@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9aef7bdac0c7971bb72cd1c9bc4b6c46dbd9b5e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 395992ef9885bd38f72e8b18699a6fcbe11016aa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-sql-server-indexes"></a>Création d'index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  **CreateIndex** interprète les propriétés de l’index comme suit.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|R/W : lecture/écriture<br /><br /> Valeur par défaut : aucune<br /><br /> Description : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif ne prend pas en charge cette propriété. Tente de définir la propriété **CreateIndex** entraînent une valeur de retour DB_S_ERRORSOCCURRED. Le *dwStatus* membre de la structure de propriété indique DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : contrôle le clustering d'index.<br /><br /> VARIANT_TRUE : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer un index cluster sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge au plus un index cluster sur une table.<br /><br /> VARIANT_FALSE : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer un index non cluster sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
  Dans la propriété spécifique au fournisseur de jeu de propriétés DBPROPSET_SQLSERVERINDEX, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client définit la propriété suivante d’informations de source de données.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Type : VT_BOOL (R/W)<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : lorsque cette propriété est spécifiée avec la valeur VARIANT_TRUE avec IIndexDefinition::CreateIndex, il s'ensuit la création d'un index xml primaire, correspondant à la colonne indexée. Si cette propriété est VARIANT_TRUE, cIndexColumnDescs doit être 1, sinon, il s'agit d'une erreur.|  
   

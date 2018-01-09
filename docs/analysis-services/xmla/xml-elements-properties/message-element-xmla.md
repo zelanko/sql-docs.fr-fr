@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Message Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1370ae3b3f37e28d212a37219a0ad50be0da740f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4bc4844a7187448bb9d44b47aee4d6c1bef8509d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="message-element-xmla"></a>Élément Message (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient un message retourné à partir d’une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] par un [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
@@ -56,8 +54,8 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |Éléments parents|[Messages](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
 |Éléments enfants|[Erreur](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md), [Avertissement](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cet élément est utilisé dans les cas où l'exécution d'un appel de méthode **Discover** ou d'une seule commande XMLA contenue dans un appel de méthode **Execute** réussit mais s'accompagne d'erreurs ou d'avertissements. En pareil cas, un élément **Messages** contenant lui-même un ou plusieurs éléments **Message** est ajouté à l'élément racine après tous les autres éléments. Chaque élément **Boîte de** représente un message unique, qui est soit une erreur, soit un avertissement, retourné par l'instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

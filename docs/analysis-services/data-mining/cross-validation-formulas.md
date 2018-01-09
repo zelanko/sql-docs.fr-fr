@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-formulas"></a>Formules de validation croisée
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous générez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, en fonction du type de modèle d’exploration de données (autrement dit, l’algorithme qui a été utilisé pour créer le modèle), le type de données de l’attribut prévisible et l’attribut prédictible valeur, le cas échéant.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 |-------------|----------------|--------------------|  
 |**Vrai positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas contient la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Vrai négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas ne contient pas la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
-|**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
+|**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Faux négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle n'est pas égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
 |**Succès/échec**|Attribut discret, cible non spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Succès si l'état prédit avec la probabilité la plus élevée est identique à l'état d'entrée et la probabilité est supérieure à la valeur de **Seuil d'état**.<br /><br /> Sinon, Échec.|  
 |**Finesse**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|La vraisemblance logarithmique moyenne pour toutes les lignes avec des valeurs pour l’attribut cible, où la vraisemblance logarithmique de chaque cas est calculée par Log(ActualProbability/MarginalProbability). Pour calculer la moyenne, la somme des valeurs de la vraisemblance du journal est divisée par le nombre de lignes dans le dataset d'entrée, à l'exclusion des lignes avec les valeurs manquantes pour l'attribut cible.<br /><br /> La courbe d'élévation peut être une valeur négative ou positive. Une valeur positive signifie un modèle efficace qui devance l'estimation aléatoire.|  

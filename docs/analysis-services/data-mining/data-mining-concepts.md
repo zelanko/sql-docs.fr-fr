@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,11 +31,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Exploration de données est le processus de découverte des informations utilisables à partir de grands jeux de données. L'exploration de données utilise l’analyse mathématique pour dégager les motifs et les tendances existant dans les données. En général, ces motifs ne peuvent pas être trouvés par l’exploration de données traditionnelle parce que les relations sont trop complexes ou parce que la quantité de données est trop importante.  
@@ -159,7 +157,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des outils qui permettent de séparer vos données en jeux de données d’apprentissage et en jeux de données de test afin d’évaluer correctement la performance de tous les modèles sur les mêmes données. Le jeu de données d'apprentissage sert à générer le modèle tandis que le jeu de données de test sert à vérifier la précision du modèle en créant des requêtes de prédictions. Ce partitionnement peut être effectué automatiquement lors de la génération du modèle d’exploration de données. Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
- Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  Si aucun des modèles créés à l'étape [Création des modèles](#BuildingModels) ne fonctionne bien, vous devrez peut-être revenir à une étape antérieure du processus et redéfinir le problème ou analyser de nouveau les données du jeu de données d'origine.  
   

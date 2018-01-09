@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62ba824569232127c6ebb44b26379f61965077ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47f225af0bdc68085ed2e265cd783ca7de57f7fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lire une colonne FILESTREAM dans un fichier à l'aide d'IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Utilisez l'un des exemples suivants pour créer la table à partir de laquelle cet exemple lit :  

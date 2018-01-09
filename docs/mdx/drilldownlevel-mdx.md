@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVEL
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 64509c923c21094d9b4c183a8d37273af5109777
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: da071ef3ba43af94caf81e1016cb84a2bffc082f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Facultatif). Un indicateur spécifiant s'il faut inclure les membres calculés (s'ils existent) au niveau d'exploration.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **DrilldownLevel** fonction retourne un jeu d’enfant de membres dans un ordre hiérarchique, basé sur les membres inclus dans le jeu spécifié. L'ordre est conservé parmi les membres d'origine dans le jeu spécifié, à ceci près que tous les membres enfants inclus dans le jeu de résultats de la fonction sont placés immédiatement sous leur membre parent.  
   
  Pour une structure de données hiérarchique multiniveau donnée, vous pouvez choisir explicitement un niveau jusqu'où explorer. Il y a deux moyens mutuellement exclusifs de spécifier le niveau. La première approche consiste à définir le **level_expression** argument à l’aide d’une expression MDX qui retourne le niveau, une autre approche consiste à spécifier le **index** argument, à l’aide d’une expression numérique qui spécifie le niveau par numéro.  

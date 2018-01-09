@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4170484d1105d9e5598a282a0691c9231568e5b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6be223ae2b53b0224d3f07f489129838b8788b5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Exécuter une procédure stockée avec le service RPC et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple illustre le traitement d'un ensemble de lignes, d'un code de retour et d'un paramètre de sortie. Les jeux de résultats ne sont pas traités. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  

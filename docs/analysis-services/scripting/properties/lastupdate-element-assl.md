@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: LastUpdate Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1f1e67f477c150fcb438bec025efcc3045f15d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a7a32d084a5cfd70af9ba2c16b97bb887012155a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lastupdate-element-assl"></a>Élément LastUpdate (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient en lecture seule horodateur qui indique la dernière fois que le texte associé [base de données](../../../analysis-services/scripting/objects/database-element-assl.md) ou un des principaux objets contenant la base de données a été modifié.  
@@ -49,17 +47,17 @@ ms.lasthandoff: 12/08/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|DateTime|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[Base de données](../../../analysis-services/scripting/objects/database-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les éléments qui correspondent aux parents de **LastUpdate** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Voir aussi  

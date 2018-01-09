@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
@@ -17,11 +17,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8a94cb71ab8625a2a546e62f5dc828b605aeaa2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 76ffc0da4e8d56b4bb37b0be5278e458ac6fb043
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-properties"></a>Propriétés DAX
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La section DAX de msmdsrv.ini contient les paramètres utilisés pour contrôler certains comportements de la requête dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], telles que la limite supérieure au nombre de lignes retournées dans un jeu de résultats de requête DAX. 
@@ -53,4 +53,4 @@ Paramètre |Valeur |Description
 MaxIntermediateRowsetSize | 1000000 | Nombre maximal de lignes retournées dans une requête DAX. Ajoutez cette entrée manuellement au fichier msmdsrv.ini et augmentez cette valeur si la valeur par défaut est trop faible. 
 PredicateCheckSpoolCardinalityThreshold| 5000 | Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l’assistance du support technique Microsoft.
 
-Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md). 
+Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md). 

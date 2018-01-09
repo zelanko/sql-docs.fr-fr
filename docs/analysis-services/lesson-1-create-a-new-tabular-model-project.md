@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 57d2db22484a8c6a8b8301e11cbd4799aae6bd91
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ebaeba0db0daaf494533cafe03f89effff2fe792
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ Dans cette leçon, vous allez créer un nouveau projet de modèle tabulaire vide
   
 Durée estimée pour effectuer cette leçon : **10 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Cette rubrique constitue la première leçon du didacticiel de conception de modèle tabulaire. Pour effectuer cette leçon, vous devez disposer de la base de données exemple AdventureWorksDW installée sur une instance de SQL Server. Pour plus d’informations, consultez [de modélisation tabulaire &#40; Didacticiel Adventure Works &#41; ](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Créer un projet de modèle tabulaire  
@@ -94,7 +94,7 @@ Explorez les boîtes de dialogue et les emplacements des fonctionnalités spéci
 Pour en savoir plus sur les différents types de projets de modèles tabulaires, consultez [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Pour en savoir plus sur l’environnement de création de modèles tabulaires, consultez [Générateur de modèles tabulaires &#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 Accédez à la leçon suivante : [leçon 2 : ajouter des données](../analysis-services/lesson-2-add-data.md).
 
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Optionality Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d159e35bf9f0e3c6393daaed32362dfef6a0086
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d492b93ecd83aa511c5df62f4bd11d683bb95943
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="optionality-element-assl"></a>Élément Optionality (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Indique le caractère facultatif des membres pour une [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) élément.  
@@ -50,19 +48,19 @@ ms.lasthandoff: 12/08/2017
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*Obligatoire*|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*Obligatoire*|Chaque membre dans l'attribut associé doit être associé à au moins un membre dans l'attribut propriétaire de l'élément **AttributeRelationship** .|  
 |*Facultatif*|Chaque membre dans l'attribut associé ne doit pas être associé à au moins un membre dans l'attribut propriétaire de l'élément **AttributeRelationship** .|  

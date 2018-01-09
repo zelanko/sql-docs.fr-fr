@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9e8c3fbcce7146c2de17caa97e70a539de6a90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ac805d2871cce4e16009e64a97c4aff17dedcf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mappage de type de données dans ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |DBTYPE_DBTIMESTAMP|**datetime**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
-|DBTYPE_I4|**int**||  
+|DBTYPE_I4|**Int**||  
 |DBTYPE_NUMERIC|**numeric**|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bPrecision* et *bScale* membres pour déterminer la précision et l’échelle pour le **numérique** colonne.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  

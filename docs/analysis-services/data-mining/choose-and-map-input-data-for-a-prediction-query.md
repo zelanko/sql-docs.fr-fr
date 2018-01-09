@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Choisir et mapper les données d'entrée pour une requête de prédiction
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez des prédictions à partir d’un modèle d’exploration de données, généralement cela en acheminant les nouvelles données dans le modèle. (Les modèles de série chronologique, qui peuvent faire des prédictions basées sur des données historiques uniquement, font exception.) Pour fournir de nouvelles données au modèle, vous devez vous assurer que les données sont disponibles dans une vue de source de données. Si vous connaissez à l'avance les données que vous allez utiliser pour la prédiction, vous pouvez les inclure dans la vue de source de données utilisée pour créer le modèle. Sinon, vous devrez peut-être créer une vue de source de données. Pour plus d’informations sur les vues de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  

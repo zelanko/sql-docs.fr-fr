@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a649a02dfeb483aec0ed1c9efb236deebe3845f0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Définir la propriété Secteur de partition (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une tranche de données est une fonctionnalité d’optimisation importante qui permet de diriger les requêtes vers les données des partitions appropriées. Définir explicitement la propriété Slice peut améliorer les performances des requêtes en remplaçant les tranches par défaut générées pour les partitions MOLAP ou HOLAP. En outre, la propriété Slice permet un contrôle de validation supplémentaire lors du traitement de la partition.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
 |-----------|--------------------------|  
 |[Date].[Calendar].[Calendar Year].&[2010]|Spécifiez cette tranche sur une partition contenant des faits de l'année 2010 (en partant du principe que le modèle inclut une dimension Date avec la hiérarchie Année civile, dont 2010 est un membre.) Bien que la table ou la clause WHERE de la source de partition soit peut-être déjà filtrée pour l'année 2010, spécifier la propriété Slice offre un contrôle supplémentaire au cours du traitement, ainsi que des analyses plus ciblées pendant l'exécution de la requête.|  
 |{ [Sales Territory].[Sales Territory Country].&[Australia], [Sales Territory].[Sales Territory Country].&[Canada] }|Spécifiez cette tranche sur une partition contenant des faits qui incluent des informations sur le secteur de vente. Une tranche peut être un jeu MDX constitué de deux membres ou plus.|  
-|[Measures].[Sales Amount Quota] > '5000'|Cette tranche représente une expression MDX.|  
+|[Measures].[Sales Amount Quota] > '5000'|Cette tranche représente une expression MDX.|  
   
  Une tranche de données d'une partition doit refléter, aussi fidèlement que possible, les données de la partition. Par exemple, si une partition est limitée aux données de l'année 2012, la tranche de données de la partition doit spécifier le membre 2012 de la dimension Time. Il n'est pas toujours possible de spécifier une tranche de données qui reflète le contenu exact d'une partition. Par exemple, si une partition contient des données uniquement pour janvier et février, alors que les niveaux de la dimension Time sont Year, Quarter et Month, l'Assistant Partition ne peut pas sélectionner à la fois les membres January et February. Dans de tels cas, sélectionnez le parent des membres qui reflètent le contenu de la partition. Dans cet exemple, sélectionnez Quarter 1.  
   

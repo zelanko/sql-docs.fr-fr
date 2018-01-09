@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: acdeb1132fab9ecd8ea141362a2d1a961ba7192a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Leçon 4-4-masquage et désactivation des hiérarchies d’attributs
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Par défaut, une hiérarchie d’attribut est créée pour chaque attribut dans une dimension, et chaque hiérarchie est disponible pour dimensionner les données de faits. Cette hiérarchie se compose d'un niveau « All » et d'un niveau de détail contenant tous les membres de la hiérarchie. Comme vous l'avez déjà appris, vous pouvez organiser les attributs en hiérarchies définies par l'utilisateur pour fournir les chemins de navigation dans un cube. Dans certaines circonstances, vous pouvez être amené à choisir de désactiver ou de masquer certains attributs et leurs hiérarchies. Par exemple, certains attributs, tels que les numéros de sécurité sociale ou les numéros de carte d'identité, les taux de rémunération, les dates de naissance et les informations de connexion ne sont pas des attributs par lesquels les utilisateurs pourront dimensionner les informations d'un cube. Ces informations sont au contraire généralement affichées uniquement comme détails d'un membre d'attribut spécifique. Vous pouvez choisir de masquer ces hiérarchies d'attributs, ce qui permet de laisser les attributs affichés uniquement en tant que propriétés de membre d'un attribut spécifique. Vous pouvez également choisir d'afficher les membres d'autres attributs, tels que les noms de clients ou les codes postaux, uniquement lorsqu'ils sont visualisés via une hiérarchie utilisateur et non indépendamment via une hiérarchie d'attributs. L'une des raisons qui amène à procéder ainsi est le nombre même de membres distincts dans la hiérarchie d'attributs. Enfin, pour améliorer les performances de traitement, vous devez désactiver les hiérarchies d'attributs auxquelles les utilisateurs ne feront pas appel pour l'exploration.  

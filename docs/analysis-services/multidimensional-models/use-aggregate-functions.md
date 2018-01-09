@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: aggregate functions [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-aggregate-functions"></a>Utiliser des fonctions d'agrégation
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsqu’une dimension est utilisée pour segmenter une mesure, la mesure est résumée en fonction des hiérarchies contenues dans cette dimension. Le comportement de sommation dépend de la fonction d'agrégation spécifiée pour la mesure. Pour la plupart des mesures contenant des données numériques, la fonction d’agrégation est **Sum**. La valeur de la mesure est la somme de montants différents selon le niveau auquel la hiérarchie est active.  

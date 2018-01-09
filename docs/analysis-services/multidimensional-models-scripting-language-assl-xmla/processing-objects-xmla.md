@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d4b3c24a3bfe2b9babcc13d9e9263a4457676bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-objects-xmla"></a>Traitement d'objets (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le traitement est l’étape ou la série d’étapes qui transforme les données en informations pour l’analyse de l’entreprise. Si le traitement varie selon le type d'objet, le traitement consiste toujours à transformer des données en informations.  
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="description"></a> Description  
+### <a name="description"></a>Description  
  L'exemple suivant traite entièrement la base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Code  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/08/2017
 </Process>  
 ```  
   
-### <a name="description"></a> Description  
+### <a name="description"></a>Description  
  L’exemple suivant traite de façon incrémentielle le **Internet_Sales_2004** dans la partition la **Internet Sales** groupe de mesures de la **Adventure Works DW** de cube dans le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. Le **processus** commande consiste à ajouter des agrégations pour la commande dates postérieures au 31 décembre 2006 à la partition à l’aide d’une liaison de requête de sortie de la ligne dans le **liaisons** propriété de la **processus** commande pour récupérer les lignes de table de faits à partir de laquelle générer des agrégations à ajouter à la partition.  
   
 ### <a name="code"></a>Code  

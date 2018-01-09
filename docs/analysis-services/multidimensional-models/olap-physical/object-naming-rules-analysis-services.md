@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit les conventions d’affectation de noms d’objet, ainsi que les mots réservés et des caractères qui ne peut pas être utilisés dans un nom d’objet, dans le code ou de script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -88,9 +86,9 @@ ms.lasthandoff: 12/08/2017
   
 |Mode serveur et niveau de compatibilité de la base de données|Caractères réservés autorisés ?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (toutes les versions)|Non|  
-|Tabulaire - 1050|Non|  
-|Tabulaire - 1100|Non|  
+|MOLAP (toutes les versions)|non|  
+|Tabulaire - 1050|non|  
+|Tabulaire - 1100|non|  
 |Tabulaire – 1130 et ultérieur|Oui|  
   
  Les bases de données peuvent avoir un ModelType par défaut. La valeur par défaut est équivalente à celle du mode multidimensionnel et ne prend donc pas en charge l'utilisation de caractères réservés dans les noms de colonnes.  

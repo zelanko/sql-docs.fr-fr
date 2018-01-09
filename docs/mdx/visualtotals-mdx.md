@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: VisualTotals
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 892416035746861e0777b8d695a283231c2ddea5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3270bf4f47b4ceafe6d5e1479e870d0492c7c37b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Modèle*  
  Expression de chaîne valide du membre parent du jeu contenant un astérisque (*) en tant que caractère de substitution utilisé pour le nom du parent.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'expression de jeu définie peut spécifier un jeu qui contient des membres à n'importe quel niveau au sein d'une seule dimension. Il s'agit généralement de membres pour lesquels une relation ancêtre-descendant existe. Le **VisualTotals** fonction totalise les valeurs des membres enfants dans le jeu spécifié et ignore les membres enfants qui ne sont pas dans le jeu du calcul des totaux. Les totaux sont effectués de manière visible pour les jeux classés dans l'ordre hiérarchique. Si l'ordre des membres dans les jeux ne respecte pas la hiérarchie, les résultats obtenus ne sont pas des valeurs visibles. Par exemple, la fonction VisualTotals (USA, WA, CA, Seattle) ne retourne pas WA sous la forme Seattle, mais plutôt les valeurs de WA, CA et Seattle, puis totalise ces valeurs en tant que valeur visible pour la valeur USA, comptabilisant ainsi les ventes pour Seattle deux fois.  
   
 > [!NOTE]  

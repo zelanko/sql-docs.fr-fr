@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d602336d96fe81a55655640efe48287c4959e0ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 948077a159fcb1937639c8e522e6b647300729e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du Type de données pour OLE DB Date et heure améliorations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/17/2017
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données|Type de données OLE DB|Valeur|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 (oledb.h)|  
+|Date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -48,9 +48,9 @@ ms.lasthandoff: 11/17/2017
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss'<br /><br /> Ce type de données possède une précision d'une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
-|date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
+|Date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.fffffff]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'aaaa-mm-jj hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
@@ -181,7 +181,7 @@ enum SQLVARENUM {
   
 |Type de données OLE DB (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données|Remarques|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
+|DBTYPE_DBDATE|Date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIME2|**temps**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  

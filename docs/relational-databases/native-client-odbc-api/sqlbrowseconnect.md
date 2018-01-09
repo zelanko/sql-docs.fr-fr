@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbe505cb8cd07efc04274725513dd8143bec688f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ee1ff2472f603b6caca690d5ed83c73968ae5cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,24 +33,24 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="level-1"></a>Niveau 1  
   
-|Mot clé|Liste retournée ?|Facultatif ?| Description|  
+|Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|Néant|Non|Nom de la source de données retournée par **SQLDataSources**. Le mot clé DSN ne peut pas être utilisé si le mot clé DRIVER est utilisé.|  
-|DRIVER|Néant|Non|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom du pilote ODBC Native Client est {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Le mot clé DRIVER ne peut pas être utilisé si le mot clé DSN est utilisé.|  
+|DSN|Néant|non|Nom de la source de données retournée par **SQLDataSources**. Le mot clé DSN ne peut pas être utilisé si le mot clé DRIVER est utilisé.|  
+|DRIVER|Néant|non|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom du pilote ODBC Native Client est {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Le mot clé DRIVER ne peut pas être utilisé si le mot clé DSN est utilisé.|  
   
 ## <a name="level-2"></a>Niveau 2  
   
-|Mot clé|Liste retournée ?|Facultatif ?| Description|  
+|Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Oui|Non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
-|UID|Non|Oui|ID de connexion d'utilisateur.|  
-|PWD|Non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
-|APP|Non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
-|WSID|Non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
+|SERVER|Oui|non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
+|UID|non|Oui|ID de connexion d'utilisateur.|  
+|PWD|non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
+|APP|non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
+|WSID|non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
   
 ## <a name="level-3"></a>Niveau 3  
   
-|Mot clé|Liste retournée ?|Facultatif ?| Description|  
+|Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Oui|Oui|Nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |LANGUAGE|Oui|Oui|Langage national utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
  Les attributs suivants, qui sont définies en appelant [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), déterminer le jeu de résultats retourné par **SQLBrowseConnect**.  
   
-|Attribut| Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Si elle a la valeur SQL_MORE_INFO_YES, **SQLBrowseConnect** retourne une chaîne étendue de propriétés du serveur.<br /><br /> Voici un exemple de chaîne étendue retournée par **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> Dans cette chaîne, des points-virgules séparent les différentes parties des informations sur le serveur. Utilisez des virgules pour séparer les différentes instances de serveur.|  
 |SQL_COPT_SS_BROWSE_SERVER|Si un nom de serveur est spécifié, **SQLBrowseConnect** renvoie les informations sur le serveur spécifié. Si SQL_COPT_SS_BROWSE_SERVER a la valeur NULL, **SQLBrowseConnect** renvoie des informations pour tous les serveurs dans le domaine.<br /><br /> <br /><br /> Notez que, en raison de problèmes de réseau, **SQLBrowseConnect** ne peut pas recevoir une réponse en temps voulu de tous les serveurs. Par conséquent, la liste des serveurs retournée peut varier pour chaque requête.|  

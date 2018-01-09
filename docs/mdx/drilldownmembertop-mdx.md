@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNMEMBERTOP
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 55b689ce0a3095defd57fe0a84edaf6d83b0c870
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e2fe59b1ea8073ef0884e601b3c5aec3a90941e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Include_Calc_Members*  
  Mot clé permettant d'activer les membres calculés à inclure dans les résultats de l'extraction vers le bas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une expression numérique est spécifiée, la **DrilldownMemberTop** fonction trie, par ordre décroissant, les enfants de chaque membre dans le premier jeu selon la valeur de l’expression numérique, telle qu’évaluée sur le jeu de membres enfants. Si aucune expression numérique n'est spécifiée, cette fonction trie, par ordre décroissant, les enfants de chaque membre dans le premier jeu selon les valeurs des cellules représentées par le jeu des membres enfants, comme le détermine le contexte de la requête. Ce comportement est semblable aux fonctions TopCount et Head (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
   
  Après le tri, le **DrilldownMemberTop** fonction retourne un jeu qui contient les membres parents et le nombre de membres enfants spécifiés dans *Count,* avec la valeur la plus élevée et contenues dans les deux ensembles.  
@@ -73,7 +73,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge par le serveur pour les fonctions d’extraction ; consultez [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) pour plus d’informations.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant effectue une extraction vers le bas dans la catégorie d'habillement pour retourner les trois sous-catégories de vêtements enregistrant le plus grand nombre de commandes expédiées.  
   
 ```  

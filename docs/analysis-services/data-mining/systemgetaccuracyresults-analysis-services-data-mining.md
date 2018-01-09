@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Retourne les mesures de précision de validation croisée d’une structure d’exploration de données et tous les modèles connexes, à l’exclusion des modèles de clustering.  
@@ -72,12 +72,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Pour obtenir la liste complète des valeurs possibles, consultez la section Remarques de cette rubrique.  
   
- (Obligatoire)  
+ (obligatoire)  
   
  *target attribute*  
  Chaîne qui contient le nom d'un objet prévisible. Un objet prévisible peut être une colonne, une colonne de table imbriquée ou une colonne clé de table imbriquée d'un modèle d'exploration de données.  
   
- (Obligatoire)  
+ (obligatoire)  
   
  *target state*  
  Chaîne qui contient une valeur spécifique à prédire.  
@@ -116,14 +116,14 @@ SystemGetAccuracyResults(<mining structure>,
 |PartitionCases|Entier qui indique le nombre de lignes dans le jeu de cas, selon la  *\<jeu de données >* paramètre.|  
 |Test|Type de test qui a été effectué.|  
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de modèle et du type de valeur prévisible.<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|Valeur de la mesure spécifiée.|  
+|Valeur|Valeur de la mesure spécifiée.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant fournit des exemples des valeurs que vous pouvez utiliser pour spécifier les données de la structure d'exploration de données qui sont utilisées pour la validation croisée. Si vous souhaitez utiliser des scénarios de test pour la validation croisée, la structure d'exploration de données doit déjà contenir un jeu de données de test. Pour plus d’informations sur la définition d’un jeu de données de test quand vous créez une structure d’exploration de données, consultez [Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Valeur de type entier|Description|  
 |-------------------|-----------------|  
-|1|Seuls les cas d'apprentissage sont utilisés.|  
+| 1|Seuls les cas d'apprentissage sont utilisés.|  
 |2|Seuls les scénarios de test sont utilisés.|  
 |3|Les cas d'apprentissage et les scénarios de test sont utilisés.|  
 |4|Combinaison incorrecte.|  
@@ -151,15 +151,15 @@ CALL SystemGetAccuracyResults (
   
  Exemples de résultats :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Valeur|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Vrai positif|605|  
-|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Faux positif|177|  
-|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Vrai négatif|501|  
-|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Faux négatif|355|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Score du journal|-0.598454638753028|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Finesse|0.0936717116894395|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Erreur quadratique moyenne|0.361630800104946|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Vrai positif|605|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Faux positif|177|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Vrai négatif|501|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Faux négatif|355|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|Vraisemblance|Score du journal|-0.598454638753028|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|Vraisemblance|Finesse|0.0936717116894395|  
+|v Target Mail DT|Bike Buyer| 1|0|1638|Vraisemblance|Erreur quadratique moyenne|0.361630800104946|  
   
 ## <a name="requirements"></a>Spécifications  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  

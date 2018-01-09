@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ProactiveCachingTablesBinding Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45299bd2679ebfd23496b80e0010cd94a6bf4e4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fd299047079c41cc164feddf7186672d0338a2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="proactivecachingtablesbinding-data-type-assl"></a>Type de données ProactiveCachingTablesBinding (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé qui représente les informations de la [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur les modifications de source de données dans les tables et vues qui exigent une reconstruction du cache spécifiées.  
@@ -48,17 +46,17 @@ ms.lasthandoff: 12/08/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|[ProactiveCachingObjectNotificationBinding](../../../analysis-services/scripting/data-type/proactivecachingobjectnotificationbinding-data-type-assl.md)|  
-|Types de données dérivés|Aucune|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[TableNotification](../../../analysis-services/scripting/objects/tablenotification-element-assl.md)|  
-|Éléments dérivés|Aucune|  
+|Éléments dérivés|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour plus d’informations sur la **ProactiveCachingBinding** type, y compris une table de la hiérarchie d’héritage de **ProactiveCachingBinding** types, consultez [Type de données ProactiveCachingBinding &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/proactivecachingbinding-data-type-assl.md).  
   
  Pour plus d’informations sur la **liaison** type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la **liaison** type et la hiérarchie d’héritage de **liaison** types, consultez [Type de liaison de données &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  

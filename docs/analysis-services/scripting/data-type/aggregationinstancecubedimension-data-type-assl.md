@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregationInstanceCubeDimension Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3bb94eb27a6f6a475afcc2d8aae46e05ed73fef2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 586b91bc68cef3d6f717b28987e2e52d7204be15
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregationinstancecubedimension-data-type-assl"></a>Type de données AggregationInstanceCubeDimension (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif qui représente des informations sur une dimension de cube utilisée par une instance d’agrégation.  
@@ -48,18 +46,18 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|Aucune|  
-|Types de données dérivés|Aucune|  
+|Types de données de base|None|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md), [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|  
 |Éléments dérivés|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="see-also"></a>Voir aussi  
  [Analysis Services script des Types de données XML Language &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  

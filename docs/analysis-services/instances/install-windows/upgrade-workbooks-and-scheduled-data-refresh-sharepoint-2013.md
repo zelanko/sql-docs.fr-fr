@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique explique l’utilisation des classeurs créés dans la précédente [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environnements et la mise à niveau [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] classeurs afin que vous pouvez tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  Mettez à niveau chaque classeur manuellement en l'ouvrant dans Microsoft Excel 2013.  
   
-2.  Pour mettre à niveau le classeur et le modèle qu'il contient, téléchargez et ouvrez le classeur dans Microsoft Excel 2013.  
+2.  Pour mettre à niveau le classeur et le modèle qu'il contient, téléchargez et ouvrez le classeur dans Microsoft Excel 2013.  
   
 3.  Ouvrez la fenêtre [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et mettez à niveau le modèle [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   

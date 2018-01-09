@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Properties
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1177ef96713961af17a7c76b1f3bce01a8089688
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_name*  
  Expression de chaîne valide du nom d'une propriété de membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **propriétés** fonction retourne la valeur du membre spécifié pour la propriété de membre spécifié. La propriété de membre peut être une des propriétés de membre intrinsèques, tels que **nom**, **ID**, **clé**, ou **légende**, ou il peut être une propriété de membre définies par l’utilisateur. Pour plus d’informations, consultez [des propriétés de membre intrinsèques &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) et [des propriétés de membre définies par l’utilisateur &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
  Par défaut, la valeur est définie comme une chaîne. Si **TYPÉ** est spécifié, la valeur de retour est fortement typée.  
@@ -57,7 +57,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
 > [!NOTE]  
 >  Properties('Key') retourne le même résultat que Key0, sauf en ce qui concerne les clés composites. Properties('Key') retourne la valeur Null pour les clés composites. Utilisez la touche*x* syntaxe pour les clés composites comme illustré dans l’exemple suivant. Properties('Key0'), Properties('Key1'), Properties('Key2'), etc., forment collectivement la clé composite.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne à la fois des propriétés de membres intrinsèques et définies par l'utilisateur en se servant de l'argument TYPED pour retourner la valeur fortement typée de la propriété de membre Day Name (Jour).  
   
 ```  

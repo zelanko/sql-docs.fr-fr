@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Exemples de requêtes de modèle Naive Bayes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer soit une requête de contenu, qui fournit des détails sur les modèles découverts dans l’analyse, ou vous pouvez créer une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions pour les nouvelles données. Vous pouvez également récupérer les métadonnées relatives au modèle en utilisant une requête sur l'ensemble de lignes de schéma d'exploration de données. Cette section explique comment créer ces requêtes pour les modèles basés sur l'algorithme MNB (Microsoft Naive Bayes).  
@@ -96,10 +94,10 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|TM_NaiveBayes|Bike Buyer|Manquant|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Manquant|0|0| 1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
-|TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
-|TM_NaiveBayes|Gender|Manquant|0|0|1|  
+|TM_NaiveBayes|Bike Buyer| 1|8615|0.492736216|4|  
+|TM_NaiveBayes|Gender|Manquant|0|0| 1|  
 |TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
 |TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
   
@@ -123,7 +121,7 @@ WHERE ATTRIBUTE_NAME = 'Region'
   
 |NODE_TYPE|NODE_CAPTION|NODE_PROBABILITY|NODE_SUPPORT|MSOLAP_NODE_SCORE|NODE_TYPE|  
 |----------------|-------------------|-----------------------|-------------------|-------------------------|----------------|  
-|10|Bike Buyer -> Region|1|17484|84.51555875|10|  
+|10|Bike Buyer -> Region| 1|17484|84.51555875|10|  
 |11|Bike Buyer -> Region = Missing|0|0|0|11|  
 |11|Bike Buyer -> Region = North America|0.508236102|8886|0|11|  
 |11|Bike Buyer -> Region = Pacific|0.193891558|3390|0|11|  
@@ -215,7 +213,7 @@ NATURAL PREDICTION JOIN
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
 |0|10161.5714|0.581192599|0.010530981|0|0|  
-|1|7321.428768|0.418750215|0.008945684|0|0|  
+| 1|7321.428768|0.418750215|0.008945684|0|0|  
 ||0.999828444|5.72E-05|5.72E-05|0|0|  
   
  La ligne finale de la table indique les ajustements apportés aux paramètres de prise en charge et de probabilité pour la valeur manquante. Les valeurs de variance et d'écart type sont toujours 0, car les modèles Naive Bayes ne peuvent pas modéliser de valeurs continues.  

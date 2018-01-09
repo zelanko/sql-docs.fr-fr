@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +22,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25903194512146b53d325b217ff7d866d7b38ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Octroi, révocation et refus d'autorisations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> objet est utilisé pour attribuer un jeu d’autorisations ou des autorisations sur un serveur individuel à le <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> objet. Pour les autorisations de niveau serveur, le bénéficiaire fait référence à une ouverture de session. Les ouvertures de session authentifiées par Windows sont répertoriées comme noms d'utilisateur Windows. Lorsque cet exemple de code est exécuté, il révoque l'autorisation du bénéficiaire et vérifie qu'il a été supprimé avec la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
   
  Les autorisations relatives à la base de données et les autorisations relatives aux objets de base de données peuvent être attribuées de la même façon en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> et l'objet <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
-## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a> Exemple  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Octroi d'autorisations de serveur en Visual Basic  
  Cet exemple de code octroie les autorisations Create Endpoint et Alter Any Endpoint à la connexion spécifiée, puis énumère et affiche les autorisations. L'une des autorisations est révoquée, puis les autorisations sont à nouveau énumérées. Cet exemple suppose que la connexion spécifiée dispose des autorisations de démarrage requises.  

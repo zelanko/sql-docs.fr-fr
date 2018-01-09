@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8212e4077187ac68835c732ecbaee0891ad461b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f030fff57fba783584d3b46ba5ad56d45771bf2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client spécifie les champs de diagnostic supplémentaires suivants pour **SQLGetDiagField**. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  
   
-|Champ d'enregistrement de diagnostic| Description|  
+|Champ d'enregistrement de diagnostic|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Signale le numéro de ligne d'une procédure stockée qui génère une erreur. La valeur de SQL_DIAG_SS_LINE est explicite uniquement si SQL_DIAG_SS_PROCNAME retourne une valeur. La valeur est retournée en tant qu'entier 16 bits non signé.|  
 |SQL_DIAG_SS_MSGSTATE|État d'un message d'erreur. Pour plus d’informations sur l’état de message d’erreur, consultez [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). La valeur est retournée en tant qu'entier 32 bits signé.|  

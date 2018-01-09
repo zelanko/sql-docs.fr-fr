@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programmation du modèle multidimensionnel - propriétés de cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les cubes ont un nombre de propriétés que vous pouvez définir pour affecter le comportement au niveau du cube. Ces propriétés sont présentées dans le tableau suivant.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
  Pour plus d’informations sur la définition des propriétés de cube, consultez [Concepteur de Cube &#40; Analysis Services - données multidimensionnelles &#41; ](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|Spécifie le préfixe commun qui est utilisé pour les noms d'agrégation.|  
 |**Classement**|Spécifie l'identificateur de paramètres régionaux (LCID) et l'indicateur de comparaison, séparés par un trait de soulignement, comme dans Latin1_General_C1_AS.|  

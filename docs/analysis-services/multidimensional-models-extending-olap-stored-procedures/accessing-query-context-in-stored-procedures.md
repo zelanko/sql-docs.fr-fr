@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,19 +23,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9ab0de9eae86293f25781cc5b85f175037f1ffc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b7a0c3e57a5249a26bf13a2cf9709e58df85da8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Accès au contexte de requête dans les procédures stockées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le contexte d’exécution d’une procédure stockée est disponible dans le code de la procédure stockée en tant que le **contexte** objet du modèle d’objet serveur ADOMD.NET. Il s'agit d'un contexte en lecture seule qui ne peut pas être modifié par la procédure stockée. Les propriétés suivantes sont disponibles pour cet objet.  
   
-|Propriété|Type| Description|  
+|Propriété|Type|Description|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|Cube du contexte de requête actuel.|  
-|**CurrentDatabaseName**|Chaîne|Identificateur de la base de données active.|  
+|**CurrentDatabaseName**|String|Identificateur de la base de données active.|  
 |**CurrentConnection**|Connexion|Référence à l'objet de connexion dans le contexte actuel.|  
 |**Passer**|Entier|Numéro de test du contexte actuel.|  
   

@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriétés de cellule MDX - contenu de FORMAT_STRING
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le **FORMAT_STRING** formats de propriété de cellule la **valeur** propriété de cellule, la création de la valeur pour le **FORMATTED_VALUE** propriété de cellule. La propriété de cellule **FORMAT_STRING** traite les valeurs brutes de types chaîne et numérique en appliquant une expression de format à la valeur pour retourner une valeur mise en forme pour la propriété de cellule **FORMATTED_VALUE** . Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="string-values"></a>Valeurs de type chaîne  
  Une expression de format pour une chaîne peut posséder une section, ou deux sections séparées par un point-virgule (;).  
   
-|Utilisation|Résultat|  
+|Utilisation|Résultats|  
 |-----------|------------|  
 |Une section|La mise en forme s'applique à toutes les valeurs de type chaîne.|  
 |Deux sections|La première section s'applique aux données de type chaîne tandis que la seconde s'applique aux valeurs NULL et aux chaînes de longueur zéro ("").|  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="numeric-values"></a>Valeurs numériques  
  Pour les nombres, une expression de format définie par l'utilisateur peut posséder de une à quatre sections, séparées par des points-virgules. Si l'argument de format contient l'un des formats numériques nommés, une seule section est autorisée.  
   
-|Utilisation|Résultat|  
+|Utilisation|Résultats|  
 |-----------|------------|  
 |Une section|L'expression de format s'applique à toutes les valeurs.|  
 |Deux sections|La première section s'applique aux valeurs positives et aux zéros, et la seconde aux valeurs négatives.|  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
 |Caractère|Description|  
 |---------------|-----------------|  
-|Aucun|Affiche le nombre sans mise en forme.|  
+|None|Affiche le nombre sans mise en forme.|  
 |**0**|Représente un espace réservé de chiffre qui affiche un chiffre ou zéro (0).<br /><br /> Si le nombre possède un chiffre là où figure le zéro dans la chaîne de format, la valeur mise en forme affiche ce chiffre. Sinon, zéro est affiché à la place.<br /><br /> Si le nombre contient moins de chiffres que de zéros (de part et d'autre du séparateur décimal) dans l'expression de format, la valeur mise en forme affiche des zéros non significatifs ou à droite.<br /><br /> Si le nombre contient davantage de chiffres à droite du séparateur décimal qu'il n'y a de zéros à droite du séparateur décimal dans l'expression de format, la valeur mise en forme arrondit le nombre à autant de positions décimales qu'il y a de zéros.<br /><br /> Si le nombre comporte davantage de chiffres à gauche du séparateur décimal qu'il n'y a de zéros à gauche du séparateur décimal dans l'expression de format, la valeur mise en forme affiche les chiffres supplémentaires sans modification.|  
 |**#**|Représente un espace réservé de chiffre qui affiche un chiffre ou rien.<br /><br /> Si l’expression a un chiffre à la position où le signe dièse (**#**) apparaît dans la chaîne de format, la valeur mise en forme affiche ce chiffre. Sinon, rien n'est affiché à la place.<br /><br /> L’espace réservé du signe dièse (**#**) fonctionne comme l’espace réservé du chiffre zéro (**0**), à la différence qu’aucun zéro non significatif de début et de fin n’est affiché si le nombre a un nombre de chiffres inférieur ou égal au nombre de caractères **#** de l’un ou l’autre côté du séparateur décimal dans l’expression de format.|  
 |**.**|Représente un espace réservé de décimale qui détermine le nombre de chiffres affichés à gauche et à droite du séparateur décimal.<br /><br /> Si l’expression de format contient seulement des signes dièse (**#**) à gauche du point (**.**), les nombres inférieurs à 1 commencent par un séparateur décimal. Pour afficher un zéro non significatif avec des nombres fractionnaires, utilisez zéro (0) comme premier espace réservé de chiffre à gauche du séparateur décimal.<br /><br /> Le caractère effectivement utilisé comme séparateur décimal dans le résultat mis en forme dépend du format numérique reconnu par votre système.<br /><br /> Remarque : dans certains paramètres régionaux, une virgule est utilisée comme séparateur décimal.|  

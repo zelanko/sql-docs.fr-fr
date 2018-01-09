@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: full-text search [SMO]
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2ae3c11901de210ae49a95eab1443b6e171fcba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0db7400457bb39daa082650a73f5fbdc9689a16d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="implementing-full-text-search"></a>Implémentation de la recherche en texte intégral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Recherche en texte intégral est disponible par instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et est représentée dans SMO par le <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> objet. Le <xref:Microsoft.SqlServer.Management.Smo.FullTextService> objet se trouve sous le **Server** objet. Il est utilisé pour gérer les options de configuration pour le service de recherche en texte intégral de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. L'objet <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> appartient à l'objet <xref:Microsoft.SqlServer.Management.Smo.Database> et c'est une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> qui représentent des catalogues de texte intégral définis pour la base de données. Vous ne pouvez avoir qu'un seul index de recherche en texte intégral défini pour chaque table, contrairement aux index normaux. Il est représenté par un objet <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> dans l'objet <xref:Microsoft.SqlServer.Management.Smo.Table>.  
@@ -31,8 +31,8 @@ ms.lasthandoff: 11/17/2017
   
  En premier lieu, créez un catalogue de texte intégral sur la base de données en appelant le constructeur <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> et en spécifiant le nom de catalogue. Puis, créez l'index de recherche en texte intégral en appelant le constructeur et en spécifiant la table sur laquelle il doit être créé. Vous pouvez ajouter des colonnes d'index pour l'index de recherche en texte intégral, en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> et en fournissant le nom de la colonne dans la table. Ensuite, définissez la propriété <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> sur le catalogue que vous avez créé. Enfin, appelez la méthode <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> et créez l'index de recherche en texte intégral sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a> Exemple  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Création d'un service de recherche en texte intégral en Visual Basic  
  Cet exemple de code crée un catalogue de recherche en texte intégral pour la table `ProductCategory` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Il crée alors un index de recherche en texte intégral sur la colonne Name dans la table `ProductCategory` . L'index de recherche en texte intégral requiert qu'un index unique soit défini au préalable sur la colonne.  

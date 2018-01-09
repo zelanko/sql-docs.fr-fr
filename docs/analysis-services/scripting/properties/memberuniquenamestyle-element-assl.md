@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MemberUniqueNameStyle Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cdfc060ddf692e2c4cd8fae2f15ebcac8a51a463
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dbe8b82f9f82327009875530e7750753705f48e8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>Élément MemberUniqueNameStyle (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Détermine comment des noms uniques sont générés pour les membres des hiérarchies contenues dans le [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md) élément.  
@@ -50,24 +48,24 @@ ms.lasthandoff: 12/08/2017
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*Natif*|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*Natif*|L'instance définit automatiquement les noms uniques des membres.|  
 |*NamePath*|L'instance génère un nom composé comprenant chaque niveau et la légende du membre.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’élément qui correspond au parent de **MemberUniqueNameStyle** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  

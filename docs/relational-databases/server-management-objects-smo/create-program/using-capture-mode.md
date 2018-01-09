@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,17 +21,17 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5632d4e1c8df64ae77f9da90fecbc81f9244c7fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76f407dc02ff95535c456f21debe3d208ff475e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-capture-mode"></a>Utilisation du mode de capture
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Programmes SMO peuvent capturer et enregistrer l’équivalent [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions émises par le programme à la place d’ou en plus, les instructions sont exécutées par le programme. Le mode de capture est activé au moyen de l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ou de la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
-## <a name="example"></a>Exemple  
-Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a> Exemple  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="enabling-capture-mode-in-visual-basic"></a>Activation du mode de capture en Visual Basic  

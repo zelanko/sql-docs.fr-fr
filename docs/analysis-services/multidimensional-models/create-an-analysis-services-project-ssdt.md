@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Créer un projet Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez définir une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de projet dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l’aide de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modèle de projet ou à l’aide de l’importation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant de base de données pour lire le contenu d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. Si aucune solution n'est chargée actuellement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la création d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée automatiquement une solution. Sinon, le nouveau projet de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sera ajouté à la solution existante. Meilleures pratiques pour un appel de développement de solutions afin de créer des projets distincts pour différents types de données d'application, à l'aide d'une seule solution si les projets sont liés. Par exemple, vous pouvez avoir une seule solution qui contient des projets distincts pour les packages Integration Services, les bases de données Analysis Services et les rapports Reporting Services qui sont tous utilisés par la même application de gestion.  

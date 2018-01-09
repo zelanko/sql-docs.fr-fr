@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6661b744ba630607b237f2754e9c22b1a5ec91df
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot pour SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mode assure l’hébergement sur serveur de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] les données dans une batterie de serveurs SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont un modèle de données analytiques que vous créez à l’aide de l’une des applications suivantes :  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  L’hébergement sur serveur de ces données requiert SharePoint, Excel Services et une installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Les données sont chargées sur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour les instances SharePoint où elles peuvent être actualisées selon des fréquences planifiées à l’aide de la fonction d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fournie par le serveur pour les classeurs Excel 2010, ou fournie par [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour les classeurs Excel 2013 et 2016.  
   
-## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot pour SharePoint 2016  
+## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot pour SharePoint 2016  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] prend en charge l’utilisation par [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 et [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] de classeurs Excel contenant des modèles de données et des rapports Power View [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Excel dans [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] comprend la fonctionnalité de modèle de données qui permet l’interaction avec un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans le navigateur. Vous n’avez pas besoin de déployer le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2016 dans la batterie de serveurs. Vous devez seulement installer un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et inscrire le serveur auprès de [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)].  

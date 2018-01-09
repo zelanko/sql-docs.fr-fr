@@ -5,12 +5,10 @@ ms.date: 06/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>Sécurité au niveau de l’objet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sécurité de modèle de données commence par la mise en oeuvre efficace [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md) et des filtres au niveau des lignes pour définir les autorisations utilisateur sur les objets de modèle de données et des données. À partir de modèles tabulaires de 1400, vous pouvez également définir au niveau de l’objet de sécurité, qui inclut la sécurité au niveau de la table et la sécurité au niveau de la colonne dans la [objet rôles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).

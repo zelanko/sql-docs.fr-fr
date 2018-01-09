@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StorageLocation Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c70315d8853bc4c4cc0d25154bbf21e341033f0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c942079a21d4727e1c125bf15ac837045c162ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="storagelocation-element-assl"></a>Élément StorageLocation (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient l’emplacement de stockage de système de fichiers pour le contenu de l’élément parent.  
@@ -49,13 +47,13 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Chaîne|  
+|Type de données et longueur|String|  
 |Valeur par défaut|Consultez le tableau ci-dessous.|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 |Ancêtre ou parent|Valeur par défaut|  
 |------------------------|-------------------|  
-|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Aucune|  
+|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|None|  
 |[Groupe de mesures](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|Valeur de **StorageLocation** de l'élément parent **Cube** .|  
 |[Partition](../../../analysis-services/scripting/objects/partition-element-assl.md)|Valeur de **StorageLocation** de l'élément parent **MeasureGroup** .|  
   
@@ -64,9 +62,9 @@ ms.lasthandoff: 12/08/2017
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les éléments qui correspondent aux parents de **StorageLocation** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, et <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Voir aussi  

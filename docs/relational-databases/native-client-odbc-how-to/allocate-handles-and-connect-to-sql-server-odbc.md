@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b0c8b1e797a91456ca3c2ed1337a2a9cffcc6d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87e3ab58220fd3b24a9e47c68bfa6a23de61f7a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allouer des handles et se connecter à SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  Appelez SQLConnect pour utiliser une source de données existante pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Ou  
+     ou  
   
      Appelez [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) à utiliser une chaîne de connexion pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple montre un appel à **SQLDriverConnect** pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans nécessiter une source de données ODBC existante. En passant une chaîne de connexion incomplète à **SQLDriverConnect**, le pilote ODBC inviter l’utilisateur à entrer les informations manquantes.  
   
 ```  

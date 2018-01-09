@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9627648fa47b750f4b9b98b45b5878cea0806961
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services Scripting Language (ASSL) représente la hiérarchie des objets sous la forme d’un ensemble de types d’éléments, chacun d’eux définit les éléments enfants qu’ils peuvent contenir.  
@@ -135,7 +133,7 @@ ms.lasthandoff: 12/08/2017
  **Long**  
  Valeur entière comprise entre -263 et 263 – 1.  
   
- **Chaîne**  
+ **String**  
  Valeur de chaîne conforme aux règles globales suivantes :  
   
 -   les caractères de contrôle sont supprimés ;  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/08/2017
 |Type de données XML|Valeur par défaut|  
 |-------------------|-------------------|  
 |**Booléen**|False|  
-|**Chaîne**|"" (chaîne vide)|  
+|**String**|"" (chaîne vide)|  
 |**Entier** ou **Long**|0 (zéro)|  
 |**Horodateur**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Frameworks **System.DateTime** avec 0 battement)|  
   

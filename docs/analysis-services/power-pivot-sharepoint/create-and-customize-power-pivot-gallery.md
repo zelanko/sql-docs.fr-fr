@@ -5,13 +5,10 @@ ms.date: 08/31/2015
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
+# <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Est un type spécial de la bibliothèque de documents SharePoint qui fournit une gestion de documents et d’aperçus pour les classeurs Excel publiés et les rapports Reporting Services qui contiennent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données.  
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  Les images d'aperçu reposent sur la façon dont le classeur est restitué par Excel Services. La représentation dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être identique à celle que vous voyez quand vous affichez un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un navigateur. L'aperçu a cependant une surface d'exposition limitée. Les parties d'un classeur ou rapport peuvent être réduites de façon à s'ajuster à l'espace disponible. Vous devrez peut-être ouvrir un classeur ou un rapport pour visualiser le document dans son intégralité.  
   
- L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d’informations, voir [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d’informations, voir [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Créer la Galerie PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est créée automatiquement lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] à l'aide de l'option d'installation Nouveau serveur. Si vous avez ajouté [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à une batterie de serveurs existante ou si vous voulez disposer d'une bibliothèque supplémentaire, vous pouvez en créer une pour votre application ou votre site.  

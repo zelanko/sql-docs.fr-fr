@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez un **source de données** de l’objet dans un modèle Analysis Services, un des paramètres que vous devez configurer est une option d’emprunt d’identité. Cette option détermine si Analysis Services utilise l'identité d'un compte d'utilisateur Windows spécifique lors d'opérations locales spécifiques associées à la connexion, telles que le téléchargement d'un fournisseur de données OLE DB ou la résolution d'informations de profil utilisateur dans des environnements qui prennent en charge les profils itinérants.  

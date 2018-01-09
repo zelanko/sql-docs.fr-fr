@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,16 +21,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b221b5f0e73224062b8c0d9a8aaec00f547fa610
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5e64785a1f71ecd88fb840b108de3f1e638bcc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Exemple : Création d’une alerte de l’Agent SQL Server avec le fournisseur WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Une façon courante d’utiliser le fournisseur d’événements WMI consiste à créer des alertes de l’Agent SQL Server qui répondent à des événements spécifiques. L'exemple suivant présente une alerte simple qui enregistre les événements du graphique de blocage XML dans une table pour leur analyse ultérieure. L'Agent SQL Server soumet une demande WQL, reçoit des événements WMI et exécute un travail en réponse à l'événement. Remarquez que, bien que plusieurs objets Service Broker soient impliqués dans le traitement du message de notification, le fournisseur d'événements WMI gère les détails de la création et de la gestion de ces objets.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  En premier lieu, une table est créée dans la base de données `AdventureWorks` pour contenir l'événement du graphique du blocage. La table contient deux colonnes : la colonne `AlertTime` contient l'heure à laquelle l'alerte s'exécute et la colonne `DeadlockGraph` contient le document XML qui inclut le graphique du blocage.  
   
  Ensuite, l'alerte est créée. Le script commence par créer le travail que l'alerte exécutera, ajoute une étape de travail au travail et cible le travail sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le script crée alors l'alerte.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714326df1756cb74b862c8145d7bff2facebdb1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>Élément KpiStatus (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément KpiStatus définit une référence à la colonne qui contient la valeur utilisée comme un indicateur d’état dans un indicateur de Performance clé (KPI).  
@@ -32,11 +30,11 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau suivant répertorie les éléments et les attributs qui définissent l'élément KpiStatus.  
   
-|Nom|Est obligatoire|Description|  
+|Nom   |Est obligatoire|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Oui|Référence à une colonne qui contient la valeur utilisée comme un indicateur d'état dans un indicateur de performance clé (KPI).<br /><br /> Cet élément DOIT contenir exactement une référence de colonne, tel que le définit le type TPropertyRefComplex.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **Tabulaire**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre un indicateur de performance clé de l'exemple de modèle tabulaire AdventureWorks. L'élément KpiStatus fait référence à une colonne (représentée en tant que PropertyRef) qui contient la valeur.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **(Multidimensionnel)**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre un indicateur de performance clé du cube Contoso Operations. L'élément KpiStatus référence une mesure qui calcule la valeur de l'état de l'indicateur de performance clé (KPI).  

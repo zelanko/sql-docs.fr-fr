@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b267fa74daf5c8ea83501eb3daadd5b84dc9cb7f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Classification de documents, messages électroniques ou autres objets ayant de nombreux attributs.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Considérez un groupe de personnes qui partagent des informations démographiques similaires et qui achètent des produits de la société Adventure Works. En modélisant les données à lier à un résultat spécifique, tel que l'achat d'un produit cible, vous pouvez voir comment les informations démographiques contribuent à la probabilité de l’achat du produit cible.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
  Les spécifications liées à un modèle de régression logistique sont les suivantes :  
   
- **Colonne à index unique** Chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+ **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
  **Colonnes d'entrée** Chaque modèle doit posséder au moins une colonne d'entrée qui contient les valeurs utilisées comme facteurs dans l’analyse. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Pour obtenir des exemples de requêtes sur un modèle de régression logistique, consultez [Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Ne prend pas en charge l’extraction. Cela est dû au fait que la structure des nœuds du modèle d'exploration de données ne correspond pas nécessairement directement aux données sous-jacentes.  
   

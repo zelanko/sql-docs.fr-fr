@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -39,11 +39,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a083805e95f9a7243767af436249ffb0858cae10
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 273c059ebeb3a0164da8f98811be88efe6247f0a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-types"></a>Types CLR définis par l'utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous donne la possibilité de créer des objets de base de données qui sont programmés par rapport à un assembly créé dans le.NET Framework common language runtime (CLR). Les objets de base de données pouvant tirer parti du modèle de programmation évolué fourni par le CLR comprennent les déclencheurs, les procédures stockées, les fonctions, les fonctions d'agrégation et les types.  

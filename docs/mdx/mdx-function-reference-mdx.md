@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -32,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c9e43eacb0fe9b5c5af98cfe54b557af93af7d1c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d6a0eecf1084cc17b1a2a08b7ef1c43c81d2e346
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-function-reference-mdx"></a>Guide de référence des fonctions MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,13 +47,13 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="array-functions"></a>Fonctions de tableau  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[SetToArray &#40; MDX &#41;](../mdx/settoarray-mdx.md)|Convertit un ou plusieurs jeux en tableau utilisé par une fonction définie par l'utilisateur.|  
   
 ## <a name="hierarchy-functions"></a>Fonctions de hiérarchie  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Hiérarchie &#40; MDX &#41;](../mdx/hierarchy-mdx.md)|Retourne la hiérarchie qui contient le membre ou le niveau spécifié.|  
 |[Dimension &#40; MDX &#41;](../mdx/dimension-mdx.md)|Retourne la dimension qui contient un membre, un niveau ou une hiérarchie spécifiés.|  
@@ -61,14 +61,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="level-functions"></a>Fonctions de niveau  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Niveau &#40; MDX &#41;](../mdx/level-mdx.md)|Retourne le niveau d'un membre.|  
 |[Niveaux &#40; MDX &#41;](../mdx/levels-mdx.md)|Retourne le niveau dont la position dans une dimension ou une hiérarchie est spécifiée par une expression numérique ou dont le nom est spécifié par une expression de chaîne.|  
   
 ## <a name="logical-functions"></a>Fonctions logiques  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[IsAncestor &#40; MDX &#41;](../mdx/isancestor-mdx.md)|Retourne une valeur indiquant si un membre spécifié est un ancêtre d'un autre membre spécifié.|  
 |[IsEmpty &#40; MDX &#41;](../mdx/isempty-mdx.md)|Retourne une valeur indiquant si l'expression évaluée est la valeur de la cellule vide.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="member-functions"></a>Fonctions de membre  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Ancêtre &#40; MDX &#41;](../mdx/ancestor-mdx.md)|Retourne l'ancêtre d'un membre au niveau spécifié ou à la distance spécifiée.|  
 |[ClosingPeriod &#40; MDX &#41;](../mdx/closingperiod-mdx.md)|Retourne le dernier frère parmi les descendants d'un membre à un niveau spécifique.|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="numeric-functions"></a>Fonctions numériques  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Agrégat &#40; MDX &#41;](../mdx/aggregate-mdx.md)|Retourne une valeur scalaire calculée par agrégation soit de mesures soit d'une expression numérique spécifiée éventuellement sur les tuples d'un jeu spécifié.|  
 |[AVG &#40; MDX &#41;](../mdx/avg-mdx.md)|Retourne la valeur moyenne des mesures ou la valeur moyenne d'une expression numérique facultative, évaluée sur un jeu spécifié.|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="set-functions"></a>Fonctions de jeu  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)|Retourne un jeu généré par l'ajout de membres calculés à un jeu spécifié.|  
 |[AllMembers &#40; MDX &#41;](../mdx/allmembers-mdx.md)|Retourne un jeu qui contient tous les membres de la dimension, de la hiérarchie ou du niveau spécifié, notamment les membres calculés.|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="string-functions"></a>Fonctions de chaîne  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Retourne la valeur d'une expression MDX évaluée sur le test de calcul spécifié d'un cube.|  
 |[CoalesceEmpty &#40; MDX &#41;](../mdx/coalesceempty-mdx.md)|Fusionne la valeur d'une cellule vide avec un nombre ou une chaîne et retourne la valeur fusionnée.|  
@@ -222,14 +222,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="subcube-functions"></a>Fonctions de sous-cube  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Ce &#40; MDX &#41;](../mdx/this-mdx.md)|Retourne le sous-cube actuel.|  
 |[Laisse &#40; MDX &#41;](../mdx/leaves-mdx.md)|Retourne le jeu des membres feuilles situés dans la dimension, le membre ou le tuple spécifié.|  
   
 ## <a name="tuple-functions"></a>fonctions de tuple  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Courant &#40; MDX &#41;](../mdx/current-mdx.md)|Retourne le tuple actif dans un jeu lors d'une itération.|  
 |[Élément &#40; Tuple &#41; &#40; MDX &#41;](../mdx/item-tuple-mdx.md)|Retourne un tuple d'un jeu.|  
@@ -238,7 +238,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="other-functions"></a>Autres fonctions  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Erreur &#40; MDX &#41;](../mdx/error-mdx.md)|Génère une erreur, et fournit éventuellement un message d'erreur spécifié.|  
   

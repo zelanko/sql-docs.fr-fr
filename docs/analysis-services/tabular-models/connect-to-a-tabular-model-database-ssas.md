@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Se connecter à une base de données model tabulaire (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Après avoir généré un modèle tabulaire et déployez-le sur un serveur en mode tabulaire de Analysis Services, vous devez définir des autorisations qui le rendent disponibles pour les applications clientes. Cette rubrique explique comment accorder des autorisations et comment se connecter à une base de données à partir d'applications clientes.  
   
 > [!NOTE]  
->  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+>  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  Cette rubrique contient les sections suivantes :  
   

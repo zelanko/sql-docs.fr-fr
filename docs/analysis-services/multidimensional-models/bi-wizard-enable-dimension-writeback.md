@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8f2ddac65e4ffbb24118a498f96dad83c2c138d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69390faf39311c3b7072e06aff2b64fcafd9a62c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>Assistant BI - Enable écriture différée de Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ajoutez l’amélioration de l’écriture différée de dimension dans un cube ou une dimension afin de permettre aux utilisateurs de modifier manuellement la structure de dimension et les membres. Les mises à jour dans une dimension activée en écriture sont enregistrées directement dans la table de la dimension. Cette amélioration modifie la définition de la propriété **WriteEnabled** pour une dimension.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="setting-dimension-writeback-capability"></a>Définition de la fonctionnalité d'écriture en différé de la dimension  
  Dans la deuxième page **Activer l’écriture différée de la dimension** de l’Assistant, vous paramétrez réellement l’option **Activer l’écriture différée de la dimension** . Quand cette option est automatiquement sélectionnée, la propriété **WriteEnabled** de la dimension a la valeur **True**. Quand cette option est automatiquement désactivée, la propriété a la valeur **False**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque vous créez un membre, vous devez inclure chaque attribut dans une dimension. Vous ne pouvez pas insérer un membre sans définir la valeur de l'attribut clé de la dimension. Par conséquent, la création de membres est soumise aux contraintes (telles que valeurs de clés non NULL) définies dans la table de dimension. Vous devez également tenir compte des colonnes éventuellement spécifiées par les propriétés de dimension, telles que les colonnes spécifiées dans les propriétés de dimension **CustomRollupColumn**, **CustomRollupPropertiesColumn** ou **UnaryOperatorColumn** .  
   
 > [!WARNING]  

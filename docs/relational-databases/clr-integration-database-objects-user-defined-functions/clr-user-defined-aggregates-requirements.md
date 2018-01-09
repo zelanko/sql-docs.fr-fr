@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46a1a0e60c7fbe667904388a4c1c8cae93ab827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 158b2aaa95f289a558f0d186e359903252f6d90e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Agrégats CLR définis par l’utilisateur - configuration requise
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un type dans un assembly du common language runtime (CLR) peut être enregistré comme une fonction d’agrégation définie par l’utilisateur, tant qu’elle implémente le contrat d’agrégation requis. Ce contrat se compose de la **SqlUserDefinedAggregate** attribut et l’agrégation des méthodes de contrat. Le contrat d’agrégation inclut le mécanisme permettant d’enregistrer l’état intermédiaire de l’agrégation et le mécanisme permettant d’accumuler de nouvelles valeurs, qui se compose de quatre méthodes : **Init**, **Accumulate**, **fusion**, et **Terminate**. Lorsque ces conditions sont satisfaites, vous serez en mesure de tirer pleinement parti des agrégats définis par l’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les sections suivantes de cette rubrique fournissent des détails supplémentaires sur la façon de créer et d'utiliser les agrégats définis par l'utilisateur. Pour obtenir un exemple, consultez [Invoking CLR User-Defined des fonctions d’agrégation](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="aggregation-methods"></a>Méthodes d'agrégation  
  La classe inscrite comme agrégat défini par l'utilisateur doit prendre en charge les méthodes d'instance suivantes. Ce sont les méthodes que le processeur de requêtes utilise pour calculer l'agrégation :  
   
-|Méthode|Syntaxe| Description|  
+|Méthode|Syntaxe|Description|  
 |------------|------------|-----------------|  
 |**Init**|`public void Init();`|Le processeur de requêtes utilise cette méthode pour initialiser le calcul de l'agrégation. Cette méthode est appelée une fois pour chaque groupe dont le processeur de requêtes effectue l'agrégation. Le processeur de requêtes peut choisir de réutiliser la même instance de la classe d'agrégation pour calculer des agrégats de plusieurs groupes. Le **Init** méthode doit effectuer tout nettoyage nécessaire à partir des utilisations précédentes de cette instance et lui permettre de redémarrer un nouveau calcul d’agrégation.|  
 |**Accumuler**|`public void Accumulate ( input-type value[, input-type value, ...]);`|Un ou plusieurs paramètres représentant les paramètres de la fonction. *INPUT_TYPE* doit être managé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données équivalent à natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données spécifié par *input_sqltype* dans les **CREATE AGGREGATE** instruction. Pour plus d’informations, consultez [de mappage de données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Pour les types définis par l'utilisateur (UDT), le type d'entrée est le même que le type UDT. Le processeur de requêtes utilise cette méthode pour accumuler les valeurs d'agrégation. La méthode est appelée une fois pour chaque valeur dans le groupe qui fait l'objet de l'agrégation. Le processeur de requêtes l’appelle toujours uniquement après avoir appelé la **Init** méthode sur l’instance donnée de la classe d’agrégation. L'implémentation de cette méthode doit mettre à jour l'état de l'instance pour refléter l'accumulation de la valeur d'argument qui est passée.|  

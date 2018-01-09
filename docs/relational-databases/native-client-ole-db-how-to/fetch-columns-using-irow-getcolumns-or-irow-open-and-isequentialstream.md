@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2fc0087288e8c166bc479a3bc08f04033158d26a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7c4f6cea711edcae4f110ce682ef99fbaa5d063
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Utilisez **ISequentialStream::Read()** à plusieurs reprises pour lire le nombre spécifié d’octets dans la mémoire tampon du consommateur.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple montre comment extraire une seule ligne avec IRow. Dans cet exemple, une colonne est récupérée à la fois de la ligne. Cet exemple illustre l'utilisation de IRow::Open() ainsi que de IRow::GetColumns(). Pour lire les données de la colonne, l'exemple utilise ISequentialStream::Read.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  

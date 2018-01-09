@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connexion à partir d'applications clientes (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si vous ne connaissez pas Analysis Services, utilisez les informations de cette rubrique pour vous connecter à une instance existante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide d’applications et les outils courants. Cette rubrique explique également comment se connecter sous différentes identités d'utilisateur à des fins de test.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
  La réussite des connexions dépend d'une configuration de port valide et d'autorisations utilisateur appropriées. Cliquez sur les liens suivants pour plus d'informations sur chaque exigence.  
   
--   [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
      Pour une instance nommée, le nom du serveur doit être spécifié selon le format suivant : nom serveur\nom instance. ADV-SRV062\Finance constitue un exemple de cette convention d'affectation des noms pour un serveur dont le nom réseau est ADV-SRV062, et sur lequel Analysis Services a été installé en tant qu'instance nommée portant le nom Finance.  
   
-     Pour les serveurs déployés dans un cluster de basculement, connectez-vous à l'aide du nom réseau du cluster SSAS. Ce nom est spécifié pendant l'installation de SQL Server, comme **Nom réseau SQL Server**. Notez que si vous avez installé SSAS comme instance nommée sur un cluster de basculement Windows Server (WSFC), vous n'ajoutez jamais le nom de l'instance pour la connexion. Cette pratique est propre à SSAS ; en revanche, une instance nommée du moteur de base de données relationnelle cluster inclut le nom de l'instance. Par exemple, si vous avez installé SSAS et le moteur de base de données en tant qu'instance nommée (Contoso-Accounting) avec un nom réseau SQL Server SQL-CLU, vous vous connecteriez à SSAS en utilisant « SQL-CLU », et au moteur de base de données en tant que « SQL-CLU\Contoso-Accounting ». Consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) pour plus d'informations et des exemples.  
+     Pour les serveurs déployés dans un cluster de basculement, connectez-vous à l'aide du nom réseau du cluster SSAS. Ce nom est spécifié pendant l'installation de SQL Server, comme **Nom réseau SQL Server**. Notez que si vous avez installé SSAS comme instance nommée sur un cluster de basculement Windows Server (WSFC), vous n'ajoutez jamais le nom de l'instance pour la connexion. Cette pratique est propre à SSAS ; en revanche, une instance nommée du moteur de base de données relationnelle cluster inclut le nom de l'instance. Par exemple, si vous avez installé SSAS et le moteur de base de données en tant qu'instance nommée (Contoso-Accounting) avec un nom réseau SQL Server SQL-CLU, vous vous connecteriez à SSAS en utilisant « SQL-CLU », et au moteur de base de données en tant que « SQL-CLU\Contoso-Accounting ». Consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) pour plus d'informations et des exemples.  
   
      Pour les serveurs déployés dans un cluster d'équilibrage de la charge réseau, connectez-vous à l'aide du nom du serveur virtuel d'équilibrage de la charge réseau.  
   

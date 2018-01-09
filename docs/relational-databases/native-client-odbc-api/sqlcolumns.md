@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32a52df92152204237756ffcc07bafdbcd69c260
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f539f5202717a5eb58929a9be9ea7945687cbb4e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par le jeu de résultats :  
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les **varchar (max)** des types de données.|  
 |TYPE_NAME|Retourne « varchar », « varbinary » ou « nvarchar » pour le **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** des types de données.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Prise en charge SQLColumns pour les colonnes éparses  
  Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des colonnes spécifiques qui ont été ajoutés au jeu de résultats pour SQLColumns :  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Si la colonne est la **column_set** colonne, sql_true ; sinon, SQL_FALSE.|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5ead98887f8773a1bdb26d1b7f6a2f2cb5447bc6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Applet de commande Invoke-ASCmd
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Permet à un administrateur de base de données exécuter un script XMLA, MDX (Multidimensional Expressions), instructions des Extensions DMX (Data Mining) ou l’écriture de scripts langage TMSL (Tabular Model).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
  Pour XMLA, les commandes suivantes sont prises en charge : Alter, Backup, Batch, BeginTransaction, Cancel, ClearCache, CommitTransaction, Create, Delete, DesignAggregations, Drop, Insert, Lock, MergePartitions, NotifyTableChange, Process, Restore, RollbackTransaction, Statement (utilisée pour l’exécution de requêtes MDX et d’instructions DMX), Subscribe, Synchronize, Unlock, Update et UpdateCells.  
   
- Pour TMSL, il s’agit des commandes suivantes : Alter, Create, Delete, MergePartitions, Process, Update.  
+ Pour TMSL, il s’agit des commandes suivantes : Alter, Create, Delete, MergePartitions, Process, Update.  
   
  Cette applet de commande prend en charge le paramètre –Credential, qui peut être utilisé si vous avez configuré l'instance Analysis Services pour l'accès HTTP. Le paramètre –Credential accepte un objet PSCredential qui fournit une identité d'utilisateur Windows. IIS emprunte l'identité de cet utilisateur lors de la connexion à Analysis Services. L'identité doit avoir des autorisations d'administrateur système sur l'instance Analysis Services pour exécuter le script.  
   
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |Entrées|PSObject|  
-|Sorties|Chaîne|  
+|Sorties|String|  
   
 ## <a name="example-1-xmla-input-file"></a>Exemple 1 (fichier d’entrée XMLA)  
   
@@ -227,7 +227,7 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 ```  
   
 ## <a name="example-2-tmsl-input-file"></a>Exemple 2 (fichier d’entrée TMSL)  
- Cet exemple est identique au premier, sauf que le script est de type TMSL (JSON) et nécessite une instance tabulaire de SQL Server 2016. Vous pouvez générer un script TMSL dans SQL Server Management Studio.  
+ Cet exemple est identique au premier, sauf que le script est de type TMSL (JSON) et nécessite une instance tabulaire de SQL Server 2016. Vous pouvez générer un script TMSL dans SQL Server Management Studio.  
   
  Si vous disposez de plusieurs instances et que votre instance tabulaire est une instance nommée, n’oubliez pas de définir le nom du serveur :  
   

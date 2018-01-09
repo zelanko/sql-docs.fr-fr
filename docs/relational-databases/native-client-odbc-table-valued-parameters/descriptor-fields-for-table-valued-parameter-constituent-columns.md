@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), descriptor fields for constituent columns
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce147a95062988c0719f53c2bf6572a4a02954ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c274a80980586881aa5faf2b2490acec7b97b7c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Champs de descripteur pour les colonnes constituantes des paramètres table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,16 +30,16 @@ ms.lasthandoff: 11/17/2017
 
   Les champs de descripteur de paramètre table décrites dans cette section sont manipulés en utilisant [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) et [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) avec le handle pour le descripteur de paramètre d’implémentation (IPD).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  SQL_DESC_AUTO_UNIQUE_VALUE est utilisé pour les paramètres table ainsi que pour d'autres fonctionnalités.  
   
-|Nom de l'attribut|Type| Description|  
+|Nom de l'attribut|Type|Description|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indique que cette colonne est une colonne d'identité.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]peut utiliser ces informations pour optimiser les performances, mais les applications ne doivent pas de le définir pour les colonnes d’identité.|  
   
  Les attributs suivants sont ajoutés à tous les types de paramètres du descripteur de paramètre d'application (APD, Application Parameter Descriptor) et du descripteur IPD :  
   
-|Nom de l'attribut|Type| Description|  
+|Nom de l'attribut|Type|Description|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indique que cette colonne est calculée.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]peut utiliser ces informations pour optimiser les performances, mais les applications ne doivent pas définir pour les colonnes calculées.<br /><br /> Cet attribut est ignoré pour les liaisons qui ne sont pas des colonnes de paramètres table.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE indique qu'une colonne de paramètre table participe à une clé unique. Cela peut accroître les performances des requêtes. Cet attribut est ignoré pour les liaisons qui ne sont pas des colonnes de paramètres table.|  

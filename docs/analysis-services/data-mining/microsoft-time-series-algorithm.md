@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fournit plusieurs algorithmes qui sont optimisés pour prévoir les valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
  Les prédictions croisées sont une fonctionnalité importante de l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series). Si vous effectuez l'apprentissage de l'algorithme avec deux séries distinctes mais connexes, vous pouvez utiliser le modèle résultant pour prédire le résultat d'une série en fonction du comportement de l'autre série. Par exemple, les ventes constatées d'un produit peuvent influencer les prévisions de ventes d'un autre produit.  La prédiction croisée est également utile pour créer un modèle global qui peut s'appliquer à plusieurs séries. Par exemple, les prédictions pour une région particulière sont instables, car la série n'a pas de données de bonne qualité.  Vous pouvez instruire un modèle global sur une moyenne de l'ensemble des quatre régions, puis appliquer le modèle aux différentes séries pour créer des prédictions plus stables pour chaque région.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'équipe dirigeante de la société [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] souhaite prédire les ventes mensuelles de vélos pour l'année à venir. La société veut tout particulièrement savoir si la vente d'un modèle de vélo peut être utilisée pour prédire la vente d'un autre modèle. En appliquant l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) aux données historiques des trois dernières années, la société peut créer un modèle d'exploration de données pour prévoir les futures ventes de vélos. De plus, la société peut effectuer des prédictions croisées afin de déterminer si les tendances des ventes de différents modèles de vélos sont liées entre elles.  
   
  Chaque trimestre, la société projette de mettre à jour le modèle avec les données de ventes récentes ainsi que leurs prédictions pour modeler des tendances récentes. Pour corriger les magasins qui n'effectuent pas une mise à jour correcte ou régulière des données de ventes, elle créera un modèle de prédiction global et l'utilisera pour créer des prédictions pour toutes les régions.  
@@ -111,8 +109,8 @@ ms.lasthandoff: 12/08/2017
   
 |TimeID|Product|Ventes|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Objet|1000|600|  
-|2/2001|Objet|1100|500|  
+|1/2001|Un|1000|600|  
+|2/2001|Un|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Un modèle de série chronologique peut effectuer des prédictions qui diffèrent, quelquefois considérablement, selon le système d'exploitation 64 bits que le serveur utilise. Ces différences se produisent car un système [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]représente et gère des nombres pour l'arithmétique à virgule flottante différemment d'un système [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]. Dans la mesure où les résultats de prédiction peuvent être spécifiques au système d'exploitation, nous vous recommandons d'évaluer les modèles sur le système d'exploitation que vous utiliserez en production.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Ne prend pas en charge l'utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d'exploration de données.  
   

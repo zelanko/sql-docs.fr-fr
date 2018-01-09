@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07588cbc2548028565db1f0d6da706d48bf0540b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algorithme MLR (Microsoft Linear Regression)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de régression linéaire est une variante de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’arbres de décision qui vous permet de calculer une relation linéaire entre une variable dépendante et indépendante et ensuite utiliser cette relation pour la prédiction.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
   
  Il existe d'autres types de régression qui font appel à plusieurs variables ainsi que les méthodes non linéaires de régression. Toutefois, la régression linéaire est une méthode utile et connue pour modéliser une réponse à une modification dans certain facteur sous-jacent.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Vous pouvez utiliser la régression linéaire pour déterminer une relation entre deux colonnes continues. Par exemple, vous pouvez utiliser la régression linéaire pour calculer une courbe de tendance à partir de données de fabrication ou de ventes. Vous pouvez aussi utiliser la régression linéaire en précurseur du développement de modèles d'exploration de données plus complexes afin d'évaluer les relations parmi les colonnes de données.  
   
  Même s’il y a de nombreuses méthodes pour calculer la régression linéaire qui ne nécessitent pas d’outils d’exploration de données, l’avantage de l’utilisation de l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) pour cette tâche est de pouvoir calculer et tester automatiquement toutes les relations possibles parmi les variables. Vous n'êtes pas obligé de sélectionner une méthode de calcul, telle que la résolution des moindres carrés. Toutefois, la régression linéaire peut simplifier à l'extrême les relations dans les scénarios où plusieurs facteurs affectent le résultat.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  En plus de créer un modèle de régression linéaire en sélectionnant l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), si l’attribut prédictible est un type de données numérique continu, vous pouvez créer un modèle d’arbre de décision qui contient des régressions. Dans ce cas, l'algorithme fractionne les données lorsqu'il recherche des points de séparation appropriés, mais pour certaines régions de données, il crée à la place une formule de régression. Pour plus d’informations sur les arbres de régression dans un modèle d’arbres de décision, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   

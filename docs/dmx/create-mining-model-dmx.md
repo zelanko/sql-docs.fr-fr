@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 279d4750f6264cbffb07e26a0d75317a1457cb56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3c4720b0ecb2dcf3aa17f250a30f106ddd1e941f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +70,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [de lignes DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consultez [propriétés d’exploration de données](../analysis-services/server-properties/data-mining-properties.md).  
   
  *liste de paramètres*  
- Ce paramètre est facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *Chaîne XML*  
  (Pour utilisateurs expérimentés uniquement). Modèle XML encodé (PMML). La chaîne doit être entourée de guillemets simples (').  
@@ -131,7 +129,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Utilisez une clause de prévision pour décrire de quelle manière la colonne de prévision est utilisée. Le tableau suivant décrit les deux clauses possibles.  
   
-|\<PRÉDICTION > clause| Description|  
+|\<PRÉDICTION > clause|Description|  
 |---------------------------|-----------------|  
 |**PREDICT**|Cette colonne peut être prédite par le modèle, et elle peut être fournie à des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
 |**PREDICT_ONLY**|Cette colonne peut être prédite par le modèle, mais ses valeurs ne peuvent pas être utilisées dans des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
@@ -145,7 +143,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Pour obtenir la liste des paramètres qui sont associés à chaque algorithme, consultez [algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si vous souhaitez créer un modèle qui a un jeu de données de test intégré, vous devez utiliser l'instruction CREATE MINING STRUCTURE suivie de ALTER MINING STRUCTURE. Toutefois, les types de modèles ne prennent pas tous en charge un jeu de données d'exclusion. Pour plus d’informations, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Pour une procédure pas à pas comment créer un modèle d’exploration de données à l’aide de l’instruction CREATEMODEL, consultez [didacticiel sur DMX de prédiction de série chronologique](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -211,6 +209,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>Voir aussi  
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

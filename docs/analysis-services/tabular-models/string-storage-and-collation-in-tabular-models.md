@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90b110552e0ea5469258581c1d1e26d4ebd86d36
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b6a2cd9235163e6586edb21e71f24bc8d1d1c4b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Stockage de chaîne et classement dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Chaînes (valeurs texte) sont stockées dans un format fortement compressé dans les modèles tabulaires ; en raison de cette compression, vous pouvez obtenir des résultats inattendus lorsque vous récupérez des chaînes entières ou partielles. En outre, comme les paramètres régionaux et les classements de chaîne sont hérités hiérarchiquement de l'objet parent le plus proche, si le langage de chaîne n'est pas défini explicitement, les paramètres régionaux et le classement du parent peuvent affecter la façon dont chaque chaîne est stockée et si la chaîne doit être unique ou combinée avec des chaînes semblables tel que le défini le classement parent.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 >  Vous pouvez décider de définir la première chaîne à stocker, en fonction de ce que vous considérez correct, mais cette opération peut être très difficile à effectuer. Il n'existe aucun moyen simple de déterminer à l'avance quelle ligne doit être traitée en premier par le moteur, étant donné que toutes les valeurs sont considérées comme identiques. Au lieu de cela, si vous devez définir la valeur standard, vous devez nettoyer toutes vos chaînes avant de charger le modèle.  
   
 ## <a name="locale-and-collation-order"></a>Ordre des paramètres régionaux et de classement  
- Lors de la comparaison de chaînes (valeurs texte), ce qui définit l'équivalence est normalement l'aspect culturel de la façon dont ces chaînes sont interprétées. Dans certaines cultures un accent ou la mise en majuscules d'un caractère peut changer complètement la signification de la chaîne ; par conséquent, généralement ces différences sont prises en compte pour déterminer l'équivalence dans n'importe quelle langue ou région spécifique.  
+ Lors de la comparaison de chaînes (valeurs texte), ce qui définit l'équivalence est normalement l'aspect culturel de la façon dont ces chaînes sont interprétées. Dans certaines cultures un accent ou la mise en majuscules d'un caractère peut changer complètement la signification de la chaîne ; par conséquent, généralement ces différences sont prises en compte pour déterminer l'équivalence dans n'importe quelle langue ou région spécifique.  
   
  Généralement, lorsque vous utilisez votre ordinateur elle est déjà configurée pour correspondre à vos propres attentes culturelles et comportement linguistique, et les opérations de chaîne, telles que le tri et la comparaison des valeurs texte se comportent de la façon attendue. Les paramètres qui contrôlent le comportement spécifique à une langue sont définis par les **paramètres régionaux** dans Windows. Les applications lisent ces paramètres et modifient leur comportement en conséquence. Dans certains cas, une application peut avoir une fonctionnalité qui vous permet de modifier le comportement culturel de l'application ou la façon dont les chaînes sont comparées.  
   

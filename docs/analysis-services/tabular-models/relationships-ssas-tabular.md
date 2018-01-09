@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
@@ -39,34 +37,34 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="what"></a> Avantages  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
-|CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|Nom   |EMail|DiscountRate|OrderID|OrderDate|Product|Quantité|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+| 1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+| 1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  Cette approche peut fonctionner, mais elle implique le stockage de nombreuses données redondantes, telles que l'adresse de messagerie du client pour chaque commande. Le stockage est bon marché, mais vous devez vous assurer de mettre à jour chaque ligne pour ce client si l'adresse de messagerie change. Une solution à ce problème consiste à fractionner les données en plusieurs tables et à définir des relations entre ces tables. C’est l’approche utilisée dans *bases de données relationnelles* que SQL Server. Par exemple, une base de données que vous importez dans un modèle peut représenter les données des commandes en utilisant trois tables associées :  
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|Nom|EMail|  
+|[CustomerID]|Nom   |EMail|  
 |--------------------|----------|-----------|  
-|1|Ashton|chris.ashton@contoso.com|  
+| 1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|1|.05|  
+| 1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantity|  
+|[CustomerID]|OrderID|OrderDate|Product|Quantité|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1|256|2010-01-07|Compact Digital|11|  
-|1|255|2010-01-03|SLR Camera|15|  
+| 1|256|2010-01-07|Compact Digital|11|  
+| 1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  Si vous importez ces tables à partir de la même base de données, l’Assistant Importation de table peut détecter les relations entre les tables en fonction des colonnes qui sont entre [crochets] et reproduire ces relations dans le générateur de modèles. Pour plus d'informations, consultez [« Détection automatique et inférence des relations »](#detection) dans cette rubrique. Si vous importez des tables provenant de plusieurs sources, vous pouvez créer manuellement des relations, comme décrit dans [créer une relation entre deux Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
@@ -179,7 +177,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer une relation entre deux tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
 |[Supprimer des relations](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  

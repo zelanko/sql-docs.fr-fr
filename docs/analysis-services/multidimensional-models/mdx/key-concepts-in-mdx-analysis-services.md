@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concepts clés dans MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Avant de pouvoir utiliser MDX (Multidimensional Expressions) pour interroger des données multidimensionnelles ou créer des expressions MDX dans un cube, vous pour devez comprendre les termes et concepts multidimensionnels.  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **Dimensions de base de données et dimensions de cube**. Dans un modèle, vous pouvez définir des dimensions autonomes qui sont ensuite incluses dans un nombre quelconque de cubes du même modèle. Lorsque vous ajoutez une dimension à un cube, elle porte le nom de dimension de cube. Seule dans un projet, en tant qu'élément autonome dans l'Explorateur d'objets, elle porte le nom de dimension de base de données. Pourquoi cette distinction ? Car vous pouvez définir des propriétés dessus indépendamment. Dans la documentation du produit, les deux termes sont employés. Il convient donc de bien comprendre leur signification.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  Maintenant que vous avez compris la terminologie et saisi les concepts importants, vous pouvez continuer avec ces rubriques supplémentaires qui expliquent plus en détails les concepts fondamentaux d'Analysis Services :  
   
 -   [Requête MDX de base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  

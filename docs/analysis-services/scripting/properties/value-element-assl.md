@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Value Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3363b3650dc93718e04fa2365c5f0537bfc602e5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 007c2b2da48f72655bfd131eedf61db9f8989a3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="value-element-assl"></a>Élément Value (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la valeur de l’élément parent.  
@@ -50,23 +48,23 @@ ms.lasthandoff: 12/08/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Consultez le tableau ci-dessous.|  
-|Valeur par défaut|Aucune|  
+|Valeur par défaut|None|  
 |Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 |Ancêtre ou parent|Type de données|  
 |------------------------|---------------|  
 |[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)|Tout simpleType|  
 |[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|Tout simpleType|  
-|Autres|Chaîne|  
+|Autres|String|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md), [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md), [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md), [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md), [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md), [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **valeur** élément contient la valeur associée à l’objet parent. La valeur attendue de la **valeur** élément varie en fonction de l’élément parent, comme décrit dans le tableau suivant.  
   
 |Élément parent|Valeur attendue|  

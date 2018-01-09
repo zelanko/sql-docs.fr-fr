@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_KPIS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 273adea0694ae9b59b2a49f26d04165c3fe948d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemakpis-rowset"></a>Ensemble de lignes MDSCHEMA_KPIS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les indicateurs de performance clés (KPI) dans une base de données.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_KPIS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Base de données source.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Non pris en charge.|  
@@ -64,10 +62,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM_ICP**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_ICP**|**DBTYPE_WSTR**|Facultatif.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de **1**. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> **1** CUBE<br /><br /> **2** DIMENSION|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|ODBC
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f28bf395b36900f23e20f826c8badd7a8310f01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ab8ca0cedf17f38b55750f06e401232ff495b0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Statistiques relatives au profil de l'application  
   
-|Champ SQLPERF| Description|  
+|Champ SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Résolution minimale de l'heure du serveur en millisecondes. Elle est signalée habituellement sous la forme 0 (zéro) et doit être prise en considération uniquement si le nombre indiqué est de grande taille. Si la résolution minimale de l'heure du serveur est supérieure à l'intervalle probable de certaines statistiques basées sur l'horloge, il est possible qu'il y ait augmentation de ces statistiques.|  
 |SQLidu|Nombre d'instructions INSERT, DELETE ou UPDATE après SQL_PERF_START.|  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Statistiques relatives au temps  
   
-|Champ SQLPERF| Description|  
+|Champ SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Durée cumulative de traitement du pilote après SQL_PERF_START, incluant la durée d'attente des réponses du serveur.|  
 |msNetworkServerTime|Durée cumulative d'attente des réponses du serveur par le pilote.|  

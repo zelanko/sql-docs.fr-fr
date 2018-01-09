@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNMEMBERBOTTOM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a0b8ce3ba24d95b276143629d11051f93c65f18c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aa91524e15441d2e11945dcda798d86aa16b0945
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  Mot clé permettant d'activer les membres calculés à inclure dans les résultats de l'extraction vers le bas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une expression numérique est spécifiée, la **DrilldownMemberBottom** fonction trie, par ordre croissant, les enfants de chaque membre dans le premier jeu, en fonction de la valeur de l’expression numérique, telle qu’évaluée sur le jeu de membres enfants. Si aucune expression numérique n'est spécifiée, cette fonction trie, par ordre croissant, les enfants de chaque membre dans le premier jeu selon les valeurs des cellules représentées par le jeu des membres enfants, comme le détermine le contexte de la requête. Ce comportement est semblable aux fonctions BottomCount et Tail (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
   
  Après le tri, le **DrilldownMemberBottom** fonction retourne un jeu qui contient les membres parents et le nombre de membres enfants spécifiés dans *Count,* avec la valeur la plus basse et contenues dans les deux ensembles.  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après avoir conçu et traité un modèle d’exploration de données à l’aide des données à partir de la structure d’exploration de données sous-jacente, le modèle d’exploration de données est terminé et qu’il contient *contenu du modèle d’exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
@@ -84,8 +82,8 @@ ms.lasthandoff: 12/08/2017
   
 |NODE_TYPE ID|Étiquette de nœud|Contenu de nœud|  
 |-------------------|----------------|-------------------|  
-|1|Modèle|Nœud de métadonnées et de contenu racine. S'applique à tous les types de modèle.|  
-|2|Arborescence|Nœud racine d'un arbre de classification. S'applique aux modèles d'arbre de décision|  
+| 1|Modèle|Nœud de métadonnées et de contenu racine. S'applique à tous les types de modèle.|  
+|2|trEE|Nœud racine d'un arbre de classification. S'applique aux modèles d'arbre de décision|  
 |3|Intérieur|Nœud fractionné intérieur dans une arborescence. S'applique aux modèles d'arbre de décision|  
 |4|Distribution|Nœud de terminaison d'une arborescence. S'applique aux modèles d'arbre de décision|  
 |5|Cluster|Cluster détecté par l'algorithme. S'applique aux modèles de clustering et aux modèles Sequence Clustering.|  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/08/2017
 >  Certains modèles, tels que ceux créés par l'algorithme MNR (Microsoft Neural Network), contiennent aussi un type de nœud spécial qui fournit des statistiques descriptives sur les données d'apprentissage du modèle entier. Par définition, ces nœuds n'ont jamais de nœuds enfants.  
   
 ### <a name="node-distribution"></a>node distribution  
- La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
+ La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
   
 > [!NOTE]  
 >  La table NODE_DISTRIBUTION peut être vide, selon le type de nœud. Par exemple, certains nœuds servent uniquement à organiser une collection de nœuds enfants, et ce sont les nœuds enfants qui contiennent les statistiques détaillées.  
@@ -221,12 +219,12 @@ ms.lasthandoff: 12/08/2017
   
 |ID VALUE_TYPE|Étiquette de valeur|Nom de type de valeur|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L’état **Missing** est calculé séparément des attributs qui ont des valeurs.|  
+| 1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L’état **Missing** est calculé séparément des attributs qui ont des valeurs.|  
 |2|Existing|Indique que les données de cas contiennent une valeur pour cet attribut.|  
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discrétisé|Indique que l'attribut contient des valeurs numériques qui ont été discrétisées. La valeur sera une chaîne mise en forme qui décrit les compartiments de discrétisation.|  
-|6|Existing|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
+|6|Existant|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
 |7|Coefficient|Indique une valeur numérique qui représente un coefficient.<br /><br /> Un coefficient est une valeur appliquée lors du calcul de la valeur de la variable dépendante. Par exemple, si votre modèle crée une formule de régression qui prédit le revenu selon l’âge, le coefficient est utilisé dans la formule qui relie l'âge au revenu.|  
 |8|Gain du score|Indique une valeur numérique qui représente le gain de score pour un attribut.|  
 |9|Statistiques|Indique une valeur numérique qui représente une statistique pour un régresseur.|  
@@ -258,9 +256,9 @@ ms.lasthandoff: 12/08/2017
   
  Par exemple, si l'alimentation de tous les clients dans un arbre de décision est répartie de manière égale par sexe (et aucune valeur ne manque), la probabilité des nœuds enfants doit être .5. Toutefois, supposons que chacun des nœuds pour le sexe est également divisé par niveaux de revenu, Élevé, Moyen, et Bas. Dans ce cas, le score MARGINAL_PROBABILITY pour chaque nœud enfant doit toujours être .33 mais la valeur NODE_PROBABILTY sera le produit de toutes les probabilités qui mènent à ce nœud et donc toujours inférieure à la valeur MARGINAL_PROBABILITY.  
   
-|Niveau de nœud/attribut et valeur|probabilité marginale|probabilité du nœud|  
+|Niveau de nœud/attribut et valeur|Probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
-|Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
+|Racine du modèle<br /><br /> Tous les clients cibles| 1| 1|  
 |Clients cibles répartis par sexe|.5|.5|  
 |Clients cibles répartis par sexe, et répartis de nouveau en trois directions selon le revenu|.33|.5 * .33 = .165|  
   
@@ -280,9 +278,9 @@ ms.lasthandoff: 12/08/2017
   
 |Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  
-|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)|  
+|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md)|  
 |Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  

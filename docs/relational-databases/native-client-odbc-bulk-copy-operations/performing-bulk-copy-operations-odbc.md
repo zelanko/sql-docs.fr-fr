@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2756cf41ac8b33fb542b37faa75b603b0783228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d8de08d636104294453187fee964212284bb66e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Exécution d'opérations de copie en bloc (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d’informations sur l’utilisation de la journalisation minimale, consultez [conditions préalables pour la journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lors de l'utilisation de bcp.exe dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, il se peut que vous rencontriez des erreurs là où il n'en existait pas avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La raison en est que dans les versions ultérieures, bcp.exe n'effectue plus la conversion implicite des types de données. Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], bcp.exe convertissait les données numériques en type de données money, si la table cible avait un tel type. Toutefois, dans ce cas, bcp.exe tronquait simplement les champs supplémentaires. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], quand les types de données ne correspondent pas entre le fichier et la table cible, bcp.exe déclenche une erreur s'il existe des données qui devraient être tronquées pour contenir dans la table cible. Pour résoudre cette erreur, corrigez les données de sorte qu'elles correspondent au type de données cible. Le cas échéant, utilisez bcp.exe à partir d'une version antérieure à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  

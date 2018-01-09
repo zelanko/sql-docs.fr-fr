@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: df64c85fb5aa9034bc9f4c77a3ac54f98e379ecf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4dbed7c8217e5ea7a14d07c2c75a3c3857fd7cb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
  Les applications peuvent spécifier par programme des noms principaux de service en tant qu'attributs de connexion, au lieu de spécifier des mots clés de chaînes de connexion. Cela peut permettre de gérer la fragmentation du regroupement de connexions.  
   
- Les applications doivent prendre en compte le fait que les noms principaux de service dans les chaînes de connexion peuvent être substitués en définissant les attributs de connexion correspondants ; toutefois, les chaînes de connexion utilisées par le regroupement de connexions tirent parti des valeurs de chaînes de connexion à des fins de regroupement.  
+ Les applications doivent prendre en compte le fait que les noms principaux de service dans les chaînes de connexion peuvent être substitués en définissant les attributs de connexion correspondants ; toutefois, les chaînes de connexion utilisées par le regroupement de connexions tirent parti des valeurs de chaînes de connexion à des fins de regroupement.  
   
 ## <a name="down-level-server-behavior"></a>Comportement de serveur de bas niveau  
  Le nouveau comportement de connexion est implémenté par le client ; par conséquent, il n'est pas spécifique à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspects liés à la gestion des noms principaux de service spécifiés par les applications  
  Au moment de choisir s'il faut spécifier des noms principaux de service dans une application (via les chaînes de connexion) ou par programme via les propriétés de connexion (au lieu de recourir aux noms principaux de service par défaut générés par le fournisseur), prenez en considération les facteurs suivants :  
   
--   Sécurité : est-ce que le nom principal de service spécifié divulgue des informations protégées ?  
+-   Sécurité : est-ce que le nom principal de service spécifié divulgue des informations protégées ?  
   
 -   Fiabilité : Pour activer l’utilisation de noms principaux de service par défaut, le compte de service dans lequel le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécute d’instance doit disposer des privilèges suffisants pour mettre à jour d’Active Directory sur le KDC.  
   

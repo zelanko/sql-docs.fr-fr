@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: row Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 31ce205d17095d2a6df40adb7ce0be64f883b5f4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e28026dda3ddb43e1ed43ac427851b8fa4ff773c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="row-element-xmla"></a>Élément row (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une ligne unique de données pour un [racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui contient les données sous forme de tableau retournées par une [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
@@ -52,8 +50,8 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |Éléments parents|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (à l’aide de la [ensemble de lignes](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) type de données)|  
 |Éléments enfants|Un ou plusieurs éléments de colonne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Chaque ligne retournée par un élément **root** contenant des données sous forme de tableau a un élément **row** correspondant. Chaque colonne dans l'élément **root** est représentée par un élément XML distinct. La valeur de la colonne pour l'élément **row** correspond aux données figurant dans l'élément XML, et le nom de la colonne correspond au nom de l'élément XML.  
   
  Il existe deux moyens d'exprimer une valeur NULL pour une colonne au sein d'une ligne :  

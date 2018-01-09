@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excel Services vous permet de spécifier les emplacements qui constituent des référentiels valides pour les classeurs que vous ouvrez sur un serveur SharePoint. Ces emplacements sont appelés « emplacements approuvés ». Vous pouvez utiliser des paramètres de configuration différents pour chaque emplacement approuvé créé. Dans le cas d’un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, vous pouvez envisager de créer un emplacement approuvé pour les sites qui contiennent des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , afin d’appliquer les paramètres les mieux adaptés à l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tout en conservant les paramètres par défaut pour le reste de la batterie de serveurs.  
   
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Vous devez être administrateur de service ou de batterie de serveurs pour désigner une URL comme emplacement approuvé.  
   
  Vous devez connaître l’adresse URL du site SharePoint contenant la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque qui stocke vos classeurs. Pour obtenir cette adresse, ouvrez le site contenant la bibliothèque, cliquez avec le bouton droit sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, sélectionnez **Propriétés**, puis copiez la première partie de l’adresse (URL) qui contient le nom du serveur et le chemin d’accès au site.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,17 +24,17 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b23d06e07703ff9b7cc7c978d69a9cb9d7eff635
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27345751dba7376371150acb15330a6e39a70c1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batches-of-statements"></a>Lots d'instructions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Un lot de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions contient plusieurs instructions, séparées par un point-virgule ( ;), intégrées dans une chaîne unique passée à **SQLExecDirect** ou [fonction SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360). Exemple :  
+  Un lot de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions contient plusieurs instructions, séparées par un point-virgule ( ;), intégrées dans une chaîne unique passée à **SQLExecDirect** ou [fonction SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360). Exemple :  
   
 ```  
 SQLExecDirect(hstmt,   

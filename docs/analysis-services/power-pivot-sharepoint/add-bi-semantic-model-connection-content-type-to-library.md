@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 805165cf99d7effe8977d6c603742e46685a60d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4438608a9e2b5ed5e4e642afa239186db863f578
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Ajouter le Type contenu de la connexion de modèle sémantique BI à la bibliothèque
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une connexion de modèle sémantique BI est créée dans SharePoint et assure la redirection vers les données de modèle sémantique business intelligence dans un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur ou la base de données de modèle tabulaire Analysis Services sur un serveur réseau. Avant de pouvoir créer une connexion de modèle sémantique BI dans SharePoint, vous devez étendre une bibliothèque de documents pour autoriser la création d'un fichier .bism. Cette étape est effectuée une seule fois pour chaque bibliothèque, mais vous devrez la répéter pour toutes les bibliothèques à partir desquelles vous souhaitez créer des fichiers .bism. Les meilleures pratiques recommandent de créer une bibliothèque centralisée pour le stockage des fichiers .bism, afin que vous puissiez gérer les autorisations dans un seul emplacement.  
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
  Après avoir activé le type de contenu Connexion de modèle sémantique BI pour une bibliothèque, vous pouvez créer une connexion qui assure la redirection vers des données de modèle sémantique d'entreprise qui peuvent être utilisées par des rapports Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Choisissez parmi les liens suivants pour en savoir plus sur cette étape suivante :  
   
- [Créer une connexion du modèle sémantique BI à un classeur PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Créer une connexion de modèle sémantique BI à un classeur PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
  [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   

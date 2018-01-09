@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0dfb628e7c70edf6e5daf197e3f0d48d4cc9b20
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f28d100ef59df6fe73b8dd93d1fbfebdb87bbb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="baseproperty-element-csdlbi"></a>Élément BaseProperty (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément BaseProperty est un type complexe qui sert de base pour d’autres éléments.  
@@ -34,20 +32,20 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau suivant répertorie les éléments et les attributs qui définissent l'élément BaseProperty.  
   
-|Nom|Est obligatoire|Description|  
+|Nom   |Est obligatoire|Description|  
 |----------|-----------------|-----------------|  
-|Alignment|Non|Nom donné au membre (une colonne, une mesure, une propriété de navigation, une hiérarchie ou un niveau) défini par l'implémentation du type Member.|  
-|FormatString|Non|Nom complet du membre.|  
-|IsRightToLeft|Non|Valeur booléenne qui indique si le champ contient du texte qui doit être lu de droite à gauche.<br /><br /> Si cet attribut est omis, la valeur par défaut (du modèle) est utilisée.|  
-|SortDirection|Non|Valeur qui indique comment les valeurs des champs sont généralement triées. Le contenu de cet attribut est défini par le type simple SortDirection.<br /><br /> En cas d'omission, un ordre de tri est affecté par défaut en fonction du type de données du champ.|  
-|Unités|Non|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités.<br /><br /> En cas d'omission, les unités sont inconnues.|  
+|Alignment|non|Nom donné au membre (une colonne, une mesure, une propriété de navigation, une hiérarchie ou un niveau) défini par l'implémentation du type Member.|  
+|FormatString|non|Nom complet du membre.|  
+|IsRightToLeft|non|Valeur booléenne qui indique si le champ contient du texte qui doit être lu de droite à gauche.<br /><br /> Si cet attribut est omis, la valeur par défaut (du modèle) est utilisée.|  
+|SortDirection|non|Valeur qui indique comment les valeurs des champs sont généralement triées. Le contenu de cet attribut est défini par le type simple SortDirection.<br /><br /> En cas d'omission, un ordre de tri est affecté par défaut en fonction du type de données du champ.|  
+|Unités|non|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités.<br /><br /> En cas d'omission, les unités sont inconnues.|  
   
 ## <a name="alignment-element"></a>Élément Alignment  
  Ce type simple définit le format d'affectation des noms qui est utilisé pour lever toute ambiguïté des membres.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Aucune|Utilise le nom de l'attribut.|  
+|None|Utilise le nom de l'attribut.|  
 |Contexte|Utilise le nom de la relation entrante.|  
 |Fusion|Selon les règles de grammaire, concatène le nom de la relation entrante et le nom de l'attribut.|  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Aucune|Utilise le nom de l'attribut.|  
+|None|Utilise le nom de l'attribut.|  
 |Contexte|Utilise le nom de la relation entrante.|  
 |Fusion|Concatène le nom de la relation entrante et le nom de la propriété.|  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f80954ed7a502fcd95f1d6343cd424cda0df9a12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 733163679d9bb3da6c238d1f439b943b01544423
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-date-and-time-types"></a>Utiliser des types de date et d'heure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 
   Cet exemple montre comment initialiser les structures de données de date et d’heure ajoutées dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Il prépare ensuite les valeurs d'entrée, lie les paramètres et exécute la requête. Pour plus d’informations sur l’utilisation de ces types, consultez [Date et heure améliorations &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Vous aurez besoin d'une source de données ODBC appelée DateTime. La base de données par défaut de DateTime doit être tempdb. Cette source de données doit être basée sur le pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  

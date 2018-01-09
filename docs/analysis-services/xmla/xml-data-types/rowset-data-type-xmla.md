@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Rowset Data Type
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 289e0a24eb8d83cca95d43a85406686c088288ab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 885910e506995f6aef382d95eb24320749b682eb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-data-type-xmla"></a>Type de données Rowset (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Définit un type de données dérivé qui représente un [racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui retourne des données tabulaires d’un [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
@@ -55,17 +53,17 @@ ms.lasthandoff: 12/08/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|[Jeu de résultats](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Types de données dérivés|Aucune|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[ligne](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
 |Éléments dérivés|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  XML n'autorise pas certains caractères en tant que noms d'élément et d'attribut. Pour résoudre cette contrainte d’attribution de noms, XML for Analysis (XMLA) prend en charge l’encodage tel que défini par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour les noms de colonnes qui contiennent des caractères de nom XML qui ne sont pas valides en fonction de la spécification XML 1.0, XMLA utilise les valeurs hexadécimales correspondantes pour encoder des caractères Unicode qui ne sont pas valides. Les valeurs hexadécimales sont échappés sous la forme _x*HHHH*\_, où *HHHH* représente le code de UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre premier bit le plus significatif. Par exemple, XMLA encode le nom Order Details sous la forme Order_x0020_Details remplaçant ainsi l'espace par le code hexadécimal correspondant.  
   
  L'encodage peut rendre les transformations XSL (Extensible Style Language) difficiles. Pour prendre en charge une recherche rapide de réels non codées les noms de colonnes, ajoutez le **SQL : Field**d’attribut pour le schéma d’ensemble de lignes XML pour chaque colonne, comme indiqué dans l’exemple suivant :  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 </row>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ## <a name="xmla-rowset-for-flat-data"></a>Ensemble de lignes XMLA pour les données à deux dimensions  
  Dans le cadre des données à deux dimensions, les noms des colonnes propres à la requête sont définis dans le schéma en tant que noms d'éléments. De plus, une paire de balises `<row>` encapsule chaque ligne.  

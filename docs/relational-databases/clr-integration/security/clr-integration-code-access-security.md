@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1bdecb5570f4c139fd42a77d2ef5479758bdf63a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-code-access-security"></a>Sécurité d'accès du code de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le common language runtime (CLR) prend en charge un modèle de sécurité appelé sécurité d’accès du code pour le code managé. Dans ce modèle, les autorisations sont accordées aux assemblys selon l'identité du code. Pour plus d'informations, consultez la section relative à la sécurité d'accès du code dans le kit de développement logiciel (SDK) .NET Framework.  
@@ -114,9 +114,9 @@ ms.lasthandoff: 11/17/2017
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**Autorisations de sécurité d’accès au code**|Exécution uniquement|Exécution + accès aux ressources externes|Illimité (y compris P/Invoke)|  
 |**Restrictions du modèle de programmation**|Oui|Oui|Aucune restriction|  
-|**Vérifiabilité requise**|Oui|Oui|Non|  
+|**Vérifiabilité requise**|Oui|Oui|non|  
 |**Accès aux données locales**|Oui|Oui|Oui|  
-|**Possibilité d’appeler du code natif**|Non|Non|Oui|  
+|**Possibilité d’appeler du code natif**|non|non|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité d’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

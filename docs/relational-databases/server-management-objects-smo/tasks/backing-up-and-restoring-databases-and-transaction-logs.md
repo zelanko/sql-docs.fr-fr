@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a9aa5d16960e9d52bb1a6e6edac30e7be02cf64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf1d65068cc72b7fda04be8b98ac999b22e010fd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sauvegarde et restauration de bases de données et de journaux de transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Backup> classe et la <xref:Microsoft.SqlServer.Management.Smo.Restore> classe sont des classes utilitaires qui fournissent les outils pour accomplir des tâches spécifiques de sauvegarde et de restauration. A <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est requise au lieu d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  Comme le <xref:Microsoft.SqlServer.Management.Smo.Backup> objet, le <xref:Microsoft.SqlServer.Management.Smo.Restore> objet n’a pas besoin d’être créé à l’aide un **créer** (méthode), car il ne représente pas un objet sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'objet <xref:Microsoft.SqlServer.Management.Smo.Restore> est constitué des méthodes et propriétés utilisées pour restaurer une base de données.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Sauvegarde des bases de données et des journaux des transactions en Visual Basic  
  Cet exemple de code montre comment sauvegarder une base de données existante dans un fichier, puis comment la restaurer.  

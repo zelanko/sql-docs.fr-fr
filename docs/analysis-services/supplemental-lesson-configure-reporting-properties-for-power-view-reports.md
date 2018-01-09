@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplémentaires leçon - configurer les propriétés de création de rapports pour les rapports Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ Dans cette leçon supplémentaire, vous allez définir les propriétés du proje
   
 Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Cette leçon supplémentaire fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
 Pour pouvoir effectuer cette leçon supplémentaire, les composants suivants doivent également être installés :  
   
@@ -83,7 +83,7 @@ Pour des informations détaillées sur l’ensemble de champs par défaut, consu
   
 #### <a name="to-set-default-field-set-for-tables"></a>Pour définir un ensemble de champs par défaut pour les tables  
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Dans la fenêtre **Propriétés** , sous **Propriétés de création de rapports**, dans la propriété **Ensemble de champs par défaut** , cliquez sur **Cliquer pour modifier** pour ouvrir la boîte de dialogue **Ensemble de champs par défaut** .  
   
@@ -118,7 +118,7 @@ Pour plus d’informations sur les propriétés de comportement de table, consul
   
 #### <a name="to-set-table-behavior"></a>Pour définir le comportement de la table 
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Dans la fenêtre **Propriétés** , dans la propriété **Comportement de la table** , cliquez sur **Cliquer pour modifier**pour ouvrir la boîte de dialogue **Comportement de la table** .  
   
@@ -143,7 +143,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
 #### <a name="to-set-properties-for-columns"></a>Pour définir les propriétés des colonnes  
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Cliquez sur la colonne **Customer Id** pour afficher les propriétés de la colonne dans la fenêtre **Propriétés** .  
   
@@ -155,7 +155,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Customer**  
   
-    |Colonne|Propriété|Value|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Format de données|Date courte|  
@@ -165,7 +165,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
     > [!NOTE]  
     > Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
-    |Colonne|Propriété|Value|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Date|Format de données|Date courte|  
     |Day Number of Week|Hidden|True|  
@@ -182,14 +182,14 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Geography**  
   
-    |Colonne|Propriété|Value|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Colonne|Propriété|Value|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Étiquette par défaut|True|  
@@ -199,7 +199,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Internet Sales**  
   
-    |Colonne|Propriété|Value|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

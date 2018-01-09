@@ -1,13 +1,13 @@
 ---
 title: Comment utiliser les fonctions RevoScaleR pour rechercher ou installer R packages SQL Server | Documents Microsoft
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server
 
@@ -38,7 +38,7 @@ Cet article décrit ces fonctions et fournit des exemples d’utilisation de la 
 
 + Si vous ne spécifiez pas un nom d’utilisateur et un mot de passe lorsque vous créez le contexte de calcul, l’identité de l’utilisateur qui exécute le code R est utilisée.
 
-+ Lorsque vous utilisez ces fonctions à partir d’un client distant de R, vous devez créer un objet de contexte de calcul en premier lieu, à l’aide de la fonction RxInSQLServer. Par la suite, pour chaque fonction de gestion de package que vous utilisez, transmettre le contexte de calcul en tant qu’argument.
++ Lorsque vous utilisez ces fonctions à partir d’un client distant de R, vous devez créer un objet de contexte de calcul en premier lieu, à l’aide de la [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) (fonction). Par la suite, pour chaque fonction de gestion de package que vous utilisez, transmettre le contexte de calcul en tant qu’argument.
 
 + Il est possible d’exécuter des fonctions de gestion de package à l’aide de `sp_execute_external_script`. Lorsque vous procédez ainsi, la fonction est exécutée en utilisant le contexte de sécurité de l’appelant de la procédure stockée.
 
@@ -46,22 +46,23 @@ Cet article décrit ces fonctions et fournit des exemples d’utilisation de la 
 
 Les fonctions de gestion de package suivantes sont fournies dans RevoScaleR, pour l’installation et la suppression de packages dans un contexte de calcul spécifié :
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): rechercher des informations sur les packages installés dans le contexte de calcul spécifiée.
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): rechercher des informations sur les packages installés dans le contexte de calcul spécifiée.
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): installer des packages dans un contexte de calcul, à partir d’un référentiel spécifié, ou en lisant enregistrés localement compressés des packages.
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): installer des packages dans un contexte de calcul, à partir d’un référentiel spécifié, ou en lisant enregistrés localement compressés des packages.
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): supprimer les packages installés à partir d’un contexte de calcul.
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): supprimer les packages installés à partir d’un contexte de calcul.
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): obtenir le chemin d’accès pour un ou plusieurs packages dans le contexte de calcul spécifiée.
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): obtenir le chemin d’accès pour un ou plusieurs packages dans le contexte de calcul spécifiée.
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): copie d’une package de bibliothèque entre le système de fichiers et les bases de données dans les contextes de calcul spécifiée.
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): copie d’une package de bibliothèque entre le système de fichiers et les bases de données dans les contextes de calcul spécifiée.
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): obtenir le chemin de recherche pour les arborescences de bibliothèque pour les packages lors de l’exécution à l’intérieur de SQL Server.
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): obtenir le chemin de recherche pour les arborescences de bibliothèque pour les packages lors de l’exécution à l’intérieur de SQL Server.
 
-Ces packages sont inclus par défaut dans SQL Server 2017. Pour plus d’informations sur ces fonctions, consultez les pages de référence de fonction RevoScaleR : (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+Ces packages sont inclus par défaut dans SQL Server 2017. Pour plus d’informations sur ces fonctions, consultez les pages de référence de fonction RevoScaleR : (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > Des fonctions de gestion des packages R sont disponibles à compter de Microsoft R Server 9.0.1. Si vous ne trouvez pas les fonctions dans RevoScaleR, vous devrez probablement mettre à niveau vers la version la plus récente. 
+
 ## <a name="examples"></a>Exemples
 
 Cette section contient des exemples montrant comment utiliser les fonctions de gestion de package avec une instance de SQL Server ou de la base de données. 

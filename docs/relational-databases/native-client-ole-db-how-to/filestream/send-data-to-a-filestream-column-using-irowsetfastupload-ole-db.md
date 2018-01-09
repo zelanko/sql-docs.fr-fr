@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65859db07a1df6cd5e40398664b2d7d13bb03e72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 154a1901ff51fe8263fe246964cfc343421be85f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Envoyer des données à une colonne FILESTREAM à l'aide d'IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  

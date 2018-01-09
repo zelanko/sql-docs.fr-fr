@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Options et paramètres de traitement (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement pour contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
 |**Traiter par défaut**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Détecte l'état de traitement des objets de base de données et effectue le traitement nécessaire pour faire passer les objets non traités ou traités partiellement dans un état de traitement complet. Si vous modifiez une liaison de données, la fonction Traiter par défaut va traiter entièrement l'objet concerné (fonction Traiter entièrement).|  
 |**Traiter entièrement**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Traite un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est sélectionnée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est requis en cas de modification structurelle d'un objet, par exemple lorsqu'une hiérarchie d'attribut est ajoutée, supprimée ou renommée.|  
 |**Traiter l'effacement**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Supprime les données dans l'objet spécifié et dans tous les objets de niveau inférieur qui constituent cet objet. Une fois que les données sont supprimées, elles ne sont pas rechargées.|  
-|**Traiter les données**|Dimensions, cubes, groupes de mesures et partitions|Traite uniquement les données sans générer d'agrégations ou d'index. Si des données figurent dans les partitions, elles seront supprimées avant de remplir à nouveau la partition avec des données sources.|  
+|**Traiter des données**|Dimensions, cubes, groupes de mesures et partitions|Traite uniquement les données sans générer d'agrégations ou d'index. Si des données figurent dans les partitions, elles seront supprimées avant de remplir à nouveau la partition avec des données sources.|  
 |**Traiter l'ajout**|Dimensions, groupes de mesures et partitions<br /><br /> Remarque : le **traitement de l’ajout** n’est pas disponible pour le traitement des dimensions dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mais vous pouvez écrire un script XMLA pour effectuer cette action.|Pour les dimensions, ajoute de nouveaux membres et met à jour les captures et descriptions d'attributs de dimension.<br /><br /> Pour les groupes de mesures et les partitions, ajoute les nouvelles données de faits disponibles et traite uniquement les partitions concernées.|  
 |**Traiter la mise à jour**|Dimensions|Impose une relecture des données et une mise à jour des attributs de dimension. Les agrégations et index flexibles sur les partitions associées seront supprimés.|  
 |**Traiter l'index**|Cubes, dimensions, groupes de mesures et partitions|Crée ou reconstruit des index et des agrégations pour toutes les partitions traitées. Cette option provoque une erreur sur les objets non traités.<br /><br /> Cette option est requise pour le traitement si vous avez désactivé le traitement différé.|  

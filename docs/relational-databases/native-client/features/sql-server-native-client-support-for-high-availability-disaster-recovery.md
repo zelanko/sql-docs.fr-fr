@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1846ad954cfd764a9c5df1aabf4fc761b23d16b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1940375cc3d822d994c673d965e1fb7e23385596
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
  Une application ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut utiliser l'une de ces trois fonctions pour établir la connexion :  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|La liste de serveurs retournée par **SQLBrowseConnect** n’inclut pas de VNN. Vous verrez seulement une liste de serveurs sans indication si ces derniers sont des serveurs autonomes, ou un serveur principal ou secondaire dans un cluster de Clustering de basculement Windows Server (WSFC) qui contient deux instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si la connexion à un serveur se solde par un échec, c’est peut-être parce que le paramètre **ApplicationIntent** n’est pas compatible avec la configuration de ce serveur.<br /><br /> Étant donné que **SQLBrowseConnect** ne reconnaît pas de serveurs dans un cluster Clustering de basculement Windows Server (WSFC) qui contient deux d’instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** ignore le mot clé de chaîne de connexion **MultiSubnetFailover**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** par le biais d’un nom de source de données ou de propriétés de connexion.|  

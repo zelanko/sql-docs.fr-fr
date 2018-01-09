@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c5c5f6bc7f49d931e33b66f96e299a2a21559c1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 14f83d4b7235f3633c05c35afd2c648397e4f8a0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Nuage de points (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *nuage* graphiques les valeurs réelles dans vos données contre les valeurs prévues par le modèle. Le nuage de points affiche les valeurs réelles le long de l'axe des X et les valeurs prédites le long de l'axe des Y. Il affiche également une ligne qui illustre la prédiction parfaite, où la valeur prédite correspond exactement à la valeur réelle. La distance d'un point par rapport à cette ligne à un angle idéal de 45 degrés indique le niveau d'exactitude ou d'inexactitude de la prédiction.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  Bien que les modèles de séries chronologiques prédisent des nombres continus, vous ne pouvez pas mesurer la précision d'un modèle de série chronologique en utilisant un nuage de points. Il existe d'autres méthodes que vous pouvez utiliser, comme la réservation d'une partie des données historiques. Pour plus d’informations, consultez [Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Les rubriques suivantes contiennent davantage d'informations sur la façon dont vous pouvez créer et utiliser les nuages de points et graphiques d'analyse de précision associés.  
   
 |Rubriques|Liens|  

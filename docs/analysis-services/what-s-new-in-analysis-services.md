@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Quel &#39; nouveauté dans Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations qui fournit les meilleures performances, la création de solutions plus facile, gestion automatisée de base de données, le traitement des partitions, en parallèle améliorée des relations avec bidirectionnelles, le filtrage croisé et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     

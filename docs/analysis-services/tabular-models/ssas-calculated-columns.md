@@ -5,13 +5,10 @@ ms.date: 10/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92e082ac88881cb6eaa252975ea865013c753d95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-columns"></a>Colonnes calculées
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, les colonnes calculées permettent d’ajouter de nouvelles données à votre modèle. Au lieu de coller ou importer des valeurs dans la colonne, vous créez une formule DAX qui définit les valeurs de niveau de ligne de la colonne. La colonne calculée peut alors être utilisée dans un rapport, un tableau croisé dynamique ou un graphique croisé dynamique comme toute autre colonne.  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
- Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
+ Cette formule extrait le mois de la colonne StartDate. Elle calcule ensuite la valeur de fin du mois pour chaque ligne de la table. Le deuxième paramètre spécifie le nombre de mois avant ou après le mois indiqué dans StartDate ; dans cette cas, 0 signifie le même mois. Par exemple, si la valeur de la colonne StartDate est 1/6/2001, la valeur dans la colonne calculée sera 30/6/2001.  
   
 ##  <a name="bkmk_naming"></a> Naming a calculated column  
  Par défaut, les nouvelles colonnes calculées sont ajoutées à droite des autres colonnes d'une table, et le nom par défaut **CalculatedColumn1**, **CalculatedColumn2**, etc. est automatiquement affecté à la colonne. Vous pouvez également cliquer avec le bouton droit sur une colonne, puis sélectionner Insérer une colonne pour créer une nouvelle colonne entre deux colonnes existantes. Vous pouvez réorganiser les colonnes dans la même table en cliquant et en faisant glisser, et vous pouvez renommer des colonnes une fois créées ; toutefois, tenez compte des restrictions suivantes relatives aux modifications apportées aux colonnes calculées :  
@@ -77,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer une colonne calculée](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Les tâches de cette rubrique décrivent comment ajouter une nouvelle colonne calculée dans une table.|  
   

@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Bases de données de modèle tabulaire dans Analysis Services sont accessibles par la plupart des clients, interfaces et langues que vous utilisez pour récupérer des données ou les métadonnées à partir d’un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -50,7 +47,7 @@ Vous pouvez vous connecter à une base de données de modèle tabulaire Analysis
  Les requêtes qui sont envoyées par le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] au modèle sont émises en tant qu'instructions DAX, que vous pouvez surveiller en définissant une trace sur le modèle.  Le client envoie également une requête au serveur pour la définition de schéma initiale, qui est présentée en langage CSDL (Conceptual Schema Definition Language). Pour plus d’informations, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d'informations, consultez les rubriques suivantes :  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
@@ -108,7 +105,7 @@ Vous pouvez vous connecter à une base de données de modèle tabulaire Analysis
 ### <a name="schema-rowsets"></a>Ensembles de lignes de schéma  
  Les applications clientes peuvent utiliser les ensembles de lignes de schéma pour examiner les métadonnées des modèles tabulaires et récupérer les informations de prise en charge et de surveillance du serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Dans cette version de SQL Server, de nouveaux ensembles de lignes de schéma ont été ajoutés et des ensembles de lignes de schéma existants ont été étendus pour prendre en charge des fonctionnalités relatives aux modèles tabulaires et pour améliorer la surveillance et l'analyse des performances sur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [Ensemble de lignes DISCOVER_CALC_DEPENDENCY](../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY, ensemble de lignes](../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)  
   
      Nouvel ensemble de lignes de schéma pour suivre les dépendances entre les colonnes et les références d'un modèle tabulaire  
   

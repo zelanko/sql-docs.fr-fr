@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SETTOARRAY
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cad2fce7792aac866e8d2388a37d7655a1f5fc3f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7cf8bdfdb22175a59207f14792abcf7f27aede0a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **SetToArray** fonction convertit un ou plusieurs jeux en tableau à utiliser dans une fonction définie par l’utilisateur. Le nombre de dimensions de ce tableau est identique au nombre de jeux précisé.  
   
  L'expression numérique facultative peut fournir les valeurs des cellules du tableau. Si aucune expression numérique n'est spécifiée, la jointure croisée des jeux est évaluée dans le contexte actuel.  
@@ -63,7 +63,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 > [!NOTE]  
 >  Le type de retour de la **SetToArray** fonction est le type VARIANT, VT_ARRAY. Par conséquent, la sortie de la **SetToArray** fonction doit être utilisée uniquement comme entrée à une fonction définie par l’utilisateur.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne un tableau.  
   
 ```  

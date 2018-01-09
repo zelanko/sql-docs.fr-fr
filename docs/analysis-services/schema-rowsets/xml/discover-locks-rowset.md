@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df185344ea5af92a66c019c29b7a385ff309522b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>Ensemble de lignes DISCOVER_LOCKS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations sur les verrous actuellement en place sur le serveur.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_LOCKS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**LOCK_CREATION_TIME**|**DBTYPE_DBTIMESTAMP**||Heure UTC du serveur au moment où le verrou a été demandé.|  
 |**LOCK_GRANT_TIME**|**DBTYPE_DBTIMESTAMP**||Heure UTC du serveur au moment où le verrou a été accordé sur la ressource.|  
@@ -56,9 +54,9 @@ ms.lasthandoff: 12/08/2017
 |LOCK_OBJECT_ID|DBTYPE_WSTR|Facultatif.|  
 |LOCK_STATUS|DBTYPE_I4|Facultatif.|  
 |LOCK_TYPE|DBTYPE_I4|Facultatif.|  
-|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Ce paramètre est facultatif.|  
+|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Facultatif.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="lock-types"></a>Types de verrouillage  
   

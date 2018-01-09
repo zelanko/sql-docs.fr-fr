@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LASTPERIODS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7b5f43547cdf6a48a35e2a433dcc7a82cdabe054
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a3a9f0940796ecbc8138447fa8dd4ba59febbe96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si le nombre de périodes spécifié est positif, le **LastPeriods** fonction retourne un jeu de membres qui commence par le membre qui est en retard *Index* -1 à partir de l’expression de membre spécifié et se termine par le membre spécifié. Le nombre de membres retournés par la fonction est égal à *Index*.  
   
  Si le nombre de périodes spécifié est négatif, le **LastPeriods** fonction retourne un jeu de membres qui commence par le membre spécifié et se termine par le membre arrivant en premier (- *Index* - 1) à partir du membre spécifié. Le nombre de membres retournés par la fonction est égal à la valeur absolue de *Index*.  

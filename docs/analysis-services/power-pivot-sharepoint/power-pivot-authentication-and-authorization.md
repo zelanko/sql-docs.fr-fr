@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint déploiement qui s’exécute dans une batterie de serveurs SharePoint 2010 utilise le modèle d’autorisation et de sous-système d’authentification fourni par les serveurs SharePoint. L’infrastructure de sécurité SharePoint s’étend au contenu et aux opérations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , car l’ensemble du contenu relatif à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est stocké dans des bases de données de contenu SharePoint, et l’ensemble des opérations relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est effectué par des services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont authentifiés à l’aide d’une identité d’utilisateur SharePoint basée sur leur identité d’utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_auth"></a> Authentification Windows à l'aide de la spécification de connexion en mode classique  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend en charge un ensemble réduit d’options d’authentification disponibles dans SharePoint. Parmi les options d’authentification disponibles, seule l’authentification Windows est prise en charge pour un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. En outre, l'application Web via laquelle la connexion se produit doit être configurée pour le mode classique.  
   
- L’authentification Windows est requise car le moteur de données Analysis Services dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend uniquement en charge l’authentification Windows. Excel Services établit les connexions à Analysis Services via le fournisseur OLE DB MSOLAP à l'aide d'une identité d'utilisateur Windows qui a été authentifiée via NTLM ou du protocole Kerberos.  
+ L’authentification Windows est requise car le moteur de données Analysis Services dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend uniquement en charge l’authentification Windows. Excel Services établit les connexions à Analysis Services via le fournisseur OLE DB MSOLAP à l'aide d'une identité d'utilisateur Windows qui a été authentifiée via NTLM ou du protocole Kerberos.  
   
  La deuxième spécification, l’authentification en mode classique sur l’application web, est nécessaire pour garantir l’opérabilité du service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le service web est un composant qui s’exécute sur un serveur web frontal et fournit la redirection HTTP vers un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans la batterie. Tandis que le service web prend en charge les revendications pour les communications entre services, il ne les prend pas en charge pour les demandes de connexion de données qu’il achemine vers un service partagé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les demandes de chargement de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont prises en charge uniquement pour les connexions authentifiées émanant d’IIS à l’aide d’une identité Windows. La connexion en mode classique sur l’application web permet une connexion réussie du service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aux services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie.  
   
@@ -96,7 +93,7 @@ ms.lasthandoff: 12/08/2017
 |Administrateur de batteries de serveurs ou de services|Installation, activation et configuration de services et d'applications.<br /><br /> Utilisation du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et affichage des rapports d’administration.|  
 |Contrôle total|Activation de l’intégration des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au niveau de la collection de sites.<br /><br /> Création d’une bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Création d'une bibliothèque de flux de données.|  
 |Collaboration|Ajout, modification, suppression et téléchargement de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configuration de l'actualisation des données.<br /><br /> Création de classeurs et rapports basés sur des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint.<br /><br /> Création de documents de service de données dans une bibliothèque de flux de données|  
-|Lecture|Accès à des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant Connexion de données Excel).|  
+|Lire|Accès à des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant Connexion de données Excel).|  
 |Vue seule|Affichage de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Affichage de l'historique d'actualisation des données.<br /><br /> Connexion d’un classeur local à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint pour réutiliser ses données d’une autre façon.<br /><br /> Téléchargement d'un instantané du classeur. L'instantané est une copie statique des données, sans segments, filtres, formules ou connexions de données. Le contenu de l'instantané est similaire à la copie de valeurs de cellules de la fenêtre de navigateur.|  
   
 ##  <a name="excel"></a> Considérations relatives à la sécurité Excel Services pour les classeurs PowerPivot  
@@ -116,7 +113,7 @@ ms.lasthandoff: 12/08/2017
 ||Autoriser les données externes|Ce paramètre doit avoir la valeur **Bibliothèques de connexions de données approuvées et incorporées**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont incorporées au classeur. Si vous interdisez les connexions incorporées, les utilisateurs peuvent consulter le cache [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais ne sont pas en mesure d’interagir avec les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Avertir lors de l'actualisation|Cette valeur doit être désactivée si vous utilisez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour stocker des classeurs et des rapports. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inclut une fonctionnalité d’aperçu des documents qui fonctionne mieux si les paramètres Actualisation à l’ouverture et Avertir lors de l’actualisation sont désactivés.|  
 |Fournisseurs de données approuvés|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 est inclus par défaut, mais l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] requiert que le fournisseur MSOLAP.4 soit la version SQL Server 2008 R2.<br /><br /> MSOLAP.5 est installé avec la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.<br /><br /> Ne supprimez pas ces fournisseurs de la liste des fournisseurs de données approuvés. Dans certains cas, vous devrez peut-être installer des copies supplémentaires de ce fournisseur sur d'autres serveurs SharePoint dans votre batterie de serveurs. Pour plus d’informations, voir [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)(Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint).|  
-|Bibliothèques de connexions de données approuvées|Ce paramètre est facultatif.|Vous pouvez utiliser des fichiers Office Data Connection (.odc) dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous utilisez des fichiers .odc pour fournir les informations de connexion aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locaux, vous pouvez ajouter les mêmes fichiers .odc à cette bibliothèque.|  
+|Bibliothèques de connexions de données approuvées|Facultatif.|Vous pouvez utiliser des fichiers Office Data Connection (.odc) dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous utilisez des fichiers .odc pour fournir les informations de connexion aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locaux, vous pouvez ajouter les mêmes fichiers .odc à cette bibliothèque.|  
 |Assembly de fonction défini par l'utilisateur|Non applicable.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ignore les assemblys de fonction définis par l’utilisateur que vous générez pour Excel Services. Si vous comptez sur les assemblys définis par l’utilisateur pour un comportement spécifique, sachez que le traitement des requêtes [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’utilise pas les fonctions définies par l’utilisateur que vous avez créées.|  
   
 ## <a name="see-also"></a>Voir aussi  

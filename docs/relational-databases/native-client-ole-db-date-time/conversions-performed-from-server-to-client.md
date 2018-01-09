@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], server to client
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 45124fb2e318cee317d496a525094b63651716d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0f86d6337913eee857e3575eb23dc52417c6e8f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,18 +33,18 @@ ms.lasthandoff: 11/17/2017
 ## <a name="conversions"></a>Conversions  
  Le tableau suivant décrit les conversions entre le type retourné au client et le type de la liaison. Paramètres de sortie, si ICommandWithParameters::SetParameterInfo a été appelée et que le type spécifié dans *pwszDataSourceType* ne correspond pas au type réel sur le serveur, une conversion implicite est effectué par le serveur, et le type retourné au client correspond au type spécifié par le biais ICommandWithParameters::SetParameterInfo. Cela peut provoquer des résultats de conversion inattendus lorsque les règles de conversion du serveur sont différentes de celles décrites dans cette rubrique. Par exemple, quand une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que 1899-12-30.  
   
-|Vers -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|Vers -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Date|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Date|1,7|OK|-|-| 1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Time|5,6,7|-|9|OK|6|3,6|5,6|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|DateTime|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> NVARCHAR2, NCHAR|7, 13|12|12,9|12|12|12|7,13|Néant|Néant|Néant|Néant|Néant|Néant|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|OK|2|2| 1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (time)|5,6,7|2|6|OK|6|3,6|5,6|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|OK|3|5,7|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK(VT_BSTR)|OK|OK|4|4|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |------------|-------------|  
 |OK|Aucune conversion nécessaire.|  
 |-|Aucune conversion n'est prise en charge. Si la liaison est validée lorsque IAccessor::CreateAccessor est appelée, DBBINDSTATUS_UPSUPPORTEDCONVERSION est retourné dans *rgStatus*. Lorsque la validation pour l'accesseur est différée, DBSTATUS_E_BADACCESSOR est défini.|  
-|1|Les champs heure sont définis avec la valeur zéro.|  
+| 1|Les champs heure sont définis avec la valeur zéro.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE est défini.|  
 |3|Le décalage est défini avec la valeur zéro.|  
 |4|Si la mémoire tampon du client n'est pas assez grande, DBSTATUS_S_TRUNCATED est défini. Lorsque le type de serveur inclut des fractions de seconde, le nombre de chiffres de la chaîne de résultats correspond exactement à l'échelle du type de serveur.|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -30,11 +30,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07c6a083b967be69fa68ae0eb8ecf67affd3636f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>L’accès à des Types définis par l’utilisateur - mise à jour de colonnes UDT avec DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Types définis par l’utilisateur (UDT) sont pris en charge en utilisant un **System.Data.DataSet** et un **objet System.Data.SqlClient.SqlDataAdapter** pour extraire et modifier des données.  
@@ -77,7 +77,7 @@ da.Fill(datTable);
   
  Notez que la **SqlCommandBuilder** ne considère pas l’UDT pour la détection de conflit sauf s’il existe un **timestamp** colonne dans la table sous-jacente. Les UDT pouvant être comparables ou non, ils ne sont pas inclus dans la clause WHERE lorsque l'option de comparaison des valeurs d'origine est utilisée pour générer une commande.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L’exemple suivant requiert la création d’une deuxième table contenant la **Point** colonne UDT, ainsi qu’une **timestamp** colonne. Les deux tables sont utilisées pour illustrer comment créer des objets de commande personnalisée pour mettre à jour des données et la mise à jour à l’aide un **timestamp** colonne. Exécutez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes pour créer la deuxième table et la remplir avec des exemples de données.  
   
 ```  

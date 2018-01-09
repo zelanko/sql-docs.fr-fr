@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services s’exécute dans un mode de déploiement de serveur qui détermine l’environnement d’architecture et de runtime mémoire utilisé par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint, utilisé pour le chargement et l’interrogation d’Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des modèles de données à l’intérieur d’un classeur.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Il n'est pas possible de déterminer par programme si la propriété d'un objet enfant a été définie directement sur l'objet enfant ou héritée.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Le cube Imports contient deux mesures, Packages et Last, ainsi que trois dimensions connexes, Route, Source et Time.  
   
  ![Exemple de cube 1](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro1.gif "exemple de Cube 1")  
@@ -119,12 +117,12 @@ ms.lasthandoff: 12/08/2017
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Dernière|  
-|3516987|1|6|1|15|Janvier-10-99|  
-|3554790|1|6|1|40|Janvier-19-99|  
-|3572673|1|6|1|34|Jan-27-99|  
-|3600974|1|6|1|45|Feb-02-99|  
-|3645541|1|6|1|20|Feb-09-99|  
-|3674906|1|6|1|36|Feb-17-99|  
+|3516987| 1|6| 1|15|Janvier-10-99|  
+|3554790| 1|6| 1|40|Janvier-19-99|  
+|3572673| 1|6| 1|34|Jan-27-99|  
+|3600974| 1|6| 1|45|Feb-02-99|  
+|3645541| 1|6| 1|20|Feb-09-99|  
+|3674906| 1|6| 1|36|Feb-17-99|  
   
  Dans le tableau précédent, chaque ligne possède les mêmes valeurs pour le **RouteKey**, **SourceKey**, et **TimeKey** colonnes, indiquant que ces lignes participent à la même cellule de cube.  
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4663f814087722ef581c14c188b18b52178a5076
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valeur par défaut : RÉPÉTABLE(0)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
   
  Le mot clé SESSION facultatif indique que la structure est une structure temporaire que vous pouvez utiliser uniquement pour la durée de la session active. Une fois la session terminée, la structure, ainsi que tous les modèles sur celle-ci, seront supprimés. Pour créer des modèles et les structures d’exploration de données temporaire, vous devez d’abord définir la propriété de base de données, AllowSessionMiningModels. Pour plus d’informations, consultez [Propriétés de l’exploration de données](../analysis-services/server-properties/data-mining-properties.md).  
@@ -198,6 +196,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Voir aussi  
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

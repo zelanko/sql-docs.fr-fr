@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lors du partitionnement d’un groupe de mesures, vous pouvez configurer une base de données secondaire sur une distance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance en tant que stockage de la partition.  
@@ -36,14 +33,14 @@ ms.lasthandoff: 12/08/2017
   
  Une base de données secondaire dédiée peut stocker les partitions distantes pour une seule base de données master, mais la base de données master peut utiliser plusieurs bases de données secondaires, tant que toutes les bases de données secondaires se trouvent sur la même instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les dimensions dans une base de données dédiée aux partitions distantes sont créées en tant que dimensions liées.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour vous permettre de créer une partition distante, les conditions suivantes doivent être remplies :  
   
 -   Vous devez disposer d’une seconde instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et d’une base de données dédiée pour stocker les partitions. La base de données secondaire a une fonction unique ; elle fournit le stockage des partitions distantes pour une base de données master.  
   
 -   Les deux instances du serveur doivent présenter la même version. Les deux bases de données doivent avoir le même niveau fonctionnel.  
   
--   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
+-   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
   
 -   Les paramètres de pare-feu sur les deux ordinateurs doivent être définis de manière à accepter les connexions externes. Pour plus d’informations sur la configuration du pare-feu, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   

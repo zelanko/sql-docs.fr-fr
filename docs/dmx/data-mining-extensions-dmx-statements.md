@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f8d5b41d7e484a89e5ccb1777e81b72bc9dba6b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f09086ca0e00e87885192dcb2f8bdb9001ada205
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instructions Data Mining Extensions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 11/20/2017
   
  Ces tâches sont classées en deux catégories, les instructions de définition de données et les instructions de manipulation de données, décrites dans les tableaux ci-dessous.  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)|Fait partie du langage de définition de données (DDL). utilisé pour définir un nouveau modèle d'exploration de données (y compris l'apprentissage) ou pour supprimer un modèle d'exploration de données existant d'une base de données.|  
 |[Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)|Fait partie du langage de manipulation de données (DML). Est utilisé pour utiliser les modèles d'exploration de données existants, notamment pour explorer un modèle ou pour créer des prévisions.|  

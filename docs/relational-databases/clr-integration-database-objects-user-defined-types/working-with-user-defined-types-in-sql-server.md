@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecb5e4f780c1aa35b5ab509cc7862b477c3854d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1ad6e283f580aa36ef84d62ae274a57f6d84e6a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Utilisation de types définis par l'utilisateur dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vous pouvez accéder à des fonctionnalités de type défini par l’utilisateur (UDT) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la [!INCLUDE[tsql](../../includes/tsql-md.md)] langue à l’aide de syntaxe de requête classique. Les types UDT peuvent être utilisés dans la définition d'objets de base de données, tels que les variables dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)], dans les fonctions et les procédures stockées, et comme arguments dans les fonctions et les procédures stockées.  

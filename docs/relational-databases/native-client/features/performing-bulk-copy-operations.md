@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b33c136dabeb499e0e007cc5c667f81ed4b885e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c6070899aab81b6e3cef56a7c6320934d57a21d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
  Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le *rgProperties* membre d’un *rgPropertySets***IOpenRowset**membre de paramètre.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Maintient les valeurs d'identité fournies par le consommateur.<br /><br /> VARIANT_FALSE : les valeurs pour une colonne d'identité dans la table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toute valeur liée pour la colonne est ignorée par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.<br /><br /> VARIANT_TRUE : le consommateur lie un accesseur qui fournit une valeur pour une colonne d'identité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La propriété identity n’est pas disponible sur les colonnes qui acceptent NULL, le consommateur fournit une valeur unique sur chaque **IRowsetFastLoad::Insert** appeler.|  
 |SSPROP_FASTLOADKEEPNULLS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : maintient la valeur NULL pour les colonnes avec une contrainte DEFAULT. Affecte uniquement les colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui acceptent NULL et auxquelles une contrainte DEFAULT est appliquée.<br /><br /> VARIANT_FALSE : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insère la valeur par défaut pour la colonne lorsque le consommateur du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client insère une ligne contenant NULL pour la colonne.<br /><br /> VARIANT_TRUE : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insère NULL pour la valeur de colonne lorsque le consommateur du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client insère une ligne contenant NULL pour la colonne.|  

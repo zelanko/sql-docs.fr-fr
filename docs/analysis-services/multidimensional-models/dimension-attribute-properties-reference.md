@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +20,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="dimension-attribute-properties-reference"></a>Référence des propriétés d'attribut de dimension
+# <a name="dimension-attribute-properties-reference"></a>Référence des propriétés d’attribut de dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il existe de nombreuses propriétés qui déterminent comment les dimensions et dimension attributs (fonction). Le tableau suivant répertorie et décrit chacune de ces propriétés d'attribut.  
   
 |Propriété|Description|  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 |**EstimatedCount**|Spécifie le nombre estimé de membres dans l'attribut. Jusqu'à l'exécution de l'Assistant Conception d'agrégation, la valeur par défaut est zéro. Vous pouvez autoriser l'Assistant à compter le nombre d'enregistrements ou bien entrer une valeur estimée. Entrez une valeur manuellement si vous connaissez le nombre de membres et que vous voulez gagner le temps qui est nécessaire pour effectuer une requête de comptage sur la base de données. Si vous utilisez un sous-ensemble de test de vos données de production, vous pouvez utiliser les chiffres de vos données de production de façon que la conception de l'agrégation soit optimisée pour les données de production plutôt que pour les données de test.|  
 |**GroupingBehavior**|Valeur définie par l'utilisateur qui fournit un indicateur aux applications clientes sur le regroupement d'attributs.|  
 |**ID**|Contient l'identificateur unique (ID) de la dimension.|  
-|**InstanceSelection**|Fournit un indicateur aux applications clientes sur le mode d'affichage d'une liste d'éléments en fonction du nombre d'éléments attendus dans la liste. Les options disponibles sont les suivantes :<br /><br /> **None** Aucun indicateur n’est fourni à l’application cliente. Ceci est la valeur par défaut.<br /><br /> **DropDown** Le nombre d’éléments est suffisamment faible pour qu’ils soient affichés dans une liste déroulante.<br /><br /> **List** Le nombre d’éléments est trop important pour une **liste**déroulante, mais ne nécessite pas de filtrage.<br /><br /> **FilteredList** Le nombre d’éléments est suffisamment important pour demander aux utilisateurs de filtrer les éléments à afficher.<br /><br /> **MandatoryFilter** Le nombre d’éléments est tellement important que l’affichage doit toujours être filtré.|  
+|**InstanceSelection**|Fournit un indicateur aux applications clientes sur le mode d'affichage d'une liste d'éléments en fonction du nombre d'éléments attendus dans la liste. Les options disponibles sont les suivantes :<br /><br /> **None** Aucun indicateur n’est fourni à l’application cliente. Il s'agit de la valeur par défaut.<br /><br /> **DropDown** Le nombre d’éléments est suffisamment faible pour qu’ils soient affichés dans une liste déroulante.<br /><br /> **List** Le nombre d’éléments est trop important pour une **liste**déroulante, mais ne nécessite pas de filtrage.<br /><br /> **FilteredList** Le nombre d’éléments est suffisamment important pour demander aux utilisateurs de filtrer les éléments à afficher.<br /><br /> **MandatoryFilter** Le nombre d’éléments est tellement important que l’affichage doit toujours être filtré.|  
 |**IsAggregatable**|Spécifie si les valeurs des membres d'attribut peuvent être agrégées. La valeur par défaut est **True**, ce qui signifie que la hiérarchie d’attribut contient un niveau (Tous). Si la valeur de cette propriété est **False**, la hiérarchie d’attribut ne contient pas un niveau (Tous).|  
 |**KeyColumns**|Contient la ou les colonnes qui représentent la clé pour l'attribut, qui est la colonne de la table relationnelle sous-jacente de la vue de source de données à laquelle l'attribut est lié. La valeur de cette colonne pour chaque membre est affichée pour les utilisateurs, sauf si une valeur est spécifiée pour la propriété **NameColumn** .|  
 |**MemberNamesUnique**|Détermine si les noms des membres de la hiérarchie d'attribut doivent être uniques.|  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |**RootMemberIf**|Détermine le mode d'identification des membres racines ou du plus haut niveau d'une hiérarchie parent-enfant. Cette valeur de propriété est utilisée uniquement quand la valeur Parent est affectée à la propriété **Usage** . Cela signifie qu'une hiérarchie parent-enfant a été définie. La valeur par défaut étant **ParentIsBlankSelfOrMissing**, seuls les membres qui satisfont à une ou plusieurs des conditions décrites pour **ParentIsBlank**, **ParentIsSelf**ou **ParentIsMissing** sont traités en tant que membres racines. Les valeurs suivantes sont aussi disponibles :<br /><br /> **ParentIsBlank** Seuls les membres avec une valeur NULL, une valeur zéro ou une chaîne vide dans les colonnes clés sont traités en tant que membres racines.<br /><br /> **ParentIsSelf** Seuls les membres qui sont parents d’eux-mêmes sont traités en tant que membres racines.<br /><br /> **ParentIsMissing** Seuls les membres dont les parents sont introuvables sont traités en tant que membres racines.|  
 |**Type**|Contient le type de l'attribut. Pour plus d’informations, consultez [Configurer des types d’attributs](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).|  
 |**UnaryOperatorColumn**|Spécifie la colonne qui fournit des opérateurs unaires. Il s'agit d'une liaison de type DataItem qui définit les détails d'une colonne fournissant un opérateur unaire.|  
-|**Usage**|Décrit le mode d'utilisation d'un attribut.<br /><br /> Les options disponibles sont les suivantes :<br /><br /> **Regular** L’attribut est un attribut régulier. Ceci est la valeur par défaut.<br /><br /> **Key** L’attribut est un attribut de clé.<br /><br /> **Parent** L’attribut est un attribut parent.|  
+|**Usage**|Décrit le mode d'utilisation d'un attribut.<br /><br /> Les options disponibles sont les suivantes :<br /><br /> **Regular** L’attribut est un attribut régulier. Il s'agit de la valeur par défaut.<br /><br /> **Key** L’attribut est un attribut de clé.<br /><br /> **Parent** L’attribut est un attribut parent.|  
 |**ValueColumn**|Identifie la colonne qui fournit la valeur de l'attribut. Si l’élément **NameColumn** de l’attribut est spécifié, les mêmes valeurs de **DataItem** sont utilisées en tant que valeurs par défaut pour l’élément **ValueColumn** . Si l’élément **NameColumn** de l’attribut n’est pas spécifié et que la collection **KeyColumns** de l’attribut contient un seul élément **KeyColumn** représentant une colonne clé avec un type de données chaîne, les mêmes valeurs de **DataItem** sont utilisées en tant que valeurs par défaut pour l’élément **ValueColumn** .|  
   
 > [!NOTE]  

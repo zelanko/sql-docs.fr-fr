@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CellInfo Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f3d572ebdc461a5323d4e2675d23137063ff307
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e26f0b4adb6872fed90fcab1a84b2ff83c90a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cellinfo-element-xmla"></a>Élément CellInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Représente les métadonnées de cellule contenue par le parent [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) élément.  
@@ -54,9 +52,9 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Éléments parents|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Éléments enfants|Une ou plusieurs définitions de propriété de cellule|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **CellInfo** élément contient une collection de propriétés de cellule pour les cellules incluses dans le dataset multidimensionnel retourné par une **racine** à l’aide de l’élément le **MDDataSet** type de données. Chaque propriété de cellule dans le **CellInfo** est définie par un élément XML distinct, chacun avec un **nom** attribut et un **type** attribut. Le **nom** attribut de la propriété de cellule correspond au nom d’OLE DB pour la propriété de cellule OLAP représentée par l’élément XML et le **type** attribut représente le type de données XML de la propriété de cellule. Le nom de l’élément XML est utilisé pour identifier la valeur de la propriété de cellule pour les cellules contenues dans le **CellData** élément de la **racine** élément.  
   
  La syntaxe suivante décrit une définition de propriété de cellule :  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
  Un fournisseur peut éventuellement spécifier des valeurs par défaut pour les propriétés de membre ou une cellule individuelles dans le **AxisInfo** ou **CellInfo** section. Les valeurs par défaut peuvent fournir un résultat plus restreint si la propriété affiche toujours, ou presque, la même valeur. Pour indiquer une valeur par défaut pour une propriété, le**par défaut** élément peut éventuellement être spécifié comme un élément enfant de l’un des éléments de définition de propriété de cellule. Par conséquent, l'absence d'une propriété de membre ou de cellule dans le résultat signifie que la valeur indiquée par défaut correspond à la valeur de la propriété de cellule.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant montre comment les propriétés de cellule valeur, FORMATTED_VALUE et FORMAT_STRING sont représentées dans le **CellInfo** élément.  
   
 ```  

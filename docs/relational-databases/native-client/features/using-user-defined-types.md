@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,11 +28,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3bc82bed550b790ffc191d4d10463d2255368ff8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65948c7c3cf387d4bbd1245b8ee00a777a8fa940
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-user-defined-types"></a>Utilisation des types définis par l'utilisateur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-procedureparameters-schema-rowset"></a>Ensemble de lignes de schéma PROCEDURE_PARAMETERS  
  Les ajouts suivants ont été effectués dans l'ensemble de lignes de schéma PROCEDURE_PARAMETERS.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificateur de nom en trois parties.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificateur de nom en trois parties.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-sqlassemblies-schema-rowset"></a>Ensemble de lignes de schéma SQL_ASSEMBLIES  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose un nouvel ensemble de schéma spécifique lignes fournisseur qui décrit les UDT enregistrés. Le serveur ASSEMBLY peut être spécifié en tant que DBTYPE_WSTR, mais n'est pas présent dans l'ensemble de lignes. S'il n'est pas spécifié, l'ensemble de lignes aura comme valeur par défaut le serveur actuel. L'ensemble de lignes de schéma SQL_ASSEMBLIES est défini dans le tableau suivant.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Nom de catalogue de l'assembly qui contient le type.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Nom de schéma ou de propriétaire de l'assembly qui contient le type. Bien que les assemblys aient une portée définie par base de données et non par schéma, ils conservent un propriétaire qui est indiqué ici.|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>Ensemble de lignes de schéma SQL_ASSEMBLIES_ DEPENDENCIES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Fournisseur OLE DB du Client natif expose un nouvel ensemble de lignes schéma spécifique au fournisseur qui décrit les dépendances d’assemblys pour un serveur spécifique. ASSEMBLY_SERVER peut être spécifié par l'appelant en tant que DBTYPE_WSTR, mais n'est pas présent dans l'ensemble de lignes. S'il n'est pas spécifié, l'ensemble de lignes aura comme valeur par défaut le serveur actuel. L'ensemble de lignes de schéma SQL_ASSEMBLY_DEPENDENCIES est défini dans le tableau suivant.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Nom de catalogue de l'assembly qui contient le type.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Nom de schéma ou de propriétaire de l'assembly qui contient le type. Bien que les assemblys sont limités par la base de données et non par schéma, ils ont toujours un propriétaire, qui est indiqué ici.|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-sqlusertypes-schema-rowset"></a>Ensemble de lignes de schéma SQL_USER_TYPES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Fournisseur OLE DB du Client natif expose les nouvelles lignes du schéma, SQL_USER_TYPES, qui décrit quand les UDT enregistrés pour un serveur spécifié est ajouté. UDT_SERVER doit être spécifié en tant que DBTYPE_WSTR par l'appelant, mais n'est pas présent dans l'ensemble de lignes. L'ensemble de lignes de schéma SQL_USER_TYPES est défini dans le tableau suivant.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Pour les colonnes UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le schéma UDT est défini.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Pour les colonnes UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le schéma UDT est défini.|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-columns-schema-rowset"></a>Ensemble de lignes de schéma COLUMNS  
  Les colonnes suivantes ont été ajoutées à l'ensemble de lignes de schéma COLUMNS.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Pour les colonnes UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le schéma UDT est défini.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Pour les colonnes UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le schéma UDT est défini.|  
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Pour prendre en charge les types UDT via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER qui contient les valeurs suivantes.  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Identificateur de nom en trois parties.<br /><br /> Pour les paramètres UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le type défini par l'utilisateur est défini.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Identificateur de nom en trois parties.<br /><br /> Pour les paramètres UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le type défini par l'utilisateur est défini.|  
@@ -157,7 +157,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
  Pour prendre en charge la création de tables dans le **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute trois nouvelles colonnes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nom| Description|Type| Description|  
+|Nom   |Description|Type|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Pour les colonnes de type DBTYPE_UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le type défini par l'utilisateur (UDT) est défini.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Pour les colonnes de type DBTYPE_UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le type défini par l'utilisateur (UDT) est défini.|  
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-icolumnsrowset-interface"></a>Interface IColumnsRowset  
  En plus de la **ISSCommandWithParameters** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute également de nouvelles valeurs pour l’ensemble de lignes retourné en appelant le **IColumnsRowset::GetColumnRowset** méthode, y compris les suivantes.  
   
-|Nom de la colonne|Type| Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificateur du nom de catalogue d'un type défini par l'utilisateur (UDT).|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificateur du nom de schéma d'un type défini par l'utilisateur (UDT).|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Target Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 644dda403f8722c31d4cbf61d925994cdd305cfc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2e0a9b638bb916d317c3b380c2e9ea447af73075
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="target-element-xmla"></a>Élément Target (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Représente la partition cible à fusionner lors une [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande.  
@@ -55,8 +53,8 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|1-n : élément requis pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -66,10 +64,10 @@ ms.lasthandoff: 12/08/2017
 |Éléments parents|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Éléments enfants|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **cible** élément est une référence d’objet à une partition unique dans lequel le contenu des partitions sources, spécifié par le [Sources](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) élément du parent **MergePartitions** élément, doivent être fusionnés.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant associe l'ensemble des quatre partitions du groupe de mesures Internet Sales dans la partition cible `Internet_Sales_2004`. L'exemple fait référence au cube [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] de la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] exemple [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ```  

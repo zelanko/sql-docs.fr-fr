@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Spécifications de capacité maximale (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Les tableaux suivants présentent la taille maximale et nombre des différents objets définis dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] composants sous les modes de déploiement de serveur différent.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>Multidimensionnel et exploration de données (DeploymentMode = 0)  
  Le mode de stockage MOLAP, qui stocke des données et des métadonnées, a des limites physiques supplémentaires concernant les tailles de fichier. Les fichiers du magasin de chaînes ont par défaut une taille maximale de 4 Go. Si vous avez besoin de fichiers de plus grande taille pour les magasins de chaînes, vous pouvez spécifier une architecture de stockage de chaînes différente. Pour plus d’informations, consultez [configurer le stockage des chaînes pour les Partitions et Dimensions](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Objet|Tailles maximales/nombres maximaux|  
+|Object|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
 |Bases de données dans une instance|2^31-1 = 2,147,483,647|  
 |Dimensions dans une base de données|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Objet|Tailles maximales/nombres maximaux|  
+|Object|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
 |Bases de données dans une instance|2^31-1 = 2,147,483,647|  
 |Tables dans une base de données|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>Tabulaire (DeploymentMode = 2)  
 Limite théorique sont les suivantes. Performances seront diminuée sur les nombres inférieurs.   
 
-|Objet|Tailles maximales/nombres maximaux|  
+|Object|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
 |Bases de données dans une instance|16,000|  
 |Nombre total de tables et colonnes dans une base de données|16,000|  

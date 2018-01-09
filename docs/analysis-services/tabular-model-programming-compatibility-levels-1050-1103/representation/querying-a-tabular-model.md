@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="querying-a-tabular-model"></a>Interrogation d'un modèle tabulaire
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]En tant que développeur interrogation d’un modèle tabulaire signifie que récupérer des données à partir de la base de données tabulaire ; pour atteindre cet objectif, vous avez deux options : utilisez des requêtes de table dans DAX ou MDX et récupérez les données comme si elles provenaient d’un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
@@ -56,7 +54,7 @@ private DataTable tabularQueryExecute(string qry, ADOMD.AdomdConnection cnx)
   
 ```  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Si le code ci-dessus est utilisé avec l'expression MDX suivante :  
   
 ```  
@@ -112,7 +110,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
+| 1| 1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|Components||$  11,799,076.66|  
   

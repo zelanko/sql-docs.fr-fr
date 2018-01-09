@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: PushedDataSource Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1b4d52901e5d4ca64ee000de1d27989563f0b3e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 206db43d89704f31e92fc4ec8f0ae1fb6b746614
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="pusheddatasource-data-type-assl"></a>Type de données PushedDataSource (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif qui représente une source de données (comme un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package) utilisé pour « pousser » des données dans un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
@@ -48,18 +46,18 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|Aucune|  
-|Types de données dérivés|Aucune|  
+|Types de données de base|None|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[EndOfData](../../../analysis-services/scripting/properties/endofdata-element-assl.md), [racine](../../../analysis-services/scripting/properties/root-element-assl.md)|  
-|Éléments dérivés|Aucune|  
+|Éléments dérivés|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **PushedDataSource** est utilisé uniquement dans une commande de traitement en tant que source de données hors ligne. Les sources de données persistantes ne sont jamais de ce type.  
   
 ## <a name="see-also"></a>Voir aussi  

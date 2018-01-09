@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f60d996499874ce76188529aadeebf9e1b8d677c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>Commande de sauvegarde (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Permet de sauvegarder une base de données Analysis Services dans un fichier de sauvegarde .abf.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**Propriété**|**Default**|**Description**|  
-|database|[Obligatoire]|Le nom de l’objet de base de données à sauvegarder.|  
+|base de données|[Obligatoire]|Le nom de l’objet de base de données à sauvegarder.|  
 |fichier|[Obligatoire]|Le fichier de sauvegarde nom/chemin d’accès.|  
 |password|Vide|Le mot de passe à utiliser pour chiffrer le fichier de sauvegarde.|  
 |allowOverwrite|False|Valeur booléenne qui, si true, indique qu’un fichier de sauvegarde qui existe déjà sera écrasée ; Sinon, false.|  

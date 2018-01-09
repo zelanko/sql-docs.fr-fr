@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le minimum requis pour une solution d’exploration de données est le projet d’exploration de données, qui définit les sources de données, vues de sources de données, les structures d’exploration de données et les modèles d’exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
@@ -65,15 +63,15 @@ ms.lasthandoff: 12/08/2017
   
  **Composants de flux de contrôle**  
   
--   [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tâche de traitement d'Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Nettoyage de données](../../data-quality-services/data-cleansing.md)  
   
--   [Tâche de requête d'exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Tâche de profilage des données](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Transformation de conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Destination d'apprentissage du modèle d'exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Destination d’apprentissage du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
 -   [Transformation de requête d’exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   

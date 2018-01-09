@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd48ec51a292b00aedec899503e302572a4ce183
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 286d7cbe5d6dbb2fb0b05b937fbd1a304f89aa1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-definition-queries-data-mining"></a>Requêtes de définition des données (Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Pour l’exploration de données, la catégorie *requête Définition des données* signifie que les instructions DMX ou des commandes XMLA procédez comme suit :  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |Utiliser des modèles pour des requêtes DMX.|[Utiliser des modèles Analysis Services dans SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|Concevoir des requêtes de tous types, à l'aide du Générateur de requêtes de prédiction.|[Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
+|Concevoir des requêtes de tous types, à l'aide du Générateur de requêtes de prédiction.|[Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |Capturer des définitions de requêtes à l'aide de SQL Server Profiler, puis utiliser les traces pour surveiller [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |En savoir plus sur les langages de script et les langages de programmation fournis pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Référence XML for Analysis &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Développement avec AMO &#40;Analysis Management Objects&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |Apprendre à gérer les modèles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exporter et importer des objets d'exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  

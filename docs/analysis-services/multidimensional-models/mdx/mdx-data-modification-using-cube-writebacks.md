@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3306e20389ece189a8f40c449ea88aa640af4f0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Modification des données MDX - à l’aide d’écriture différée de cubes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vous mettez à jour un cube à l’aide de la [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) instruction. Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
@@ -52,7 +49,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
 > [!NOTE]  
 >  Quand les cellules mises à jour ne se chevauchent pas, la propriété de chaîne de connexion **Update Isolation Level** peut être utilisée pour améliorer les performances pour UPDATE CUBE. Pour plus d’informations, consultez <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour tester l'instruction UPDATE CUBE, utilisez le groupe de mesures Cibles de ventes dans le cube Adventure Works. Ce groupe de mesures est constitué de mesures regroupées par SUM, qui est une condition requise pour l'instruction UPDATE CUBE.  
   
 1.  Activez l'écriture différée pour le groupe de mesures Cibles de ventes dans la base de données Adventure Works. Dans Management Studio, cliquez avec le bouton droit sur un groupe de mesures, pointez sur **Options d’écriture différée**et sélectionnez **Activer l’écriture différée**.  

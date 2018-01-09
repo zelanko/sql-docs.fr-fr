@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 441bb1316c22d0a701ded998def0b1f94c84e4de
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Définir le type de données d'une colonne (SSAS Tabulaire)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Lorsque vous importez ou collez des données dans un modèle, le Concepteur de modèle est détecte et applique automatiquement les types de données. Après avoir ajouté les données au modèle, vous pouvez modifier manuellement le type de données d'une colonne afin de modifier la manière dont les données sont stockées. Si vous souhaitez simplement changer le format d'affichage des données sans modifier le mode de stockage de ces dernières, suivez plutôt la procédure ci-après.  

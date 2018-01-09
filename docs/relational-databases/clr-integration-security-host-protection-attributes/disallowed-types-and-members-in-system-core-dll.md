@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e195d20bb8941d70e60c9301e20eb4189c5f4fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 929ff492c992c69add1e6394bcb699958d1c602d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Types et membres interdits dans System.Core.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commune programmation en langage integration (CLR) interdit l’utilisation d’un type ou membre qui a un **HostProtectionAttribute** qui spécifie un **System.Security.Permissions.HostProtectionResource**  énumération avec la valeur **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**,  **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**,  **Synchronisation**, ou **l’interface utilisateur**. Le tableau suivant répertorie les membres et les types des assemblys System.Core.dll dont les valeurs d'attribut de protection de l'hôte (HPA) sont interdites.  

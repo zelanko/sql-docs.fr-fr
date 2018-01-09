@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b989616b7ae9ebd397fda9dd88044f008cb0eadf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91786723c33d5eb06f7c6c55d256de0154626a87
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Utilisez l'authentification Windows quand c'est possible. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Pour copier des données en bloc dans une table SQL Server  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Appelez **IRowsetFastLoad::InsertRow** pour le copier en bloc les données dans la table.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans cet exemple, 10 enregistrements sont ajoutés à la table IRFLTable. Vous devez créer la table IRFLTable dans la base de données. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  

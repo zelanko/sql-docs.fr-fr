@@ -5,13 +5,10 @@ ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e44414be7517bbecf0411753bdd55337cc9e0d39
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX dans les modèles tabulaires (SSAS tabulaire)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Les Expressions DAX (Data Analysis) est un langage de formule utilisé pour créer des calculs personnalisés dans Analysis Services, Power BI Desktop et Power Pivot dans Excel. Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
@@ -76,7 +73,7 @@ ms.lasthandoff: 12/08/2017
 |Nombre entier|Valeur entière de 64 bits (huit octets) <sup>1, 2</sup>|Nombres qui n'ont pas de décimales. Les entiers peuvent être des nombres positifs ou négatifs, mais doivent être compris entre -9 223 372 036 854 775 808 (-2^63) et 9 223 372 036 854 775 807 (2^63-1).|  
 |Nombre décimal|Nombre réel de 64 bits (huit octets) <sup>1, 2</sup>|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
 |Booléen|Booléen|Valeur True ou valeur False.|  
-|Texte|Chaîne|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
+|Texte|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
@@ -376,7 +373,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Les erreurs syntactiques sont les plus faciles à résoudre. Elles impliquent en général une virgule ou une parenthèse manquante. Pour obtenir de l’aide sur la syntaxe d’une fonction, consultez [Référence des fonctions DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
- L'autre type d'erreur se produit lorsque la syntaxe est correcte, mais que la valeur ou la colonne référencée n'a pas de sens dans le contexte de la formule. De telles erreurs sémantiques et de calcul peuvent être provoquées par l'un des problèmes suivants :  
+ L'autre type d'erreur se produit lorsque la syntaxe est correcte, mais que la valeur ou la colonne référencée n'a pas de sens dans le contexte de la formule. De telles erreurs sémantiques et de calcul peuvent être provoquées par l'un des problèmes suivants :  
   
 -   La formule fait référence à une colonne, une table ou une fonction non existante.  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10cd57d39845f67fe8e447a1c95a5e412709409d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f616fb67d0e22bba33d22d0d59eb2ed19a4d88e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="properties-assl"></a>Propriétés (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui agit comme une propriété d’objet dans le schéma d’Analysis Services Scripting Language (ASSL).  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Élément| Description|  
+|Élément|Description|  
 |-------------|-----------------|  
 |[Élément Access &#40; ASSL &#41;](../../../analysis-services/scripting/properties/access-element-assl.md)|Indique le niveau d’accès accordé à un [CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md) élément.|  
 |[Élément Account &#40; ImpersonationInfo &#41; &#40; ASSL &#41;](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md)|Contient le nom du compte d’utilisateur pour le [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) type de données.|  

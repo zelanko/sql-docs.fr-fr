@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: edbad8837867dbb863672db7d3803a0d9e1e4ac5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 066bee36d4dabdf6b11894d5d0158451d601adb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Connexion à une instance de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]La première étape de programmation un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les application Management Objects (SMO) consiste à créer une instance de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet et pour établir sa connexion à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 -   La méthode <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> doit être appelée avant de passer la connexion à n'importe quel objet de programmation RMO.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connexion à l'instance locale de SQL Server via l'authentification Windows en Visual Basic  
  La connexion à l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'exige pas beaucoup de code. À la place, elle se base sur les paramètres par défaut pour la méthode d'authentification et le serveur. La première opération nécessitant la récupération des données entraîne la création d'une connexion.  

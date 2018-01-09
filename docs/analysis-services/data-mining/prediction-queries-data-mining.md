@@ -5,12 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’objectif d’un projet d’exploration de données par défaut est d’utiliser le modèle d’exploration de données pour élaborer des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  

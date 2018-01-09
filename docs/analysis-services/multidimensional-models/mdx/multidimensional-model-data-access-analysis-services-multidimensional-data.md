@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accès aux données de modèles multidimensionnels (Analysis Services - Données multidimensionnelles)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Utilisez les informations de cette rubrique pour savoir comment accéder aux [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] des données multidimensionnelles à l’aide des méthodes de programmation, un script ou des applications clientes qui incluent la prise en charge intégrée pour la connexion à un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur sur votre réseau.  
@@ -61,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="performancepoint-dashboards"></a>Tableaux de bord PerformancePoint  
  Les tableaux de bord PerformancePoint servent à créer des tableaux de bord SharePoint qui communiquent les performances métier sur des mesures prédéfinies. PerformancePoint inclut la prise en charge des connexions de données aux données multidimensionnelles Analysis Services. Pour plus d’informations, consultez [Créer des connexions de données Analysis Services (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>Outils de données SQL Server  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Le modèle et les concepteurs de rapports utilisent des outils de données SQL Server pour créer des solutions qui incluent des modèles MDX. Le déploiement de la solution sur une instance Analysis Services permet de crée la base de données à laquelle vous allez vous connecter par la suite à partir d'Excel, Reporting Services et d'autres applications clientes Business Intelligence.  
   
  SQL Server Data Tools sont générés sur un shell Visual Studio et utilisent des projets pour organiser et contenir le modèle. Pour plus d’informations, consultez [Création de modèles MDX à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  

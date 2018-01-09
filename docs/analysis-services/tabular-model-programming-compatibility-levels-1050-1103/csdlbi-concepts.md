@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b75857391d8c5298db654469ada8c117926dc89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conceptual Schema Definition Language avec des annotations BI (CSDLBI) est basée sur l’Entity Data Framework, qui est une abstraction pour représenter des données d’une façon qui permet à des jeux de données disparates pour par programmation accessibles, interrogés ou exportés. CSDLBI est utilisé pour représenter les modèles de données créés à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], car il prend en charge les applications et la création de rapports complets pilotée par les données.  

@@ -5,12 +5,10 @@ ms.date: 07/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ae2fc5e77d04d24bbe51a0fc06c9546ef739f07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilité des formules DAX en mode DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pour les modèles tabulaires 1200 et les versions ultérieures en mode DirectQuery, plusieurs limitations fonctionnelles dans les versions antérieures ne s’appliquent plus. Pour les formules DAX en particulier :
@@ -42,7 +40,7 @@ Ce sont des fonctions qui retournent principalement des résultats scalaires ou 
 
 | Prises en charge dans toutes les formules DAX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Prises en charge seulement dans les formules de mesure et de requête                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  Vide</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Monétaire (Currency)</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  - ou -</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  VALUE</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  Vide</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Monétaire (Currency)</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  - ou -</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
@@ -108,7 +106,7 @@ Notez que dans Transact-SQL une valeur Null n'est jamais égale à une valeur Nu
   
 ### <a name="casts"></a>Casts  
   
-Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites sont effectués dans nombre de comparaisons et d'opérations arithmétiques. La comparaison ou l'opération arithmétique détermine le type de données du résultat. Par exemple :  
+Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites sont effectués dans nombre de comparaisons et d'opérations arithmétiques. La comparaison ou l'opération arithmétique détermine le type de données du résultat. Par exemple,  
   
 -   Les valeurs booléennes sont traitées en tant que valeurs numériques dans les opérations arithmétiques, telles que TRUE + 1, ou la fonction MIN appliquée à une colonne de valeurs booléennes. Une opération NOT retourne également une valeur numérique.  
   
@@ -330,7 +328,7 @@ EXEMPLE : `SUBSTITUTE([Title],”Doctor”,”Dr.”)`
   
 EXEMPLE : `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
   
-En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonction qui a trois (3) paramètres : une référence à une colonne, l'ancien texte et le nouveau texte. Si vous utilisez la deuxième formule, une erreur est générée.  
+En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonction qui a trois (3) paramètres : une référence à une colonne, l'ancien texte et le nouveau texte. Si vous utilisez la deuxième formule, une erreur est générée.  
   
 Dans les modèles en mémoire, vous pouvez utiliser un quatrième paramètre facultatif pour spécifier le nombre d'instances de la chaîne à remplacer. Par exemple, vous pouvez remplacer uniquement la deuxième instance, etc.  
   

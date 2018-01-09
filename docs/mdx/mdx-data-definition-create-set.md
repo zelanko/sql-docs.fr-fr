@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 46ad325e1ca6e983b3ecfa550c6f7192bb17242f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>Définition de données MDX - créer défini
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Nom*  
  Expression scalaire valide qui définit la valeur de la propriété de jeu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un jeu nommé est un jeu de membres de dimension (ou une expression définissant un jeu) que vous créez pour le réutiliser. Par exemple, un jeu nommé vous permet de définir un jeu de membres de dimension constitué de l'ensemble des dix premiers magasins en termes de ventes. Ce jeu peut être défini statiquement, ou au moyen d’une fonction comme [TopCount](../mdx/topcount-mdx.md). Ce jeu nommé peut ensuite être utilisé chaque fois que l'ensemble des 10 premiers magasins est nécessaire.  
   
  L’instruction CREATE SET crée un jeu nommé qui demeure disponible durant toute la session et peut donc être utilisée dans plusieurs requêtes dans une session. Pour plus d’informations, consultez [Creating Session-Scoped de membres calculés &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
@@ -83,7 +83,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Étendue de session  
  La visibilité et la durée de vie du jeu sont limitées à la session dans laquelle il est créé. (La durée de vie est inférieure à la durée de la session si une instruction DROP SET est émise sur le jeu.) L'instruction CREATE SET crée un jeu avec une étendue de session. Utilisez la clause WITH pour créer un jeu avec une étendue de requête.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L'exemple ci-dessous crée un jeu appelé Core Products (produits clés). La requête SELECT démontre ensuite l'appel du nouveau jeu créé. Vous devez exécuter l'instruction CREATE SET avant d'exécuter la requête SELECT. Ces deux éléments ne peuvent pas être exécutés dans le même traitement.  
   
 ```  

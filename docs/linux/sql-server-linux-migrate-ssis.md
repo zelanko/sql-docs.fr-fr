@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
 
@@ -31,7 +31,7 @@ Les packages SSIS en cours d’exécution sur Linux peuvent se connecter à Micr
 
 Pour plus d’informations sur les fonctionnalités de SSIS, consultez [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Pour exécuter des packages SSIS sur un ordinateur Linux, vous devez d’abord installer SQL Server Integration Services. SSIS n’est pas inclus dans l’installation de SQL Server pour les ordinateurs Linux. Pour obtenir des instructions d’installation, consultez [installer SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -47,6 +47,34 @@ Pour exécuter un package SSIS sur un ordinateur Linux, procédez comme suit :
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
+## <a name="run-an-encrypted-password-protected-package"></a>Exécuter un package chiffré (protégé par mot de passe)
+Il existe trois manières d’exécuter un package SSIS qui est chiffré avec un mot de passe :
+
+1.  Définir la valeur de la variable d’environnement `SSIS_PACKAGE_DECRYPT`, comme illustré dans l’exemple suivant :
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  Spécifiez le `/de[crypt]` option pour entrer le mot de passe interactivement, comme indiqué dans l’exemple suivant :
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  Spécifiez le `/de` permet de fournir le mot de passe sur la ligne de commande, comme indiqué dans l’exemple suivant. Cette méthode n’est pas recommandée, car elle stocke le mot de passe de déchiffrement avec la commande dans l’historique des commandes.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
 ## <a name="design-packages"></a>Conception de packages
 
 **Se connecter aux sources de données ODBC**. SSIS lors de l’actualisation de Linux CTP 2.1 et versions ultérieures, les packages SSIS permet les connexions ODBC sur Linux. Cette fonctionnalité a été testée avec les pilotes ODBC MySQL sur le serveur SQL Server, mais il est également prévue pour fonctionner avec n’importe quel pilote ODBC Unicode qui respecte la spécification ODBC. Au moment du design, vous pouvez fournir une source de données ou une chaîne de connexion pour se connecter aux données ODBC ; Vous pouvez également utiliser l’authentification Windows. Pour plus d’informations, consultez la [blog de l’annonce prise en charge d’ODBC sur Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
@@ -56,7 +84,7 @@ Pour exécuter un package SSIS sur un ordinateur Linux, procédez comme suit :
 ## <a name="deploy-packages"></a>Déployer des packages
 Vous ne pouvez stocker des packages dans le système de fichiers sur Linux dans cette version. La base de données du catalogue SSIS et le service SSIS hérité ne sont pas disponibles sur Linux pour le stockage et le déploiement du package.
 
-## <a name="schedule-packages"></a>Planification des packages
+## <a name="schedule-packages"></a>Planifier les packages
 Vous pouvez utiliser le système Linux tels que les outils de planification `cron` pour planifier les packages. Vous ne pouvez pas utiliser l’Agent SQL sur Linux pour planifier l’exécution du package dans cette version. Pour plus d’informations, consultez [packages SSIS de planification sur Linux avec cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Limitations et problèmes connus

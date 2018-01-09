@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5aa5b45c71d32f711e3facecd3846d32b70a769
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Fonctions DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge plusieurs fonctions du langage DMX (Data Mining Extensions). Les fonctions étendent les résultats d'une requête de prévision afin d'inclure les informations qui décrivent en détail la prévision. Les fonctions permettent aussi de mieux contrôler la présentation des résultats de la prévision. Le tableau suivant fournit des liens vers des ressources vous permettant de comprendre l'utilisation des fonctions dans DMX.  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|Répertorie les fonctions qui peuvent être utilisées avec tous les types de modèles et fournit des liens vers des informations supplémentaires sur l'interrogation de types spécifiques de modèles d'exploration de données.|  
 |[Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Fournit une vue d'ensemble de la création d'une requête de prédiction à l'aide de DMX.|  
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau ci-après répertorie les fonctions prises en charge par DMX.  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |[BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)|Retourne une table qui contient les n dernières lignes d'éléments de l'expression de table, triées par ordre croissant selon une expression de classement.|  
 |[BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)|Retourne une table qui contient le plus petit nombre de lignes de niveau inférieur qui représentent un pourcentage spécifié, triée en ordre croissant d'après une expression de classement.|  

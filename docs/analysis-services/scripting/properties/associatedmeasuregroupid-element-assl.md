@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AssociatedMeasureGroupID Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb7a391e6c042d33d511426d39666febb88f891e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 14ddb275cf2462812fdbed1430a2503f2f79130d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associatedmeasuregroupid-element-assl"></a>Élément AssociatedMeasureGroupID (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient l’ID de la [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) élément associé à un [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) élément ou un [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) élément.  
@@ -49,18 +47,18 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Chaîne|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|String|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md), [indicateur de performance clé](../../../analysis-services/scripting/objects/kpi-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Quand il est appliqué à **CalculationProperty** éléments, le **AssociatedMeasureGroupID** propriété s’applique aux éléments avec un [CalculationType](../../../analysis-services/scripting/properties/calculationtype-element-assl.md) de *membre*.  
   
  Les éléments qui correspondent aux parents de **AssociatedMeasureGroupID** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.CalculationProperty> et <xref:Microsoft.AnalysisServices.Kpi>.  

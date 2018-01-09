@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 978c1deca02aa60a7a123707de9ac3e95cd68851
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +55,7 @@ FROM <existing model>
  Nom défini par le fournisseur d'un algorithme d'exploration de données  
   
  *liste de paramètres*  
- Ce paramètre est facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *expression*  
  Expression dont le résultat est une condition de filtre valide sur les données d'apprentissage. Pour plus d’informations sur les expressions qui peuvent être utilisées comme filtres, consultez [filtres pour les modèles d’exploration de données &#40; Analysis Services - Exploration de données &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
@@ -65,7 +63,7 @@ FROM <existing model>
  *modèle existant*  
  Nom du modèle existant à copier.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si l'apprentissage du modèle existant est effectué, le nouveau modèle est automatiquement traité lors de l'exécution de cette instruction. Dans le cas contraire, le nouveau modèle reste non traité.  
   
  Le **SELECT INTO** instruction fonctionne uniquement si la structure du modèle existant est compatible avec l’algorithme du nouveau modèle. Par conséquent, cette instruction s'avère très utile pour créer et tester rapidement des modèles basés sur le même algorithme. Si vous modifiez le type d'algorithme, le nouvel algorithme doit prendre en charge le type de données de chaque colonne du modèle existant, sinon une erreur peut se produire lors du traitement du modèle.  
@@ -96,6 +94,6 @@ FROM [TM Clustering]
 ## <a name="see-also"></a>Voir aussi  
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

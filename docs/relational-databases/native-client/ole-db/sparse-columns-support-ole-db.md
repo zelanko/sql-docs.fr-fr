@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e619df00ebd8c35d950de35aacc058f24205c2e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccfb47c8663f482b7c6c7ab95b7957381f43d010
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>Prise en charge des colonnes éparses (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="ole-db-support-for-sparse-columns"></a>Prise en charge OLE DB des colonnes éparses  
  Les interfaces OLE DB suivantes ont été modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour prendre en charge les colonnes éparses :  
   
-|Type ou fonction membre| Description|  
+|Type ou fonction membre|Description|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|Un nouveau DBCOLUMNFLAGS indicateur valeur DBCOLUMNFLAGS_SS_ISCOLUMNSET est définie pour **column_set** dans les colonnes *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE est défini pour **column_set** colonnes.|  
 |IColumsRowset::GetColumnsRowset|Une nouvelle valeur d’indicateur DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, est définie pour **column_set** colonnes dans DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE est défini à DBCOMPUTEMODE_DYNAMIC pour **column_set** colonnes.|  

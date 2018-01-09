@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODELS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 275be85ca3a85147767166ac49cd1d1ee288cf5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_MODELS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Énumère les modèles d’exploration de données dans le catalogue actuel. Le **DMSCHEMA_MINING_MODELS** ensemble de lignes inclut des informations telles que les noms de modèle, date de traitement et l’algorithme d’exploration de données associée à chaque modèle d’exploration de données.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DMSCHEMA_MINING_MODELS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|Nom du catalogue. Défini d'après le nom de la base de données dont le modèle est membre.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|Nom de schéma non qualifié. Cette colonne n’est pas pris en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; il contient toujours **NULL**.|  
@@ -65,13 +63,13 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Ce paramètre est facultatif.|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facultatif.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facultatif.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Facultatif.|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facultatif.|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Facultatif.|  
   
  Pour obtenir des exemples d’interrogation de cet ensemble de lignes, consultez [les paramètres utilisés pour créer un modèle d’exploration de données de requête](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: user-defined functions [SMO]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9db4252a3a820cca18bfc38d5583dfd542f198c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2551a7393df1d4e896a78d40f244aa914de0ef5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Création, modification et suppression de fonctions définies par l'utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fournit une fonctionnalité qui permet aux utilisateurs de gérer par programmation des fonctions définies par l’utilisateur dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fonctions définies par l'utilisateur prennent en charge les paramètres d'entrée et de sortie, ainsi que les références directes aux colonnes de table.  
@@ -33,8 +33,8 @@ ms.lasthandoff: 11/17/2017
   
  Lorsque le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fait référence à un assembly .NET, vous devez inscrire l’assembly en créant un <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> objet et en l’ajoutant à la <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> objet, qui appartienne à la <xref:Microsoft.SqlServer.Management.Smo.Database> objet.  
   
-## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a> Exemple  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Création d'une fonction scalaire définie par l'utilisateur en Visual Basic  
  Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l’utilisateur qui a une entrée <xref:System.DateTime> paramètre d’objet et un entier type de retour en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. La fonction définie par l’utilisateur est créée sur le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple crée une fonction définie par l'utilisateur, ISOweek, qui accepte un argument de date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur 1 doit être affectée à l'option de base de données DATEFIRST avant l'appel de la fonction.  

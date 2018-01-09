@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9ab5746170451db7fea60b257adb7c0e9381627e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e99da62dd46ff34e13cb009ef1dd20141be75ead
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est très courant d’écrire une procédure stockée (ou une procédure stockée étendue) qui envoie des résultats ou des paramètres de sortie au client appelant.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Après l'appel de la méthode **SendResultsStart** , seules **SendResultsRow** et **SendResultsEnd** peuvent être appelées. L'appel de toute autre méthode dans la même instance de **SqlPipe** entraîne **InvalidOperationException**. **SendResultsEnd** rétablit **SqlPipe** à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  La procédure stockée **uspGetProductLine** retourne les nom, numéro de produit, couleur et tarif de tous les produits dans une ligne de produit spécifiée. Cette procédure stockée accepte des correspondances exactes pour *prodLine*.  
   
  C#  

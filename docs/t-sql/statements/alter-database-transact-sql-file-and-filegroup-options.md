@@ -47,11 +47,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0672b00cbb7064bdb889908585b4333865ac75c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>MODIFIER les Options de groupe de fichiers et de la base de données (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 ALTER DATABASE database_name   
 {  
     <add_or_modify_files>  
@@ -135,18 +134,18 @@ ALTER DATABASE database_name
  Nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!WARNING]  
->  Suppression d’un fichier de base de données qui a FILE_SNAPSHOT les sauvegardes associées à elle réussira, mais toutes les captures instantanées associées ne seront pas supprimées pour éviter l’invalidation de sauvegardes qui fait référence au fichier de base de données. Le fichier sera tronqué, mais n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+> Suppression d’un fichier de base de données qui a FILE_SNAPSHOT les sauvegardes associées à elle réussira, mais toutes les captures instantanées associées ne seront pas supprimées pour éviter l’invalidation de sauvegardes qui fait référence au fichier de base de données. Le fichier sera tronqué, mais n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  MODIFY FILE  
  Spécifie le fichier à modifier. Seul \<filespec > propriété peut être modifiée à la fois. NOM doit toujours être spécifié dans le \<filespec > pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.  
   
- Pour modifier le nom logique d'un fichier de données ou d'un fichier journal, spécifiez le nom logique du fichier à renommer dans la clause `NAME` et indiquez le nouveau nom logique à appliquer dans la clause `NEWNAME`. Exemple :  
+ Pour modifier le nom logique d'un fichier de données ou d'un fichier journal, spécifiez le nom logique du fichier à renommer dans la clause `NAME` et indiquez le nouveau nom logique à appliquer dans la clause `NEWNAME`. Exemple :  
   
 ```  
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )   
 ```  
   
- Pour déplacer un fichier de données ou un fichier journal vers un nouvel emplacement, spécifiez le nom de fichier logique actuel dans la clause `NAME` et les nouveaux chemin d'accès et nom de fichier de système d'exploitation dans la clause `FILENAME`. Exemple :  
+ Pour déplacer un fichier de données ou un fichier journal vers un nouvel emplacement, spécifiez le nom de fichier logique actuel dans la clause `NAME` et les nouveaux chemin d'accès et nom de fichier de système d'exploitation dans la clause `FILENAME`. Exemple :  
   
 ```  
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )  
@@ -188,7 +187,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  Les paramètres SIZE, MAXSIZE et FILEGROWTH ne peuvent pas être définis lorsqu'un chemin d'accès UNC est spécifié pour le fichier.  
   
 > [!NOTE]  
->  Les bases de données système ne peuvent pas résider dans les répertoires partagés UNC.  
+> Bases de données système ne peuvent pas résider dans les répertoires partagés UNC.  
   
  Les fichiers de données ne doivent pas être placés sur des systèmes de fichiers compressés à moins qu'il ne s'agisse de fichiers secondaires en lecture seule ou que la base de données soit en lecture seule. Les fichiers journaux ne doivent jamais être placés sur des systèmes de fichiers compressés.  
   
@@ -209,7 +208,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  TAILLE *taille*  
  Spécifie la taille du fichier. SIZE ne s'applique pas aux groupes de fichiers FILESTREAM.  
   
- *taille*  
+ *size*  
  Est la taille du fichier.  
   
  Lorsque spécifié avec ADD FILE, *taille* est la taille initiale du fichier. Lorsque spécifiée avec MODIFY FILE, *taille* est la nouvelle taille pour le fichier et doit être supérieure à la taille du fichier.  
@@ -239,10 +238,10 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  Si la croissance du fichier n’est pas spécifié, les valeurs par défaut sont :  
   
-|Version|Valeurs par défaut|  
+|Options de version|Valeurs par défaut|  
 |-------------|--------------------|  
-|Début[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Données de 64 Mo. Les fichiers journaux 64 Mo.|  
-|Début[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Données de 1 Mo. Fichiers journaux de 10 %.|  
+|À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Données de 64 Mo. Les fichiers journaux 64 Mo.|  
+|À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Données de 1 Mo. Fichiers journaux de 10 %.|  
 |Versions antérieures à[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Données de 10 %. Fichiers journaux de 10 %.|  
   
  OFFLINE  
@@ -252,7 +251,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 >  Utilisez cette option uniquement lorsque le fichier est endommagé et peut être restauré. Un fichier configuré avec l'option OFFLINE ne peut être remis en ligne qu'en le restaurant à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
->  \<spécification de fichier > options ne sont pas disponibles dans une base de données de contenu.  
+> \<spécification de fichier > options ne sont pas disponibles dans une base de données de contenu.  
   
  **\<add_or_modify_filegroups > :: =**  
   
@@ -266,13 +265,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Spécifie que le groupe de fichiers stocke des données mémoire optimisées dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers MEMORY_OPTIMIZED_DATA est autorisé par base de données. Pour créer des tables mémoire optimisées, le groupe de fichiers ne peut pas être vide. Il doit y avoir au moins un fichier. *FILEGROUP_NAME* fait référence à un chemin d’accès. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister.  
   
  L'exemple suivant crée un groupe de fichiers qui est ajouté à une base de données nommée xtp_db, puis ajoute un fichier dans le groupe de fichiers. Le groupe de fichiers stocke des données optimisées en mémoire.  
   
-```  
+```sql  
 ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
 GO  
 ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
@@ -282,7 +281,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  Supprime un groupe de fichiers de la base de données. Le groupe de fichiers ne peut pas être supprimé s'il n'est pas vide. Commencez par supprimer tous les fichiers du groupe. Pour plus d’informations, consultez « Suppression du fichier *nom_fichier_logique*, » plus haut dans cette rubrique.  
   
 > [!NOTE]  
->  Sauf dans le cas où le garbage collector FILESTREAM a supprimé tous les fichiers d'un conteneur FILESTREAM, l'opération ALTER DATABASE REMOVE FILE pour supprimer un conteneur FILESTREAM échoue et retourne une erreur. Consultez la section « Supprimer le conteneur FILESTREAM » dans les Notes dans la suite de cette rubrique.  
+> Sauf dans le cas où le garbage collector FILESTREAM a supprimé tous les fichiers d'un conteneur FILESTREAM, l'opération ALTER DATABASE REMOVE FILE pour supprimer un conteneur FILESTREAM échoue et retourne une erreur. Consultez la section « Supprimer le conteneur FILESTREAM » dans les Notes dans la suite de cette rubrique.  
   
 MODIFIER le groupe de fichiers *filegroup_name* { \<filegroup_updatability_option > | PAR DÉFAUT | NOM  **=**  *new_filegroup_name* } modifie le groupe de fichiers en définissant l’état READ_ONLY ou READ_WRITE, de rendre le groupe de fichiers du groupe de fichiers par défaut pour la base de données ou de la modification du nom de groupe de fichiers.  
   
@@ -296,13 +295,13 @@ MODIFIER le groupe de fichiers *filegroup_name* { \<filegroup_updatability_optio
  Modifie le nom du groupe de fichiers pour le *new_filegroup_name*.  
   
  OPTIONS AUTOGROW_SINGLE_FILE  
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Lorsqu’un fichier dans le groupe de fichiers est conforme au seuil de croissance automatique, seul ce fichier s’agrandit. Il s'agit du paramètre par défaut.  
   
  AUTOGROW_ALL_FILES  
 
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Lorsqu’un fichier dans le groupe de fichiers est conforme au seuil de croissance automatique, tous les fichiers dans le groupe de fichiers augmente.  
   
@@ -316,9 +315,7 @@ MODIFIER le groupe de fichiers *filegroup_name* { \<filegroup_updatability_optio
  Étant donné qu'une base de données en lecture seule interdit la modification des données :  
   
 -   La récupération automatique est ignorée au démarrage du système.  
-  
 -   Le compactage de la base de données est impossible.  
-  
 -   Tout verrouillage est impossible dans les bases de données en lecture seule, ce qui améliore les performances des requêtes.  
   
 > [!NOTE]  
@@ -328,42 +325,39 @@ MODIFIER le groupe de fichiers *filegroup_name* { \<filegroup_updatability_optio
  Spécifie que le groupe a l'option READ_WRITE. Les objets du groupe de fichiers peuvent être mis à jour. Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.  
   
 > [!NOTE]  
->  Le mot clé READWRITE sera supprimée dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser READWRITE dans le développement de nouvelles applications et prévoyez de modifier celles qui utilisent actuellement READWRITE. Utilisez à la place READ_WRITE.  
+>  Le mot clé `READWRITE` sera supprimée dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` de travail dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement `READWRITE` à utiliser `READ_WRITE` à la place.  
   
- L’état de ces options peut être déterminé en examinant la **is_read_only** colonne dans la **sys.databases** affichage catalogue ou **mise à jour** propriété de la fonction DATABASEPROPERTYEX.  
+ L’état de ces options peut être déterminé en examinant la **is_read_only** colonne dans la **sys.databases** affichage catalogue ou **mise à jour** propriété de la `DATABASEPROPERTYEX` (fonction).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour réduire la taille d’une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
- Vous ne pouvez pas ajouter ou supprimer de fichier tant qu'une instruction BACKUP est en cours d'exécution.  
+Impossible d’ajouter ou supprimer un fichier pendant une `BACKUP` instruction est en cours d’exécution.  
   
- Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.  
+Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.  
   
- Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, l'état d'un fichier de base de données (par exemple, en ligne ou hors connexion) est préservé indépendamment de l'état de la base de données. Pour plus d’informations, consultez [États des fichiers](../../relational-databases/databases/file-states.md). L'état des fichiers dans un groupe de fichiers détermine la disponibilité de tout le groupe de fichiers. Pour qu'un groupe de fichiers soit disponible, tous ses fichiers doivent être en ligne. Si un groupe de fichiers est hors connexion, toute tentative d'accès au groupe par une instruction SQL échoue avec une erreur. Lorsque vous créez des plans de requête pour les instructions SELECT, l'optimiseur de requête évite les index non cluster et les vues indexées qui résident dans les groupes de fichiers hors connexion. Cela permet aux instructions de s'exécuter correctement. Cependant, si le groupe de fichiers hors connexion contient le segment ou l'index cluster d'une table cible, les instructions SELECT échouent. De plus, toute instruction INSERT, UPDATE ou DELETE modifiant une table assortie d'un index dans un groupe de fichiers hors connexion ne peut être exécutée.  
+En commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l’état d’un fichier de base de données (par exemple, en ligne ou hors connexion), est géré indépendamment de l’état de la base de données. Pour plus d’informations, consultez [États des fichiers](../../relational-databases/databases/file-states.md). 
+-  L'état des fichiers dans un groupe de fichiers détermine la disponibilité de tout le groupe de fichiers. Pour qu'un groupe de fichiers soit disponible, tous ses fichiers doivent être en ligne. 
+-  Si un groupe de fichiers est hors connexion, toute tentative d'accès au groupe par une instruction SQL échoue avec une erreur. Lorsque vous générez des plans de requête pour `SELECT` instructions, l’optimiseur de requête évite les index non ordonnés en clusters et des vues indexées qui résident dans des groupes de fichiers hors connexion. Cela permet aux instructions de s'exécuter correctement. Toutefois, si le groupe de fichiers hors connexion contient le segment de mémoire ou index ordonné en clusters de la table cible, le `SELECT` instructions échouent. En outre, les `INSERT`, `UPDATE`, ou `DELETE` instruction qui modifie une table avec un index dans un groupe de fichiers hors connexion échoue.  
   
 ## <a name="moving-files"></a>Déplacement de fichiers  
- Vous pouvez déplacer des données système ou définies par l'utilisateur ainsi que des fichiers journaux en spécifiant le nouvel emplacement dans FILENAME. Cela peut être utile dans les cas suivants :  
+Vous pouvez déplacer des données système ou définies par l'utilisateur ainsi que des fichiers journaux en spécifiant le nouvel emplacement dans FILENAME. Cela peut être utile dans les cas suivants :  
   
--   Récupération après défaillance. Par exemple, la base de données est en mode suspect ou arrêtée à cause d'une défaillance matérielle  
+-   Récupération après défaillance. Par exemple, la base de données est en mode suspect ou arrêtée à cause d'une défaillance matérielle.  
+-   Déplacement prévu.  
+-   Déplacement en vue d'une maintenance de disque planifiée.  
   
--   Déplacement prévu  
-  
--   Déplacement en vue d’une maintenance de disque planifiée  
-  
- Pour plus d’informations, consultez [déplacer les fichiers de base de données](../../relational-databases/databases/move-database-files.md).  
+Pour plus d’informations, consultez [déplacer les fichiers de base de données](../../relational-databases/databases/move-database-files.md).  
   
 ## <a name="initializing-files"></a>Initialisation des fichiers  
- Par défaut, les fichiers de données et journaux sont initialisés en remplissant les fichiers avec des zéros lorsque vous effectuez l'une des opérations suivantes :  
+Par défaut, les fichiers de données et journaux sont initialisés en remplissant les fichiers avec des zéros lorsque vous effectuez l'une des opérations suivantes :  
   
--   création d'une base de données ;  
+-   Créer une base de données.   
+-   Ajouter des fichiers à une base de données existante.   
+-   Augmenter la taille d'un fichier existant.   
+-   Restaurer une base de données ou un groupe de fichiers.   
   
--   ajout de fichiers à une base de données existante ;  
-  
--   augmentation de la taille d'un fichier existant ;  
-  
--   restauration d'une base de données ou d'un groupe de fichiers.  
-  
- Les fichiers de données peuvent être initialisés de manière instantanée. Dès lors, l'exécution de ces opérations de fichiers est très rapide.  
+Les fichiers de données peuvent être initialisés de manière instantanée. Dès lors, l'exécution de ces opérations de fichiers est très rapide. Pour plus d’informations, consultez [Initialisation des fichiers de base de données](../../relational-databases/databases/database-instant-file-initialization.md). 
   
 ## <a name="removing-a-filestream-container"></a>Suppression d'un conteneur FILESTREAM  
  Même si le conteneur FILESTREAM a peut-être été vidé à l'aide de l'opération DBCC SHRINKFILE, la base de données peut encore peut-être conserver des références aux fichiers supprimés pour des raisons de maintenance du système. [sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) s’exécutera le Garbage Collector FILESTREAM pour supprimer ces fichiers quand il est possible de le faire. Sauf dans le cas où le garbage collector FILESTREAM a supprimé tous les fichiers d'un conteneur FILESTREAM, l'opération ALTER DATABASEREMOVE FILE ne parviendra pas à supprimer un conteneur FILESTREAM et retournera une erreur. Le processus suivant est recommandé pour supprimer un conteneur FILESTREAM.  
@@ -387,7 +381,7 @@ MODIFIER le groupe de fichiers *filegroup_name* { \<filegroup_updatability_optio
 ### <a name="a-adding-a-file-to-a-database"></a>A. Ajout d'un fichier à une base de données  
  L'exemple suivant ajoute un fichier de données de 5 Mo à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -406,7 +400,7 @@ GO
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Ajout d'un groupe de deux fichiers à une base de données  
  L'exemple suivant crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -436,7 +430,7 @@ GO
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. Ajout de deux fichiers journaux à une base de données  
  L'exemple suivant ajoute deux fichiers journaux de 5 Mo à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -462,20 +456,19 @@ GO
 ### <a name="d-removing-a-file-from-a-database"></a>D. Suppression d'un fichier d'une base de données  
  L'exemple suivant supprime l'un des fichiers ajoutés dans l'exemple B.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 REMOVE FILE test1dat4;  
 GO  
-  
 ```  
   
 ### <a name="e-modifying-a-file"></a>E. Modification d'un fichier  
 L'exemple suivant augmente la taille de l'un des fichiers ajoutés dans l'exemple B.  
  L’instruction ALTER DATABASE avec la commande modifier le fichier peut uniquement agrandir une taille de fichier, si vous avez besoin réduire la taille du fichier vous devez donc utiliser DBCC SHRINKFILE.  
   
-```  
+```sql  
 USE master;  
 GO
   
@@ -488,7 +481,7 @@ GO
 
 Cet exemple réduit la taille d’un fichier de données de 100 Mo et puis spécifie la taille de ce montant. 
 
-```
+```sql
 USE AdventureWorks2012;
 GO
 
@@ -510,9 +503,9 @@ GO
  L'exemple suivant déplace le fichier `Test1dat2` créé dans l'exemple A vers un nouveau répertoire.  
   
 > [!NOTE]  
->  Vous devez déplacer physiquement le fichier vers le nouveau répertoire avant d'exécuter cet exemple. Après quoi, arrêtez et démarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou mettez la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hors connexion (OFFLINE) puis remettez-la en ligne (ONLINE) pour implémenter la modification.  
+> Vous devez déplacer physiquement le fichier vers le nouveau répertoire avant d'exécuter cet exemple. Après quoi, arrêtez et démarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou mettez la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hors connexion (OFFLINE) puis remettez-la en ligne (ONLINE) pour implémenter la modification.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -529,7 +522,7 @@ GO
   
 1.  Déterminez les noms de fichier logique de la `tempdb` base de données et de leur emplacement actuel sur le disque.  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -538,7 +531,7 @@ GO
   
 2.  Modifiez l'emplacement de chaque fichier à l'aide de `ALTER DATABASE`.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     ALTER DATABASE tempdb   
@@ -553,7 +546,7 @@ GO
   
 4.  Vérifiez que la modification des fichiers a bien eu lieu.  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -564,7 +557,7 @@ GO
 ### <a name="h-making-a-filegroup-the-default"></a>H. Configuration d'un groupe de fichiers comme groupe par défaut  
  L’exemple suivant montre la `Test1FG1` groupe de fichiers est créé dans l’exemple B le groupe de fichiers par défaut. Ensuite, le groupe de fichiers par défaut est reconfiguré en groupe de fichiers `PRIMARY`. Notez que `PRIMARY` doit être délimité par des crochets ou des guillemets.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -573,13 +566,12 @@ GO
 ALTER DATABASE AdventureWorks2012   
 MODIFY FILEGROUP [PRIMARY] DEFAULT;  
 GO  
-  
 ```  
   
 ### <a name="i-adding-a-filegroup-using-alter-database"></a>I. Ajout d'un groupe de fichiers à l'aide d'ALTER DATABASE  
  L'exemple de code suivant ajoute un `FILEGROUP` qui contient la clause `FILESTREAM` à la base de données `FileStreamPhotoDB`.  
   
-```  
+```sql  
 --Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
 --the FileStreamPhotoDB database.  
 ALTER DATABASE FileStreamPhotoDB  
@@ -601,7 +593,7 @@ GO
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. Modifier le groupe de fichiers afin que lorsqu’un fichier dans le groupe de fichiers est conforme au seuil de croissance automatique, tous les fichiers dans le groupe de fichiers augmente
  L’exemple suivant génère le requis `ALTER DATABASE` instructions pour modifier les groupes de fichiers en lecture-écriture avec le `AUTOGROW_ALL_FILES` paramètre.  
   
-```  
+```sql  
 --Generate ALTER DATABASE ... MODIFY FILEGROUP statements  
 --so that all read-write filegroups grow at the same time.  
 SET NOCOUNT ON;
@@ -661,5 +653,6 @@ GO
  [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
+ [Initialisation des fichiers de base de données](../../relational-databases/databases/database-instant-file-initialization.md)    
   
   

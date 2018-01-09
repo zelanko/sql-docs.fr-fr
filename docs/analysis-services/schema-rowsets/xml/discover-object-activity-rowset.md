@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa671c4b9c53d793b9f122d2c7e9eef9d7aac417
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>Ensemble de lignes DISCOVER_OBJECT_ACTIVITY
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit l’utilisation des ressources par objet depuis le démarrage du service.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_OBJECT_ACTIVITY** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**OBJECT_AGGREGATION_HIT**|**DBTYPE_I8**||Nombre d'accès à une agrégation de l'objet depuis le démarrage du service.|  
 |**OBJECT_AGGREGATION_MISS**|**DBTYPE_I8**||Nombre de fois où une agrégation existante de l'objet n'a pas servi (autrement dit, n'a pas été utilisée) depuis le démarrage du service.|  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
 |OBJECT_PARENT_PATH|DBTYPE_WSTR|Facultatif.|  
-|OBJECT_ID|DBTYPE_WSTR|Ce paramètre est facultatif.|  
+|OBJECT_ID|DBTYPE_WSTR|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

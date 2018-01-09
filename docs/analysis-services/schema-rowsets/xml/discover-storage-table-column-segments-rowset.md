@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations au niveau de la colonne et du segment sur les tables de stockage utilisé par une base de données Analysis Services en cours d’exécution tabulaire ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Cet ensemble de lignes est utilisé principalement pour le dépannage et l'analyse.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |GUID|a07ccd45-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|StorageSegments|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La requête suivante retourne les segments de la table stockage associés à l'attribut de modèle LastName, dans la base de données actuelle.  
   
 ```  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9bfce6ce1096e6c0951a0493cfafe9b6b37960cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/27/2017
 |[CLng](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007662&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&CTT=5&origin=HV080007552)|MDX uniquement||  
 |[CLngLng](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007662&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&CTT=5&origin=HV080007552)|Non pris en charge||  
 |[CLngPtr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007662&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&CTT=5&origin=HV080007552)|Non pris en charge||  
-|[Command](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007551&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
+|[Commandee](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007551&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[COS](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007553&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[CreateObject](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007554&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[CSng](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007662&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&CTT=5&origin=HV080007552)|MDX uniquement||  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/27/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
-|[Filter](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge|**\*\*Avertissement \* \***  MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **\*\*Avertissement \* \***  DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
+|[Filtre](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge|**\*\*Avertissement \* \***  MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **\*\*Avertissement \* \***  DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
 |[Correctif](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[Format (Visual Basic pour Applications)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  

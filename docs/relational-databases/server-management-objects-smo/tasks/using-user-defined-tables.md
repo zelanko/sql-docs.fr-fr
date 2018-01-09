@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: user-defined tables [SQL Server]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bbec0404e9a28a58d76afce072bf47cf7b6e871
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7155a66d912f4cb854d23cca3bf8babd2ae1deef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-user-defined-tables"></a>Utilisation de tables définies par l'utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Tables définies par l’utilisateur représentent des informations sous forme de tableau. Elles sont utilisées comme paramètres lorsque vous transmettez des données tabulaires dans des procédures stockées ou des fonctions définies par l'utilisateur. Les tables définies par l'utilisateur ne peuvent pas être utilisées pour représenter des colonnes dans une table de base de données.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> est utilisée pour spécifier le type de données qui est associé aux colonnes et paramètres. Utilisez ce type pour spécifier le type de table défini par l'utilisateur comme paramètre pour des fonctions définies par l'utilisateur et des procédures stockées.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Création d'une table définie par l'utilisateur en Visual Basic  

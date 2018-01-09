@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e822a52ab516d65c9e28aaaa3bcfb7d78f2eec16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 055023bf4c41bad380e1306a2facd7dc884b75ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="debugging-clr-database-objects"></a>Débogage d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit la prise en charge pour le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] et objets de common language runtime (CLR) dans la base de données. Les principaux atouts du débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont la facilité d'installation et d'utilisation, et l'intégration du débogueur SQL Server avec le débogueur Microsoft Visual Studio. En outre, le débogage fonctionne sur plusieurs langages. Les utilisateurs peuvent effectuer de façon transparente un pas à pas détaillé dans les objets CLR à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] et vice versa. Le débogueur Transact-SQL dans SQL Server Management Studio ne peut pas être utilisé pour déboguer des objets de base de données managés, mais vous pouvez déboguer les objets en utilisant les débogueurs de Visual Studio. Le débogage d'objets de base de données managés dans Visual Studio prend en charge toutes les fonctionnalités de débogage classiques, par exemple, les instructions "step into" et "step over" dans les routines qui s'exécutent sur le serveur. Les débogueurs peuvent définir des points d'arrêt, inspecter la pile des appels, inspecter les variables et modifier des valeurs de variables en cours de débogage. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le débogage ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Lorsque la flèche jaune qui désigne le pointeur d'instruction apparaît au niveau du point d'arrêt, l'exécution du code est  suspendue et vous pouvez commencer à déboguer votre objet de base de données managé. Vous pouvez **pas à pas principal** à partir de la **déboguer** menu pour faire avancer le pointeur d’instruction à la ligne suivante de code. Le **variables locales** fenêtre permet d’observer l’état des objets mis en surbrillance par le pointeur d’instruction. Les variables peuvent être ajoutés à la **espion** fenêtre. L'état des variables espionnées peut être consulté tout au long de la session de débogage, et non uniquement lorsque la variable figure dans la ligne de code mise en surbrillance par le pointeur d'instruction. Sélectionnez Continuer dans le menu Déboguer pour faire avancer le pointeur d'instruction jusqu'au point d'arrêt suivant ou pour terminer l'exécution de la routine s'il n'y a plus de points d'arrêt.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L'exemple suivant retourne la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'appelant.  
   
  C#  

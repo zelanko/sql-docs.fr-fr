@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 94ff2b30d64c0d3039910c57adf8327781e38c75
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 38f0983ae4f840ac0addf4e30439ff57a679e30e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---properties"></a>Éléments XML - propriétés
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Le protocole XML for Analysis (XMLA) utilise des éléments XML pour représenter des informations sur les propriétés et valeurs pour les en-têtes, les méthodes, les objets, les commandes et les types de données XMLA.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="topic-list"></a>Liste des rubriques  
  Les rubriques suivantes décrivent les éléments XMLA implémentés par [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
-|Élément| Description|  
+|Élément|Description|  
 |-------------|-----------------|  
 |[Élément AllowOverwrite &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)||  
 |[Élément ApplyCompression &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)||  

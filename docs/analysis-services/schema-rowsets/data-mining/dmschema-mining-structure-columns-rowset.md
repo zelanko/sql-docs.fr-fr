@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 187bba4f2a785eab9c1de4e076c323bcc4d561fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_STRUCTURE_COLUMNS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les colonnes de toutes les structures d’exploration de données déployées sur un serveur qui est en cours d’exécution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DMSCHEMA_MINING_STRUCTURE_COLUMNS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||Nom du catalogue.|  
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Nom de schéma non qualifié. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ne prend pas en charge les schémas, par conséquent, cette colonne est toujours **NULL**.|  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||La valeur par défaut de la colonne. Un fournisseur peut exposer **DBCOLUMN_DEFAULTVALUE** mais pas **DBCOLUMN_HASDEFAULT** (pour les tables de la norme ISO) dans l’ensemble de lignes retourné par **IColumnsRowset::GetColumnsRowset**.<br /><br /> Si la valeur par défaut est **NULL**, **COLUMN_HASDEFAULT** est **TRUE** et **COLUMN_DEFAULT** colonne est un **NULL** valeur.|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||Masque de bits qui décrit les caractéristiques de la colonne. Le **DBCOLUMNFLAGS** type énuméré spécifie les bits du masque de bits. Cette colonne ne peut pas contenir un **NULL** valeur. Les valeurs valides sont les suivantes :<br /><br /> **DBCOLUMNFLAGS_ISNULLABLE** (**0 x 20**)<br /><br /> **DBCOLUMNFLAGS_MAYBENULL** (**0 x 40**)<br /><br /> **DBCOLUMNFLAGS_ISLONG** (**0 x 80**)|  
 |**IS_NULLABLE**|**DBTYPE_BOOL**||Valeur booléenne qui indique si cette colonne possède une valeur par défaut.<br /><br /> **TRUE** si la colonne peut contenir **NULL**; **FALSE**, dans le cas contraire.|  
-|**DATA_TYPE**|**DBTYPE_UI2**||Indicateur du type de données de la colonne. Exemple :<br /><br /> «**TABLE**» = **DBTYPE_HCHAPTER**<br /><br /> «**TEXTE**» = **DBTYPE_WCHAR**<br /><br /> «**LONG**» = **DBTYPE_I8**<br /><br /> «**DOUBLE**» = **DBTYPE_R8**<br /><br /> «**DATE**» = **DBTYPE_DATE**|  
+|**DATA_TYPE**|**DBTYPE_UI2**||Indicateur du type de données de la colonne. Exemple :<br /><br /> «**TABLE**» = **DBTYPE_HCHAPTER**<br /><br /> «**TEXTE**» = **DBTYPE_WCHAR**<br /><br /> «**LONG**» = **DBTYPE_I8**<br /><br /> «**DOUBLE**» = **DBTYPE_R8**<br /><br /> «**DATE**» = **DBTYPE_DATE**|  
 |**TYPE_GUID**|**DBTYPE_GUID**||GUID du type de données de la colonne. Les fournisseurs qui n’utilisent pas de GUID pour identifier les types de données doivent retourner **NULL** dans cette colonne.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**||Longueur maximale possible pour une valeur de la colonne. Pour les colonnes de type character, binary ou bit, il s'agit de l'une des valeurs suivantes :<br /><br /> Longueur maximale de la colonne en caractères, octets ou bits, respectivement, si la longueur est définie. Par exemple, la longueur maximale d'une colonne `CHAR(5)` dans une table SQL est 5.<br /><br /> Longueur maximale du type de données en caractères, octets ou bits, respectivement, si la longueur de la colonne n'est pas définie.<br /><br /> Zéro (0) si la longueur maximale n'est définie ni pour la colonne, ni pour le type de données.<br /><br /> **NULL** pour tous les autres types de colonnes.|  
 |**CHARACTER_OCTET_LENGTH**|**DBTYPE_UI4**||Longueur maximale en octets de la colonne, si la colonne est de type character ou binary. La valeur zéro (0) signifie que la colonne ne possède pas de longueur maximale. **NULL** pour tous les autres types de colonnes.|  
@@ -78,10 +76,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM_STRUCTURE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM_COLONNE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Facultatif.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_STRUCTURE**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_COLONNE**|**DBTYPE_WSTR**|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma d’exploration de données](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

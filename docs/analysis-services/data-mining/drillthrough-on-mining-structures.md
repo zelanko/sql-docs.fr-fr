@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d9e924f914822b7eb26b4242c1120113da7c3b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>Extraction sur des structures d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*L’extraction* signifie que la possibilité d’interroger un modèle d’exploration de données ou une structure d’exploration de données et obtenir des données détaillées qui n’est pas exposée dans le modèle.  
@@ -56,12 +54,12 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Si vous activez l'extraction à la fois sur la structure d'exploration de données et le modèle d'exploration de données, tout utilisateur membre d'un rôle ayant les autorisations d'extraction sur le modèle d'exploration de données peut également consulter les colonnes de la structure d'exploration de données, même si ces colonnes ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, afin de protéger les informations sensibles, vous devez configurer la vue de la source de données de façon à masquer les informations personnelles et à n'autoriser l'accès en extraction sur la structure d'exploration de données qu'en cas de nécessité.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Consultez les rubriques suivantes pour plus d'informations sur l'utilisation de l'extraction avec des modèles d'exploration de données.  
   
 |||  
 |-|-|  
-|Utiliser l'extraction dans la structure des visionneuses de modèle d'exploration de données|[Utiliser l'extraction des visionneuses de modèle](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
+|Utiliser l'extraction dans la structure des visionneuses de modèle d'exploration de données|[Utiliser l’extraction dans les visionneuses de modèle](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |Consulter les exemples de requêtes d'extraction pour les types de modèles spécifiques.|[Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Obtenir des informations sur l'assignation d'autorisations qui s'appliquent à des structures d'exploration de données et à des modèles d'exploration de données spécifiques.|[Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   

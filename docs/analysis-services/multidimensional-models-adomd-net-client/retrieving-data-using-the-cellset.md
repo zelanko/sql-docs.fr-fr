@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3252672f1188bd72ab51c6ad3aa44ddb2b281b90
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1552ce0646c48465aac824f40d9f42f8aa4215d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Récupération de données à l'aide d'un ensemble de cellules
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lors de la récupération des données analytiques, les <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objet fournit le meilleur parti de l’interactivité et la flexibilité. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> est un cache de données et métadonnées hiérarchiques en mémoire qui préserve la dimensionnalité des données. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> peut également être parcouru en état connecté ou déconnecté. Du fait de cette aptitude en état déconnecté, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> peut être utilisé pour consulter les données et les métadonnées dans n'importe quel ordre et constitue le modèle objet le plus complet pour la récupération de données. Autre conséquence de cette aptitude en état déconnecté : l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> subit une charge maximale, et il s'agit du modèle objet de récupération de données ADOMD.NET le plus long à remplir.  

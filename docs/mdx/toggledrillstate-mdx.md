@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOGGLEDRILLSTATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 69533fc6585b0e40eaa04d8f3554716f614af4e0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e8564128db3f9eaa06e7eb5bfe93880c74c5b3b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  (Facultatif). Un indicateur spécifiant s'il faut inclure les membres calculés (s'ils existent) au niveau d'exploration.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **ToggleDrillState** fonction active ou désactive l’état d’extraction de chaque membre du deuxième jeu est présent dans le premier jeu. Le premier jeu peut contenir des tuples de n'importe quelle dimensionnalité mais le deuxième jeu doit contenir les membres d'une dimension unique. Le **ToggleDrillState** (fonction) est une combinaison de la **DrillupMember** et **DrilldownMember** fonctions. Si le membre, *m*, du deuxième jeu est présent dans le premier jeu, et que ce membre est extrait vers le bas (, qui est un descendant immédiatement), puis `DrillupMember(Set_Expression1, {m})` est appliqué au membre ou tuple dans le premier jeu. Si ce *m* jeu des membres (autrement dit, il n’existe aucun descendant de *m* qui suit immédiatement *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` est appliqué au premier jeu.  
   
  Si le paramètre facultatif **récursive** indicateur est utilisé, monter et Descendre sont appliquées de manière récursive. Pour plus d’informations sur l’indicateur récursif, consultez le [DrillupMember](../mdx/drillupmember-mdx.md) et [DrilldownMember](../mdx/drilldownmember-mdx.md) fonctions.  
@@ -60,7 +60,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Consultez [Journal de base de données : les fonctions MDX définie : The ToggleDrillState() Function](http://go.microsoft.com/fwlink/?LinkId=517759) pour les scénarios et exemples utilisant cette fonction.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous procède à une extraction vers le bas du membre Australia du premier jeu, puis à une extraction vers le haut du membre United States de ce même jeu.  
   
 ```  

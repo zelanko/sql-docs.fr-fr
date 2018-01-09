@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Analysis Services Scripting Language XML Data Types
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9baa60a57d8ef59bb7bb24afc82c0a3e5435a56d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Types de données XML Analysis Services Scripting Language (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui agit comme un type dans le schéma d’Analysis Services Scripting Language (ASSL).  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
  Dans certains cas, un type provient d'un autre type. Par exemple, le **CubeBinding** dérive du type du parent **liaison** type.  
   
-|Élément| Description|  
+|Élément|Description|  
 |-------------|-----------------|  
 |[Type de données action &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/action-data-type-assl.md)|Définit un type de données primitif abstrait qui représente une action dans un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément ou un [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) élément.|  
 |[Type de données AggregationAttribute &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/aggregationattribute-data-type-assl.md)|Définit un type de données primitif qui représente l’association entre un [agrégation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) élément et un attribut.|  

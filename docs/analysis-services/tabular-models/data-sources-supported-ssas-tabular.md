@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac5c3ca68f52a946195797e64ea650d82b1cde7f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 945b4d774e67d327c4a067f3fc59837232b90263
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>Sources de données prises en charge dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
@@ -38,8 +35,8 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
 |-|-|-|-|  
 |Source|Versions|Type de fichier|Fournisseurs|  
 |Bases de données Access|Microsoft Access 2010 et versions ultérieures.|.accdb ou .mdb|Fournisseur OLE DB ACE 14|  
-|Bases de données relationnelles SQL Server|SQL Server 2008 et versions ultérieur, SQL Server 2008 de l’entrepôt de données et version ultérieure, Azure SQL Database, Azure SQL Data Warehouse, système de plateforme Analytique (APS)<br /><br /> <br /><br /> Système de plateforme Analytique (APS) était anciennement en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. |(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
-|Bases de données relationnelles Oracle|Oracle 9i et versions ultérieures.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Bases de données relationnelles SQL Server|SQL Server 2008 et versions ultérieur, SQL Server 2008 de l’entrepôt de données et version ultérieure, Azure SQL Database, Azure SQL Data Warehouse, système de plateforme Analytique (APS)<br /><br /> <br /><br /> Système de plateforme Analytique (APS) était anciennement en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. |(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
+|Bases de données relationnelles Oracle|Oracle 9i et versions ultérieures.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de données relationnelles Teradata|Teradata V2R6 et versions ultérieures|(non applicable)|Fournisseur OLE DB TDOLEDB<br /><br /> Fournisseur de données .Net pour Teradata|  
 |Bases de données relationnelles Informix||(non applicable)|Fournisseur OLE DB Informix|  
 |Bases de données relationnelles IBM DB2|8.1|(non applicable)|DB2OLEDB|  
@@ -58,10 +55,10 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
   
 Source de données   |Versions  |Fournisseurs
 ---------|---------|---------
-Microsoft SQL Server    |  2008 et versions ultérieures      |       Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client  
-Base de données SQL Microsoft Azure    |   Tous      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client            
-Microsoft Azure SQL Data Warehouse     |   Tous     |  Fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   Tous      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
+Microsoft SQL Server    |  2008 et versions ultérieures      |       Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client  
+Base de données SQL Microsoft Azure    |   All      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client            
+Microsoft Azure SQL Data Warehouse     |   All     |  Fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   All      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
 Bases de données relationnelles Oracle     |  Oracle 9i et versions ultérieures       |  Fournisseur OLE DB Oracle       
 Bases de données relationnelles Teradata    |  Teradata V2R6 et versions ultérieures     | Fournisseur de données .Net pour Teradata    
 

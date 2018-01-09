@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SCOPE
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9487e1e71916e07232eed6ee7f60c013f9598197
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 018b08ba8c45393e77101cf56d098c1dd176ce9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---scope"></a>Écriture de scripts MDX - étendue
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ Limited_Set ::=
  *single_tuple*  
  Tuple unique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instruction SCOPE détermine le sous-cube qui sera affecté par l'exécution d'une ou plusieurs instructions MDX. Sauf si une instruction MDX est insérée dans une instruction SCOPE, l'étendue implicite d'une instruction MDX est le cube tout entier.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ Limited_Set ::=
   
  Les membres calculés et les jeux nommés créés dans le cadre d'une instruction SCOPE ne sont pas affectés par l'instruction SCOPE.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant, à partir du script de calcul MDX dans la solution exemple Adventure Works, définit l’étendue actuelle en tant que trimestre fiscal dans l’année fiscale 2005 et de la mesure de quota du montant des ventes, puis assigne une valeur aux cellules dans l’étendue actuelle à l’aide de la **ParallelPeriod** (fonction). L’exemple modifie ensuite l’étendue à l’aide d’une autre instruction SCOPE et qu’il exécute ensuite une autre assignation à l’aide du [This (MDX)](../mdx/this-mdx.md) (fonction).  
   
 ```  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56aa77942742b275172058fad2be05fb11bcdb11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5afe17b75d83f969c116ff1dc9c6e2e6850ac011
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Données Unicode et pages de codes du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Si votre application de l'API de procédure stockée étendue prend en charge Unicode, vous devez convertir les noms de colonne de métadonnées Unicode, les messages d'erreur, etc. en données multioctets avant de passer ces données à l'API de procédure stockée étendue.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La procédure stockée étendue suivante est un exemple des conversions Unicode abordées précédemment. Sachez que :  
   
 -   Données de la colonne sont passées en tant que données Unicode à **srv_describe** , car la colonne est décrite comme étant SRVNVARCHAR.  

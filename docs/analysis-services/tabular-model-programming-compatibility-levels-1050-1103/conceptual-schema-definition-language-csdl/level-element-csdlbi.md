@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63a271429d0d71516760e81ba0c085f903d90511
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6d2896a01a8efeacb42bde203ad93e0efdb52be4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="level-element-csdlbi"></a>Élément Level (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément de niveau est un type complexe qui définit un niveau unique dans une hiérarchie  
@@ -32,15 +30,15 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau suivant répertorie les éléments et les attributs qui définissent l'élément Level.  
   
-|Nom|Est obligatoire|Description|  
+|Nom   |Est obligatoire|Description|  
 |----------|-----------------|-----------------|  
 |Source|Oui|Conteneur de la référence de la propriété.|  
 |PropertyRef|Oui|Référence à une propriété d'instance. D'autres attributs de niveau, tels que captions, name et reference name, peuvent être pris dans la propriété de l'instance référencée. Par conséquent, vous n'avez pas besoin de les spécifier dans l'élément Level.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour plus d’informations sur les hiérarchies dans les modèles tabulaires, consultez [Élément Hierarchy &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **Tabulaire**  
   
  L'exemple suivant, en CSDLBI version 1.1, affiche la définition de plusieurs niveaux dans une hiérarchie de l'exemple de modèle tabulaire AdventureWorks.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 </bi:Hierarchy>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **(Multidimensionnel)**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre une hiérarchie à plusieurs niveaux, du cube Contoso Operations.  

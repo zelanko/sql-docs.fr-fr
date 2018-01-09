@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41d9217d8bbee3f961ccc019f2b8b8dd65eb6fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-table-valued-functions"></a>Fonctions table CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Une fonction table est une fonction définie par l’utilisateur qui retourne une table.  
@@ -62,7 +62,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Définition d'une fonction table dans Transact-SQL  
- La syntaxe permettant de définir une fonction table CLR est similaire à celle d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] fonction table, avec l’ajout de la **nom externe** clause. Exemple :  
+ La syntaxe permettant de définir une fonction table CLR est similaire à celle d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] fonction table, avec l’ajout de la **nom externe** clause. Exemple :  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

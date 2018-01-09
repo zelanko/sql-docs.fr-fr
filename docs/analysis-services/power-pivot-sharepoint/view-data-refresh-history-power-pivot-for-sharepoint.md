@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c2347b4bf7a02f61599f0a318ab1660dff50e4d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc4dcd60f4a37b1b3f01844369f210a81653160b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Afficher l’historique d’actualisation des données (Power Pivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Historique d’actualisation des données est un enregistrement de toutes les activités d’actualisation des données pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] les données dans un classeur Excel. Dans une batterie de serveurs SharePoint, les opérations d'actualisation des données sont effectuées sur une instance du serveur Analysis Services, selon une planification que vous fournissez. Par défaut, l'historique d'actualisation des données est conservé pendant un an. Toutefois, un administrateur de batterie de serveurs peut, pour l'historique de l'utilisation et des événements, spécifier une stratégie de rétention différente qui détermine la durée de conservation des enregistrements d'actualisation des données.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
 |Élément|Description|  
 |----------|-----------------|  
-|Nom|Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Nom   |Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |État actuel|Les valeurs possibles sont **Planifiée**, **Actualisation**, **Opération réussie**ou **Échec**.<br /><br /> **Planifiée** apparaît la première fois que vous créez la planification. Une fois la première actualisation des données effectuée, ce message d'état ne s'affiche plus.<br /><br /> **Actualisation** indique que l'actualisation des données est en cours. Une requête figure dans la file d'attente des processus ou s'exécute activement sur le serveur.<br /><br /> **Opération réussie** indique que la dernière opération d'actualisation des données est terminée et que le classeur mis à jour est archivé dans la bibliothèque SharePoint.<br /><br /> **Échec** indique que la dernière opération d'actualisation des données n'a pas réussi. Les données actualisées n'ont pas été enregistrées. Le classeur contient les mêmes données qu'avant l'opération d'actualisation des données.|  
 |Dernière actualisation réussie|Spécifie la date de dernière exécution réussie de l'actualisation des données.|  
 |Prochaine actualisation planifiée|Spécifie la date prévue pour la prochaine actualisation des données.<br /><br /> Le lien **Configurer la planification** vous dirige vers la page de définition de la planification. Si vous disposez d’autorisations de collaboration sur le classeur, vous pouvez cliquer sur ce lien pour visualiser et modifier les informations de planification qui contrôlent l’actualisation sans assistance des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] du classeur.|  

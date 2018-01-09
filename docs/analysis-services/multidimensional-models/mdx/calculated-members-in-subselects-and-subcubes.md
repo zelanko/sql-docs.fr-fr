@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un membre calculé est un membre de dimension dont la valeur est calculée à partir d’une expression au moment de l’exécution et peut être utilisée dans les sous-sélections et les sous-cubes plus définissent précisément l’espace de cube d’une requête.  
@@ -36,9 +33,9 @@ ms.lasthandoff: 12/08/2017
   
 |||  
 |-|-|  
-|Value|Description|  
+|Valeur|Description|  
 |0|Les membres calculés ne sont pas autorisés dans les sous-sélections ou les sous-cubes.<br /><br /> Une erreur est déclenchée lors de l'évaluation de la sous-sélection ou du sous-cube si un membre calculé est référencé.|  
-|1|Les membres calculés sont autorisés dans les sous-sélections ou les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné.|  
+| 1|Les membres calculés sont autorisés dans les sous-sélections ou les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné.|  
 |2|Les membres calculés sont autorisés dans les sous-sélections et les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné. Par ailleurs, la granularité mixte est autorisée dans la sélection des membres calculés.|  
   
  La définition des valeurs 1 ou 2 dans la propriété SubQueries autorise l'utilisation des membres calculés pour filtrer le sous-espace des sous-sélections retourné.  
@@ -81,7 +78,7 @@ Where [Measures].[Reseller Sales Amount]
 |||||||  
 |-|-|-|-|-|-|  
 ||All Periods|CY 2011|CY 2012|CY 2013|CY 2014|  
-|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
+|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
  Comme expliqué plus haut, les ascendants de [Seattle Metro] n'existent pas dans le sous-espace retourné lorsque SubQueries=1, par conséquent [Géographie].[Géographie].allmembers contient seulement le membre calculé.  
   
@@ -128,7 +125,7 @@ Where [Measures].[Reseller Sales Amount]
   
  Dans les résultats ci-dessus, les valeurs d'agrégation pour [All Geographies], [United States], [Oregon] et [Washington] proviennent de l'agrégation sur les descendants de &[Portland]&[OR] et &[Spokane]&[WA]. Rien ne provient du membre calculé.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Notes   
  Seuls les membres calculés globaux ou de session sont autorisés dans les expressions de sous-sélection ou de sous-cube. Si des membres calculés sont demandés dans l'expression MDX, une erreur est déclenchée lorsque l'expression de sous-sélection ou de sous-cube est évaluée.  
   
 ## <a name="see-also"></a>Voir aussi  

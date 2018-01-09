@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PredictProbability
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a48d9a8460d4e8d84a0089b5f15a43306f78fd67
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b990b0c695e0502924796ce51ec6bd0bab26814
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Type de retour  
  Une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si l'état prédit est omis, l'état ayant la probabilité la plus élevée est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, définissez la \<état prédit > à **INCLUDE_NULL**. Pour retourner la probabilité des États manquants, définissez la \<état prédit > sur la valeur NULL.  
   
 > [!NOTE]  
@@ -73,7 +71,7 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|1|0.867074195848097|0.132755556974282|  
+| 1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 17d6ebb3df10a5bc8b5801c11cc8ac12cde372a2
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: f490b54cd26fd5d62699d8b5807d116f72ca771b
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installer SQL Server et de créer une base de données sur Ubuntu
 
@@ -51,13 +51,13 @@ Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un
 1. Importer les clés GPG référentiel public :
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Enregistrer le référentiel Microsoft SQL Server Ubuntu :
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
@@ -99,13 +99,13 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
 1. Importer les clés GPG référentiel public :
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Enregistrer le référentiel Microsoft Ubuntu :
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
 1. Mettre à jour la liste des sources et exécutez la commande d’installation avec le package de développement unixODBC :

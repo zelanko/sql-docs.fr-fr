@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f121fbcd03bf3dace4c09c20925b7ce3d52baf5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="collections-assl"></a>Collections (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui agit comme une collection dans le schéma d’Analysis Services Scripting Language (ASSL).  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/08/2017
   
  Dans d'autres cas, une collection contient des éléments qui correspondent à des propriétés d'objet et non à des objets. Par exemple, le **alias** collection contient **Alias** propriétés, chacun d’eux est une valeur de chaîne simple.  
   
-|Élément| Description|  
+|Élément|Description|  
 |-------------|-----------------|  
 |[Élément Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)|Contient la collection des types de compte sont définies dans un [base de données](../../../analysis-services/scripting/objects/database-element-assl.md) élément.|  
 |[Élément actions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/actions-element-assl.md)|Contient la collection d’actions pour un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) élément.|  

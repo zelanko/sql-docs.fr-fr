@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 440464913f4dc6e38ca1da47dc4045f4249656f7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a9ba34222580b292fbc6281df49505f57739911a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Développement avec XMLA dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) est un protocole XML basé sur SOAP, spécifiquement conçu pour un accès universel à n’importe quelle source de données multidimensionnelle standard qui sont accessibles via une connexion HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise XMLA comme seul protocole pour communiquer avec les applications clientes. Fondamentalement, toutes les bibliothèques clientes prises en charge par Analysis Services formulent des demandes et des réponses XMLA.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[La gestion des connexions et Sessions &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)|Explique comment se connecter à une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et comment gérer les sessions et la conservation de l'état avec XMLA.|  
 |[Gestion des erreurs et avertissements &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md)|Indique comment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne les informations d'erreur et d'avertissement pour les méthodes et les commandes XMLA.|  

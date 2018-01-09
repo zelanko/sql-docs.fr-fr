@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e306099efb3f667637adfbbfd0e47854e065ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0bbf3f9599995081b3a8b463bc59dd84dcee237
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Utilisation de fichiers ou de groupes de fichiers pour stocker des données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Les fichiers de données sont utilisés pour stocker les fichiers de base de données. Les fichiers de données se répartissent en plusieurs groupes de fichiers. L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> a une propriété <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> qui référence un objet <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>. Chaque objet <xref:Microsoft.SqlServer.Management.Smo.FileGroup> de cette collection a une propriété <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>. Cette propriété fait référence à une collection <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> qui contient tous les fichiers de données qui font partie de la base de données. Un groupe de fichiers est utilisé principalement pour regrouper les fichiers utilisés pour stocker un objet de base de données. L'étalement d'un objet de base de données sur plusieurs fichiers se justifie car cela permet d'améliorer les performances, surtout si les fichiers sont stockés sur les lecteurs de disques différents.  

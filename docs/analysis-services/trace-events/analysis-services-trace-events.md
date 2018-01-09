@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bda0bd4dac6b7f60bbda2fd9562af9fa2ebe9abb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-trace-events"></a>Événements de trace Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez suivre l’activité d’une instance de Microsoft SQL Server Analysis Services (SSAS) en capturant, puis en analysant les événements de trace générés par l’instance.  Les événements de trace sont regroupés afin que vous puissiez plus facilement rechercher des événements de trace connexes.  Chaque événement de trace contient un jeu de données concernant l'événement ; toutes les parties de données ne sont pas correctes pour tous les événements.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/08/2017
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
 |------------------|--------------------|---------------------------|  
-|17|Erreur|Erreur serveur.|  
+|17|Error|Erreur serveur.|  
   
  **[Chargement de fichier et enregistrement de catégorie d'événement](../../analysis-services/trace-events/file-load-and-save-event-category.md)**  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 12/08/2017
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
 |------------------|--------------------|---------------------------|  
-|1|Audit Login|Collecte tous les événements de connexion depuis le début de la trace, telle qu'une demande de connexion d'un client à un serveur qui exécute une instance de SQL Server.|  
+| 1|Audit Login|Collecte tous les événements de connexion depuis le début de la trace, telle qu'une demande de connexion d'un client à un serveur qui exécute une instance de SQL Server.|  
 |2|Audit Logout|Collecte tous les nouveaux événements de déconnexion depuis le début de la trace, telle que l'émission par un client d'une commande de déconnexion.|  
 |4|Audit Server Starts And Stops|Enregistre l'arrêt du service, le début et la suspension des activités des services.|  
 |18|Audit Object Permission Event|Enregistre les modifications d'autorisations sur les objets.|  

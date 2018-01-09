@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -35,16 +33,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71c8f644f19236e9507b37ebdd75f1bcde7299eb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies"></a>Hiérarchies utilisateur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Hiérarchies définies par l’utilisateur sont définis par l’utilisateur de hiérarchies d’attributs qui sont utilisés dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour organiser les membres d’une dimension en structures hiérarchiques et fournir des chemins de navigation dans un cube. Par exemple, le tableau suivant définit une table de dimension pour une dimension de temps. La table de dimension prend en charge trois attributs nommés Year, Quarter et Month.  
   
-|Année|Quarter|Mois|  
+|Année|Quarter|Month|  
 |----------|-------------|-----------|  
 |1999|Trimestre 1|Jan|  
 |1999|Trimestre 1|Fév|  

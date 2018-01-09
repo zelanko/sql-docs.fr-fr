@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT, ensemble de lignes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations sur une dimension, y compris le nom de la base de données qui contient, le nom de dimension, ses attributs et un nombre de membres pour chaque attribut. Dans un modèle tabulaire, cela correspond aux colonnes dans une table et au nombre de valeurs dans chaque colonne.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_DIMENSION_STAT** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Restriction| Description|  
+|Nom de colonne|Indicateur de type|Restriction|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**NOM_BASE_DE_DONNÉES**|**DBTYPE_WSTR**|Requis|Nom de la base de données contient la dimension.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**|Requis|Nom de la dimension.<br /><br /> Cette colonne est requise dans la liste de restriction.|  

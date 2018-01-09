@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbcb5748adeda3ea607bcb8002bceeb28e95cbdf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d69e604464b017499c439c4d10bef8496b88b2c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d’informations sur les SPN et l’authentification Kerberos, consultez [nom Principal de Service &#40; Nom principal de service &#41; Prise en charge dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Vous devez spécifier un serveur. Dans le fichier .cpp, remplacez « MyServer » par un nom d'ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure).  
   
  Vous devez également spécifier un SPN fourni par le client. Dans le fichier .cpp, modifiez « CPSPN » par un SPN fourni par client.  

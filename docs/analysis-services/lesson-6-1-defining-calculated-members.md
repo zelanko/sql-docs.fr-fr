@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Leçon 6-1-définir des membres calculés
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Les membres calculés sont membres d’une dimension ou un groupe de mesures qui sont définies selon une combinaison de données du cube, des opérateurs arithmétiques, des chiffres et des fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  

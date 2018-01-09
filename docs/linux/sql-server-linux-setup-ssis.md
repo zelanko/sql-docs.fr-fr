@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
 
@@ -119,6 +119,29 @@ Pour supprimer `mssql-server-is`, vous pouvez exécuter de commande suivante :
 ```bash
 sudo yum remove mssql-server-is
 ```
+
+## <a name="unattended-installation"></a>Installation sans assistance
+Pour exécuter une installation sans assistance lorsque vous exécutez `ssis-conf setup`, procédez comme suit :
+1.  Spécifiez le `-n` (sans invite) option.
+2.  Fournir les valeurs requises en définissant les variables d’environnement.
+
+L’exemple suivant effectue les opérations suivantes :
+-   Installe SSIS.
+-   Spécifie l’Édition Developer en fournissant une valeur pour le `SSIS_PID` variable d’environnement.
+-   Accepte le CLUF en fournissant une valeur pour le `ACCEPT_EULA` variable d’environnement.
+-   Exécute une installation sans assistance en spécifiant le `-n` (sans invite) option.
+
+```
+sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>Variables d’environnement pour l’installation sans assistance
+
+| Variable d'environnement | Description |
+|---|---|
+| **ACCEPT_EULA** | Accepte le contrat de licence de SQL Server lorsque la valeur n’importe quelle valeur (par exemple, `Y`).|
+| **SSIS_PID** | Définit la clé de produit ou d’édition de SQL Server. Les valeurs possibles sont :<br/>Evaluation<br/>Développeur<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Une clé de produit<br/><br/>Si vous spécifiez une clé de produit, la clé de produit doit être sous la forme `#####-#####-#####-#####-#####`, où `#` est une lettre ou un chiffre.  |
+| | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

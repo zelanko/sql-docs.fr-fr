@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,16 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 722cd58757ea108a187b4e7a0884daaee2d2d058
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8fb3927a735f0dddfa753bb939947e8d40b6ef88
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Programmation de tâches spécifiques à l’aide d’objets SMO inclut des sujets complexes requis uniquement par les programmes ayant une fonction spécifique, par exemple la sauvegarde, surveillance des statistiques, la réplication, la gestion des objets d’instance et la définition des options de configuration.  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Utilisation de serveurs liés dans SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Explique comment SMO utilise l'objet <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> pour lier des serveurs OLE DB.|  
 |[Configuration de SQL Server dans SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Explique comment afficher et modifier les paramètres de configuration de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans SMO.|  

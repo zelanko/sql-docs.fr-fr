@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODEL_CONTENT
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0bd29ab1dcd96412710e9d79255119489253bde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Permet à l’application cliente de parcourir le contenu d’un modèle d’exploration de données. Les applications clientes peuvent utiliser les restrictions d'opérations d'arborescence spéciales décrites à la fin de cette rubrique pour accéder au contenu du modèle d'exploration de données.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DMSCHEMA_MINING_MODEL_CONTENT** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**MODEL_CATALOG**|**DBTYPE_WSTR**||Nom du catalogue. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] remplit cette colonne avec le nom de la base de données dont le modèle est un membre.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Nom de schéma non qualifié. Cette colonne n’est pas pris en charge par [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; il contient toujours **VT_NULL**.|  
@@ -64,16 +62,16 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM_NŒUD**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NODE_TYPE**|**DBTYPE_I4**|Ce paramètre est facultatif.|  
-|**NODE_GUID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NODE_CAPTION**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**TREE_OPERATION**|**DBTYPE_UI4**|Ce paramètre est facultatif. (voir les remarques supplémentaires ci-dessous)|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facultatif.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facultatif.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_NŒUD**|**DBTYPE_WSTR**|Facultatif.|  
+|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**NODE_TYPE**|**DBTYPE_I4**|Facultatif.|  
+|**NODE_GUID**|**DBTYPE_WSTR**|Facultatif.|  
+|**NODE_CAPTION**|**DBTYPE_WSTR**|Facultatif.|  
+|**TREE_OPERATION**|**DBTYPE_UI4**|Facultatif. (voir les remarques supplémentaires ci-dessous)|  
   
  La restriction, **TREE_OPERATION**, n’est pas sur une colonne spécifique de la **DMSCHEMA_MINING_MODEL_CONTENT** rowset ; au lieu de cela, il spécifie un opérateur d’arborescence. Le consommateur peut spécifier un **NODE_UNIQUE_NAME** l’opérateur d’arborescence et de restriction (**ancêtres**, **enfants**, **frères**, **PARENT**, **DESCENDANTS**, **SELF**) pour obtenir le jeu de membres demandé. Le **SELF** opérateur inclut la ligne pour le nœud lui-même dans la liste des lignes retournées. Le tableau suivant décrit les constantes qui composent la définition de bitmap de la **TREE_OPERATION** restriction. Elles peuvent être combinées à l’aide de la logique **ou** opérateur.  
   

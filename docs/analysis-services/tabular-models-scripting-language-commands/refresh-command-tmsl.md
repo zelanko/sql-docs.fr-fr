@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b715a469718a168f0872e3f95cd817ec1e735d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refresh-command-tmsl"></a>Actualiser la commande (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Traite les objets dans la base de données actuelle.   
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/08/2017
 |dataOnly|Base de données,<br />Table,<br />Partition|Actualisez les données dans cet objet et effacez tous les dépendants.|  
 |automatic|Base de données,<br />Table,<br />Partition|Si l’objet doit être actualisé et recalculé, actualiser et recalculer l’objet et tous ses éléments dépendants. S’applique si la partition est dans un état autre que Prêt.|  
 |add|Partition|Ajoutez des données à cette partition et recalculez tous les dépendants. Cette commande est valide seulement pour les partitions régulières, et non pas pour les partitions de calcul.|  
-|défragmenter|Base de données,<br />Table|Défragmenter les données dans la table spécifiée. Comme les données sont ajoutées ou supprimées d’une table, les dictionnaires de chaque colonne peuvent devenir pollués par des valeurs qui n’existent plus dans les valeurs actuelles des colonnes. L’option de défragmentation nettoie les valeurs dans les dictionnaires qui ne sont plus utilisées.|  
+|défragmenter|Base de données,<br />Table de charge de travail|Défragmenter les données dans la table spécifiée. Comme les données sont ajoutées ou supprimées d’une table, les dictionnaires de chaque colonne peuvent devenir pollués par des valeurs qui n’existent plus dans les valeurs actuelles des colonnes. L’option de défragmentation nettoie les valeurs dans les dictionnaires qui ne sont plus utilisées.|  
   
  Vous pouvez actualiser les objets suivants :  
   

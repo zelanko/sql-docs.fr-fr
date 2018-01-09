@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_XML_METADATA
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae0b5c6375fe196d780a8b13b13178157161ebfb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 64fe5c240808b727c0985f432bb634d83cb68e91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Ensemble de lignes DISCOVER_XML_METADATA
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne un document XML qui décrit un objet demandé. L'ensemble de lignes qui est retourné se compose toujours d'une ligne et d'une colonne.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_XML_METADATA** contient la colonne suivante.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**MÉTADONNÉES**|**DBTYPE_WSTR**||Document XML qui décrit l'objet demandé par la restriction.|  
   
@@ -51,32 +49,32 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**DatabaseID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DimensionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**CubeID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MeasureGroupID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**ID de partition**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**PerspectiveID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DimensionPermissionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**RoleID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DatabasePermissionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MiningModelID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MiningModelPermissionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DataSourceID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MiningStructureID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**AggregationDesignID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**TraceID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MiningStructurePermissionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**CubePermissionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**ID d’assembly**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MdxScriptID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DataSourceViewID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DataSourcePermissionID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**ObjectExpansion**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DatabaseID**|**DBTYPE_WSTR**|Facultatif.|  
+|**DimensionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**CubeID**|**DBTYPE_WSTR**|Facultatif.|  
+|**MeasureGroupID**|**DBTYPE_WSTR**|Facultatif.|  
+|**ID de partition**|**DBTYPE_WSTR**|Facultatif.|  
+|**PerspectiveID**|**DBTYPE_WSTR**|Facultatif.|  
+|**DimensionPermissionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**RoleID**|**DBTYPE_WSTR**|Facultatif.|  
+|**DatabasePermissionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**MiningModelID**|**DBTYPE_WSTR**|Facultatif.|  
+|**MiningModelPermissionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**DataSourceID**|**DBTYPE_WSTR**|Facultatif.|  
+|**MiningStructureID**|**DBTYPE_WSTR**|Facultatif.|  
+|**AggregationDesignID**|**DBTYPE_WSTR**|Facultatif.|  
+|**TraceID**|**DBTYPE_WSTR**|Facultatif.|  
+|**MiningStructurePermissionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**CubePermissionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**ID d’assembly**|**DBTYPE_WSTR**|Facultatif.|  
+|**MdxScriptID**|**DBTYPE_WSTR**|Facultatif.|  
+|**DataSourceViewID**|**DBTYPE_WSTR**|Facultatif.|  
+|**DataSourcePermissionID**|**DBTYPE_WSTR**|Facultatif.|  
+|**ObjectExpansion**|**DBTYPE_WSTR**|Facultatif.|  
   
  La restriction, **ObjectExpansion**, est disponible pour chaque objet principal de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le client utilise généralement des restrictions pour décrire les objets OLAP pour lesquels la DDL doit être retournée, et il utilise la restriction **ObjectExpansion** pour définir le degré d'expansion dans la DDL retournée. Le tableau suivant indique si la valeur d’énumération est autorisée pour [Alter, élément &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) commandes.  
   
-|Valeur d'énumération| Description|  
+|Valeur d'énumération|Description|  
 |-----------------------|-----------------|  
 |**ReferenceOnly**|Retourne uniquement le nom/ID/horodatage/état demandé pour les objets demandés et tous les objets principaux descendants.|  
 |**ObjectProperties**|Développe l'objet demandé sans référence aux objets qu'il contient (inclut les objets secondaires contenus développés).|  

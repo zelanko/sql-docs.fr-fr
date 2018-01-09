@@ -8,7 +8,7 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -24,11 +24,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4cc170e6b8da5bc83e4ca2927baed90c8a02fe24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a80c26130d5671dd387122930e599a2c33a5db60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |counter_value|**entier**|Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée.|  
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
 > [!NOTE]  
 >  Les utilisateurs qui exécutent des scripts externes doivent avoir l’autorisation supplémentaire EXECUTE ANY EXTERNAL SCRIPT, toutefois, cette vue de gestion dynamique peut être utilisée par les administrateurs sans cette autorisation. 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   Cette vue de gestion dynamique est fournie pour la télémétrie interne, afin de contrôler l’utilisation générale de la nouvelle fonction d’exécution de script externe fournie dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. La télémétrie démarre au lancement de LaunchPad et incrémente un compteur sur disque à chaque fois qu’une fonction enregistrée de script externe est appelée.
 
 En règle générale, les compteurs de performance demeurent valides tant que le processus qui les a générés reste actif. Par conséquent, une demande sur une vue de gestion dynamique ne peut pas faire état des données des services qui ne sont plus en cours d’exécution. Par exemple, si le lanceur exécute le script externe tout en les terminant très rapidement, une vue de gestion dynamique conventionnelle n’indiquera pas forcément les données.

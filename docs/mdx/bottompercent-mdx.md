@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: BOTTOMPERCENT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3e188299440d09a941d82981b8a77bbf2d94bde1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 078221baa088e0375af381e1e4ef5579280a2cb3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,13 +48,13 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **BottomPercent** fonction calcule la somme de l’expression numérique spécifiée évaluée sur un jeu spécifié, en triant le jeu par ordre croissant. Elle retourne ensuite les éléments dotés des valeurs les plus faibles et dont le pourcentage cumulé du total de la valeur additionnée correspond au moins au pourcentage indiqué. Enfin, elle retourne le plus petit sous-ensemble d'un jeu dont le total cumulé est égal au moins au pourcentage précisé. Les éléments retournés sont triés du plus grand au plus petit.  
   
 > [!IMPORTANT]  
 >  Le **BottomPercent** fonction, comme le [TopPercent](../mdx/toppercent-mdx.md) de fonction, la hiérarchie. Pour plus d'informations, consultez la fonction Order.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne pour la catégorie Bikes (bicyclettes) le plus petit jeu de membres au niveau City (ville) de la hiérarchie Geography (zone géographique) dans la dimension Geography de l'année fiscale 2003 dont le total cumulé et obtenu à l'aide de la mesure Reseller Sales Amount (volume de vente du revendeur) correspond au moins à 15 % du total cumulé (en commençant par les membres de jeu en question avec le nombre le plus faible de ventes).  
   
 ```  

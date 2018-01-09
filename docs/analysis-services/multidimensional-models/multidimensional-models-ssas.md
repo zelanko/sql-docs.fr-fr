@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modélisation multidimensionnelle (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une solution multidimensionnelle Analysis Services utilise des structures de cube pour analyser les données d’entreprise entre plusieurs dimensions. Le mode multidimensionnel est le mode serveur par défaut d'Analysis Services. Il inclut une requête et un moteur de calcul pour les données OLAP, avec les modes de stockage MOLAP, ROLAP et HOLAP pour équilibrer les performances par des conditions de données évolutives. Le moteur OLAP d'Analysis Services est un serveur OLAP leader de l'industrie qui fonctionne parfaitement avec de nombreux outils BI. La plupart des déploiements Analysis Services sont installés comme des serveurs OLAP classiques.  

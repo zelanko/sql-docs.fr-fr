@@ -1,7 +1,7 @@
 ---
 title: "MODIFIER la SOURCE de données externe (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 11/13/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,16 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 028a300c8dc6b295a0f10b3cb137809c81c4af95
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9257f2747d29933ce04f8e7faa2112c3f4231eaf
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alter-external-data-source-transact-sql"></a>MODIFIER la SOURCE de données externe (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifie la source de données externe utilisée pour créer une table externe. La source de données externe peut être le stockage d’objets blob Hadoop ou Azure (WASB).  
+  Modifie la source de données externe utilisée pour créer une table externe. La source de données externe peut être le stockage d’objets blob Hadoop ou Azure (WASB).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,10 +74,10 @@ Les informations d’identification utilisées, doivent être créés à l’aid
 
   
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
  Uniquement une source unique peut être modifiée à la fois. Les demandes simultanées de la même source de provoquent une seule instruction d’attente. Toutefois, différentes sources peuvent être modifiés en même temps. Cette instruction peut s’exécuter en même temps que les autres instructions.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
  >  L’autorisation ALTER ANY EXTERNAL DATA SOURCE accorde à n’importe quel principal de la possibilité de créer et modifier n’importe quel objet de source de données externe, et par conséquent, elle autorise également la possibilité d’accéder à toutes les informations d’identification de base de données d’une étendue sur la base de données. Cette autorisation doit être considérée comme des privilèges très élevés et doit donc être accordé uniquement aux entités de confiance dans le système.

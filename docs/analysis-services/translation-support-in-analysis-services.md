@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c6417a0f9f52f4b1fe6974928f534e8fafa04bca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Prise en charge des traductions dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Dans un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] des modèles de données, vous pouvez incorporer plusieurs traductions d’une légende ou une description pour fournir des chaînes spécifiques à la culture en fonction de l’identificateur LCID. Dans le cas des modèles multidimensionnels, vous pouvez ajouter des traductions pour le nom de la base de données, les objets cube et les objets de dimension de base de données. Pour les modèles tabulaires, vous pouvez traduire les descriptions et légendes des tables et des colonnes.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 >  Vous pouvez utiliser des applications clientes telles qu'Excel, Management Studio et SQL Server Profiler pour retourner des chaînes traduites. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="how-to-add-translated-metadata-to-model-in-analysis-services"></a>Comment ajouter des métadonnées traduites à un modèle dans Analysis Services  
- Pour obtenir des instructions pas à pas, cliquez sur les liens suivants :  
+ Pour obtenir des instructions pas à pas, cliquez sur les liens suivants :  
   
 -   [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)  
   

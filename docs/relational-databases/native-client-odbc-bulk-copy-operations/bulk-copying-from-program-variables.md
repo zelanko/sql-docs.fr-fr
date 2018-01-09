@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 935fad0a9e40cd85b9ec13a62d6c28cd8e215d64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 603d759724fd7a634e6cc4b53ccb5302ccb56816
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**caractère**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variable de caractère**<br /><br /> **char varying**<br /><br /> **sysname**|  
-|SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
+|SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**texte**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
@@ -75,8 +75,8 @@ ms.lasthandoff: 11/17/2017
 |SQL_TINYINT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (non signé)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
-|SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
-|SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
+|SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**Int**<br /><br /> **entier**|  
+|SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**Int**<br /><br /> **entier**|  
 |SQL_INTEGER (non signé)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **DEC**|  
 |SQL_BIGINT (signé et non signé)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
 |SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  

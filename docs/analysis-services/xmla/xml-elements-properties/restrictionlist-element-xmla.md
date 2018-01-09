@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RestrictionList Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96bbf8798521a6661e630115e5a5669ee24d15df
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eeabf1889208ab4cf31b0d0b65d336ccf62ba84e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restrictionlist-element-xmla"></a>Élément RestrictionList (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de colonnes de restriction et les valeurs utilisées par le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) (méthode).  
@@ -52,9 +50,9 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |Éléments parents|[Restrictions](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)|  
 |Éléments enfants|Colonnes et valeurs de restriction (voir la section « Notes »).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'élément **RestrictionList** contient une collection de colonnes de restriction sur lesquelles les données retournées par la méthode **Discover** peuvent être filtrées. Chaque colonne de restriction dans l'élément **RestrictionList** est définie par un élément XML distinct. La valeur de la colonne de restriction correspond aux données figurant dans l'élément XML et le nom de la colonne de restriction correspond au nom de l'élément XML.  
   
 ## <a name="see-also"></a>Voir aussi  

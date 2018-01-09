@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a32592d58d51c1504f88fb054cee688d657cb93
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach, commande (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Attache un fichier Analysis Services sur un serveur.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**Propriété**|**Default**|**Description**|  
-|database|[Obligatoire]|Le nom de l’objet de base de données à attacher.|  
+|base de données|[Obligatoire]|Le nom de l’objet de base de données à attacher.|  
 |dossier|[Obligatoire]|Le dossier qui contient la base de données attachée.|  
 |password|Vide|Le mot de passe à utiliser pour chiffrer les clés secrètes dans la base de données attachée.|  
 |readWriteMode|Lecture/écriture|Valeur d’énumération qui indique les modes d’accès autorisés à la base de données.<br /><br /> **Les valeurs d’énumération sont comme suit :**<br /><br /> readWrite : l’accès en lecture-écriture est autorisé.<br /><br /> readOnly : accès en lecture seule est autorisé.<br /><br /> readOnlyExclusive – un accès exclusif en lecture seule est autorisé.|  

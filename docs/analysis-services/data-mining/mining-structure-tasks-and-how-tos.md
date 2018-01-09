@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: mining structures [Analysis Services], how-to topics
@@ -20,18 +18,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db7f8b700505c6bf34caadee3642d709962c2228
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a9b949aa861e9db20c60f64c75d5edd41e9247c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tâches de la structure d'exploration de données et procédures
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le **Structure d’exploration de** onglet du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contient des outils que vous pouvez utiliser pour créer, modifier et traiter une structure d’exploration de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
+-   [Créer une structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
 -   [Créer une structure d’exploration de données OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   

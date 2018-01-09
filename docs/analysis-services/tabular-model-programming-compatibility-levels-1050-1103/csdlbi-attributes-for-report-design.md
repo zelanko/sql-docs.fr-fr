@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] création de requête.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="entity-attributes"></a>Attributs d'entité  
  Ces attributs sont définis sur un sous-élément d'un élément EntitySet ou EntityType CSDL.  
   
-|Nom de l'attribut|Type de données| Description|  
+|Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
 |**Nom de la référence**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
 |**Légende**|Texte|Nom complet de l'entité.|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="field-attributes"></a>Attributs de champ  
  Ces attributs sont définis sur un sous-élément d'un élément d'une propriété CSDL ou d'un élément [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) .  
   
-|Nom de l'attribut|Type de données| Description|  
+|Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
 |**Nom de la référence**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
 |**Légende**|Texte|Nom complet de l'entité. En cas d'omission, **ReferenceName** est utilisé.|  

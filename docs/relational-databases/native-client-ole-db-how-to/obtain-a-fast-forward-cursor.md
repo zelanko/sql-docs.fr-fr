@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: fast forward-only cursors
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40520a8a9b4cfca2a1e498d19ac8dcdc580aee1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2228eb406f1a32f461c2013d56dec80fdd33731b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="obtain-a-fastforward-cursor"></a>Obtenir un curseur FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
  Un exemple complet montre comment définir les propriétés de l'ensemble de lignes de façon à obtenir un curseur FAST_FORWARD. Une fois les propriétés définies, une instruction SELECT est exécutée pour récupérer et afficher la colonne **Name** de la table **Purchasing.Vendor** dans la base de données **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Utilisez l'authentification Windows quand c'est possible. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fastforward-cursor"></a>Pour obtenir un curseur FAST_FORWARD  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Exécutez la commande.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant montre comment définir les propriétés de l'ensemble de lignes de façon à obtenir un curseur FAST_FORWARD. Une fois les propriétés définies, une instruction SELECT est exécutée pour récupérer et afficher la colonne Name de la table Purchasing.Vendor dans la base de données AdventureWorks. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  

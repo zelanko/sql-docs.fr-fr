@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -45,14 +45,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ef279f10209b9281f3f7497d730e07247d5d9ab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 286999ab145671370f458f0ffb8f5f2db85d0461
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="general-properties"></a>Propriétés générales
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **S’applique à :** mode serveur multidimensionnel et tabulaire, sauf indication contraire  
   
@@ -101,10 +101,10 @@ ms.lasthandoff: 12/08/2017
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|0|Ceci est la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
-|1|Spécifie des instances d’Analysis Services installées dans le cadre d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l’instance Analysis Services qui fait partie d’une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne s’exécuteront plus sur le serveur si vous modifiez le mode.|  
+|0|Il s'agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
+| 1|Spécifie des instances d’Analysis Services installées dans le cadre d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l’instance Analysis Services qui fait partie d’une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne s’exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   
  Chaque mode est exclusif pour l'autre. Un serveur configuré pour le mode tabulaire ne peut pas exécuter des bases de données Analysis Services qui contiennent des cubes et des dimensions. Si le matériel informatique sous-jacent peut prendre cela en charge, vous pouvez installer plusieurs instances d'Analysis Services sur le même ordinateur et configurer chaque instance pour utiliser un mode de déploiement différent. Souvenez-vous qu'Analysis Services est une application qui consommée beaucoup de ressources. Le déploiement de plusieurs instances sur le même système est recommandé uniquement pour les serveurs haut de gamme.  
@@ -163,7 +163,7 @@ ms.lasthandoff: 12/08/2017
  **Port**  
  Propriété dont la valeur est un entier qui définit le numéro de port sur lequel le serveur sera à l'écoute des connexions clientes. Si cette propriété n'est pas définie, le serveur recherche dynamiquement le premier port inutilisé.  
   
- La valeur par défaut de cette propriété, zéro (0), correspond au port 2383. Pour plus d'informations sur la configuration du port, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ La valeur par défaut de cette propriété, zéro (0), correspond au port 2383. Pour plus d'informations sur la configuration du port, consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
  Entier qui spécifie le délai d'attente des requêtes, en secondes. La valeur par défaut est 3 600 secondes (ou 60 minutes). Zéro (0) indique qu'aucune requête n'expire.  

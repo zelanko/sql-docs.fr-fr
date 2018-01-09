@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: Tester Analysis Services
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et classements fournis par [!INCLUDE[msCoName](../includes/msconame-md.md)] systèmes d’exploitation Windows. Les propriétés**Language** et **Collation** sont définies initialement au niveau de l'instance pendant l'installation, mais vous pouvez les modifier ultérieurement à différents niveaux de la hiérarchie d'objets.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/08/2017
   
     -   latin1_general_100  
   
-     Un classement Windows trie les caractères selon les caractéristiques linguistiques et culturelles de la langue. Dans Windows, les classements sont plus nombreux que les paramètres régionaux (ou langues) utilisés avec eux, car de nombreuses langues partagent le même alphabet et les mêmes règles de tri et de comparaison des caractères. Par exemple, 33 groupes de paramètres régionaux Windows, notamment tous les groupes de paramètres régionaux portugais et anglais, utilisent la page de codes Latin1 (1252) et possèdent un ensemble de règles communes pour le tri et la comparaison des caractères.  
+     Un classement Windows trie les caractères selon les caractéristiques linguistiques et culturelles de la langue. Dans Windows, les classements sont plus nombreux que les paramètres régionaux (ou langues) utilisés avec eux, car de nombreuses langues partagent le même alphabet et les mêmes règles de tri et de comparaison des caractères. Par exemple, 33 groupes de paramètres régionaux Windows, notamment tous les groupes de paramètres régionaux portugais et anglais, utilisent la page de codes Latin1 (1252) et possèdent un ensemble de règles communes pour le tri et la comparaison des caractères.  
   
     > [!NOTE]  
     >  Lorsque vous choisissez un classement, il est recommandé d’utiliser le même classement que celui de la base de données sous-jacente. Si vous avez le choix, la version _100 est cependant plus à jour et offre une convention de tri culturelle plus précise sur le plan linguistique.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 12/08/2017
 |Ordre de tri (suffixe)|Description de l'ordre de tri|  
 |---------------------------|----------------------------|  
 |Binaire (_BIN) ou BIN2 (_BIN2)|Il existe deux types de classements binaires dans SQL Server ; les anciens classements BIN et les nouveaux classements BIN2. Dans un classement BIN2, tous les caractères sont triés selon leurs points de code. Dans un classement BIN, seul le premier caractère est trié selon le point de code et les autres caractères sont triés selon leurs valeurs d'octets. (En raison de l'architecture little endian de la plateforme Intel, les caractères de code Unicode sont toujours triés inversés par octet.)<br /><br /> Pour le classement binaire des types de données Unicode, les paramètres régionaux (la langue) ne sont pas pris en compte dans les tris de données. Par exemple, Latin_1_General_BIN et Japanese_BIN produisent des résultats de tri identiques quand ils sont utilisés avec des données Unicode.<br /><br /> L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
-|Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Vous pouvez explicitement définir le non-respect de la casse en spécifiant _CI. Les paramètres de casse spécifiques au classement ne s'appliquent pas aux identificateurs d'objets, tels que l'ID d'une dimension, le cube et d'autres objets. Pour plus d'informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
+|Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Vous pouvez explicitement définir le non-respect de la casse en spécifiant _CI. Les paramètres de casse spécifiques au classement ne s'appliquent pas aux identificateurs d'objets, tels que l'ID d'une dimension, le cube et d'autres objets. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « a » n'est pas équivalent à « ấ ». Si cette option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que la version accentuée et la version non accentuée d'une même lettre sont identiques dans les opérations de tri. Vous pouvez explicitement définir le non-respect des accents en spécifiant _AI.|  
 |Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que les caractères Hiragana et Katakana sont des caractères identiques dans les opérations de tri. Il n'existe pas de suffixe d'ordre de tri pour les tris ne respectant pas le jeu de caractères Kana.|  
 |Respecter la largeur (_WS)|Fait la distinction entre un caractère codé sur un octet et le même caractère représenté sur deux octets. Si cette option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que la version codée sur un octet et la version codée sur deux octets d’un même caractère sont identiques dans les opérations de tri. Il n'existe pas de suffixe d'ordre de tri pour les tris ne respectant pas la largeur.|  
@@ -179,7 +179,7 @@ ms.lasthandoff: 12/08/2017
  Si vous utilisez l’identificateur de langue Anglais (États-Unis) (0x0409 ou 1033) en tant que langue par défaut de l’instance d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez obtenir de meilleures performances en définissant la propriété de configuration **EnableFast1033Locale** , une propriété de configuration avancée disponible uniquement pour cet identificateur de langue. Si vous attribuez la valeur **True** à cette propriété, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise un algorithme plus rapide pour le hachage de chaînes et les comparaisons. Pour plus d’informations sur la définition des propriétés de configuration, consultez [Propriétés du serveur dans Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> Prise en charge de GB18030 dans Analysis Services  
- GB18030 est une norme distincte utilisée en République populaire de Chine pour l'encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Dans Analysis Services, il n'y a aucune conversion de données lors du traitement de données provenant de sources externes. Les données sont simplement stockées au format Unicode. Au moment de la requête, une conversion GB18030 est effectuée via les bibliothèques clientes Analysis Services (plus précisément, le fournisseur OLE DB MSOLAP.dll) quand des données texte sont retournées dans les résultats de la requête, en fonction des paramètres du système d'exploitation client. Le moteur de base de données prend également en charge la norme GB18030. Pour plus d'informations, consultez [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ GB18030 est une norme distincte utilisée en République populaire de Chine pour l'encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Dans Analysis Services, il n'y a aucune conversion de données lors du traitement de données provenant de sources externes. Les données sont simplement stockées au format Unicode. Au moment de la requête, une conversion GB18030 est effectuée via les bibliothèques clientes Analysis Services (plus précisément, le fournisseur OLE DB MSOLAP.dll) quand des données texte sont retournées dans les résultats de la requête, en fonction des paramètres du système d'exploitation client. Le moteur de base de données prend également en charge la norme GB18030. Pour plus d'informations, consultez [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénarios de globalisation pour Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   

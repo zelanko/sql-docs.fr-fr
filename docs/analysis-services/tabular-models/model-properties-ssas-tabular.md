@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10fc0c4c74dddf6faaa2cfe0b2bff4e24695ec2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 536e56027445e2634ac2b72537c3af9540d76fff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-properties-ssas-tabular"></a>Propriétés de modèle (SSAS Tabulaire)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette rubrique décrit les propriétés de modèle tabulaire. Chaque projet de modèle tabulaire possède des propriétés de modèle qui affectent la façon dont le modèle que vous créez dans les outils de développement SQL Server est construit et sauvegardé, ainsi que le mode de stockage de la base de données d’espace de travail. Les propriétés du modèle décrites ici ne s'appliquent pas aux modèles qui ont déjà été déployés.  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |**Langage**|Anglais|Langue par défaut du modèle. La langue par défaut est déterminée par la langue de Visual Studio. Cette propriété ne peut pas être définie dans la fenêtre Propriétés.|  
 |**Base de données d'espace de travail**|Le nom du projet, suivi d'un trait de soulignement, puis d'un GUID.|Nom de la base de données d'espace de travail utilisée pour le stockage et la modification du modèle en mémoire pour le fichier model.bim sélectionné. Cette base de données apparaît dans l'instance Analysis Services spécifiée dans la propriété Serveur d'espace de travail. Cette propriété ne peut pas être définie dans la fenêtre Propriétés. Pour plus d’informations, consultez [Base de données d’espace de travail &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md).|  
 |**Rétention de l'espace de travail**|Décharger de la mémoire|Spécifie comment une base de données d'espace de travail est conservée une fois que le modèle a été fermé. Une base de données d'espace de travail inclut les métadonnées du modèle, les données importées dans un modèle et les informations d'identification d'emprunt d'identité (chiffrées). Dans certains cas, la base de données d'espace de travail peut être très volumineuse et consommer une quantité significative de mémoire. Par défaut, les bases de données d'espace de travail sont déchargées de la mémoire. Lors de la modification de ce paramètre, il est important de considérer vos ressources mémoire disponibles ainsi que la fréquence à laquelle vous projetez de travailler sur le modèle. Ce paramètre de propriété a les options suivantes :<br /><br /> **Conserver en mémoire** - Indique de conserver la base de données de l’espace de travail en mémoire une fois le modèle fermé. Cette option consommera davantage de mémoire ; toutefois, lors de l’ouverture d’un modèle, moins de ressources seront consommées, et la base de données d’espace de travail se chargera plus vite.<br /><br /> **Décharger de la mémoire** - Indique de garder la base de données de l’espace de travail sur le disque, mais pas dans la mémoire, une fois le modèle fermé. Cette option consommera moins de mémoire ; toutefois, lors de l’ouverture d’un modèle, des ressources supplémentaires seront consommées, et le modèle se chargera plus lentement que si la base de données d’espace de travail est conservée en mémoire. Utilisez cette option lorsque les ressources en mémoire sont limitées ou lorsque vous travaillez sur une base de données d'espace de travail distante.<br /><br /> **Supprimer l’espace de travail** - Indique de supprimer la base de données de l’espace de travail de la mémoire et de ne pas la garder sur le disque une fois le modèle fermé. Cette option consommera moins de mémoire et d’espace de stockage ; toutefois, lors de l’ouverture d’un modèle, des ressources supplémentaires seront consommées, et le modèle se chargera plus lentement que si la base de données d’espace de travail est conservée en mémoire ou sur le disque. Utilisez cette option uniquement si vous travaillez occasionnellement sur les modèles.<br /><br /> <br /><br /> Le paramètre par défaut de cette propriété peut être modifié sur la page Modélisation des données dans les paramètres Analysis Server de la boîte de dialogue Outils\Options.|  
-|**Serveur d'espace de travail**|localhost|Cette propriété indique le serveur par défaut qui sera utilisé pour héberger la base de données d’espace de travail pendant que le modèle est créé. Toutes les instances disponibles d'Analysis Services qui fonctionnent sur l'ordinateur local sont incluses dans la zone de liste.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié sur la page Modélisation des données dans les paramètres Analysis Server de la boîte de dialogue Outils\Options.<br /><br /> <br /><br /> Remarque : il est recommandé de toujours spécifier un serveur Analysis Services local comme serveur d’espace de travail. Pour les bases de données d’espace de travail sur serveur distant, l’importation à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’est pas prise en charge, les données ne peuvent pas être sauvegardées localement, et l’interface utilisateur peut connaître une latence pendant les requêtes.|  
+|**Serveur d'espace de travail**|localhost|Cette propriété indique le serveur par défaut qui sera utilisé pour héberger la base de données d’espace de travail pendant que le modèle est créé. Toutes les instances disponibles d'Analysis Services qui fonctionnent sur l'ordinateur local sont incluses dans la zone de liste.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié sur la page Modélisation des données dans les paramètres Analysis Server de la boîte de dialogue Outils\Options.<br /><br /> <br /><br /> Remarque : il est recommandé de toujours spécifier un serveur Analysis Services local comme serveur d’espace de travail. Pour les bases de données d’espace de travail sur serveur distant, l’importation à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’est pas prise en charge, les données ne peuvent pas être sauvegardées localement, et l’interface utilisateur peut connaître une latence pendant les requêtes.|  
   
 ##  <a name="bkmk_conf_model_prop"></a> Configurer les paramètres de propriété du modèle  
   

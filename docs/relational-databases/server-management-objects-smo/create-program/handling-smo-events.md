@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c1e3c355c940cccb8a9e13d5da469934910c72b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f71df8b210fff4524a4e84a5ee64da039d741e6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-smo-events"></a>Gestion des événements SMO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il existe des types d’événements de serveur que vous peuvent vous abonner à l’aide d’un gestionnaire d’événements et les <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objet.  
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/17/2017
   
  Les types d’événements de base de données et de serveur qui peuvent être gérées sont répertoriés dans le <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe et la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
   
-## <a name="example"></a>Exemple  
-Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a> Exemple  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Enregistrement de gestionnaires d'événements et abonnement à la gestion des événements en Visual Basic  

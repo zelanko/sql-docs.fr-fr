@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture d’intégration CLR - environnement hébergé CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’intégration avec le common language runtime (CLR) du .NET Framework permet aux programmeurs de base de données d’utiliser des langages tels que Visual c#, Visual Basic .NET et Visual C++. Les fonctions, procédures stockées, déclencheurs, types de données et agrégats sont parmi les types de logique métier que les programmeurs peuvent écrire avec ces langages.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 ###### <a name="security"></a>Sécurité  
  Le code utilisateur qui s'exécute dans la base de données doit suivre les règles d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d'autorisation lors de l'accès à des objets de base de données tels que les tables et les colonnes. De plus, les administrateurs de base de données doivent être en mesure de contrôler l'accès aux ressources du système d'exploitation, tel que l'accès aux fichiers et au réseau, à partir du code utilisateur qui s'exécute dans la base de données. Cela devient important alors que les langages de programmation managés (contrairement aux langages non managés tels que Transact-SQL) fournissent des API pour accéder à ces ressources. Le système doit fournir une méthode sécurisée pour que le code utilisateur accède aux ressources d'ordinateur à l'extérieur du processus du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d’informations, consultez [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-###### <a name="performance"></a>Performance  
+###### <a name="performance"></a>Performances  
  Le code utilisateur managé qui s'exécute dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit avoir des performances de calcul comparables au même code exécuté hors du serveur. L'accès à la base de données à partir du code utilisateur managé n'est pas aussi rapide que pour [!INCLUDE[tsql](../../includes/tsql-md.md)] natif. Pour plus d’informations, consultez [performances d’intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>Services CLR  
@@ -132,8 +132,8 @@ ms.lasthandoff: 11/17/2017
 |Jeu d'autorisations|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sécurité d’accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Illimité|  
 |Restrictions du modèle de programmation|Oui|Oui|Aucune restriction|  
-|Vérifiabilité requise|Oui|Oui|Non|  
-|Possibilité d'appeler du code natif|Non|Non|Oui|  
+|Vérifiabilité requise|Oui|Oui|non|  
+|Possibilité d'appeler du code natif|non|non|Oui|  
   
  SAFE est le mode le plus fiable et sécurisé avec des restrictions associées quant au modèle de programmation autorisé. Les assemblys SAFE bénéficient d'autorisations suffisantes pour s'exécuter, effectuer des calculs et avoir accès à la base de données locale. Les assemblys SAFE doivent être de type sécurisé vérifié et ne sont pas autorisés à appeler du code non managé.  
   

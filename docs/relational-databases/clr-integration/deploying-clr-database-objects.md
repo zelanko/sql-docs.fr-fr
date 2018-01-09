@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73dd29d7c658a9537c6860aecfb69c5fcd538460
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5fd0a8abac60e2e5b0e2f1bce35bd1d6e3554e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Déploiement est le processus par lequel vous distribuez une application terminée ou le module doit être installé et exécuté sur un autre ordinateur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  

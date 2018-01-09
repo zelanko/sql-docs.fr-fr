@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b76d8eb93aa0e247652b122728249947cf24df8e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 63f814c8878e1e1151861a8979398a4422d4578a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Définir des attributions et d'autres commandes de script
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sur le **calculs** onglet du Concepteur de Cube, cliquez sur le **ScriptCommand nouveau** icône dans la barre d’outils pour créer un script vide. Quand vous créez un script, il s’affiche au départ avec un titre vide dans le volet **Organisateur de script** de l’onglet Calculs. Les caractères que vous tapez dans le volet des expressions de calcul s’affichent en tant que nom de l’élément dans **l’organisateur de script**. Par conséquent, vous pouvez avoir intérêt à taper un nom commenté sur la première ligne pour pouvoir identifier plus facilement le script dans le volet **Organisateur de script** . Pour plus d’informations, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et aux requêtes MDX, consultez la section du [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621)qui explique comment écrire efficacement des requêtes MDX.  

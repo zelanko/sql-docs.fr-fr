@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchies"></a>Hierarchies
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, les hiérarchies sont des métadonnées qui définissent les relations entre deux ou plusieurs colonnes dans une table. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de clients de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs du client et à inclure dans un rapport.  
@@ -32,7 +29,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_benefits"></a> Avantages  
  Les tables peuvent inclure des dizaines, voire des centaines de colonnes avec des noms de colonne inhabituels sans ordre apparent. Cela peut entraîner une apparence non ordonnée dans les listes de champs de clients de création de rapports, ce qui complique la tâche des utilisateurs qui recherchent et souhaitent inclure des données dans un rapport. Les hiérarchies peuvent fournir une vue simple et intuitive d'une structure de données autrement plus complexe.  
   
- Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
+ Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
   
  Chaque niveau dans une hiérarchie étant une représentation d'une colonne dans une table, le niveau peut être renommé. Bien que cette opération ne concerne pas seulement les hiérarchies (toute colonne peut être renommée dans un modèle tabulaire), renommer les niveaux de la hiérarchie peut permettre aux utilisateurs de rechercher et d’inclure plus facilement des niveaux dans un rapport. Renommer un niveau ne renomme pas la colonne qu'il référence ; cela rend simplement le niveau plus identifiable. Dans notre hiérarchie Année civile, par exemple, dans la table de date de la vue de données, les colonnes CalendarYear, CalendarMonth, CalendarWeek et CalendarDay ont été renommées en Année civile, Mois, Semaine et Jour de manière à les rendre plus facilement identifiables. Renommer des niveaux présente un autre avantage, celui d'assurer la cohérence dans les rapports, étant donné que les utilisateurs seront moins souvent amenés à modifier les noms de colonnes pour les rendre plus lisibles dans les tableaux croisés dynamiques, les graphiques, etc.  
   
@@ -51,9 +48,9 @@ ms.lasthandoff: 12/08/2017
   
  Après avoir créé des hiérarchies, vous pouvez tester leur efficacité dans votre modèle à l'aide de la fonctionnalité Analyser dans Excel. Pour plus d’informations, consultez [analyser dans Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tâches associées  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |----------|-----------------|  
 |[Créer et gérer des hiérarchies](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
   

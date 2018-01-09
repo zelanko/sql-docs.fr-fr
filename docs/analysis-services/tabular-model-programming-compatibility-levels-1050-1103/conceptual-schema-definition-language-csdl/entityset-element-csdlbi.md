@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20401dbc3487931219009811c83694c7f2f19703
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entityset-element-csdlbi"></a>Élément EntitySet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément EntitySet définit une collection d’entités d’un type particulier dans un modèle de données CSDLBI.  
@@ -38,12 +36,12 @@ ms.lasthandoff: 12/08/2017
   
 |Nom d'attribut|Est obligatoire|Description|  
 |--------------------|-----------------|-----------------|  
-|Légende|Non|Description conviviale du jeu d'entités.|  
-|CollectionCaption|Non|Chaîne qui contient le nom au pluriel de l'entité.|  
-|ReferenceName|Non|Contient le nom non fusionné et complet de l'entité. Dans un modèle multidimensionnel, correspond au nom CubeDimension.|  
-|Caché|Non|Indique si l'entité est masquée. Par défaut, les entités ne sont pas masquées.|  
+|Légende|non|Description conviviale du jeu d'entités.|  
+|CollectionCaption|non|Chaîne qui contient le nom au pluriel de l'entité.|  
+|ReferenceName|non|Contient le nom non fusionné et complet de l'entité. Dans un modèle multidimensionnel, correspond au nom CubeDimension.|  
+|Hidden|non|Indique si l'entité est masquée. Par défaut, les entités ne sont pas masquées.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **Tabulaire**  
   
  L'exemple suivant, en CSDLBI version 1.1, affiche les définitions des tables Date et Geography, du modèle tabulaire AdventureWorks.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 </EntitySet>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **(Multidimensionnel)**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre plusieurs éléments EntitySet du cube Contoso Retail Operations.  

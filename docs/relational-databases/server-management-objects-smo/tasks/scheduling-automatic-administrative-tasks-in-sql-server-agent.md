@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9ab92b8cdea97074750f5cd6ef2327960505825e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac685dde06e3cd95ebd029db96e27d75372b1ed2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planification des tâches administratives automatiques dans l'Agent SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent est représenté par les objets suivants :  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Les objets de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se trouvent dans l'espace de noms <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 Pour les programmes qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez inclure le **à l’aide de** instruction pour qualifier l’espace de noms de l’Agent. Insérez l’instruction après l’autre **à l’aide de** instructions, avant toute autre déclaration dans l’application, telles que :
   

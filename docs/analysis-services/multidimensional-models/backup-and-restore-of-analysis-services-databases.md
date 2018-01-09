@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et restauration afin que vous pouvez récupérer une base de données et ses objets à partir d’un point particulier dans le temps. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Si un fichier de sauvegarde est chiffré, vous devez fournir le mot de passe spécifié pendant la sauvegarde pour pouvoir utiliser ce fichier dans le but de restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Au cours de la restauration, vous disposez des options suivantes :  
+ Au cours de la restauration, vous disposez des options suivantes :  
   
 -   Vous pouvez restaurer la base de données en utilisant le nom original de la base de données ou vous pouvez spécifier un nouveau nom de base de données.  
   

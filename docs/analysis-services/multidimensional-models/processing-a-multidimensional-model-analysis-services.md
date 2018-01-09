@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Traitement d’un modèle multidimensionnel (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le traitement est l’étape ou une série d’étapes, dans lesquelles Analysis Services charge des données à partir d’une source de données relationnelles dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  

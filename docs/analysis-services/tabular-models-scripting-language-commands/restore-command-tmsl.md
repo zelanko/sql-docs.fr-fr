@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45e4461956c78278d367715e8ef665821d487e3f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>Restaurer des commandes (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Restaure une base de données Analysis Services à partir d’un fichier de sauvegarde.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**Propriété**|**Default**|**Description**|  
-|database|[Obligatoire]|Le nom de l’objet de base de données à restaurer.|  
+|base de données|[Obligatoire]|Le nom de l’objet de base de données à restaurer.|  
 |fichier|[Obligatoire]|Le fichier de sauvegarde nom/chemin d’accès.|  
 |password|Vide|Le mot de passe à utiliser pour déchiffrer le fichier de sauvegarde.|  
 |allowOverwrite|False|Valeur booléenne qui, si true, indique qu’un fichier de sauvegarde qui existe déjà sera écrasée ; Sinon, false.|  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="response"></a>Réponse  
  Retourne un résultat vide lorsque la commande aboutit. Sinon, une exception XMLA est retournée.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **Exemple 1** -restaurer une base de données à partir d’un dossier local.  
   
 ```  

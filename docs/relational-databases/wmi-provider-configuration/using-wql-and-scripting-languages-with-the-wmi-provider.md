@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06e1205af31c945496d16fe55595035cfb54d189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f86bfa3cb0c8adaf178641bbeadf2c74c48bc65d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>À l’aide de WQL ou langage de script avec le fournisseur WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Accès aux applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services et des paramètres de réseau à l’aide du fournisseur Windows Management Instrumentation (WMI) pour les objets de gestion de la Configuration de deux manières :  

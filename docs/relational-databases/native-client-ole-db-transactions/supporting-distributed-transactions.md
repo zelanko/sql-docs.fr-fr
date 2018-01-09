@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-transactions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2085ae56343197b7ddb71c094f356d229baf8ed6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc742b7ead09b61840ba6f6bb7ac66e8e81465e2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supporting-distributed-transactions"></a>Prise en charge des Transactions distribuées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour les transactions distribuées, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente du fournisseur OLE DB Native Client **ITransactionJoin::JoinTransaction** paramètres comme suit.  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Pointeur vers un objet de transaction MS DTC.|  
 |*IsoLevel*|Ignoré par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif. Le niveau d'isolation pour les transactions coordonnées MS DTC est déterminé lorsque le consommateur acquiert un objet de transaction à partir de MS DTC.|  

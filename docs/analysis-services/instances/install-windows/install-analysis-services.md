@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Installer SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services est un serveur de base de données analytique hébergeant des modèles tabulaires, des cubes multidimensionnels et des modèles d’exploration de données que vous pouvez accéder à partir de rapports, feuilles de calcul et tableaux de bord.  
@@ -74,7 +74,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|TABULAR|Ceci est la valeur par défaut. Si vous ne définissez pas **ASSERVERMODE**, le serveur est installé en mode tabulaire.|
+|TABULAR|Il s'agit de la valeur par défaut. Si vous ne définissez pas **ASSERVERMODE**, le serveur est installé en mode tabulaire.|
 |MULTIDIMENSIONAL|Cette valeur est facultative.|  
 |POWERPIVOT|Cette valeur est facultative. En pratique, si vous définissez le paramètre **ROLE** , le mode serveur est automatiquement défini sur 1, ce qui rend **ASSERVERMODE** facultatif pour une installation de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint. Pour plus d’informations, consultez [Installer Power Pivot à partir de l’invite de commandes](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   

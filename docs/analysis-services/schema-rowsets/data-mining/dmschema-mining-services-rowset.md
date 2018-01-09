@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_SERVICES
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a7a400ba01989b8b4bb74d682a2c3533fa9127f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_SERVICES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit une description de chaque algorithme d’exploration de données qui prend en charge par le fournisseur.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DMSCHEMA_MINING_SERVICES** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|Nom de l'algorithme. Cette colonne est spécifique au fournisseur.|  
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Cette colonne contient une bitmap qui décrit le service d'exploration de données. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] remplit cette colonne avec l’une des valeurs suivantes :<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
@@ -69,8 +67,8 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Ce paramètre est facultatif.|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma d’exploration de données](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

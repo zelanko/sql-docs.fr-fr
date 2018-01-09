@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19ce71cdffe3272a791cf7f9961a4d7757c913ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a169a625d2ee3e55257e1629d3043fbe9851ac8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Classement et types de données de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], le **CompareInfo** objet gère les classements. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] application d’utilisent des interfaces de programmation (API) de la chaîne du **CompareInfo** propriété associée à la **CultureInfo** objet du thread actuel pour effectuer des comparaisons de chaînes. Le paramètre par défaut de la **CultureInfo** objet est basé sur le [!INCLUDE[msCoName](../../includes/msconame-md.md)] paramètres régionaux Windows pour l’ordinateur sur lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution. Ce paramètre détermine la sémantique de comparaison par défaut, si aucun explicite **CultureInfo** est spécifié, pour les comparaisons de **System.String** valeurs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ne change pas explicitement le **CompareInfo** propriété de classement de la base de données ou serveur. Si nécessaire, les utilisateurs doivent définir approprié **CompareInfo** propriété dans leurs routines.  

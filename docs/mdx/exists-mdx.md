@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 37b5bc5e1b1e19bbadc53b734b0aee2470488c80
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Expression de chaîne valide qui précise le nom d'un groupe de mesures.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 1.  Lignes de groupe de mesures avec des mesures contenant des valeurs null contribuent à **Exists** lorsque l’argument MeasureGroupName est spécifié. C'est la différence entre cette forme d'Exists et la fonction Nonempty : si la propriété NullProcessing de ces mesures est configurée sur Conserver, cela signifie que les mesures afficheront des valeurs NULL lorsque les requêtes sont exécutées contre cette partie du cube ; NonEmpty supprimera toujours des tuples d'un jeu qui a des valeurs de la mesure Null, alors qu'Exists avec l'argument MeasureGroupName ne filtrera pas les tuples qui ont des lignes de groupe de mesures associées, même si les valeurs de mesure sont Null.  
   

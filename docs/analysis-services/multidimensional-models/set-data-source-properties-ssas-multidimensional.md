@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Définir les propriétés de la source de données (SSAS Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objet de source de données spécifie une connexion à un entrepôt de données externe ou d’une base de données relationnelle qui fournit des données à un modèle multidimensionnel. Les propriétés sur la source de données déterminent la chaîne de connexion, le délai d'attente, le nombre maximal de connexions et le niveau d'isolation de la transaction.  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/08/2017
 |**Nombre maximal de connexions**|Spécifie le nombre maximal de connexions autorisées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour la connexion à la source de données. Si davantage de connexions sont nécessaires, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attend qu’une connexion soit disponible. La valeur par défaut est 10. En limitant le nombre de connexions, vous garantissez que la source de données externe n'est pas surchargée par les demandes d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Isolement**|Spécifie le comportement de verrouillage et de contrôle de version de ligne des commandes SQL exécutées par une connexion sur une base de données relationnelle. Les valeurs valides sont ReadCommitted ou Snapshot. La valeur par défaut est ReadCommitted, qui spécifie que ces données doivent être validées avant d'être lues et qui empêche les lectures erronées. L'instantané spécifie que les lectures proviennent d'un instantané de données déjà validées. Pour plus d’informations sur le niveau d’isolation dans SQL Server, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).|  
 |**Fournisseur managé**|Affiche le nom du fournisseur managé (ex. System.Data.SqlClient ou System.Data.OracleClient) si la source de données utilise un fournisseur managé.<br /><br /> Si la source de données n'utilise pas un tel fournisseur, cette propriété est vide.<br /><br /> Cette propriété est en lecture seule dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour modifier le fournisseur utilisé pour la connexion, modifiez la chaîne de connexion.|  
-|**Informations d'emprunt d'identité**|Spécifie l’identité Windows sous laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécute durant la connexion à une source de données qui utilise l’authentification Windows. Les options utilisent un ensemble prédéfini d'informations d'identification Windows, le compte de service, l'identité de l'utilisateur actuel ou une option d'héritage qui peut être utile si votre modèle contient plusieurs objets de source de données. Pour plus d’informations, consultez [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).<br /><br /> Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], les valeurs valides sont les suivantes :<br /><br /> **ImpersonateAccount** (utiliser un nom et un mot de passe utilisateur Windows spécifiques pour se connecter à la source de données).<br /><br /> **ImpersonateServiceAccount** (utiliser l’identité de sécurité du compte de service pour se connecter à la source de données). Ceci est la valeur par défaut.<br /><br /> **ImpersonateCurrentUser** (utiliser l’identité de sécurité de l’utilisateur actuel pour se connecter à la source de données). Cette option est uniquement valide pour les requêtes d'exploration de données qui extraient des données d'un entrepôt ou d'une base de données externes ; ne la choisissez pas pour les connexions de données utilisées pour le traitement, le chargement ou l'écriture différée dans une base de données multidimensionnelle.<br /><br /> **Inherit** ou **default** (utiliser les paramètres d’emprunt d’identité de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient cet objet de source de données). Les propriétés de base de données incluent des options d'emprunt d'identité.|  
+|**Informations d'emprunt d'identité**|Spécifie l’identité Windows sous laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécute durant la connexion à une source de données qui utilise l’authentification Windows. Les options utilisent un ensemble prédéfini d'informations d'identification Windows, le compte de service, l'identité de l'utilisateur actuel ou une option d'héritage qui peut être utile si votre modèle contient plusieurs objets de source de données. Pour plus d’informations, consultez [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).<br /><br /> Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], les valeurs valides sont les suivantes :<br /><br /> **ImpersonateAccount** (utiliser un nom et un mot de passe utilisateur Windows spécifiques pour se connecter à la source de données).<br /><br /> **ImpersonateServiceAccount** (utiliser l’identité de sécurité du compte de service pour se connecter à la source de données). Il s'agit de la valeur par défaut.<br /><br /> **ImpersonateCurrentUser** (utiliser l’identité de sécurité de l’utilisateur actuel pour se connecter à la source de données). Cette option est uniquement valide pour les requêtes d'exploration de données qui extraient des données d'un entrepôt ou d'une base de données externes ; ne la choisissez pas pour les connexions de données utilisées pour le traitement, le chargement ou l'écriture différée dans une base de données multidimensionnelle.<br /><br /> **Inherit** ou **default** (utiliser les paramètres d’emprunt d’identité de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient cet objet de source de données). Les propriétés de base de données incluent des options d'emprunt d'identité.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données dans des modèles multidimensionnels](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   

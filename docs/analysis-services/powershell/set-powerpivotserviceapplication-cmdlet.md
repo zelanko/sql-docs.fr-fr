@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1d1caae0c63d1ffdbbed07940b35a4a822787f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Applet de commande Set-PowerPivotServiceApplication
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Définit les propriétés d’un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application de service.  
@@ -126,7 +126,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accepter les caractères génériques ?|false|  
   
 ### <a name="-connectionpoolsize-int"></a>-ConnectionPoolSize \<int >  
- Spécifie le nombre maximal de connexions inactives créées par le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans les pools de connexions pour chaque combinaison d’utilisateur SharePoint, de jeu de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de version. La valeur par défaut est 1000 connexions inactives. Les valeurs valides sont -1 (illimité), 0 (désactive le regroupement de connexions utilisateur) ou une plage comprise entre 1 et 10000. Ces pools de connexions permettent au service de gérer plus efficacement les connexions aux mêmes données en lecture seule par le même utilisateur. Si vous désactivez le regroupement de connexions, chaque connexion sera recréée. Notez que la modification de la limite de taille du pool de connexions, y compris son paramétrage sur la valeur 0, ne provoque pas de perte de connexion. Les pools de connexions servent à réduire les temps d'attente lors de la connexion aux données. Le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne refuse jamais une connexion fondée sur les paramètres du pool de connexions.  
+ Spécifie le nombre maximal de connexions inactives créées par le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans les pools de connexions pour chaque combinaison d’utilisateur SharePoint, de jeu de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de version. La valeur par défaut est 1000 connexions inactives. Les valeurs valides sont -1 (illimité), 0 (désactive le regroupement de connexions utilisateur) ou une plage comprise entre 1 et 10000. Ces pools de connexions permettent au service de gérer plus efficacement les connexions aux mêmes données en lecture seule par le même utilisateur. Si vous désactivez le regroupement de connexions, chaque connexion sera recréée. Notez que la modification de la limite de taille du pool de connexions, y compris son paramétrage sur la valeur 0, ne provoque pas de perte de connexion. Les pools de connexions servent à réduire les temps d'attente lors de la connexion aux données. Le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne refuse jamais une connexion fondée sur les paramètres du pool de connexions.  
   
 |||  
 |-|-|  
@@ -144,7 +144,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Requis ?|false|  
 |Position ?|nommée|  
 |Valeur par défaut|1800|  
-|Accepter l'entrée de pipeline ?|false|  
+|Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
 ### <a name="-dataloadtimeout-int"></a>-DataLoadTimeout \<int >  
@@ -155,7 +155,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Requis ?|false|  
 |Position ?|nommée|  
 |Valeur par défaut|1800|  
-|Accepter l'entrée de pipeline ?|false|  
+|Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
 ### <a name="-datarefreshfailurethreshold-int"></a>-DataRefreshFailureThreshold \<int >  
@@ -227,7 +227,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accepter les caractères génériques ?|false|  
   
 ### <a name="-memorydatabaseholdlimit-int"></a>-MemoryDatabaseHoldLimit \<int >  
- Spécifie le nombre d'heures pendant lequel une base de données inactive est conservée en mémoire pour répondre aux nouvelles requêtes de données. Une base de données active est toujours conservée en mémoire tant que vous l'interrogez ; lorsqu'elle n'est plus active, le système la conserve en mémoire pour une période supplémentaire au cas où ces données seraient interrogées ultérieurement. L'intervalle par défaut est de 48 heures.  
+ Spécifie le nombre d'heures pendant lequel une base de données inactive est conservée en mémoire pour répondre aux nouvelles requêtes de données. Une base de données active est toujours conservée en mémoire tant que vous l'interrogez ; lorsqu'elle n'est plus active, le système la conserve en mémoire pour une période supplémentaire au cas où ces données seraient interrogées ultérieurement. L'intervalle par défaut est de 48 heures.  
   
 |||  
 |-|-|  
@@ -357,7 +357,7 @@ C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklm -All
   
  Utilisez Get-powerpivotserviceapplication pour obtenir une identité valide.  
   
-## <a name="example-2"></a>Exemple 2  
+## <a name="example-2"></a>Exemple 2  
   
 ```  
 C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklm -HealthBasedAllocation  

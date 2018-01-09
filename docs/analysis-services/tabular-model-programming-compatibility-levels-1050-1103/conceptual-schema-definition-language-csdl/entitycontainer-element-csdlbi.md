@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Élément EntityContainer (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément EntityContainer est un type complexe, selon le type CSDL, EntityContainer, qui définit une collection d’entités dans un modèle de données unique. Dans une application Business Intelligence, le modèle de données représenté par un EntityContainer peut contenir plusieurs tables avec une colonne liée par des relations, ainsi que des calculs, des mesures et des indicateurs de performance clés. Il est similaire sur le plan conceptuel à une base de données ou à une source de données.  
@@ -36,15 +34,15 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau ci-dessous décrit les éléments et les attributs qui définissent l'EntityContainer.  
   
-|Nom|Est obligatoire|Description|  
+|Nom   |Est obligatoire|Description|  
 |----------|-----------------|-----------------|  
-|Nom|Oui|Nom du modèle de données.|  
-|Légende|Non|Description de la base de données ou du modèle de données.|  
+|Nom   |Oui|Nom du modèle de données.|  
+|Légende|non|Description de la base de données ou du modèle de données.|  
 |Culture|Oui|Chaîne qui contient le LCID de la demande.|  
 |CompareOptions|Oui|Options de tri et de comparaison de chaîne spécifiques à la langue pour le modèle.|  
-|DirectQueryMode|Non|Énumération qui indique le mode de requête lorsque le modèle utilise le mode DirectQuery.|  
+|DirectQueryMode|non|Énumération qui indique le mode de requête lorsque le modèle utilise le mode DirectQuery.|  
 |Élément EntitySet|Oui|[Élément EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Élément AssociationSet|Non|[Élément AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Élément AssociationSet|non|[Élément AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions, élément  
  L'attribut CompareOptions définit les propriétés de classement appliquées au modèle de données. Les propriétés définies par l'option CompareOptions sont dérivées des paramètres d'ordre de tri, de respect du jeu de caractères Kana et de respect de la casse définis dans la base de données Analysis Services au moment de la conception de modèle. Le tableau suivant décrit les valeurs qui sont incluses dans l'attribut CompareOptions.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |DirectQueryWithInMemory|Indique, par défaut, que les requêtes sur le modèle utilisent les données du cache.|  
 |DirectQuery|Indique que les requêtes sur le modèle utilisent uniquement les données de la source de données relationnelle.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **Tabulaire**  
   
  L'exemple suivant, en CSDLBI version 1.1, représente une partie du modèle de données tabulaire AdventureWorks.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **(Multidimensionnel)**  
   
  L'exemple suivant, en CSDLBI version 1.1, est un extrait du cube Contoso Operations.  

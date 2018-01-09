@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Définir le comportement semi-additif
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mesures semi-additives, qui n’uniformément s’agrègent pas toutes les dimensions, sont très courantes dans de nombreux scénarios d’entreprise. Chaque cube qui se base sur l'instantané de soldes dans le temps pose ce problème. Ces instantanés s'utilisent dans des applications traitant de titres de placement, de soldes de compte, de budgétisation, de ressources humaines, de polices et de déclarations d'assurance, et de nombreux autres domaines d'activité.  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 -   First Nonempty Child  
   
--   Aucun  
+-   None  
   
  Cette option ne change pas les mesures ayant une fonction d’agrégation standard : **Sum**, **Min**, **Max**, **Count**ou **Distinct****Count**.  
   
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 |---------------------------|-----------------|  
 |Average of Children|L'agrégation d'un membre est la moyenne de ses enfants.|  
 |ByAccount|Le système lit le comportement semi-additif spécifié pour le type de compte.|  
-|Count|L'agrégation est un nombre de membres.|  
+|Compter|L'agrégation est un nombre de membres.|  
 |Distinct Count|L'agrégation est un nombre de membres uniques.|  
 |First Child|La valeur de membre est évaluée comme la valeur de son premier enfant avec la dimension de temps.|  
 |FirstNonEmpty|La valeur de membre est évaluée comme la valeur de son premier enfant avec la dimension de temps qui contient les données.|  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
 |LastNonEmpty|La valeur de membre est évaluée comme la valeur de son dernier enfant avec la dimension de temps qui contient les données.|  
 |Max|La fonction d'agrégation maximale standard est appliquée.|  
 |Min|La fonction d'agrégation minimale standard est appliquée.|  
-|Aucun|Aucune agrégation n'est appliquée.|  
+|None|Aucune agrégation n'est appliquée.|  
 |SUM|La fonction d'addition standard est appliquée.|  
   
  Tout comportement semi-additif existant est écrasé lorsque vous terminez l'Assistant.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a5e9efb687e9a554841e945f7575a75a5ac3d4ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06859de8da70eb1357802fdca1e758e1872a7f10
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +48,11 @@ ms.lasthandoff: 11/17/2017
   
  Une procédure peut avoir zéro, un ou plusieurs paramètres. Elle peut également retourner une valeur (comme l'indique le marqueur de paramètre optionnel ?= au début de la syntaxe). Si un paramètre est un paramètre d'entrée ou d'entrée/sortie, ce peut être un littéral ou un marqueur de paramètre. Si le paramètre est un paramètre de sortie, ce doit être un marqueur de paramètre car la sortie est inconnue. Marqueurs de paramètres doivent être liés avec [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) avant l’appel de procédure cette instruction est exécutée.  
   
- Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Exemple :  
+ Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Exemple :  
   
  {**appeler** *nom_procédure***()**}  
   
- Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Exemple :  
+ Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Exemple :  
   
  {**appeler** *nom_procédure*}  
   

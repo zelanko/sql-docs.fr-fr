@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5aba1b9a2ad2d70d56335e496e624864492397dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d8583586c151eaeecf2cb4088536a0810337a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="context-connection"></a>Connexion contextuelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le problème d’accès aux données interne est un scénario assez courant. Autrement dit, vous souhaitez accéder au même serveur que celui sur lequel votre fonction ou procédure stockée CLR s'exécute. Une option consiste à créer une connexion à l’aide de **System.Data.SqlClient.SqlConnection**, spécifiez une chaîne de connexion qui pointe vers le serveur local et ouvrir la connexion. Cela requiert la spécification d'informations d'identification pour se connecter. La connexion est dans une session de base de données autre que la procédure stockée ou la fonction, elle peut avoir différents **définir** options, il est dans une transaction distincte, elle ne voit pas vos tables temporaires, et ainsi de suite. Si le code de votre procédure stockée managée ou de votre fonction exécute dans le processus SQL Server, la raison en est que quelqu'un s'est connecté à ce serveur et a exécuté une instruction SQL pour l'appeler. Vous souhaitez probablement que la procédure stockée ou une fonction à exécuter dans le contexte de cette connexion, ainsi que sa transaction, **définir** options et ainsi de suite. Une telle connexion est appelée connexion du contexte, ou connexion contextuelle.  

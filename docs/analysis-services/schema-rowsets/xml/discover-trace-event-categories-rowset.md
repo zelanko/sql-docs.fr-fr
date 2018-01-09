@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1adc4b7e60c566ac1c46a4b51c06e2ee505916ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>DISCOVER_TRACE_EVENT_CATEGORIES, ensemble de lignes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Affiche la liste des catégories d’événements qui sont pris en charge par le fournisseur de trace.  
@@ -34,9 +32,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_TRACE_EVENT_CATEGORIES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**Données**|**DBTYPE_WSTR**||Contient une chaîne XML encodée décrivant les informations de catégorie d'événement relatives au fournisseur de trace, y compris le nom de catégorie, le type et la description. Le type est une chaîne indiquant le type de catégorie d'événement. Les valeurs d'énumération sont les suivantes :<br /><br /> 0=Normal<br /><br /> 1=Proche<br /><br /> 2=Erreur|  
+|**Data**|**DBTYPE_WSTR**||Contient une chaîne XML encodée décrivant les informations de catégorie d'événement relatives au fournisseur de trace, y compris le nom de catégorie, le type et la description. Le type est une chaîne indiquant le type de catégorie d'événement. Les valeurs d'énumération sont les suivantes :<br /><br /> 0=Normal<br /><br /> 1=Proche<br /><br /> 2=Erreur|  
   
  Cet ensemble de lignes de schéma n'est pas trié.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |Argument|Valeur|  
 |--------------|-----------|  
 |GUID|a07ccd19-8148-11d0-87bb-00c04fc33942|  
-|Chaîne|DISCOVER_TRACE_EVENT_CATEGORIES|  
+|String|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

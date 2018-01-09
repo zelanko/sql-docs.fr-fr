@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVELTOP
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f42880ec233ea2a92fd33d86193e751391f5ef12
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f4f3454f14371a7d75cf04f18ba69f11bce6d71f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  Mot clé pour ajouter les membres calculés aux résultats de l'extraction vers le bas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une expression numérique est spécifiée, la **DrilldownLevelTop** fonction trie, par ordre décroissant, les enfants de chaque membre dans le jeu spécifié en fonction de la valeur de l’expression numérique, telle qu’évaluée sur le jeu de membres enfants. Si une expression numérique n'est pas spécifiée, cette fonction trie, par ordre décroissant, les enfants de chaque membre dans le jeu spécifié selon les valeurs des cellules représentées par le jeu des membres enfants, comme le détermine le contexte de la requête.  
   
  Après le tri, le **DrilldownLevelTop** fonction retourne un jeu qui contient les membres parents et le nombre de membres enfants spécifiés dans *Count,* avec la valeur la plus élevée.  

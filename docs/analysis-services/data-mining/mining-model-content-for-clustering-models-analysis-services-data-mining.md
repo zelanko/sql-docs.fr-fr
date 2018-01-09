@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8ce27412abf931efcc0b18de246b921afc2e4fe
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de clustering (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le contenu du modèle d’exploration de données qui est spécifique aux modèles qui utilisent l’algorithme Microsoft Clustering. Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -45,10 +43,10 @@ ms.lasthandoff: 12/08/2017
   
  Le nœud parent contient des statistiques utiles qui décrivent la distribution réelle de tous les cas d'apprentissage. Ces statistiques se trouvent dans la colonne de table imbriquée NODE_DISTRIBUTION. Par exemple, la table suivante contient plusieurs lignes de la table NODE_DISTRIBUTION qui décrivent la distribution des données démographiques pour le modèle de clustering, `TM_Clustering`, que vous créez dans le [Didacticiel sur l’exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Manquant|0|0|0|1 (Manquante)|  
-|Age|44.9016152716593|12939|1|125.663453102554|3 (Continue)|  
+|Age|44.9016152716593|12939| 1|125.663453102554|3 (Continue)|  
 |Gender|Manquant|0|0|0|1 (Manquante)|  
 |Gender|F|6350|0.490764355823479|0|4 (Discrète)|  
 |Gender|M|6589|0.509235644176521|0|4 (Discrète)|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-content-for-a-clustering-model"></a>Contenu du modèle pour un modèle de clustering  
  Cette section fournit des informations et des exemples pour les colonnes du contenu du modèle d'exploration de données qui s'appliquent aux modèles de clustering.  
   
- Pour plus d’informations sur les colonnes à caractère général dans l’ensemble de lignes du schéma, comme MODEL_CATALOG et MODEL_NAME, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Pour plus d’informations sur les colonnes à caractère général dans l’ensemble de lignes du schéma, comme MODEL_CATALOG et MODEL_NAME, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nom de la base de données où le modèle est stocké.  
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  **Nœuds du cluster** : nom du cluster. Par exemple : Cluster 1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour créer un modèle de clustering. Si vous ne savez pas quelle méthode a été utilisée pour créer le modèle avec lequel vous travaillez, vous pouvez récupérer les métadonnées du modèle par programmation en utilisant un client ADOMD ou un objet AMO, ou encore en interrogeant l'ensemble de lignes de schéma d'exploration de données. Pour plus d’informations, consultez [Interroger les paramètres utilisés pour créer un modèle d’exploration de données](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  

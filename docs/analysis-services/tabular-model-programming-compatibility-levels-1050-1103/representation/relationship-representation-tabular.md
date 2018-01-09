@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3204dee0af5235847920c41d9738a1c2ecdcfb9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c0fef50d7a63d51955dcc523e07957c237d530ff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationship-representation-tabular"></a>Représentation (tabulaire) d'une relation
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="relationship-in-amo"></a>Relation dans AMO  
  En termes d'objets AMO, toutes les relations inactives ont une représentation de relation de mappage un-à-un avec <xref:Microsoft.AnalysisServices.Relationship> et aucun autre objet AMO principal n'est requis ; pour la relation active, d'autres exigences existent et un mappage à <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension> est également requis.  
   
- Les extraits de code suivants montrent comment créer une relation dans les modèles tabulaires, comment activer une relation et comment définir une clé primaire dans une table (autre que « RowNumber »). Pour créer une relation active, une clé primaire doit être définie dans la table de clé primaire (PKTableName) de la relation (le côté « un » de la relation). L'exemple ci-après crée la clé primaire sur PKColumnName si aucune clé primaire n'est définie dans cette colonne. Les relations inactives peuvent être créées sans clé primaire sur la colonne de clé primaire.  
+ Les extraits de code suivants montrent comment créer une relation dans les modèles tabulaires, comment activer une relation et comment définir une clé primaire dans une table (autre que « RowNumber »). Pour créer une relation active, une clé primaire doit être définie dans la table de clé primaire (PKTableName) de la relation (le côté « un » de la relation). L'exemple ci-après crée la clé primaire sur PKColumnName si aucune clé primaire n'est définie dans cette colonne. Les relations inactives peuvent être créées sans clé primaire sur la colonne de clé primaire.  
   
 ```  
   

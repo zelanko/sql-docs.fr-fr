@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimension-properties---types"></a>Propriétés de Dimension de base de données - Types
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le **Type** paramètre de propriété fournit des informations sur le contenu d’une dimension aux applications clientes et serveur. Dans certains cas, le **Type** uniquement fournit des conseils pour les applications clientes et est facultatif. Dans d’autres cas, tel que **comptes** ou **temps** dimensions, les **Type** des paramètres de propriété pour la dimension et ses attributs déterminent des comportements spécifiques basée sur le serveur et peuvent être nécessaires pour implémenter certains comportements dans le cube. Par exemple, le **Type** propriété d’une dimension peut être définie sur **comptes** pour indiquer aux applications clientes que la dimension standard contient des attributs de compte. Pour plus d’informations sur l’heure, le compte et les dimensions de devise, consultez [créer une Dimension de type Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [créer un compte Finance de Dimension de type parent-enfant](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), et [créer une Dimension de type devise](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="available-dimension-types"></a>Types de dimensions disponibles  
  Le tableau suivant décrit les types de dimensions disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Type de dimension| Description|  
+|Type de dimension|Description|  
 |--------------------|-----------------|  
 |Regular|Une dimension dont le type n'a pas été défini avec un type de dimension spécial.|  
 |Time|Une dimension dont les attributs représentent des périodes de temps, telles que des années, des semestres, des trimestres, des mois et des jours.|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |Products|Une dimension dont les attributs représentent des informations relatives à des produits.|  
 |Scénario|Une dimension dont les attributs représentent des informations de planification ou d'analyse stratégique.|  
 |Quantitative|Une dimension dont les attributs représentent des informations quantitatives.|  
-|Utilitaire|Une dimension dont les attributs représentent des informations diverses.|  
+|Utility|Une dimension dont les attributs représentent des informations diverses.|  
 |Monétaire (Currency)|Ce type de dimension contient des données et des métadonnées monétaires.|  
 |Rates|Une dimension dont les attributs représentent des informations relatives à des taux de devises.|  
 |Channel|Une dimension dont les attributs représentent des informations de canaux.|  

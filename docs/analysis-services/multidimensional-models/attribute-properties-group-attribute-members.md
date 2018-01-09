@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriétés - groupe attribut des membres d’attribut
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un groupe de membres est une collection de généré par le système de membres de dimension contigus. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Pour inclure un point-virgule (;) comme caractère littéral dans le modèle de nom, faites-le précéder du signe de pourcentage (%).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L’expression de chaîne suivante peut être utilisée pour classer l’attribut Yearly Income de la dimension Customer de l’exemple de base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , où cet attribut fait appel au regroupement de membres :  
   
  "Less than %{Next Bucket Min};Between %{First bucket member} and %{Last bucket member};Greater than %{Previous Bucket Max}"  

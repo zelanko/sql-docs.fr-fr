@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df38adbaae9e911b7dfa32a2a356c77c9bcae9ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e3e98e7685b68b81a5dd586cdb92529456b3c935
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="scripting"></a>Création de scripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Écriture de scripts dans SMO est contrôlée par le <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet et ses objets enfants, ou le **Script** méthode sur des objets spécifiques. Le <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet contrôle le mappage en dehors des relations de dépendance pour les objets sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/17/2017
   
  Au cours de la troisième et dernière phase, un script est généré à l'aide de la liste et des options spécifiées. Le résultat est retourné sous la forme d'un objet système <xref:System.Collections.Specialized.StringCollection>. Au cours de cette phase, les noms des objets dépendants sont extraits de la collection Items des objets et propriétés <xref:Microsoft.SqlServer.Management.Smo.DependencyTree>, comme <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> et <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
-## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a> Exemple  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Cet exemple de code nécessite un **importations** instruction pour l’espace de noms System.Collections.Specialized. Insérez-la avec les autres instructions Imports, avant toute autre déclaration dans l'application.  
   

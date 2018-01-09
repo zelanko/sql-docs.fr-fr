@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Tuple Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5b736390fc88221a35d0080ccde11feea772ae0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72e7e976397ad2d7566b9e0efd7daa4102289768
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tuple-element-xmla"></a>Élément Tuple (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) éléments contenus par le parent [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) élément.  
@@ -53,8 +51,8 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |Éléments parents|[Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
 |Éléments enfants|[Membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Quand une application cliente définit la propriété **AxisFormat** avec la valeur *TupleFormat*, un axe est représenté comme un ensemble de tuples. Chaque élément **Axis** contient un élément **Tuples** qui représente l’ensemble de tuples sur l’axe en question. Chaque tuple est représenté à l’aide d’un élément **Tuple** qui contient des éléments **Member** de chaque hiérarchie sur l’axe.  
   
 ## <a name="example"></a> Exemple  

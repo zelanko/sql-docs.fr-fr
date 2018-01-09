@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: sql13.asvs.sqlserverstudio.startpage.mdx.f1
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: aa471c4f2896cacd319cd4f6c1dd8a3bf6d2518a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f0391b6ddf2e87a8170e4271ab2082b424baff34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Référence MDX (Multidimensional Expressions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
     
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Éléments de syntaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)|Décrit les divers éléments de syntaxe disponibles dans le langage MDX pour les expressions, instructions et scripts MDX.|  
 |[Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)|Décrit les instructions, opérateurs et fonctions définissant le langage MDX.|  

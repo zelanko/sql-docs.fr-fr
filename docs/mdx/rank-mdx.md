@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: RANK
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ba556f2a298ea65ff2d9662a8deba90334d31a0f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cb61eefec8d262d2955e3383c2e0a24b8380be2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une expression numérique est spécifiée, la **rang** fonction détermine le rang de base un pour le tuple spécifié en évaluant l’expression numérique spécifiée par rapport au tuple. Si une expression numérique est spécifiée, la **rang** fonction affecte le même rang aux tuples dotés de valeurs en double dans le jeu. L'attribution du même rang aux doublons affecte le rang des tuples suivants dans le jeu. Soit par exemple un jeu constitué des tuples suivants, `{(a,b), (e,f), (c,d)}` : le tuple `(a,b)` a la même valeur que le tuple `(c,d)`. Si le tuple `(a,b)` a le rang 1, alors `(a,b)` et `(c,d)` ont tous deux le rang 1. Toutefois, le tuple `(e,f)` aura un rang égal à 3. Il ne peut y avoir aucun tuple dans ce jeu avec un rang égal à 2.  
   
  Si une expression numérique n’est pas spécifiée, le **rang** fonction retourne la position ordinale de base un du tuple spécifié.  
   
  Le **rang** fonction ne trie pas le jeu.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant retourne le jeu de tuples contenant les clients et les dates d’achat, à l’aide de la **filtre**, **NonEmpty**, **élément**, et **rang** fonctions pour trouver la dernière date à laquelle chaque client a effectué un achat.  
   
 ```  

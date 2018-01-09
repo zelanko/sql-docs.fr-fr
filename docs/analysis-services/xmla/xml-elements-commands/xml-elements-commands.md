@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,16 +22,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6a16dfc9dd0ff1c58edcc18c69c1d2f2709145a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3ffde9e4cc1500ee0637225dc76153f3d81b463f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---commands"></a>Éléments XML - commandes
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Cette section de référence contient du code XML pour les éléments Analysis (XMLA) qui peuvent être utilisés dans le **commande** élément pendant une **Execute** appel de méthode.  
   
-|Élément| Description|  
+|Élément|Description|  
 |-------------|-----------------|  
 |[Alter, élément (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contient des éléments d’Analysis Services Scripting Language (ASSL) utilisés par le [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) pour modifier les objets sur une instance de méthode [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Élément Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Sauvegarde une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données à un fichier de sauvegarde.|  

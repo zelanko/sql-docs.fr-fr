@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: STRTOMEMBER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 453b69fd273e5d5c06d33eac52221fc2c08a3ce5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b26a0a5922f138bc13bbb13099809629ee336b02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
  *Member_Name*  
  Expression de chaîne valide qui spécifie, directement ou indirectement, un membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **StrToMember** fonction retourne le membre spécifié dans l’expression de chaîne. Le **StrToMember** fonction est généralement utilisée avec les fonctions définies par l’utilisateur pour retourner un membre spécifié à partir d’une fonction externe vers une instruction MDX, ou lorsqu’une requête MDX est paramétrable.  
   
 -   Lorsque vous utilisez l'indicateur CONSTRAINED, le nom du membre doit pouvoir être directement résolu à un nom de membre qualifié ou non qualifié. Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne qui ne peut être directement résolue à un nom de membre qualifié ou non qualifié est fournie, l'erreur suivante s'affiche : « Les restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOMEMBER n'ont pas été respectées. »  
