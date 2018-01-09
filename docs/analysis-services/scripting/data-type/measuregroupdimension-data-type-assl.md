@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MeasureGroupDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a7c98b6be117dbb61579ce6c95c474cb1457cfc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea26210ea35408c1514a5de2a2b08342223c031a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>Type de données MeasureGroupDimension (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif abstrait qui représente la relation entre une dimension et un groupe de mesures.  
@@ -49,18 +47,18 @@ ms.lasthandoff: 12/08/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|Aucune|  
+|Types de données de base|None|  
 |Types de données dérivés|[DataMiningMeasureGroupDimension](../../../analysis-services/scripting/data-type/dataminingmeasuregroupdimension-data-type-assl.md), [DegenerateMeasureGroupDimension](../../../analysis-services/scripting/data-type/degeneratemeasuregroupdimension-data-type-assl.md), [ManyToManyMeasureGroupDimension](../../../analysis-services/scripting/data-type/manytomanymeasuregroupdimension-data-type-assl.md), [ReferenceMeasureGroupDimension](../../../analysis-services/scripting/data-type/referencemeasuregroupdimension-data-type-assl.md), [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
 |Éléments dérivés|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) (collection[Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md) de [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md))|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Chaque type de données **MeasureGroupDimension** est une référence à l'une des dimensions dans le cube. Ces références définissent quelles dimensions du cube s'appliquent au groupe de mesures.  
   
  L'ensemble des attributs fournis détermine la granularité (étendue) avec laquelle les mesures dans le groupe de mesures sont connues. Par exemple, les mesures qui représentent des ventes de produits apparaissent dans le groupe de mesures Sales. Les informations concernant ces mesures sont stockées dans la source de données sous-jacente à une granularité mensuelle, plutôt qu'hebdomadaire ou quotidienne. Dans ce cas, seul l'attribut Month (Mois) serait répertorié pour le type de données **MeasureGroupDimension** décrivant la relation entre une dimension de temps et le groupe de mesures Sales. Dans de rares cas, la granularité peut être définie sous la forme d'un ensemble d'attributs. Par exemple, dans le cas de l'ensemble d'attributs {Day, Week, Month, Year} où Day (Jour) implique Week (Semaine) et Month (Mois) mais Week n'implique pas Month, les mesures contenues dans le groupe de mesures Forecasts (Prévisions) peuvent être connues par mois et par semaine, mais pas par jour.  

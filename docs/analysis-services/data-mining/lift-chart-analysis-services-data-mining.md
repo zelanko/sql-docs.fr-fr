@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *graphique de courbes d’élévation* graphiquement représente l’amélioration offrant un modèle d’exploration de données lors de la comparaison par rapport à une estimation aléatoire et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d’élévation pour différents modèles, vous pouvez identifier le modèle le plus performant. Vous pouvez également déterminer le point auquel les prédictions du modèle deviennent moins utiles. Par exemple, en examinant le graphique de courbes d’élévation, vous pouvez réaliser qu’une campagne de promotion est susceptible d’être efficace auprès de seulement 30 % de vos clients et utiliser ce chiffre pour limiter l’étendue de la campagne.  
@@ -126,7 +124,7 @@ ms.lasthandoff: 12/08/2017
   
  Vous ne pouvez pas afficher les modèles de série chronologique dans un graphique de courbes d'élévation ou un graphique des bénéfices. L’habitude veut que, pour mesurer la précision des prédictions de série chronologique, il convient de réserver une partie des données d’historique et de comparer ces données aux prédictions. Pour plus d’informations, consultez [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
-### <a name="related-content"></a>Contenu connexe  
+### <a name="related-content"></a>Contenu associé  
  [Retour au début](#bkmk_Top)  
   
 ## <a name="see-also"></a>Voir aussi  

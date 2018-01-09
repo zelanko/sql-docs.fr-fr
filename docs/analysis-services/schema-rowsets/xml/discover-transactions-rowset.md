@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cc8bdd0f4c3a4b212661e4ac9363ce6bdefb64f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS, ensemble de lignes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne l’ensemble actuel de transactions en attente sur le système.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_TRANSACTIONS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**IDENTIFICATEUR TRANSACTION_ID :**|**DBTYPE_WSTR**|Identificateur unique de la transaction, tel qu'un GUID.|  
 |**TRANSACTION_SESSION_ID**|**DBTYPE_WSTR**|Identificateur unique de la session de transaction, tel qu'un GUID.|  
@@ -49,8 +47,8 @@ ms.lasthandoff: 12/08/2017
   
 |**Nom de colonne**|**Indicateur de type**|**État de la restriction**|  
 |---------------------|------------------------|---------------------------|  
-|**ID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SESSION_ID**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**ID**|**DBTYPE_WSTR**|Facultatif.|  
+|**SESSION_ID**|**DBTYPE_WSTR**|Facultatif.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Utilisation d'ADOMD.NET pour retourner l'ensemble de lignes  
  Lorsque vous utilisez ADOMD.NET et l'ensemble de lignes de schéma pour récupérer des métadonnées, vous pouvez utiliser un GUID ou une chaîne pour référencer un objet d'ensemble de lignes de schéma dans la méthode GetSchemaDataSet. Pour plus d'informations, consultez [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |Argument|Valeur|  
 |--------------|-----------|  
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
-|Chaîne|DISCOVER_TRANSACTIONS|  
+|String|DISCOVER_TRANSACTIONS|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

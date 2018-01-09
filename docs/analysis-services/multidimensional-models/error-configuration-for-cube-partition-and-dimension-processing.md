@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuration d’erreur pour le Cube, Partition et le traitement de Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propriétés de configuration d’erreur sur le cube, la partition ou des objets de dimension déterminent comment le serveur répond lorsque des erreurs d’intégrité des données se produisent au cours du traitement. Les clés dupliquées, manquantes et les valeurs NULL dans une colonne clé déclenchent généralement ces erreurs, et comme l'enregistrement à l'origine de l'erreur n'est pas ajouté à la base de données, vous pouvez définir des propriétés qui déterminent ce qui se produit après. Par défaut, le traitement s'arrête. Cependant, lorsque vous développez le cube, vous pouvez souhaiter que le traitement continue lorsque des erreurs se produisent afin de tester le comportement du cube avec des données importées, même si elles sont incomplètes.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  **Réponse du serveur à des erreurs spécifiques**  
   
-|Propriété|Par défaut|Autres valeurs|  
+|Propriété|Valeur par défaut|Autres valeurs|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Se produit lors de l'initialisation de la configuration d'erreur.|**IgnoreError** ne consigne pas ou ne comptabilise pas l’erreur. Le traitement continue tant que le nombre d’erreurs est inférieur au nombre maximal.|**ReportAndContinue** consigne et comptabilise l’erreur.<br /><br /> **ReportAndStop** signale l’erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d’erreurs.|  
 |**KeyNotFound**<br /><br /> Se produit lorsqu'une clé étrangère dans une table de faits n'a pas de clé primaire correspondante dans une table de dimension associée (par exemple, une table de faits Sales contient in enregistrement avec un ID de produit qui n'existe pas dans la table de dimension Product). Cette erreur se produit lors du traitement des partitions, ou du traitement des dimensions en flocons.|**ReportAndContinue** consigne et comptabilise l’erreur.|**ReportAndStop** signale l’erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d’erreurs.<br /><br /> **IgnoreError** ne consigne pas ou ne comptabilise pas l’erreur. Le traitement continue tant que le nombre d’erreurs est inférieur au nombre maximal. Les enregistrements qui déclenchent cette erreur sont convertis en membre inconnu par défaut, mais vous pouvez modifier la propriété **KeyErrorAction** de façon à les ignorer.|  
@@ -118,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  Dans Propriétés, cliquez sur **Configuration d’erreur**.  
   
-#### <a name="sql-server-data-tools"></a>Outils de données SQL Server  
+#### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur une dimension ou sur un cube. **ErrorConfiguration** s’affiche dans Propriétés dans le volet au-dessous.  
   

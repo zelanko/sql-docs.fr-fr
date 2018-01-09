@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 601c9d365870528a8716091cfc3a1ba60bd2f920
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fe7b1ece760be2f1058c506306b409cd455edd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Principes de base des requêtes MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) vous permet d’interroger des objets multidimensionnels, tels que des cubes et retourner des ensembles de cellules multidimensionnels contenant les données du cube. Cette rubrique et ses sous-rubriques donnent une vue d'ensemble des requêtes MDX.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |[Requête MDX de base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)|Fournit des informations de base sur la syntaxe de l'instruction MDX SELECT.|  
 |[Restriction de la requête avec l’axe de secteur et de requête &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)|Décrit les axes de requête et de découpage ainsi que la manière de les spécifier.|  
 |[Définition d’un contexte de cube dans une requête &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)|Indique le rôle de la clause FROM dans une instruction MDX SELECT.|  
-|[Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)|Décrit le rôle des jeux nommés dans la syntaxe MDX et les techniques nécessaires pour les créer et les utiliser dans des requêtes MDX.|  
+|[Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)|Décrit le rôle des jeux nommés dans la syntaxe MDX et les techniques nécessaires pour les créer et les utiliser dans des requêtes MDX.|  
 |[Création de membres calculés dans MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)|Fournit des informations sur les membres calculés dans la syntaxe MDX, notamment sur les techniques nécessaires pour les créer et les utiliser dans des expressions MDX.|  
 |[Création de calculs de cellules à l’aide de la syntaxe MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)|Explique de manière détaillée le processus de création et l'utilisation des cellules calculées.|  
 |[Création et utilisation de valeurs de propriétés &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)|Décrit en détail le processus de création et l'utilisation des propriétés de dimension, de niveau, de membre et de cellule.|  

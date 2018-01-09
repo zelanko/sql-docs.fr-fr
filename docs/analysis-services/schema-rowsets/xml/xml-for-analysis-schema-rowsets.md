@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML pour le fournisseur Analysis (XMLA) inclut des ensembles de lignes de schéma qui retournent des métadonnées sur l’état du serveur, d’activité et d’objets. La récupération de métadonnées est nécessaire si vous développez une application cliente qui se connecte à un modèle Analysis Services dont la structure et les caractéristiques sont variables.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Ensemble de lignes<sup>1</sup>| Description|  
+|Ensemble de lignes<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[DISCOVER_CALC_DEPENDENCY, ensemble de lignes](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Retourne des informations sur les dépendances entre les tables, colonnes, mesures et formules de colonne calculée.<br /><br /> S’applique aux modèles tabulaires déployés sur une instance Analysis Services et [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modèles dans les classeurs Excel qui s’exécutent dans un environnement SharePoint.|  
 |[DISCOVER_CONNECTIONS, ensemble de lignes](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Fournit des informations sur l'activité et l'utilisation des ressources des connexions actuellement ouvertes sur le serveur.|  

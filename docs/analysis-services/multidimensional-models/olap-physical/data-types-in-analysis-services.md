@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30c57dde21aa4839cb06d44b77215b6afee7581b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Types de données dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Pour toutes les <xref:Microsoft.AnalysisServices.DataItem> objets, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge le sous-ensemble de **System.Data.OleDb.OleDbType**. Pour définir ou lire le type de données, utilisez [Type de données DataItem &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="amo-validations-on-data-types"></a>Validations AMO sur les types Data  
  Le tableau suivant contient les validations supplémentaires effectuées par AMO (Analysis Management Objects) pour certaines liaisons :  
   
-|Objet|Binding|Types de données autorisés|  
+|Object|Binding|Types de données autorisés|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Tous à l'exception de Binary|  
 ||NameColumn|WChar uniquement|  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 ||CustomRollupColumn|WChar uniquement|  
 ||CustomRollupPropertiesColumn|WChar uniquement|  
 ||UnaryOperatorColumn|WChar uniquement|  
-||ValueColumn|Tous|  
+||ValueColumn|All|  
 |AttributeTranslation|CaptionColumn|WChar uniquement|  
 |ScalarMiningStructureColumn|KeyColumns|Tous à l'exception de Binary|  
 ||NameColumn|WChar uniquement|  

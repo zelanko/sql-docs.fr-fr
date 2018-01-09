@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6c435e40-bfaf-4073-8cef-bc3260602246
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4ec3f4059d6bd193ef20f38133f4cc53ae8b1570
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4064f8eb4d2dfd37d0ae201977739fff9df67f1a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-powershell-reference"></a>Référence PowerShell Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,15 +42,15 @@ ms.lasthandoff: 12/08/2017
 |[Applet de commande Backup-ASDatabase](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Sauvegardez une base de données Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
 |[Invoke-ASCmd, applet de commande](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Exécutez une requête ou un script au format XMLA ou TSML (JSON).|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
 |[Invoke-ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Traitez une base de données.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Applet de commande Invoke-ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Traitez un cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Applet de commande Invoke-ProcessDimension](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Traitez une dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessCube, applet de commande](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Traitez un cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessDimension, applet de commande](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Traitez une dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Applet de commande Invoke-ProcessPartition](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)|Traitez une partition.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessTable, applet de commande](../../analysis-services/powershell/invoke-processtable-cmdlet.md)|Traitez une table dans un modèle tabulaire, le modèle de compatibilité 1200 ou supérieur.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Merge-Partition, applet de commande](../../analysis-services/powershell/merge-partition-cmdlet.md)|Fusionnez une partition.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
-|[Applet de commande New-RestoreFolder](../../analysis-services/powershell/new-restorefolder-cmdlet.md)|Créer un dossier pour contenir une sauvegarde de base de données.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
+|[New-RestoreFolder, applet de commande](../../analysis-services/powershell/new-restorefolder-cmdlet.md)|Créer un dossier pour contenir une sauvegarde de base de données.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
 |[Applet de commande New-RestoreLocation](../../analysis-services/powershell/new-restorelocation-cmdlet.md)|Spécifier un ou plusieurs serveurs distants sur lesquels restaurer la base de données.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
 |[Applet de commande Remove-RoleMember](../../analysis-services/powershell/remove-rolemember-cmdlet.md)|Supprimer un membre d'un rôle de base de données.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
-|[Applet de commande Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)|Restaurer une base de données sur une instance de serveur.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
+|[Restore-ASDatabase, applet de commande](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)|Restaurer une base de données sur une instance de serveur.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
   
 
   

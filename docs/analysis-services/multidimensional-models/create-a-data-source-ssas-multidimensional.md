@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modèle multidimensionnel, un objet de source de données représente une connexion à la source de données à partir de laquelle vous traitement (ou importez) de données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
  Après avoir enregistré l'objet de source de données dans votre modèle, la chaîne de connexion et le mot de passe sont chiffrés.  Pour des raisons de sécurité, toutes les traces visibles du mot de passe sont supprimées de la chaîne de connexion lorsque vous l'affichez ensuite dans les outils, le script ou le code.  
   
 > [!NOTE]  
->  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d’informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
+>  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Définition des informations d'emprunt d'identité pour les objets d'exploration de données  
  Les requêtes d'exploration de données peuvent être exécutées dans le contexte du compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais également dans le contexte de l'utilisateur qui soumet la requête ou dans le contexte d'un utilisateur spécifique. Le contexte dans lequel une requête est exécutée peut avoir une incidence sur les résultats de la requête. Pour les opérations d’exploration de données de type **OPENQUERY** , vous pouvez exécuter la requête d’exploration de données dans le contexte de l’utilisateur actuel ou dans le contexte d’un utilisateur spécifique (quel que soit l’utilisateur qui soumet la requête) plutôt que dans le contexte d’un compte de service. Cela permet d'exécuter la requête avec des informations d'identification de sécurité limitées. Si vous souhaitez que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de l’utilisateur actuel ou d’un utilisateur spécifique, sélectionnez l’option **Utiliser un nom d’utilisateur et un mot de passe spécifiques** ou **Utiliser les infos d’identification de l’utilisateur actuel** .  

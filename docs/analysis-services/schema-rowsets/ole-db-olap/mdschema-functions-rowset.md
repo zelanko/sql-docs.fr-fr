@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_FUNCTIONS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e25d28e953c3f7a984cf77a4d6d26d34b4f79c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>Ensemble de lignes MDSCHEMA_FUNCTIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les fonctions disponibles pour les applications clientes connectées à la base de données.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_FUNCTIONS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Nom de la fonction.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Description de la fonction.|  
@@ -57,10 +55,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**NOM_LIBRAIRIE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM_INTERFACE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**ORIGINE**|**DBTYPE_I4**|Ce paramètre est facultatif.|  
+|**NOM_LIBRAIRIE**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_INTERFACE**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Facultatif.|  
+|**ORIGINE**|**DBTYPE_I4**|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3be92a4572e464d23c24c0f7152a7a106e1932c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Dimensions de base de données : création d’une Dimension de type Date
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de temps est un type de dimension dont les attributs représentent des périodes de temps, telles que des années, des semestres, trimestres, mois et jours. Les périodes d'une dimension de temps fournissent des niveaux de granularité de temps pour l'analyse et les rapports. Les attributs sont organisés en hiérarchies, la granularité de la dimension de temps est largement déterminée par les besoins commerciaux et les besoins en rapports pour les données historiques. Par exemple, la majorité des données financières et de vente dans les applications décisionnelles utilisent la granularité mensuelle ou trimestrielle.  
@@ -63,8 +60,8 @@ ms.lasthandoff: 12/08/2017
 |Calendrier|Description|  
 |--------------|-----------------|  
 |Calendrier standard|Calendrier grégorien de 12 mois qui commence le 1er janvier et se termine le 31 décembre.<br /><br /> Que vous utilisiez l'Assistant Dimension pour créer une dimension de temps ou une dimension de temps du serveur, l'Assistant génère une hiérarchie pour un calendrier standard lorsque vous définissez les attributs qui représentent les périodes de la dimension. Si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur, vous pouvez faire démarrer le calendrier standard à partir d'un jour autre que le 1er janvier.|  
-|Calendrier fiscal|Calendrier fiscal de 12 mois. Lorsque vous sélectionnez ce calendrier, définissez le jour et le mois de début de l'exercice utilisé par l'organisation.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
-|Calendrier de rapports (calendrier marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines répétés sur un modèle de trois mois (trimestre). Lorsque vous définissez ce calendrier, définissez le jour et le mois de départ et le modèle de trois mois de 4–4–5, 4–5–4 ou 5–4–4 semaines, où chaque chiffre correspond au nombre de semaines du mois.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
+|Calendrier fiscal|Calendrier fiscal de 12 mois. Lorsque vous sélectionnez ce calendrier, définissez le jour et le mois de début de l'exercice utilisé par l'organisation.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
+|Calendrier de rapports (calendrier marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines répétés sur un modèle de trois mois (trimestre). Lorsque vous définissez ce calendrier, définissez le jour et le mois de départ et le modèle de trois mois de 4–4–5, 4–5–4 ou 5–4–4 semaines, où chaque chiffre correspond au nombre de semaines du mois.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
 |Calendrier de fabrication|Calendrier qui utilise 13 périodes de quatre semaines, divisé en trois trimestres de trois périodes et un trimestre de quatre périodes. Lorsque vous sélectionnez ce calendrier, vous définissez la semaine de début (entre 1 et 4) et le mois de l'année de fabrication utilisée par l'organisation, et vous définissez le trimestre qui contient quatre périodes.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
 |Calendrier ISO 8601|Calendrier standard de représentation de dates et d'heure ISO (International Organization for Standardization) (8601). Ce calendrier a un nombre intégral de semaines de sept jours. La nouvelle année peut démarrer plusieurs jours avant ou après le début de la nouvelle année du calendrier grégorien. La première semaine de ce calendrier est déterminée par la première semaine du calendrier grégorien qui contient un jeudi. Par conséquent, le premier jour de cette semaine, dimanche, peut tomber l'année précédente.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
   

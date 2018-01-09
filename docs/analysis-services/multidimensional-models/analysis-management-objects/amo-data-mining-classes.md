@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-data-mining-classes"></a>Classes d'exploration de données AMO
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Classes d’exploration de données vous aident à créer, modifier, supprimer et traiter des objets d’exploration de données. L'utilisation d'objets d'exploration de données consiste notamment à créer des structures d'exploration de données, à créer des modèles d'exploration de données et à traiter les modèles.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
  Le <xref:Microsoft.AnalysisServices.MiningStructure> peuvent être traitées à l’aide de sa propre méthode process ou elle peut être traitée lorsqu’un objet parent lui-même traite avec sa propre méthode process.  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Colonnes  
  Les colonnes contiennent les données du modèle et peuvent être de différents types selon l'utilisation : Key, Input, Predictable ou InputPredictable. Les colonnes prédictibles sont la cible de la génération du modèle d'exploration de données.  
   
  Les colonnes à valeur unique sont appelées <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> dans AMO. Les colonnes à valeurs multiples sont appelées <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  

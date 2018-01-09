@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 97bc6142b19e453c2415653e899d6bbf832f4c1a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-feeds"></a>Flux de données Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un flux de données fournit un flux de données à la demande à partir d’une source de données en ligne à une application cliente. Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser des flux de données pour ajouter des données provenant d’un service ou d’une application web compatible Atom à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un classeur Excel.  
   
  Cette section fournit des informations qui vous aideront à utiliser au mieux les flux de données pour obtenir dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] des données existantes d’entreprise ou de groupe de travail. Elle fournit également des informations sur le partage de flux de données avec d'autres personnes de votre organisation et explique comment sont créés et utilisés les flux de données pour vous permettre de résoudre les problèmes susceptibles de se présenter.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Créer ou personnaliser une bibliothèque de flux de données &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
  [Supprimer une bibliothèque de flux de données PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  

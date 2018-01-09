@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 444890daf7e8410b6fbb51b9ee793200888d4ad6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestion des connexions et des sessions (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Que l'on appelle* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode se termine.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  La spécification SOAP (Simple Object Access Protocol) du W3C (World Wide Web Consortium) recommande d'utiliser des en-têtes SOAP pour développer de nouveaux protocoles sur les messages SOAP. Le tableau suivant énumère les éléments et les attributs d'en-tête SOAP que XMLA définit pour initialiser, maintenir et fermer une session.  
   
-|En-tête SOAP| Description|  
+|En-tête SOAP|Description|  
 |-----------------|-----------------|  
 |BeginSession|Cet en-tête demande au fournisseur de créer une nouvelle session. Le fournisseur doit répondre en construisant une nouvelle session et en retournant l'ID de session dans l'en-tête Session de la réponse SOAP.|  
 |SessionId|La zone des valeurs contient l'ID de session qui doit être utilisé dans chaque appel de méthode pour le reste de la session. Le fournisseur spécifié dans la réponse SOAP envoie cette balise et le client doit également envoyer cet attribut avec chaque élément d'en-tête Session.|  

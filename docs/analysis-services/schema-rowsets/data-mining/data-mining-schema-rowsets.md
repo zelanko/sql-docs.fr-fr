@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcde375ccb8186f0ef5d38dca2c7f88aefaaf4b7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de34fa80e547b38216ca83458501347888488774
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-schema-rowsets"></a>Data Mining Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un serveur qui est en cours d’exécution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge les ensembles de lignes de schéma d’exploration de données suivantes. Pour vérifier si un fournisseur XML/A particulier prend en charge un ensemble de lignes spécifique, utilisez la [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) ensemble de lignes avec le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) (méthode).  
@@ -42,7 +40,7 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Ensemble de lignes de schéma| Description|  
+|Ensemble de lignes de schéma|Description|  
 |-------------------|-----------------|  
 |[DMSCHEMA_MINING_COLUMNS, ensemble de lignes](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Décrit les colonnes de tous les modèles d'exploration de données définis qui sont déployés sur le serveur.|  
 |[DMSCHEMA_MINING_FUNCTIONS, ensemble de lignes](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Décrit les fonctions de prédiction et les fonctions d'exploration qui peuvent être utilisées avec chaque algorithme d'exploration de données installé sur le serveur.|  

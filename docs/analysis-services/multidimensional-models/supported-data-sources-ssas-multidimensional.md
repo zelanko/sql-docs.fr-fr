@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 774c6a7a3de377c9bfa6073b26e8ce45d7b3477e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Sources de données prises en charge (SSAS - Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit les types de sources de données que vous pouvez utiliser dans un modèle multidimensionnel.  
@@ -45,8 +42,8 @@ ms.lasthandoff: 12/08/2017
 |-|-|-|-|  
 |Source|Versions|Type de fichier|Fournisseurs*|  
 |Bases de données Access|Microsoft Access 2010, 2013, 2016|.accdb ou .mdb|Fournisseur Microsoft Jet 4.0 OLE DB|  
-|Bases de données relationnelles SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], entrepôt de données SQL Azure, le système de plateforme Analytique de Microsoft (APS)<br /><br /> <br /><br /> Remarque : pour plus d’information sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , voir [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Remarque : Système de plateforme Analytique (APS) était anciennement en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. Pour plus d’informations sur APS, consultez le site web du [Système de plateforme d’analyse de Microsoft](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 11.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
-|Bases de données relationnelles Oracle|Oracle 9i, 10g, 11g, 12g|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Bases de données relationnelles SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], entrepôt de données SQL Azure, le système de plateforme Analytique de Microsoft (APS)<br /><br /> <br /><br /> Remarque : pour plus d’information sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , voir [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Remarque : Système de plateforme Analytique (APS) était anciennement en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. Pour plus d’informations sur APS, consultez le site web du [Système de plateforme d’analyse de Microsoft](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 11.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
+|Bases de données relationnelles Oracle|Oracle 9i, 10g, 11g, 12g|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de données relationnelles Teradata|Teradata V2R6, V12|(non applicable)|Fournisseur OLE DB TDOLEDB<br /><br /> Fournisseur de données .Net pour Teradata|  
 |Bases de données relationnelles Informix|V11.10|(non applicable)|Fournisseur OLE DB Informix|  
 |Bases de données relationnelles IBM DB2|8.1|(non applicable)|DB2OLEDB|  

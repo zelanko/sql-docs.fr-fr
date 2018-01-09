@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validation croisée (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*La validation croisée* est un outil standard dans analytique et est une fonctionnalité importante pour vous aider à développer et à affiner les modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
@@ -184,7 +182,7 @@ ms.lasthandoff: 12/08/2017
   
  La validation croisée ne peut pas être utilisée avec des modèles de série chronologique ou des modèles Sequence Clustering. En particulier, aucun modèle contenant une colonne KEY TIME ou une colonne KEY SEQUENCE ne peut être inclus dans la validation croisée.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Consultez les rubriques suivantes pour plus d'informations sur la validation croisée, ou pour des informations sur les méthodes associées pour tester les modèles d'exploration de données, telles que les graphiques d'analyse de précision.  
   
 |Rubriques|Liens|  
@@ -194,7 +192,7 @@ ms.lasthandoff: 12/08/2017
 |Explique le format des rapports de validation croisée et définit les mesures statistiques fournies pour chaque type de modèle.|[Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
 |Répertorie les procédures stockées pour calculer des statistiques de validation croisée.|[Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
-|Décrit la création d'un jeu de données de test pour les structures d'exploration de données et les modèles associés.|[Jeux de données d'apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|Décrit la création d'un jeu de données de test pour les structures d'exploration de données et les modèles associés.|[Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |Consultez des exemples d'autres types de graphiques d'analyse de précision.|[Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Décrit les étapes de création de différents graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   

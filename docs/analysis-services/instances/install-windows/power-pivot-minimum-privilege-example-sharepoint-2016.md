@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f86e52576c3a145042741c1a1ecc012b7c4941f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 258bb0a43d8f3e507327594f9db399ef82745754
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot avec privilèges Minimum exemple - SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit un exemple [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour la configuration de SharePoint 2016 avec les privilèges minimum. La configuration utilise un compte différent pour chacun des trois composants et chaque compte dispose du niveau minimum de privilèges.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
  Le tableau suivant récapitule les trois comptes utilisés dans cet exemple de configuration avec privilèges minimums.  
   
-|Portée|Nom|  
+|Portée|Nom   |  
 |-----------|----------|  
 |Compte Administrateur SharePoint|**SPAdmin**|  
 |Compte de batterie de serveurs SharePoint|**SPFarm**|  

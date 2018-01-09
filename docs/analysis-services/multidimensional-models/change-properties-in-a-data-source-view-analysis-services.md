@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après la définition d’une vue de source de données à l’aide de l’Assistant vue de Source de données et l’ajout de tables, vues, de calculs nommés et afficher les requêtes nommées à la source de données, vous souhaiterez modifier les propriétés liées à :  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |Source de données|Indique la source de données dans la vue de source de données dont vous consultez les propriétés|  
 |Description|Fournit la description de la vue de source de données.|  
-|Nom|Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
+|Nom   |Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
 |NameMatchingCriteria|Critères de correspondance de noms pour la source de données. La valeur par défaut est (none) si des relations clé primaire/clé étrangère ont été détectées par l'Assistant Vue de source de données. Que cette propriété ait été définie ou non par l'Assistant Vue de source de données, vous pouvez spécifier une valeur ici. S'il existe des relations de base de données et que vous spécifiez des critères de correspondance de noms, les deux seront utilisés pour déterminer les relations entre les tables existantes et les nouvelles tables ajoutées.|  
 |RetrieveRelationships|Indique si les relations sont récupérées dans la base de données. La valeur par défaut est True.|  
 |SchemaRestriction|Indique les restrictions, le cas échéant, sur les schémas récupérés dans une source de données. Par défaut, aucune restriction de schéma n'est définie.|  
@@ -70,9 +67,9 @@ ms.lasthandoff: 12/08/2017
 |DataSource|Définit la source de données de l'objet. Vous ne pouvez pas modifier cette propriété.|  
 |Description|Fournit la description de la table, la vue ou la requête nommée. Si la vue ou la table de la base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de table ou de vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une table ou d’une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des tables ou des vues. Vous pouvez modifier cette propriété.|  
-|Nom|Indique le nom de la vue ou de la table sous-jacente, ou le nom de la requête nommée. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des requêtes nommées. Vous pouvez modifier cette propriété uniquement pour les requêtes nommées.|  
+|Nom   |Indique le nom de la vue ou de la table sous-jacente, ou le nom de la requête nommée. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des requêtes nommées. Vous pouvez modifier cette propriété uniquement pour les requêtes nommées.|  
 |QueryDefinition|Définit une requête nommée. Cette propriété ne s'applique qu'aux requêtes nommées et vous ne pouvez pas la modifier directement. Pour modifier cette propriété, vous devez modifier la requête nommée.|  
-|Schéma|Indique le schéma de base de données applicable à la table, la vue ou la requête nommée. Cette propriété n’est pas modifiable.|  
+|schéma|Indique le schéma de base de données applicable à la table, la vue ou la requête nommée. Cette propriété n’est pas modifiable.|  
 |TableType|Indique le type de table de la table, de la vue ou de la requête nommée. Cette propriété n’est pas modifiable.|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>Consultation ou modification des propriétés DataColumn  
@@ -86,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |Description|Fournit la description de la colonne. Si la colonne de base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de colonne dans une table ou une vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une colonne dans une table ou une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des colonnes de tables ou de vues. Vous pouvez modifier cette propriété.|  
 |Longueur|Indique la longueur maximale de la colonne, en fonction des données de la colonne dans la vue ou la table sous-jacente.|  
-|Nom|Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
+|Nom   |Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
