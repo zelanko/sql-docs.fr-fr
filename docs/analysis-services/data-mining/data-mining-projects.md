@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un projet d’exploration de données fait partie d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
@@ -210,14 +208,14 @@ ms.lasthandoff: 12/08/2017
  Vous pouvez également effectuer ces tâches en utilisant ASSL (Analysis Services Scripting Language), ou en utilisant des objets AMO (Analysis Management Objects). Pour plus d’informations, consultez [Développement avec XMLA dans Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Les rubriques suivantes décrivent l'utilisation de l'Assistant Exploration de données pour créer un projet d'exploration de données et ses objets associés.  
   
 |Tâches|Rubriques|  
 |-----------|------------|  
 |Décrit la façon d'utiliser des colonnes de structure d'exploration de données|[Créer une structure d’exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
 |Fournit des informations sur l'ajout de nouveaux modèles d'exploration de données et le traitement d'une structure et de modèles|[Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
-|Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser les modèles et les structures d'exploration de données](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|Fournit des liens vers des ressources qui vous permettent de personnaliser les algorithmes qui génèrent des modèles d'exploration de données|[Personnaliser les modèles et les structures d’exploration de données](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |Fournit des liens vers des informations sur chacune des visionneuses de modèles d'exploration de données|[Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d'exploration de données](../../analysis-services/data-mining/processing-data-mining-objects.md)|  

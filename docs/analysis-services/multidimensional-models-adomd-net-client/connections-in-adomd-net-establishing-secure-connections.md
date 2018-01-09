@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a6665fb3cc1ca653a35224300e6dc021646547d2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connexions dans ADOMD.NET - établissement de connexions sécurisées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous utilisez une connexion dans ADOMD.NET, la méthode de sécurité qui est utilisée pour la connexion dépend de la valeur de la **ProtectionLevel** propriété de chaîne de connexion utilisée lorsque vous appelez le <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> méthode de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -81,9 +79,9 @@ ms.lasthandoff: 12/08/2017
   
 |Valeur de ProtectionLevel|Utilisation avec HTTP ou HTTPS|  
 |---------------------------|----------------------------|  
-|**Aucun**|Non|  
+|**Aucun**|non|  
 |**Se connecter**|HTTP|  
-|**L’intégrité de PKT** ou **PktIntegrity**|Non|  
+|**L’intégrité de PKT** ou **PktIntegrity**|non|  
 |**PKT Privacy** ou **PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>Ouverture d'une connexion HTTP sécurisée  

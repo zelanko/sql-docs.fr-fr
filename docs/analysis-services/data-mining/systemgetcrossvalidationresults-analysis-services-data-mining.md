@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partitions de l’exploration de la structure dans le nombre spécifié de sections croisées, effectue l’apprentissage d’un modèle pour chaque partition, puis retourne les mesures de précision pour chaque partition.  
@@ -143,9 +143,9 @@ SystemGetCrossValidationResults(
 |PartitionSize|Entier qui indique combien de cas ont été inclus dans chaque partition.|  
 |Test|Catégorie du test qui a été effectué. Pour obtenir une description des catégories et des tests inclus dans chaque catégorie, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de valeur prévisible. Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Value|Valeur de la mesure de test spécifiée.|  
+|Valeur|Valeur de la mesure de test spécifiée.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour retourner des mesures de précision pour le jeu de données complet, utilisez [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Si le modèle d’exploration de données a déjà été partitionné en replis, vous pouvez contourner le traitement et retourner uniquement les résultats de la validation croisée en utilisant [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -170,24 +170,24 @@ NULL
 )  
 ```  
   
- Exemples de résultats :  
+ Exemples de résultats :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Valeur|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|1|1|500|classification.|Vrai positif|144|  
-|Target Mail DT|Bike Buyer|1|1|500|classification.|Faux positif|105|  
-|Target Mail DT|Bike Buyer|1|1|500|classification.|Vrai négatif|186.|  
-|Target Mail DT|Bike Buyer|1|1|500|classification.|Faux négatif|65|  
-|Target Mail DT|Bike Buyer|1|1|500|Vraisemblance|Score du journal|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|1|1|500|Vraisemblance|Finesse|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|1|1|500|Vraisemblance|Erreur quadratique moyenne|0.346946279977653|  
-|Target Mail DT|Bike Buyer|1|2|500|classification.|Vrai positif|162|  
-|Target Mail DT|Bike Buyer|1|2|500|classification.|Faux positif|86|  
-|Target Mail DT|Bike Buyer|1|2|500|classification.|Vrai négatif|165|  
-|Target Mail DT|Bike Buyer|1|2|500|classification.|Faux négatif|87|  
-|Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Score du journal|0.654117781086519|  
-|Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Finesse|0.038997399132084|  
-|Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Erreur quadratique moyenne|0.342721344892651|  
+|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Vrai positif|144|  
+|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Faux positif|105|  
+|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Vrai négatif|186.|  
+|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Faux négatif|65|  
+|Target Mail DT|Bike Buyer| 1| 1|500|Vraisemblance|Score du journal|-0.619042807138345|  
+|Target Mail DT|Bike Buyer| 1| 1|500|Vraisemblance|Finesse|0.0740963734002671|  
+|Target Mail DT|Bike Buyer| 1| 1|500|Vraisemblance|Erreur quadratique moyenne|0.346946279977653|  
+|Target Mail DT|Bike Buyer| 1|2|500|classification.|Vrai positif|162|  
+|Target Mail DT|Bike Buyer| 1|2|500|classification.|Faux positif|86|  
+|Target Mail DT|Bike Buyer| 1|2|500|classification.|Vrai négatif|165|  
+|Target Mail DT|Bike Buyer| 1|2|500|classification.|Faux négatif|87|  
+|Target Mail DT|Bike Buyer| 1|2|500|Vraisemblance|Score du journal|0.654117781086519|  
+|Target Mail DT|Bike Buyer| 1|2|500|Vraisemblance|Finesse|0.038997399132084|  
+|Target Mail DT|Bike Buyer| 1|2|500|Vraisemblance|Erreur quadratique moyenne|0.342721344892651|  
   
 ## <a name="requirements"></a>Spécifications  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  

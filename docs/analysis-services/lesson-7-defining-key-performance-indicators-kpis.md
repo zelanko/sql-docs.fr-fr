@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e89ab9340c73e1ae09ec66cb360e23cbe28cd9b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Leçon 7 : Définition d'indicateurs de performance clés
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans cette leçon, vous apprenez à définir des indicateurs de Performance clés (KPI) dans votre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet. Les indicateurs de performance clés fournissent une infrastructure pour définir des calculs côté serveur qui mesurent votre activité, et ils standardisent la façon d'afficher les informations résultantes. Les indicateurs de performance clés peuvent être affichés dans des rapports, des portails et des tableaux de bord, à travers des API d'accès aux données, des outils [!INCLUDE[msCoName](../includes/msconame-md.md)] et des outils de fournisseurs tiers. Les indicateurs de performance clés sont des wrappers de métadonnées autour de mesures ordinaires et d'autres expressions MDX (Multidimensional Expressions). Pour plus d’informations, consultez [Indicateurs de performance clés &#40;KPI&#41; dans les modèles multidimensionnels](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  

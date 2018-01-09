@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-spécification des relations d’attributs dans une hiérarchie définie par l’utilisateur
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Comme vous avez déjà appris dans ce didacticiel, vous pouvez organiser les hiérarchies d’attributs en niveaux au sein des hiérarchies d’utilisateur à fournir des chemins de navigation pour les utilisateurs dans un cube. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  
@@ -39,7 +39,7 @@ Au cours des tâches de cette rubrique, vous allez définir des relations d'attr
   
     Dans le volet **Hiérarchies** , notez les niveaux de la hiérarchie **Customer Geography** définie par l’utilisateur. Cette hiérarchie est simplement un chemin d'exploration pour les utilisateurs, aucune relation entre les niveaux et les attributs n'étant définie.  
   
-2.  Cliquez sur l’onglet **Relations d’attributs** .  
+2.  Cliquez sur l’onglet **Relations d’attributs**.  
   
     Notez les quatre relations d’attributs qui lient les attributs non-clé de la table **Geography** à l’attribut clé de la table **Geography** . L’attribut **Geography** est mis en rapport avec l’attribut **Nom complet** . L’attribut **Code postal** est indirectement lié à l’attribut **Nom complet** via l’attribut **Géographie** , car **Code postal** est lié à l’attribut **Géographie** et **Géographie** est lié à l’attribut **Nom complet** . Ensuite, nous modifierons les relations d’attributs afin qu’ils n’utilisent pas l’attribut **Géographie** .  
   
@@ -77,7 +77,7 @@ Au cours des tâches de cette rubrique, vous allez définir des relations d'attr
   
 17. Quand la boîte de dialogue **Supprimer les objets** apparaît, cliquez sur **OK**.  
   
-18. Dans le diagramme, cliquez avec le bouton droit sur l’attribut **État-Province** , puis sélectionnez **Nouvelle relation d’attribut**.  
+18. Dans le diagramme, cliquez avec le bouton droit sur l’attribut **État-Province**, puis sélectionnez **Nouvelle relation d’attribut**.  
   
 19. Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **State-Province**. Définissez **l’Attribut associé** sur **Pays-Région**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide** , car la relation entre un état-province et un pays-région ne change pas au fil du temps.  
   
@@ -111,7 +111,7 @@ Au cours des tâches de cette rubrique, vous allez définir des relations d'attr
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Nom du modèle** puis sélectionnez **Nouvelle relation d’attribut**.  
   
-3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Model Name**. Définissez **l’Attribut associé** sur **Product Line**. Dans la liste **Type de relation** , laissez le type de relation défini sur **Flexible**.  
+3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Model Name**. Définissez **l’Attribut associé** sur **Product Line**. Dans la liste **Type de relation**, laissez le type de relation défini sur **Flexible**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -141,19 +141,19 @@ Au cours des tâches de cette rubrique, vous allez définir des relations d'attr
   
 1.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Month Name** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-2.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Month Name**. Définissez **l’Attribut associé** avec la valeur **Calendar Quarter**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+2.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Month Name**. Définissez **l’Attribut associé** avec la valeur **Calendar Quarter**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Quarter** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-5.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+5.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Semester** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-8.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Semester**. Définissez **l’Attribut associé** avec la valeur **Calendar Year**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+8.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Calendar Semester**. Définissez **l’Attribut associé** avec la valeur **Calendar Year**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

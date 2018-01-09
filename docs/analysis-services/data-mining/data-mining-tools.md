@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47b9015ba7635a7392639fbc8a7e1ca5ff73d13
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 130c8098a7083019671b3b799246b16757fd1b5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-tools"></a>Outils d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit les outils suivants que vous pouvez utiliser pour créer des solutions d’exploration de données :  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  **Pour plus d’informations** : [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
-## <a name="data-mining-designer"></a>Concepteur d'exploration de données  
+## <a name="data-mining-designer"></a>Concepteur d’exploration de données  
  Après avoir créé une structure et un modèle d'exploration de données à l'aide de l'Assistant Exploration de données, vous pouvez utiliser le Concepteur d'exploration de données depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser les structures et les modèles existants.  
   
  Le concepteur contient des outils permettant de réaliser ces tâches :  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Tâches et transformations d'exploration de données d'Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit de nombreux composants qui prennent en charge l'exploration de données.  
   
- Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Par exemple :  
+ Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Exemple :  
   
 -   Créez un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui met automatiquement à jour le modèle chaque fois que le dataset est actualisé avec de nouveaux clients  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Générez automatiquement des modèles transmis aux paramètres.  
   
- Toutefois, vous pouvez également utiliser l'exploration de données dans un flux de travail de package, en tant qu'entrée à d'autres processus. Par exemple :  
+ Toutefois, vous pouvez également utiliser l'exploration de données dans un flux de travail de package, en tant qu'entrée à d'autres processus. Exemple :  
   
 -   Utilisez les valeurs de probabilité générées par le modèle pour pondérer les scores pour l'exploration de texte ou d'autres tâches de classification.  
   

@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le contenu du modèle d’exploration de données qui est spécifique aux modèles qui utilisent l’algorithme Microsoft Logistic Regression. Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|hidden layer|Vide|  
+|Couche masquée|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Nom d'attribut de sortie|  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/08/2017
   
 |ID du type de nœud|Description|  
 |------------------|-----------------|  
-|1|Modèle.|  
+| 1|Modèle.|  
 |17|Nœud organisateur pour le sous-réseau.|  
 |18|Nœud organisateur pour la couche d'entrée.|  
 |19|Nœud organisateur pour la couche masquée. La couche masquée est vide.|  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiques marginales|Toujours 0.|  
 |Couche d'entrée|Indique le nombre de paires de valeurs d'attribut d'entrée utilisées par le modèle.|  
 |Nœud d'entrée|Toujours 0.|  
-|Couche masquée|Dans un modèle de régression logistique, toujours 0.|  
+|hidden layer|Dans un modèle de régression logistique, toujours 0.|  
 |Couche de sortie|Indique le nombre de valeurs de sortie.|  
 |Nœud de sortie|Toujours 0.|  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|hidden layer|Vide|  
+|Couche masquée|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Si l'attribut de sortie est continu, contient le nom de l'attribut de sortie.<br /><br /> Si l'attribut de sortie est discret ou discrétisé, contient le nom de l'attribut et la valeur.|  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/08/2017
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Fragment XML qui contient les mêmes informations que la colonne NODE_DESCRIPTION.|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Fragment XML qui contient les mêmes informations que la colonne NODE_DESCRIPTION.|  
   

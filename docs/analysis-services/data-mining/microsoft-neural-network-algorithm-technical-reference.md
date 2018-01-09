@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] réseau neuronal utilise un *Perceptron MULTICOUCHE* réseau, également appelé un *réseau à règle Delta de rétropropagation*, composé de trois couches de neurones, ou  *PERCEPTRONS*. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/08/2017
  MAXIMUM_INPUT_ATTRIBUTES  
  Détermine le nombre maximal d'attributs d'entrée qui peuvent être fournis à l'algorithme et au-delà duquel la sélection des fonctionnalités est utilisée. La valeur 0 désactive la sélection des fonctionnalités pour les attributs d'entrée.  
   
- La valeur par défaut est 255.  
+ La valeur par défaut est 255.  
   
  MAXIMUM_OUTPUT_ATTRIBUTES  
  Détermine le nombre maximal d'attributs de sortie qui peuvent être fournis à l'algorithme et au-delà duquel la sélection des fonctionnalités est utilisée. La valeur 0 désactive la sélection des fonctionnalités pour les attributs de sortie.  
@@ -167,7 +165,7 @@ ms.lasthandoff: 12/08/2017
   
  En d'autres termes, si HOLDOUT_PERCENTAGE a la valeur 30, l'algorithme utilisera soit la valeur de ce paramètre, soit une valeur égale à 70 % du nombre total de cas, la plus petite valeur étant retenue.  
   
- La valeur par défaut est 10 000.  
+ La valeur par défaut est 10 000.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  Les indicateurs de modélisation suivants sont pris en charge pour une utilisation avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network).  
@@ -200,7 +198,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) prend en charge les colonnes d'entrée spécifiques et les colonnes prédictibles répertoriées dans le tableau suivant.  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Cyclique, Discret, Discrétisé, Clé, Table et Trié|  
 |Attribut prédictible|Continu, Cyclique, Discret, Discrétisé et Trié|  

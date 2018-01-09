@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f36bbe3858909a34154dbc0775678a67529bf74
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Déployer des solutions de modèle avec l'utilitaire de déploiement
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le **Microsoft.AnalysisServices.Deployment** utilitaire vous permet de démarrer le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] moteur de déploiement à partir de l’invite de commandes. Comme un fichier d'entrée, l'utilitaire emploie les fichiers de sorties XML générés par la construction d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les fichiers d'entrées sont facilement modifiables pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
@@ -69,7 +66,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  L’argument **/d** est utilisé uniquement en mode de sortie. Cet argument est ignoré s'il est spécifié en mode réponse ou en mode silencieux. Pour plus d'informations sur les modes, consultez la section, [Modes](#Modes), plus loin dans cette rubrique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'utilitaire **Microsoft.AnalysisServices.Deployment** prend un ensemble de fichiers qui fournit les définitions d'objets, les cibles de déploiement, les options de déploiement et les paramètres de configuration et tente de déployer les définitions d'objets dans les cibles de déploiement spécifiées, en utilisant les options de déploiement et les paramètres de configuration spécifiés. Cet utilitaire peut fournir une interface utilisateur lorsqu'il est invoqué dans un fichier de réponse ou en mode de sortie. Pour plus d’informations sur l’utilisation de l’interface utilisateur fournie pour cet utilitaire pour créer des fichiers de réponse, consultez [Déployer des solutions de modèles à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  L'utilitaire se trouve dans le dossier \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  

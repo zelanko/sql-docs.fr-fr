@@ -5,12 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des outils clients que vous pouvez utiliser pour gérer les structures d’exploration de données existantes et les modèles d’exploration de données. Cette section décrit les opérations de gestion que vous pouvez effectuer avec chaque environnement.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
  Outre ces outils, vous pouvez gérer les objets d'exploration de données par programmation à l'aide d'AMO ou utiliser d'autres clients qui se connectent à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , comme les Compléments d'exploration de données pour [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Déplacement d'objets d'exploration de données](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Déplacement d’objets d’exploration de données](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
@@ -53,11 +51,11 @@ ms.lasthandoff: 12/08/2017
   
  Les liens suivants permettent d'accéder à des informations sur la modification des objets d'exploration de données à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Modifier la vue de source de données utilisée pour une structure d'exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modifier la vue de source de données utilisée pour une structure d’exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [Modifier les propriétés d'une structure d'exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [Modifier les propriétés d’une structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Modifier les propriétés d'un modèle d'exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
+-   [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
 -   [Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   

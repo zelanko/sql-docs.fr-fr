@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’algorithme Microsoft Sequence Clustering est un algorithme hybride qui utilise la chaîne de MARKOV pour identifier les séquences ordonnées et associe les résultats de cette analyse aux techniques de clustering pour générer des clusters basés sur les séquences et d’autres attributs dans le modèle. Cette rubrique décrit l'implémentation de l'algorithme, la personnalisation de l'algorithme et les besoins spéciaux pour les modèles Sequence Clustering.  
@@ -97,12 +95,12 @@ ms.lasthandoff: 12/08/2017
  MINIMUM_SUPPORT  
  Spécifie le nombre minimal de cas requis pour la prise en charge un attribut en vue de créer un cluster.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est 10.  
   
  MAXIMUM_SEQUENCE_STATES  
  Spécifie le nombre maximal d'états qu'une séquence peut posséder.  
   
- Si cette valeur est supérieure à 100, l'algorithme peut créer un modèle qui ne fournit pas d'informations significatives.  
+ Si cette valeur est supérieure à 100, l'algorithme peut créer un modèle qui ne fournit pas d'informations significatives.  
   
  La valeur par défaut est 64.  
   
@@ -137,12 +135,12 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, cyclique, discret, discrétisé, clé, séquence de clés, table et trié|  
 |Attribut prédictible|Continu, cyclique, discret, discrétisé, table et trié|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Utilisez la fonction [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) pour la prédiction des séquences. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la prédiction des séquences, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   

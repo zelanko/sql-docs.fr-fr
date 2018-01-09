@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-a-relational-mining-structure"></a>Créer une structure d'exploration de données relationnelle
+# <a name="create-a-relational-mining-structure"></a>Créer une structure d’exploration de données relationnelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La plupart des modèles d’exploration de données sont basées sur les sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  
   
  Une structure d'exploration de données relationnelle peut ajouter des données provenant de sources disparates. Les données brutes peuvent être stockées dans des tables, des fichiers ou des systèmes de bases de données relationnelles, à condition que les données puissent être définies dans la vue de source de données. Par exemple, vous devez utiliser une structure d'exploration de données relationnelle si vos données se trouvent dans Excel, un entrepôt de données SQL Server ou une base de données de rapports SQL Server, ou dans des sources externes accessibles via des fournisseurs OLE DB ou ODBC.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  **Créer un jeu de test**: dans cette page, vous pouvez indiquer à l'Assistant combien de données doivent être mises de côté pour être utilisées lors du test du modèle. Si vos données prennent en charge plusieurs modèles, il est judicieux de créer un jeu de données d'exclusion, afin que tous les modèles puissent être testés sur les mêmes données.  
   
-     Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+     Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
 8.  **Fin de l'Assistant**: dans cette page, vous donnez un nom à la nouvelle structure d'exploration de données et au modèle d'exploration de données associé, puis vous enregistrez la structure et le modèle.  
   

@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les modèles d’exploration de données ont les types de propriétés suivants :  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**Algorithm**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
 |**AlgorithmParameters**|Définit les valeurs pour les paramètres d'algorithme disponibles pour chaque type d'algorithme.|  
-|**Filtre**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
+|**Filter**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
 |**Nom**|Définit le nom du modèle d'exploration de données.|  
 |**AllowDrillThrough**|Spécifie si l'extraction est activée sur le modèle d'exploration de données.|  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |**Nom**|Définit le nom de la colonne du modèle d'exploration de données. Vous pouvez taper un nouveau nom, pour fournir un alias pour la colonne du modèle d'exploration de données.|  
 |**ModelingFlags**|Définit tous les indicateurs spécifiques des algorithmes pour la colonne.|  
 |**SourceColumnID**|Indique le nom de la colonne de structure d'exploration de données sur laquelle la colonne du modèle est basée.<br /><br /> Cette propriété est en lecture seule.|  
-|**Utilisation**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
+|**Usage**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   

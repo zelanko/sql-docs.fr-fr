@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffd9987c39cdffda3052ed075cb3abb137e4d1b2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistant Exploration de données (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’Assistant exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] démarre chaque fois que vous ajoutez une nouvelle structure d’exploration de données à un projet d’exploration de données. L'Assistant vous permet de choisir une source de données et de configurer une vue de source de données qui définit les données à utiliser pour l'analyse, puis vous aide à créer un modèle.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Vous pouvez également utiliser l'Assistant Importation d'Analysis Services pour obtenir des métadonnées d'une solution d'exploration de données existante. Toutefois, vous ne pouvez pas sélectionner les différents objets à importer ; l'ensemble de la base de données est importé, y compris tout cube, toute vue de source de données, etc. Notez également que la nouvelle solution créée par l'intermédiaire de l'importation est automatiquement configurée pour utiliser la base de données par défaut locale. Vous devrez peut-être la remplacer par une autre instance avant de pouvoir traiter ou parcourir les objets, et si vous effectuez l'importation à partir d'une version antérieure d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devrez peut-être mettre à jour les références aux fournisseurs.  
   
- Vous allez ensuite créer la structure d'exploration de données et un modèle d'exploration de données associé. Vous pouvez également créer uniquement la structure d'exploration de données et ajouter des modèles ultérieurement, mais le plus simple est généralement de créer un modèle de test en premier.  
+ Vous allez ensuite créer la structure d'exploration de données et un modèle d'exploration de données associé. Vous pouvez également créer uniquement la structure d'exploration de données et ajouter des modèles ultérieurement, mais le plus simple est généralement de créer un modèle de test en premier.  
   
 ###  <a name="BKMK_Relational"></a>Vs relationnelles. modèles d'exploration de données OLAP  
  L'option importante suivante que vous avez est d'utiliser une source de données relationnelles ou de baser votre modèle sur des données multidimensionnelles (OLAP).  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
  Consultez les rubriques suivantes pour une procédure pas-à-pas de chaque option plus en détail :  
   
- [Créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Créer une structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Vous guide dans les décisions à prendre lors de la création d'un modèle d'exploration de données relationnel.  
   
  [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
 >  Vous n'avez pas besoin d'avoir un cube ou une base de données OLAP pour effectuer l'exploration de données. Sauf si vos données sont déjà stockées dans un cube, ou si vous voulez explorer des dimensions OLAP ou les résultats de calculs ou d'agrégations OLAP, nous vous recommandons d'utiliser une table relationnelle ou une source de données pour l'exploration de données.  
   
 ### <a name="choosing-an-algorithm"></a>Choix d'un algorithme  
- Vous devez ensuite décider de l'algorithme à utiliser lors du traitement de vos données. Cette décision peut être difficile à prendre. Chaque algorithme fourni dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a des fonctionnalités différentes et produit des résultats différents. Vous pouvez donc faire des essais et tenter différents modèles avant de déterminer celui qui est le plus approprié pour vos données et votre problème d'entreprise. Pour obtenir une explication des tâches pour lesquelles chaque algorithme est le plus approprié, consultez la rubrique suivante :  
+ Vous devez ensuite décider de l'algorithme à utiliser lors du traitement de vos données. Cette décision peut être difficile à prendre. Chaque algorithme fourni dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a des fonctionnalités différentes et produit des résultats différents. Vous pouvez donc faire des essais et tenter différents modèles avant de déterminer celui qui est le plus approprié pour vos données et votre problème d'entreprise. Pour obtenir une explication des tâches pour lesquelles chaque algorithme est le plus approprié, consultez la rubrique suivante :  
   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/08/2017
   
  [Retour au début](#BKMK_Using_DM_Wizard)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Pour en savoir plus sur les décisions à prendre lors de la création d'un modèle d'exploration de données, consultez les liens suivants :  
   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
@@ -122,7 +120,7 @@ ms.lasthandoff: 12/08/2017
   
  [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
- [Extraction sur des modèles d'exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [Extraction sur des modèles d’exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   

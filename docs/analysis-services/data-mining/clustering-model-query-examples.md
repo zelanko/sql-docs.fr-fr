@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez récupérer les métadonnées relatives au modèle, ou créer une requête de contenu qui fournit des détails sur les modèles découverts dans l’analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- **Content Queries**  
+ **Requêtes de contenu**  
   
  [Obtention des métadonnées du modèle avec DMX](#bkmk_Query1)  
   
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|Tous|  
+|NODE_DESCRIPTION|All|  
   
  Pour connaître la signification de ces colonnes dans un modèle de clustering, consultez [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -171,13 +169,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|1|0.109354156|  
+|001| 1|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Manquant|0|  
 |002|0|0.576980023|  
-|002|1|0.406623939|  
+|002| 1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -283,19 +281,19 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  
-|1|0.592924735740338|  
+| 1|0.592924735740338|  
   
  Exemple de résultats lorsque l'utilisation a pour valeur **PredictOnly** et que le modèle est retraité :  
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  
-|1|0.55843544003102|  
+| 1|0.55843544003102|  
   
  Dans cet exemple, la différence dans le modèle n'est pas significative. Toutefois, il peut parfois être important de détecter les différences entre la distribution réelle de valeurs et ce que le modèle prédit. L’onglet [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) est utile dans ce scénario, car elle indique la probabilité qu’un cas ce produise pour un modèle donné.  
   
  Le nombre retourné par la fonction PredictCaseLikelihood est une probabilité. Par conséquent, il est donc toujours égal à 0 ou 1, la valeur 0,5 représentant un résultat aléatoire. Un score inférieur à 0,5 signifie que le cas prédit est improbable pour le modèle donné, tandis qu'un score supérieur à 0,5 indique que le cas prédit est plus susceptible d'être adapté au modèle que de ne pas l'être.  
   
- Par exemple, la requête suivante retourne deux valeurs qui caractérisent la vraisemblance d'un nouveau cas d'exemple. La valeur non normalisée représente la probabilité pour le modèle actuel donné. Lorsque vous utilisez le mot clé NORMALIZED, le score de vraisemblance retourné par la fonction est ajusté en divisant la « probabilité avec le modèle » par la « probabilité sans le modèle ».  
+ Par exemple, la requête suivante retourne deux valeurs qui caractérisent la vraisemblance d'un nouveau cas d'exemple. La valeur non normalisée représente la probabilité pour le modèle actuel donné. Lorsque vous utilisez le mot clé NORMALIZED, le score de vraisemblance retourné par la fonction est ajusté en divisant la « probabilité avec le modèle » par la « probabilité sans le modèle ».  
   
 ```  
 SELECT  
@@ -364,7 +362,7 @@ NATURAL PREDICTION JOIN
 |Cluster 7|0.979081275926724|0.0209187240732763|  
 |Cluster 1|0.999169044818624|0.000830955181376364|  
 |Cluster 9|0.999831227795894|0.000168772204105754|  
-|Cluster 8|1|0|  
+|Cluster 8| 1|0|  
   
  Par défaut, les résultats sont classés par probabilité. Les résultats indiquent que le Cluster 2, bien que sa probabilité soit assez faible, est toujours le mieux adapté au nouveau point de données.  
   

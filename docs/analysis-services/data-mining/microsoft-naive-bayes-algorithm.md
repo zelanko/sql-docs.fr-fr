@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,18 +23,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ac78f4108cfde4efa5de2e04be3a7e2e9c7a2ff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algorithme MNB (Microsoft Naive Bayes)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Naive Bayes est un algorithme de classification basé sur les théorèmes de Bayes et peut être utilisé pour la modélisation prédictive et exploratoire. Le terme Naïve dans le nom Naïve Bayes est dérivé du fait que l'algorithme utilise des techniques bayésiennes, mais ne prend pas en compte les dépendances qui peuvent exister.  
   
  Cet algorithme est informatiquement moins lourd que d’autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Ainsi, il est utile pour générer rapidement des modèles d’exploration de données permettant de découvrir les relations entre les colonnes d’entrée et les colonnes prédictibles. Vous pouvez utiliser cet algorithme pour effectuer l'exploration initiale de données et appliquer ensuite les résultats pour créer des modèles d'exploration de données supplémentaires avec d'autres algorithmes qui sont informatiquement plus lourds et plus précis.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans le cadre d'une stratégie promotionnelle continue, le service marketing de la société Adventure Works Cycle a décidé de cibler les clients potentiels en envoyant des prospectus. Afin de réduire les coûts de la campagne, ils ne veulent envoyer des prospectus qu'aux clients susceptibles de répondre. La société stocke des informations dans une base de données sur des statistiques démographiques et la réponse à un publipostage antérieur. Ils souhaitent utiliser ces données pour déterminer si les statistiques démographiques, telles que l'âge et la situation géographique, peuvent permettre de prédire la réponse à une promotion, en comparant les clients potentiels aux clients existants qui présentent des caractéristiques similaires. Plus particulièrement, ils veulent déterminer les différences entre les clients ayant acheté un vélo et ceux qui n'en ont pas acheté.  
   
  En utilisant l'algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes), le service marketing peut rapidement prédire un résultat pour un profil de client spécifique et peut ainsi déterminer quels clients sont les plus susceptibles de répondre aux prospectus. En utilisant la Visionneuse de l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le service marketing peut aussi identifier visuellement les colonnes d’entrée contribuant aux réponses positives aux prospectus.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/08/2017
   
  Pour plus d’informations sur la façon de créer des requêtes sur un modèle d’exploration de données, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md). Pour obtenir des exemples montrant comment utiliser des requêtes avec un modèle Naive Bayes, consultez [Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Prend en charge l'utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d'exploration de données.  
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir le deux le type de données physique pour une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne lorsqu’il est utilisé dans un modèle,  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
  Le type de contenu **Discrétisé** est pris en charge par les types de données suivants : **Date**, **Double**, **Long**et **Text**.  
   
-## <a name="key"></a>Clé  
+## <a name="key"></a>Key  
  Le type de contenu *clé* (Key) signifie que la colonne identifie de façon unique une ligne. Dans une table de cas, la colonne clé est généralement un identificateur numérique ou texte. Vous attribuez la valeur **key** au type de contenu pour indiquer que la colonne doit uniquement servir au suivi des enregistrements, et non à des fins d’analyse.  
   
  Les tables imbriquées ont également des clés, mais l'utilisation de la clé de table imbriquée diffère quelque peu. Vous attribuez la valeur **key** au type de contenu dans une table imbriquée si la colonne est l’attribut à analyser. Les valeurs dans la clé de table imbriquée doivent être uniques pour chaque cas, mais il peut y avoir des doublons sur tout le jeu de cas.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  Ce type de contenu est pris en charge par les types de données suivants : **Double**, **Long**et **Date**.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Table de charge de travail  
  Le type de contenu *table* indique que la colonne contient une autre table de données, comprenant une ou plusieurs colonnes et une ou plusieurs lignes. Pour toute ligne particulière de la table de cas, cette colonne peut contenir plusieurs valeurs qui sont toutes associées à l'enregistrement de cas parent. Par exemple, si la table de cas principale contient une liste de clients, vous pouvez avoir plusieurs colonnes qui contiennent des tables imbriquées, telles qu’une colonne **ProductsPurchased** dans laquelle la table imbriquée répertorie les produits précédemment achetés par ce client, et une colonne **Hobbies** qui répertorie les centres d’intérêt du client.  
   
  Le type de données de cette colonne est toujours **Table**.  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tous les modèles d’exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
 -   Le second ensemble de nœuds est intitulé ARIMA et représente les résultats de l'analyse par l'algorithme ARIMA.  
   
 > [!WARNING]  
->  Le nom (Tout) sur l'arbre ARTXP est conservé uniquement à des fins de compatibilité descendante. Avant SQL Server 2008, l'algorithme MTS (Microsoft Time Series) utilisait un seul algorithme pour l'analyse : l'algorithme ARTXP.  
+>  Le nom (Tout) sur l'arbre ARTXP est conservé uniquement à des fins de compatibilité descendante. Avant SQL Server 2008, l'algorithme MTS (Microsoft Time Series) utilisait un seul algorithme pour l'analyse : l'algorithme ARTXP.  
   
  Les sections suivantes expliquent comment les nœuds sont réorganisés dans chacun de ces types de modèle.  
   
@@ -235,7 +233,7 @@ ms.lasthandoff: 12/08/2017
   
  Pour mieux comprendre ce comportement, vous pouvez examiner le modèle de série chronologique créé dans le [Didacticiel sur l'exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Ce modèle, basé sur l'entrepôt de données AdventureWorks, n'utilise pas de données particulièrement complexes. Par conséquent, l'arbre ARTXP comprend peu de divisions. Toutefois, ce modèle relativement simple illustre tout de même trois types de divisions différents :  
   
--   La courbe de tendance [Amount] pour la région Pacific se divise sur la clé de temps. Une division sur la clé de temps signifie qu'il y a une modification de la tendance à un moment donné. La courbe de tendance était linéaire uniquement jusqu'à un certain point, puis la courbe a adopté une forme différente. Par exemple, une série chronologique peut continuer jusqu'au 6 août 2002, et une autre série chronologique démarre après cette date.  
+-   La courbe de tendance [Amount] pour la région Pacific se divise sur la clé de temps. Une division sur la clé de temps signifie qu'il y a une modification de la tendance à un moment donné. La courbe de tendance était linéaire uniquement jusqu'à un certain point, puis la courbe a adopté une forme différente. Par exemple, une série chronologique peut continuer jusqu'au 6 août 2002, et une autre série chronologique démarre après cette date.  
   
 -   La courbe de tendance [Amount] pour la région North America se divise sur une autre variable. Dans le cas présent, la tendance pour North America se divise en fonction de la valeur du même modèle dans la région Europe. En d'autres termes, l'algorithme a détecté que lorsque la valeur pour Europe change, la valeur pour North America A change également.  
   
@@ -415,12 +413,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION :** affiche les termes de l’équation dans une table imbriquée, que vous pouvez interroger pour obtenir des termes spécifiques. La table de distribution du nœud suit la même structure hiérarchique que les règles XML. En d'autres termes, le nœud racine de la série ARIMA (NODE_TYPE = 27) contient la valeur de l'ordonnée à l'origine et les périodicités de l'équation complète, laquelle peut inclure plusieurs périodicités, alors que les nœuds enfants contiennent uniquement des informations spécifiques à une certaine structure périodique ou aux nœuds enfants de cette structure périodique.  
   
-|Type de nœud|Attribut|Type de valeur|  
+|Type de nœud|Attribute|Type de valeur|  
 |---------------|---------------|----------------|  
-|27 (Racine ARIMA)|Intercepter<br /><br /> périodicité|11|  
+|27 (Racine ARIMA)|Intercepter<br /><br /> Périodicité|11|  
 |28 (Structure périodique ARIMA)|périodicité<br /><br /> Ordre autorégressif<br /><br /> ordre des différences<br /><br /> Ordre des moyennes mobiles|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA autorégressif)|Coefficient<br /><br /> (complément de coefficient)|7|  
-|30 (Moyenne mobile ARIMA)|Valeur à t<br /><br /> Valeur à t-1<br /><br /> …<br /><br /> Valeur à t-n|7|  
+|30 (Moyenne mobile ARIMA)|Valeur à t<br /><br /> Valeur à t-1<br /><br /> …<br /><br /> Valeur à t-n|7|  
   
  La valeur de l' *ordre des moyennes mobiles* indique le nombre de moyennes mobiles dans une série. En général, la moyenne mobile est calculée `n-1` fois s'il y a `n` termes dans une série, mais le nombre peut être réduit afin de faciliter le calcul.  
   
@@ -441,11 +439,11 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   Représentation XML : utilisez une requête XML.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il peut être difficile de récupérer des informations d'un arbre ARTXP, car les informations relatives à chaque division se trouvent dans un emplacement différent dans l'arbre. Par conséquent, avec un modèle ARTXP, vous devez obtenir toutes les informations, puis procéder à un traitement pour reconstituer la formule complète. L'extraction d'une équation à partir d'un modèle ARIMA est plus simple car la formule est disponible dans l'ensemble de l'arbre. Pour plus d’informations sur la création d’une requête pour récupérer ces informations, consultez [Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

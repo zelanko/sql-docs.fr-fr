@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une instance Analysis Services enregistre les notifications du serveur, les erreurs et avertissements dans le fichier msmdsrv.log : une pour chaque instance que vous installez. Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
@@ -54,8 +51,8 @@ ms.lasthandoff: 12/08/2017
 |Nom de fichier ou emplacement|Type|Utilisé pour|Activé par défaut|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Journal des erreurs|Surveillance de routine et dépannage de base|Oui|  
-|Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|Non|  
-|Fichiers SQLDmp\<guid > .mdmp fichiers|Blocages et exceptions|Dépannage approfondi|Non|  
+|Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|non|  
+|Fichiers SQLDmp\<guid > .mdmp fichiers|Blocages et exceptions|Dépannage approfondi|non|  
   
  Nous vous recommandons vivement de consulter le lien suivant pour accéder à des ressources supplémentaires non traitées dans la rubrique suivante, qui fournit des [conseils sur la collecte de données initiale depuis le support Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -164,7 +161,7 @@ ms.lasthandoff: 12/08/2017
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Désactive le fichier de vidage de la mémoire. Tous les autres paramètres dans la section Exceptions sont ignorés.|  
-|1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
+| 1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
 |2|Active et envoie automatiquement un rapport d'erreurs à Microsoft.|  
   
  **CrashReportsFolder** est l'emplacement des fichiers de vidage. Par défaut, un fichier .mdmp et les enregistrements de journaux associés se trouvent dans le dossier \Olap\Log.  

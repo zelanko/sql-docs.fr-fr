@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Séparation des données en jeux d’apprentissage et jeux de test est une partie importante de l’évaluation des modèles d’exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 -   en créant et modifiant par programmation les structures à l'aide des objets AMO (Analysis Management Objects) ou du langage de définition de données (DDL) XML.  
   
 ### <a name="using-the-data-mining-wizard-to-divide-a-mining-structure"></a>Utilisation de l'Assistant Exploration de données pour diviser une structure d'exploration de données  
- Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
+ Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
   
  Vous pouvez également configurer l'Assistant pour définir un nombre maximal de cas d'apprentissage ou vous pouvez associer les limites pour permettre un pourcentage maximal de cas jusqu'à un nombre maximal spécifié de cas. Lorsque vous spécifiez à la fois un pourcentage maximal de cas et un nombre maximal de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la plus petite des deux limites comme taille du jeu de test. Par exemple, si vous spécifiez une exclusion de 30 % pour les scénarios de test et un nombre maximal de scénarios de test égal à 1000, la taille du jeu de test ne dépassera jamais 1 000 scénarios. Cela peut être utile si vous souhaitez garantir que la taille de votre jeu de test reste cohérente même si des données d'apprentissage supplémentaires sont ajoutées au modèle.  
   
@@ -105,7 +103,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, **HoldoutActualSize**, est fournie dans les objets AMO et le langage DDL XML. Toutefois, comme la taille réelle d'une partition ne peut pas être déterminée précisément avant le traitement de la structure, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la propriété **HoldoutActualSize** .  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 |Rubriques|Liens|  
 |------------|-----------|  
@@ -119,6 +117,6 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
  [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Concepts d’exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

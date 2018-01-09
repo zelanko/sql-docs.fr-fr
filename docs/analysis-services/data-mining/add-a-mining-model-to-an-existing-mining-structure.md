@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79d2c8b506cd42bd04ae4fb95f28fa2b3a07f613
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecd909a6aeb0fb0b7d0557ba93333709f5ade242
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Ajouter un modèle d'exploration de données à une structure d'exploration de données existante
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez ajouter des modèles d’exploration de données à une structure d’exploration de données, après avoir ajouté le modèle initial. Chaque modèle doit contenir des colonnes qui existent dans la structure, mais vous pouvez définir l'utilisation des colonnes différemment pour chaque modèle d'exploration de données. Pour plus d’informations sur la définition des colonnes des modèles d’exploration de données, consultez [Colonnes de modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -47,6 +45,6 @@ ms.lasthandoff: 12/08/2017
  Un nouveau modèle d’exploration de données apparaît dans l’onglet **Modèles d’exploration de données** . Le modèle utilise les colonnes par défaut qui existent dans la structure. Pour plus d’informations sur la modification des colonnes, consultez [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tâches et procédures des modèles d’exploration de données](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

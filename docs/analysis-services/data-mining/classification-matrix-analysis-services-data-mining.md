@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice de classification (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *matrice de classification* trie tous les cas du modèle en catégories, en déterminant si la valeur prédite correspondait à la valeur réelle. Tous les cas dans chaque catégorie sont ensuite comptés et les totaux sont affichés dans la matrice. La matrice de classification est un outil standard d’évaluation des modèles statistiques et est parfois appelée *matrice de confusion*.  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |Prédite|0 (Réel)|1 (Réel)|2 (Réel)|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-|1|2|123|17|  
+| 1|2|123|17|  
 |2|19|0|20|  
   
  Bien que l'ajout de plusieurs colonnes rende la disposition du rapport plus complexe, les détails supplémentaires peuvent être très utiles lorsque vous voulez évaluer le coût cumulé d'une prédiction incorrecte. Pour créer des sommes sur les diagonales ou comparer les résultats de différentes combinaisons de lignes, vous pouvez cliquer sur le bouton **Copier** sous l’onglet **Matrice de classification** et coller le rapport dans Excel. Vous pouvez aussi utiliser un client tel que le Client d’exploration de données pour Excel, qui prend en charge [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, pour créer, directement dans Excel, un rapport de classification qui inclut des nombres et des pourcentages. Pour plus d’informations, consultez [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)(en anglais).  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/08/2017
   
  Bien que vous puissiez ajouter plusieurs modèles au moment de sélectionner des modèles sous l’onglet **Sélection d’entrée** du concepteur **Graphique d’analyse de précision de l’exploration de données** , l’onglet **Matrice de classification** présente une matrice distincte pour chaque modèle.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Les rubriques suivantes contiennent davantage d'informations sur la façon dont vous pouvez créer et utiliser des matrices de classification et d'autres graphiques.  
   
 |Rubriques|Liens|  

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,13 +20,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction
+# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez créer des requêtes de prédiction soit lorsque vous générez une solution d’exploration de données dans BI Development Studio, ou en double-cliquant sur un modèle d’exploration de données existant dans SQL Server Management Studio et puis en choisissant l’option **générer une requête de prédiction**.  
   
  Le **Générateur de requêtes de prédiction** dispose des trois modes de création suivants, que vous pouvez utiliser tour à tour en cliquant sur les icônes dans l’angle supérieur gauche.  
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/08/2017
   
 -   **Requête**  
   
--   **Résultat**  
+-   **Result**  
   
  Le mode**Création** vous permet de générer une requête de prédiction en choisissant des données d’entrée, en mappant les données au modèle, puis en ajoutant des fonctions de prédiction dans les instructions que vous créez à l’aide de la grille. La grille de création contient ces blocs de construction :  
   
  **Source**  
  Choisissez la source de la nouvelle colonne. Vous pouvez utiliser des colonnes du modèle d'exploration de données, les tables d'entrée incluses dans la vue de source de données, une fonction de prédiction ou une expression personnalisée.  
   
- **Champ**  
+ **Field**  
  Détermine la colonne ou la fonction spécifique associée à la sélection dans la colonne **Source** .  
   
  **Alias**  

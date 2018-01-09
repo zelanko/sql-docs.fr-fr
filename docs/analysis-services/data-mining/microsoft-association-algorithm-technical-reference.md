@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,13 +27,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme Microsoft Association
+# <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de règles d’Association est une implémentation simple de l’algorithme Apriori bien connu.  
   
  Vous pouvez utiliser les algorithmes MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) et MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) pour analyser des associations, mais les règles identifiées par chaque algorithme peuvent différer. Dans un modèle d'arbres de décision, les divisions qui aboutissent à des règles spécifiques sont basées sur un gain d'informations, tandis que dans un modèle d'association, les règles sont entièrement basées sur la confiance. Par conséquent, dans un modèle d'association, une règle forte ou avec un niveau de confiance élevé n'est pas forcément intéressante car elle ne fournit pas de nouvelles informations.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
  *MAXIMUM_ITEMSET_SIZE*  
  Spécifie le nombre maximal d'éléments autorisés dans un jeu d'éléments. Une valeur de 0 spécifie qu'il n'y a pas de limite quant à la taille du jeu d'éléments.  
   
- La valeur par défaut est 3.  
+ La valeur par défaut est 3.  
   
 > [!NOTE]  
 >  Le fait de réduire cette valeur peut potentiellement accélérer la création du modèle, son traitement étant arrêté une fois la limite atteinte.  
@@ -120,7 +118,7 @@ ms.lasthandoff: 12/08/2017
  *MINIMUM_PROBABILITY*  
  Spécifie la probabilité minimale qu'une règle ait la valeur True.  
   
- Par exemple, l'attribution de la valeur 0,5 spécifie que toute règle ayant une probabilité inférieure à 50 % ne peut pas être générée.  
+ Par exemple, l'attribution de la valeur 0,5 spécifie que toute règle ayant une probabilité inférieure à 50 % ne peut pas être générée.  
   
  La valeur par défaut est 0,4.  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Cyclique, discret, discrétisé, clé, table et trié|  
 |Attribut prédictible|Cyclique, discret, discrétisé, table et trié|  

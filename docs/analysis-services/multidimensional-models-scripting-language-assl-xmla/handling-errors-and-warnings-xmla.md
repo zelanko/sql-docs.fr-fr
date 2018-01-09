@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,16 +28,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestion des erreurs et des avertissements (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gestion des erreurs est requises lorsqu’un document XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode ne s’exécute pas, s’exécute correctement mais génère des erreurs ou avertissements, ou s’exécute correctement mais retourne des résultats qui contient des erreurs.  
   
-|Erreur|Signalement|  
+|Error|Signalement|  
 |-----------|---------------|  
 |L'appel de méthode XMLA ne s'exécute pas|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] renvoie un message d’erreur SOAP qui contient les détails de l’échec.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs SOAP](#handling_soap_faults).|  
 |Erreurs ou avertissements sur un appel de méthode ayant abouti|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]inclut un [erreur](../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) ou [avertissement](../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md) , élément pour chaque erreur ou avertissement, respectivement, dans le [Messages](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md) propriété de la [racine](../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui contient les résultats de l’appel de méthode.<br /><br /> Pour plus d’informations, consultez la section [gestion des erreurs et avertissements](#handling_errors_and_warnings).|  
@@ -59,13 +57,13 @@ ms.lasthandoff: 12/08/2017
 ### <a name="fault-code-information"></a>Informations de code d'erreur  
  Le tableau suivant présente les informations de code d'erreur XMLA contenues dans la section détaillée de la réponse SOAP. Les colonnes représentent les attributs d'une erreur dans la section détaillée d'une erreur SOAP.  
   
-|Nom de colonne|Type| Description|Null autorisé<sup>1</sup>|  
+|Nom de colonne|Type|Description|Null autorisé<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Code de retour qui indique le succès ou l'échec de la méthode. La valeur hexadécimale doit être convertie en un **UnsignedInt** valeur.|Non|  
+|**ErrorCode**|**UnsignedInt**|Code de retour qui indique le succès ou l'échec de la méthode. La valeur hexadécimale doit être convertie en un **UnsignedInt** valeur.|non|  
 |**WarningCode**|**UnsignedInt**|Code de retour qui indique une condition d'avertissement. La valeur hexadécimale doit être convertie en un **UnsignedInt** valeur.|Oui|  
-|**Description**|**Chaîne**|Texte et description de l'erreur ou de l'avertissement retourné par le composant qui a généré l'erreur.|Oui|  
-|**Source**|**Chaîne**|Nom du composant qui a généré l'erreur ou l'avertissement.|Oui|  
-|**HelpFile**|**Chaîne**|Chemin d'accès ou URL menant au fichier ou à la rubrique d'aide qui décrit l'erreur ou l'avertissement.|Oui|  
+|**Description**|**String**|Texte et description de l'erreur ou de l'avertissement retourné par le composant qui a généré l'erreur.|Oui|  
+|**Source**|**String**|Nom du composant qui a généré l'erreur ou l'avertissement.|Oui|  
+|**HelpFile**|**String**|Chemin d'accès ou URL menant au fichier ou à la rubrique d'aide qui décrit l'erreur ou l'avertissement.|Oui|  
   
  <sup>1</sup> indique si les données est obligatoire et doivent être retournées, ou si les données sont facultatives et une chaîne null est autorisée si la colonne ne s’applique pas.  
   

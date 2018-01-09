@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversions monétaires (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Multidimensionnel uniquement  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/08/2017
  Devise locale  
  Devise utilisée pour stocker les transactions sur lesquelles se basent les mesures à convertir.  
   
- La devise locale peut être identifiée par un des éléments suivants :  
+ La devise locale peut être identifiée par un des éléments suivants :  
   
 -   Un identificateur de devise dans la table de faits stockée avec la transaction, comme cela est communément le cas avec les applications bancaires où la transaction identifie elle-même la devise qu'elle utilise.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="defining-currency-conversions"></a>Définition des conversions monétaires  
  Vous pouvez utiliser l'Assistant Business Intelligence pour définir la fonctionnalité de conversion monétaire pour un cube ou vous pouvez définir manuellement les conversions monétaires à l'aide de scripts MDX.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
  Avant de pouvoir définir une conversion monétaire dans un cube à l'aide de l'Assistant Business Intelligence, vous devez définir au préalable au moins une dimension monétaire, au moins une dimension de temps et au moins un groupe de mesures de taux. À partir de ces objets, l'Assistant Business Intelligence peut récupérer les données et métadonnées utilisées pour générer la dimension monétaire de rapport et le script MDX nécessaires pour assurer la fonctionnalité de conversion monétaire.  
   
 ### <a name="decisions"></a>Décisions  

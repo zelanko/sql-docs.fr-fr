@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>La récupération des métadonnées - utilisation des ensembles de lignes de schéma
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous avez besoin de davantage de métadonnées que celles disponibles dans le modèle objet ADOMD.NET, ADOMD.NET permet de récupérer la plage complète de XML pour Analysis (XMLA), OLE DB, OLE DB pour OLAP et OLE DB pour les ensembles de lignes de schéma d’exploration de données :  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
  Chacune de ces méthodes retourne une instance d'un objet **DataSet** rempli des informations de schéma. L'objet **DataSet** provient de l'espace de noms **System.Data** de la bibliothèque de classes Microsoft .NET Framework.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans l’exemple suivant, la fonction GetActions prend une connexion, le nom du cube, une coordonnée et un type de coordonnée, récupère un [de lignes MDSCHEMA_ACTIONS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)et retourne les actions disponibles sur la coordonnée sélectionnée.  
   
  [!code-cs[Adomd.NetClient#GetActions](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-metadata-work_0_1.cs)]  

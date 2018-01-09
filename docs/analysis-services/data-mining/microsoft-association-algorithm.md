@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -39,11 +37,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’Association est un algorithme qui est souvent utilisé pour les moteurs de recommandation. Un moteur de recommandation recommande des éléments aux clients en se basant sur ceux qu’ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat.   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
  Comme le diagramme l’illustre, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association peut trouver de nombreuses règles au sein d’un jeu de données. L'algorithme utilise deux paramètres, de prise en charge et de probabilité, pour décrire les jeux d'éléments et les règles qu'il génère. Par exemple, si X et Y représentent deux éléments éventuellement présents dans un panier d’achat, le paramètre de prise en charge correspond au nombre de cas dans le jeu de données qui contiennent la combinaison des éléments X et Y. En utilisant le paramètre de prise en charge en association avec les paramètres définis par l’utilisateur, *MINIMUM_SUPPORT* et *MAXIMUM_SUPPORT,* l’algorithme contrôle le nombre de jeux d’éléments générés. Le paramètre de probabilité, appelé aussi *confidence*, représente la fraction des cas du jeu de données contenant à la fois X et Y. En utilisant le paramètre de probabilité en association avec le paramètre *MINIMUM_PROBABILITY* , l’algorithme contrôle le nombre de règles générées.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La société [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] Cycle revoit la fonctionnalité de son site Web. L'objectif de cette nouvelle conception est d'augmenter les ventes de produits. Comme la société enregistre chaque vente dans une base de données transactionnelle, elle peut utiliser l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association pour identifier les produits qui ont tendance à être achetés ensemble. Il est alors possible de prédire les éléments supplémentaires susceptibles d'intéresser un client en fonction des éléments déjà présents dans le panier d'achat de ce client.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  Les spécifications pour un modèle de règles d'association sont les suivantes :  
   
--   **Colonne à index unique** Chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+-   **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
 -   **Une seule colonne prédictible** Un modèle d’association peut avoir une seule colonne prédictible. Il s'agit en général de la colonne clé de la table imbriquée, par exemple le champ qui répertorie les produits achetés. Les valeurs doivent être discrètes ou discrétisées.  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
  Pour des informations générales sur la création d’une requête sur un modèle d’exploration de données, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="performance"></a>Performance  
+## <a name="performance"></a>Performances  
  Le processus de création de jeux d'éléments et de comptage des corrélations peut être fastidieux. Bien que l’algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) utilise des techniques d’optimisation pour économiser de l’espace et accélérer le traitement, vous devez savoir que des problèmes de performances peuvent survenir dans des conditions semblables à celles-ci :  
   
 -   Le jeu de données est important et comprend de nombreux éléments individuels.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
  Pour minimiser le temps de traitement et réduire la complexité des jeux d'éléments, vous pouvez essayer de regrouper les éléments liés par catégories avant d'analyser les données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   
