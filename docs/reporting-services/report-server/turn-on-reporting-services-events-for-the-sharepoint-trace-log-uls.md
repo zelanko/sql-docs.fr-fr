@@ -8,28 +8,26 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dfb7020fe79961b4b52a5a6b36919e7abdbb7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
 
   À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], les serveurs d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint peuvent écrire des événements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le journal des traces su service de journalisation unifiée SharePoint (ULS). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont disponibles sur la page de supervision de l'Administration centrale de SharePoint.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Recommandations générales du journal ULS](#bkmk_general)  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 |Base de données|Commentaires|Journalise les événements ayant trait à l'accès aux bases de données.|  
 |Général|Commentaires|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  
 |Généralités sur Office Server|Exception|Journalise les échecs d'ouverture de session.|  
-|Topologie|Commentaires|Journalise des informations sur l'utilisateur actuel.|  
+|Topologie|Verbose|Journalise des informations sur l'utilisateur actuel.|  
 |composants WebPart|Commentaires|Journalise les événements ayant trait à l'accès au composant WebPart Visionneuse de rapports.|  
   
 ##  <a name="bkmk_turnon"></a> Pour activer et désactiver des événements Reporting Services dans la catégorie Reporting Services  

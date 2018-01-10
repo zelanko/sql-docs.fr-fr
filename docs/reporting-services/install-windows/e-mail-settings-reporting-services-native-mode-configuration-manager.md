@@ -8,22 +8,22 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: SQL13.rsconfigtool.emailsettings.F1
 helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4f4a978424825e4f54596ec2485818b47ce4d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 84fc2d366101e410f301bf76cbccc8e61eea6b38
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)
 Reporting Services comprend une extension de la remise des e-mails que vous pouvez utiliser pour distribuer les rapports par courrier électronique. Selon la façon dont vous définissez l'abonnement de messagerie électronique, une remise peut consister en une notification, un lien, une pièce jointe ou un rapport incorporé. L'extension de remise de courrier électronique fonctionne avec votre technologie de serveur de messagerie existante. Le serveur de messagerie doit être un serveur SMTP ou redirecteur. Le serveur de rapports se connecte à un serveur SMTP par le biais de bibliothèques CDO (Collaboration Data Objects) (cdosys.dll) fournies par le système d'exploitation.
@@ -167,7 +167,7 @@ D'autres valeurs utilisées pour le service SMTP distant comprennent ce qui suit
 
 8. Enregistrez le fichier.
 
-     Le serveur de rapports utilise automatiquement les nouveaux paramètres ; il n'est pas nécessaire de redémarrer le service. Vous pouvez spécifier des paramètres SMTP supplémentaires pour configurer comment le serveur SMTP est utilisé pour la remise par messagerie du serveur de rapports.
+     Le serveur de rapports utilise automatiquement les nouveaux paramètres ; il n'est pas nécessaire de redémarrer le service. Vous pouvez spécifier des paramètres SMTP supplémentaires pour configurer comment le serveur SMTP est utilisé pour la remise par messagerie du serveur de rapports.
 
 ## <a name="configuration-options-for-local-smtp-service"></a>Options de configuration pour le service SMTP local
 La configuration d'un service SMTP local est pratique si vous testez ou dépannez la remise du courrier électronique par le serveur de rapports. Par défaut, le service SMTP local n'est pas activé.
@@ -226,7 +226,7 @@ La connexion entre le serveur de rapports et le serveur ou le redirecteur SMTP l
      
 17. Enregistrez le fichier.
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Gestionnaire de configurations de Reporting Services (mode natif)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Fichier de configuration Rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)

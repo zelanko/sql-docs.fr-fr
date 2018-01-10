@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 603babfeaf85513059a3adfb4277cc0b26d60135
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5d6d17894c218fddbe7c3eb9e7e03231ff77d7cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Création d'une transformation synchrone à l'aide du composant Script
   Vous utilisez un composant de transformation dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour modifier et analyser les données acheminées de la source à la destination. Une transformation à sorties synchrones traite chacune des lignes d'entrée lorsqu'elles traversent le composant. Une transformation à sorties asynchrones patiente jusqu'à ce qu'elle ait reçu toutes les lignes d'entrée pour achever son traitement. Cette rubrique décrit une transformation synchrone. Pour plus d’informations sur les transformations asynchrones, consultez [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -264,7 +264,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des transformations synchrones et asynchrones] (~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
  [Création d’une transformation asynchrone à l’aide du composant Script] (~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
  [Développement d’un composant de transformation personnalisé à sorties synchrones](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc831068b5a306c9de62873b3e173a1b9d43b2db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d29cc34d665dd08acc7eac8dfb634be06f427ee
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Créer des classes proxy de service Web Master Data Manager
   Le service Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] vous permet de programmer les fonctionnalités de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à partir de n'importe quel ordinateur pouvant accéder à votre site Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Avant de commencer à écrire du code pour accéder au service Web, vous devez générer des classes proxy. La classe proxy principale que vous utilisez pour effectuer des opérations de service Web est la classe <xref:Microsoft.MasterDataServices.ServiceClient>, qui implémente l'interface <xref:Microsoft.MasterDataServices.IService>.  
@@ -65,7 +65,7 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
 -   *proxy_name* désigne le nom du fichier proxy généré.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Opérations de service web par catégorie &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

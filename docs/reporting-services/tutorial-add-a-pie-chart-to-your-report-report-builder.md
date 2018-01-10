@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 330e6807dc0e3ff1715b030bdb4ddeaed7e8a94f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous créez un graphique à secteurs dans un rapport paginé Reporting Services. Vous ajoutez des pourcentages et combinez de petits secteurs en un seul secteur.
@@ -47,7 +47,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset incorporé, choisissez une source de données partagée et créez un graphique à secteurs.  
 
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -220,10 +220,10 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 Votre rapport est enregistré sur le serveur de rapports.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

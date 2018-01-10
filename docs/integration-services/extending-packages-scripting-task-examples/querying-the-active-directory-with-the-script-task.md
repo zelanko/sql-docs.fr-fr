@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0328b2eeaa94e279a53b45e8e205c1356768e53d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f5fe7b12a667bd91e7ef19ea8051850d4e22b567
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Interrogation d'Active Directory avec la tâche de script
   Les applications de traitement des données d'entreprise, telles que les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ont souvent besoin de traiter des données différemment selon l'échelon, le poste ou d'autres caractéristiques des employés stockés dans Active Directory. Active Directory est un service d’annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows qui fournit un magasin centralisé de métadonnées, non seulement sur les utilisateurs, mais aussi sur d’autres ressources organisationnelles, comme les ordinateurs et les imprimantes. L’espace de noms **System.DirectoryServices** dans le Microsoft .NET Framework fournit des classes à utiliser avec Active Directory, pour vous aider à diriger le flux de travail du traitement des données en fonction des informations qu’il stocke.  
@@ -36,8 +36,8 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a> Description  
- L'exemple suivant extrait le nom, le titre et le numéro de téléphone d'un employé dans Active Directory selon la valeur de la variable `email`, laquelle contient l'adresse de messagerie de l'employé. Les contraintes de précédence dans le package peuvent utiliser les informations extraites pour déterminer, par exemple, s'il faut envoyer un message électronique de priorité basse ou une page prioritaire, selon la fonction de l'employé.  
+## <a name="description"></a>Description  
+ L'exemple suivant extrait le nom, le titre et le numéro de téléphone d'un employé dans Active Directory selon la valeur de la variable `email`, laquelle contient l'adresse de messagerie de l'employé. Les contraintes de précédence dans le package peuvent utiliser les informations extraites pour déterminer, par exemple, s'il faut envoyer un message électronique de priorité basse ou une page prioritaire, selon le poste de l'employé.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   

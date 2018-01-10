@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03676da7d12179dcccd1d82e0601c9fbda3c826d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51c1529c330b6cbb6c7b1b0905a34dca3984f824
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Créer un flux de travail personnalisé (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base, comme la mise à jour et la validation automatique des données et l'envoi de notifications par courrier électronique, en fonction des conditions que vous spécifiez. Lorsque vous avez besoin de traitements plus complexes que ceux fournis par ces actions de flux de travail intégrées, utilisez un flux de travail personnalisé. Un flux de travail personnalisé est un assembly .NET. que vous créez. Lorsque votre assembly de flux de travail est appelé, votre code peut exécuter n'importe quelle action requise par votre situation. Par exemple, si votre flux de travail nécessite le traitement d'événements complexes, tels que des approbations multicouches ou des arbres de décision compliqués, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour démarrer un flux de travail personnalisé qui analyse les données et détermine où les transmettre pour l'approbation.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
     </setting>  
     ```  
   
-3.  Sous le paramètre « ConnectionString » ajoutez un paramètre « WorkflowTypeExtenders » pour associer un nom de balise à votre assembly de gestionnaire de flux de travail. Exemple :  
+3.  Sous le paramètre « ConnectionString » ajoutez un paramètre « WorkflowTypeExtenders » pour associer un nom de balise à votre assembly de gestionnaire de flux de travail. Exemple :  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="view-the-service-broker-queue"></a>Afficher la file d'attente de Service Broker  
  La file d'attente Service Broker qui contient les données de référence passées dans le cadre du flux de travail est : mdm.microsoft/mdm/queue/externalaction. Les files d’attente se trouvent dans l’**Explorateur d’objets** de SQL Management Studio sous le nœud Service Broker de la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Notez que, si le service a effacé la file d'attente correctement, cette file d'attente est vide.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exemple de flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Description du code XML d’un flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

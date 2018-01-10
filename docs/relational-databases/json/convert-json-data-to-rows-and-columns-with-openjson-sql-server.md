@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -21,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,10 +59,10 @@ FROM OPENJSON(@json);
   
 **Résultats**  
   
-|Clé|valeur|type|  
+|Clé|valeur|Type|  
 |---------|-----------|----------|  
-|name|John|1|  
-|surname|Doe|1|  
+|NAME|John| 1|  
+|surname|Doe| 1|  
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
 
@@ -123,7 +122,7 @@ WITH (
   
 |Number|Date|Customer|Quantité|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|  
+|SO43659|2011-05-31T00:00:00|AW29825| 1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 Cette fonction retourne et met en forme les éléments d’un tableau JSON.  
@@ -148,7 +147,7 @@ Vous pouvez changer le niveau de compatibilité d’une base de données à l’
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   

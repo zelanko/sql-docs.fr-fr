@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd7e9017dbc3bcfea38ea43b21a9c3a463eb813e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b92954553d0db01e8d86773fbccbbab739aacb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Déclenchement et définition d'événements dans un composant de flux de données
   Les développeurs de composants peuvent déclencher un sous-ensemble des événements définis dans l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> en appelant les méthodes exposées sur la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Vous pouvez également définir des événements personnalisés à l'aide de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A>, puis les déclencher pendant l'exécution en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. Cette section décrit comment créer et déclencher un événement. Elle fournit également des conseils sur l'opportunité de déclencher des événements au moment de la conception.  
@@ -97,7 +97,7 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   

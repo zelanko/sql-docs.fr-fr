@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11b9cf94deb2f686939beec038d241c4b868928a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d81ff7ff9d78eed04f1b635f45b661dda601808
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
   Pour récupérer des données à partir d'une source de données externe, vous utilisez une connexion de données. Les informations de connexion de données sont fournies habituellement par le propriétaire de la source de données externe, qui est chargé d'accorder les autorisations nécessaires et de spécifier les types d'informations d'identification à utiliser. Les informations de connexion de données sont enregistrées en tant que source de données de rapport. Le type de source de données spécifie l'extension de données à utiliser pour récupérer les données.  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
 |Rubrique|Type de source de données|  
 |-----------|----------------------|  
 |[Type de connexion SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
+|[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)])|  
 |[Type de connexion PowerPivot &#40;SSRS&#41;](../../reporting-services/report-data/power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
 |[Type de connexion de liste SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Liste SharePoint|  
 |[Type de connexion SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
 |[Vue d’ensemble des extensions pour le traitement des données](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](http://go.microsoft.com/fwlink/?linkid=121312).|Fournit des informations détaillées sur les extensions de données pour les utilisateurs expérimentés.|  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b962ff84ab21c0222c26a6057a1abad3dc493aa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f2c69567eedb53dce94134f0381dfca7a21cf28
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Création d'une destination ODBC à l'aide du composant Script
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous enregistrez généralement les données dans une destination ODBC en utilisant une destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] et le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour ODBC. Toutefois, vous pouvez également créer une destination ODBC ad hoc à utiliser dans un package unique. Pour créer cette destination ODBC ad hoc, vous utilisez le composant Script comme indiqué dans l'exemple suivant.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si vous souhaitez créer un composant que vous pouvez réutiliser plus facilement dans plusieurs tâches de flux de données et plusieurs packages, utilisez le code présenté dans cet exemple de composant Script comme point de départ pour un composant de flux de données personnalisé. Pour plus d’informations, consultez [Développement d’un composant de flux de données personnalisé](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant montre comment créer un composant de destination qui utilise un gestionnaire de connexions ODBC existant pour enregistrer des données du flux de données dans une table [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Cet exemple est une version modifiée de la destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] personnalisée présentée dans la rubrique [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Toutefois, dans cet exemple, la destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] personnalisée a été modifiée afin d'utiliser un gestionnaire de connexions ODBC et d'enregistrer les données dans une destination ODBC. Ces modifications incluent également les points suivants :  
@@ -172,7 +172,7 @@ ms.lasthandoff: 11/20/2017
     }  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

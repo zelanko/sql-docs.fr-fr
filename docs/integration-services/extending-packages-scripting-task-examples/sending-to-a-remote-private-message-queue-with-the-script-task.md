@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2736526eed551bf1756911b007f64b92a124d50b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85b1dc84819c3327fe5a01b5796ade04d5c803ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Envoi vers une file d'attente de messages privée distante à l'aide de la tâche de script
   Message Queuing (également appelé MSMQ) permet aux développeurs de communiquer de façon simple, rapide et fiable avec des programmes d'application par l'envoi et la réception de messages. Une file d'attente de messages peut se trouver sur l'ordinateur local ou un ordinateur distant et être publique ou privée. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le gestionnaire de connexions MSMQ et la tâche MSMQ ne prennent pas en charge l'envoi vers une file d'attente privée située sur un ordinateur distant. Toutefois, la tâche de script permet d'envoyer facilement un message à une file d'attente privée distante.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a> Description  
+## <a name="description"></a>Description  
  L’exemple suivant utilise un gestionnaire de connexions MSMQ existant, avec des objets et des méthodes de l’espace de noms System.Messaging, pour envoyer le texte contenu dans une variable de package à une file d’attente de messages privée distante. L’appel à la méthode M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) du gestionnaire de connexions MSMQ retourne un objet **MessageQueue** dont la méthode **Send** réalise cette tâche.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -108,7 +108,7 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche MSMQ](../../integration-services/control-flow/message-queue-task.md)  
   
   

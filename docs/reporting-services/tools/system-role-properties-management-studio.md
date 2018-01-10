@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: "30"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2f2b1cbdb4d32c87af4614f4d8907b2d621c99b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8028ef472cd23de251ab791e4099703640fdabc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="system-role-properties-management-studio"></a>Propriétés de rôle système (Management Studio)
   La page Rôles système vous permet d'afficher les définitions de rôles système qui sont actuellement définies pour le serveur de rapports. Une définition de rôle système contient une collection nommée de tâches effectuées sur tout le site plutôt que sur un élément individuel. Les définitions de rôles sont attribuées à un utilisateur ou à des groupes pour créer une attribution de rôle. Les tâches contenues dans la définition de rôle spécifient les opérations que peuvent effectuer l'utilisateur ou le groupe.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
  **Description**  
  Donne des informations sur chaque tâche. Vous ne pouvez pas modifier la description des tâches.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Tâches au niveau système](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   

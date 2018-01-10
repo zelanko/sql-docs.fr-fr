@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9ab8c4d53b12e3c2e777d9a119ea9b226c7f1800
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 956788c9a1c502671ff5593149a2f67f6c7b85bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Connexion à des sources de données dans une tâche personnalisée
   Les tâches se connectent à des sources de données externes pour extraire ou enregistrer des données à l'aide d'un gestionnaire de connexions. Au moment de la conception, un gestionnaire de connexions représente une connexion logique et décrit des informations clés telles que le nom du serveur et des propriétés d'authentification. Au moment de l'exécution, les tâches appellent la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> du gestionnaire de connexions pour établir la connexion physique à la source de données.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  Les tâches appellent la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> pour établir la connexion physique à la source de données. La méthode renvoie l'objet de connexion sous-jacent qui peut alors être utilisé par la tâche. Étant donné que le gestionnaire de connexions isole de la tâche les détails d'implémentation de l'objet de connexion sous-jacent, la tâche doit seulement appeler la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> pour établir la connexion et n'a pas à s'occuper des autres aspects de la connexion.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant montre la validation du nom <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> dans les méthodes Validate et Execute, puis indique comment utiliser la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> pour établir la connexion physique dans la méthode Execute.  
   
 ```csharp  
@@ -142,7 +142,7 @@ Public Overrides Function Execute( _
 End Function  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

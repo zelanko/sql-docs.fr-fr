@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
 Au cours de cette leçon du didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez les pages d’abonnement pilotées par les données des portails web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour vous connecter à une source de données d’abonnement, créer une requête qui extrait des données d’abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
@@ -95,7 +95,7 @@ Paramètre  |Source de la valeur  | Valeur/champ
  1. Dans le champ **OrderNumber** , sélectionnez **Obtenir la valeur du dataset**. Dans Valeur, sélectionnez **Ordre**. 
  2. Cliquez sur **Créer un abonnement**.
    
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Lors de l'exécution de l'abonnement, quatre fichiers de rapport sont remis au partage de fichiers que vous avez défini, un pour chaque commande dans la source de données *Abonnés* . Chaque remise doit être unique en termes de données (les données doivent être propres à chaque commande), de format de rendu et de format de fichier. Vous pouvez ouvrir chaque rapport à partir du dossier partagé pour vérifier que chaque version est personnalisée en fonction des options d'abonnement que vous avez définies.  
   
 ![Liste de fichiers créée par l’abonnement](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste de fichiers créée par l’abonnement")  
@@ -107,7 +107,7 @@ La page des abonnements dans le portail web contiendra la date de **Dernière ex
   
 Cette étape est la dernière du didacticiel « Définir un abonnement piloté par les données ».   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Abonnements et remise &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Abonnements pilotés par les données](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Créer, modifier ou supprimer des abonnements pilotés par les données](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

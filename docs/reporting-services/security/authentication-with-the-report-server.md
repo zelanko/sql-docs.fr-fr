@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,14 +19,14 @@ helpviewer_keywords:
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: e4a32e6dc9401db120557c7f7cd3988f57fb2418
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 998426333430c4b082a4ac2a265672dcd48175bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="authentication-with-the-report-server"></a>Authentification avec le serveur de rapports
 
@@ -43,9 +41,9 @@ ms.lasthandoff: 12/05/2017
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Oui|Tente d'utiliser Kerberos en premier pour l'authentification intégrée de Windows, mais revient à NTLM si Active Directory ne peut pas accorder de ticket pour la demande du client au serveur de rapports. Negotiate revient à NTLM uniquement si le ticket n'est pas disponible. Si les premières tentatives entraînent une erreur plutôt qu'un ticket manquant, le serveur de rapports n'effectue pas de deuxième tentative.|  
 |RSWindowsNTLM|NTLM|Oui|Utilise NTLM pour l'authentification intégrée de Windows.<br /><br /> Les informations d'identification ne seront pas déléguées ou empruntées sur d'autres demandes. Les demandes suivantes suivent une nouvelle séquence de stimulation/réponse. Selon les paramètres de sécurité du réseau, le système peut demander à un utilisateur des informations d'identification ou la demande d'authentification est gérée de façon transparente.|  
-|RSWindowsKerberos|Kerberos|Non|Utilise Kerberos pour l'authentification intégrée de Windows. La configuration de Kerberos passe par celle des noms des principes du service (SPN) pour vos comptes de service, lequel requiert des privilèges d'administrateur de domaine. Si vous configurez la délégation d'identité à l'aide de Kerberos, le jeton de l'utilisateur qui demande un rapport peut également être utilisé sur une connexion supplémentaire aux sources de données externes qui fournissent des données aux rapports.<br /><br /> Avant de spécifier RSWindowsKerberos, vérifiez que le type de navigateur que vous utilisez prend bien en charge ce dernier. Si vous utilisez Microsoft Edge ou Internet Explorer, l’authentification Kerberos est prise en charge uniquement par l’intermédiaire de Negotiate. Microsoft Edge ou Internet Explorer ne formule pas de demande d’authentification qui spécifie Kerberos directement.|  
-|RSWindowsBasic|Basic|Non|L'authentification de base est définie dans le protocole HTTP et peut être utilisée uniquement pour authentifier des requêtes HTTP au serveur de rapports.<br /><br /> Les informations d'identification sont passées dans la requête HTTP à l'aide de l'encodage en base 64. Si vous avez recours à l'authentification de base, utilisez le protocole SSL (Secure Sockets Layer) pour chiffrer les informations du compte d'utilisateur avant de les envoyer sur le réseau. Le protocole SSL fournit un canal chiffré pour l'envoi d'une demande de connexion du client au serveur de rapports via une connexion HTTP TCP/IP. Pour plus d’informations, consultez [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) (Chiffrer les données confidentielles à l’aide de SSL) sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
-|Custom|(Anonyme)|Non|L'authentification anonyme dirige le serveur de rapports pour ignorer l'en-tête d'authentification dans une requête HTTP. Le serveur de rapports accepte toutes les demandes, mais appelle une authentification par formulaire [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] personnalisée que vous fournissez pour authentifier l'utilisateur.<br /><br /> Spécifiez **Custom** si vous déployez un module d’authentification personnalisé qui gère toutes les demandes d’authentification sur le serveur de rapports. Vous ne pouvez pas utiliser le type d'authentification Personnalisé avec l'extension d'authentification Windows par défaut.|  
+|RSWindowsKerberos|Kerberos|non|Utilise Kerberos pour l'authentification intégrée de Windows. La configuration de Kerberos passe par celle des noms des principes du service (SPN) pour vos comptes de service, lequel requiert des privilèges d'administrateur de domaine. Si vous configurez la délégation d'identité à l'aide de Kerberos, le jeton de l'utilisateur qui demande un rapport peut également être utilisé sur une connexion supplémentaire aux sources de données externes qui fournissent des données aux rapports.<br /><br /> Avant de spécifier RSWindowsKerberos, vérifiez que le type de navigateur que vous utilisez prend bien en charge ce dernier. Si vous utilisez Microsoft Edge ou Internet Explorer, l’authentification Kerberos est prise en charge uniquement par l’intermédiaire de Negotiate. Microsoft Edge ou Internet Explorer ne formule pas de demande d’authentification qui spécifie Kerberos directement.|  
+|RSWindowsBasic|Basic|non|L'authentification de base est définie dans le protocole HTTP et peut être utilisée uniquement pour authentifier des requêtes HTTP au serveur de rapports.<br /><br /> Les informations d'identification sont passées dans la requête HTTP à l'aide de l'encodage en base 64. Si vous avez recours à l'authentification de base, utilisez le protocole SSL (Secure Sockets Layer) pour chiffrer les informations du compte d'utilisateur avant de les envoyer sur le réseau. Le protocole SSL fournit un canal chiffré pour l'envoi d'une demande de connexion du client au serveur de rapports via une connexion HTTP TCP/IP. Pour plus d’informations, consultez [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) (Chiffrer les données confidentielles à l’aide de SSL) sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Custom|(Anonyme)|non|L'authentification anonyme dirige le serveur de rapports pour ignorer l'en-tête d'authentification dans une requête HTTP. Le serveur de rapports accepte toutes les demandes, mais appelle une authentification par formulaire [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] personnalisée que vous fournissez pour authentifier l'utilisateur.<br /><br /> Spécifiez **Custom** si vous déployez un module d’authentification personnalisé qui gère toutes les demandes d’authentification sur le serveur de rapports. Vous ne pouvez pas utiliser le type d'authentification Personnalisé avec l'extension d'authentification Windows par défaut.|  
   
 ## <a name="unsupported-authentication-methods"></a>Méthodes d'authentification non prises en charge  
  Les méthodes et demandes d'authentification suivantes ne sont pas prises en charge.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descriptions de tâche|Liens|  
 |-----------------------|-----------|  
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
-[Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implémentation d'une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   

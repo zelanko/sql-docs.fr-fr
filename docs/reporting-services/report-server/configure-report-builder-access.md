@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2018c910537ea73bc36d1a41f074d9aeae0e9a37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
   Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -42,8 +40,8 @@ ms.lasthandoff: 12/05/2017
   
  Pour utiliser le Générateur de rapports, vous devez disposer d'un modèle de rapport publié avec lequel travailler.  
   
-## <a name="prerequisites"></a>Conditions préalables  
- Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 doit être installé sur l’ordinateur client. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
   
@@ -170,7 +168,7 @@ ms.lasthandoff: 12/05/2017
 |Authentification de base|ClickOnce ne prend pas en charge l'authentification de base. Il ne formulera pas de demandes qui spécifient l'authentification de base dans l'en-tête d'authentification. Il ne passera pas d'informations d'identification ou n'invitera pas l'utilisateur pour les fournir. Vous pouvez contourner ces problèmes en activant l'accès anonyme aux fichiers d'application du Générateur de rapports.<br /><br /> Les demandes réussiront si vous activez l'accès anonyme aux fichiers d'application du Générateur de rapports car le serveur de rapports ignore l'en-tête d'authentification. Pour plus d’informations sur l’activation de l’accès anonyme au Générateur de rapports, consultez [Configurer une authentification de base sur le serveur de rapports](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Une fois que ClickOnce a extrait les fichiers d'application, le Générateur de rapports ouvre une connexion distincte à un serveur de rapports. Les utilisateurs doivent retaper leurs informations d'identification pour que le Générateur de rapports se connecte au serveur de rapports. Le Générateur de rapports ne collecte pas les informations d'identification à partir d'Internet Explorer ou de ClickOnce.<br /><br /> Les demandes échoueront si le serveur de rapports est configuré pour l'authentification de base alors que vous n'avez pas activé l'accès anonyme aux fichiers programme du Générateur de rapports. La demande échoue car ClickOnce spécifie la sécurité intégrée de Windows sur ses demandes. Si vous configurez le serveur de rapports pour l'authentification de base, le serveur rejette la demande car elle spécifie un package de sécurité non valide et il lui manque les informations d'identification que le serveur de rapports attend.<br /><br /> En outre, si le serveur de rapports est configuré pour utiliser le mode intégré SharePoint et que le site SharePoint utilise l'authentification de base, une erreur 401 se produira lorsque les utilisateurs tenteront d'utiliser ClickOnce pour installer le Générateur de rapports sur leurs ordinateurs clients. Ceci est dû au fait que SharePoint utilise un cookie pour conserver l’authentification de l’utilisateur pour toute la durée de la session, mais que ClickOnce ne prend pas en charge ce cookie. Lorsqu'un utilisateur lance une application ClickOnce, telle que le Générateur de rapports, l'application ne passe pas le cookie à SharePoint et donc SharePoint refuse l'accès et renvoie une erreur 401.<br /><br /> Vous pouvez contourner ce problème en essayant l’une des méthodes suivantes :<br /><br /> -Sélectionnez l’option **Mémoriser mon mot de passe** quand vous fournissez vos informations d’authentification utilisateur.<br /><br /> -Activez l’accès anonyme à la collection de sites SharePoint.<br /><br /> -Configurez l’environnement afin que l’utilisateur n’ait pas à fournir d’informations d’identification. Par exemple, dans un environnement intranet, vous pouvez configurer le serveur SharePoint pour qu’il appartienne à un groupe de travail, puis créer des comptes d’utilisateur sur l'ordinateur local.|  
 |Custom|Lorsque vous configurez un serveur de rapports pour utiliser l'authentification personnalisée, l'accès anonyme est activé sur le serveur de rapports et les demandes sont acceptées sans contrôle d'authentification.<br /><br /> Une fois que ClickOnce a extrait les fichiers d'application, le Générateur de rapports ouvre une connexion distincte à un serveur de rapports. Les utilisateurs doivent retaper leurs informations d'identification pour que le Générateur de rapports se connecte au serveur de rapports. Le Générateur de rapports ne collecte pas les informations d'identification à partir d'Internet Explorer ou de ClickOnce.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   

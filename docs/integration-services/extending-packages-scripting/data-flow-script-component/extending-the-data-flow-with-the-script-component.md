@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a27b69a20903d80f33d190846156ce010046b11
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 97389e6c62a00f758b1ca4769363180f0451b9db
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extension du flux de données avec le composant Script
   Le composant Script étend les fonctionnalités du flux de données des packages [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] à l’aide du code personnalisé écrit dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, compilé et exécuté au moment de l’exécution des packages. Le composant Script simplifie le développement d'une source, transformation ou destination de flux de données personnalisée, lorsque les sources, les transformations et les destinations incluses dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne répondent que partiellement à vos besoins. Une fois que vous avez configuré le composant avec les entrées et sorties attendues, celui-ci écrit tout le code d'infrastructure requis, ce qui vous permet de vous concentrer exclusivement sur le code nécessaire au traitement personnalisé.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/20/2017
  [Exemples supplémentaires du composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Ces exemples simples expliquent et montrent quelques utilisations possibles du composant Script.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Composant Script](../../../integration-services/data-flow/transformations/script-component.md)   
  [Comparaison de la tâche de script et du composant Script](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

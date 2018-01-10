@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: MSReportServer_ConfigurationSetting Methods
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a9be625638d520a967ffe43e773e6f51fa4698d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d88ff0247939668c63339ec8a6835405af8bd0a5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>Méthodes MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting du Fournisseur WMI Report Server fournit les méthodes publiques suivantes.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |[Méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md)|Définit le répertoire virtuel pour une application.|  
 |[SetWindowsServiceIdentity](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md)|Fait en sorte que le service Report Server s'exécute en tant que l'utilisateur Windows spécifié et accorde des autorisations de système de fichiers suffisantes à ce compte pour permettre au serveur de rapports de fonctionner.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
   

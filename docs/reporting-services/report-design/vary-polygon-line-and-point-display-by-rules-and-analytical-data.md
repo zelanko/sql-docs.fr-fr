@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,13 +25,13 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 464731c279d55f20b725193cde9db1e5f2974bf2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   Les options d'affichage pour les polygones, les lignes et les points d'une couche sont contrôlées en définissant des options pour la couche, en établissant des règles pour les éléments cartographiques de la couche ou en remplaçant des options pour des éléments cartographiques incorporés spécifiques sur une couche.  
@@ -112,7 +110,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **EqualInterval.** Créez des plages qui divisent les données en intervalles de plage égaux. Pour l'exemple, les trois plages seraient 0-2999, 3000-5999, 6000-8999. Sous-plage 1 : 1, 10, 200, 500. Sous-plage 2 : 4777. Sous-plage 3 : 8999. Cette méthode ne prend pas en considération la distribution des données. Les valeurs très élevées ou très basses peuvent dénaturer les résultats de distribution.  
   
--   **EqualDistribution.** Créez des plages qui divisent les données de sorte que chaque plage ait un même nombre d'éléments. Dans l'exemple de données, les trois plages seraient 0-10, 11-500 et 501-8999. Sous-plage 1 : 1, 10. Sous-plage 2 : 200, 500. Sous-plage 3 : 4777, 8999. Cette méthode peut déformer la distribution en créant des divisions couvrant des plages très grandes ou très petites.  
+-   **EqualDistribution.** Créez des plages qui divisent les données de sorte que chaque plage ait un même nombre d'éléments. Dans l'exemple de données, les trois plages seraient 0-10, 11-500 et 501-8999. Sous-plage 1 : 1, 10. Sous-plage 2 : 200, 500. Sous-plage 3 : 4777, 8999. Cette méthode peut déformer la distribution en créant des divisions couvrant des plages très grandes ou très petites.  
   
 -   **Optimal.** Créez des plages qui ajustent automatiquement la distribution pour créer des sous-plages équilibrées. Le nombre de sous-plages est déterminé par l'algorithme.  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/05/2017
 |`#TOVALUE`|Affiche la valeur numérique réelle du champ de données.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Affiche les valeurs numériques réelles du début et de la fin de la plage.|10 - 790|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Modifier les légendes de carte, l’échelle de couleurs et les règles associées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

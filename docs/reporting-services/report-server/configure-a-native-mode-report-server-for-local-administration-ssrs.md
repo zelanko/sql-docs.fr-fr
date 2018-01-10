@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a0d47b170b22f25ff8c9752a5b7a4aa9034f6284
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b6b522f7f7a0de5dbf979f51a3289a2ab820fdbc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
   Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -189,7 +187,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informations supplémentaires  
  Une étape de configuration supplémentaire et courante pour l'administration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à ouvrir le port 80 dans le Pare-feu Windows pour autoriser l'accès à l'ordinateur du serveur de rapports. Pour obtenir des instructions, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 409dd2e774c494bb9d61a51b86a5fd24def8cd59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 51a5010bdf9a97ee013882e8b73a995297029eff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
-  Selon les options que vous avez sélectionnées pendant l'installation, le serveur de rapports peut requérir une configuration supplémentaire avant de pouvoir fonctionner. Dans sa configuration minimale, un serveur de rapports se compose des éléments suivants :  
+  Selon les options que vous avez sélectionnées pendant l'installation, le serveur de rapports peut requérir une configuration supplémentaire avant de pouvoir fonctionner. Dans sa configuration minimale, un serveur de rapports se compose des éléments suivants :  
   
 -   Un compte de service Report Server (configuré au cours de l'installation).  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  Suivez les instructions dans « Étapes suivantes » pour achever votre déploiement.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  Pour achever votre déploiement, vous devez configurer le Gestionnaire de rapports ou l'intégration SharePoint. Pour plus d’informations, consultez [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
   
  Si le Pare-feu Windows est activé, le port que le serveur de rapports est configuré pour utiliser est très probablement fermé. Un port peut être fermé si une page vide apparaît lorsque vous essayez d'ouvrir le Gestionnaire de rapports à partir d'un ordinateur client distant. Pour plus d'informations sur la configuration du pare-feu, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
  Vérifiez votre installation en créant des dossiers, en téléchargeant des éléments, et en exécutant des rapports. Suivez les instructions de la rubrique [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) pour vérifier votre installation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   

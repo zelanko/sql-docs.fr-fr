@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13342deddb2a0e732cd4bf9b3f56df378f80439c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 842012b19e26041065ef6adbd42cf6dc5e5990cd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Boîte de dialogue Propriétés du dataset, Options (Générateur de rapports)
   Sélectionnez **Options** dans la boîte de dialogue **Propriétés du jeu de données** pour modifier les options de données, telles que les options de classement et le traitement des sous-totaux en tant que données de détail, pour la requête. Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md) dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
  **Interpréter les sous-totaux comme des lignes de détails**  
  Sélectionnez une valeur qui indique si vous souhaitez que les lignes de sous-total soient interprétées comme des lignes de détails au lieu de lignes agrégées. La valeur par défaut, **Auto**, indique que les lignes de sous-total doivent être traitées comme des lignes de détails si le rapport n’utilise pas la fonction **Aggregate**() pour accéder aux champs dans le dataset. Si vous souhaitez que les lignes de sous-total soient interprétées comme lignes agrégées, choisissez **False**. Si vous souhaitez que les lignes de sous-total soient interprétées comme des lignes de détails et que vous savez qu’elles n’utilisent pas la fonction **Aggregate**(), choisissez **True**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

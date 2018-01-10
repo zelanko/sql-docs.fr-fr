@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Préparation à l'implémentation d'une extension pour le traitement des données
   Avant d’implémenter votre extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] comme un pont entre le jeu de résultats et votre source de données.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="available-extension-interfaces"></a>Interfaces d'extension disponibles  
  Le tableau suivant décrit les interfaces disponibles et indique si l'implémentation est requise ou facultative.  
   
-|Interface| Description|Implémentation|  
+|Interface|Description|Implémentation|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Représente une session unique avec une source de données. Dans le cas d'un système de base de données client/serveur, il peut s'agir d'une connexion réseau au serveur.|Requis|  
 |IDbConnectionExtension|Représente des propriétés de connexion supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] relatives à la sécurité et l'authentification.|Ce paramètre est facultatif|  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/05/2017
   
  Les interfaces d'extension pour le traitement des données sont identiques à un sous-ensemble des interfaces, des méthodes et des propriétés du fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans la mesure du possible. Pour plus d'informations sur l'implémentation d'un fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] complet, consultez la rubrique sur l'implémentation d'un fournisseur de données .NET Framework dans votre documentation du Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implémentation d’une extension pour le traitement des données](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  

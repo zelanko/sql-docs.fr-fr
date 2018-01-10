@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -58,13 +56,13 @@ ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b3a2027302934ab4fb9dd1ea68cf70e014ee4de8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d38b2ce46120e435ac1b94623587816ff20307d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Mise en forme d'un graphique (Générateur de rapports et SSRS)
   Après avoir défini les données et l'aspect de votre graphique, vous pouvez ajouter une mise en forme pour améliorer l'apparence globale et mettre en évidence les principaux points de données. Les options de mise en forme les plus courantes peuvent être modifiées dans la boîte de dialogue Propriétés qui apparaît lorsque vous cliquez avec le bouton droit sur un élément de graphique pour afficher son menu contextuel. Chaque élément de graphique possède sa propre boîte de dialogue. Pour plus d’informations sur les éléments des graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -95,7 +93,7 @@ ms.lasthandoff: 12/05/2017
  [Ajouter un cadre de bordure à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
  Explique comment ajouter un cadre de bordure à un graphique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Ajouter un cadre de bordure à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

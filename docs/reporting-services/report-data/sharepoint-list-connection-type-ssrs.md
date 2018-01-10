@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2dc5ac094612cbe2566b505fe4088d02762ae853
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ba9625e6d50c14ee47070b4980e6b376cc68e738
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
 
@@ -52,9 +50,9 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|Non|  
-|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|non|  
+|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
   
  *Authentification Windows, authentification basée sur des formulaires (FBA), jetons SAML (Secure Application Markup Language), autres fournisseurs d’identité ou combinaison de plusieurs fournisseurs d’authentification indiqués ci-dessus.  
   
@@ -63,9 +61,9 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Non|Non|  
-|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Non|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|non|non|  
+|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|non|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
   
  *Authentification Windows, authentification basée sur des formulaires (FBA), jetons SAML (Secure Application Markup Language), autres fournisseurs d’identité ou combinaison de plusieurs fournisseurs d’authentification indiqués ci-dessus.  
   
@@ -191,7 +189,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Paramètres de rapport](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtrer, regrouper et trier des données](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

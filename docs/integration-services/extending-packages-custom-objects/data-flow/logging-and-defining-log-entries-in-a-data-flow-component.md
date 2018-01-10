@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe113aad9e86802378eec1b24cc6539d758a5ac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49ff86491085fad1db20b93295acf65374228fd3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Enregistrement et définition d'entrées de journal dans un composant de flux de données
   Les composants de flux de données personnalisés peuvent publier des messages dans une entrée de journal existante à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Ils peuvent également présenter des informations à l'utilisateur en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A>, ou des méthodes semblables, de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Toutefois, cette procédure induit une surcharge causée par le déclenchement et la gestion d'événements supplémentaires et force l'utilisateur à passer en revue les messages d'information documentés pour rechercher ceux susceptibles de l'intéresser. Vous pouvez utiliser une entrée de journal personnalisée, tel que décrit ci-dessous, pour fournir aux utilisateurs de votre composant des informations de journal personnalisées étiquetées.  
@@ -104,7 +104,7 @@ End Sub
   
  À présent, lorsque l’utilisateur exécute le package, après avoir sélectionné l’option « Entrée de journal de mon composant personnalisé » dans la boîte de dialogue **Enregistrement**, le journal contient une entrée clairement étiquetée « Utilisateur ::Entrée de journal de mon composant personnalisé ». Cette nouvelle entrée de journal contient le texte de l'instruction SQL, l'horodateur et toutes les données supplémentaires enregistrées par le développeur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

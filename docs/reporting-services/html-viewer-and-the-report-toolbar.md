@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML utilisée pour afficher des rapports sur demande lorsqu'ils sont demandés auprès du serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="credentials"></a>Informations d'identification  
  Les informations d'identification sont les valeurs de nom d'utilisateur et de mot de passe qui autorisent l'accès à une source de données. Une fois les informations d'identification spécifiées, cliquez sur **Afficher le rapport** pour obtenir les données. Si un rapport requiert que vous vous connectiez, cela signifie que les données que vous êtes autorisé à afficher peuvent être différentes de celles qu'un autre utilisateur peut afficher. Par conséquent, deux utilisateurs peuvent exécuter le même rapport et obtenir des résultats différents. En outre, certains rapports contiennent des zones masquées qui sont révélées selon les informations d'identification de connexion utilisateur ou les sélections effectuées dans le rapport. Les zones masquées sont exclues des opérations de recherche, ce qui entraîne des résultats de recherche différents de ceux obtenus lorsque toutes les parties du rapport sont visibles.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  

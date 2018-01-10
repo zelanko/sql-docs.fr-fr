@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ab1065adff87ee843e649b7da2b8d6a21d4b1ac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc07df4510aff77e5bb0fa5ef5ca6fff3ad23beb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-extensions-overview"></a>Vue d'ensemble des extensions de rendu
   Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend sept extensions de rendu : HTML, Excel, Word, CSV ou texte, XML, image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  Le tableau suivant décrit les extensions de rendu incluses avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extension Name| Description|  
+|Extension Name|Description|  
 |--------------------|-----------------|  
 |**XML**|Effectue le rendu d'un rapport au format XML. Le rapport peut être ouvert dans un navigateur. Les transformations supplémentaires qui s'appliquent à cette sortie XML offrent éventuellement une méthode économique pour éviter d'avoir à développer votre propre extension de rendu.|  
 |**CSV**|Effectue le rendu d'un rapport dans lequel les données sont délimitées par des virgules. Le rapport s'ouvre dans un outil d'affichage associé aux formats de fichiers CSV.|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour une documentation supplémentaire et des livres blancs sur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consultez les ressources techniques les plus récentes sur le [site web Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Implémentation d’une extension de rendu](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

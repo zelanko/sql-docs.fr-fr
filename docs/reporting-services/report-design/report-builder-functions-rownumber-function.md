@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33f3b559c924f6a5cb9751ad938a01f495172701
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6edb97aaf3da5499568c4893c02cfd208d556696
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Fonctions du Générateur de rapports - RowNumber
   Retourne un nombre évolutif du nombre de lignes pour l'étendue spécifiée.  
@@ -42,7 +40,7 @@ RowNumber(scope)
  *portée*  
  (**Chaîne**) Nom d’un dataset, d’une région de données ou d’un groupe, ou valeur Null (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer le nombre de lignes. **Nothing** spécifie le contexte le plus à l'extérieur, habituellement le dataset du rapport.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **RowNumber** retourne une valeur d'exécution du nombre de lignes dans l'étendue spécifiée, de la même façon que [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) retourne la valeur d'exécution d'une fonction d'agrégation. Lorsque vous spécifiez une étendue, vous spécifiez quand réinitialiser le nombre de lignes à 1.  
   
  *scope* ne peut pas être une expression. *scope* doit être une étendue contenante. Les étendues classiques, de la relation contenant-contenu le plus à l'extérieur à celle située le plus à l'intérieur, sont un dataset de rapport, une région de données, des groupes de lignes ou des groupes de colonnes.  
@@ -61,7 +59,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

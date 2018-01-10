@@ -8,7 +8,7 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b836c6af9d5862949ec7844d7a88dbc0d349228d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c135d96f93aea211b260c104b260eb9378a5d2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Documentation développeur du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un riche ensemble d’outils pour développer, administrer et contrôler les applications de base de données.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
  [Programmation de boîte de message d’exception](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Décrit comment utiliser l'interface de programmation des messages d'exception dans vos applications pour contrôler les messages de manière beaucoup plus rigoureuse et pour donner à vos utilisateurs la possibilité d'enregistrer le contenu des messages d'erreur afin de pouvoir obtenir une assistance ultérieure.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Programmation de l’exploration de données](../analysis-services/data-mining-programming.md)   
  [Documentation du développeur Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
  [Documentation du développeur Integration Services](../integration-services/integration-services-developer-documentation.md)   

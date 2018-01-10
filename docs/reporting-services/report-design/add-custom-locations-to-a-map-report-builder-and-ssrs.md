@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
@@ -18,13 +16,13 @@ ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f874233485441f7f3ac2575b022c69cd298c056
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4f6fe4d4ba90117cbb6db930419e272d210ccb5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Ajouter des emplacements personnalisés à une carte (Générateur de rapports et SSRS)
   Après avoir ajouté une carte à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous pouvez ajouter vos propres emplacements de points.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Cliquez sur les pages et définissez les propriétés d'affichage que vous souhaitez appliquer à ce point.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   

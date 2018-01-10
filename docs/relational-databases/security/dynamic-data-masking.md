@@ -17,11 +17,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ Par exemple, si une personne assurant le support technique au sein d’un centre
   
 |Fonction|Description|Exemples|  
 |--------------|-----------------|--------------|  
-|Par défaut|Masquage complet en fonction des types de données des champs désignés.<br /><br /> Pour les données de type chaîne (string), utilisez XXXX, ou moins de X si la taille du champ est inférieure à 4 caractères (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Pour les données de type numérique, utilisez une valeur zéro (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Pour les données de type date et heure, utilisez 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Pour les données de type binaire, utilisez un seul octet de valeur ASCII 0 (**binary**, **varbinary**, **image**).|Exemple de syntaxe de définition de colonne : `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Méthode de masquage qui affiche la première lettre d’une adresse de messagerie et le suffixe de constante « .com », sous la forme d’une adresse de messagerie. . `aXXX@XXXX.com`.|Exemple de syntaxe de définition : `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`|  
+|Valeur par défaut|Masquage complet en fonction des types de données des champs désignés.<br /><br /> Pour les données de type chaîne (string), utilisez XXXX, ou moins de X si la taille du champ est inférieure à 4 caractères (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Pour les données de type numérique, utilisez une valeur zéro (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Pour les données de type date et heure, utilisez 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Pour les données de type binaire, utilisez un seul octet de valeur ASCII 0 (**binary**, **varbinary**, **image**).|Exemple de syntaxe de définition de colonne : `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|Méthode de masquage qui affiche la première lettre d’une adresse de messagerie et le suffixe de constante « .com », sous la forme d’une adresse de messagerie. . `aXXX@XXXX.com`.|Exemple de syntaxe de définition : `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Nombre aléatoire|Fonction de masquage aléatoire à utiliser sur tout type de données numérique pour masquer la valeur d’origine à l’aide d’une valeur aléatoire dans une plage spécifiée.|Exemple de syntaxe de définition : `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Chaîne personnalisée|Méthode de masquage qui affiche les première et dernière lettres, et ajoute une chaîne de remplissage personnalisée au milieu. `prefix,[padding],suffix`<br /><br /> Remarque : si la valeur d’origine est trop courte pour occuper la totalité du masque, une partie du préfixe ou du suffixe n’est pas exposée.|Exemple de syntaxe de définition : `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Autres exemples :<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Vous n’avez pas besoin d’autorisation particulière pour créer une table avec un masque dynamique des données. Les autorisations de schéma standard **CREATE TABLE** et **ALTER** suffisent.  
   
  Pour ajouter, remplacer ou supprimer le masque d’une colonne, vous devez disposer des autorisations **ALTER ANY MASK** et **ALTER** sur la table. Il convient d’accorder l’autorisation **ALTER ANY MASK** à un responsable sécurité.  
@@ -111,7 +111,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Id | Nom| Salaire |   
+>    |  Id | Nom   | Salaire |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  
@@ -197,7 +197,7 @@ ALTER TABLE Membership
 ALTER COLUMN LastName DROP MASKED;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   

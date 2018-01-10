@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 333d687c7d08be6187a493cd04b7e39dd2c61865
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c7035ef5f0f7c40504363dbfac696d96fcc3d13
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---inscope-function"></a>Fonctions du Générateur de rapports - InScope
   Indique si l'instance actuelle d'un élément se trouve dans l'étendue spécifiée.  
@@ -44,7 +42,7 @@ InScope(scope)
 ## <a name="return-type"></a>Type de retour  
  Retourne une valeur **booléenne**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction **InScope** teste l’étendue de l’instance actuelle d’un élément de rapport pour l’appartenance à l’étendue spécifiée par le paramètre *scope*.  
   
  *Scope* ne peut pas être une expression.  
@@ -65,14 +63,14 @@ InScope(scope)
   
  Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code ci-dessous indique si l'instance actuelle de l'élément se trouve dans l'étendue du groupe, de la région de données ou du dataset `Product` .  
   
 ```  
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

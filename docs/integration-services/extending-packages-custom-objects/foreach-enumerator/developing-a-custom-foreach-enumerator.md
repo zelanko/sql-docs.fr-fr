@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72173ef704d12154cffe3eabcbe09317f1c40c10
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b6629d85f2a92834f848938beac45a7ff5bf0bf6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Développement d'un énumérateur ForEach personnalisé
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des énumérateurs Foreach pour parcourir les éléments d'une collection et effectuer les mêmes tâches pour chaque élément. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers énumérateurs Foreach qui prennent en charge les collections les plus couramment utilisées, telles que tous les fichiers inclus dans un dossier, toutes les tables incluses dans une base de données ou tous les éléments d'une liste stockée dans une variable de package. Si les énumérateurs foreach et les collections fournies ne répondent pas totalement à vos besoins, vous pouvez créer un énumérateur foreach personnalisé.  

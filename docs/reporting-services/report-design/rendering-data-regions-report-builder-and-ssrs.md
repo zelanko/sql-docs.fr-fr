@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83d210b33acb4e3cf3ac93b3f2eaeb47e8c326cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 142d8fe5fcf57b96355a71ff3aeb586a7ccf553e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendu des régions de données (Générateur de rapports et SSRS)
   En plus des comportements de rendu généraux qui s'appliquent à tous les éléments de rapport, les régions de données suivent des comportements de pagination et de rendu supplémentaires. Les règles de rendu spécifiques aux régions de données comprennent la croissance d'une région de données, le rendu de cellules spéciales, telles que la cellule d'angle ou les cellules d'en-tête, le rendu de la lecture de droite à gauche d'une région de données. Cette rubrique présente le rendu des différents composants d'une région de données.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="chart-gauge-and-map-data-regions"></a>Régions de données de graphique, jauge et plan  
  Les régions de données de graphique, jauge et plan se comportent comme des images lorsqu'elles sont rendues et affichées dans le corps du rapport. Les valeurs au sein de la région de données peuvent avoir des actions associées, telles que la liaison à un autre rapport ou l'ouverture d'un signet, et ces actions peuvent également être rendues, si le convertisseur le prend en charge.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

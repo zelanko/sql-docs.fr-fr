@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f105f34e6e5d5c06159c40c8958f097ca5b2512
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd273c3dd52eb3feb0ab4f5db30b4569744e78c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-device-information-settings"></a>Paramètres d'informations de périphérique HTML
 Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu du rapport au format HTML.  
@@ -34,9 +32,9 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
 > [!IMPORTANT]  
 >  Les paramètres d’informations de périphérique répertoriés dans le tableau ci-dessous avec **(\*)** sont déconseillés et ne doivent pas être utilisés dans les nouvelles applications. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|Paramètre|Value|  
+|Paramètre|Valeur|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indique s'il faut effectuer le rendu avec des métadonnées d'accessibilité supplémentaires en vue de l'utilisation d'un lecteur d'écran. Les métadonnées d'accessibilité supplémentaires imposent la mise en conformité du rapport eu égard des normes techniques suivantes décrites dans la section « Intranet Web et Applications et Informations Internet » (1194.22) du document relatif aux normes d'accessibilité dans le domaine de l'électronique et des technologies de l'information (Section 508) :<br /><br /> (g) les en-têtes de ligne et de colonne doivent être identifiés pour les tables de données.<br /><br /> (h) le balisage doit être utilisé pour associer les cellules de données aux cellules d'en-tête pour les tables de données qui ont plusieurs niveaux logiques d'en-têtes de ligne ou de colonne.|  
+|**AccessibleTablix**|Indique s'il faut effectuer le rendu avec des métadonnées d'accessibilité supplémentaires en vue de l'utilisation d'un lecteur d'écran. Les métadonnées d'accessibilité supplémentaires imposent la mise en conformité du rapport eu égard des normes techniques suivantes décrites dans la section « Intranet Web et Applications et Informations Internet » (1194.22) du document relatif aux normes d'accessibilité dans le domaine de l'électronique et des technologies de l'information (Section 508) :<br /><br /> (g) les en-têtes de ligne et de colonne doivent être identifiés pour les tables de données.<br /><br /> (h) le balisage doit être utilisé pour associer les cellules de données aux cellules d'en-tête pour les tables de données qui ont plusieurs niveaux logiques d'en-têtes de ligne ou de colonne.|  
 |**ActionScript(\*)**|Spécifie le nom de la fonction JavaScript à utiliser lorsqu'un événement d'action se produit, tel qu'une extraction ou un clic pour atteindre un signet. Si ce paramètre est spécifié, un événement d'action déclenchera la fonction JavaScript nommée au lieu d'une publication sur le serveur.|  
 |**BookmarkID**|Identificateur du signet à atteindre dans le rapport.|  
 |**DocMap**|Indique s'il faut afficher ou masquer l'Explorateur de documents du rapport. La valeur par défaut de ce paramètre est **true**.|  
@@ -61,7 +59,7 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
 |**Zoom (\*)**|Valeur du zoom du rapport sous forme de pourcentage entier ou de constante de chaîne. Les valeurs de chaîne standard incluent les valeurs **Page Width** et **Whole Page**. Ce paramètre est ignoré par les versions de [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer antérieures à la version 5.0 et par tous les navigateurs non-[!INCLUDE[msCoName](../includes/msconame-md.md)] . La valeur par défaut de ce paramètre est **100**.|  
 |**DataVisualizationFitSizing**|Indique le comportement d'ajustement de la visualisation des données à l'intérieur d'un tableau matriciel. Cela inclut le graphique, la jauge et la carte.<br /><br /> Les valeurs possibles sont **Approximatif** et **Exact**.<br /><br /> La valeur par défaut est **Approximatif**. Si le paramètre est supprimé du fichier **rsreportserver.config** , le comportement par défaut est **Exact**.<br /><br /> L’activation de l’option **Exact** peut avoir un impact sur les performances, car le traitement permettant de déterminer la taille peut prendre plus de temps.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  

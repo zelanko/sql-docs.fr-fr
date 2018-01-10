@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e470d64c425f967b37a42eed2467b925f05ad0e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77666065993e86cbee7fa90beb4865a1562580c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -187,7 +185,7 @@ ms.lasthandoff: 12/05/2017
   
  Un abonnement est supprimé automatiquement lorsque le rapport sous-jacent est supprimé. Si vous supprimez un abonnement lors de son traitement, l'abonnement s'arrête lorsque la suppression intervient avant que l'extension de remise n'ait reçu les données d'abonnement. Dans le cas contraire, le traitement de l'abonnement se poursuit.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

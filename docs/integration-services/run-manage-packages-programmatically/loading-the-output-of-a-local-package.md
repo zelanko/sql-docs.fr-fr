@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58548ba72a81257c14b2db3535fd1131c4983099
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55cab9d27200b6a81979a357f89e3b5f55838978
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
   Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé de cette solution est l’espace de noms **Microsoft.SqlServer.Dts.DtsClient**, qui contient des implémentations spécialisées des interfaces **IDbConnection**, **IDbCommand** et **IDbDataParameter** à partir de l’espace de noms **System.Data**. L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Créez un objet de type **DtsClient.DtsCommand** qui utilise le **DtsConnection** créé auparavant, et affectez à sa propriété **CommandText** le nom de la destination du DataReader dans le package. Appelez ensuite la méthode **ExecuteReader** de l’objet de commande pour charger les résultats du package dans un nouveau DataReader.  
   
-5.  Vous pouvez éventuellement paramétrer indirectement la sortie du package en utilisant la collection d’objets **DtsDataParameter** sur l’objet **DtsCommand** pour passer des valeurs aux variables définies dans le package. Dans le package, vous pouvez utiliser ces variables comme paramètres de requête ou dans des expressions pour affecter les résultats retournés à la destination DataReader. Vous devez définir ces variables dans le package de l’espace de noms **DtsClient** avant de pouvoir les utiliser avec l’objet **DtsDataParameter** d’une application cliente. (Vous pouvez être amené à cliquer sur le bouton de barre d’outils **Choisir les colonnes variables** dans la fenêtre **Variables** pour afficher la colonne **Espace de noms**.) Dans votre code client, quand vous ajoutez **DtsDataParameter** à la collection **Parameters** de **DtsCommand**, omettez la référence à l’espace de noms DtsClient dans le nom de la variable. Exemple :  
+5.  Vous pouvez éventuellement paramétrer indirectement la sortie du package en utilisant la collection d’objets **DtsDataParameter** sur l’objet **DtsCommand** pour passer des valeurs aux variables définies dans le package. Dans le package, vous pouvez utiliser ces variables comme paramètres de requête ou dans des expressions pour affecter les résultats retournés à la destination DataReader. Vous devez définir ces variables dans le package de l’espace de noms **DtsClient** avant de pouvoir les utiliser avec l’objet **DtsDataParameter** d’une application cliente. (Vous pouvez être amené à cliquer sur le bouton de barre d’outils **Choisir les colonnes variables** dans la fenêtre **Variables** pour afficher la colonne **Espace de noms**.) Dans votre code client, quand vous ajoutez **DtsDataParameter** à la collection **Parameters** de **DtsCommand**, omettez la référence à l’espace de noms DtsClient dans le nom de la variable. Exemple :  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
 8.  Fermez le DataReader et les objets de connexion.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant exécute un package qui calcule une valeur d'agrégation unique et qui enregistre cette valeur dans une destination DataReader, puis qui lit cette valeur depuis le DataReader et qui l'affiche dans une zone de texte sur un Windows Form.  
   
  L'utilisation de paramètres n'est pas requise lors du chargement de la sortie d'un package dans une application cliente. Si vous ne souhaitez pas utiliser un paramètre, vous pouvez omettre l’utilisation de la variable dans l’espace de noms **DtsClient**, ainsi que le code qui utilise l’objet **DtsDataParameter**.  
@@ -300,7 +300,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Chargement et exécution d’un package distant par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

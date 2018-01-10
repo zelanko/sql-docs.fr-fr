@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c595b197cab784eb3ccc1ab34257868ecdc9e87
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
 
@@ -56,25 +54,25 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
   
 ## <a name="feature-comparison-of-sharepoint-and-native-mode"></a>Comparaison des fonctionnalités du mode natif et du mode SharePoint
   
-|Fonctionnalité ou composant|Mode natif|Mode SharePoint|  
+|Fonctionnalité ou composant|en mode natif|Mode SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**Adressage URL**|Oui|L'adressage des URL est différent en mode intégré SharePoint. Les URL SharePoint sont utilisées pour référencer des rapports, des modèles de rapport, des sources de données partagées et des ressources. L'arborescence des dossiers du serveur de rapports n'est pas utilisée. Si vous possédez des applications personnalisées qui reposent sur un accès URL pris en charge sur un serveur de rapports en mode natif, ces fonctionnalités ne fonctionneront plus lorsque le serveur de rapports sera configuré pour l'intégration SharePoint.<br /><br /> Pour plus d’informations sur l’accès URL, consultez [Référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md).|  
 |**Extensions de sécurité personnalisées**|Oui|Les extensions de sécurité personnalisées Reporting Services ne peuvent pas être déployées ni utilisées sur le serveur de rapports. Le serveur de rapports inclut une extension de sécurité spécifique qui est utilisée chaque fois que vous configurez un serveur de rapports pour qu'il s'exécute en mode intégré SharePoint. Cette extension de sécurité est un composant interne requis pour le fonctionnement intégré.|  
 |**Gestionnaire de configuration**|Oui|**\*\* Important \*\*** Le gestionnaire de configuration ne peut pas être utilisé pour gérer un serveur de rapports en mode SharePoint. À la place, utilisez l'Administration centrale de SharePoint.|  
 |**Gestionnaire de rapports**|Oui|Le gestionnaire de rapports ne peut pas être utilisé pour gérer le mode SharePoint. Utilisez les pages d'application SharePoint. Pour plus d’informations, consultez [Service Reporting Services SharePoint et applications de service](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Rapports liés**|Oui|Non.|  
-|**Mes rapports**|Oui|Non|  
-|**Mes abonnements** et méthodes de traitement par lot.|Oui|Non|  
-|**Alertes de données**|Non|Oui|  
-|**Power View**|Non|Oui<br /><br /> Requiert Silverlight dans le navigateur client. Pour plus d’informations sur la configuration de navigateur requise, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|**Mes rapports**|Oui|non|  
+|**Mes abonnements** et méthodes de traitement par lot.|Oui|non|  
+|**Alertes de données**|non|Oui|  
+|**Power View**|non|Oui<br /><br /> Requiert Silverlight dans le navigateur client. Pour plus d’informations sur la configuration de navigateur requise, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
 |**Rapports .RDL**|Oui|Oui<br /><br /> Les rapports .RDL peuvent s’exécuter sur des serveurs de rapports Reporting Services en mode natif ou en mode SharePoint.|  
-|**Rapports .RDLX**|Non|Oui<br /><br /> Les rapports .RDLX Power View peuvent s’exécuter uniquement sur des serveurs de rapports Reporting Services en mode SharePoint.|  
-|**Informations d'identification du jeton utilisateur SharePoint pour l'extension de liste SharePoint**|Non|Oui|  
-|**Zones AAM (mappages des accès de substitution) pour les déploiements exposés à Internet**|Non|Oui|  
-|**Sauvegarde et récupération SharePoint**|Non|Oui|  
-|**Prise en charge des journaux ULS**|Non|Oui|  
+|**Rapports .RDLX**|non|Oui<br /><br /> Les rapports .RDLX Power View peuvent s’exécuter uniquement sur des serveurs de rapports Reporting Services en mode SharePoint.|  
+|**Informations d'identification du jeton utilisateur SharePoint pour l'extension de liste SharePoint**|non|Oui|  
+|**Zones AAM (mappages des accès de substitution) pour les déploiements exposés à Internet**|non|Oui|  
+|**Sauvegarde et récupération SharePoint**|non|Oui|  
+|**Prise en charge des journaux ULS**|non|Oui|  
   
-## <a name="native-mode"></a>Mode natif
+## <a name="native-mode"></a>en mode natif
 
  En mode natif, un serveur de rapports est un serveur d'applications autonome qui assure l'ensemble de l'affichage, de la gestion, du traitement et de la remise des rapports et des modèles de rapport. Il s'agit du mode par défaut pour les instances de serveur de rapports. Vous pouvez installer un serveur de rapports en mode natif en le configurant pendant l'installation ou une fois l'installation terminée.  
   
@@ -94,7 +92,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 
  En mode SharePoint, un serveur de rapports doit s'exécuter dans une batterie de serveurs SharePoint. Les fonctionnalités de traitement, de rendu et de gestion du serveur de rapports sont représentées par un serveur d’applications SharePoint exécutant le service partagé Reporting Services SharePoint et une ou plusieurs applications de service Reporting Services. Un site SharePoint fournit l'accès frontal au contenu et aux opérations du serveur de rapports.  
   
- Le mode SharePoint requiert :  
+ Le mode SharePoint requiert :  
   
 -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -106,7 +104,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
   
  ![architecture fonctionnelle SSRS SharePoint](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "architecture fonctionnelle SSRS SharePoint")  
   
-|| Description|  
+||Description|  
 |-|-----------------|  
 |**(1)**|Serveurs Web ou serveurs Web frontaux (WFE). Le complément Reporting Services doit être installé sur chaque serveur web à partir duquel vous souhaitez utiliser les fonctionnalités d’application web, comme l’affichage de rapports ou des pages de gestion Reporting Services pour effectuer des tâches telles que la gestion de sources de données ou des abonnements.|  
 |**(2)**|Ce complément installe les points de terminaison URL et SOAP afin que les clients communiquent avec les serveurs d’applications, via le proxy du service Reporting Services.|  
@@ -127,9 +125,9 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 
  Le serveur de rapports prend en charge les types d'extensions suivants : extensions d'authentification, extensions pour le traitement des données, extensions pour le traitement des rapports, extensions de rendu et extensions de remise. Un serveur de rapports nécessite au moins une extension d'authentification, une extension pour le traitement des données et une extension de rendu. Les extensions de remise et les extensions pour le traitement des rapports personnalisés sont facultatives, mais nécessaires si vous voulez prendre en charge la diffusion des rapports ou les contrôles personnalisés.  
   
- Reporting Services fournit des extensions par défaut afin que vous puissiez utiliser toutes les fonctionnalités de serveur sans avoir à développer des composants personnalisés. Le tableau suivant décrit les extensions par défaut qui contribuent à une instance de serveur de rapports complète avec des fonctions prêtes à utiliser :  
+ Reporting Services fournit des extensions par défaut afin que vous puissiez utiliser toutes les fonctionnalités de serveur sans avoir à développer des composants personnalisés. Le tableau suivant décrit les extensions par défaut qui contribuent à une instance de serveur de rapports complète avec des fonctions prêtes à utiliser :  
   
-|Type|Par défaut|  
+|Type|Valeur par défaut|  
 |----------|-------------|  
 |Authentification|Une instance de serveur de rapports par défaut prend en charge l'authentification Windows, y compris l'emprunt d'identité et les fonctionnalités de délégation si elles sont activées dans votre domaine.|  
 |Traitement des données|Une instance de serveur de rapports par défaut contient des extensions pour le traitement des données pour les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse et ODBC.|  
@@ -160,7 +158,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
 [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
 [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Implémentation d'une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Implémentation d’une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Implémentation d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 

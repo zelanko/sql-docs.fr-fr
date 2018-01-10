@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: "33"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e5be508787d44acd1c3356105cd3bd988b175a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilisation des fichiers de stratégie de sécurité Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stocke les informations de stratégie de sécurité dans trois fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Ces fichiers de configuration peuvent contenir une combinaison de stratégies de sécurité à usage interne et définies par l'utilisateur pour les assemblys de code dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les trois fichiers de configuration correspondent à trois composants sécurisables dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] : le service Windows Report Server, l'application Web du Gestionnaire de rapports et la fenêtre d'aperçu du Concepteur de rapports.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="policy-files-in-reporting-services"></a>Fichiers de stratégie dans Reporting Services  
  Le tableau suivant répertorie les fichiers de configuration de stratégie dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], leurs emplacements (dans une installation par défaut) et leurs fonctions respectives.  
   
-|Nom de fichier|Emplacement (installation par défaut)| Description|  
+|Nom de fichier|Emplacement (installation par défaut)|Description|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Fichier de configuration de stratégie du serveur de rapports. Ces stratégies de sécurité affectent principalement les expressions de rapport et les assemblys personnalisés, une fois qu'un rapport est déployé sur un serveur de rapports. Ce fichier de stratégie affecte également les extensions personnalisées en matière de données, de remise, de rendu et de sécurité, qui sont déployées sur le serveur de rapports.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Fichier de configuration de stratégie du Gestionnaire de rapports. Ces stratégies de sécurité affectent tous les assemblys qui étendent le Gestionnaire de rapports, par exemple les extensions d'interface utilisateur d'abonnement pour une remise personnalisée.|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  Les groupes de codes supplémentaires peuvent être ajoutés les uns à la suite des autres.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des stratégies de sécurité](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
   
   

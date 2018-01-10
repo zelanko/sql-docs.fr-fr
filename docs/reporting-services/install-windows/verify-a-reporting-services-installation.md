@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +21,17 @@ helpviewer_keywords:
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3bc0a3f5b33e73a14fd7d4c78a412d6dd36c89f3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b7135112da1536af6b279b8f0de55bfcb646e4b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="verify-a-reporting-services-installation"></a>Vérifier une installation de Reporting Services
+# <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés au choix dans l'un des deux modes, natif ou SharePoint. Les étapes que vous devez suivre pour vérifier l'installation dépendent du mode de serveur de rapports.  
   
 ##  <a name="bkmk_sharepointmode"></a> Vérifiez l'installation en mode SharePoint  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Si vous avez installé des exemples de rapports, ouvrez les exemples de fichiers de projet de rapport et publiez les rapports sur un serveur de rapport.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
  [Cause et résolution des erreurs Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   

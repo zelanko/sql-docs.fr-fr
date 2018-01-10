@@ -8,22 +8,22 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7a38071816dbd945ce1b18336feedc28c5d91e73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395ec440e3cae0ac4013edc9c35af36e32a73d0c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-report-builder"></a>Installer le Générateur de rapports
+# <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] est une application autonome installée sur votre ordinateur par vos propres soins ou par un administrateur. Vous pouvez l’installer à partir du Centre de téléchargement Microsoft, d’un serveur de rapport [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] le serveur de rapports ou d’un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Un administrateur installe et configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], accorde l’autorisation de télécharger l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du portail web, et gère les dossiers et les autorisations d’accès aux rapports, les parties des rapports et les datasets partagés enregistrés sur le serveur de rapports. Pour plus d’informations sur l’administration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Reporting Services Report Server &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -110,7 +110,7 @@ ms.lasthandoff: 12/05/2017
   
      Si le serveur de rapports ne figure pas dans la liste des serveurs existants, fermez la boîte de dialogue **Ouvrir un rapport** , puis cliquez sur **Se connecter** en bas de l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] pour vous connecter au serveur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   
  [Désinstaller le générateur de rapports](../../reporting-services/install-windows/uninstall-report-builder.md)  
   

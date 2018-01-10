@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b708125e0e6a15c22e7baee4ef4aba0f2c193624
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac89e662415b74bab2003af1462453ad96b369b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
   Les extensions de remise fournissent leurs informations de configuration sous la forme d'un fichier de configuration XML. Le fichier XML est conforme au schéma XML défini pour les extensions de remise. Les extensions de remise fournissent l'infrastructure nécessaire pour définir et modifier le fichier de configuration.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  Le tableau suivant décrit les attributs de l’élément **Extension** pour les extensions de remise.  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**Nom**|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |**Type**|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
@@ -100,7 +98,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Vous pouvez vérifier que votre extension de remise a été correctement déployée sur le serveur de rapports en utilisant la méthode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> du service Web. Vous pouvez également ouvrir le portail web et vérifier que votre extension est effectivement répertoriée dans la liste des extensions de remise disponibles pour un abonnement. Pour plus d’informations sur le portail web et les abonnements, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Implémentation d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

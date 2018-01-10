@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f444ed7b1c875ed523a690d0a13629a1b190f381
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd6fcd0875993612dba6d8f787ba2d13df87d7f6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
   Bien que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puisse utiliser toute la mémoire disponible, vous pouvez substituer le comportement par défaut en configurant une limite supérieure pour la quantité totale des ressources de mémoire allouées aux applications serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez également définir des seuils qui obligent le serveur de rapports à modifier son mode de traitement des requêtes et leur classement par ordre de priorité, selon que la sollicitation de la mémoire est faible, moyenne ou élevée. Face à de faibles niveaux de sollicitation de la mémoire, le serveur de rapports répond en donnant une priorité légèrement supérieure au traitement de rapport interactif ou à la demande. Face à des niveaux élevés de sollicitation de la mémoire, le serveur de rapports utilise plusieurs techniques pour rester opérationnel en utilisant les ressources limitées dont il dispose.  
@@ -97,8 +95,8 @@ ms.lasthandoff: 12/05/2017
 #### <a name="about-aspnet-memory-configuration-settings"></a>À propos des paramètres de configuration de la mémoire ASP.NET  
  Bien que le service web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , aucune d’entre elles ne répond aux paramètres de configuration de la mémoire spécifiés dans la section **processModel** de machine.config pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] qui s’exécutent en mode de compatibilité IIS 5.0. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a> Voir aussi  
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Domaines d’application pour des applications du serveur de rapports](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  

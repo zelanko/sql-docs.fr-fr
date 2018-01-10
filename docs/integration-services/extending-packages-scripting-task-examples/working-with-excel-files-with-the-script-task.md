@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb50dc174d4a1763416b4ccc313db56f26a5b1b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8793d258c8328c59e6901e38455fd389dca5de1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles. Ces exemples peuvent être modifiés facilement afin d'utiliser l'une des autres sources de données basées sur des fichiers prises en charge par le fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -547,7 +547,7 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   

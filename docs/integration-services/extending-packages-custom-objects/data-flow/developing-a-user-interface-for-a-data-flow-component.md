@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d087ffe2ecbf3cc136950fb7069f32c926582554
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Développement d'une interface utilisateur pour un composant de flux de données
   Les développeurs de composants peuvent fournir une interface utilisateur personnalisée pour un composant. Cette interface s'affiche dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] lors de la modification du composant. Grâce à l'implémentation d'une interface utilisateur personnalisée, vous êtes averti lorsque le composant est ajouté ou supprimé d'une tâche de flux de données, et lorsque de l'aide est demandée pour le composant.  
@@ -96,7 +96,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Utilisation des services du concepteur SSIS  
  Le paramètre **IServiceProvider** de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fournit l’accès aux services suivants du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] :  
   
-|Service| Description|  
+|Service|Description|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Permet de déterminer si le composant a été généré dans le cadre d'une opération copier/coller ou couper/coller.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Permet d'accéder aux connexions existantes ou de créer des connexions dans le package.|  
@@ -288,7 +288,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b91a57a70fd258f71e687f18654e6445892c2657
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99dbf2e386831ec182c9c3c98680388fdb122314
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Mise en forme des lignes, couleurs et images (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous donne la possibilité de mettre en forme des lignes, des couleurs, des régions de données, des images ainsi que d'autres éléments de rapport.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
  Vous pouvez également ajouter des images telles que des logos à l'arrière-plan de votre rapport, à un rectangle, une zone de texte, un tableau, une matrice ou toute partie d'un graphique, ainsi qu'aux sections de corps et de page d'un rapport. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   

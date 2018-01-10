@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Reporting Services, report creation
@@ -18,13 +16,13 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Rapports Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les rapports paginés sont des définitions de rapport XML qui incluent des données de rapport et des éléments de disposition du rapport. Sur un système de fichiers client, les définitions de rapport portent l'extension de fichier .rdl. Une fois publié, un rapport paginé correspond à un élément de rapport stocké sur le serveur de rapports ou le site SharePoint. Les rapports paginés constituent une partie de la plateforme de création de rapports sur le serveur fourni par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez également [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -86,11 +84,11 @@ ms.lasthandoff: 12/05/2017
   
     -   **Choisissez les données à utiliser à partir de chaque source.** Pour chaque source de données, définissez les datasets de rapport. Chaque dataset inclut une requête pour spécifier les données à utiliser. Si vous avez des paramètres de rapport, définissez un dataset pour remplir une liste de valeurs disponibles pour chaque paramètre. Pour plus d’informations, consultez [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) et [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Choisissez une visualisation des données.** Pour chaque dataset, sélectionnez la région de données à utiliser pour l'affichage des données. Choisissez dans la liste de tables, graphiques, jauges et cartes. Pour plus d'informations, consultez les rubriques suivantes :  
+    -   **Choisissez une visualisation des données.** Pour chaque dataset, sélectionnez la région de données à utiliser pour l'affichage des données. Choisissez dans la liste de tables, graphiques, jauges et cartes. Pour plus d'informations, consultez les rubriques suivantes :  
   
         -   [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [Graphiques (Générateur de rapports et SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -100,7 +98,7 @@ ms.lasthandoff: 12/05/2017
   
         -   [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personnalisez les données et la mise en page.** Concevez la mise en page du rapport. Une définition de rapport comporte un corps de rapport, des sources de données, des datasets, des régions de données, des zones de texte, des lignes et des images. Les rectangles sont utilisés comme conteneurs pour la mise en page ainsi que les éléments visuels. Personnalisez chaque région de données en écrivant des expressions pour contrôler le filtrage, le regroupement, le tri, le format et l'affichage des données. Ajoutez les noms de rapport, les emplacements, et d'autres informations d'identification qui permettent de gérer des dizaines ou des centaines de rapports. Ajoutez conteneurs et des éléments visuels pour organiser les éléments de mise en page sur la page. Pour plus d'informations, consultez les rubriques suivantes :  
+    -   **Personnalisez les données et la mise en page.** Concevez la mise en page du rapport. Une définition de rapport comporte un corps de rapport, des sources de données, des datasets, des régions de données, des zones de texte, des lignes et des images. Les rectangles sont utilisés comme conteneurs pour la mise en page ainsi que les éléments visuels. Personnalisez chaque région de données en écrivant des expressions pour contrôler le filtrage, le regroupement, le tri, le format et l'affichage des données. Ajoutez les noms de rapport, les emplacements, et d'autres informations d'identification qui permettent de gérer des dizaines ou des centaines de rapports. Ajoutez conteneurs et des éléments visuels pour organiser les éléments de mise en page sur la page. Pour plus d'informations, consultez les rubriques suivantes :  
   
         -   [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="create-notifications-based-on-report-data"></a>Créer des notifications en fonction de données de rapport  
  Vous pouvez créer des alertes de données pour les rapports publiés sur un site SharePoint. Les alertes de données sont basées sur les flux de données des régions de données dans le rapport. Par défaut, les régions de données sont nommées automatiquement. Les auteurs de rapport peuvent faciliter la création d'alertes de données dans leurs rapports en nommant les régions de données en fonction de leur objectif métier. Si vous créez une alerte de données, vous êtes averti par message électronique lorsque les données remplissent les critères que vous spécifiez. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Créer une alerte de données dans le Concepteur d’alertes](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) et [Alertes de données Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## <a name="upgrade-reports"></a>Rapports de mise à niveau  
+## <a name="upgrade-reports"></a>Mettre à niveau des rapports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge plusieurs versions des définitions de rapports, serveurs de rapports et sites SharePoint. Pour mettre à niveau un rapport :  
   
 -   Mettez à niveau une installation du serveur de rapports. Les rapports compilés stockés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation. La définition de rapport (.rdl) n'est pas modifiée. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -182,7 +180,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Déterminez où vous pouvez rechercher plus d'informations.** Par exemple, pour la création de rapports qui inclut des expressions, l'outil Concepteur de rapports fournit plus d'informations sur les problèmes d'évaluation d'expression que l'outil Générateur de rapports. Pour les erreurs de traitement des rapports, les fichiers journaux contiennent des informations détaillées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

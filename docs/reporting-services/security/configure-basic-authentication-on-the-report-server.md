@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 2972097a7cc52ee5c73ec05d684de19b56cd1fd6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-basic-authentication-on-the-report-server"></a>Configurer une authentification de base sur le serveur de rapports
+# <a name="configure-basic-authentication-on-the-report-server"></a>Configurer l’authentification de base sur le serveur de rapports
   Par défaut, Reporting Services accepte les demandes qui spécifient l'authentification Negotiate et NTLM. Si votre déploiement inclut des applications clientes ou des navigateurs qui utilisent l'authentification de base, vous devez l'ajouter à la liste des types pris en charge. De plus, si vous voulez utiliser le Générateur de rapports, vous devez activer l'accès anonyme aux fichiers Générateur de rapports.  
   
  Pour configurer l'authentification de base sur le serveur de rapports, modifiez les éléments et les valeurs XML dans le fichier RSReportServer.config. Vous pouvez copier et coller les exemples de cette rubrique pour remplacer les valeurs par défaut.  
@@ -95,7 +93,7 @@ ms.lasthandoff: 12/05/2017
 |Realm|Ce paramètre est facultatif|Spécifie une partition de ressource qui inclut les fonctionnalités d'autorisation et d'authentification permettant de contrôler l'accès aux ressources protégées de votre organisation.|  
 |DefaultDomain|Ce paramètre est facultatif|Spécifie le domaine utilisé par le serveur pour authentifier l'utilisateur. Cette valeur est facultative, mais si vous l'omettez, le serveur de rapports utilise le nom d'ordinateur comme domaine. Si l'ordinateur est membre du domaine, ce domaine est le domaine par défaut. Si vous avez installé le serveur de rapports sur un contrôleur de domaine, le domaine utilisé est celui contrôlé par l'ordinateur.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Domaines d'application des applications du serveur de rapports](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
  [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   

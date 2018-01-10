@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d08c5ede8ad95a151dc5a4d0e721d386490f3fa0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4a59e7381ed6df7fbc9be2d8e8f82224f75f9ef7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Ajouter un signet à un rapport (Générateur de rapports et SSRS)
   Ajoutez des signets et des liens de signet à un rapport lorsque vous souhaitez fournir une table des matières personnalisée ou des liens de navigation interne personnalisés dans le rapport. En général, vous ajoutez des signets aux emplacements du rapport où vous souhaitez amener les utilisateurs, comme les tables ou graphiques, ou les valeurs de groupe uniques qui figurent dans une table ou une matrice. Vous pouvez créer vos propres chaînes à utiliser en tant que signets, ou, pour les groupes, vous pouvez définir le signet sur l'expression de groupe.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  Pour tester le lien, cliquez sur **Exécuter** afin d'afficher l'aperçu du rapport, puis cliquez sur l'élément de rapport sur lequel vous avez défini ce lien.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

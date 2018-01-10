@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1ed5030c4f649cea359d7ac14df67ecc0e4426
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9137df08bf09842a0ab5d85b9af2a73f48f52639
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Rapports d'extraction (Générateur de rapports et SSRS)
   Un rapport d'extraction est un rapport que l'utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Par exemple, dans cette illustration, le rapport de synthèse des ventes répertorie les commandes client et les totaux. Lorsque l'utilisateur clique sur un numéro de commande dans la liste de résumé, un autre rapport s'affiche pour présenter des informations sur la commande en question.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="viewing-a-drillthrough-report"></a>Affichage d'un rapport d'extraction  
  Pour afficher un rapport de résumé doté de liens d'extraction après sa publication, vous devez vérifier que les rapports d'extraction résident sur le même serveur de rapports que le rapport de résumé. Dans tous les cas, l'utilisateur doit être autorisé à consulter le rapport d'extraction.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

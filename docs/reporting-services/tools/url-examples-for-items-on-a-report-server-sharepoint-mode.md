@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint)
   Pour publier des rapports et des éléments associés dans une bibliothèque SharePoint, vous pouvez soit publier le contenu à l’aide des outils de création de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tels que le Concepteur de rapports, soit télécharger le contenu à l’aide des actions de site SharePoint.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  Les éléments répertoriés ci-dessous de l'arborescence Web peuvent être utilisés pour accéder au contenu du serveur de rapports et pour sécuriser ce contenu. Les autres objets, tels que les listes et les pages, ne sont pas utilisés pour accéder au contenu du serveur de rapports et ne sont par conséquent pas décrits dans le tableau suivant.  
   
-|Objet|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |Application web SharePoint|Une application web SharePoint peut être installée comme serveur autonome ou dans une batterie de serveurs contenant une collection de serveurs virtuels. Une application web possède une URL (par exemple, `http:*//servername*`) et peut contenir plusieurs sites.|  
 |Site|Un site peut être un site parent d'une application web ou un sous-site.|  
@@ -142,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
  Lorsqu'un serveur de rapports s'exécute en mode intégré SharePoint, le concept de ressource présente une définition moins large. Le serveur de rapports conserve le concept de ressource pour le stockage des rapports qui font référence à une image externe. Cela s'applique si le rapport est un instantané ou une copie conservée pour un usage interne.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [publier un rapport dans une bibliothèque SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publier une source de données partagée sur une bibliothèque SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Pages de propriétés du projet, boîte de dialogue](../../reporting-services/tools/project-property-pages-dialog-box.md)  

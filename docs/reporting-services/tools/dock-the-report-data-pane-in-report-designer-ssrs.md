@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6b573f7c3020ee1206f01b3c66a9c47941335bc1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7300a2cd51617c29aae8c78b1b7780a1a2f1c92f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS)
   Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le volet des données de rapport affiche une vue hiérarchique des objets de données que vous pouvez utiliser dans un rapport, y compris les sources de données, datasets, champs, paramètres et images. Les sources de données dans cette vue peuvent être incorporées ou représenter des références aux sources de données partagées affichées dans l'Explorateur de solutions.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
      Pour basculer entre les deux derniers états d'affichage, double-cliquez sur la barre de titre du volet Données du rapport.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Données du rapport, volet](../../reporting-services/report-data/report-data-pane.md)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d55e5842ec6a9e62ec75095c68e59d4df86eec36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Chargement et exécution d'un package local par programme
   Vous pouvez exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] selon les besoins ou à des moments prédéterminés à l’aide des méthodes décrites dans [Exécution de packages](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Toutefois, quelques lignes de code vous suffisent pour exécuter également un package à partir d'une application personnalisée, telle qu'une application Windows Forms, une application console, un ASP.NET Web Form, un service Web ASP.NET ou un service Windows.  
@@ -229,7 +229,7 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Chargement et exécution d’un package distant par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

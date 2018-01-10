@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 706d719a813508541f3eda5df4045937a3af4643
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00cf7478716df5e790c54708f9b1c66a6004bdd0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Ajouter un rectangle ou un conteneur (Générateur de rapports et SSRS)
   Ajoutez un rectangle à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quand vous souhaitez qu’un élément graphique sépare des zones du rapport, mette en évidence des zones d’un rapport ou constitue un arrière-plan pour un ou plusieurs éléments du rapport. Les rectangles sont également utilisés comme conteneurs qui aident à contrôler la façon dont les régions de données sont rendues dans un rapport. Vous pouvez personnaliser l'apparence d'un rectangle en modifiant ses propriétés, telles que les couleurs d'arrière-plan et de bordure. Pour plus d’informations sur l’utilisation d’un rectangle comme conteneur, consultez [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) et [Afficher les mêmes données dans une matrice et sur un graphique &#40;Générateur de rapports&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]    
     >  Si vous affectez au style de ligne la valeur **Double** et que la largeur de ligne est de 1½ pt ou plus étroite, il est possible que la ligne n’apparaisse pas en double quand vous exécutez le rapport dans le Générateur de rapports, dans le Concepteur de rapports ou dans le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Elle apparaît en double quand vous exportez le rapport à d’autres formats, comme Microsoft Word et Acrobat PDF.    
     
-## <a name="see-also"></a>Voir aussi    
+## <a name="see-also"></a> Voir aussi    
  [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)    
     

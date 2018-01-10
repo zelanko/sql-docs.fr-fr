@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85b1c63c9b6ab18018b9d31143ab53503ad64ae1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 
@@ -349,7 +349,7 @@ Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l
   
 #### <a name="to-create-the-main-report"></a>Pour créer le rapport principal  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -390,7 +390,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-12. Pour vérifier que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
+12. Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -689,6 +689,6 @@ Exécutez le rapport principal, puis cliquez sur des valeurs dans la colonne de 
   
 5.  Explorez éventuellement les autres catégories de produits en cliquant sur leur nom.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
   

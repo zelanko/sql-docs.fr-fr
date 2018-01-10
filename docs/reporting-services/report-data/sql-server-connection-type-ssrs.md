@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f3640a9656e5543b98b4c4c85a704fc0a96065a3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7d53c67b2a0f40cefcc01d1b1ab31d39ccb2f9d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Type de connexion SQL Server (SSRS)
   Pour inclure des données d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de la version actuelle et des versions antérieures des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -134,13 +132,13 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- Les paramètres de rapport sont créés avec des valeurs de propriétés par défaut que vous devrez peut-être modifier. Par exemple :  
+ Les paramètres de rapport sont créés avec des valeurs de propriétés par défaut que vous devrez peut-être modifier. Exemple :  
   
 -   Par défaut, chaque paramètre de rapport a le type de données **Texte**. Si les données sous-jacentes ont un autre type de données, vous devez modifier le type de données du paramètre.  
   
 -   Si vous sélectionnez l’option pour des paramètres à valeurs multiples, vous devez modifier manuellement la requête pour tester si les valeurs font partie d’un jeu en utilisant l’opérateur **IN** , par exemple, `WHERE EmployeeID IN (@EmpID)`.  
   
- Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Remarks"></a> Notes  
@@ -179,7 +177,7 @@ WHERE EmployeeID = (@EmpID)
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

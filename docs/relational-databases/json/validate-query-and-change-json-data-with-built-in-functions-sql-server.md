@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -20,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3a398f0ab3fec7da5ef914fe1a94f949bc71942
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 737ed53b4c69a797a11b38c59a4939c244af7b98
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Valider, interroger et modifier les données JSON avec des fonctions intégrées (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ Dans cet exemple de texte JSON, les membres de données « a » et « c » sont 
 |**$**|NULL ou erreur|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL ou erreur|  
 |**$.b**|NULL ou erreur|[1,2]|  
-|**$.b[0]**|1|NULL ou erreur|  
+|**$.b[0]**| 1|NULL ou erreur|  
 |**$.c**|hi|NULL ou erreur|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Tester JSON_VALUE et JSON_QUERY avec la base de données exemple AdventureWorks  
@@ -173,7 +172,7 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   
  [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)   
  [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)   

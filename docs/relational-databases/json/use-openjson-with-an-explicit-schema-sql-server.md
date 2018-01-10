@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 864e6daaef42f78696b5e77eeac3b97352dbef99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87225090442520d657b71e831844468b3a2dfd94
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Utilisation d’OPENJSON avec un schéma explicite (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ DECLARE @json NVARCHAR(MAX) = '{
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   

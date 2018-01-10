@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e35f1d74cf6df3c3a37b8f03765f96ae2c6d7f65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0953ed8f708232e9527c2b760c9784ef76edd5c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enabling-logging-programmatically"></a>Activation de la journalisation par programme
   Le moteur d'exécution fournit une collection d'objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> qui permettent la capture d'informations spécifiques à un événement au cours de la validation et de l'exécution de package. Les objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sont disponibles pour les objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, y compris les objets <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> et <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La journalisation est activée sur des conteneurs individuels, ou sur l'ensemble du package.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau suivant répertorie les modules fournisseurs d'informations disponibles, leur description et leurs informations <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
-|Fournisseur| Description|Propriété ConfigString|  
+|Fournisseur|Description|Propriété ConfigString|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Génère des traces SQL qui peuvent être capturées et affichées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. L'extension de nom de fichier par défaut de ce fournisseur est .trc.|Aucune configuration n'est requise.|  
 |SQL Server|Écrit les entrées du journal des événements dans la table **sysssislog** de toute base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que la connexion à la base de données soit spécifiée, ainsi que le nom de la base de données cible.|  
@@ -121,7 +121,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

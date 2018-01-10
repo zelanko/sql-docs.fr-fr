@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23da9a0f983e78dee10e2e1d0b1a2bde28c9c503
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 242fbc404f49f41c1051a900144a7a61e46d3714
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions"></a>Tâches et autorisations
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les *tâches* correspondent aux actions qu’un utilisateur ou un administrateur peut effectuer. Les tâches sont prédéfinies. Vous ne pouvez pas créer de tâches personnalisées ou modifier celles qui sont fournies, par programme ou à l'aide d'un outil. Il en existe vingt cinq en tout. Ces tâches comprennent l'ensemble des opérations disponibles dans la sécurité basée sur l'attribution de rôles. Parmi ces tâches, citons par exemple « Afficher les rapports », « Gérer les rapports » et « Gérer les propriétés du serveur de rapports ».  
@@ -51,7 +49,7 @@ Diagramme Autorisations et tâches
 |[Tâches au niveau élément](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Actions qui sont effectuées sur des éléments gérés par un serveur de rapports, tels que les dossiers, les rapports, les modèles de rapports et les ressources.<br /><br /> Les tâches au niveau élément sont limitées à l'espace de noms de dossier du serveur de rapports. Tous les éléments auxquels vous accédez par le biais des dossiers sur un serveur de rapports ou par le biais de liens URL sont sécurisés par des attributions de rôles comprenant des tâches au niveau élément.|  
 |[Tâches au niveau système](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Actions qui sont effectuées au niveau du système, telles que la gestion des travaux ou des planifications partagées pouvant être utilisées avec de nombreux éléments. Les tâches au niveau système sont limitées en dehors de l'espace de noms de dossier du serveur de rapports.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Définitions de rôles](../../reporting-services/security/role-definitions.md)   
  [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

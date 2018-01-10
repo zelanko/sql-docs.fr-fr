@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddd945cd1ccd0ce85082c9d4a2a4d05a6eac626c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c73f9685bd5f340376d95191730fecaf7e54dbf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service Reporting Services SharePoint
 
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
 |Paramètre|Commentaires|  
 |-------------|--------------|  
-|Délai d'expiration de session|La valeur par défaut est 600 secondes.|  
+|Délai d'expiration de session|La valeur par défaut est 600 secondes.|  
 |Utiliser des cookies de session|La valeur par défaut est TRUE.|  
 |Délai d'attente de rapport d'EDLX|La valeur par défaut est 1800 secondes.|  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
 |Paramètre|Commentaires|  
 |-------------|--------------|  
 |Activer la journalisation des exécutions|La valeur par défaut est TRUE.<br /><br /> Vous pouvez spécifier si le serveur de rapports génère des journaux de traces et le nombre de jours pendant lesquels ces journaux sont conservés. . Les journaux sont stockés sur l'ordinateur serveur de rapports dans le dossier \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Un nouveau fichier journal est démarré chaque fois que le service est démarré. Pour plus d'informations sur les fichiers journaux, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|Nombre de jours de conservation dans le journal des exécutions|La valeur par défaut est 60 jours.|  
+|Nombre de jours de conservation dans le journal des exécutions|La valeur par défaut est 60 jours.|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge la journalisation ULS SharePoint.  Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
@@ -179,7 +177,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
 ## <a name="provision-subscriptions-and-alerts"></a>Configurer les abonnements et les alertes
 
- Utilisez cette page pour vérifier si SQL Server Agent s'exécute et pour mettre en service un accès permettant à Reporting Services de l'utiliser. SQL Server Agent est requis pour les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les planifications et les alertes de données. [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
+ Utilisez cette page pour vérifier si SQL Server Agent s'exécute et pour mettre en service un accès permettant à Reporting Services de l'utiliser. SQL Server Agent est requis pour les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les planifications et les alertes de données. [Approvisionner les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
 ## <a name="proxy-association"></a>Association de proxy
 

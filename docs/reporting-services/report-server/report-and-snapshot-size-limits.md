@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d433a0ea0b586929858ca4fe83fcf1a48274f59e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9498eab0fb3117567aab18207f3a207fd0410c2c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  
@@ -87,7 +85,7 @@ EXEC sp_spaceused
   
  La quantité d'instantanés qui est stockée dans une base de données de serveur de rapports n'est pas, en soi, un facteur de performances. Vous pouvez stocker un grand nombre d'instantanés sans aucune incidence sur les performances. Vous pouvez conserver les instantanés indéfiniment. Sachez cependant que l'historique de rapport est configurable. Si un administrateur de serveur de rapports abaisse la limite de l'historique de rapport, vous risquez de perdre des rapports que vous comptiez garder. Si vous supprimez le rapport, tout l'historique est également supprimé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Traiter les rapports volumineux](../../reporting-services/report-server/process-large-reports.md)  

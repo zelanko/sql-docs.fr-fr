@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63d4542741f790f2f4bc78750ded7ee54d05a83e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77b2487bf741c7be1a232aaefa4396b17a1ba897
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une échelle de jauge correspond à la plage de nombres, limités par une valeur minimale et une valeur maximale, indiqués sur une jauge. En général, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge. Une échelle de jauge est la plupart du temps associée à un ou plusieurs pointeurs de jauge. Plusieurs échelles sont possibles sur une même jauge.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Rayon de l’échelle par rapport à diamètre de la jauge](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Rayon de l’échelle par rapport au diamètre de la jauge")  
   
- L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
+ L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
   
  L'angle de balayage correspond au nombre de degrés, entre 0 et 360, que l'échelle balaiera dans un cercle. Avec un angle de balayage de 360 degrés, une échelle représente un cercle complet. Cela peut s'avérer utile si vous souhaitez concevoir une jauge ressemblant à une horloge.  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
 -   1 % de la plus petite valeur de la hauteur ou de la largeur de la jauge sur une jauge linéaire.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

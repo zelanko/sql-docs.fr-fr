@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff227bcee9f504a6d363513ac647ee9845701849
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb8a4c575fd2dd6eea33ca875f0b54a999791d26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensions pour le traitement des données et fournisseurs de données .NET Framework (SSRS)
   Une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est un composant installé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et chargé de récupérer des données à partir d’un type spécifique de source de données, et de fournir des fonctionnalités supplémentaires de prise en charge de la conception et du traitement des rapports. Une extension pour le traitement des données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] est un composant disponible dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou des sources tierces qui prend en charge des interfaces <xref:System.Data> qui vous permettent de récupérer et de modifier des données à partir d’un type spécifique de source de données.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Vous devez installer et inscrire un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ou une extension pour le traitement des données personnalisée avant de pouvoir les utiliser pour accéder à des données à partir d'une source de données. L'extension pour le traitement des données doit être installée et inscrite à la fois sur le client de création de rapports pour créer le rapport et sur le serveur de rapports pour afficher le rapport publié. Tous les fournisseurs de données ne sont pas conçus pour fonctionner dans un environnement serveur. Pour plus d’informations, consultez [Inscrire un fournisseur de données .NET Framework standard &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) et [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d'ensemble des extensions pour le traitement des données](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

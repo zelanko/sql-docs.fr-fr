@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 caps.latest.revision: "64"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 173fd67cb30e98ab254e5cf0504bcf737b4d5955
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 14ff9f92d3582bbad4af7d3252d2e2ae6ce170bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Type de connexion Analysis Services pour DMX (SSRS)
   Quand vous créez un dataset à l’aide d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , le Concepteur de rapports affiche le Concepteur de requêtes MDX (Multidimensional Expression) s’il détecte un cube valide. Si aucun cube n'est détecté, mais qu'un modèle d'exploration de données est disponible, le Concepteur de rapports affiche le Concepteur de requêtes DMX (Data Mining Extensions). Pour basculer entre les concepteurs MDX et DMX, cliquez sur le bouton **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers la vue langage de requête DMX")) dans la barre d’outils. Utilisez le Concepteur de requêtes DMX pour créer de manière interactive une requête DMX à l'aide d'éléments graphiques. Pour utiliser le Concepteur de requêtes DMX, la source de données que vous spécifiez doit déjà avoir un modèle d'exploration de données qui fournit les données. Les résultats de requête sont convertis en un jeu de lignes à deux dimensions qui sera utilisé dans le rapport.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’informations sur la façon de gérer la relation entre les paramètres de rapport et les paramètres de requête, consultez [Associer un paramètre de requête à un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). Pour plus d’informations sur les paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

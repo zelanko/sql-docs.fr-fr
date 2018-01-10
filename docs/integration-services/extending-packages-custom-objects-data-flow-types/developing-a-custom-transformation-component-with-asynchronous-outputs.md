@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7583fa59dc2696a38fc69a76a0b66c27e6b3b919
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Développement d'un composant de transformation personnalisé à sorties asynchrones
   Vous utilisez un composant à sorties asynchrones lorsqu'une transformation ne peut pas extraire de lignes tant que le composant n'a pas reçu toutes ses lignes d'entrée, ou lorsqu'une transformation ne génère pas exactement une ligne de sortie pour chaque ligne reçue en tant qu'entrée. La transformation d'agrégation, par exemple, ne peut pas calculer une somme de lignes tant qu'elle n'a pas lu toutes les lignes. Par opposition, vous pouvez utiliser un composant à sorties synchrones lorsque vous modifiez chaque ligne de données au moment de leur transfert. Vous pouvez modifier les données de chaque ligne en place ou créer une ou plusieurs colonnes, chacune contenant une valeur pour chaque ligne d'entrée. Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -325,7 +325,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Développement d’un composant de transformation personnalisé à sorties synchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

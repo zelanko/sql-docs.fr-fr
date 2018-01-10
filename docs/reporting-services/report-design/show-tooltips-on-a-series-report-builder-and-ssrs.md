@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3244afa1caf23e6c60410419c48d8fa4d8876a42
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d2e0640a2712cb6880fbae2d5d9e043957df1d4b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Afficher des info-bulles dans une série (Générateur de rapports et SSRS)
   Vous pouvez ajouter une info-bulle à chaque point de données sur la série d’un graphique pour afficher des informations en rapport avec le point de données, par exemple le nom du groupe, la valeur du point de données ou le pourcentage du point de données par rapport au total de la série. Quand les utilisateurs placent le pointeur sur le point de données dans un rapport paginé rendu, ils voient ces informations.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Cliquez sur **Données de la série** puis, pour la propriété **ToolTip** , tapez une chaîne ou une expression. Vous pouvez utiliser n'importe quel mot clé spécifique au graphique pour représenter un autre élément sur le graphique. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

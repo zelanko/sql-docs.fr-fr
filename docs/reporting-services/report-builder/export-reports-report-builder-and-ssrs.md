@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10437"
@@ -18,13 +16,13 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: be5b29f8f01eaaee1f1ea225ec47c0665762984f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exporter des rapports (Générateur de rapports et SSRS)
 
@@ -124,11 +122,11 @@ ms.lasthandoff: 12/05/2017
 |Format|Type d'extension de rendu|Description|  
 |------------|------------------------------|-----------------|  
 |Fichier Acrobat (PDF)|Saut de page manuel|L'extension de rendu PDF présente les rapports sous forme de fichiers s'affichant dans des visionneuses comme Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et version ultérieure, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 6 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier PDF](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|Données|L'extension de rendu Atom génère des flux conformes à Atom à partir des rapports. Les flux de données peuvent être lus et échangés avec des applications, comme Power Pivot ou Power BI, qui utilisent des flux de données conformes à Atom.<br /><br /> La sortie est un document de service Atom qui répertorie les flux disponibles à partir d'un rapport. Au moins un flux est créé pour chaque région de données dans un rapport. Selon le type de région de données et les données affichées par cette région, plusieurs flux peuvent être générés.<br /><br /> Pour plus d’informations, consultez [Génération de flux de données à partir de rapports](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|Données|L'extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports sous la forme d'une représentation aplatie des données d'un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier PDF](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
-|EXCELOPENXML|Saut de page conditionnelle|Affiché avec la mention « Excel » dans les menus d’exportation lors de la consultation de rapports. L’extension de rendu Excel affiche un rapport au format Excel (.xslx) compatible avec [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Pour plus d’informations, consultez [Exportation vers Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Atom|data|L'extension de rendu Atom génère des flux conformes à Atom à partir des rapports. Les flux de données peuvent être lus et échangés avec des applications, comme Power Pivot ou Power BI, qui utilisent des flux de données conformes à Atom.<br /><br /> La sortie est un document de service Atom qui répertorie les flux disponibles à partir d'un rapport. Au moins un flux est créé pour chaque région de données dans un rapport. Selon le type de région de données et les données affichées par cette région, plusieurs flux peuvent être générés.<br /><br /> Pour plus d’informations, consultez [Génération de flux de données à partir de rapports](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|data|L'extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports sous la forme d'une représentation aplatie des données d'un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier PDF](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|EXCELOPENXML|Saut de page conditionnelle|Affiché avec la mention « Excel » dans les menus d’exportation lors de la consultation de rapports. L’extension de rendu Excel affiche un rapport au format Excel (.xslx) compatible avec [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Pour plus d’informations, consultez [Exportation vers Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Saut de page manuel|l’extension de rendu PowerPoint affiche un rapport au format PowerPoint (.pptx) compatible avec PowerPoint 2013.|  
-|Fichier TIFF|Saut de page manuel|L'extension de rendu de type image effectue le rendu d'un rapport dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer.<br /><br /> L'extension de rendu de type image peut générer des fichiers dans l'un des formats pris en charge par [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG et TIFF.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier image](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|Fichier TIFF|Saut de page manuel|L'extension de rendu de type image effectue le rendu d'un rapport dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer.<br /><br /> L'extension de rendu de type image peut générer des fichiers dans l'un des formats pris en charge par [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG et TIFF.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier image](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Archive Web|Saut de page conditionnelle|L'extension de rendu HTML effectue le rendu d'un rapport au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.<br /><br /> L’extension de rendu HTML représente l’extension de rendu par défaut pour les rapports qui sont prévisualisés dans le Générateur de rapports et qui s’affichent dans un navigateur, y compris pendant une exécution dans portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Pour plus d’informations, consultez [Rendu au format HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Saut de page conditionnelle|Affiché avec la mention « Word » dans le menu d’exportation lors de l’affichage des rapports. L’extension de rendu Word génère un rapport au format Word (.docx) compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Pour plus d’informations, consultez [Exportation vers Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Données|L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.<br/><br/> Pour plus d’informations, consultez [Exportation vers XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  

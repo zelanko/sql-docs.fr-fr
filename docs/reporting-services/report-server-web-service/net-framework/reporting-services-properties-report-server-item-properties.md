@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriétés de Reporting Services - Propriétés d’élément du serveur de rapports
   Les propriétés d'élément sont des propriétés spécifiques à des éléments dans la base de données du serveur de rapports, notamment des rapports, des rapports liés, des dossiers, des ressources, des modèles et des sources de données.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="item-properties"></a>Propriétés d'élément  
  Les propriétés suivantes s'appliquent à tous les éléments dans la base de données du serveur de rapports.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**CreatedBy**|Nom de l'utilisateur ayant initialement ajouté l'élément à la base de données du serveur de rapports.|  
 |**CreationDate**|Date et heure auxquelles l'élément a été ajouté à la base de données du serveur de rapports.|  
@@ -57,14 +55,14 @@ ms.lasthandoff: 12/05/2017
 ## <a name="folder-properties"></a>Propriétés de dossier  
  Outre les propriétés d'élément répertoriées précédemment, la propriété suivante s'applique aux dossiers dans la base de données du serveur de rapports.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**Reserved**|Valeur retournée par la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> pour les dossiers réservés par le serveur de rapports. Les dossiers réservés comprennent Users, My Reports et /. Les dossiers réservés ne peuvent être ni modifiés ni supprimés.|  
   
 ## <a name="report-properties"></a>Propriétés des états  
  Outre les propriétés d'élément répertoriées précédemment, les propriétés suivantes s'appliquent aux rapports dans la base de données du serveur de rapports.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**Langage**|Langue utilisé dans un rapport. La valeur est un code de langue défini dans la spécification RFC1766 du groupe de travail IETF (Internet Engineering Task Force). La première partie est une désignation de deux caractères de la langue de base. La deuxième partie est séparée par un trait d'union et désigne la variation ou le dialecte de la langue. Si aucune valeur n’est spécifiée dans l’élément **Style** associé à l’élément **Body** dans la définition du rapport, la valeur par défaut est la langue du serveur de rapports.|  
 |**ReportProcessingTimeout**|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est **-1**, le rapport n’est soumis à aucun délai d’expiration au cours du traitement. Si la valeur est **null**, la valeur de la propriété système **ReportProcessingTimeout** est utilisée pour le délai de traitement des rapports. La valeur par défaut est **null**. Pour plus d’informations, consultez [Propriétés système de Report Server](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
@@ -78,11 +76,11 @@ ms.lasthandoff: 12/05/2017
 ## <a name="resource-properties"></a>Propriétés de ressource  
  Outre les propriétés d'élément répertoriées précédemment, la propriété suivante s'applique aux ressources dans la base de données du serveur de rapports.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**MimeType**|Type MIME d'une ressource dans la base de données du serveur de rapports.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

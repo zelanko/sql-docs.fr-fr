@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 76748c3a02ca158e3519197b043ce8e4c978f915
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92f7c462be75d4557ab44216af1beb14d101029e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS)
   Vous pouvez mieux contrôler si une ligne statique, telle qu'un en-tête ou un pied de page de groupe, est rendue avec des lignes dynamiques qui sont associées à un groupe dans une région de données de tableau matriciel.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  (Facultatif) Affichez l'aperçu du rapport. Dans la mesure du possible, le convertisseur de rapport garde ce membre avec les membres de groupe de colonnes spécifiés.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
  
   

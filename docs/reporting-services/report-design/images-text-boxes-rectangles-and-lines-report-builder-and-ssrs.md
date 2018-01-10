@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea493c80dba54d0c9b497c7c41423d24764a9533
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: addd20b5bf083ad99b0d877f519f86170ac2a57c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS)
   Outre les régions de données telles que les tableaux, les matrices et les graphiques, les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent d’autres éléments de rapport, comme des images, des zones de texte ou des rectangles, pour ajouter un attrait visuel, mettre en évidence des informations clés ou fournir des informations connexes. Vous pouvez modifier la mise en forme d'un élément de rapport. Par exemple, vous pouvez ajouter une bordure ou une marge intérieure, modifier la visibilité initiale ou la direction, ou encore spécifier la taille et l'emplacement exacts de l'élément.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
  [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  Dans un rapport, les images affichent des données binaires de type image. Vous fournissez la source de l'image. La source peut être une référence de type URL à une image stockée sur un serveur Web, une référence à des données d'image incorporées ou une référence à des données binaires de type image dans une base de données. Le Générateur de rapports et le Concepteur de rapports prennent en charge les fichiers .bmp, .jpeg, .gif et .png.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

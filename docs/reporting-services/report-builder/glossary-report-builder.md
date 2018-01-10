@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>Glossaire (Générateur de rapports)
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |nom de source de données|Dans un rapport, nom de l'objet source de données.|  
 |type de données|Attribut indiquant quel type d'information peut être stocké dans une colonne, un paramètre ou une variable.|  
 |entrepôt de données|Base de données spécifiquement structurée pour les requêtes et les analyses.|  
-|database|Collection d'informations, de tables et d'autres objets organisés et présentés de manière à répondre à des besoins précis, tels qu'une recherche, un tri ou une recombinaison des données.|  
+|base de données|Collection d'informations, de tables et d'autres objets organisés et présentés de manière à répondre à des besoins précis, tels qu'une recherche, un tri ou une recombinaison des données.|  
 |catalogue de la base de données|Partie d'une base de données qui contient la définition de la base de données et de tous les objets inclus dans celle-ci.|  
 |moteur de base de données|Modules de programme qui fournissent l'accès à un système de gestion de base de données (SGBD).|  
 |fichier de base de données|Un des fichiers physiques composant une base de données.|  
@@ -377,7 +375,7 @@ ms.lasthandoff: 12/05/2017
 |axe X|Voir le terme : axe des abscisses (x)|  
 |axe Y|Voir le terme : axe des ordonnées (y)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

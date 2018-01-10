@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fcd13b5395ddb1a2e8438d26b631f62a332370e
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 66988188b2f0ce0550384392b6f90a0b8f93d489
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Envoi d'un message électronique HTML à l'aide de la tâche de script
   La tâche SendMail de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend uniquement en charge les messages électroniques au format texte brut. Toutefois, vous pouver envoyer facilement des messages électroniques HTML en utilisant la tâche de script et les fonctionnalités de messagerie du .NET Framework.  
@@ -35,14 +35,14 @@ ms.lasthandoff: 11/28/2017
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a> Description  
+## <a name="description"></a>Description  
  L’exemple suivant utilise l’espace de noms **System.Net.Mail** pour configurer et envoyer un e-mail HTML. Le script obtient le destinataire, l’expéditeur, l’objet et le corps de l’e-mail à partir de variables du package, les utilise pour créer un nouvel objet **MailMessage** et définit sa propriété **IsBodyHtml** sur **True**. Il obtient ensuite le nom du serveur SMTP auprès d’une autre variable du package, initialise une instance de **System.Net.Mail.SmtpClient** et appelle sa méthode **Send** pour envoyer le message HTML. L'exemple encapsule la fonctionnalité d'envoi du message dans une sous-routine susceptible d'être réutilisée dans d'autres scripts.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Pour configurer cet exemple de tâche de script sans gestionnaire de connexions SMTP  
   
 1.  Créez des variables chaîne nommées `HtmlEmailTo`, `HtmlEmailFrom` et `HtmlEmailSubject`, puis attribuez-leur des valeurs appropriées à un message de test valide.  
   
-2.  Créez une variable chaîne nommée `HtmlEmailBody` et attribuez-lui une chaîne de balise HTML. Exemple :  
+2.  Créez une variable chaîne nommée `HtmlEmailBody` et attribuez-lui une chaîne de balise HTML. Exemple :  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -156,7 +156,7 @@ public void Main()
         }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tache Envoyer un message](../../integration-services/control-flow/send-mail-task.md)  
   
   

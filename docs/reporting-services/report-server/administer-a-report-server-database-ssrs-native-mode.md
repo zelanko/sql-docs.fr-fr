@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 caps.latest.revision: "63"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4e8fe9877ea3e30466652a1cd4db8f4af53ba396
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 988a22337e01882fec658bec1e18c3114eca7f03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrer une base de données du serveur de rapports (SSRS en mode natif)
   Un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise deux bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage interne. Par défaut, les bases de données ont pour nom respectif Reportserver et ReportServerTempdb. La base de données ReportServerTempdb est créée à l'aide de la base de données du serveur de rapports primaire et sert à stocker les données temporaires, les informations de session et les rapports mis en mémoire cache.  
@@ -86,7 +84,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ## <a name="about-database-versions"></a>À propos des versions de base de données  
  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], aucune information explicite n’est disponible sur la version de la base de données. Toutefois, comme les versions des bases de données sont toujours synchronisées avec les versions des produits, vous pouvez utiliser les informations de version d'un produit pour savoir quand la version de base de données a changé. Les informations de version d’un produit pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont indiquées dans les informations de version de fichier qui apparaissent dans les fichiers journaux, dans les en-têtes de tous les appels SOAP et lorsque vous vous connectez à l’URL du serveur de rapports (par exemple, lorsque vous ouvrez un navigateur à l’adresse `http://localhost/reportserver`).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

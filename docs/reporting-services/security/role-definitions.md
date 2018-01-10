@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d30bd923a2a88d4438c2700073cf8430966e0d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7618d07d7329a92c4c059b68f099fb6acbf3e338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions"></a>Définitions de rôles
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une *définition* de *rôle* est une collection nommée de tâches définissant les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
  Vous pouvez supprimer une définition de rôle si vous ne l'utilisez plus. Vous ne pouvez pas supprimer la définition de rôle qui est sélectionnée pour la fonctionnalité Mes Rapports tant que cette dernière est activée. Avant de pouvoir supprimer la définition de rôle utilisée pour Mes Rapports, vous devez désactiver la fonctionnalité ou sélectionner une autre définition de rôle à utiliser avec elle.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

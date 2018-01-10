@@ -8,29 +8,27 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 488bdc3d56427922095ba1ed35e73cb82c88c41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l’extension de traitement des données SQL Server Analysis Services pour récupérer des données d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié dans une Galerie SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  La source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être publiée dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint.  
   
  Pour prendre en charge les connexions du Générateur de rapports à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, mais si vous utilisez un ordinateur qui n’a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="parameters"></a>Paramètres  
  Dans le volet Filtres, sélectionnez l'option **Paramètres** pour qu'un filtre crée automatiquement un paramètre de rapport avec les valeurs disponibles qui correspondent aux sélections de filtre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si vous ouvrez le Générateur de rapports à partir du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , les tableaux croisés dynamiques, les graphiques croisés dynamiques, les segments et autres mises en page et fonctionnalités analytiques du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne sont pas recréés dans le rapport. Le rapport vide inclut une source de données préconfigurée qui pointe vers les données du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La conception de rapports basés sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peut être fastidieuse et chronophage selon le nombre de segments, de filtres et de tables ou de graphiques que vous voulez recréer dans le rapport. Pour être plus efficace, séparez la présentation des données que vous souhaitez dans un rapport, de la conception [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Les données d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont très compressées, ce qui n’est pas le cas des données récupérées du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’un rapport. Utilisez le concepteur de requêtes pour spécifier des filtres et des paramètres afin de limiter les données à ce qui est absolument nécessaire dans le rapport.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Le rapport ne contient que les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

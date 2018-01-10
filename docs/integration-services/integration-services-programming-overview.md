@@ -8,7 +8,7 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1e9c7eb931cb3b21572979f150b6491f83f00f38
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46aaef93dd2fef463dc2abcfcdb42db1ff0c59a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="integration-services-programming-overview"></a>Vue d'ensemble de la programmation Integration Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a une architecture qui sépare le déplacement et la transformation de données du flux de contrôle et de la gestion de packages. Cette architecture se définit par deux moteurs distincts qui peuvent être automatisés et étendus lors de la programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le moteur d'exécution implémente l'infrastructure de flux de contrôle et de gestion de packages qui permet aux développeurs de contrôler le flux d'exécution et de définir des options pour la journalisation, les gestionnaires d'événements et les variables. Le moteur de flux de données est un moteur spécialisé, hautement performant, exclusivement dédié à l'extraction, la transformation et le chargement de données. La programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'effectue à partir de ces deux moteurs.  

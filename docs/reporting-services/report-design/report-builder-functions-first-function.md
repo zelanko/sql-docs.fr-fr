@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6919cb9eea7da37cb3967b4e06d945a66ab6c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2645f7db1b7e65c1fea7f72ab70b79b7565bdb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---first-function"></a>Fonctions du Générateur de rapports - First
   Retourne la première valeur dans l'étendue donnée de l'expression spécifiée.  
@@ -48,7 +46,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Type de retour  
  Déterminé par le type d'expression.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction **First** retourne la première valeur d'un jeu de données après que l'étendue spécifiée a été correctement triée et filtrée.  
   
  La fonction **First** ne peut être utilisée dans les expressions de filtre de groupe qu’avec l’étendue actuelle (par défaut).  
@@ -71,14 +69,14 @@ First(expression, scope)
   
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code ci-dessous retourne le premier numéro de produit du groupe `Category` d'une région de données :  
   
 ```  
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

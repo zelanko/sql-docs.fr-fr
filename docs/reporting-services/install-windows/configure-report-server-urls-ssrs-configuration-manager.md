@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 87c3c32e3068d9b3d1303697b846664d2e5cadb0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4128ec3ec665dc5dff90b6d82b7aa7838d4e5d99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les URL permettent d’accéder au service Web Report Server et au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Avant de pouvoir utiliser l’une ou l’autre de ces applications, vous devez configurer au moins une URL pour le service web et une pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des valeurs par défaut pour les URL des deux applications qui s’accommodent bien à la plupart des scénarios de déploiement, dont les déploiements côte à côte avec d’autres applications et services web.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |Élément|Description|  
 |----------|-----------------|  
 |Nom d'hôte|Un réseau TCP/IP utilise une adresse IP pour identifier de manière unique un périphérique sur le réseau. Il existe une adresse IP physique pour chaque carte réseau installée dans un ordinateur. Si l'adresse IP est résolue en en-tête d'hôte, vous pouvez spécifier l'en-tête de l'hôte. Si vous déployez le serveur de rapports sur un réseau d'entreprise, vous pouvez utiliser le nom réseau de l'ordinateur.|  
-|Port|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
+|d’|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
 |Répertoire virtuel|Un port est souvent partagé par plusieurs applications ou services Web. Pour cette raison, une URL de serveur de rapports inclut toujours un répertoire virtuel qui correspond à l'application obtenant la demande. Vous devez spécifier des noms de répertoire virtuel uniques pour chaque application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui écoute sur les mêmes port et adresse IP.|  
 |Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
 |Élément|Valeur|Explication|  
 |----------|-----------|-----------------|  
 |Adresse IP|Assigné|Le service DNS (Domain Name Service) de votre réseau résout le nom d'hôte sur l'URL en adresse IP de l'ordinateur. Tant que l'adresse IP est spécifiée dans l'URL que vous définissez, une demande envoyée à un hôte spécifique atteint sa cible.|  
-|Port|80|Le port 80 est le port par défaut pour les connexions TCP/IP sur un ordinateur. Comme le serveur de rapports écoute sur le port 80, vous pouvez omettre le numéro de port de l'URL. Si vous spécifiez un autre port, vous devez le spécifier dans l'URL.|  
+|d’|80|Le port 80 est le port par défaut pour les connexions TCP/IP sur un ordinateur. Comme le serveur de rapports écoute sur le port 80, vous pouvez omettre le numéro de port de l'URL. Si vous spécifiez un autre port, vous devez le spécifier dans l'URL.|  
 |Répertoire virtuel|ReportServer|Remarquez que les deux exemples d'URL incluent le nom de répertoire virtuel. À moins que vous ne personnalisiez la définition d'URL, vous devez toujours spécifier le nom du répertoire virtuel de l'application dans l'URL.|  
   
 > [!NOTE]  
@@ -85,5 +85,5 @@ ms.lasthandoff: 12/05/2017
  [Réservations d’URL pour les déploiements de serveur de rapports multi-instance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
  Lorsque vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un même ordinateur, vous augmentez la probabilité de rencontrer une duplication d'URL lors de l'inscription. Pour éviter ces erreurs, suivez les recommandations de cette rubrique pour créer des réservations d'URL spécifiques à l'instance.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 

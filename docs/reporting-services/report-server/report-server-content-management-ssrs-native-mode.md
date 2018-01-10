@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 21bafd5c07350c38ee14f7de27aaeab265f22e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f40de7d519da0def4ad65cf5f1d96a592489b5a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, le portail web  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est disponible. Cet article détaille le Gestionnaire de rapports et l’utilisation du nouveau portail web.  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/05/2017
   
  Des dossiers ne sont alloués qu'aux utilisateurs dotés de comptes système valides. Si un nom d'utilisateur contient des caractères spéciaux, il est créé avec les caractères d'échappement équivalents. Les caractères d'échappement équivalents sont indiqués dans le tableau suivant.  
   
-|Caractère|Valeur d'échappement|Exemple|  
+|Caractère|Valeur d'échappement| Exemple|  
 |---------------|------------------|-------------|  
 |(espace)|[ ]|*Prénom Nom* devient *Prénom[ ]Nom*|  
 |\ (barre oblique inverse)|Remplacé par une espace|*NomDomaine\nom_utilisateur* devient *NomDomaine nom_utilisateur*|  
@@ -193,7 +191,7 @@ ms.lasthandoff: 12/05/2017
   
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

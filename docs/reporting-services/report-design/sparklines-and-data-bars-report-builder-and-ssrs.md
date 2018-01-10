@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c0af6c5e35a50e1ce26b1511ce97b7ac1978a732
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fcca620035420f293cda90a0481380efdd4d2c25
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Graphiques sparkline et barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations dans un petit espace, souvent intégré au texte.   
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
  [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>Autres rubriques de procédures pour les graphiques  
- Les graphiques sparkline et les barres de données étant un type de graphique, vous pouvez également consulter les rubriques de procédures suivantes pour obtenir des informations utiles et pertinentes sur les graphiques :  
+ Les graphiques sparkline et les barres de données étant un type de graphique, vous pouvez également consulter les rubriques de procédures suivantes pour obtenir des informations utiles et pertinentes sur les graphiques :  
   
  [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 12/05/2017
   
  [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   

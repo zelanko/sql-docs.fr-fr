@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 776a8ac7555128b47175b77739033918f4ed0b5e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
   Les composants sources dans le flux d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent de charger des données à partir d'une source de données et de les transférer à des transformations et des destinations en aval. En principe, vous vous connectez à la source de données via un gestionnaire de connexions existant.  
@@ -392,7 +392,7 @@ ms.lasthandoff: 11/20/2017
     }  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Développement d’un composant source personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   

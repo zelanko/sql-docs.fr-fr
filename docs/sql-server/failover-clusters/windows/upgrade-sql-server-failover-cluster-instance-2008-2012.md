@@ -1,7 +1,10 @@
 ---
 title: "Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012 | Microsoft Docs"
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
 
@@ -127,7 +130,7 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] qui n’utilise aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] autonome, uniquement des instances de cluster de basculement SQL contenues dans au moins un groupe de disponibilité, vous pouvez effectuer cette migration vers un nouveau cluster à l’aide de méthodes similaires à celles du scénario « aucun groupe de disponibilité, aucune instance autonome ». Avant de copier des tables système sur les disques partagés d’instance de cluster de basculement cible, vous devez supprimer tous les groupes de disponibilité dans l’environnement d’origine. Une fois que toutes les bases de données ont été migrées vers les ordinateurs cibles, vous allez recréer les groupes de disponibilité avec les mêmes noms de schéma et d’écouteur. Ce faisant, les ressources de cluster de basculement Windows Server sont correctement formées et gérées sur le cluster cible. **Always On doit être activé dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] sur chaque ordinateur dans l’environnement cible avant la migration.**
 
-###  <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
+### <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
 1.  Arrêtez le trafic vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
 

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10151"
@@ -18,13 +16,13 @@ ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c0d653cac98162a50b04c016a228f04843cf643
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formules dans les requêtes de modèle de rapport (Générateur de rapports et SSRS)
   Les formules sont des calculs effectués sur les valeurs d'un rapport utilisant un modèle de rapport comme source de données. Vous définissez des formules dans la **boîte de dialogue Définir la formule** du concepteur de requêtes Modèle de rapport quand vous définissez une requête pour une source de données de modèle de rapport. Une formule peut contenir des fonctions, des opérateurs, des constantes et des références à des champs ou des entités. Les formules vous permettent de combiner, d'agréger, de filtrer et d'évaluer des données numériques et de texte. Vous pouvez créer des formules et les enregistrer en tant que nouveaux champs, ou vous pouvez modifier les formules des champs existants.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
  Lorsque vous utilisez des références, le processeur de rapports exécute la formule sur chaque valeur du champ. Par exemple, supposons qu'un champ contienne le total des ventes annuelles des cinq années passées. Ce champ contient cinq valeurs, chacune représentant le total des ventes d'une année donnée. Si la formule contient une référence à ce champ, elle calcule la nouvelle valeur à l'aide de chacune des valeurs.  
   
 ## <a name="operators"></a>Opérateurs  
- Les opérateurs spécifient le type de calcul à réaliser sur les valeurs d'une formule. Il existe trois différents types d'opérateurs de calcul : arithmétique, comparaison et texte. Les opérateurs sont indiqués à l'aide de symboles, tels que le signe plus (+).  
+ Les opérateurs spécifient le type de calcul à réaliser sur les valeurs d'une formule. Il existe trois différents types d'opérateurs de calcul : arithmétique, comparaison et texte. Les opérateurs sont indiqués à l'aide de symboles, tels que le signe plus (+).  
   
  **Opérateurs arithmétiques.** Les opérateurs arithmétiques réalisent des opérations mathématiques de base, telles que l'addition, la soustraction ou la multiplication, combinent des nombres et génèrent des résultats numériques.  
   

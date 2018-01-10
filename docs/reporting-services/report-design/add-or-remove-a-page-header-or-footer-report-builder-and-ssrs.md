@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac5237204cabf9796433b4fd8c307273cce33e11
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e10b015647d513494b6a13d7f690953ca3728533
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Ajouter ou supprimer un en-tête ou un pied de page (Générateur de rapports et SSRS)
   Vous pouvez ajouter du texte statique, des images, des lignes, des rectangles et des bordures aux en-têtes ou aux pieds de page. Vous pouvez placer des expressions et des images liées aux données dans une zone de texte si vous souhaitez qu'un en-tête ou pied de page contienne des données variables ou calculées.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  La suppression d'un en-tête ou d'un pied de page entraîne sa suppression du rapport. Les éléments que vous avez précédemment ajoutés à l'en-tête ou au pied de page ne réapparaissent pas si vous le rajoutez.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

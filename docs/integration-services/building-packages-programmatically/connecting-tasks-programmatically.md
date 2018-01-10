@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,18 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f76b250b29e0ab2fb5750941315d75ebed5b7272
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1426af752da0cb20051477d70c566e53589d9f70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="connecting-tasks-programmatically"></a>Connexion de tâches par programmation
+# <a name="connecting-tasks-programmatically"></a>Connexion de tâches par programme
   Une contrainte de précédence, représentée dans le modèle objet par la classe <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, établit l'ordre dans lequel les objets <xref:Microsoft.SqlServer.Dts.Runtime.Executable> s'exécutent dans un package. La contrainte de précédence permet de rendre l'exécution des conteneurs et des tâches d'un package dépendante du résultat de l'exécution d'une tâche ou d'un conteneur précédent. Les contraintes de précédence sont établies entre des paires d'objets <xref:Microsoft.SqlServer.Dts.Runtime.Executable> en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> de la collection <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> sur l'objet conteneur. Après avoir créé une contrainte entre deux objets exécutables, vous devez définir la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> pour établir les critères d'exécution du deuxième objet exécutable défini dans la contrainte.  
   
  Vous pouvez utiliser une contrainte ou une expression dans une seule contrainte de précédence, en fonction de la valeur spécifiée pour la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A>, tel que décrit dans le tableau suivant :  
   
-|Valeur de la propriété EvalOp| Description|  
+|Valeur de la propriété EvalOp|Description|  
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|Spécifie que le résultat de l'exécution détermine l'exécution de la tâche ou du conteneur contraint. Affectez la valeur souhaitée de l'énumération <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> de <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|Spécifie que la valeur d'une expression détermine l'exécution de la tâche ou du conteneur contraint. Définissez la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.|  
@@ -104,7 +104,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajout de la tâche de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   

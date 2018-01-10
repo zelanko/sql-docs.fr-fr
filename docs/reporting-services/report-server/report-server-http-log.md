@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-http-log"></a>Journal HTTP Report Server
   Le fichier journal HTTP Report Server garde un enregistrement de chaque requête et réponse HTTP gérée par le serveur de rapports. Dans la mesure où les erreurs de dépassement de capacité et de délai d'attente des requêtes n'atteignent pas le serveur de rapports, elles ne sont pas enregistrées dans le fichier journal.  
@@ -63,29 +61,29 @@ ms.lasthandoff: 12/05/2017
 ## <a name="log-file-fields"></a>Champs du fichier journal  
  Le tableau suivant décrit les champs disponibles dans le journal. La liste des champs est configurable ; vous pouvez spécifier quels sont les champs à inclure via le paramètre de configuration **HTTPTraceSwitches** . La colonne **Default** spécifie si le champ doit être inclus automatiquement dans le fichier journal, si vous ne spécifiez pas **HTTPTraceSwitches**.  
   
-|Champ|Description|Default|  
+|Champ|Description|Valeur par défaut|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Cette valeur est facultative. La valeur par défaut est ReportServerServiceHTTP_. Vous pouvez spécifier une autre valeur si vous souhaitez utiliser une convention d'affectation de noms de fichiers distincte (pour inclure le nom du serveur lorsque vous enregistrez les fichiers journaux dans un emplacement central, par exemple).|Oui|  
-|HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|Non|  
-|Date|Date à laquelle l'activité s'est produite.|Non|  
-|Time|Heure à laquelle l'activité s'est produite.|Non|  
+|HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|non|  
+|Date|Date à laquelle l'activité s'est produite.|non|  
+|Time|Heure à laquelle l'activité s'est produite.|non|  
 |ClientIp|Adresse IP du client qui accède au serveur de rapports.|Oui|  
-|UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|Non|  
-|ServerPort|Numéro de port utilisé pour la connexion.|Non|  
-|Hôte|Contenu de l'en-tête de l'hôte.|Non|  
+|UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|non|  
+|ServerPort|Numéro de port utilisé pour la connexion.|non|  
+|Hôte|Contenu de l'en-tête de l'hôte.|non|  
 |Méthode|Action ou méthode SOAP appelée à partir du client.|Oui|  
 |UriStem|Ressource ayant fait l'objet d'un accès.|Oui|  
-|UriQuery|Requête utilisée pour accéder à la ressource.|Non|  
+|UriQuery|Requête utilisée pour accéder à la ressource.|non|  
 |ProtocolStatus|Code d'état HTTP.|Oui|  
-|BytesReceived|Nombre d'octets reçus par le serveur.|Non|  
-|TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|Non|  
-|ProtocolVersion|Version de protocole utilisée par le client.|Non|  
-|UserAgent|Type de navigateur utilisé par le client.|Non|  
-|CookieReceived|Contenu du cookie reçu par le serveur.|Non|  
-|CookieSent|Contenu du cookie envoyé par le serveur.|Non|  
-|Referrer|Site précédent visité par le client.|Non|  
+|BytesReceived|Nombre d'octets reçus par le serveur.|non|  
+|TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|non|  
+|ProtocolVersion|Version de protocole utilisée par le client.|non|  
+|UserAgent|Type de navigateur utilisé par le client.|non|  
+|CookieReceived|Contenu du cookie reçu par le serveur.|non|  
+|CookieSent|Contenu du cookie envoyé par le serveur.|non|  
+|Referrer|Site précédent visité par le client.|non|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

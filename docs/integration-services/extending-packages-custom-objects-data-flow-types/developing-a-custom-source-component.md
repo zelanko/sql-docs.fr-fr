@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a73c1630674189dd1f86a1aca68937a558d5149f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-source-component"></a>Développement d'un composant source personnalisé
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants sources capables de se connecter à des sources de données personnalisées et de fournir des données, à partir de ces sources, à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.  
@@ -673,7 +673,7 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Développement d’un composant de destination personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
  [Création d’une source à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   

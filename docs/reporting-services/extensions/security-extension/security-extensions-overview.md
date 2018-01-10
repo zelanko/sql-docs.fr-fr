@@ -8,24 +8,22 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
 helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 caps.latest.revision: "22"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 978410874f598656c9c7e7108c0e1c56b1dc36f2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e07a4bbc62bf15d03887b12912fea2e216ad28ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-extensions-overview"></a>Présentation des extensions de sécurité
   Une extension de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet l'authentification d'utilisateurs ou de groupes ainsi que l'attribution d'autorisations à ces derniers, en permettant à différents utilisateurs de se connecter à un serveur de rapports et d'effectuer différentes tâches ou opérations selon leur identité. Par défaut, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise une extension d'authentification Windows, qui utilise des protocoles de compte Windows pour vérifier l'identité des utilisateurs qui prétendent avoir des comptes sur le système. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise un système de sécurité basé sur les rôles pour l'autorisation des utilisateurs. Le modèle de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basé sur les rôles est identiques aux modèles de sécurité basé sur les rôles d'autres technologies.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Vous avez des utilisateurs et des rôles personnalisés et devez fournir un schéma d'autorisation correspondant dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Implémentation d’une extension de sécurité](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
  [Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   

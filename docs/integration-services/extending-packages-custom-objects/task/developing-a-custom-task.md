@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 265f05d748398eb4a219899681c0bf71eb481b44
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7996cfe2838bde7d68df2342ca9c98e9fc2b3a07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-task"></a>Développement d'une tâche personnalisée
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des tâches pour effectuer des unités de travail en soutien à l'extraction, la transformation et le chargement de données. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut une variété de tâches qui effectuent les actions les plus fréquemment utilisées, allant de l'exécution d'une instruction SQL au téléchargement d'un fichier à partir d'un site FTP. Si les tâches incluses et les actions prises en charge ne répondent pas complètement à vos besoins, vous pouvez créer une tâche personnalisée.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
  [Développement d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Explique comment programmer des sources, des transformations et des destinations de flux de données personnalisées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Extension du package à l’aide de la tâche de script](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [Comparaison des solutions de script et des objets personnalisés](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   

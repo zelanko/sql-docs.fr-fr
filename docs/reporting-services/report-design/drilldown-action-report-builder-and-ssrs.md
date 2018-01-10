@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -47,13 +45,13 @@ ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a86800bbbf7b92a55aa6da83175c5017571f4feb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 28ae890e8f4c04522cf0bad9f6f65a9a0135855d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Action d'exploration (Générateur de rapports et SSRS)
   En fournissant des icônes plus et moins (+/-) dans une zone de texte, vous pouvez permettre aux utilisateurs de masquer et d'afficher des éléments de manière interactive. Cela s'appelle une action d' *exploration* . Pour une table ou une matrice, vous pouvez afficher ou masquer des colonnes et des lignes statiques ou des colonnes et des lignes qui sont associées à des groupes.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

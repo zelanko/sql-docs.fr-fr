@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f71ff29b7e029bc52fd6ffe243b4279e6caf08b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a40b52df28d1cb4609259aa68010eace5ead7990
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Déclenchement et définition d'événements dans une tâche personnalisée
   Le moteur d’exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose une collection d’événements qui fournissent l’état d’avancement d’une tâche lors de sa validation et de son exécution. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> définit ces événements et elle est fournie aux tâches en tant que paramètre pour les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -196,7 +196,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 80dda6c12477a044a8a12c9b50d8fccb18aebb23
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Fonctions du Générateur de rapports - Référence aux fonctions d’agrégation
   Pour inclure des valeurs agrégées dans votre rapport, vous pouvez utiliser des fonctions d'agrégation intégrées dans des expressions. La fonction d'agrégation par défaut pour les champs de type numérique est SUM. Vous pouvez modifier l'expression et utiliser une fonction d'agrégation intégrée différente ou spécifier une étendue différente. L'étendue identifie le jeu de données à utiliser pour le calcul.  
@@ -82,18 +80,18 @@ ms.lasthandoff: 12/05/2017
 |Emplacement dans le rapport|Champs|Paramètres|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |En-tête de page<br /><br /> Pied de page|Oui|Oui|Un au plus<br /><br /> Remarque 1|Oui|Oui|Oui|Oui|  
-|Corps|Oui<br /><br /> Remarque 2|Oui|Seuls les éléments dans l'étendue active ou une étendue contenante<br /><br /> Remarque 3|Non|Oui|Oui|Oui|  
-|Paramètre de rapport|Non|Seuls les premiers paramètres dans la liste<br /><br /> Remarque 4|Non|Non|Non|Non|Non|  
-|Champ|Oui|Oui|Non|Non|Non|Non|Non|  
-|Paramètre de requête|Non|Oui|Non|Non|Non|Non|Non|  
-|Expression de groupe|Oui|Oui|Non|Non|Oui|Non|Non|  
-|Expression de tri|Oui|Oui|Non|Non|Oui|Oui<br /><br /> Remarque 5|Non|  
-|Expression de filtre|Oui|Oui|Non|Non|Oui|Oui<br /><br /> Remarque 6|Non|  
-|Code|Non|Oui<br /><br /> Remarque 7|Non|Non|Non|Non|Non|  
-|Report.Language|Non|Oui|Non|Non|Non|Non|Non|  
-|Variables|Oui|Oui|Non|Non|Oui|Étendue active ou contenante|Non|  
-|Agrégats|Oui|Oui|Uniquement dans l'en-tête de page/le pied de page|Uniquement dans les agrégats d'élément de rapport|Oui|Non|Non|  
-|Fonctions de recherche|Oui|Oui|Oui|Non|Oui|Non|Non|  
+|Corps|Oui<br /><br /> Remarque 2|Oui|Seuls les éléments dans l'étendue active ou une étendue contenante<br /><br /> Remarque 3|non|Oui|Oui|Oui|  
+|Paramètre de rapport|non|Seuls les premiers paramètres dans la liste<br /><br /> Remarque 4|non|non|non|non|non|  
+|Champ|Oui|Oui|non|non|non|non|non|  
+|Paramètre de requête|non|Oui|non|non|non|non|non|  
+|Expression de groupe|Oui|Oui|non|non|Oui|non|non|  
+|Expression de tri|Oui|Oui|non|non|Oui|Oui<br /><br /> Remarque 5|non|  
+|Expression de filtre|Oui|Oui|non|non|Oui|Oui<br /><br /> Remarque 6|non|  
+|Code|non|Oui<br /><br /> Remarque 7|non|non|non|non|non|  
+|Report.Language|non|Oui|non|non|non|non|non|  
+|Variables|Oui|Oui|non|non|Oui|Étendue active ou contenante|non|  
+|Agrégats|Oui|Oui|Uniquement dans l'en-tête de page/le pied de page|Uniquement dans les agrégats d'élément de rapport|Oui|non|non|  
+|Fonctions de recherche|Oui|Oui|Oui|non|Oui|non|non|  
   
 -   **Remarque 1.** ReportItems doit exister dans la page de rapport rendue, sinon sa valeur est Null. Si la visibilité d'un élément de rapport dépend d'une expression qui prend la valeur False, l'élément de rapport n'existe pas dans la page.  
   
@@ -118,13 +116,13 @@ ms.lasthandoff: 12/05/2017
   
 |Contexte|RunningValue|RowNumber|Première<br /><br /> Dernière|Previous|Sum et autres fonctions Presort|Agrégats ReportItem|Fonctions de recherche|Fonction d'agrégation|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valeur d'exécution|Non|Non|Non|Non|Oui|Non|Oui|Non|  
-|Première<br /><br /> Dernière|Non|Non|Non|Non|Oui|Non|Non|Non|  
-|Previous|Oui|Oui|Oui|Non|Oui|Non|Oui|Non|  
-|Sum et autres fonctions Presort|Non|Non|Non|Non|Oui|Non|Oui|Non|  
-|Agrégats ReportItem|Non|Non|Non|Non|Non|Non|Non|Non|  
-|Fonctions de recherche|Oui|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Non|Non|  
-|Fonction d'agrégation|Non|Non|Non|Non|Non|Non|Non|Non|  
+|Valeur d'exécution|non|non|non|non|Oui|non|Oui|non|  
+|Première<br /><br /> Dernière|non|non|non|non|Oui|non|non|non|  
+|Previous|Oui|Oui|Oui|non|Oui|non|Oui|non|  
+|Sum et autres fonctions Presort|non|non|non|non|Oui|non|Oui|non|  
+|Agrégats ReportItem|non|non|non|non|non|non|non|non|  
+|Fonctions de recherche|Oui|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|non|non|  
+|Fonction d'agrégation|non|non|non|non|non|non|non|non|  
   
 -   **Remarque 1.** Les fonctions d’agrégation sont autorisées uniquement à l’intérieur de l’expression *Source* d’une fonction Lookup si cette dernière n’est pas contenue dans un agrégat. Les fonctions d'agrégation ne sont pas autorisées à l'intérieur des expressions *Destination* ou *Result* d'une fonction Lookup.  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")Retour au début  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  

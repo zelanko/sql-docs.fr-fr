@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4889d5aabf66b97c4dfaae3c59117f678da4f6a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] prend en charge les scénarios suivants :  
@@ -67,17 +65,17 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Le schéma n'a pas changé depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-|Type de projet ou de fichier|Version|Création de rapports|Publier des rapports|Remarques|  
+|Type de projet ou de fichier|Options de version|Création de rapports|Publier des rapports|Remarques|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|Projet Report Server<br /><br /> ou<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Schéma RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|Projet Report Server<br /><br /> ou<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schéma RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projet Report Server<br /><br /> ou<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schéma RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projet Report Server<br /><br /> ou<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL (schéma)|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projet Report Server<br /><br /> ou<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schéma RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uniquement|Permet une mise à niveau locale de schémas RDL (Report Definition Language) 2003, 2005 et 2008.|  
+|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Schéma RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schéma RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schéma RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL (schéma)|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projet Report Server<br /><br /> ou Gestionnaire de configuration<br /><br /> Assistant Projet Report Server|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schéma RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uniquement|Permet une mise à niveau locale de schémas RDL (Report Definition Language) 2003, 2005 et 2008.|  
   
  Pour plus d’informations sur l’ouverture de rapports dans une version précédente du schéma de définition de rapport, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md). Pour plus d'informations sur des schémas de définition de rapport spécifiques, consultez la rubrique consacrée à la [spécification RDL (Report Definition Language)](http://go.microsoft.com/fwlink/?linkid=116865).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Publication des sources de données et des rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

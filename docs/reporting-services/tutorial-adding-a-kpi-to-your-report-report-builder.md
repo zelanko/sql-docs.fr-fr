@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -46,7 +46,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>Pour créer un tableau avec un dataset incorporé  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -323,7 +323,7 @@ Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vo
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
   
@@ -344,12 +344,12 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 2.  Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d'informations, consultez :
 *  [Jauges](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicateurs](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 * [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)
 * [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

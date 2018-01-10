@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 43b324699b0e462f452b106846fe86d5e5e0919a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-view"></a>Vue Design
 Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , utilisez la vue Design pour disposer les éléments dans le rapport. Cette vue est parfois appelée aire de conception ou mode de conception.  
@@ -41,7 +39,7 @@ Utilisez la boîte à outils pour sélectionner les éléments à placer dans ce
 ## <a name="toolbox"></a>Boîte à outils  
  La Boîte à outils répertorie les régions de données et autres éléments de rapport disponibles pour votre rapport. Pour ajouter de éléments de rapport à partir de la Boîte à outils, double-cliquez sur l’élément qui vous intéresse ou faites-le glisser jusqu’à l’aire de conception. Vous pouvez ensuite modifier la forme et la taille en utilisant les handles d’objet.  
   
-## <a name="report-data-pane"></a>Données du rapport, volet  
+## <a name="report-data-pane"></a>Volet des données de rapport  
  Pour afficher le volet Données de rapport, dans le menu **Affichage** , cliquez sur **Données du rapport**. Utilisez ce volet pour définir des paramètres, des images, des sources de données et des datasets et pour référencer des champs intégrés tels que ReportName. Pour ajouter un nouvel élément, cliquez sur le menu **Nouveau** et sélectionnez un élément. Pour ajouter des champs calculés à un dataset existant, cliquez sur **Dataset**puis, dans la boîte de dialogue **Propriétés du dataset** , sélectionnez **Champs**. Sélectionnez un élément et cliquez sur **Modifier** pour ouvrir la boîte de dialogue **Propriétés** . Vous pouvez également cliquer avec le bouton droit sur les éléments du volet des données de rapportpour ajouter des éléments ou mettre à jour leurs propriétés.  
   
  Pour ajouter des données et des images à un rapport, faites glisser les éléments depuis le volet des données de rapportvers les régions de données et les zones de texte de l'aire de conception.  
@@ -61,7 +59,7 @@ Utilisez la boîte à outils pour sélectionner les éléments à placer dans ce
 ## <a name="properties-pane"></a>Volet Propriétés  
  Utilisez le volet Propriétés pour afficher les propriétés de l'élément de rapport sélectionné sur l'aire de conception ou du groupe sélectionné dans le volet Regroupement. Vous pouvez aussi cliquer avec le bouton droit sur un groupe ou un élément de rapport sélectionné, puis cliquer sur **Propriétés** pour ouvrir la boîte de dialogue **Propriétés** correspondant au groupe ou à l’élément de rapport.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Conseils de conception de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   

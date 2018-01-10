@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6581db08d67cef66d9ea4134493b3c83a4b0d80
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d934c4314aa149c4e220fc0b91a9cc182083f6d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planifier un rapport cartographique (Générateur de rapports et SSRS)
 Un rapport efficace présente des informations provoquant des actions ou stimulant des idées. Pour présenter des données analytiques, telles que les totaux des ventes ou des statistiques démographiques sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Une carte peut contenir plusieurs couches, où chaque couche affiche des éléments cartographiques définis par un type spécifique de données spatiales : points qui représentent des emplacements, lignes qui représentent des itinéraires ou polygones qui représentent des zones. Vous pouvez associer vos données analytiques aux éléments cartographiques sur chaque couche.  
@@ -115,8 +113,8 @@ Un rapport efficace présente des informations provoquant des actions ou stimula
   
 |Icône d'Assistant|Style de couche|Type de couche|Description et options|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Carte simple|Polygone|Carte qui affiche des zones uniquement, par exemple, des secteurs de vente.<br /><br /> Options : faites varier la couleur par palette ou utilisez une couleur unique. Une palette est un jeu prédéfini de couleurs. Lorsque toutes les couleurs d'une palette ont été attribuées, des nuances des couleurs sont attribuées.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Carte analytique en couleur|Polygone|Carte affichant des données analytiques en utilisant plusieurs couleurs, par exemple, pour afficher les chiffres des ventes par zone.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Carte simple|Polygon|Carte qui affiche des zones uniquement, par exemple, des secteurs de vente.<br /><br /> Options : faites varier la couleur par palette ou utilisez une couleur unique. Une palette est un jeu prédéfini de couleurs. Lorsque toutes les couleurs d'une palette ont été attribuées, des nuances des couleurs sont attribuées.|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Carte analytique en couleur|Polygon|Carte affichant des données analytiques en utilisant plusieurs couleurs, par exemple, pour afficher les chiffres des ventes par zone.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Carte à bulles|Polygone|Carte affichant des données analytiques en faisant varier la taille des bulles centrées sur les zones, par exemple pour afficher les chiffres des ventes par zone.<br /><br /> Options : faites varier les couleurs de zone en fonction d'un deuxième champ analytique et spécifiez des règles de couleur.|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Carte linéaire simple|Ligne|Carte qui affiche des lignes uniquement, par exemple des itinéraires de livraison.<br /><br /> Options : faites varier la couleur par palette ou utilisez une couleur unique.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Carte linéaire analytique|Ligne|Carte faisant varier la couleur et la largeur des lignes, par exemple pour afficher le nombre de paquets livrés et les mesures de ponctualité par itinéraire.<br /><br /> Options : faites varier la largeur de ligne en fonction d'un champ analytique et la couleur de ligne en fonction d'un deuxième champ analytique, et spécifiez des règles de couleur.|  
@@ -158,7 +156,7 @@ Un rapport efficace présente des informations provoquant des actions ou stimula
   
  Pour utiliser des données spatiales dynamiques, la source de données spatiales doit être sur le serveur de rapports. Lorsque les rapports sont conçus dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les sources de données spatiales peuvent être ajoutées à un projet et publiées sur le serveur de rapports avec la définition de rapport. Si vous utilisez le Générateur de rapports pour concevoir des rapports, vous devez télécharger en premier lieu les données spatiales sur le serveur de rapports, puis, dans l'Assistant ou dans les propriétés de couche, spécifier cette source de données spatiales pour la couche.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Didacticiel : rapport cartographique &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

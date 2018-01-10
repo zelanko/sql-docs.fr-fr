@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: DatabaseLogonAccount
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 caps.latest.revision: "24"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0ba2709350b3bc5b8038e6b09a6d83a1dfa5300b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efbde911a4fe861310abb2678723c5e3696d95e0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>Propriété ConfigurationSetting - DatabaseLogonAccount
   Spécifie le compte d'ouverture de session utilisé par le serveur de rapports lors de la connexion à la base de données du serveur de rapports. Lecture seule.  
@@ -48,7 +46,7 @@ public string DatabaseLogonAccount;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les valeurs valides pour cette propriété varient selon la valeur de la propriété [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) .  
   
  Cette propriété est ignorée si la propriété [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) a la valeur **2 (Service)**.  
@@ -56,7 +54,7 @@ public string DatabaseLogonAccount;
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

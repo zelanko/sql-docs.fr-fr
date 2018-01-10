@@ -23,18 +23,19 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Avec SQL Server 2016, vous pouvez créer des applications stratégiques intelligentes à l’aide d’une plateforme de base de données hybride évolutive où tout est intégré, depuis les performances en mémoire et la sécurité avancée jusqu’à l’analytique en base de données. La version SQL Server 2016 ajoute de nouveaux composants de sécurité, des fonctionnalités d’interrogation, l’intégration de Hadoop et du cloud, l’analytique R et plus encore, ainsi que de nombreuses améliorations et de nombreux perfectionnements. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ Avec SQL Server 2016, vous pouvez créer des applications stratégiques intelligentes à l’aide d’une plateforme de base de données hybride évolutive où tout est intégré, depuis les performances en mémoire et la sécurité avancée jusqu’à l’analytique en base de données. La version SQL Server 2016 ajoute de nouveaux composants de sécurité, des fonctionnalités d’interrogation, l’intégration de Hadoop et du cloud, l’analytique R et plus encore, ainsi que de nombreuses améliorations et de nombreux perfectionnements. 
 
 Cette page offre une synthèse ainsi que des liens vers des informations plus détaillées sur les nouveautés de SQL Server 2016 pour chaque composant SQL Server. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **Essayez SQL Server aujourd’hui !** 
 - Téléchargez **gratuitement** [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).

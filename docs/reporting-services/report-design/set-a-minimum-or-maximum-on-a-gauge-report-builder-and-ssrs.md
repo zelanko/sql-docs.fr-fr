@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad8907105a44ee24cfb160204dec2186f803eb4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e772f394e0f6ef3aa762f85405097a15a90ede9d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Définir un minimum ou un maximum sur une jauge (Générateur de rapports et SSRS)
   Contrairement aux graphiques dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , où plusieurs groupes sont définis, les jauges affichent une seule valeur. Étant donné que le Générateur de rapports et le Concepteur de rapports déterminent le contexte ou la précision relative de la valeur que vous essayez d’afficher sur la jauge, vous devez définir les valeurs minimale et maximale de l’échelle.   
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  (Facultatif) Si les valeurs minimale et maximale sont élevées, spécifiez une valeur pour l’option **Multiplier les étiquettes d’échelle par** . Pour spécifier un multiplicateur qui réduit votre échelle, utilisez un nombre décimal. Par exemple, si vous utilisez une échelle de 0 à 1 000, vous pouvez spécifier une valeur de multiplicateur de 0,01 pour réduire l'échelle afin d'afficher 0 à 10.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

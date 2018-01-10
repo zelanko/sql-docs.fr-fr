@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2456f192a8518ed45c548d94e75e7ec0c5ae1ec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8333a60403a32321c8796bb2041d6e95e39160ce
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parties de rapports et datasets dans le Générateur de rapports
   Dans le Générateur de rapports, la façon la plus simple d'inclure des données dans un rapport est d'ajouter des parties de rapports à partir de la bibliothèque de parties de rapports. Les parties de rapports contiennent les datasets desquels elles dépendent, appelés *datasets dépendants*. Les datasets dépendants sont basés sur les sources de données partagées et peuvent être des datasets incorporés ou partagés. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  Pour garantir que vous et d'autres utilisateurs pouvez continuer à utiliser avec succès des données d'un dataset partagé, vous devez comprendre les principes qui sous-tendent la sécurisation des éléments de rapport. Pour plus d’informations, consultez [Sécuriser les éléments de dataset partagés](../../reporting-services/security/secure-shared-dataset-items.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Sécurité &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/security-report-builder.md)   
  [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   

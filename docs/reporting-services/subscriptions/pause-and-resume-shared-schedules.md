@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,24 +21,24 @@ helpviewer_keywords:
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0f8e6b85da6ec41e1c3d24f223194b17c56ea53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aff3fe5efdee7db2dfb0ac17f8d797badec97da9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="pause-and-resume-shared-schedules"></a>Suspendre et reprendre des planifications partagées
+# <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   Vous pouvez suspendre et reprendre une planification partagée en cours d'utilisation. Le fait de suspendre une planification partagée fournit un moyen de geler temporairement une planification qui est utilisée pour déclencher un traitement de rapport et des abonnements. Seules les planifications partagées peuvent être suspendues et reprises. Vous ne pouvez pas suspendre des planifications spécifiques aux rapports.  
   
  Vous ne pouvez pas suspendre et reprendre un traitement de rapport en cours. Vous ne pouvez suspendre et reprendre que les planifications faisant partie de la file d'attente des planifications du service Agent SQL Server. Un travail en cours ne fait pas partie du champ d'intervention du moteur de planification. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
  Pendant qu'une planification partagée est suspendue, toutes les opérations censées s'exécuter sont temporairement autorisées à ne pas avoir lieu. Lorsque vous reprenez une planification partagée, le traitement du rapport et de la planification se produit à l'heure planifiée suivante, en fonction de l'heure locale du serveur. Le serveur de rapports en mode natif ou les applications de service SharePoint n'effectuent pas les opérations planifiées qui étaient censées s'exécuter si la planification n'avait pas été suspendue.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Suspendre et reprendre des planifications partagées (mode natif)](#bkmk_native)  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Sélectionnez la planification, puis cliquez sur **Suspendre les planifications sélectionnées** ou sur **Exécuter les planifications sélectionnées**. Si une planification est actuellement suspendue, la colonne **État** contient **Suspendu**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   

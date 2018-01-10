@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c44e3342fa9c15ecb9924c9fa64a4bc5163a484b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15c30b516ec8d2b19d0f54fb47281c74f7442ec0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Développement d'objets personnalisés pour Integration Services
   Lorsque les objets de flux de contrôle et de flux de données inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne répondent pas complètement à vos besoins, vous pouvez développer vos propres types d’objets personnalisés, notamment les suivants :  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="base-classes-attributes-and-important-methods"></a>Classes de base, attributs et méthodes importantes  
  Ce tableau constitue une référence simple aux éléments les plus importants du modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour chaque type d'objet personnalisé que vous pouvez développer.  
   
-|Objet personnalisé|Classe de base|Attribut|Méthodes importantes|  
+|Objet personnalisé|Classe de base|Attribute|Méthodes importantes|  
 |-------------------|----------------|---------------|-----------------------|  
 |Tâche|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Gestionnaire de connexions|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Entrée de blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](http://go.microsoft.com/fwlink/?LinkId=215662), sur blogs.msdn.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Persistance des objets personnalisés](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Génération, déploiement et débogage d’objets personnalisés](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

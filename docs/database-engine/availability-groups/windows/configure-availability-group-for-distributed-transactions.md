@@ -22,11 +22,11 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 198d9e8f67003e23a6c94094b7e559249a2d3fad
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurer un groupe de disponibilité pour les transactions distribuées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Dans une transaction distribuée, les applications clientes utilisent Microsoft 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] n’empêche pas les transactions distribuées pour des bases de données dans un groupe de disponibilité, même quand le groupe de disponibilité n’est pas configuré pour les transactions distribuées. Cependant, quand un groupe de disponibilité n’est pas configuré pour les transactions distribuées, le basculement peut échouer dans certaines situations. En particulier, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] du nouveau réplica principal ne peut parfois pas obtenir le résultat de la transaction auprès du DTC. Pour permettre à l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] d’obtenir le résultat des transactions incertaines auprès du DTC après un basculement, configurez le groupe de disponibilité pour les transactions distribuées. 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Avant de configurer un groupe de disponibilité pour prendre en charge les transactions distribuées, vous devez respecter les prérequis suivants :
 
@@ -86,7 +86,7 @@ Vous pouvez modifier un groupe de disponibilité pour les transactions distribu�
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ Après avoir validé ou annulé la transaction, vous pouvez utiliser `ALTER DATA
 
 Pour plus d’informations sur la résolution des transactions incertaines, consultez [Résoudre les transactions manuellement](http://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 
 [Transactions distribuées](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

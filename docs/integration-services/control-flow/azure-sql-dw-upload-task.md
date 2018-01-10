@@ -41,7 +41,7 @@ LocalDirectory|Spécifie le répertoire local qui contient les fichiers de donn�
 Recursively|Spécifie s’il convient d’effectuer des recherches de façon récursive dans les sous-répertoires.
 FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par ex. MaFeuille*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
 RowDelimiter|Spécifie le ou les caractères qui marquent la fin de chaque ligne.
-ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par ex. &#124 ; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
+ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par ex. &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
 IsFirstRowHeader|Spécifie si la première ligne de chaque fichier de données contient les noms de colonne au lieu des données réelles.
 AzureStorageConnection|Spécifie un gestionnaire de connexions de stockage Azure.
 BlobContainer|Spécifie le nom du conteneur d’objets blob sur lequel les données locales seront chargées et relayées vers Azure Data Warehouse via PolyBase. Un conteneur sera créé s’il n’existe pas.

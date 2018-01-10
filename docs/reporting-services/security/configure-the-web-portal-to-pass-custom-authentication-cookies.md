@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +16,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], custom security
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 421c4806ee3a6f5aaf041f8446cbe1c2bf5eed9c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 083b458f0800fc560822f2ae933fd3b0503979d2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>Configurer le portail web pour passer des cookies d’authentification personnalisée
 
@@ -50,7 +48,7 @@ Pour activer la transmission de cookies supplémentaires via des requêtes HTTP 
 </UI>  
 ```  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
 [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

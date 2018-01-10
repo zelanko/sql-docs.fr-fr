@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10427"
@@ -18,13 +16,13 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43f304a78091c9b70abea274ae28e7ad180f27a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f50138fa4045822456105962aec3c8a6c2305fbe
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-default-options-for-report-builder"></a>Définir les options par défaut du Générateur de rapports
   Dans le Générateur de rapports, vous pouvez définir un certain nombre de paramètres par défaut utiles pour faciliter et accélérer la création des rapports.  Par exemple, si vous pouvez définir ou modifier le serveur de rapports par défaut, le Générateur de rapports enregistre vos rapports sur le même serveur de rapports automatiquement, sauf indication contraire.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
  **Effacer toutes les listes d'éléments récentes**  
  Effacez les listes actuelles de serveurs et de sites récents, de documents, de datasets partagés et de connexions à des sources de données partagées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)  
   
   

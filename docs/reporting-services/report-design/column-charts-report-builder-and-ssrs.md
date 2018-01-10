@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f962314d1c4b4c3c3c342c668979081d8c7305c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41f82ebf47951b2935fda6d604c17f0640fe9ee7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Les histogrammes sont utiles pour montrer des modifications de données sur une période ou pour illustrer des comparaisons entre éléments. L'histogramme ordinaire est étroitement lié au graphique à barres, qui affiche une série sous la forme d'un ensemble de barres horizontales, ainsi qu'au graphique d'étendue en colonnes, qui affiche une série sous la forme d'un ensemble de barres verticales avec des points de départ et de fin variables. Pour plus d’informations, consultez [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) et [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 -   La possibilité d'afficher votre graphique sous la forme d'un histogramme ou diagramme de Pareto est une spécificité des histogrammes. Pour ce faire, attribuez à la propriété ShowColumnAs la valeur **Histogramme** ou **Pareto** et définissez-la sur **true**dans la fenêtre Propriétés.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   

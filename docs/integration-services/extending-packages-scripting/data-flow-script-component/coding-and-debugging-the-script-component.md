@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1df48e67801190ccef4a6e5dce7de92fc5a5bca2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8874b50730037fee6f369c99d5ce860f5f91c95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
   Dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. Lorsque vous ouvrez l’**Éditeur de transformation de script**, le composant entre en mode Création des métadonnées, dans lequel vous configurez des métadonnées et définissez les propriétés du composant. Après avoir défini les propriétés du composant Script et avoir configuré l'entrée et les sorties en mode Création des métadonnées, vous pouvez basculer vers le mode Création du code pour écrire votre script personnalisé. Pour plus d’informations sur le mode Création des métadonnées et le mode Création de code, consultez [Configuration du composant Script dans l’Éditeur de composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
@@ -165,7 +165,7 @@ public class ScriptMain : UserComponent
  Vous pouvez ajouter des références aux assemblys managés en cliquant avec le bouton droit sur le projet de tâche de script dans l’**Explorateur de projets**, puis en cliquant sur **Ajouter une référence**. Pour plus d’informations, consultez [Référencement d’autres assemblys dans les solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
->  Vous pouvez consulter des références de projet dans l’environnement de développement intégré VSTA dans l’**Affichage de classes** ou l’**Explorateur de projets**. Vous ouvrez l’une ou l’autre de ces fenêtres à partir du menu **Affichage**. Vous pouvez ajouter une nouvelle référence à partir du menu **Projet**, de l’**Explorateur de projets** ou de l’**Affichage de classes**.  
+>  Vous pouvez consulter des références de projet dans l’environnement de développement intégré VSTA dans l’**Affichage de classes** ou l’**Explorateur de projets**. Vous ouvrez l’une ou l’autre de ces fenêtres à partir du menu **Affichage**. Vous pouvez ajouter une nouvelle référence à partir du menu **Projet**, de l’**Explorateur de projets** ou d’**Affichage de classes**.  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>Interaction avec le package dans le composant Script  
  Le script personnalisé que vous écrivez dans le composant Script peut accéder à des variables et gestionnaires de connexions afin de les utiliser, à partir du package conteneur, via des accesseurs fortement typés dans les classes de base générées automatiquement. Toutefois, vous devez configurer à la fois les variables et les gestionnaires de connexions avant de passer en mode Création du code si vous souhaitez les rendre disponibles pour votre script. Vous pouvez également déclencher des événements et effectuer une journalisation à partir de votre code de composant Script.  
@@ -214,7 +214,7 @@ public class ScriptMain : UserComponent
   
 -   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration du composant Script dans l’éditeur de composant de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
   
   

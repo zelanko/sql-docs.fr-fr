@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -17,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: efb8daaa71c08e9292e7d0427e04fc0a7878f219
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importer des documents JSON dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -163,7 +162,7 @@ SELECT book.*
 
 Dans cet exemple, OPENROWSET(BULK) lit le contenu du fichier et transmet ce contenu à la fonction OPENJSON avec un schéma défini pour la sortie. OPENJSON établit une correspondance avec les propriétés dans les objets JSON en utilisant des noms de colonnes. Par exemple, la propriété `price` est retournée en tant que colonne `price` et convertie vers le type de données float. Voici les résultats :
 
-|Id|Nom|price|pages_i|Auteur
+|Id|Nom   |price|pages_i|Author
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
@@ -176,6 +175,6 @@ Vous pouvez maintenant retourner cette à l’utilisateur, ou charger les donné
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

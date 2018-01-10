@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,26 +19,26 @@ helpviewer_keywords:
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6a21d71f31380543a74db37bd70061a3fe848a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9fe31f06921df5ef0c1f3272f2064c0464551a2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Configurer les abonnements et les alertes pour les applications de service de SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les abonnements et les alertes de données nécessitent SQL Server Agent et peuvent exiger la configuration des autorisations de SQL Server Agent. Si des messages d'erreur apparaissent indiquant que SQL Server Agent est obligatoire et que vous avez vérifié le fonctionnement de SQL Server Agent, alors vous devez mettre à jour ou vérifier les autorisations. Cette rubrique traite de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et décrit trois méthodes pour mettre à jour les autorisations de SQL Server Agent avec les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les informations d'identification que vous utilisez pour les étapes de cette rubrique doivent disposer d'autorisations suffisantes pour accorder des autorisations EXECUTE au rôle RSExecRole pour les objets dans les bases de données de l'application de service, msdb et master.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124 SharePoint 2013|  
   
  ![Autorisations d’accès de l’Agent SQL aux bases de données d’application de service](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Autorisations d’accès de l’Agent SQL aux bases de données d’application de services")  
   
-|| Description|  
+||Description|  
 |------|-----------------|  
 |**1**|Instance du moteur de base de données SQL Server qui héberge les bases de données d'application de service Reporting Services.|  
 |**2**|L'instance d'agent SQL Server pour l'instance du moteur de base de données SQL.|  

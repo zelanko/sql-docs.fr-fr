@@ -8,23 +8,21 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: "29"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3b53303b80144b02f6e64c6d3aaeac1856773da9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ab52b302e3dddfd4ab42d2cd09019f0fa62f5a91
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
  Vérifiez l'orthographe dans les expressions. Les noms de paramètres, de globales et de champs respectent la casse. Dans l'expression source de l'erreur, vérifiez que le nom existe réellement dans le rapport et qu'il est correctement orthographié. Pour plus d’informations, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Propriétés de paramètre et valeur NULL  
- Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Un paramètre à valeurs multiples ne peut pas contenir la valeur NULL. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Le rapport principal avec le sous-rapport n'a pas pu être traité  
  Un rapport avec des sous-rapports doit être traité par la même version du processeur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lors de la mise à niveau de rapports vers la version actuelle du schéma de la définition de rapport, le rapport principal et les sous-rapports peuvent ou non ne pas être mis à jour en même temps. Si la version d'un rapport et de ses sous-rapports n'est pas compatible, le message suivant est affiché : « Le sous-rapport n'a pas pu être traité ».  
@@ -131,7 +129,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Étendue de dataset par défaut pour une zone de texte de niveau supérieur  
  N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

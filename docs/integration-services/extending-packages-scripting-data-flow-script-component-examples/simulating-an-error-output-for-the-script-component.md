@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,18 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7a802bffc3178cecd58279fed0d93ad55bcdc0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 41a596fef6df27aff01dae76abb5b16fb152f76a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulation d'une sortie d'erreur pour le composant Script
   Bien qu'il soit impossible de configurer directement une sortie en tant que sortie d'erreur dans le composant Script à des fins de gestion automatique des lignes d'erreur, vous pouvez reproduire les fonctionnalités d'une sortie d'erreur intégrée en créant une sortie supplémentaire et en utilisant une logique conditionnelle dans votre script afin de diriger des lignes vers cette sortie, le cas échéant. Vous pouvez imiter le comportement d'une sortie d'erreur intégrée en ajoutant deux colonnes de sortie supplémentaires pour recevoir le numéro d'erreur et l'ID de la colonne dans laquelle une erreur s'est produite.  
   
  Si vous souhaitez ajouter la description d'erreur qui correspond à un code d'erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prédéfini spécifique, vous pouvez utiliser la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, disponible via la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> du composant Script.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple indiqué ici utilise un composant Script configuré en tant que transformation qui possède deux sorties synchrones. L'objectif du composant Script est de filtrer les lignes d'erreur parmi les données d'adresse dans l'exemple de base de données AdventureWorks. Cet exemple fictif suppose que nous préparons une promotion pour les clients d'Amérique du Nord et que nous avons besoin d'éliminer les adresses qui ne se trouvent pas en Amérique du Nord par filtrage.  
   
 #### <a name="to-configure-the-example"></a>Pour configurer l'exemple  
@@ -105,7 +105,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)   
  [Utilisation de sorties d’erreur dans un composant de flux de données](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

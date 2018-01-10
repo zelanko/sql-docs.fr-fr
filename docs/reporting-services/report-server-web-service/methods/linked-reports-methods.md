@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f778955a671ff182e32fe0ffe58cfafefbc816ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 079cd24c185d272d3b3b3f35222b756a6537d713
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="linked-reports-methods"></a>Méthodes relatives aux rapports liés
   Vous pouvez utiliser ces méthodes pour créer et gérer des éléments liés.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 |<xref:ReportService2010.ReportingService2010.ListDependentItems%2A>|Retourne une liste des éléments liés à un élément spécifié.|  
 |<xref:ReportService2010.ReportingService2010.SetItemLink%2A>|Spécifie l'élément de catalogue utilisé pour la définition d'élément d'un élément lié existant.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

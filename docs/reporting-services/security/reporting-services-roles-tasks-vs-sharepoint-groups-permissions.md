@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6dfe5a9c884008b2e5e5e744e2b2169356c6442f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Rôles-tâches Reporting Services et groupes-autorisations SharePoint
   Cette rubrique compare les fonctionnalités d'autorisation basées sur les rôles et les tâches en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aux fonctionnalités de sécurité dans les produits SharePoint. Cette rubrique compare la terminologie et les caractéristiques des rôles, des tâches, des groupes SharePoint, des niveaux d'autorisation et des autorisations.  
@@ -110,7 +108,7 @@ ms.lasthandoff: 12/05/2017
 |Afficher les propriétés du serveur de rapports|Système|Aucun (non applicable). Le serveur de rapports ne détermine pas si un utilisateur est autorisé à consulter les paramètres d'intégration dans l'administration centrale.|  
 |Afficher les planifications partagées|Système|Ouvrir les éléments.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Définir des autorisations pour des opérations de serveurs de rapports dans une application web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

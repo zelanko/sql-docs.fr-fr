@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c1acb733ddce1bcbbfeab4117305e9738de607a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6b4ddcbdf056ce23dd7837e0e3b19f56dc1a889d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>création, suppression ou modification d'un dossier (Gestionnaire de rapports)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
      La page **Nouveau dossier** s’affiche.  
   
-3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : @ & = + , $ / * < > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
+3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : @ & = + , $ / * < > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
   
 4.  Tapez éventuellement une description.  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  Cliquez sur **Appliquer** pour enregistrer vos modifications.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Page Nouveau dossier &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
  [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  

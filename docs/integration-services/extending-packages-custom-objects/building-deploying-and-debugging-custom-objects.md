@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33dcd6590ec74ecc06de8b2e545f865e1e259f26
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 661ca09d032e09e8f9599b7b8093f95fcc975731
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d’un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l’assembly, le déployer, l’intégrer dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] afin qu’il puisse être utilisé dans des packages, puis le tester et le déboguer.  
@@ -162,7 +162,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  Revenez au package mis en pause et passez le point d’arrêt, ou cliquez sur **OK** pour fermer le message généré par la tâche de script, puis continuez l’exécution et le débogage du package.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Développement d’objets personnalisés pour Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [Persistance des objets personnalisés](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 03acb388a2fe0b5eb75821379d0299460707c042
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b800d0677323aa53276640be971fddf73d36b62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de données du serveur de rapports (SSRS en mode natif)
   Un serveur de rapports est un serveur sans état qui utilise le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour stocker les métadonnées et les définitions d'objets. Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif utilise deux bases de données pour distinguer le stockage de données persistantes des obligations de stockage temporaire. Les bases de données sont créées ensemble et liées par le nom. Les noms par défaut de ces bases de données sont respectivement **reportserver** et **reportservertempdb**.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 -   propriétés système et paramètres de sécurité au niveau système ;  
   
--   données du journal d'exécution des rapports ;  
+-   données du journal d'exécution des rapports ;  
   
 -   clés symétriques, ainsi que connexions et informations d'identification chiffrées pour les sources de données des rapports.  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  Si vous sauvegardez la base de données temporaire et la restaurez ensuite, il est recommandé d'en supprimer le contenu. En règle générale, il n'est pas risqué de supprimer le contenu de la base de données temporaire à quelque moment que ce soit. Toutefois, vous devez redémarrer le service Windows Report Server après avoir supprimé le contenu.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Héberger une base de données du serveur de rapports dans un cluster de basculement SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   

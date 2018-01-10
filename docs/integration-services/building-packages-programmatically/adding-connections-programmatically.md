@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed662d5dff653fc0e245db65f6fe25b4b209c77e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a8884691a3837d86f2210662cd9d680cda0e65b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-connections-programmatically"></a>Ajout de connexions par programme
   La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> représente des connexions physiques aux sources de données externes. La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isole du runtime les détails d'implémentation de la connexion. Elle permet au runtime d'interagir avec chaque gestionnaire de connexions de façon cohérente et prévisible. Les gestionnaires de connexions contiennent un jeu de propriétés stock que toutes les connexions ont en commun, telles que les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Toutefois, les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> sont habituellement les seules propriétés requises pour configurer un gestionnaire de connexions. Contrairement à d’autres paradigmes de programmation, où les classes de connexion exposent des méthodes telles que **Open** ou **Connect** pour établir physiquement une connexion à la source de données, le moteur d’exécution gère toutes les connexions du package pendant qu’il s’exécute.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau suivant répertorie les gestionnaires de connexions fournis avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. et la chaîne utilisée dans l'instruction `package.Connections.Add("xxx")`. Pour obtenir la liste de tous les gestionnaires de connexions, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-|Chaîne|Gestionnaire de connexions|  
+|String|Gestionnaire de connexions|  
 |------------|------------------------|  
 |"OLEDB"|Gestionnaire de connexions pour les connexions OLE DB.|  
 |"ODBC"|Gestionnaire de connexions pour les connexions ODBC.|  
@@ -216,7 +216,7 @@ End Class
 ## <a name="external-resources"></a>Ressources externes  
  Article technique, [Connection Strings](http://go.microsoft.com/fwlink/?LinkId=220743), sur carlprothman.net.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

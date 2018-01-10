@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>Utilisation de variables par programmation
   Les variables constituent un moyen de définir des valeurs et de contrôler des processus dans les packages, conteneurs, tâches et gestionnaires d'événements de manière dynamique. Les variables peuvent également être utilisées par les contraintes de précédence pour contrôler la direction du flux de données vers différentes tâches. Les variables ont diverses utilisations :  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
  Si un package exécute d'autres packages, les variables définies dans la portée du package appelant sont disponibles pour le package appelé. La seule exception se produit lorsqu'une variable de même nom existe dans le package appelé. Lorsque cette collision se produit, la valeur de la variable dans le package appelé remplace celle du package appelant. Les variables définies dans la portée du package appelé ne sont jamais de nouveau disponibles pour le package appelant.  
   
- L'exemple de code suivant crée une variable, `myCustomVar`, par programmation, à la portée du package, puis parcourt toutes les variables visibles pour le package, en imprimant leur nom, leur type de données et leur valeur.  
+ L'exemple de code suivant crée une variable, `myCustomVar`, par programme, à la portée du package, puis parcourt toutes les variables visibles pour le package, en imprimant leur nom, leur type de données et leur valeur.  
   
 ```csharp  
 using System;  
@@ -235,7 +235,7 @@ End Module
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Si un fichier de configuration inclut une variable personnalisée, la variable peut être mise à jour au moment de l'exécution. Cela signifie que lorsque le package s'exécute, la valeur de la variable qui se trouvait à l'origine dans le package est remplacée par une nouvelle valeur provenant du fichier de configuration. Cette technique de remplacement s'avère utile lorsqu'un package est déployé sur plusieurs serveurs qui requièrent des valeurs de variables différentes. Par exemple, une variable peut spécifier combien de fois un conteneur de **boucles Foreach** répète son flux de travail, répertorier les destinataires auxquels un gestionnaire d’événements envoie des e-mails lorsqu’une erreur est déclenchée ou changer le nombre d’erreurs pouvant se produire avant que le package n’échoue. Ces variables sont fournies de manière dynamique dans des fichiers de configuration pour chaque environnement. Par conséquent, seules les variables accessibles en lecture/écriture sont autorisées dans les fichiers de configuration. Pour plus d’informations, consultez [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd531049f4446df4f367907d13721f194a307e52
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Ajout de la prise en charge du débogage dans une tâche personnalisée
   Le moteur d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet aux packages, tâches et autres types de conteneurs d'être suspendus pendant l'exécution à l'aide de points d'arrêt. L'utilisation de points d'arrêt vous permet d'examiner et de corriger les erreurs qui empêchent votre application ou vos tâches de s'exécuter correctement. L'architecture de point d'arrêt permet au client d'évaluer la valeur d'exécution des objets contenus dans le package aux points d'exécution définis pendant la suspension du traitement de la tâche.  
@@ -347,7 +347,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogage du flux de contrôle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

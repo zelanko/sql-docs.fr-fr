@@ -8,18 +8,18 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f282b9aacc253620a2f90da67cd5738702acd0ee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installer le premier serveur de rapports en mode SharePoint
 
@@ -28,13 +28,13 @@ ms.lasthandoff: 12/05/2017
   Les procédures de cette rubrique constituent un guide d’installation sur un serveur unique de Reporting Services en mode SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint. La rubrique peut également être utilisée pour des procédures individuelles dans le cadre de la mise à jour d’une installation existante, par exemple, pour créer une application de service Reporting Services.  
   
 > [!NOTE]
-> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
   
  Pour plus d’informations sur l’ajout de serveurs Reporting Services supplémentaires à une batterie de serveurs existante, consultez les rubriques suivantes :  
   
 -   [Ajouter un serveur de rapports supplémentaire à une batterie &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
--   [Ajouter un serveur Web frontal Reporting Services supplémentaire à une batterie](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
+-   [Ajouter un serveur Web frontal Reporting Services supplémentaire à un pool](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
  Une installation sur un serveur unique est utile pour les scénarios de développement et de tests, mais n'est pas recommandée pour les environnements de production.  
   

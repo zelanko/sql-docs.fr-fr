@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24f37e9db3b2e20cba50ad3fa303694b6d23d74e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21fab04c319d2d407a1a228b908cccb6ffd73266
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
   Vous utilisez un composant de transformation dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour modifier et analyser les données acheminées de la source à la destination. Une transformation à sorties synchrones traite chacune des lignes d'entrée lorsqu'elles traversent le composant. Une transformation à sorties asynchrones peut attendre d’avoir reçu toutes les lignes d’entrée avant de procéder au traitement des données, ou elle peut exporter certaines lignes avant d’avoir reçu toutes les lignes d’entrée. Cette rubrique examine une transformation asynchrone. Si votre traitement requiert une transformation synchrone, consultez [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si vous développez un composant de flux de données personnalisé entièrement nouveau, il est important de remplacer la méthode PrimeOutput pour mettre en cache les références aux mémoires tampons de sortie afin de pouvoir ajouter des lignes de données aux mémoires tampons ultérieurement. Dans le composant Script, cette opération n’est pas nécessaire car vous disposez d’une classe générée automatiquement qui représente chaque mémoire tampon de sortie dans l’élément de projet **BufferWrapper**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple présente le code personnalisé requis dans la classe ScriptMain pour créer un composant de transformation asynchrone.  
   
 > [!NOTE]  
@@ -235,7 +235,7 @@ public class ScriptMain:
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Développement d’un composant de transformation personnalisé avec des sorties asynchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +18,17 @@ helpviewer_keywords:
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 caps.latest.revision: "92"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 13b4723a9d481f9372b73619ffd9900f278b1910
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f67b915820ae2d458ff6e43c7c3b0bbe7fdf1f98
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="upgrade-and-migrate-reporting-services"></a>Mettre à niveau et migrer Reporting Services
+# <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
 
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Sauvegardez toutes les personnalisations effectuées dans les répertoires virtuels [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans IIS.  
   
--   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Les certificats non valides provoquent l’échec de la mise à niveau et un message d’erreur semblable au suivant est ajouté au fichier journal de Reporting Services : **Microsoft.ReportingServices.WmiProvider.WMIProviderException : Un certificat SSL (Secure Sockets Layer) n’est pas configuré sur le site web.**.  
+-   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Les certificats non valides provoquent l’échec de la mise à niveau et un message d’erreur semblable au suivant est ajouté au fichier journal de Reporting Services : **Microsoft.ReportingServices.WmiProvider.WMIProviderException : Un certificat SSL (Secure Sockets Layer) n’est pas configuré sur le site web**.  
   
  Avant de mettre à niveau un environnement de production, veillez à toujours exécuter une mise à niveau de test dans un environnement de préproduction qui a la même configuration que votre environnement de production.  
   
@@ -215,7 +213,7 @@ ms.lasthandoff: 12/05/2017
   
  Le déplacement d'une installation du serveur de rapports vers un autre ordinateur invalidera le hachage qui protège les clés de chiffrement utilisées pour aider à sécuriser des données sensibles stockées dans la base de données du serveur de rapports. Chaque instance du serveur de rapports qui utilise la base de données a sa copie de la clé de chiffrement, laquelle est chiffrée avec l'identité du compte de service telle qu'elle est définie sur l'ordinateur actuel. Si vous changez d'ordinateurs, le service n'aura plus accès à sa clé, même si vous utilisez le même nom de compte sur le nouvel ordinateur.  
   
- Pour rétablir le chiffrement réversible sur le nouveau serveur de rapports, vous devez restaurer la clé que vous avez précédemment sauvegardée. L'ensemble complet de clés qui est stocké dans la base de données du serveur de rapports est composé d'une valeur de clé symétrique ainsi que des informations d'identité de service utilisées pour restreindre l'accès à la clé afin qu'elle puisse être utilisée uniquement par l'instance du serveur de rapports qui l'a stockée. Pendant la restauration de la clé, le serveur de rapports remplace les copies existantes de la clé par les nouvelles versions. La nouvelle version inclut les valeurs d'identité du service et de l'ordinateur, telles que définies sur l'ordinateur actuel. Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour rétablir le chiffrement réversible sur le nouveau serveur de rapports, vous devez restaurer la clé que vous avez précédemment sauvegardée. L'ensemble complet de clés qui est stocké dans la base de données du serveur de rapports est composé d'une valeur de clé symétrique ainsi que des informations d'identité de service utilisées pour restreindre l'accès à la clé afin qu'elle puisse être utilisée uniquement par l'instance du serveur de rapports qui l'a stockée. Pendant la restauration de la clé, le serveur de rapports remplace les copies existantes de la clé par les nouvelles versions. La nouvelle version inclut les valeurs d'identité du service et de l'ordinateur, telles que définies sur l'ordinateur actuel. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   Mode SharePoint : Consultez la section « Gestion des clés » de la rubrique [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
@@ -237,7 +235,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_additional_resources"></a> Ressources supplémentaires  
   
 > [!NOTE]  
->  Pour plus d'informations sur la mise à niveau avec liaison des bases de données SharePoint, consultez les rubriques suivantes :  
+>  Pour plus d'informations sur la mise à niveau avec liaison des bases de données SharePoint, consultez les rubriques suivantes :  
   
 -   [Présentation de la procédure de mise à niveau vers SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 

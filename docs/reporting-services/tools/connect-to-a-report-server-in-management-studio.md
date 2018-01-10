@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1b6a12b85b69cb6bb8ae1b5bc138a47d1a58c1a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 951f22989a1fb2bb725073cd27da6f1307c71551
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit l’Explorateur d’objets, qui vous permet de vous connecter à n’importe quel serveur de la famille [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Pour Reporting Services, vous pouvez utiliser l'Explorateur d'objets pour effectuer les opérations suivantes :  
@@ -113,14 +111,14 @@ ms.lasthandoff: 12/05/2017
   
  Quand vous indiquez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en tant que type de serveur dans la boîte de dialogue **Se connecter au serveur** , vous pouvez spécifier un nom de serveur de rapports ou un point de terminaison au service web.  
   
-|Se connecter à|Tâches|Permissions|  
+|Se connecter à|Tâches|Autorisations|  
 |----------------|-----------|-----------------|  
 |Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée :<br /><br /> \<nom du serveur>\<_instance><br /><br /> La connexion au serveur de rapports est établie à travers le fournisseur WMI de Report Server.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
 |Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée, via le point de terminaison au service Web Report Server :<br /><br /> `http://<servername>/reportserver`<br /><br /> La spécification de l'URL du serveur de rapports offre un autre moyen de se connecter au serveur de rapports.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
 |Serveur de rapports en mode intégré SharePoint, connecté via le site SharePoint :<br /><br /> `http://<webserver>/<SharePointSite>`|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez des planifications partagées définies pour le site auquel vous êtes connecté.<br /><br /> Consultez les niveaux d'autorisation définis pour le site auquel vous êtes connecté.|Niveau d'autorisation Contrôle total pour le site SharePoint auquel vous êtes connecté.|  
 |Serveur de rapports en mode intégré SharePoint, connecté via le nom de l'instance du serveur de rapports :<br /><br /> \<nom du serveur>\<_instance>|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.|Niveau d'autorisation Contrôle total pour le site SharePoint intégré au serveur de rapports.<br /><br /> Notez que lorsque vous vous connectez au serveur de rapports plutôt qu'au site SharePoint, le nombre des tâches que vous pouvez effectuer est considérablement réduit. En effet, le serveur de rapports peut retourner uniquement les données d'application stockées ou gérées dans la base de données du serveur de rapports, et non dans les bases de données de contenu et de configuration SharePoint.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services pour SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   

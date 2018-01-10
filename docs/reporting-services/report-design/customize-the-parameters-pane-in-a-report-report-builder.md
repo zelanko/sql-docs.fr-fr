@@ -8,20 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7c214ec5fccd3c94d3c910d3d2d887b556ba6884
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0cd8a2752084f8b4f6be1675b657e5a6b5e3dfb3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   Lors de la création de rapports paginés avec des paramètres dans le Générateur de rapports, vous pouvez personnaliser le volet Paramètres. Dans la vue Conception de rapport, vous pouvez faire glisser un paramètre vers une colonne et une ligne spécifiques du volet Paramètres. Vous pouvez ajouter et supprimer des colonnes pour modifier la disposition du volet.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
     -   Cliquez avec le bouton droit sur le paramètre dans le volet **Données du rapport** et sélectionnez **Supprimer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

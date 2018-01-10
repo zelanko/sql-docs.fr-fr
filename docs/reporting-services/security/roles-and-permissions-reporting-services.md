@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe0865c8e7b818b6de5c48fcd05d8dfef4727e5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 169cc23cc10ab031b26d3e6853e8e0a4b983f588
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Rôles et autorisations (Reporting Services)
   Reporting Services propose un sous-système d'authentification et un modèle d'autorisation basé sur les rôles. Les modèles d'authentification et d'autorisation varient selon que le serveur de rapports s'exécute en mode natif ou en mode SharePoint. Si le serveur de rapports fait partie d'un déploiement SharePoint, les autorisations SharePoint déterminent quels sont les utilisateurs qui ont accès au serveur de rapports.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  Explique comment utiliser les groupes SharePoint, les niveaux d'autorisation et les autorisations pour contrôler l'accès à un serveur de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

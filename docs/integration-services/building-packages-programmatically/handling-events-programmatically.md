@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6eacc7562384189a9b70da5c548b929dabfb7ce4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-events-programmatically"></a>Gestion d'événements par programme
   Le Runtime [!INCLUDE[ssIS](../../includes/ssis-md.md)] fournit une collection d'événements qui se produisent avant, pendant et après la validation et l'exécution d'un package. Ces événements peuvent être capturés de deux manières. La première méthode consiste à implémenter l’interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> dans une classe et à fournir la classe en tant que paramètre aux méthodes **Execute** et **Validate** du package. La deuxième méthode consiste à créer des objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, qui peuvent contenir d'autres objets [!INCLUDE[ssIS](../../includes/ssis-md.md)], tels que des tâches et des boucles, exécutés lorsqu'un événement se produit dans <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Cette section décrit ces deux méthodes et fournit des exemples de code pour illustrer leur utilisation.  
@@ -117,7 +117,7 @@ End Class
   
  Le code suivant montre comment créer un objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Le code ajoute <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> à la collection <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> du package, puis crée un objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> pour l'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> de la tâche. <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> est ajouté au gestionnaire d'événements, qui s'exécute lorsque l'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> se produit pour le premier <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. Cet exemple suppose que vous disposez d'un fichier nommé C:\Windows\Temp\DemoFile.txt à des fins de test. La première fois que vous exécutez l'exemple, le fichier est correctement copié et le gestionnaire d'événements n'est pas appelé. Lorsque vous exécutez l’exemple une seconde fois, le premier <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> ne parvient pas à copier le fichier (car la valeur de <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> est **false**), le gestionnaire d’événements est appelé, le deuxième <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> supprime le fichier source et le package signale un échec en raison de l’erreur qui s’est produite.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```csharp  
 using System;  
@@ -254,7 +254,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../integration-services/integration-services-ssis-event-handlers.md)   
  [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   

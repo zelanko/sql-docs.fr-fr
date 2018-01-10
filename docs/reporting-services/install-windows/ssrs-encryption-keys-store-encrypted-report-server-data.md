@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7ede2f08bd7f09eb4a3dd0be273225dc5ba6b8d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b733d6f858f3d631c25b7861cc7f7b5546482ee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge la mise en cache ou l’historique de rapport pour les rapports basés sur l’identité de sécurité de l’utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

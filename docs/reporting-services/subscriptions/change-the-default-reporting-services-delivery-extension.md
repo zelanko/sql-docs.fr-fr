@@ -8,23 +8,21 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d5c6afdd473d88687eb7d7bd522eebb784e0424f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e6822219bab297526467637a79e6bd46305c9e4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
   Vous pouvez modifier les paramètres de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour modifier l’extension de remise par défaut qui s’affiche dans la liste **Remis par** d’une page de définition d’abonnement. Par exemple, vous pouvez modifier la configuration afin que, lorsque les utilisateurs créent un nouvel abonnement, la remise par partage de fichiers soit activée par défaut, plutôt que la remise par messagerie électronique. Vous pouvez également modifier l'ordre selon lequel les extensions de remise sont répertoriées dans l'interface utilisateur.  
@@ -118,8 +116,8 @@ ms.lasthandoff: 12/05/2017
   
     ```
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a> Voir aussi  
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Remise par e-mail dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   

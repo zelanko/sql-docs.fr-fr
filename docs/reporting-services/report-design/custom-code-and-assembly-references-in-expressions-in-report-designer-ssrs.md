@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: "77"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c6bb20022e7766e66b47c51995eef4fe7fb785c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e17e5820a54eb2328edc9efe31239ca31a1fef09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
   Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  
@@ -198,7 +196,7 @@ End Function
   
  Comme le contenu des collections *Fields* et *ReportItems* peut changer dynamiquement pendant l’exécution, vous ne devriez pas les conserver entre les appels à l’assembly personnalisé (par exemple, dans une variable membre). La même recommandation s'applique généralement à toutes les collections intégrées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajouter du code à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Utilisation d'assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

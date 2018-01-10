@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8abf9b5440cb59319b7d827a406efd900ac689bb
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 33caea16c9b3424b2c0e1a26bd23e32b9a99ca72
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
   L'énumérateur Foreach à partir d'une variable énumère les éléments d'une liste qui lui est transmise via une variable et effectue les mêmes tâches sur chaque élément. Vous pouvez utiliser le code personnalisé dans une tâche de script pour remplir une liste à cet effet. Pour plus d’informations sur l’énumérateur, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/28/2017
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a> Description  
+## <a name="description"></a>Description  
  L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet **ArrayList** et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
   
 > [!NOTE]  
@@ -252,7 +252,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
  [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   

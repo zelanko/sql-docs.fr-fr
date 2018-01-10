@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 340e4116a6994f41490b7637e5e625b21c72869a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2fd31fc1775d7b7abcab360ac2dd28d3cb9f8ecd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-custom-log-provider"></a>Création d'un module fournisseur d'informations personnalisé
   L'environnement d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possède des fonctionnalités de journalisation complètes. Un journal vous permet de capturer des événements qui se produisent pendant l'exécution d'un package. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers modules fournisseurs d'informations qui permettent de créer et stocker des journaux dans plusieurs formats, notamment XML, texte et base de données ou dans le journal des événements Windows. Si l'un de ces fournisseurs ou formats de sortie ne répond pas à vos besoins, vous pouvez créer un module fournisseur d'informations personnalisé.  
@@ -79,7 +79,7 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>Génération, déploiement et débogage d'un module fournisseur d'informations personnalisé  
  Les étapes permettant de générer, déployer et déboguer un module fournisseur d'informations personnalisé dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sont très similaires à celles requises pour les autres types d'objets personnalisés. Pour plus d’informations, consultez [Génération, déploiement et débogage d’objets personnalisés](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Codage d’un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)   
  [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   

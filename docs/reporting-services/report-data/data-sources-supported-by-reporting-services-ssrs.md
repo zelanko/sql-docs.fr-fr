@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 caps.latest.revision: "96"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96b080d0244783a3af13c8bbe4a7f1587cb10f18
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29c605b8a41fefd8d4cdc1bebe3131823aa6ca20
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="DataSourcesTable"></a> Types de sources de données  
   
-|Source des<br /><br /> données de rapport|Type de la source de données Reporting Services|Nom du fournisseur de données/extension pour le traitement des données|Version du fournisseur de données sous-jacent<br /><br /> (Facultatif)|Données<br /><br /> Source<br /><br /> Plateforme x86|Données<br /><br /> Source<br /><br /> Plateforme x64|Version de la source de données|RS<br /><br /> Plateforme x86|RS<br /><br /> Plateforme x64|  
+|Source des<br /><br /> données de rapport|Type de la source de données Reporting Services|Nom du fournisseur de données/extension pour le traitement des données|Version du fournisseur de données sous-jacent<br /><br /> (Facultatif)|data<br /><br /> Source<br /><br /> Plateforme x86|Données<br /><br /> Source<br /><br /> Plateforme x64|Version de la source de données|RS<br /><br /> Plateforme x86|RS<br /><br /> Plateforme x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données relationnelle|[Microsoft SQL Server](#MicrosoftSQLServer)|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.SqlClient|O|O|SQL Server 2008 et ultérieur.|O|O|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données relationnelle|OLEDB|Extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée|Étend System.Data.OledbClient|O|O|SQL Server 2008 et ultérieur.|O|O|  
@@ -272,9 +270,9 @@ Pour installer les outils clients Oracle, vous pouvez procéder comme suit :
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|13.00|13.0.0.1|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|14.00|14.00.01| 
-|SQL Server 2016|13.00|13.0.0.1|  
-|SQL Server 2016|14.00|14.00.01|
-|SQL Server 2016|15.00|15.00.01| 
+|SQL Server 2016|13.00|13.0.0.1|  
+|SQL Server 2016|14.00|14.00.01|
+|SQL Server 2016|15.00|15.00.01| 
   
  Les paramètres à valeurs multiples sont pris en charge par cette extension. Les macros peuvent être spécifiées dans une requête en utilisant la commande EXECUTE en mode de requête TEXT.  
   
@@ -320,7 +318,7 @@ Pour installer les outils clients Oracle, vous pouvez procéder comme suit :
   
  [Retourner à la table des sources de données](#DataSourcesTable)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

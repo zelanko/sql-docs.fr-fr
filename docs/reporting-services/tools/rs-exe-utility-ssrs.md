@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28da6b7f73721a99937dcfca82264463367830c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf442aad4542358644835a64111ca63ed59b51a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilitaire RS.exe (SSRS)
   L'utilitaire rs.exe traite le script que vous fournissez dans un fichier d'entrée. Utilisez cet utilitaire pour automatiser les tâches de déploiement et d'administration du serveur de rapports.  
@@ -88,7 +86,7 @@ rs {-?}
  Si une valeur n'est pas spécifiée, le point de terminaison Mgmt2005 est utilisé. Pour plus d'informations sur les points de terminaison SOAP, consultez [Report Server Web Service Endpoints](../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  **-l** *time_out*  
- (Facultatif) Spécifie le délai d'expiration de la connexion au serveur, en secondes. La valeur par défaut est 60 secondes. Si vous ne spécifiez pas de délai d'expiration, la valeur par défaut est utilisée. La valeur **0** indique que la connexion n'arrive jamais à expiration.  
+ (Facultatif) Spécifie le délai d'expiration de la connexion au serveur, en secondes. La valeur par défaut est 60 secondes. Si vous ne spécifiez pas de délai d'expiration, la valeur par défaut est utilisée. La valeur **0** indique que la connexion n'arrive jamais à expiration.  
   
  **-b**  
  (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et si l'exécution se poursuit normalement à partir de **Main**, le traitement est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, voir [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
@@ -107,7 +105,7 @@ rs {-?}
  **-t**  
  (Facultatif) Génère des messages d'erreur dans le journal des traces. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Autorisations  
  Pour exécuter l'outil, vous devez avoir l'autorisation de vous connecter à l'instance du serveur de rapports sur laquelle s'exécute le script. Vous pouvez exécuter des scripts pour apporter des modifications à l'ordinateur local ou à un ordinateur distant. Pour apporter des modifications à un serveur de rapports installé sur un ordinateur distant, spécifiez l’ordinateur distant dans l’argument **-s** .  
   
 ##  <a name="bkmk_examples"></a> Exemples  
@@ -121,7 +119,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  Pour obtenir des exemples supplémentaires, consultez [Exécuter un fichier de script Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous pouvez créer des scripts pour définir des propriétés système, publier des rapports, etc. Les scripts que vous créez peuvent inclure toutes les méthodes de l'API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Le script doit être écrit en code [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET et stocké dans un fichier texte au format Unicode ou UTF-8, avec l’extension de nom de fichier .rss. Vous ne pouvez pas déboguer les scripts à l’aide de l’utilitaire **rs** . Pour déboguer un script, exécutez le code dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
@@ -129,7 +127,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  Pour obtenir un exemple détaillé, consultez [Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 - [Exécuter un fichier de script Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [Écrire des scripts pour les tâches d'administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [Écrire des scripts avec l'utilitaire rs.exe et le service Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   

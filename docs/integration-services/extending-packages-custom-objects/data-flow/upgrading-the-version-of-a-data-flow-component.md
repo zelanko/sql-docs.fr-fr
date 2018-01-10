@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d93362af894bb395123b5b18dc5b8ac60a418a0e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b75909f38cffb46fd7ad670176233acd7cc88868
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Mise à niveau de la version d'un composant de flux de données
   Les packages créés avec une version antérieure de votre composant peuvent contenir des métadonnées qui ne sont plus valides, telles que des propriétés personnalisées dont l'utilisation a été modifiée dans les versions plus récentes du composant. Vous pouvez remplacer la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> de la classe de base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> pour mettre à jour les métadonnées précédemment enregistrées dans les packages plus anciens afin de refléter les propriétés actuelles de votre composant.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Lorsque vous recompilez un composant personnalisé pour une nouvelle version de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vous n'avez pas à modifier la valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.CurrentVersion%2A> si les propriétés du composant n'ont pas changé.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant contient le code de la version 2.0 d'un composant de flux de données fictif. Le nouveau numéro de version est défini dans la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.CurrentVersion%2A> de l'objet <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Le composant possède une propriété qui définit la manière dont les valeurs numériques qui dépassent un seuil doivent être gérées. Dans la version 1.0 du composant fictif, cette propriété a été nommée `RaiseErrorOnInvalidValue` et acceptait une valeur booléenne True ou False. Dans la version 2.0 du composant fictif, la propriété a été renommée `InvalidValueHandling` et accepte l'une des quatre valeurs possibles d'une énumération personnalisée.  
   
  La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> remplacée dans l'exemple suivant effectue les actions suivantes :  

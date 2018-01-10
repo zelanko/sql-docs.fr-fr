@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,13 +22,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c0a229c7706ac3c46cf7a1688c15dd4e02daa4c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 14e5a1d1539ac2d65285530607bae262ac7e9b8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="loading-and-running-a-remote-package-programmatically"></a>Chargement et exécution d'un package distant par programmation
+# <a name="loading-and-running-a-remote-package-programmatically"></a>Chargement et exécution d'un package distant par programme
   Pour exécuter des packages distants à partir d'un ordinateur local sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé, démarrez les packages afin qu'ils s'exécutent sur l'ordinateur distant sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installé. Pour cela, vous faites utiliser par l'ordinateur local l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un service Web ou un composant distant pour démarrer les packages sur l'ordinateur distant. Si vous essayez de démarrer directement les packages distants à partir de l'ordinateur local, les packages se chargeront sur l'ordinateur local et essayeront de s'exécuter à partir de ce dernier. Si [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé sur l'ordinateur local, les packages ne s'exécuteront pas.  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
  Presque toutes les méthodes utilisées dans cette rubrique pour charger et enregistrer des packages nécessitent une référence à l’assembly **Microsoft.SqlServer.ManagedDTS**. L’approche ADO.NET décrite dans cette rubrique pour exécuter la procédure stockée **sp_start_job**, laquelle nécessite uniquement une référence à **System.Data**, constitue la seule exception. Après avoir ajouté la référence à l’assembly **Microsoft.SqlServer.ManagedDTS** dans un nouveau projet, importez l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> avec une instruction **using** ou **Imports**.  
   
 ###  <a name="agent"></a> Utilisation de SQL Server Agent pour exécuter par programmation un package distant sur le serveur  
- L'exemple de code suivant montre comment utiliser par programmation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour exécuter un package distant sur le serveur. L’exemple de code appelle la procédure stockée système, **sp_start_job**, qui lance un travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le travail que la procédure lance est nommé `RunSSISPackage`, et ce travail se trouve sur l'ordinateur distant. Le travail `RunSSISPackage` exécute alors le package sur l'ordinateur distant.  
+ L'exemple de code suivant montre comment utiliser par programme l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter un package distant sur le serveur. L’exemple de code appelle la procédure stockée système, **sp_start_job**, qui lance un travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le travail que la procédure lance est nommé `RunSSISPackage`, et ce travail se trouve sur l'ordinateur distant. Le travail `RunSSISPackage` exécute alors le package sur l'ordinateur distant.  
   
 > [!NOTE]  
 >  La valeur retournée par la procédure stockée **sp_start_job** indique si la procédure stockée a pu démarrer correctement le travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. La valeur de retour n'indique pas si le package a réussi ou a échoué.  
@@ -151,7 +151,7 @@ namespace LaunchSSISPackageAgent_CS
 ```  
   
 ###  <a name="service"></a> Utilisation d’un service web ou d’un composant distant pour exécuter un package distant par programmation  
- La solution précédente pour l'exécution de packages par programmation sur le serveur ne requiert pas de code personnalisé sur le serveur. Toutefois, vous pouvez préférer une solution qui ne compte pas sur l'Agent SQL Server pour exécuter des packages. L'exemple suivant présente un service Web qui peut être créé sur le serveur pour démarrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localement, ainsi qu'une application de test qui peut être utilisée pour appeler le service Web à partir d'un ordinateur client. Si vous préférez créer un composant distant au lieu d’un service web, vous pouvez utiliser la même logique de code avec très peu de changements dans un composant distant. Toutefois, un composant distant risque de requérir une configuration plus approfondie qu'un service Web.  
+ La solution précédente pour l'exécution de packages par programme sur le serveur ne requiert pas de code personnalisé sur le serveur. Toutefois, vous pouvez préférer une solution qui ne compte pas sur l'Agent SQL Server pour exécuter des packages. L'exemple suivant présente un service Web qui peut être créé sur le serveur pour démarrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localement, ainsi qu'une application de test qui peut être utilisée pour appeler le service Web à partir d'un ordinateur client. Si vous préférez créer un composant distant au lieu d’un service web, vous pouvez utiliser la même logique de code avec très peu de changements dans un composant distant. Toutefois, un composant distant risque de requérir une configuration plus approfondie qu'un service Web.  
   
 > [!IMPORTANT]  
 >  Avec ses paramètres par défaut pour l'authentification et l'autorisation, un service Web ne dispose généralement pas des autorisations suffisantes pour accéder à SQL Server ou au système de fichiers afin de charger et d'exécuter des packages. Vous risquez de devoir attribuer les autorisations appropriées au service web en configurant ses paramètres d’authentification et d’autorisation dans le fichier **web.config** et en attribuant les autorisations d’accès appropriées à la base de données et au système de fichiers. La description complète des autorisations Web, de base de données et de système de fichiers sort de la portée de cette rubrique.  
@@ -165,7 +165,7 @@ namespace LaunchSSISPackageAgent_CS
 #### <a name="creating-the-web-service"></a>Création du service Web  
  Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être chargé directement à partir d'un fichier, directement à partir de SQL Server ou à partir du magasin de packages SSIS, lequel gère le stockage des packages dans SQL Server et des dossiers spéciaux du système de fichiers. Cet exemple prend en charge toutes les options disponibles en utilisant une construction **Select Case** ou **switch** pour sélectionner la syntaxe appropriée au démarrage du package et pour concaténer les arguments d’entrée convenablement. La méthode de service Web LaunchPackage renvoie le résultat de l'exécution du package sous la forme d'un entier plutôt que d'une valeur <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> afin que les ordinateurs clients ne requièrent pas de référence aux assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>Pour créer un service web afin d'exécuter par programmation des packages sur le serveur  
+###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>Pour créer un service Web afin d'exécuter par programme des packages sur le serveur  
   
 1.  Ouvrez Visual Studio et créez un projet de service Web dans votre langage de programmation préféré. L'exemple de code utilise le nom LaunchSSISPackageService pour le projet.  
   
@@ -425,7 +425,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   Vidéo, [Procédure : automatiser l’exécution du package SSIS à l’aide de SQL Server Agent (vidéo de SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx), sur technet.microsoft.com  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

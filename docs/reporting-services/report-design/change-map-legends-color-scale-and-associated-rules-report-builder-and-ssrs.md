@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -40,13 +38,13 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 685edba6f15b60f990de198784834f142ef2e2c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f252d1bc68c8b9f9e44b2d1741c88060210d90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modifier les légendes de carte, l'échelle de couleurs et les règles associées (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une carte peut contenir des légendes de carte, une échelle de couleurs et une échelle des distances. Ces parties d'une carte aident les utilisateurs à interpréter la visualisation des données sur la carte.  
@@ -292,7 +290,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Ajouter, changer ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   

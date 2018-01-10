@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1679abc5cdec550cd1c81208e71532613996e2cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -142,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  Dans **Contenu du rapport**, spécifiez si vous souhaitez incorporer le rapport réel dans le corps du message.  
   
-     Le format de rendu et le navigateur déterminent si le rapport est incorporé ou joint. Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous sélectionnez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport ne sera pas remis. Choisissez une des autres options de remise (URL ou notification) pour les rapports volumineux.  
+     Le format de rendu et le navigateur déterminent si le rapport est incorporé ou joint. Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous sélectionnez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport ne sera pas remis. Choisissez une des autres options de remise (URL ou notification) pour les rapports volumineux.  
   
 9. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -164,7 +162,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Activez la case à cocher en regard de l'abonnement, puis cliquez sur **Supprimer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Remise par e-mail dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   

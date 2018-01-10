@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51a72f84342bbff7617b1ef0e0c927eb9a70923e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6462484e8665b1b124275d51e0a85790f2c27446
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans une région de données (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ajoutez un groupe à une région de données pour organiser les données selon une valeur spécifique ou un ensemble d’expressions à des fins d’affichage et de calculs. Un groupe porte un nom et possède une expression qui identifient les données d'un dataset qui appartient à ce groupe. Pour plus d’informations sur les groupes, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -125,7 +123,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
     > [!NOTE]  
     >  Lorsque vous supprimez une ligne de détails, vérifiez que l'expression dans chaque cellule spécifie, le cas échéant, une expression d'agrégation. Si nécessaire, modifiez l'expression pour spécifier les fonctions d'agrégation appropriées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,18 +29,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a95e1007fdb54b3bd08139c3c826d372aca4171
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Développement d'une interface utilisateur pour une tâche personnalisée
   Le modèle objet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit aux développeurs de tâches personnalisées la capacité de créer facilement une interface utilisateur personnalisée pour une tâche, qui peut ensuite être intégrée et affichée dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interface utilisateur fournit des informations utiles dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] et aide les utilisateurs à configurer correctement les propriétés et les paramètres de la tâche personnalisée.  
   
  Le développement d'une interface utilisateur personnalisée pour une tâche implique l'utilisation de deux classes importantes. Le tableau suivant décrit ces classes.  
   
-|Classe| Description|  
+|Classe|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Attribut qui identifie une tâche managée et fournit des informations au moment de la conception par le biais de ses propriétés pour contrôler la manière dont le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] affiche les objets et interagit avec eux.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Interface utilisée par la tâche pour s'associer à son interface utilisateur personnalisée.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau suivant décrit les propriétés de l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Affiche le nom de la tâche dans la boîte à outils Flux de contrôle.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Description de la tâche (héritée de <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Cette propriété est affichée dans des info-bulles.|  
@@ -204,7 +204,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [Codage d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Développement d’une interface utilisateur pour une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  

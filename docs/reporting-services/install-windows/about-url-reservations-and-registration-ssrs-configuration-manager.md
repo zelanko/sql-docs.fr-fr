@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 78ec76d599f212e75d5e721c5a13413a392a4f09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94c0184320284272524932ce8d9b1bcda60f1d2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>À propos des réservations et de l’inscription d’URL (Gestionnaire de configuration de SSRS)
   Les URL pour les applications Reporting Services sont définies en tant que réservations d'URL dans HTTP.SYS. Une réservation d'URL définit la syntaxe d'un point de terminaison URL à une application Web. Les réservations d'URL sont définies pour le service Web Report Server et pour le Gestionnaire de rapports lorsque vous configurez les applications sur le serveur de rapports. Les réservations d'URL sont créées automatiquement pour vous lors de la configuration d'URL par le biais du programme d'installation ou de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] et les versions ultérieures intègrent de nouvelles fonctionnalités de sécurité destinées à réduire le risque d’exécution accidentelle de programmes avec des privilèges élevés. Des étapes supplémentaires sont nécessaires pour activer l'administration locale sur ces systèmes d'exploitation. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Syntaxe de réservation d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   

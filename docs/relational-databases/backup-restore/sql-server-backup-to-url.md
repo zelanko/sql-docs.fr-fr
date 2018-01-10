@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 8be67d9cca60d3debf15cc1c10bd2ebfa171761a
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/22/2017
   
  **Conteneur :** un conteneur permet de regrouper un ensemble d’objets blob, et peut stocker un nombre illimité d’objets blob. Pour pouvoir écrire une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage d’objets blob Microsoft Azure, vous devez avoir créé au moins le conteneur racine. Vous pouvez générer un jeton de signature d’accès partagé sur un conteneur, et accorder l’accès aux objets uniquement sur un conteneur spécifique.  
   
- **Objet blob :** fichier de tout type et de toute taille. Deux types d’objets blob peuvent être stockés dans le service de stockage d’objets blob Microsoft Azure : les objets blob de blocs et les objets blob de pages. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sauvegarde peut utiliser les deux types d’objets blob en fonction de la syntaxe Transact-SQL utilisée. Les objets blob sont adressables en utilisant le format d’URL suivant : https://\<compte de stockage>.blob.core.windows.net/\<conteneur>/\<objet blob>. Pour plus d’informations sur le service de stockage d’objets blob Microsoft Azure, voir [Prise en main du stockage d’objets blob Azure à l’aide de .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Pour plus d’informations sur les objets blob de pages et de blocs, voir [Présentation des objets blob de blocs, des objets blob d’ajout et des objets blob de pages](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+ **Objet blob :** fichier de tout type et de toute taille. Deux types d’objets blob peuvent être stockés dans le service de stockage d’objets blob Microsoft Azure : les objets blob de blocs et les objets blob de pages. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sauvegarde peut utiliser les deux types d’objets blob en fonction de la syntaxe Transact-SQL utilisée. Les objets blob sont adressables en utilisant le format d’URL suivant : https://\<compte de stockage>.blob.core.windows.net/\<conteneur>/\<objet blob>. Pour plus d’informations sur le service de stockage d’objets blob Microsoft Azure, voir [Prise en main du stockage d’objets blob Azure à l’aide de .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Pour plus d’informations sur les objets blob de pages et de blocs, voir [Présentation des objets blob de blocs, des objets blob d’ajout et des objets blob de pages](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
  ![Stockage Blob Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Stockage Blob Azure")  
   
@@ -355,7 +355,7 @@ Après avoir exécuté le script, copiez la commande `CREATE CREDENTIAL` dans un
    (SELECT * FROM sys.credentials   
    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
-      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
       SECRET = '<SAS_TOKEN>';  
    ```  
   
@@ -416,7 +416,7 @@ Après avoir exécuté le script, copiez la commande `CREATE CREDENTIAL` dans un
    GO  
    ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un point de données est la plus petite entité individuelle sur un graphique. Sur les graphiques qui ne sont pas à base de formes, les points de données sont représentés selon le type de graphique. Par exemple, une série à base de lignes comprend un ou plusieurs points de données reliés. Sur les graphiques à base de formes, les points de données sont représentés par des coupes ou segments individuels qui s'ajoutent à l'ensemble du graphique. Par exemple, sur un graphique à secteurs, chaque secteur est un point de données. Pour plus d’informations, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -68,21 +66,21 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
   
 |Mot clé de graphique|Description|Applicable au type de graphique|Exemple d'expression simple équivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valeur Y du point de données.|Tous|`=Fields!MyDataField.Value`|  
-|#VALY2|Valeur Y n° 2 du point de données.|Graphique d'étendue, graphique à bulles|Aucune|  
-|#VALY3|Valeur Y n° 3 du point de données.|Graphique boursier, graphique en chandelier|Aucune|  
-|#VALY4|Valeur Y n° 4 du point de données.|Graphique boursier, graphique en chandelier|Aucune|  
-|#SERIESNAME|Nom de la série.|Tous|Aucune|  
-|#LABEL|Étiquette de point de données.|Tous|Aucune|  
+|#VALY|Valeur Y du point de données.|All|`=Fields!MyDataField.Value`|  
+|#VALY2|Valeur Y n° 2 du point de données.|Graphique d'étendue, graphique à bulles|None|  
+|#VALY3|Valeur Y n° 3 du point de données.|Graphique boursier, graphique en chandelier|None|  
+|#VALY4|Valeur Y n° 4 du point de données.|Graphique boursier, graphique en chandelier|None|  
+|#SERIESNAME|Nom de la série.|All|None|  
+|#LABEL|Étiquette de point de données.|All|None|  
 |#AXISLABEL|Étiquette de point de données d'axe.|Graphique à base de formes|`=Fields!MyDataField.Value`|  
-|#INDEX|Index de point de données.|Tous|Aucune|  
-|#PERCENT|Pourcentage de la valeur Y du point de données.|Tous|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Total de toutes les valeurs Y de la série.|Tous|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|Tous|Aucune|  
-|#AVG|Moyenne de toutes les valeurs Y de la série.|Tous|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|Index de point de données.|All|None|  
+|#PERCENT|Pourcentage de la valeur Y du point de données.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Total de toutes les valeurs Y de la série.|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|All|None|  
+|#AVG|Moyenne de toutes les valeurs Y de la série.|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum de toutes les valeurs Y de la série.|Tous|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Maximum de toutes les valeurs Y de la série.|Tous|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|Première de toutes les valeurs Y de la série.|Tous|`=First(Fields!MyDataField.Value)`|  
+|#MAX|Maximum de toutes les valeurs Y de la série.|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|Première de toutes les valeurs Y de la série.|All|`=First(Fields!MyDataField.Value)`|  
   
  Pour mettre en forme le mot clé, mettez une chaîne de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre parenthèses. Par exemple, pour spécifier la valeur du point de données dans une info-bulle sous la forme d’un nombre à deux décimales, incluez la chaîne de format « N2 » entre accolades, telle que « #VALY{N2} » pour la propriété **ToolTip** de la série. Pour plus d'informations sur les chaînes de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mise en forme des types](http://go.microsoft.com/fwlink/?LinkId=112024) sur le site MSDN. Pour plus d’informations sur la mise en forme des nombres dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
@@ -103,7 +101,7 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
   
  [Afficher des valeurs en pourcentage dans un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

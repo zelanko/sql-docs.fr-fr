@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ba31ee90aaa57cb76b6b651e7298011513ac62c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="running-and-managing-packages-programmatically"></a>Exécution et gestion de packages par programmation
-  Si vous devez gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hors de l'environnement de développement, vous pouvez manipuler les packages par programmation. Cette méthode vous offre un choix d'options :  
+# <a name="running-and-managing-packages-programmatically"></a>Exécution et gestion de packages par programme
+  Si vous devez gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hors de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre un choix d'options :  
   
 -   Charger et exécuter un package existant sans modification.  
   
@@ -35,12 +35,12 @@ ms.lasthandoff: 11/20/2017
   
  Vous pouvez charger et exécuter un package existant à partir d'une application cliente en écrivant quelques lignes de code seulement.  
   
- Cette section décrit et explique comment exécuter un package existant par programmation et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programmation un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, comme indiqué dans la rubrique [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programmation un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, comme indiqué dans la rubrique [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
- Cette section présente également d'autres tâches d'administration que vous pouvez effectuer par programmation pour gérer des packages stockés, des packages en cours d'exécution et des rôles de package.  
+ Cette section présente également d'autres tâches d'administration que vous pouvez effectuer par programme pour gérer des packages stockés, des packages en cours d'exécution et des rôles de package.  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>Exécution de packages sur le serveur Integration Services  
- Lorsque vous déployez des packages sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez exécuter les packages par programmation à l'aide de l'espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices>. L'assembly Microsoft.SqlServer.Management.IntegrationServices est compilé avec le .NET Framework 3.5. Si vous générez une application .NET Framework 4.0, vous devrez peut-être ajouter la référence d'assembly directement dans votre fichier projet.  
+ Lorsque vous déployez des packages sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez exécuter les packages par programme à l'aide de l'espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices>. L'assembly Microsoft.SqlServer.Management.IntegrationServices est compilé avec le .NET Framework 3.5. Si vous générez une application .NET Framework 4.0, vous devrez peut-être ajouter la référence d'assembly directement dans votre fichier projet.  
   
  Vous pouvez également utiliser l'espace de noms pour déployer et gérer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour obtenir une vue d'ensemble de l'espace de noms et des extraits de code, consultez l'entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=253122), sur blogs.msdn.com.  
   
@@ -81,9 +81,9 @@ ms.lasthandoff: 11/20/2017
  Explique comment créer des tâches personnalisées de programme, des composants de flux de données et d'autres objets de package à utiliser dans plusieurs packages.  
   
  [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
- Explique comment créer, configurer et enregistrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] par programmation.  
+ Explique comment créer, configurer et enregistrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] par programme.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

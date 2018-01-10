@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d6bca8c03edec6ce2e53433a7266b65c8affb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aef9d09f6f8a9606a742be05a2076bf65aeb9a40
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Mettre en forme la sortie JSON automatiquement avec le mode AUTO (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **Résultat**  
+ **Result**  
   
 ```json  
 [{
@@ -103,7 +102,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
-**Résultat**  
+**Result**  
   
 ```json  
 [{
@@ -141,7 +140,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
-**Résultat**  
+**Result**  
   
 ```json  
 [{
@@ -162,5 +161,5 @@ FOR JSON PATH
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Clause FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

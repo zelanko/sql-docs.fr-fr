@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6cbdbe147c963b225f20a5c3ace9ab6f1f605e5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2bf27f67645387e78806cddf7fc195d0d4904ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>Convertir des sources de données (Générateur de rapports et SSRS)
   Chaque source de données dans le volet des données de rapport est incorporée et est spécifique au rapport ou est partagée. Dans le Générateur de rapports, une source de données partagée pointe vers une source de données partagée publiée sur un serveur de rapports ou un site SharePoint. Dans le Concepteur de rapports, une source de données partagée pointe vers une source de données partagée dans l’Explorateur de solutions sous le dossier **Sources de données partagées** .  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
      Dans le volet des données de rapport, l'icône de source de données se transforme en icône de source de données partagée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   

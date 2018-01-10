@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -20,14 +19,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 03be01e0efe2a6cf437f448cf952c7949d45026d
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="json-data-sql-server"></a>Données JSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON est un format de données textuelles répandu qui est utilisé pour échanger des données dans des applications mobiles et web modernes. JSON est aussi utilisé pour stocker des données non structurées dans des fichiers journaux ou des bases de données NoSQL comme Microsoft Azure Cosmos DB. Nombreux sont les services web REST qui retournent des résultats sous forme de texte JSON ou qui acceptent des données au format JSON. Par exemple, la plupart des services Azure, tels que Recherche Azure, Stockage Azure et Azure Cosmos DB, ont des points de terminaison REST qui retournent ou utilisent des données JSON. JSON est aussi le principal format d’échange de données entre les pages web et les serveurs web utilisant des appels AJAX.  
   
@@ -297,7 +296,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 5.  Exécuter des exemples de requêtes : exécutez des requêtes qui appellent les procédures stockées et les vues créées aux étapes 2 et 4.  
   
-6.  Nettoyer les scripts : n’exécutez pas cette partie si vous voulez conserver les procédures stockées et les vues créées aux étapes 2 et 4.  
+6.  Nettoyer les scripts : n’exécutez pas cette partie si vous voulez conserver les procédures stockées et les vues créées aux étapes 2 et 4.  
   
 ## <a name="learn-more-about-built-in-json-support"></a>En savoir plus sur la prise en charge JSON intégrée  
   

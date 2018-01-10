@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service-net-framework-soap-headers
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: "46"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c021d2633a21ddcd6c3d5aafcfd5d53fd74d253
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b3d94c2de26ebdb1256812b4aad40f8a2c1f1653
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="identifying-execution-state"></a>Identification de l'état d'exécution
   Le protocole HTTP (Hypertext Transfer Protocol) est un protocole sans connexion et sans état, ce qui signifie qu'il n'indique pas automatiquement si des requêtes différentes proviennent du même client ou si une seule instance de navigateur continue d'afficher activement une page ou un site. Les sessions créent une connexion logique pour maintenir l'état entre le serveur et le client sur HTTP. Les informations spécifiques à l'utilisateur relatives à une session particulière sont appelées l'état de session.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
  Vous pouvez également gérer une session de rapport à l'aide de commandes d'accès URL.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Informations techniques de référence &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Utilisation d’en-têtes SOAP Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

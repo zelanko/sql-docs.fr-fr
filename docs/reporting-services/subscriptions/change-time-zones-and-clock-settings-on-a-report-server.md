@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 caps.latest.revision: "22"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dd8d5966c884df463ec42116368ac3fd0183f9e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91f37c8df4a278fef841b12ff727e8e11c04a808
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports
   Un serveur de rapports utilise toujours l'heure locale de l'ordinateur sur lequel il est installé. Vous ne pouvez pas le configurer de manière à utiliser un autre fuseau horaire. Si une application cliente pointe vers un serveur de rapports se trouvant dans un autre fuseau horaire, c'est le fuseau horaire du serveur de rapports qui sera utilisé pour effectuer une opération planifiée. Dans les pages de gestion SharePoint et le Gestionnaire de rapports, le fuseau horaire est indiqué sur chaque page de planification de sorte que vous savez exactement à quel moment doit se produire une opération planifiée. Par exemple, la page consacrée à la création de planifications personnalisées indiquera « Les heures sont exprimées en (UTC-08:00) Heure du Pacifique (États-Unis et Canada). »  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="changing-the-clock-settings"></a>Modification des paramètres d'horloge  
  Le changement de l'heure de l'horloge de l'ordinateur est sans effet sur les valeurs d'horodatage existantes (par exemple, si vous avancez l'horloge d'une heure, les valeurs d'horodatage des instantanés d'historique de rapport ne changent pas). On peut constater un délai de 10 secondes avant que le processeur de planification et de remise utilise le nouveau paramètre. Le délai véritable peut varier si vous avez modifié les paramètres de fréquence d'interrogation dans les fichiers de configuration.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)  
   

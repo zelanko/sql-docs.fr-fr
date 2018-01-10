@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad8d4cf48040ffca40f971fe1dc070c347b3351b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3bd85c7fee051173c5b6b6860d0e978dacc42d4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zones de région de données de tableau matriciel (Générateur de rapports et SSRS)
  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de tableau matriciel a quatre zones qui contiennent des cellules de tableau matriciel :   
@@ -56,7 +54,7 @@ Sur l'aire de conception, les traits en pointillés délimitent les quatre zones
   
  La zone de groupe de lignes affiche deux instances de groupe de catégorie, l'une correspondant à la catégorie Clothing et l'autre à la catégorie Components. Le groupe de colonnes affiche une instance de groupe géographique correspondant à l'Amérique du Nord (North America) ainsi que des instances de groupe pays/région imbriquées correspondant respectivement au Canada (CA) et aux États-Unis (US). En outre, la colonne adjacente affiche deux instances de groupe pour les années 2003 et 2004. La ligne de colonne Total affiche les totaux de ligne, la ligne des totaux qui est répétée pour chaque groupe de catégorie affiche les totaux de sous-catégorie et la ligne du total global affiche les totaux de catégorie une seule fois pour la région de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

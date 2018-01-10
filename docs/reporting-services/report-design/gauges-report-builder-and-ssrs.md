@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -165,13 +163,13 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f7368c5ab7fb528862d12ab79aa0e4f90365a4ed
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fa277221c184a30af7680cb6371c9c5220ceae63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de jauge affiche une valeur unique tirée de votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Dans un panneau de jauge, vous pouvez créer plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  
@@ -306,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 |[Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fournit des informations générales sur la mise en forme des pointeurs sur les jauges et des informations détaillées sur les options de mise en forme pour les styles de pointeurs disponibles pour les jauges radiales et linéaires.|  
 |[Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fournit des informations sur la mise en forme des plages sur les jauges pour indiquer une sous-section importante de valeurs sur la jauge ou indiquer visuellement le moment où la valeur de pointeur entre dans une certaine plage de valeurs.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

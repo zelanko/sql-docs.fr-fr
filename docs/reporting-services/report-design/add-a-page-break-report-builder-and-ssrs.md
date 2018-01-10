@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d3beec0ea94190d84836e41e5ee5863c5e04c913
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f264f0fc3f601ba9433f5ec591674bfa03b07779
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Ajouter un saut de page (Générateur de rapports et SSRS)
   Vous pouvez ajouter un saut de page aux rectangles, régions de données ou groupes dans des régions de données pour contrôler la quantité d'informations sur chaque page. L'ajout de sauts de page peut améliorer les performances des rapports publiés, car seuls les éléments sur chaque page doivent être traités pendant que vous visualisez le rapport. Lorsque le rapport entier est une page unique, tous les éléments doivent être traités avant de pouvoir consulter le rapport.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Si vous le souhaitez, sélectionnez **Au début d'un groupe également** ou **À la fin d'un groupe également** pour spécifier qu'un saut de page soit ajouté au début ou à la fin d'un groupe dans le tableau.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

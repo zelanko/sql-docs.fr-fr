@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,13 +26,13 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d98e581133e48ec19c9123973a39b6a9c0d3a0ac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c5b5bc4bfaac7322b902cc4ea941c64c6b58f4f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports est conçu pour vous aider à organiser facilement vos ressources de rapport et à générer rapidement les rapports paginés dont vous avez besoin. L’aire de conception se trouve au centre de la fenêtre, avec le ruban et les volets autour d’elle. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Cet article décrit les volets que vous utilisez pour ajouter, sélectionner et organiser vos ressources de rapport, ainsi que pour modifier les propriétés des éléments de rapport.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
  La taille de l'aire de conception peut être différente de la zone d'impression de taille de page que vous spécifiez pour imprimer le rapport. Le fait de modifier la taille de l'aire de conception ne modifie pas la zone d'impression de votre rapport. Quelle que soit la taille que vous définissez pour la zone d'impression de votre rapport, la taille globale de l'aire de conception ne change pas. Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!TIP]  
->  Pour afficher la règle, sous l’onglet **Affichage** , cochez la case **Règle** .  
+>  Pour afficher la règle, sous l’onglet **Affichage**, cochez la case **Règle**.  
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  
@@ -172,13 +170,13 @@ ms.lasthandoff: 12/05/2017
  En savoir plus sur [Aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Exécution d'un rapport avec des paramètres  
- Lorsque vous exécutez votre rapport, celui-ci est traité automatiquement. Si le rapport contient des paramètres, ils doivent tous avoir des valeurs par défaut pour que le rapport puisse s'exécuter automatiquement. Si un paramètre ne possède pas de valeur par défaut, vous devez choisir une valeur pour chaque paramètre lors de l’exécution du rapport, puis cliquer sur **Afficher le rapport** sous l’onglet Exécuter. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Lorsque vous exécutez votre rapport, celui-ci est traité automatiquement. Si le rapport contient des paramètres, ils doivent tous avoir des valeurs par défaut pour que le rapport puisse s'exécuter automatiquement. Si un paramètre ne possède pas de valeur par défaut, vous devez choisir une valeur pour chaque paramètre lors de l’exécution du rapport, puis cliquer sur **Afficher le rapport** sous l’onglet Exécuter. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Aperçu avant impression  
  Lorsque vous affichez un aperçu du rapport en mode exécution, le rapport ressemble à un rapport généré en HTML. L'aperçu n'est pas en HTML, mais la présentation et la pagination du rapport sont similaires à un affichage HTML. Vous pouvez changer la vue pour afficher le rapport tel qu'il sera imprimé en activant le mode d'aperçu avant impression. Cliquez sur le bouton **Aperçu avant impression** sous l’onglet **Exécuter** . Le rapport s'affiche comme sur une véritable page. Ce que vous voyez ressemble au résultat que produisent les extensions de rendu Image et PDF. L’aperçu avant impression n’est pas une image ni un fichier PDF, mais la disposition et la pagination du rapport sont similaires à la sortie de ces formats.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

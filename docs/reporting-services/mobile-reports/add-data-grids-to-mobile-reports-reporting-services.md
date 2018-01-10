@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 caps.latest.revision: "4"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5297f37049305d971cc5f97d0f34c65002272061
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 656c40ea8c8bc7d20fd2fe9de0a189f451731ae5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Ajouter des grilles de données aux rapports mobiles | Reporting Services
 La meilleure visualisation est parfois les données elles-mêmes. Découvrez les trois *grilles de données*, ou tables, avec lesquelles vous pouvez afficher des données dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
@@ -85,7 +85,7 @@ Quand vous ajoutez une colonne de graphique à une grille de données, vous deve
    * **Champ de données du graphique** détermine la métrique à utiliser dans la table de données **Données de référence pour les visualisations de graphiques** comme valeur de l’axe X ou série dans le graphique au sein de chaque ligne.  
 
 ## <a name="see-also"></a>Voir aussi 
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Cartes dans les rapports pour mobiles Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navigateurs dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualisations dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Jauges dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7a7378573859a1cc1961347e358a93ec1dea8fc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8412ab6ab529d51a8dc2626ff724b70440b1e357
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
   Un graphique à barres affiche les séries sous la forme d'ensembles de barres horizontales. Le graphique à barres ordinaire est étroitement lié à l'histogramme, qui affiche les séries sous la forme d'ensembles de barres verticales, ainsi qu'au graphique d'étendue à barres, qui affiche les séries sous la forme d'ensembles de barres horizontales avec des points de départ et de fin variables.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Par exemple, si votre dataset contient de nombreux points de données par rapport à la taille du graphique, la taille des colonnes ou barres et l'espacement entre ces éléments seront alors réduits. Pour définir manuellement la largeur des colonnes dans un graphique, modifiez leur largeur, en pixels, en changeant la valeur de la propriété **PointWidth** . Par défaut, la valeur de cette propriété est 0,8. Lorsque vous augmentez la largeur des colonnes ou barres dans un graphique, l'espace entre chaque colonne ou barre diminue.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

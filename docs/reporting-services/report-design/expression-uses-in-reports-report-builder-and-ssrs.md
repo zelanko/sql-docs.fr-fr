@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: expressions [Reporting Services], about expressions
@@ -18,13 +16,13 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c99fec659eaeffa55efee403bd336a20f9ccab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc3cfbff325d163ca9ddde120ecc17db97e91c03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les expressions sont utilisées dans la définition des rapports pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d’éléments de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d’en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>**.  
@@ -75,7 +73,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 |Spécifier une date mise en forme pour une culture spécifique.|Valeur d’un espace réservé à l’intérieur d’une zone de texte dans une région de données. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Général**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concaténer une chaîne et un nombre mis en forme comme un pourcentage à deux décimales.|Valeur d’un espace réservé à l’intérieur d’une zone de texte dans une région de données. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Général**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

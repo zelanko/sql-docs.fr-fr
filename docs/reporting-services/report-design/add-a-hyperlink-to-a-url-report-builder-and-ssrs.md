@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1f147d97fdd5f5a237bcc9fff20642ec60ee2151
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bfecbec1812a15ec582c8e5d91afb8e471f8de3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
 Découvrez comment ajouter des actions de lien hypertexte à des zones de texte, des images, des graphiques et des jauges aux rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Les liens peuvent mener à d’autres rapports, aux signets d’un rapport ou à des URL dynamiques ou statiques. 
@@ -95,7 +93,7 @@ Vous pouvez définir un lien vers des signets menant à un emplacement du rappor
   
 7.  Pour tester le lien, cliquez sur **Exécuter** afin d'afficher l'aperçu du rapport, puis cliquez sur l'élément de rapport sur lequel vous avez défini ce lien.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Créer un explorateur de documents &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   

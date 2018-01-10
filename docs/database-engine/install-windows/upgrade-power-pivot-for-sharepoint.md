@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9f4ff9921b0965fdd57620a29298688f4604b0f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bd176479745f786197782bc489b45ea2c1e74429
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique résume les étapes nécessaires pour mettre à niveau un déploiement de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vers [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Les étapes spécifiques dépendent de la version de SharePoint exécutée par votre environnement et incluent le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**).  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/20/2017
   
          ![Deux outils de configuration de PowerPivot](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "Deux outils de configuration de PowerPivot")  
   
-         Ou  
+         ou  
   
          Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
@@ -360,7 +360,7 @@ Get-PowerPivotSystemService
   
  Pour des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [Configuration initiale (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +19,20 @@ helpviewer_keywords:
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d43635b75e3feadabe76d968e154a972768ed2d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 842d8e4c1afbea57b1c5d067c7819ad953844fe4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilitaires d'invite de commandes du serveur de rapports (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend plusieurs utilitaires de ligne de commande qui permettent d’administrer un serveur de rapports. Ces utilitaires sont installés automatiquement lorsque vous installez un serveur de rapports.  
   
-|Nom|Fichier de commandes|Mode de déploiement pris en charge|Description|  
+|Nom   |Fichier de commandes|Mode de déploiement pris en charge|Description|  
 |----------|------------------|-------------------------------|-----------------|  
 |Utilitaire RSS|rs.exe|Mode natif et mode SharePoint. La version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] inclut la prise en charge du mode SharePoint.|[L’utilitaire rs.exe](../../reporting-services/tools/rs-exe-utility-ssrs.md) est un hôte de script que vous pouvez utiliser pour réaliser des opérations contenant des scripts. Par son intermédiaire, vous exécutez des scripts [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour publier des rapports, créer des éléments dans une base de données de serveur de rapports, copier des données entre des bases de données de serveurs de rapports, etc. Pour en savoir plus sur l’utilisation de scripts permettant d’administrer un serveur, consultez [Écrire des scripts pour les tâches d’administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).|  
 |Applets de commande Powershell||SharePoint uniquement|Pour obtenir la liste des applets de commande PowerShell, consultez [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Si vous préférez utiliser un outil à interface utilisateur graphique, choisissez le Gestionnaire de configuration de Reporting Services au lieu de **rsconfig** et de **rskeymgmt**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  

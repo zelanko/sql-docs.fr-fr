@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0795006b2ec1b6dbc0f222f9513bf9d6ce9a17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3da875380580bcf7151db13c0b14280a9790d5dc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Utiliser OPENJSON avec le schéma par défaut (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Résultats**  
   
-|Clé|Valeur|  
+|Key|Valeur|  
 |---------|-----------|  
-|name|John|  
+|NAME|John|  
 |surname|Doe|  
 |age|45|  
   
@@ -57,10 +56,10 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Résultats**  
   
-|Clé|Valeur|  
+|Key|Valeur|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en-UK|  
+| 1|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
@@ -90,9 +89,9 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Résultats**  
   
-|Clé|Valeur|Type|  
+|Key|Valeur|Type|  
 |---------|-----------|----------|  
-|Type|1|0|  
+|Type| 1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   
@@ -110,7 +109,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>Codage d'une tâche personnalisée
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
@@ -170,13 +170,13 @@ End Class
   
  Le tableau suivant répertorie les paramètres fournis à la tâche dans la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Contient une collection d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> disponibles pour la tâche.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contient les variables disponibles pour la tâche. Les tâches utilisent des variables via VariableDispenser ; les tâches n'utilisent pas des variables directement. Le distributeur de variables verrouille et déverrouille les variables, et empêche les blocages ou les remplacements.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contient les méthodes appelées par la tâche pour déclencher des événements pour le moteur d'exécution.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contient les méthodes et propriétés utilisées par la tâche pour écrire des entrées dans le journal des événements.|  
-|Objet|Contient l'objet de transaction dont le conteneur fait partie, le cas échéant. Cette valeur est transmise en tant que paramètre à la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> d'un objet <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Object|Contient l'objet de transaction dont le conteneur fait partie, le cas échéant. Cette valeur est transmise en tant que paramètre à la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> d'un objet <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Envoi de commentaires d'exécution  
  Les tâches encapsulent leur code dans des blocs **try/catch** pour empêcher le déclenchement d’exceptions sur le moteur d’exécution. Cela permet de veiller à ce que le package finisse l'exécution et ne s'arrête pas de façon inattendue. Toutefois, le moteur d'exécution fournit d'autres mécanismes pour gérer les conditions d'erreur qui peuvent se produire pendant l'exécution d'une tâche. Ceux-ci incluent la publication de messages d'erreur et d'avertissement, le renvoi d'une valeur de la structure <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, la publication de messages, le renvoi de la valeur <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> et la divulgation d'informations sur les résultats de l'exécution des tâches via la propriété <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
@@ -292,7 +292,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [Codage d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Développement d’une interface utilisateur pour une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  

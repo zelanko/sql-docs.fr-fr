@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.components.f1
@@ -18,13 +16,13 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1060d0f256f9520860b01d4c324bd8e21100e923
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b47556b43940c363d8eac0a53d63db601bcd8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  La personne A signale le graphique avec son dataset incorporé à publier. Le Concepteur de rapports lui affecte un ID unique. La personne A déploie ensuite le rapport sur le serveur de rapports. Le Concepteur de rapports publie le graphique.  
   
-3.  Une personne B crée un rapport vide dans le Générateur de rapports et lui ajoute le graphique. Le graphique fait maintenant partie du rapport de la personne B, avec le dataset incorporé. La personne B peut modifier les instances du graphique et du dataset qui sont dans le rapport. Cela n'aura aucun effet sur les instances du graphique et du dataset sur le serveur de rapports et ne rompra pas non plus la relation entre les instances dans le rapport et sur le serveur de rapports.  
+3.  Une personne B crée un rapport vide dans le Générateur de rapports et lui ajoute le graphique. Le graphique fait maintenant partie du rapport de la personne B, avec le dataset incorporé. La personne B peut modifier les instances du graphique et du dataset qui sont dans le rapport. Cela n'aura aucun effet sur les instances du graphique et du dataset sur le serveur de rapports et ne rompra pas non plus la relation entre les instances dans le rapport et sur le serveur de rapports.  
   
      ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   

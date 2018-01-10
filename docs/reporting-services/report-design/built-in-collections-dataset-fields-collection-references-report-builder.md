@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3e240e6e5a12fc38468d51af79aa43a19c7196f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1a266bf27c1d31d3cb662c19903da50fb7e2b8f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Collections intégrées - Références à la collection Fields d’un dataset (Générateur de rapports)
   Chaque dataset d’un rapport contient une collection Fields. La collection Fields comprend l’ensemble de champs spécifiés par la requête de dataset, ainsi que tous les champs calculés supplémentaires que vous créez. Après avoir créé un dataset, la collection de champs apparaît dans le volet **Données du rapport** .  
@@ -98,7 +96,7 @@ End Function
   
  Si vous spécifiez une propriété qui n’est pas prise en charge pour ce champ, l’expression prend la valeur **null** (**Nothing** dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un fournisseur de données ne prend pas en charge les propriétés de champ étendues ou si le champ est introuvable lors de l’exécution de la requête, la valeur de la propriété est **null** (**Nothing** dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) pour les propriétés de type **String** et **Object**, et zéro (0) pour les propriétés de type **Integer**. Une extension pour le traitement des données peut tirer parti des propriétés prédéfinies en optimisant les requêtes qui intègrent cette syntaxe.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

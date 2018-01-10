@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77ab1d9f9216fda6bf393037b341e531cd16c14
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau
   Si vous configurez la montée en puissance parallèle du serveur de rapports en vue de son exécution sur un cluster avec équilibrage de la charge réseau (NLB, Network Load Balancing), vous devez effectuer les opérations suivantes :  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 |Étape|Description|Informations complémentaires|  
 |----------|-----------------|----------------------|  
-|1|Avant d'installer Reporting Services sur les nœuds de serveurs d'un cluster avec équilibrage de la charge réseau, vérifiez les spécifications du déploiement avec montée en puissance parallèle.|[Déploiement avec montée en puissance parallèle - Mode natif de Reporting Services &#40;Gestionnaire de configuration&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+| 1|Avant d'installer Reporting Services sur les nœuds de serveurs d'un cluster avec équilibrage de la charge réseau, vérifiez les spécifications du déploiement avec montée en puissance parallèle.|[Déploiement avec montée en puissance parallèle - Mode natif de Reporting Services &#40;Gestionnaire de configuration&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |2|Configurez le cluster avec équilibrage de la charge réseau et vérifiez son bon fonctionnement.<br /><br /> Veillez à mapper un nom d'en-tête de l'hôte à l'adresse IP du serveur virtuel du cluster avec équilibrage de la charge réseau. Le nom d'en-tête de l'hôte est utilisé dans l'URL du serveur de rapports et présente l'avantage d'être plus facile à retenir et à taper qu'une adresse IP.|Pour plus d'informations, consultez la documentation Windows Server correspondant à la version du système d'exploitation Windows que vous exécutez.|  
 |3|Ajoutez le nom NetBIOS et de domaine complet pour l’en-tête de l’hôte dans la liste des **BackConnectionHostNames** stockés dans le Registre Windows. Utilisez les étapes de la **Méthode 1 : Spécification des noms d’hôte** dans [l’article 896861 de la Base de connaissances](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861), avec la modification suivante. **L’étape 7** de l’article de la Base de connaissances indique « Quittez l’Éditeur du Registre, puis redémarrez le service IISAdmin ». À la place, redémarrez l'ordinateur pour vous assurer que les modifications prennent effet.<br /><br /> Par exemple, si le nom d’en-tête de l’hôte \<MyServer> est un nom virtuel du nom d’ordinateur Windows « contoso », vous pouvez probablement référencer le formulaire de nom de domaine complet comme « contoso.domain.com ». Vous devrez ajouter le nom d’en-tête de l’hôte (MyServer) et le nom de domaine complet (contoso.domain.com) à la liste dans **BackConnectionHostNames**.|Cette étape est requise si votre environnement serveur implique l'authentification NTLM sur l'ordinateur local, créant une connexion de retour de boucle.<br /><br /> Si tel est le cas, les demandes entre le gestionnaire de rapports et le serveur de rapports vont échouer avec l'erreur 401 (Non autorisé).|  
 |4|Installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode fichiers uniquement sur les nœuds qui font déjà partie d'un cluster avec équilibrage de la charge réseau et configurer les instances du serveur de rapports pour un déploiement avec montée en puissance parallèle.<br /><br /> La montée en puissance parallèle que vous configurez ne répond pas aux demandes adressées à l'IP du serveur virtuel. La configuration de la montée en puissance parallèle pour l'utilisation de l'IP du serveur virtuel intervient à un stade ultérieur, après la configuration de la validation de l'état d'affichage.|[Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
@@ -118,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
  Si vous démarrez l’outil de configuration de Reporting Services après avoir effectué ces modifications, l’outil peut remplacer les paramètres \<**ReportServerUrl**> par la valeur par défaut. Conservez toujours une copie de sauvegarde des fichiers de configuration au cas où vous auriez besoin de les remplacer par la version qui contient les paramètres à utiliser.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   

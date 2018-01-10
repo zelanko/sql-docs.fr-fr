@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3540f8a2cb7ce57a858415bffe8576ccde49a928
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e714d755d0423174dafd6477ee0c1c25f780f3c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Fusionner des cellules dans une région de données (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez fusionner des cellules dans une région de données pour les combiner, améliorer l’apparence de la région de données ou fournir des étiquettes étendues pour les groupes de colonnes et de lignes.  
@@ -41,7 +39,7 @@ Vous pouvez fusionner les cellules uniquement à l’intérieur de chaque zone d
   
 3.  Répétez les étapes 1 et 2 pour fusionner d'autres cellules adjacentes dans une région de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Région de données de tableau matriciel](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
  [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Créer une matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   

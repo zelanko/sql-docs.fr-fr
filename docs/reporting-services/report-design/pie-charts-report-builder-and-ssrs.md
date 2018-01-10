@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc45fbc472c0b3dc3852381b78894105e7998534
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 663b10952ab6452c6a3d8f56199a20a0a3a424da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Graphiques à secteurs (Générateur de rapports et SSRS)
   Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphiques à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, comprennent un groupe de graphiques connu sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total. Pour plus d’informations sur les graphiques à base de formes, consultez [Graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Regrouper les petits secteurs dans un graphique à secteurs secondaire. Le deuxième graphique à secteurs ne s'affiche pas dans le concepteur. En revanche, pendant le traitement des rapports, le graphique calcule si un deuxième graphique à secteurs est nécessaire, selon les valeurs des points de données. Le cas échéant, les valeurs sont ajoutées dans un autre graphique à secteurs.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Afficher des étiquettes de points de données à l’extérieur d’un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Regrouper des petits secteurs sur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Afficher des valeurs en pourcentage sur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   

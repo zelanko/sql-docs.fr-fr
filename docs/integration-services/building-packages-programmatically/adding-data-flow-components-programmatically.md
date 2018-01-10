@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d730302cddaba05d9160489fab2bf761986fca9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Ajout de composants de flux de données par programme
   Lorsque vous générez un flux de données, vous commencez par ajouter des composants. Puis vous configurez ces composants et vous les connectez ensemble pour établir le flux de données au moment de l'exécution. Cette section décrit l'ajout d'un composant à la tâche de flux de données, lequel permet de créer l'instance du moment de la conception du composant, puis de configurer ce composant. Pour plus d’informations sur la connexion de composants, consultez [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -289,7 +289,7 @@ End Module
 ## <a name="external-resources"></a>Ressources externes  
  Entrée de blog, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), sur blogs.msdn.com.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   

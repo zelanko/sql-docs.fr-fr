@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51ca8c680faaa96778e433f7768a680524087804
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3135ec02eb0f52e7d5c1155caa7966eb0732329b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Masquer un élément (Générateur de rapports et SSRS)
   Définissez la visibilité d'un élément de rapport lorsque vous souhaitez masquer de façon conditionnelle un élément en fonction d'un paramètre de rapport ou d'une autre expression que vous spécifiez.  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Dans la boîte de dialogue **Visibilité de la colonne** , effectuez les étapes 3 et 4 de la première procédure.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

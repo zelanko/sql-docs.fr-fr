@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 88e58bc5a10c7b42f33fe1dae255114a919af556
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef263ccc03bdc76ab9479f7c82b41f5f9c87b9b9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="building-packages-programmatically"></a>Génération de packages par programmation
-  Si vous devez créer des packages de manière dynamique, ou gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l'extérieur de l'environnement de développement, vous pouvez manipuler les packages par programmation. Cette méthode vous offre une gamme continue d'options :  
+# <a name="building-packages-programmatically"></a>Génération de packages par programme
+  Si vous devez créer des packages de manière dynamique, ou gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l'extérieur de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre une gamme continue d'options :  
   
 -   Charger et exécuter un package existant sans modification.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
  Vous pouvez utiliser le modèle d'objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour écrire du code qui crée, configure et exécute des packages dans n'importe quel langage de programmation managé. Par exemple, vous pouvez créer des packages, pilotés par des métadonnées, qui configurent leurs connexions ou leurs sources de données, transformations et destinations selon la source de données sélectionnée, ainsi que ses tables et ses colonnes.  
   
- Cette section montre comment créer et configurer un package par programmation, ligne par ligne. L’option de programmation de package la moins complexe vous permet simplement de charger et d’exécuter un package existant sans modification, comme décrit dans [Exécution et gestion de packages par programmation](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
+ Cette section montre comment créer et configurer un package par programme, ligne par ligne. L’option de programmation de package la moins complexe vous permet simplement de charger et d’exécuter un package existant sans modification, comme décrit dans [Exécution et gestion de packages par programmation](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
   
  Une option intermédiaire, qui n'est pas décrite dans cet article, consiste à charger un package existant en tant que modèle, le reconfigurer (par exemple, pour une source de données différente) et l'exécuter. Vous pouvez également utiliser les informations de cette section pour modifier les objets existants dans un package.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Création d’un package par programmation](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
- Explique comment créer un package par programmation.  
+ Explique comment créer un package par programme.  
   
  [Ajout de tâches par programmation](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
  Explique comment ajouter des tâches au package.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
  Décrit comment sélectionner des colonnes d'entrée parmi celles fournies à un composant par les composants situés en amont du flux de données.  
   
  [Enregistrement d’un package par programmation](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
- Explique comment enregistrer un package par programmation.  
+ Explique comment enregistrer un package par programme.  
   
 ## <a name="reference"></a>Référence  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Entrée de blog, [Performance profiling your custom extensions](http://go.microsoft.com/fwlink/?LinkId=238831), sur le site blogs.msdn.com.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

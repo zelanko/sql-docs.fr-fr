@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f2277794ae29689ca7e81fa536c8bf45b029ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cd22b98f99a220fb9b8153bcb780d5d6c50185
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="technical-reference-ssrs"></a>Références techniques (SSRS)
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  [Aide de l'Assistant Rapport](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
- [Visionneuse HTML et barre d'outils Rapport](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+ [Visionneuse HTML et barre d’outils des rapports](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
  [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   

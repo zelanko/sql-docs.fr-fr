@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d1b8d12e3b01fc8717770ae5fdb117f114ae324d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb4c74bd26d25d35612b49dd9575ac244ee1a20d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les paramètres des applications dans un jeu de fichiers de configuration. Le programme d'installation crée les fichiers de configuration de chaque instance du serveur de rapports que vous installez. Dans chaque fichier, les valeurs sont définies soit pendant l'installation, soit lorsque vous utilisez des outils et des applications pour configurer un serveur. Dans certains cas, vous devez modifier directement un fichier pour ajouter ou configurer des paramètres avancés. Les paramètres de configuration sont spécifiés soit comme des éléments, soit comme des attributs XML. Si le langage XML et les fichiers de configuration vous sont familiers, vous pouvez modifier les paramètres définissables par l'utilisateur dans un éditeur de texte ou de code.  
@@ -109,8 +107,8 @@ ms.lasthandoff: 12/05/2017
   
 6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Consultez l’article [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l’origine de l’erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)(Journal des traces du service Report Server).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a> Voir aussi  
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   

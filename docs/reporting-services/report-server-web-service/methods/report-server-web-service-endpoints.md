@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: "26"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a5a6f0c4947db3e75593afabf12524de0583068
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 687112770da659a9764845f5db58bc096788411f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server
   Le service Web Report Server fournit plusieurs points de terminaison pour la gestion d’un serveur de rapports aussi bien que l'exécution de rapports et la navigation dans ces derniers.  
@@ -72,7 +70,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>Points de terminaison de proxy SharePoint  
  Lorsqu'un serveur de rapports est configuré pour le mode intégré SharePoint et que le complément [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est installé, un jeu de points de terminaison de proxy est installé sur le serveur SharePoint. Les points de terminaison de proxy constituent l'API primaire pour le développement de solutions de rapport lorsqu'un serveur de rapports est configuré pour le mode intégré SharePoint. Lors du développement avec les points de terminaison de proxy, le complément [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] gère l'échange des informations d'identification entre le serveur SharePoint et le serveur de rapports en mode d'authentification Compte approuvé. Lors du développement par rapport aux points de terminaison du serveur de rapports, l'application appelante doit gérer l'échange des informations d'identification en mode d'authentification Compte approuvé. Le tableau suivant répertorie les points de terminaison installés avec le complément [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Point de terminaison proxy| Description|  
+|Point de terminaison proxy|Description|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint.<br /><br /> Remarque : Ce point de terminaison est déconseillé dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.|  
@@ -93,7 +91,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Génération d’applications à l’aide du service web et de .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

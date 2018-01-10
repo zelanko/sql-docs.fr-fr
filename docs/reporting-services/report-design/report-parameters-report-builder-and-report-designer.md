@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
   Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
@@ -149,14 +147,14 @@ ms.lasthandoff: 12/05/2017
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|Nom|Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
+|Nom   |Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
 |Demander|Texte qui apparaît en regard du paramètre dans la barre d'outils de la visionneuse de rapports.|  
 |Type de données|Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> **Boolean**. L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> **DateTime**. L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Texte**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Notez que lorsque des valeurs disponibles sont définies pour un paramètre, l’utilisateur peut les sélectionner dans une liste déroulante, même quand le type de données est **DateTime**.<br /><br /> Pour plus d'informations sur les types de données de rapport, consultez [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Autoriser une valeur vide|Sélectionnez cette option si la valeur du paramètre peut être une chaîne ou une valeur vide.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur vide soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur vide dans les valeurs disponibles.|  
 |Autoriser les valeurs de type NULL|Sélectionnez cette option si la valeur du paramètre peut être Null.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur Null soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur Null dans les valeurs disponibles.|  
 |Autoriser les valeurs multiples|Fournissez les valeurs disponibles pour la création d'une liste déroulante dans laquelle vos utilisateurs peuvent effectuer des choix. Cela constitue une bonne méthode pour s'assurer que seules les valeurs valides sont envoyées dans la requête de dataset.<br /><br /> Sélectionnez cette option si la valeur pour le paramètre peut être plusieurs valeurs affichées dans une liste déroulante. Les valeurs NULL ne sont pas autorisées. Lorsque cette option est sélectionnée, les cases à cocher sont ajoutées à la liste de valeurs disponibles dans une liste déroulante de paramètre. Le haut de la liste comporte une case à cocher pour **Sélectionner tout**. Les utilisateurs peuvent activer les valeurs qu'ils souhaitent.<br /><br /> Si les données qui fournissent des valeurs changent rapidement, il est possible que la liste visible par l'utilisateur ne soit pas actualisée.|  
 |Visible|Sélectionnez cette option pour afficher le paramètre de rapport en haut du rapport lorsqu'il est exécuté. Cette option permet aux utilisateurs de sélectionner des valeurs de paramètre au moment de l'exécution.|  
-|Caché|Sélectionnez cette option pour masquer le paramètre de rapport dans le rapport publié. Les valeurs de paramètre de rapport peuvent toujours être définies sur une URL de rapport, dans une définition d'abonnement ou sur le serveur de rapports.|  
+|Hidden|Sélectionnez cette option pour masquer le paramètre de rapport dans le rapport publié. Les valeurs de paramètre de rapport peuvent toujours être définies sur une URL de rapport, dans une définition d'abonnement ou sur le serveur de rapports.|  
 |Interne|Sélectionnez cette option pour masquer le paramètre de rapport. Dans le rapport publié, le paramètre de rapport ne peut être affiché que dans la définition du rapport.|  
 |Valeurs disponibles|Si vous avez spécifié les valeurs disponibles d'un paramètre, les valeurs valides s'affichent toujours sous forme de liste déroulante. Par exemple, si vous fournissez des valeurs disponibles pour un paramètre **DateTime** , une liste déroulante de dates s’affiche dans le volet des paramètres à la place d’un contrôle calendrier.<br /><br /> Pour vous assurer qu'une liste de valeurs est cohérente parmi un rapport et des sous-rapports, vous pouvez définir une option sur la source de données afin d'utiliser une transaction unique pour toutes les requêtes des datasets associés à une source de données.<br /><br /> **Note de sécurité** Dans un rapport qui comprend un paramètre de type de données **Text**, veillez à utiliser une liste de valeurs disponibles (aussi appelée liste de valeurs valides), et vérifiez que l’utilisateur exécutant le rapport dispose uniquement des autorisations requises pour afficher les données du rapport. Pour plus d’informations, consultez [Sécurité &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/security-report-builder.md).|  
 |Valeurs par défaut|Définissez les valeurs par défaut à partir d'une requête ou d'une liste statique.<br /><br /> Lorsque chaque paramètre a une valeur par défaut, le rapport s'exécute automatiquement au premier affichage.|  
@@ -176,7 +174,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour un rapport publié, vous pouvez utiliser les éléments suivants :  
   
--   **Propriétés des paramètres de rapport.** Modifiez des valeurs de paramètres de rapport directement sur le serveur de rapports, indépendamment de la définition de rapport.  
+-   **Propriétés des paramètres de rapport.** Modifiez des valeurs de paramètres du rapport directement sur le serveur de rapports, indépendamment de la définition de rapport.  
   
 -   **Rapports mis en cache.** Pour permettre la création d’un plan de cache pour un rapport, chaque paramètre doit avoir une valeur par défaut. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/05/2017
  Pour sécuriser l'utilisation des paramètres des données personnelles ou des employés, vous pouvez sélectionner les données en fonction d'expressions qui comprennent le champ **UserID** de la collection Users. La collection Users permet d'obtenir l'identité de l'utilisateur qui exécute le rapport et d'utiliser cette identité pour extraire les données spécifiques à l'utilisateur.  
   
 > [!IMPORTANT]  
->  Dans un rapport qui inclut un paramètre de type **String**, veillez à utiliser une liste de valeurs disponibles (aussi appelée liste de valeurs valides) et vérifiez que l’utilisateur exécutant le rapport dispose uniquement des autorisations nécessaires à l’affichage des données du rapport. Lorsque vous définissez un paramètre de type **String**, la zone de texte qui apparaît vous permet d'entrer n'importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de dataset et que vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
+>  Dans un rapport qui inclut un paramètre de type **String**, veillez à utiliser une liste de valeurs disponibles (aussi appelée liste de valeurs valides) et vérifiez que l’utilisateur exécutant le rapport dispose uniquement des autorisations nécessaires à l’affichage des données du rapport. Quand vous définissez un paramètre de type **Chaîne**, la zone de texte qui apparaît vous permet d’entrer n’importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de dataset et que vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
 >   
 >  Si un paramètre de rapport n'est pas lié à un paramètre de dataset et les valeurs de paramètre sont incluses dans le rapport, l'utilisateur d'un rapport peut taper la syntaxe de l'expression ou une URL dans la valeur de paramètre et rendre le rapport au format Excel ou HTML. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
 >   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: "24"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3cc5aeb73c242b71e06d38fa21c451272c8185ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65acea8f2887a2c45553c69d8d53ecfeb65e96a5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Serveur de rapports Reporting Services (mode natif)
   Un serveur de rapports configuré en mode natif s’exécute comme un serveur d’applications qui fournit toutes les fonctions de traitement et de gestion exclusivement par le biais de composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_manageresources"></a> Sécurisation et gestion d'une ressource  
  Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier.  
   
- Pour ajouter une ressource à un serveur de rapports, vous devez télécharger ou publier un fichier :  
+ Pour ajouter une ressource à un serveur de rapports, vous devez télécharger ou publier un fichier :  
   
 |Opération|Type de fichier|  
 |---------------|---------------|  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour utiliser une ressource de type image dans un rapport, ajoutez le fichier image au projet et publiez-le avec le rapport. Une fois l'image publiée, vous pouvez mettre à jour la référence de l'image dans le rapport, de sorte qu'elle pointe vers la ressource du serveur de rapports ; il vous suffit ensuite de publier à nouveau le rapport pour enregistrer vos modifications. Vous pouvez désormais mettre à jour l'image indépendamment du rapport en publiant à nouveau la ressource. Le rapport utilise la version la plus actuelle de l'image disponible sur le serveur de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Résoudre les problèmes d’une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b9b0560be6980577dcedbe147ff856a18b032f03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 954f01cd94ff93d10e30c313cd11bb21b13675f0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous allez utiliser un script [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) pour créer une signature d’accès partagé sur un conteneur d’objets blob Azure à l’aide d’une stratégie d’accès stockée.  
@@ -115,21 +115,12 @@ Pour créer une stratégie sur le conteneur et générer une clé de signature d
   
     # Creates a new container in blob storage  
     $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
-    $cbc = $container.CloudBlobContainer  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $permissions = $cbc.GetPermissions();  
-    $policyName = $policyName  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-    $policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-    $policy.Permissions = "Read,Write,List,Delete"  
-    $permissions.SharedAccessPolicies.Add($policyName, $policy)  
-    $cbc.SetPermissions($permissions);  
-  
+    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+
     # Gets the Shared Access Signature for the policy  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
+    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -146,7 +137,7 @@ Pour créer une stratégie sur le conteneur et générer une clé de signature d
   
 [Leçon 2 : Créer des informations d’identification SQL Server à l’aide d’une signature d’accès partagé](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  

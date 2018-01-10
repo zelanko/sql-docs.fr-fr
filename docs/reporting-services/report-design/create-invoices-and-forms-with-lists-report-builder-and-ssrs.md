@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08630eac8299c1086e75338cc6354bf4ba926622
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 47d1cf1399a788e271240f7b233115f6f3669b3a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Créer des factures et des formulaires avec des listes (Générateur de rapports et SSRS)
   Une région de données de liste est répétée avec chaque groupe ou ligne du dataset du rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données. Vous pouvez définir des listes contenant n'importe quel nombre d'éléments de rapport. Une liste peut être imbriquée  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
  ![Aperçu, 2 tables, dont l’une avec un graphique imbriqué](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Aperçu, 2 tables, dont l’une avec un graphique imbriqué")  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

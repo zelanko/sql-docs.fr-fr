@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30bf51ee5f2c927360dc73f959abdacb7df2ad01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07882659f3ead59efe15d02ede109b6cae11ba29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Boîte de dialogue Propriétés du dataset, Paramètres
   Sélectionnez **Paramètres** dans la boîte de dialogue **Propriétés du dataset** pour ajouter, modifier et supprimer des paramètres de requête, y compris ceux qui sont liés aux paramètres de rapport.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
  **Flèche bas**  
  Déplacez le paramètre sélectionné vers le bas de la liste.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  

@@ -8,20 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] Les visualisations sous la forme de graphiques de compartimentage et en rayons de soleil de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont parfaites pour représenter visuellement des données hiérarchiques. Cet article présente une vue d’ensemble de l’ajout d’un graphique de compartimentage ou d’un graphique en rayons de soleil à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il inclut également un exemple de requête AdventureWorks pour vous aider à démarrer.  
@@ -132,7 +132,7 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
     3.  Dans Type de connexion, sélectionnez **Microsoft SQL Server**.  
   
-    4.  Entrez la chaîne de connexion à votre serveur et à la base de données. Exemple :  
+    4.  Entrez la chaîne de connexion à votre serveur et à la base de données. Exemple :  
   
         ```  
         Data Source=[server name];Initial Catalog=AdventureWorks2016  

@@ -8,25 +8,23 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b439c6e0c9214415b7192116f5c726c820763488
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dfaf5fec90d334ef19dcf3b5de715322164253e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Pagination dans Reporting Services (Générateur de rapports et SSRS)
-  La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport. Lorsque vous exécutez un rapport sur le serveur de rapports, le rapport utilise le convertisseur HTML. HTML suit un ensemble spécifique de règles de pagination. Par exemple, si vous exportez le même rapport en PDF, le convertisseur PDF est utilisé et un ensemble différent de règles est appliqué ; par conséquent, le rapport est paginé différemment. Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport. Lorsque vous exécutez un rapport sur le serveur de rapports, le rapport utilise le convertisseur HTML. HTML suit un ensemble spécifique de règles de pagination. Par exemple, si vous exportez le même rapport en PDF, le convertisseur PDF est utilisé et un ensemble différent de règles est appliqué ; par conséquent, le rapport est paginé différemment. Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Cette rubrique explique l'impact de la taille physique de la page et de la mise en page du rapport sur le rendu des sauts de page manuels du rapport par les convertisseurs. Vous pouvez définir les propriétés pour modifier la taille de la page et les marges physiques, et diviser le rapport en colonnes, à l'aide du volet **Propriétés de rapport** , du volet **Propriétés** ou de la boîte de dialogue **Mise en page** . Pour accéder au volet **Propriétés de rapport** , cliquez sur la zone bleue en dehors du corps du rapport. Pour accéder à la boîte de dialogue **Mise en page** , cliquez sur **Exécuter** dans l'onglet Accueil, puis cliquez sur **Mise en page** sous l'onglet Exécuter.  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’informations sur le fonctionnement de ces propriétés quand les rapports sont exportés vers Excel, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

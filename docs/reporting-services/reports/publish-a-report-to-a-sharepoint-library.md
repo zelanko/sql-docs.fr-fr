@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe51d7285a29ba57b59ad71d0be80ac46acfc959
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb63f117cdf9b174b09f52adf66bdc4324cf7ca8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>publier un rapport dans une bibliothèque SharePoint
   Pour publier un rapport sur un site SharePoint configuré pour l'intégration SharePoint, vous devez définir les propriétés du projet dans le Concepteur de rapports. Dans les propriétés du projet, toutes les références aux serveurs, aux rapports et aux sources de données partagées doivent être des URL complètes. Dans la définition de rapport, toutes les références aux sous-rapports, aux rapports d'extraction et aux ressources, telles que des images Web, doivent être des URL complètes.  
@@ -50,13 +48,13 @@ ms.lasthandoff: 12/05/2017
   
 6.  Pour **TargetReportFolder**, tapez une URL vers une bibliothèque ou un dossier de bibliothèque (par exemple, `http://TestServer/TestSite/Documents/Reports`).  
   
-7.  Pour **TargetServerURL**, tapez une URL vers un sous-site ou un site SharePoint de niveau supérieur. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, `http://servername`, `http://servername/site`ou `http://servername/site/subsite`).  
+7.  Pour **TargetServerURL**, tapez l’URL d’un sous-site ou d’un site SharePoint de niveau supérieur. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, `http://servername`, `http://servername/site`ou `http://servername/site/subsite`).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le rapport à publier, puis cliquez sur **Déployer**. Le rapport est publié à l’emplacement spécifié dans **TargetReportFolder**. Les erreurs de déploiement apparaissent dans la fenêtre Sortie.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pages de propriétés du projet, boîte de dialogue](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [Publication de rapports sur un serveur de rapports](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   

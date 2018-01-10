@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c9c659c5e7dc07edd7d45cf9f2e74cf58313ac7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44809cf12df1fac42a99882672fa945800a9f5f4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Lier un rapport ou un modèle à une source de données partagée (SSRS)
   Dans certaines situations, par exemple si vous déplacez un rapport ou un modèle d'un serveur test vers un serveur de production, vous pouvez envisager d'enregistrer le fichier sur votre ordinateur local puis de le télécharger sur un autre serveur de rapports. Si vous téléchargez le rapport ou le modèle sur le nouveau serveur, vous devez le lier de nouveau à une source de données partagée stockée sur le nouveau serveur de rapports. Si vous ne liez pas de nouveau le rapport ou le modèle, celui-ci ne fonctionnera pas correctement en cas d'accès à partir du nouveau serveur de rapports.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
 10. Cliquez sur **Fermer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Télécharger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
  [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   

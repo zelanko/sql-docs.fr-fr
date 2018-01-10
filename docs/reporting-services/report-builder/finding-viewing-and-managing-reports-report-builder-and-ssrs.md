@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fc5a838e47221f6686cb417ae4c20e9ac95d09f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ca04c9558b827539bdb6dac8431a768e8d68f414
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -96,7 +94,7 @@ Barre d'outils Rapports
 ### <a name="refreshing-reports"></a>Actualisation des rapports  
  Les données des rapports changent fréquemment et vous pouvez actualiser le rapport pour afficher les données les plus récentes. Vous pouvez actualiser les données d'un rapport de trois façons différentes.  
   
-|Option|Résultat|  
+|Option|Résultats|  
 |------------|------------|  
 |Bouton**Actualiser** de la fenêtre du navigateur|Affiche le rapport stocké dans le cache de sessions. Un cache de session est créé lorsqu'un utilisateur ouvre un rapport. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour assurer un affichage cohérent lorsqu'un rapport est ouvert.|  
 |![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](../../reporting-services/media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|Quand vous cliquez dans la barre d’outils Rapports sur le bouton **Actualiser** , le serveur de rapports réexécute la requête et met à jour les données du rapport si ce dernier s’exécute à la demande. Si le rapport est mis en cache ou s'il s'agit d'un instantané, la commande **Actualiser** permet d'afficher le rapport stocké dans la base de données du serveur de rapports.|  
@@ -161,7 +159,7 @@ Barre d'outils Rapports
  [Aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Décrit comment afficher un aperçu des rapports lorsque vous les créez ou les mettez à jour.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Installer et désinstaller le Générateur de rapports](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +20,17 @@ helpviewer_keywords:
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14e26b4d8f398fcfc8d648f757e782e0afda2101
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a03feca8dfe4da40235745087577e307af69ba7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint
   Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, les paramètres de sécurité définis sur le site SharePoint déterminent le mode d'affichage et de gestion des rapports, des modèles de rapport et des sources de données partagées. Si vous utilisez les groupes SharePoint par défaut, les niveaux d'autorisation et les attributions d'autorisations, vous pouvez utiliser les rapports et d'autres documents à l'aide des paramètres de sécurité actuels.  
   
  Si les paramètres de sécurité par défaut n'offrent pas le niveau d'accès souhaité, vous pouvez utiliser les informations fournies dans les sections suivantes pour connaître les autorisations nécessaires à des opérations particulières :  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Il n'existe pas d'autorisation pour modifier des modèles de rapport. Même si vous pouvez créer ou supprimer des modèles de rapport, vous ne pouvez pas les modifier depuis un site SharePoint. La modification de modèles de rapport exige le Générateur de modèles, un outil de création client sur lequel les autorisations définies dans SharePoint sont sans effet.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
   Report Definition Language (RDL) est une représentation XML d’une définition de rapport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une définition de rapport contient les informations d'extraction de données et de mise en page d'un rapport. La spécification RDL est composée d’éléments XML qui sont conformes à une grammaire XML créée pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez ajouter vos propres fonctions personnalisées pour contrôler les valeurs, les styles et la mise en forme des éléments de rapport en accédant à des assemblys de code dans les fichiers de définition de rapport.  
@@ -88,13 +86,13 @@ ms.lasthandoff: 12/05/2017
   
 |**Type CLR**|**Type de données correspondant**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|Booléen|Boolean|  
 |DateTime, DateTimeOffset|DateTime|  
-|Int16, Int32, UInt16, Byte, SByte|Integer|  
-|Single, Double|Float|  
+|Int16, Int32, UInt16, Byte, SByte|Entier|  
+|Single, Double|float|  
 |String, Char, GUID, Timespan|String|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Utilisation d'assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Éléments de rapports personnalisés](../../reporting-services/custom-report-items/custom-report-items.md)  
