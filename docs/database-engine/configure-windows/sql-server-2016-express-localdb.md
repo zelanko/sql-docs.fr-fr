@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Microsoft SQL Server 2016 Express **LocalDB** est une fonctionnalité de [SQL Se
 ## <a name="install-localdb"></a>Installer LocalDB  
  Installez **LocalDB** par le biais de l’Assistant installation ou à l’aide du programme SqlLocalDB.msi. **LocalDB** est une option sélectionnable lors de l’installation de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Sélectionnez **LocalDB** dans la page **Sélection de fonctionnalités/Fonctionnalités partagées** lors de l’installation. Il ne peut y avoir qu'une seule installation des fichiers binaires **LocalDB** pour chaque version majeure de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Plusieurs processus [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être démarrés et utiliseront tous les mêmes fichiers binaires. Une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] démarrée comme **LocalDB** a les mêmes limitations que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Sélectionnez **LocalDB** dans la page **Sélection de fonctionnalités/Fonctionnalités partagées** lors de l’installation. Il ne peut y avoir qu'une seule installation des fichiers binaires **LocalDB** pour chaque version majeure de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Plusieurs processus [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être démarrés et utiliseront tous les mêmes fichiers binaires. Une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] démarrée comme **LocalDB** a les mêmes limitations que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  Une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** est gérée à l’aide de l’utilitaire **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** doit être utilisé à la place de la fonctionnalité d’instance utilisateur [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui est déconseillée. 
   
@@ -109,11 +109,11 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|Nom|"LocalDBApp1"|  
-|Version|\<Version actuelle>|  
+|Nom   |"LocalDBApp1"|  
+|Options de version|\<Version actuelle>|  
 |Nom partagé|""|  
 |Propriétaire|"\<votre utilisateur Windows>"|  
-|Création automatique|Non|  
+|Création automatique|non|  
 |État|en cours d'exécution|  
 |Dernière heure de début|\<Date et heure>|  
 |Nom du canal de l'instance|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -133,7 +133,7 @@ REM Gather information about the instance of LocalDB
 > [!NOTE]  
 >  **LocalDB** s'exécute toujours dans le contexte de sécurité des utilisateurs ; autrement dit, **LocalDB** ne s'exécute jamais avec les informations d'identification du groupe des administrateurs local. Cela signifie que tous les fichiers de base de données utilisés par une instance **LocalDB** doivent être accessibles à l'aide du compte Windows de l'utilisateur propriétaire, sans prendre en compte l'appartenance au groupe des administrateurs local.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilitaire SqlLocalDB](../../tools/sqllocaldb-utility.md)  
   
   

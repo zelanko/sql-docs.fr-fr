@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de BYOK pour Azure SQL Database et Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de la fonctionnalité BYOK (préversion) pour Azure SQL Database et Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Avec la prise en charge de la fonctionnalité BYOK (Bring Your Own Key) pour [Transparent Data Encryption (TDE)](transparent-data-encryption.md), vous pouvez gérer vous-même vos clés de chiffrement TDE et déterminer quels autres utilisateurs sont autorisés à y accéder, et à quel moment. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), système de gestion de clés externes cloud Azure, est le premier service de gestion de clés auquel TDE a intégré la prise en charge BYOK. Avec BYOK, la clé de chiffrement de la base de données est protégée par une clé asymétrique stockée dans Key Vault. La clé asymétrique est définie au niveau du serveur et est héritée par toutes les bases de données sur ce serveur. 
+Avec la prise en charge de la fonctionnalité BYOK (Bring Your Own Key) pour [Transparent Data Encryption (TDE)](transparent-data-encryption.md), vous pouvez gérer vous-même vos clés de chiffrement TDE et déterminer quels autres utilisateurs sont autorisés à y accéder, et à quel moment. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), système de gestion de clés externes cloud Azure, est le premier service de gestion de clés auquel TDE a intégré la prise en charge BYOK. Avec BYOK, la clé de chiffrement de la base de données est protégée par une clé asymétrique stockée dans Key Vault. La clé asymétrique est définie au niveau du serveur et est héritée par toutes les bases de données sur ce serveur. Cette fonctionnalité est actuellement disponible en préversion. Nous vous déconseillons de l’utiliser pour des charges de travail de production avant sa mise à disposition générale.
 
 Avec la prise en charge de BYOK, les utilisateurs peuvent maintenant gérer diverses tâches de gestion des clés, y compris les rotations de clés, les autorisations d’accès à Key Vault, la suppression des clés, ainsi que l’audit et le reporting sur toutes les clés de chiffrement. Key Vault propose une gestion centralisée des clés, tire parti des modules de sécurité matériels (HSM) étroitement surveillés et permet la séparation des responsabilités liées à la gestion des clés et des données pour garantir la conformité réglementaire. 
 
@@ -57,10 +60,11 @@ Quand vous utilisez TDE avec prise en charge de BYOK, vous avez davantage de tâ
 Gérer les clés de chiffrement des ressources d’une application est une responsabilité importante. En utilisant TDE avec l’option BYOK dans Key Vault, vous avez la responsabilité des tâches de gestion des clés ci-dessous :
 - **Rotations des clés** : vous devez changer les protecteurs TDE conformément aux stratégies internes ou aux exigences de conformité. Les rotations de clés peuvent être effectuées à partir du coffre de clés associé au protecteur TDE.  
 - **Autorisations dans Key Vault** : les autorisations dans Key Vault sont provisionnées au niveau du coffre de clés et du serveur. Vous pouvez révoquer les autorisations d’un serveur sur un coffre de clés à tout moment à l’aide de la stratégie d’accès définie pour le coffre de clés.
+- **Redondance dans Key Vault** : étant donné que les éléments de clé ne quittent jamais Azure Key Vault et que le serveur n’a pas accès aux copies mises en cache en dehors du coffre de clés, vous devez configurer la géoréplication Azure Key Vault pour garantir l’accès aux éléments de clé même si une région Azure Key Vault connaît une interruption de service.  Les bases de données géorépliquées qui utilisent un seul coffre de clés Azure Key Vault perdraient l’accès aux éléments de clé associés.
 - **Suppression de clés** : vous pouvez supprimer des clés dans Key Vault et sur le serveur SQL Server pour une sécurité supplémentaire ou pour répondre aux exigences de conformité.
 - **Audit et reporting sur toutes les clés de chiffrement** : Key Vault fournit des fichiers journaux que vous pouvez facilement injecter dans d’autres outils de gestion des événements et des informations de sécurité (SIEM). Le service [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) d’OMS (Operations Management Suite) est un exemple de service déjà intégré.
 
-### <a name="pricing-considerations"></a>Points sur les tarifs 
+### <a name="pricing-considerations"></a>Observations tarifaires 
 
 TDE avec prise en charge de BYOK est une fonctionnalité de sécurité intégrée à Azure SQL Database et Data Warehouse qui est fournie sans frais supplémentaires. Toutefois, l’utilisation du service Key Vault proprement dit est facturée. Les opérations effectuées par le serveur dans Key Vault sont facturées comme des opérations normales dans votre coffre de clés, selon les [prix](https://azure.microsoft.com/pricing/details/key-vault/) en vigueur pour Key Vault. Le serveur envoie des demandes à Key Vault pour les événements suivants :
 - Redémarrages d’instances SQL
@@ -91,12 +95,11 @@ Les protecteurs TDE uniques pour une base de données ou un entrepôt de donnée
 
 ### <a name="high-availability-and-disaster-recovery"></a>Haute disponibilité et récupération d’urgence
   
-Il existe deux façons de configurer la géoréplication pour les serveurs utilisant Key Vault : 
+La géoréplication doit être configurée pour le coffre de clés afin de garantir la haute disponibilité des éléments de clé dans Azure Key Vault :
 
-- **Coffre de clés séparé** : chaque serveur a accès à un coffre de clés distinct (dans l’idéal, situé dans sa région Azure associée). C’est la configuration recommandée, car chaque serveur a ainsi sa propre copie du protecteur TDE pour les bases de données géorépliquées chiffrées. Si une des régions Azure des serveurs n’est plus accessible, les autres serveurs gardent leur accès aux bases de données géorépliquées.   
+- **Key Vault redondant** : chaque serveur géorépliqué a accès à un coffre de clés distinct, de préférence situé dans la même région Azure. C’est la configuration recommandée, car chaque serveur a ainsi sa propre copie du protecteur TDE pour les bases de données géorépliquées chiffrées. Si une des régions Azure des serveurs n’est plus accessible, les autres serveurs gardent leur accès aux bases de données géorépliquées.  Cela doit être configuré avec soin. En effet, en cas d’indisponibilité d’un coffre de clés, le serveur doit pouvoir accéder à la sauvegarde du protecteur TDE dans l’autre coffre de clés.     
 
-- **Coffre de clés partagé** : tous les serveurs partagent le même coffre de clés. Cette configuration est plus simple, mais si la région Azure où se trouve le coffre de clés n’est plus accessible, les autres serveurs ne peuvent plus accéder aux bases de données géorépliquées chiffrées ni à leurs propres bases de données chiffrées. 
- 
+
 Pour commencer, utilisez l’applet de commande [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) pour ajouter la clé Key Vault de chaque serveur aux autres serveurs dans le lien de géoréplication.  
 (Exemple de valeur KeyId dans Key Vault : *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 
@@ -131,7 +134,7 @@ Pour corriger cela, utilisez l’applet de commande [Get-AzureRmSqlServerKeyVaul
    ```
 Pour en savoir plus sur la récupération d’une sauvegarde pour SQL Database, consultez [Récupérer une base de données Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Pour en savoir plus sur la récupération d’une sauvegarde pour SQL Data Warehouse, consultez [Récupérer un entrepôt de données Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
 
-## <a name="best-practices"></a>Bonnes pratiques
+## <a name="best-practices"></a>Meilleures pratiques
 
 ### <a name="key-management"></a>Gestion des clés 
 

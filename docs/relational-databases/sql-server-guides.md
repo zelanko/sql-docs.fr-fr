@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1c80c429cd094c36ec92aa71039e6431e60e73e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65789c30fdb080171e70ab16e81808990a7b636e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="sql-server-guides"></a>Repères de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Les guides suivants sont disponibles. Ils présentent les concepts généraux et
 [Guide de conception d’index](../relational-databases/sql-server-index-design-guide.md)  
 [Guide d’architecture de gestion de la mémoire](../relational-databases/memory-management-architecture-guide.md)  
 [Guide d’architecture des pages et des étendues](../relational-databases/pages-and-extents-architecture-guide.md)  
-[Guide de validation et d’optimisation post-migration](post-migration-validation-and-optimization-guide.md)  
+[Guide de validation et d’optimisation post-migration](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [Guide d’architecture de traitement des requêtes](../relational-databases/query-processing-architecture-guide.md)  
 [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598)  
 [Guide d’architecture et gestion du journal des transactions SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  

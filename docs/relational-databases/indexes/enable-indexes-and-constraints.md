@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05993c2ce383b65938712557cd82db47aaaf28bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc82c95d6bed2f0479a576d2cab04a24f4ab2176
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-indexes-and-constraints"></a>Activer les index et contraintes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,10 +75,12 @@ ms.lasthandoff: 11/17/2017
     |ALTER INDEX REBUILD|L'action échoue.|L'action réussit.|  
     |DROP INDEX|L'action réussit.|L'action réussit.|  
     |CREATE INDEX WITH DROP_EXISTING|L'action échoue.|L'action réussit.|  
-  
+
+-   Lors de la regénération d’index non-cluster compressés désactivés, data_compression est défini sur 'none' par défaut, ce qui signifie que les index seront décompressés. Cela est dû à la perte des métadonnées des paramètres de compression quand les index non-cluster sont désactivés. Pour contourner ce problème, spécifiez la compression de données explicite dans une instruction rebuild.
+
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue. S’il utilise DBCC DBREINDEX, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

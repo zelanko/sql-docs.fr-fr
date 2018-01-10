@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Cette rubrique limite la discussion à la mise à niveau de SQL Server lui-même. Elle ne couvre pas la mise à niveau du système d’exploitation contenant le cluster WSFC (Windows Server Failover Clusting). La mise à niveau du système d’exploitation Windows qui héberge le cluster de basculement n’est pas prise en charge psr les systèmes d’exploitation antérieurs à Windows Server 2012 R2. Pour mettre à niveau un nœud de cluster s’exécutant sur Windows Server 2012 R2, consultez la rubrique [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(Mise à niveau propagée du système d’exploitation de cluster).  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prerequisites  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -41,11 +41,14 @@ ms.lasthandoff: 11/20/2017
 -   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
-  
+
+> [!NOTE]  
+>  Le mélange de versions de SQL Server dans le même groupe de disponibilité n’est pas pris en charge. Pour migrer vers une nouvelle version avec des groupes de disponibilité, la seule méthode prise en charge est un groupe de disponibilité distribué qui figure dans SQL Server 2016 Enterprise Edition ou une version ultérieure.
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Bonnes pratiques pour la mise à niveau propagée de groupes de disponibilité Always On  
  Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire les temps d’arrêt et la perte de données de vos groupes de disponibilité :  
   
--   Avant de procéder à la mise à niveau propagée :  
+-   Avant de procéder à la mise à niveau propagée :  
   
     -   Procédez à un essai de basculement manuel sur au moins l’une de vos instances de réplica avec validation synchrone.  
   
@@ -170,7 +173,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Dans de nombreux cas, une fois la mise à niveau propagée terminée, le serveur principal d’origine sera restauré automatiquement sur le réplica principal.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   

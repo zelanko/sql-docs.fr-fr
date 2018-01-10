@@ -1,7 +1,7 @@
 ---
 title: "Résoudre les problèmes de mémoire insuffisante | Microsoft Docs"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cd2c56037edfc85932f8cb9ef0c7dbe8b5251ef4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.lasthandoff: 11/27/2017
 |-----------|--------------|  
 |[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* » ».|  
 |[Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](#bkmk_recoverFromOOM)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
-|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* ». … » lorsque la mémoire disponible est suffisante pour l'opération.|
+|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* ». … » lorsque la mémoire disponible est suffisante pour l'opération.|
 |[Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs)|Ce qu’il faut savoir avant d’utiliser l’OLTP en mémoire dans un environnement virtualisé.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Quand vous tentez de restaurer une base de données, il se peut que le message d’erreur suivant s’affiche : « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* » ». Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données.
+ Quand vous tentez de restaurer une base de données, il se peut que le message d’erreur suivant s’affiche : « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* » ». Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
    
-Le serveur sur lequel vous restaurez une base de données doit disposer de suffisamment de mémoire pour les tables optimisées en mémoire dans la sauvegarde de base de données. Dans le cas contraire, la base de données n’est pas mise en ligne.  
+Le serveur sur lequel vous restaurez une base de données doit disposer de suffisamment de mémoire pour les tables à mémoire optimisée dans la sauvegarde de base de données. Dans le cas contraire, la base de données n’est pas mise en ligne et est marquée comme suspecte.  
   
 Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur persiste, cela peut signifier que les autres processus utilisent trop de mémoire ou indiquer qu’un problème de configuration ne permet pas de disposer d’une quantité de mémoire suffisante pour procéder à la restauration. Pour cette classe de problèmes, prenez les mesures suivantes pour augmenter la quantité de mémoire disponible pour l’opération de restauration : 
   
@@ -54,7 +54,7 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
     > Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
     > Pour plus d’informations, consultez la rubrique [Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs).  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +117,7 @@ Cet extrait de code modifie la valeur de MAX_MEMORY_PERCENT pour le pool de ress
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
 > Pour plus d’informations, consultez la rubrique [Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs).  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -163,7 +163,7 @@ Si vous suivez les pratiques ci-dessus lorsque votre base de données possède p
 ### <a name="resolution"></a>Résolution
 Pour atténuer ce problème, préallouez suffisamment de mémoire à la base de données pour la récupération ou le redémarrage ; ne vous contentez pas d'une valeur minimale en comptant sur la mémoire dynamique pour fournir la mémoire supplémentaire lorsque cela est nécessaire.
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion de la mémoire pour l'OLTP en mémoire](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Analyse et dépannage de l’utilisation de mémoire](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
