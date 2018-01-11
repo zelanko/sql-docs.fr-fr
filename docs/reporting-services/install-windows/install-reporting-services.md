@@ -1,38 +1,36 @@
 ---
-title: "Installer SQL Server Reporting Services | Microsoft Docs"
-ms.date: 10/10/2017
+title: "Installer SQL Server Reporting Services (2017 et versions ultérieures) | Microsoft Docs"
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>Installation de SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>Installer SQL Server Reporting Services (2017 et versions ultérieures)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
 
-L’installation de SQL Server Reporting Services comprend des composants serveur pour le stockage des éléments de rapport, le rendu des rapports et le traitement des services d’abonnement et autres services de rapport.  Découvrez comment installer Power BI Report Server.
+L’installation de SQL Server Reporting Services comprend des composants serveur pour le stockage des éléments de rapport, le rendu des rapports et le traitement des services d’abonnement et autres services de rapport. 
 
 Pour télécharger Microsoft SQL Server 2017 Reporting Services, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=55252).
 
 > [!NOTE]
-> Vous recherchez Power BI Report Server ? Consultez [Installer Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
+> Vous recherchez Power BI Report Server ? Consultez [Installer Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -55,11 +53,11 @@ L’installation d’un serveur de rapports est simple. Quelques étapes suffise
 
     ![Choisissez l’édition.](media/install-reporting-services/report-server-install-edition.png)
 
-    Vous avez le choix entre l’édition d’évaluation et l’édition Développeur dans la liste déroulante.
+    Pour installer une édition gratuite, choisissez l’édition d’évaluation ou Developer dans la liste déroulante.
 
     ![Éditions d’évaluation ou Développeur](media/install-reporting-services/report-server-install-edition-select.png)
 
-    Sinon, vous pouvez entrer une clé de produit.
+    Sinon, entrez une clé de produit. [Rechercher la clé de produit pour SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md).
 
 4. Lisez et acceptez les termes du contrat de licence, puis sélectionnez **Suivant**.
 
@@ -106,9 +104,9 @@ Les réservations d'URL se composent d'un préfixe, d'un nom d'hôte, d'un port 
 
 |Élément|Description|
 |----------|-----------------|
-|Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
+|Prefix|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
 |Nom d'hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `http://<computername>/reportserver`, `http://localhost/reportserver` ou`http://<IPAddress>/reportserver.`|
-|Port|Le port par défaut est 80. Si vous utilisez un port autre que le port 80, vous devez l’ajouter explicitement à l’URL lorsque vous ouvrez un portail web dans une fenêtre de navigateur.|
+|d’|Le port par défaut est 80. Si vous utilisez un port autre que le port 80, vous devez l’ajouter explicitement à l’URL lorsque vous ouvrez un portail web dans une fenêtre de navigateur.|
 |Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer pour le service web Report Server et au format Reports pour le portail web. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Pour le portail web, le répertoire virtuel par défaut est **reports**.|
 
 Voici un exemple de chaîne URL complète :

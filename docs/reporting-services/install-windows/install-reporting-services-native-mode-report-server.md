@@ -1,14 +1,14 @@
 ---
-title: Installer le serveur de rapports Reporting Services en mode natif | Microsoft Docs
+title: Installer le serveur de rapports Reporting Services 2016 en mode natif | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: "68"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-reporting-services-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services en mode natif
+# <a name="install-reporting-services-2016-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services 2016 en mode natif
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
 
@@ -93,9 +93,9 @@ Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssr
   
 |Élément|Description|  
 |----------|-----------------|  
-|Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), l'installation tente de créer des réservations d'URL qui utilisent le préfixe HTTPS.|  
+|Prefix|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), l'installation tente de créer des réservations d'URL qui utilisent le préfixe HTTPS.|  
 |Nom d'hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `http://<computername>/reportserver`, `http://localhost/reportserver` ou`http://<IPAddress>/reportserver`.|  
-|Port|Le port par défaut est 80. Notez que si vous utilisez un port autre que le port 80, vous devez l'ajouter explicitement à l'URL lorsque vous ouvrez une application Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une fenêtre de navigateur.|  
+|d’|Le port par défaut est 80. Notez que si vous utilisez un port autre que le port 80, vous devez l'ajouter explicitement à l'URL lorsque vous ouvrez une application Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une fenêtre de navigateur.|  
 |Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer_\<*nom_instance*> pour le service web Report Server et Reports_\<*nom_instance* pour le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Par défaut, le répertoire virtuel du [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]est **reports**.|  
   
  Voici un exemple de chaîne URL complète :  
@@ -170,7 +170,7 @@ Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssr
   
  [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
- [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
+ [Résoudre les problèmes d’une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   
 ##  <a name="bkmk_additional_configuration"></a> Configuration supplémentaire  
   
@@ -180,7 +180,7 @@ Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssr
   
 -   Pour configurer le portail web et le rendre accessible sur un ordinateur de rapports afin de consulter et de gérer des rapports, consultez [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) et [Configurer un serveur de rapports pour l’administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
