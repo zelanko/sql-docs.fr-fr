@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Mettre à niveau les composants de la machine learning dans une instance de SQL Server
 
@@ -38,7 +38,7 @@ Si à tout moment vous souhaitez arrêter la mise à niveau sur la planification
 
 Le processus de mise à niveau les composants d’apprentissage automatique est appelé **liaison**, car il modifie le modèle de prise en charge pour les composants de formation ordinateur SQL Server à utiliser la nouvelle stratégie de cycle de vie de logiciel moderne. 
 
-En règle générale, le basculement vers le nouveau modèle de licence garantit que les chercheurs de données peuvent utiliser toujours la dernière version de R ou Python. Pour plus d’informations sur les conditions de la stratégie de cycle de vie moderne, consultez [chronologie de prise en charge de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+En règle générale, le basculement vers le nouveau modèle de service garantit que les chercheurs de données peuvent utiliser toujours la dernière version de R ou Python. Pour plus d’informations sur les conditions de la stratégie de cycle de vie moderne, consultez [chronologie de prise en charge de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > La mise à niveau ne modifie pas le modèle de prise en charge pour la base de données SQL Server et ne change pas la version de SQL Server.
@@ -59,7 +59,7 @@ Consultez le tableau suivant pour obtenir la liste des mises à niveau pris en c
 
 | Version de SQL Server| Mise à niveau pris en charge| Remarques|
 |-----|-----|------|
-| SQL Server 2016| Serveur 9.2.1 d’apprentissage| Nécessite au moins Service Pack 1 plus CU3. R Services doit être installés et activés.|
+| SQL Server 2016| Serveur 9.2.1 d’apprentissage| Nécessite au moins Service Pack 1 plus CU3. R Services doit être installés et activés.|
 | SQL Server 2017| Serveur 9.2.1 d’apprentissage| Machine Learning Services (de-de base de données) doit être installés et activés. |
 
 ## <a name="bind-or-upgrade-an-instance"></a>Lier ou mettre à niveau une instance
@@ -189,7 +189,7 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 
 ### <a name="parameters"></a>Paramètres
 
-|Nom   |Description|
+|Nom| Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
@@ -199,7 +199,7 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 
 L’outil retourne les messages d’erreur suivants :
 
-|Error|Résolution|
+|Erreur|Résolution|
 |------|------|
 |Une erreur est survenue lors de la liaison de l’instance| L’instance n’a pas pu être liée. Contactez le support pour obtenir de l’aide.|
 |L’instance est déjà liée| Vous avez exécuté la commande *bind* , mais l’instance spécifiée est déjà liée. Choisissez une autre instance.|

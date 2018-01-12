@@ -3,7 +3,7 @@ title: Prise en charge FILESTREAM (ODBC) | Documents Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine
 ms.service: 
 ms.component: native-client|ODBC
 ms.reviewer: 
@@ -20,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a1f392498ada12492aa3ab6b1f9f58674caa950
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a26f724c6e6a6dd0670fb74523a1bcc91398786
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="filestream-support-odbc"></a>Prise en charge de FILESTREAM (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la fonctionnalité FILESTREAM améliorée. Pour plus d’informations sur cette fonctionnalité, consultez [prise en charge FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Pour un exemple illustrant la prise en charge ODB pour FILESTREAM, consultez [envoyer et recevoir des données incrémentielle avec FILESTREAM &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  Si vous appelez SQLFetch sur une colonne dépendante, vous recevrez un avertissement « données tronquées » si la mémoire tampon n’est pas assez grande pour contenir la valeur entière. Ignorez cet avertissement et mettre à jour les données dans cette colonne liée avec les appels de SQLParamData et SQLPutData. Vous pouvez mettre à jour les données FILESTREAM à l’aide de SQLSetPos si elle est liée avec SQLBindCol.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Colonnes FILESTREAM se comportent exactement comme **varbinary (max)** colonnes, mais sans une taille limitent. Elles sont liées en tant que SQL_VARBINARY. (SQL_LONGVARBINARY est utilisé avec les colonnes image et ce type comporte un certain nombre de restrictions. Par exemple, SQL_LONGVARBINARY ne peut pas être utilisé comme paramètre de sortie.) Les exemples suivants affichent l'accès NTFS direct pour les colonnes FILESTREAM. Ces exemples supposent que le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant a été exécuté dans la base de données :  
   
 ```  
@@ -52,7 +52,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>Lire  
+### <a name="read"></a>Lecture  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  

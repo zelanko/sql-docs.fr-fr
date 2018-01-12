@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: 
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 641ad24e22893b10ff5ad40f648e431c78731aea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e8aa8d51c54fb98b3851676ddedd367f476dd1fa
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>À l’aide des données à partir de cubes OLAP dans R
 
@@ -105,7 +105,7 @@ Consultez l’article suivant pour obtenir des informations générales sur les 
 
 Consultez l’article suivant pour plus d’informations sur l’interrogation des propriétés du serveur :
 
-+ [Ensembles de lignes de schéma OLE DB pour OLAP](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB pour OLAP Schema Rowsets](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### <a name="writeback-is-not-supported"></a>L’écriture différée n’est pas pris en charge.
 
