@@ -1,5 +1,5 @@
 ---
-title: "Se connecter à des sources de données locales et des partages de fichiers Azure avec l’authentification Windows | Microsoft Docs"
+title: "Se connecter à des sources de données et des partages de fichiers avec l’authentification Windows | Microsoft Docs"
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Se connecter à des sources de données locales et des partages de fichiers Azure avec l’authentification Windows
 Cet article explique comment configurer le catalogue SSIS sur Azure SQL Database pour exécuter des packages qui utilisent l’authentification Windows afin de se connecter à des sources de données locales et des partages de fichiers Azure. Vous pouvez utiliser l’authentification Windows pour vous connecter à des sources de données dans le même réseau virtuel qu’Azure SSIS Integration Runtime, aussi bien localement que sur des machines virtuelles Azure et dans Azure Files.
@@ -80,7 +80,7 @@ Pour vérifier si vous pouvez vous connecter à une instance SQL Server locale, 
 
 3.  À partir de SSMS, vérifiez si vous pouvez vous connecter à l’instance SQL Server locale à utiliser.
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Prerequisites
 Pour vous connecter à un serveur SQL Server local à partir d’un package s’exécutant sur Azure, vous devez satisfaire aux prérequis suivants :
 
 1.  Dans le Gestionnaire de Configuration SQL Server, activez le protocole TCP/IP.

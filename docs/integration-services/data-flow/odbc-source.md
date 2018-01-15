@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>Source ODBC
   La source ODBC extrait les données d'une base de données compatible ODBC à l'aide d'une table de base de données, d'une vue ou d'une instruction SQL.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  Selon le comportement paramétré pour les erreurs, la source ODBC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
- Pour plus d'informations sur les types de données pris en charge par la source ODBC, consultez le Connecteur pour Open Database Connectivity (ODBC) d'Attunity.  
+ Pour plus d’informations sur les types de données pris en charge par la source ODBC, consultez le Connecteur pour Open Database Connectivity (ODBC).  
   
 ## <a name="extract-options"></a>Options d'extraction  
  La source ODBC s’exécute en mode **Lot** ou **Ligne par ligne** . Le mode utilisé est déterminé par la propriété **FetchMethod** . La liste suivante décrit les différents modes.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations sur la propriété **FetchMethod** , consultez [Propriétés personnalisées des sources ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallélisme  
+## <a name="parallelism"></a>Parallelism  
  Il n'existe aucune limitation quant au nombre de composants de source ODBC pouvant s'exécuter en parallèle sur la même table ou des tables différentes, sur le même ordinateur ou sur des ordinateurs différents (autre que les limites de session globale habituelles).  
   
  Toutefois, les limites du fournisseur ODBC utilisé peuvent limiter le nombre de connexions simultanées par le fournisseur. Ces limites restreignent le nombre d'instances parallèles prises en charge pour la source ODBC. Le développeur SSIS doit avoir connaissance des limites de tout fournisseur ODBC utilisé et en tenir compte lors de la génération de packages SSIS.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="configuring-the-odbc-source"></a>Configuration de la source ODBC  
  Vous pouvez définir la source ODBC par programmation ou par le biais du concepteur SSIS.  
   
- La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programmation.  
+ La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
  Pour ouvrir la boîte de dialogue **Éditeur avancé** :  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="connection-manager"></a>Gestionnaire de connexions  
  Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur **Nouveau** pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
   
-#### <a name="new"></a>Nouveau  
+#### <a name="new"></a>Nouvelle  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions ODBC.  
   
 #### <a name="data-access-mode"></a>Mode d'accès aux données  
@@ -167,10 +167,10 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>Entrée/sortie  
  Affichez le nom de la source de données.  
   
-#### <a name="column"></a>Colonne  
+#### <a name="column"></a>colonne  
  Non utilisé.  
   
-#### <a name="error"></a>Erreur  
+#### <a name="error"></a>Error  
  Sélectionnez la façon dont la source ODBC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
 #### <a name="truncation"></a>Troncation  

@@ -1,7 +1,7 @@
 ---
 title: "Groupes de fichiers et fichiers de base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a au moins deux fichiers de système d'exploitation : un fichier de données et un fichier journal. Les fichiers de données contiennent des données et des objets tels que des tables, des index, des procédures stockées et des vues. Les fichiers journaux contiennent les informations nécessaires pour récupérer toutes les transactions de la base de données. Les fichiers de données peuvent être regroupés dans des groupes de fichiers à des fins d'allocation et d'administration.  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  Par défaut, les données et les journaux des transactions sont placés sur le même lecteur et leur chemin est identique, ceci afin de gérer les systèmes comportant un seul disque. Cependant, cette configuration n'est pas forcément optimale pour les environnements de production. Nous vous recommandons de placer les fichiers de données et les fichiers journaux sur des disques distincts.  
 
 ### <a name="logical-and-physical-file-names"></a>Noms de fichiers logiques et physiques
-Les fichiers SQL Server portent deux noms : 
+Les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont deux types de nom de fichier : 
 
-**logical_file_name**  : nom utilisé pour faire référence au fichier physique dans toutes les instructions Transact-SQL. Le nom de fichier logique doit respecter les règles régissant les identificateurs SQL Server et doit être unique parmi les noms de fichiers logiques de la base de données.
+**logical_file_name**  : nom utilisé pour faire référence au fichier physique dans toutes les instructions Transact-SQL. Le nom de fichier logique doit respecter les règles régissant les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit être unique parmi les noms de fichier logique dans la base de données. Cela est défini par l’argument `NAME` dans `ALTER DATABASE`. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name** : nom du fichier physique, comprenant le chemin du répertoire. Il doit respecter les règles en vigueur pour les noms de fichiers du système d'exploitation.
+**os_file_name** : nom du fichier physique, comprenant le chemin du répertoire. Il doit respecter les règles en vigueur pour les noms de fichiers du système d'exploitation. Cela est défini par l’argument `FILENAME` dans `ALTER DATABASE`. Pour plus d’informations, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-Les données et les fichiers journaux SQL Server peuvent être placés dans les systèmes de fichiers FAT ou NTFS. Nous vous recommandons d'utiliser le système de fichiers NTFS pour des raisons de sécurité. Les fichiers journaux et les groupes de fichiers de données en lecture/écriture ne peuvent pas être implantés dans un système de fichiers compressé NTFS. Seuls les groupes de fichiers secondaires en lecture seule et les bases de données en lecture seule peuvent être implantés dans un système de fichiers compressé NTFS.
+> [!IMPORTANT]
+> Les données et les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être implantés dans les systèmes de fichiers FAT ou NTFS. Sur les systèmes Windows, nous vous recommandons d’utiliser le système de fichiers NTFS pour des raisons de sécurité. 
 
-Lorsque plusieurs instances de SQL Server sont exécutées sur un ordinateur unique, chaque instance reçoit son propre répertoire par défaut pour contenir les fichiers des bases de données créées dans l’instance. Pour plus d’informations, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
+> [!WARNING]
+> Les fichiers journaux et les groupes de fichiers de données en lecture/écriture ne peuvent pas être implantés dans un système de fichiers compressé NTFS. Seuls les groupes de fichiers secondaires en lecture seule et les bases de données en lecture seule peuvent être implantés dans un système de fichiers compressé NTFS.
+> Pour économiser de l’espace, il est fortement recommandé d’utiliser la [compression des données](../../relational-databases/data-compression/data-compression.md) au lieu de la compression du système de fichiers.
+
+Quand plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont en cours d’exécution sur un ordinateur unique, chaque instance reçoit un répertoire par défaut différent pour contenir les fichiers des bases de données créées dans l’instance. Pour plus d’informations, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### <a name="data-file-pages"></a>Pages de fichiers de données
-Les pages d’un fichier de données SQL Server sont numérotées de manière séquentielle, zéro (0) correspondant à la première page. Chaque fichier d'une base de données possède un numéro d'identification de fichier unique. L'ID de fichier et le numéro de page sont nécessaires pour identifier de manière unique une page d'une base de données. L'exemple ci-dessous montre les numéros de page d'une base de données disposant d'un fichier de données primaire de 4 Mo et d'un fichier de données secondaire de 1 Mo.
+Les pages d'un fichier de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont numérotées de manière séquentielle, zéro (0) correspondant à la première page. Chaque fichier d'une base de données possède un numéro d'identification de fichier unique. L'ID de fichier et le numéro de page sont nécessaires pour identifier de manière unique une page d'une base de données. L'exemple ci-dessous montre les numéros de page d'une base de données disposant d'un fichier de données primaire de 4 Mo et d'un fichier de données secondaire de 1 Mo.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-La première page de chaque fichier est une page d'en-tête qui contient des informations sur les attributs du fichier. D'autres pages situées au début du fichier contiennent également des informations sur le système, comme les tables d'allocation. Une des pages système stockée à la fois dans le fichier de données primaire et dans le premier fichier journal est une page d'amorçage de base de données qui contient des informations sur les attributs de la base de données. Pour plus d’informations sur les pages et les types de pages, consultez « Fonctionnement des pages et étendues ».
+La première page de chaque fichier est une page d'en-tête qui contient des informations sur les attributs du fichier. D'autres pages situées au début du fichier contiennent également des informations sur le système, comme les tables d'allocation. Une des pages système stockée à la fois dans le fichier de données primaire et dans le premier fichier journal est une page d'amorçage de base de données qui contient des informations sur les attributs de la base de données. Pour plus d’informations sur les pages et les types de page, consultez [Guide d’architecture des pages et des étendues](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="file-size"></a>Taille du fichier
-Les fichiers SQL Server peuvent augmenter automatiquement leur volume et dépasser leur taille d’origine. Lorsque vous définissez un fichier, vous pouvez spécifier un incrément de croissance précis. Chaque fois que le fichier est rempli, sa taille augmente en fonction de l'incrément de croissance. Si un groupe comporte plusieurs fichiers, ces derniers ne s'accroissent pas automatiquement jusqu'à ce que tous les fichiers soient remplis. La croissance se produit dans ce cas selon le principe de chacun son tour.
+Les fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent augmenter automatiquement leur volume et dépasser leur taille d'origine. Lorsque vous définissez un fichier, vous pouvez spécifier un incrément de croissance précis. Chaque fois que le fichier est rempli, sa taille augmente en fonction de l'incrément de croissance. Si un groupe comporte plusieurs fichiers, ces derniers ne s'accroissent pas automatiquement jusqu'à ce que tous les fichiers soient remplis. La croissance se produit dans ce cas selon le principe de chacun son tour avec utilisation d’un [remplissage proportionnel](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill).
 
-Chaque fichier peut également avoir une taille maximale. En l'absence de spécification, le fichier continue à s'accroître jusqu'à ce que tout l'espace disque disponible soit utilisé. Cette fonctionnalité s’avère particulièrement utile lorsque SQL Server sert de base de données incorporée dans une application pour laquelle l’utilisateur n’a pas accès à un administrateur système. L'utilisateur peut laisser les fichiers s'accroître automatiquement autant que nécessaire pour réduire la charge administrative liée à la gestion de l'espace disponible dans la base de données et à l'affectation manuelle d'espace supplémentaire. 
+Chaque fichier peut également avoir une taille maximale. En l'absence de spécification, le fichier continue à s'accroître jusqu'à ce que tout l'espace disque disponible soit utilisé. Cette fonctionnalité s'avère particulièrement utile lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sert de base de données incorporée dans une application pour laquelle l'utilisateur n'a pas accès à un administrateur système. L'utilisateur peut laisser les fichiers s'accroître automatiquement autant que nécessaire pour réduire la charge administrative liée à la gestion de l'espace disponible dans la base de données et à l'affectation manuelle d'espace supplémentaire.  
+
+Si [l’initialisation instantanée de fichiers (IFI)](../../relational-databases/databases/database-instant-file-initialization.md) est activée pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe une surcharge minimale au moment de l’allocation de l’espace supplémentaire pour les fichiers de données.
+
+Pour plus d’informations sur la gestion du fichier journal de transactions, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
 ## <a name="database-snapshot-files"></a>Fichiers d'instantanés de base de données
 Le format de fichier utilisé par un instantané de base de données pour stocker ses données de copie lors de l'écriture varie selon que l'instantané a été créé par un utilisateur ou utilisé en interne :
@@ -174,21 +183,22 @@ Les règles suivantes s'appliquent aux fichiers et aux groupes de fichiers :
 - Un fichier ne peut appartenir qu'à un seul groupe.
 - Les fichiers journaux des transactions ne peuvent jamais faire partie d'un groupe de fichiers.
 
-## <a name="recommendations"></a>Recommandations
+## <a name="Recommendations"></a> Recommandations
 Voici une série de recommandations générales à suivre lors de l'utilisation de fichiers et de groupes de fichiers : 
 - La plupart des bases de données fonctionnent très bien avec un seul fichier de données et un seul fichier journal des transactions.
-- Si vous utilisez plusieurs fichiers, créez un second groupe de fichiers pour les fichiers supplémentaires et utilisez-le comme groupe de fichiers par défaut. Ainsi, le fichier primaire ne contiendra que les objets et les tables système.
+- Si vous utilisez plusieurs fichiers de données, créez un second groupe de fichiers pour les fichiers supplémentaires et utilisez-le comme groupe de fichiers par défaut. Ainsi, le fichier primaire ne contiendra que les objets et les tables système.
 - Pour optimiser les performances, créez si possible les fichiers et les groupes de fichiers sur différents disques disponibles. Placez dans des groupes de fichiers différents les objets qui se disputent fortement l'espace disque.
 - Utilisez les groupes de fichiers pour permettre le placement des objets sur des disques physiques spécifiques.
 - Placez dans des groupes différents les tables qui sont utilisées dans les mêmes requêtes jointes. Vous améliorerez ainsi les performances, puisque les opérations d'entrée/sortie de recherche des données jointes se feront en parallèle.
 - Placez dans des groupes de fichiers différents les tables fréquemment consultées et les index non-cluster qui leur appartiennent. Vous améliorerez ainsi les performances, puisque les opérations d'entrée/sortie se feront en parallèle, les fichiers étant situés sur différents disques physiques.
 - Ne placez pas les fichiers journaux de transactions sur le même disque physique que les autres fichiers et groupes de fichiers.
 
+Pour plus d’informations sur les recommandations relatives à la gestion du fichier journal de transactions, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
+
 ## <a name="related-content"></a>Contenu associé  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [Guide d’architecture des pages et des étendues](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

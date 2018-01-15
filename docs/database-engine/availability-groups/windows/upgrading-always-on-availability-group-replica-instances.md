@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
 
 > [!NOTE]  
->  Le mélange de versions de SQL Server dans le même groupe de disponibilité n’est pas pris en charge. Pour migrer vers une nouvelle version avec des groupes de disponibilité, la seule méthode prise en charge est un groupe de disponibilité distribué qui figure dans SQL Server 2016 Enterprise Edition ou une version ultérieure.
+>  Le mélange de versions SQL Server dans le même groupe de disponibilité n’est pas pris en charge en dehors d’une mise à niveau propagée qui met à niveau les réplicas en place. Cela signifie qu’une version ultérieure de SQL Server ne peut pas être ajoutée en tant que nouveau réplica à un groupe de disponibilité existant. Par exemple, un réplica SQL Server 2017 ne peut pas être ajouté à un groupe de disponibilité SQL Server 2016 existant. Pour migrer vers une nouvelle version de SQL Server avec des groupes de disponibilité, la seule méthode prise en charge est un groupe de disponibilité distribué qui figure dans SQL Server 2016 Édition Entreprise ou ultérieur.
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Bonnes pratiques pour la mise à niveau propagée de groupes de disponibilité Always On  
  Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire les temps d’arrêt et la perte de données de vos groupes de disponibilité :  

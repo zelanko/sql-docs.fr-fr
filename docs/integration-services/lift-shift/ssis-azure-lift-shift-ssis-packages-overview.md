@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud
 Vous pouvez maintenant déplacer vos packages et charges de travail SQL Server Integration Services (SSIS) vers le cloud Azure.
@@ -68,7 +68,7 @@ Pour plus d’informations sur les prérequis dans Azure, consultez [Effectuer u
 
 ## <a name="ssis-features-on-azure"></a>Fonctionnalités SSIS sur Azure
 
-Quand vous provisionnez une instance de SQL Database pour héberger SSISDB, le Feature Pack Azure pour SSIS et le composant redistribuable Access sont également installés. Ces composants fournissent une connectivité aux fichiers **Excel et Access** et à diverses sources de données **Azure**, en plus des sources de données prises en charge par les composants intégrés. Vous ne pouvez pas installer de **composants tiers** pour SSIS (notamment les composants tiers de Microsoft, par exemple Attunity et SAP BI) pour le moment.
+Quand vous provisionnez une instance de SQL Database pour héberger SSISDB, le Feature Pack Azure pour SSIS et le composant redistribuable Access sont également installés. Ces composants fournissent une connectivité aux fichiers **Excel et Access** et à diverses sources de données **Azure**, en plus des sources de données prises en charge par les composants intégrés. Vous ne pouvez pas installer de **composants tiers** pour SSIS pour le moment (notamment les composants tiers de Microsoft, tels que les composants Oracle et Teradata d’Attunity et les composants SAP BI).
 
 Le **nom de l’instance SQL Database** qui héberge SSISDB devient la première partie du nom en quatre parties à utiliser quand vous déployez et gérez des packages à partir de SSDT et de SSMS - `<sql_database_name>.database.windows.net`.
 
@@ -80,7 +80,7 @@ Pour plus d’informations sur la connexion aux **sources de données locales** 
 
 ## <a name="common-tasks"></a>Tâches courantes
 
-### <a name="provision"></a>Provisionner
+### <a name="provision"></a>Approvisionner
 Avant de pouvoir déployer et exécuter des packages SSIS dans Azure, vous devez provisionner la base de données de catalogues SSISDB et le runtime d’intégration Azure SSIS. Suivez les étapes de provisionnement décrites dans cet article : [Effectuer un « lift-and-shift » des packages SSIS (SQL Server Integration Services) vers Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ### <a name="deploy-and-run-packages"></a>Déployer et exécuter des packages
