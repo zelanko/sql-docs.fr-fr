@@ -17,25 +17,27 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625b34647312ffb31fbe3821ed8e893d883f3298
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-properties---smo"></a>Définition des propriétés - SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Les propriétés sont des valeurs qui stockent des informations descriptives sur l’objet. Par exemple, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les options de configuration sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriétés de l’objet. Les propriétés sont accessibles soit directement, soit indirectement par le biais de la collection de propriétés. L'accès aux propriétés utilise directement la syntaxe suivante :  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Les propriétés sont des valeurs qui stockent des informations descriptives sur l'objet. Par exemple, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les options de configuration sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriétés de l’objet. Les propriétés sont accessibles soit directement, soit indirectement par le biais de la collection de propriétés. L'accès aux propriétés utilise directement la syntaxe suivante :  
   
  `objInstance.PropertyName`  
   
  Une valeur de propriété peut être modifiée ou récupérée selon que la propriété dispose d'un accès en lecture/écriture ou d'un accès en lecture seule. Il est également nécessaire de définir certaines propriétés avant qu'un objet ne puisse être créé. Pour plus d'informations, consultez la référence SMO pour l'objet particulier.  
   
 > [!NOTE]  
->  Les collections d'objets enfants apparaissent en tant que propriété d'un objet. Par exemple, la collection **Tables** est une propriété d'un objet **Server** . Pour plus d’informations, consultez [à l’aide des Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
+>  Les collections d'objets enfants apparaissent en tant que propriété d'un objet. Par exemple, la collection **Tables** est une propriété d'un objet **Server** . Pour plus d'informations, voir [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
   
  Les propriétés d'un objet sont membres de la collection Properties. La collection Properties peut être utilisée pour parcourir chaque propriété d'un objet.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   La version du serveur ne prend pas en charge la propriété, notamment si vous essayez d'accéder à une propriété représentant une nouvelle fonctionnalité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une ancienne version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Le serveur ne fournit pas de données pour la propriété, notamment si vous essayez d’accéder à une propriété qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] composant qui n’est pas installé.  
+-   Le serveur ne fournit pas de données pour la propriété, notamment si vous essayez d'accéder à une propriété représentant un composant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n'est pas installé.  
   
  Vous pouvez gérer ces circonstances en interceptant les exceptions SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> et <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/08/2018
  La méthode <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> définit le comportement de chargement des propriétés pour le reste de l'application ou jusqu'à ce qu'elle soit réinitialisée. Vous pouvez enregistrer le comportement d’origine en utilisant la <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> méthode et la restaurer en fonction des besoins.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Obtention et définition d'une propriété en Visual Basic  

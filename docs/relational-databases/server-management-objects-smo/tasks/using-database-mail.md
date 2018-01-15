@@ -17,21 +17,23 @@ helpviewer_keywords:
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28082a9c402700a17c7072ed6d7dcd3a87c92bd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6e8dfdbf86d296c7780b12551808dcd45a0631fe
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-database-mail"></a>Utilisation de la messagerie de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le sous-système de messagerie de base de données est représenté par le <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objet qui est référencé par le <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> propriété. En utilisant l'objet SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, vous pouvez configurer le sous-système de messagerie de base de données et gérer des profils et des comptes de messagerie. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objet appartient à la **Server** objet, ce qui signifie que l’étendue des comptes de messagerie est au niveau du serveur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, le sous-système de la messagerie de base de données est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> qui est référencé par la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. En utilisant l'objet SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, vous pouvez configurer le sous-système de messagerie de base de données et gérer des profils et des comptes de messagerie. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objet appartient à la **Server** objet, ce qui signifie que l’étendue des comptes de messagerie est au niveau du serveur.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Pour les programmes qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] messagerie de base de données, vous devez inclure le **importations** instruction pour qualifier l’espace de noms de messagerie. Insérez l'instruction après les autres instructions **Imports** , avant toute autre déclaration dans l'application, par exemple :  
   

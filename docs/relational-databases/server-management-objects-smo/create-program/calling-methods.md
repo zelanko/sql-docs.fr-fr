@@ -18,25 +18,27 @@ helpviewer_keywords:
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7059c9dea32d8bcc6fac8e9d0c14e3b3b18f4415
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9f16b887f7dd16a80052da640a7132769299c4e4
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="calling-methods"></a>Appel de méthodes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Les méthodes effectuent des tâches spécifiques liées à l’objet, telles que l’exécution une **point de contrôle** sur une base de données ou de la demande une liste énumérée d’ouvertures de session pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Les méthodes effectuent des tâches spécifiques liées à l’objet, telles que l’exécution une **point de contrôle** sur une base de données ou de la demande une liste énumérée d’ouvertures de session pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Les méthodes effectuent une opération sur un objet. Les méthodes peuvent accepter des paramètres et possèdent souvent une valeur de retour. La valeur de retour peut être un type de données simple, un objet complexe ou une structure qui contient de nombreux membres.  
   
  Utilisez la gestion des exceptions pour détecter si la méthode a réussi. Pour plus d’informations, consultez [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md).  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C & #35 ; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Utilisation d'une méthode SMO simple en Visual Basic  

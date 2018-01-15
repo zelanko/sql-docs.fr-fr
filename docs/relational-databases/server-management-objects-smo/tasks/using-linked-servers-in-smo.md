@@ -14,25 +14,27 @@ ms.topic: reference
 helpviewer_keywords: linked servers [SQL Server], SMO
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 139dbbb8c6107da574e3ba0f732da3d6467f75e6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 53a4b6d33d1413673f4991fcaf0f4ce3687a2712
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-linked-servers-in-smo"></a>Utilisation de serveurs liés dans SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un serveur lié représente une source de données OLE DB sur un serveur distant. Les sources de données OLE DB distantes sont liées à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Un serveur lié représente une source de données OLE DB sur un serveur distant. Les sources de données OLE DB distantes sont liées à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objet.  
   
  Les serveurs de base de données distante peuvent être liés à l’instance actuelle de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide d’un fournisseur OLE DB. Dans SMO, les serveurs liés sont représentés par le <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objet. Le <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A> propriété fait référence à une collection de <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin> objets. Ces derniers stockent les informations d'identification requises pour établir une connexion avec le serveur lié.  
   
 ## <a name="ole-db-providers"></a>Fournisseurs OLE DB  
  Dans SMO, les fournisseurs OLE DB installés sont représentés par une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings>.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>Création d'un lien vers un serveur de fournisseur OLE DB en Visual C#  

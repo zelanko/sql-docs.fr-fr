@@ -18,23 +18,25 @@ helpviewer_keywords:
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1857f72d40bc7e5f38fcda603507b49314cdcd59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf0867f9ed104a2a04cbdc0b9a0c16093cee59a9
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-databases"></a>Création, modification et suppression de bases de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, une base de données est représentée par la <xref:Microsoft.SqlServer.Management.Smo.Database> objet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, une base de données est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
  Il n'est pas nécessaire de créer un objet <xref:Microsoft.SqlServer.Management.Smo.Database> pour la modifier ou la supprimer. La base de données peut être référencée à l'aide d'une collection.  
   
-## <a name="example"></a> Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a>Exemple  
+ Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Création, modification et suppression d'une base de données en Visual Basic  
  Cet exemple de code crée une base de données. Les fichiers et groupes de fichiers sont créés automatiquement pour la base de données.  

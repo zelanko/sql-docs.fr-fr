@@ -17,18 +17,20 @@ helpviewer_keywords:
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac685dde06e3cd95ebd029db96e27d75372b1ed2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 86868dc6aa08ed947e97764df7d8caaf9df57fbc
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planification des tâches administratives automatiques dans l'Agent SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent est représenté par les objets suivants :  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est représenté par les objets suivants :  
   
 -   L'objet <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> possède trois collections de travaux, d'alertes et d'opérateurs.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
  Les objets de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se trouvent dans l'espace de noms <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Exemples  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 Pour les programmes qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez inclure le **à l’aide de** instruction pour qualifier l’espace de noms de l’Agent. Insérez l’instruction après l’autre **à l’aide de** instructions, avant toute autre déclaration dans l’application, telles que :
   

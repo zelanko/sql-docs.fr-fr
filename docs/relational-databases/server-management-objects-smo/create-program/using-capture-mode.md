@@ -17,21 +17,23 @@ helpviewer_keywords:
 - SMO [SQL Server], capture mode
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76f407dc02ff95535c456f21debe3d208ff475e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6452457dfb60a0a99f405907fb2ae01658b30412
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-capture-mode"></a>Utilisation du mode de capture
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Programmes SMO peuvent capturer et enregistrer l’équivalent [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions émises par le programme à la place d’ou en plus, les instructions sont exécutées par le programme. Le mode de capture est activé au moyen de l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ou de la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Les programmes SMO peuvent capturer et enregistrer les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] équivalentes publiées par le programme à la place ou en plus des instructions exécutées par le programme. Le mode de capture est activé au moyen de l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ou de la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
-## <a name="example"></a> Exemple  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a>Exemple  
+Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="enabling-capture-mode-in-visual-basic"></a>Activation du mode de capture en Visual Basic  

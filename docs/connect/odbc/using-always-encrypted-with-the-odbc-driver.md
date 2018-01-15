@@ -1,7 +1,7 @@
 ---
-title: "Utilisation du chiffrement intégral avec ODBC Driver 13.1 for SQL Server | Documents Microsoft"
+title: "Utilisation du chiffrement intégral avec le pilote ODBC pour SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,20 +17,27 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Utilisation du chiffrement intégral avec ODBC Driver 13.1 for SQL Server
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation du chiffrement intégral avec le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Cet article fournit des informations sur la façon de développer des applications ODBC à l’aide de [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+### <a name="applicable-to"></a>S’applique à
 
-Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. Un pilote avec Always Encrypted, telles que ODBC Driver 13.1 for SQL Server, cela, le chiffrement et déchiffrement des données sensibles dans l’application cliente de façon transparente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+- ODBC Driver 13.1 for SQL Server
+- Pilote ODBC 17 pour SQL Server
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="introduction"></a>Introduction
+
+Cet article fournit des informations sur la façon de développer des applications ODBC à l’aide de [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [pilote ODBC pour SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+
+Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. Un pilote avec Always Encrypted, telles que le pilote ODBC pour SQL Server, cela, le chiffrement et déchiffrement des données sensibles dans l’application cliente de façon transparente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+
+### <a name="prerequisites"></a>Configuration requise
 
 Configurez Always Encrypted dans votre base de données. Pour cela, vous devez mettre en service des clés Always Encrypted et configurer le chiffrement pour les colonnes de base de données sélectionnées. Si vous n’avez pas déjà une base de données dans laquelle est configuré Always Encrypted, suivez les instructions de [Prise en main d’Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). En particulier, votre base de données doit contenir les définitions de métadonnées pour une table qui contient une ou plusieurs colonnes chiffrées à l’aide de cette clé, une clé de chiffrement de colonne (CEK) et une clé principale de colonne (CMK).
 
@@ -282,11 +289,11 @@ Always Encrypted étant une technologie de chiffrement côté client, la majeure
 
 - Appels au magasin de clés principales de colonne pour accéder à une clé principale de colonne.
 
-Cette section décrit les optimisations des performances intégrés dans ODBC Driver 13.1 pour SQL Server et comment vous pouvez contrôler l’impact de ces deux facteurs sur les performances.
+Cette section décrit les optimisations des performances intégrés dans le pilote ODBC pour SQL Server et comment vous pouvez contrôler l’impact de ces deux facteurs sur les performances.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Contrôle des allers-retours pour récupérer des métadonnées pour les paramètres de requête
 
-Si Always Encrypted est activé pour une connexion, ODBC Driver 13.1 de SQL Server sera, par défaut, appelez [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans paramètre les valeurs) à SQL Server. Cette procédure stockée analyse l’instruction de requête pour déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : l’application (et le développeur d’applications) sans devoir de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées à le pilote dans les paramètres.
+Si Always Encrypted est activé pour une connexion, le pilote sera, par défaut, appelez [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans les valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête pour déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : l’application (et le développeur d’applications) sans devoir de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées à le pilote dans les paramètres.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Instruction Always Encrypted comportement
 
@@ -329,7 +336,7 @@ Si SQL Server informe le pilote que le paramètre ne doit pas être chiffré, le
 Pour réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne, le pilote met en cache le clés cek clair dans la mémoire. Après avoir reçu le ECEK à partir des métadonnées de la base de données, le pilote tente d’abord de trouver la clé CEK en texte clair correspondant à la valeur de clé chiffrée dans le cache. Le pilote appelle le magasin de clés contenant la clé CMK uniquement s’il ne peut pas trouver le texte en clair correspondante CEK dans le cache.
 
 > [!NOTE]
-> Dans ODBC Driver 13.1 for SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Cela signifie que, pour un ECEK donné, le pilote contacte le magasin de clés qu’une seule fois pendant la durée de vie de l’application ou de toutes les deux heures, si elle est inférieure.
+> Dans le pilote ODBC pour SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Cela signifie que, pour un ECEK donné, le pilote contacte le magasin de clés qu’une seule fois pendant la durée de vie de l’application ou de toutes les deux heures, si elle est inférieure.
 
 ## <a name="working-with-column-master-key-stores"></a>Utilisation de magasins de clés principales de colonne
 
@@ -339,7 +346,7 @@ Pour obtenir la valeur de texte en clair d’un ECEK, le pilote obtient d’abor
 
 ### <a name="built-in-keystore-providers"></a>Fournisseurs de magasins de clés intégrée
 
-ODBC Driver 13.1 for SQL Server est fourni avec les fournisseurs de magasin de clés intégrés suivants :
+Le pilote ODBC pour SQL Server est fourni avec les fournisseurs de magasin de clés intégrés suivants :
 
 | Nom |  Description | Nom du fournisseur (métadonnées) |Disponibilité|
 |:---|:---|:---|:---|
@@ -352,7 +359,7 @@ ODBC Driver 13.1 for SQL Server est fourni avec les fournisseurs de magasin de c
 
 ### <a name="using-the-azure-key-vault-provider"></a>L’utilisation du fournisseur Azure Key Vault
 
-Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver 13.1 for SQL Server sur Windows, Linux et macOS inclut un fournisseur de magasins de clé principale de colonne intégré pour Azure Key Vault. Consultez [Azure Key Vault – étape par étape](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [mise en route avec le coffre de clés](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), et [création des clés de principales de colonne dans le coffre de clés Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) pour plus d’informations sur la configuration d’une clé Azure Coffre pour Always Encrypted.
+Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. Le pilote ODBC pour SQL Server sur Windows, Linux et macOS inclut un fournisseur de magasins de clé principale de colonne intégré pour Azure Key Vault. Consultez [le coffre de clés Azure - étape par étape](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [mise en route avec le coffre de clés](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), et [création des clés de principales de colonne dans le coffre de clés Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) pour plus d’informations sur la configuration d’une clé Azure Coffre pour Always Encrypted.
 
 Le pilote prend en charge l’authentification auprès d’Azure Key Vault à l’aide des types d’informations d’identification suivants :
 
@@ -387,11 +394,11 @@ Aucune autre modification des applications ODBC ne doivent utiliser AKV pour le 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>L’utilisation du fournisseur de magasin de certificats Windows
 
-ODBC Driver 13.1 for SQL Server sur Windows inclut un fournisseur de magasins de clé principale de colonne intégré pour le magasin de certificats Windows nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur macOS ou Linux.) Avec ce fournisseur, la clé CMK est stockée localement sur l’ordinateur client et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et sa clé privée dans le magasin. Consultez [créer et stocker des clés des principales de colonne (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) pour plus d’informations.
+Le pilote ODBC pour SQL Server sur Windows inclut un fournisseur de magasins de clé principale de colonne intégré pour le magasin de certificats Windows nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur macOS ou Linux.) Avec ce fournisseur, la clé CMK est stockée localement sur l’ordinateur client et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et sa clé privée dans le magasin. Consultez [créer et stocker des clés des principales de colonne (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) pour plus d’informations.
 
 ### <a name="using-custom-keystore-providers"></a>À l’aide de fournisseurs de magasins de clés personnalisé
 
-ODBC Driver 13.1 for SQL Server prend également en charge les fournisseurs de magasins de clés tiers personnalisé à l’aide de l’interface CEKeystoreProvider. Cela permet à une application charger, la requête et de configurer les fournisseurs de magasins de clés afin qu’ils peuvent être utilisés par le pilote pour accéder aux colonnes chiffrées. Les applications peuvent interagir directement avec un fournisseur de magasins de clés afin de chiffrer les clés cek pour le stockage dans SQL Server et effectuer des tâches au-delà de l’accès à des colonnes chiffrées avec ODBC ; Pour plus d’informations, consultez [fournisseurs de magasins de clés personnalisés](../../connect/odbc/custom-keystore-providers.md).
+Le pilote ODBC pour SQL Server prend également en charge les fournisseurs de magasins de clés tiers personnalisé à l’aide de l’interface CEKeystoreProvider. Cela permet à une application charger, la requête et de configurer les fournisseurs de magasins de clés afin qu’ils peuvent être utilisés par le pilote pour accéder aux colonnes chiffrées. Les applications peuvent interagir directement avec un fournisseur de magasins de clés afin de chiffrer les clés cek pour le stockage dans SQL Server et effectuer des tâches au-delà de l’accès à des colonnes chiffrées avec ODBC ; Pour plus d’informations, consultez [fournisseurs de magasins de clés personnalisés](../../connect/odbc/custom-keystore-providers.md).
 
 Deux attributs de connexion sont utilisées pour interagir avec les fournisseurs de magasins de clés personnalisés. Celles-ci sont les suivantes :
 
@@ -515,11 +522,44 @@ Pour obtenir un exemple d’implémentation de votre propre fournisseur de magas
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitations du pilote ODBC lors de l’utilisation de Always Encrypted
 
-### <a name="bulk-copy-function-usage"></a>Utilisation des fonctions de copie en bloc
-Utilisation de la [des fonctions de copie en bloc SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) n’est pas pris en charge lorsque vous utilisez le pilote ODBC avec Always Encrypted. Aucun chiffrement/déchiffrement transparent se produira sur les colonnes chiffrées sont utilisés avec les fonctions de copie en bloc SQL.
-
 ### <a name="asynchronous-operations"></a>Opérations asynchrones
 Bien que le pilote ODBC autorise l’utilisation de [opérations asynchrones](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) avec Always Encrypted, a un impact sur les performances sur les opérations de chiffrement intégral est activé. L’appel à `sys.sp_describe_parameter_encryption` pour déterminer les métadonnées de chiffrement pour l’instruction bloque et entraîne le pilote à attendre que le serveur retourner les métadonnées avant de retourner `SQL_STILL_EXECUTING`.
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Récupérer des données dans des parties avec SQLGetData
+Avant le 17 du pilote ODBC pour SQL Server, cryptage caractère et les colonnes de type binary ne sont pas accessibles dans des parties avec SQLGetData. Un seul appel de SQLGetData peut être effectué, avec une mémoire tampon de longueur suffisante pour contenir les données de la colonne entière.
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>Envoyer des données dans des parties avec SQLPutData
+Impossible d’envoyer les données de comparaison ou insertion dans des parties avec SQLPutData. Un seul appel à SQLPutData peut être effectué, avec une mémoire tampon contenant la totalité des données. Pour insérer des données de type long dans les colonnes chiffrées, utilisez l’API de copie en bloc, décrit dans la section suivante, avec un fichier de données d’entrée.
+
+### <a name="encrypted-money-and-smallmoney"></a>Smallmoney et money chiffrée
+Chiffré **money** ou **smallmoney** colonnes ne peut pas être ciblés par les paramètres, car il n’existe aucun spécifique qui correspond à ces types, ce qui entraîne des erreurs de conflit de Type opérande de type de données ODBC.
+
+## <a name="bulk-copy-of-encrypted-columns"></a>Copie en bloc des colonnes chiffrées
+
+Utilisation de la [des fonctions de copie en bloc SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) et le **bcp** utilitaire est pris en charge avec Always Encrypted depuis le 17 du pilote ODBC pour SQL Server. Texte en clair (insertion chiffrée sur et récupération déchiffrée sur) et texte chiffré (transféré textuellement) peuvent être insérés et récupérés à l’aide de la copie en bloc (bcp_ *) API et la **bcp** utilitaire.
+
+- Pour récupérer du texte chiffré sous forme de varbinary (max) (par exemple, pour le chargement en masse dans une autre base de données), de se connecter sans le `ColumnEncryption` option (ou la valeur `Disabled`) et effectuer une opération BCP OUT.
+
+- Pour insérer, extraire en texte clair et permettent d’effectuer en toute transparence le chiffrement et le déchiffrement en tant que paramètre requis, le pilote `ColumnEncryption` à `Enabled` est suffisante. Les fonctionnalités de l’API BCP sont inchangée.
+
+- Pour insérer du texte chiffré sous forme de varbinary (max) (par exemple, tel que récupéré ci-dessus), définissez la `BCPMODIFYENCRYPTED` option sur TRUE et effectuer une opération BCP IN. Dans l’ordre pour les données résultantes être decryptable, assurez-vous que la destination clé de la colonne est la même que celle à partir de laquelle le texte chiffré obtenu à l’origine.
+
+Lorsque vous utilisez la **bcp** utilitaire : au contrôle le `ColumnEncryption` paramètre, utilisez l’option -D et spécifier une source de données qui contient la valeur souhaitée. Pour insérer du texte chiffré, vérifiez le `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur est activée.
+
+Le tableau suivant fournit un résumé des actions lorsqu’il fonctionne sur une colonne chiffrée :
+
+|`ColumnEncryption`|Direction BCP| Description|
+|----------------|-------------|-----------|
+|`Disabled`|OUT (au client)|Récupère le texte chiffré. Le type de données observée est **varbinary (max)**.|
+|`Enabled`|OUT (au client)|Récupère le texte en clair. Le pilote de déchiffrer les données de la colonne.|
+|`Disabled`|(Pour le serveur)|Insère du texte chiffré. Cela est destiné opaque déplacement des données chiffrées sans l’exiger pour être déchiffrée. L’opération échoue si le `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option n’est pas définie sur l’utilisateur ou BCPMODIFYENCRYPTED n’est pas défini sur le handle de connexion. Pour plus d’informations, voir ci-dessous.|
+|`Enabled`|(Pour le serveur)|Insère le texte en clair. Le pilote chiffre les données de colonne.|
+
+### <a name="the-bcpmodifyencrypted-option"></a>L’option BCPMODIFYENCRYPTED
+
+Pour éviter une altération des données, le serveur normalement n’autorise pas l’insertion de texte chiffré directement dans une colonne chiffrée, et ainsi faire tenteront ; Toutefois, pour le chargement en masse des données chiffrées à l’aide de l’API BCP, en définissant le `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) option true permettra de texte chiffré à insérer directement et réduit le risque d’endommager les données chiffrées sur un paramètre de la `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option sur le compte d’utilisateur. Toutefois, les clés doivent correspondre les données et il est judicieux d’effectuer des vérifications en lecture seule des données insérées après l’insertion en bloc et avant leur utilisation.
+
+Consultez [migrer des données sensibles protégées par Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) pour plus d’informations.
 
 ## <a name="always-encrypted-api-summary"></a>Résumé des API de chiffrement intégral
 
@@ -551,6 +591,12 @@ Bien que le pilote ODBC autorise l’utilisation de [opérations asynchrones](..
 |Champ IPD|Type de la taille|Valeur par défaut| Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 octets)|0|Lorsque 0 (valeur par défaut) : la décision pour chiffrer ce paramètre est déterminée par la disponibilité des métadonnées de chiffrement.<br><br>Lorsqu’elle est différente de zéro : si les métadonnées de chiffrement sont disponible pour ce paramètre, il est chiffré. Dans le cas contraire, la demande échoue avec l’erreur [CE300] le cryptage [Microsoft] [ODBC Driver 13 for SQL Server] obligatoire a été spécifié pour un paramètre, mais aucune métadonnée de chiffrement a été fournie par le serveur.|
+
+### <a name="bcpcontrol-options"></a>bcp_control Options
+
+|Nom de l’option|Valeur par défaut| Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|Lorsque la valeur est TRUE, autorise les valeurs de varbinary (max) à insérer dans une colonne chiffrée. Si la valeur est FALSE, empêche l’insertion, sauf si les métadonnées correctes de type et le chiffrement sont fournie.|
 
 ## <a name="see-also"></a>Voir aussi
 

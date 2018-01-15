@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 066bee36d4dabdf6b11894d5d0158451d601adb9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 721e0fdf56fe26bc4c9484bce8dea091a479aba7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Connexion à une instance de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]La première étape de programmation un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les application Management Objects (SMO) consiste à créer une instance de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet et pour établir sa connexion à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  La première étape de programmation un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les application Management Objects (SMO) consiste à créer une instance de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet et pour établir sa connexion à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Vous pouvez créer une instance de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server> et établir une connexion avec l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de trois manières. La première est d'utiliser une variable objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> pour fournir les informations de connexion. La deuxième est de fournir les informations de connexion en définissant explicitement les propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server>. La troisième est de passer le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le constructeur d'objet <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 -   La méthode <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> doit être appelée avant de passer la connexion à n'importe quel objet de programmation RMO.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Connexion à l'instance locale de SQL Server via l'authentification Windows en Visual Basic  
  La connexion à l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'exige pas beaucoup de code. À la place, elle se base sur les paramètres par défaut pour la méthode d'authentification et le serveur. La première opération nécessitant la récupération des données entraîne la création d'une connexion.  

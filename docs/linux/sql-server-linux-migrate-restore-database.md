@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrer une base de données SQL Server à partir de Windows et Linux à l’aide de la sauvegarde et restauration
 
@@ -34,7 +34,7 @@ SQL Server de la sauvegarde et la fonctionnalité de restauration est la méthod
 > * Restaurer le fichier de sauvegarde sur Linux avec Transact-SQL
 > * Exécutez une requête pour vérifier la migration
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Les conditions préalables suivantes sont requises pour effectuer ce didacticiel :
 
@@ -88,7 +88,7 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
 
 ## <a id="scp"></a>Copiez le fichier de sauvegarde pour Linux
 
-1. Dans votre session d’interpréteur de commandes, accédez au répertoire contenant votre fichier de sauvegarde. Exemple :
+1. Dans votre session d’interpréteur de commandes, accédez au répertoire contenant votre fichier de sauvegarde. Par exemple :
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
@@ -195,6 +195,7 @@ Dans ce didacticiel, vous avez appris comment sauvegarder une base de données s
 > * Déplacer le fichier de sauvegarde pour la préparation de la restauration
 > * Utilisez **sqlcmd** pour exécuter des commandes Transact-SQL
 > * Restaurez la sauvegarde de base de données avec le **restaurer la base de données** commande 
+> * Exécutez la requête pour vérifier la migration
 
 Ensuite, explorez les autres scénarios de migration pour SQL Server sur Linux. 
 

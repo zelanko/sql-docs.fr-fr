@@ -18,23 +18,25 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a8626731b1fde43a1713ba4afbc6a98988e2c2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 326c98022af0adbb6e508cc9ba8c6e63f7fd6d23
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gestion des services et des paramètres réseau à l'aide du fournisseur WMI
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le fournisseur WMI est une interface publiée utilisée par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) pour gérer les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services et protocoles réseau. Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objet représente le fournisseur WMI.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Le fournisseur WMI est une interface publiée utilisée par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) pour gérer les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services et protocoles réseau. Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objet représente le fournisseur WMI.  
   
  Le <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objet fonctionne indépendamment de la connexion établie avec le <xref:Microsoft.SqlServer.Management.Smo.Server> objet à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et utilise les informations d’identification Windows pour se connecter au service WMI.  
   
-## <a name="example"></a> Exemple  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a>Exemple  
+Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
  Pour les programmes qui utilisent la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur WMI, vous devez inclure le **importations** instruction pour qualifier l’espace de noms WMI. Insérez l'instruction après les autres instructions **Imports** , avant toute autre déclaration dans l'application, par exemple :  

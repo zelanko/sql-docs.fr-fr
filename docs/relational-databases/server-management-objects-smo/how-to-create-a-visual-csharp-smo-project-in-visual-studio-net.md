@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 231e49bce1350370917871c131d3558b02b82d8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 220c190a88a1b5c5d38591905e9bb1060a2f4509
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Comment créer un projet SMO Visual c# dans Visual Studio .NET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette section décrit comment créer une application de console SMO simple.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Cette section décrit comment élaborer une application de console SMO simple.  
   
  Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L’importation de la **Agent** espace de noms est facultative. Utilisez-la lorsque vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le **commune** espace de noms est requis pour établir une connexion sécurisée à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **SqlClient** espace de noms est utilisé pour traiter les erreurs d’exception SQL.  
   

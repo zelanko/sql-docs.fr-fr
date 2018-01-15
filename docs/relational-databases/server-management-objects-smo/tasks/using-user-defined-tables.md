@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7155a66d912f4cb854d23cca3bf8babd2ae1deef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 44a2706d60ff1b6b2935c9c5e5251adece1c33f8
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-user-defined-tables"></a>Utilisation de tables définies par l'utilisateur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Tables définies par l’utilisateur représentent des informations sous forme de tableau. Elles sont utilisées comme paramètres lorsque vous transmettez des données tabulaires dans des procédures stockées ou des fonctions définies par l'utilisateur. Les tables définies par l'utilisateur ne peuvent pas être utilisées pour représenter des colonnes dans une table de base de données.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Les tables définies par l'utilisateur représentent des informations disposées en table. Elles sont utilisées comme paramètres lorsque vous transmettez des données tabulaires dans des procédures stockées ou des fonctions définies par l'utilisateur. Les tables définies par l'utilisateur ne peuvent pas être utilisées pour représenter des colonnes dans une table de base de données.  
   
  L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> a une propriété <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> qui référence un objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Chaque <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> de l’objet de cette collection a un **colonnes** propriété qui fait référence à une collection de <xref:Microsoft.SqlServer.Management.Smo.Column> les objets qui répertorient les colonnes dans la table définie par l’utilisateur. Utilisez la méthode Add pour ajouter des colonnes à la table définie par l'utilisateur.  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/08/2018
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> est utilisée pour spécifier le type de données qui est associé aux colonnes et paramètres. Utilisez ce type pour spécifier le type de table défini par l'utilisateur comme paramètre pour des fonctions définies par l'utilisateur et des procédures stockées.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Création d'une table définie par l'utilisateur en Visual Basic  

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,14 +38,14 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 > [!NOTE] 
 > Pour appeler cette de  **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , utilisez le nom **sys.dm_pdw_nodes_os_wait_stats**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar (60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
-|pdw_node_id|**Int**|L’identificateur du nœud qui se trouve sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|L’identificateur du nœud qui se trouve sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
@@ -78,7 +78,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
   
  Le contenu de cette vue de gestion dynamique peut être réinitialisé en exécutant la commande suivante :  
   
-``` t-sql  
+```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
@@ -90,7 +90,7 @@ Cette commande remet tous les compteurs à 0.
   
  Le tableau suivant récapitule les types d'attente que rencontrent les tâches.  
 
-|Type |Description| 
+|type | Description| 
 |-------------------------- |--------------------------| 
 |ABR |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

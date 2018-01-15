@@ -24,11 +24,11 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: dd0653ae9177673026eb07bbc14f2b6769315e00
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99165e38dc4f1ad0b25a754f2c0f38b4ae413e84
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>Sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |**free_worker_count**|**int**|Nombre de threads de travail disponibles pour les tâches.<br /><br />**Remarque :** chaque demande entrante consomme au moins 1 processus de travail est soustrait du nombre de travail disponible.  Il est possible que le nombre de travail disponible peut être un nombre négatif sur un serveur très chargé.| 
 |**used_worker_count**|**int**|Nombre de workers utilisé par les requêtes parallèles.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="a-viewing-current-parallel-worker-availability"></a>A. Affichage de la disponibilité de travail parallèle en cours  
 
-``` tsql 
+```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   

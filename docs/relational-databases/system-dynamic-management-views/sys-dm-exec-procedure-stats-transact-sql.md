@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_exec_procedure_stats (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 01/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f935b0e9a4c150830a03ecb2ea1f67a4cd270d3f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f8e20e1ebf036e61585f2a690452354de2ba3f71
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,9 +37,11 @@ ms.lasthandoff: 11/17/2017
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.  
   
-> **Remarque :** une requête initiale de **sys.dm_exec_procedure_stats** peut produire des résultats inexacts s’il existe une charge de travail en cours d’exécution sur le serveur. Des résultats plus précis peuvent être déterminés en réexécutant la requête.  
+> [!NOTE]
+> Une requête initiale de **sys.dm_exec_procedure_stats** peut produire des résultats inexacts s’il existe une charge de travail en cours d’exécution sur le serveur. Des résultats plus précis peuvent être déterminés en réexécutant la requête.  
   
-> **Remarque pour l’entrepôt de données SQL Azure** Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_procedure_stats**.  
+> [!NOTE]
+> Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_procedure_stats**.  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
@@ -51,32 +53,36 @@ ms.lasthandoff: 11/17/2017
 |**plan_handle**|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec la **sys.dm_exec_cached_plans** vue de gestion dynamique.<br /><br /> Sa valeur est toujours 0x000 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
 |**cached_time**|**datetime**|Heure à laquelle la procédure stockée a été ajoutée au cache.|  
 |**last_execution_time**|**datetime**|Heure de dernière exécution de la procédure stockée.|  
-|**execution_count**|**bigint**|Nombre d'exécutions de la procédure stockée depuis sa dernière compilation.|  
-|**total_worker_time**|**bigint**|Temps processeur total, en microsecondes, consommé par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> Pour les procédures stockées compilées en mode natif, **total_worker_time** peut être inexact si plusieurs exécutions sont réalisées en moins d’une milliseconde.|  
+|**execution_count**|**bigint**|Le nombre de fois que la procédure stockée a été exécutée depuis sa dernière compilation.|  
+|**total_worker_time**|**bigint**|La quantité totale de temps processeur, en microsecondes, consommé par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> Pour les procédures stockées compilées en mode natif, **total_worker_time** peut être inexact si plusieurs exécutions sont réalisées en moins d’une milliseconde.|  
 |**last_worker_time**|**bigint**|Temps processeur, en microsecondes, consommé lors de la dernière exécution de la procédure stockée. <sup>1</sup>|  
-|**min_worker_time**|**bigint**|Temps processeur minimal, en microsecondes, consommé par cette procédure stockée lors d'une seule exécution. <sup>1</sup>|  
-|**max_worker_time**|**bigint**|Temps processeur maximal, en microsecondes, consommé par cette procédure stockée lors d'une seule exécution. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|Le temps processeur minimal, en microsecondes, cette procédure stockée consommé une seule exécution. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|Temps processeur maximal, en microsecondes, que cette procédure stockée a consommé une seule exécution. <sup>1</sup>|  
 |**total_physical_reads**|**bigint**|Nombre total de lectures physiques effectuées par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**last_physical_reads**|**bigint**|Nombre de lectures physiques effectuées lors de la dernière exécution de la procédure stockée.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**min_physical_reads**|**bigint**|Nombre minimal de lectures physiques effectuées par cette procédure stockée lors d'une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**max_physical_reads**|**bigint**|Nombre maximal de lectures physiques effectuées par cette procédure stockée lors d'une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**total_logical_writes**|**bigint**|Nombre total d'écritures logiques effectuées par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**last_logical_writes**|**bigint**|Numéro du nombre de pages du pool de mémoires tampons modifiées lors de la dernière exécution du plan. Si une page est déjà modifiée, aucune écriture n'est comptée.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**min_logical_writes**|**bigint**|Nombre minimal d'écritures logiques effectuées par cette procédure stockée lors d'une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**max_logical_writes**|**bigint**|Nombre maximal d'écritures logiques effectuées par cette procédure stockée lors d'une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**last_physical_reads**|**bigint**|Nombre de lectures physiques effectuées à la dernière exécution de la procédure stockée.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**min_physical_reads**|**bigint**|Le nombre minimal de lectures physiques par cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**max_physical_reads**|**bigint**|Le nombre maximal de lectures physiques par cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**total_logical_writes**|**bigint**|Nombre total d’écritures logiques effectuées par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**last_logical_writes**|**bigint**|Le nombre de pages de pool de mémoires tampons modifiées lors de la dernière exécution du plan. Si une page est déjà modifiée, aucune écriture n'est comptée.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**min_logical_writes**|**bigint**|Le nombre minimal d’écritures logiques par cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**max_logical_writes**|**bigint**|Le nombre maximal d’écritures logiques par cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
 |**total_logical_reads**|**bigint**|Nombre total de lectures logiques effectuées par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**last_logical_reads**|**bigint**|Nombre de lectures logiques effectuées lors de la dernière exécution de la procédure stockée.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**min_logical_reads**|**bigint**|Nombre minimal de lectures logiques effectuées par cette procédure stockée lors d'une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**max_logical_reads**|**bigint**|Nombre maximal de lectures logiques effectuées par cette procédure stockée lors d'une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
-|**total_elapsed_time**|**bigint**|Temps total écoulé, en microsecondes, pour les exécutions de cette procédure stockée.|  
-|**last_elapsed_time**|**bigint**|Temps écoulé, en microsecondes, pour la dernière exécution de cette procédure stockée.|  
-|**min_elapsed_time**|**bigint**|Temps minimal écoulé, en microsecondes, pour les différentes exécutions de cette procédure stockée.|  
-|**max_elapsed_time**|**bigint**|Temps maximal écoulé, en microsecondes, pour les différentes exécutions de cette procédure stockée.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**last_logical_reads**|**bigint**|Nombre de lectures logiques effectuées à la dernière exécution de la procédure stockée.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**min_logical_reads**|**bigint**|Le nombre minimal de lectures logiques par cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**max_logical_reads**|**bigint**|Le nombre maximal de lectures logiques par cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> Sa valeur est toujours 0 lors de l'interrogation d'une table optimisée en mémoire.|  
+|**total_elapsed_time**|**bigint**|Le temps total écoulé, en microsecondes, pour les exécutions de cette procédure stockée.|  
+|**last_elapsed_time**|**bigint**|Le temps écoulé, en microsecondes, pour la dernière exécution de cette procédure stockée.|  
+|**min_elapsed_time**|**bigint**|Le temps minimal écoulé, en microsecondes, pour toutes les exécutions de cette procédure stockée.|  
+|**max_elapsed_time**|**bigint**|Le temps maximal écoulé, en microsecondes, pour toutes les exécutions de cette procédure stockée.|  
+|**total_spills**|**bigint**|Le nombre total de pages répandues par l’exécution de cette procédure stockée depuis sa compilation.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Le nombre de pages répandues la dernière exécution de la procédure stockée.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Le nombre minimal de pages par cette procédure stockée a jamais répandues lors d’une seule exécution.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Le nombre maximal de pages par cette procédure stockée a jamais répandues lors d’une seule exécution.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|L’identificateur du nœud qui se trouve sur cette distribution.<br /><br />**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup> des procédures stockées compilées en mode natif lors de la collecte de statistiques est activée, des temps de travail est collecté en millisecondes. Si la requête s'exécute en moins d'une milliseconde, la valeur est 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte. 
   
@@ -86,7 +92,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne des informations sur les dix principales procédures stockées identifiées d'après le temps moyen écoulé.  
   
-```  
+```sql  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'proc name',   
     d.cached_time, d.last_execution_time, d.total_elapsed_time,  
     d.total_elapsed_time/d.execution_count AS [avg_elapsed_time],  
@@ -96,11 +102,12 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- 
- [Sys.dm_exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+[Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[Sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[Sys.dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[Sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[Sys.dm_exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+[Sys.dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   
 

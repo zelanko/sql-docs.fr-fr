@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Types d’attente sont classés à l’aide de la table ci-dessous, et, le temps d’attente sont agrégé sur ces attendre des catégories. Différentes catégories d’attente nécessitent une analyse de suivi différente pour résoudre le problème, mais les types d’attente d’une même catégorie entraînent des expériences de résolution de problèmes très similaires à condition que la requête affectée au dessus des attentes soit l’élément manquant de la plupart de ces expériences.|
-|**wait_category_desc**|**nvarchar (128)**|Pour une description textuelle du champ de catégorie d’attente, veuillez consulter le tableau ci-dessous.|
+|**wait_category_desc**|**nvarchar(128)**|Pour une description textuelle du champ de catégorie d’attente, veuillez consulter le tableau ci-dessous.|
 |**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 – exécution normal (terminée avec succès)<br /><br /> 3 – initié par le client abandon de l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
-|**execution_type_desc**|**nvarchar (128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 – standard<br /><br /> 3 – abandonnée<br /><br /> 4 - exception|  
-|**total_query_wait_time_ms**|**bigint**|Processeur total, temps d’attente pour le plan de requête dans l’intervalle d’agrégation et catégorie (indiqué en microsecondes) d’attente.|
+|**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 – standard<br /><br /> 3 – abandonnée<br /><br /> 4 - exception|  
+|**total_query_wait_time_ms**|**bigint**|Processeur total délai d’attente pour le plan de requête dans l’intervalle d’agrégation et catégorie (signalée en millisecondes) d’attente.|
 |**avg_query_wait_time_ms**|**float**|Durée du plan de requête par l’exécution dans la catégorie d’attente et l’intervalle d’agrégation (signalée en millisecondes) d’attente moyen.|
 |**last_query_wait_time_ms**|**bigint**|Dernière durée du plan de requête dans l’intervalle d’agrégation d’attente et catégorie (signalée en millisecondes) d’attente.|
 |**min_query_wait_time_ms**|**bigint**|Processeur minimal, temps d’attente pour le plan de requête dans l’intervalle d’agrégation et catégorie (signalée en millisecondes) d’attente.|
@@ -86,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ***Compilation** catégorie d’attente n’est actuellement pas pris en charge. 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert le **VIEW DATABASE STATE** autorisation.  
   
 ## <a name="see-also"></a>Voir aussi  

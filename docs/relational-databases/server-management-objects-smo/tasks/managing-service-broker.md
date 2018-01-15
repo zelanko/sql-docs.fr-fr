@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211edf4746ab07cd65ce189c4279e91e1e956a0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80784d2a5df6d8bd6a2514da6451da6496688ed4
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-service-broker"></a>Gestion de Service Broker
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le [!INCLUDE[ssSB](../../../includes/sssb-md.md)] objets sont trouvent dans le **Microsoft.SqlServer.Management.Smo.Broker** espace de noms, qui requiert une référence à Microsoft.SqlServer.Smo.dll. Une référence à Microsoft.SqlServer.ServiceBrokerEnum.dll est également requise pour la prise en charge des informations de classe.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, le [!INCLUDE[ssSB](../../../includes/sssb-md.md)] objets sont trouvent dans le **Microsoft.SqlServer.Management.Smo.Broker** espace de noms, qui requiert une référence à Microsoft.SqlServer.Smo.dll. Une référence à Microsoft.SqlServer.ServiceBrokerEnum.dll est également requise pour la prise en charge des informations de classe.  
   
  SMO fournit un ensemble d'objets [!INCLUDE[ssSB](../../../includes/sssb-md.md)] qui permettent une gestion par programme (DDL) de l'implémentation de [!INCLUDE[ssSB](../../../includes/sssb-md.md)]. Ceci inclut la définition des types de messages, des contrats, des files d'attente et des services. SMO n'est pas un outil d'administration conçu pour la manipulation des données ; il ne prend donc pas en charge l'envoi et la réception de messages [!INCLUDE[ssSB](../../../includes/sssb-md.md)].  
   

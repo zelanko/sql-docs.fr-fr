@@ -14,23 +14,23 @@ ms.topic: reference
 helpviewer_keywords: statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1acbf6b7d4c0a14bb9f236d0b802f0e96ff070
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c1a24487cf7460024fd26e1f4101c791d29589d
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-and-updating-statistics"></a>Création et mise à jour des statistiques
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, les informations statistiques sur le traitement des requêtes dans la base de données peuvent être collectées à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.Statistic> objet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]Dans SMO, les informations statistiques sur le traitement des requêtes dans la base de données peuvent être collectées à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.Statistic> objet.  
   
  Il est possible de créer des statistiques pour n'importe quelle colonne en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. La méthode <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> peut être exécutée pour mettre à jour les statistiques dans l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Les résultats peuvent être affichés dans l'optimiseur de requête.  
   
-## <a name="example"></a> Exemple  
- Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+## <a name="example"></a>Exemple  
+ Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Création et mise à jour des statistiques en Visual Basic  
  Cet exemple de code crée une table sur une base de données existante pour laquelle l'objet <xref:Microsoft.SqlServer.Management.Smo.Statistic> et l'objet <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> sont créés.  

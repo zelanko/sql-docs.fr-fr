@@ -18,18 +18,20 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5b30ad5cab9d7e9ceb34103e64b7a782367b1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 820ef3737125c82296655db5cfba1a4265223796
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilisation du partitionnement des tables et des index
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Données peuvent être stockées à l’aide d’algorithmes de stockage fournis par [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Données peuvent être stockées à l’aide d’algorithmes de stockage fournis par [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
   
 ## <a name="index-and-table-partitioning"></a>Partitionnement des tables et des index  
  Cette fonctionnalité permet de répartir les données des tables et index sur plusieurs groupes de fichiers dans des partitions. Une fonction de partition définit comment les lignes d'une table ou d'un index sont mappées à un ensemble de partitions selon les valeurs de certaines colonnes, appelées « colonnes de partitionnement ». Un schéma de partition mappe chaque partition spécifiée par la fonction de partition avec un groupe de fichiers. Vous pouvez ainsi développer des stratégies d'archivage qui permettent de répartir les tables sur plusieurs groupes de fichiers, et par conséquent sur plusieurs périphériques physiques.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
  Chaque objet <xref:Microsoft.SqlServer.Management.Smo.Table> et <xref:Microsoft.SqlServer.Management.Smo.Index> spécifie quel schéma de partition il utilise dans la propriété <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> et spécifie les colonnes dans la <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Installation d'un schéma de partition pour une table en Visual C#  
@@ -136,6 +138,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Tables et index partitionnés](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

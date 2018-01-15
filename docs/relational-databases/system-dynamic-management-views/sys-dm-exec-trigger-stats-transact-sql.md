@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_exec_trigger_stats (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 01/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67c6d5765ee5259134f6d9985a88bf94768490cf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f0c102ba4f43cbd81d228945dc3e27143f7ce5a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,34 +45,38 @@ ms.lasthandoff: 11/17/2017
 |**plan_handle**|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec la **sys.dm_exec_cached_plans** vue de gestion dynamique.|  
 |**cached_time**|**datetime**|Heure à laquelle le déclencheur a été ajouté au cache.|  
 |**last_execution_time**|**datetime**|Heure de dernière exécution du déclencheur.|  
-|**execution_count**|**bigint**|Nombre d'exécutions du déclencheur depuis sa dernière compilation.|  
-|**total_worker_time**|**bigint**|Temps processeur total, en microsecondes, consommé par les exécutions de ce déclencheur depuis sa compilation.|  
+|**execution_count**|**bigint**|Le nombre de fois que le déclencheur a été exécuté depuis sa dernière compilation.|  
+|**total_worker_time**|**bigint**|La quantité totale de temps processeur, en microsecondes, consommé par les exécutions de ce déclencheur depuis sa compilation.|  
 |**last_worker_time**|**bigint**|Temps processeur, en microsecondes, consommé lors de la dernière exécution du déclencheur.|  
-|**min_worker_time**|**bigint**|Temps processeur maximal, en microsecondes, consommé par ce déclencheur lors d'une seule exécution.|  
-|**max_worker_time**|**bigint**|Temps processeur maximal, en microsecondes, consommé par ce déclencheur lors d'une seule exécution.|  
+|**min_worker_time**|**bigint**|Le temps processeur maximal, en microsecondes, consommé ce déclencheur lors d’une seule exécution.|  
+|**max_worker_time**|**bigint**|Le temps processeur maximal, en microsecondes, consommé ce déclencheur lors d’une seule exécution.|  
 |**total_physical_reads**|**bigint**|Nombre total de lectures physiques effectuées par les exécutions de ce déclencheur depuis sa compilation.|  
-|**last_physical_reads**|**bigint**|Nombre de lectures physiques effectuées lors de la dernière exécution du déclencheur.|  
-|**min_physical_reads**|**bigint**|Nombre minimal de lectures physiques effectuées par ce déclencheur lors d'une seule exécution.|  
-|**max_physical_reads**|**bigint**|Nombre maximal de lectures physiques effectuées par ce déclencheur lors d'une seule exécution.|  
-|**total_logical_writes**|**bigint**|Nombre total d'écritures logiques effectuées par les exécutions de ce déclencheur depuis sa compilation.|  
-|**last_logical_writes**|**bigint**|**total_physical_reads**nombre d’écritures logiques effectuées lors de la dernière exécution du déclencheur.|  
-|**min_logical_writes**|**bigint**|Nombre minimal d'écritures logiques effectuées par ce déclencheur lors d'une seule exécution.|  
-|**max_logical_writes**|**bigint**|Nombre maximal d'écritures logiques effectuées par ce déclencheur lors d'une seule exécution.|  
+|**last_physical_reads**|**bigint**|Nombre de lectures physiques effectuées la dernière exécution du déclencheur.|  
+|**min_physical_reads**|**bigint**|Le nombre minimal de lectures physiques par ce déclencheur effectuées lors d’une seule exécution.|  
+|**max_physical_reads**|**bigint**|Le nombre maximal de lectures physiques par ce déclencheur effectuées lors d’une seule exécution.|  
+|**total_logical_writes**|**bigint**|Nombre total d’écritures logiques effectuées par les exécutions de ce déclencheur depuis sa compilation.|  
+|**last_logical_writes**|**bigint**|Nombre d’écritures logiques effectuées la dernière exécution du déclencheur.|  
+|**min_logical_writes**|**bigint**|Le nombre minimal d’écritures logiques par ce déclencheur effectuées lors d’une seule exécution.|  
+|**max_logical_writes**|**bigint**|Le nombre maximal d’écritures logiques par ce déclencheur effectuées lors d’une seule exécution.|  
 |**total_logical_reads**|**bigint**|Nombre total de lectures logiques effectuées par les exécutions de ce déclencheur depuis sa compilation.|  
-|**last_logical_reads**|**bigint**|Nombre de lectures logiques effectuées lors de la dernière exécution du déclencheur.|  
-|**min_logical_reads**|**bigint**|Nombre minimal de lectures logiques effectuées par ce déclencheur lors d'une seule exécution.|  
-|**max_logical_reads**|**bigint**|Nombre maximal de lectures logiques effectuées par ce déclencheur lors d'une seule exécution.|  
-|**total_elapsed_time**|**bigint**|Temps total écoulé, en microsecondes, pour les exécutions de ce déclencheur.|  
+|**last_logical_reads**|**bigint**|Nombre de lectures logiques effectuées la dernière exécution du déclencheur.|  
+|**min_logical_reads**|**bigint**|Le nombre minimal de lectures logiques effectuées ce déclencheur lors d’une seule exécution.|  
+|**max_logical_reads**|**bigint**|Le nombre maximal de lectures logiques effectuées ce déclencheur lors d’une seule exécution.|  
+|**total_elapsed_time**|**bigint**|Le temps écoulé total, en microsecondes, pour les exécutions de ce déclencheur.|  
 |**last_elapsed_time**|**bigint**|Temps écoulé, en microsecondes, pour la dernière exécution de ce déclencheur.|  
-|**min_elapsed_time**|**bigint**|Temps minimal écoulé, en microsecondes, pour les différentes exécutions de ce déclencheur.|  
-|**max_elapsed_time**|**bigint**|Temps maximal écoulé, en microsecondes, pour les différentes exécutions de ce déclencheur.|  
+|**min_elapsed_time**|**bigint**|Temps écoulé minimal, en microsecondes, pour toutes les exécutions de ce déclencheur.|  
+|**max_elapsed_time**|**bigint**|Le temps écoulé maximal, en microsecondes, pour toutes les exécutions de ce déclencheur.| 
+|**total_spills**|**bigint**|Le nombre total de pages répandues par l’exécution de ce déclencheur depuis sa compilation.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Le nombre de pages répandues la dernière exécution du déclencheur.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Le nombre minimal de pages de ce déclencheur a répandues jamais une seule exécution.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Le nombre maximal de pages que ce déclencheur a répandues jamais une seule exécution.<br /><br /> **S’applique aux**: compter [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## <a name="remarks"></a>Notes  
- Dans Microsoft Azure SQL Database, les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.  
+ Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.  
 
 Les statistiques de la vue sont actualisées lorsqu'une requête est terminée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.
   
@@ -81,8 +85,6 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
  L'exemple suivant retourne des informations sur les cinq principaux déclencheurs identifiés d'après le temps moyen écoulé.  
   
 ```sql  
-PRINT '--top 5 CPU consuming triggers '  
-  
 SELECT TOP 5 d.object_id, d.database_id, DB_NAME(database_id) AS 'database_name',   
     OBJECT_NAME(object_id, database_id) AS 'trigger_name', d.cached_time,  
     d.last_execution_time, d.total_elapsed_time,   
@@ -93,10 +95,10 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-  [Sys.dm_exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
- [Sys.dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+[Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[Sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[Sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[Sys.dm_exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[Sys.dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

@@ -22,18 +22,20 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5069931c6e144dc574664e71c8f2a5d8964403
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, la clé principale du service est représentée par la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objet. Elle est référencée par la <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet. Elle peut être régénérée à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> (méthode).  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, la clé principale du service est représentée par la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objet. Elle est référencée par la <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet. Elle peut être régénérée à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> (méthode).  
   
  La clé principale de base de données est représentée par la <xref:Microsoft.SqlServer.Management.Smo.MasterKey> objet. Le <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> propriété indique si la clé principale de base de données est chiffrée par la clé principale du service. La copie chiffrée dans la base de données master est automatiquement mise à jour à chaque modification de la clé principale de la base de données.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
  Dans SMO, les certificats sont représentés par le <xref:Microsoft.SqlServer.Management.Smo.Certificate> objet. Le <xref:Microsoft.SqlServer.Management.Smo.Certificate> objet possède des propriétés qui spécifient la clé publique, le nom du sujet, la période de validité et les informations sur l’émetteur. L'autorisation d'accès au certificat est contrôlée en utilisant les méthodes **Grant**, **Revoke** et **Deny** .  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C &#35; Projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Ajout d'un certificat en Visual C#  
