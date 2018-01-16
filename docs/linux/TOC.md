@@ -3,10 +3,10 @@
 # Vue d'ensemble
 ## [Notes de publication](sql-server-linux-release-notes.md)
 ## [Nouveautés de cette version](sql-server-linux-whats-new.md)
-## [nouvelles articles et articles mises à jour](new-updated-linux.md)
+## [Articles nouveaux et mis à jour](new-updated-linux.md)
 ## [Éditions et fonctionnalités prises en charge](sql-server-linux-editions-and-components-2017.md)
 
-# Démarrages rapides
+# Guides de démarrage rapide
 ## [Installer et connecter - Red Hat](quickstart-install-connect-red-hat.md)
 ## [Installer et connecter - SUSE](quickstart-install-connect-suse.md)
 ## [Installer et connecter - Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -26,9 +26,10 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Déployer un cluster Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Créer et configurer les groupes de disponibilité](sql-server-linux-create-availability-group.md)
+## [9_Configurer dans Kubernetes pour la haute disponibilité](tutorial-sql-server-containers-kubernetes.md)
 
 # Concepts
-## Install
+## Installer
 ### [Installer SQL Server](sql-server-linux-setup.md)
 ### [Installer les outils SQL Server](sql-server-linux-setup-tools.md)
 ### [Installer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
@@ -89,7 +90,7 @@
 ### [Bien démarrer avec les fonctionnalités de sécurité](sql-server-linux-security-get-started.md)
 ### [Chiffrement des connexions](sql-server-linux-encrypted-connections.md)
 
-## Performance
+## Performances
 ### [Bonnes pratiques](sql-server-linux-performance-best-practices.md)
 ### [Bien démarrer avec les fonctionnalités relatives aux performances](sql-server-linux-performance-get-started.md)
 
