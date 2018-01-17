@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9ec9e75c2d54ee40946ed70d0ab293bb8881f28b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6504ceae257a72a0777d49a18f745885f64df47e
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Rechercher des expressions clés dans les documents avec la recherche sémantique
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Explique comment rechercher des expressions clés dans des documents ou des colonnes de texte configurés pour l’indexation sémantique statistique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Explique comment rechercher des expressions clés dans des documents ou des colonnes de texte configurés pour l’indexation sémantique statistique.  
 
 ##  <a name="howtofind"></a> Rechercher des expressions clés dans des documents avec SEMANTICKEYPHRASETABLE  
  Pour identifier les expressions clés dans des documents spécifiques, ou pour identifier des documents qui contiennent des expressions clés spécifiques, vous pouvez interroger la fonction [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  

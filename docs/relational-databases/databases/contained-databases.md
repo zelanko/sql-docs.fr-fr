@@ -22,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c39632f5d9580b652f57cec05000649af7591fc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0569381edb5d6ff8142818fb5d1382f28e7ad09
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-databases"></a>Bases de données à relation contenant-contenu
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Une *base de données à relation contenant-contenu* est une base de données qui est isolée d’autres bases de données et de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge cette base de données.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aide l'utilisateur à isoler sa base de données de l'instance de 4 manières différentes.  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage, événement  
  Ce XEvent se produit chaque fois qu'une entité sans relation contenant-contenu est identifiée lors de l'exécution. Cela inclut des entités provenant du code client. Ce XEvent ne se produit que pour les entités sans relation contenant-contenu réelles. Toutefois, l'événement ne se produit qu'au moment de l'exécution. Par conséquent, toutes les entités d'utilisateur sans relation contenant-contenu que vous n'avez pas exécutées ne seront pas identifiées par ce XEvent  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités modifiées &#40;base de données à relation contenant-contenu&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

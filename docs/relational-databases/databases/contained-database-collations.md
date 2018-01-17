@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e86cd34a6a4a2f51b86a84bd6eaa1f123fb6ea8
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-collations"></a>Classements de base de données à relation contenant-contenu
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Diverses propriétés affectent l’ordre de tri et la sémantique d’égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Diverses propriétés affectent l’ordre de tri et la sémantique d’égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Les classements ne s'appliquent pas seulement aux données stockées dans les tables utilisateur, mais à tout le texte géré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les métadonnées, les objets temporaires, les noms de variable, etc. Leur gestion est différente dans une base de données à relation contenant-contenu et dans une base de données sans relation contenant-contenu. Cette modification n'affecte pas de nombreux utilisateurs, mais permet l'indépendance et l'uniformité des instances. Cependant, elle peut provoquer également quelques confusions, ainsi que des problèmes pour les sessions qui accèdent à la fois à des bases de données à relation contenant-contenu et à des bases de données sans relation contenant-contenu.  
   

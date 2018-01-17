@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 285d172878aff387efe15941fe2312779036af0a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 1db8725baa154ccec81b5a69ebc20c97f5da8e72
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Rechercher des documents similaires ou connexes avec la recherche sémantique
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Explique comment rechercher des valeurs textuelles ou des documents similaires ou connexes, et donne des informations sur leur similitude, dans des colonnes configurées pour l’indexation sémantique statistique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Explique comment rechercher des valeurs textuelles ou des documents similaires ou connexes, et donne des informations sur leur similitude, dans des colonnes configurées pour l’indexation sémantique statistique.  
    
 ##  <a name="HowToQuerySimilar"></a> Rechercher des documents similaires ou connexes avec SEMANTICSIMILARITYTABLE  
  Pour identifier des documents similaires ou connexes dans une colonne spécifique, interrogez la fonction [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  

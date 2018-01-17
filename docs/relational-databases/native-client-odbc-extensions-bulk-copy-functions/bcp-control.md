@@ -1,5 +1,5 @@
 ---
-title: bcp_control | Documents Microsoft
+title: bcp_control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  Une erreur de séquence se produira également si vous appelez `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` après avoir appelé `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` et bcp_writefmt.  
   
- Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Pour plus d'informations, consultez [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contient le numéro de la page de codes du fichier de données. Vous pouvez spécifier le numéro de la page de codes, par exemple 1252 ou 850, ou l'une de ces valeurs :  
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  Est le nombre d’erreurs autorisées avant l’échec de l’opération de copie en bloc. La valeur par défaut est 10 ; une valeur inférieure à 1 rétablit cette option par défaut. La copie en bloc impose 65 535 erreurs au maximum. Toute tentative d'attribution d'une valeur supérieure à 65 535 à cette option entraîne l'attribution de la valeur 65 535 à l'option.  
   
  BCPODBC  
- Lorsque la valeur est TRUE, spécifie que **datetime** et **smalldatetime** valeurs enregistrées au format caractère utilisent le préfixe de séquence d’échappement ODBC timestamp et le suffixe. L'option BCPODBC s'applique uniquement à BCP_OUT.  
+ Lorsque la valeur est TRUE, spécifie que **datetime** et **smalldatetime** valeurs enregistrées au format caractère utilisent le préfixe de séquence d’échappement ODBC timestamp et le suffixe. L’option BCPODBC s’applique uniquement aux DB_OUT.  
   
  Si la valeur est FALSE, un **datetime** valeur représentant le 1er janvier 1997 est convertie en chaîne de caractères : 1997-01-01 00:00:00.000. Si TRUE, le même **datetime** valeur est représentée en tant que : {ts ' 1997-01-01 00:00:00.000'}.  
   

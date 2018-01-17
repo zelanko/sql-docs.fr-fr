@@ -3,7 +3,7 @@ title: "Modifier un schéma de partition | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -17,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef0b8ce7c9ba0c23da4d689b37a01cff34f3f0ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb7b93313a278db10ecffa7efd61e971b418868d
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="modify-a-partition-scheme"></a>Modifier un schéma de partition
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez modifier un schéma de partition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en désignant un groupe de fichiers destiné à contenir la prochaine partition ajoutée à une table partitionnée à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour ce faire, vous affectez la propriété NEXT USED au groupe de fichiers en question. Vous pouvez affecter la propriété NEXT USED à un groupe de fichiers vide ou à un groupe de fichiers qui contient déjà une partition. Autrement dit, un groupe de fichiers peut contenir plusieurs partitions.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Vous pouvez modifier un schéma de partition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en désignant un groupe de fichiers destiné à contenir la prochaine partition ajoutée à une table partitionnée à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour ce faire, vous affectez la propriété NEXT USED au groupe de fichiers en question. Vous pouvez affecter la propriété NEXT USED à un groupe de fichiers vide ou à un groupe de fichiers qui contient déjà une partition. Autrement dit, un groupe de fichiers peut contenir plusieurs partitions.  
   
  **Dans cette rubrique**  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations suivantes peuvent être utilisées pour exécuter ALTER PARTITION SCHEME :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-modify-a-partition-scheme"></a>Pour modifier un schéma de partition  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

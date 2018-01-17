@@ -1,5 +1,5 @@
 ---
-title: bcp_colfmt | Documents Microsoft
+title: bcp_colfmt | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a18017f252d787ed9a5322e32ccf6997b208890
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2fe615792733b5633bcfd9e8d64e48edb8a6d219
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -144,7 +144,7 @@ RETCODE bcp_colfmt (
  Le [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) fonction peut être utilisée pour conserver la spécification de format.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge de bcp_colfmt pour les fonctionnalités Date et Heure améliorées  
- Pour plus d’informations aboutt, il les types utilisé avec les *eUserDataType* paramètre pour les types date/heure, consultez [modifications de copie en bloc pour améliorées de Date et heure Types &#40; OLE DB et ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Pour plus d’informations sur les types utilisés avec les *eUserDataType* paramètre pour les types date/heure, consultez [modifications de copie en bloc pour améliorées de Date et heure Types &#40; OLE DB et ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  Pour plus d’informations, consultez [Date et heure améliorations &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

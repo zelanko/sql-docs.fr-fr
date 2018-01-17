@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Décrit la procédure d’activation ou de désactivation de l’indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Décrit la procédure d’activation ou de désactivation de l’indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
   
  La recherche sémantique statistique utilise les index créés par la recherche en texte intégral et crée des index supplémentaires. Conséquence de cette dépendance sur la recherche en texte intégral, vous créez un index sémantique lorsque vous définissez un nouvel index de recherche en texte intégral ou lorsque vous modifiez un index de recherche en texte intégral existant. Vous pouvez créer un index sémantique à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en utilisant l'Assistant Indexation de texte intégral et d'autres boîtes de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], comme décrit dans cette rubrique.  
   

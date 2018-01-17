@@ -3,7 +3,7 @@ title: "Créer des tables et des index partitionnés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -35,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 416bba81433e35e34c053aafc5412cca3875b4ae
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez créer une table ou un index partitionnés dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les données contenues dans des tables et des index partitionnés sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Vous pouvez créer une table ou un index partitionnés dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les données contenues dans des tables et des index partitionnés sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
   
  La création d'une table ou d'un index partitionné(e) se produit généralement en quatre étapes :  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  La création d'une table partitionnée nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table est créée. La création d'un index partitionné nécessite l'autorisation ALTER sur la table ou la vue dans laquelle l'index est créé. La création d'une table ou d'un index partitionné(e) nécessite l'une des autorisations supplémentaires suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -268,7 +268,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bonnes pratiques de sécurité recommandées avec les bases de données à relation contenant-contenu
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Les bases de données à relation contenant-contenu présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart de ces menaces sont liées au processus d’authentification **USER WITH PASSWORD** , qui déplace la limite de l’authentification du niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers celui de la base de données.  
   
@@ -92,7 +92,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Déni de service via AUTO_CLOSE  
  Ne configurez pas de bases de données à relation contenant-contenu pour la fermeture automatique. Si la base de données est fermée, son ouverture pour authentifier un utilisateur consomme des ressources supplémentaires et risque de contribuer à une attaque par déni de service.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)   
  [Migrer vers une base de données partiellement à relation contenant-contenu](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 10/17/2016
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,14 +21,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9435c864a481a5df25e74c132062cada5ca0e7b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 393b9178fcda3ba0487fc361e4edf107c17d042b
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
 
 FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
@@ -139,7 +138,7 @@ Lorsqu'une API du système de fichiers ne parvient pas à ouvrir un fichier en r
 |Ouvert pour l'écriture.|Ouvert pour l'écriture.|L'opération d'ouverture sur la transaction 2 échoue avec une exception ERROR_SHARING_VIOLATION.|L'opération d'ouverture sur la transaction 2 échoue avec une exception ERROR_SHARING_VIOLATION.|  
 |Ouvert pour la lecture.|Ouvert pour SELECT.|Réussite des deux transactions.|Réussite des deux transactions.|  
 |Ouvert pour la lecture.|Ouvert pour UPDATE ou DELETE.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas les opérations de lecture effectuées dans la transaction 1.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas les opérations de lecture effectuées dans la transaction 1.|  
-|Ouvert pour l'écriture.|Ouvert pour SELECT.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|Réussite des deux transactions.|  
+|Ouvert pour l'écriture.|Ouvert pour SELECT.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|Réussite des deux transactions.|  
 |Ouvert pour l'écriture.|Ouvert pour UPDATE ou DELETE.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|  
 |Ouvert pour SELECT.|Ouvert pour la lecture.|Réussite des deux transactions.|Réussite des deux transactions.|  
 |Ouvert pour SELECT.|Ouvert pour l'écriture.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas la transaction 1.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas la transaction 1.|  
@@ -154,7 +153,7 @@ L'accès de système de fichiers distant aux données FILESTREAM est activé sur
 
 La création de vues mappées en mémoire (E/S mappées en mémoire) à l'aide d'un descripteur FILESTREAM n'est pas prise en charge. Si le mappage mémoire est utilisé pour les données FILESTREAM, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas garantir la cohérence et la durabilité des données, ni l’intégrité de la base de données.  
 
-## <a name="related-tasks"></a>Tâches associées
+## <a name="related-tasks"></a>Related Tasks
 
 [Activer et configurer FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [Créer une base de données compatible FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
@@ -167,6 +166,6 @@ La création de vues mappées en mémoire (E/S mappées en mémoire) à l'aide d
 [Configurer FILESTREAM sur un cluster de basculement](../../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md)  
 [Configurer un pare-feu pour l'accès FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)
 
-## <a name="related-content"></a>Contenu connexe
+## <a name="related-content"></a>Contenu associé
 
 [Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
