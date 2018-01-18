@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Utiliser le groupe de disponibilité haute disponibilité pour SQL Server sur Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Fonctionnent toujours sur les groupes de disponibilité sur Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -137,13 +137,13 @@ Si vous ne peuvent pas basculer le groupe de disponibilité avec les outils de g
 
 1. Vérifiez que la ressource de groupe de disponibilité n’est pas plus gérée par le cluster. 
 
-      - Tentative de définition de la ressource au mode non géré. Cela signale à l’agent de ressource pour arrêter la surveillance des ressources et la gestion. Exemple : 
+      - Tentative de définition de la ressource au mode non géré. Cela signale à l’agent de ressource pour arrêter la surveillance des ressources et la gestion. Par exemple : 
       
       ```bash
       sudo pcs resource unmanage <**resourceName**>
       ```
 
-      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Exemple :
+      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Par exemple :
 
       ```bash
       sudo pcs resource delete <**resourceName**>
@@ -188,9 +188,9 @@ Lorsque les réplicas du groupe de disponibilité sont sur des instances de SQL 
 1. Avant de commencer, sauvegardez chaque base de données.
 2. Mettre à niveau des instances de SQL Server qui hébergent les réplicas secondaires.
 
-    a. Mettre à niveau tout d’abord des réplicas secondaires asynchrones.
+    A. Mettre à niveau tout d’abord des réplicas secondaires asynchrones.
 
-    b. Mettre à niveau les réplicas secondaires synchrones.
+    B. Mettre à niveau les réplicas secondaires synchrones.
 
    >[!NOTE]
    >Si un groupe de disponibilité possède uniquement asynchrone réplicas - pour éviter toute perte de données modifiez un réplica synchrone et attendez qu’il est synchronisé. Puis, mettez à niveau de ce réplica.
@@ -232,13 +232,13 @@ Lorsque les réplicas du groupe de disponibilité sont sur des instances de SQL 
    >Les étapes suivantes s’appliquent uniquement aux groupes de disponibilité qui n’ont pas un gestionnaire de cluster.  
    Si le type de cluster de groupe de disponibilité est `NONE`manuellement basculer. Exécutez les étapes suivantes dans l'ordre :
 
-      a. La commande suivante définit le réplica principal vers le site secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l’instance de SQL Server qui héberge le réplica principal.
+      A. La commande suivante définit le réplica principal vers le site secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l’instance de SQL Server qui héberge le réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      b. La commande suivante définit un réplica secondaire synchrone principal. Exécutez la commande Transact-SQL suivante sur l’instance cible de SQL Server - l’instance qui héberge le réplica secondaire synchrone.
+      B. La commande suivante définit un réplica secondaire synchrone principal. Exécutez la commande Transact-SQL suivante sur l’instance cible de SQL Server - l’instance qui héberge le réplica secondaire synchrone.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

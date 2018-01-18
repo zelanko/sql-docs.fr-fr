@@ -27,15 +27,15 @@ helpviewer_keywords:
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f4d0ddce880cbb3ba3ca2cd422543ced125c08f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dad9cc5bae465697932b88986e4eb45deabb3bc9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitoring-the-error-logs"></a>Surveillance des journaux d'erreurs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enregistre certains événements système et les événements définis par l’utilisateur dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal des erreurs et les [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. Tous les événements consignés dans ces deux journaux sont automatiquement datés. Utilisez les informations du journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour résoudre des problèmes liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Consultation du journal des erreurs de SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contient des informations sur le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la procédure pour l'afficher.|  
-|[Affichage du journal des applications Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contient des informations sur le journal des applications Windows et la procédure pour l'afficher.|  
+|[Afficher le journal des erreurs SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contient des informations sur le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la procédure pour l'afficher.|  
+|[Afficher le journal des applications Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contient des informations sur le journal des applications Windows et la procédure pour l'afficher.|  
   
   

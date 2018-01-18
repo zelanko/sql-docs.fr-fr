@@ -26,15 +26,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bce247fa86806a4acd40bdfefd11a167a5c614f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef0d4c1015fa70145f8539a4dd10f4f8f6ffc35b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="start-a-trace"></a>Démarrer une trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Après avoir défini une nouvelle trace ou créé un modèle à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous pouvez démarrer, suspendre ou arrêter la capture des données à l’aide de la nouvelle définition de trace ou un modèle.  
@@ -50,10 +50,10 @@ ms.lasthandoff: 12/21/2017
 >  Lorsque vous utilisez des traces existantes, vous pouvez afficher les propriétés, mais pas les modifier. Pour modifier les propriétés, arrêtez ou suspendez la trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer automatiquement une trace après s’être connecté à un serveur &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Suspendre une Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)   
- [Arrêter une Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)   
- [Effacer une fenêtre de Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)   
+ [Démarrer une Trace automatiquement après la connexion à un serveur & #40 ; SQL Server Profiler & #41 ;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Suspendre une Trace & #40 ; SQL Server Profiler & #41 ;](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)   
+ [Arrêter une Trace & #40 ; SQL Server Profiler & #41 ;](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)   
+ [Effacer une fenêtre de Trace & #40 ; SQL Server Profiler & #41 ;](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)   
  [Exécuter une trace après qu’elle a été suspendue ou arrêtée &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie l’espace maximal (en mégaoctets) qui peut être consommé par la recommandation de paramétrage de l’Assistant Paramétrage du moteur de base de données (index et le partitionnement du jeu).  
@@ -44,16 +44,16 @@ ms.lasthandoff: 12/21/2017
 |--------------------|-----------------|  
 |**Type de données et longueur**|**unsignedInt**, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour l'élément **TuningOptions** .|  
+|**Occurrence**|Ce paramètre est facultatif. Ne peut être utilisé qu'une seule fois pour l'élément **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Éléments enfants**|None|  
+|**Élément parent**|[Tuningoptions, élément & #40 ; DTA & #41 ;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Éléments enfants**|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque plusieurs bases de données sont paramétrées, les recommandations pour toutes les bases de données sont prises en compte pour le calcul de l'espace. Par défaut, l'Assistant Paramétrage du moteur de base de données utilise la plus petite taille des tailles de stockage suivantes :  
   
 -   Trois fois la taille des données brutes, qui comprend la taille totale des segments et des index cluster sur les tables.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  Si la valeur spécifiée pour l'élément **StorageBoundInMB** dépasse celle de l'espace disque, l'Assistant Paramétrage du moteur de base de données renvoie une erreur mais continue le paramétrage. Une fois le paramétrage terminé, vous pouvez ajouter de l'espace disque si vous décidez d'appliquer la recommandation.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ## <a name="description"></a>Description  
  L'exemple de code suivant montre comment définir une limite de 1500 mégaoctets comme espace disque maximal consommable par une recommandation de réglage :  
