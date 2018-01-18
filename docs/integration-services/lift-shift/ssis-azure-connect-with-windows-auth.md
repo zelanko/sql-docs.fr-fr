@@ -1,6 +1,6 @@
 ---
 title: "Se connecter à des sources de données et des partages de fichiers avec l’authentification Windows | Microsoft Docs"
-ms.date: 11/27/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -13,16 +13,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Se connecter à des sources de données locales et des partages de fichiers Azure avec l’authentification Windows
 Cet article explique comment configurer le catalogue SSIS sur Azure SQL Database pour exécuter des packages qui utilisent l’authentification Windows afin de se connecter à des sources de données locales et des partages de fichiers Azure. Vous pouvez utiliser l’authentification Windows pour vous connecter à des sources de données dans le même réseau virtuel qu’Azure SSIS Integration Runtime, aussi bien localement que sur des machines virtuelles Azure et dans Azure Files.
 
-Les informations d’identification de domaine que vous fournissez quand vous suivez les étapes de cet article s’appliquent à toutes les exécutions de package sur l’instance SQL Database jusqu’à ce que vous changiez ou supprimiez les informations d’identification.
+> [!WARNING]
+> Si vous ne fournissez pas d’informations d’identification de domaine valides pour l’authentification Windows en exécutant `catalog`.`set_execution_credential`, comme décrit dans cet article, les packages qui dépendent de l’authentification Windows ne peuvent pas se connecter aux sources de données et échouent au moment de l’exécution.
+
+Les informations d’identification de domaine que vous fournissez quand vous suivez les étapes de cet article s’appliquent à toutes les exécutions de package, interactives ou planifiées, sur l’instance SQL Database, et ce jusqu’à ce que vous changiez ou supprimiez les informations d’identification.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fournir des informations d’identification de domaine pour l’authentification Windows
 Pour fournir des informations d’identification de domaine qui permettent aux packages d’utiliser l’authentification Windows afin de se connecter à des sources de données locales, effectuez les actions suivantes :

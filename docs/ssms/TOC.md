@@ -4,7 +4,7 @@
 ## [Notes de publication](download-sql-server-management-studio-ssms.md#release-notes)
 ## [Installer SSMS dans une autre langue que l’anglais](install-other-languages.md)
 ## [nouvelles articles et articles mises à jour](new-updated-ssms.md)
-# [Télécharger le module PowerShell SQL Server](download-sql-server-ps-module.md)
+# [Installer le module SQL Server PowerShell](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
 # [Aide F1 +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
@@ -21,7 +21,7 @@
 # [Fenêtres Outil dans SSMS](tool-windows-in-sql-server-management-studio.md)
 # [Utiliser SSMS pour créer des projets de base de données](build-database-projects-by-using-sql-server-management-studio.md)
 # [Comprendre la gestion de Windows SSMS](understand-sql-server-management-studio-windows-management.md)
-# [Outils externes, boîte de dialogue](external-tools-dialog-box.md)
+# [Boîte de dialogue Outils externes](external-tools-dialog-box.md)
 
 # [Arguments, boîte de dialogue](arguments-dialog-box.md)
 # [Administrer des serveurs avec SSMS](administer-servers-with-sql-server-management-studio.md)

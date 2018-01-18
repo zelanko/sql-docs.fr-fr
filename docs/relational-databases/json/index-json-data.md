@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>Indexer des données JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Dans SQL Server 2016, JSON n’est pas un type de données intégré et SQL Server n’a pas d’index JSON personnalisés. Toutefois, vous pouvez optimiser vos requêtes sur des documents JSON à l’aide d’index standard. 
+Dans SQL Server et SQL Database, JSON n’est pas un type de données intégré et SQL Server n’a pas d’index JSON personnalisés. Toutefois, vous pouvez optimiser vos requêtes sur des documents JSON à l’aide d’index standard. 
 
 Les index de base de données permettent d’améliorer les performances des opérations de filtrage et de tri. Sans index, SQL Server doit effectuer une analyse de table complète chaque fois que vous interrogez des données.  
   
@@ -69,7 +69,7 @@ La colonne calculée n’est pas persistante. Elle est calculée uniquement lors
   
 Il est important de créer la colonne calculée avec la même expression que celle que vous comptez utiliser dans vos requêtes. Ici, par exemple, il s’agit de l’expression `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Vous n’avez pas besoin de réécrire vos requêtes. Si vous utilisez des expressions avec la fonction `JSON_VALUE`, comme indiqué dans l’exemple de requête ci-dessus, SQL Server détecte qu’il existe une colonne calculée équivalente avec la même expression et applique un index si possible.
+Vous n’avez pas besoin de réécrire vos requêtes. Si vous utilisez des expressions avec la fonction `JSON_VALUE`, comme indiqué dans l’exemple de requête précédent, SQL Server détecte qu’il existe une colonne calculée équivalente avec la même expression et applique un index si possible.
 
 ### <a name="execution-plan-for-this-example"></a>Plan d’exécution pour cet exemple
 Voici le plan d’exécution de la requête utilisée dans cet exemple.  
@@ -79,7 +79,7 @@ Voici le plan d’exécution de la requête utilisée dans cet exemple.
 Au lieu d’une analyse de table complète, SQL Server utilise une recherche d’index dans l’index non cluster et recherche les lignes qui répondent aux conditions spécifiées. Il utilise ensuite une recherche de clé dans la table `SalesOrderHeader` pour extraire les autres colonnes référencées dans la requête. Dans cet exemple, il s’agit de `SalesOrderNumber` et `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Optimiser davantage l’index avec les colonnes incluses
-Vous pouvez éviter cette recherche supplémentaire dans la table en ajoutant les colonnes nécessaires dans l’index. Vous pouvez ajouter ces colonnes en tant que colonnes incluses standard, comme indiqué dans l’exemple suivant, qui étend l’exemple `CREATE INDEX` ci-dessus.  
+Si vous ajoutez les colonnes nécessaires dans l’index, vous pouvez éviter cette recherche supplémentaire dans la table. Vous pouvez ajouter ces colonnes en tant que colonnes incluses standard, comme indiqué dans l’exemple suivant, ce qui étend l’exemple `CREATE INDEX` précédent.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-Dans ce cas, SQL Server n’a pas à lire les données supplémentaires de la table `SalesOrderHeader`, car tout ce dont il a besoin est inclus dans l’index JSON non cluster. Il s’agit d’un bon moyen de combiner des données JSON et des données de colonne dans les requêtes, et de créer des index optimaux pour votre charge de travail.  
+Dans ce cas, SQL Server n’a pas à lire les données supplémentaires de la table `SalesOrderHeader`, car tout ce dont il a besoin est inclus dans l’index JSON non cluster. Ce type d’index est un bon moyen de combiner des données JSON et des données de colonne dans les requêtes, et de créer des index optimaux pour votre charge de travail.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Les index JSON prennent en charge le classement  
 Les index des données JSON présentent une caractéristique importante : ils prennent en charge le classement. Le résultat de la fonction `JSON_VALUE` que vous utilisez quand vous créez la colonne calculée est une valeur texte qui hérite son classement de l’expression d’entrée. Ainsi, les valeurs de l’index sont triées à l’aide des règles de classement définies dans les colonnes sources.  
   
-À titre d’illustration, l’exemple suivant crée une table de collection simple avec une clé primaire et un contenu JSON.  
+Pour démontrer que les index prennent en charge le classement, l’exemple suivant crée une table de collection simple avec une clé primaire et un contenu JSON.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Bien que la requête comporte une clause `ORDER BY`, le plan d’exécution n’utilise pas d’opérateur de tri. L’index JSON est déjà trié selon les règles cyrilliques serbes. Par conséquent, SQL Server peut utiliser l’index non cluster dans lequel les résultats sont déjà triés.  
   
- Toutefois, si nous changeons le classement de l’expression `ORDER BY`, par exemple en plaçant `COLLATE French_100_CI_AS_SC` après la fonction `JSON_VALUE`, nous obtenons un autre plan d’exécution de requête.  
+ Toutefois, si vous changez le classement de l’expression `ORDER BY`, par exemple en ajoutant `COLLATE French_100_CI_AS_SC` après la fonction `JSON_VALUE`, vous obtenez un autre plan d’exécution de requête.  
   
  ![Plan d’exécution](../../relational-databases/json/media/jsonindexblog3.png "Plan d’exécution")  
   

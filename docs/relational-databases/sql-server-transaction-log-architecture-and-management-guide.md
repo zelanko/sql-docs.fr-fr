@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +70,7 @@ De nombreux types d'opérations sont enregistrés dans le journal des transactio
   
  Les opérations de restauration sont également consignées dans le journal. Chaque transaction réserve de l'espace dans le journal des transactions afin qu'il existe suffisamment d'espace journal pour prendre en charge une restauration déclenchée par une instruction de restauration explicite ou par la détection d'une erreur. Le volume d'espace réservé dépend des opérations effectuées dans la transaction, mais il est généralement égal au volume d'espace utilisé pour la journalisation de chaque opération. Cet espace réservé est libéré lorsque la transaction est terminée.  
   
-<a name="minlsn"></a> La section du fichier journal comprise entre le premier enregistrement de journal nécessaire à une restauration portant sur l’ensemble de la base de données et la fin du journal représente la partie active du journal, également appelée le *journal actif*. Cette section est indispensable pour procéder à une récupération complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Le [numéro séquentiel dans le journal (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de ce premier enregistrement est le **LSN de récupération minimum (*MinLSN*)**.  
+<a name="minlsn"></a> La section du fichier journal comprise entre le premier enregistrement de journal nécessaire à une restauration portant sur l’ensemble de la base de données et la fin du journal représente la partie active du journal, également appelée le *journal actif*. Cette section est indispensable pour procéder à une récupération complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Le [LSN (numéro séquentiel dans le journal)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de ce premier enregistrement est le ***LSN de récupération minimum (*MinLSN**).  
   
 ##  <a name="physical_arch"></a> Architecture physique du journal des transactions  
 Le journal des transactions d'une base de données s'étend sur un ou plusieurs fichiers physiques. D'un point de vue conceptuel, le fichier journal est une chaîne d'enregistrements. D'un point de vue physique, la séquence des enregistrements du journal est stockée de façon efficace dans l'ensemble de fichiers physiques qui implémente le journal des transactions. Chaque base de données doit posséder au moins un fichier journal.  
@@ -77,9 +80,10 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divise chaque fich
 > [!NOTE]
 > La création du fichier journal virtuel suit cette méthode :
 > - Si la croissance suivante est inférieure à 1/8 de la taille physique actuelle du journal, 1 fichier journal virtuel qui couvre la taille de croissance est créé (à partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
-> - Si la croissance est inférieure à 64 Mo, 4 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 1 Mo, quatre fichiers journaux virtuels de 256 Ko sont créés)
-> - Si la croissance se situe entre 64 Mo et 1 Go, 8 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 512 Mo, huit fichiers journaux virtuels de 64 Mo sont créés)
-> - Si la croissance est supérieure à 1 Go, 16 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 8 Go, seize fichiers journaux virtuels de 512 Ko sont créés)
+> - Si la croissance suivante est supérieure à 1/8 de la taille actuelle du journal, utilisez la méthode antérieure à 2014 :
+>    -  Si la croissance est inférieure à 64 Mo, 4 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 1 Mo, quatre fichiers journaux virtuels de 256 Ko sont créés)
+>    -  Si la croissance se situe entre 64 Mo et 1 Go, 8 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 512 Mo, huit fichiers journaux virtuels de 64 Mo sont créés)
+>    -  Si la croissance est supérieure à 1 Go, 16 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 8 Go, seize fichiers journaux virtuels de 512 Ko sont créés)
 
 Si la taille des fichiers journaux s'accroît par de petits incréments, de nombreux fichiers journaux virtuels vont être créés, **ce qui peut ralentir le démarrage de la base de données ainsi que les opérations de sauvegarde et de restauration.** Il est conseillé d’affecter aux fichiers journaux une valeur *size* proche de la taille finale souhaitée et une valeur *growth_increment* relativement importante. Consultez le conseil ci-dessous pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions.
  - La valeur *size*, telle que définie par l’argument `SIZE` de `ALTER DATABASE` est la taille initiale du fichier journal.

@@ -17,18 +17,26 @@ helpviewer_keywords:
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 404e929c7fd184162df6d68d2dceb0dceb532ff6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
-  Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
+
+> [!NOTE]
+> Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
+> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
+> Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
+
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,7 +101,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |aaaa|Année à quatre chiffres.|  
-|mm|Mois à deux chiffres (01 à 12).|  
+|MM|Mois à deux chiffres (01 à 12).|  
 |jj|Date à deux chiffres (01 à 31).|  
 |hh|Heure à deux chiffres au format 24 heures (01 à 23).|  
 |mi|Minutes à deux chiffres (01 à 59).|  
@@ -108,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(@Name, ’xyz’)) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les expressions de requête sont des chaînes qui énumèrent les nœuds dans une hiérarchie de modèle SMO. Chaque nœud possède une expression de filtre qui spécifie les critères pour déterminer les objets qui sont énumérés au niveau de ce nœud. Les expressions de requête sont modélisées sur le langage d'expression XPath. Les expressions de requête implémentent un petit sous-ensemble des expressions qui sont prises en charge par XPath, et possèdent également quelques extensions qui ne sont pas présentes dans XPath. Les expressions XPath sont des chaînes qui spécifient un jeu de critères utilisé pour énumérer une ou plusieurs balises dans un document XML. Pour plus d'informations sur XPath, consultez [W3C XPath Language](http://www.w3.org/TR/xpath20/)(en anglais).  
   
  Les expressions de requête doivent commencer par une référence absolue à l'objet serveur. Les expressions relatives avec une barre oblique (/) de début ne sont pas autorisées. La séquence des objets spécifiés dans une expression de requête doit respecter la hiérarchie des objets de collection dans le modèle objet associé. Par exemple, une expression de requête qui fait référence à des objets dans l'espace de noms Microsoft.SqlServer.Management.Smo doit commencer par un nœud Server, suivi d'un nœud Database, etc.  
@@ -166,8 +174,8 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Invoke-PolicyEvaluation (applet de commande)](../powershell/invoke-policyevaluation-cmdlet.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Invoke-PolicyEvaluation (applet de commande)](invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40moteur de base de données&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

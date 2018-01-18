@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: c69295e84e5bd6ef1162bb007c206b0addd8656c
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,8 +95,7 @@ Pour plus d’informations, consultez [Disk Space Requirements for Index DDL Ope
 ## <a name="resumable-index-rebuild-considerations"></a>Considérations relatives à la regénération d’index pouvant être reprise
 
 > [!NOTE]
-> Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> L’option d’index pouvant être repris s’applique à SQL Server (à compter de SQL Server 2017) et à SQL Database. Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 Quand vous effectuez une regénération d’index en ligne pouvant être reprise, les recommandations suivantes s’appliquent :
 -   Gestion, planification et extension des fenêtres de maintenance d’index. Vous pouvez suspendre et redémarrer une opération de regénération d’index à plusieurs reprises en fonction de vos fenêtres de maintenance.
@@ -108,7 +107,6 @@ Quand vous effectuez une regénération d’index en ligne pouvant être reprise
 
 > [!IMPORTANT]
 > Dans la mesure où la régénération peut être reprise, il n’est pas nécessaire de maintenir ouverte une transaction de longue durée, ce qui permet la troncation des journaux au cours de cette opération et une meilleure gestion de l’espace des journaux. Avec la nouvelle conception, nous avons réussi à conserver les données nécessaires dans une base de données, ainsi que toutes les références indispensables au redémarrage de l’opération pouvant être reprise.
->
 
 En règle générale, il n’existe aucune différence de performances entre la regénération d’index en ligne avec reprise et sans reprise. Quand vous mettez à jour un index pouvant être repris alors qu’une opération de regénération d’index est en pause :
 - Pour les charges de travail de lecture principalement, l’impact sur les performances est insignifiant. 

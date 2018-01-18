@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Examiner et générer des scripts de journalisation supplémentaires
   L’onglet **Scripts** permet d’exécuter ou de réexécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Lorsque vous exécutez des scripts de journalisation supplémentaires, la boîte de dialogue des informations d'identification Oracle pour l'exécution de script s'ouvre et vous permet de spécifier un nom d'utilisateur et un mot de passe Oracle valides. Pour plus d'informations sur la façon de fournir les informations d'identification Oracle appropriées, consultez [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- Vous pouvez également exécuter les scripts manuellement à l'aide de SQL*PLUS, si nécessaire.  
+ Vous pouvez également exécuter les scripts manuellement à l’aide de SQL\*PLUS, si nécessaire.  
   
 ### <a name="to-run-the-scripts-manually"></a>Pour exécuter les script manuellement  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Donnez un nom au fichier, puis cliquez sur **Enregistrer** pour enregistrer le fichier.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Informations d’identification Oracle pour l’exécution d’un script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
