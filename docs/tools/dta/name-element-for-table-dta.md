@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38938f788b00e41acf726acb2af6cf275668e39d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf1209f51e3952439b3a9d28fa170c0684bce1a4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-table-dta"></a>Name, élément pour les tables (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie un nom de table pour le paramétrage.  
@@ -49,10 +49,10 @@ ms.lasthandoff: 12/21/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Table, élément pour les schémas &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Élément parent**|[Table, élément pour les schémas &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation, consultez [Server, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/server-element-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  

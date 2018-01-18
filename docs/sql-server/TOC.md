@@ -49,9 +49,9 @@
 ### [Sécurité SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## Commentaires et aide
+### [Suggestions pour SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [Contenu local avec la visionneuse d’aide](sql-server-help-installation.md)

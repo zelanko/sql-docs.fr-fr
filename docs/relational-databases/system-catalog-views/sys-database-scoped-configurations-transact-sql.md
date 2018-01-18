@@ -1,7 +1,7 @@
 ---
 title: Sys.database_scoped_configurations (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 06/29/2016
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,13 +23,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70b0f5c2ecb1f15828d5ac1c219033c337bb3a8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e9df8c18b3ca7556b10e3e2d453c41735a07e52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>Sys.database_scoped_configurations (Transact-SQL)
+# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne par configuration. 
@@ -37,17 +37,19 @@ ms.lasthandoff: 11/17/2017
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|ID de l’option de configuration.|  
-|**nom**|**nvarchar (60)**|Le nom de l’option de configuration. Pour plus d’informations sur les configurations possibles, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**valeur**|**SQLVARIANT**|La valeur définie pour cette option de configuration pour le réplica principal.|  
-|**value_for_secondary**|**SQLVARIANT**|La valeur définie pour cette option de configuration pour les réplicas secondaires.|  
+|**nom**|**nvarchar(60)**|Le nom de l’option de configuration. Pour plus d’informations sur les configurations possibles, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**valeur**|**sqlvariant**|La valeur définie pour cette option de configuration pour le réplica principal.|  
+|**value_for_secondary**|**sqlvariant**|La valeur définie pour cette option de configuration pour les réplicas secondaires.|  
   
 ##  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="remarks"></a>Notes  
  Lorsque la valeur NULL est retournée en tant que la valeur de **value_for_secondary**, cela signifie que la base de données secondaire est définie au principal.  
+ 
+ Paramètres seront reportés avec la base de données de configuration d’une étendue de base de données. Cela signifie que lorsqu’une base de données est restaurée ou attachée, les paramètres de configuration existants restent.
   
 ## <a name="see-also"></a>Voir aussi  
- [MODIFIER la CONFIGURATION inclus dans l’étendue de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   

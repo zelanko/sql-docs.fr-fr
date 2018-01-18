@@ -13,21 +13,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b9dab3881ea4c78254f9e6db183603a4a53a4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f286661863d1d6ec065f3b9532530d9e96205821
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="report-server-properties-service-tab"></a>Propriétés de Report Server (onglet Service)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ce service est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Report Server. Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
   
 ## <a name="options"></a>Options  
- **Chemin d’accès binaire**  
+ **Chemin d'accès binaire**  
  Affiche l'emplacement des fichiers programme utilisés par ce service.  
   
  **Contrôle d'erreurs**  

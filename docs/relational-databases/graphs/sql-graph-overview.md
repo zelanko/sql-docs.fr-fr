@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graphique de traitement avec SQL Server et la base de données SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Nœuds et bords sont stockés sous forme de tables  
 
 ### <a name="query-language-extensions"></a>Extensions de langage de requête  
-Nouvelle `MATCH` clause est introduite pour prendre en charge la recherche de correspondance et de navigation cascade via le graphique. Le `MATCH` fonction utilise la syntaxe de style pointe ASCII pour les critères spéciaux. Exemple :  
+Nouvelle `MATCH` clause est introduite pour prendre en charge la recherche de correspondance et de navigation cascade via le graphique. Le `MATCH` fonction utilise la syntaxe de style pointe ASCII pour les critères spéciaux. Par exemple :  
 
 ```   
 -- Find friends of John
@@ -73,7 +73,7 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Entièrement intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur 
-Extensions de graphique sont entièrement intégrées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Nous utilisons le même moteur de stockage, les métadonnées, processeur de requêtes, etc. pour stocker et interroger des données de graphique. Cela permet aux utilisateurs d’interroger les leurs graphique et les données relationnelles dans une requête unique. Les utilisateurs peuvent également bénéficier de combinaison de fonctionnalités de graphique avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que columnstore, haute disponibilité, R services, etc.. Base de données du graphique SQL prend également en charge toutes les sécurité et conformité fonctionnalités disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Extensions de graphique sont entièrement intégrées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Nous utilisons le même moteur de stockage, les métadonnées, processeur de requêtes, etc. pour stocker et interroger des données de graphique. Cela permet aux utilisateurs d’interroger les leurs graphique et les données relationnelles dans une requête unique. Les utilisateurs peuvent également bénéficier de combinaison de fonctionnalités de graphique avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que columnstore, haute disponibilité, R services, etc. Base de données du graphique SQL prend également en charge toutes les sécurité et conformité fonctionnalités disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 ### <a name="tooling-and-ecosystem"></a>Outils et l’écosystème  
 Les utilisateurs bénéficient d’outils existants et l’écosystème qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Outils de sauvegarde et de restauration, importer et exporter, fonctionnement BCP prêtes à l’emploi. Autres outils ou des services, comme SSIS, SSRS ou Power BI fonctionnera avec les tables de graphique, la façon de travailler avec des tables relationnelles.

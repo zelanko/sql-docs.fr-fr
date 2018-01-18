@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et de ressources du groupe de disponibilité
 
@@ -32,7 +32,7 @@ Ce document explique comment créer un cluster de trois nœuds sur Ubuntu et ajo
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
-## <a name="roadmap"></a>Feuille de route
+## <a name="roadmap"></a>Roadmap
 
 Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes de haut niveau : 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Créer le cluster. 
 
    >[!WARNING]
-   >En raison d’un problème connu que le fournisseur de clustering est le problème, en commençant le cluster ('PC cluster start') échoue avec erreur ci-dessous. Il s’agit, car le fichier journal configuré dans /etc/corosync/corosync.conf est incorrect. Pour résoudre ce problème, modifiez le fichier journal pour : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
+   >En raison d’un problème connu que le fournisseur de clustering est le problème, en commençant le cluster ('PC cluster start') échoue avec erreur ci-dessous. Il s’agit, car le fichier journal est configuré dans /etc/corosync/corosync.conf qui est créé lorsque la commande d’installation de cluster est exécutée, est incorrect. Pour résoudre ce problème, modifiez le fichier journal pour : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

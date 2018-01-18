@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **dta** utilitaire est la version de l’invite de commandes de l’Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
@@ -134,7 +134,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *nom_base_de_données*  
- Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Exemple :  
+ Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Par exemple :  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* spécifié avec l’option **–D**||  
 |*owner_name*|**dbo**|*owner_name* doit avoir la valeur **dbo**. Si une autre valeur est spécifiée, l'exécution de **dta** échoue et il retourne une erreur.|  
-|*table_name*|None||  
+|*table_name*|Aucun||  
   
  Si un fichier est utilisé, spécifiez .xml comme extension. Par exemple, TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Spécifie les types de PDS (Physical Design Structures) que **dta** doit inclure dans la recommandation. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument. Si aucune valeur n’est spécifiée, **dta** utilise la valeur par défaut **fa****IDX**.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |IDX_IV|Index et vues indexées.|  
 |IDX|Index uniquement.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Spécifie les structures PDS (Physical Design Structures) que **dta** doit conserver lors de la génération de sa recommandation. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |Aucune|Aucune structure existante|  
 |ALL|Toutes les structures existantes|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Spécifie si les nouvelles PDS (Physical Design Structures) (index et vues indexées) que **dta** propose doivent être partitionnées et de quelle manière. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |Aucune|Aucun partitionnement|  
 |FULL|Partitionnement complet (choisissez cette option pour améliorer les performances)|  
@@ -220,7 +220,7 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  
  
-**-sweetiq**  
+**-iq**  
  Spécifie que le magasin de requêtes est utilisé comme la charge de travail. Les 1 000 premiers événements du magasin de requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  Consultez [magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [de paramétrage de base de données à l’aide de la charge de travail à partir du magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) pour plus d’informations.
  ||  
 |-|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  Spécifie le chemin d'accès et le nom du fichier de charge de travail à utiliser comme entrée pour le réglage. Le fichier doit être dans l'un de ces formats : .trc (fichier trace du Générateur de profils SQL Server), .sql (fichier SQL) ou .log (fichier de trace de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Un fichier de charge de travail ou une table de charge travail doit être spécifié.  
   
  **-it** *workload_trace_table_name*  
- Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié selon le format : [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié dans le format : [*nom_base_de_données*]**.** [*owner_name*] **. *** table_name*.  
   
  Le tableau suivant indique les valeurs par défaut de chaque paramètre :  
   
@@ -245,7 +245,7 @@ dta -d AdventureWorks2012 ...
 >  *owner_name* doit avoir la valeur **dbo**. Si toute autre valeur est spécifiée, l'exécution de **dta** échoue et une erreur est retournée. Notez également qu'une table de charge de travail ou un fichier de charge de travail doit être spécifié.  
   
  **-ix** *input_XML_file_name*  
- Spécifie le nom du fichier XML contenant les informations d’entrée **dta** . Ce doit être un document XML valide, conforme à DTASchema.xsd. Les arguments conflictuels spécifiés à partir de l'invite de commandes pour les options de réglage remplacent la valeur correspondante dans ce fichier XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans l'élément **Configuration** du fichier d'entrée XML et si un élément **EvaluateConfiguration** est également spécifié comme l'une des options de réglage, les options de réglage spécifiées dans le fichier d'entrée XML sont prioritaires par rapport à toute option de réglage entrée à partir de l'invite de commandes.  
+ Spécifie le nom du fichier XML contenant les informations d’entrée **dta** . Ce doit être un document XML valide, conforme à DTASchema.xsd. Les arguments conflictuels spécifiés à partir de l'invite de commandes pour les options de réglage remplacent la valeur correspondante dans ce fichier XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans l'élément **Configuration** du fichier d'entrée XML et si un élément **EvaluateConfiguration** est également spécifié comme l'une des options de réglage, les options de réglage spécifiées dans le fichier d'entrée XML sont prioritaires par rapport à toute option de réglage entrée à partir de l'invite de commandes.  
   
  **-m** *minimum_improvement*  
  Spécifie le pourcentage minimal d'amélioration que la configuration recommandée doit satisfaire.  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Spécifie si des PDS (Physical Design Structures) sont créées en ligne. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |OFF|Aucune PDS ne peut être créée en ligne.|  
 |ON|Toutes les PDS recommandées peuvent être créées en ligne.|  
@@ -357,7 +357,7 @@ Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de
   
  Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables (**-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
   
- **-U** *ID_connexion*  
+ **-U** *login_id*  
  Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  
@@ -366,7 +366,7 @@ Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de
  **-x**  
  Démarre une session de réglage et quitte.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Appuyez sur Ctrl+C pour arrêter la session de réglage et générer des recommandations basées sur l’analyse que **dta** a effectuée jusqu’à ce point. Un message vous demande de déterminer si vous souhaitez générer ou non des recommandations. Appuyez de nouveau sur CTRL+C pour arrêter la session de réglage sans générer de recommandations.  
   
 ## <a name="examples"></a>Exemples  

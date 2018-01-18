@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>Utilisateur et les paramètres de l’espace de travail
 
@@ -47,12 +47,22 @@ Modifications apportées aux paramètres sont rechargées par [!INCLUDE[name-sos
 
 Selon votre plateforme, le fichier de paramètres utilisateur se trouve ici :
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 Le fichier de paramètres d’espace de travail se trouve sous le `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` dossier dans votre projet.
 
+## <a name="hot-exit"></a>Sortie à chaud
+
+Studio d’opérations SQL sera n’oubliez pas les modifications non enregistrées dans des fichiers lorsque vous quittez par défaut. Cela est identique à la fonctionnalité de sortie à chaud dans Visual Studio Code.
+
+Par défaut, la sortie à chaud est désactivée. Permettre à chaud sortie en modifiant le `files.hotExit` paramètre. Pour plus d’informations, consultez [à chaud de sortie (dans la documentation de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## <a name="tab-color"></a>Couleur d’onglet
+
+Pour simplifier l’identifiant les connexions que vous travaillez, onglets ouverts dans l’éditeur peuvent avoir leurs couleurs configurées pour correspondre à la couleur du groupe de serveurs auquel appartient la connexion. Par défaut, les couleurs d’onglet sont désactivées par défaut. Activer les couleurs d’onglet en modifiant le `sql.tabColorMode` paramètre.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

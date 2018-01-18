@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Le **tablediff** utilitaire est utilisé pour comparer les données dans deux tables à une non-convergence et est particulièrement utile pour la résolution des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
@@ -85,7 +85,7 @@ tablediff
  Retour de la liste des paramètres pris en charge.  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Nom du serveur source. Spécifiez *source_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *source_server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Nom du serveur source. Spécifiez *source_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *source_server_name***\\***nom_instance* pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Nom de la base de données source.  
@@ -109,7 +109,7 @@ tablediff
  Durant la comparaison, la table source est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *destination_server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *destination_server_name***\\***nom_instance* pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Nom de la base de données de destination.  
@@ -176,7 +176,7 @@ tablediff
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Les tables comprenant des colonnes de types de données **sql_variant** ne sont pas prises en charge.  
@@ -187,7 +187,7 @@ tablediff
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**, **int**ou **bigint**|  
 |**smallint**|**int** ou **bigint**|  
-|**Int**|**bigint**|  
+|**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  

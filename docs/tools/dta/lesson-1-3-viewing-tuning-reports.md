@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Leçon 1-3 - affichage de rapports de paramétrage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans l’exercice précédent de cette leçon, vous avez affiché le [!INCLUDE[tsql](../../includes/tsql-md.md)] des scripts qui créent ou suppriment des objets de base de données dans les recommandations de paramétrage du moteur de base de données qui ont été générées à la suite de la session de paramétrage MySession. La session de paramétrage MySession a été créée dans [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
@@ -52,7 +52,7 @@ Bien qu'il soit très utile d'afficher les scripts utilisables pour implémenter
 Vous avez parcouru l'onglet **Rapports** de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour la session de paramétrage MySession. Vous pouvez suivre ces mêmes étapes pour parcourir les rapports générés pour la session de paramétrage EvaluateMySession (ÉvaluerMaSession). Double-cliquez sur **EvaluateMySession** dans le volet **Moniteur de session** pour commencer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 3 : Utilisation de l'utilitaire de ligne de commande dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Leçon 3 : Utilisation de l’utilitaire d’invite de commandes dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   

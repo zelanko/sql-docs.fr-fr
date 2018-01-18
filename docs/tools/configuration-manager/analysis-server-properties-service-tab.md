@@ -13,24 +13,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a91db42a951bc74c191bf9b63357d582eb91a451
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92a4c081478824ca40745c3985d30b90c66c5c8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propriétés de Analysis Server (onglet Service)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ce service est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce service doit être en cours d'exécution pour que [!INCLUDE[ssAS](../../includes/ssas-md.md)] fonctionne correctement. Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
   
 ## <a name="options"></a>Options  
- **Chemin d’accès binaire**  
+ **Chemin d'accès binaire**  
  Affiche l'emplacement des fichiers programme utilisés par ce service.  
   
- **Contrôle d’erreurs**  
+ **Contrôle d'erreurs**  
  1 indique `SERVICE_ERROR_NORMAL`. Si le lancement du service échoue pendant le démarrage de l'ordinateur, le programme de démarrage consigne l'erreur et affiche une boîte de message, mais poursuit l'opération de démarrage. Cette valeur ne peut pas être modifiée.  
   
  **Code de sortie**  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  Affiche le numéro qu’utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour effectuer le suivi des processus de ce programme.  
   
  **Type de service SQL**  
- Affiche le type de service fourni aux processus appelants. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
+ Affiche le type de service fourni aux processus appelants. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
   
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  

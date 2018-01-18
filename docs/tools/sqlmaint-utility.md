@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le**sqlmaint** utilitaire exécute un ensemble spécifique d’opérations de maintenance sur une ou plusieurs bases de données. Utilisez **sqlmaint** pour exécuter des vérifications DBCC, sauvegarder une base de données et son journal des transactions, mettre à jour des statistiques et reconstruire des index. Toutes les activités de maintenance de base de données produisent un rapport qui peut être envoyé vers un fichier texte, un fichier HTML ou un compte de messagerie déterminé. **sqlmaint** exécute les plans de maintenance de base de données créés avec des versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour exécuter des plans de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de l’invite de commandes, utilisez [l’utilitaire dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -86,7 +86,7 @@ number[minutes | hours | days | weeks | months]
  Spécifie que le diagramme de syntaxe pour l’utilitaire **sqlmaint** doit être retourné. Ce paramètre doit être utilisé seul.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez *server_name***\\***nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
+ Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez *nom_serveur***\\***nom_instance* pour se connecter à une instance nommée de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
   
  **-U** *login_ID*  
  Spécifie l'ID de connexion à utiliser lors de la connexion au serveur. Si celui-ci n’est pas fourni, **sqlmaint** tente d’utiliser l’authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Si *login_ID* contient des caractères spéciaux, il doit être encadré par des guillemets doubles. Ceux-ci sont facultatifs dans tous les autres cas.  
@@ -94,7 +94,7 @@ number[minutes | hours | days | weeks | months]
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
- **-P** *mot de passe*  
+ **-P** *password*  
  Spécifie le mot de passe de l’ID de connexion. Uniquement valide si le paramètre **-U** est également fourni. Si le *password* contient des caractères spéciaux, il doit être encadré par des guillemets doubles ; ceux-ci sont facultatifs dans tous les autres cas.  
   
 > [!IMPORTANT]  
@@ -233,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Si seul le paramètre *number* est spécifié, la partie de la date sélectionnée par défaut est **semaines**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’utilitaire **sqlmaint** effectue des opérations de maintenance sur une ou plusieurs bases de données. Si **-D** est spécifié, les opérations spécifiées par ailleurs portent uniquement sur la base de données indiquée. Si **-PlanName** ou **-PlanID** est spécifié, la seule information récupérée du plan de maintenance indiqué par **sqlmaint** est la liste des bases de données contenues dans le plan. Toutes les opérations spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à chaque base de données figurant sur la liste extraite du plan, l’utilitaire **sqlmaint** n’effectuant aucune opération de maintenance définie dans le plan lui-même.  
   
  L’utilitaire **sqlmaint** retourne 0 en cas de réussite et 1 en cas d’échec. L'échec de l'exécution est signalé :  

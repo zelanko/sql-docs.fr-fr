@@ -13,24 +13,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdd7b2f7ac6e01b52843e597f50bcbd6939053d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 01411079b539ebc1629ac39596f6c34d7f2c65f3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Propriétés de SQL Server Integration Services (onglet Service)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez le **Service**onglet sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **propriétés** boîte de dialogue pour afficher ou spécifier les options suivantes.  
   
 ## <a name="options"></a>Options  
- **Chemin d’accès binaire**  
+ **Chemin d'accès binaire**  
  Affiche l'emplacement des fichiers programme utilisés par ce service.  
   
- **Contrôle d’erreurs**  
+ **Contrôle d'erreurs**  
  1 indique `SERVICE_ERROR_NORMAL`. Si le lancement du service échoue pendant le démarrage de l'ordinateur, le programme de démarrage consigne l'erreur et affiche une boîte de message, mais poursuit l'opération de démarrage. Cette valeur ne peut pas être modifiée.  
   
  **Code de sortie**  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  Affiche l'ID de processus Windows.  
   
  **Type de service SQL**  
- Affiche le type de service fourni aux processus appelants. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
+ Affiche le type de service fourni aux processus appelants. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe plusieurs services.  
   
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  

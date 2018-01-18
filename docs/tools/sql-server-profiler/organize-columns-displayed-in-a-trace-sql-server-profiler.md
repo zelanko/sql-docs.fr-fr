@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organiser les colonnes affichées dans une trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vous pouvez grouper les colonnes de données dans une trace en sélectionnant **organiser les colonnes** dans la table de trace ou **propriétés du fichier de Trace** boîte de dialogue, ou lorsque vous définissez une trace. Le regroupement des colonnes de données vous permet de mieux analyser la sortie de trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Pour plus d’informations, consultez [Afficher et analyser des traces avec SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-| 1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   Choisissez une seule colonne de regroupement pour grouper et agréger les événements de trace. Lorsque vous ne choisissez qu'une colonne de données pour le regroupement, la fenêtre de trace affiche les événements en les groupant en fonction des valeurs de cette colonne de données et réduit tous les événements sous celle-ci. Un signe positif (**+**) apparaît à gauche de l’événement dans la colonne de données choisie pour le regroupement, tandis que le nombre d’événements réduits sous celle-ci apparaît entre parenthèses à droite de l’événement. L’exemple suivant indique comment la grille de la fenêtre de trace apparaît si vous choisissez uniquement la colonne de données **EventClass** pour le regroupement. Notez que tous les événements sont organisés sous la colonne de données **EventClass** . Pour afficher tous les événements, cliquez sur le signe plus pour développer et afficher toutes les classes d'événements correspondantes.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/21/2017
 7.  Pour revenir à une vue normale des données de trace, cliquez sur **Vue agrégée** dans le menu **Affichage** , pour annuler la sélection. Si vous souhaitez revenir à la vue agrégée, cliquez de nouveau sur **Vue agrégée** dans le menu **Affichage** afin de la sélectionner à nouveau. Vous pouvez également cliquer sur **Vue groupée** dans le menu **Affichage** pour afficher les événements de trace groupés sans les réduire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Créer une Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Ouvrir une Table de Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   

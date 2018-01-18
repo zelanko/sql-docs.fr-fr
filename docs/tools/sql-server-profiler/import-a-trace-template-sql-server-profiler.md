@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7824961599f764e423d71be6cf4d41d915227ca3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2aa9a75ec93b7faca5ee242792b63fa3490e1c46
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importer un modèle de trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique décrit comment importer un fichier de modèle de trace (.tdf) à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
      Le fichier est ajouté aux modèles disponibles dans la liste **Utiliser le modèle** de la boîte de dialogue **Propriétés de la trace** . La chaîne **(utilisateur)** figure à la fin du nom des modèles définis par l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un modèle de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Créer un modèle de Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Modifier un modèle de Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [Dériver un modèle à partir d’une Trace en cours d’exécution &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Dériver un modèle à partir d’un fichier de Trace ou Table de Trace &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

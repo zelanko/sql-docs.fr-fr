@@ -19,7 +19,7 @@
 ## [Exemples Analysis Services](analysis-services-samples.md)
 
 # Didacticiels
-## [Modélisation tabulaire (Didacticiel Adventure Works)](tabular-modeling-adventure-works-tutorial.md)  
+## [Modélisation tabulaire (niveau de compatibilité 1200)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Leçon 1 : Créer un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Leçon 2 : Ajouter des données](lesson-2-add-data.md)  
 ### [Leçon 3 : Marquer en tant que table de dates](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [Leçon supplémentaire : Implémenter la sécurité dynamique à l’aide des filtres de lignes](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Leçon supplémentaire : Configurer les propriétés de création de rapports pour les rapports Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Modélisation multidimensionnelle (Didacticiel Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Modélisation multidimensionnelle](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Scénario du didacticiel](analysis-services-tutorial-scenario.md)  
 ### [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](install-sample-data-and-projects.md)  
 ### [Leçon 1 : Définition d’une vue de source de données dans un projet Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  

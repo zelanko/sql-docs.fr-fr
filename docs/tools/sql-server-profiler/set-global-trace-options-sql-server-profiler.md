@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb801e92dfaa141be2b5e942a1c0bd95c19a6cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a830b25f8719953dec13a2ad43d0d7db275ee8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Définir les options globales de trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique explique comment définir des options qui s’appliquent à toutes les traces qui sont créés avec une instance spécifique de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
         |**86400**|Valeur maximale. Interroge les processus de blocage une fois toutes les **86400** secondes (une fois par jour).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les valeurs par défaut de l’affichage des traces &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Définir l’affichage par défaut des traces &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

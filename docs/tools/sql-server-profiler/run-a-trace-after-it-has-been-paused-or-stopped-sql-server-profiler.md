@@ -18,15 +18,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c342e43e792438f230e753809ef237d0bd459c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9983653d8ba6496dc26f5104d584ca2a2151364
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>Exécuter une trace après qu'elle a été suspendue ou arrêtée (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique explique comment démarrer une trace après qu’il a été suspendu ou arrêté à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -39,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Démarrer une trace](../../tools/sql-server-profiler/start-a-trace.md)  
+ [Démarrer une Trace](../../tools/sql-server-profiler/start-a-trace.md)  
   
   

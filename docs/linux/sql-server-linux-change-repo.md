@@ -1,5 +1,5 @@
 ---
-title: "Inscrire le le référentiel de la disponibilité générale de SQL Server sur Linux | Documents Microsoft"
+title: "Inscrire le référentiel de la disponibilité générale de SQL Server sur Linux | Documents Microsoft"
 description: "Modifier les référentiels à partir du référentiel SQL Server 2017 d’aperçu dans le référentiel de disponibilité générale sur Linux (disponibilité générale est parfois également appelé RTM)."
 author: annashres
 ms.author: anshrest
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Modification des référentiels à partir du référentiel d’aperçu dans le référentiel GA
 

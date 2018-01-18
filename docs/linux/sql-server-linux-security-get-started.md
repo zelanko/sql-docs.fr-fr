@@ -1,9 +1,9 @@
 ---
 title: "Prise en main la sécurité SQL Server sur Linux | Documents Microsoft"
 description: "Cette rubrique décrit les actions de sécurité standard."
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: 
 ms.workload: Inactive
-ms.openlocfilehash: cb8f44ae871d3e1ec81d576439d81508ac2c96f5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
 
@@ -31,7 +31,7 @@ Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les t
 
 ## <a name="create-a-login-and-a-database-user"></a>Créez une connexion et un utilisateur de base de données 
 
-D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Exemple :
+D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Par exemple :
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -52,7 +52,7 @@ GO
 - Un compte d’administrateur SQL Server peut se connecter à une base de données et pouvez créer plusieurs connexions et utilisateurs dans une base de données.  
 - Lorsqu’un utilisateur crée une base de données qu’ils deviennent le propriétaire de base de données, ce qui peut se connecter à cette base de données. Les propriétaires de base de données peuvent créer d’autres utilisateurs.
 
-Ultérieurement, vous pouvez autoriser des connexions pour créer une connexion plus en leur octroyant le `ALTER ANY LOGIN` autorisation. À l’intérieur d’une base de données, vous pouvez autoriser d’autres utilisateurs à créer d’autres utilisateurs en leur octroyant le `ALTER ANY USER` autorisation. Exemple :   
+Ultérieurement, vous pouvez autoriser des connexions pour créer une connexion plus en leur octroyant le `ALTER ANY LOGIN` autorisation. À l’intérieur d’une base de données, vous pouvez autoriser d’autres utilisateurs à créer d’autres utilisateurs en leur octroyant le `ALTER ANY USER` autorisation. Par exemple :   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

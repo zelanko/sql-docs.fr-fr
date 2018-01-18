@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4064f8eb4d2dfd37d0ae201977739fff9df67f1a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9fbe93dba70125f12d20ee6ae2227d477b08ef19
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-services-powershell-reference"></a>Référence PowerShell Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Applets de commande PowerShell sont inclus dans le [module SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
  Si vous souhaitez utiliser PowerShell pour effectuer une tâche qui n’est pas représentée dans la liste suivante (par exemple, pour créer ou synchroniser une base de données), vous pouvez écrire le script TMSL ou XMLA de cette action, puis l’exécuter à l’aide de l’applet de commande **Invoke-ASCmd** .  
   
-|Applet de commande|Description|Méthodes AMO équivalentes|  
+|Applet de commande| Description|Méthodes AMO équivalentes|  
 |------------|-----------------|----------------------------|  
 |[Applet de commande Add-RoleMember](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Ajoutez un membre à un rôle de base de données.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
 |[Applet de commande Backup-ASDatabase](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Sauvegardez une base de données Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  

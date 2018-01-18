@@ -15,13 +15,13 @@ ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fdc9277c24dc7fdec267c593862aa8ca45802b8
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: b90819fbed37aa41a23a257caf287fd563da6ffa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-options"></a>Options de connexion
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +34,9 @@ Cette rubrique répertorie les options qui sont autorisées dans le tableau asso
 |ApplicationIntent|Chaîne|Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. Les valeurs possibles sont ReadOnly et ReadWrite.<br /><br />Pour plus d’informations sur la prise en charge de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pour les [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consultez [Pilote PHP pour la prise en charge de la haute disponibilité et de la récupération d’urgence par SQL Server](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|Chaîne|Spécifie le fichier de base de données que le serveur doit attacher.|Aucune valeur n’est définie.|  
 |Authentification|Une des chaînes suivantes :<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Spécifie le mode d’authentification.|Pas définie.|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|Chaîne|Spécifiez le chemin d’accès, le nom et la clé de chiffrement pour un fournisseur de magasin de clés personnalisé pour la fonctionnalité toujours chiffré. Les trois valeurs doivent être définies pour configurer correctement le fournisseur de magasin de clés personnalisé lors de la connexion. Pour plus d’informations, consultez [activer le chiffrement intégral dans une Application PHP](../../connect/php/enabling-always-encrypted-php-application.md).|Aucune valeur n’est définie.|
+|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|Chaîne|Spécifiez le chemin d’accès, le nom et la clé de chiffrement pour un fournisseur de magasin de clés personnalisé pour la fonctionnalité toujours chiffré. Les trois valeurs doivent être définies pour configurer correctement le fournisseur de magasin de clés personnalisé lors de la connexion. |Aucune valeur n’est définie.|
 |CharacterSet<br /><br />(non pris en charge dans le pilote PDO_SQLSRV)|Chaîne|Spécifie le jeu de caractères utilisé pour envoyer des données au serveur.<br /><br />Les valeurs possibles sont SQLSRV_ENC_CHAR et UTF-8. Pour plus d’informations, consultez [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**Activé** ou **désactivé**|Spécifie si la fonctionnalité toujours chiffré est activée ou non. Pour plus d’informations, consultez [activer le chiffrement intégral dans une Application PHP](../../connect/php/enabling-always-encrypted-php-application.md).|Désactivé|  
+|ColumnEncryption|**Activé** ou **désactivé**|Spécifie si la fonctionnalité toujours chiffré est activée ou non. |Désactivé|  
 |ConnectionPooling|1 ou **true** pour activer le regroupement de connexions.<br /><br />0 ou **false** pour désactiver le regroupement de connexions.|Spécifie si la connexion est attribuée à partir d’un pool de connexions (1 ou **true**) ou non (0 ou **false**).<sup> 1</sup>|**true** (1)|  
 |Base de données|Chaîne|Spécifie le nom de la base de données en cours d’utilisation pour la connexion établie<sup>2</sup>.|Base de données par défaut pour la connexion utilisée.|  
 |Pilote|Chaîne|Spécifie le pilote ODBC Microsoft utilisé pour communiquer avec SQL Server.<br /><br />Les valeurs possibles sont :<br />Pilote ODBC 17 pour SQL Server<br />ODBC Driver 13 for SQL Server<br />Pilote ODBC 11 pour SQL Server (Windows uniquement).|Lorsque le mot clé Driver n’est pas spécifié, le Microsoft Drivers for PHP for SQL Server tentent de trouver l’existence des ou les pilotes ODBC Microsoft pris en charge dans le système, en commençant avec la dernière version d’ODBC et ainsi de suite.|  

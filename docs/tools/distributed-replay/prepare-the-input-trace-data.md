@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7f92ad0cc65a6e4be5df650d480e5bbb04174f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Avant de démarrer une relecture distribuée avec le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalité Distributed Replay, vous devez préparer les données de trace d’entrée en initialisant l’étape de prétraitement à partir de l’outil d’administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
@@ -65,8 +65,8 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Conditions préalables de relecture distribuée](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Options de ligne de commande de l’outil Administration &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
