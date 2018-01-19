@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs de Table (Transact-SQL) :
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
+ Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Par exemple :  
   
 ```  
 FROM t (TABLOCK)  
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d'informations, consultez la section Notes.  
   
- INDEX **(***index_value* [**,**... *n* ] ) | INDEX = ( *index_value***)**  
+ INDEX  **(*** index_value* [**,**... *n* ] ) | INDEX = ( *index_value ***)**  
  La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
   
  S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que INDEX(1) en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, INDEX(0) force l'analyse d'une table et INDEX(1) est interprété comme une erreur.  
@@ -184,7 +184,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... Sélectionnez * à partir de l’instruction d’OPENROWSET, consultez [conserver les valeurs NULL ou utiliser par défaut les valeurs pendant une importation en bloc &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***index_value***(*** index_column_name* [ **,**... *n* ] **))** ]  
  Indique que l'optimiseur de requête doit utiliser uniquement une opération de recherche d'index comme chemin d'accès aux données dans la table ou la vue. À partir de SQL Server 2008 R2 SP1, les paramètres d'index peuvent également être spécifiés. Dans ce cas, l'optimiseur de requête considère uniquement les opérations de recherche d'index par le biais de l'index spécifié utilisant au moins les colonnes d'index spécifiées.  
   
  *index_value*  
@@ -195,7 +195,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  L'indicateur FORCESEEK peut être spécifié des manières suivantes.  
   
-|Syntaxe| Exemple|Description|  
+|Syntaxe|Exemple| Description|  
 |------------|-------------|-----------------|  
 |Sans index ou indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK)`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de tout index approprié.|  
 |Combiné avec un indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de l'index spécifié.|  
@@ -383,7 +383,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  Spécifie que les verrous exclusifs doivent être établis et maintenus jusqu'à ce que la transaction s'achève. Si l'option ROWLOCK, PAGLOCK ou TABLOCK est spécifiée, les verrous exclusifs s'appliquent au niveau de granularité approprié.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les indicateurs de table sont ignorés si l'accès à la table ne s'effectue pas par un plan de requête. Ceci peut résulter du choix de l'optimiseur d'empêcher globalement l'accès à la table ou de l'accès à une vue indexée à la place. Dans ce dernier cas, l'accès à une vue indexée peut être proscrit à l'aide de l'indicateur de requête OPTION (EXPAND VIEWS).  
   
  Tous les indicateurs de verrou sont diffusés à toutes les vues et tables accessibles par le plan de requête ainsi que les vues et tables référencées dans une vue. En outre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les contrôles de cohérence de verrous correspondants.  
@@ -501,7 +501,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Voir aussi  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Indicateurs de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

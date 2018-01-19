@@ -1,5 +1,5 @@
 ---
-title: READTEXT (Transact-SQL) | Documents Microsoft
+title: READTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17d233bf75593d8b27a458120dbcb2035bc7d2ec
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *table* **.** *colonne*  
+ *table* **.** *column*  
  Nom de la table et de la colonne dont le contenu doit être lu. Les noms de table et de colonne doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md). Les noms de la table et de la colonne sont obligatoires ; ceux de la base de données et du propriétaire sont facultatifs.  
   
- *pointeur_texte*  
+ *text_ptr*  
  Pointeur de texte valide. *pointeur_texte* doit être **Binary (16)**.  
   
- *décalage*  
+ *offset*  
  Est le nombre d’octets (lorsque le **texte** ou **image** types de données sont utilisés) ou caractères (lorsque le **ntext** type de données est utilisé) à ignorer avant de commencer à lire le **texte**, **image**, ou **ntext** données.  
   
- *taille*  
+ *size*  
  Est le nombre d’octets (lorsque le **texte** ou **image** types de données sont utilisés) ou de caractères (lorsque le **ntext** type de données est utilisé) de données à lire. Si *taille* est 0, 4 Ko de données est en lecture.  
   
  HOLDLOCK  
@@ -71,7 +71,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  La valeur de la @@TEXTSIZE fonction remplace la taille indiquée dans READTEXT si elle est inférieure à la taille spécifiée pour READTEXT. Le @@TEXTSIZE fonction spécifie la limite du nombre d’octets de données à renvoyer, défini par l’instruction SET TEXTSIZE. Pour plus d’informations sur la façon de définir le paramètre de session, consultez [SET TEXTSIZE &#40; Transact-SQL &#41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations READTEXT reviennent par défaut aux utilisateurs ayant des autorisations SELECT sur la table indiquée. Ces autorisations peuvent être transférées lorsque les autorisations SELECT sont transférées.  
   
 ## <a name="examples"></a>Exemples  

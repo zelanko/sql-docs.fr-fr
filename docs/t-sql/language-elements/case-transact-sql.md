@@ -1,5 +1,5 @@
 ---
-title: CAS (Transact-SQL) | Documents Microsoft
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: df29d72722d665e9595105a01a3a89841ec2b4ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,16 +76,16 @@ END
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Il peut s’agir*  
+ *input_expression*  
  Expression évaluée à l'aide du format CASE simple. *Il peut s’agir* valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  Lorsque *il peut s’agir*  
  Une expression simple à laquelle *il peut s’agir* est comparé quand le format CASE simple est utilisé. *Il peut s’agir* toute expression valide. Les types de données de *il peut s’agir* et chaque *il peut s’agir* doivent être identiques ou permettre une conversion implicite.  
   
- PUIS *result_expression*  
+ THEN *result_expression*  
  Expression retournée lorsque *il peut s’agir* est égal à *il peut s’agir* a la valeur TRUE, ou *Boolean_expression* a la valeur TRUE. *expressions de résultat* valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- AUTRE *else_result_expression*  
+ ELSE *else_result_expression*  
  Expression retournée si aucune opération de comparaison n'a la valeur TRUE. Si cet argument est omis et si aucune opération de comparaison n'a la valeur TRUE, CASE retourne la valeur NULL. *else_result_expression* toute expression valide. Les types de données de *else_result_expression* et n’importe quel *result_expression* doivent être identiques ou permettre une conversion implicite.  
   
  Lorsque *Boolean_expression*  
@@ -115,7 +115,7 @@ END
   
 -   Si aucun *Boolean_expression* a la valeur TRUE, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne le *else_result_expression* si une clause ELSE est spécifiée, ou une valeur NULL si aucune clause ELSE n’est spécifiée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise uniquement 10 niveaux d'imbrication dans les expressions CASE.  
   
  L'expression CASE ne peut pas être utilisée pour contrôler le flux d'exécution d'instructions, de blocs d'instructions, de fonctions définies par l'utilisateur et de procédures stockées Transact-SQL. Pour obtenir la liste des méthodes de contrôle de flux, consultez [langage de contrôle de flux &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
@@ -355,11 +355,11 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Fusionner &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [Choisissez &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

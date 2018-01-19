@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,27 +48,27 @@ ms.lasthandoff: 01/09/2018
 |MAJUSCULES|Mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*italique*|Paramètres de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fournis par l'utilisateur.|  
 |**gras**|Noms de bases de données, de tables, de colonnes, d'index, de procédures stockées, d'utilitaires, de types de données et de textes à taper tel qu'indiqués.|  
-|**soulignement**|Indique que l'instruction est omise par la valeur par défaut appliquée lorsque la clause contient la valeur soulignée.|  
+|**underline**|Indique que l'instruction est omise par la valeur par défaut appliquée lorsque la clause contient la valeur soulignée.|  
 |&#124; (barre verticale)|Sépare les éléments de syntaxe placés entre crochets ou entre accolades. Vous ne pouvez utiliser qu'un seul de ces éléments.|  
 |`[ ]` (crochets)|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |{} (accolades)|Éléments de syntaxe obligatoires. Ne tapez pas les accolades.|  
 |[**,**...*n*]|Indique l’élément précédent peut se répéter  *n*  nombre de fois. Les occurrences sont séparées par des virgules.|  
 |[...*n*]|Indique l’élément précédent peut se répéter  *n*  nombre de fois. Les occurrences sont séparées par des espaces.|  
 |;|Terminateur d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Bien que le point-virgule ne soit pas requis pour la plupart des instructions dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il sera requis dans une version à venir.|  
-|\<étiquette > :: =|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est signalé par une étiquette encadrée de chevrons : \<étiquette >.<br /><br /> Un jeu est une collection d’expressions, par exemple \<jeu de regroupement > ; une liste est une collection de jeux, par exemple \<liste d’éléments composites >.|  
+|\<label> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est signalé par une étiquette encadrée de chevrons : \<étiquette >.<br /><br /> Un jeu est une collection d’expressions, par exemple \<jeu de regroupement > ; une liste est une collection de jeux, par exemple \<liste d’éléments composites >.|  
   
 ## <a name="multipart-names"></a>Noms à plusieurs composantes  
  Sauf indication contraire, toutes les références [!INCLUDE[tsql](../../includes/tsql-md.md)] au nom d'un objet de base de données peuvent prendre la forme d'un nom à quatre composantes, comme suit :  
   
- *nom_serveur* **.** [*nom_base_de_données*]**.** [*nom_schéma*]**.** *nom_objet*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***.** [*nom_schéma*]**.** *nom_objet*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***.** *nom_objet*  
+ | *schema_name***.***object_name*  
   
- *| nom_objet*  
+ *| object_name*  
   
- *nom_serveur*  
+ *server_name*  
  Spécifie un nom de serveur lié ou un nom de serveur distant.  
   
  *database_name*  
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |Format de la référence d'objet| Description|  
 |-----------------------------|-----------------|  
-|*serveur* **.** *base de données* **.** *schéma* **.** *objet*|Nom à quatre composantes.|  
-|*serveur* **.** *base de données* **...** *objet*|Le nom du schéma est omis.|  
-|*serveur* **...** *schéma* **.** *objet*|Le nom de la base de données est omis.|  
-|*serveur* **...**  *objet*|Les noms de la base de données et du schéma sont omis.|  
-|*base de données* **.** *schéma* **.** *objet*|Le nom du serveur est omis.|  
+|*server* **.** *database* **.** *schema* **.** *objet*|Nom à quatre composantes.|  
+|*server* **.** *base de données* **...** *objet*|Le nom du schéma est omis.|  
+|*server* **..** *schema* **.** *objet*|Le nom de la base de données est omis.|  
+|*server* **...** *object*|Les noms de la base de données et du schéma sont omis.|  
+|*database* **.** *schema* **.** *objet*|Le nom du serveur est omis.|  
 |*base de données* **...** *objet*|Les noms du serveur et du schéma sont omis.|  
-|*schéma* **.** *objet*|Les noms du serveur et de la base de données sont omis.|  
+|*schema* **.** *objet*|Les noms du serveur et de la base de données sont omis.|  
 |*objet*|Les noms du serveur, de la base de données et du schéma sont omis.|  
   
 ## <a name="code-example-conventions"></a>Conventions des exemples de code  

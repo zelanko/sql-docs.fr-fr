@@ -25,15 +25,15 @@ helpviewer_keywords:
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4555a892c55ae8ef40e8fd0c3658412e3641d973
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ee91826fe19979d411c10baf2ab4c60f225d0bb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>DE - à l’aide des opérateurs PIVOT et UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -210,7 +210,7 @@ VendorID    Employee    Orders
  Le `Sales.vSalesPersonSalesByFiscalYears` afficher dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] exemple de base de données utilise `PIVOT` pour retourner le total des ventes de chaque vendeur, par exercice comptable. Créer un script de la vue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans **l’Explorateur d’objets**, recherchez celle-ci dans le **vues** dossier pour le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données. Cliquez sur le nom de la vue, puis **mode Script en tant que**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À partir de (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CAS (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

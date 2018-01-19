@@ -1,5 +1,5 @@
 ---
-title: "À partir de (Transact-SQL) | Documents Microsoft"
+title: FROM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<table_source >  
+\<table_source>  
  Spécifie une table, une vue, une variable de table ou une source de table dérivée, avec ou sans alias, à utiliser dans l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez utiliser jusqu'à 256 sources de table dans une instruction, bien que cette limite varie en fonction de la mémoire disponible et de la complexité des autres expressions constituant la requête. Les requêtes individuelles peuvent ne pas prendre en charge 256 sources de table.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ FROM { <table_source> [ ,...n ] }
   
  L'ordre des sources de table après le mot clé FROM n'a aucune incidence sur le jeu de résultats retourné. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des erreurs lorsque des noms dupliqués apparaissent dans la clause FROM.  
   
- *nom_table_ou_vue*  
+ *table_or_view_name*  
  Nom d'une table ou d'une vue.  
   
  Si la table ou la vue existe dans une autre base de données sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez un nom complet sous la forme *base de données*. *schéma*. *nom_objet*.  
@@ -184,7 +184,7 @@ FROM { <table_source> [ ,...n ] }
  AVEC (\<indicateur de table >)  
  Spécifie que l'optimiseur de requête utilise une stratégie d'optimisation ou de verrouillage avec cette table et pour cette instruction. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- *fonction_ensemble_de_lignes*  
+ *rowset_function*  
 
 **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -206,14 +206,14 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Spécifie une fonction table.  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Fournit une vue de l'ensemble de lignes d'un document XML. Pour plus d’informations, consultez [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md).  
   
- *table_dérivée*  
+ *derived_table*  
  Sous-requête qui récupère les lignes de la base de données. *table_dérivée* est utilisé en tant qu’entrée à la requête externe.  
   
  *dérivés* *_table* pouvez utiliser la [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionnalité de constructeur de valeur de table pour spécifier plusieurs lignes. Par exemple, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Pour plus d’informations, consultez [constructeur de valeurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
@@ -221,14 +221,14 @@ FROM { <table_source> [ ,...n ] }
  *column_alias*  
  Alias facultatif qui peut remplacer un nom de colonne dans le jeu de résultats de la table dérivée. Utilisez un alias de colonne pour chaque colonne de la liste de sélection et placez l'intégralité de la liste d'alias de colonnes entre parenthèses.  
   
- *nom_table_ou_vue* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Spécifie qu’une version spécifique de données est retournée à partir de la table temporelle spécifiée et sa table d’historique avec version système lié  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT, UPDATE ou DELETE. TABLESAMPLE ne peut pas être spécifié avec des vues.  
   
 > [!NOTE]  
@@ -252,13 +252,13 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Expression d'un entier de type constante utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer un nombre aléatoire. *repeat_seed* est **bigint**. Si *repeat_seed* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte une valeur aléatoire. Pour un spécifique *repeat_seed* valeur, le résultat de l’échantillonnage est toujours le même si aucune modification n’ont été appliquées à la table. Le *repeat_seed* expression doit correspondre à un entier supérieur à zéro.  
   
- \<joined_table >  
+ \<joined_table>  
  Jeu de résultats correspondant au produit de deux ou plusieurs tables. Pour plusieurs jointures, utilisez des parenthèses afin de modifier l'ordre naturel des jointures.  
   
-\<join_type >  
+\<join_type>  
  Spécifie le type d'opération de jointure.  
   
- **INTERNE**  
+ **INNER**  
  Spécifie que toutes les paires correspondantes de lignes sont retournées. Supprime les lignes n'ayant pas de correspondance dans les deux tables. Lorsqu'aucun type de jointure n'est spécifié, cet argument est la valeur par défaut.  
   
  FULL [ OUTER ]  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Spécifie que toutes les lignes de la table de droite qui ne respectent pas la condition de jointure sont incluses dans le jeu de résultats et que les colonnes de sortie qui correspondent à l'autre table ont des valeurs NULL en plus de toutes les lignes retournées par la jointure interne.  
   
-\<indicateurs join_hint >  
+\<join_hint>  
  Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], qui spécifie le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requête optimiseur utilise un indicateur de jointure ou un algorithme d’exécution par jointure spécifiée dans la clause FROM de la requête. Pour plus d’informations, consultez [indicateurs de jointure &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], ces indicateurs de jointure s’appliquent aux jointures INNER sur deux colonnes incompatibles de distribution. Ils peuvent améliorer les performances en limitant la quantité de déplacement des données qui se produit pendant le traitement des requêtes. Indicateurs de la jointure autorisée pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sont les suivantes :  
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  Indique que l'opération de jointure spécifiée doit avoir lieu entre les sources de table ou les vues spécifiées.  
   
- ON \<search_condition >  
+ ON \<search_condition>  
  Spécifie la condition sur laquelle se base la jointure. Celle-ci peut spécifier n'importe quel prédicat, bien que les colonnes et les opérateurs de comparaison soient souvent utilisés, par exemple :  
   
 ```sql
@@ -322,7 +322,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Source de table, telle qu'elle est définie dans l'argument précédent. Pour plus d'informations, consultez la section Notes.  
   
- *table_source* PIVOT \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  Spécifie que le *table_source* est croisé dynamiquement sur la *pivot_column*. *table_source* est une table ou une expression de table. La sortie est une table qui contient toutes les colonnes de la *table_source* , sauf le *pivot_column* et *value_column*. Les colonnes de la *table_source*, sauf le *pivot_column* et *value_column*, sont appelées colonnes de regroupement de l’opérateur pivot. Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, consultez [à l’aide de PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT opère un regroupement sur la table d'entrée par rapport aux colonnes de regroupement et retourne une ligne par groupe. En outre, la sortie contient une colonne pour chaque valeur spécifiée dans le *column_list* qui s’affiche dans le *pivot_column* de la *input_table*.  
@@ -337,7 +337,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  Colonne de valeur de l'opérateur PIVOT. Lorsqu’il est utilisé avec UNPIVOT, *value_column* ne peut pas être le nom d’une colonne existante dans l’entrée *table_source*.  
   
- POUR *pivot_column*  
+ FOR *pivot_column*  
  Colonne de tableau croisé dynamique de l'opérateur PIVOT. *pivot_column* doit être d’un type implicitement ou explicitement convertible en **nvarchar()**. Cette colonne ne peut pas être **image** ou **rowversion**.  
   
  Lorsque l’opérateur UNPIVOT est utilisé, *pivot_column* est le nom de la colonne de sortie qui est réduite à partir de la *table_source*. Il ne peut pas être une colonne existante de *table_source* portant ce nom.  
@@ -347,20 +347,20 @@ ON (p.ProductID = v.ProductID);
   
  Dans la clause UNPIVOT, répertorie les colonnes de *table_source* qui doivent être réduites à une seule *pivot_column*.  
   
- *alias_de_table*  
+ *table_alias*  
  Nom d'alias de la table de sortie. *pivot_table_alias* doit être spécifié.  
   
  UNPIVOT \< unpivot_clause >  
  Spécifie que la table d’entrée est réduite de plusieurs colonnes dans *column_list* en une seule colonne appelée *pivot_column*. Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, consultez [à l’aide de PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- En tant que de \<date_heure >  
+ AS OF \<date_time>  
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique et les résultats sont filtrés pour renvoyer les valeurs de la ligne qui était valide au point dans le temps spécifié par le  *\<date_heure >* paramètre. La valeur d’une ligne est considérée comme valide si le *system_start_time_column_name* la valeur est inférieure ou égale à la  *\<date_heure >* la valeur du paramètre et le *system_end_time_column_name* valeur est supérieure à la  *\<date_heure >* la valeur du paramètre.   
   
- À partir de \<start_date_time > TO \<end_date_time >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
@@ -373,7 +373,7 @@ ON (p.ProductID = v.ProductID);
   
  Identique à celle ci-dessus dans le **FROM \<start_date_time > à \<end_date_time >** description, mais il inclut des lignes qui sont devenues actives sur la limite supérieure définie par le \<end_date_time > point de terminaison.  
   
- CONTAINED IN (\<start_date_time >, \<end_date_time >)  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -383,7 +383,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Retourne une table avec les valeurs de toutes les lignes de la table actuelle et la table d’historique.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La clause FROM prend en charge la syntaxe SQL-92 pour les tables jointes et les tables dérivées. La syntaxe SQL-92 fournit les opérateurs de jointure INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER et CROSS.  
   
  UNION et JOIN à l'intérieur d'une clause FROM sont pris en charge aussi bien dans les vues que dans les tables dérivées et les sous-requêtes.  
@@ -857,9 +857,9 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

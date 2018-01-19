@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ Retourne un objet géométrique qui représente l’union du point de toutes les
  *distance*  
  Est un **float** expression qui spécifie la distance à partir de la **geometry** instance autour de laquelle calculer la mémoire tampon.  
   
- *tolérance de panne*  
+ *tolerance*  
  Est un **float** expression qui spécifie la tolérance de la distance de tampon.  
   
  *La tolérance de panne* fait référence à la variation maximale dans la distance de tampon idéale pour l’approximation linéaire retournée.  
   
  Par exemple, la distance de mémoire tampon idéale d'un point est un cercle, mais elle doit être exprimée de façon à se rapprocher d'un polygone. Plus la tolérance est petite, plus le polygone aura de points, ce qui augmente la complexité du résultat mais décroît l'erreur.  
   
- *relatif*  
+ *relative*  
  Est un **bits** spécifiant si le *la tolérance de panne* valeur est relatif ou absolu. Si 'TRUE' ou 1, puis la tolérance est relative et est calculée comme étant le produit de la *la tolérance de panne* paramètre et du diamètre du rectangle englobant de l’instance. Si 'FALSE' ou 0, la tolérance est absolue et la *la tolérance de panne* valeur est la variation maximale absolue dans la distance de tampon idéale pour l’approximation linéaire retournée.  
   
 ## <a name="return-types"></a>Types de retour  

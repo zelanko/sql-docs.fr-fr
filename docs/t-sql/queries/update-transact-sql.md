@@ -39,15 +39,15 @@ helpviewer_keywords:
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d30edc04b6b78ae1ccff83028433c4a25e25ca33
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,17 +124,17 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Vous pouvez également utiliser des expressions de table courantes avec les instructions SELECT, INSERT, DELETE et CREATE VIEW. Pour plus d’informations, consultez [avec common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- HAUT **(** *expression***)** [%]  
+ HAUT **(** *expression ***)** [%]  
  Spécifie le nombre ou le pourcentage de lignes qui sont mis à jour. L'argument*expression* peut être un nombre ou un pourcentage de lignes.  
   
  Les lignes référencées dans l'expression TOP utilisée dans les instructions INSERT, UPDATE ou DELETE ne sont pas triées dans un ordre précis.  
   
  Les parenthèses qui entourent *expression* dans TOP sont nécessaires dans les instructions INSERT, UPDATE et DELETE. Pour plus d’informations, consultez [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
- *alias_de_table*  
+ *table_alias*  
  Alias spécifié dans la clause FROM représentant la table ou la vue à partir de laquelle les lignes doivent être mises à jour.  
   
- *nom_serveur*  
+ *server_name*  
  Est le nom du serveur (à l’aide d’un nom de serveur lié ou [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) fonctionner en tant que le nom du serveur) sur lequel se trouve la table ou la vue. Si *nom_serveur* est spécifié, *nom_base_de_données* et *nom_schéma* sont requis.  
   
  *database_name*  
@@ -149,7 +149,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  Est soit le [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) fonction, selon les possibilités du fournisseur.  
   
- AVEC **(** \<Table_Hint_Limited > **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  Spécifie un ou plusieurs indicateurs de table autorisés pour une table cible. Le mot clé WITH et les parenthèses sont obligatoires. NOLOCK et READUNCOMMITTED ne sont pas autorisés. Pour plus d’informations sur les indicateurs de table, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -174,7 +174,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Opérateur d'assignation composé :  
  += Ajouter et attribuer  
  -= Soustraire et attribuer  
- * = Multiplier et attribuer  
+ *= Multiplier et attribuer  
  / = Diviser et attribuer  
  % = Modulo et attribuer  
  & = et au niveau du bit et attribuer  
@@ -184,7 +184,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  Colonne définie par l'utilisateur.  
   
- *property_name* | *nom_champ*  
+ *property_name* | *field_name*  
  Propriété publique ou membre de données public d'un type défini par l'utilisateur.  
   
  *nom_méthode* **(** *argument* [ **,**... *n*] **)**  
@@ -201,15 +201,15 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Pour plus d'informations, consultez la section Notes.  
   
- **@***variable*  
+ **@** *variable*  
  Est une variable déclarée est définie sur la valeur retournée par *expression*.  
   
- Définissez  **@**  *variable* = *colonne* = *expression* définit la variable à la même valeur que la colonne. Cela est différent de SET  **@**  *variable* = *colonne*, *colonne* = *expression*, qui définit la variable à la valeur de la mise à jour avant de la colonne.  
+ DÉFINIR **@*** variable* = *colonne* = *expression* définit la variable à la même valeur que la colonne. Cela est différent de SET **@*** variable* = *colonne*, *colonne* = *expression*, qui affecte le variable à la valeur de la mise à jour avant de la colonne.  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  Retourne des données mises à jour ou des expressions associées dans le cadre de l'opération UPDATE. La clause OUTPUT n'est pas prise en charge dans les instructions DML, qui ciblent les tables ou les vues distantes. Pour plus d’informations, consultez [Clause OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
- À partir de \<table_source >  
+ FROM \<table_source>  
  Spécifie qu'une table, une vue ou une source de table dérivée sont utilisées pour fournir les valeurs destinées à servir de critères en vue de la mise à jour. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
  Si l'objet mis à jour est le même que l'objet de la clause FROM et s'il n'existe qu'une seule référence à cet objet de la clause FROM, un alias d'objet pourra être spécifié ou non. Si l'objet mis à jour apparaît plusieurs fois dans la clause FROM, l'une des références, mais une seule, à cet objet ne doit pas spécifier un alias de la table. Toutes les autres références à l'objet dans la clause FROM doivent inclure un alias d'objet.  
@@ -226,7 +226,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   Les mises à jour avec positions utilisent la clause CURRENT OF pour définir un curseur. La mise à jour se produit à l'emplacement actuel du curseur.  
   
-\<search_condition >  
+\<search_condition>  
  Spécifie la condition à remplir pour mettre à jour les lignes. La condition de recherche peut également être la condition sur laquelle est basée une jointure. Le nombre de prédicats inclus dans une condition de recherche est illimité. Pour plus d’informations sur les prédicats et les conditions de recherche, consultez [Condition de recherche &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -237,13 +237,13 @@ CURRENT OF
 GLOBAL  
  Spécifie que *cursor_name* fait référence à un curseur global.  
   
-*tous les autres cas*  
+*cursor_name*  
  Nom du curseur ouvert grâce auquel s'effectue l'extraction. Si un global et un curseur local portant le nom *cursor_name* existe, cet argument fait référence au curseur global si GLOBAL est spécifié ; sinon, elle fait référence au curseur local. Le curseur doit pouvoir gérer les mises à jour.  
   
-*nom_de_variable_de_curseur*  
+*cursor_variable_name*  
  Est le nom d’une variable de curseur. *nom_de_variable_de_curseur* doit faire référence à un curseur qui autorise les mises à jour.  
   
-OPTION **(** \<query_hint > [ **,**... *n* ] **)**  
+OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
  Spécifie que les indicateurs d’optimiseur sont utilisées pour personnaliser la façon dont le [!INCLUDE[ssDE](../../includes/ssde-md.md)] traite l’instruction. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
@@ -334,7 +334,7 @@ GO
 >  Le **ntext**, **texte**, et **image** des types de données seront supprimées dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)et [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Mise à jour des données de valeurs élevées  
- Utilisez le **.** ÉCRIRE (*expression***,**  *@Offset*  **,***@Length*) pour effectuer une mise à jour partielle ou complète de clause **varchar (max)**, **nvarchar (max)**, et **varbinary (max)** des types de données. Par exemple, une mise à jour partielle d’un **varchar (max)** colonne risque de supprimer ou modifier uniquement les 200 premiers caractères de la colonne, tandis qu’une mise à jour complète supprime ou modifie toutes les données dans la colonne. **.** WRITE mises à jour qui insèrent ou ajoutent de nouvelles données sont journalisées si le mode de récupération de base de données est défini comme journalisées en bloc ou simple. La journalisation minimale n'est pas utilisée lors de la mise à jour de valeurs existantes. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Utilisez le **.** ÉCRIRE (*expression ***** *@Offset***,***@Length*) pour effectuer une mise à jour partielle ou complète de clause  **varchar (max)**, **nvarchar (max)**, et **varbinary (max)** des types de données. Par exemple, une mise à jour partielle d’un **varchar (max)** colonne risque de supprimer ou modifier uniquement les 200 premiers caractères de la colonne, tandis qu’une mise à jour complète supprime ou modifie toutes les données dans la colonne. **.** WRITE mises à jour qui insèrent ou ajoutent de nouvelles données sont journalisées si le mode de récupération de base de données est défini comme journalisées en bloc ou simple. La journalisation minimale n'est pas utilisée lors de la mise à jour de valeurs existantes. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertit une mise à jour partielle à une mise à jour complète lorsque l’instruction UPDATE provoque une des actions suivantes :  
 -   Modification d'une colonne clé de la vue ou table partitionnée.  
@@ -346,7 +346,7 @@ Vous ne pouvez pas utiliser le **.** Clause d’écriture mettre à jour une col
   
 Pour optimiser les performances, nous recommandons l'insertion ou la mise à jour de données en blocs multiples de 8 040 octets.  
   
-Si la colonne modifiée par le **.** ÉCRIRE la clause est référencée dans une clause OUTPUT, la valeur complète de la colonne, soit l’image avant dans **supprimé.** *column_name* ou l’image après dans **insérées.** *column_name*, est retournée à la colonne spécifiée dans la variable de table. Consultez l’exemple R qui suit.  
+Si la colonne modifiée par le **.** ÉCRIRE la clause est référencée dans une clause OUTPUT, la valeur complète de la colonne, soit l’image avant dans **supprimé. *** column_name* ou l’image après dans **insérées. *** column_name*, est retourné à la colonne spécifiée dans la variable de table. Consultez l’exemple R qui suit.  
   
 Pour obtenir les mêmes fonctionnalités de **.** ÉCRIRE avec d’autres caractères ou les types de données binaires, utilisez le [sélections &#40; Transact-SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -1036,7 +1036,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>CA. Utilisation de l'instruction UPDATE dans un bloc TRY…CATCH  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Utilisation de l'instruction UPDATE dans un bloc TRY…CATCH  
  L’exemple suivant utilise une instruction de mise à jour dans un bloc TRY... CATCH pour gérer les erreurs d’exécution peuvent se produire pendant l’opération de mise à jour.  
   
 ```sql  
@@ -1070,7 +1070,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="ad-using-a-simple-update-statement"></a>ACTIVE DIRECTORY. Utilisation d'une instruction UPDATE simple  
+### <a name="ad-using-a-simple-update-statement"></a>AD. Utilisation d'une instruction UPDATE simple  
  Le suivants montrent les exemples comment toutes les lignes peuvent être affectées lorsqu’une clause WHERE pas permet de spécifier la (ou les lignes) pour mettre à jour.  
   
  Cet exemple met à jour les valeurs dans le `EndDate` et `CurrentFlag` colonnes pour toutes les lignes dans la `DimEmployee` table.  
@@ -1114,7 +1114,7 @@ WHERE ProductKey = 313
 OPTION (LABEL = N'label1');  
 ```  
   
-### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>GROUPE DE DISPONIBILITÉ. Utilisation de l'instruction UPDATE avec des informations provenant d'une autre table  
+### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>AG. Utilisation de l'instruction UPDATE avec des informations provenant d'une autre table  
  Cet exemple crée une table pour stocker le total des ventes par année. Il met à jour le total des ventes pour l’année 2004 en exécutant une instruction SELECT sur la table FactInternetSales.  
   
 ```sql  
@@ -1221,7 +1221,7 @@ DROP TABLE CTAS_acs
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Curseurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Texte et Image fonctions &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [AVEC l’expression de table commune &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

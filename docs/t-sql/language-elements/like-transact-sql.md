@@ -1,5 +1,5 @@
 ---
-title: COMME (Transact-SQL) | Documents Microsoft
+title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,13 +64,13 @@ match_expression [ NOT ] LIKE pattern
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *expression_match*  
+ *match_expression*  
  Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) du type de données caractère.  
   
- *modèle*  
+ *pattern*  
  Chaîne spécifique de caractères à rechercher dans *match_expression*et peut inclure les caractères génériques valides suivants. *modèle* peut comporter un maximum de 8 000 octets.  
   
-|Caractère générique|Description| Exemple|  
+|Caractère générique| Description|Exemple|  
 |------------------------|-----------------|-------------|  
 |%|Toute chaîne de zéro caractère ou plus.|WHERE title LIKE '%computer%' trouve tous les titres de livres comportant le terme « computer ».|  
 |_ (souligné)|N'importe quel caractère.|WHERE au_fname LIKE '_ean' trouve tous les prénoms en quatre lettres terminant par « ean » (Dean, Sean, etc.).|  
@@ -86,7 +86,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valeur des résultats  
  LIKE renvoie TRUE si le *match_expression* correspond à l’élément spécifié *modèle*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lors de la comparaison de chaînes à l'aide de l'argument LIKE, tous les caractères de la chaîne modèle sont importants, y compris les espaces de début ou de fin. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc  » (abc suivi d'un seul espace), une ligne dont la valeur pour cette colonne est « abc » (abc sans espace) ne sera pas renvoyée. Les espaces à droite dont le profil correspond à l'expression ne sont pas pris en compte. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc » (abc sans espace), toutes les lignes commençant par la chaîne « abc », qu'elles contiennent ou non des espaces à droite, seront renvoyées.  
   
  Une comparaison de chaînes à l’aide d’un modèle contenant **char** et **varchar** données peuvent échouer lors d’une comparaison LIKE en raison de la façon dont les données sont stockées. Vous devez comprendre le stockage de chaque type de données et la cause possible de l'échec d'une comparaison LIKE. L’exemple suivant passe une variable locale **char** variable à une procédure stockée, puis recherche générique pour trouver tous les employés dont le nom commence avec un jeu de caractères spécifié.  
@@ -187,7 +187,7 @@ GO
 |Symbole|Signification|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_N|  
+|LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d ou f|  
 |LIKE '[-acdf]'|-, a, c, d, ou f|  
 |LIKE '[ [ ]'|[|  
@@ -357,8 +357,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

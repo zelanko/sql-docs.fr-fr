@@ -32,15 +32,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="output-clause-transact-sql"></a>Clause OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,14 +137,14 @@ DELETE Sales.ShoppingCartItem
     OUTPUT DELETED.*;  
 ```  
   
- *nom_colonne*  
- Référence de colonne explicite. Toute référence à la table en cours de modification doit être qualifiée correctement par soit le le préfixe INSERTED ou DELETED selon le cas, par exemple : INSERTED**.** *column_name*.  
+ *column_name*  
+ Référence de colonne explicite. Toute référence à la table en cours de modification doit être qualifiée correctement par soit le le préfixe INSERTED ou DELETED selon le cas, par exemple : INSERTED **. *** column_name*.  
   
  $action  
  Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar (10)** dans la clause OUTPUT dans une instruction MERGE qui renvoie un des trois valeurs pour chaque ligne : 'INSERT', 'UPDATE' ou 'DELETE', en fonction de l’action qui a été effectuée sur cette ligne.  
   
 ## <a name="remarks"></a>Notes  
- La sortie \<dml_select_list > clause et la sortie \<dml_select_list > INTO {  **@**  *table_variable* | *output_table* } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
+ La sortie \<dml_select_list > clause et la sortie \<dml_select_list > INTO {**@*** table_variable* | *output_table* } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Sauf indication contraire, les références à la clause OUTPUT sont relatives aux clauses OUTPUT et OUTPUT INTO.  
@@ -311,7 +311,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Utilisez l'indicateur de table READPAST dans les instructions UPDATE et DELETE si votre scénario permet à plusieurs applications d'exécuter une lecture destructive à partir d'une table. Ce cas de figure empêche les problèmes de verrouillage qui peuvent survenir si une autre application est déjà entrain de lire le premier enregistrement dans la table.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sélectionner les autorisations sont requises sur toutes les colonnes récupérés via \<dml_select_list > ou utilisées dans \<scalar_expression >.  
   
  Autorisations INSERT sont obligatoires sur toutes les tables spécifiées dans \<output_table >.  
@@ -670,9 +670,9 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

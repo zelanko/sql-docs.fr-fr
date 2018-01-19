@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs de requête (Transact-SQL) :
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,11 +158,11 @@ ms.lasthandoff: 01/02/2018
   
  Cet indicateur de requête interdit virtuellement l'utilisation directe de vues indexées et d'index sur des vues indexées dans le plan de requête.  
   
- La vue indexée n’est pas développée uniquement si la vue est directement référencée dans la partie SELECT de la requête et de WITH (NOEXPAND) ou de WITH (NOEXPAND, INDEX ( *index_value* [ **,***.. .n* ])) est spécifié. Pour plus d’informations sur l’indicateur de requête WITH (NOEXPAND), consultez [FROM](../../t-sql/queries/from-transact-sql.md).  
+ La vue indexée n’est pas développée uniquement si la vue est directement référencée dans la partie SELECT de la requête et de WITH (NOEXPAND) ou de WITH (NOEXPAND, INDEX ( *index_value* [**, ***.. .n* ])) est spécifié. Pour plus d’informations sur l’indicateur de requête WITH (NOEXPAND), consultez [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  Seules les vues dans la partie SELECT des instructions, y compris celles figurant dans les instructions INSERT, UPDATE, MERGE et DELETE, sont affectées par l'indicateur.  
   
- FAST *nombre_de_lignes*  
+ FAST *number_rows*  
  Spécifie que la requête est optimisée pour la récupération rapide du premier *nombre_de_lignes.* Il s’agit d’un entier non négatif. Après la première *nombre_de_lignes* sont retournées, la requête poursuit l’exécution et génère le jeu de résultats complet.  
   
  FORCE ORDER  
@@ -198,10 +198,10 @@ ms.lasthandoff: 01/02/2018
  MAXDOP *nombre*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Remplace le **degré maximal de parallélisme** option de configuration de **sp_configure** et le gouverneur de ressources pour la spécification de cette option de requête. L'indicateur de requête MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la valeur du gouverneur de ressources MAXDOP, décrite dans [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec les **degré maximal de parallélisme** option de configuration s’appliquent lorsque vous utilisez l’indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Remplace le **degré maximal de parallélisme** option de configuration de **sp_configure** et le gouverneur de ressources pour la spécification de cette option de requête. L'indicateur de requête MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la valeur du gouverneur de ressources MAXDOP, décrite dans [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec les **degré maximal de parallélisme** option de configuration s’appliquent lorsque vous utilisez l’indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  Si MAXDOP est défini avec la valeur zéro, le serveur choisit le degré maximal de parallélisme.  
+> Si MAXDOP est défini avec la valeur zéro, le serveur choisit le degré maximal de parallélisme.  
   
  MAXRECURSION *nombre*  
  Spécifie le nombre maximal de récursivités autorisé pour cette requête. *nombre* est un entier non négatif compris entre 0 et 32767. Lorsque 0 est spécifié, aucune limite n'est appliquée. Si cette option n'est pas spécifiée, la limite par défaut du serveur est 100.  
@@ -223,7 +223,7 @@ ms.lasthandoff: 01/02/2018
  *@variable_name*  
  Nom d'une variable locale utilisée dans une requête, à laquelle une valeur peut être attribuée pour être utilisée avec l'indicateur de requête OPTIMIZE FOR.  
   
- *INCONNU*  
+ *UNKNOWN*  
  Spécifie que l'optimiseur de requête utilise des données statistiques à la place de la valeur initiale pour déterminer la valeur d'une variable locale pendant l'optimisation de requête.  
   
  *literal_constant*  
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/02/2018
  Spécifie les règles de paramétrage que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique à la requête lorsqu'elle est compilée.  
   
 > [!IMPORTANT]  
->  L'indicateur de requête PARAMETERIZATION ne peut être spécifié qu'à l'intérieur d'un repère de plan. Il ne peut pas être spécifié directement dans une requête.  
+> L'indicateur de requête PARAMETERIZATION ne peut être spécifié qu'à l'intérieur d'un repère de plan. Il ne peut pas être spécifié directement dans une requête.  
   
  SIMPLE indique à l'optimiseur de requête de tenter le processus de paramétrage simple. FORCED indique à l'optimiseur de tenter le processus de paramétrage forcé. L'indicateur de requête PARAMETERIZATION permet de remplacer le paramétrage actuel de l'option PARAMETERIZATION database SET à l'intérieur d'un repère de plan. Pour plus d’informations, consultez [spécifier le comportement du paramétrage requête à l’aide des repères de Plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -254,11 +254,10 @@ ms.lasthandoff: 01/02/2018
   
  Si un tel plan n'est pas possible, l'optimiseur de requête retourne une erreur au lieu de reporter la détection de l'erreur au moment de l'exécution de la requête. Lignes peuvent contenir des colonnes de longueur variable ; le [!INCLUDE[ssDE](../../includes/ssde-md.md)] permet de définir les lignes qui ont une taille maximale potentielle au-delà de la capacité de le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les traiter. En règle générale, en dépit de la taille maximale potentielle, une application stocke des lignes dont la taille réelle est comprise dans les limites gérées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] trouve une ligne trop longue, il retourne une erreur d'exécution.  
  
- INDICATEUR d’utilisation ( **'***hint_name***'** )  
- **S’applique à**: s’applique à SQL Server (à partir de 2016 SP1) et de la base de données SQL Azure.
+<a name="use_hint"></a>INDICATEUR d’utilisation ( **'***hint_name***'** )  
+ **S’applique aux**: s’applique aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Fournit un ou plusieurs indicateurs supplémentaires au processeur de requêtes comme spécifié par un nom de l’indicateur **à l’intérieur des guillemets simples**. 
-  **S’applique aux**: compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  Les noms d’indicateur suivants sont pris en charge :
  
@@ -288,10 +287,10 @@ ms.lasthandoff: 01/02/2018
 > [!IMPORTANT] 
 > Certains indicateurs d’indicateur d’utilisation peuvent entrer en conflit avec les indicateurs de trace activés au niveau global ou au niveau de la session ou la base de données étendue des paramètres de configuration. Dans ce cas, l’indicateur de niveau de requête (indicateur USE) est toujours prioritaire. Si des conflits d’indicateur d’utilisation avec un autre indicateur de requête ou un indicateur de trace activé au niveau de la requête (par exemple par QUERYTRACEON), SQL Server génère une erreur lorsque vous tentez d’exécuter la requête. 
 
- USE PLAN de N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**  
  Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête qui est spécifiée par **'***xml_plan***'**. USE PLAN ne peut pas être spécifié avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
   
-INDICATEUR de TABLE **(***exposed_object_name* [ **,** \<indicateur de table > [ [**,** ]...  *n*  ] ] **)** Applique l’indicateur de table spécifié à la table ou la vue qui correspond à *exposed_object_name*. Nous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
+INDICATEUR de TABLE  **(*** exposed_object_name* [ **,** \<indicateur de table > [[**,**]...  *n*  ]] **)** Applique l’indicateur de table spécifié à la table ou la vue qui correspond à *exposed_object_name*. Nous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* peut prendre l’une des références suivantes :  
   
@@ -301,14 +300,14 @@ INDICATEUR de TABLE **(***exposed_object_name* [ **,** \<indicateur de table > [
   
  Lorsque *exposed_object_name* est spécifié sans spécifier également un indicateur de table, tous les index spécifiés dans la requête comme partie d’un indicateur de table pour l’objet sont ignorées et l’utilisation des index est déterminée par l’optimiseur de requête. Vous pouvez utiliser cette technique pour éliminer l'effet d'un indicateur de table INDEX lorsque vous ne pouvez pas modifier la requête d'origine. Voir l'exemple J.  
   
-**\<indicateur de table > :: =** {[NOEXPAND] {INDEX ( *index_value* [,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SÉRIALISABLE | INSTANTANÉ | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} est l’indicateur de table à appliquer à la table ou la vue qui correspond à *exposed_object_name* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<indicateur de table > :: =** {[NOEXPAND] {INDEX ( *index_value* [,... *n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(*** index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SÉRIALISABLE | INSTANTANÉ | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} est l’indicateur de table à appliquer à la table ou la vue qui correspond à *exposed_object_name* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Pour plus d'informations, consultez la section Notes.  
   
 > [!CAUTION] 
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il n'est pas possible de spécifier des indicateurs de requête dans une instruction INSERT sauf si celle-ci contient une clause SELECT.  
   
  Les indicateurs de requête ne peuvent être spécifiés que dans une requête de niveau supérieur et non pas dans des sous-requêtes. Lorsqu’un indicateur de table est spécifié comme un indicateur de requête, l’indicateur peut être spécifié dans la requête de niveau supérieur ou dans une sous-requête ; Toutefois, la valeur spécifiée pour *exposed_object_name* dans l’indicateur de TABLE clause doit correspondre exactement au nom exposé dans la requête ou une sous-requête.  
@@ -554,9 +553,9 @@ GO
 ```  
     
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

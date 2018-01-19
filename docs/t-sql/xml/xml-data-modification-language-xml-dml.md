@@ -23,15 +23,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acbedcd828fcacb6b690f0380d83d7dd779f1b2e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5b3315bad83aff77c661edb9e0b3e9e081147d42
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Langage de modification de données XML (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/17/2017
   
  Le XML DML ajoute dans XQuery les mots clés respectant la casse suivants :  
   
--   **INSERT**  
+-   **insert**  
   
--   **supprimer**  
+-   **delete**  
   
 -   **Remplacez la valeur de**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Spécifiez les instructions XML DML appropriées à l’intérieur de la **modify()** (méthode).  
   
- Notez que certains attributs ne peuvent pas être insérés ou supprimés, et que leur valeur ne peut pas être modifiée. Exemple :  
+ Notez que certains attributs ne peuvent pas être insérés ou supprimés, et que leur valeur ne peut pas être modifiée. Par exemple :  
   
 -   Pour non typés **xml,** les attributs sont **xmlns**, **xmlns :\***, et **XML : base**.  
   
@@ -69,8 +69,8 @@ ms.lasthandoff: 11/17/2017
  Lorsque vous modifiez une instance XML typée, le format final doit être une instance valide de ce type. Dans le cas contraire, une erreur de validation est retournée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer &#40; XML DML &#41;](../../t-sql/xml/insert-xml-dml.md)   
- [supprimer le s &#40; XML DML &#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
  [Remplacez la valeur de &#40; XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   

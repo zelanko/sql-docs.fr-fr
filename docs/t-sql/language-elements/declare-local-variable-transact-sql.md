@@ -22,17 +22,17 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="declare-localvariable-transact-sql"></a>DÉCLARER @local_variable (Transact-SQL)
+# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Les variables sont déclarées au sein d'un lot ou d'une procédure avec l'instruction DECLARE, et l'instruction SET ou SELECT leur affecte des valeurs. Les variables curseur peuvent être déclarées avec cette instruction, puis utilisées avec d'autres instructions liées aux curseurs. Après la déclaration, toutes les variables sont initialisées avec la valeur NULL., à moins qu'une valeur ne soit fournie dans le cadre de la déclaration.  
@@ -95,10 +95,10 @@ DECLARE
   
  Pour plus d’informations sur les types de données système, consultez [Types de données &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Pour plus d’informations sur les types CLR définis par l’utilisateur ou les types de données alias, consultez [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*valeur*  
+ =*value*  
  Attribue une valeur à la variable en ligne. La valeur peut être une constante ou une expression, mais elle doit soit correspondre au type de déclaration de la variable, soit être implicitement convertible vers ce type. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-@*nom_de_variable_de_curseur*  
+@*cursor_variable_name*  
  Est le nom d’une variable de curseur. Les noms de variables curseur doivent commencer par le signe @ et être conformes aux règles des identificateurs.  
   
 CURSOR  
@@ -115,7 +115,7 @@ Définit le **table** type de données. La déclaration de table inclut des déf
  *n*  
  Espace réservé indiquant que plusieurs variables peuvent être spécifiées et que des valeurs peuvent leur être affectées. Lors de la déclaration **table** variables, les **table** variable doit être la seule variable déclarée dans l’instruction DECLARE.  
   
- *nom_colonne*  
+ *column_name*  
  Est le nom de la colonne dans la table.  
   
  *scalar_data_type*  
@@ -132,16 +132,16 @@ Définit le **table** type de données. La déclaration de table inclut des déf
  DEFAULT  
  Spécifie la valeur fournie pour la colonne lorsque vous n'avez pas spécifié explicitement de valeur lors d'une insertion. Définitions DEFAULT peuvent être appliquées à toutes les colonnes à l’exception de celles définies en tant que **timestamp** ou celles dotées de la propriété d’identité. Les définitions de valeurs par défaut sont supprimées lorsque la table est supprimée. Seule une valeur constante, telle qu'une chaîne de caractères, une fonction système comme SYSTEM_USER() ou la valeur NULL, peut être utilisée comme valeur par défaut. Pour maintenir la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un nom de contrainte peut être affecté à une définition DEFAULT.  
   
- *expression_constante*  
+ *constant_expression*  
  Constante, valeur NULL ou fonction système utilisée comme valeur par défaut pour une colonne.  
   
  IDENTITY  
  Indique que la nouvelle colonne est une colonne d'identité. Lorsqu'une nouvelle ligne est ajoutée à la table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une valeur incrémentielle unique pour la colonne. Les colonnes d'identité sont normalement utilisées avec les contraintes PRIMARY KEY comme identificateur unique de ligne pour la table. La propriété IDENTITY peut être affectée à **tinyint**, **smallint**, **int**, **decimal(p,0)**, ou **numeric(p,0)** colonnes. Une seule colonne d'identité peut être créée par table. Il n'est pas possible d'utiliser des valeurs par défaut liées et des contraintes DEFAULT avec une colonne d'identité. Vous devez spécifier à la fois la valeur initiale et l'incrément, ou bien aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
   
- *valeur initiale*  
+ *seed*  
  Valeur utilisée pour la toute première ligne chargée dans la table.  
   
- *incrément*  
+ *increment*  
  Valeur d’incrément ajoutée à la valeur d’identité de la ligne précédente qui a été chargée.  
   
  ROWGUIDCOL  
@@ -159,7 +159,7 @@ Définit le **table** type de données. La déclaration de table inclut des déf
  CHECK  
  Contrainte qui assure l'intégrité du domaine en limitant les valeurs possibles pouvant être entrées dans une ou plusieurs colonnes.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Expression logique qui retourne TRUE ou FALSE.  
   
 ## <a name="remarks"></a>Notes  
@@ -321,7 +321,7 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   

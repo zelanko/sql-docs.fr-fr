@@ -28,15 +28,15 @@ helpviewer_keywords:
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b0f259b51b993c777b27fe8c43c58268ca3dace
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,10 +60,10 @@ ms.lasthandoff: 11/17/2017
  *expression_name*  
 Est un identificateur valide pour l’expression de table commune. *expression_name* doit être différent de celui de toute autre expression de table commune définie dans le même WITH \<common_table_expression > clause, mais *expression_name* peut être le même que le nom d’une table de base ou une vue. Toute référence à *expression_name* dans la requête utilise l’expression de table commune et pas l’objet de base.
   
- *nom_colonne*  
+ *column_name*  
  Spécifie un nom de colonne dans l'expression de table commune. Les noms dupliqués ne sont pas autorisés au sein d'une définition d'expression de table commune unique (CTE, Common Table Expression). Le nombre de noms de colonnes spécifié doit correspondre au nombre de colonnes du jeu de résultats de la *définitions de requêtes cet*. La liste des noms de colonnes n'est facultative que si des noms distincts pour toutes les colonnes résultants sont fournis dans la définition de la requête.  
   
- *Définitions de requêtes cet*  
+ *CTE_query_definition*  
  Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT pour *définitions de requêtes cet* doit présenter la même configuration que pour la création d’une vue, mais une expression de table commune ne peut pas définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  Si plusieurs *définitions de requêtes cet* est défini, les définitions de requête doivent être jointes par un de ces opérateurs de jeu : UNION ALL, UNION, EXCEPT ou INTERSECT.  
@@ -528,7 +528,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a>K. Utilisation de fonctions analytiques dans une expression de table commune récursive  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Utilisation de fonctions analytiques dans une expression de table commune récursive  
  L'exemple suivant montre un piège qui peut se produire lors de l'utilisation d'une fonction analytique ou d'agrégation dans la partie récursive d'une expression CTE.  
   
 ```  
@@ -682,7 +682,7 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [À l’exception et INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   

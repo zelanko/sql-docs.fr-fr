@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e0b4cf5509bf68801938a93aac339108539a0ea1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86f89cd7d2e8198383a548dbfbcabb39e5f1738c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *argument*  
+ *transaction_name*  
  Nom de transaction, défini par l'utilisateur, qui est utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. *argument* doit être conforme aux règles des identificateurs et doivent être \<= 32 caractères.  
   
- @*variable_nom_transaction*  
+ @*tran_name_variable*  
  Nom d'une variable définie par l'utilisateur qui contient un nom de transaction utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données.  
   
 ## <a name="remarks"></a>Notes  
@@ -81,7 +81,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Pour plus d'informations sur l'environnement et le traitement des transactions distribuées, consultez la documentation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -107,9 +107,9 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [VALIDER le travail &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [TRAVAIL de restauration &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

@@ -31,15 +31,15 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d1e327dc8e5ce590ee3d2123b6049bbfc470d7b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 968c0b5e8a35f6175ed739da716273e7231c6298
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -69,12 +69,12 @@ BEGIN { TRAN | TRANSACTION }
 
   
 ## <a name="arguments"></a>Arguments  
- *argument*  
+ *transaction_name*  
  **S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
  
  Nom attribué à la transaction. *argument* doit être conforme aux règles des identificateurs, mais les identificateurs de plus de 32 caractères ne sont pas autorisés. Utilisez les noms de transaction seulement sur la paire la plus extérieure des instructions BEGIN...COMMIT ou BEGIN...ROLLBACK imbriquées. *argument* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
   
- @*variable_nom_transaction*  
+ @*tran_name_variable*  
  **S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
  
  Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données. Si plus de 32 caractères sont passés à la variable, seuls les 32 premiers caractères seront utilisés et les autres seront tronqués.  
@@ -143,7 +143,7 @@ COMMIT TRAN T1;
   
  « L'option est ignorée. »  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -214,9 +214,9 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [VALIDER le travail &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [TRAVAIL de restauration &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

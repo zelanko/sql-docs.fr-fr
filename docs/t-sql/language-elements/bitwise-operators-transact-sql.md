@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 17ef615ab6b82cb9407871fcf8ee7a312ce22613
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bitwise-operators-transact-sql"></a>Opérateurs au niveau du bit (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ Convertit l’entier 75 0100 1011 binaire.
 |operator|mathématiques au niveau du bit|
 |---- |---- |
 |AND <br> Si bits à n’importe quel emplacement 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|ou <br> Si des bits à n’importe quel emplacement sont 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|- ou - <br> Si des bits à n’importe quel emplacement sont 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> Inverse la valeur du bit à chaque emplacement de bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 Consultez les rubriques suivantes :   
@@ -64,7 +64,7 @@ Consultez les rubriques suivantes :
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint**, ou **tinyint**|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

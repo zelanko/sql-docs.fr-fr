@@ -30,15 +30,15 @@ helpviewer_keywords:
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
-ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
+ms.openlocfilehash: da5481a06a3f1e02ea1f0e1ab3429e2d02c238d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>-Clause SELECT INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/10/2018
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nouvelle_table*  
+ *new_table*  
  Spécifie le nom d'une table à créer en fonction des colonnes de la liste de sélection et des lignes choisies à partir de la source de données.  
  
-  *groupe de fichiers*
+  *filegroup*
  
  Spécifie le nom du groupe de fichiers dans lequel la nouvelle table sera créée. Le groupe de fichiers spécifié doit exister sur la base de données reste le moteur SQL Server lève une erreur. Cette option est uniquement prise en charge avec [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
@@ -249,8 +249,8 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Exemples SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITÉ &#40; Fonction &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

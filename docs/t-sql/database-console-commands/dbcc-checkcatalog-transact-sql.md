@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -78,27 +77,27 @@ DBCC CHECKCATALOG effectue différentes vérifications de cohérence entre les t
 Si un instantané ne peut pas être créé, DBCC CHECKCATALOG acquiert un verrou de base de données exclusif pour obtenir la cohérence requise. Si des incohérences sont détectées, elles ne peuvent pas être réparées et la base de données doit être restaurée à partir d'une sauvegarde.
   
 > [!NOTE]  
->  Exécution de DBCC CHECKCATALOG sur **tempdb** ne procède à aucune vérification. Effet, pour des raisons de performances, les instantanés de base de données ne sont pas disponibles sur **tempdb**. Cela signifie que la cohérence transactionnelle requise ne peut pas être obtenue. Recyclez le serveur pour résoudre toute **tempdb** problèmes liés aux métadonnées.  
+> Exécution de DBCC CHECKCATALOG sur **tempdb** ne procède à aucune vérification. Effet, pour des raisons de performances, les instantanés de base de données ne sont pas disponibles sur **tempdb**. Cela signifie que la cohérence transactionnelle requise ne peut pas être obtenue. Recyclez le serveur pour résoudre toute **tempdb** problèmes liés aux métadonnées.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG ne vérifie pas les données FILESTREAM. FILESTREAM stocke les objets BLOB dans le système de fichiers.  
+> DBCC CHECKCATALOG ne vérifie pas les données FILESTREAM. FILESTREAM stocke les objets BLOB dans le système de fichiers.  
   
 DBCC CHECKCATALOG est également exécutée dans le cadre de [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Jeux de résultats  
 Si aucune base de données n'est spécifiée, DBCC CHECKCATALOG retourne :
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 Si [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est spécifié en tant que nom de base de données, DBCC CHECKCATALOG retourne :
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle de serveur fixe ou le **db_owner** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -115,5 +114,5 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Tables système &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

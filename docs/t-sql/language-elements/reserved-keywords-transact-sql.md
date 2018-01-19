@@ -19,15 +19,15 @@ helpviewer_keywords:
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>Mots clés réservés (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/18/2017
 |CURSOR|NOT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
-|DEALLOCATE|DE|TRUNCATE|  
+|DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
 |DELETE|ON|UNION|  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/18/2017
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|Utilisateur|  
-|DROP|ou|VALUES|  
+|DROP|- ou -|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -115,85 +115,85 @@ ms.lasthandoff: 11/18/2017
   
 ||||  
 |-|-|-|  
-|**ABSOLU**|**EXEC**|**CHEVAUCHEMENTS**|  
-|**ACTION**|**EXECUTE**|**REMPLISSAGE**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIELLE**|  
-|**AJOUTER**|**EXTERNAL**|**PASCAL**|  
-|**ALL**|**EXTRAIRE**|**POSITION**|  
-|**ALLOUER**|**FALSE**|**PRÉCISION**|  
+|**ADD**|**EXTERNAL**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
 |**ALTER**|**FETCH**|**PRÉPARER**|  
-|**AND**|**PREMIER**|**CONSERVER**|  
+|**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**SONT**|**POUR**|**PRÉCÉDENT**|  
+|**SONT**|**FOR**|**PRIOR**|  
 |**AS**|**ÉTRANGÈRE**|**PRIVILÈGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**ASSERTION**|**TROUVÉ**|**PUBLIC**|  
-|**AT**|**FROM**|**EN LECTURE**|  
+|**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**RÉEL**|  
-|**AVG**|**TÉLÉCHARGER**|**RÉFÉRENCES**|  
+|**AVG**|**GET**|**REFERENCES**|  
 |**BEGIN**|**GLOBAL**|**RELATIF**|  
-|**BETWEEN**|**GO**|**RESTREINDRE**|  
-|**BITS**|**GOTO**|**REVOKE**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**LES DEUX**|**GROUPE**|**RESTAURATION**|  
-|**PAR**|**AVOIR**|**LIGNES**|  
+|**LES DEUX**|**GROUP**|**ROLLBACK**|  
+|**BY**|**AVOIR**|**ROWS**|  
 |**CASCADE**|**HEURE**|**SCHEMA**|  
-|**MISES EN CASCADE**|**IDENTITÉ**|**DÉFILEMENT**|  
-|**CASE**|**IMMÉDIATE**|**SECONDE**|  
+|**CASCADED**|**IDENTITÉ**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
 |**CAST**|**IN**|**SECTION**|  
-|**CATALOGUE**|**INCLURE**|**SELECT**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**SESSION**|  
-|**CHAR_LENGTH**|**INDICATEUR**|**SESSION_USER**|  
-|**CARACTÈRE**|**AU DÉPART**|**ENSEMBLE**|  
-|**CHARACTER_LENGTH**|**INTERNE**|**TAILLE**|  
-|**VÉRIFICATION**|**ENTRÉE**|**SMALLINT**|  
-|**CLOSE**|**NON-RESPECT DE LA**|**CERTAINS**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CARACTÈRE**|**AU DÉPART**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
+|**VÉRIFICATION**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**NON-RESPECT DE LA**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
-|**COPIES ASSEMBLÉES**|**INT**|**SQL**|  
-|**CLASSEMENT**|**ENTIER**|**SQLCA**|  
-|**COLONNE**|**INTERSECT**|**SQLCODE**|  
-|**VALIDATION**|**INTERVALLE**|**SQLERROR**|  
-|**SE CONNECTER**|**DANS**|**SQLSTATE**|  
-|**CONNEXION**|**IS**|**SQLWARNING**|  
+|**COLLATE**|**INT**|**SQL**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**CONNEXION**|**EST**|**SQLWARNING**|  
 |**CONTRAINTE**|**ISOLATION**|**SUBSTRING**|  
-|**CONTRAINTES**|**JOINDRE**|**SUM**|  
-|**CONTINUE**|**CLÉ**|**SYSTEM_USER**|  
-|**CONVERTIR**|**LANGUAGE**|**TABLE**|  
-|**CORRESPONDANT**|**DERNIÈRE**|**TEMPORAIRE**|  
+|**CONTRAINTES**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**CORRESPONDING**|**LAST**|**TEMPORAIRE**|  
 |**COUNT**|**DÉBUT**|**PUIS**|  
-|**CRÉER**|**LEFT**|**HEURE**|  
-|**CROSS-**|**NIVEAU**|**HORODATEUR**|  
+|**CRÉER**|**LEFT**|**TIME**|  
+|**CROSS**|**NIVEAU**|**TIMESTAMP**|  
 |**EN COURS**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**À**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**DE FIN**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
-|**CURSEUR**|**MIN**|**TRANSLATE**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
 |**DATE**|**MINUTE**|**TRADUCTION**|  
 |**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NOMS**|**UNION**|  
-|**DÉCIMAL**|**NATIONAL**|**UNIQUE**|  
-|**DÉCLARER**|**NATURELLE**|**INCONNU**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**PEUT ÊTRE DIFFÉRÉE**|**SUIVANT**|**UPPER**|  
-|**DIFFÉRÉE**|**NO**|**UTILISATION**|  
+|**PEUT ÊTRE DIFFÉRÉE**|**NEXT**|**UPPER**|  
+|**DIFFÉRÉE**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**À L’AIDE DE**|  
-|**DÉCRIRE**|**NULL**|**VALUE**|  
-|**DESCRIPTEUR**|**NULLIF**|**VALEURS**|  
-|**TESTS DE DIAGNOSTIC**|**NUMÉRIQUE**|**VARCHAR**|  
-|**SE DÉCONNECTER**|**OCTET_LENGTH**|**VARIABLE**|  
-|**DISTINCTES**|**DE**|**VIEW**|  
-|**DOMAINE**|**ON**|**LORSQUE**|  
-|**DOUBLE**|**UNIQUEMENT**|**CHAQUE FOIS QUE**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARIABLE**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**LORSQUE**|  
+|**DOUBLE**|**ONLY**|**CHAQUE FOIS QUE**|  
 |**DROP**|**OPEN**|**WHERE**|  
 |**ELSE**|**OPTION**|**AVEC**|  
-|**END**|**OR**|**TRAVAIL**|  
-|**FIN-EXEC**|**COMMANDE**|**ÉCRITURE**|  
-|**SÉQUENCE D’ÉCHAPPEMENT**|**EXTERNE**|**YEAR**|  
-|**À L’EXCEPTION**|**SORTIE**|**ZONE**|  
-|**(EXCEPTION)**|||  
+|**END**|**- ou -**|**TRAVAIL**|  
+|**END-EXEC**|**COMMANDE**|**WRITE**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>Mots clés futurs  
  Les mots clés suivants sont susceptibles d'être réservés dans de futures versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lorsque de nouvelles fonctionnalités seront implémentées. Évitez d'utiliser ces mots comme identificateurs.  
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/18/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Non|TIMEZONE_MINUTE|  
 |CURRENT_PATH|Aucune|TRAILING|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/18/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Paramètre|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  

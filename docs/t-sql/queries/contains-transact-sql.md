@@ -36,15 +36,15 @@ helpviewer_keywords:
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 caps.latest.revision: "117"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c2f2f2f6bca2048ead7dc9565b5338bc2505c8e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ CONTAINS (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_colonne*  
+ *column_name*  
  Nom d'une colonne d'index de recherche en texte intégral de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **texte**, **ntext**, **image**, **xml**, **varbinary**, ou **varbinary (max)**.  
   
  *column_list*  
@@ -155,14 +155,14 @@ CONTAINS (
  Indique que la requête recherche toutes les colonnes indexées en texte intégral dans la table spécifiée dans la clause FROM de la condition de recherche donnée. Les colonnes de la clause CONTAINS doivent provenir d'une table unique qui possède un index de recherche en texte intégral. À moins que *language_term* est spécifié, la langue de toutes les colonnes de la table doit être le même.  
   
  PROPRIÉTÉ ( *column_name* , '*property_name*')  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie une propriété du document sur laquelle rechercher la condition de recherche spécifiée.  
   
 > [!IMPORTANT]  
 >  Pour la requête retourne des lignes, *property_name* doit être spécifié dans la propriété de recherche liste de l’index de recherche en texte intégral et de l’index de recherche en texte intégral doit contenir des entrées spécifiques à la propriété pour *property_name*. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- LANGAGE *language_term*  
+ LANGUAGE *language_term*  
  Est la langue à utiliser pour l’analyse lexicale, recherche de radical, les expansions du dictionnaire des synonymes et remplacements et parasites (ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) dans le cadre de la requête. Ce paramètre est facultatif.  
   
  Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue à utiliser pour l'indexation de son contenu. Lorsque vous interrogez une telle colonne, spécification de langage *language_term* permet d’augmenter la probabilité d’une correspondance correcte.  
@@ -204,26 +204,26 @@ WHERE CONTAINS(Description, @SearchWord);
   
  Vous pouvez également utiliser l'indicateur de requête OPTIMIZE FOR lorsqu'un plan non optimal est généré.  
   
- *Word*  
+ *word*  
  Chaîne de caractères sans espaces ni ponctuation.  
   
- *expression*  
+ *phrase*  
  Un ou plusieurs mots séparés par des espaces.  
   
 > [!NOTE]  
 >  Certaines langues, notamment certaines langues asiatiques, peuvent contenir des expressions composées d'un ou de plusieurs mots non séparés par des espaces.  
   
-\<simple_term >  
+\<simple_term>  
 Spécifie une correspondance pour un mot ou une expression exacts. Exemples de termes simples autorisés : « lieu dit », « lieudit » et « Microsoft SQL Server ». Les expressions doivent être mises entre des guillemets doubles (""). Mots d’une expression doivent apparaître dans l’ordre spécifié dans  *\<contains_search_condition >* telles qu’elles apparaissent dans la colonne de base de données. La recherche de caractères dans un mot ou une expression ne respecte pas la casse. Les mots parasites (ou [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (tels qu’un et, ou) dans les colonnes indexées en texte intégral ne sont pas stockées dans l’index de recherche en texte intégral. Si un mot parasite est utilisé dans la recherche d'un mot unique, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur indiquant que la requête contient uniquement des mots parasites. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une liste standard des mots parasites dans le répertoire \Mssql\Binn\FTERef de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La ponctuation est ignorée. Par conséquent, `CONTAINS(testing, "computer failure")` retourne la ligne ayant la valeur « Où est mon ordinateur (computer) ? Il est en panne (Failure). » Pour plus d’informations sur le comportement de séparateur de mots, consultez [configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- \<prefix_term >  
+ \<prefix_term>  
  Précise une correspondance de mots ou d'expressions commençant par le texte spécifié. Placez un terme préfixe entre guillemets doubles (" ») et ajoutez un astérisque (\*) avant les guillemets doubles fermants afin que tout le texte commençant par le terme simple spécifié avant l’astérisque est mis en correspondance. La clause doit être définie de la manière suivante : `CONTAINS (column, '"text*"')`. L'astérisque correspond à aucun, à un ou à plusieurs caractères (du ou des mots racine dans le mot ou l'expression). Si le texte et l'astérisque ne sont pas délimités par des guillemets doubles, comme dans `CONTAINS (column, 'text*')`, la recherche en texte intégral considère l'astérisque comme un caractère et recherche les correspondances exactes avec `text*`. Le moteur de recherche en texte intégral ne trouvera pas de mots avec l’astérisque (\*) caractère car les analyseurs lexicaux ignorent en général ces caractères.  
   
  Lorsque  *\<prefix_term >* est une expression, chaque mot de l’expression est considéré comme un préfixe séparé. Ainsi, une recherche spécifiant le préfixe « contrôle des mots* » trouvera les lignes contenant le texte « contrôle des mots clés », « contrôleur des mots », etc.  
   
- \<generation_term >  
+ \<generation_term>  
  Précise une correspondance de mots lorsque les termes simples qui s'y trouvent contiennent des variantes du mot initial à rechercher.  
   
  INFLECTIONAL  
@@ -234,7 +234,7 @@ Spécifie une correspondance pour un mot ou une expression exacts. Exemples de t
  THESAURUS  
  Spécifie l'utilisation du dictionnaire des synonymes correspondant à la langue de texte intégral de la colonne ou à la langue spécifiée dans la requête. Le modèle ou les modèles à partir de la plus longue du  *\<simple_term >* sont mis en correspondance avec le dictionnaire des synonymes et conditions supplémentaires sont créées pour étendre ou remplacer le modèle d’origine. Si une correspondance est introuvable pour la totalité ou une partie de la  *\<simple_term >*, la partie de la mise en correspondance est traitée comme un *simple_term*. Pour plus d’informations sur le dictionnaire des synonymes de recherche en texte intégral, consultez [configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
- \<terme_de_proximité_générique >  
+ \<generic_proximity_term>  
  Spécifie une correspondance de mots ou d'expressions qui doit figurer dans le document faisant l'objet d'une recherche.  
   
 > [!IMPORTANT]  
@@ -249,8 +249,8 @@ Spécifie une correspondance pour un mot ou une expression exacts. Exemples de t
   
  Pour plus d’informations sur les termes de proximité générique, consultez [recherche de mots dans le voisinage d’autres mots avec NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<custom_proximity_term >  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ \<custom_proximity_term>  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Spécifie une correspondance de mots ou d'expressions, et la distance maximale éventuellement autorisée entre des termes de recherche. Vous pouvez également spécifier que les termes de recherche doivent être trouvés dans l’ordre exact dans lequel vous les spécifiez (\<match_order >).  
   
@@ -264,7 +264,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  Les paramètres facultatifs sont les suivants :  
   
- \<maximum_distance >  
+ \<maximum_distance>  
  Spécifie la distance maximale autorisée entre les termes de recherche au début et à la fin d'une chaîne afin que cette chaîne soit considérée comme une correspondance.  
   
  *entier*  
@@ -291,7 +291,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  Retourne toutes les lignes qui contiennent les termes spécifiés indépendamment de la distance qui les sépare. Il s'agit du paramètre par défaut.  
   
- \<match_order >  
+ \<match_order>  
  Spécifie si les termes doivent apparaître dans l'ordre spécifié pour être retournés par une requête de recherche. Pour spécifier \<match_order >, vous devez également spécifier \<maximum_distance >.  
   
  \<match_order > prend l’une des valeurs suivantes :  
@@ -312,13 +312,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  Pour plus d’informations sur l’utilisation de termes de proximité personnalisé, consultez [recherche de mots dans le voisinage d’autres mots avec NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<weighted_term >  
+ \<weighted_term>  
  Précise que les lignes retournées par la requête correspondent à une liste de mots ou d'expressions auxquels une valeur de pondération peut être affectée.  
   
  ISABOUT  
  Spécifie le  *\<weighted_term >* (mot clé).  
   
- POIDS (*valeur_de_pondération*)  
+ WEIGHT(*weight_value*)  
  Définit une valeur de pondération qui est un nombre compris entre 0,0 et 1,0. Chaque composant de  *\<weighted_term >* peut inclure un *valeur_de_pondération*. *valeur_de_pondération* consiste à modifier les différentes parties d’une requête affectent la valeur de classement affectée à chaque ligne correspondant à la requête. POIDS n’affecte pas les résultats de requêtes CONTAINS, mais influe sur le classement dans [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) requêtes.  
   
 > [!NOTE]  
@@ -358,7 +358,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Vous pouvez utiliser un nom en quatre parties dans le CONTAINS ou [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) prédicat de requête de recherche en texte intégral indexées colonnes des tables cibles sur un serveur lié. Pour préparer un serveur distant à recevoir des requêtes de texte intégral, créez un index de recherche en texte intégral sur les tables et colonnes cibles du serveur distant, puis ajoutez le serveur distant comme serveur lié.  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>Comparaison de LIKE et de recherche en texte intégral  
- Contrairement à la recherche en texte intégral, le prédicat [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne uniquement sur les modèles de caractères. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées et de leur taille. Une autre considération à prendre en compte est que LIKE effectue uniquement une analyse de modèle simple d'une table entière. Par opposition, une requête de texte intégral est consciente de la langue et applique des transformations spécifiques au niveau de l'index et de l'heure de requête, telles que le filtrage de mots vides et l'ajout au dictionnaire des synonymes et aux formes fléchies. Ces transformations permettent aux requêtes de texte intégral d'améliorer le rappel et le dernier classement de leurs résultats.  
+ Contrairement à la recherche de texte intégral, le [comme](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] prédicat fonctionne sur les modèles de caractère uniquement. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées et de leur taille. Une autre considération à prendre en compte est que LIKE effectue uniquement une analyse de modèle simple d'une table entière. Par opposition, une requête de texte intégral est consciente de la langue et applique des transformations spécifiques au niveau de l'index et de l'heure de requête, telles que le filtrage de mots vides et l'ajout au dictionnaire des synonymes et aux formes fléchies. Ces transformations permettent aux requêtes de texte intégral d'améliorer le rappel et le dernier classement de leurs résultats.  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>Interrogation de plusieurs colonnes (recherche en texte intégral)  
  Vous pouvez interroger plusieurs colonnes en spécifiant une liste de colonnes à rechercher. Les colonnes doivent être issues de la même table.  
@@ -426,7 +426,7 @@ GO
   
 ### <a name="e-using-contains-with-proximityterm"></a>E. Utilisation de CONTAINS avec \<proximity_term >  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  L’exemple suivant recherche le `Production.ProductReview` table pour tous les commentaires qui contiennent le mot `bike` au sein de 10 termes du mot «`control`» et dans l’ordre spécifié (autrement dit, où «`bike`« précède »`control`»).  
   
@@ -523,7 +523,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. Interrogation sur une propriété de document  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  La requête suivante effectue une recherche sur une propriété indexée, `Title`, dans la colonne `Document` de la table `Production.Document`. La requête retourne uniquement les documents dont la propriété `Title` contient la chaîne `Maintenance` ou `Repair`.  
   
@@ -552,7 +552,7 @@ GO
  [Requête avec la recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)   
  [Créer des requêtes de recherche en texte intégral &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

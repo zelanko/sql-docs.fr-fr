@@ -1,5 +1,5 @@
 ---
-title: DEALLOCATE (Transact-SQL) | Documents Microsoft
+title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f0b4fbd8d6cffb43fc8a6c7c69a9e1182a2dadb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7dd1a4deca2a3c6db7db7596c94f0def97934da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *tous les autres cas*  
+ *cursor_name*  
  Nom d'un curseur déjà déclaré. Si un global et un curseur local portent *cursor_name* comme leur nom, *cursor_name* fait référence au curseur global si GLOBAL est précisé et au curseur local si GLOBAL n’est pas spécifié.  
   
- @*nom_de_variable_de_curseur*  
+ @*cursor_variable_name*  
  Est le nom d’un **curseur** variable. @*nom_de_variable_de_curseur* doit être de type **curseur**.  
   
 ## <a name="remarks"></a>Notes  
@@ -102,7 +102,7 @@ GO
   
  Il n'est pas nécessaire de désallouer explicitement une variable de curseur. Elle est implicitement désallouée une fois qu'elle est hors de portée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, tout utilisateur valide a l'autorisation d'utiliser l'instruction DEALLOCATE.  
   
 ## <a name="examples"></a>Exemples  
@@ -146,10 +146,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fermer &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Curseurs](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [EXTRACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [Ouvrir &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

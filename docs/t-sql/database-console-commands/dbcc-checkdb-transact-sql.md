@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c991ba9e987d5dc7ed39b2b8edb8bf6b428956
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 49cf7311995d2760306e6050e6bae6efc1db41d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ DATA_PURITY
  Les erreurs de validation signalées par cette option ne peuvent pas être corrigées à l'aide des options de réparation DBCC. Pour plus d’informations sur la correction manuelle de ces erreurs, consultez l’article 923247 de la Base de connaissances : [erreur de résolution des problèmes de DBCC 2570 dans SQL Server 2005 et versions ultérieures](http://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Remplace le **degré maximal de parallélisme** option de configuration de **sp_configure** pour l’instruction. Le MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] utilise la valeur du gouverneur de ressources MAXDOP, décrite dans [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec l'option de configuration max degree of parallelism sont applicables lorsque vous utilisez l'indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  

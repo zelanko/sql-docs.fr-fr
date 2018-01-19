@@ -26,15 +26,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0f99a9d507b74dfd12bbdaf273683f857ceec881
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  Spécifie qu'il convient d'effectuer une comparaison.  
   
- *sous-requête*  
+ *subquery*  
  Sous-requête avec un jeu de résultats d'une colonne. Le type de données de la colonne retournée doit être le même type de données en tant que *scalar_expression*.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- CERTAINS ou tous les retours **TRUE** lorsque la comparaison spécifiée a la valeur TRUE pour n’importe quelle paire (*scalar_expression***,***x*) où *x* est une valeur dans le jeu de colonnes uniques ; sinon, retourne **FALSE**.  
+ CERTAINS ou tous les retours **TRUE** lorsque la comparaison spécifiée a la valeur TRUE pour n’importe quelle paire (*scalar_expression***,***x*) où *x* est une valeur dans la jeu de colonnes unique ; Sinon, retourne **FALSE**.  
   
 ## <a name="remarks"></a>Notes  
  SOME requiert le *scalar_expression* corresponde au moins une valeur retournée par la sous-requête. Pour les instructions qui nécessitent le *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête, consultez [tous les &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = SOME (sous-requête) serait équivalente à TRUE pour une *scalar_express* de 2. Si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat, car certaines valeurs de la sous-requête (la valeur 3) ne répondent pas aux critères de l’expression.  
@@ -148,12 +148,12 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tous les &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [CAS &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
