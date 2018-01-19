@@ -3,10 +3,10 @@
 # Vue d'ensemble
 ## [Notes de publication](sql-server-linux-release-notes.md)
 ## [Nouveautés de cette version](sql-server-linux-whats-new.md)
-## [Articles nouveaux et mis à jour](new-updated-linux.md)
+## [nouvelles articles et articles mises à jour](new-updated-linux.md)
 ## [Éditions et fonctionnalités prises en charge](sql-server-linux-editions-and-components-2017.md)
 
-# Guides de démarrage rapide
+# Démarrages rapides
 ## [Installer et connecter - Red Hat](quickstart-install-connect-red-hat.md)
 ## [Installer et connecter - SUSE](quickstart-install-connect-suse.md)
 ## [Installer et connecter - Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -29,7 +29,7 @@
 ## [9_Configurer dans Kubernetes pour la haute disponibilité](tutorial-sql-server-containers-kubernetes.md)
 
 # Concepts
-## Installer
+## Install
 ### [Installer SQL Server](sql-server-linux-setup.md)
 ### [Installer les outils SQL Server](sql-server-linux-setup-tools.md)
 ### [Installer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
@@ -112,5 +112,5 @@
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+## [Envoyer vos commentaires :](https://feedback.azure.com/forums/908035-sql-server)
 ## [Reddit](https://www.reddit.com/r/SQLServer)
