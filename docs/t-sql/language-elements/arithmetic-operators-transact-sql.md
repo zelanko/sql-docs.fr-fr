@@ -18,15 +18,15 @@ helpviewer_keywords:
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d6446d1e4850ca8f50a666c5c8a0fea58c57b1b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 15ab9c387221a0afba7535514681d6d89af60ab3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Opérateurs arithmétiques (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,10 +35,10 @@ ms.lasthandoff: 11/17/2017
   
 |Opérateur|Signification|  
 |--------------|-------------|  
-|[+ (Additionner)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
+|[+ (Additionner)](../../t-sql/language-elements/add-transact-sql.md)|Ajout|  
 |[- (Soustraire)](../../t-sql/language-elements/subtract-transact-sql.md)|Soustraction|  
 |[* (Multiplier)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplication|  
-|[/ (Division)](../../t-sql/language-elements/divide-transact-sql.md)|Division|  
+|[/ (Divide)](../../t-sql/language-elements/divide-transact-sql.md)|Division|  
 |[% (Modulo)](../../t-sql/language-elements/modulo-transact-sql.md)|Retourne le reste entier d'une division. Par exemple, 12 % 5 = 2 parce que le reste de 12 divisé par 5 est 2.|  
   
  Le signe plus (+) et moins (-) les opérateurs peuvent également être utilisés pour effectuer des opérations arithmétiques sur **datetime** et **smalldatetime** valeurs.  

@@ -1,5 +1,5 @@
 ---
-title: FORMAT (Transact-SQL) | Documents Microsoft
+title: FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -80,10 +80,10 @@ FORMAT ( value, format [, culture ] )
 |Numérique|smallint|Int16|  
 |Numérique|tinyint|Byte|  
 |Numérique|decimal|SqlDecimal|  
-|Numérique|numeric|SqlDecimal|  
+|Numérique|numérique|SqlDecimal|  
 |Numérique|float|Double|  
-|Numérique|real|Single|  
-|Numérique|smallmoney|Decimal|  
+|Numérique|real|Unique|  
+|Numérique|smallmoney|Décimal|  
 |Numérique|money|Décimal|  
 |Date et heure|date|DateTime|  
 |Date et heure|time|TimeSpan|  
@@ -212,5 +212,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

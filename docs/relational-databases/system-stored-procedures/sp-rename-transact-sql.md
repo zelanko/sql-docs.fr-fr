@@ -1,7 +1,7 @@
 ---
-title: sp_rename (Transact-SQL) | Documents Microsoft
+title: sp_rename (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 > [!NOTE]  
 >  Les noms de déclencheurs ne peuvent pas commencer par # ou par ##.  
   
- [ @objtype =] '*object_type*'  
+ [ @objtype = ] '*object_type*'  
  Type d'objet renommé. *object_type* est **varchar(13)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
@@ -84,11 +84,11 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  Vous pouvez utiliser sp_rename pour renommer des index XML primaires et secondaires.  
   
- Renommer une procédure stockée, fonction, vue ou au déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de la définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) affichage catalogue. Par conséquent, il est déconseillé d'utiliser sp_rename pour renommer ces types d'objets. Supprimez, puis recréez plutôt l'objet avec son nouveau nom.  
+ Renommer une procédure stockée, fonction, vue ou au déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) affichage catalogue ou obtenus à l’aide du [OBJECT_ DÉFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction intégrée. Par conséquent, il est déconseillé d'utiliser sp_rename pour renommer ces types d'objets. Supprimez, puis recréez plutôt l'objet avec son nouveau nom.  
   
- Le fait de renommer un objet tel qu'une table ou une colonne ne renomme pas automatiquement les références à cet objet. Vous devez modifier manuellement tout objet qui référence l'objet renommé. Par exemple, si vous renommez une colonne de table et si cette colonne est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nouveau nom de colonne. Utilisez[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour répertorier les dépendances sur l’objet avant de le renommer.  
+ Le fait de renommer un objet tel qu'une table ou une colonne ne renomme pas automatiquement les références à cet objet. Vous devez modifier manuellement tout objet qui référence l'objet renommé. Par exemple, si vous renommez une colonne de table et si cette colonne est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nouveau nom de colonne. Utilisez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour obtenir la liste des dépendances de l’objet avant de le renommer.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour renommer des objets, des colonnes et des index, il vous faut l'autorisation ALTER sur l'objet concerné. Pour renommer des types définis par l'utilisateur, il vous faut une autorisation CONTROL sur le type concerné. Pour renommer une base de données, vous devez être membre des rôles serveur fixes dbcreator ou sysadmin.  
   
 ## <a name="examples"></a>Exemples  

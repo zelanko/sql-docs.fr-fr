@@ -1,5 +1,5 @@
 ---
-title: STRING_SPLIT (Transact-SQL) | Documents Microsoft
+title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_SPLIT ( string , separator )
  *chaîne*  
  Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (c'est-à-dire **nvarchar**, **varchar**, **nchar** ou **char**).  
   
- *séparateur*  
+ *separator*  
  Est un caractère unique [expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (par exemple, **nvarchar(1)**, **varchar (1)**, **nchar (1)** ou **char (1)**) qui est utilisé comme séparateur pour les chaînes concaténées.  
   
 ## <a name="return-types"></a>Types de retour  
@@ -65,7 +65,7 @@ STRING_SPLIT ( string , separator )
 |Lorem|  
 |ipsum|  
 |dolor|  
-|Cet état|  
+|sit|  
 |Amet.|  
   
  Si la chaîne d’entrée est **NULL**, le **STRING_SPLIT** fonction table retourne une table vide.  
@@ -95,7 +95,7 @@ WHERE RTRIM(value) <> '';
 |productId|Nom|Balises|  
 |---------------|----------|----------|  
 |1|À un doigt intégral gants|vêtements, route, touring, bike|  
-|2|LL casque|vélo|  
+|2|LL casque|bike|  
 |3|HL Mountain Frame|vélo, mountain|  
   
  Requête suivante transforme chaque liste de balises et les joint avec la ligne d’origine :  
@@ -113,9 +113,9 @@ FROM Product
 |1|À un doigt intégral gants|habillement|  
 |1|À un doigt intégral gants|feuille de route|  
 |1|À un doigt intégral gants|Touring|  
-|1|À un doigt intégral gants|vélo|  
-|2|LL casque|vélo|  
-|3|HL Mountain Frame|vélo|  
+|1|À un doigt intégral gants|bike|  
+|2|LL casque|bike|  
+|3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|Mountain|  
   
 ### <a name="c-aggregation-by-values"></a>C. Agrégation de valeurs  
@@ -171,7 +171,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [SOUS-chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   

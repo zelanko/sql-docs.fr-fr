@@ -1,5 +1,5 @@
 ---
-title: SUBSTRING (Transact-SQL) | Documents Microsoft
+title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  Est un **caractère**, **binaire**, **texte**, **ntext**, ou **image**[expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *Démarrer*  
+ *start*  
  Est un entier ou **bigint** expression qui spécifie où les caractères renvoyés commencent. (La numérotation est la signification de base, 1 que le premier caractère de l’expression est 1). Si *Démarrer* est inférieur à 1, l’expression retournée commence au premier caractère qui est spécifié dans *expression*. Dans ce cas, le nombre de caractères retournés est la plus grande valeur de la somme de *Démarrer* + *longueur*- 1 ou 0. Si *Démarrer* est supérieur au nombre de caractères dans l’expression de valeur, une expression de longueur nulle est retournée.  
   
  *length*  
@@ -63,9 +63,9 @@ SUBSTRING ( expression ,start , length )
   
 |Expression spécifiée|Type de retour|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**texte**|**varchar**|  
-|**NCHAR**/**nvarchar**/**ntext**|**nvarchar**|  
-|**binaire**/**varbinary**/**image**|**varbinary**|  
+|**char**/**varchar**/**text**|**varchar**|  
+|**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Notes  
  Les valeurs de *Démarrer* et *longueur* doit être spécifié en nombre de caractères pour **ntext**, **char**, ou **varchar** des types de données et octets pour **texte**, **image**, **binaire**, ou **varbinary** des types de données.  
@@ -73,7 +73,7 @@ SUBSTRING ( expression ,start , length )
  Le *expression* doit être **varchar (max)** ou **varbinary (max)** lors de la *Démarrer* ou *longueur* contient une valeur supérieure à 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
- Lors de l’utilisation de classements de caractères supplémentaires (SC), les deux *Démarrer* et *longueur* comptent chaque paire de substitution dans *expression* comme un caractère unique. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Lors de l’utilisation de classements de caractères supplémentaires (SC), les deux *Démarrer* et *longueur* comptent chaque paire de substitution dans *expression* comme un caractère unique. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -91,10 +91,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |St |
-|tempdb  |t  |Pack d’administration |
+|master  |m  |st |
+|tempdb  |t  |mp |
 |model   |m  |de |
-|msdb    |m  |base de données |
+|msdb    |m  |db |
 
 
   
@@ -222,6 +222,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

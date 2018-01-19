@@ -3,8 +3,8 @@ title: "Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft"
 description: "Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: da16bc7126d39bcdf86152b3ae8b21d7b58805eb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
@@ -51,7 +51,7 @@ Si vous rencontrez des difficultés à se connecter à votre serveur SQL de Linu
 
 - Vérifiez que le nom d’utilisateur et un mot de passe ne contiennent pas de fautes de frappe ou espaces ni d’une casse incorrecte.
 
-- Essayez de définir explicitement le numéro de port et de protocole avec le nom du serveur comme suit : **tcp:servername, 1433**.
+- Essayez de définir explicitement le numéro de port et de protocole avec le nom du serveur à l’exemple suivant : **tcp:servername, 1433**.
 
 - Problèmes de connectivité réseau peuvent également entraîner des délais d’attente et les erreurs de connexion. Après avoir vérifié vos informations de connexion et la connectivité réseau, recommencez l’opération.
 
@@ -61,7 +61,7 @@ Les sections suivantes montrent comment démarrer, arrêter, redémarrer et vér
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Gérer le service mssql-serveur Red Hat Enterprise Linux (RHEL) et Ubuntu 
 
-Vérifiez l’état de l’état du service SQL Server à l’aide de cette commande :
+Vérifiez l’état du service SQL Server à l’aide de cette commande :
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +77,7 @@ Vous pouvez arrêter, démarrer ou redémarrer le service SQL Server en fonction
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Gérer l’exécution du conteneur Docker mssql
 
-Vous pouvez obtenir l’ID de conteneur et d’état du dernier conteneur Docker de serveur SQL créé en exécutant la commande suivante (l’ID sera sous la colonne « ID de conteneur ») :
+Vous pouvez obtenir l’ID de conteneur et d’état du dernier conteneur Docker de serveur SQL créé en exécutant la commande suivante (l’ID est sous le **ID de conteneur** colonne) :
 
    ```bash
    sudo docker ps -l
@@ -159,9 +159,9 @@ Si vous avez commencé par inadvertance de SQL Server avec un autre utilisateur,
 
 ## <a name="common-issues"></a>Problèmes courants
 
-1. Vous ne pouvez pas vous connecter à votre instance de SQL Server à distance.
+1. Impossible de se connecter à votre instance de SQL Server à distance.
 
-   Consultez la section Dépannage de la rubrique, [se connecter à SQL Server sur Linux](#connection).
+   Consultez la section Dépannage de l’article, [se connecter à SQL Server sur Linux](#connection).
 
 2. Erreur : Nom d’hôte doit être de 15 caractères ou moins.
 
@@ -172,7 +172,7 @@ Si vous avez commencé par inadvertance de SQL Server avec un autre utilisateur,
    Si vous avez oublié le mot de passe d’administrateur système ou que vous devez le réinitialiser pour une raison quelconque, procédez comme suit.
 
    > [!NOTE]
-   > Procédez comme suit arrêtez temporairement le service SQL Server.
+   > Les étapes suivantes arrêter le service SQL Server temporairement.
 
    Journal dans le terminal de l’ordinateur hôte, exécutez les commandes suivantes, suivez les invites pour réinitialiser le mot de passe SA :
 
@@ -183,7 +183,7 @@ Si vous avez commencé par inadvertance de SQL Server avec un autre utilisateur,
 
 4. À l’aide de caractères spéciaux dans le mot de passe.
 
-   Si vous utilisez des caractères dans le mot de passe du compte de connexion SQL Server, vous devrez peut-être d’échappement lors de leur utilisation dans le terminal Linux. Vous devez échapper la $ à tout moment à l’aide de la barre oblique vous l’utilisez dans un script de shell de commande/Terminal Server :
+   Si vous utilisez des caractères dans le mot de passe du compte de connexion SQL Server, vous devrez peut-être d’échappement lors de leur utilisation dans le terminal Linux. Vous devez isoler le $ à tout moment à l’aide de la barre oblique vous l’utilisez dans un script de shell de commande/Terminal Server :
 
    Ne fonctionne pas :
 
@@ -207,5 +207,5 @@ Prise en charge est disponible via la Communauté et surveillé par l’équipe 
 - [Échange de pile DBA](https://dba.stackexchange.com/questions/tagged/sql-server): poser des questions d’administration de base de données
 - [Dépassement de capacité de la pile](http://stackoverflow.com/questions/tagged/sql-server): poser des questions sur le développement
 - [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): poser des questions techniques
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): signaler des bogues et la fonctionnalité de demande
+- [Envoyer des commentaires](https://feedback.azure.com/forums/908035-sql-server): signaler des bogues et la fonctionnalité de demande
 - [Reddit](https://www.reddit.com/r/SQLServer/): traitent de SQL Server
