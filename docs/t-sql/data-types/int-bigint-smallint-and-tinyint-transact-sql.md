@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint et tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Pour économiser de l’espace dans la base de données, utilisez le plus petit type de données qui peut contenir fiable de toutes les valeurs possibles. Par exemple, un tinyint peut suffire pour la durée de vie d’une personne, car aucune personne ne vie plus de 255 ans. Mais un tinyint ne serait pas suffisant pour la durée de vie d’une génération, car une génération peut durer plus de 255 ans.
+Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Pour économiser de l’espace dans la base de données, utilisez le plus petit type de données qui peut contenir toutes les valeurs possibles. Par exemple, un tinyint peut suffire pour la durée de vie d’une personne, car aucune personne ne vit plus de 255 ans. Mais un tinyint ne serait pas suffisant pour la durée de vie d’une génération, car une génération peut durer plus de 255 ans.
   
 |Type de données|Plage|Stockage|  
 |---|---|---|
