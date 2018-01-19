@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint et tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Pour économiser de l’espace dans la base de données, utilisez le plus petit type de données qui peut contenir fiable de toutes les valeurs possibles. Par exemple, tinyint peut suffire pour la durée de vie d’une personne, car aucun habite à plus de 255 ans. Mais tinyint ne serait pas suffisant pour la durée de vie d’une génération, car une génération peut être plus de 255 ans.
+Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Pour économiser de l’espace dans la base de données, utilisez le plus petit type de données qui peut contenir toutes les valeurs possibles. Par exemple, un tinyint peut suffire pour la durée de vie d’une personne, car aucune personne ne vit plus de 255 ans. Mais un tinyint ne serait pas suffisant pour la durée de vie d’une génération, car une génération peut durer plus de 255 ans.
   
 |Type de données|Plage|Stockage|  
 |---|---|---|
@@ -52,11 +52,11 @@ Types de données représentant des valeurs numériques exactes qui utilisent de
 |**tinyint**|0 à 255|Un octet|  
   
 ## <a name="remarks"></a>Notes  
-Le **int** type de données est le type de données integer principal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **bigint** type de données est destiné à utiliser lorsque les valeurs entières peuvent dépasser la plage prise en charge par le **int** type de données.
+Le **int** (type de données) est le type de données integer principal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **bigint** (type de données) est destiné à être utilisé lorsque les valeurs entières peuvent dépasser la plage prise en charge par le **int** (type de données).
   
-**bigint** s’insère entre **smallmoney** et **int** dans le graphique de priorité de type de données.
+Un **bigint** s’insère entre un **smallmoney** et un **int** dans le graphique de priorité de type de données.
   
-Fonctions retournent **bigint** uniquement si l’expression de paramètre est un **bigint** type de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ne promeut pas automatiquement les autres types de données integer (**tinyint**, **smallint**, et **int**) à **bigint**.
+Les Fonctions retournent **bigint** uniquement si l’expression du paramètre est un **bigint** (type de données). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne promeut pas automatiquement les autres types de données integer (**tinyint**, **smallint**, et **int**) à **bigint**.
   
 > [!CAUTION]  
 >  Lorsque vous utilisez le +, -, \*, /, ou % des opérateurs arithmétiques pour effectuer une conversion implicite ou explicite de **int**, **smallint**, **tinyint**, ou **bigint** des valeurs de constante pour le **float**, **réel**, **décimal** ou **numérique** les types de données, les règles qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’applique lorsqu’il calcule le type de données et la précision des résultats des expressions diffèrent selon que la requête est automatiquement paramétrable ou non.  
