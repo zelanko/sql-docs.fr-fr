@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation du chiffrement intégral avec le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -372,7 +372,7 @@ Pour autoriser le pilote à utiliser des clés de migration certifiables stocké
 |Type d'informations d'identification| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Nom d’utilisateur/mot de passe| `KeyVaultPassword`|Nom d’utilisateur Principal|Mot de passe|
-|ID de client/secret| `KeyVaultClientSecret`|ID client|Secret|
+|ID de client/secret| `KeyVaultClientSecret`|ID client|Clé secrète|
 
 #### <a name="example-connection-strings"></a>Exemples de chaînes de connexion
 
@@ -384,7 +384,7 @@ Les chaînes de connexion suivantes montrent comment s’authentifier auprès d�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**Nom d’utilisateur/mot de passe**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -526,7 +526,7 @@ Pour obtenir un exemple d’implémentation de votre propre fournisseur de magas
 Bien que le pilote ODBC autorise l’utilisation de [opérations asynchrones](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) avec Always Encrypted, a un impact sur les performances sur les opérations de chiffrement intégral est activé. L’appel à `sys.sp_describe_parameter_encryption` pour déterminer les métadonnées de chiffrement pour l’instruction bloque et entraîne le pilote à attendre que le serveur retourner les métadonnées avant de retourner `SQL_STILL_EXECUTING`.
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Récupérer des données dans des parties avec SQLGetData
-Avant le 17 du pilote ODBC pour SQL Server, cryptage caractère et les colonnes de type binary ne sont pas accessibles dans des parties avec SQLGetData. Un seul appel de SQLGetData peut être effectué, avec une mémoire tampon de longueur suffisante pour contenir les données de la colonne entière. 17 de pilote ODBC pour SQL Server, chiffré **varbinary (max)** des colonnes ne peut pas être récupérées dans les parties avec SQLGetData et un type C SQL_C_BINARY.
+Avant le 17 du pilote ODBC pour SQL Server, cryptage caractère et les colonnes de type binary ne sont pas accessibles dans des parties avec SQLGetData. Un seul appel de SQLGetData peut être effectué, avec une mémoire tampon de longueur suffisante pour contenir les données de la colonne entière.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Envoyer des données dans des parties avec SQLPutData
 Impossible d’envoyer les données de comparaison ou insertion dans des parties avec SQLPutData. Un seul appel à SQLPutData peut être effectué, avec une mémoire tampon contenant la totalité des données. Pour insérer des données de type long dans les colonnes chiffrées, utilisez l’API de copie en bloc, décrit dans la section suivante, avec un fichier de données d’entrée.
