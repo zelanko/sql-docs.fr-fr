@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Leçon 7-1-Définition et exploration d’indicateurs de performance clés
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Pour définir les indicateurs de performance clés (KPI), vous définissez tout d’abord un nom d’indicateur de performance clé et le groupe de mesures auquel l’indicateur de performance clé est associé. Un indicateur de performance clé peut être associé à tous les groupes de mesures ou à un seul groupe de mesures. Vous définissez ensuite les éléments suivants de l'indicateur de performance clé :  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Pour définir un indicateur de performance clé (PKI, Key Performance Indicator), vous définissez d'abord son nom et le groupe de mesures auquel il est associé. Un indicateur de performance clé peut être associé à tous les groupes de mesures ou à un seul groupe de mesures. Vous définissez ensuite les éléments suivants de l'indicateur de performance clé :  
   
 -   L'expression de valeur  
   
@@ -275,5 +277,5 @@ Dans la tâche de cette leçon, vous définissez les indicateurs de performance 
     La marge brute de la vente de vélos par les revendeurs en Amérique du Nord pour le troisième trimestre de l'année fiscale 2007 s'affiche.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 8 : Définition des actions](../analysis-services/lesson-8-defining-actions.md)  
+[Leçon 8 : Définition des Actions](../analysis-services/lesson-8-defining-actions.md)  
   

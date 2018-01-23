@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 850aa434cc5eb5b5f1379be68d29cd77994a2f75
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d0913972ef2ca0b1c40c0e23d3d189a6149809cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>Leçon 2-4 - examen des propriétés de Cube et Dimension
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Après avoir défini un cube, vous pouvez examiner les résultats à l’aide du Concepteur de Cube. Dans la tâche suivante, vous examinez la structure du cube dans le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Après avoir défini un cube, vous pouvez examiner les résultats en utilisant le Concepteur de cube. Dans la tâche suivante, vous examinez la structure du cube dans le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>Pour vérifier les propriétés d'un cube et des dimensions dans le Concepteur de cube  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 10. Fermez l'onglet du code XML.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Déploiement d'un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Déploiement d’un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Explorer les données d'une dimension dans le Concepteur de dimensions](../analysis-services/multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  

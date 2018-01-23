@@ -24,14 +24,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6417a0f9f52f4b1fe6974928f534e8fafa04bca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Prise en charge des traductions dans Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Dans un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] des modèles de données, vous pouvez incorporer plusieurs traductions d’une légende ou une description pour fournir des chaînes spécifiques à la culture en fonction de l’identificateur LCID. Dans le cas des modèles multidimensionnels, vous pouvez ajouter des traductions pour le nom de la base de données, les objets cube et les objets de dimension de base de données. Pour les modèles tabulaires, vous pouvez traduire les descriptions et légendes des tables et des colonnes.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Dans des modèles de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez incorporer plusieurs traductions d’une légende ou d’une description pour fournir des chaînes spécifiques aux paramètres régionaux en fonction de l’identificateur LCID. Dans le cas des modèles multidimensionnels, vous pouvez ajouter des traductions pour le nom de la base de données, les objets cube et les objets de dimension de base de données. Pour les modèles tabulaires, vous pouvez traduire les descriptions et légendes des tables et des colonnes.  
   
  La définition d’une traduction crée les métadonnées et la légende traduite à l’intérieur du modèle. Cependant, pour restituer des chaînes localisées dans une application cliente, vous devez définir la propriété **Language** sur l’objet ou passer un paramètre **Culture** ou **Locale Identifier** sur la chaîne de connexion (par exemple, en définissant `LocaleIdentifier=1036` afin de retourner des chaînes en français).  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1e7d887c9c25ee62cf9fe37ca16c9538c3c646db
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition de calculs
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions MDX (Multidimensional Expressions) ou des scripts. Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
   
 Lorsque vous définissez un nouveau calcul dans le Concepteur de cube, ce calcul est ajouté au volet **Organisateur de script** de l'onglet **Calculs** du Concepteur de cube, et les champs pour ce type de calcul particulier s'affichent dans un formulaire de calcul dans le volet **Expressions de calcul** . Les calculs sont exécutés dans l'ordre où ils apparaissent dans le volet **Organisateur de script** . Vous pouvez changer l’ordre des calculs en cliquant avec le bouton droit sur un calcul particulier, puis en sélectionnant **Monter** ou **Descendre**. Ou bien, vous pouvez cliquer sur un calcul particulier, puis utiliser l’icône **Monter** ou **Descendre** de la barre d’outils de l’onglet **Calculs** .  
   
@@ -59,11 +61,11 @@ Dans cette tâche, vous apprenez à définir des membres calculés.
 Dans cette tâche, vous apprenez à définir des jeux nommés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Leçon 7 : Définition d’indicateurs de Performance clés &#40; Indicateurs de performance clés &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modélisation multidimensionnelle &#40; Didacticiel Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Créer des jeux nommés](../analysis-services/multidimensional-models/create-named-sets.md)  
 [Créer des membres calculés](../analysis-services/multidimensional-models/create-calculated-members.md)  
   

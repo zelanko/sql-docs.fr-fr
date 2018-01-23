@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bcf00aa80484209477179ef34e4a795000f4cdc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Leçon 4-7 : définition des propriétés de traitement des valeurs Null et membre inconnu
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] traite une dimension, toutes les valeurs distinctes à partir de colonnes dans les tables sous-jacentes ou des vues dans la vue de source de données remplissent les attributs de la dimension. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur Null au cours du traitement, par défaut, elle convertit celle-ci en zéro pour des colonnes numériques ou en une chaîne vide pour des colonnes de type chaîne. Vous pouvez modifier les paramètres par défaut ou convertir les valeurs Null dans votre processus d’extraction, de transformation et de chargement (le cas échéant) de l’entrepôt de données relationnelles sous-jacent. Par ailleurs, vous pouvez faire en sorte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convertisse la valeur Null en une valeur désignée en configurant trois propriétés : les propriétés **UnknownMember** et **UnknownMemberName** pour la dimension, et la propriété **NullProcessing** pour l’attribut de clé de la dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] traite une dimension, toutes les valeurs distinctes des colonnes sous-jacentes dans les tables ou les vues de la vue de source de données remplissent les attributs de la dimension. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur Null au cours du traitement, par défaut, elle convertit celle-ci en zéro pour des colonnes numériques ou en une chaîne vide pour des colonnes de type chaîne. Vous pouvez modifier les paramètres par défaut ou convertir les valeurs Null dans votre processus d’extraction, de transformation et de chargement (le cas échéant) de l’entrepôt de données relationnelles sous-jacent. Par ailleurs, vous pouvez faire en sorte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convertisse la valeur Null en une valeur désignée en configurant trois propriétés : les propriétés **UnknownMember** et **UnknownMemberName** pour la dimension, et la propriété **NullProcessing** pour l’attribut de clé de la dimension.  
   
 L'Assistant Dimension et l'Assistant Cube activeront automatiquement ces propriétés si l'attribut de clé d'une dimension peut accepter une valeur Null ou si l'attribut racine d'une dimension en flocons est basée sur une colonne pouvant être Null. Dans ce cas, la propriété **NullProcessing** de l’attribut de clé a la valeur **UnknownMember** et la propriété **UnknownMember** a la valeur **Visible**.  
   
@@ -185,7 +187,7 @@ Pour modifier le comportement mentionné dans la tâche précédente, activez la
     ![Niveau de nom de produit affichant les composants d’assemblage](../analysis-services/media/l4-assemblycomponents-1.gif "au niveau du nom de produit affichant les composants d’assembly")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Leçon 5 : Définition des relations entre les Dimensions et les groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd66b2c32da2194dbfbfd370db8592cd9494cb34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8ddbefdcbc54c076c801e5f4d83e107e48ac5ba9
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>Leçon 3-5-parcourir le Cube déployé
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans la tâche suivante, vous parcourez le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel. Étant donné que notre analyse compare la mesure entre plusieurs dimensions, utilisez un tableau croisé dynamique Excel pour parcourir vos données. Un tableau croisé dynamique permet de placer le client, la date et les informations produit sur différents axes afin que vous pouvoir voir les disparités des ventes sur Internet en fonction des points dans le temps, des caractéristiques démographiques de la clientèle et des gammes de produits.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dans la tâche suivante, vous parcourez le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Étant donné que notre analyse compare la mesure entre plusieurs dimensions, utilisez un tableau croisé dynamique Excel pour parcourir vos données. Un tableau croisé dynamique permet de placer le client, la date et les informations produit sur différents axes afin que vous pouvoir voir les disparités des ventes sur Internet en fonction des points dans le temps, des caractéristiques démographiques de la clientèle et des gammes de produits.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Pour parcourir le cube déployé  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/08/2018
     ![Ventes sur Internet par région et ligne de produits](../analysis-services/media/l3-cube-browser-finish.gif "ventes Internet par région et ligne de produits")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 4 : Définition des attributs avancés et des propriétés de dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+[Leçon 4 : Définition des attributs avancés et des propriétés de Dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
   

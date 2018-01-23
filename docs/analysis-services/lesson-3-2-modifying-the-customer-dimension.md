@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Leçon 3-2 : modification de la Dimension Customer
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Il existe différentes manières que vous pouvez augmenter la facilité d’utilisation et les fonctionnalités des dimensions dans un cube. Dans les tâches dans cette rubrique, vous modifiez la dimension Customer.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Il existe différents moyens de rendre les dimensions d'un cube plus conviviales et plus fonctionnelles. Dans les tâches dans cette rubrique, vous modifiez la dimension Customer.  
   
 ## <a name="renaming-attributes"></a>Affectation d'un nouveau nom aux attributs  
 Vous pouvez modifier les noms d’attributs avec l’onglet **Structure de dimension** du Concepteur de dimensions.  

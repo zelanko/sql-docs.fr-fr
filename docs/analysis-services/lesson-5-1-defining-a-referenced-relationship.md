@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Leçon 5-1-définir une relation référencée
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]À ce stade du didacticiel, chaque dimension de cube que vous avez définie était basée sur une table qui a été directement liée à la table de faits pour un groupe de mesures par une clé primaire pour la relation de clé étrangère. Au cours des tâches de cette rubrique, vous allez lier la dimension **Geography** à la table de faits pour les ventes de revendeurs par le biais de la dimension **Reseller** , qui est appelée *dimension de référence*. Cela permet aux utilisateurs de dimensionner les ventes des revendeurs par zone géographique. Pour plus d’informations, consultez [Définir une relation référencée et des propriétés de relation référencée](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Jusqu'à présent, vous avez défini dans ce didacticiel des dimensions de cube basées sur une table directement liée à la table de faits d'un groupe de mesures par une relation clé primaire/clé étrangère. Au cours des tâches de cette rubrique, vous allez lier la dimension **Geography** à la table de faits pour les ventes de revendeurs par le biais de la dimension **Reseller** , qui est appelée *dimension de référence*. Cela permet aux utilisateurs de dimensionner les ventes des revendeurs par zone géographique. Pour plus d’informations, consultez [Définir une relation référencée et des propriétés de relation référencée](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Dimensionnement des ventes des revendeurs par zones géographiques  
   
@@ -128,7 +130,7 @@ Au cours de la tâche suivante, vous allez résoudre ce problème en définissan
     ![Boîte de dialogue Définir relation](../analysis-services/media/l5-referencedrelationship-5.gif "boîte de dialogue Définir une relation")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Définition d'une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+[Définition d’une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Relations d'attributs](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  

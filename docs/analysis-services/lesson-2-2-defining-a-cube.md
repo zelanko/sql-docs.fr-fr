@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>Leçon 2-2-définition d’un Cube
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]L’Assistant Cube vous permet de définir les groupes de mesures et les dimensions d’un cube. Dans la tâche suivante, vous allez utiliser l'Assistant Cube pour générer un cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+L'Assistant Cube vous aide à définir les groupes de mesures et les dimensions d'un cube. Dans la tâche suivante, vous allez utiliser l'Assistant Cube pour générer un cube.  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Pour définir un cube et ses propriétés  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 15. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Ajout d'attributs aux dimensions](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[Ajout d’attributs aux Dimensions](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Cubes dans les modèles multidimensionnels](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  

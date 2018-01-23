@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Leçon 4-1-à l’aide d’une Version modifiée du projet didacticiel Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Les leçons de ce didacticiel sont basées sur une version améliorée de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet que vous avez effectuées dans les trois premières leçons du didacticiel. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
   
 Avant de poursuivre votre apprentissage dans le didacticiel, vous devez télécharger, extraire, charger et traiter la version améliorée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Suivez les instructions de cette leçon pour vous assurer d'effectuer toutes les étapes.  
   
@@ -124,5 +126,5 @@ Le cube **Analysis Services Tutorial** contient maintenant deux groupes de mesur
 [Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Déploiement d'un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Déploiement d’un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

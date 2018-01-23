@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Leçon 6-1-définir des membres calculés
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Les membres calculés sont membres d’une dimension ou un groupe de mesures qui sont définies selon une combinaison de données du cube, des opérateurs arithmétiques, des chiffres et des fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Les membres calculés sont les membres d'une dimension ou d'un groupe de mesures qui sont définis à l'aide d'une combinaison de données de cube, d'opérateurs arithmétiques, de nombres et de fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
   
 Pour créer un membre calculé, utilisez la commande **Nouveau membre calculé** , disponible sous l'onglet **Calculs** du Concepteur de cube. Vous pouvez créer un membre calculé au sein d'une dimension, y compris la dimension de mesures. Vous pouvez aussi placer un membre calculé dans un dossier d'affichage dans la boîte de dialogue **Propriétés de calcul** . Pour plus d’informations, consultez [Calculs](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calculs dans les modèles multidimensionnels](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)et [Créer des membres calculés](../analysis-services/multidimensional-models/create-calculated-members.md).  
   

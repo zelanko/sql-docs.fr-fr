@@ -1,5 +1,5 @@
 ---
-title: "DÉFINIR des statistiques d’e/s (Transact-SQL) | Documents Microsoft"
+title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d19ec8f11ae314dd4c420ba8b72689169e5e29b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ SET STATISTICS IO { ON | OFF }
 |Élément de sortie|Signification|  
 |-----------------|-------------|  
 |**Table**|Nom de la table.|  
-|**Nombre d’analyses**|Nombre de recherches/analyses démarrées après avoir atteint le niveau feuille dans n'importe quelle direction afin de récupérer toutes les valeurs pour construire le dataset final de la sortie.<br /><br /> Le nombre d'analyses est 0 si l'index utilisé est un index unique ou un index cluster sur une clé principale et que vous recherchez une seule valeur. Par exemple, `WHERE Primary_Key_Column = <value>`.<br /><br /> Le nombre d'analyses est 1 lorsque vous recherchez une valeur à l'aide d'un index cluster non unique qui est défini sur une colonne clé non principale. Cela permet de rechercher les valeurs en double de la valeur clé que vous recherchez. Par exemple, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Le nombre d'analyses est N lorsque N correspond au nombre de recherches/analyses différentes à gauche ou à droite au niveau feuille après avoir recherché une valeur clé à l'aide de la clé d'index.|  
+|**Nombre d’analyses**|Nombre de recherches/analyses démarrées après avoir atteint le niveau feuille dans n'importe quelle direction afin de récupérer toutes les valeurs pour construire le dataset final de la sortie.<br /><br /> Le nombre d'analyses est 0 si l'index utilisé est un index unique ou un index cluster sur une clé principale et que vous recherchez une seule valeur. Par exemple, `WHERE Primary_Key_Column = <value>`.<br /><br /> Nombre d’analyses est 1 lorsque vous recherchez une valeur à l’aide d’un index cluster non unique qui est défini sur une colonne de clé non primaire. Cela permet de rechercher les valeurs en double de la valeur clé que vous recherchez. Par exemple, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Le nombre d'analyses est N lorsque N correspond au nombre de recherches/analyses différentes à gauche ou à droite au niveau feuille après avoir recherché une valeur clé à l'aide de la clé d'index.|  
 |**lectures logiques**|Nombre de pages lues à partir du cache de données.|  
 |**lectures physiques**|Nombre de pages lues depuis le disque.|  
 |**lectures anticipées**|Nombre de pages placées dans le cache pour la requête.|  
@@ -74,7 +74,7 @@ SET STATISTICS IO { ON | OFF }
 > [!NOTE]  
 >  Lorsque des instructions Transact-SQL extraient des colonnes LOB, certaines opérations d'extraction peuvent entraîner le parcours de l'arbre LOB à de multiples reprises. L'option SET STATISTICS IO peut alors signaler un nombre de lectures logiques plus élevé que prévu.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour utiliser SET STATISTICS IO, les utilisateurs doivent disposer des autorisations appropriées pour exécuter l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'autorisation SHOWPLAN n'est pas nécessaire.  
   
 ## <a name="examples"></a>Exemples  
@@ -103,7 +103,7 @@ lob read-ahead reads 0.
   
 ## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [DÉFINIR STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   

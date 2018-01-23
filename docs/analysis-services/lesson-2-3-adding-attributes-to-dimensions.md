@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4d2a87b4e387d48c6f9537ee402a10a253bf202
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Leçon 2-3-Ajout d’attributs aux Dimensions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Maintenant que vous avez défini les dimensions, vous pouvez les remplir avec des attributs qui représentent chaque élément de données dans la dimension. Les attributs reposent généralement sur les champs d'une vue de source de données. Lorsque vous ajoutez des attributs à une dimension, vous pouvez inclure des champs de n'importe quelle table dans la vue de source de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Une fois les dimensions définies, vous pouvez les remplir avec les attributs qui représentent chaque élément de données dans la dimension. Les attributs reposent généralement sur les champs d'une vue de source de données. Lorsque vous ajoutez des attributs à une dimension, vous pouvez inclure des champs de n'importe quelle table dans la vue de source de données.  
   
 Dans cette tâche, vous utiliserez le Concepteur de dimensions pour ajouter des attributs aux dimensions Customer et Product. La dimension Customer inclut des attributs basés sur des champs des deux tables Customer et Geography.  
   
@@ -130,10 +132,10 @@ Dans cette tâche, vous utiliserez le Concepteur de dimensions pour ajouter des 
 5.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Vérification des propriétés de cube et de dimension](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Vérification des propriétés de la Dimension et de Cube](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Référence des propriétés d’attribut de dimension](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Dimension Attribute Properties Reference](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

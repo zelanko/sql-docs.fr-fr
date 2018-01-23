@@ -17,17 +17,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dafe91acc4a753b9b6335d1b8b5bbd56c30586f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: db03f796d3271a7141f3cd754dd04d0e312bdc33
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-features-and-tasks"></a>Fonctionnalités et tâches Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Documentation fondamentale d’Analysis Services est organisée en mode de serveur et de type de modèle afin de pouvoir vous concentrer sur simplement les outils, les tâches et les fonctionnalités qui sont disponibles dans le mode que vous avez installé. Des tâches d’administration communes à plusieurs modes se trouvent dans Gestion des instances.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  La documentation d’Analysis Services est structurée en fonction du type de modèle et du mode serveur afin que vous puissiez vous concentrer sur les outils, les tâches et les fonctionnalités disponibles pour le mode que vous avez installé. Des tâches d’administration communes à plusieurs modes se trouvent dans Gestion des instances.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comparaison des solutions tabulaires et multidimensionnelles (SSAS)](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [Comparaison des Solutions tabulaires et multidimensionnelles &#40; SSAS &#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
  [Outils et applications utilisés dans Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   

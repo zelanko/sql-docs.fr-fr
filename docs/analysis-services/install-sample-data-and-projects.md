@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609d8f220df38081e5f14b3aa9154eb86350e014
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="install-sample-data-and-projects"></a>Installer les exemples de données et des projets 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Utilisez les instructions et les liens fournis dans cette rubrique pour installer tous les fichiers de données et de projet utilisés dans le didacticiel Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+Utilisez les instructions et les liens fournis dans cette rubrique pour installer tous les fichiers de données et de projet utilisés dans le didacticiel Analysis Services.  
   
 ## <a name="step-1-install-sql-server-software"></a>Étape 1 : installer SQL Server  
 Les leçons du didacticiel supposent que vous avez installé les logiciels suivants. Tous les logiciels suivants sont installés à l'aide du support d'installation de SQL Server. Pour simplifier le déploiement, vous pouvez installer toutes les fonctionnalités sur un seul ordinateur. Pour installer ces fonctionnalités, exécutez le programme d'installation de SQL Server et sélectionnez-les dans la page Sélection de fonctionnalités. Pour plus d’informations, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  

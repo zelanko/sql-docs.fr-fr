@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d080c99d9d3fc1a1fcdfb8e6a4e183850462f94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans cette leçon, vous allez apprendre à définir des actions dans votre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet. Une action est simplement une instruction MDX (Multidimensional Expressions) qui est stockée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et peut être incorporée dans des applications clientes et démarrée par un utilisateur.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dans cette leçon, vous allez apprendre à définir des actions dans votre projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Une action est simplement une instruction MDX (Multidimensional Expressions) qui est stockée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et peut être incorporée dans des applications clientes et démarrée par un utilisateur.  
   
 > [!NOTE]  
 > Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les types d’actions décrits dans le tableau suivant.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les types d'actions décrits dans le tableau suivant.  
   
 |||  
 |-|-|  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
 |Rapport|Soumet une demande paramétrable basée sur une URL à un serveur de rapports et renvoie un rapport à une application cliente.|  
 |Ensemble de lignes|Renvoie un ensemble de lignes à une application cliente.|  
-|.|Exécute une commande OLE DB.|  
+|Instruction|Exécute une commande OLE DB.|  
 |URL|Affiche une page web dynamique dans un navigateur Internet.|  
   
 Les actions permettent aux utilisateurs de démarrer une application ou d'effectuer d'autres étapes dans le contexte d'un élément sélectionné. Pour plus d’informations, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md), [Actions dans les modèles multidimensionnels](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
@@ -51,16 +53,16 @@ Les actions permettent aux utilisateurs de démarrer une application ou d'effect
   
 Cette leçon inclut la tâche suivante :  
   
-[Définition et utilisation d'une action d'extraction](../analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+[Définition et utilisation d’une Action d’extraction](../analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md)  
 Dans cette tâche, vous définissez, utilisez puis modifiez une action d'extraction à travers la relation de dimension de fait que vous avez définie antérieurement dans ce didacticiel.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 9 : Définition de perspectives et de traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Leçon 9 : Définition de Perspectives et traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Actions &#40;Analysis Services - Données multidimensionnelles&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[Actions &#40; Analysis Services - données multidimensionnelles &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [Actions dans les modèles multidimensionnels](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

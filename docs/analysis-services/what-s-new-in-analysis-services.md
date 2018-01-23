@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Quel &#39; nouveauté dans Analysis Services
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations qui fournit les meilleures performances, la création de solutions plus facile, gestion automatisée de base de données, le traitement des partitions, en parallèle améliorée des relations avec bidirectionnelles, le filtrage croisé et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations de fournir des performances améliorées, solution plus facile de création, de gestion automatisée de la base de données améliorée des relations avec bidirectionnelles entre le filtrage, le traitement des partitions parallèles et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 Comme nous l’avons annoncé lors de la conférence SQL PASS de 2016, Analysis Services est désormais disponible dans le cloud comme un service Azure. **Azure Analysis Services** prend en charge les modèles tabulaires aux niveaux de compatibilité 1200 et supérieurs. DirectQuery, les partitions, la sécurité de niveau ligne, les relations bidirectionnelles et les traductions sont toutes prises en charge. Pour en savoir plus et effectuer un essai gratuit, consultez [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
@@ -68,7 +70,7 @@ Avec cette version, vous n’avez plus besoin de deux versions de SSDT pour cré
 Les dossiers d’affichage sont désormais disponibles pour les modèles 1200 tabulaires. Définis dans SQL Server Data Tools et affichés dans les applications clientes comme Excel ou Power BI Desktop, les dossiers d’affichage vous permettent d’organiser facilement des mesures en grand nombre dans des dossiers individuels. De cette façon, les mesures sont présentées de façon hiérarchique, ce qui simplifie la navigation dans les listes de champs.
 ### <a name="bi-directional-cross-filtering"></a>Filtrage croisé bidirectionnel
 L’une des nouveautés de cette version est son approche intégrée d’activation des filtres croisés bidirectionnels dans les modèles tabulaires. Grâce à elle, plus besoin de concevoir manuellement des solutions de contournement DAX pour propager un contexte de filtre dans les relations de table. Les filtres sont créés automatiquement uniquement si la direction des filtres peut être établie avec un haut degré de certitude. S’il existe une ambiguïté en ce qui concerne le format de plusieurs chemins de requête sur les relations de table, les filtres ne sont pas créés automatiquement. Pour plus d’informations, consultez [Filtres croisés bidirectionnels pour modèles tabulaires dans SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .
- ### <a name="translations"></a>Translations    
+ ### <a name="translations"></a>Traductions    
  Vous pouvez désormais stocker des métadonnées traduites dans un modèle 1200 tabulaire. Les métadonnées du modèle incluent des champs pour la **Culture**, les légendes traduites et les descriptions traduites. Pour ajouter des traductions, utilisez la commande **Modèle** > **Traductions** dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).    
  ### <a name="pasted-tables"></a>Tables collées    
  Si vous utilisez un modèle tabulaire 1100 ou 1103 qui contient des tables collées, vous pouvez désormais le mettre à niveau vers un modèle 1200. Nous vous recommandons d’utiliser [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Dans SSDT, définissez **CompatibilityLevel** à la valeur 1200 et effectuez le déploiement sur une instance [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    

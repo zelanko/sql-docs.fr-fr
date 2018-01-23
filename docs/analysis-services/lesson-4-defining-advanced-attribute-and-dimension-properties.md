@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 486d4c78c92f9de8f70a8d3cdb70cced525b3e4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des attributs avancés et des propriétés de dimension
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans cette leçon, vous allez apprendre comment utiliser certaines des propriétés avancées des attributs, des hiérarchies d’attributs et des propriétés de dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Au cours de cette leçon, vous allez apprendre à utiliser certaines propriétés avancées des attributs, hiérarchies d'attributs et propriétés de dimensions.  
   
 > [!NOTE]  
 > Cette leçon est basée sur une version améliorée du projet de didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons de ce didacticiel. La première tâche de cette leçon explique où vous pouvez trouver l'exemple de projet à utiliser pour cette leçon et la différence qu'il existe entre ce projet et le projet que vous avez créé au cours des trois premières leçons.  
@@ -41,7 +43,7 @@ Au cours de cette tâche, vous allez définir des noms de niveaux dans une dimen
 [Regroupement automatique des membres d'attribut](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
 Au cours de cette tâche, vous allez créer automatiquement des groupements de membres d'attributs en fonction de la distribution des membres dans la hiérarchie d'attributs. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-[Masquage et désactivation des hiérarchies d'attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[Masquage et désactivation des hiérarchies d’attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
 Au cours de cette tâche, vous allez apprendre à désactiver ou à masquer les hiérarchies d'attributs et à quel moment le faire.  
   
 [Tri des membres d'attribut sur la base d'un attribut secondaire](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Didacticiels sur Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Cette section contient des didacticiels pour SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Cette section contient des didacticiels pour SQL Server Analysis Services.  
   
 [Modélisation tabulaire &#40;Didacticiel Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire Analysis Services de base de la société fictive, Adventure Works, à l’aide de SQL Server Data Tools (SSDT).  
   
-[Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modélisation multidimensionnelle &#40; Didacticiel Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 Il vous apprend les compétences fondamentales et les concepts de modélisation multidimensionnelle dans SSDT. Lorsque vous avez terminé, vous disposerez d’une base de données du cube en fonction des données Adventure Works auxquelles vous pouvez accéder à partir d’Excel, Reporting Services ou toute autre application cliente qui se connecte à Analysis Services.  
   
 [Exploration de données](../analysis-services/data-mining-tutorials-analysis-services.md)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Leçon 2-1-Définition d’une Dimension
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans la tâche suivante, vous utiliserez l’Assistant Dimension pour créer une dimension de Date.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour générer une dimension Date.  
   
 > [!NOTE]  
 > Avant de commencer cette leçon, vous devez avoir terminé toutes les procédures de la leçon 1.  
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 12. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Définition d'un cube](../analysis-services/lesson-2-2-defining-a-cube.md)  
+[Définition d’un Cube](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Dimensions dans les modèles multidimensionnels](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  

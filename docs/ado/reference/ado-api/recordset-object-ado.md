@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>Objet Recordset (ADO)
 Représente l’ensemble d’enregistrements à partir d’une table de base ou les résultats d’une commande exécutée. À tout moment, le **Recordset** objet fait référence à un seul enregistrement dans le jeu en tant que l’enregistrement actif.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous utilisez **Recordset** objets pour manipuler des données à partir d’un fournisseur. Lorsque vous utilisez ADO, vous manipulez les données à l’aide de presque entièrement **Recordset** objets. Tous les **Recordset** objets sont constitués d’enregistrements (lignes) et des champs (colonnes). Selon les fonctionnalités prises en charge par le fournisseur, certaines **Recordset** méthodes ou propriétés ne peuvent pas être disponibles.  
   
  ADODB. Jeu d’enregistrements est le ProgID qui doit être utilisé pour créer un **Recordset** objet. Applications existantes qui font référence à l’objet ADOR obsolète. Le ProgID Recordset continueront à fonctionner sans avoir à recompiler, mais tout nouveau développement doit faire référence à ADODB. Jeu d’enregistrements.  
@@ -54,7 +54,7 @@ Représente l’ensemble d’enregistrements à partir d’une table de base ou 
   
  Vous pouvez utiliser la [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, et **MovePrevious** méthodes ; le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode ; et le [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), et [filtre](../../../ado/reference/ado-api/filter-property.md) l’enregistrement en cours, en supposant que le fournisseur prend en charge les propriétés fonctionnalité. Avant uniquement **Recordset** objets prennent en charge uniquement la [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) (méthode). Lorsque vous utilisez le **déplacer** méthodes à visiter chaque enregistrement (ou énumérer le **Recordset**), vous pouvez utiliser la **BOF** et **EOF** propriétés pour déterminer si vous avez déplacé au-delà du début ou la fin de la **Recordset**.  
   
- Avant d’utiliser toutes les fonctionnalités d’un **Recordset** de l’objet, vous devez appeler la **prend en charge** méthode sur l’objet pour vérifier que la fonctionnalité est prise en charge ou disponible. Vous ne devez pas utiliser la fonctionnalité lorsque la **prend en charge** méthode retourne la valeur false. Par exemple, vous pouvez utiliser la **MovePrevious** uniquement si de méthode `Recordset.Supports(adMovePrevious)` retourne **True**. Sinon, vous obtiendrez une erreur, car le **Recordset** objet ont été fermé et les fonctionnalités de rendu non disponible sur l’instance. Si une fonctionnalité qui vous intéressez n’est pas pris en charge, **prend en charge** ainsi retourne false. Dans ce cas, vous devez éviter d’appeler la propriété correspondante ou la méthode sur le **Recrodset** objet.  
+ Avant d’utiliser toutes les fonctionnalités d’un **Recordset** de l’objet, vous devez appeler la **prend en charge** méthode sur l’objet pour vérifier que la fonctionnalité est prise en charge ou disponible. Vous ne devez pas utiliser la fonctionnalité lorsque la **prend en charge** méthode retourne la valeur false. Par exemple, vous pouvez utiliser la **MovePrevious** uniquement si de méthode `Recordset.Supports(adMovePrevious)` retourne **True**. Sinon, vous obtiendrez une erreur, car le **Recordset** objet ont été fermé et les fonctionnalités de rendu non disponible sur l’instance. Si une fonctionnalité qui vous intéressez n’est pas pris en charge, **prend en charge** ainsi retourne false. Dans ce cas, vous devez éviter d’appeler la propriété correspondante ou la méthode sur le **Recordset** objet.  
   
  **Jeu d’enregistrements** objets peuvent prendre en charge deux types de mise à jour : immédiate et par lot. Mise à jour immédiate, toutes les modifications apportées aux données sont écrites immédiatement dans la source de données sous-jacente lorsque vous appelez le [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode). Vous pouvez également passer des tableaux de valeurs en tant que paramètres avec le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) et **mettre à jour** méthodes et mettre à jour simultanément plusieurs champs dans un enregistrement.  
   

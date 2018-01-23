@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c409654fe8ae5ae504dcf4cad42c552ccb11ca22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Leçon 8-1 : définition et utilisation d’une Action d’extraction
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dimensionner les données de faits par une dimension de fait sans filtrage correct des données retournées par la requête peut provoquer des performances de requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Le dimensionnement des données de fait par une dimension de fait sans filtrage correct des données retournées par la requête peut ralentir les performances des requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
   
 Dans les tâches de cette rubrique, vous définissez une action d'extraction pour retourner des informations détaillées sur les commandes pour les ventes à des clients via Internet.  
   
@@ -150,7 +152,7 @@ Dans les tâches de cette rubrique, vous définissez une action d'extraction pou
     ![Les commandes expédiées à Adam Powell](../analysis-services/media/l8-action8.gif "commandes expédiées à Adam Powell")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 9 : Définition de perspectives et de traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Leçon 9 : Définition de Perspectives et traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

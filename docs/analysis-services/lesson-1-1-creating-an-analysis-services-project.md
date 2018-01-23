@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Leçon 1-1-Création d’un projet Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans la tâche suivante, vous utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un nouveau [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet nommé **Analysis Services Tutorial**, en fonction de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] modèle de projet. Un *projet* est une collection d'objets connexes. Les projets existent au sein d'une solution, laquelle peut inclure un ou plusieurs projets. Pour plus d’informations, consultez [Créer un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Au cours de la tâche suivante, vous utiliserez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un nouveau projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] appelé **Analysis Services Tutorial**, basé sur le modèle de projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un *projet* est une collection d'objets connexes. Les projets existent au sein d'une solution, laquelle peut inclure un ou plusieurs projets. Pour plus d’informations, consultez [Créer un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Pour créer un nouveau projet Analysis Services  
   
@@ -41,11 +43,11 @@ ms.lasthandoff: 01/08/2018
 Vous avez créé le projet **Analysis Services Tutorial** , selon le modèle **Analysis Services Multidimensional and Data Mining Project** , dans une nouvelle solution qui est également nommée **Analysis Services Tutorial**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Définition d'une source de données](../analysis-services/lesson-1-2-defining-a-data-source.md)  
+[Définition d’une Source de données](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Créer un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Créer un projet Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

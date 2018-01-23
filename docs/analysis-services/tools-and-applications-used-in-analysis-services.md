@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Outils et applications utilisés dans Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Trouvez les outils et les applications que vous avez besoin pour créer des modèles Analysis Services et la gestion des bases de données déploiement.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Trouvez les outils et les applications que vous avez besoin pour créer des modèles Analysis Services et la gestion des bases de données déploiement.  
   
 ## <a name="analysis-services-model-designers"></a>Concepteurs de modèles Analysis Services  
  Les modèles sont créés à l’aide de modèles de projet dans SQL Server Data Tools (SSDT), un interpréteur de commandes de Visual Studio. Modèles de projet fournissent des concepteurs de modèles pour créer les objets de modèle de données qui constituent une solution Analysis Services. SSDT est un téléchargement web gratuit mis à jour tous les mois.

@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversions monétaires (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Multidimensionnel uniquement  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] Multidimensionnel uniquement  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise une combinaison de fonctionnalités, guidées par des scripts MDX (Multidimensional Expressions), pour assurer la prise en charge des conversions monétaires dans les cubes qui prennent en charge plusieurs devises.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  Devise locale  
  Devise utilisée pour stocker les transactions sur lesquelles se basent les mesures à convertir.  
   
- La devise locale peut être identifiée par un des éléments suivants :  
+ La devise locale peut être identifiée par un des éléments suivants :  
   
 -   Un identificateur de devise dans la table de faits stockée avec la transaction, comme cela est communément le cas avec les applications bancaires où la transaction identifie elle-même la devise qu'elle utilise.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>Définition des conversions monétaires  
  Vous pouvez utiliser l'Assistant Business Intelligence pour définir la fonctionnalité de conversion monétaire pour un cube ou vous pouvez définir manuellement les conversions monétaires à l'aide de scripts MDX.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Conditions préalables  
  Avant de pouvoir définir une conversion monétaire dans un cube à l'aide de l'Assistant Business Intelligence, vous devez définir au préalable au moins une dimension monétaire, au moins une dimension de temps et au moins un groupe de mesures de taux. À partir de ces objets, l'Assistant Business Intelligence peut récupérer les données et métadonnées utilisées pour générer la dimension monétaire de rapport et le script MDX nécessaires pour assurer la fonctionnalité de conversion monétaire.  
   
 ### <a name="decisions"></a>Décisions  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00b1110e3deba08207cda1c71c75d6603660c019
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 322abebe579106c03f4855f7b9e2e7573f5d5580
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Leçon 3-1-modification des mesures
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Vous pouvez utiliser la **FormatString** propriété pour définir les paramètres de mise en forme qui contrôlent la façon dont les mesures sont affichées aux utilisateurs. Au cours de cette tâche, vous allez spécifier des propriétés de formatage pour les mesures relatives aux devises et aux pourcentages dans le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Vous pouvez utiliser la propriété **FormatString** pour définir des paramètres de mise en forme qui contrôlent comment les mesures sont affichées aux utilisateurs. Au cours de cette tâche, vous allez spécifier des propriétés de formatage pour les mesures relatives aux devises et aux pourcentages dans le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>Pour modifier les mesures du cube  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 11. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Modification de la dimension Customer](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[Modification de la Dimension Customer](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Définir des dimensions de base de données](../analysis-services/multidimensional-models/define-database-dimensions.md)  

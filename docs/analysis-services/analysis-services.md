@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what-is-analysis-services"></a>Nouveautés d’Analysis Services ?
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services est un moteur de données analytiques utilisé de la prise de décision et analytique d’entreprise, en fournissant les données analytiques pour les rapports d’entreprise et les applications clientes, telles que Power BI, Excel, des rapports Reporting Services et d’autres outils de visualisation de données.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Analysis Services est un moteur de données analytiques utilisé de la prise de décision et analytique d’entreprise, en fournissant les données analytiques pour les rapports d’entreprise et les applications clientes, telles que Power BI, Excel, des rapports Reporting Services et d’autres outils de visualisation de données.  
   
  Un flux de travail typique comprend la création d’un modèle de données multidimensionnelle ou tabulaire, le déploiement du modèle en tant qu’une base de données à une instance de serveur local SQL Server Analysis Services ou Azure Analysis Services, configurer le traitement des données périodique et affectation d’autorisations d’accès aux données par les utilisateurs finaux. Lorsqu’il est prêt, votre modèle de données sémantique accessibles par toute application cliente prenant en charge d’Analysis Services comme source de données.  
  

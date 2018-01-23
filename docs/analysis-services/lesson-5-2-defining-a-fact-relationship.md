@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc3614124b6e47f4da3526351927218dba8b03ba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Leçon 5-2-définition d’une relation de faits
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Les utilisateurs souhaitent parfois pouvoir dimensionner des mesures par des éléments de données qui se trouvent dans la table de faits ou d’interroger la table de faits pour les informations spécifiques connexes supplémentaires, telles que des numéros de facture ou de bons de commande associées à des faits de ventes spécifiques. Quand vous définissez une dimension basée sur un élément de table de faits de ce type, la dimension est appelée *dimension de fait*. Les dimensions de fait sont aussi appelées dimensions dégénérées. Les dimensions de fait servent à regrouper des lignes connexes de la table de faits, par exemple toutes les lignes concernant un numéro de facture particulier. Bien qu'il soit possible de stocker cette information dans une table de dimensions distincte dans la base de données relationnelles, la création d'une table de dimensions distincte pour cette information n'offre aucun avantage, car la table de dimensions augmente à la même vitesse que la table de faits et le seul résultat obtenu est la duplication des données et une plus grande complexité, ce qui est inutile.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Les utilisateurs souhaitent parfois pouvoir dimensionner des mesures par élément de données se trouvant dans la table de faits ou exécuter des requêtes sur la table de faits pour obtenir des informations spécifiques connexes supplémentaires, telles que des numéros de factures ou de bons de commande associés à des ventes spécifiques. Quand vous définissez une dimension basée sur un élément de table de faits de ce type, la dimension est appelée *dimension de fait*. Les dimensions de fait sont aussi appelées dimensions dégénérées. Les dimensions de fait servent à regrouper des lignes connexes de la table de faits, par exemple toutes les lignes concernant un numéro de facture particulier. Bien qu'il soit possible de stocker cette information dans une table de dimensions distincte dans la base de données relationnelles, la création d'une table de dimensions distincte pour cette information n'offre aucun avantage, car la table de dimensions augmente à la même vitesse que la table de faits et le seul résultat obtenu est la duplication des données et une plus grande complexité, ce qui est inutile.  
   
 Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez déterminer s'il est nécessaire de dupliquer les données des dimensions de fait dans la structure de dimensions MOLAP pour augmenter les performances des requêtes ou s'il est nécessaire de définir les dimensions de fait en tant que dimensions ROLAP pour gagner de l'espace de stockage aux dépens des performances des requêtes. Lorsque vous stockez une dimension avec le mode de stockage MOLAP, tous les membres de dimension sont stockés dans l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans une structure MOLAP avec un taux de compression élevé et sont aussi stockés dans les partitions du groupe de mesures. Lorsque vous stockez une dimension avec un mode de stockage ROLAP, seule la définition de la dimension est stockée dans la structure MOLAP ; les requêtes sont exécutées sur les membres de la dimension à partir de la table de faits relationnelle sous-jacente. Le mode de stockage approprié se choisit en fonction de la fréquence à laquelle les requêtes sont exécutées sur la dimension de fait, du nombre de lignes retournées par une requête classique, de la performance de la requête et enfin, du coût de traitement. Pour définir une dimension ROLAP, il n'est pas nécessaire que tous les cubes qui utilisent la dimension soient également stockés avec le mode de stockage ROLAP. Le mode de stockage pour chaque dimension peut être configuré indépendamment.  
   
@@ -129,7 +131,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter une nouvelle dimensio
   
 ## <a name="see-also"></a>Voir aussi  
 [Relations de dimension](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
-[Définir une relation de fait et des propriétés de relation de fait](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
+[Définir une relation de faits et les propriétés de relation de faits](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
   

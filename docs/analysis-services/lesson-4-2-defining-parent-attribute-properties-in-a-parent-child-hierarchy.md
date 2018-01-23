@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9f8206a854379bd95a41d271d3c5f9dc45bd200c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Leçon 2-4-définition des propriétés d’attribut Parent dans une hiérarchie Parent-enfant
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Une hiérarchie parent-enfant est une hiérarchie dans une dimension est basée sur deux colonnes de table. Ensemble, ces colonnes définissent les relations hiérarchiques entre les membres de la dimension. La première colonne, appelée *colonne des clés de membre*, identifie chaque membre de dimension. L’autre colonne, appelée *colonne parente*, identifie le parent de chaque membre de dimension. La propriété **NamingTemplate** d’un attribut parent détermine le nom de chaque niveau de la hiérarchie parent-enfant et la propriété **MembersWithData** détermine si les données des membres parents doivent être affichées ou non.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Une hiérarchie parent-enfant est une hiérarchie dans une dimension fondée sur deux colonnes de table. Ensemble, ces colonnes définissent les relations hiérarchiques entre les membres de la dimension. La première colonne, appelée *colonne des clés de membre*, identifie chaque membre de dimension. L’autre colonne, appelée *colonne parente*, identifie le parent de chaque membre de dimension. La propriété **NamingTemplate** d’un attribut parent détermine le nom de chaque niveau de la hiérarchie parent-enfant et la propriété **MembersWithData** détermine si les données des membres parents doivent être affichées ou non.  
   
 Pour plus d’informations, consultez [Dimensions parent-enfant](../analysis-services/multidimensional-models/parent-child-dimension.md), [Attributs dans des hiérarchies de type parent-enfant](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   

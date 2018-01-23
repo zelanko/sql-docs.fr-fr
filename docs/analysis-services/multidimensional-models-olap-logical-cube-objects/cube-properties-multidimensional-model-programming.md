@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programmation du modèle multidimensionnel - propriétés de cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les cubes ont un nombre de propriétés que vous pouvez définir pour affecter le comportement au niveau du cube. Ces propriétés sont présentées dans le tableau suivant.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour plus d’informations sur la définition des propriétés de cube, consultez [Concepteur de Cube &#40; Analysis Services - données multidimensionnelles &#41; ](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|Spécifie le préfixe commun qui est utilisé pour les noms d'agrégation.|  
 |**Classement**|Spécifie l'identificateur de paramètres régionaux (LCID) et l'indicateur de comparaison, séparés par un trait de soulignement, comme dans Latin1_General_C1_AS.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |**ScriptErrorHandlingMode**|Détermine la gestion des erreurs. Les options sont **IgnoreNone** ou **IgnoreAll**|  
 |**Source**|Affiche la vue de source de données utilisée pour le cube.|  
 |**StorageLocation**|Spécifie l'emplacement de stockage du système de fichiers pour le cube. Si aucun n'est spécifié, l'emplacement est hérité de la base de données qui contient l'objet du cube.|  
-|**StorageMode**|Spécifie le mode de stockage pour le cube. Les valeurs sont **MOLAP**, **ROLAP**, ou **HOLAP ***.**|  
+|**StorageMode**|Spécifie le mode de stockage pour le cube. Les valeurs sont **MOLAP**, **ROLAP**, ou **HOLAP**.|  
 |**Visible**|Détermine la visibilité du cube.|  
   
 > [!NOTE]  

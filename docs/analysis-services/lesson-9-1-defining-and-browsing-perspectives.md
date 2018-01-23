@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b50bb9f02ef1f5d0c36d05f269b229e803c8100b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f9250e25f4e874c40ec9e400850707f30c8e1930
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Leçon 9-1-Définition et exploration de Perspectives
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Une perspective peut simplifier l’affichage d’un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Une perspective peut simplifier l'affichage d'un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  
   
 Pour réduire l’apparente complexité d’un cube, vous pouvez créer des sous-ensembles visualisables du cube, appelés *perspectives*, qui ne montrent aux utilisateurs qu’une partie définie des groupes de mesures, des mesures, des dimensions, des attributs, des hiérarchies, des indicateurs de performance clés, des actions et des membres calculés du cube. Cette opération est particulièrement utile lorsque vous travaillez avec des applications clientes qui n'ont pas été écrites pour une version précédente de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Ces clients ignorent tout des dossiers d'affichage ou des perspectives, par exemple ; en revanche, une perspective s'affiche aux anciens clients comme s'il s'agissait d'un cube. Pour plus d’informations, consultez [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md), et [Perspectives dans les modèles multidimensionnels](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md).  
   

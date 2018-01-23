@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparaison des solutions multidimensionnelles et tabulaires
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services offre plusieurs approches pour la création d’un modèle sémantique business intelligence : tabulaire, multidimensionnel et PowerPivot pour SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services offre plusieurs approches pour la création d’un modèle sémantique business intelligence : tabulaire, multidimensionnel et PowerPivot pour SharePoint.
   
  Le fait d’avoir plusieurs approches offre une expérience de modélisation adaptée aux différents besoins des entreprises et des utilisateurs. Le modèle multidimensionnel est une technologie rodée reposant sur des normes ouvertes, adoptée par de nombreux éditeurs de logiciels d’aide à la décision (Business Intelligence ou BI), mais il peut être difficile à maîtriser. Le modèle tabulaire propose une approche de modélisation relationnelle que de nombreux développeurs jugent plus intuitive. Le modèle PowerPivot est encore plus simple, car il offre une modélisation visuelle des données dans Excel, avec prise en charge des serveurs fournie via SharePoint.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |Membre par défaut|Oui|non|  
 |Dossiers d’affichage|Oui|Oui<sup>1</sup>|  
 |Distinct Count|Oui|Oui (via DAX)|
-|Extraction|Oui|Oui (dépend de l’application cliente)|
+|extraction|Oui|Oui (dépend de l’application cliente)|
 |Hierarchies|Oui|Oui|
 |Indicateurs de performance clés|Oui|Oui| 
 |Objets liés|Oui|Oui (tables liées)|
@@ -77,11 +79,11 @@ ms.lasthandoff: 01/08/2018
 |Hiérarchies déséquilibrées|Oui|Oui<sup>1</sup>|  
 |Hiérarchies parent-enfant|Oui|Oui (via DAX)|
 |Partitions|Oui|Oui| 
-|perspectives|Oui|Oui|
+|Perspectives|Oui|Oui|
 |Sécurité de niveau ligne|Oui|Oui| 
 |Sécurité au niveau de l’objet|Oui|Oui<sup>1</sup>|
 |Mesures semi-additives|Oui|Oui| 
-|Translations|[Oui](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Oui| 
+|Traductions|[Oui](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Oui| 
 |Hiérarchies définies par l'utilisateur|Oui|Oui|
 |Écriture différée|Oui|non| 
   
