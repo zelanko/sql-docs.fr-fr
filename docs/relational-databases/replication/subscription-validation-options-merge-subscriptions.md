@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.validate.mergeoptions.f1
 helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3f0ec8237e5c7ca3f7b2a344a44b45b37b918c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90c5d99900c05986e049546b376789db5963dab6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Options de validation d'abonnement (Abonnements de fusion)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Options de validation d’abonnement** pour spécifier si la validation doit utiliser uniquement un nombre de lignes, ou bien un nombre de lignes et une somme de contrôle binaire.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
  **Vérifier le nombre de lignes et comparer les totaux de contrôle pour vérifier les données de ligne**  
  Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle binaire. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée. Cette option n'est pas valide pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Valider des données sur l’abonné](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Valider des données répliquées](../../relational-databases/replication/validate-replicated-data.md)  
   

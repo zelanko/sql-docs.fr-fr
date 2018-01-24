@@ -21,15 +21,15 @@ helpviewer_keywords:
 - geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d29ae4593e0215065b5be92140d65310c7f32f3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 181b4e159bf1fcdd68138f14d9386ddf3be508f0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="spatial-data-sql-server"></a>Données spatiales (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  [Créer, modifier et supprimer les index spatiaux](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Fournit des informations sur la création, la modification et la suppression d'un index spatial.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)  
  Présente les types de données spatiales.  
   

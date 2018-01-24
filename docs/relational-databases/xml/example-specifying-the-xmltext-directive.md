@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ed147121ef70cf969d5d961665e21a948df7195
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca56c87a2bf4e1744d5ef3527c559595bc988dd8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
@@ -57,7 +57,7 @@ FOR XML EXPLICIT;
   
 -   En raison du conflit entre l’attribut `PersonID` de l’élément <`xmltext`> et l’attribut `PersonID` extrait du même niveau d’éléments, l’attribut de l’élément <`xmltext`> est ignoré, même si `PersonID` a la valeur NULL. En général, un attribut remplace un attribut de même nom dans les données en excès.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
@@ -91,7 +91,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
@@ -115,7 +115,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" PersonName="Joe">  
@@ -142,7 +142,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>  
@@ -156,7 +156,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
+ Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
   
 ```  
 SELECT 1 AS Tag,  
@@ -178,7 +178,7 @@ FOR XML EXPLICIT, xmldata;
  </overflow>
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

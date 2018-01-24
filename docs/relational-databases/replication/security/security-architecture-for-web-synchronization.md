@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a582eb3debf641b5704e051e67c49104a83f270c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet un contrôle précis de la configuration de la sécurité de la synchronisation web. Cette rubrique donne une liste complète de tous les composants qui peuvent être inclus dans une configuration de synchronisation Web, ainsi que des informations sur les connexions qui sont établies entre ces composants. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 |Type d'authentification|Emplacement de spécification de l'authentification|  
 |----------------------------|-------------------------------------------|  
-|L'authentification Windows est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **1** pour le paramètre **@publisher_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **1** pour **-PublisherSecurityMode**.|L'Agent de fusion établit les connexions au serveur de publication dans le contexte de l'utilisateur Windows spécifié pour la connexion à IIS (D). Si le serveur de publication et IIS se trouvent sur des ordinateurs différents et si l'authentification intégrée est utilisée pour la connexion (D), vous devez activer la délégation Kerberos sur l'ordinateur exécutant IIS. Pour plus d'informations, consultez la documentation Windows.|  
+|L'authentification Windows est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **1** pour le paramètre **@publisher_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **1** pour **-PublisherSecurityMode**.|L'Agent de fusion établit les connexions au serveur de publication dans le contexte de l'utilisateur Windows spécifié pour la connexion à IIS (D). Si le serveur de publication et IIS se trouvent sur des ordinateurs différents et si l'authentification intégrée est utilisée pour la connexion (D), vous devez activer la délégation Kerberos sur l'ordinateur exécutant IIS. Pour plus d'informations, consultez la documentation Windows.|  
 |L'authentification[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **0** pour le paramètre **@publisher_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **0** pour **-PublisherSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: paramètres **@publisher_login** et **@publisher_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> Objets RMO : <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>.<br /><br /> Ligne de commande de l'Agent de fusion : **-PublisherLogin** et **-PublisherPassword**.|  
   
 ## <a name="f-connection-to-the-distributor"></a>F. Connexion au serveur de distribution  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 |-   Type d’authentification|Emplacement de spécification de l'authentification|  
 |-------------------------------|-------------------------------------------|  
-|L'authentification Windows est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **1** pour le paramètre **@distributor_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **1** pour **-DistributorSecurityMode**.|L'Agent de fusion établit les connexions au serveur de distribution dans le contexte de l'utilisateur Windows spécifié pour la connexion à IIS (D). Si le serveur de distribution et IIS se trouvent sur des ordinateurs différents et si l'authentification intégrée est utilisée pour la connexion (D), vous devez activer la délégation Kerberos sur l'ordinateur exécutant IIS. Pour plus d'informations, consultez la documentation Windows.|  
+|L'authentification Windows est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **1** pour le paramètre **@distributor_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **1** pour **-DistributorSecurityMode**.|L'Agent de fusion établit les connexions au serveur de distribution dans le contexte de l'utilisateur Windows spécifié pour la connexion à IIS (D). Si le serveur de distribution et IIS se trouvent sur des ordinateurs différents et si l'authentification intégrée est utilisée pour la connexion (D), vous devez activer la délégation Kerberos sur l'ordinateur exécutant IIS. Pour plus d'informations, consultez la documentation Windows.|  
 |L'authentification[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **0** pour le paramètre **@distributor_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Ligne de commande de l’Agent de fusion : valeur **0** pour **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: paramètres **@distributor_login** et **@distributor_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> Objets RMO : <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Ligne de commande de l'Agent de fusion : **-DistributorLogin** et **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Connexion à un serveur FTP  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 |Type d'authentification|Emplacement de spécification de l'authentification|  
 |----------------------------|-------------------------------------------|  
-|Authentification Windows|L'Agent de fusion accède au partage de fichiers d'instantanés dans le contexte de l'utilisateur Windows spécifié pour la connexion à IIS (D). Si le partage de fichiers d'instantanés et IIS se trouvent sur des ordinateurs différents et si l'authentification intégrée est utilisée pour la connexion (D), vous devez activer la délégation Kerberos sur l'ordinateur exécutant IIS. Pour plus d'informations, consultez la documentation Windows.|  
+|Authentification Windows|L'Agent de fusion accède au partage de fichiers d'instantanés dans le contexte de l'utilisateur Windows spécifié pour la connexion à IIS (D). Si le partage de fichiers d'instantanés et IIS se trouvent sur des ordinateurs différents et si l'authentification intégrée est utilisée pour la connexion (D), vous devez activer la délégation Kerberos sur l'ordinateur exécutant IIS. Pour plus d'informations, consultez la documentation Windows.|  
   
 ## <a name="i-application-pool-account-for-iis"></a>I. Compte du pool d'applications pour IIS  
  Ce compte sert à démarrer le processus W3wp.exe sur l'ordinateur exécutant IIS pour [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] ou le processus Dllhost.exe sur [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]. Ces processus hébergent des applications sur l'ordinateur exécutant IIS, telles que le réconciliateur de réplication de fusion et l'écouteur de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce compte doit disposer sur l'ordinateur exécutant IIS d'autorisations en lecture et en exécution sur les DLL de réplication suivantes :  
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------|------------------------------------|  
 |Tout utilisateur Windows disposant des autorisations nécessaires.|Gestionnaire IIS (Internet Information Services). |  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer la synchronisation web](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Agent de fusion de réplication](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   

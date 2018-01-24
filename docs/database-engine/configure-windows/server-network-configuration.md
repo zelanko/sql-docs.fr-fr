@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>Configuration réseau du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les tâches de configuration réseau du serveur incluent l’activation de protocoles, la modification du port ou du canal utilisé par un protocole, la configuration du chiffrement, la configuration du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, l’exposition ou le masquage du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sur le réseau et l’inscription du nom du principal du serveur. La plupart du temps, vous n'avez pas besoin de modifier la configuration réseau du serveur. Reconfigurez uniquement les protocoles réseau du serveur si des spécifications réseau spéciales l'imposent.  
@@ -61,13 +61,13 @@ ms.lasthandoff: 11/20/2017
   
  Les noms de principaux du service peuvent également être utilisés pour sécuriser davantage l'authentification client lors d'une connexion avec NTLM. Pour plus d’informations, consultez [Se connecter au moteur de base de données à l’aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
-## <a name="sql-server-browser-service"></a>Service SQL Server Browser  
+## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
  Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fonctionne sur le serveur et aide les ordinateurs clients à trouver des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser n'a pas besoin d'être configuré, mais doit fonctionner sous certains scénarios de connexion. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, consultez [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 ## <a name="hiding-sql-server"></a>Masquage de SQL Server  
  Lors de l'exécution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser répond aux requêtes, avec le nom, la version et les informations de connexion de chaque instance installée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'indicateur **HideInstance** indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne doit pas répondre avec des informations sur cette instance de serveur. Les applications clientes peuvent toujours se connecter, mais elles doivent disposer des informations de connexion requises. Pour plus d’informations, consultez [Masquer une instance du moteur de base de données de SQL Server](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md)  
   
  [Gérer les services du moteur de base de données](../../database-engine/configure-windows/manage-the-database-engine-services.md)  

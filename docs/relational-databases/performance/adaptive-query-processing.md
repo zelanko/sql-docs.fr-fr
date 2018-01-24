@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Parfois, le plan choisi par l’optimiseur de requête n’est pas optimal pour 
 ![Fonctionnalités de traitement de requêtes adaptatif](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Comment activer le traitement de requêtes adaptatif
-Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes adaptatif en activant le niveau de compatibilité 140 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :
+Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes adaptatif en activant le niveau de compatibilité 140 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
@@ -136,7 +136,7 @@ Les jointures adaptatives en mode batch fonctionnent pour l’exécution initial
 ### <a name="tracking-adaptive-join-activity"></a>Suivi de l’activité des jointures adaptatives
 L’opérateur de jointure adaptative a les attributs d’opérateur de plan suivants :
 
-| Attribut de plan |  Description |
+| Attribut de plan | Description |
 |--- |--- |
 | AdaptiveThresholdRows | Montre l’utilisation du seuil pour passer d’une jointure hachée à une jointure de boucles imbriquées. |
 | EstimatedJoinType | Type de jointure probable. |
@@ -202,14 +202,14 @@ Une fois qu’un plan d’exécution entrelacée est mis en cache, le plan avec 
 ### <a name="tracking-interleaved-execution-activity"></a>Suivi de l’activité d’exécution entrelacée
 Vous pouvez voir les attributs d’utilisation dans le plan d’exécution de requête réel :
 
-| Attribut de plan |  Description |
+| Attribut de plan | Description |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | S’applique au nœud *QueryPlan*, quand la valeur est « true », cela signifie que le plan contient des candidats pour l’exécution entrelacée. |
 | IsInterleavedExecuted | L’attribut est à l’intérieur de l’élément RuntimeInformation sous le RelOp pour le nœud TVF. Quand la valeur est « true », cela signifie que l’opération a été matérialisée dans le cadre d’une opération d’exécution entrelacée. |
 
 Vous pouvez également suivre les occurrences d’exécution entrelacée via les événements XEvent suivants :
 
-| XEvent |  Description |
+| XEvent | Description |
 | ---- | --- |
 | interleaved_exec_status | Cet événement se déclenche quand l’exécution entrelacée se produit. |
 | interleaved_exec_stats_update | Cet événement décrit les estimations de cardinalité mises à jour par l’exécution entrelacée. |
@@ -224,7 +224,7 @@ Une instruction qui utilise OPTION(RECOMPILE) crée un plan à l’aide de l’e
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Interopérabilité de l’exécution entrelacée et du Magasin des requêtes
 L’utilisation des plans qui utilisent l’exécution entrelacée peut être forcée. Le plan est la version dont les estimations de cardinalité ont été corrigées en fonction de l’exécution initiale.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 

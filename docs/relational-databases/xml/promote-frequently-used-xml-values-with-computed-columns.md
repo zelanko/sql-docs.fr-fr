@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Si les requêtes portent essentiellement sur un petit nombre de valeurs d’élément et d’attribut, vous pouvez promouvoir ces quantités dans les colonnes relationnelles. Cela peut s'avérer utile lorsque les requêtes sont émises sur une petite partie des données XML et que l'ensemble de l'instance XML est récupéré. Il n'est pas nécessaire de créer un index XML sur la colonne XML. En revanche, la colonne promue peut être indexée. Les requêtes doivent être écrites en vue de l'utilisation de la colonne promue afin que l'optimiseur de requête ne redirige plus les requêtes de la colonne XML vers la colonne promue.  
@@ -161,7 +161,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : recherche des instances XML dont les auteurs portent le même prénom  
- La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Exemple :  
+ La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Exemple :  
   
 ```  
 SELECT xCol   
@@ -242,7 +242,7 @@ begin
 end  
 ```  
   
- Pour finir, définissez les déclencheurs en suivant l'exemple « Création de déclencheurs pour remplir une table de propriétés », mais remplacez udf_XML2Table par la fonction CLR_udf_XML2Table. Le déclencheur insert est présenté dans l'exemple suivant :  
+ Pour finir, définissez les déclencheurs en suivant l'exemple « Création de déclencheurs pour remplir une table de propriétés », mais remplacez udf_XML2Table par la fonction CLR_udf_XML2Table. Le déclencheur insert est présenté dans l'exemple suivant :  
   
 ```  
 create trigger CLR_trg_docs_INS on T for insert  
@@ -259,7 +259,7 @@ as
   
  Le déclencheur delete est identique à celui utilisé dans la version non CLR. Le déclencheur update, quant à lui, remplace simplement la fonction udf_XML2Table() par CLR_udf_XML2Table().  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser des données XML dans les colonnes calculées](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

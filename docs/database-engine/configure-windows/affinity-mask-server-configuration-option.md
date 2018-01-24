@@ -23,15 +23,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5c13f332469856a9467e1694e59024a3222d5b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7ba445a69a1bbb019b73676bf843a1dafc0884e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 > [!CAUTION]  
 >  Évitez de configurer l'affinité de processeur dans le système d'exploitation Windows et le masque d'affinité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces paramètres tentent d'obtenir le même résultat et, si les configurations sont incohérentes, les résultats risquent d'être imprévisibles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il est préférable de configurer l’affinité de processeur à l’aide de l’option sp_configure dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Par exemple, pour définir l'option affinity mask, si les processeurs 1, 2 et 5 sont sélectionnés comme étant disponibles et si les bits 1, 2 et 5 ont la valeur 1 alors que les bits 0, 3, 4, 6 et 7 ont la valeur 0, une valeur hexadécimale égale à 0x26 ou l'équivalent décimal `38` est spécifiée. Numérotez les bits de droite à gauche. L'option affinity mask commence à compter les processeurs de 0 à 31, de sorte que dans l'exemple suivant, le compteur `1` représente le deuxième processeur sur le serveur.  
   
 ```  
@@ -113,7 +113,7 @@ GO
   
 |Valeur décimale|Masque binaire|Autorise les threads SQL Server sur les processeurs|  
 |-------------------|---------------------|--------------------------------------------|  
-|1|00000001|0|  
+| 1|00000001|0|  
 |3|00000011|0 et 1|  
 |7|00000111|0, 1 et 2|  
 |15|00001111|0, 1, 2 et 3|  
@@ -138,7 +138,7 @@ GO
 ### <a name="reconfigure"></a>Reconfiguration  
  Si un masque d'affinité spécifié ne respecte pas la stratégie de licences lors de l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, un message d'erreur est envoyé à la session cliente et est consigné dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exigeant ainsi que l'administrateur de la base de données reconfigure le masque d'affinité. Aucune commande RECONFIGURE WITH OVERRIDE n'est acceptée dans ce cas.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

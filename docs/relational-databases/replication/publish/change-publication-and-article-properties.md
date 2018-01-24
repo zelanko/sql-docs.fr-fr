@@ -19,15 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d43da2c0314c2b724a7d5b04db3a56ff5ceb664f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l’instantané soit regénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |Activer ou désactiver les abonnements en téléchargement seul (changer d'autres options de chargement ne nécessite pas d'actions particulières).|**sp_changemergearticle**|Changer la valeur ou pour la valeur **2** pour **subscriber_upload_options**|Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination.|**sp_changemergearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Créer et appliquer un instantané](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   

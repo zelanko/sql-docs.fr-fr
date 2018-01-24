@@ -36,15 +36,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b9dccca2e644bf5d02d47165b02d75241e40695
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca2fd82971fa8d4eb8c874b809961f5052d5fbf5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Des index XML peuvent être créés sur des colonnes de type **xml**. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
@@ -99,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   La clé primaire de la table de base. Cette clé est copiée dans l'index XML primaire afin de pouvoir effectuer une jointure en retour avec la table de base et le nombre maximal de colonnes dans la clé primaire de la table de base est limité à 15.  
   
- Les informations de ce nœud sont utilisées afin d'évaluer et d'élaborer les résultats sous forme de données XML découlant d'une requête donnée. Pour des raisons d'optimisation, les informations relatives au nom de la balise et au type de nœud sont encodées sous forme de valeurs entières et la colonne Path s'appuie sur ce même encodage. En outre, les chemins d'accès sont stockés dans l'ordre inverse afin de pouvoir faire correspondre les chemins d'accès où seul le suffixe est connu. Exemple :  
+ Les informations de ce nœud sont utilisées afin d'évaluer et d'élaborer les résultats sous forme de données XML découlant d'une requête donnée. Pour des raisons d'optimisation, les informations relatives au nom de la balise et au type de nœud sont encodées sous forme de valeurs entières et la colonne Path s'appuie sur ce même encodage. En outre, les chemins d'accès sont stockés dans l'ordre inverse afin de pouvoir faire correspondre les chemins d'accès où seul le suffixe est connu. Exemple :  
   
 -   `//ContactRecord/PhoneNumber` , où seuls les deux derniers niveaux sont connus ;  
   
@@ -140,7 +140,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Si votre charge de travail implique le lancement de requêtes sur des valeurs d'instances XML pour lesquelles vous ne connaissez pas les noms d'élément ou d'attribut, vous aurez peut-être intérêt à créer l'index VALUE. C’est généralement ce qui se produit en cas de recherches d’axes descendants telles que //author[last-name="Howard"], où les éléments \<author> peuvent se trouver à tout niveau de la hiérarchie. Cela se rencontre aussi dans les requêtes basées sur des caractères génériques telles que /book [@* = "novel"], où la requête recherche les éléments \<book> ayant des attributs de valeur « novel ».  
   
-### <a name="path-secondary-xml-index"></a>Index XML secondaire de type PATH  
+### <a name="path-secondary-xml-index"></a>les index XML secondaires de type PATH (s'appuyant sur le chemin d'accès) ;  
  Si vos requêtes précisent habituellement les expressions de chemin d'accès sur les colonnes de type **xml** , un index secondaire de type PATH peut s'avérer à même d'accélérer la recherche. Comme nous l’avons vu précédemment, l’index primaire est des plus utiles pour les requêtes indiquant la méthode **exist()** dans leur clause WHERE. Si vous ajoutez à présent un index secondaire de type PATH, il se peut que vous amélioriez encore la rapidité de la recherche lancée par de telles requêtes.  
   
  Bien qu'un index XML primaire évite de fragmenter les objets blob XML à l'exécution, il peut ne pas offrir les meilleurs temps de réponse pour les requêtes s'appuyant sur des expressions de chemin d'accès. Une recherche, lancée sur toutes les lignes constituant l'index XML primaire correspondant à un objet blob XML et s'opérant de façon séquentielle pour des instances XML volumineuses, peut s'avérer des plus lentes. Dans ce cas, un index secondaire construit sur les valeurs de chemin d'accès et sur celles des nœuds de l'index primaire peut accélérer de façon significative la recherche sur l'index. Dans le cas d'un index XML secondaire de type PATH, les valeurs de chemin d'accès et des nœuds correspondent à des colonnes clés permettant donc des recherches plus efficaces si ces dernières portent sur le chemin d'accès. Il se peut que l'optimiseur de requête utilise l'index de type PATH dans des expressions telles que celles mentionnées ci-dessous :  
@@ -219,7 +219,7 @@ WHERE ProductModelID = 19
   
  L’espace utilisé par les index XML figure dans la fonction table [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), qui fournit des informations telles que le nombre de pages disque occupées, la taille moyenne des lignes en octets et le nombre d'enregistrements, pour tous les types d'index. Vous y trouvez également les index XML. Ces informations sont disponibles pour chaque partition de la base de données. Les index XML utilisent le même schéma et la même fonction de partitionnement que la table de base.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -16,13 +16,13 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79eb525e471b463368cb928cae0dfcf3cf1bc797
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f01884482a43f1aff3a6d833bdae0a431f284d01
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Liste des colonnes, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si une table possède un schéma de partition associé, vous pouvez utiliser cette boîte de dialogue pour choisir la ou les colonnes auxquelles s’applique la fonction de partition. Cette fonction n'est utilisable que si le type de données de la colonne vers laquelle vous basculez est identique à celui de la colonne définie dans la fonction de partition.  

@@ -16,13 +16,13 @@ ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c355410d0536b4f461973ac55ba382183aa3694
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b813bc94aa5afcd2cb537de0bfc8cba9d925d034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Boîte de dialogue Emplacement (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue permet de localiser et de sélectionner le dossier contenant les fichiers qui vous intéressent. Cette boîte de dialogue renvoie le chemin du dossier sélectionné à la boîte de dialogue appelante. Vous pouvez accéder à cette boîte de dialogue en procédant comme suit :  

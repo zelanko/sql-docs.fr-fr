@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6519427db4b2e2fcb16826c1d595b132d7fb4e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eeac17b8e62ca25f3f1257005f0911e603f91440
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet de performance **SQLServer:HTTP_STORAGE_OBJECT** est constitué de compteurs de performances qui surveillent le compte Stockage Microsoft Azure. La fonctionnalité [Fichiers de données SQL Server de Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) permet d’enregistrer les fichiers de base de données dans Azure Storage Blob. Cet objet de performance traite chaque compte de stockage Windows Azure en tant que lecteur différent.  
@@ -34,12 +34,12 @@ ms.lasthandoff: 11/17/2017
 |**Lectures/s**|Nombre de lectures par seconde sur le stockage HTTP.|  
 |**logiques/s**|Nombre d'écritures par seconde sur le stockage HTTP.|  
 |**Transferts/s**|Nombre d'opérations de lecture et d'écriture par seconde sur le stockage HTTP.|  
-|**Nbre moyen octets/lecture**|Nombre moyen d'octets transférés du stockage HTTP par lecture.|  
-|**Nbre moyen octets/lecture BASE**|À usage interne uniquement|
-|**Nbre moyen octets/transfert**|Nombre moyen d'octets transférés du stockage HTTP pendant des opérations de lecture ou d'écriture.|  
-|**Nbre moyen octets/transfert BASE**|À usage interne uniquement|
+|**Durée octets/lecture**|Nombre moyen d'octets transférés du stockage HTTP par lecture.|  
+|**Durée octets/lecture BASE**|À usage interne uniquement|
+|**Durée octets/transfert**|Nombre moyen d'octets transférés du stockage HTTP pendant des opérations de lecture ou d'écriture.|  
+|**Durée octets/transfert BASE**|À usage interne uniquement|
 |**Nbre moyen octets/écriture**|Nombre moyen d'octets transférés du stockage HTTP par écriture.|  
-|**Nbre moyen octets/écriture BASE**|À usage interne uniquement|
+|**Durée octets/écriture BASE**|À usage interne uniquement|
 |**Nbre moyen microsecondes/lecture**|Nombre moyen de microsecondes nécessaires pour chaque lecture à partir du stockage HTTP.|  
 |**Nbre moyen microsecondes/lecture BASE**|À usage interne uniquement|
 |**Nbre moyen microsecondes/lecture achevée**|Nombre moyen de microsecondes nécessaires au protocole HTTP pour achever la lecture du stockage.| 
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**Échec/s des ES de stockage HTTP**|Nombre de requêtes d’écriture échouées envoyées au stockage HTTP par seconde.| 
 |**Nouvelle tentative d'E/S au stockage HTTP/s**|Nombre de demandes de nouvelle tentative envoyées au stockage HTTP par seconde.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

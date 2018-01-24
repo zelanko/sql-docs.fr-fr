@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] À compter de SQL Server 2016, l’option de détection de l’intégrité au niveau base de données (DB_FAILOVER) est disponible lors de la configuration d’un groupe de disponibilité Always On. La détection de l’état d’intégrité au niveau base de données indique quand une base de données n’est plus en ligne ou quand un problème se produit, puis déclenche le basculement automatique du groupe de disponibilité. 
@@ -102,9 +102,9 @@ select name, db_failover from sys.availability_groups
 
 Exemple de sortie de la vue de gestion dynamique :
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
-| Contoso-ag |  1  |
+| Contoso-ag |   1  |
 
 ### <a name="errorlog"></a>ErrorLog 
 Le journal des erreurs de SQL Server (ou le texte retourné par sp_readerrorlog) affiche le message d’erreur 41653 quand un groupe de disponibilité a basculé en raison des contrôles de la détection de l’état d’intégrité au niveau base de données. 
@@ -157,7 +157,7 @@ Dans SQL Server Management Studio, connectez-vous au serveur SQL Server principa
 
 Explication des champs :
 
-|Données de la colonne    |  Description
+|Données de la colonne    | Description
 |---------|---------
 |availability_group_id  |ID du groupe de disponibilité.
 |availability_group_name    |Nom du groupe de disponibilité.
@@ -180,7 +180,7 @@ Dans cet exemple de sortie, fault_type indique qu’un événement critique s’
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
+|failover_ready_replicas |   1
 |fault_type |   2
 |is_critical    | True
 

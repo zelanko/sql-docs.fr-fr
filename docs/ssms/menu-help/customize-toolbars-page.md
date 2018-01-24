@@ -18,13 +18,13 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0fb95a5c9589b46e2f144362d7b667411965545
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9aaa2f4f281a4e41dd90e336c4dd4e39024bb20
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-toolbars-page"></a>Personnaliser (page Barres d'outils)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’onglet **Barres d’outils** vous permet de créer, de renommer, de supprimer et de réinitialiser des barres d’outils. Vous pouvez accéder à cet onglet en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Barres d'outils**.  

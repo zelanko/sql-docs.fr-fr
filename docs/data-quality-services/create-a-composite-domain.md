@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd7202378a76fb0de0552685343fc681f39ea4bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
   Cette rubrique explique comment créer un domaine composite dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend un ou plusieurs domaines uniques qui s'appliquent à un seul champ de données. Pour plus d’informations sur les domaines composites, consultez [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine composite.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Créer un domaine composite dans l'activité de découverte des connaissances  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/20/2017
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services vous permet d'analyser les données selon les connaissances, et pas simplement en fonction du délimiteur ou de l'ordre. L'analyse basée sur les connaissances est utilisée lorsque des données sources complexes sont mappées à un domaine composite et que vous n'utilisez pas les services de données de référence. Vous pouvez utiliser l'analyse basée sur les connaissances pour analyser les données de la source de données dans les domaines uniques appropriés. Avec l'analyse basée sur les connaissances, DQS tente d'abord d'utiliser les connaissances pour analyser des données complexes dans des domaines uniques. Si possible, il identifiera certaines parties de la chaîne comme étant dans un ou plusieurs domaines, et analysera la chaîne dans ses différents domaines. Par exemple, supposons que vous avez « John B.Doe » comme valeurs complexes dans un champ de nom complet représenté par un domaine composite Nom complet. Si DQS identifie « John » comme étant dans le domaine Prénom et « Doe » comme étant dans le domaine Nom, DQS ajoute alors « B. » au domaine Deuxième prénom selon la connaissance de domaine.  
+ Data Quality Services vous permet d'analyser les données selon les connaissances, et pas simplement en fonction du délimiteur ou de l'ordre. L'analyse basée sur les connaissances est utilisée lorsque des données sources complexes sont mappées à un domaine composite et que vous n'utilisez pas les services de données de référence. Vous pouvez utiliser l'analyse basée sur les connaissances pour analyser les données de la source de données dans les domaines uniques appropriés. Avec l'analyse basée sur les connaissances, DQS tente d'abord d'utiliser les connaissances pour analyser des données complexes dans des domaines uniques. Si possible, il identifiera certaines parties de la chaîne comme étant dans un ou plusieurs domaines, et analysera la chaîne dans ses différents domaines. Par exemple, supposons que vous avez « John B.Doe » comme valeurs complexes dans un champ de nom complet représenté par un domaine composite Nom complet. Si DQS identifie « John » comme étant dans le domaine Prénom et « Doe » comme étant dans le domaine Nom, DQS ajoute alors « B. » au domaine Deuxième prénom selon la connaissance de domaine.  
   
  Vous pouvez utiliser l'analyse basée sur les connaissances uniquement si vous sélectionnez également l'analyse en fonction du délimiteur. L'analyse basée sur les connaissances ne remplace pas l'analyse de délimiteur, mais l'améliore. DQS utilisera un délimiteur pour effectuer l'analyse uniquement s'il n'existe aucune connaissance pour exécuter l'opération. Dans certains cas, DQS peut établir une analyse avec l'analyse basée sur les connaissances, puis une autre analyse avec l'analyse en fonction du délimiteur.  
   

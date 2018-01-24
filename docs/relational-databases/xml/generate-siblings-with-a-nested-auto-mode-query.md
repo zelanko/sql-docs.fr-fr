@@ -16,21 +16,21 @@ helpviewer_keywords:
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54b9f392468d4d9a5f284114bde030abba1e6ac4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f170fb28de50fcce0e1452a6f93ffa022b1b7791
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] L’exemple suivant indique comment générer des frères à l’aide d’une requête imbriquée en mode AUTO. La seule autre façon de générer ce type de document XML consiste à utiliser le mode EXPLICIT. Toutefois, cette méthode peut s'avérer lourde.  
   
-## <a name="example"></a>Exemple  
- Cette requête construit le document XML qui fournit les informations sur les commandes. Notamment :  
+## <a name="example"></a> Exemple  
+ Cette requête construit le document XML qui fournit les informations sur les commandes. Notamment :  
   
 -   Les informations sur les en-têtes des commandes, `SalesOrderID`, `SalesPersonID`et `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stocke ces informations dans la table `SalesOrderHeader` .  
   
@@ -80,7 +80,7 @@ FOR XML AUTO, TYPE
   
  L'instruction `SELECT` qui extrait les informations sur le vendeur interroge un ensemble de lignes, `SalesPerson`, créé dans la clause `FROM` . Pour que les requêtes `FOR XML` fonctionnent, vous devez fournir un nom pour l'ensemble de lignes anonyme généré dans la clause `FROM` . Dans ce cas, le nom fourni est `SalesPerson`.  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <SalesOrder>  
@@ -171,7 +171,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser des requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

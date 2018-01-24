@@ -16,15 +16,15 @@ helpviewer_keywords:
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a20cb4d1a23ed32f7bddf1aa79d5428f46b9926e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f6682717a70bc98358a3cb010f38b773c0b44ca
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formes canoniques et restrictions de modèle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La facette de modèle XSD permet la restriction de l’espace lexical des types simples. Quand une restriction de modèle est appliquée à un type pour lequel il existe plusieurs représentations lexicales possibles, certaines valeurs peuvent entraîner un comportement inattendu lors de la validation.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  Une sérialisation imprécise de valeurs en virgule flottante donne lieu à un problème similaire. Du fait de l'algorithme de sérialisation en virgule flottante utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est possible pour des valeurs similaires de partager la même forme canonique. Quand une valeur en virgule flottante est sérialisée puis réinsérée, sa valeur peut varier légèrement. En de rares occasions, cela peut produire une valeur enfreignant l'une des facettes suivantes propres à son type au moment de sa réinsertion : **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**ou **maxExclusive**. Pour éviter ce problème, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs des types dérivés de `xs:float` ou de `xs:double` ne pouvant pas être sérialisées et réinsérées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

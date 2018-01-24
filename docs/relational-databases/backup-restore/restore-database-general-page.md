@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31fc3012f234601db7d24b80b4499b78138e709c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>Restaurer la base de données (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ ms.lasthandoff: 11/17/2017
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Base de données**|Sélectionnez la base de données à restaurer dans la liste déroulante. La liste contient uniquement les bases de données qui ont été sauvegardées selon l'historique de sauvegarde **msdb** .|  
+|**Sauvegarde de la base de données**|Sélectionnez la base de données à restaurer dans la liste déroulante. La liste contient uniquement les bases de données qui ont été sauvegardées selon l'historique de sauvegarde **msdb** .|  
 |**Unité**|Sélectionnez les unités de sauvegarde logiques ou physiques (bandes, URL ou fichiers) qui contiennent la ou les sauvegardes à restaurer. Cela est requis si la sauvegarde de la base de données a été effectuée sur une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Pour sélectionner une ou plusieurs unités de sauvegarde logiques ou physiques, cliquez sur le bouton Parcourir afin d'ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans cette boîte de dialogue, vous pouvez sélectionner jusqu'à 64 unités appartenant au même support de sauvegarde. Les lecteurs de bande doivent être connectés physiquement à l'ordinateur qui exécute l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un fichier de sauvegarde peut se trouver sur une unité de disque locale ou distante. Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). Vous pouvez également sélectionner **URL** comme type de périphérique pour sauvegarder les fichiers stockés dans le stockage Windows Azure.<br /><br /> Quand vous fermez la boîte de dialogue **Sélectionner les unités de sauvegarde** , l’unité sélectionnée s’affiche sous forme de valeurs accessibles en lecture seule dans la liste **Unité** .|  
-|**Base de données**|Sélectionnez dans la liste déroulante le nom de la base de données depuis laquelle les sauvegardes doivent être restaurées.<br /><br /> Remarque : cette liste n’est disponible que lorsque l’option **Unité** est sélectionnée. Seules les bases de données qui ont des copies de sauvegarde sur les unités sélectionnées sont disponibles.|  
+|**Sauvegarde de la base de données**|Sélectionnez dans la liste déroulante le nom de la base de données depuis laquelle les sauvegardes doivent être restaurées.<br /><br /> Remarque : cette liste n’est disponible que lorsque l’option **Unité** est sélectionnée. Seules les bases de données qui ont des copies de sauvegarde sur les unités sélectionnées sont disponibles.|  
   
 ### <a name="destination"></a>Destination  
  Les options du volet **Restaurer sur** identifient la base de données et le point de restauration.  
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Base de données**|Entrez la base de données à restaurer dans la liste. Vous pouvez entrer une nouvelle base de données ou choisir une base de données existante dans la liste déroulante. La liste contient toutes les bases de données sur le serveur, à l'exception des bases de données système **master** et **tempdb**.<br /><br /> Remarque : Pour restaurer une sauvegarde protégée par mot de passe, vous devez utiliser l’instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .|  
+|**Sauvegarde de la base de données**|Entrez la base de données à restaurer dans la liste. Vous pouvez entrer une nouvelle base de données ou choisir une base de données existante dans la liste déroulante. La liste contient toutes les bases de données sur le serveur, à l'exception des bases de données système **master** et **tempdb**.<br /><br /> Remarque : Pour restaurer une sauvegarde protégée par mot de passe, vous devez utiliser l’instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .|  
 |**Restaurer sur**|Par défaut, la zone **Restaurer sur** a la valeur « Dernière sauvegarde effectuée ». Vous pouvez également cliquer sur **Chronologie** pour ouvrir la boîte de dialogue **Chronologie de sauvegarde** , qui affiche l'historique de sauvegarde de la base de données sous forme de chronologie. Cliquez sur **Chronologie** pour indiquer la date et l'heure ( **datetime** ) jusqu'où restaurer la base de données. La base de données est ensuite restaurée dans l'état où elle se trouvait aux date et heure spécifiées. Consultez [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md).|  
   
 ### <a name="restore-plan"></a>Plan de restauration  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="restoring-from-microsoft-azure-storage"></a>Restauration à partir de Microsoft Azure Storage  
 Sélectionnez **URL** dans la liste déroulante **Type de support de sauvegarde** dans la boîte de dialogue **Sélectionner les unités de sauvegarde** .  Ensuite, cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner un emplacement pour le fichier de sauvegarde** , où vous pouvez sélectionner des informations d’identification SQL Server ou un conteneur de stockage Azure existant, ajouter un nouveau conteneur de stockage Azure avec une signature d’accès partagé, ou générer une signature d’accès partagé et des informations d’identification SQL Server pour un conteneur de stockage existant. Une fois que vous vous êtes connecté au compte de stockage, les fichiers de sauvegarde s’affichent dans la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** , où vous sélectionnez le fichier à utiliser pour la restauration.  Voir aussi [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   

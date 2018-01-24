@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mappage de type de données pour les serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les types de données Oracle et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne correspondent pas toujours exactement. Dans la mesure du possible, le type de données correspondant est sélectionné automatiquement lors de la publication d'une table Oracle. Dans les cas où un mappage de type de données simple n'est pas clair, des mappages de type de données de remplacement sont fournis. Pour plus d'informations sur la sélection de mappages de remplacement, consultez la section « Spécification de mappages de type de données de remplacement » plus loin dans cette rubrique.  
@@ -39,30 +39,30 @@ ms.lasthandoff: 11/17/2017
 |CHAR([1-2000])|CHAR([1-2000])|Oui|  
 |CLOB|VARCHAR(MAX)|Oui|  
 |DATE|DATETIME|Oui|  
-|FLOAT|FLOAT|Non|  
-|FLOAT([1-53])|FLOAT([1-53])|Non|  
-|FLOAT([54-126])|FLOAT|Non|  
+|FLOAT|FLOAT|non|  
+|FLOAT([1-53])|FLOAT([1-53])|non|  
+|FLOAT([54-126])|FLOAT|non|  
 |INT|NUMERIC(38)|Oui|  
 |INTERVAL|DATETIME|Oui|  
 |LONG|VARCHAR(MAX)|Oui|  
 |LONG RAW|IMAGE|Oui|  
-|NCHAR([1-1000])|NCHAR([1-1000])|Non|  
+|NCHAR([1-1000])|NCHAR([1-1000])|non|  
 |NCLOB|NVARCHAR(MAX)|Oui|  
 |NUMBER|FLOAT|Oui|  
-|NUMBER([1-38])|NUMERIC([1-38])|Non|  
+|NUMBER([1-38])|NUMERIC([1-38])|non|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Oui|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Non|  
-|RAW([1-2000])|VARBINARY([1-2000])|Non|  
-|REAL|FLOAT|Non|  
-|ROWID|CHAR(18)|Non|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|non|  
+|RAW([1-2000])|VARBINARY([1-2000])|non|  
+|real|FLOAT|non|  
+|ROWID|CHAR(18)|non|  
 |TIMESTAMP|DATETIME|Oui|  
 |TIMESTAMP(0-7)|DATETIME|Oui|  
 |TIMESTAMP(8-9)|DATETIME|Oui|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Oui|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Non|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|non|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Oui|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Non|  
-|UROWID|CHAR(18)|Non|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|non|  
+|UROWID|CHAR(18)|non|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Oui|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Règles de mappage des types de données  
@@ -110,9 +110,9 @@ ms.lasthandoff: 11/17/2017
   
  Pour spécifier des mappages de types de données de remplacement, consultez [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Problèmes et limitations de conception des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

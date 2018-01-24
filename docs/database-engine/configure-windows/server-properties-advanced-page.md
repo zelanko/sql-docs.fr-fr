@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db1fe5e47e062e2fa1a4563d54059b0ecfdc0af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>Propriétés du serveur - page Avancé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher ou modifier vos paramètres de serveur avancés.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Relation contenant-contenu  
+## <a name="containment"></a>Containment  
  Activer les bases de données à relation contenant-contenu  
  Indique si cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les bases de données à relation contenant-contenu. Si la valeur est **True**, une base de données à relation contenant-contenu peut être créée, restaurée ou attachée. Si la valeur est **False**, une base de données à relation contenant-contenu ne peut pas être créée, restaurée ou attachée à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de modifier la propriété de relation contenant-contenu peut avoir un impact sur la sécurité de la base de données. Le fait d'activer les bases de données à relation contenant-contenu permet aux propriétaires de base de données d'octroyer l'accès à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L efait de désactiver les bases de données à relation contenant-contenu peut empêcher les utilisateurs de se connecter. Pour comprendre l’impact de la propriété de relation contenant-contenu, consultez [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md) et [Meilleures pratiques de sécurité recommandées avec les bases de données à relation contenant-contenu](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
  Indique le niveau actuel de prise en charge de FILESTREAM sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour modifier le niveau d'accès, sélectionnez l'une des valeurs suivantes :  
   
  **Désactivé**  
- Les données BLOB ne peuvent pas être stockées dans le système de fichiers. Ceci est la valeur par défaut.  
+ Les données BLOB ne peuvent pas être stockées dans le système de fichiers. Il s'agit de la valeur par défaut.  
   
  **Accès Transact-SQL activé**  
  Les données FILESTREAM sont accessibles à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)], mais pas par le biais du système de fichiers.  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  **Query Wait**  
  Spécifie le nombre de secondes (de 0 à 2 147 483 647) pendant lequel une requête peut attendre des ressources avant d'expirer. Si la valeur par défaut -1 est utilisée, le délai d'attente est calculé comme étant 25 fois le coût estimé de la requête. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

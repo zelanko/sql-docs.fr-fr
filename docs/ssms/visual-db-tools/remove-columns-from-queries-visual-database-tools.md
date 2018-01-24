@@ -20,13 +20,13 @@ ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb5152ae022bd736492f01d2a370443cc42850b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6d3432b44f8adf35e6ea3fc105d1057a40250e0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Supprimer des colonnes des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si vous ne souhaitez plus utiliser une colonne figurant dans une requête, vous pouvez la supprimer. Dans ce cas, le Concepteur de requêtes et de vues supprime toutes les références à cette colonne dans la liste de sélection, les spécifications de tri, les critères de recherche, le **volet SQL**et toute autre spécification de regroupement.  

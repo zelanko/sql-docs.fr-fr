@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b457c021a4692a2e29becf690b684215f860c77d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86369f3a423be60c73ed2024e1490e7de9c97c30
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilité descendante du moteur de base de données SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Les rubriques de la section consacrée à la compatibilité descendante décrivent les changements de comportement entre les différentes versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)|Fonctionnalités [!INCLUDE[ssDE](../includes/ssde-md.md)] dépréciées dans la version 2017.| 
 |[Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)|Fonctionnalités [!INCLUDE[ssDE](../includes/ssde-md.md)] dépréciées dans la version 2016.|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuration des protocoles réseau par défaut de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour renforcer la sécurité, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] désactive la connectivité réseau de certaines nouvelles installations. La connectivité réseau faisant appel à TCP/IP n’est pas désactivée si vous utilisez l’édition Enterprise, Standard, Evaluation ou Workgroup ou qu’une installation précédente de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] est présente. Pour toutes les installations, le protocole de mémoire partagée est activé de manière à autoriser les connexions locales au serveur. Le service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] peut être arrêté si les conditions et options d'installation l'exigent.
@@ -45,7 +45,7 @@ Développeur   | Nouvelle installation  | Activé   | Désactivé  | Désactivé
 Evaluation  | Nouvelle installation  | Activé   | Activé   | Désactivés pour les connexions réseau.
 SQL Server Express  | Nouvelle installation  | Activé   | Désactivé  | Désactivés pour les connexions réseau.
 Toutes les éditions    | L'installation précédente est présente mais n'est pas mise à niveau.   | Même configuration que pour une nouvelle installation  | Même configuration que pour une nouvelle installation  | Même configuration que pour une nouvelle installation
-Toutes les éditions    | Mise à niveau   | Activé   | Les paramètres de l'installation précédente sont conservés.    | Les paramètres de l'installation précédente sont conservés.
+Toutes les éditions    | UPGRADE   | Activé   | Les paramètres de l'installation précédente sont conservés.    | Les paramètres de l'installation précédente sont conservés.
 
 
 >[!NOTE]
@@ -72,7 +72,7 @@ Le service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 
 * lors de l’installation d’une instance nommée du moteur de base de données, notamment toutes les instances de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ;
 * lors de l’installation d’une instance nommée d’Analysis Services.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

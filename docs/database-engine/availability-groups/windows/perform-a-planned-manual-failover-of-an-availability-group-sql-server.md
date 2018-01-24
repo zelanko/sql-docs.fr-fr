@@ -19,13 +19,13 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5bb5c28e35464ef46641d33600a53c2d4cb79cc
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment effectuer un basculement manuel sans perte de données (un *basculement manuel planifié*) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un basculement manuel planifié, comme un basculement de groupe de disponibilité AlwaysOn, transfère le rôle principal à un réplica secondaire. En même temps, le basculement transfère l’ancien réplica principal sur le rôle secondaire.  
@@ -59,7 +59,7 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
   
 ###  <a name="Security"></a> Sécurité 
   
-####  <a name="Permissions"></a> Autorisations 
+####  <a name="Permissions"></a> Permissions 
  L’autorisation ALTER AVAILABILITY GROUP est obligatoire sur le groupe de disponibilité. L’autorisation CONTROL AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER sont également obligatoires. 
   
 ##  <a name="SSMSProcedure"></a> Utiliser SQL Server Management Studio 
@@ -98,7 +98,7 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
 2. Utilisez l’applet de commande **Switch-SqlAvailabilityGroup** . 
   
     > [!NOTE] 
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Pour plus d’informations, consultez [Obtenir de l’aide pour SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
+    >  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour plus d’informations, consultez [Obtenir de l’aide pour SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
   
      L’exemple suivant montre un basculement manuel du groupe de disponibilité *MyAg* vers le réplica secondaire dont le chemin est spécifié : 
   

@@ -21,13 +21,13 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Suspendre et reprendre la mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le propriétaire de la base de données peut suspendre et reprendre ultérieurement une session de mise en miroir de bases de données à tout moment. La suspension conserve l'état de la session tout en suspendant la mise en miroir. En cas de goulots, la suspension peut permettre d'améliorer les performances sur le serveur principal.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 >  Pour plus d'informations sur les points de contrôle et la troncature du journal, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ##  <a name="AvoidFullLog"></a> Éviter la saturation du journal des transactions  
- Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
+ Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
   
 -   Reprendre la session de mise en miroir de base de données avant que le journal ne soit plein, ou ajouter un espace journal supplémentaire. La reprise de la mise en miroir de bases de données permet au serveur principal d'envoyer son journal actif cumulé au serveur miroir et met la base de données miroir en état SYNCHRONIZING. Le serveur miroir peut alors renforcer le journal sur le disque et commencer à le refaire.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

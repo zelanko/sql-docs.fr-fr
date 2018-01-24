@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflit de réplication de fusion avancée - Choisir un programme de résolution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lors du choix d’un programme de résolution, considérez l’importance de la résolution des conflits dans votre application, et si vous pouvez utiliser l’outil de résolution des conflits par défaut basé sur les priorités ou utiliser un programme de résolution d’articles.  
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 |Problème de résolution de conflits|Recommandation|  
 |-------------------------------|--------------------|  
-|Différentes catégories d'utilisateurs nécessitent des valeurs de priorité différentes.|Utilisez le résolveur par défaut et créez des abonnements serveur avec des valeurs de priorité différentes.<br /><br /> Ou<br /><br /> Utilisez un résolveur d'article qui reconnaît une colonne de valeur d'autorité dans l'article pour contribuer à résoudre tout conflit.|  
+|Différentes catégories d'utilisateurs nécessitent des valeurs de priorité différentes.|Utilisez le résolveur par défaut et créez des abonnements serveur avec des valeurs de priorité différentes.<br /><br /> ou<br /><br /> Utilisez un résolveur d'article qui reconnaît une colonne de valeur d'autorité dans l'article pour contribuer à résoudre tout conflit.|  
 |Nécessité d'une solution de résolution de conflit du type “ le premier l'emporte ”.|Utilisez le résolveur par défaut et créez des abonnements clients.|  
 |La modification d'une même ligne de données par plusieurs utilisateurs est acceptable, du moment qu'aucune modification conflictuelle n'est apportée à la même colonne.|Utilisez soit le résolveur par défaut soit un résolveur d'articles où le suivi au niveau des colonnes est activé.|  
 |Les multiples modifications de valeurs dans une ligne doivent être signalées comme un conflit.|Utilisez soit le résolveur par défaut soit un résolveur d'articles où le suivi au niveau des lignes est activé.|  
 |De multiples modifications de valeurs dans un enregistrement logique doivent être signalées comme un conflit.|Utilisez le résolveur par défaut avec un suivi au niveau des enregistrements logiques (les enregistrements logiques ne prennent pas en charge les résolveurs personnalisés ni les gestionnaires de logique métier).|  
 |Les données de résultat d'un conflit doivent être différentes des données de conflit originales.|Utilisez un résolveur d'articles qui calcule les nouvelles valeurs.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Détection et résolution des conflits dans les enregistrements logiques](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Détection et résolution des conflits de réplication de fusion avancée](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republier des données](../../../relational-databases/replication/republish-data.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7058a9dc394b10c5b938d1a7d827fd2aaa4459d9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurer un pare-feu Windows pour accéder au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 >  Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser permet aux utilisateurs de se connecter à des instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui n'écoutent pas sur le port 1433 sans connaître le numéro de port. Pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, vous devez ouvrir le port UDP 1434. Pour garantir un environnement sécurisé optimal, laissez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser désactivé et configurez les clients pour qu'ils se connectent avec ce numéro de port.  
   
 > [!NOTE]  
->  Par défaut, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows active le pare-feu Windows ; ce dernier ferme alors le port 1433 pour empêcher des ordinateurs reliés à Internet de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut sur votre ordinateur. Les connexions à l'instance par défaut à l'aide du protocole TCP/IP sont impossibles si vous ne rouvrez pas le port 1433. Les procédures suivantes présentent les étapes de base permettant de configurer le pare-feu Windows. Pour plus d'informations, consultez la documentation Windows.  
+>  Par défaut, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows active le pare-feu Windows ; ce dernier ferme alors le port 1433 pour empêcher des ordinateurs reliés à Internet de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut sur votre ordinateur. Les connexions à l'instance par défaut à l'aide du protocole TCP/IP sont impossibles si vous ne rouvrez pas le port 1433. Les procédures suivantes présentent les étapes de base permettant de configurer le pare-feu Windows. Pour plus d'informations, consultez la documentation Windows.  
   
  Si la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'écoute sur un port fixe et l'ouverture du port est une solution qui ne vous convient pas, vous pouvez également inscrire le fichier exécutable de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Sqlservr.exe) en tant qu'exception pour les programmes verrouillés. Optez pour cette méthode si vous souhaitez continuer à utiliser des ports dynamiques. Vous ne pouvez accéder qu'à une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec cette méthode.  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : configurer les paramètres de pare-feu (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

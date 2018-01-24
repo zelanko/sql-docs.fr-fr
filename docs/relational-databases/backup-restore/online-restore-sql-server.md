@@ -16,15 +16,15 @@ helpviewer_keywords:
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3500b144cc3afb10c5ac12ee76e49dc11953623
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="online-restore-sql-server"></a>Restauration en ligne (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La restauration en ligne est prise en charge uniquement dans l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Par défaut, une restauration fragmentaire, de fichiers ou de pages est en ligne dans cette édition. Cette rubrique concerne les bases de données qui contiennent plusieurs fichiers ou groupes de fichiers et, en mode de récupération simple, seulement des groupes de fichiers en lecture seule.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="log-backups-for-online-restore"></a>Sauvegardes de journal pour une restauration en ligne  
  Pour une restauration en ligne, le point de récupération est le point où les données en cours de restauration ont été mises hors connexion ou mises en lecture seule pour la dernière fois. Les sauvegardes des journaux de transactions jusqu'à ce point de récupération compris doivent toutes être disponibles. Généralement, une sauvegarde de fichier journal est requise après ce point pour couvrir le point de récupération du fichier. La seule exception concerne une restauration en ligne de données en lecture seule à partir une sauvegarde de données effectuée après la mise en lecture seule des données. Dans ce cas, vous n'avez pas besoin d'une sauvegarde de journal.  
   
- En général, vous pouvez effectuer des sauvegardes des journaux de transactions pendant que la base de données est en ligne, même après le début de la séquence de restauration. Le moment de la dernière sauvegarde de journal dépend des propriétés du fichier en cours de restauration :  
+ En général, vous pouvez effectuer des sauvegardes des journaux de transactions pendant que la base de données est en ligne, même après le début de la séquence de restauration. Le moment de la dernière sauvegarde de journal dépend des propriétés du fichier en cours de restauration :  
   
 -   Pour un fichier en lecture seule en ligne, vous pouvez effectuer la dernière sauvegarde de journal nécessaire à la récupération avant ou pendant la première séquence de restauration. Un groupe de fichiers en lecture seule peut se passer de sauvegardes de journal si une sauvegarde de données ou différentielle a été effectuée après la mise en lecture seule du groupe de fichiers.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Supprimer des groupes de fichiers obsolètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

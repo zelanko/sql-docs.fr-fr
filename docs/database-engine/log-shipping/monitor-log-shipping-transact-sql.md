@@ -23,13 +23,13 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Surveiller la copie des journaux de transaction (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une fois l’envoi de journaux configuré, vous pouvez contrôler les informations d’état de l’ensemble des serveurs d’envoi de journaux. L'historique et l'état des opérations d'envoi de journaux sont toujours enregistrés localement par les travaux d'envoi de journaux. L'historique et l'état de l'opération de sauvegarde sont stockés sur le serveur principal, tandis que l'historique et l'état des opérations de copie et de restauration sont stockés sur le serveur secondaire. Si vous avez implémenté un serveur moniteur distant, ces informations sont également stockées sur le serveur moniteur.  
@@ -37,14 +37,14 @@ ms.lasthandoff: 11/20/2017
  Vous pouvez définir des alertes qui se déclenchent si les opérations d'envoi de journaux ne sont pas exécutées conformément à la planification. Les erreurs sont signalées par un travail d'alerte qui surveille l'état des opérations de sauvegarde et de restauration. Vous pouvez définir des alertes qui indiquent à l'opérateur l'occurrence de ces erreurs. Si un serveur moniteur est configuré, un travail d'alerte s'exécute sur le serveur moniteur qui signale les erreurs de toutes les opérations dans la configuration d'envoi des journaux. Si aucun serveur moniteur n'est défini, un travail d'alerte s'exécute sur l'instance du serveur principal qui surveille la sauvegarde. Si aucun serveur moniteur n'est défini, un travail d'alerte s'exécute également sur chaque instance de serveur secondaire pour surveiller les opérations de copie et de restauration.  
   
 > [!IMPORTANT]  
->  Pour analyser une configuration d'envoi de journaux, vous devez ajouter le serveur moniteur lorsque vous activez l'envoi de journaux. Si vous ajoutez un serveur moniteur ultérieurement, vous devez supprimer la configuration d'envoi de journaux, puis la remplacer par une nouvelle configuration qui inclut un serveur moniteur. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md). Qui plus est, une fois le serveur moniteur configuré, il ne peut pas être modifié sans que l'envoi de journaux ne soit auparavant supprimé.  
+>  Pour analyser une configuration d'envoi de journaux, vous devez ajouter le serveur moniteur lorsque vous activez l'envoi de journaux. Si vous ajoutez un serveur moniteur ultérieurement, vous devez supprimer la configuration d'envoi de journaux, puis la remplacer par une nouvelle configuration qui inclut un serveur moniteur. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md). Qui plus est, une fois le serveur moniteur configuré, il ne peut pas être modifié sans que l'envoi de journaux ne soit auparavant supprimé.  
   
 ## <a name="history-tables-containing-monitoring-information"></a>Tables d'historique contenant les informations d'analyse  
  Les tables d'historique d'analyse contiennent des métadonnées stockées sur le serveur moniteur. Une copie des informations spécifiques à un serveur principal ou secondaire est également stockée localement.  
   
  Vous pouvez interroger ces tables pour contrôler l'état d'une session d'envoi de journaux. Pour connaître l'état de l'envoi des journaux, par exemple, vérifiez l'état et l'historique du travail de sauvegarde, du travail de copie et du travail de restauration. Vous pouvez afficher un historique d'envoi de journaux et des informations d'erreur spécifiques en interrogeant les tables d'analyse.  
   
-|Table|Description|  
+|Table de charge de travail|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Contient l'ID du travail d'alerte.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Contient les informations d'erreur des travaux d'envoi des journaux. Vous pouvez interroger cette table pour identifier les erreurs d'une session d'agent. Vous pouvez également trier les erreurs en fonction de leurs date et heure d'enregistrement. Chaque erreur est consignée sous la forme d'une séquence d'exceptions, et plusieurs erreurs (séquences) peuvent être consignées pour chaque session d'agent.|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 |[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Extrait les paramètres des bases de données secondaires depuis les tables **log_shipping_secondary**, **log_shipping_secondary_databases** et **log_shipping_monitor_secondary** tables.|Serveur secondaire|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Cette procédure stockée récupère les paramètres d'une base de données primaire donnée sur le serveur secondaire.|Serveur secondaire|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Afficher le rapport de la copie des journaux de transaction &#40;SQL Server Management Studio&#41;](../../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)   
  [Tables et procédures stockées de copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

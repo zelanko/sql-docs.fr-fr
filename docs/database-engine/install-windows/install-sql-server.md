@@ -19,12 +19,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 992a6dcf93bba9eba91297c894700d00b82186b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 937779613dbabd97aa456f7dbe4cda623ea8532b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server"></a>Installer SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>Procédure d’installation de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  
-|Title| Description|  
+|Titre|Description|  
 |-----------|-----------------|  
 |[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Prenez connaissance de cette rubrique pour installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur Windows Server Core.|  
 |[Paramètres de l’outil d’analyse de configuration système](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Décrit les fonctions de l'Outil d'analyse de configuration système (SCC).|  
@@ -89,12 +89,12 @@ ms.lasthandoff: 11/20/2017
 ## <a name="related-sections"></a>Sections connexes  
 [Éditions et fonctionnalités prises en charge de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  
 [Installer les fonctionnalités Business Intelligence de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+  [Installation d'un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
+[Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Mise à niveau vers [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Désinstaller [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
  [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e70740c2a1d9f3d315f6480cbcea05cc1084f1dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07c3d9d0d5fe44d38c5e163cb3e925519c994f4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ ms.lasthandoff: 11/20/2017
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Indique que seules les connexions locales sont autorisées à utiliser la connexion administrateur dédiée.|  
-|1|Indique que les connexions à distance sont autorisées à utiliser la connexion administrateur dédiée.|  
+| 1|Indique que les connexions à distance sont autorisées à utiliser la connexion administrateur dédiée.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant active la connexion administrateur dédiée à partir d'un ordinateur distant.  
   
 ```  
@@ -53,7 +53,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   

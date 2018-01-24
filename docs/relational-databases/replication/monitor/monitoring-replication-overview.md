@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d270a3b798caa19ee5cf393e9c79209ed06079f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d753e6f33d721fe409af8ca71afc6812f500a95f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-replication-overview"></a>Vue d'ensemble sur la surveillance de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le Moniteur de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est un outil graphique vous permettant d’analyser la santé globale d’une topologie de réplication. Le Moniteur de réplication fournit des informations détaillées sur l'état et les performances des publications et abonnements, vous permettant de répondre aux questions les plus fréquentes :  
   
 -   L'intégrité de mon système de réplication est-elle de bonne qualité ?  
   
--   Quels sont les abonnements lents ?  
+-   Quels sont les abonnements lents ?  
   
 -   Mon abonnement transactionnel est-il en retard ?  
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 674e78687e89e01126205971a3a070924c6e664f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les publications provenant des serveurs de publication Oracle sont créées de la même façon que les publications d’instantané et les publications transactionnelles standard. Toutefois, pour créer une publication provenant d’un serveur de publication Oracle, vous devez préalablement effectuer les étapes ci-après (les étapes 1, 3 et 4 sont décrites en détail dans cette rubrique) :  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
 |Action|Description|  
 |------------|-----------------|  
 |Identifier la base de données|Il existe deux méthodes pour identifier la base de données. La première méthode utilise le SID (Oracle System Identifier) et est disponible dans chaque version d'Oracle. La seconde méthode utilise le nom de service, disponible à partir d'Oracle release 8.0 et versions ultérieures. Ces deux méthodes utilisent une valeur qui est configurée lors de la création de la base de données, et il est essentiel que la configuration réseau du client utilise la méthode de nommage déjà utilisée par l'administrateur lorsqu'il a configuré l'écouteur pour la base de données.|  
-|Identifier un alias réseau pour la base de données|Vous devez spécifier un alias réseau, utilisé pour accéder à la base de données Oracle. Fournissez également cet alias lorsque vous identifiez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'alias réseau est essentiellement un pointeur vers le SID distant ou le nom de service qui a été configuré lors de la création de la base de données ; il a reçu divers noms dans les différentes versions et produits d'Oracle, notamment Net Service Name et TNS Alias. SQL*Plus vous demande cet alias comme paramètre « Host String » lors de votre connexion.|  
+|Identifier un alias réseau pour la base de données|Vous devez spécifier un alias réseau, utilisé pour accéder à la base de données Oracle. Fournissez également cet alias lorsque vous identifiez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'alias réseau est essentiellement un pointeur vers le SID distant ou le nom de service qui a été configuré lors de la création de la base de données ; il a reçu divers noms dans les différentes versions et produits d'Oracle, notamment Net Service Name et TNS Alias. SQL*Plus vous demande cet alias comme paramètre « Host String » lors de votre connexion.|  
 |Sélectionner le protocole réseau|Sélectionnez les protocoles que vous souhaitez prendre en charge. La plupart des applications utilisent TCP.|  
 |Spécifier les informations d'hôte pour identifier l'écouteur de la base de données|L'hôte est le nom ou l'alias DNS de l'ordinateur sur lequel s'exécute l'écouteur d'Oracle ; cet ordinateur est en général celui sur lequel réside la base de données. Pour certains protocoles, vous devez fournir des informations supplémentaires. Par exemple, si vous sélectionnez TCP, vous devez fournir le port sur lequel l'écouteur est à l'écoute des demandes de connexion sur la base de données cible. La configuration TCP par défaut utilise le port 1521.|  
   
@@ -146,10 +146,10 @@ ms.lasthandoff: 11/17/2017
   
  Pour configurer un serveur de publication Oracle et créer une publication, consultez [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Considérations sur l’administration des serveurs de publication Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Mappage de type de données pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Glossaire des termes de la publication Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

@@ -21,13 +21,13 @@ ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2fbf26947bbf50bb16fc78dbe6af61e45f4c202
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bc7f0a8d553cbf7f103732d34a7063425f700ed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Afficher ou modifier les propriétés d'une connexion dans un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les propriétés d’une connexion enregistrées dans un projet peuvent être affichées. En outre, certaines d’entre elles peuvent être modifiées.  

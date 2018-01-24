@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  Le basculement manuel planifié, ou *basculement manuel*, est un basculement qui est initié par un administrateur de base de données, en général pour des raisons administratives. Un basculement manuel planifié est pris en charge uniquement si le réplica principal et le réplica secondaire sont configurés en mode de validation synchrone et que le réplica secondaire est actuellement synchronisé (dans l'état SYNCHRONIZED). Lorsque le réplica secondaire cible est synchronisé, un basculement manuel (sans perte de données) est possible même si le réplica principal est hors service car les bases de données secondaires sont prêtes pour le basculement. C'est l'administrateur de base de données qui initie manuellement un basculement manuel.  
   
  Basculement forcé (avec possible perte de données)  
- Basculement qui peut être initié par un administrateur de base de données lorsqu'aucun réplica secondaire n'est synchronisé (SYNCHRONIZED) avec le réplica principal, ou lorsque le réplica principal n'est pas en cours d'exécution et aucun réplica secondaire n'est prêt pour le basculement. Le basculement forcé présente un risque de perte des données et est exclusivement recommandé dans le cas d'une récupération d'urgence. Le basculement forcé est également appelé « basculement manuel forcé » car il ne peut être initié que manuellement. Il s'agit de la seule forme de basculement prise en charge en mode de disponibilité avec validation asynchrone.  
+ Basculement qui peut être initié par un administrateur de base de données lorsqu'aucun réplica secondaire n'est synchronisé (SYNCHRONIZED) avec le réplica principal, ou lorsque le réplica principal n'est pas en cours d'exécution et aucun réplica secondaire n'est prêt pour le basculement. Le basculement forcé présente un risque de perte des données et est exclusivement recommandé dans le cas d'une récupération d'urgence. Le basculement forcé est également appelé « basculement manuel forcé » car il ne peut être initié que manuellement. Il s'agit de la seule forme de basculement prise en charge en mode de disponibilité avec validation asynchrone.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
  Dans un groupe de disponibilité donné, paire de réplicas de disponibilité (réplica principal actuel compris) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]entre en vigueur uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
@@ -87,8 +87,8 @@ ms.lasthandoff: 11/20/2017
   
 ||Mode de validation asynchrone|Mode de validation synchrone avec mode de basculement manuel|Mode de validation synchrone avec mode de basculement automatique|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Basculement automatique|Non|Non|Oui|  
-|Basculement manuel planifié|Non|Oui|Oui|  
+|Basculement automatique|non|non|Oui|  
+|Basculement manuel planifié|non|Oui|Oui|  
 |basculement forcé|Oui|Oui|Oui**\***|  
   
  **\***Si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica secondaire se comporte de la même manière que pour un basculement manuel.  
@@ -264,9 +264,9 @@ ms.lasthandoff: 11/20/2017
   
 |Mode de disponibilité d'un réplica secondaire|Las base de données est-elle synchronisée ?|Une perte de données est-elle possible ?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Validation synchrone|Oui|Non|  
-|Validation synchrone|Non|Oui|  
-|Validation asynchrone|Non|Oui|  
+|Validation synchrone|Oui|non|  
+|Validation synchrone|non|Oui|  
+|Validation asynchrone|non|Oui|  
   
  Les bases de données secondaires suivent uniquement deux branchements de récupération. Par conséquent, si vous exécutez plusieurs basculements forcés, il est possible que certaines bases de données secondaires qui ont démarré la synchronisation des données avec le basculement forcé précédent, ne puissent pas être reprises. Si cela se produit, les bases de données secondaires qui ne peuvent pas être reprises devront être supprimées du groupe de disponibilité, restaurées au moment approprié et rejoindre le groupe de disponibilité. Une restauration ne fonctionnera pas entre plusieurs branchements de récupération, par conséquent, vous devez veiller à sauvegarder le journal après l'exécution de plus d'un basculement forcé.  
   
@@ -352,13 +352,13 @@ ms.lasthandoff: 11/20/2017
   
 -   [Forcer un cluster WSFC à démarrer sans quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

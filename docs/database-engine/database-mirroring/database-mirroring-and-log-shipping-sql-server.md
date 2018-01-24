@@ -18,13 +18,13 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mise en miroir de bases de données et copie des journaux de transaction (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une base de données déterminée peut être simultanément mise en miroir et/ou faire l’objet d’une copie des journaux de transaction. Pour choisir l'approche à utiliser, tenez compte des éléments suivants :  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
      Il est conseillé de configurer un partage unique comme répertoire de sauvegarde (partage de sauvegarde). Cela permet de garantir qu'après le changement de rôle entre le principal et le serveur miroir, les travaux de sauvegarde seront toujours écrits dans le même répertoire qu'auparavant. Il est recommandé de vérifier que ce partage se situe sur un serveur physique différent des serveurs hébergeant les bases de données impliquées dans la mise en miroir et la copie des journaux de transaction.  
   
-     Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+     Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
 5.  Basculement manuel du principal au miroir.  
   

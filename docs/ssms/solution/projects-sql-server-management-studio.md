@@ -15,13 +15,13 @@ ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f7b80e3d65bbb72e154b267aa22f117e1e9060b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6aee221e94bfddd9ef968d5868c07ae2d9291d91
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="projects-sql-server-management-studio"></a>Projets (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un projet [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] est une collection de scripts et de fichiers associés de façon logique qui peuvent être enregistrés ensemble en vue de l’administration et du développement d’une base de données.  

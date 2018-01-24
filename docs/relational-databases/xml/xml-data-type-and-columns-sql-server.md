@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 401b870e8a40b2d451bf7b17aa0eb7c4f7a304f0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 68e9e9a97b9a601bad62750b2092f2bea66441c0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cette rubrique présente les avantages et les limites du type de données **XML** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et vous aide à choisir comment stocker des données XML.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="relational-or-xml-data-model"></a>Modèle de données relationnel ou XML  
  Si vos données sont très structurées et s'accompagnent de schémas connus, le modèle relationnel est sans doute le mieux adapté au stockage des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les fonctionnalités et les outils dont vous pourrez avoir besoin. En revanche, s'il s'agit de données semi-structurées ou non structurées, ou si la structure est inconnue, mieux vaut envisager la modélisation de ces données.  
   
- XML s'avère une solution de choix si vous souhaitez un modèle indépendant des plateformes pour assurer la portabilité des données à l'aide d'un balisage structurel et sémantique. De plus, cette solution semble mieux adaptée si certaines des conditions suivantes sont réunies :  
+ XML s'avère une solution de choix si vous souhaitez un modèle indépendant des plateformes pour assurer la portabilité des données à l'aide d'un balisage structurel et sémantique. De plus, cette solution semble mieux adaptée si certaines des conditions suivantes sont réunies :  
   
 -   Vos données sont éparses, vous n'en connaissez pas la structure ou la structure de vos données risque d'évoluer considérablement dans l'avenir.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Si aucune de ces conditions n'est remplie, il est préférable d'utiliser le modèle de données relationnel. Par exemple, si vos données sont au format XML, alors que votre application n’utilise la base de données que pour stocker et récupérer les données, une colonne **[n]varchar(max)** suffit. Le stockage des données dans une colonne XML apporte d'autres avantages : le moteur peut vérifier que les données sont bien formées ou valides, et vous pouvez lancer des requêtes et des mises à jour à granularité fine sur les données XML.  
   
-## <a name="reasons-for-storing-xml-data-in-sql-server"></a>Raisons justifiant le stockage des données XML dans SQL Server  
+## <a name="reasons-for-storing-xml-data-in-sql-server"></a>Raisons justifiant le stockage des données XML dans SQL Server  
  Vous trouverez ici quelques bonnes raisons d'opter pour les fonctions XML natives de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au lieu de gérer vos données XML dans le système de fichiers :  
   
 -   Vous voulez partager, interroger et modifier vos données XML d'une manière efficace et transactionnelle. Votre application a besoin d'accéder aux données à un niveau très détaillé. Par exemple, vous souhaitez extraire quelques passages d'un document XML, ou insérer une nouvelle section, sans avoir à remplacer l'ensemble du document.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  Si aucune de ces conditions n’est remplie, vous avez intérêt à stocker vos données dans un type d’objet volumineux non-XML, tel que **[n]varchar(max)** ou **varbinary(max)**.  
   
-## <a name="xml-storage-options"></a>Options de stockage XML  
+## <a name="xml-storage-options"></a>Options de stockage XML  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous disposez des options de stockage XML suivantes :  
   
 -   Stockage en mode natif dans le type de données **xml**   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
      Vous trouverez peut-être qu'une option de stockage convient mieux qu'une autre en fonction de la nature de vos requêtes et de la façon dont vous interrogez vos données XML. Les requêtes à granularité fine sur des données XML, évaluation de prédicat sur des nœuds XML par exemple, ne sont prises en charge qu'à des degrés divers dans les deux options de stockage.  
   
--   Indexation des données XML  
+-   Indexation des données XML  
   
      Vous cherchez peut-être à indexer les données XML de manière à optimiser les performances des requêtes XML. Les options d'indexation varient avec les options de stockage. Il vous appartient de choisir la solution la mieux adaptée à l'optimisation de votre charge de travail.  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/17/2017
  Pour des données XML très structurées, par exemple, le contenu d'une table a été converti en XML de façon à pouvoir mapper toutes les valeurs aux colonnes relationnelles, et éventuellement faire appel aux vues XML.  
   
 ## <a name="granularity-of-xml-data"></a>Granularité des données XML  
- La granularité des données XML stockées dans une colonne XML est d'une importance capitale pour le verrouillage et de moindre importance pour les mises à jour. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le même mécanisme de verrouillage, qu’il s’agisse de données XML ou non XML. Par conséquent, le verrouillage au niveau de la ligne verrouille toutes les instances XML de la ligne. En cas de grosse granularité, le verrouillage des grosses instances XML pendant les mises à jour provoque une baisse de la capacité de traitement dans un scénario multi-utilisateur. En cas de décomposition fine, l'encapsulation des objets est perdue et le coût de réassemblage augmente.  
+ La granularité des données XML stockées dans une colonne XML est d'une importance capitale pour le verrouillage et de moindre importance pour les mises à jour. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le même mécanisme de verrouillage, qu’il s’agisse de données XML ou non XML. Par conséquent, le verrouillage au niveau de la ligne verrouille toutes les instances XML de la ligne. En cas de grosse granularité, le verrouillage des grosses instances XML pendant les mises à jour provoque une baisse de la capacité de traitement dans un scénario multi-utilisateur. En cas de décomposition fine, l'encapsulation des objets est perdue et le coût de réassemblage augmente.  
   
  Pour le bien de la conception, il est essentiel de trouver un juste équilibre entre les exigences de la modélisation des données et les critères de verrouillage et de mise à jour. Toutefois, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la taille des instances XML stockées proprement dites ne revêt pas une telle importante.  
   
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Il ne peut pas être utilisé en tant que colonne clé dans un index. En revanche, il peut être inclus en tant que donnée dans un index cluster ou ajouté explicitement à un index non-cluster à l'aide du mot clé INCLUDE lors de la création d'un index non-cluster.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

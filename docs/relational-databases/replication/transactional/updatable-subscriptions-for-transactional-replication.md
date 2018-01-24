@@ -20,15 +20,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d146aaae7ef0a3e033deb1fb3a3cc51b49663abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a31fed7f22953170b443c42b6394786e6fa9a60e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Abonnements pouvant être mis à jour pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="immediate-updating"></a>Mise à jour immédiate  
   
--   Pour des abonnements mis à jour immédiatement, les modifications sur l'abonné sont propagées au serveur de publication et appliquées à l'aide du Coordinateur de transactions distribuées Microsoft (MSDTC, Microsoft Distributed Transaction Coordinator). Vérifiez que ce dernier est installé et configuré sur le serveur de publication et l'abonné. Pour plus d'informations, consultez la documentation Windows.  
+-   Pour des abonnements mis à jour immédiatement, les modifications sur l'abonné sont propagées au serveur de publication et appliquées à l'aide du Coordinateur de transactions distribuées Microsoft (MSDTC, Microsoft Distributed Transaction Coordinator). Vérifiez que ce dernier est installé et configuré sur le serveur de publication et l'abonné. Pour plus d'informations, consultez la documentation Windows.  
   
 -   Les déclencheurs utilisés par les abonnements mis à jour immédiatement exigent une connexion au serveur de publication pour répliquer les modifications.  
   
@@ -130,10 +130,10 @@ ms.lasthandoff: 11/17/2017
   
     -   Si des confits sont prévisibles : vous ne devez pas utiliser des contraintes de clés étrangères sur le serveur de publication ou l'abonné si vous optez pour la résolution de conflit où l'abonné prime ; vous ne devez pas utiliser des contraintes de clés étrangères sur l'abonné si vous utilisez la résolution de conflit où le serveur de publication prime.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Réplication transactionnelle d’égal à égal](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Types de publication pour la réplication transactionnelle](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

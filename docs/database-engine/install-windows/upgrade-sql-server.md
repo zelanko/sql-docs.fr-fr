@@ -16,12 +16,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 406ae798a766e1eb22c51e8c34da1661acd71627
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 63b740d38d52feb7e29b724560c0d6f29023057b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server"></a>Mettre à niveau SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez mettre à niveau des instances de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou de [!INCLUDE[ss2016](../../includes/sssql15-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Avant d'exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], examinez les rubriques suivantes traitant de la mise à niveau, ainsi que les notes de publication.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
    - [Notes de publication de SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## <a name="in-this-section"></a>Dans cette section  
-Cette section contient les rubriques suivantes :  
+Cette section contient les rubriques suivantes :  
   
 -   [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Préparer la mise à niveau en exécutant Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
@@ -48,7 +48,7 @@ Cette section contient les rubriques suivantes :
 -   [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 -   [Mettre à niveau vers une autre édition de SQL Server &#40;Installation&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/upgrade-database-engine.md)   
  [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)   
  [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

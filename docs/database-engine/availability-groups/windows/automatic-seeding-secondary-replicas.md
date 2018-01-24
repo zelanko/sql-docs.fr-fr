@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Amorçage automatique pour les réplicas secondaires
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Les scénarios, où l’emplacement de la base de données du réplica principal
 
 Si vous mélangez des chemins par défaut et non par défaut sur les réplicas principaux et secondaires, SQL Server 2017 se comporte différemment des versions précédentes. Le tableau suivant montre le comportement de SQL Server 2017.
 
-|Instance principale</br>Chemin de données par défaut |Instance secondaire</br>Chemin de données par défaut |Instance principale</br>Emplacement du fichier |SQL Server 2016 </br>Instance secondaire</br>Emplacement du fichier |SQL Server 2017 </br>Instance secondaire</br>Emplacement du fichier
+|Instance principale</br>Chemin de données par défaut |Instance secondaire</br>Chemin de données par défaut |Instance principale</br>Emplacement du fichier |SQL Server 2016 </br>Instance secondaire</br>Emplacement du fichier |SQL Server 2017 </br>Instance secondaire</br>Emplacement du fichier
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
@@ -169,7 +169,7 @@ Si le réplica secondaire a utilisé l’amorçage automatique quand il a été 
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Changer le mode d’amorçage d’un réplica
 
-Le mode d’amorçage d’un réplica peut être changé après la création du groupe de disponibilité : l’amorçage automatique peut donc être activé ou désactivé. L’activation de l’amorçage automatique après la création permet de créer une base de données à ajouter au groupe de disponibilité en utilisant l’amorçage automatique si elle a été créée avec la sauvegarde, la copie et la restauration. Exemple :
+Le mode d’amorçage d’un réplica peut être changé après la création du groupe de disponibilité : l’amorçage automatique peut donc être activé ou désactivé. L’activation de l’amorçage automatique après la création permet de créer une base de données à ajouter au groupe de disponibilité en utilisant l’amorçage automatique si elle a été créée avec la sauvegarde, la copie et la restauration. Exemple :
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -249,7 +249,7 @@ GO
 
 Le tableau suivant répertorie les événements étendus relatifs à l’amorçage automatique.
 
-|Nom|Description|
+|Nom   |Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Message de demande d’amorçage.|
 |hadr_physical_seeding_backup_state_change|Modification d’état côté sauvegarde d’amorçage physique.|

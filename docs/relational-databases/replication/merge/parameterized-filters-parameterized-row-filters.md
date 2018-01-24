@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les filtres de lignes paramétrables permettent l’envoi de différentes partitions de données à divers Abonnés sans qu’il soit nécessaire de créer plusieurs publications (les filtres paramétrables étaient précédemment désignés par le terme « filtres dynamiques » dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Une partition est un sous-ensemble de lignes d'une table ; selon les paramètres sélectionnés lors de la création d'un filtre de lignes paramétrable, chaque ligne d'une table publiée peut appartenir à une seule partition (ce qui donne des partitions qui ne se chevauchent pas), ou à deux ou plusieurs partitions (auquel cas, elles se chevauchent).  
@@ -76,7 +76,7 @@ ComputerName = HOST_NAME()
   
  Par exemple, la valeur correspondant à l'un des employés peut être « john5_laptop ». Lorsque l'Agent de fusion se connecte au serveur de publication, il compare la valeur retournée par SUSER_SNAME() aux valeurs de la table et ne télécharge que la ligne contenant la valeur « john5_laptop » dans la colonne **ComputerName** .  
   
- Il est également possible de combiner les fonctions dans un filtre. Si, par exemple, vous souhaitez qu'un employé ne reçoive les données que s'il se connecte avec son nom de connexion sur son ordinateur, la clause du filtre peut se présenter comme suit :  
+ Il est également possible de combiner les fonctions dans un filtre. Si, par exemple, vous souhaitez qu'un employé ne reçoive les données que s'il se connecte avec son nom de connexion sur son ordinateur, la clause du filtre peut se présenter comme suit :  
   
 ```  
 LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()  
@@ -113,7 +113,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Agent de fusion : spécifiez une valeur pour le paramètre **-Hostname** dans la ligne de commande ou par l’intermédiaire d’un profil d’Agent. Pour plus d'informations sur l'Agent de fusion, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Pour plus d'informations sur les profils d'Agent, consultez [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>Initialisation d'un abonnement à une publication avec des filtres paramétrés  
- Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Pour plus d’informations, voir [Instantanés des publications de fusion avec des filtres paramétrés](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## <a name="using-the-appropriate-filtering-options"></a>Utilisation des options de filtrage appropriées  
  Vous contrôlez essentiellement deux processus lorsque vous utilisez les filtres paramétrés :  
@@ -178,7 +178,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Les articles ne peuvent exister que dans une seule publication et ne peuvent pas être republiés.  
   
--   La publication doit autoriser les Abonnés à initialiser le processus d'instantané. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   La publication doit autoriser les Abonnés à initialiser le processus d'instantané. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ##### <a name="additional-considerations-for-join-filters"></a>Autres considérations sur les filtres de jointure  
   
@@ -190,7 +190,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Si deux tables d'un serveur de publication possèdent une relation de filtre de jointure et que la table enfant contient des lignes qui ne correspondent à aucune ligne de la table parent, une insertion de la ligne parente manquante n'entraîne pas le téléchargement des lignes liées vers l'Abonné (les lignes seraient téléchargées avec des partitions qui se chevauchent). Si, par exemple, la table **SalesOrderDetail** comprend des lignes sans correspondance dans la table **SalesOrderHeader** et que vous insérez la ligne manquante dans **SalesOrderHeader**, la ligne est téléchargée sur l'Abonné mais les lignes correspondantes de la table **SalesOrderDetail** ne le sont pas.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bonnes pratiques concernant les filtres de lignes basés sur le temps](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrer des données publiées en vue de la réplication de fusion](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

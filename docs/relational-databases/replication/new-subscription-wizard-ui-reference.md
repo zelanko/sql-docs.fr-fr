@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f896ec3aef62e23f25ba58c34c54e1fe447e613a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3dfa511ecb0302be2417dbffb0c4b794261b4668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistant Nouvel abonnement (références de l'interface utilisateur)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette section fournit des informations sur les pages suivantes de l’Assistant Nouvel abonnement :  
@@ -47,10 +47,10 @@ ms.lasthandoff: 11/18/2017
   
 -   [Valeurs HOST_NAME](../../relational-databases/replication/host-name-values.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Créer un abonnement par émission de données](../../relational-databases/replication/create-a-push-subscription.md)   
- [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Référence des propriétés &#40;réplication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

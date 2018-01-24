@@ -23,15 +23,15 @@ helpviewer_keywords:
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eaf3148fba4a949d937b725fe4f860f1bb228674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff6b20dc866c6d4e7b7ebf9bf21ccf6ae883a474
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d’application de la couche Données est membre d’un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
@@ -53,11 +53,11 @@ ms.lasthandoff: 11/17/2017
   
  Dans cette version, l'UCP doit respecter les exigences suivantes :  
   
--   L’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être une édition prise en charge. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+-   L’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être une édition prise en charge. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Nous recommandons d'héberger l'UCP sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]qui respecte la casse.  
   
- Tenez compte des recommandations suivantes pour planifier la capacité sur l'ordinateur de l'UCP :  
+ Tenez compte des recommandations suivantes pour planifier la capacité sur l'ordinateur de l'UCP :  
   
 -   Dans un scénario classique, l'espace disque utilisé par la base de données UMDW (sysutility_mdw) sur l'UCP est d'environ 2 Go par instance gérée de SQL Server par an. Cette évaluation peut varier selon le nombre d'objets de base de données et système collectés par l'instance gérée. Le taux de croissance de l'espace disque de la base de données UMDW (sysutility_mdw) est plus élevé pendant les deux premiers jours.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
  Utilisez cette procédure pour supprimer un UCP SQL Server de l'utilitaire SQL Server. Une fois l'opération terminée, il est possible de créer à nouveau un UCP sur l'instance de SQL Server.  
   
- Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
+ Utilisez SQL Server Management Studio pour la connexion au point de contrôle de l'utilitaire, puis exécutez le script suivant :  
   
 ```  
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
@@ -167,7 +167,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |Vous devez avoir des privilèges d'administrateur sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le point de contrôle de l'utilitaire sera créé.|Connectez-vous avec un compte disposant de privilèges d'administrateur sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être de version 10.50 ou ultérieure.|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l’UCP.|  
-|L’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être une édition prise en charge. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l’UCP.|  
+|L’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être une édition prise en charge. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l’UCP.|  
 |L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne doit pas être une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrite avec un autre UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l'UCP, ou inscrire l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'UCP où c'est actuellement une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être déjà l'hôte d'un point de contrôle de l'utilitaire.|Spécifiez une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour héberger l’UCP.|  
 |L'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir TCP/IP activé.|Activez TCP/IP pour l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -231,8 +231,8 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Résolution des problèmes liés à l'utilitaire SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Résolution des problèmes liés à l’utilitaire SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

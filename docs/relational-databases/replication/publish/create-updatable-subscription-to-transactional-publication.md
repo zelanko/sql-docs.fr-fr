@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53bef20bb061a75fca42b122278d2c583b65b904
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2acb3a117d7bd833c2367e1766a3adbd3d07fa91
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-updatable-subscription-to-transactional-publication"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -203,7 +203,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
     * Planification du travail de l'Agent de distribution pour cet abonnement.
 
 
-## <a name="example"></a>Exemple ##
+## <a name="example"></a> Exemple ##
 
 Cet exemple crée un abonnement par extraction avec mise à jour immédiate à une publication qui prend en charge les abonnements avec mise à jour immédiate. Les valeurs de connexion et le mot de passe sont fournis lors de l'exécution à l'aide des variables de script sqlcmd.
 
@@ -274,7 +274,7 @@ EXEC sp_addsubscription
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi ##
+## <a name="see-also"></a> Voir aussi ##
 
 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 

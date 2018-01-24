@@ -30,15 +30,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a687248919676d1193682a983f8ba71b1827cc3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programme
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le Moniteur de réplication est un outil graphique permettant d’analyser une topologie de réplication. Vous pouvez accéder par programmation aux mêmes données d'analyse en utilisant les procédures stockées de réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou les objets RMO (Replication Management Objects). Ces objets permettent de programmer les tâches suivantes :  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Spécifiez une valeur **Session_id** de l'étape 1 pour **@session_id**. Les informations d'analyse détaillées sur la session sont ainsi affichées.  
   
-3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
+3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Pour analyser les sessions de l'Agent de fusion pour les abonnements par extraction de l'Abonné  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> et définissez les propriétés <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> de l'abonnement, puis attribuez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée dans l'étape 1.  
   
-3.  Appelez l'une des méthodes suivantes pour retourner les informations sur les sessions de l'Agent de fusion de cet abonnement :  
+3.  Appelez l'une des méthodes suivantes pour retourner les informations sur les sessions de l'Agent de fusion de cet abonnement :  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - retourne un tableau d'objets <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> avec des informations sur les cinq dernières sessions au plus de l'Agent de fusion. Notez la valeur <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> pour toutes les sessions dignes d'intérêt.  
   
@@ -273,7 +273,7 @@ ms.lasthandoff: 11/17/2017
   
         |Valeur|Description|  
         |-----------|-----------------|  
-        |1|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
+        | 1|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
         |2|**latency** : contrôle les performances des abonnements aux publications transactionnelles.|  
         |4|**mergeexpiration** : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
         |5|**mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
