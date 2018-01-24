@@ -42,7 +42,7 @@ Pour commencer, installez SQL Server sur Linux à l’aide d’un des didacticie
 > [!NOTE]
 > Docker lui-même s’exécute sur plusieurs plateformes, ce qui signifie que vous pouvez exécuter l’image Docker sur Windows, Mac et Linux.
 
-## <a name="connect"></a>Connection
+## <a name="connect"></a>Se connecter
 
 Après l’installation, connectez-vous à l’instance de SQL Server sur l’ordinateur Linux. Vous pouvez vous connecter localement ou à distance et avec un large éventail d’outils et de pilotes. Les didacticiels de démarrage rapide montrent comment utiliser l'outil en ligne de commande [sqlcmd](sql-server-linux-setup-tools.md). Les autres outils possibles sont les suivants :
 
@@ -60,9 +60,9 @@ Si vous êtes déjà familiarisé avec SQL Server, passez en revue les [notes de
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Contacter l’équipe d’ingénierie de SQL Server
 
-- [Échange de pile DBA](https://dba.stackexchange.com/questions/tagged/sql-server): poser des questions d’administration de base de données
-- [Dépassement de capacité de la pile](http://stackoverflow.com/questions/tagged/sql-server): poser des questions sur le développement
-- [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): poser des questions techniques
+- [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server): Poser des questions sur l’administration de base de données
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Poser des questions sur le développement
+- [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Poser des questions techniques
 - [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): signaler des bogues ou demander une nouvelle fonctionnalité
-- [Reddit](https://www.reddit.com/r/SQLServer/): discuter de SQL Server
+- [Reddit](https://www.reddit.com/r/SQLServer/): Discuter de SQL Server
 
