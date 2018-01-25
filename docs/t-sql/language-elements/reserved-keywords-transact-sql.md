@@ -21,13 +21,13 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>Mots clés réservés (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|Utilisateur|  
+|DOUBLE|OPTION|USER|  
 |DROP|- ou -|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -96,8 +96,8 @@ ms.lasthandoff: 01/19/2018
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|par|  
-|Exécutez|PRIMARY|WITHIN GROUP|  
+|EXEC|PRECISION|WITH|  
+|EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
   
@@ -247,7 +247,7 @@ ms.lasthandoff: 01/19/2018
 |CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Non|TIMEZONE_MINUTE|  
-|CURRENT_PATH|Aucune|TRAILING|  
+|CURRENT_PATH|NONE|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
@@ -260,7 +260,7 @@ ms.lasthandoff: 01/19/2018
 |DEFERRABLE|OVERLAY|USING|  
 |DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|Paramètre|VAR_SAMP|  
+|DEREF|PARAMETER|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  

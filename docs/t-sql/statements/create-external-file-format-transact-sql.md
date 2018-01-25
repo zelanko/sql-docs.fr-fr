@@ -23,13 +23,13 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CRÉER un FORMAT de fichier externe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -198,18 +198,18 @@ PolyBase utilise uniquement le format de date personnalisée pour l’importatio
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]] M-[d] [aa] d-yy HH : mm : [.fff]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00]|[M [M]] M-[d] d-[aa] AA|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] zzz|  
+|[M [M]] M-[d] [aa] d-yy HH : mm : [.fff]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00]|[M[M]]M-[d]d-[yy]yy|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] zzz|  
 |[M [M]] M-[d] [aa] d-yy HH : mm : [.fff] [tt]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00] [tt]||[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] [tt]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] [tt] zzz|  
-|[M [M]] M [aa] AA-[d]-d hh : mm : [.fff]|[M [M]] M [aa] AA-[d]-d hh : mm [ : 00]|[M [M]] M [aa] AA-[d]-d|[M [M]] M [aa] AA-[d]-d hh : mm : [.fffffff]|[M [M]] M [aa] AA-[d]-d hh : mm : [.fffffff] zzz|  
-|[M [M]] M-[aa] AA-[d] HH : mm : d [.fff] [tt]|[M [M]] M-[aa] AA-[d] HH : mm d [ : 00] [tt]||[M [M]] M-[aa] AA-[d] HH : mm : d [.fffffff] [tt]|[M [M]] M-[aa] AA-[d] HH : mm : d [.fffffff] [tt] zzz|  
-|[aa] AA-[M [M]] [d] M-d hh : mm : [.fff]|[aa] AA-[M [M]] [d] M-d hh : mm [ : 00]|[aa] AA-[M [M]] [d] M-d|[aa] AA-[M [M]] [d] M-d hh : mm : [.fffffff]|[aa] AA-[M [M]] HH : mm : d [.fffffff] zzz de M-[d]|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M [M]] M-[aa] AA-[d] HH : mm : d [.fff] [tt]|[M[M]]M-[yy]yy-[d]d hh:mm[:00][tt]||[M [M]] M-[aa] AA-[d] HH : mm : d [.fffffff] [tt]|[M [M]] M-[aa] AA-[d] HH : mm : d [.fffffff] [tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
 |[aa] AA-[M [M]] [d] M-d hh : mm : [.fff] [tt]|[aa] AA-[M [M]] [d] M-d hh : mm [ : 00] [tt]||[aa] AA-[M [M]] [d] M-d hh : mm : [.fffffff] [tt]|[aa] AA-[M [M]] [d] M-d hh : mm : [.fffffff] [tt] zzz|  
-|[aa] AA-[d] [M [M]] d-M hh : mm : [.fff]|[aa] AA-[d] [M [M]] d-M hh : mm [ : 00]|[aa] AA - d [d]-[M [M]] M|[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff]|[aa] AA-[d] M hh : mm : [.fffffff] zzz de d-[M [M]]|  
-|[aa] AA-[d] [M [M]] d-M hh : mm : [.fff] [tt]|[aa] AA-[d] [M [M]] d-M hh : mm [ : 00] [tt]||[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff] [tt]|[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff] [tt] zzz|  
-|[d] [M [M]] d-M-[aa] AA HH : mm : [.fff]|[d] [M [M]] d-M-[aa] AA HH : mm [ : 00]|[d] [M [M]] d-M-[aa] AA|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff]|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[aa] AA-[d] [M [M]] d-M hh : mm : [.fff] [tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff] [tt]|[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff] [tt] zzz|  
+|[d] [M [M]] d-M-[aa] AA HH : mm : [.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff]|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] zzz|  
 |[d] [M [M]] d-M-[aa] AA HH : mm : [.fff] [tt]|[d] [M [M]] d-M-[aa] AA HH : mm [ : 00] [tt]||[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] [tt]|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] [tt] zzz|  
-|d [d]-[aa] AA-[M [M]] M hh : mm : [.fff]|d [d]-[aa] AA-[M [M]] M hh : mm [ : 00]|d [d]-[aa] AA-[M [M]] M|d [d]-[aa] AA-[M [M]] M hh : mm : [.fffffff]|[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] zzz|  
-|[d] d-[aa] AA-[M [M]] M hh : mm : [.fff] [tt]|[d] d-[aa] AA-[M [M]] M hh : mm [ : 00] [tt]||[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] [tt]|[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] [tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d] d-[aa] AA-[M [M]] M hh : mm : [.fff] [tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] [tt]|[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] [tt] zzz|  
   
  Détails :  
   
@@ -264,7 +264,7 @@ PolyBase utilise uniquement le format de date personnalisée pour l’importatio
   
 -   La COMPRESSION de données = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER ANY EXTERNAL FILE FORMAT.
   
 ## <a name="general-remarks"></a>Remarques d'ordre général

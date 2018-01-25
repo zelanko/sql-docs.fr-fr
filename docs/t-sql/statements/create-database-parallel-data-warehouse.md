@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>CRÉER la base de données (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,21 +55,21 @@ WITH (
   
  Croissance automatique est activé pour toutes les tailles ou OFF pour toutes les tailles. Par exemple, il n’est pas possible de définir de croissance automatique pour *log_size*, mais pas définie pour *replicated_size*.  
   
- *replicated_size* [Go]  
+ *replicated_size* [ GB ]  
  Un nombre positif. Définit la taille (en gigaoctets entier ou décimal) pour l’espace total alloué pour les tables répliquées et les données correspondantes *sur chaque nœud de calcul*. Pour les valeurs minimale et maximale *replicated_size* configuration requise, consultez « Valeurs minimale et maximale » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Si la croissance automatique est activée, les tables répliquées seront autorisées à croître au-delà de cette limite.  
   
  Si la croissance automatique est désactivée, une erreur est renvoyée si un utilisateur tente de créer une table répliquée, insertion de données dans une réplication de table, ou mettre à jour un existant table répliquée dans une manière qui augmenterait la taille au-delà de *replicated_size*.  
   
- *distributed_size* [Go]  
+ *distributed_size* [ GB ]  
  Un nombre positif. La taille, en gigaoctets entière ou décimale, pour l’espace total alloué aux tables distribuées (et aux données correspondantes) *sur l’appliance*. Pour les valeurs minimale et maximale *distributed_size* configuration requise, consultez « Valeurs minimale et maximale » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Si la croissance automatique est activée, les tables distribuées seront autorisées à croître au-delà de cette limite.  
   
  Si la croissance automatique est désactivée, une erreur est renvoyée si un utilisateur tente de créer une nouvelle table distribuée, insérer des données dans un distributed existant de table, ou mettre à jour une table distribuée existante d’une manière qui augmenterait la taille au-delà de *distributed_size*.  
   
- *log_size* [Go]  
+ *log_size* [ GB ]  
  Un nombre positif. La taille (en gigaoctets entier ou décimal) pour le journal des transactions *sur l’appliance*.  
   
  Pour les valeurs minimale et maximale *log_size* configuration requise, consultez « Valeurs minimale et maximale » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -78,7 +78,7 @@ WITH (
   
  Si la croissance automatique est désactivée, une erreur s’affichera à l’utilisateur pour toute action qui augmenterait la taille du journal sur un nœud de calcul individuelles au-delà de *log_size*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert le **CREATE ANY DATABASE** autorisation dans la base de données master, ou l’appartenance dans le **sysadmin** rôle serveur fixe.  
   
  L'exemple suivant fournit l'autorisation de créer une base de données à l'utilisateur de base de données Fay.  

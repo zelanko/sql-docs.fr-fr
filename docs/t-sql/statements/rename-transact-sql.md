@@ -1,5 +1,5 @@
 ---
-title: Changement de nom (Transact-SQL) | Documents Microsoft
+title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/20/2017
 ms.prod: 
@@ -15,21 +15,21 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="rename-transact-sql"></a>Changement de nom (Transact-SQL)
+# <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Renomme une table créée par l’utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomme un créés par l’utilisateur de table ou de la base de données dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Pour renommer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Pour renommer une base de données dans la base de données SQL Azure, utilisez le [ALTER DATABASE (base de données de SQL Azure)](/statements/alter-database-azure-sql-database.md) instruction. 
+>  Pour renommer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,13 +56,13 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>Arguments  
  RENOMMER L’OBJET [ :]   
-          [[*nom_base_de_données* . [ *schema_name* ]. ] | [ *nom_schéma* . []]*table_name* à *nom_nouvelle_table*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *nom_schéma* . []]*table_name* à *nom_nouvelle_table*  
  **S’APPLIQUE À :**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Modifier le nom d’une table définie par l’utilisateur. Spécifier la table à renommer avec-, deux ou nom en trois parties.    Spécifiez la nouvelle table *new_table_name* comme un nom en une partie.  
   
  RENOMMEZ LA BASE DE DONNÉES [ :]   
-          [ *nom_base_de_données* à *nouveau_nom_base_de_données*  
+          [ *database_name* TO *new_database_name*  
  **S’APPLIQUE À :**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Modifier le nom d’une base de données défini par l’utilisateur à partir de *nom_base_de_données* à *nouveau_nom_base_de_données*.  Vous ne pouvez pas renommer une base de données à un de ces [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]les noms de base de données :  
@@ -85,7 +85,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Ces autorisations sont nécessaires pour exécuter cette commande :  
   
 -   **ALTER** autorisation sur la table  

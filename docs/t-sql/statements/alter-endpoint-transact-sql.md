@@ -21,15 +21,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a035e71325993e088b9910d6538c8bdd61e03f7e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Les arguments suivants sont spécifiques à ALTER ENDPOINT. Pour obtenir une description des arguments restants, consultez [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
- **EN TANT QUE** { **TCP** }  
+ **AS** { **TCP** }  
  Vous ne pouvez pas modifier le protocole de transport avec **ALTER ENDPOINT**.  
   
  **AUTORISATION** *connexion*  
@@ -127,7 +127,7 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4 est un algorithme relativement faible et AES est un algorithme relativement fort. Toutefois, AES est considérablement plus lent que RC4. Si vous considérez que la sécurité est une priorité plus importante que la vitesse, nous vous recommandons d'utiliser AES.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Utilisateur doit être un membre de la **sysadmin** le propriétaire du point de terminaison, du rôle de serveur fixe ou avoir reçu l’autorisation ALTER ANY ENDPOINT.  
   
  Pour modifier l'appartenance d'un point de terminaison existant, vous devez utiliser l'instruction ALTER AUTHORIZATION. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
@@ -135,7 +135,7 @@ FOR DATABASE_MIRRORING (
  Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [SUPPRIMER le point de terminaison &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la SOURCE de données externe (Transact-SQL) | Documents Microsoft"
+title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-data-source-transact-sql"></a>CRÉER la SOURCE de données externe (Transact-SQL)
+# <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Crée une source de données externe pour PolyBase, les requêtes de base de données élastique ou le stockage Blob Azure. Selon le scénario, la syntaxe diffère considérablement. Une source de données créée pour PolyBase ne peut pas être utilisée pour les requêtes de base de données élastique.  De même, une source de données créée pour les requêtes de base de données élastique ne peut pas être utilisée pour PolyBase, etc. 
@@ -177,7 +177,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 Pour obtenir un didacticiel, consultez [mise en route avec les requêtes élastiques pour le partitionnement (partitionnement horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
-**SGBDR**   
+**RDBMS**   
 Pour le SGBDR, spécifie le nom du serveur logique de la base de données distante dans la base de données SQL Azure.  
 
 ```  
@@ -211,7 +211,7 @@ Si le port n’est pas spécifié, la valeur par défaut est déterminée à l�
 
 |Connectivité Hadoop|Port du Gestionnaire de ressources par défaut|
 |-------------------|-----------------------------|
-| 1|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -259,7 +259,7 @@ Pour obtenir une liste complète des versions prises en charge par chaque valeur
  Informations d’identification = *credential_name*  
  Spécifie les informations d’identification étendue de base de données pour l’authentification auprès de la source de données externe. Pour obtenir un exemple, consultez [C. création d’une source de données externe du stockage blob Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Pour créer les informations d’identification, consultez [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Notez que les informations d’identification ne sont pas requises pour les jeux de données publics qui autorise l’accès anonyme. 
   
- Nom_base_de_données = *'QueryDatabaseName'*  
+ DATABASE_NAME = *'QueryDatabaseName'*  
  Le nom de la base de données qui fonctionne comme le Gestionnaire de carte de partitions (pour SHARD_MAP_MANAGER) ou la base de données à distance (pour le SGBDR).  
   
  SHARD_MAP_NAME = *'ShardMapName'*  
@@ -480,12 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 Pour voir cet exemple en cours d’utilisation, consultez [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
 ## <a name="see-also"></a>Voir aussi
-[MODIFIER la SOURCE de données externe (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
+[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
 [CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [CREATE TABLE AS SELECT &#40; Entrepôt de données SQL Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

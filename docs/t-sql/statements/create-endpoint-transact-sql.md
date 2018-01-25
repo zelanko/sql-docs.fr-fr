@@ -1,5 +1,5 @@
 ---
-title: "CRÉER le point de terminaison (Transact-SQL) | Documents Microsoft"
+title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 caps.latest.revision: "135"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Le point de terminaison est désactivé. Dans cet état, le serveur écoute les requêtes du port mais renvoie des erreurs aux clients.  
   
- **ARRÊTÉ**  
+ **STOPPED**  
  Le point de terminaison est arrêté. Dans cet état, le serveur n'écoute pas le port du point de terminaison et ne répond à aucune tentative de requête visant l'utilisation du point de terminaison.  
   
  Pour modifier l’état, utilisez [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -149,10 +149,10 @@ FOR DATABASE_MIRRORING (
   
  Les arguments suivants s'appliquent uniquement à l'option du protocole TCP.  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **=***listenerPort*  
  Spécifie le numéro du port écouté pour les connexions par le protocole TCP/IP Service Broker. Par convention, 4022 est utilisé mais n'importe quel numéro entre 1024 et 32767 est valide.  
   
- LISTENER_IP  **=**  tous les | **(***4-partie-ip* **)** | **(** »*ip_address_v6*» **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  Spécifie l'adresse IP que le point de terminaison va écouter. La valeur par défaut est ALL. Ce qui signifie que l'écouteur acceptera une connexion sur n'importe quelle adresse IP valide.  
   
  Si vous configurez la mise en miroir de bases de données avec une adresse IP au lieu d'un nom de domaine complet (`ALTER DATABASE SET PARTNER = partner_IP_address` ou `ALTER DATABASE SET WITNESS = witness_IP_address`), vous devez spécifier `LISTENER_IP =IP_address` au lieu de `LISTENER_IP=ALL` lorsque vous créez des points de terminaison de mise en miroir.  
@@ -171,14 +171,14 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  Toutes les connexions de mise en miroir situées sur une instance du serveur utilisent un point de terminaison de mise en miroir de bases de données unique. Toutes les tentatives de création d'un autre point de terminaison de mise en miroir de bases de données échouent.  
   
- **\<authentication_options > :: =**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
  Indique que le point de terminaison doit se connecter à l'aide du protocole d'authentification Windows pour authentifier les points de terminaison. Il s'agit du paramètre par défaut.  
   
  Si vous spécifiez une méthode d'autorisation (NTLM ou KERBEROS), cette méthode est utilisée en tant que protocole d'authentification. Avec la valeur par défaut, NEGOTIATE, le point de terminaison utilise le protocole de négociation Windows pour choisir NTLM ou Kerberos.  
   
- CERTIFICAT *nom_certificat*  
+ CERTIFICATE *certificate_name*  
  Spécifie que le point de terminaison doit authentifier la connexion à l’aide du certificat spécifié par *nom_certificat* pour établir l’identité d’autorisation. Le point de terminaison éloigné doit disposer d'un certificat dont la clé publique correspond à la clé privée du certificat spécifié.  
   
  WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }] CERTIFICAT *nom_certificat*  
@@ -234,7 +234,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Annule les messages destinés à des services situés ailleurs. Il s'agit du paramètre par défaut.  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **=***forward_size*  
  Indique l'espace de stockage maximal, en mégaoctets, à allouer au point de terminaison lors du stockage des messages à transférer.  
   
  **Options DATABASE_MIRRORING**  
@@ -272,7 +272,7 @@ FOR DATABASE_MIRRORING (
   
 -   les utilisateurs ou groupes disposant de l'autorisation CONNECT sur le point de terminaison.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe **sysadmin** . Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="example"></a>Exemple  
@@ -293,8 +293,8 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [Choisissez un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [SUPPRIMER le point de terminaison &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

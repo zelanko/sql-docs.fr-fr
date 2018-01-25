@@ -34,13 +34,13 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: "104"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -268,12 +268,12 @@ Execute a character string
  AS \<context_specification>  
  Spécifie le contexte dans lequel l'instruction est exécutée.  
   
- Connexion  
+ LOGIN  
 **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Spécifie que le contexte dont l'identité doit être empruntée est une connexion. L'étendue de l'emprunt d'identité est le serveur.  
   
- Utilisateur  
+ USER  
  Spécifie que le contexte dont l'identité doit être empruntée est un utilisateur de la base de données active. L'étendue de l'emprunt d'identité est limitée à la base de données active. Le changement de contexte vers un utilisateur de base de données n'hérite pas des autorisations de cet utilisateur au niveau serveur.  
   
 > [!IMPORTANT]  

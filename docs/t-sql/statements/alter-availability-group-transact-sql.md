@@ -26,13 +26,13 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ALTER AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_groupe*  
+ *group_name*  
  Spécifie le nom du nouveau groupe de disponibilité. *nom_groupe* doit être valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur et il doit être unique parmi tous les groupes de disponibilité dans le cluster WSFC.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRINCIPAL | SECONDARY_ONLY | SECONDAIRE | AUCUN}  
@@ -197,9 +197,9 @@ ALTER AVAILABILITY GROUP group_name
   
  Les niveaux de condition d'échec (1-5) s'étendent du moins restrictif, niveau 1, au plus restrictif, le niveau 5. Un niveau de condition donné comprend tous les niveaux moins restrictifs. Par conséquent, le niveau de condition le plus strict, le niveau 5, inclut les quatre niveaux de condition moins restrictifs (1 à 4), le niveau 4 inclut les niveaux 1 à 3, et ainsi de suite. Le tableau suivant décrit la condition d'échec qui correspond à chaque niveau.  
   
-|Level|Condition d'échec|  
+|Niveau|Condition d'échec|  
 |-----------|-----------------------|  
-| 1|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d’informations, consultez [Fonctionnement : délai d’expiration de bail Always On SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d’informations, consultez [Fonctionnement : délai d’expiration de bail Always On SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne se connecte pas au cluster et le seuil du groupe de disponibilité HEALTH_CHECK_TIMEOUT spécifié par l'utilisateur est dépassé.<br /><br /> Le réplica de disponibilité est dans un état d'échec.|  
 |3|Spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes critiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que les verrouillages spinlock orphelins, les violations graves d'accès en écriture, ou en cas de vidages trop importants.<br /><br /> Il s'agit du comportement par défaut.|  
 |4|Spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes modérées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles qu'une condition persistante de mémoire insuffisante dans le pool de ressources interne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -249,7 +249,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Vous devez joindre chaque nouveau réplica secondaire au groupe de disponibilité. Pour plus d'informations, consultez la description de l'option JOIN ultérieurement dans cette section.  
   
- \<instance_serveur >  
+ \<server_instance>  
  Spécifie l’adresse de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l’hôte d’un réplica. Le format de l'adresse varie selon que l'instance est l'instance par défaut ou une instance nommée et s'il s'agit d'une instance autonome ou d'une instance de cluster de basculement (FCI). La syntaxe de base est la suivante :  
   
  { '*nom_système*[\\*nom_instance*]' | '*nom_réseau_FCI*[\\*nom_instance*]' }  
@@ -273,9 +273,9 @@ ALTER AVAILABILITY GROUP group_name
  ENDPOINT_URL ='TCP : / /*adresse-système*:*port*'  
  Spécifie le chemin d’accès d’URL pour le [point de terminaison de mise en miroir de base de données](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui hébergera le réplica de disponibilité que vous ajoutez ou modifiez.  
   
- ENDPOINT_URL est requis dans la clause ADD REPLICA ON et est facultatif dans la clause MODIFY REPLICA ON.  Pour plus d’informations, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+ ENDPOINT_URL est requis dans la clause ADD REPLICA ON et est facultatif dans la clause MODIFY REPLICA ON.  Pour plus d’informations, consultez [Spécifiez l’URL du point de terminaison lors de l’ajout ou la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***adresse-système***:***port***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Spécifie une URL pour spécifier une URL de point de terminaison ou l'URL de routage en lecture seule. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -330,7 +330,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Spécifie l’amorçage manuel (par défaut). Cette méthode vous oblige à créer une sauvegarde de la base de données sur le réplica principal et restaurer manuellement cette sauvegarde sur le réplica secondaire.  
   
- BACKUP_PRIORITY**=***n*  
+ BACKUP_PRIORITY **=***n*  
  Spécifie la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur est un entier compris entre 0 et 100. Ces valeurs ont les significations suivantes :  
   
 -   1..100 indique que le réplica de disponibilité peut être choisi pour effectuer des sauvegardes. 1 indique la priorité la plus faible, 100 la priorité la plus élevée. Si BACKUP_PRIORITY = 1, le réplica de disponibilité est choisi pour l'exécution des sauvegardes uniquement si aucun réplica de disponibilité ayant une priorité plus élevée n'est actuellement disponible.  
@@ -358,7 +358,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***adresse-système***:***port***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
   
  Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant le **port** et **type_desc** les colonnes de la [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) vue de gestion dynamique. L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc = 'TSQL'**).  
@@ -391,7 +391,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Les valeurs de READ_ONLY_ROUTING_LIST sont les suivantes :  
   
- \<instance_serveur >  
+ \<server_instance>  
  Spécifie l'adresse de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l'hôte d'un réplica de disponibilité qui est un réplica secondaire lisible lors de l'exécution sous le rôle secondaire.  
   
  Utilisez une liste séparée par des virgules pour spécifier toutes les instances de serveur qui peuvent héberger un réplica secondaire lisible. Le routage en lecture seule suivra l'ordre dans lequel les instances de serveur sont spécifiées dans la liste. Si vous incluez l'instance de serveur hôte d'un réplica dans la liste de routage en lecture seule du réplica, il est généralement recommandé d'insérer cette instance de serveur à la fin de la liste, afin que les connexions de tentative de lecture soient dirigées vers un réplica secondaire (le cas échéant).  
@@ -401,7 +401,7 @@ ALTER AVAILABILITY GROUP group_name
  Aucune  
  Spécifie que lorsque ce réplica de disponibilité est le réplica principal, le routage en lecture seule ne sera pas pris en charge. Il s'agit du comportement par défaut. Lorsqu'elle est utilisée avec MODIFY REPLICA ON, cette valeur désactive une liste existante (le cas échéant).  
   
- SESSION_TIMEOUT  **=**  *secondes*  
+ SESSION_TIMEOUT **= *** secondes*  
  Spécifie le délai d'expiration de la session en secondes. Si vous ne précisez pas de valeur, le délai défini par défaut est 10 secondes. La valeur minimale est de 5 secondes.  
   
 > [!IMPORTANT]  
@@ -427,7 +427,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Pris en charge uniquement sur un réplica secondaire qui n'a pas encore été joint au groupe de disponibilité.  
   
- Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+ Pour plus d’informations, consultez [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
  Initialise un basculement manuel du groupe de disponibilité sur le réplica secondaire auquel vous êtes connecté, sans perte de données. Le réplica sur lequel vous entrez une commande de basculement cible est appelé le.  La cible de basculement assure le rôle principal, récupère sa copie de chaque base de données et les met en ligne en tant que nouvelles bases de données principales. Le réplica principal précédent joue simultanément le rôle secondaire, et ses bases de données deviennent des bases de données secondaires et sont immédiatement suspendues. Éventuellement, ces rôles peuvent être basculés par une série d'échecs.  
@@ -452,7 +452,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Pour plus d’informations sur les limitations, les conditions préalables et recommandations pour forcer le basculement et l’effet d’un basculement forcé sur les anciennes bases de données primaires dans le groupe de disponibilité, consultez [effectuer un basculement manuel forcé d’un groupe de disponibilité &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- Ajouter un écouteur **'***nom_DNS***» (** \<option_ajout_écouteur > **)**  
+ ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
  Définit un nouvel écouteur de groupe de disponibilité pour ce groupe de disponibilité. Pris en charge uniquement sur le réplica principal.  
   
 > [!IMPORTANT]  
@@ -463,7 +463,7 @@ ALTER AVAILABILITY GROUP group_name
 >  -   Demandez à votre administrateur réseau de réserver l'adresse IP de l'écouteur pour son utilisation exclusive.  
 > -   Fournissez le nom d'hôte DNS de l'écouteur aux développeurs d'applications pour qu'ils l'utilisent dans les chaînes de connexion lorsqu'ils demandent des connexions clientes vers ce groupe de disponibilité.  
   
- *nom_DNS*  
+ *dns_name*  
  Spécifie le nom d'hôte DNS de l'écouteur du groupe de disponibilité. Le nom DNS de l'écouteur doit être unique dans le domaine et dans NetBIOS.  
   
  *nom_DNS* est une valeur de chaîne. Ce nom ne peut contenir que des caractères alphanumériques, des tirets (-) et des caractères de soulignement (_), dans n'importe quel ordre. Les noms d'hôte DNS ne respectent pas la casse. La longueur maximale autorisée est de 63 caractères.  
@@ -476,7 +476,7 @@ ALTER AVAILABILITY GROUP group_name
  JOINDRE UN GROUPE DE DISPONIBILITÉ  
  Joint à un *groupe de disponibilité distribué*. Lorsque vous créez un groupe de disponibilité distribué, le groupe de disponibilité sur le cluster sur lequel il est créé est le groupe de disponibilité principal. Le groupe de disponibilité qui rejoint le groupe de disponibilité distribué est le groupe de disponibilité secondaire.  
   
- \<ag_name >  
+ \<ag_name>  
  Spécifie le nom du groupe de disponibilité qui constitue une partie du groupe de disponibilité distribués.  
   
  ÉCOUTEUR **='**TCP**://***adresse-système***:***port***'**  
@@ -484,7 +484,7 @@ ALTER AVAILABILITY GROUP group_name
   
  La clause de l’écouteur est obligatoire.  
   
- **'**TCP**://***adresse-système***:***port***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Spécifie une URL de l’écouteur associé au groupe de disponibilité. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -533,7 +533,7 @@ ALTER AVAILABILITY GROUP group_name
  REFUSER CRÉER UNE BASE DE DONNÉES  
  Supprime la possibilité de créer des bases de données pour le compte le réplica principal du groupe de disponibilité.  
   
- \<option_ajout_écouteur >  
+ \<add_listener_option>  
  ADD LISTENER prend l'une des options suivantes :  
   
  AVEC le protocole DHCP [ON { **(«***four_part_ipv4_address***','***four_part_ipv4_mask***')** }]  
@@ -542,14 +542,14 @@ ALTER AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  Nous vous déconseillons d'utiliser DHCP dans un environnement de production. Lorsqu'un temps mort se produit et que le bail IP DHCP arrive à expiration, une période de temps supplémentaire est requise pour enregistrer la nouvelle adresse IP de réseau DHCP associée au nom DNS de l'écouteur et cela a un impact sur la connectivité client. Toutefois, DHCP peut tout à fait être utilisé pour configurer un environnement de développement et de test dans le but de vérifier les fonctions de base des groupes de disponibilité et l'intégration avec vos applications.  
   
- Exemple :  
+ Par exemple :  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- AVEC IP **(** { **(«***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **(«***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** PORT  **=**  *listener_port* ]  
+ AVEC IP **(** { **(«***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **(«***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** PORT **= *** listener_port* ]  
  Spécifie que l'écouteur du groupe de disponibilité utilisera une ou plusieurs adresses IP statiques au lieu d'utiliser DHCP. Pour créer un groupe de service sur plusieurs sous-réseaux, chaque sous-réseau requiert une adresse IP statique dans la configuration de l'écouteur. Pour un sous-réseau donné, l'adresse IP statique peut être une adresse IPv4 ou une adresse IPv6. Contactez votre administrateur réseau pour obtenir une adresse IP statique pour chaque sous-réseau qui hébergera un réplica de disponibilité pour le nouveau groupe de disponibilité.  
   
- Exemple :  
+ Par exemple :  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -562,23 +562,23 @@ ALTER AVAILABILITY GROUP group_name
  *ipv6_address*  
  Spécifie une adresse IPv6 pour un écouteur du groupe de disponibilité. Par exemple, `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
- PORT  **=**  *listener_port*  
+ PORT **=** *listener_port*  
  Spécifie le numéro de port :*listener_port*: à utiliser par un écouteur de groupe de disponibilité qui est spécifié par la clause WITH IP. Le PORT est facultatif.  
   
  Le numéro de port par défaut est 1433. Toutefois, si vous avez des problèmes de sécurité, nous vous recommandons d'utiliser un numéro de port différent.  
   
  Par exemple : `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'***nom_DNS***» (** \<modify_listener_option > **)**  
+ MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
  Modifie un écouteur du groupe de disponibilité existant pour ce groupe de disponibilité. Pris en charge uniquement sur le réplica principal.  
   
- \<modify_listener_option >  
+ \<modify_listener_option>  
  MODIFY LISTENER prend l'une des options suivantes :  
   
- Ajouter IP { **(«***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **(«**nom_DNS*ipv6_address***')** }  
+ Ajouter IP { **(«***four_part_ipv4_address***','***four_part_ipv4_mask***')** | **(«**nom_DNS*ipv6_ Address***')**}  
  Ajoute l’adresse IP spécifiée à l’écouteur de groupe de disponibilité spécifié par *nom_DNS*.  
   
- PORT  **=**  *listener_port*  
+ PORT **=** *listener_port*  
  Une description de cet argument est fournie plus haut dans cette section.  
   
  REDÉMARRER un écouteur **'***nom_DNS***'**  
@@ -626,10 +626,10 @@ GO
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [GROUPE de disponibilité &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
- [Sys.availability_replicas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [Sys.availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Résoudre les problèmes toujours sur la Configuration des groupes de disponibilité &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

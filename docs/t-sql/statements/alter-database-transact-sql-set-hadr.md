@@ -1,5 +1,5 @@
 ---
-title: "MODIFIER la base de données SET HADR (Transact-SQL) | Documents Microsoft"
+title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER HADR d’ensemble de la base de données (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  Exécute la commande [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] spécifiée sur le serveur spécifié.  
   
- {Le groupe de disponibilité  **=**  *nom_groupe* | {OFF}  
+ {Le groupe de disponibilité **= *** nom_groupe* | {OFF}  
  Joint ou supprime la base de données de disponibilité dans le groupe de disponibilité spécifié, comme suit :  
   
- *nom_groupe*  
+ *group_name*  
  Attache la base de données spécifiée sur le réplica secondaire hébergé par l'instance de serveur sur laquelle vous exécutez la commande sur le groupe de disponibilité spécifié par group_name.  
   
  Les conditions préalables requises à cette opération sont les suivantes :  

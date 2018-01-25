@@ -14,13 +14,13 @@ ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e3f906e0c5290b6aa2cab375e4761390f84e718d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: e76a42ead115c8ee4fa89599b192d722ecfbb2ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Déterminer quels packages R sont installés sur SQL Server
 
@@ -61,7 +61,7 @@ GO
 
 ## <a name="get-a-list-of-installed-packages-using-r"></a>Obtenir la liste des packages installés à l’aide de R
 
-Il existe différentes façons d’obtenir la liste des packages installés ou chargés à l’aide d’outils ou de fonctions R. De nombreux outils de développement R fournissent un explorateur d’objets ou une liste des packages installés ou chargés dans l’espace de travail R actuel. Cette section fournit des commandes courtes que vous pouvez utiliser à partir de n’importe quelle ligne de commande R ou fournisseur de services\_exécuter\_externe\_script.
+Il existe différentes façons d’obtenir la liste des packages installés ou chargés à l’aide d’outils ou de fonctions R. De nombreux outils de développement R fournissent un explorateur d’objets ou une liste des packages installés ou chargés dans l’espace de travail R actuel. Cette section fournit des commandes courtes que vous pouvez utiliser à partir de n’importe quelle ligne de commande R ou fournisseur de services\_exécuter\_externe\_script.
 
 + À partir d’un utilitaire R local, utilisez une fonction R de base, telles que `installed.packages()`, qui est inclus dans le `utils` package. Pour obtenir une liste est correcte pour une instance, vous devez spécifier le chemin d’accès de la bibliothèque de manière explicite, ou utiliser les outils R associés à la bibliothèque de l’instance.
 

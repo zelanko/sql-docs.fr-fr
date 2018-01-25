@@ -20,15 +20,15 @@ helpviewer_keywords:
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e15452378461c3799d82b3a204bda9c3893dcd5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88b1652b77827fc00fed7d396ccaf72a06a6a585
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construction d'instructions SQL pour les curseurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.lasthandoff: 01/08/2018
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise des curseurs de serveur pour implémenter les fonctionnalités de curseur définie dans la spécification ODBC. Une application ODBC contrôle le comportement du curseur à l’aide de [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir les attributs d’instruction différent. Voici les attributs et leurs valeurs par défaut.  
   
-|Attribute|Valeur par défaut|  
+|Attribut|Par défaut|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE| 1|  
+|SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
  Lorsque ces options sont définies à leurs valeurs par défaut à la fois une instruction SQL est exécutée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’utilise pas un curseur côté serveur pour implémenter le jeu de résultats ; au lieu de cela, il utilise un jeu de résultats par défaut. Si une de ces options sont modifiée à partir de leurs valeurs par défaut à la fois une instruction SQL est exécutée, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client tente d’utiliser un curseur côté serveur pour implémenter le jeu de résultats.  
   

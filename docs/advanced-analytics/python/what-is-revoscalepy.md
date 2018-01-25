@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Présentation de revoscalepy
 
@@ -81,7 +81,7 @@ Vous créez l’objet de source de données à l’aide des fonctions répertori
 
 Les algorithmes d’apprentissage automatique suivants et les fonctions de synthèse de RevoScaleR sont incluses dans SQL Server 2017, à partir de CTP 2.0.
 
-| Fonction| Description|Remarques|
+| Fonction|  Description|Remarques|
 | ------ | ------ |------ |
 |`rx_btrees` | Ajuster les arbres de décision augmentés de gradient stochastique|`rx_btrees_ex`dans CTP 2.0|
 |`rx_dforest` | Ajuster les forêts décisionnelles classification et de régression|`rx_dforest_ex`dans CTP 2.0|
@@ -93,7 +93,7 @@ Les algorithmes d’apprentissage automatique suivants et les fonctions de synth
 
 Nouveaux algorithmes d’apprentissage automatique sont également fournies par la version Python de [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| Fonction| Description|
+| Fonction|  Description|
 | ------ | ------ |
 |`rx_fast_forest` |Créez un modèle de forêt de décision|
 |`rx_fast_linear` | Régression linéaire avec élévation de coordonnées double stochastique|

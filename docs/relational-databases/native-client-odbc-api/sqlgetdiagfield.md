@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f030fff57fba783584d3b46ba5ad56d45771bf2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9d43d9cc49e275bb63970f94a7fe9bbea80b7d4f
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/08/2018
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client spécifie les champs de diagnostic supplémentaires suivants pour **SQLGetDiagField**. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  
   
-|Champ d'enregistrement de diagnostic|Description|  
+|Champ d'enregistrement de diagnostic| Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Signale le numéro de ligne d'une procédure stockée qui génère une erreur. La valeur de SQL_DIAG_SS_LINE est explicite uniquement si SQL_DIAG_SS_PROCNAME retourne une valeur. La valeur est retournée en tant qu'entier 16 bits non signé.|  
 |SQL_DIAG_SS_MSGSTATE|État d'un message d'erreur. Pour plus d’informations sur l’état de message d’erreur, consultez [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). La valeur est retournée en tant qu'entier 32 bits signé.|  
@@ -108,6 +108,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetDiagField, fonction](http://go.microsoft.com/fwlink/?LinkId=59352)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

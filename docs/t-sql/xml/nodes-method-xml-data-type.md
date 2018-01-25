@@ -19,13 +19,13 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e083c0b7376b1cac9433e19eee8fc25c93ea09b4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f75f08164b84e803a6a54d039a09cf481a1886e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="nodes-method-xml-data-type"></a>Méthode nodes() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ nodes (XQuery) as Table(Column)
  *XQuery*  
  Littéral de chaîne, représentant une expression XQuery. Si l'expression de requête construit des nœuds, ceux-ci sont exposés dans l'ensemble de lignes obtenu. Si l'expression de requête aboutit à une séquence vide, l'ensemble de lignes est vide. Si l'expression de requête aboutit de façon statique à une séquence qui contient des valeurs atomiques au lieu de nœuds, une erreur statique est déclenchée.  
   
- *Table*(*colonne*)  
+ *Table*(*Column*)  
  Nom de table et nom de colonne de l'ensemble de lignes obtenu.  
   
 ## <a name="remarks"></a>Notes  
@@ -102,7 +102,7 @@ FROM   T
 CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID  Instructions  
@@ -181,7 +181,7 @@ FROM   @x.nodes('/Root/row') T(c)
 go  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Root>  
@@ -270,7 +270,7 @@ WHERE ProductModelID=7
 GO         
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID LocID Step         

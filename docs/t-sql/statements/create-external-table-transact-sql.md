@@ -24,13 +24,13 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CRÉER une TABLE externe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,7 +135,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_name* . [nom_schéma]. | schema_name. ] *nom_table*  
+ *database_name* . [nom_schéma]. | schema_name. ] *table_name*  
  Un à trois - nom de partie de la table à créer. Pour une table externe, seules les métadonnées de la table sont stockée dans SQL, ainsi que des statistiques de base sur le fichier et ou le dossier référencé dans Hadoop ou Azure blob storage. Aucune donnée réelle est déplacée ou est stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe de définition d’une colonne. Une exception à cela, vous ne pouvez pas utiliser la contrainte par défaut sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) et [créer la TABLE de base de données SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
@@ -159,20 +159,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Unique|float|FloatWritable||  
 |money|Décimal|double|DoubleWritable||  
 |smallmoney|Décimal|double|DoubleWritable||  
-|nchar|Chaîne<br /><br /> Char]|chaîne|texte||  
-|nvarchar|Chaîne<br /><br /> Char]|chaîne|Texte||  
-|char|Chaîne<br /><br /> Char]|chaîne|Texte||  
-|varchar|Chaîne<br /><br /> Char]|chaîne|Texte||  
+|NCHAR|Chaîne<br /><br /> Char[]|chaîne|texte||  
+|nvarchar|Chaîne<br /><br /> Char[]|chaîne|Texte||  
+|char|Chaîne<br /><br /> Char[]|chaîne|Texte||  
+|varchar|Chaîne<br /><br /> Char[]|chaîne|Texte||  
 |binary|Byte[]|binary|BytesWritable|S’applique à la ruche 0,8 et versions ultérieur.|  
 |varbinary|Byte[]|binary|BytesWritable|S’applique à la ruche 0,8 et versions ultérieur.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Décimal|decimal|BigDecimalWritable|S’applique à Hive0.11 et versions ultérieures.|  
+|date|DateTime|TIMESTAMP|TimestampWritable||  
+|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime|DateTime|TIMESTAMP|TimestampWritable||  
+|time|TimeSpan|TIMESTAMP|TimestampWritable||  
+|Décimal|Décimal|Décimal|BigDecimalWritable|S’applique à Hive0.11 et versions ultérieures.|  
   
- EMPLACEMENT = '*folder_or_filepath*'  
+ LOCATION =  '*folder_or_filepath*'  
  Spécifie le dossier ou le chemin d’accès et le nom de fichier pour les données réelles dans Hadoop ou Azure blob storage. L’emplacement démarre à partir du dossier racine ; le dossier racine est l’emplacement de données spécifié dans la source de données externe.  
   
  Si vous spécifiez l’emplacement à un dossier, une requête de PolyBase qui sélectionne à partir de la table externe récupérera les fichiers dans le dossier et tous ses sous-dossiers. Tout comme Hadoop, PolyBase ne retourne pas de dossiers cachés. Il ne retourne pas les fichiers dont le nom de fichier commence par un trait de soulignement (_) ou un point (.).  
@@ -251,7 +251,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  DISTRIBUTION  
  Ce paramètre est facultatif. Cette option n’est obligatoire uniquement pour les bases de données de type SHARD_MAP_MANAGER. Ce paramètre contrôle si une table est traitée comme une table partitionnée ou d’une table répliquée. Avec **SHARDED** (*nom de la colonne*) des tables, les données de différentes tables ne se chevauchent pas. **RÉPLIQUÉES** Spécifie que les tables ont les mêmes données sur chaque partition. **ROUND_ROBIN** indique qu’une méthode spécifique à l’application est utilisée pour distribuer les données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert les autorisations de l’utilisateur :  
   
 -   **CREATE TABLE**  

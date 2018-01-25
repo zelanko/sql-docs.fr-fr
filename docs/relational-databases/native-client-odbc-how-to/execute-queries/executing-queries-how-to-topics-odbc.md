@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: queries [ODBC]
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 779657ac906dc825249546f506d6fb9158cdd9c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1be6681d2af5371f7a8f29242636157e5261978
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Rubriques de procédures relatives à l'exécution de requêtes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,6 +41,6 @@ ms.lasthandoff: 01/08/2018
 -   [Préparer et exécuter une instruction &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

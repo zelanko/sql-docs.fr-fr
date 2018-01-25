@@ -13,12 +13,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a252feae8b3e3cdb049278d2e60234dda8f14319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 0f728b0e15372f9027dac84c3f58b09438444f95
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="native-scoring"></a>Calcul de score en natif
 
@@ -88,7 +88,7 @@ Plateformes prises en charge sont les suivantes :
 
     Vous pouvez également effectuer en temps réel de calcul de score à l’aide de sp_rxPredict. Pour utiliser cette procédure stockée nécessite que vous activiez [intégration CLR SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
-+ SQL Server 2016
++ SQL Server 2016
 
    En temps réel de calcul de score à l’aide de sp_rxPredict est possible avec SQL Server 2016 et peut également être exécuté sur Microsoft R Server. Cette option requiert SQLCLR doit être activée et que vous installez la mise à niveau de Microsoft R Server.
    Pour plus d’informations, consultez [calculer les scores en temps réel](Real-time-scoring.md)

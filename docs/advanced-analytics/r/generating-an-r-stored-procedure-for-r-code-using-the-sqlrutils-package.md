@@ -15,13 +15,13 @@ ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
 caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7f906136e7e948c7b4cbe2da2f60cc4c488b71e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4948cdd841c2b97e50623dac7b9d6ba9ef923220
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Génération d’une procédure stockée R pour du code R à l’aide du package sqlrutils
 Le package **sqlrutils** fournit un mécanisme permettant aux utilisateurs de R de placer leurs scripts R dans une procédure stockée T-SQL, d’inscrire cette procédure auprès d’une base de données, et d’exécuter la procédure stockée à partir d’un environnement de développement R. 

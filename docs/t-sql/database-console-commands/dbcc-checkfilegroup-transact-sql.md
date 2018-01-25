@@ -27,15 +27,15 @@ helpviewer_keywords:
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Vérifie l’allocation et l’intégrité structurelle de toutes les tables et vues indexées dans le groupe de fichiers spécifié de la base de données actuelle.
@@ -63,7 +63,7 @@ DBCC CHECKFILEGROUP
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *FILEGROUP_NAME*  
+ *filegroup_name*  
  Nom du groupe de fichiers, dans la base de données active, pour lequel l'allocation de table et l'intégrité de la structure doivent être vérifiées. Si vous ne définissez pas cet argument ou si vous lui attribuez la valeur 0, le groupe de fichiers primaire est utilisé par défaut. Les noms de groupe de fichiers doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md).  
  *FILEGROUP_NAME* ne peut pas être un groupe de fichiers FILESTREAM.  
   
@@ -98,7 +98,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Remplace le **degré maximal de parallélisme** option de configuration de **sp_configure** pour l’instruction. Le MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le moteur de base de données utilise la valeur de Resource Governor MAXDOP, décrite dans l’instruction ALTER WORKLOAD GROUP (Transact-SQL). Toutes les règles sémantiques utilisées avec l'option de configuration max degree of parallelism sont applicables lorsque vous utilisez l'indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Remplace le **degré maximal de parallélisme** option de configuration de **sp_configure** pour l’instruction. Le MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le moteur de base de données utilise la valeur de Resource Governor MAXDOP, décrite dans l’instruction ALTER WORKLOAD GROUP (Transact-SQL). Toutes les règles sémantiques utilisées avec l'option de configuration max degree of parallelism sont applicables lorsque vous utilisez l'indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Si MAXDOP est défini avec la valeur zéro, le serveur choisit le degré maximal de parallélisme.  
@@ -119,7 +119,7 @@ S'il est impossible de créer un instantané, ou si l'option TABLOCK est spécif
 >  L'exécution de la commande DBCC CHECKFILEGROUP sur tempdb n'entraîne aucune vérification d'allocation ; par ailleurs, cette commande doit acquérir des verrous de table partagés pour vérifier les tables. En effet, pour des raisons de performances, les instantanés de base de données ne sont pas disponibles sur tempdb. Cela signifie que la cohérence transactionnelle requise ne peut pas être obtenue.  
   
 ## <a name="checking-objects-in-parallel"></a>Vérification des objets en parallèle  
-DBCC CHECKFILEGROUP effectue par défaut une vérification parallèle des objets. Le degré de parallélisme est automatiquement défini par le processeur de requêtes. Le degré maximum de parallélisme est configuré de la même manière que les requêtes parallèles. Pour limiter le nombre maximal de processeurs disponibles pour la vérification DBCC, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+DBCC CHECKFILEGROUP effectue par défaut une vérification parallèle des objets. Le degré de parallélisme est automatiquement défini par le processeur de requêtes. Le degré maximum de parallélisme est configuré de la même manière que les requêtes parallèles. Pour limiter le nombre maximal de processeurs disponibles pour la vérification DBCC, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 La vérification parallèle peut être désactivée à l'aide de l'indicateur de trace 2528. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>Index non cluster sur des groupes de fichiers distincts  
@@ -196,7 +196,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  
@@ -231,10 +231,10 @@ WITH ESTIMATEONLY;
   
 ## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[FILEGROUP_ID &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
-[sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
-[sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
-[Sys.sysfilegroups &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
+[FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)  
+[sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)  
+[sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)  
+[sys.sysfilegroups &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysfilegroups-transact-sql.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)

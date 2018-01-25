@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed7e27232f57c829efcff478805567e812334bdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 91ec3d738f8a718a2af7415a6f204be3c204201a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est une API COM de bas niveau qui est utilisé pour accéder aux données. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est recommandé pour développer des outils, des utilitaires ou des composants de bas niveau qui ont besoin de performances élevées. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est un fournisseur natif de hautes performances qui accède directement au protocole TDS (Tabular Data Stream) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Création d’une application de fournisseur OLE DB de SQL Server Native Client](../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
+-   [Création d’une Application de fournisseur SQL Server Native Client OLE DB](../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
 -   [Objets Source de données &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Objets BLOB et OLE](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
--   [Tables et index](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
+-   [Tables et des index](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
 -   [Types de données &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQL Server Native Client &#40; OLE DB &#41; Référence](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Rubriques de procédures liées à OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Rubriques de procédures OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

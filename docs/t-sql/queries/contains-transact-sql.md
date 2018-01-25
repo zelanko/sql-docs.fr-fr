@@ -38,13 +38,13 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 caps.latest.revision: "117"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6c2f2f2f6bca2048ead7dc9565b5338bc2505c8e
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -479,7 +479,7 @@ GO
 ```  
   
 ### <a name="i-using-contains-with-a-logical-operator-and"></a>I. Utilisation de CONTAINS avec un opérateur logique (AND)  
- L'exemple suivant utilise la table ProductDescription de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La requête utilise le prédicat CONTAINS pour rechercher les descriptions dans lequel l’ID de description n’est pas égal à 5 et la description contient à la fois le mot `Aluminum` et le mot `spindle`. La condition de recherche utilise l'opérateur booléen AND.  
+ L'exemple suivant utilise la table ProductDescription de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. La requête utilise le prédicat CONTAINS pour rechercher les descriptions dans lequel l’ID de description n’est pas égal à 5 et la description contient à la fois le mot `Aluminum` et le mot `spindle`. La condition de recherche utilise l'opérateur booléen AND.  
   
 ```sql  
 USE AdventureWorks2012;  

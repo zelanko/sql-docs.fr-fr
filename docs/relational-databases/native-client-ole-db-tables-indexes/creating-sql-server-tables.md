@@ -19,15 +19,15 @@ helpviewer_keywords:
 - CreateTable function
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c6c5e697044275940ac62cf9174f86f29370dc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b1e7dbe9bee95c52ac0e34a79c92e93fd51f48e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
  Les propriétés des colonnes dans une structure DBCOLUMNDESC se définissent de la manière suivante.  
   
-|ID de propriété|Description|  
+|ID de propriété| Description|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : définit la propriété d'identité dans la colonne créée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la propriété d'identité est valide pour une colonne unique au sein d'une table. Définition de la propriété à VARIANT_TRUE pour plusieurs colonnes uniques génère une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriété d’identité est valide uniquement pour les **entier**, **numérique**, et **décimal** types lors de l’échelle est 0. Définition de la propriété à VARIANT_TRUE sur une colonne de tout autre type de données génère une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client retourne DB_S_ERRORSOCCURRED lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE n’est pas DBPROPOPTIONS_REQUIRED. DB_E_ERRORSOCCURRED est retourné lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE est égale à DBPROPOPTIONS_REQUIRED. La colonne est définie avec la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriété d’identité et la DBPROP_COL_NULLABLE *dwStatus* membre est défini sur DBPROPSTATUS_CONFLICTING.|  
 |DBPROP_COL_DEFAULT|R/W : lecture/écriture<br /><br /> Valeur par défaut : aucune<br /><br /> Description : crée une contrainte DEFAULT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la colonne.<br /><br /> Le *vValue* membre DBPROP peut être un nombre quelconque de types. Le *vValue.vt* membre doit spécifier un type compatible avec le type de données de la colonne. Par exemple, le choix de BSTR N/A comme valeur par défaut d'une colonne définie en tant que DBTYPE_WSTR offre une valeur de correspondance compatible. Définition de la même valeur par défaut sur une colonne en tant que DBTYPE_R8 une erreur lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif essaie de créer la table sur le serveur.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
  Lorsque le consommateur appelle **ITableDefinition::CreateTable**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client interprète les propriétés de la table comme suit.  
   
-|ID de propriété|Description|  
+|ID de propriété| Description|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : par défaut, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif crée des tables nommées par le consommateur. Lors de la valeur VARIANT_TRUE, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif génère un nom de table temporaire pour le consommateur. Le consommateur attribue la *pTableID* paramètre de **CreateTable** avec la valeur NULL. Le *ppTableID* paramètre doit contenir un pointeur valide.|  
   
@@ -225,6 +225,6 @@ SAFE_EXIT:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
+ [Tables et des index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

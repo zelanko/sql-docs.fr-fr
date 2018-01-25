@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f939afc47e0ca7bcd6286dd0d090a088c5d6458a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f0a6530f658011ce4ef38cbf4220af5994846611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversions de client à serveur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,17 +35,17 @@ ms.lasthandoff: 01/08/2018
   
  Si ICommandWithParameters::SetParameterInfo n’est pas appelée, les liaisons DBTYPE_DBTIMESTAMP sont converties comme s’ils étaient **datetime2**.  
   
-|Vers -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|Vers -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE| 1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10| 1<br /><br /> Date|  
-|DBTIME|-| 1| 1|1,7|1,7|1,7|1,5, 7|1,10|1,10| 1<br /><br /> Time(0)|  
-|DBTIME2|-|1,3| 1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11| 1<br /><br /> Time(7)|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
+|DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
+|DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|Néant|Néant|Néant|  
-|VARIANT| 1| 1| 1|1,10|1,10|1,10|1,10|Néant|Néant|1,10|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|Néant|Néant|1,10|  
 |SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|Néant|Néant|1,16|  
 |BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Néant|Néant|Néant|  
 |STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Néant|Néant|Néant|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 |------------|-------------|  
 |-|Aucune conversion n'est prise en charge. Si la liaison est validée lorsque IAccessor::CreateAccessor est appelée, DBBINDSTATUS_UPSUPPORTEDCONVERSION est retourné dans *rgStatus*. Lorsque la validation pour l'accesseur est différée, DBSTATUS_E_BADACCESSOR est défini.|  
 |Néant|Non applicable.|  
-| 1|Si les données fournies ne sont pas valides, DBSTATUS_E_CANTCONVERTVALUE est défini. Comme les données d'entrée sont validées avant que les conversions ne soient appliquées, même quand un composant est ignoré par une conversion suivante, il doit demeurer valide pour que la conversion réussisse.|  
+|1|Si les données fournies ne sont pas valides, DBSTATUS_E_CANTCONVERTVALUE est défini. Comme les données d'entrée sont validées avant que les conversions ne soient appliquées, même quand un composant est ignoré par une conversion suivante, il doit demeurer valide pour que la conversion réussisse.|  
 |2|Les champs time (heure) sont ignorés.|  
 |3|Les fractions de seconde doivent être égales à zéro ou DBSTATUS_E_DATAOVERFLOW est défini.|  
 |4|Le composant date est ignoré.|  

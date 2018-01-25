@@ -13,21 +13,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fdd4ba2e98b31d2637641eaded57be1aa4415c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f1332812cc70853fc095e506b43c45aa637cec6c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-how-to-topics"></a>Rubriques de procédures ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Pour utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC, vous devez être en mesure de créer des sources de données ODBC et assurez-vous que le serveur dispose de la version correcte des procédures stockées de catalogue. Pour coder une application ODBC qui utilise SQL Server, vous devez savoir comment allouer des handles ODBC, définir des attributs, vous connecter à une instance de SQL Server, exécuter des requêtes et traiter les résultats.  
+  Pour utiliser le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez être en mesure de créer des sources de données ODBC et de vous assurer que le serveur a la version correcte des procédures stockées de catalogue. Pour coder une application ODBC qui utilise SQL Server, vous devez savoir comment allouer des handles ODBC, définir des attributs, vous connecter à une instance de SQL Server, exécuter des requêtes et traiter les résultats.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

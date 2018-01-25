@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457ce42346ec53d30cc8a47a6bc4f82a3271d8fc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTAURER les instructions - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,13 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **\<unité_sauvegarde > :: =** 
+ **\<backup_device> ::=** 
   
  Spécifie les unités de sauvegarde logiques ou physiques à utiliser pour l'opération de restauration.  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- Nom logique, qui doit respecter les règles des identificateurs, les unités de sauvegarde créées par **sp_addumpdevice** à partir de laquelle la base de données est restaurée. Fourni comme variable (**@***logical_backup_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié comme constante de chaîne (**@***logical_backup_device_name_var* = *logical_backup_device_name*) ou comme une variable de type chaîne de caractères, à l’exception de la **ntext** ou **texte** des types de données.  
+ { *logical_backup_device_name* | **@*** logical_backup_device_name_var* } est le nom logique, qui doit respecter les règles des identificateurs, les unités de sauvegarde créé par **sp_addumpdevice** à partir de laquelle la base de données est restaurée. Fourni comme variable (**@***logical_backup_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié comme constante de chaîne (**@*** logical_backup_device_name_var*  =   *logical_backup_device_name*) ou comme une variable de type chaîne de caractères, à l’exception de la **ntext** ou **texte** des types de données.  
   
- {DISQUE | BANDE}  **=**  { **'***nom_unité_sauvegarde_physique***'** | **@***nom_unité_sauvegarde_physique_var* }  
- Permet la restauration de sauvegardes à partir de l'unité de disque ou de bande spécifiée. Les types d’appareils de disk et tape doivent être spécifiés avec le nom réel (par exemple, chemin d’accès et nom complet) de l’appareil : disque = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\. \TAPE0'. S’il est spécifié en tant que variable (**@***physical_backup_device_name_var*), le nom du périphérique peut être spécifié comme constante de chaîne (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') ou comme une variable de type chaîne de caractères, à l’exception de la **ntext** ou **texte** des types de données.  
+ {DISQUE | BANDE}  **=**  { **'***nom_unité_sauvegarde_physique***'** | **@*** physical_backup_device_name_var*  } Permet aux sauvegardes d’être restauré à partir de l’unité de disque ou bande nommée. Les types d’appareils de disk et tape doivent être spécifiés avec le nom réel (par exemple, chemin d’accès et nom complet) de l’appareil : disque = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\. \TAPE0'. S’il est spécifié en tant que variable (**@***physical_backup_device_name_var*), le nom du périphérique peut être spécifié comme constante de chaîne (**@*** physical_backup_device_name_var* = '* physcial_backup_device_name *') ou comme une variable de type chaîne de caractères, à l’exception de la **ntext** ou **texte** des types de données.  
   
  Si vous utilisez un serveur réseau pourvu d'un nom UNC (qui doit contenir le nom de l'ordinateur), spécifiez le type d'unité DISK. Pour plus d’informations sur l’utilisation des noms UNC, consultez [unités de sauvegarde &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -100,7 +98,7 @@ FROM <backup_device> [ ,...n ]
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Tout utilisateur peut utiliser RESTORE REWINDONLY.  
   
 ## <a name="see-also"></a>Voir aussi  

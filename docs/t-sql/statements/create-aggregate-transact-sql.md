@@ -23,15 +23,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Nom de la fonction d'agrégation que vous voulez créer.  
   
- **@***param_name*  
+ **@** *param_name*  
  Un ou plusieurs paramètres dans l'agrégat défini par l'utilisateur. L'utilisateur doit fournir la valeur d'un paramètre lors de l'exécution de la fonction d'agrégation. Spécifiez un nom de paramètre à l’aide d’un signe « at » (**@**) comme premier caractère. Le nom du paramètre doit respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md). Les paramètres sont locaux à la fonction.  
   
  *system_scalar_type*  
@@ -83,7 +83,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Nom d'un type CLR défini par l'utilisateur et déjà créé dans la base de données active. Si *udt_schema_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que le type appartient au schéma de l’utilisateur actuel.  
   
- *ASSEMBLY_NAME* [ **.** *class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. *CLASS_NAME* doit être valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur et mise en correspondance le nom d’une classe qui existe dans l’assembly. *CLASS_NAME* peut être un nom qualifié d’espace de noms si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, tel que c#. Si *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique *aggregate_name*.  
   
 ## <a name="remarks"></a>Notes  
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  La classe de l’assembly référencé dans *assembly_name* et ses méthodes doivent répondre à la configuration requise pour l’implémentation d’une fonction d’agrégation définie par l’utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [les agrégats](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations CREATE AGGREGATE et REFERENCES pour l'assembly mentionné dans la clause EXTERNAL NAME.  
   
 ## <a name="examples"></a>Exemples  
@@ -121,6 +121,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DROP AGGREGATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

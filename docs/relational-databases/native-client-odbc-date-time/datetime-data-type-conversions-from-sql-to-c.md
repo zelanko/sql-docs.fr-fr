@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36a60d790397b34ee66020fc3a174ba6df18ce63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a29e6ce735286d2d864fdb30fc468c02b58846a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>DateTime, Conversions de types de données à partir de SQL à C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,8 +35,8 @@ ms.lasthandoff: 01/08/2018
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11| 1| 1| 1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11| 1| 1| 1|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
 |SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
 |SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |Symbole|Signification|  
 |------------|-------------|  
 |OK|Aucun problème de conversion.|  
-| 1|Les règles antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] s'appliquent.|  
+|1|Les règles antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] s'appliquent.|  
 |2|Les espaces de début et de fin sont ignorés.|  
 |3|La chaîne est analysée en date, time, timezone ou timezoneoffset et autorise jusqu'à neuf chiffres pour les fractions de seconde. Si un timezoneoffset est analysé, l'heure est convertie en fuseau horaire du client. Si une erreur se produit pendant cette conversion, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Dépassement du champ Datetime ».|  
 |4|Si la valeur n'est pas une valeur date, timestamp ou timestampoffset valide, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».|  

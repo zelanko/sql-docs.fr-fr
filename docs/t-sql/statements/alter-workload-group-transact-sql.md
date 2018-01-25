@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_groupe* | «**par défaut**»  
+ *group_name* | "**default**"  
  Nom d'un groupe de charge de travail existant défini par l'utilisateur ou du groupe de charge de travail par défaut du gouverneur de ressources.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Le paramètre IMPORTANCE est local par rapport au pool de ressources : les groupes de charges de travail d'importance différente à l'intérieur du même pool de ressources s'affectent mutuellement, mais n'affectent pas les groupes de charges de travail dans un autre pool de ressources.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valeur*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Spécifie la quantité de mémoire maximale qu'une requête unique peut prendre du pool. Ce pourcentage est relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -83,7 +83,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *valeur* doit être 0 ou un entier positif. La plage autorisée pour *valeur* est comprise entre 0 et 100. La valeur par défaut *valeur* est 25.  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Paramètre *valeur* 0 empêche les requêtes des opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur en cours d’exécution.  
   
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  Sachez toutefois que dans les deux cas, l'erreur de délai d'attente 8645 se produit si le serveur dispose d'une mémoire physique insuffisante.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valeur*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur* est 0, ce qui signifie illimité.  
   
 > [!NOTE]  
@@ -107,7 +107,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!IMPORTANT]
 > En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et à l’aide de [2422 d’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), le gouverneur de ressources va être abandonné une demande lorsque la durée maximale est dépassée.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valeur*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre que l'allocation de mémoire (mémoire tampon de travail) devienne disponible.  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *valeur* doit être un entier positif. La valeur par défaut *valeur*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer la durée maximale.  
   
- MAX_DOP =*valeur*  
+ MAX_DOP =*value*  
  Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *valeur* doit être 0 ou un entier positif, 1 et 255. Lorsque *valeur* est 0, le serveur choisit le degré maximal de parallélisme. Ceci est la valeur par défaut et recommandée.  
   
 > [!NOTE]  
@@ -136,10 +136,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.  
   
- GROUP_MAX_REQUESTS =*valeur*  
+ GROUP_MAX_REQUESTS =*value*  
  Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur*(0) autorise les demandes illimités. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
   
- À l’aide de { *pool_name* | «**par défaut**»}  
+ USING { *pool_name* | "**default**" }  
  Associe le groupe de charges de travail avec le pool de ressources définis par l’utilisateur identifié par *pool_name*, qui met en vigueur le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut du gouverneur de ressources prédéfini.  
   
  L'option "default" doit être placée entre des guillemets doubles ("") ou des crochets ([]) lorsqu'elle est utilisée avec l'instruction ALTER WORKLOAD GROUP pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -147,7 +147,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 >  L'option "default" respecte la casse.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction ALTER WORKLOAD GROUP est autorisée sur le groupe par défaut.  
   
  Les modifications apportées à la configuration du groupe de charge de travail ne sont pas appliquées tant que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'est pas exécutée. Lorsque vous modifiez un plan qui affectent les paramètres, les nouveaux paramètres prendront effet que dans les plans mis en cache précédemment après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources du gouverneur de ressources sur lequel le groupe de charge de travail est associé.  

@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_groupe*  
+ *group_name*  
  Nom défini par l'utilisateur pour le groupe de charges de travail. *nom_groupe* est alphanumérique, peut contenir jusqu'à 128 caractères, doit être unique au sein d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  IMPORTANCE = {FAIBLE | **SUPPORT** | HAUTE}  
@@ -72,7 +72,7 @@ CREATE WORKLOAD GROUP group_name
   
  Le paramètre IMPORTANCE est local par rapport au pool de ressources : les groupes de charges de travail d'importance différente à l'intérieur du même pool de ressources s'affectent mutuellement, mais n'affectent pas les groupes de charges de travail dans un autre pool de ressources.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valeur*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Spécifie la quantité de mémoire maximale qu'une requête unique peut prendre du pool. Ce pourcentage est relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ CREATE WORKLOAD GROUP group_name
   
  *valeur* doit être 0 ou un entier positif. La plage autorisée pour *valeur* est comprise entre 0 et 100. La valeur par défaut *valeur* est 25.  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Paramètre *valeur* 0 empêche les requêtes des opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur en cours d’exécution.  
   
@@ -95,7 +95,7 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Sachez toutefois que dans les deux cas, l'erreur de délai d'attente 8645 se produit si le serveur dispose d'une mémoire physique insuffisante.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valeur*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur* est 0, ce qui signifie illimité.  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ CREATE WORKLOAD GROUP group_name
 > [!IMPORTANT]
 > En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et à l’aide de [2422 d’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), le gouverneur de ressources va être abandonné une demande lorsque la durée maximale est dépassée. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valeur*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre une allocation de mémoire (mémoire tampon de travail) devienne disponible.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ CREATE WORKLOAD GROUP group_name
   
  *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer la durée maximale.  
   
- MAX_DOP =*valeur*  
+ MAX_DOP =*value*  
  Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *valeur* doit être 0 ou un entier positif. La plage autorisée pour *valeur* est comprise entre 0 et 64. La valeur par défaut *valeur*, 0, utilise le paramètre global. MAX_DOP est géré comme suit :  
   
 -   MAX_DOP en tant qu'indicateur de requête est effectif tant qu'il ne dépasse pas le groupe de charges de travail MAX_DOP. Si la valeur d'indicateur de requête MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le moteur de base de données utilise la valeur MAXDOP du gouverneur de ressources.  
@@ -125,7 +125,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.  
   
- GROUP_MAX_REQUESTS =*valeur*  
+ GROUP_MAX_REQUESTS =*value*  
  Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur*(0) autorise les demandes illimités. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
   
  À l’aide de { *pool_name* | **« default »** }  
@@ -145,7 +145,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Un pool de ressources externes pour les processus externes. Pour plus d’informations, consultez [sp_execute_external_script &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  REQUEST_MEMORY_GRANT_PERCENT : la création d'index est autorisée à utiliser une mémoire d'espace de travail supérieure à celle qui lui a été initialement allouée, afin d'améliorer les performances. Cette gestion spéciale est prise en charge par le gouverneur de ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charges de travail.  
   
  **Création d’index sur une Table partitionnée**  

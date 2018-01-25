@@ -19,15 +19,15 @@ helpviewer_keywords:
 - OLE DB error handling
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8aee76a5858d087fb171e362f5d91a5dd5cfe0c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd82c09514ebcfe70c3ea295cc8f9c5236756a49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="errors"></a>Erreurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 01/08/2018
   
 -   [Codes de retour](../../relational-databases/native-client-ole-db-errors/return-codes.md)  
   
--   [Informations dans les interfaces d’erreur](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
+-   [Pour plus d’informations dans les Interfaces d’erreur](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
   
--   [Détails des erreurs SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
+-   [Détail de l’erreur SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   
--   [Extraction des informations sur les erreurs](../../relational-databases/native-client-ole-db-errors/retrieving-error-information.md)  
+-   [Erreur lors de la récupération d’informations](../../relational-databases/native-client-ole-db-errors/retrieving-error-information.md)  
   
 -   [Résultats des messages SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-message-results.md)  
   

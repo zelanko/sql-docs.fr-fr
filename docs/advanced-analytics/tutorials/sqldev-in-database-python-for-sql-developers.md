@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 970298c59b7b48c5579125ef163785801db676ee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analytique Python de la base de données pour les développeurs SQL
 
@@ -76,7 +76,7 @@ Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../i
 
 ## <a name="requirements"></a>Spécifications
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Configuration requise
 
 + Installez une instance de SQL Server 2017 avec Machine Learning Services et Python activée. Pour plus d’informations, consultez [configurer SQL Server Machine Learning Services avec Python](../python/setup-python-machine-learning-services.md).
 + La connexion que vous utilisez pour cette procédure pas à pas doit avoir les autorisations pour créer des bases de données et autres objets, pour charger des données, sélectionner des données et exécuter des procédures stockées.

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab8ca0cedf17f38b55750f06e401232ff495b0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92048dd38dc58683f3726fc23dcc106731eda739
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Statistiques relatives au profil de l'application  
   
-|Champ SQLPERF|Description|  
+|Champ SQLPERF| Description|  
 |-------------------|-----------------|  
 |TimerResolution|Résolution minimale de l'heure du serveur en millisecondes. Elle est signalée habituellement sous la forme 0 (zéro) et doit être prise en considération uniquement si le nombre indiqué est de grande taille. Si la résolution minimale de l'heure du serveur est supérieure à l'intervalle probable de certaines statistiques basées sur l'horloge, il est possible qu'il y ait augmentation de ces statistiques.|  
 |SQLidu|Nombre d'instructions INSERT, DELETE ou UPDATE après SQL_PERF_START.|  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Statistiques relatives au temps  
   
-|Champ SQLPERF|Description|  
+|Champ SQLPERF| Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Durée cumulative de traitement du pilote après SQL_PERF_START, incluant la durée d'attente des réponses du serveur.|  
 |msNetworkServerTime|Durée cumulative d'attente des réponses du serveur par le pilote.|  

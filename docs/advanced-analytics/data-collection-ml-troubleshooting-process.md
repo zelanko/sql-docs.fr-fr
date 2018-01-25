@@ -15,13 +15,13 @@ dev_langs: R
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4225b87b8aab3bac5e023ef194cf7a2bc35c8dc2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3eec9220734a2e13cb4d355422b5d8c957bf9264
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
 
@@ -91,7 +91,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 En dernier recours, vous pouvez ouvrir des fichiers sur le serveur pour déterminer la version installée. Pour ce faire, recherchez le fichier de rlauncher.config pour obtenir l’emplacement du runtime R et le répertoire de travail actuel. Nous vous recommandons de faire et ouvrir une copie du fichier afin que vous ne modifiez pas accidentellement des propriétés.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name\MSSQL\Binn\rlauncher.config`
 
@@ -101,7 +101,7 @@ En dernier recours, vous pouvez ouvrir des fichiers sur le serveur pour détermi
 
 Pour obtenir la version de R et les versions de RevoScaleR, ouvrez une invite de commandes R, ou ouvrez l’interface RGui qui est associé à l’instance.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64\RGui.exe`
 
@@ -184,7 +184,7 @@ Lorsque vous travaillez avec le service pour la première fois, il peut être di
 
 Obtenir le plus récent journal des erreurs de SQL Server. L’ensemble complet de journaux d’erreurs se compose des fichiers à partir du répertoire de journal par défaut suivant :
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\Log\ExtensibilityLog`
 
@@ -228,7 +228,7 @@ SQL Server génère des journaux distincts pour les exécutions de langage de sc
 
 Vous pouvez obtenir ces journaux à partir d’emplacements par défaut suivants :
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
@@ -338,7 +338,7 @@ Si le runtime R fonctionne, mais votre script retourne des erreurs, nous vous re
 
 Nous vous recommandons également que vous passez en revue et légèrement Réécrivez le script pour corriger les problèmes liés aux types de données qui peuvent se produire lorsque vous déplacez des données entre R et le moteur de base de données. Pour plus d’informations, consultez [R bibliothèques et types de données](r/r-libraries-and-data-types.md).
 
-En outre, vous pouvez utiliser le package sqlrutils pour regrouper votre script R dans un format qui est plus simple qu’une procédure stockée. Pour plus d'informations, consultez :
+En outre, vous pouvez utiliser le package sqlrutils pour regrouper votre script R dans un format qui est plus simple qu’une procédure stockée. Pour plus d'informations, consultez :
 * [Générer une procédure stockée pour le code R à l’aide du package sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 * [Créer une procédure stockée à l’aide de sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACEON (Transact-SQL) | Documents Microsoft
+title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27fd6427cf4916cc9bbbf20f365aeb600c088be2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c173779833562123c9ba3820fef76bf23b80a43
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*trace #*  
+*trace#*  
 Numéro de l'indicateur de trace à activer.  
   
 *n*  
@@ -61,7 +61,7 @@ Supprime tous les messages d'information.
 ## <a name="remarks"></a>Notes  
 Sur un serveur de production, pour éviter un comportement imprévisible, il est recommandé d'activer uniquement les indicateurs de trace à l'échelle du serveur à l'aide de l'une des méthodes suivantes :
 -   Utilisez le **-T** option de démarrage de ligne de commande de Sqlservr.exe. Cette pratique est recommandée car elle garantit que toutes les instructions sont exécutées avec l'indicateur de trace activé. Celles-ci comprennent les commandes des scripts de démarrage. Pour plus d’informations, consultez [sqlservr Application](../../tools/sqlservr-application.md).  
--   Utilisez DBCC TRACEON **(***trace #* [**,** ... *.n*]**, -1)** uniquement pendant que les utilisateurs ou applications sont simultanément exécute pas les instructions sur le système.  
+-   Utilisez DBCC TRACEON  **(*** trace #* [**,**... *.n*]**, -1)** uniquement pendant que les utilisateurs ou applications sont simultanément exécute pas les instructions sur le système.  
 
 Les indicateurs de trace permettent de personnaliser certaines caractéristiques en contrôlant le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les indicateurs de trace, une fois activés, le restent sur le serveur jusqu'à ce qu'ils soient désactivés lors de l'exécution de l'instruction DBCC TRACEOFF. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe deux types d'indicateurs de trace : les indicateurs de trace de session et les indicateurs de trace globaux. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement pour celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Pour déterminer l'état des indicateurs de trace, utilisez l'instruction DBCC TRACESTATUS. Pour désactiver certains indicateurs de trace, exécutez DBCC TRACEOFF.
   
@@ -74,7 +74,7 @@ Après avoir activé un indicateur de trace qui affecte les plans de requête, e
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
   
 ## <a name="examples"></a>Exemples  
@@ -102,7 +102,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
-[DBCC TRACESTATUS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
 [Activer affectant le plan requête optimiseur comportement de SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau de requête spécifiques](https://support.microsoft.com/kb/2801413)
   

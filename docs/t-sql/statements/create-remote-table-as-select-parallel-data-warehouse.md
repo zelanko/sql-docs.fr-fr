@@ -15,13 +15,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -61,7 +61,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  La table distante est créée en tant que segment. Il n’a pas de contraintes de validation ou de déclencheurs. Le classement des colonnes de la table distante est le même que le classement des colonnes de table source. Cela s’applique aux colonnes de type **char**, **nchar**, **varchar**, et **nvarchar**.  
   
- *chaîne_connexion*  
+ *connection_string*  
  Une chaîne de caractères qui spécifie le `Data Source`, `User ID`, et `Password` paramètres pour la connexion au serveur distant et à la base de données.  
   
  La chaîne de connexion est une liste délimitée par des points-virgules de paires clé / valeur. Mots clés ne respectent pas la casse. Les espaces entre les paires clé / valeur sont ignorés. Toutefois, les valeurs peuvent être sensible à la casse, en fonction de la source de données.  
@@ -78,10 +78,10 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 > [!NOTE]  
 >  Il est recommandé de se connecter à un serveur distant à l’aide de l’adresse IP. Selon votre configuration réseau, la connexion à l’aide du nom de l’ordinateur peut nécessiter des étapes supplémentaires pour votre serveur DNS de l’appliance non permet de résoudre le nom au serveur approprié. Cette étape n’est pas nécessaire lors de la connexion avec une adresse IP. Pour plus d’informations, consultez « Utiliser un redirecteur DNS pour les noms DNS de l’Appliance Non résolution (système de plateforme Analytique) » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- *nom_utilisateur*  
+ *user_name*  
  Valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom de connexion d’authentification. Nombre maximal de caractères est 128.  
   
- *mot de passe*  
+ *password*  
  Mot de passe de connexion. Nombre maximal de caractères est 128.  
   
  *batch_size*  
@@ -92,7 +92,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  Sélectionnez \<select_criteria > le prédicat de requête qui spécifie les données remplira la table distante. Pour plus d’informations sur l’instruction SELECT, consultez [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite :  
   
 -   L’autorisation SELECT sur chaque objet dans la clause SELECT.  

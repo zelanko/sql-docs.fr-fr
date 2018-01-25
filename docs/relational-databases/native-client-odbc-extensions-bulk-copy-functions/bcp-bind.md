@@ -1,5 +1,5 @@
 ---
-title: bcp_bind | Documents Microsoft
+title: bcp_bind | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3f6005104620c3a55d34c39b114517dab6750d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9efa0570e0ffe698fccb7decb6eafbf5877842db
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_bind (
   
 ## <a name="arguments"></a>Arguments  
  *pas*  
- Handle de connexion ODBC compatible avec la copie en bloc.  
+ Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *pData*  
  Pointeur vers les données copiées. Si *eDataType* est SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR ou SQLIMAGE, *pData* peut être NULL. Une valeur NULL *pData* indique que les valeurs de données de type long sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des segments à l’aide de [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). L’utilisateur doit uniquement définir *pData* avec la valeur NULL si la colonne correspondant au champ utilisateur lié est une colonne BLOB dans le cas contraire **bcp_bind** échoue.  
@@ -105,7 +105,7 @@ bcp_bind(hdbc, szName, 0, 15,
    NULL, 0, SQLCHARACTER, 2)  
 ```  
   
- L'interface de programmation d'applications (API) de la copie en bloc procède à la conversion des caractères Unicode vers MBCS en fonction des besoins. Veillez à définir correctement la chaîne d'octet de marque de fin et la longueur de la chaîne d'octets. Par exemple, pour indiquer que la chaîne dans *szName* est une chaîne de caractères larges Unicode terminée par la valeur de la marque de fin null Unicode :  
+ L'interface de programmation d'application (API) de copie en bloc effectue la conversion de caractères Unicode vers MBCS en fonction des besoins. Veillez à définir correctement la chaîne d'octet de marque de fin et la longueur de la chaîne d'octets. Par exemple, pour indiquer que la chaîne dans *szName* est une chaîne de caractères larges Unicode terminée par la valeur de la marque de fin null Unicode :  
   
 ```  
 bcp_bind(hdbc, szName, 0,   
@@ -134,7 +134,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Notes  
  Utilisez **bcp_bind** un moyen rapide et efficace copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. Appel de **bcp_init** définit le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table cible pour la copie en bloc. Lors de l’appel **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le **bcp_init** *szDataFile* paramètre, qui indique le fichier de données a la valeur NULL ; la **bcp_init***eDirection* paramètre a la valeur DB_IN.  
+ Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. Appel de **bcp_init** définit le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table cible pour la copie en bloc. Lors de l’appel **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le **bcp_init** *szDataFile*paramètre, qui indique le fichier de données a la valeur NULL ; le **bcp_init *** eDirection* paramètre a la valeur DB_IN.  
   
  Rendre un distinct **bcp_bind** appeler pour chaque colonne dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table dans laquelle vous souhaitez copier. Après avoir nécessaires **bcp_bind** appels ont été apportées, puis appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de programme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La reliaison des colonnes n'est pas prise en charge.  
   

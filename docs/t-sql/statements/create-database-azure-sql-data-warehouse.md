@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>CRÉER la base de données (entrepôt de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ Indique le classement par défaut de la base de données. Le nom du classement p
   
 Pour plus d’informations sur les noms de classements Windows et SQL, consultez [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
-*ÉDITION*  
+*EDITION*  
 Spécifie la couche de service de la base de données. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utiliser « entrepôt de données ».  
   
 *MAXSIZE*  
@@ -81,7 +81,7 @@ Utilisez [ALTER DATABASE &#40; Entrepôt de données SQL Azure &#41; ](../../t-s
 
 Entrepôt de données SQL est défini sur COMPATIBILITY_LEVEL 130 et ne peut pas être modifié. Pour plus d’informations, consultez [amélioré les performances de requête avec 130 de niveau de compatibilité de base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Autorisations requises :  
   
 -   Connexion principale au niveau serveur, créée par le processus de déploiement, ou  

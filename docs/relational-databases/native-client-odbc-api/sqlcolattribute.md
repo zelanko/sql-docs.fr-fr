@@ -1,5 +1,5 @@
 ---
-title: SQLColAttribute | Documents Microsoft
+title: SQLColAttribute | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48e17d03ea0b224487b115faf407c3d43b5fc95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0ba0d2473ed054e9d356f84fdf5a698cae4c201a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Les attributs de l'identificateur de colonne ODBC ne sont pas disponibles dans tous les jeux de résultats [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Identificateur de champ|Description|  
+|Identificateur de champ| Description|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponible dans des jeux de résultats extraits d'instructions générant des curseurs côté serveur ou sur des instructions SELECT exécutées qui contiennent une clause FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponible dans des jeux de résultats extraits d'instructions générant des curseurs côté serveur ou sur des instructions SELECT exécutées qui contiennent une clause FOR BROWSE.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]inclut les champs de descripteur spécifiques au pilote pour fournir des informations supplémentaires pour indiquer le nom de collection de schémas XML, le nom de schéma et le nom du catalogue, de respectivement. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nom du catalogue dans lequel un nom de collection de schémas XML est défini. Si le nom du catalogue est introuvable, cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d'enregistrement SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME de l'IRD qui est un champ en lecture-écriture.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Nom du schéma dans lequel un nom de collection de schémas XML est défini. Si le nom du schéma est introuvable, cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d'enregistrement SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME du champ de descripteur de ligne d'implémentation (IRD) en lecture-écriture.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
  De même, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] inclut des champs de descripteur inhérents au pilote qui fournissent des informations supplémentaires pour une colonne de type défini par l'utilisateur (UDT) d'un jeu de résultats ou un paramètre UDT d'une procédure stockée ou d'une requête paramétrable. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
-|Nom de la colonne|Type|Description|  
+|Nom de la colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nom du catalogue contenant le type défini par l'utilisateur (UDT).|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Le nom du schéma contenant l’UDT.|  

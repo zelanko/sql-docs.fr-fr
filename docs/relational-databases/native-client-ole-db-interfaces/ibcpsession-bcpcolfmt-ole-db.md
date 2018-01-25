@@ -16,17 +16,17 @@ apitype: COM
 helpviewer_keywords: BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1f51b2466d823c720c487684cab1efa748de95e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af34e779db0662bd0fe35cef8cf8a8178ec134d9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
-# <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
+# <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -53,17 +53,17 @@ HRESULT BCPColFmt(
   
  Dans les modes non interactifs, elle est appelée uniquement une fois par colonne pour attribuer le type natif ou caractère à chaque colonne, et pour définir les marques de fin de colonne et de ligne.  
   
- La méthode **BCPColFmt** vous permet de spécifier le format de fichier utilisateur pour les copies en bloc. Pour la copie en bloc, un format se compose des éléments suivants :  
+ La méthode **BCPColFmt** vous permet de spécifier le format de fichier utilisateur pour les copies en bloc. Pour la copie en bloc, un format se compose des éléments suivants :  
   
 -   un mappage des champs de fichier utilisateur aux colonnes de base de données ;  
   
 -   le type de données de chaque champ de fichier utilisateur ;  
   
--   la longueur de l'indicateur facultatif pour chaque champ ;  
+-   la longueur de l'indicateur facultatif pour chaque champ ;  
   
 -   la longueur maximale des données par champ de fichier utilisateur ;  
   
--   la séquence d'octets de fin facultative pour chaque champ ;  
+-   la séquence d'octets de fin facultative pour chaque champ ;  
   
 -   Longueur de la séquence d'octets de fin facultative  
   
@@ -88,7 +88,7 @@ HRESULT BCPColFmt(
 -   Si la colonne source est décimale ou numérique, la précision et l'échelle de la colonne source sont utilisées.  
   
  *cbIndicator*[in]  
- Longueur de préfixe pour le champ. La valeur par défaut est BCP_PREFIX_DEFAULT. Les longueurs valides pour le préfixe sont 0, 1, 2, 4 et 8. La taille de préfixe 8 est la plus souvent utilisée pour indiquer que le champ est segmenté. Elle permet d'effectuer des copies en bloc efficaces de colonnes de type valeur volumineuses.  
+ Longueur de préfixe pour le champ. La valeur par défaut est BCP_PREFIX_DEFAULT. Les longueurs valides pour le préfixe sont 0, 1, 2, 4 et 8. La taille de préfixe 8 est la plus souvent utilisée pour indiquer que le champ est segmenté. Elle permet d'effectuer des copies en bloc efficaces de colonnes de type valeur volumineuses.  
   
  *cbUserData*[in]  
  Longueur maximale, en octets, des données de ce champ dans le fichier utilisateur, sans compter la longueur de tout indicateur de longueur ou marque de fin.  
@@ -104,7 +104,7 @@ HRESULT BCPColFmt(
  *pbUserDataTerm*[size_is][in]  
  Séquence de marque de fin à utiliser pour le champ. Ce paramètre est utile surtout pour les types de données de caractères puisque tous les autres types sont de longueur fixe ou, dans le cas des données binaires, nécessitent un indicateur de longueur pour enregistrer avec précision le nombre d'octets présents.  
   
- Pour éviter de terminer des données extraites ou pour indiquer que les données dans un fichier utilisateur ne sont pas terminées, attribuez la valeur NULL à ce paramètre.  
+ Pour éviter de terminer des données extraites ou pour indiquer que les données dans un fichier utilisateur ne sont pas terminées, attribuez la valeur NULL à ce paramètre.  
   
  Si plusieurs méthodes sont employées pour définir la longueur des colonnes du fichier utilisateur (par exemple, un terminateur et un indicateur de longueur, ou un terminateur et une longueur de colonne maximale), la copie en bloc choisit celle qui implique le volume de données à copier le moins élevé.  
   

@@ -15,13 +15,13 @@ ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>SAUVEGARDE de la base de données (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -76,7 +76,7 @@ BACKUP DATABASE database_name
   
 -   Le serveur ou l’hôte doit être spécifié en tant qu’une adresse IP.  Vous ne pouvez pas spécifier il comme nom d’hôte ou serveur.  
   
- DESCRIPTION = **'***texte***'**  
+ DESCRIPTION = **'***text***'**  
  Spécifie une description textuelle de la sauvegarde. La longueur maximale du texte est de 255 caractères.  
   
  La description est stockée dans les métadonnées et s’affichera lorsque l’en-tête de sauvegarde est restaurée avec RESTORE HEADERONLY.  
@@ -97,13 +97,13 @@ BACKUP DATABASE database_name
  DIFFERENTIAL  
  Spécifie l’exécution d’une sauvegarde différentielle de base de données utilisateur. Si omis, la valeur par défaut est une sauvegarde de base de données complète. Le nom de la sauvegarde différentielle n’a pas besoin de correspondre au nom de la sauvegarde complète. Pour le suivi de la sauvegarde différentielle et sa sauvegarde complète correspondante, envisagez d’utiliser le même nom avec « complet » ou « diff » ajouté.  
   
- Exemple :  
+ Par exemple :  
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`  
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert le **BACKUP DATABASE** autorisation ou l’appartenance dans le **db_backupoperator** rôle de base de données fixe. La base de données master ne peut pas être sauvegardée des mais par un utilisateur standard qui a été ajouté à la **db_backupoperator** rôle de base de données fixe. La base de données master peut uniquement être sauvegardée par **sa**, l’administrateur de l’ensemble fibre optique, ou les membres de la **sysadmin** rôle serveur fixe.  
   
  Nécessite un compte Windows qui a l’autorisation d’accès, créer et écrire dans le répertoire de sauvegarde. Vous devez également stocker le nom de compte Windows et le mot de passe dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour ajouter ces informations d’identification de réseau à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le [sp_pdw_add_network_credentials &#40; Entrepôt de données SQL &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procédure stockée.  
@@ -160,11 +160,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Métadonnées  
  Ces vues de gestion dynamique contiennent des informations sur tous les sauvegarder, restaurer et opérations de chargement. Les informations sont conservées entre les redémarrages du système.  
   
--   [Sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [Sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [Sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Performance  
  Pour effectuer une sauvegarde, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] première sauvegarde pour les métadonnées, puis effectue une sauvegarde en parallèle de la base de données stockées sur les nœuds de calcul. Dans le répertoire de sauvegarde, les données sont copiées directement à partir de chaque nœud de calcul. Pour obtenir de meilleures performances pour le déplacement des données à partir des nœuds de calcul dans le répertoire de sauvegarde, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] contrôle le nombre de nœuds de calcul qui copie des données simultanément.  

@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWCONTIG (Transact-SQL) | Documents Microsoft
+title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_table* | *table_id* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  Table ou vue dont les informations de fragmentation doivent être vérifiées. Sans aucune précision, toutes les tables et les vues indexées de la base de données active sont contrôlées. Pour obtenir la table ou afficher les ID, utilisez la [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) (fonction).  
   
  *index_name* | *index_id*  
@@ -100,12 +100,12 @@ Le tableau suivant décrit les informations du jeu de résultats.
 |**Pages analysées**|Nombre de pages dans la table ou l'index.|  
 |**Extensions analysées**|Nombre d'extensions dans la table ou l'index|  
 |**Commutateurs d’extension**|Nombre de fois où l'instruction DBCC est passée d'une extension à l'autre en parcourant les pages de l'index ou de la table.|  
-|**Durée Pages par extension**|Nombre de pages par extension dans la chaîne de pages.|  
+|**Nbre moyen Pages par extension**|Nombre de pages par extension dans la chaîne de pages.|  
 |**Densité d’analyse [meilleur nombre : nombre réel]**|Il s'agit d'un pourcentage. Il représente le ratio **meilleur nombre** à **nombre réel**. Cette valeur est de 100 si tout est contigu et elle est inférieure à 100 si certaines fragmentations existent.<br /><br /> **Meilleur nombre** est le nombre idéal de modifications d’extension si tout est lié en contigu. **Nombre réel** est le nombre effectif de modifications d’extension.|  
 |**Fragmentation d’analyse logique**|Pourcentage de pages hors service renvoyées après l'analyse des pages de feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une page non ordonnés est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page vers laquelle pointée la pag suivant*e* pointeur dans la page feuille actuelle.|  
 |**Fragmentation d’analyse d’extension**|Pourcentage d'extensions déclassées lors de l'analyse des pages feuilles d'un index. Cette valeur n'est pas pertinente pour les segments. Une extension hors service est une extension qui contient la page active pour un index, mais n'est pas physiquement l'extension qui suit celle contenant la page précédente pour un index.<br /><br /> Remarque : Ce nombre est sans signification lorsque l’index s’étend sur plusieurs fichiers.|  
-|**Durée Octets libres par Page**|Nombre moyen d'octets libres sur les pages analysées. Plus le nombre est élevé et moins les pages sont remplies. Les faibles valeurs sont préférables si l'index ne doit pas recevoir beaucoup d'insertions aléatoires. Ce nombre est également affecté par la taille des lignes : plus elle sera élevée, plus le nombre le sera également.|  
-|**Durée Densité de page (complète)**|Densité de page moyenne (pourcentage). Cette valeur prend en compte la taille des lignes. C'est donc une indication plus précise sur le remplissage de vos pages. Plus le pourcentage est élevé et mieux c'est.|  
+|**Nbre moyen Octets libres par Page**|Nombre moyen d'octets libres sur les pages analysées. Plus le nombre est élevé et moins les pages sont remplies. Les faibles valeurs sont préférables si l'index ne doit pas recevoir beaucoup d'insertions aléatoires. Ce nombre est également affecté par la taille des lignes : plus elle sera élevée, plus le nombre le sera également.|  
+|**Nbre moyen Densité de page (complète)**|Densité de page moyenne (pourcentage). Cette valeur prend en compte la taille des lignes. C'est donc une indication plus précise sur le remplissage de vos pages. Plus le pourcentage est élevé et mieux c'est.|  
   
 Lorsque *table_id* et FAST sont spécifiés, DBCC SHOWCONTIG renvoie un jeu de résultats avec uniquement les colonnes suivantes.
 -   **Pages analysées**  
@@ -118,7 +118,7 @@ Lorsque TABLERESULTS est spécifié, DBCC SHOWCONTIG renvoie les colonnes suivan
   
 |statistiques| Description|  
 |---|---|
-|**Nom de l’objet**|Nom de la table ou de la vue traitée.|  
+|**Nom de l'objet**|Nom de la table ou de la vue traitée.|  
 |**ObjectId**|ID du nom d'objet.|  
 |**IndexName**|Nom de l'index traité. A la valeur NULL pour un segment.|  
 |**IndexId**|Identificateur de l'index. A la valeur 0 pour un segment.|  
@@ -129,7 +129,7 @@ Lorsque TABLERESULTS est spécifié, DBCC SHOWCONTIG renvoie les colonnes suivan
 |**MaximumRecordSize**|Taille maximum des enregistrements dans ce niveau d'index ou le segment entier.|  
 |**AverageRecordSize**|Taille moyenne des enregistrements dans ce niveau d'index ou le segment entier.|  
 |**ForwardedRecords**|Nombre d'enregistrements transférés dans ce niveau d'index ou le segment entier.|  
-|**Étendues**|Nombre d'extensions dans ce niveau d'index ou le segment entier.|  
+|**Extents**|Nombre d'extensions dans ce niveau d'index ou le segment entier.|  
 |**ExtentSwitches**|Nombre de fois où l'instruction DBCC est passée d'une extension à l'autre en parcourant les pages de l'index ou de la table.|  
 |**AverageFreeBytes**|Nombre moyen d'octets libres sur les pages analysées. Plus le nombre est élevé et moins les pages sont remplies. Les faibles valeurs sont préférables si l'index ne doit pas recevoir beaucoup d'insertions aléatoires. Ce nombre est également affecté par la taille des lignes : plus elle sera élevée, plus le nombre le sera également.|  
 |**AveragePageDensity**|Densité de page moyenne (pourcentage). Cette valeur prend en compte la taille des lignes. C'est donc une indication plus précise sur le remplissage de vos pages. Plus le pourcentage est élevé et mieux c'est.|  
@@ -154,7 +154,7 @@ L’instruction DBCC SHOWCONTIG parcourt la chaîne de pages au niveau feuille d
 ## <a name="restrictions"></a>Restrictions  
 DBCC SHOWCONTIG n’affiche pas les données **ntext**, **texte**, et **image** des types de données. Cela est dû au fait que les index de texte qui stockent des données de texte et d'image n'existent plus.
   
-En outre, DBCC SHOWCONTIG ne prend pas en charge certaines fonctionnalités nouvelles. Exemple :
+En outre, DBCC SHOWCONTIG ne prend pas en charge certaines fonctionnalités nouvelles. Par exemple :
 -   Si la table ou l'index spécifié est partitionné, DBCC SHOWCONTIG n'affiche que la première partition de la table ou de l'index spécifié.  
 -   DBCC SHOWCONTIG n’affiche pas les informations de stockage de dépassement de ligne et d’autres nouveaux types de données hors ligne, tel que **nvarchar (max)**, **varchar (max)**, **varbinary (max)**, et **xml**.  
 -   Les index spatiaux ne sont pas pris en charge par DBCC SHOWCONTIG.  
@@ -190,7 +190,7 @@ Le niveau de fragmentation d'un index peut être déterminé des manières suiva
     > [!NOTE]  
     >  Le **Fragmentation d’analyse d’étendue** valeur sera élevée si l’index s’étend sur plusieurs fichiers. Pour réduire ces valeurs, vous devez réduire la fragmentation de l'index.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Utilisateur propriétaire de la table ou être membre du **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou **db_ddladmin** rôle de base de données fixe.
   
 ## <a name="examples"></a>Exemples  

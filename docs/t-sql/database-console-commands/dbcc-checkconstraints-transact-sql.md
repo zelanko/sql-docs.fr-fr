@@ -25,15 +25,15 @@ helpviewer_keywords:
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 358dddc25f1265f344387cc75ef12f79182c27e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ DBCC CHECKCONSTRAINTS
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_table* | *table_id* | *constraint_name* | *constraint_id*  
+ *table_name* | *table_id* | *constraint_name* | *constraint_id*  
  Table ou contrainte à vérifier. Lorsque *table_name* ou *table_id* est spécifié, toutes les contraintes activées sur cette table sont vérifiées. Lorsque *constraint_name* ou *constraint_id* est spécifié, seule cette contrainte est vérifiée. Si aucun identificateur de table ni aucun identificateur de contrainte n'est spécifié, toutes les contraintes activées sur toutes les tables de la base de données actuelle sont vérifiées.  
  Un nom de contrainte identifie de manière unique la table à laquelle la contrainte appartient. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- par  
+ WITH  
  Permet de spécifier des options.  
   
  ALL_CONSTRAINTS  
@@ -99,7 +99,7 @@ Si *table_name* ou *table_id* est spécifié et il est activé pour le contrôle
   
 |Vérifier|Dans la sortie en cas d’échec de la vérification des informations supplémentaires|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (actuel)|[sys_end] = '{0}' et MAX(DATETIME2) = ' 9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' et MAX(DATETIME2) = ' 9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (actuel, l’historique)|[sys_start] = '{0}' et [sys_end] = « {{1} »|  
 |PeriodStartColumn < current_utc_time (actuel)|[sys_start] = '{0}' et SYSUTCTIME|  
 |PeriodEndColumn < current_utc_time (historique)|[sys_end] = '{0}' et SYSUTCTIME|  
@@ -116,7 +116,7 @@ DBCC CHECKCONSTRAINTS retourne un ensemble de lignes comportant les colonnes sui
 |Constraint Name (Nom de la contrainte)|**varchar**|Nom de la contrainte qui n'est pas respectée.|  
 |Où|**varchar**|Affectations des valeurs de la colonne qui identifient la ou les lignes ne respectant pas la contrainte.<br /><br /> La valeur de cette colonne peut être utilisée dans la clause WHERE d'une instruction SELECT qui demande les lignes qui ne respectent pas la contrainte.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  

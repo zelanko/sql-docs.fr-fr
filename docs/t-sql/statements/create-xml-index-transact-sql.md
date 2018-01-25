@@ -31,13 +31,13 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Spécifie le type d'index XML secondaire.  
   
- Value  
+ VALUE  
  Crée un index XML secondaire sur les colonnes dans lesquelles les colonnes de clé (valeur et chemin de nœud) proviennent de l'index XML primaire.  
   
  PATH  
@@ -127,7 +127,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  Crée un index XML secondaire sur les colonnes (valeur PK, de chemin et de nœud) de l'index XML primaire où PK est la clé primaire de la table de base.  
   
- **\<objet > :: =**  
+ **\<object>::=**  
   
  Objet qualifié complet ou partiel à indexer.  
   
@@ -140,7 +140,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  Nom de la table à indexer.  
   
- **\<xml_index_option > :: =** 
+ **\<xml_index_option> ::=** 
   
  Spécifie les options à utiliser lorsque vous créez l'index.  
   
@@ -155,7 +155,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  L'option PAD_INDEX est utile seulement si FILLFACTOR est spécifié, car PAD_INDEX utilise le pourcentage spécifié par FILLFACTOR. Si le pourcentage défini pour FILLFACTOR n'est pas suffisamment élevé pour autoriser une ligne, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] remplace en interne le pourcentage de façon à ce qu'il autorise le minimum. Le nombre de lignes sur une page d’index intermédiaire n’est jamais inférieur à 2, quelle que soit la valeur de faible *fillfactor*.  
   
- Facteur de remplissage  **=**  *facteur de remplissage*  
+ FILLFACTOR **=***fillfactor*  
  Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la reconstruction de l'index. *facteur de remplissage* doit être un entier compris entre 1 et 100. La valeur par défaut est 0. Si *fillfactor* est 100 ou 0, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée des index avec des pages de niveau feuille intégralement remplies.  
   
 > [!NOTE]  
@@ -210,7 +210,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  Les verrous de ligne ne sont pas utilisés.  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
+ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
  ON  
@@ -219,7 +219,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  Les verrous de page ne sont pas utilisés.  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  Remplace le [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) option de configuration pour la durée de l’opération d’index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
 > [!IMPORTANT]  
@@ -227,7 +227,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism* peut être :  
   
-  1  
+ 1  
  Supprime la création de plans parallèles.  
   
  \>1  
@@ -241,7 +241,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]  
 >  Opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les colonnes calculées dérivées **xml** types de données peuvent être indexées comme colonne clée ou incluse non-clés tant que le type de données de colonne calculée est autorisé en tant qu’une colonne clé d’index ou une colonne non-clé. Impossible de créer un index XML primaire sur une calculée **xml** colonne.  
   
  Pour afficher des informations sur les index XML, utilisez la [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) affichage catalogue.  
@@ -291,16 +291,16 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Sys.xml_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   

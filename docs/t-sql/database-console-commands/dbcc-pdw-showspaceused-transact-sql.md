@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Documents Microsoft
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -16,13 +16,13 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce89806ad869f18333d535402c1d112ae5873de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c564a6debb9c110cb41f8fc90a7cc1c0c5a01f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,10 +44,10 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ *nom_base_de_données* . [ *schema_name* ]. | *schema_name* . ] *nom_table*  
+ [ *nom_base_de_données* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  L’une, de deux ou de nom en trois parties de la table à afficher. Pour deux ou les noms de table en trois parties, le nom doivent être mis entre guillemets doubles ( » »). L’utilisation des guillemets autour d’un nom de table d’une partie est facultative. Lorsque aucun nom de table n’est spécifié, les informations s’affichent pour la base de données actuelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Requiert l'autorisation VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -95,7 +95,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;  
 ```  
  ## <a name="see-also"></a>Voir aussi
-[DBCC PDW_SHOWEXECUTIONPLAN &#40; Transact-SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   

@@ -20,13 +20,13 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8089e82d6e6bb04c8e25af3603c4522a820a7a83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="insert-sql-graph"></a>INSERT (graphique SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ L’insertion en bloc pour la table du nœud est reste identique à celui d’un
 Avant l’insertion en bloc dans une table du bord, les tables du nœud doivent être importés. Les valeurs pour `$from_id` et `$to_id` peut ensuite être extraites à partir de la `$node_id` colonne de la table des nœuds et inséré comme bords. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  L'autorisation INSERT est obligatoire sur la table cible.  
   
  Insérer les autorisations par défaut aux membres du **sysadmin** rôle serveur fixe le **db_owner** et **db_datawriter** les rôles de base de données et le propriétaire de la table. Membres de la **sysadmin**, **db_owner**et le **db_securityadmin** rôles et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
@@ -166,7 +166,7 @@ Avant l’insertion en bloc dans une table du bord, les tables du nœud doivent 
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer une TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Graphique de traitement avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Documents Microsoft
+title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
  *database_name* | *database_id* | 0  
  Base de données contenant l'index à défragmenter. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent être conformes aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- *nom_table* | *table_id* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  Table ou vue contenant l'index à défragmenter. Les noms des tables et des vues doivent suivre les règles applicables aux identificateurs.  
   
  *index_name* | *index_id*  
@@ -113,7 +113,7 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’appelant doit posséder la table ou être membre du **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou **db_ddladmin** rôle de base de données fixe.
   
 ## <a name="examples"></a>Exemples  

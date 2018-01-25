@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c72e6ab626db31ec329dce777f17e04774b01d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/08/2018
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
     |**varbinary(max)**|**image**|  
-    |**UDT**|**varbinary**|  
+    |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
      Ce mappage de type affecte les valeurs retournées pour les métadonnées de colonne. Par exemple, un **texte** colonne a une taille maximale de 2 147 483 647, mais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Native Client signale la taille maximale de **varchar (max)** colonnes en tant que SQL_SS_LENGTH_UNLIMITED, et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Native Client signale la taille maximale de **varchar (max)** colonnes en tant que 2 147 483 647 ou -1, en fonction de la plateforme.  
@@ -122,6 +122,6 @@ ms.lasthandoff: 01/08/2018
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC prennent en charge l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne, mais seul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l'isolation de la transaction d'instantané. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d’Applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f7f2dd42fd3d34073bbdfc223af339f2e867539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION n'est pas valide dans une fonction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour mettre fin à une conversation active, l'utilisateur actif doit en être le propriétaire, un membre du rôle serveur fixe sysadmin ou un membre du rôle de base de données fixe db_owner.  
   
  Un membre du rôle serveur fixe sysadmin ou du rôle de base de données fixe db_owner peut utiliser la clause WITH CLEANUP pour supprimer les métadonnées d'une conversation qui est déjà terminée.  
@@ -137,6 +137,6 @@ END CONVERSATION @dialog_handle WITH CLEANUP ;
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

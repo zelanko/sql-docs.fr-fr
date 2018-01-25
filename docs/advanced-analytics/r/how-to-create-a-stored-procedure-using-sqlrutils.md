@@ -15,13 +15,13 @@ ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3e1223ded4b8ef7107a0a565b751b31d12ff6f3e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c86b39e8c6c9aad23c9059482f1e33ec7ba3621b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Créer un sqlrutils utilisant de procédure stockée
 
@@ -89,7 +89,7 @@ Lorsque vous apportez chaque fonction à appeler, R création d’un objet que v
 
 Lorsque tous les paramètres d’entrée et de sortie sont prêtes, effectuez un appel à la `StoredProcedure` constructeur.
 
-**Usage**
+**Utilisation**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

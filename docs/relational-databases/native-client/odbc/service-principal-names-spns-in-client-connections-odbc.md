@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c4f143b902a3cc0dd16829c646512fad4f9c14e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10a6289d31cbb40ac7f468a38cc2bf53e895feed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Noms de principaux du service (SPN) dans les connexions clientes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="connection-attributes"></a>Attributs de connexion  
  Les attributs de connexion suivants permettent aux applications clientes de spécifier un nom principal de service et d'interroger la méthode d'authentification.  
   
-|Nom   |Type|Utilisation|  
+|Nom|Type|Utilisation|  
 |----------|----------|-----------|  
 |SQL_COPT_SS_SERVER_SPN<br /><br /> SQL_COPT_SS_FAILOVER_PARTNER_SPN|SQLTCHAR, lecture/écriture|Spécifie le nom principal de service du serveur. La valeur par défaut est une chaîne vide, ce qui force [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à utiliser le nom principal de service par défaut, généré par le pilote.<br /><br /> Cet attribut peut être interrogé uniquement après avoir été défini par programme ou après l'ouverture d'une connexion. Si une tentative d'interrogation de cet attribut sur une connexion qui n'est pas ouverte est effectuée et que l'attribut n'a pas été défini par programme, SQL_ERROR est retournée et un enregistrement de diagnostic est enregistré avec SQLState 08003 et le message « Connexion non ouverte ».<br /><br /> Si une tentative de définition de cet attribut est effectuée lorsqu'une connexion est ouverte, SQL_ERROR est retournée et un enregistrement de diagnostic est consigné avec SQLState HY011 et le message « Opération actuellement non valide ».|  
 |SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD|SQLTCHAR, lecture seule|Retourne la méthode d'authentification utilisée pour la connexion. La valeur retournée à l'application est la valeur que Windows renvoie à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les valeurs possibles sont :<br /><br /> « NTLM », lorsqu'une connexion est ouverte à l'aide de l'authentification NTLM.<br /><br /> « Kerberos », lorsqu'une connexion est ouverte à l'aide de l'authentification Kerberos.<br /><br /> <br /><br /> Cet attribut peut être lu uniquement pour une connexion ouverte ayant utilisé l'authentification Windows. Si une tentative de lecture de cet attribut est effectuée avant qu'une connexion ait été ouverte, SQL_ERROR est retournée et une erreur est enregistrée avec SQLState 08003 et le message « Connexion non ouverte ».<br /><br /> Si cet attribut est interrogé sur une connexion qui n'a pas utilisé l'authentification Windows, SQL_ERROR est retournée, une erreur est enregistrée avec SQLState HY092 et le message « Identificateur d'option/attribut non valide (SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD n'est disponible que pour les connexions approuvées) ».<br /><br /> Si la méthode d'authentification ne peut pas être déterminée, SQL_ERROR est retournée et une erreur est enregistrée avec SQLState HY000 et le message « Erreur générale »|  

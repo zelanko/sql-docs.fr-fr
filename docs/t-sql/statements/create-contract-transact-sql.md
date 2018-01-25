@@ -23,15 +23,15 @@ helpviewer_keywords:
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b77fba7800b8533793f9b26574d442bb0c087b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26a8d2c2826e091322a1cec35d6ffe1d9ca379e0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ CREATE CONTRACT contract_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_contract*  
+ *contract_name*  
  Nom du contrat à créer. Un nouveau contrat est créé dans la base de données active et il appartient au principal spécifié dans la clause AUTHORIZATION. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés. Le *contract_name* peut contenir jusqu'à 128 caractères.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ CREATE CONTRACT contract_name
   
  Un contrat ne peut pas être un objet temporaire. Les noms de contrats commençant par # sont autorisés mais ce sont des objets permanents.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres de la **db_ddladmin** ou **db_owner** base de données fixe et le **sysadmin** rôle serveur fixe peut créer des contrats.  
   
  Par défaut, le propriétaire du contrat, aux membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe avoir l’autorisation REFERENCES sur un contrat.  
@@ -128,7 +128,7 @@ CREATE CONTRACT
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SUPPRIMER le contrat &#40; Transact-SQL &#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
+ [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

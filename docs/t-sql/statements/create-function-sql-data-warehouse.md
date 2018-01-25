@@ -16,13 +16,13 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: "14"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>CRÉER (fonction) (entrepôt de données SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -72,13 +72,13 @@ RETURNS return_data_type
  *schema_name*  
  Nom du schéma auquel appartient la fonction définie par l'utilisateur.  
   
- *nom de la fonction*  
+ *function_name*  
  Nom de la fonction définie par l'utilisateur. Les noms de fonctions doivent être conformes aux règles des identificateurs et doivent être uniques au sein de la base de données et son schéma.  
   
 > [!NOTE]  
 >  Les parenthèses sont requises après le nom de fonction même si aucun paramètre n'est spécifié.  
   
- @*nom_paramètre*  
+ @*parameter_name*  
  Paramètre dans la fonction définie par l'utilisateur. Un ou plusieurs paramètres peuvent être déclarés.  
   
  Une fonction peut comprendre au maximum 2 100 paramètres. La valeur de chaque paramètre déclaré doit être fournie par l'utilisateur lors de l'exécution de la fonction, sauf si vous définissez une valeur par défaut pour le paramètre.  
@@ -91,7 +91,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  Est le type de données de paramètre. Pour [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions, tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisées. Le type de données d’horodatage (rowversion) n’est pas un type pris en charge.  
   
- [=*par défaut* ]  
+ [ =*default* ]  
  Valeur par défaut pour le paramètre. Si un *par défaut* la valeur est définie, la fonction peut être exécutée sans spécifier de valeur pour ce paramètre.  
   
  Lorsque l'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin de récupérer la valeur par défaut. Ce comportement est différent de l'utilisation de paramètres avec des valeurs par défaut dans des procédures stockées pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut.  
@@ -107,7 +107,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Indique la valeur scalaire retournée par la fonction scalaire.  
   
- **\<function_option > :: =** 
+ **\<function_option>::=** 
   
  Spécifie que la fonction aura une ou plusieurs des options ci-dessous.  
   
@@ -157,7 +157,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Métadonnées  
  Cette section répertorie les affichages catalogue système que vous pouvez utiliser pour retourner des métadonnées sur les fonctions définies par l’utilisateur.  
   
- [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : affiche la définition de [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions définies par l’utilisateur. Exemple :  
+ [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : affiche la définition de [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions définies par l’utilisateur. Par exemple :  
   
 ```  
 SELECT definition, type   
@@ -173,7 +173,7 @@ GO
   
  [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : affiche les objets sous-jacents référencés par une fonction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

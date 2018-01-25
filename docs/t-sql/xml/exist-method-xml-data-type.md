@@ -19,13 +19,13 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcf939f68dd338e9672dfc4bc716b3d92ebda272
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exist-method-xml-data-type"></a>Méthode exist() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SET @f = @x.exist('/Somedate[(text()[1] cast as xs:date ?) = xs:date("2002-01-01
 SELECT @f;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **text()** méthode retourne un nœud de texte qui contient la valeur non typée `2002-01-01`. (Le type XQuery est **xdt : untypedAtomic**.) Vous devez explicitement convertir cette valeur typée de **x** à **xsd : date**, car la conversion implicite n’est pas pris en charge dans ce cas.  
   
@@ -133,7 +133,7 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La clause WHERE sélectionne uniquement les lignes de la **ProductDescription** table qui satisfont la condition spécifiée par rapport à la **CatalogDescription xml** colonne de type.  
   
@@ -162,7 +162,7 @@ WHERE CatalogDescription.exist('
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

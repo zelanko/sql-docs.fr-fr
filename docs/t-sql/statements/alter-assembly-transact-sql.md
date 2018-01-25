@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,10 +73,10 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ASSEMBLY_NAME*  
+ *assembly_name*  
  Nom de l'assembly à modifier. *ASSEMBLY_NAME* doit déjà exister dans la base de données.  
   
- À partir de \<client_assembly_specifier > | \<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Met à jour un assembly avec la dernière copie des modules [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contiennent sa mise en œuvre. Cette option ne peut être utilisée que s'il n'existe aucun fichier associé avec l'assembly spécifié.  
   
  \<client_assembly_specifier > Spécifie l’emplacement réseau ou local où se trouve l’assembly en cours d’actualisation. L'emplacement réseau inclut le nom de l'ordinateur, le nom de partage et un chemin d'accès au sein de ce partage. *manifest_file_name* Spécifie le nom du fichier qui contient le manifeste de l’assembly.  
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  Pour plus d’informations, consultez [mise en œuvre des assemblys](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *nom_fichier*[ **,***.. .n*] | ALL}]  
+ [DROP FILE { *nom_fichier*[**, ***.. .n*] | ALL}]  
  Supprime le nom de fichier associé à l'assembly ou tous les fichiers associés à l'assembly, de la base de données. Si DROP FILE est utilisé avec ADD FILE qui suit, il s'exécute en premier. Cela vous permet de remplacer un fichier avec le même nom de fichier.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ ALTER ASSEMBLY assembly_name
   
  Si l'instruction ALTER ASSEMBLY est exécutée sans la clause de données UNCHECKED, des vérifications sont effectuées pour s'assurer que la nouvelle version de l'assembly n'affecte pas les données existantes dans les tables. Selon la quantité de données à vérifier, cela peut affecter les performances.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur l'assembly. Il y a d'autres exigences :  
   
 -   Pour modifier un assembly existante dont l’autorisation, jeu est EXTERNAL_ACCESS, requiert**EXTERNAL ACCESS ASSEMBLY**autorisation sur le serveur.  
@@ -222,8 +222,8 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER un ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

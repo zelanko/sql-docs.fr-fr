@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b48c2c0953e3565a406bf2a22788a2e1c537110
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: e40a5317fd4f837aaf91e79256568a414dcf263d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpcolumns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ RETCODE bcp_columns (
   
 ## <a name="arguments"></a>Arguments  
  *pas*  
- Handle de connexion ODBC compatible avec la copie en bloc.  
+ Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *nColumns*  
  Nombre total de colonnes dans le fichier utilisateur. Même si vous vous apprêtez à la copie de données à partir du fichier utilisateur à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table et n’envisagez pas de copier toutes les colonnes dans le fichier utilisateur, vous devez toujours définir *nColumns* au nombre total de colonnes du fichier utilisateur.  

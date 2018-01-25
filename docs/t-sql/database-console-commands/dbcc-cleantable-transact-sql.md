@@ -28,15 +28,15 @@ helpviewer_keywords:
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af5d7e7dab04bf6999b8c8085a4f154a4192d96c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Récupère la quantité d’espace entre les colonnes de longueur variable supprimées dans les tables ou vues indexées.
@@ -59,7 +59,7 @@ DBCC CLEANTABLE
  *database_name* | *database_id* | 0  
  Base de données à laquelle la table à nettoyer appartient. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- *nom_table* | *table_id* | *view_name*| *view_id*  
+ *table_name* | *table_id* | *view_name*| *view_id*  
  Table ou vue indexée à nettoyer.  
   
  *batch_size*  
@@ -85,7 +85,7 @@ DBCC CLEANTABLE retourne :
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’appelant doit posséder la table ou vue indexée ou être membre du **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou la **db_ddladmin** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -165,6 +165,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [Sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   

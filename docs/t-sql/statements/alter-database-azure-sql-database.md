@@ -15,13 +15,13 @@ ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: "37"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ALTER DATABASE { database_name }
  CURRENT  
  Indique que la base de données actuelle en cours d'utilisation doit être modifiée.  
   
- MODIFY NAME  **=**  *nouveau_nom_base_de_données*  
+ MODIFY NAME **= *** nouveau_nom_base_de_données*  
  Renomme la base de données portant le nom spécifié en tant que *nouveau_nom_base_de_données*. L’exemple suivant modifie le nom d’une base de données `db1` à `db2`:   
 
 ```  
@@ -222,7 +222,7 @@ Modification de l’édition échoue si la propriété MAXSIZE de la base de don
  MODIFIER (MAXSIZE  **=**  [100 MO | 500 MO | 1 | 1024... 4096] GO)  
  Spécifie la taille maximale de la base de données. La taille maximale doit être conforme au jeu de valeurs valide pour la propriété EDITION de la base de données. Le fait de modifier la taille maximale de la base de données peut entraîner la modification de la propriété EDITION de la base de données. Le tableau suivant contient la liste des valeurs de MAXSIZE prises en charge et des valeurs par défaut (D) des couches de service [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S12 S3**|**P1-P6 et PRS1-PRS6**|**P11-P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 et PRS1-PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 Mo|√|√|√|√|√|  
 |250 MO|√|√|√|√|√|  
@@ -276,7 +276,7 @@ ALTER DATABASE current
  AVEC ALLOW_CONNECTIONS {TOUTES LES | **NON** }  
  Lorsque ALLOW_CONNECTIONS n’est pas spécifié, il a la valeur NO par défaut. Si elle est définie à tous, il est une base de données en lecture seule qui permet à toutes les connexions avec les autorisations appropriées pour vous connecter.  
   
- AVEC SERVICE_OBJECTIVE {'S0' | 'S1' | « S2 » | « S3 » | 'S4' | 'S6' | 'S7' | 'F9' | 'S12' | « P1 » | « P2 » | 'P4' | 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6'}  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
  Lorsque SERVICE_OBJECTIVE n’est pas spécifié, la base de données secondaire est créé au même niveau de service en tant que base de données primaire. Lorsque SERVICE_OBJECTIVE est spécifié, la base de données secondaire est créée au niveau spécifié. Cette option prend en charge la création de bases de données secondaires géo-répliquées avec des niveaux de service moins coûteux. Le SERVICE_OBJECTIVE spécifié doit figurer dans la même édition de la source. Par exemple, vous ne pouvez pas spécifier S0 si l’édition premium n’est.  
   
  ELASTIC_POOL (nom = \<elastic_pool_name)  
@@ -321,7 +321,7 @@ ALTER DATABASE current
 > [!IMPORTANT]  
 >  L’utilisateur exécutant la commande FORCE_FAILOVER_ALLOW_DATA_LOSS doit être DBManager sur le serveur principal et le serveur secondaire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
  Pour réduire la taille d’une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -405,10 +405,10 @@ ALTER DATABASE db1 FAILOVER
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys.database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [Sys.data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [Sys.FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sys.master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
   

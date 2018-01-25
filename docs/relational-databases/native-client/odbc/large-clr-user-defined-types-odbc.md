@@ -16,17 +16,17 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbcc9fd355a75a690fd77914340212362f34766
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
+# <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -165,7 +165,7 @@ ms.lasthandoff: 01/08/2018
   
 |Version du serveur|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**UDT**|**varbinary(max)**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
 |SQL Server 2008 et versions ultérieur|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Fonctions ODBC prenant en charge les types CLR volumineux définis par l'utilisateur  
@@ -177,7 +177,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Les valeurs requises pour les UDT sont les suivantes :  
   
-|Type de données SQL|*Type de paramètre*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
+|Type de données SQL|*Parametertype*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-------------------|---------------------|---------------------|------------------------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -219,7 +219,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Les valeurs retournées pour les UDT sont les suivantes :  
   
-|Type de données SQL|Type|Sous-type|Longueur|Précision|Échelle|  
+|Type de données SQL|Type|SubType|Longueur|Précision|Échelle|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -239,7 +239,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Les valeurs autorisées pour les UDT sont les suivantes :  
   
-|Type de données SQL|Type|Sous-type|Longueur|Précision|Échelle|  
+|Type de données SQL|Type|SubType|Longueur|Précision|Échelle|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

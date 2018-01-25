@@ -22,15 +22,15 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8944c6b5ca481e61a1ca18e7c453d2c2035e1acb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>CORRESPONDANCE (Transact-SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Spécifie une condition de recherche pour un graphique. CORRESPONDANCE peut être utilisée uniquement avec graphique nœud bord tables et, dans l’instruction SELECT dans le cadre de la clause WHERE. 
@@ -152,5 +152,5 @@ AND Person1.name = 'Alice';
 
 ## <a name="see-also"></a>Voir aussi  
  [CRÉER une TABLE &#40; Graphique SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (graphique SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graphique de traitement avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

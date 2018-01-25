@@ -22,15 +22,15 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc317c36ae0cc14891be3a4f3a9c17c7a41fc3e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - Autorisations sur Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,30 +57,30 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qu'il est possible d'accorder sur un élément sécurisable Service Broker.  Voir ci-dessous.  
   
- CONTRAT **::***nom_contract*  
+ CONTRAT **:: *** nom_contract*  
  Indique le contrat sur lequel l'autorisation est accordée. Le qualificateur d’étendue « :: » est requis.  
   
- TYPE DE MESSAGE **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Spécifie le type de message sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Spécifie la liaison de service distant sur laquelle l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- ITINÉRAIRE **::***route_name*  
+ ITINÉRAIRE **:: *** route_name*  
  Indique l'itinéraire sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
  SERVICE **::***service_name*  
  Indique le service sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal auquel l'autorisation est accordée. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -102,7 +102,7 @@ GRANT permission  [ ,...n ] ON
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -171,12 +171,12 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  En cas d'utilisation de l'option AS, ces critères s'appliquent.  
   
-|En tant que *granting_principal*|Autres autorisations nécessaires|  
+|AS *granting_principal*|Autres autorisations nécessaires|  
 |------------------------------|------------------------------------|  
 |Utilisateur de base de données|L’autorisation IMPERSONATE sur l’utilisateur, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
 |Utilisateur de base de données mappé à une connexion Windows|L’autorisation IMPERSONATE sur l’utilisateur, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  

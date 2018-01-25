@@ -16,13 +16,13 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY et REVOKE (entrepôt de données SQL Azure, entrepôt de données en parallèle)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,9 +86,9 @@ REVOKE
   
  ON [ \<class_type > ::] *sécurisable* le **ON** clause décrit le paramètre d’élément sécurisable auquel accorder, refuser ou révoquer des autorisations.  
   
- \<class_type > le type de classe de l’élément sécurisable. Cela peut être **connexion**, **base de données**, **objet**, **schéma**, **rôle**, ou **utilisateur**. Les autorisations peuvent également être accordées à la **SERVER***class_type*, mais **SERVER** n’est pas spécifié pour ces autorisations. **Base de données** n’est pas spécifié lorsque l’autorisation inclut le mot **base de données** (par exemple **ALTER ANY DATABASE**). Lorsqu’aucun *class_type* est spécifié et le type d’autorisation n’est pas limité sur le serveur ou de la classe de base de données, la classe est censée pour être **objet**.  
+ \<class_type > le type de classe de l’élément sécurisable. Cela peut être **connexion**, **base de données**, **objet**, **schéma**, **rôle**, ou **utilisateur**. Les autorisations peuvent également être accordées à la **serveur *** class_type*, mais **SERVER** n’est pas spécifié pour ces autorisations. **Base de données** n’est pas spécifié lorsque l’autorisation inclut le mot **base de données** (par exemple **ALTER ANY DATABASE**). Lorsqu’aucun *class_type* est spécifié et le type d’autorisation n’est pas limité sur le serveur ou de la classe de base de données, la classe est censée pour être **objet**.  
   
- *élément sécurisable*  
+ *securable*  
  Le nom de la connexion, de base de données, table, vue, schéma, procédure, rôle ou utilisateur auquel accorder, refuser ou révoquer des autorisations. Le nom de l’objet peut être spécifié avec les règles d’affectation des noms en trois parties qui sont décrites dans [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  POUR *principal* [ **,**... *n* ]  
@@ -109,7 +109,7 @@ REVOKE
 > [!IMPORTANT]  
 >  Si le principal possède l’autorisation spécifiée sans la **GRANT** option, l’autorisation elle-même sera révoquée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour accorder une autorisation, le fournisseur d’autorisations doit avoir l’autorisation elle-même avec le **WITH GRANT OPTION**, ou doit avoir une autorisation plus élevée qui implique l’autorisation accordée.  Les propriétaires d'objets peuvent accorder des autorisations sur les objets qu'ils possèdent. Les principaux avec **contrôle** autorisation sur un élément sécurisable permettre accorder une autorisation sur cet élément sécurisable.  Membres de la **db_owner** et **db_securityadmin** des rôles de base de données fixe peuvent accorder une autorisation dans la base de données.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
@@ -230,7 +230,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   Exécutez  
   
 -   INSERT  
   

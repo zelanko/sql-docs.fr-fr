@@ -14,13 +14,13 @@ ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 27ecbb2ca677523d6bcb97af8ee9c0c961ae718f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Options de configuration avancée pour les Services de Machine Learning
 
@@ -45,7 +45,7 @@ En outre, votre administrateur de base de données doit permettre à ce groupe l
 
 + Les noms de comptes d’utilisateur dans le pool sont au format SQLInstanceName*nn*. Par exemple, si vous utilisez l’instance par défaut pour l’apprentissage, le pool de comptes d’utilisateur prend en charge les noms de compte tels que MSSQLSERVER01, MSSQLSERVER02 et ainsi de suite.
 
-+ La taille du pool de comptes d’utilisateur est statique et sa valeur par défaut est 20. Le nombre de sessions de runtime externe qui peuvent s’exécuter simultanément est limité par la taille de ce pool de comptes d’utilisateur. Pour modifier cette limite, un administrateur doit utiliser le Gestionnaire de Configuration SQL Server.
++ La taille du pool de comptes d’utilisateur est statique et sa valeur par défaut est 20. Le nombre de sessions de runtime externe qui peuvent s’exécuter simultanément est limité par la taille de ce pool de comptes d’utilisateur. Pour modifier cette limite, un administrateur doit utiliser le Gestionnaire de Configuration SQL Server.
 
 Pour plus d’informations sur la façon d’apporter des modifications pour le pool de comptes d’utilisateur, consultez [modifier le pool de comptes d’utilisateur pour SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 

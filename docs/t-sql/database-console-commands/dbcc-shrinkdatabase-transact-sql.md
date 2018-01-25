@@ -1,5 +1,5 @@
 ---
-title: DBCC SHRINKDATABASE (Transact-SQL) | Documents Microsoft
+title: DBCC SHRINKDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: b8ca8cceddccd4066b7c1762bc75dffee02be842
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -82,7 +82,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les colonnes du jeu de résultats.
   
-|Nom de colonne|Description|  
+|Nom de colonne| Description|  
 |-----------------|-----------------|  
 |**DbId**|Numéro d’identification du fichier de base de données la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduction.|  
 |**FileId**|Numéro d’identification du fichier de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduction.|  
@@ -94,7 +94,7 @@ Le tableau suivant décrit les colonnes du jeu de résultats.
 >[!NOTE]
 > Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’affiche pas les lignes pour ces fichiers ne pas réduits.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Pour réduire tous les fichiers de données et fichiers journaux d'une base de données particulière, exécutez la commande DBCC SHRINKDATABASE. Pour augmenter ou diminuer les données d’un fichier journal à la fois pour une base de données spécifique, exécutez le [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) commande.
   
 Pour afficher la quantité actuelle de l’espace libre (non alloué) dans la base de données, exécutez [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).

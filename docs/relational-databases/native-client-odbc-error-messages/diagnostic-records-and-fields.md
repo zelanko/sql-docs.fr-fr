@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ced62a96f94fa4cb929f295f7a390c60b42e15d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>Enregistrements et champs de diagnostic
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  Les champs dans les enregistrements d'état contiennent des informations sur des erreurs ou des avertissements spécifiques retournés par le gestionnaire de pilotes, le pilote ou la source de données ODBC, y compris la valeur SQLSTATE, le numéro d'erreur native, le message de diagnostic, le numéro de colonne et le numéro de ligne. Les enregistrements d'état sont créés uniquement si la fonction retourne SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA ou SQL_STILL_EXECUTING. Pour obtenir une liste complète des champs dans les enregistrements d’état, consultez **SQLGetDiagField**.  
   
- **SQLGetDiagRec** récupère un seul enregistrement de diagnostic, ainsi que ses ODBC SQLSTATE, numéro d’erreur natif et des champs de message de diagnostic. Cette fonctionnalité est similaire à l’API ODBC 2. *x***SQLError** (fonction). La fonction de gestion des erreurs la plus simple dans ODBC 3. *x* consiste à appeler à plusieurs reprises **SQLGetDiagRec** en commençant par le *RecNumber* paramètre défini sur 1 et en incrémentant *RecNumber* de 1 jusqu'à ce que **SQLGetDiagRec** retourne SQL_NO_DATA. Cela équivaut à une API ODBC 2. *x* application appelant **SQLError** jusqu'à ce qu’elle retourne SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** récupère un seul enregistrement de diagnostic, ainsi que ses ODBC SQLSTATE, numéro d’erreur natif et des champs de message de diagnostic. Cette fonctionnalité est similaire à l’API ODBC 2. *x *** SQLError** fonction. La fonction de gestion des erreurs la plus simple dans ODBC 3. *x* consiste à appeler à plusieurs reprises **SQLGetDiagRec** en commençant par le *RecNumber* paramètre défini sur 1 et en incrémentant *RecNumber* de 1 jusqu'à ce que **SQLGetDiagRec** retourne SQL_NO_DATA. Cela équivaut à une API ODBC 2. *x* application appelant **SQLError** jusqu'à ce qu’elle retourne SQL_NO_DATA_FOUND.  
   
  ODBC 3. *x* prend en charge beaucoup plus d’informations de diagnostic qu’ODBC 2. *x*. Ces informations sont stockées dans des champs supplémentaires dans les enregistrements de diagnostic récupérés à l’aide de **SQLGetDiagField**.  
   

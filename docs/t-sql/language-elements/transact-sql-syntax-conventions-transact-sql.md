@@ -30,13 +30,13 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7c4eb67190b5123296fbcffb3fac3f09e9ec2000
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/19/2018
   
  Les constantes de chaîne de caractères Unicode avec la lettre du préfixe de nombreux exemples de code **N**. Sans le **N** préfixe, la chaîne est convertie en page de codes par défaut de la base de données. Cette page risque de ne pas reconnaître certains caractères.  
   
-## <a name="applies-to-references"></a>Informations de référence de type « S'applique à »  
+## <a name="applies-to-references"></a>Informations de référence de type « S'applique à »  
  Le [!INCLUDE[tsql](../../includes/tsql-md.md)] référence inclut des articles relatifs aux [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Au début de chaque article est une section indiquant les produits qui prennent en charge le sujet de l’article. Si un produit est omis, la fonctionnalité décrite par l’article n’est pas disponible dans ce produit. Par exemple, les groupes de disponibilité ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Le **créer un groupe de disponibilité** article indique qu’il s’applique à **SQL Server (SQL Server 2012 jusqu'à la version actuelle)** , car il ne s’applique pas aux [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Dans certains cas, le sujet général de l’article peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données à relation contenant-contenu ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Le **CREATE USER** instruction peut être utilisée dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit, mais la **avec mot de passe** syntaxe ne peut pas être utilisée avec les versions antérieures. Dans ce cas, supplémentaire **s’applique à** sections sont insérées dans les descriptions des arguments appropriés dans le corps de l’article.  

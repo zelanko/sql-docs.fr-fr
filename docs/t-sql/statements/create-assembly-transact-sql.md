@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +61,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ASSEMBLY_NAME*  
+ *assembly_name*  
  Nom de l'assembly. Le nom doit être unique au sein de la base de données et valide [identificateur](../../relational-databases/databases/database-identifiers.md).  
   
  AUTORISATION *owner_name*  
  Spécifie le nom d'un utilisateur ou d'un rôle comme propriétaire de l'assembly. *owner_name* doit être le nom d’un rôle dont l’utilisateur actuel est membre ou l’utilisateur actuel doit avoir l’autorisation IMPERSONATE *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve l'assembly en cours de téléchargement, et également le nom du fichier de manifeste qui correspond à l'assembly.  \<client_assembly_specifier > peut être exprimée comme une chaîne fixe ou de l’évaluation d’expression en une chaîne fixe, avec des variables. CREATE ASSEMBLY ne prend pas en charge le chargement d'assemblys multimodules. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche au même emplacement les assemblys dépendants de cet assembly et les télécharge avec le même propriétaire en tant qu'assembly au niveau racine. Si ces assemblys dépendants sont introuvables et s'ils ne sont pas déjà chargés dans la base de données active, l'instruction CREATE ASSEMBLY échoue. Si les assemblys dépendants sont déjà chargés dans la base de données active, leur propriétaire doit être identique à celui de l'assembly créé.
   
  \<client_assembly_specifier > ne peut pas être spécifié si l’utilisateur connecté est empruntée.  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  Liste des valeurs binaires qui composent l'assembly et ses assemblys dépendants. La première valeur de la liste est considérée comme l'assembly de niveau racine. Les valeurs correspondant aux assemblys dépendants peuvent être fournies dans n'importe quel ordre. Toutes les valeurs qui ne correspondent pas à des dépendances de l'assembly racine sont ignorées.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
  *varbinary_expression*  
  Est une expression de type **varbinary**.  
   
- PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE}  
+ PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
  >  [!IMPORTANT]  
  >  Le `PERMISSION_SET` option est affectée par la `clr strict security` option, décrite dans l’avertissement lors de l’ouverture. Lorsque `clr strict security` est activé, tous les assemblys sont traités en tant que `UNSAFE`.
  
@@ -149,7 +149,7 @@ Lorsque vous tentez d’accéder à l’assembly spécifié dans \<client_assemb
   
  Pour plus d’informations, consultez [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE ASSEMBLY.  
   
  Si PERMISSION_SET = EXTERNAL_ACCESS est spécifié, nécessite**EXTERNAL ACCESS ASSEMBLY** autorisation sur le serveur. Si PERMISSION_SET = UNSAFE est spécifié, nécessite **UNSAFE ASSEMBLY** autorisation sur le serveur.  
@@ -170,7 +170,7 @@ Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple a : création d’un assembly à partir d’une dll  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  L’exemple suivant suppose que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exemples sont installés à l’emplacement par défaut de l’ordinateur local et l’application exemple HelloWorld.csproj est compilée. Pour plus d’informations, consultez [exemple Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
@@ -182,7 +182,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple b : création d’un assembly à partir des bits d’assembly  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Remplacez les bits d’exemple (qui sont terminée ou non valides) par vos bits d’assembly.  
   
@@ -194,12 +194,12 @@ WITH PERMISSION_SET = SAFE;
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [CRÉER un agrégat &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Scénarios d’utilisation et des exemples pour le Common Language Runtime &#40; CLR &#41; Intégration](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

@@ -1,5 +1,5 @@
 ---
-title: RESTAURATION (Transact-SQL) | Documents Microsoft
+title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -41,15 +41,15 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTAURER des instructions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -404,10 +404,10 @@ Note: URL is the format used to specify the location and the file name for the W
 >   
 >  Pour plus d’informations spécifiques à la sauvegarde de SQL Server et de restauration avec le stockage d’objets Blob Windows Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-### <a name="permissions"></a>Permissions  
- Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
+### <a name="permissions"></a>Autorisations  
+ Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="examples"></a> Exemples  
  Tous les exemples partent du principe qu'une sauvegarde complète de la base de données a été effectuée.  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91; Début d’exemples &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. Restauration du journal des transactions jusqu'à une marque  
+###  <a name="restoring_transaction_log_to_mark"></a> G. Restauration du journal des transactions jusqu'à une marque  
  L'exemple suivant restaure le journal des transactions jusqu'à la marque dans la transaction marquée nommée `ListPriceUpdate`.  
   
 ```  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91; Début d’exemples &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. Restauration en utilisant la syntaxe TAPE  
+###  <a name="restoring_using_TAPE"></a> H. Restauration en utilisant la syntaxe TAPE  
  L'exemple suivant restaure une sauvegarde de base de données complète à partir d'une unité de sauvegarde `TAPE`.  
   
 ```  
@@ -586,7 +586,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91; Début d’exemples &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>I. Restauration en utilisant la syntaxe FILE et FILEGROUP  
+###  <a name="restoring_using_FILE_n_FG"></a> I. Restauration en utilisant la syntaxe FILE et FILEGROUP  
  L'exemple suivant restaure une base de données nommée `MyDatabase` qui est composée de deux fichiers, d'un groupe de fichiers secondaire et d'un journal des transactions. La base de données utilise le mode de récupération complète.  
   
  La sauvegarde de la base de données est le neuvième jeu de sauvegarde dans le support de sauvegarde sur une unité de sauvegarde logique nommée `MyDatabaseBackups`. Trois sauvegardes de fichier journal, qui se trouvent dans les trois jeux de sauvegarde suivants (`10`, `11` et `12`) sur l'unité `MyDatabaseBackups` sont ensuite restaurés à l'aide de `WITH NORECOVERY`. Une fois restaurée la dernière sauvegarde de fichier journal, la base de données est récupérée.  
@@ -628,7 +628,7 @@ GO
   
  [&#91; Début d’exemples &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. Rétablissement à partir d'un instantané de base de données  
+###  <a name="reverting_from_db_snapshot"></a> J. Rétablissement à partir d'un instantané de base de données  
  L'exemple suivant rétablit un instantané de base de données. Il part du principe qu'un seul instantané existe actuellement dans la base de données. Pour obtenir un exemple de création de cet instantané de base de données, consultez [créer un instantané de base de données &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **Remarque :** rétablissement d’un instantané supprime tous les catalogues de texte intégral.  
@@ -642,7 +642,7 @@ GO
 
  [&#91; Début d’exemples &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K. Restauration à partir du service de stockage d’objets Blob Microsoft Azure  
+###  <a name="Azure_Blob"></a> K. Restauration à partir du service de stockage d’objets Blob Microsoft Azure  
 Les trois exemples ci-dessous impliquent l’utilisation du service de stockage Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur pour les fichiers de données est appelé `myfirstcontainer`.  Le conteneur pour les fichiers de sauvegarde est appelé `mysecondcontainer`.  Une stratégie d’accès stockée a été créée avec des droits en lecture, écriture, suppression et la liste, pour chaque conteneur.  Informations d’identification SQL Server ont été créées à l’aide de Signatures d’accès partagé qui sont associés les stratégies d’accès stockée.  Pour plus d’informations spécifiques à la sauvegarde de SQL Server et de restauration avec le stockage d’objets Blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Restaurer une sauvegarde complète de la base de données à partir du service de stockage Microsoft Azure**  
@@ -686,7 +686,7 @@ RESTORE DATABASE Sales
  - [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- - [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ - [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
  - [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

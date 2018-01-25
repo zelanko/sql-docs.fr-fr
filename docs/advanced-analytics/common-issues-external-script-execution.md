@@ -14,13 +14,13 @@ ms.topic: article
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ce80d7ca50b9410120bdb61a347d4b8a90c39b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2920cfae6e23845a9ac1643a17d6f133adaaf70d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
 
@@ -191,9 +191,9 @@ Si vous avez installé, puis apprentissage, mais que vous obtenez cette erreur l
 
 4. Le redémarrage du service généralement de résoudre le problème afin que d’exécuter des scripts d’apprentissage machine. Si le redémarrage ne résout pas le problème, notez le chemin d’accès et les arguments dans le **chemin d’accès binaire** propriété et procédez comme suit :
 
-    A. Vérifier le fichier .config de l’utilitaire de chargement et assurez-vous que le répertoire de travail est valide.
+    a. Vérifier le fichier .config de l’utilitaire de chargement et assurez-vous que le répertoire de travail est valide.
 
-    B. Vérifiez que le groupe Windows qui est utilisé par le Launchpad peut se connecter à l’instance de SQL Server, comme décrit dans la [section précédente](#bkmk_LaunchpadTS).
+    b. Vérifiez que le groupe Windows qui est utilisé par le Launchpad peut se connecter à l’instance de SQL Server, comme décrit dans la [section précédente](#bkmk_LaunchpadTS).
 
     c. Si vous modifiez les propriétés de service, redémarrez le service Launchpad.
 

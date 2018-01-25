@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59846868f34d756ad1575ade730e08ec5ed882e2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4471b9f4d85240a51d456ea90973c852f5e5db76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Exécuter directement une instruction (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
      Configurez toutes les paramètres d'image ou de texte de données en cours d'exécution.  
   
-     Mettez les valeurs de données S et les longueurs de données S dans les tableaux de paramètres liés.  
+     Mettez les valeurs de données S et les longueurs de données S dans les tableaux de paramètres liés.  
   
 3.  Appelez [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
   

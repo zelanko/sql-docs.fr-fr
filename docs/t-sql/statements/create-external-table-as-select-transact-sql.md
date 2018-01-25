@@ -24,13 +24,13 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,10 +78,10 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [[ *nom_base_de_données* . [ *schema_name* ]. ] | *nom_schéma* . ] *nom_table*  
+ [[ *nom_base_de_données* . [ *schema_name* ] . ] | *nom_schéma* . ] *table_name*  
  Un à trois - nom de partie de la table à créer dans la base de données. Pour une table externe, seules les métadonnées de la table sont stockée dans la base de données relationnelle.  
   
- EMPLACEMENT = '*hdfs_folder*'  
+ LOCATION =  '*hdfs_folder*'  
  Spécifie l’emplacement où écrire les résultats de l’instruction SELECT sur la source de données externe. L’emplacement est un nom de dossier et peut éventuellement inclure un chemin d’accès est relatif au dossier racine du Hadoop Cluster ou de l’objet Blob de stockage Azure.  PolyBase créera le chemin d’accès et le dossier s’il n’existe pas.  
   
  Les fichiers externes sont écrits dans *hdfs_folder* et nommée *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Par exemple, QID776_20160130_182739_0.orc.  
@@ -136,7 +136,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Sélectionnez \<select_criteria > remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* est le corps de l’instruction SELECT qui détermine les données à copier vers la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette commande le **utilisateur de base de données** a besoin de ces autorisations ou les appartenances tous :  
   
 -   **ALTER SCHEMA** autorisation sur le schéma local qui contiendra la nouvelle table ou l’appartenance à la **db_ddladmin** rôle de base de données fixe.  

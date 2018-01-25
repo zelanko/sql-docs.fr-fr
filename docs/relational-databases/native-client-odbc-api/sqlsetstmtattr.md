@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtAttr | Documents Microsoft
+title: SQLSetStmtAttr | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9a4ed6f218b77febc84719fb001ca072c9b80bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Si une tentative est effectuée pour définir SQL_SOPT_SS_PARAM_FOCUS à l’ordinal d’un paramètre qui est pas un paramètre table, SQLSetStmtAttr retourne SQL_ERROR et un enregistrement de diagnostic est créé avec SQLSTATE = HY024 et le message « valeur d’attribut non valide ». SQL_SOPT_SS_PARAM_FOCUS n'est pas modifié quand SQL_ERROR est retourné.  
   
- La définition de SQL_SOPT_SS_PARAM_FOCUS sur 0 restaure l'accès aux enregistrements de descripteurs pour les paramètres.  
+ La définition de SQL_SOPT_SS_PARAM_FOCUS sur 0 restaure l'accès aux enregistrements de descripteurs pour les paramètres.  
   
  SQLSetStmtAttr peut également être utilisé pour définir SQL_SOPT_SS_NAME_SCOPE. Pour plus d'informations, consultez la section SQL_SOPT_SS_NAME_SCOPE, plus loin dans cette rubrique.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  L'attribut SQL_SOPT_SS_CURSOR spécifie si le pilote utilise les options de performances spécifiques au pilote sur les curseurs. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) n’est pas autorisée lorsque ces options sont définies. La valeur par défaut est SQL_CO_OFF. La valeur de *ValuePtr* est de type SQLLEN.  
   
-|*ValuePtr* valeur|Description|  
+|*ValuePtr* valeur| Description|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Valeur par défaut. Désactive les curseurs avant uniquement rapides, en lecture seule et l’auto-extraction, Active **SQLGetData** sur les curseurs avant uniquement, en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur différent à l’aide de **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Active les curseurs avant uniquement rapides, en lecture seule, désactive **SQLGetData** sur les curseurs avant uniquement, en lecture seule.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  L’attribut SQL_SOPT_SS_DEFER_PREPARE détermine si l’instruction est préparée immédiatement ou différée jusqu'à ce que **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) est exécutée. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et version antérieure, cette propriété est ignorée (aucune préparation différée). La valeur de *ValuePtr* est de type SQLLEN.  
   
-|*ValuePtr* valeur|Description|  
+|*ValuePtr* valeur| Description|  
 |----------------------|-----------------|  
 |SQL_DP_ON|Valeur par défaut. Après avoir appelé [fonction SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) est exécutée.|  
 |SQL_DP_OFF|L’instruction est préparée dès que **SQLPrepare** est exécutée.|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  La valeur de *ValuePtr* est de type SQLLEN.  
   
-|*ValuePtr* valeur|Description|  
+|*ValuePtr* valeur| Description|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Valeur par défaut. Le pilote ne convertit pas les valeurs date, heure et devise monétaire en données de chaînes de caractères à l'aide des paramètres régionaux du client.|  
 |SQL_RE_ON|Le pilote utilise les paramètres régionaux du client lors de la conversion des données date, heure et devise monétaire en données de chaînes de caractères.|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  L’attribut SQL_SOPT_SS_TEXTPTR_LOGGING bascule l’enregistrement des opérations sur les colonnes contenant des **texte** ou **image** données. La valeur de *ValuePtr* est de type SQLLEN.  
   
-|*ValuePtr* valeur|Description|  
+|*ValuePtr* valeur| Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Désactive la journalisation des opérations effectuées sur **texte** et **image** données.|  
 |SQL_TL_ON|Valeur par défaut. Active la journalisation des opérations effectuées sur **texte** et **image** données.|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  L'attribut SQL_SOPT_SS_HIDDEN_COLUMNS expose dans le jeu de résultats les colonnes masquées dans une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. Le pilote n'expose pas ces colonnes par défaut. La valeur de *ValuePtr* est de type SQLLEN.  
   
-|*ValuePtr* valeur|Description|  
+|*ValuePtr* valeur| Description|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Valeur par défaut. Les colonnes FOR BROWSE sont masquées dans le jeu de résultats.|  
 |SQL_HC_ON|Expose les colonnes FOR BROWSE.|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Exemple :  
+ Par exemple :  
   
  `service=mySSBService;local database=mydb`  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 01/08/2018
   
  Le type de SQL_SOPT_SS_NAME_SCOPE est SQLULEN.  
   
-|*ValuePtr* valeur|Description|  
+|*ValuePtr* valeur| Description|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Valeur par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lorsque vous utilisez la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui ne sont pas membres d’éparse **column_set**.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indique que l'application requiert les métadonnées pour un type de table, plutôt qu'une table réelle (les fonctions de catalogue doivent retourner les métadonnées pour les types de table). L’application transmet ensuite le TYPE_NAME du paramètre table incluse en tant que le *TableName* paramètre.|  
@@ -154,6 +154,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetStmtAttr, fonction](http://go.microsoft.com/fwlink/?LinkId=59355)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

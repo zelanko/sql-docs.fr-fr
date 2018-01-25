@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>PRÉDIRE (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ L’objet de modèle peut être créé à l’aide de R ou Python ou un autre ou
 
 Le paramètre de données est utilisé pour spécifier les données utilisées pour calculer les scores ou la prédiction. Données sont spécifiées sous la forme d’une source de table dans la requête. Source de table peut être une table, un alias de table, un alias de l’expression de table commune, une vue ou un fonction table.
 
-**paramètres**
+**parameters**
 
 Le paramètre de paramètres est utilisé pour spécifier des paramètres facultatifs définis par l’utilisateur utilisés pour calculer les scores ou la prédiction.
 
@@ -73,7 +73,7 @@ Le nom de chaque paramètre est spécifique au type de modèle. Par exemple, la 
 
 > [REMARQUE] Cette option n’est pas pris en charge dans la version préliminaire de SQL Server 2017 et est incluse uniquement à des fins de compatibilité avant.
 
-**AVEC ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 La clause WITH est utilisée pour spécifier le schéma de la sortie retournée par le `PREDICT` (fonction).
 
@@ -91,7 +91,7 @@ Les messages d’erreur liés aux données, le modèle ou le format de colonne s
 
 Il n’est pas possible d’afficher la structure de modèle interne à l’aide de `PREDICT`. Si vous souhaitez comprendre le contenu du modèle lui-même, vous devez charger le modèle objet, désérialiser et utiliser code R approprié pour analyser le modèle.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Le `PREDICT` fonction est prise en charge dans toutes les éditions de SQL Server, notamment Linux.
 

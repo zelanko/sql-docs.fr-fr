@@ -14,13 +14,13 @@ ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 24d15dab6e2b7b038b862e8d72d0b2ca625bd3f6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec10bd25b3709a578ea5dee6c109da69ff7d3327
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Installation sans assistance de Python Machine Learning Services (de-de base de données)
 
@@ -29,7 +29,7 @@ Cette rubrique décrit comment utiliser les arguments de ligne de commande dans 
 > [!NOTE]
 > N’oubliez pas d’inclure les arguments de ligne de commande pour les contrats de licence, un pour Python et pour SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de lancer le processus d’installation, prenez connaissance des conditions requises suivantes :
 

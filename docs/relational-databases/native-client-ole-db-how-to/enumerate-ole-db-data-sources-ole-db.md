@@ -14,17 +14,17 @@ ms.topic: reference
 helpviewer_keywords: data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb40617e799f702d06c0d2f877a7f24643703053
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 72ad4f8ad956d2f47cd454fbb5ae590f8ce07569
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
-# <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
+# <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour répertorier les sources de données visibles pour l'énumérateur SQLOLEDB, le consommateur appelle la méthode [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) . Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
   
- Selon la bibliothèque réseau utilisée, le système recherche les sources de données dans le domaine approprié. Pour les canaux nommés, il s'agit du domaine auquel le client est connecté. Pour AppleTalk, il s'agit de la zone par défaut. Pour SPX/IPX, il s'agit de la liste des installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles dans la base de données Bindery. Pour BANYAN VINES, il s'agit des installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles dans le réseau local. Les sockets Multiprotocol et TCP/IP ne sont pas pris en charge.  
+ Selon la bibliothèque réseau utilisée, le système recherche les sources de données dans le domaine approprié. Pour les canaux nommés, il s'agit du domaine auquel le client est connecté. Pour AppleTalk, il s'agit de la zone par défaut. Pour SPX/IPX, il s'agit de la liste des installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles dans la base de données Bindery. Pour BANYAN VINES, il s'agit des installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles dans le réseau local. Les sockets Multiprotocol et TCP/IP ne sont pas pris en charge.  
   
  Lorsque le serveur est désactivé ou activé, la mise à jour des informations dans ces domaines peut prendre un moment.  
   
@@ -55,8 +55,8 @@ ms.lasthandoff: 01/08/2018
   
 6.  Appelez **IRowset::GetData**pour récupérer les données de la copie de l'ensemble de lignes de la ligne et traiter ces données.  
   
-## <a name="example"></a> Exemple  
- Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+## <a name="example"></a>Exemple  
+ Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

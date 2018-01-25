@@ -19,15 +19,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08cca5788a9e3908fd72fd415feaab72533b1480
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriétés d'initialisation et d'autorisation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 
   Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client interprète les propriétés d'initialisation et d'autorisation OLE DB comme suit :  
   
-|ID de propriété|Description|  
+|ID de propriété| Description|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ne met pas en cache les informations d'authentification.<br /><br /> Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne DB_S_ERRORSOCCURRED lors d'une tentative de définition de la valeur de propriété. Le *dwStatus* membre de la Structure DBPROP indique DBPROPSTATUS_NOTSUPPORTED.|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client utilise la norme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des mécanismes de sécurité pour masquer les mots de passe.<br /><br /> Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne DB_S_ERRORSOCCURRED lors d'une tentative de définition de la valeur de propriété. Le *dwStatus* membre de la Structure DBPROP indique DBPROPSTATUS_NOTSUPPORTED.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
  Dans la propriété spécifique au fournisseur de jeu de propriétés DBPROPSET_SQLSERVERDATASOURCEINFO, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client définit les propriétés supplémentaires ; consultez [propriétés d’informations de Source de données](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md) pour plus d’informations.  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>Chaîne du fournisseur OLE DB de SQL Server Native Client  
- Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client reconnaît la syntaxe ODBC dans les valeurs de propriétés de la chaîne du fournisseur. La propriété de chaîne du fournisseur est fournie en tant que valeur de la propriété d'initialisation OLE DB DBPROP_INIT_PROVIDERSTRING lorsqu'une connexion est établie à la source de données OLE DB. Cette propriété indique les données de connexion OLE DB spécifiques au fournisseur, qui sont requises pour implémenter une connexion à la source de données OLE DB. Dans la chaîne, les éléments sont délimités à l'aide d'un point-virgule. Le dernier élément de la chaîne doit se terminer par un point-virgule. Chaque élément comprend un mot clé, le signe égal et la valeur passée lors de l'initialisation. Exemple :  
+ Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client reconnaît la syntaxe ODBC dans les valeurs de propriétés de la chaîne du fournisseur. La propriété de chaîne du fournisseur est fournie en tant que valeur de la propriété d'initialisation OLE DB DBPROP_INIT_PROVIDERSTRING lorsqu'une connexion est établie à la source de données OLE DB. Cette propriété indique les données de connexion OLE DB spécifiques au fournisseur, qui sont requises pour implémenter une connexion à la source de données OLE DB. Dans la chaîne, les éléments sont délimités à l'aide d'un point-virgule. Le dernier élément de la chaîne doit se terminer par un point-virgule. Chaque élément comprend un mot clé, le signe égal et la valeur passée lors de l'initialisation. Par exemple :  
   
 ```  
 Server=MyServer;UID=MyUserName;  

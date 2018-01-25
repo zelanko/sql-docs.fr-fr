@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07f9f5e3409d491afd9abd4fdb9fe48af6bc574d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a469aaaf1e1b84a27091ead07fded761b02c3f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Envoyer et recevoir des données de façon incrémentielle avec FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour plus d’informations sur la fonctionnalité FILESTREAM, consultez [prise en charge FILESTREAM &#40; ODBC &#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une base de données utilisée par cet exemple. Votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture pour exécuter ce script (par exemple, ouvrez une session en tant que compte système local).  

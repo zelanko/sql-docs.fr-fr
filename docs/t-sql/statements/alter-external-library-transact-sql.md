@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e679664f02ffcb08d811a66229a21f1bdaf08077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER bibliothèque externe (Transact-SQL)  
 
@@ -57,7 +57,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Arguments
 
-**nom_librairie**
+**library_name**
 
 Spécifie le nom d’une bibliothèque de package existante. Les bibliothèques sont limités à l’utilisateur. Autrement dit, les noms de bibliothèque sont considérées comme uniques dans le contexte d’un utilisateur spécifique ou un propriétaire.
 
@@ -88,7 +88,7 @@ Spécifie le contenu du package comme un littéral hexadécimal, similaire aux a
 
 Spécifie la plateforme pour le contenu de la bibliothèque. Cette valeur est requise lors de la modification d’une bibliothèque existante pour ajouter une autre plateforme. Windows est la seule plateforme prise en charge.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour le langage R, les packages doivent être préparées sous la forme de fichiers d’archive ZIP avec le. Extension ZIP pour Windows. Actuellement, seule la plate-forme Windows est prise en charge.  
 

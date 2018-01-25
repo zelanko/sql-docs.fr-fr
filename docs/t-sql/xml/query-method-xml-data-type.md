@@ -19,13 +19,13 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22770e7338ef7a3dff5a4f4486d0543cdf75d76c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ec43116cf548df0a6f3541ab882635331f1b395
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="query-method-xml-data-type"></a>Méthode query() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ set @myDoc = '<Root>
 SELECT @myDoc.query('/Root/ProductDescription/Features')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Features>  
@@ -88,7 +88,7 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La colonne CatalogDescription est typé **xml** colonne. En d'autres termes, elle possède une collection de schémas qui lui est associée. Dans le [prologue XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), le **espace de noms** est utilisé pour définir le préfixe qui sera utilisé ultérieurement dans le corps de la requête.  
   
@@ -122,7 +122,7 @@ where CatalogDescription.exist('
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

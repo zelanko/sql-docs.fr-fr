@@ -16,13 +16,13 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (entrepôt de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -111,15 +111,15 @@ Pour plus d’informations, consultez la [les options de partition de Table](htt
 ### <a name="select-options"></a>Sélectionnez les options
 L’instruction select est la différence fondamentale entre SACT et CREATE TABLE.  
 
- `WITH`*common_table_expression*  
+ `WITH` *common_table_expression*  
  Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Pour plus d’informations, consultez [avec common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* est le corps de l’instruction SELECT qui détermine les données à copier vers la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 SACT requiert `SELECT` autorisation sur les objets référencés dans les *select_criteria*.
 
 Pour les autorisations créer une table, consultez [autorisations](https://msdn.microsoft.com/library/mt203953/#Permissions) dans CREATE TABLE. 
@@ -833,9 +833,9 @@ Par conséquent, vous pouvez voir que la cohérence des types et la gestion des 
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [CRÉER une TABLE &#40; Entrepôt de données SQL Azure &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [SUPPRIMER une TABLE externe &#40; Transact-SQL &#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
+ [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [MODIFICATION de la TABLE externe &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
 

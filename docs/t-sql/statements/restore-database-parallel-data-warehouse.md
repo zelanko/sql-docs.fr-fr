@@ -15,13 +15,13 @@ ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTAURER la base de données (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -68,7 +68,7 @@ RESTORE HEADERONLY
  À partir du disque = '\\\\*UNC_path*\\*Répertoire_Sauvegarde*'  
  Le chemin d’accès réseau et le répertoire à partir de laquelle [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaure les fichiers de sauvegarde. Par exemple, à partir du disque = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
   
- *Répertoire_Sauvegarde*  
+ *backup_directory*  
  Spécifie le nom d’un répertoire qui contient la sauvegarde complète ou différentielle. Par exemple, vous pouvez effectuer une opération RESTORE HEADERONLY sur une sauvegarde complète ou différentielle.  
   
  *full_backup_directory*  
@@ -90,7 +90,7 @@ RESTORE HEADERONLY
   
  Les résultats RESTORE HEADERONLY sont modélisées après le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY des résultats. Le résultat contient plus de 50 colonnes qui sont pas tous utilisés par [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour obtenir une description des colonnes dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des résultats RESTORE HEADERONLY, consultez [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert le **CREATE ANY DATABASE** autorisation.  
   
  Nécessite un compte Windows qui a l’autorisation d’accéder à et lire à partir du répertoire de sauvegarde. Vous devez également stocker le nom de compte Windows et le mot de passe dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  

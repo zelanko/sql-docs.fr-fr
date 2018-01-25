@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Documents Microsoft
+title: SQLColumns | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f539f5202717a5eb58929a9be9ea7945687cbb4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 661c678e8d98d1b4d3f88c29d6d0b786b4e686d4
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par le jeu de résultats :  
   
-|Nom de colonne|Description|  
+|Nom de colonne| Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les **varchar (max)** des types de données.|  
 |TYPE_NAME|Retourne « varchar », « varbinary » ou « nvarchar » pour le **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** des types de données.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Prise en charge SQLColumns pour les colonnes éparses  
  Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des colonnes spécifiques qui ont été ajoutés au jeu de résultats pour SQLColumns :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Si la colonne est la **column_set** colonne, sql_true ; sinon, SQL_FALSE.|  
@@ -97,6 +97,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLColumns (fonction)](http://go.microsoft.com/fwlink/?LinkId=59336)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   
