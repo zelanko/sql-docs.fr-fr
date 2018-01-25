@@ -1,5 +1,5 @@
 ---
-title: Notes de publication pour 2017 du serveur SQL sur Linux | Documents Microsoft
+title: Notes de publication pour 2017 de SQL Server sur Linux | Documents Microsoft
 description: "Cette rubrique contient les notes de publication et les fonctionnalités prises en charge pour SQL Server 2017 est en cours d’exécution sur Linux. Notes de publication sont inclus dans la version la plus récente et plusieurs versions précédentes."
 author: rothja
 ms.author: jroth
@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/10/2018
 ---
-# <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 du serveur SQL sur Linux
+# <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
 Les notes suivantes s’appliquent à SQL Server 2017 est en cours d’exécution sur Linux. La rubrique ci-dessous est divisée en sections pour chaque version. La version GA a détaillées prise en charge et connu des problèmes répertoriés. Chaque version de mise à jour Cumulative (CU) a un lien vers une rubrique d’aide qui décrit les modifications CU ainsi que des liens vers le package télécharge de Linux.
 
