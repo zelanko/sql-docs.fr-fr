@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ac062d5ba0e12162aa6872f57e90780b1d7c4d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 990768fa64b5da13d633c28ae64a0ab0c95e78b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="deferred-transactions-sql-server"></a>Transactions différées (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, une transaction endommagée est différée si les données requises par la restauration (annulation) sont hors connexion durant le démarrage de la base de données. Une *transaction différée* est une transaction qui n’est pas validée lorsque la phase de restauration par progression s’achève et dont la restauration ne peut pas être annulée en raison d’une erreur. Si la transaction ne peut pas être annulée, elle est différée.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |Action|Résolution (en cas de problèmes d'E/S ou de données requises hors connexion)|  
 |------------|-----------------------------------------------------------------------|  
 |Démarrage du serveur|transaction différée|  
-|Restore|transaction différée|  
+|Restaurer|Transaction différée|  
 |Attacher|Échec de l'attachement|  
 |Redémarrage automatique|transaction différée|  
 |Création d'une base de données ou d'un instantané de base de données|Échec de la création|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
          Lorsque la commande DBCC rencontre la page erronée, elle la désalloue et répare les éventuelles erreurs associées. Cette approche permet de remettre en ligne la base de données dans un état physique cohérent. Il se peut néanmoins que d'autres données soient perdues ; c'est pourquoi cette approche ne doit être adoptée qu'en dernier recours.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Supprimer des groupes de fichiers obsolètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

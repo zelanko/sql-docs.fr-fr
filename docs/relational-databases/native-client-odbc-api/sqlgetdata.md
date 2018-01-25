@@ -1,5 +1,5 @@
 ---
-title: SQLGetData | Documents Microsoft
+title: SQLGetData | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3512c8dc7fe97902d13496fbae0c071f8da9b6e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4e738c8b3f4c2200287a7c4dc9578951e90c8dd8
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>Prise en charge SQLGetData pour les types CLR volumineux définis par l'utilisateur  
  **SQLGetData** prend en charge les types CLR volumineux définis par l’utilisateur (UDT). Pour plus d’informations, consultez [Large CLR User-Defined Types &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 SQLHDBC     hDbc = NULL;  
@@ -103,6 +103,6 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonction SQLGetData](http://go.microsoft.com/fwlink/?LinkId=59350)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

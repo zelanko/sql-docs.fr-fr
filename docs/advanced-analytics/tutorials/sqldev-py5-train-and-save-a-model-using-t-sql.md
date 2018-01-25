@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d8c20752d69b066934d1981025633dffd740318e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 07777ff0752a68e574c5f7f1a0021a8817eb7ea0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Étape 5 : L’apprentissage et enregistrer un modèle de Python à l’aide de T-SQL
 
@@ -124,14 +124,14 @@ Pour faciliter le former à nouveau le modèle sur de nouvelles données, vous e
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    Le traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages qui sont redirigés vers Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
+    Le traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages qui sont redirigés vers Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Par exemple :
 
     *Messages STDOUT du script externe :*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Ouvrez la table *nyc\_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -189,14 +189,14 @@ Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages qui sont redirigés vers Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
+    Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages qui sont redirigés vers Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Par exemple :
 
     *Messages STDOUT du script externe :*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Ouvrez la table *nyc_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 Dans l’étape suivante, vous utilisez les modèles formés pour créer des prédictions.
 

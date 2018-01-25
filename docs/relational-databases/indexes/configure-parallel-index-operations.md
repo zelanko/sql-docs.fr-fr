@@ -19,15 +19,15 @@ helpviewer_keywords:
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53114677b0aa3635e4c031c4b24309bcb7b4ab9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f6d408cdf02885ce9d3ec56a228bc9341cc7776
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-parallel-index-operations"></a>Configurer des opérations d'index parallèles
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
     |Valeur|Description|  
     |-----------|-----------------|  
     |0|Spécifie que le serveur détermine le nombre de processeurs utilisés, selon la charge système actuelle. Il s'agit de la valeur par défaut et recommandée.|  
-    |1|Supprime la création de plans parallèles. L'opération est exécutée en série.|  
+    | 1|Supprime la création de plans parallèles. L'opération est exécutée en série.|  
     |2-64|Limite le nombre de processeurs à la valeur spécifiée. Un nombre moins élevé de processeurs peuvent être utilisés en fonction de la charge de travail actuelle. Si une valeur supérieure au nombre d'UC disponibles est spécifiée, c'est le nombre d'UC disponibles qui est utilisé.|  
   
 -   L'exécution parallèle d'index et l'option d'index MAXDOP s'appliquent aux instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Pour définir le degré maximal de parallélisme sur un index existant  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>Définir le degré maximal de parallélisme sur un nouvel index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

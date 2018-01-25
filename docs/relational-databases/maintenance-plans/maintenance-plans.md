@@ -18,15 +18,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>Plans de maintenance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les plans de maintenance vous permettent de créer un flux de travail des tâches nécessaires à l’optimisation de votre base de données, à la création d’une sauvegarde régulière et à la recherche des incohérences. L'Assistant Plan de maintenance permet aussi de créer les principaux plans de maintenance, mais la création manuelle de ces plans offre beaucoup plus de souplesse.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  Les résultats générés par les tâches de maintenance peuvent être écrits en tant que rapport dans un fichier texte ou dans les tables du plan de maintenance, **sysmaintplan_log** et **sysmaintplan_logdetail**, de la table **msdb**. Pour consulter les résultats dans la visionneuse du fichier journal, cliquez avec le bouton droit sur **Plans de maintenance**, puis cliquez sur **Afficher l’historique**.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Utilisez les rubriques suivantes pour commencer à utiliser les plans de maintenance.  
   
 |||  

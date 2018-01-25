@@ -27,15 +27,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3342065c2af974fffc5e4a6d33c338362deb4a55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d4318ad30d660b9e04aa53100061fd6ed6036bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’exportation d’une application de la couche Données (DAC) déployée ou d’une base de données crée un fichier d’exportation qui inclut les définitions des objets de la base de données et toutes les données contenues dans les tables. Le fichier d'exportation peut ensuite être importé dans une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou dans [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Les opérations d’exportation-importation peuvent être combinées pour migrer une DAC entre différentes instances, pour créer une archive ou pour créer une copie sur site d’une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  Vous ne pouvez pas exporter une base de données contenant des objets qui ne sont pas pris en charge dans une DAC ou contenant des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  L’exportation d’une DAC requiert au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.  
   
 ##  <a name="UsingDeployDACWizard"></a> Utilisation de l'Assistant Exporter l'application de la couche Données  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Cliquez sur **Tâches** , puis sélectionnez **Exporter une application de la couche Données…**  
   
-5.  Renseignez les boîtes de dialogue de l'Assistant :  
+5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     -   [Page Introduction](#Introduction)  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Utilisez la méthode **Export** de type **Microsoft.SqlServer.Management.Dac.DacStore** pour exporter la DAC. Spécifiez le nom de la DAC à exporter, ainsi que le chemin d'accès au dossier où le fichier d'exportation doit être placé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extraire une DAC d'une base de données](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

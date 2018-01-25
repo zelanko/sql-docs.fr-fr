@@ -25,15 +25,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d65afb41e160671afa9466f648a08e49937e3b6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4fc9229e01d07d9932d0ae61ad60dc06d5855141
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Déployez une application de la couche Données (DAC) à partir d’un package DAC sur une instance existante du moteur de base de données ou de la base de données Azure SQL à l’aide d’un Assistant ou d’un script PowerShell. 
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  Vous pouvez déployer plusieurs fois le même package DAC sur une instance unique du [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous devez exécuter les déploiements un par un. Le nom d'instance DAC spécifié pour chaque déploiement doit être unique dans l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="managed-instances"></a>Instances managées  
- Si vous déployez une DAC dans une instance managée du moteur de base de données, la DAC déployée est incorporée dans l’**utilitaire SQL Server** la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC est ensuite présente dans le nœud **Applications de la couche Données déployées** de l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
+ Si vous déployez une DAC dans une instance managée du moteur de base de données, la DAC déployée est incorporée dans l’**utilitaire SQL Server** la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
   
 ###  <a name="database-options-and-settings"></a>Options et paramètres de base de données  
  Par défaut, la base de données créée pendant le déploiement aura tous les paramètres par défaut de l'instruction CREATE DATABASE, sauf pour les exceptions suivantes :  

@@ -36,15 +36,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c7f10d27faf1c0fc658550f962c71c2419ff8607
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un historique complet de toutes les opérations de restauration et de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur est stocké dans la base de données **msdb**. Cette rubrique présente les tables d'historique de sauvegarde et de restauration, ainsi que les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] servant à accéder à l'historique de sauvegarde. Elle explique également dans quels cas il est utile d'afficher la liste des fichiers journaux de base de données et de transactions et dans quelles circonstances utiliser les informations d'en-tête de support ou les informations d'en-tête de sauvegarde.  
@@ -223,7 +223,7 @@ ms.lasthandoff: 11/17/2017
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

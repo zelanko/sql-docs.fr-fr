@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cb93f6f2644966696f7d7c48f2dac7f72cde06b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8bfc10f588c868693eb0d24308730a618db9df7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une application de la couche Données (DAC) peut être analysée à partir de **l’Explorateur de l’utilitaire** et de **l’Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), avec les vues et les tables système. De plus, tous les objets dans la base de données contenue dans la DAC peuvent être analysés à l'aide des techniques d'analyse de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de base de données standard.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="monitoring-dac-databases"></a>Analyse des bases de données de la DAC  
  Après le déploiement réussi d'une DAC, la base de données contenue dans la DAC fonctionne de la même façon que toute autre base de données. Utilisez des outils et techniques du [!INCLUDE[ssDE](../../includes/ssde-md.md)] standard pour analyser les performances, le journal, les événements et l'utilisation des ressources de la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
   

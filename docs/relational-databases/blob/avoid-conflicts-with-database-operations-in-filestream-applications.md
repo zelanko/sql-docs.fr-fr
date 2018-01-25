@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97c0552652fba104adb69ac0fc1b00cf7316bec5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 289eada63f153a03f39c58e005a5459b743517ae
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les applications qui utilisent SqlOpenFilestream() pour ouvrir des descripteurs de fichiers Win32 afin de lire ou d’écrire des données BLOB FILESTREAM peuvent rencontrer des erreurs de conflit avec les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] gérées dans une transaction commune. Cela inclut [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les requêtes MARS dont l'exécution dure longtemps. Les applications doivent être conçues avec soin afin de mieux éviter ces types de conflits.  
@@ -145,7 +145,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Accéder à des données FILESTREAM avec OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
   

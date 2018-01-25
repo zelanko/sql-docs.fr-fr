@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 208c0d03e893fa50c33ae28e5533163af75a3ff9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 54eb5c1750289784ed7a15016b6047287fdb15a9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-contents-sql-server"></a>Contenu de l'unité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour consulter les informations de sauvegarde. Ces informations décrivent le périphérique, le support, le jeu de supports, ainsi que le ou les jeux de sauvegarde.  
@@ -64,14 +64,14 @@ ms.lasthandoff: 11/17/2017
 |**Type**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
 |**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
 |**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
-|**Base de données**|Le nom de la base de données qui a été sauvegardée.|  
+|**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
 |**Date**|Date et heure de fin de l'opération de sauvegarde, exprimée d'après les paramètres régionaux du client.|  
 |**Taille**|Taille du jeu de sauvegarde, exprimée en octets.|  
 |**Nom d'utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
 |**Expiration**|La date et l'heure d'expiration du jeu de sauvegarde.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

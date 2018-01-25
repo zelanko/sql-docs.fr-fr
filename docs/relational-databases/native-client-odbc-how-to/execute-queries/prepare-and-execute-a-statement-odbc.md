@@ -16,15 +16,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3894f47ecd4a368a36e1b03dae89e2ce32993d9f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea42cfdc65bec4580a08856b349e4f11437f60c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Préparer et exécuter une instruction (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/08/2018
   
 3.  Éventuellement, pour chaque paramètre dans l'instruction préparée :  
   
-    -   Appelez [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) pour obtenir des informations de paramètre.  
+    -   Appelez [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) pour obtenir des informations sur les paramètres.  
   
-    -   Liez chaque paramètre à une variable de programme à l’aide de [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurez tous les paramètres de données en cours d'exécution.  
+    -   Liez chaque paramètre à une variable de programme à l'aide de [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurez tous les paramètres de données en cours d'exécution.  
   
 4.  Pour chaque exécution d'une instruction préparée :  
   

@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b96dc26f769c21365eea344080fb84b5dec42a70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f2acc8c52d6e16cf17c05cc421faf5ea52b20e71
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportement des types de date et d'heure améliorés avec les versions SQL Server antérieures (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,14 +41,14 @@ ms.lasthandoff: 01/08/2018
   
 |Type SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](ou version ultérieure) Type|Type de client ODBC|Conversion des résultats (de SQL vers C)|Conversion des paramètres (de C vers SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
+|DateTime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs d'heure définis à zéro.|OK (2)<br /><br /> Échoue si le champ d'heure n'est pas nul. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde sont différentes de zéro. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(7)|SQL_C_TIME|Échec : littéral d'heure non valide.|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Échec : littéral d'heure non valide.|OK (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|La valeur sera arrondie à 1/300e de seconde par la conversion cliente.|  
+||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|La valeur sera arrondie à 1/300e de seconde par la conversion cliente.|  
 |Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Champs d'heure définis à zéro.|OK (2)<br /><br /> Échoue si le champ d'heure n'est pas nul. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
 |Symbole|Signification|  
 |------------|-------------|  
-| 1|Si cela a fonctionné avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] cela doit continuer à fonctionner avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|1|Si cela a fonctionné avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] cela doit continuer à fonctionner avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|Une application qui fonctionnait avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pourrait échouer avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  Notez que seules les modifications de schéma courantes ont été considérées. Les modifications courantes sont les suivantes :  
@@ -73,10 +73,10 @@ ms.lasthandoff: 01/08/2018
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Métadonnées de colonne retournées par SQLColumns, SQLProcedureColumns et SQLSpecialColumns  
  Les valeurs de colonnes suivantes sont retournées pour les types date/heure :  
   
-|Type de colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type de colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -90,9 +90,9 @@ ms.lasthandoff: 01/08/2018
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Métadonnées de type de données retournées par SQLGetTypeInfo  
  Les valeurs de colonnes suivantes sont retournées pour les types date/heure :  
   
-|Type de colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type de colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/08/2018
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  

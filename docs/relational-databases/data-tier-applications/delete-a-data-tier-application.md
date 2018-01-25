@@ -23,20 +23,20 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181ebd6219df4a3b016ea0b366fae7c883399d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54016fe377d7ed10fffd8831bfe07d5c26e1ce8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="delete-a-data-tier-application"></a>Supprimer une application de couche Données
+# <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez supprimer une application de la couche Données à l’aide de l’Assistant Supprimer l’application de la couche Données ou d’un script Windows PowerShell. Vous pouvez spécifier si la base de données associée doit être conservée, détachée ou supprimée.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Pour mettre à niveau une DAC, en utilisant :**  [L’Assistant Inscrire l’application de la couche Données](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  La reconstruction d'une instance de la DAC en inscrivant une DAC à partir d'une base de données rattachée ou restaurée ne recréera pas certaines parties de la DAC d'origine, telles que la stratégie de sélection du serveur.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  Une DAC peut uniquement être supprimée par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par le propriétaire de la base de données. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut également lancer l’Assistant.  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilisation de l'Assistant Supprimer l'application de la couche Données  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Cliquez avec le bouton droit sur la DAC à supprimer et sélectionnez **Supprimer une application de la couche Données**.  
   
-5.  Renseignez les boîtes de dialogue de l'Assistant :  
+5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     1.  [Introduction](#Introduction)  
   
@@ -238,7 +238,7 @@ $dacName  = "MyApplication"
   
  [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   

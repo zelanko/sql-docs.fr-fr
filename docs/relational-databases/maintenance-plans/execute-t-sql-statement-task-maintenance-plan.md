@@ -15,17 +15,17 @@ f1_keywords: sql13.swb.maint.tsql.f1
 helpviewer_keywords: Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26175cca19d94ba8d5cf0d9c6cf4f34a03fdf15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a507e5599faec3047ec861e8c72d618b33c27bdf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="execute-t-sql-statement-task-maintenance-plan"></a>Exécuter la tâche de l'instruction T-SQL (Plan de maintenance)
+# <a name="execute-t-sql-statement-task-maintenance-plan"></a>Exécuter la tâche de l’instruction T-SQL (Plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Exécuter la tâche de l’instruction T-SQL** pour personnaliser le plan de maintenance en y ajoutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de votre choix.  
   
 ## <a name="options"></a>Options  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Se connecte à une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
  **Mot de passe**  

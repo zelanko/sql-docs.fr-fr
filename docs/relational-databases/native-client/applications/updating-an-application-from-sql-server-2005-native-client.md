@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea8bd24944008b1301f02024f9aa77910a7dbe37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Mise à jour d'une application depuis SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 9.0 livré avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 livré avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 livré avec [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 livré avec [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Modification du comportement dans SQL Server Native Client depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
+|Modification du comportement dans SQL Server Native Client depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]| Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB effectue un remplissage uniquement à l'échelle définie.|Pour les conversions où les données sont envoyées au serveur, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (à compter de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) remplit les zéros dans les données uniquement jusqu'à la longueur maximale de **datetime** valeurs. SQL Server Native Client 9.0 effectuaient un remplissage à neuf chiffres.|  
 |Valider DBTYPE_DBTIMESTAMP pour ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (à compter de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implémente la spécification OLE DB pour *bScale* dans ICommandWithParameter::SetParameterInfo à définir à la précision de la fractions pour DBTYPE_DBTIMESTAMP.|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 |SQLGetDescRec n’est plus n’une descripteur une vérification de cohérence.|Antérieures à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, SQLGetDescRec effectuée une vérification de cohérence de descripteur lorsque le champ SQL_DESC_DATA_PTR était défini. Cela n'était pas requis par la spécification ODBC et dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) et les versions ultérieures, cette vérification de cohérence n'est plus effectuée.|  
 |Erreur différente retournée lorsque la date est hors limites.|Pour le **datetime** type, un numéro d’erreur différent est retourné par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (à compter de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) pour un out-of-range date a été retournée dans les versions antérieures.<br /><br /> Plus précisément, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 retournait l’erreur 22007 pour toutes les valeurs hors limites année des conversions de chaîne pour **datetime**, et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] début Native Client avec la version 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) retourne l’erreur 22008 lorsque la date dans la plage prise en charge par **datetime2** mais en dehors de la plage prise en charge par **datetime** ou **smalldatetime**.|  
 |**DateTime** valeur tronque les fractions de secondes et le pas round if arrondi modifie le jour.|Antérieures à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, le comportement client **datetime** valeurs envoyées au serveur consiste à les arrondir au 1/300e de seconde. Depuis [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, ce scénario provoque une troncation des fractions de seconde si l'arrondi modifie le jour.|  
-|Trunction possible de secondes pour **datetime** valeur.|Une application générée avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client (ou ultérieure) qui se connecte à un serveur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 tronquera des secondes et des fractions de seconde pour la partie heure des données envoyées au serveur si vous créez une liaison avec une colonne datetime avec un identificateur de type de DBTYPE_DBTIMESTAMP (OLE DB) ou SQL_TIMESTAMP (ODBC) et une échelle de 0.<br /><br /> Exemple :<br /><br /> Données d'entrée : 1994-08-21 21:21:36.000<br /><br /> Données insérées : 1994-08-21 21:21:00.000|  
+|Trunction possible de secondes pour **datetime** valeur.|Une application générée avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client (ou ultérieure) qui se connecte à un serveur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 tronquera des secondes et des fractions de seconde pour la partie heure des données envoyées au serveur si vous créez une liaison avec une colonne datetime avec un identificateur de type de DBTYPE_DBTIMESTAMP (OLE DB) ou SQL_TIMESTAMP (ODBC) et une échelle de 0.<br /><br /> Par exemple :<br /><br /> Données d'entrée : 1994-08-21 21:21:36.000<br /><br /> Données insérées : 1994-08-21 21:21:00.000|  
 |La conversion de données OLE DB de DBTYPE_DBTIME vers DBTYPE_DATE ne peut plus provoquer de changement de jour.|Avant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, si la partie heure d'un DBTYPE_DATE était à moins d'une demi-seconde de minuit, le code de conversion OLE DB provoquait le changement de jour. Depuis [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, le jour ne change pas (les fractions de seconde sont tronquées et non arrondies).|  
 |Modifications de conversion IBCPSession::BCColFmt.|À compter de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, lorsque vous utilisez IBCPSession::BCOColFmt pour convertir SQLDATETIME ou SQLDATETIME en un type chaîne, une valeur fractionnaire est exportée. Par exemple, lors de la conversion du type SQLDATETIME vers le type SQLNVARCHARMAX, les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retournaient<br /><br /> 1989-02-01 00:00:00. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 et versions ultérieures retournent 1989-02-01 00:00:00.0000000.|  
 |La taille des données envoyées doit correspondre à la longueur spécifiée dans SQL_LEN_DATA_AT_EXEC.|Lors de l'utilisation de SQL_LEN_DATA_AT_EXEC, la taille des données doit correspondre à la longueur que vous avez spécifiée avec SQL_LEN_DATA_AT_EXEC. Vous pouvez utiliser SQL_DATA_AT_EXEC, mais l'utilisation de SQL_LEN_DATA_AT_EXEC présente certains avantages en matière de performances.|  

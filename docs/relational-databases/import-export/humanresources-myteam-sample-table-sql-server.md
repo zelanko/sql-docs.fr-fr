@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7c82b62908b8004c9ef93c77b5d980cb65b0787
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d1175f8be3cdd8ebf15227ea46ceca7180a44e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Exemple de table HumanResources.myTeam (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les exemples de code fournis au chapitre [Importation et exportation de données en bloc](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) font généralement appel à une table de test spéciale nommée **myTeam**. Pour pouvoir mettre à exécution les exemples, vous devez d’abord créer la table **myTeam** dans le schéma **HumanResources** de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/17/2017
   
  La table **myTeam** contient les colonnes suivantes.  
   
-|Colonne|Type de données|Possibilité de valeurs nulles|Description|  
+|colonne|Type de données|Possibilité de valeurs nulles|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Non Null|Clé primaire des lignes. EmployeeID d'un membre de l'équipe.|  
 |**Nom**|**nvarchar(50)**|Non Null|Name est un membre de l'équipe.|  
-|**Titre**|**nvarchar(50)**|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
+|**Title**|**nvarchar(50)**|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
 |**Arrière-plan**|**nvarchar(50)**|Non Null|Date et heure de dernière mise à jour de la ligne (Par défaut)|  
   
 **Pour créer HumanResources.myTeam**  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Ces instructions ignorent la quatrième colonne, `Background`. Celle-ci a une valeur par défaut. En l'ignorant, l'instruction `INSERT` laisse cette colonne vide.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

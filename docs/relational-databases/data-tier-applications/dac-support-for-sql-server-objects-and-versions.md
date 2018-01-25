@@ -16,17 +16,17 @@ helpviewer_keywords:
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 939f92fab054aefc60c23500ed6207c3adef0e21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12b99446025274f0f3652a7552f53775283af7ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une application de la couche Données (DAC) prend en charge les objets du [!INCLUDE[ssDE](../../includes/ssde-md.md)] les plus couramment utilisés.  
   
  **Dans cette rubrique**  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|  
 |DATABASE ROLE|FUNCTION : table incluse|  
 |FUNCTION : table à instructions multiples|FUNCTION : scalaire|  
-|INDEX : cluster|INDEX : non-cluster|  
+|INDEX : cluster|INDEX : non-cluster|  
 |INDEX : spatial|INDEX : unique|  
 |LOGIN|Autorisations|  
 |Appartenances aux rôles|SCHEMA|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
  Un package DAC ou un fichier d'exportation créé avec une version de DAC Framework peut être traité par toute version ultérieure du DAC Framework. Par exemple, un package DAC extrait à l'aide des outils clients de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] peut être déployé à l'aide de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 ou des outils clients d'une version supérieure.  
   
 ##  <a name="DeploymentLimitations"></a> Limitations lors du déploiement de données  
- Notez les limitations de fidélité dans le moteur de déploiement de données du DAC Framework dans SQL Server 2012 SP1. Les limitations s'appliquent aux actions suivantes du DAC Framework : déployer ou publier un fichier .dacpac, et importer un fichier .bacpac.  
+ Notez les limitations de fidélité dans le moteur de déploiement de données du DAC Framework dans SQL Server 2012 SP1. Les limitations s'appliquent aux actions suivantes du DAC Framework : déployer ou publier un fichier .dacpac, et importer un fichier .bacpac.  
   
 1.  La perte des métadonnées de certaines conditions et types de base dans les colonnes sql_variant. Dans les cas affectés, un avertissement avec le message suivant s’affiche :  **Certaines propriétés sur certains types de données utilisés dans une colonne sql_variant ne sont pas conservées lorsqu’elles sont déployées par le DAC Framework.**  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
         -   Types de base de DECIMAL/NUMERIC avec une précision de 38 : les métadonnées sql_variant « TotalBytes » sont toujours définies sur 21.  
   
-    -   Tous les types de base de texte : le classement par défaut de la base de données est appliqué à l'ensemble du texte.  
+    -   Tous les types de base de texte : le classement par défaut de la base de données est appliqué à l'ensemble du texte.  
   
     -   Types de base BINARY : la propriété de longueur maximale n'est pas conservée.  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Solutions de contournement** : les opérations d’extraction et d’exportation écrivent les fichiers de données BCP haute fidélité dans les fichiers .dacpac ou .bacpac. Pour éviter les limitations, utilisez l'utilitaire en ligne de commande SQL Server BCP.exe pour déployer des données haute fidélité dans une base de données cible d'un package DAC.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

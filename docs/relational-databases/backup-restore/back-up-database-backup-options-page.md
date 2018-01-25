@@ -16,15 +16,15 @@ f1_keywords:
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1d587759b7c57accdc4836346446e181f7df60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>Sauvegarder la base de données (page Options de sauvegarde)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez la page **Options de sauvegarde** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
 ### <a name="encryption"></a>Chiffrement  
- Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
+ Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
   
 -   AES 128  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 >   
 >  Seules les clés résidant dans la gestion de clés extensible (EKM) sont prises en charge.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

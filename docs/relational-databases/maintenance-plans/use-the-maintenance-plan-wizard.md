@@ -37,15 +37,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer un plan de maintenance pour un ou plusieurs serveurs à l’aide de l’Assistant Plan de maintenance dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'Assistant Plan de maintenance crée un plan de maintenance que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut exécuter régulièrement. Vous pouvez ainsi réaliser, en fonction d'intervalles spécifiés, diverses tâches d'administration de base de données, notamment des sauvegardes, l'exécution de contrôles d'intégrité de la base de données ou les mises à jour des statistiques de la base de données.  
@@ -183,7 +183,7 @@ Case à cocher**Inclure les index**
  - Limite la vérification à l’intégrité de la structure physique de la page, aux en-têtes d’enregistrement et à l’intégrité de la cohérence d’allocation de la base de données. L’utilisation de cette option étant susceptible de réduire considérablement la durée d’exécution de DBCC CHECKDB sur des bases de données volumineuses, elle est recommandée pour une utilisation fréquente sur des systèmes de production.  
   
 **Tablock**  
- - Génère des verrouillages par DBCC CHECKDB au lieu d'utiliser un instantané de base de données interne. Cette opération comprend un verrou exclusif sur la base de données. L’utilisation de cette option contribue à accélérer l’exécution de DBCC CHECKDB sur une base de données soumise à une charge importante, tout en diminuant la concurrence disponible dans cette dernière pendant l’exécution de DBCC CHECKDB.  
+ - Génère des verrouillages par DBCC CHECKDB au lieu d'utiliser un instantané de base de données interne. Cette opération comprend un verrou exclusif sur la base de données. L’utilisation de cette option contribue à accélérer l’exécution de DBCC CHECKDB sur une base de données soumise à une charge importante, tout en diminuant la concurrence disponible dans cette dernière pendant l’exécution de DBCC CHECKDB.  
   
 ## <a name="define-database-shrink-tasks"></a>Définir les tâches de réduction de la base de données  
   
@@ -379,7 +379,7 @@ Case à cocher**Inclure les index**
      Spécifiez le nom du conteneur de stockage Windows Azure.  
   
      **Préfixe d'URL**  
-     Est généré automatiquement à partir des informations du compte de stockage contenues dans les informations d'identification SQL, et du nom du conteneur de stockage Windows Azure que vous avez spécifié. Nous vous recommandons de ne pas modifier les informations de ce champ, sauf si vous utilisez un domaine qui utilise un format autre que **\<compte_de_stockage>.blob.core.windows.net**.  
+     Est généré automatiquement à partir des informations du compte de stockage contenues dans les informations d'identification SQL, et du nom du conteneur de stockage Windows Azure que vous avez spécifié. Nous vous recommandons de ne pas modifier les informations de ce champ, sauf si vous utilisez un domaine qui utilise un format autre que **\<compte_de_stockage>.blob.core.windows.net**.  
   
      Zone**Extension du fichier de sauvegarde**   
      Spécifiez l'extension à utiliser pour les fichiers de sauvegarde. La valeur par défaut est .bak.  
@@ -394,7 +394,7 @@ Case à cocher**Inclure les index**
      Ordonne à BACKUP de continuer en dépit des erreurs rencontrées, telles que des sommes de contrôle de page non valides ou des pages endommagées.  
   
      **Chiffrement de sauvegarde**  
-     Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
+     Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
   
     -   AES 128  
   

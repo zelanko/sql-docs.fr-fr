@@ -19,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39ef8a6ae40be42412c580e3573aa51fb7a5a83d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dc0837867969c86e578d1c87189d1803f8a5594
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurer une sauvegarde de base de données en mode de récupération simple (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-restore-a-full-database-backup"></a>Pour restaurer une sauvegarde complète de base de données  
   
-1.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde complète de la base de données, en spécifiant :  
+1.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde complète de la base de données, en spécifiant :  
   
     -   le nom de la base de données à restaurer ;  
   
@@ -73,12 +73,12 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Si vous restaurez une base de données de version antérieure à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est automatiquement mise à niveau. En général, la base de données est immédiatement disponible. Toutefois, si une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comprend des index de recherche en texte intégral, le processus de mise à niveau les importe, les réinitialise ou les reconstruit, selon la valeur de la propriété de serveur  **upgrade_option** . Si l’option de mise à niveau a la valeur Importer (**upgrade_option** = 2) ou Reconstruire (**upgrade_option** = 0), les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l'option de mise à niveau est Importer, les index de recherche en texte intégral associés sont reconstruits si aucun catalogue de texte intégral n'est disponible. Pour modifier le paramètre de la propriété de serveur **upgrade_option** , utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ### <a name="description"></a>Description  
  Cet exemple restaure la sauvegarde complète de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à partir d'une bande.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
   
 ```  
 USE master;  
@@ -88,7 +88,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

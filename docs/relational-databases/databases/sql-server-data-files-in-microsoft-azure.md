@@ -15,12 +15,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 9fca2543543bc508d3fc232ba75c05f19a561ebb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]![Fichiers de données sur Azure](../../relational-databases/databases/media/data-files-on-azure.png "Fichiers de données sur Azure")  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 >  Le stockage des bases de données système dans le stockage d’objets blob Azure n’est pas recommandé et n’est pas pris en charge. 
 
   
- Cette rubrique présente les concepts et les considérations essentiels au stockage des fichiers de données SQL Server dans le service Microsoft Azure Storage.  
+ Cette rubrique présente les concepts et les considérations essentiels au stockage des fichiers de données SQL Server dans le service de Stockage Microsoft Azure.  
   
  Pour obtenir une expérience pratique de la façon d’utiliser cette nouvelle fonctionnalité, consultez [Didacticiel : Utilisation du service de stockage d’objets blob Microsoft Azure avec des bases de données SQL Server 2016 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
@@ -174,7 +174,7 @@ ON
 3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*   
     Résolution : actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances de SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le stockage Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*.  
   
-     Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Si vous n’en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour cela, procédez comme suit :  
+     Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Si vous n’en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour cela, procédez comme suit :  
   
     1.  Définissez le chemin d'accès du serveur A sur un dossier local à l'aide de l'instruction ALTER Database.  
   

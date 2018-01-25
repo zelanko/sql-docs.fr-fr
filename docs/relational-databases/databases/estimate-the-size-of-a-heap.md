@@ -19,17 +19,17 @@ helpviewer_keywords:
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 584a02e689f5f39b995aa014d11273aeeaf7aaeb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec79282019d86f452df08676e8fa0d51f015c370
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d'un segment de mémoire
+# <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez effectuer les étapes suivantes pour obtenir une estimation de la quantité d’espace nécessaire au stockage de données dans un segment de mémoire :  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
      Pour plus d'informations sur l'espace nécessaire pour les colonnes éparses, consultez [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Segments &#40;tables sans index cluster&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

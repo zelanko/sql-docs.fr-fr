@@ -18,14 +18,14 @@ helpviewer_keywords:
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: fac90b998c51feb54a0fe496e6d09b3bf59c1129
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7985a4fa9d1fa3dd4fc11553d640c4ef0ad0c6a2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="system-databases"></a>Bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut les bases de données système suivantes.  
@@ -67,12 +67,12 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Procédures stockées système et fonctions intégrées.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [Masquer les objets système dans l'Explorateur d'objets](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
  [Bases de données](../../relational-databases/databases/databases.md)  

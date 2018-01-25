@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c147dcd51706f9b67b6154ffc15bd449b0b27332
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 63d848005d0a1745070caf209f52f49dd80db1d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nouvelles fonctionnalités de Date et heure avec les versions SQL Server antérieures (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,14 +38,14 @@ ms.lasthandoff: 01/08/2018
   
 |Type du client OLE DB|Type SQL Server 2005|SQL Server 2008 (ou versions ultérieures)|Conversion de résultat (serveur vers client)|Conversion de paramètre (client vers serveur)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|Date|OK|OK|  
+|DBTYPE_DBDATE|DateTime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Champs d'heure définis à zéro.|IRowsetChange échoue en raison d’une troncation de chaîne si le champ d’heure est différent de zéro.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Champs de date définis à la date actuelle.|IRowsetChange échoue en raison d’une troncation de chaîne si les fractions de seconde sont différentes de zéro.<br /><br /> Date est ignorée.|  
 |DBTYPE_DBTIME||Time(7)|Échec : littéral d'heure non valide.|OK|  
 |DBTYPE_DBTIMESTAMP|||Échec : littéral d'heure non valide.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2(7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Champs d'heure définis à zéro.|IRowsetChange échoue en raison d’une troncation de chaîne si le champ d’heure est différent de zéro.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
@@ -72,10 +72,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de paramètre|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|Date|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -86,10 +86,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|Date|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
@@ -98,10 +98,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de paramètre|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|Date|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -113,10 +113,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de colonne|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|Date|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
@@ -125,19 +125,19 @@ ms.lasthandoff: 01/08/2018
   
 |Type de colonne|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|Date|DBTYPE_WSTR|10|20|Date|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="providertypes-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
  Les lignes suivantes sont retournées pour les types date/heure :  
   
-|Type -><br /><br /> colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type -><br /><br /> Colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 01/08/2018
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0603aa186c900e60cc17bc388d439738fd41a95a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 532a6809dc01c3122efa5e46665c77569ebf060d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les fichiers de format. Vous pouvez utiliser un fichier de format pour ignorer l'importation d'une colonne de table lorsque le champ n'existe pas dans le fichier de données. Un fichier de données peut contenir moins de champs qu'il n'y a de colonnes dans la table uniquement si les colonnes ignorées peuvent être NULL et/ou avoir une valeur par défaut.  
@@ -124,7 +124,7 @@ GO
 ## <a name="using-an-xml-format-file"></a>Utilisation d'un fichier de format XML  
  Avec un fichier de format XML, vous ne pouvez pas ignorer une colonne lorsque vous procédez à une importation directement dans une table à l’aide d’une commande **bcp** ou d’une instruction BULK INSERT. Néanmoins, vous pouvez importer toutes les colonnes d'une table hormis la dernière. Pour ignorer toutes les colonnes à l'exception de la dernière, vous devez créer une vue de la table cible contenant uniquement les colonnes figurant dans le fichier de données. Vous pouvez ensuite importer en bloc les données de ce fichier dans la vue.  
   
- Pour utiliser un fichier de format XML afin d'ignorer une colonne de table à l'aide de OPENROWSET(BULK...), vous devez fournir une liste explicite des colonnes dans la liste de sélection mais aussi dans la table cible, comme ci-dessous :  
+ Pour utiliser un fichier de format XML afin d'ignorer une colonne de table à l'aide de OPENROWSET(BULK...), vous devez fournir une liste explicite des colonnes dans la liste de sélection mais aussi dans la table cible, comme ci-dessous :  
   
  INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)  
   
@@ -209,7 +209,7 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

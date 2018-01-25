@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3ead52966c2c827140d05877596f4275dea9bde4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15e1fe1efcd8b2e0e1afc8ac4d64a26d7e274454
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Notes  
+#### <a name="remarks"></a>Notes   
  En utilisant SINGLE_BLOB dans ce cas, vous évitez toute discordance entre l'encodage du document XML (tel qu'il est spécifié par la déclaration d'encodage XML) et la page de codes de type chaîne inhérente au serveur.  
   
  Si vous utilisez les types de données NCLOB ou CLOB et que vous rencontrez un conflit de pages de codes ou d'encodage, effectuez l'une des opérations suivantes :  
@@ -268,7 +268,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'enregistre pas l'encodage XML lorsque les données XML sont conservées dans la base de données. Par conséquent, l'encodage original des champs XML n'est pas disponible lorsque les données XML sont exportées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l’encodage UTF-16 durant l’exportation de données XML.  
   
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Clause SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   

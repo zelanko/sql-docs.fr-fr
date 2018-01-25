@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le format caractère est recommandé pour l’exportation en bloc de données dans un fichier texte qui doit être utilisé dans un autre programme, ou pour l’importation en bloc de données à partir d’un fichier texte généré par un autre programme.  
@@ -34,7 +34,7 @@ Le format caractère utilise le format de données de caractères pour toutes le
 > [!NOTE]
 >  Lors du transfert en bloc de données entre des instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le fichier de données contient des données caractères Unicode mais aucun caractère étendu ni jeu de caractères codés sur deux octets (DBCS), utilisez le format de caractères Unicode. Pour plus d’informations, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
-|Dans cette rubrique :|
+|Dans cette rubrique :|
 |---|
 |[Considérations relatives à l'utilisation du format caractère](#considerations)|
 |[Options de commande pour le format caractère](#command_options)|
@@ -45,7 +45,7 @@ Le format caractère utilise le format de données de caractères pour toutes le
 
   
 ## Considérations relatives à l'utilisation du format caractère<a name="considerations"></a>
-Lors de l'utilisation du format caractère, tenez compte des points suivants :  
+Lors de l'utilisation du format caractère, tenez compte des points suivants :  
   
 -   Par défaut, [l’utilitaire bcp](../../tools/bcp-utility.md) sépare les champs de données de caractères par le caractère de tabulation et termine les enregistrements par un caractère de nouvelle ligne.  Pour plus d’informations sur la spécification des terminateurs de remplacement, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
@@ -222,7 +222,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415758711cb93b7c0da560a5935df679e36096
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS  
  Les ajouts réalisés dans les ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS incluent les colonnes suivantes.  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nom d'un catalogue dans lequel une collection de schémas XML est définie. Possède la valeur NULL pour une colonne non XML ou une colonne XML non typée.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nom d'un schéma dans lequel une collection de schémas XML est définie. Possède la valeur NULL pour une colonne non XML ou une colonne XML non typée.|  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>Ensemble de lignes de schéma SS_XMLSCHEMA  
  Un nouvel ensemble de lignes de schéma SS_XMLSCHEMA permettant d'extraire des informations de schéma XML est proposé pour les clients. L'ensemble de lignes SS_XMLSCHEMA contient les colonnes suivantes.  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogue auquel une collection XML appartient.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schéma auquel une collection XML appartient.|  
@@ -176,7 +176,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Pour prendre en charge la **xml** type de données via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER, qui contient les valeurs suivantes.  
   
-|Nom   |Type|Description|  
+|Nom|Type| Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nom d'un catalogue (base de données) dans lequel une collection de schémas XML est définie. Une partie de l’identificateur de nom en trois parties SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nom d'un schéma XML dans la collection de schémas. Une des trois parties qui composent l'identificateur de nom SQL.|  
@@ -185,7 +185,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
  Pour prendre en charge la création de tables dans le **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute trois nouvelles colonnes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nom   |Type|Description|  
+|Nom|Type| Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom du catalogue où le schéma XML est stocké. Pour d'autres types de colonnes, cette propriété retourne une chaîne vide.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom de schéma XML qui définit cette colonne.|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-icolumnsrowset-interface"></a>Interface IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ajoute les éléments suivants [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-colonnes spécifiques à l’ensemble de lignes retourné par la **IColumnRowset::GetColumnsRowset** (méthode). Ces colonnes contiennent le nom en trois parties d'une collection de schémas XML. Dans le cas des colonnes non XML ou des colonnes XML non typées, ces trois colonnes possèdent toutes la valeur NULL par défaut.  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogue auquel une collection de schémas XML appartient.<br /><br /> Possède la valeur NULL sinon.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schéma auquel une collection de schémas XML appartient. Possède la valeur NULL sinon.|  
@@ -277,7 +277,7 @@ ms.lasthandoff: 01/08/2018
  Le standard XML exigent que les données XML encodées UTF-16 commencent par une marque d'ordre d'octet (BOM), soit le code de caractère UTF-16 0xFEFF. Lorsque vous travaillez avec une liaison SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne requiert pas ou ajouter une nomenclature, puisque l’encodage est implicitement par la liaison. L'objectif recherché est la simplification de l'utilisation d'autres processeurs et systèmes de stockage XML. Dans ce cas, une marque d'ordre d'octet doit être présente avec les données XML encodées UTF-16 et l'application n'a pas à se soucier de l'encodage réel puisque la majorité des processeurs XML (y compris [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) détectent l'encodage par inspection des premiers octets de la valeur. Données XML reçues de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à l’aide de SQL_C_BINARY liaisons sont toujours encodées en UTF-16 avec une nomenclature et sans déclaration d’encodage incorporée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Fonctionnalités SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

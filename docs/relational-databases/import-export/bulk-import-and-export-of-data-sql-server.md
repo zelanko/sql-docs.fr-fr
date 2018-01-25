@@ -27,15 +27,15 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0d6c0536543d77b323684869a42349e614dd48cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a7a6c256b102c43decf8cc003ce2ceae808e621
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importation et exportation en bloc de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée. 
@@ -51,8 +51,8 @@ ms.lasthandoff: 11/17/2017
 |Méthode|Description|Importe les données|Exporte les données|  
 |------------|-----------------|------------------|------------------|  
 |[bcp (utilitaire)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilitaire en ligne de commande (Bcp.exe) qui exporte et importe en bloc des données et génère des fichiers de format.|Oui|Oui|  
-|[BULK INSERT, instruction](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui importe des données directement d'un fichier de données dans une table de base de données ou une vue non partitionnée.|Oui|Non|  
-|instruction [INSERT ... instruction SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui utilise le fournisseur d'ensembles de lignes OPENROWSET pour importer en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant la fonction OPENROWSET(BULK…) afin de sélectionner des données dans une instruction INSERT.|Oui|Non| 
+|[BULK INSERT, instruction](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui importe des données directement d'un fichier de données dans une table de base de données ou une vue non partitionnée.|Oui|non|  
+|instruction [INSERT ... instruction SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui utilise le fournisseur d'ensembles de lignes OPENROWSET pour importer en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant la fonction OPENROWSET(BULK…) afin de sélectionner des données dans une instruction INSERT.|Oui|non| 
 |[Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|L’Assistant crée des packages simples qui importent et exportent des données dans plusieurs formats de données courants (bases de données, feuilles de calcul, fichiers texte, etc.).|Oui|Oui|  
   
 > [!IMPORTANT]

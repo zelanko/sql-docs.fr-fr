@@ -19,15 +19,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9b1a0e72a794e702428cbadc9a813cca17447c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 964e94f9eed81eabd86cf56c781ae1defde0303b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espace disque du journal des transactions pour les opérations d'index
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les opérations d’index à grande échelle peuvent générer des chargements de données volumineux susceptibles de saturer le journal des transactions rapidement. Pour que l'opération d'index puisse être restaurée, le journal des transactions ne peut pas être tronqué avant la fin de celle-ci ; toutefois, il peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit posséder suffisamment de place pour stocker les transactions de l'opération d'index et toutes les transactions utilisateur concurrentes qui interviennent pendant celle-ci. Cela concerne à la fois les opérations d'index hors ligne et les opérations d'index en ligne. Étant donné que les tables sous-jacentes sont inaccessibles pendant une opération d'index hors ligne, le nombre de transactions utilisateur peut être faible et le journal ne peut pas croître rapidement. Les opérations d'index en ligne n'empêchent pas l'activité utilisateur concurrente ; par conséquent, les opérations d'index en ligne à grande échelle combinées à des transactions utilisateur concurrentes significatives peuvent provoquer une croissance continue du journal des transactions en l'absence d'option permettant de le tronquer.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  N'exécutez pas l'opération d'index en ligne dans une transaction explicite. Le journal n'est pas tronqué avant la fin de la transaction explicite.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Espace disque nécessaire pour les opérations DDL d'index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Exemple d'espace disque d'un index](../../relational-databases/indexes/index-disk-space-example.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - temporary stored procedures [SQL Server]
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 162734e2bb90d83d3f84fce2467b0fab3175baff
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La base de données système **tempdb** est une ressource globale disponible pour tous les utilisateurs connectés à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à SQL Database. La base de données tempdb peut stocker les éléments suivants :  
@@ -63,7 +63,7 @@ Les opérations effectuées dans **tempdb** font l’objet d’un enregistrement
 > La valeur par défaut du nombre de fichiers de données est basée sur les directives générales de l’article [KB 2154845](http://support.microsoft.com/kb/2154845/).  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Déplacement des fichiers de données et journaux de tempdb dans SQL Server  
- Pour déplacer les fichiers de données et journaux de **tempdb**, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
+ Pour déplacer les données **tempdb** et les fichiers journaux, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
   
 ### <a name="database-options-for-tempdb-in-sql-server"></a>Options de la base de données tempdb dans SQL Server  
  Le tableau suivant répertorie les valeurs par défaut de chaque option de la base de données **tempdb** et précise si elles sont modifiables. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  

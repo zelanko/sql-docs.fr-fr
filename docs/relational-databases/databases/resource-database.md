@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 caps.latest.revision: "71"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28c3a118942874c2c68ec22ae1b0574cd35def34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 83f2db0cd4e4b046eb6b5dc1a6fa7b1557420df4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-database"></a>Base de données Resource
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de données Resource est une base de données en lecture seule qui contient tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les objets système, tels que sys.objects, sont conservés physiquement dans la base de données Resource, mais ils figurent logiquement dans le schéma sys de chaque base de données. La base de données Resource ne contient ni données utilisateur, ni métadonnées utilisateur.  
@@ -69,7 +69,7 @@ SELECT OBJECT_DEFINITION(OBJECT_ID('sys.objects'));
 GO  
 ```  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
  [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  

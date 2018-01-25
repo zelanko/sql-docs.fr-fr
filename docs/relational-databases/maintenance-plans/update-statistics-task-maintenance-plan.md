@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.statistics.f1
 helpviewer_keywords: Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74685382e97db6911db1b45ca778099c921c562a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77bdf027ea3354d11c9877f03f20f2ebfe92afba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tâche Mettre à jour les statistiques (Plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Tâche Mettre à jour les statistiques** pour mettre à jour les informations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux données des tables et des index. Cette tâche rééchantillonne les statistiques de distribution de chaque index créé dans les tables utilisateur de la base de données. Les statistiques de distribution servent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser la navigation dans les tables pendant le traitement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour collecter automatiquement les statistiques de distribution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] échantillonne périodiquement les données de la table correspondant à chaque index. La taille de cet échantillonnage est calculée en fonction du nombre de lignes de la table et de la fréquence de modification des données. Utilisez cette option pour effectuer un échantillonnage supplémentaire à l'aide du pourcentage spécifié de données des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise ces informations pour créer des plans de requête améliorés.  
@@ -107,13 +107,13 @@ ms.lasthandoff: 11/17/2017
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   

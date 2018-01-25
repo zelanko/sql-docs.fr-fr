@@ -20,15 +20,15 @@ helpviewer_keywords:
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0d85ca3709065461adb4615e9da09410c6d6650
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca84d493ede9087ec3e41db12e2d7da6cc8e1e13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Option SORT_IN_TEMPDB pour les index
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,12 +79,12 @@ ms.lasthandoff: 11/17/2017
   
 -   Si l'option SORT_IN_TEMPDB n'est pas activée, l'espace libre dans le groupe de fichiers de destination doit être suffisamment grand pour stocker la table finale. Ceci comprend les structures de tous les index. La continuité de la table et des extensions d'index peut être améliorée si l'espace libre disponible est plus important.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
  [Configurer l’option de configuration Création d’index en mémoire.](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  

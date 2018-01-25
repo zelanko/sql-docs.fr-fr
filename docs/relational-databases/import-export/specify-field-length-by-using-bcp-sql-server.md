@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779cd2f34ae30c2e21d632e3359861452c4f652a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La longueur de champ indique le nombre maximal de caractères nécessaires pour représenter les données au format caractères. La longueur de champ est déjà connue si les données sont enregistrées au format natif. Par exemple, les données de type **int** occupent 4 octets. Si vous indiquez 0 pour la longueur du préfixe, la commande **bcp** vous demande la longueur des champs, les longueurs par défaut des champs et l’influence de la longueur des champs sur le stockage des données dans des fichiers de données qui contiennent des données de type **char** .  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |**nvarchar**|Le double de la longueur définie pour la colonne|  
 |**Texte**|0|  
 |**ntext**|0|  
-|**bit**|1|  
+|**bit**| 1|  
 |**binaire**|Le double de la longueur définie pour la colonne + 1|  
 |**varbinary**|Le double de la longueur définie pour la colonne + 1|  
 |**image**|0|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 |**smalldatetime**|24|  
 |**float**|30|  
 |**real**|30|  
-|**int**|12|  
+|**Int**|12|  
 |**bigint**|19|  
 |**smallint**|7|  
 |**tinyint**|5|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
 |Type de données|Longueur par défaut (en caractères)|  
 |---------------|-----------------------------------|  
-|**bit**|1|  
+|**bit**| 1|  
 |**binaire**|Longueur définie pour la colonne|  
 |**varbinary**|Longueur définie pour la colonne|  
 |**image**|0|  
@@ -111,10 +111,10 @@ ms.lasthandoff: 11/17/2017
 |**smalldatetime**|4|  
 |**float**|8|  
 |**real**|4|  
-|**int**|4|  
+|**Int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**|1|  
+|**tinyint**| 1|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Dans tous les cas précédents, pour créer un fichier de données pour un chargement ultérieur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et faire en sorte que l'espace de stockage soit minimal, utilisez un préfixe de longueur avec le type de stockage de fichier et la longueur du champ par défaut.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5df9200f0101300d7e17d7e6b033882a4da5354d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f5c80e05dd49dc5d1280be66d98baf42deb02cc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Préparer l'importation de données en bloc (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
      De nombreux utilitaires et éditeurs de texte affichent les caractères masqués qui figurent généralement à la fin du fichier de données. Durant une opération d'importation en bloc, les caractères masqués d'un fichier de données ASCII peuvent causer des problèmes qui génèrent une erreur de type « une valeur NULL inattendue a été trouvée ». Il suffit en général de rechercher et de supprimer les caractères masqués pour éviter ce problème.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   

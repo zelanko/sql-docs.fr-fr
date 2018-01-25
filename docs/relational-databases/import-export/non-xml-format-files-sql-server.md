@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a5c74d49ff35255399caf10a74bffa91c3edc2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ed7efe20ed53b63b615ad358bbabcb8e00fe3df
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="non-xml-format-files-sql-server"></a>Fichiers de format non-XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], deux types de fichiers de format sont pris en charge pour l’exportation et l’importation en bloc : les *fichiers de format non XML* et les *fichiers de format XML*.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 |Champ du fichier de format|Description|  
 |------------------------|-----------------|  
-|Version|Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Ce numéro de version n’est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Remarque : La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
+|Options de version|Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Ce numéro de version n’est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Remarque : La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
 |Nombre de colonnes|Nombre de champs dans le fichier de données. Il doit être identique pour toutes les lignes.|  
   
  Les autres champs de fichier de format décrivent les champs de données à importer ou exporter en bloc. Chaque champ de données nécessite une ligne séparée dans le fichier de format. Chaque ligne de fichier de format contient les valeurs des champs de fichier de format décrits dans le tableau suivant.  
@@ -110,9 +110,9 @@ ms.lasthandoff: 11/17/2017
   
 -   [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Créer un fichier de format &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   

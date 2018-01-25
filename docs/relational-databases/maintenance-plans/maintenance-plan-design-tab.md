@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e2c7e920b4f0a4ca5933efafce3dc09b2b5924b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e425cd4e4901b396ae08cc9586381120ab225745
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/17/2017
  **Zoom**  
  Modifie la taille des tâches sur l’aire de conception  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Créer un plan de maintenance](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

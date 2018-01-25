@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2747e999b3de3bb014c1033b0ac81301f1052939
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dd9ef3f21e8bcafa103bfd5252d0df621c033922
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  Le tableau suivant répertorie les colonnes retournées par le jeu de résultats et la façon dont ils ont été étendues pour gérer les **udt** et **xml** des types de données via le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client :  
   
-|Nom de colonne|Description|  
+|Nom de colonne| Description|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Retourne le nom du catalogue contenant le type défini par l'utilisateur (UDT).|  
 |SS_UDT_SCHEMA_NAME|Retourne le nom du schéma contenant l'UDT.|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |SS_XML_SCHEMACOLLECTION_NAME|Retourne le nom d'une collection de schémas XML. Si le nom est introuvable, cette variable contient une chaîne vide.|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns et paramètres table  
- SQLProcedureColumns gère les paramètres de la table d’une manière similaire aux types CLR définis par l’utilisateur. Dans les lignes retournées pour les paramètres table, les colonnes ont les valeurs suivantes :  
+ SQLProcedureColumns gère les paramètres de la table d’une manière similaire aux types CLR définis par l’utilisateur. Dans les lignes retournées pour les paramètres table, les colonnes ont les valeurs suivantes :  
   
 |Nom de colonne|Description/valeur|  
 |-----------------|------------------------|  
@@ -83,6 +83,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLProcedureColumns (fonction)](http://go.microsoft.com/fwlink/?LinkId=59363)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

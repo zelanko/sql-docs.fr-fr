@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: "74"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurations fragmentaires (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique concerne uniquement les bases de données de l’édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent plusieurs fichiers ou groupes de fichiers et, dans le mode simple, seulement des groupes de fichiers en lecture seule.  
@@ -178,7 +178,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Sauvegarde différentielle suivie d'autres sauvegardes restaurées dans la séquence de restauration fragmentaire d'origine pour restaurer les données jusqu'au point de récupération d'origine.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8efb55f96b30bab334c6a29b2412a4c424e16dfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fe964e8e0cadaee2118540714f6e8a9c43763748
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowsets"></a>Ensembles de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,13 +59,13 @@ ms.lasthandoff: 01/08/2018
   
 -   [Création d’ensembles de lignes avec ICommand::Execute](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
--   [Propriétés et comportements des ensembles de lignes](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
+-   [Comportements et les propriétés de l’ensemble de lignes](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [Ensembles de lignes et curseurs SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [Récupération de lignes](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
+-   [Extraction de lignes](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [Récupération d’une ligne unique avec IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [Extraction d’une ligne unique avec IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [Signets](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   

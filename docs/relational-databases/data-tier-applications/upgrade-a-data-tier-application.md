@@ -27,17 +27,17 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d374f66debb936b1b57cb631d9e1643cc923fdc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ea79fb1e120239f25cfab958e92fcd44b79423d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="upgrade-a-data-tier-application"></a>Mettre à niveau une application de la couche Données
+# <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez l’Assistant Mise à niveau de l’application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d’une application de la couche Données (DAC) actuellement déployée pour qu’ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
 -   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Une DAC ne peut être mise à niveau que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions situées dans le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. La connexion doit être propriétaire de la base de données existante. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut aussi mettre à niveau une DAC.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Utilisation de l'Assistant Mise à niveau de l'application de la couche Données  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données…**.  
   
-4.  Renseignez les boîtes de dialogue de l'Assistant :  
+4.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     1.  [Page Introduction](#Introduction)  
   
@@ -290,7 +290,7 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ef5650ee59d98c865e533043b26df0bcc090c5d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4968f3e95cde1aa5f4fb38ec7271714439e3b0d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ne récupère pas de données volumineuses de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  
   
 ```  
@@ -156,6 +156,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Utilisation de types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [À l’aide des Types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

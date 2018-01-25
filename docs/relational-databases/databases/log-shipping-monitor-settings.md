@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f1b2e15ff1c7ba3ff48fb37763e8742e4056eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39a41cec811cacb613ef61a8cf0b5c753f84fd86
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-monitor-settings"></a>Paramètres du moniteur d'envoi des journaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet de configurer et de modifier les propriétés du serveur moniteur d’envoi des journaux.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
  **Instance du serveur moniteur**  
  Affiche le nom de l'instance du serveur actuellement configurée comme serveur moniteur dans la configuration d'envoi des journaux.  
   
- **Connecter**  
+ **Se connecter**  
  Sélectionnez et connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser comme serveur moniteur. Le compte utilisé pour se connecter doit être membre du rôle serveur fixe sysadmin sur l'instance de serveur secondaire.  
   
  **En imitant le compte proxy du travail**  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
  **Nom du travail**  
  Spécifie le nom du travail d'alerte de l'Agent SQL Server utilisé par l'envoi des journaux pour déclencher des alertes lors du dépassement des seuils de sauvegarde ou de restauration. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
- **Planifier**  
+ **Planification**  
  Indique la planification en cours du travail d'alerte de l'Agent SQL Server.  
   
  **Modifier**  

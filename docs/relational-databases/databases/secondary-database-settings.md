@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>Paramètres de base de données secondaire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour configurer et modifier les propriétés d’une base de données secondaire dans la configuration de la copie des journaux de transaction.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
  **Base de données secondaire**  
  Affiche le nom de la base de données secondaire pour la configuration de la copie des journaux de transaction. Si vous ajoutez une nouvelle base de données secondaire à une configuration de la copie des journaux de transaction, vous pouvez en choisir une dans la liste ou taper son nom dans la zone de texte. Si vous entrez le nom, vous devez sélectionner une option dans l'onglet **Initialisation** afin de restaurer une sauvegarde complète de la base de données primaire dans la base de données secondaire. La nouvelle base de données est créée dans le cadre de l'opération de restauration.  
   
- **Connecter**  
+ **Se connecter**  
  Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée comme serveur secondaire dans la configuration de la copie des journaux de transaction. Le compte utilisé pour se connecter doit être membre du rôle serveur fixe sysadmin sur l'instance de serveur secondaire.  
   
  **Onglet Initialiser**  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
  **Nom du travail**  
  Affiche le nom du travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
- **Planifier**  
+ **Planification**  
  Affiche la planification actuelle du travail Agent SQL Server utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Vous pouvez la modifier en cliquant sur **Planification…**.  
   
  **Planification…**  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  **Nom du travail**  
  Affiche le nom du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
- **Planifier**  
+ **Planification**  
  Affiche la planification actuelle du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Vous pouvez la modifier en cliquant sur **Planification…**.  
   
  **Planification…**  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  **Désactiver ce travail**  
  Interrompt les opérations de restauration dans la base de données secondaire.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

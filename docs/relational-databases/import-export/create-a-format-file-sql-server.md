@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c3aa7d6569f8a4390f249c032641978fb5382313
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4eb0b49bbf52926536293cf26cd47046329abaf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Lorsque vous importez des données en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou exportez en bloc des données à partir d’une table, utilisez un fichier de format pour un système souple afin d’écrire des fichiers de données nécessitant peu ou pas d’édition pour la conformité aux autres formats de données, ou de lire des fichiers de données provenant d’autres logiciels.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="creating-a-non-xml-format-file"></a>Création d'un fichier de format non-XML  
  Pour utiliser une commande **bcp** pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin d’accès de fichier de données. L’option **format** requiert également l’option **-f** , comme suit :  
   
- **bcp** *table_ou_vue* **format** nul **-f***nom_fichier_de_format*  
+ **bcp** *table_or_view* **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  Pour bien distinguer un fichier au format non-XML, nous vous recommandons d'utiliser l'extension de nom de fichier .fmt, par exemple MaTable.fmt.  
@@ -270,16 +270,16 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  Pour obtenir des informations sur la syntaxe de ce fichier de format, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Pour plus d’informations sur les données de type caractère, consultez [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Mappage des champs de données aux colonnes de table  
- Lorsqu’il est créé par **bcp**, un fichier de format décrit toutes les colonnes de table dans l’ordre. Vous pouvez modifier ce fichier pour réorganiser ou omettre des lignes de la table. Vous pouvez ainsi personnaliser un fichier de format en fonction d'un fichier de données dont les champs ne sont pas mappés directement aux colonnes de table. Pour plus d'informations, consultez les rubriques suivantes :  
+ Lorsqu’il est créé par **bcp**, un fichier de format décrit toutes les colonnes de table dans l’ordre. Vous pouvez modifier ce fichier pour réorganiser ou omettre des lignes de la table. Vous pouvez ainsi personnaliser un fichier de format en fonction d'un fichier de données dont les champs ne sont pas mappés directement aux colonnes de table. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
 -   [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

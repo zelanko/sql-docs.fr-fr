@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) ou [resource](../../relational-databases/databases/resource-database.md), ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance de chaque fichier de données tempdb en Mo. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64|  
     |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo du fichier journal tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
     |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance en Mo du fichier journal tempdb. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
+    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|Spécifie le répertoire pour les fichiers journaux tempdb.<br /><br /> Valeur par défaut : Répertoire des données système.|  
   
 3.  Lorsque le programme d'installation a terminé la reconstruction des bases de données système, il revient à l'invite de commandes sans afficher de message. Examinez le fichier journal Summary.txt pour vérifier que le processus s'est correctement déroulé. Ce fichier se trouve à l’emplacement C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
 10. Sauvegardez la base de données **msdb** .  
   
 ##  <a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
- Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
+ Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  
   
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
  Une fois l'opération de reconstruction terminée, examinez les journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vérifier s'ils contiennent des erreurs. L’emplacement par défaut des journaux est C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs. Pour localiser le fichier journal qui contient les résultats du processus de reconstruction, accédez au dossier Logs à partir d'une invite de commandes, puis exécutez `findstr /s RebuildDatabase summary*.*`. Cette recherche vous dirige vers les fichiers journaux qui contiennent les résultats de la reconstruction des bases de données système. Ouvrez les fichiers journaux et recherchez les messages d'erreur pertinents.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
   

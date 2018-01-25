@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dfe465757a4182803609ec24f3b2b28510ffb61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>Métadonnées - paramètre et l’ensemble de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +45,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de paramètre|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
+|date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Définissez|  
   
@@ -62,11 +62,11 @@ ms.lasthandoff: 01/08/2018
 |*pwszDataSourceType*<br /><br /> (spécifique au fournisseur)|*pwszDataSourceType*<br /><br /> (OLE DB générique)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignoré|  
-|Date|DBTYPE_DBDATE|6|Ignoré|  
+|date|DBTYPE_DBDATE|6|Ignoré|  
 ||DBTYPE_DBTIME|10|Ignoré|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignoré|  
-|DATETIME||16|Ignoré|  
+|datetime||16|Ignoré|  
 |datetime2 ou DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |Type de liaison|*pwszDataSourceType*<br /><br /> (spécifique au fournisseur)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Date|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -90,10 +90,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
+|date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Définissez|  
   
@@ -124,10 +124,10 @@ ms.lasthandoff: 01/08/2018
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
+|date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Définissez|  
   

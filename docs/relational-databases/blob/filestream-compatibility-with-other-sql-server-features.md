@@ -16,15 +16,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fa07febaa2096db25b4b29152a089462deccae1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb4b3143fb09733fcedf8bc36a3f744577ff7553
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les données FILESTREAM figurant dans le système de fichiers, cette rubrique fournit quelques considérations, indications et limitations relatives à l’utilisation de FILESTREAM avec les fonctionnalités suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
   
  Vous pouvez définir la relation contenant-contenu de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données à relation contenant-contenu, telles que les utilisateurs contenus. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

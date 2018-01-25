@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51237868e7431efcfe7e11031f6862f917022e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 785c92513f16659d4fa193305874b9ca8bab5f3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Suppression d'une colonne d'une table SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Le consommateur indique un nom de colonne dans la *pwszName*membre de la *uName* union dans la *pColumnID* paramètre. Le nom de colonne est une chaîne de caractères Unicode. Le *eKind* membre *pColumnID* doit être DBKIND_NAME.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
@@ -57,6 +57,6 @@ hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
+ [Tables et des index](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

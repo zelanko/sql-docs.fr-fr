@@ -17,15 +17,15 @@ helpviewer_keywords:
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 947bbd87fca45f0647bffe38af8e51591799778c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="databases"></a>Bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une base de données est constituée d’une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  

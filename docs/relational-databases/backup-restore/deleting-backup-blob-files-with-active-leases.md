@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feb8bb22579b8ed7c1c6c62e193ae5bce910269c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9d8368d268caf86958ce90229c69f792a1ff036
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Supprimer des fichiers blob de sauvegarde avec des baux actifs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En cas de sauvegarde vers ou de restauration à partir du stockage Microsoft Azure, SQL Server acquiert un bail infini pour verrouiller l’accès exclusif à l’objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l’objet blob ne peut pas être écrit ou supprimé tant que le bail n’a pas été libéré. Cette rubrique explique comment libérer (résilier) le bail et supprimer l’objet blob. 
@@ -162,6 +162,6 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

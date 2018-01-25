@@ -21,15 +21,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b58f7ba5799384276fb39c8490d933ed4f63469
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e8860ca10da3f28750d62f2fb1a926069cec496c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment gérer la table **suspect_pages** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La table **suspect_pages** est conçue pour gérer les informations sur les pages suspectes et aide à déterminer si une restauration est nécessaire ou non. La table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) réside dans la [base de données msdb](../../relational-databases/databases/msdb-database.md).  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
     |Description de l'erreur|Valeur**event_type** |  
     |-----------------------|---------------------------|  
-    |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
+    |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)| 1|  
     |Somme de contrôle incorrecte|2|  
     |Page endommagée|3|  
     |Page restaurée (la page a été restaurée après avoir été marquée comme incorrecte)|4|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages** . Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -166,7 +166,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

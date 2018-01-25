@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a26d6e0cdf6e356fa65035cff28f99b86bbb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05d9eac7b81f5a17d5f2b9de71cc0a7027896354
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de maintenance, (Page Création de rapports et enregistrement)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La boîte de dialogue **Création de rapport et enregistrement** vous permet de configurer les rapports et les enregistrements qui sont générés lors de l’exécution des plans de maintenance.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
  **Nouveau**  
  Affiche la boîte de dialogue **Propriétés de connexion** . Sert à configurer les nouvelles informations de connexion permettant de se connecter à un serveur distant.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
   

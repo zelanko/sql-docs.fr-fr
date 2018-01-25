@@ -19,15 +19,15 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e4f42a1288119c4557e2e045943b71da700b483
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 03eb28507a7fa0fdc2bf8df55dbb39356f24109c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,10 +69,10 @@ ms.lasthandoff: 01/08/2018
   
 -   [Définition de données volumineuses](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
   
--   [Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Prise en charge de diffusion en continu pour les paramètres de sortie BLOB](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40; OLE DB &#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Utilisation de types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [À l’aide des Types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

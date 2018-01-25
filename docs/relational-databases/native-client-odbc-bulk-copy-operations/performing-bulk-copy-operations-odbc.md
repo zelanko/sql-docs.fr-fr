@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d8de08d636104294453187fee964212284bb66e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 94ccda73ec77c00e77f99f8a11405be40cc876dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Exécution d'opérations de copie en bloc (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,14 +55,14 @@ ms.lasthandoff: 01/08/2018
   
  Pour plus d’informations sur l’utilisation de la journalisation minimale, consultez [conditions préalables pour la journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lors de l'utilisation de bcp.exe dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, il se peut que vous rencontriez des erreurs là où il n'en existait pas avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La raison en est que dans les versions ultérieures, bcp.exe n'effectue plus la conversion implicite des types de données. Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], bcp.exe convertissait les données numériques en type de données money, si la table cible avait un tel type. Toutefois, dans ce cas, bcp.exe tronquait simplement les champs supplémentaires. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], quand les types de données ne correspondent pas entre le fichier et la table cible, bcp.exe déclenche une erreur s'il existe des données qui devraient être tronquées pour contenir dans la table cible. Pour résoudre cette erreur, corrigez les données de sorte qu'elles correspondent au type de données cible. Le cas échéant, utilisez bcp.exe à partir d'une version antérieure à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utilisation de fichiers de données et de format](../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
+-   [À l’aide de fichiers de données et les fichiers de Format](../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
--   [Copie en bloc à partir de variables de programme](../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
+-   [Variables de programme à partir de la copie en bloc](../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
 -   [Gestion des tailles de lot de copie en bloc](../../relational-databases/native-client-odbc-bulk-copy-operations/managing-bulk-copy-batch-sizes.md)  
   

@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.notifyoperator.f1
 helpviewer_keywords: Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8e10a98a1d2ee8328d4124b9949abf33943821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b272b5d52fc3bcfadfee095f03b061c436f4508d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tâche Notifier l'opérateur (Plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Tâche Notifier l’opérateur** pour ajouter une notification automatique à ce plan de maintenance. Pour utiliser cette tâche, la messagerie de base de données doit être activée et correctement configurée avec MSDB en tant que base de données hôte de messagerie, et vous devez disposer d’un opérateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent avec une adresse de messagerie valide.  
@@ -71,13 +71,13 @@ ms.lasthandoff: 11/17/2017
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
   

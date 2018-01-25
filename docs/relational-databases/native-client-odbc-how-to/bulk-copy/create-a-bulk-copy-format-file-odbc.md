@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e07f7c4c42f51ca31de3eb636d5cde65f3817380
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 42a40a161a901ab036eb58c8743b461c88df155d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Créer un fichier de format de copie en bloc (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
   
  Une opération de copie en bloc exécutée de cette manière crée à la fois un fichier de données contenant les données copiées en bloc et un fichier de format décrivant la mise en page du fichier de données.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
@@ -222,6 +222,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Copie en bloc avec les SQL Server ODBC Driver rubriques &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [Utilisation de fichiers de données et de format](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
+ [À l’aide de fichiers de données et les fichiers de Format](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

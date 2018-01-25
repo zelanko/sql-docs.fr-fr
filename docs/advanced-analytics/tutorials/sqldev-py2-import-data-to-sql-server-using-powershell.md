@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d39e391e494e37c63731431579e82900ef3dbeeb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 80b40209f7287a7710a9dcd8022a3dd203aa8305
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Étape 2 : Importer des données vers SQL Server à l’aide de PowerShell
 
@@ -56,7 +56,7 @@ Si vous rencontrez des problèmes, vous pouvez utiliser le script en tant que r�
     - Le nom ou l’adresse d’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance où la Machine Learning Services avec Python a été installé.
     - Les nom d’utilisateur et mot de passe d’un compte sur l’instance. Le compte que vous utilisez doit avoir la possibilité de créer des bases de données, créer des tables et des procédures stockées et en bloc des données de charge pour les tables. 
     - Si vous ne fournissez pas de nom d’utilisateur et mot de passe, votre identité de Windows est utilisée pour se connecter à SQL Server, et vous sont promus pour entrer un mot de passe.
-    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple, `C:\temp\pysql\nyctaxi1pct.csv`
+    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple : `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Pour charger les données correctement, le fichier xmlrw.dll bibliothèque doit être dans le même dossier que bcp.exe.

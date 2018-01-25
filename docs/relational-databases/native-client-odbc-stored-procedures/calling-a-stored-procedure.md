@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06859de8da70eb1357802fdca1e758e1872a7f10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,19 +42,19 @@ ms.lasthandoff: 01/08/2018
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   
- {[**? =**]**appeler***nom_procédure*[([*paramètre*] [**,**[*paramètre*]]...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
   
  où *nom_procédure* Spécifie le nom d’une procédure et *paramètre* spécifie un paramètre de procédure. Les paramètres nommés sont pris en charge uniquement dans les instructions à l'aide de la séquence d'échappement ODBC CALL.  
   
  Une procédure peut avoir zéro, un ou plusieurs paramètres. Elle peut également retourner une valeur (comme l'indique le marqueur de paramètre optionnel ?= au début de la syntaxe). Si un paramètre est un paramètre d'entrée ou d'entrée/sortie, ce peut être un littéral ou un marqueur de paramètre. Si le paramètre est un paramètre de sortie, ce doit être un marqueur de paramètre car la sortie est inconnue. Marqueurs de paramètres doivent être liés avec [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) avant l’appel de procédure cette instruction est exécutée.  
   
- Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Exemple :  
+ Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Par exemple :  
   
- {**appeler** *nom_procédure***()**}  
+ {**call** *procedure_name***( )**}  
   
- Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Exemple :  
+ Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Par exemple :  
   
- {**appeler** *nom_procédure*}  
+ {**call** *procedure_name*}  
   
  Des littéraux peuvent être spécifiés comme paramètres d'entrée et d'entrée/sortie dans les appels de procédure. Par exemple, la procédure InsertOrder possède cinq paramètres d'entrée. L'appel suivant à InsertOrder omet le premier paramètre, fournit un littéral pour le deuxième paramètre et utilise un marqueur de paramètre pour les troisième, quatrième et cinquième paramètres. (Les paramètres sont numérotés de façon séquentielle, en commençant par la valeur 1.)  
   

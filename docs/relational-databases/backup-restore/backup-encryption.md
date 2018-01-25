@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 -   L'option Ajouter au jeu de sauvegarde existant n'est pas prise en charge pour les sauvegardes chiffrées.  
   
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  **Pour chiffrer une sauvegarde ou restaurer à partir d'une sauvegarde chiffrée :**  
   
  **VIEW DEFINITION** sur le certificat ou la clé asymétrique utilisée pour chiffrer la sauvegarde de la base de données.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Methods"></a> Méthodes de chiffrement des sauvegardes  
  Les sections ci-dessous fournissent une brève introduction aux étapes de chiffrement des données pendant la sauvegarde. Pour une procédure pas à pas complète des différentes étapes de chiffrement de votre sauvegarde à l’aide de Transact-SQL, consultez [Créer une sauvegarde chiffrée](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
  Chiffrez une sauvegarde lors de la création de la sauvegarde d'une base de données dans l'une des boîtes de dialogue suivantes :  
   
 1.  [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) Dans la page **Options de sauvegarde**, sélectionnez **Chiffrement**, ainsi que l’algorithme de chiffrement et le certificat ou la clé asymétrique à utiliser pour le chiffrement.  
@@ -143,7 +143,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[Créer une sauvegarde chiffrée](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Décrit les étapes de base requises pour créer une sauvegarde chiffrée.|  
 |[Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fournit un exemple de création d'une sauvegarde chiffrée protégée par des clés dans le coffre de clés Azure.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

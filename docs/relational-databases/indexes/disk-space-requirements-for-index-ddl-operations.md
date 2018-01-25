@@ -19,15 +19,15 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5479835a035a5a70a58463c3ed04f5540fdb1554
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Espace disque nécessaire pour les opérations DDL d'index
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,12 +85,12 @@ ms.lasthandoff: 11/17/2017
   
  Les opérations d'index en ligne utilisent le contrôle de version de ligne pour isoler l'opération d'index des effets des modifications d'autres transactions. Ceci permet d'éviter de demander des verrous partagés sur des lignes qui ont été lues. Les opérations simultanées de suppression et de mise à jour d’utilisateur lors d’opérations d’index en ligne nécessitent de l’espace pour les enregistrements de version dans **tempdb**. Pour plus d’informations, consultez [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Exemple d’espace disque d’un index](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Espace disque du journal des transactions pour les opérations d'index](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
- [Estimer la taille d'une table](../../relational-databases/databases/estimate-the-size-of-a-table.md)  
+ [Estimer la taille d’une table](../../relational-databases/databases/estimate-the-size-of-a-table.md)  
   
  [Estimer la taille d'un index cluster](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  [Estimer la taille d'un segment de mémoire](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  

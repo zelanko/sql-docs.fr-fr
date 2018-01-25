@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dff9a1a2d366ddbb5fa4731dc6b7a40906babafb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab87d6c5626424a2f6491ed6acec3b3f83fcbfe6
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour plus d’informations, consultez [prise en charge des colonnes éparses &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 typedef struct tagCOMPUTEBYLIST  
@@ -160,6 +160,6 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetDescField, fonction](http://go.microsoft.com/fwlink/?LinkId=59351)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

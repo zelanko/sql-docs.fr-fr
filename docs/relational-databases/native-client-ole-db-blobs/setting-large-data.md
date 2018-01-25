@@ -19,15 +19,15 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ae41ce54eb4ffc65bc5acedd854fcc9c030b36c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9d1cb93b8c5d7f9b9a0b596d1a29762f849f630c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  Créer un objet de stockage contenant les données (et également l’indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l’accesseur qui lie la colonne BLOB pour définir les données.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple montre comment définir des données BLOB. Cet exemple crée une table, ajoute un exemple d'enregistrement, extrait cet enregistrement de l'ensemble de lignes, puis définit la valeur du champ BLOB.  
   
 ```  
@@ -728,6 +728,6 @@ Exit:
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Utilisation de types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [À l’aide des Types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

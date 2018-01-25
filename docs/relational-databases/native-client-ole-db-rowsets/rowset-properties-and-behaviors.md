@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 
   Il s’agit du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriétés ensemble de lignes du fournisseur OLE DB Native Client.  
   
-|ID de propriété|Description|  
+|ID de propriété| Description|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : le comportement d'un ensemble de lignes après une opération d'abandon est déterminé par cette propriété.<br /><br /> VARIANT_FALSE : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif invalide les ensembles de lignes après une opération d’abandon. Les fonctionnalités de l'objet d'ensemble de lignes sont quasiment perdues. Il prend uniquement en charge **IUnknown** opérations et la version de handles de ligne et d’accesseur en attente.<br /><br /> VARIANT_TRUE : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur gère un ensemble de lignes valide.|  
 |DBPROP_ACCESSORDER|R/W : lecture/écriture<br /><br /> Valeur par défaut : DBPROPVAL_AO_RANDOM<br /><br /> Description : ordre d'accès. Ordre dans lequel les colonnes doivent être accessibles dans l'ensemble de lignes.<br /><br /> DBPROPVAL_AO_RANDOM : les colonnes sont accessibles dans n'importe quel ordre.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS : les colonnes liées en tant qu'objets de stockage sont accessibles uniquement dans l'ordre séquentiel déterminé par l'ordinal de colonne.<br /><br /> DBPROPVAL_AO_SEQUENTIAL : toutes les colonnes doivent être accessibles dans l'ordre séquentiel déterminé par l'ordinal de colonne.|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif définit l’ensemble de la propriété spécifique au fournisseur DBPROPSET_SQLSERVERROWSET comme indiqué dans cette table.  
   
-|ID de propriété|Description|  
+|ID de propriété| Description|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|Colonne : ColumnID<br /><br /> R/w : lecture seule<br /><br /> Type : VT_U12 &#124; VT_ARRAY<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Description : tableau de valeurs entières représentant la position ordinale (de base 1) d'une colonne de résultats d'une clause COMPUTE dans l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT actuelle. Il s’agit de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] équivalent pour le fournisseur OLE DB Native Client de l’attribut ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : VARIANT_TRUE : dans l’exécution préparée, la préparation de la commande est différée jusqu'à ce que **ICommand::Execute** est appelée ou une opération de métapropriété est effectuée. Si la propriété a la valeur<br /><br /> VARIANT_FALSE : L’instruction est préparée lorsque **ICommandPrepare::Prepare** est exécutée.|  
@@ -105,7 +105,7 @@ ms.lasthandoff: 01/08/2018
 |SSPROP_MAXBLOBLENGTH|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_I4<br /><br /> Valeur par défaut : le fournisseur ne restreint pas la taille du texte retourné par le serveur et la valeur de propriété est définie à sa valeur maximale. Par exemple 2 147 483 647.<br /><br /> Description : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client exécute une instruction SET TEXTSIZE pour restreindre la longueur des données d’objet binaire volumineux (BLOB) retournées dans une instruction SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Colonne : NoCount<br /><br /> R/w : lecture seule<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : valeur booléenne représentant l'état de SET NOCOUNT ON/OFF dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> VARIANT_TRUE : avec SET NOCOUNT ON<br /><br /> VARIANT_FALSE : avec SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR (entre 1 et 2 000 caractères sont autorisés)<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : texte du message de notification de requête. Il est défini par l'utilisateur et n'a aucun format spécifique.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : options de notifications de requêtes. Elles sont spécifiées dans une chaîne avec `name=value`. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente. La syntaxe de la chaîne des options de notifications de requêtes est :<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Exemple :<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : options de notifications de requêtes. Elles sont spécifiées dans une chaîne avec `name=value`. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente. La syntaxe de la chaîne des options de notifications de requêtes est :<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Par exemple :<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_UI4<br /><br /> Valeur par défaut : 432 000 secondes (5 jours)<br /><br /> Valeur minimale : 1 seconde<br /><br /> Valeur maximale : 2^31-1 secondes<br /><br /> Description : nombre de secondes pendant lesquelles la notification de requête doit rester active.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60db5e1eed36ab731c982d7171ca186b3012aacc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dfea7aa106988fc0b188dd1f1eb9da0efb206b33
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Champs de descripteur de paramètre table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.lasthandoff: 01/08/2018
 
   La prise en charge des paramètres table inclut de nouveaux champs spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les descripteurs de paramètre d'application (APD) ODBC et les descripteurs de paramètre d'implémentation (IPD).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
-|Nom   |Emplacement|Type|Description|  
+|Nom|Emplacement|Type| Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nom du type de serveur du paramètre table.<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié sur un appel à SQLBindParameter, il doit toujours être spécifié comme une valeur Unicode, même dans les applications qui sont générées comme applications ANSI. La valeur utilisée pour le paramètre *StrLen_or_IndPtr* doit être SQL_NTS ou la longueur de chaîne du nom multipliée par sizeof (WCHAR).<br /><br /> Lorsqu’un nom de type de paramètre table est spécifié via SQLSetDescField, il peut être spécifié à l’aide d’un littéral conforme à la façon dont l’application est créé. Le Gestionnaire de pilotes ODBC effectuera toute conversion Unicode requise.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (lecture seule)|IPD|SQLTCHAR*|Catalogue où le type est défini.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  Les attributs d'instruction et les champs d'en-tête de descripteur suivants s'appliquent aux paramètres table lorsque le focus de paramètre est défini sur un paramètre table :  
   
-|Nom   |Emplacement|Type|Description|  
+|Nom|Emplacement|Type| Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (Équivaut à SQL_DESC_ARRAY_SIZE dans le descripteur APD.)|APD|SQLUINTEGER|Taille du tableau de mémoires tampon pour un paramètre table. Il s'agit du nombre maximal de lignes que les mémoires tampon peuvent prendre en charge ou de la taille des mémoires tampon dans les lignes ; la valeur du paramètre table peut elle-même avoir un nombre de lignes supérieur ou inférieur à la capacité des mémoires tampon. Valeur par défaut est 1.<br /><br /> Remarque : Si SQL_SOPT_SS_PARAM_FOCUS est défini sur sa valeur par défaut de 0, SQL_ATTR_PARAMSET_SIZE fait référence à l’instruction et spécifie le nombre de jeux de paramètres. Si SQL_SOPT_SS_PARAM_FOCUS est pour valeur l'ordinal d'un paramètre table, il fait référence au paramètre table et spécifie le nombre de lignes par jeu de paramètres pour le paramètre table.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|La valeur par défaut est SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Pour sélectionner la liaison selon les lignes, ce champ a pour valeur la longueur de la structure ou une instance d'une mémoire tampon qui sera liée à un jeu de lignes de paramètre table. Cette durée doit inclure l'espace pour toutes les colonnes dépendantes et tout remplissage de la structure ou de la mémoire tampon. Cela garantit que lorsque l'adresse d'une colonne dépendante est incrémentée de la longueur spécifiée, le résultat pointera vers le début de la même colonne dans la ligne suivante. Lorsque vous utilisez la **sizeof** opérateur en C ANSI, ce comportement est garanti.|  

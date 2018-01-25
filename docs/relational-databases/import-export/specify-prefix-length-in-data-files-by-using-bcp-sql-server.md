@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d649216f87a35c21430cd2d9b16bd4a4085b485
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
@@ -67,21 +67,21 @@ ms.lasthandoff: 11/17/2017
 |**binaire**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
-|**smalldatetime**|0|1|0|1|  
-|**decimal**|1|1|1|1|  
-|**numeric**|1|1|1|1|  
-|**float**|0|1|0|1|  
-|**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
-|**bigint**|0|1|0|1|  
-|**smallint**|0|1|0|1|  
-|**tinyint**|0|1|0|1|  
-|**money**|0|1|0|1|  
-|**smallmoney**|0|1|0|1|  
-|**bit**|0|1|0|1|  
-|**uniqueidentifier**|1|1|0|1|  
-|**timestamp**|1|1|1|1|  
+|**datetime**|0| 1|0| 1|  
+|**smalldatetime**|0| 1|0| 1|  
+|**decimal**| 1| 1| 1| 1|  
+|**numeric**| 1| 1| 1| 1|  
+|**float**|0| 1|0| 1|  
+|**real**|0| 1|0| 1|  
+|**Int**|0| 1|0| 1|  
+|**bigint**|0| 1|0| 1|  
+|**smallint**|0| 1|0| 1|  
+|**tinyint**|0| 1|0| 1|  
+|**money**|0| 1|0| 1|  
+|**smallmoney**|0| 1|0| 1|  
+|**bit**|0| 1|0| 1|  
+|**uniqueidentifier**| 1| 1|0| 1|  
+|**timestamp**| 1| 1| 1| 1|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (type de données défini par l’utilisateur)|8|8|8|8|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Pour spécifier une longueur de préfixe dans un fichier de données qui n’a pas été créé à l’aide de **bcp**, utilisez les longueurs indiquées dans [Longueurs de préfixe pour l’exportation en bloc](#PrefixLengthsExport), plus haut dans cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c30e38d6f10e519cb4c635a5a23c561dc3ad93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-filegroups-page"></a>Propriétés de la base de données (page Groupes de fichiers)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet d’afficher les groupes de fichiers existants ou d’ajouter un nouveau groupe de fichiers à la base de données sélectionnée. Il existe trois types de groupes de fichiers : les groupes de fichiers de *ligne* , les groupes de fichiers de données FILESTREAM et les groupes de fichiers optimisés en mémoire.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  **Lecture seule**  
  Sélectionnez cette option pour attribuer au groupe de fichiers l'état lecture seule.  
   
- **Par défaut**  
+ **Default**  
  Sélectionnez cette option pour définir ce groupe de fichiers comme groupe de fichiers par défaut. Vous pouvez définir un groupe de fichiers de ligne par défaut et un groupe de fichiers par défaut pour les données FILESTREAM.  
   
  **Ajouter**  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  **Supprimer**  
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

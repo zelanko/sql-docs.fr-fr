@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>Performance  
+### <a name="performance"></a>Performances  
  La compression des index columnstore avec compression d’archivage affecte les performances des index par rapport aux index columnstore sans compression d’archivage. Utilisez la compression d'archivage uniquement lorsque vous pouvez vous permettre d'utiliser du temps et les ressources supplémentaires pour compresser et récupérer les données.  
   
  La compression d’archivage offre l’avantage d’un stockage réduit, ce qui est utile pour les données auxquelles vous n’accédez pas fréquemment. Par exemple, si vous disposez d'une partition pour chaque mois de données, et la majeure partie de votre activité est réalisée au cours des mois les plus récents, vous pouvez archiver les mois antérieurs afin de réduire les besoins de stockage.  
@@ -191,7 +191,7 @@ Le tableau suivant illustre les paramètres de réplication qui contrôlent la c
 |Compresser la table sur l'Abonné si toutes les partitions sont compressées sur le serveur de publication, mais ne pas répliquer le schéma de partition.|False|True|Vérifie si toutes les partitions sont activées pour la compression.<br /><br /> Exclut la compression du script au niveau de la table.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Impact de la compression sur les autres composants SQL Server 
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  La compression se produit dans le moteur de stockage et les données sont présentées à la plupart des autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non compressé. Cela limite les effets de la compression sur les autres composants de la manière suivante :  
 -   Opérations d'importation et d'exportation en bloc  
@@ -203,7 +203,7 @@ Le tableau suivant illustre les paramètres de réplication qui contrôlent la c
 -   La compression de données est incompatible avec les colonnes éparses. Par conséquent, les tables contenant des colonnes éparses ne peuvent pas être compressées et les colonnes éparses ne peuvent pas être ajoutées aux tables compressées.  
 -   L'activation de la compression peut provoquer la modification des plans de requêtes, car les données sont stockées avec un nombre différent de pages et de lignes par page.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Implémentation de la compression de ligne](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implémentation de la compression de page](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implémentation de la compression Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)   

@@ -14,17 +14,17 @@ ms.topic: reference
 helpviewer_keywords: large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1a4811af052af8ce7dccd90a00fe678f3e47973
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d80c7a2a09bd258662ae64481980b628a6480b0a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
-# <a name="set-large-data-ole-db"></a>Définir des données volumineuses (OLE DB)
+# <a name="set-large-data-ole-db"></a>Définir des données volumineuses (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l'élément **wType** dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l'élément **pObject** de sorte qu'il pointe vers la structure DBOBJECT que vous avez créée.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définir le **wType** élément de la structure DBBINDING à DBTYPE_IUNKNOWN et le **pObject** élément pour qu’il pointe vers la structure DBOBJECT que vous avez créé.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   
@@ -53,10 +53,10 @@ ms.lasthandoff: 01/08/2018
   
 6.  Pour définir les données, créez un objet de stockage contenant les données (ainsi que l'indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l'accesseur qui lie la colonne BLOB.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
-### <a name="description"></a>Description  
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+### <a name="description"></a> Description  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
 ### <a name="code"></a>Code  
   

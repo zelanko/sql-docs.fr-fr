@@ -20,15 +20,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a5824fa73a1c869eb1376fca9b9d0d11ecfb223
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8eba0d38c9a36f9f66009283126e34f55f38202
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="validate-a-dac-package"></a>Valider un package DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nous vous conseillons d’examiner le contenu d’un package DAC avant de le déployer en production, et de valider les actions de mise à niveau avant de mettre à niveau une DAC existante. Ceci tout particulièrement lors du déploiement de packages qui n'ont pas été développés dans votre organisation.  
@@ -176,7 +176,7 @@ $fileStream.Close()
   
  Ou bien, décompressez les DAC dans des dossiers distincts. Vous pouvez ensuite utiliser un outil de comparaison, tel que l'utilitaire WinDiff, pour analyser les différences.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Mettre à niveau une application de la couche Données](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
