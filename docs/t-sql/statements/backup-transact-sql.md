@@ -1,7 +1,7 @@
 ---
 title: SAUVEGARDE (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7e7c733332d7d7b38c8067daf45ce39b2023d311
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
-ms.translationtype: MT
+ms.openlocfilehash: 0d02c6efa9dc45f344ca240f6533bf6499fa83fa
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,49 +170,48 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Lorsque vous restaurez une sauvegarde créée par la sauvegarde de la base de données (un *sauvegarde des données*), l’ensemble de la sauvegarde est restaurée. Seule une sauvegarde du fichier journal peut être restaurée à un moment ou une transaction spécifique au sein de la sauvegarde.  
   
 > [!NOTE]  
->  Uniquement une sauvegarde complète de la base de données peut être effectuée sur le **master** base de données.  
+> Uniquement une sauvegarde complète de la base de données peut être effectuée sur le **master** base de données.  
   
  LOG  
  Indique que la sauvegarde ne doit porter que sur le journal des transactions. Le journal est sauvegardé à partir de la dernière sauvegarde réussie du fichier journal et jusqu'à sa fin actuelle. Avant de pouvoir créer la première sauvegarde du fichier journal, vous devez créer une sauvegarde complète.  
   
- Vous pouvez restaurer une sauvegarde de journal à un moment spécifique ou de la transaction au sein de la sauvegarde en spécifiant WITH STOPAT, STOPATMARK ou STOPBEFOREMARK dans votre [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) instruction.  
+ Vous pouvez restaurer une sauvegarde de journal à un moment spécifique ou de la transaction au sein de la sauvegarde en spécifiant `WITH STOPAT`, `STOPATMARK`, ou `STOPBEFOREMARK` dans votre [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) instruction.  
   
 > [!NOTE]  
->  Après une sauvegarde de fichier journal standard, certains enregistrements du journal des transactions deviennent inactifs, sauf si vous spécifiez WITH NO_TRUNCATE ou COPY_ONLY. Le journal est tronqué une fois que tous les enregistrements d'un ou de plusieurs fichiers journaux virtuels sont devenus inactifs. Si le journal n'est pas tronqué après des sauvegardes normales du journal, il se peut que quelque chose retarde la troncation du journal. Pour plus d'informations, consultez  
+>  Après une sauvegarde de journal par défaut, certains enregistrements de journal des transactions deviennent inactifs, sauf si vous spécifiez `WITH NO_TRUNCATE` ou `COPY_ONLY`. Le journal est tronqué une fois que tous les enregistrements d'un ou de plusieurs fichiers journaux virtuels sont devenus inactifs. Si le journal n'est pas tronqué après des sauvegardes normales du journal, il se peut que quelque chose retarde la troncation du journal. Pour plus d’informations, consultez [facteurs pouvant retarder la troncation du journal](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
- { *nom_base_de_données* | **@**var_nom_base_de_données *}   
- Correspond à la base de données à partir de laquelle va être opérée la sauvegarde du journal des transactions, c'est à dire la sauvegarde complète ou partielle. Fourni comme variable (**@***var_nom_base_de_données*), ce nom peut être spécifié comme constante de chaîne (**@***var_nom_base_de_données*** =** *nom de la base de données*) ou comme une variable de type chaîne de caractères, à l’exception de la **ntext** ou **texte** des types de données.  
+ { *nom_base_de_données* | **@*** var_nom_base_de_données* } est la base de données à partir de laquelle le journal des transactions, base de données partielle ou base de données complète est sauvegardée. Fourni comme variable (**@***database_name_var*), ce nom peut être spécifié comme constante de chaîne (**@***var_nom_base_de_données***= *** nom de la base de données*) ou comme un type de données, de chaîne de variable de caractère à l’exception de la **ntext** ou **texte** des types de données.  
   
 > [!NOTE]  
->  La base de données miroir d'un partenariat de mise en miroir de bases de données ne peut pas être sauvegardée.  
+> La base de données miroir d'un partenariat de mise en miroir de bases de données ne peut pas être sauvegardée.  
   
-\<file_or_filegroup > [ **,**... *n* ]  
+\<file_or_filegroup> [ **,**...*n* ]  
  Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.  
   
- FICHIER  **=**  { *nom_fichier_logique*| **@*** variable_nom_fichier_logique* }  
+ FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
  Nom logique d'un fichier ou variable dont la valeur correspond au nom logique d'un fichier à inclure dans la sauvegarde.  
   
- Groupe de fichiers  **=**  { *nom_groupe_fichiers_logique*| **@*** var_nom_groupe_fichiers_logique* }  
+ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  Nom logique d'un groupe de fichiers ou variable dont la valeur correspond au nom logique d'un groupe de fichiers à inclure dans la sauvegarde. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.  
   
 > [!NOTE]  
->  Pensez à utiliser des sauvegardes de fichiers lorsque la taille de la base de données et les exigences en matière de performances rendent la sauvegarde de la base de données totalement inadaptée. NULL peut être utilisé pour tester les performances des sauvegardes, mais ne doit pas être utilisé dans les environnements de production.
+> Pensez à utiliser des sauvegardes de fichiers lorsque la taille de la base de données et les exigences en matière de performances rendent la sauvegarde de la base de données totalement inadaptée. NULL peut être utilisé pour tester les performances des sauvegardes, mais ne doit pas être utilisé dans les environnements de production.
   
  *n*  
  Espace réservé indiquant qu'il est possible de spécifier plusieurs fichiers et groupes de fichiers dans une liste séparée par des virgules. Le nombre est illimité. 
   
- Pour plus d’informations, consultez : [sauvegardes de fichiers complètes &#40; SQL Server &#41; ](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [sauvegarder les fichiers et groupes de fichiers &#40; SQL Server &#41; ](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
+ Pour plus d’informations, consultez [sauvegardes de fichiers complètes &#40; SQL Server &#41; ](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [sauvegarder les fichiers et groupes de fichiers &#40; SQL Server &#41; ](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *nom_groupe_fichiers_logique*| **@*** var_nom_groupe_fichiers_logique* } [ **,**...* n *]]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *nom_groupe_fichiers_logique* | **@*** var_nom_groupe_fichiers_logique* } [ **,**...* n *]]  
  Spécifie une sauvegarde partielle. Une sauvegarde partielle inclut tous les fichiers en lecture/écriture dans une base de données : le groupe de fichiers primaire, tous les groupes de fichiers secondaires en lecture/écriture, ainsi que les fichiers ou groupes de fichiers en lecture seule qui ont été spécifiés.  
   
  READ_WRITE_FILEGROUPS  
  Spécifie que tous les groupes de fichiers en lecture/écriture doivent être sauvegardés dans la sauvegarde partielle. Si la base de données est en lecture seule, READ_WRITE_FILEGROUPS inclut uniquement le groupe de fichiers primaire.  
   
 > [!IMPORTANT]  
->  Si, au lieu d'utiliser READ_WRITE_FILEGROUPS, vous listez de manière explicite les groupes de fichiers en lecture/écriture en utilisant FILEGROUP, vous allez créer une sauvegarde de fichiers.  
+> Si, au lieu d'utiliser READ_WRITE_FILEGROUPS, vous listez de manière explicite les groupes de fichiers en lecture/écriture en utilisant FILEGROUP, vous allez créer une sauvegarde de fichiers.  
   
- Groupe de fichiers = { *nom_groupe_fichiers_logique*| **@*** var_nom_groupe_fichiers_logique* }  
+ FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
 Nom logique d'un groupe de fichiers en lecture seule ou variable dont la valeur correspond au nom logique d'un groupe de fichiers en lecture seule à inclure dans la sauvegarde partielle. Pour plus d’informations, consultez «\<file_or_filegroup >, » plus haut dans cette rubrique.
   
  *n*  
@@ -229,22 +228,23 @@ POUR \<backup_device > [ **,**...  *n*  ] Indique l’accompagnant le jeu de [un
  {DISQUE | BANDE | URL}  **=**  { **'***physical_device_name***'** | **@*** physical_device_name_var* | 'NUL'}  
  Spécifie un fichier de disque ou périphérique à bandes, ou un service de stockage d'objets blob Windows Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Windows Azure. Pour plus d’informations et d’exemples, consultez [SQL Server sauvegarde et restauration avec Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour obtenir un didacticiel, consultez [didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
-[!NOTE] 
- L’unité de disque NUL supprimera toutes les informations qui lui sont envoyées et doit uniquement être utilisée pour le test. Ce n’est pas pour la production.
+> [!NOTE] 
+> L’unité de disque NUL supprimera toutes les informations qui lui sont envoyées et doit uniquement être utilisée pour le test. Ce n’est pas pour la production.
   
 > [!IMPORTANT]  
->  Avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu'à ce que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez uniquement sauvegarder à un seul périphérique lors de la sauvegarde vers une URL. Pour la sauvegarde sur plusieurs unités pour la sauvegarde vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et vous devez utiliser des jetons de Signature d’accès partagé (SAS). Pour des exemples de création d’une Signature d’accès partagé, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [simplification de la création des informations d’identification SQL avec des jetons de Signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> En commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous pouvez uniquement sauvegarder à un seul périphérique lors de la sauvegarde vers une URL. Pour la sauvegarde sur plusieurs unités pour la sauvegarde vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et vous devez utiliser des jetons de Signature d’accès partagé (SAS). Pour des exemples de création d’une Signature d’accès partagé, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [simplification de la création des informations d’identification SQL avec des jetons de Signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 **URL s’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Une unité de disque n'est pas tenue d'exister pour pouvoir être spécifiée dans une instruction BACKUP. Si l'unité physique existe et si l'option INIT n'est pas spécifiée dans l'instruction BACKUP, la sauvegarde est ajoutée à l'unité.  
  
- L’appareil NUL supprimera toutes les entrées sont envoyées à ce fichier, toutefois, la sauvegarde toujours marque toutes les pages sauvegardées.
+> [!NOTE] 
+> L’appareil NUL supprimera toutes les entrées sont envoyées à ce fichier, toutefois, la sauvegarde toujours marque toutes les pages sauvegardées.
   
  Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
 > [!NOTE]  
->  L'option TAPE sera supprimée dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
+> L'option TAPE sera supprimée dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
   
  *n*  
  Espace réservé indiquant qu'il est possible de spécifier jusqu'à 64 unités de sauvegarde dans une liste séparée par des virgules.  
@@ -254,16 +254,16 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Spécifie un ensemble d’unités
  Cette option est disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Pour MIRROR TO = DISK, BACKUP détermine automatiquement la taille de bloc appropriée des unités de disques. Pour plus d'informations sur la taille de bloc, consultez « BLOCKSIZE » ultérieurement dans ce tableau.  
+> Pour MIRROR TO = DISK, BACKUP détermine automatiquement la taille de bloc appropriée des unités de disques. Pour plus d'informations sur la taille de bloc, consultez « BLOCKSIZE » ultérieurement dans ce tableau.  
   
 \<unité_sauvegarde > consultez «\<unité_sauvegarde >, » plus haut dans cette section.
   
  *n*  
  Espace réservé indiquant qu'il est possible de spécifier jusqu'à 64 unités de sauvegarde dans une liste séparée par des virgules. Le nombre d'unités spécifiées dans la clause MIRROR TO doit être égal au nombre d'unités spécifiées dans la clause TO.  
   
- Pour plus d'informations, consultez « Familles de supports de sauvegarde miroirs » dans la section « Remarques », plus loin dans cette rubrique.  
+ Pour plus d’informations, consultez « Media familles dans supports de sauvegarde miroirs » dans le [notes](#general-remarks) section, plus loin dans cette rubrique.  
   
- [ *mise en miroir de suivant à* ]  
+ [ *next-mirror-to* ]  
  Espace réservé indiquant qu'une instruction BACKUP peut contenir jusqu'à trois clauses MIRROR TO, en plus de la clause TO.  
   
 ### <a name="with-options"></a>Options WITH  
@@ -275,7 +275,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Spécifie un ensemble d’unités
 **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  FILE_SNAPSHOT  
- Utilisé pour créer un instantané Azure de fichiers de la base de données lorsque tous les fichiers de base de données SQL Server sont stockés à l’aide du service de stockage d’objets Blob Azure. Pour plus d’informations, consultez [fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sauvegarde d’instantanés prend des instantanés Azure des fichiers de base de données (fichiers de données et journaux) à un état cohérent. Un ensemble cohérent d’instantanés Azure constituent une sauvegarde et sont enregistrées dans le fichier de sauvegarde. La seule différence entre **sauvegarde de base de données vers URL WITH FILE_SNAPSHOT** et **sauvegarde de journal pour URL WITH FILE_SNAPSHOT** est que ce dernier également tronque le journal des transactions n’est pas le cas de l’ancienne. Avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instantané de sauvegarde, après la sauvegarde complète initiale requise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la chaîne de sauvegarde, seule une sauvegarde de journal de transaction unique est nécessaire pour restaurer une base de données au point dans le temps de la sauvegarde de journal des transactions. En outre, seulement deux sauvegardes de journaux de transactions sont requis pour restaurer une base de données à un point dans le temps entre le moment où une deux transaction sauvegardes de journaux.  
+ Utilisé pour créer un instantané Azure de fichiers de la base de données lorsque tous les fichiers de base de données SQL Server sont stockés à l’aide du service de stockage d’objets Blob Azure. Pour plus d’informations, consultez [fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sauvegarde d’instantanés prend des instantanés Azure des fichiers de base de données (fichiers de données et journaux) à un état cohérent. Un ensemble cohérent d’instantanés Azure constituent une sauvegarde et sont enregistrées dans le fichier de sauvegarde. La seule différence entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` et `BACKUP LOG TO URL WITH FILE_SNAPSHOT` est que ce dernier également tronque le journal des transactions n’est pas le cas de l’ancienne. Avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instantané de sauvegarde, après la sauvegarde complète initiale requise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la chaîne de sauvegarde, seule une sauvegarde de journal de transaction unique est nécessaire pour restaurer une base de données au point dans le temps de la sauvegarde de journal des transactions. En outre, seulement deux sauvegardes de journaux de transactions sont requis pour restaurer une base de données à un point dans le temps entre le moment où une deux transaction sauvegardes de journaux.  
   
 **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -283,50 +283,45 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] Spécifie un ensemble d’unités
  Utilisé uniquement avec BACKUP DATABASE, ce paramètre spécifie que la sauvegarde de base de données ou de fichier ne doit porter que sur les parties de la base de données ou du fichier qui ont été modifiées depuis la dernière sauvegarde complète. Une sauvegarde différentielle occupe en général moins d'espace qu'une sauvegarde complète. Utilisez cette option de façon à ne pas avoir à appliquer toutes les sauvegardes successives du journal effectuées depuis la dernière sauvegarde complète.  
   
 > [!NOTE]  
->  Par défaut, BACKUP DATABASE crée une sauvegarde complète.  
+> Par défaut, `BACKUP DATABASE` crée une sauvegarde complète.  
   
  Pour plus d’informations, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
  ENCRYPTION  
- Utilisé pour spécifier le chiffrement d'une sauvegarde. Spécifiez un algorithme de chiffrement pour chiffrer la sauvegarde ou spécifiez « NO_ENCRYPTION » pour ne pas chiffrer la sauvegarde. Il est recommandé d'utiliser le chiffrement pour sécuriser les fichiers de sauvegarde. Liste des algorithmes possibles :  
+ Utilisé pour spécifier le chiffrement d'une sauvegarde. Vous pouvez spécifier un algorithme de chiffrement pour chiffrer la sauvegarde ou de spécifier `NO_ENCRYPTION` ne pas avoir la sauvegarde chiffrée. Il est recommandé d'utiliser le chiffrement pour sécuriser les fichiers de sauvegarde. Liste des algorithmes possibles :  
   
--   AES_128  
-  
--   AES_192  
-  
--   AES_256  
-  
--   TRIPLE_DES_3KEY  
-  
--   NO_ENCRYPTION  
-  
- Si vous choisissez de chiffrer, vous devez également spécifier le chiffreur à l'aide des options de chiffreur :  
+-   `AES_128`  
+-   `AES_192`  
+-   `AES_256`  
+-   `TRIPLE_DES_3KEY`  
+-   `NO_ENCRYPTION`    
+
+Si vous choisissez de chiffrer, vous devez également spécifier le chiffreur à l'aide des options de chiffreur :  
   
 -   SERVER CERTIFICATE = Encryptor_Name  
-  
 -   SERVER ASYMMETRIC KEY = Encryptor_Name  
   
-    > [!WARNING]  
-    >  Lorsque le chiffrement est utilisé conjointement avec l’argument FILE_SNAPSHOT, le fichier de métadonnées lui-même est chiffré à l’aide de l’algorithme de chiffrement spécifié et le système vérifie que le chiffrement transparent des données a été effectuée pour la base de données. Aucun chiffrement supplémentaire se produit pour les données proprement dites. La sauvegarde échoue si la base de données n’a pas été chiffré ou si le chiffrement n’a pas été exécuté avant l’instruction de sauvegarde a été émise.  
+> [!WARNING]  
+> Lorsque le chiffrement est utilisé conjointement avec la `FILE_SNAPSHOT` argument, le fichier de métadonnées lui-même est chiffré à l’aide de l’algorithme de chiffrement spécifié et le système vérifie que [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) a été effectué pour la base de données. Aucun chiffrement supplémentaire se produit pour les données proprement dites. La sauvegarde échoue si la base de données n’a pas été chiffré ou si le chiffrement n’a pas été exécuté avant l’instruction de sauvegarde a été émise.  
   
 **Options du jeu de sauvegarde**  
   
 Ces options s'appliquent au jeu de sauvegarde qui est créé par cette opération de sauvegarde.  
   
 > [!NOTE]  
->  Pour spécifier une jeu de sauvegarde pour une opération de restauration, utilisez le fichier **=***\<numéro_fichier_jeu_sauvegarde >* option. Pour plus d’informations sur la façon de spécifier un jeu de sauvegarde, consultez « Spécification d’un jeu de sauvegarde » dans [Arguments RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+> Pour spécifier une jeu de sauvegarde pour une opération de restauration, utilisez la `FILE = <backup_set_file_number>` option. Pour plus d’informations sur la façon de spécifier un jeu de sauvegarde, consultez « Spécification d’un jeu de sauvegarde » dans [Arguments RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Spécifie que la sauvegarde est un *sauvegarde de copie uniquement*, qui n’affecte pas la séquence normale des sauvegardes. Une sauvegarde en copie seule est créée indépendamment de vos sauvegardes régulières standard. Ce type de sauvegarde n'a aucun effet sur les procédures globales de sauvegarde et de restauration de la base de données.  
   
  Les sauvegardes en copie seule doivent être utilisées dans les cas où une sauvegarde est effectuée dans un but particulier, par exemple pour sauvegarder le journal avant une restauration de fichiers en ligne. En règle générale, une sauvegarde de fichier journal en copie seule est utilisée une fois, puis supprimée.  
   
--   Lorsqu'elle est utilisée avec BACKUP DATABASE, l'option COPY_ONLY crée une sauvegarde complète qui ne peut pas servir de base différentielle. La bitmap différentielle n'est pas mise à jour et les sauvegardes différentielles se comportent comme si la sauvegarde en copie seule n'existait pas. Les sauvegardes différentielles ultérieures utilisent la dernière sauvegarde complète standard en tant que base.  
+-   Lorsqu’il est utilisé avec `BACKUP DATABASE`, la `COPY_ONLY` option permet de créer une sauvegarde complète ne peut pas servir de base différentielle. La bitmap différentielle n'est pas mise à jour et les sauvegardes différentielles se comportent comme si la sauvegarde en copie seule n'existait pas. Les sauvegardes différentielles ultérieures utilisent la dernière sauvegarde complète standard en tant que base.  
   
     > [!IMPORTANT]  
-    >  Si les options DIFFERENTIAL et COPY_ONLY sont utilisées ensemble, COPY_ONLY est ignorée et une sauvegarde différentielle est créée.  
+    > Si `DIFFERENTIAL` et `COPY_ONLY` sont utilisés ensemble, `COPY_ONLY` est ignoré, et une sauvegarde différentielle est créée.  
   
--   Lorsqu’il est utilisé avec les journaux de sauvegarde, l’option COPY_ONLY crée une *sauvegarde du journal de copie seule*, qui ne tronque pas le journal des transactions. La sauvegarde de journal en copie seule n'a aucun effet sur la séquence de journaux de transactions consécutifs et les autres sauvegardes de journal se comportent comme si la sauvegarde en copie seule n'existait pas.  
+-   Lorsqu’il est utilisé avec `BACKUP LOG`, le `COPY_ONLY` option permet de créer un *sauvegarde du journal de copie seule*, qui ne tronque pas le journal des transactions. La sauvegarde de journal en copie seule n'a aucun effet sur la séquence de journaux de transactions consécutifs et les autres sauvegardes de journal se comportent comme si la sauvegarde en copie seule n'existait pas.  
   
 Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
@@ -334,6 +329,8 @@ Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL 
 Dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures uniquement, spécifie si [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md) est effectuée sur cette sauvegarde, remplaçant la valeur par défaut au niveau du serveur.  
   
 Lors de l'installation, le comportement par défaut exclut toute compression des sauvegardes. Mais cette valeur par défaut peut être modifié en définissant le [par défaut de compression des sauvegardes](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) option de configuration de serveur. Pour plus d’informations sur l’affichage de la valeur actuelle de cette option, consultez [afficher ou modifier les propriétés du serveur &#40; SQL Server &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+
+Pour plus d’informations sur l’utilisation de la compression de sauvegarde avec [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) des bases de données activées, consultez le [notes](#general-remarks) section.
   
 COMPRESSION  
 Active explicitement la compression des sauvegardes.  
@@ -341,21 +338,21 @@ Active explicitement la compression des sauvegardes.
 NO_COMPRESSION  
 Désactive explicitement la compression des sauvegardes.  
   
-DESCRIPTION  **=**  { **'***texte***'** | **@*** variable_texte* }  
+DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
 Spécifie le texte de format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
-NOM  **=**  { *nom_jeu_sauvegarde*| **@*** var_jeu_sauvegardes* }  
+NAME **=** { *backup_set_name* | **@***backup_set_var* }  
 Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
-{EXPIREDATE **='***date***'**| RETAINDAYS  **=**  *jours* }  
+{EXPIREDATE **='***date***'** | RETAINDAYS  **=**  *jours* }  
 Spécifie la date à laquelle le jeu de sauvegarde de cette sauvegarde peut être écrasé. Si ces options sont toutes les deux utilisées, RETAINDAYS l'emporte sur EXPIREDATE.  
   
-Si aucune de ces options est spécifiée, la date d’expiration est déterminée par le **mediaretention** paramètre de configuration. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+Si aucune de ces options est spécifiée, la date d’expiration est déterminée par le **mediaretention** paramètre de configuration. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
   
 > [!IMPORTANT]  
->  Ces options empêchent seulement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'écraser un fichier. Le contenu des bandes peut être écrasé par d'autres méthodes, et les fichiers sur disque peuvent être supprimés à partir du système d'exploitation. Pour plus d'informations sur le contrôle du délai d'expiration, consultez SKIP et FORMAT dans cette rubrique.  
+> Ces options empêchent seulement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'écraser un fichier. Le contenu des bandes peut être écrasé par d'autres méthodes, et les fichiers sur disque peuvent être supprimés à partir du système d'exploitation. Pour plus d'informations sur le contrôle du délai d'expiration, consultez SKIP et FORMAT dans cette rubrique.  
   
-EXPIREDATE  **=**  { **'***date***'**| **@*** var_date* } spécifie à quel moment la sauvegarde jeu expire et peut être remplacée. Fourni comme variable (@*var_date *), cette date doit suivre le système configuré **datetime** mettre en forme et être spécifié comme l’une des opérations suivantes :  
+EXPIREDATE  **=**  { **'***date***'** | **@*** var_date* } spécifie à quel moment la sauvegarde jeu expire et peut être remplacée. Fourni comme variable (@*var_date *), cette date doit suivre le système configuré **datetime** mettre en forme et être spécifié comme l’une des opérations suivantes :  
   
 -   Une constante de chaîne (@*var_date*  **=**  date)  
 -   Une variable de type chaîne de caractères (à l’exception de la **ntext** ou **texte** des types de données)  
@@ -370,9 +367,9 @@ Par exemple :
 Pour plus d’informations sur la spécification **datetime** valeurs, consultez [Types de Date et heure](../../t-sql/data-types/date-and-time-types.md).  
   
 > [!NOTE]  
->  Pour ignorer la date d'expiration, utilisez l'option SKIP.  
+> Pour ignorer la date d’expiration, utilisez la `SKIP` option.  
   
-RETAINDAYS  **=**  { *jours*| **@*** days_var* } Spécifie le nombre de jours qui doivent s’écouler avant ce support de sauvegarde définie peut être remplacée. Fourni comme variable (**@***days_var*), il doit être spécifié en tant qu’entier.  
+RETAINDAYS  **=**  { *jours* | **@*** days_var* } Spécifie le nombre de jours qui doivent s’écouler avant ce support de sauvegarde définie peut être remplacée. Fourni comme variable (**@***days_var*), il doit être spécifié en tant qu’entier.  
   
 **Options de support de sauvegarde**  
   
@@ -382,7 +379,7 @@ Ces options s'appliquent à l'ensemble du support de sauvegarde.
  Détermine si l'opération de sauvegarde ajoute les nouvelles sauvegardes ou si elle remplace les jeux de sauvegardes déjà présents sur le support de sauvegarde. La valeur par défaut (NOINIT) consiste à ajouter les nouvelles sauvegardes après le jeu de sauvegarde le plus récent sur le support.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les interactions entre { **NOINIT** | INIT} et { **NOSKIP** | SKIP}, reportez-vous à la section « Remarques », plus loin dans cette rubrique.  
+> Pour plus d’informations sur les interactions entre { **NOINIT** | INIT} et { **NOSKIP** | SKIP}, consultez [notes](#general-remarks) plus loin dans cette rubrique.  
   
 NOINIT  
  Indique que le jeu de sauvegarde est ajouté au support de sauvegarde spécifié, préservant ainsi les jeux de sauvegardes existants. Si un mot de passe de support est défini pour le support de sauvegarde, il doit être fourni. NOINIT est la valeur par défaut.  
@@ -392,18 +389,18 @@ Pour plus d’informations, consultez [Jeux de supports, familles de supports et
 INIT  
  Indique que tous les jeux de sauvegardes doivent être écrasés mais préserve l'en-tête de support. Si INIT est spécifié, tous les jeux de sauvegardes qui se trouvent sur l'unité concernée sont écrasés si les conditions l'autorisent. Par défaut, BACKUP vérifie les conditions ci-après et n'écrase pas le support de sauvegarde si l'une des conditions est vraie :  
   
--   Un jeu de sauvegarde n'a pas encore expiré. Pour plus d'informations, reportez-vous aux options EXPIREDATE et RETAINDAYS.  
+-   Un jeu de sauvegarde n'a pas encore expiré. Pour plus d’informations, consultez la `EXPIREDATE` et `RETAINDAYS` options.  
 -   Le nom du jeu de sauvegarde donné dans l'instruction BACKUP, s'il est fourni, ne correspond pas à celui du support de sauvegarde. Pour plus d'informations, consultez l'option NAME, plus haut dans cette section.  
   
-Pour ignorer ces contrôles, utilisez l'option SKIP.  
+Pour remplacer ces vérifications, utilisez la `SKIP` option.  
   
 Pour plus d’informations, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-{ **NOSKIP** | SKIP}  
+{ **NOSKIP** | SKIP }  
 Détermine si une opération de sauvegarde vérifie la date et l'heure d'expiration des jeux de sauvegardes figurant sur le support avant de les écraser.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les interactions entre { **NOINIT** | INIT} et { **NOSKIP** | SKIP}, reportez-vous à la section « Remarques », plus loin dans cette rubrique.  
+> Pour plus d’informations sur les interactions entre { **NOINIT** | INIT} et { **NOSKIP** | SKIP}, reportez-vous à la section « Remarques », plus loin dans cette rubrique.  
   
 NOSKIP  
 Ordonne à l'instruction BACKUP de vérifier la date d'expiration de tous les jeux de sauvegardes qui se trouvent sur le support, avant d'autoriser leur écrasement. Il s'agit du comportement par défaut.  
@@ -422,38 +419,42 @@ FORMAT
 Indique qu'un nouveau support de sauvegarde est créé. Si FORMAT est utilisé, l'opération de sauvegarde écrit un nouvel en-tête de support sur tous les volumes utilisés pour cette opération de sauvegarde. Le contenu précédent du volume devient non valide étant donné que l'en-tête de support et les jeux de sauvegardes existants sont écrasés.  
   
 > [!IMPORTANT]  
->  Utilisez l'option FORMAT avec prudence. Si vous formatez l'un des volumes d'un support de sauvegarde, la totalité du support de sauvegarde devient inutilisable. Par exemple, si une bande appartenant à un support de sauvegarde distribuée existant est initialisée, tout le support de sauvegarde devient inutilisable.  
+> Utilisez `FORMAT` avec soin. Si vous formatez l'un des volumes d'un support de sauvegarde, la totalité du support de sauvegarde devient inutilisable. Par exemple, si une bande appartenant à un support de sauvegarde distribuée existant est initialisée, tout le support de sauvegarde devient inutilisable.  
   
-Si l'option FORMAT est spécifiée, l'option SKIP est implicitement prise en compte ; il n'est pas nécessaire de spécifier explicitement l'option SKIP.  
+La spécification de FORMAT implique `SKIP`; `SKIP` n'a pas besoin d’être défini explicitement.  
   
-MEDIADESCRIPTION  **=**  { *texte* | **@*** variable_texte* }  
+MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
 Indique le texte de description de format libre du support de sauvegarde (maximum 255 caractères).  
   
-MEDIANAME  **=**  { *nom_support* | **@*** variable_nom_support* }  
-Fournit le nom du support de sauvegarde complet. Le nom du support ne doit pas dépasser 128 caractères. Si MEDIANAME est spécifié, il doit correspondre au nom spécifié précédemment existant sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.  
+MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+Fournit le nom du support de sauvegarde complet. Le nom du support doit être pas plu de 128 caractères, si `MEDIANAME` est spécifié, il doit correspondre au nom spécifié précédemment déjà existants sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.  
   
-BLOCKSIZE  **=**  { *blocksize* | **@*** variable_taille_bloc* }  
+BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
 Indique, en octets, la taille physique du bloc. Les tailles prises en charge sont 512, 1024, 2048, 4096, 8192, 16384, 32768 et 65536 (64 Ko) octets. La valeur par défaut est 65536 pour les périphériques à bandes, 512 sinon. En règle générale, cette option est superflue car BACKUP sélectionne automatiquement une taille de bloc appropriée pour le périphérique. Si vous spécifiez explicitement une taille de bloc, la sélection automatique est annulée et remplacée.  
   
 Si vous effectuez une sauvegarde que vous envisagez de copier sur un CD-ROM pour la restaurer à partir de celui-ci, spécifiez BLOCKSIZE=2048.  
   
 > [!NOTE]  
->  En règle générale, cette option n'affecte les performances que si les données sont écrites sur des périphériques à bandes.  
+> En règle générale, cette option n'affecte les performances que si les données sont écrites sur des périphériques à bandes.  
   
 **Options de transfert de données**  
   
-BUFFERCOUNT  **=**  { *buffercount* | **@*** buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
 Spécifie le nombre total de tampons d'E/S à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier n'importe quel entier positif ; toutefois, un nombre élevé de tampons peut provoquer des erreurs liées à une insuffisance de mémoire. En effet, l'espace d'adressage virtuel peut s'avérer inapproprié dans la tâche Sqlservr.exe.  
   
-L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount***\****maxtransfersize*.  
+L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
->  Pour obtenir des informations importantes sur l’utilisation de l’option BUFFERCOUNT, consultez le [option de transfert de données Incorrect BufferCount risque d’insuffisance](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
+> Pour plus d’informations sur l’utilisation de la `BUFFERCOUNT` option, consultez la [option de transfert de données Incorrect BufferCount risque d’insuffisance](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@*** maxtransfersize_variable* }  
- Spécifie la plus grande unité de transfert en octets à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize*  |   ***@**  maxtransfersize_variable*} Spécifie la plus grande unité de transfert en octets à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).  
+
 > [!NOTE]  
->  Lors de la création de sauvegardes à l’aide du Service SQL Writer, si la base de données a configuré FILESTREAM ou comprend des groupes de fichiers OLTP en mémoire, puis la `MAXTRANSFERSIZE` au moment de la restauration doit être supérieure ou égale à la `MAXTRANSFERSIZE` qui a été utilisé lorsque le Création de la sauvegarde. 
+> Lors de la création de sauvegardes à l’aide du Service SQL Writer, si la base de données a configuré [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), ou [groupes de fichiers optimisé en mémoire](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), puis le `MAXTRANSFERSIZE` à l’heure de restauration doit être supérieur ou égal à la `MAXTRANSFERSIZE` qui a été utilisé lors de la sauvegarde a été créée. 
+
+> [!NOTE]  
+> Pour [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) activé des bases de données avec un seul fichier de données, la valeur par défaut `MAXTRANSFERSIZE` est 65 536 (64 Ko). Pour la valeur par défaut des bases de données non-chiffrement transparent des données chiffrées `MAXTRANSFERSIZE` est 1 048 576 (1 Mo) lors de l’utilisation de sauvegarde sur disque et 65 536 (64 Ko) lors de l’utilisation d’infrastructure VDI ou bande.
+> Pour plus d’informations sur l’utilisation de la compression de la sauvegarde avec chiffrement transparent des données chiffrées des bases de données, consultez la [notes](#general-remarks) section.
   
 **Options de gestion des erreurs**  
   
@@ -472,7 +473,7 @@ L'utilisation des sommes de contrôle de sauvegarde peut affecter la charge de t
   
 Pour plus d’informations, consultez [Media erreurs possibles au cours de sauvegarde et de restauration &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
 Détermine si une opération de sauvegarde s'arrête ou continue après avoir rencontré une erreur de somme de contrôle de page.  
   
 STOP_ON_ERROR  
@@ -492,7 +493,7 @@ Depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], n'a aucun effet. Ell
   
 **Options de surveillance**  
   
-STATISTIQUES [**= *** pourcentage* ]  
+STATISTIQUES [  **=**  *pourcentage* ]  
  Affiche un message chaque fois qu’un autre *pourcentage* se termine et sert à évaluer la progression. Si *pourcentage* est omis, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message à chaque 10 pour cent.  
   
 L'option STATS signale le pourcentage terminé comme seuil de rapport de l'intervalle suivant. C'est-à-dire approximativement le pourcentage spécifié ; par exemple, si STATS=10, et si le pourcentage terminé est 40 pour cent, l'option peut afficher 43 pour cent. Pour les jeux de sauvegardes volumineux, cela n'est pas un problème car le pourcentage terminé varie très lentement entre les appels d'E/S terminés.  
@@ -511,11 +512,12 @@ Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintient 
 NOREWIND implique NOUNLOAD, et ces options sont incompatibles dans une instruction BACKUP unique.  
   
 > [!NOTE]  
->  Si vous utilisez NOREWIND, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la propriété du lecteur de bande jusqu'à ce qu'une instruction BACKUP ou RESTORE s'exécutant dans le même processus utilise l'option REWIND ou UNLOAD, ou jusqu'à l'arrêt de l'instance du serveur. Le fait de maintenir la bande ouverte empêche les autres processus d'y accéder. Pour plus d’informations sur la façon de pour afficher une liste des bandes ouvrir et fermer une bande ouverte, consultez [unités de sauvegarde &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+> Si vous utilisez `NOREWIND`, l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la propriété du lecteur de bande jusqu'à ce qu’une instruction BACKUP ou RESTORE qui s’exécute dans le même processus utilise soit le `REWIND` ou `UNLOAD` option ou l’instance de serveur est arrêté. Le fait de maintenir la bande ouverte empêche les autres processus d'y accéder. Pour plus d’informations sur la façon de pour afficher une liste des bandes ouvrir et fermer une bande ouverte, consultez [unités de sauvegarde &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-{ **UNLOAD** | NOUNLOAD}  
+{ **UNLOAD** | NOUNLOAD}    
+
 > [!NOTE]  
->  UNLOAD/NOUNLOAD est un paramètre de session qui reste en vigueur jusqu'à la fin de la session ou tant qu'il n'est pas réinitialisé par le choix de l'option opposée à celle en cours d'utilisation.  
+> `UNLOAD`et `NOUNLOAD` sont des paramètres de session qui persistent pendant la durée de vie de la session ou jusqu'à ce qu’elle est réinitialisée en spécifiant l’alternative.  
   
 UNLOAD  
  Indique que la bande est automatiquement rembobinée et démontée lorsque la sauvegarde est terminée. UNLOAD est l'option par défaut au démarrage d'une session. 
@@ -524,22 +526,22 @@ NOUNLOAD
  Spécifie qu’une fois l’opération BACKUP la bande reste chargée sur le lecteur de bande.  
   
 > [!NOTE]  
->  Dans le cas d'une sauvegarde sur une unité de sauvegarde sur bande, l'option BLOCKSIZE affecte les performances de l'opération de sauvegarde. En règle générale, cette option n'affecte les performances que si les données sont écrites sur des périphériques à bandes.  
+> Pour une sauvegarde sur une unité de sauvegarde sur bande, la `BLOCKSIZE` option affecte les performances de l’opération de sauvegarde. En règle générale, cette option n'affecte les performances que si les données sont écrites sur des périphériques à bandes.  
   
 **Options spécifiques au journal**  
   
-Ces options ne sont utilisées qu'avec BACKUP LOG.  
+Ces options sont utilisées uniquement avec `BACKUP LOG`.  
   
 > [!NOTE]  
->  Si vous ne voulez pas effectuer de sauvegarde du journal, utilisez le mode de récupération simple. Pour plus d’informations, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+> Si vous ne voulez pas effectuer de sauvegarde du journal, utilisez le mode de récupération simple. Pour plus d’informations, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{NORECOVERY | Mise en veille **= *** nom_fichier_annulation* }  
+{NORECOVERY | Mise en veille  **=**  *nom_fichier_annulation* }  
   NORECOVERY  
   Effectue une sauvegarde de la fin du journal et laisse la base de données en état de restauration (RESTORING). NORECOVERY s'avère utile lors du basculement vers une base de données secondaire ou de l'exécution d'une sauvegarde de la fin du journal avant une opération RESTORE.  
   
-  Pour effectuer au mieux une sauvegarde du journal qui évite la troncation du journal et place la base de données en état RESTORING, utilisez conjointement les options NO_TRUNCATE et NORECOVERY.  
+  Pour effectuer une sauvegarde du journal de mieux qu’ignore la troncation du journal, puis d’exécuter atomiquement la base de données dans l’état de restauration, utilisez la `NO_TRUNCATE` et `NORECOVERY` options ensemble.  
   
-  Mise en veille **= *** nom_fichier_annulation*  
+  STANDBY **=** *standby_file_name*  
   Effectue une sauvegarde de la fin du journal et laisse la base de données en lecture seule et en état STANDBY. La clause STANDBY écrit les données en attente (annulation avec option de restauration ultérieure). L'option STANDBY est semblable à BACKUP LOG WITH NORECOVERY suivie par RESTORE WITH STANDBY.  
   
   À l’aide du mode veille nécessite un fichier d’annulation, spécifié par *nom_fichier_annulation*, dont l’emplacement est stocké dans le journal de la base de données. Si le fichier spécifié existe déjà, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'écrase ; sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] le crée. Le fichier d'annulation devient partie intégrante de la base de données.  
@@ -547,13 +549,13 @@ Ces options ne sont utilisées qu'avec BACKUP LOG.
   Ce fichier contient les modifications annulées, qui doivent être restaurées si des opérations RESTORE LOG sont effectuées ultérieurement. Vous devez disposer d'un espace disque suffisant pour que le fichier d'annulation puisse contenir toutes les pages distinctes de la base de données qui ont été modifiées par suite du rejet des transactions non validées.  
   
 NO_TRUNCATE  
-Spécifie que le n’est ne pas tronqué de journal et provoque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente la sauvegarde quelle que soit l’état de la base de données. Par conséquent, les métadonnées d'une sauvegarde effectuée avec l'option NO_TRUNCATE peuvent être incomplètes. Cette option permet de sauvegarder le journal lorsque la base de données est endommagée.  
+Spécifie que le n’est ne pas tronqué de journal et provoque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente la sauvegarde quelle que soit l’état de la base de données. Par conséquent, une sauvegarde effectuée avec `NO_TRUNCATE` peut avoir des métadonnées incomplètes. Cette option permet de sauvegarder le journal lorsque la base de données est endommagée.  
   
 L'option NO_TRUNCATE de BACKUP LOG revient à spécifier COPY_ONLY et CONTINUE_AFTER_ERROR.  
   
-Sans l'option NO_TRUNCATE, l'état de la base de données doit avoir la valeur ONLINE. Si l'état de la base de données a la valeur SUSPENDED, vous pouvez créer une sauvegarde en spécifiant NO_TRUNCATE. Toutefois, si l'état de la base de données a la valeur OFFLINE ou EMERGENCY, l'option BACKUP n'est pas autorisée même avec l'option NO_TRUNCATE. Pour plus d’informations sur les États de la base de données, consultez [les États de base de données](../../relational-databases/databases/database-states.md).  
+Sans la `NO_TRUNCATE` option, la base de données doit être dans l’état en ligne. Si la base de données est dans l’état suspendu, vous pourrez peut-être créer une sauvegarde en spécifiant `NO_TRUNCATE`. Mais si la base de données est dans l’état hors connexion ou d’urgence, la sauvegarde n’est pas autorisée même avec `NO_TRUNCATE`. Pour plus d’informations sur les États de la base de données, consultez [les États de base de données](../../relational-databases/databases/database-states.md).  
   
-## <a name="about-working-with-sql-server-backups"></a>À propos de l'utilisation de sauvegardes SQL Server  
+## <a name="about-working-with-sql-server-backups"></a>Sur l’utilisation des sauvegardes SQL Server  
  Cette section présente les concepts de sauvegarde essentiels suivants :  
   
  [Types de sauvegarde](#Backup_Types)  
@@ -563,7 +565,7 @@ Sans l'option NO_TRUNCATE, l'état de la base de données doit avoir la valeur O
  [Restauration des sauvegardes SQL Server](#Restoring_Backups)  
   
 > [!NOTE]  
->  Pour une introduction à la sauvegarde dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [présentation de la sauvegarde &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+> Pour une introduction à la sauvegarde dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [présentation de la sauvegarde &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Backup_Types"></a>Types de sauvegarde  
  Les types de sauvegarde pris en charge dépendent du mode de récupération de la base de données conformément à ce qui suit :  
@@ -583,7 +585,7 @@ Sans l'option NO_TRUNCATE, l'état de la base de données doit avoir la valeur O
      Nous vous recommandons de placer les sauvegardes de fichier journal sur un autre volume que les sauvegardes de base de données.  
   
     > [!NOTE]  
-    >  Avant de pouvoir créer la première sauvegarde du fichier journal, vous devez créer une sauvegarde complète.  
+    > Avant de pouvoir créer la première sauvegarde du fichier journal, vous devez créer une sauvegarde complète.  
   
 -   A *sauvegarde de copie seule* est une sauvegarde complète de spécial ou d’une sauvegarde de journal qui est indépendante de la séquence normale des sauvegardes conventionnelles. Pour créer une sauvegarde en copie seule, spécifiez l'option COPY_ONLY dans votre instruction BACKUP. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
@@ -591,19 +593,19 @@ Sans l'option NO_TRUNCATE, l'état de la base de données doit avoir la valeur O
  Pour éviter de remplir le journal des transactions d'une base de données, les sauvegardes régulières sont essentielles. En mode de récupération simple, la troncation du journal se produit automatiquement après la sauvegarde de la base de données ; en mode de récupération complète, elle se produit automatiquement après la sauvegarde du journal des transactions. Toutefois, le processus de troncation peut parfois être différé. Pour plus d’informations sur les facteurs susceptibles de retarder la troncation du journal, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > [!NOTE]  
->  Les options BACKUP LOG WITH NO_LOG et WITH TRUNCATE_ONLY ont été supprimées. Si vous utilisez le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions et si vous devez supprimer la chaîne de sauvegarde de fichier journal d'une base de données, passez au mode de récupération simple. Pour plus d’informations, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+> Le `BACKUP LOG WITH NO_LOG` et `WITH TRUNCATE_ONLY` options ont été abandonnées. Si vous utilisez le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions et si vous devez supprimer la chaîne de sauvegarde de fichier journal d'une base de données, passez au mode de récupération simple. Pour plus d’informations, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 ###  <a name="Formatting_Media"></a>Mise en forme du support de sauvegarde  
  Le support de sauvegarde est formaté par une instruction BACKUP si, et uniquement si, l'une des conditions suivantes est vraie :  
   
--   L'option FORMAT est spécifiée.  
+-   Le `FORMAT` option est spécifiée.  
 -   Le support est vide.  
 -   L'opération écrit sur une bande magnétique de sauvegarde consécutive.  
   
-###  <a name="Backup_Devices_and_Media_Sets"></a>Utilisation des unités de sauvegarde et de jeux de supports  
+###  <a name="Backup_Devices_and_Media_Sets"></a>Utilisation des ensembles de périphériques et supports de sauvegarde  
   
-#### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Unités de sauvegarde d'un support de sauvegarde distribuée (jeu de bandes)  
- A *agrégat* est un ensemble de fichiers de disque sur lequel les données sont divisées en blocs et distribuées dans un ordre fixe. Le nombre d'unités de sauvegarde utilisées dans un jeu de bandes doit rester le même (sauf si le support est réinitialisé avec FORMAT).  
+#### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Unités de sauvegarde dans un support de sauvegarde distribuée (jeu de bandes)  
+ A *agrégat* est un ensemble de fichiers de disque sur lequel les données sont divisées en blocs et distribuées dans un ordre fixe. Le nombre d’unités de sauvegarde utilisées dans un jeu de bandes doit rester le même (sauf si le support est réinitialisé avec `FORMAT`).  
   
  L'exemple ci-dessous écrit une sauvegarde de la base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sur un nouveau jeu de sauvegarde distribuée qui utilise trois fichiers disque.  
   
@@ -622,34 +624,34 @@ GO
   
  Si ni MEDIANAME ni MEDIADESCRIPTION est spécifiée lors de l’écriture d’un en-tête de support, le champ d’en-tête de support correspondant à l’élément est vide.  
   
-#### <a name="working-with-a-mirrored-media-set"></a>Utilisation d'un support de sauvegarde miroir  
+#### <a name="working-with-a-mirrored-media-set"></a>Utilisation avec un jeu de supports en miroir  
  En règle générale, les sauvegardes ne sont pas mises en miroir et les instructions BACKUP contiennent simplement une clause TO. Toutefois, il est possible de créer jusqu'à quatre miroirs par support de sauvegarde. Dans le cas d'un support de sauvegarde miroir, l'opération de sauvegarde écrit dans plusieurs groupes d'unités de sauvegarde. Chaque groupe d'unités de sauvegarde constitue un miroir au sein du support de sauvegarde miroir. Chaque miroir doit utiliser le même nombre et le même type d'unités de sauvegarde physiques, lesquelles doivent toutes avoir les mêmes propriétés.  
   
- Pour effectuer une sauvegarde dans un support de sauvegarde miroir, tous les miroirs doivent être présents. Pour effectuer une sauvegarde dans un support de sauvegarde miroir, spécifiez la clause TO pour le premier miroir et spécifiez une clause MIRROR TO pour chacun des autres miroirs.  
+ Pour effectuer une sauvegarde dans un support de sauvegarde miroir, tous les miroirs doivent être présents. Pour sauvegarder sur un support de sauvegarde miroir, vous devez spécifier le `TO` clause pour spécifier le premier miroir et spécifiez un `MIRROR TO` clause pour chacun des autres miroirs.  
   
- Pour un support de sauvegarde miroir, chaque clause MIRROR TO doit contenir le même nombre et le même type d'unités que la clause TO. L'exemple suivant écrit dans un support de sauvegarde miroir contenant deux miroirs et utilisant trois unités par miroir :  
+ Pour un jeu de supports mis en miroir, chaque `MIRROR TO` clause doit répertorier le même nombre et type des appareils que la clause TO. L'exemple suivant écrit dans un support de sauvegarde miroir contenant deux miroirs et utilisant trois unités par miroir :  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
+  DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
+  DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
 MIRROR TO DISK='X:\SQLServerBackups\AdventureWorks1b.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
+  DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
+  DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
 GO  
 ```  
   
 > [!IMPORTANT]  
->  Cet exemple vous permet d'effectuer un test sur votre système local. En pratique, effectuer une sauvegarde dans plusieurs unités se trouvant sur le même lecteur nuit aux performances et élimine la redondance pour laquelle les supports de sauvegarde miroirs sont conçus.  
+> Cet exemple vous permet d'effectuer un test sur votre système local. En pratique, effectuer une sauvegarde dans plusieurs unités se trouvant sur le même lecteur nuit aux performances et élimine la redondance pour laquelle les supports de sauvegarde miroirs sont conçus.  
   
-##### <a name="media-families-in-mirrored-media-sets"></a>Familles de supports de sauvegarde miroirs  
- Chaque unité de sauvegarde spécifiée dans la clause TO d'une instruction BACKUP correspond à une famille de supports. Par exemple, si la clause TO répertorie trois unités, BACKUP écrit des données dans trois familles de supports. Dans un support de sauvegarde miroir, chaque miroir doit contenir une copie de chacune des familles de supports. C'est pour cette raison que le nombre d'unités doit être identique pour tous les miroirs.  
+##### <a name="media-families-in-mirrored-media-sets"></a>Familles de supports dans les jeux de supports en miroir  
+ Chaque unité de sauvegarde spécifiée dans le `TO` clause d’une instruction de sauvegarde correspond à une famille de supports. Par exemple, si le `TO` clauses répertorie trois unités, BACKUP écrit des données dans trois familles de supports. Dans un support de sauvegarde miroir, chaque miroir doit contenir une copie de chacune des familles de supports. C'est pour cette raison que le nombre d'unités doit être identique pour tous les miroirs.  
   
  Si plusieurs unités sont spécifiées pour chaque miroir, leur ordre détermine la famille de supports qui est écrite sur chacune d'elles. Par exemple, dans chaque liste d'unités, la deuxième unité correspond à la deuxième famille de supports. Le tableau suivant établit la correspondance entre unités et familles de supports pour les unités de l'exemple ci-dessus.  
   
 |Miroir|Famille de supports 1|Famille de supports 2|Famille de supports 3|  
-|------------|--------------------|--------------------|--------------------|  
+|---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
 |1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
@@ -657,49 +659,56 @@ GO
   
  Pour plus d’informations sur les jeux de supports en miroir, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Pour plus d’informations sur les jeux de supports et des familles de supports en général, consultez [jeux de supports, familles de supports et jeux de sauvegarde &#40; SQL Server &#41; ](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-###  <a name="Restoring_Backups"></a>Restauration des sauvegardes SQL Server  
+###  <a name="Restoring_Backups"></a>Restauration des sauvegardes de SQL Server  
  Pour restaurer une base de données et, éventuellement, de le récupérer à mettre en ligne, ou pour restaurer un fichier ou un groupe de fichiers, utilisez le [!INCLUDE[tsql](../../includes/tsql-md.md)] [restaurer](../../t-sql/statements/restore-statements-transact-sql.md) instruction ou le [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **restaurer** tâches. Pour plus d’informations, consultez [restauration et de présentation de la récupération &#40; SQL Server &#41; ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
-##  <a name="Additional_Considerations"></a>Considérations supplémentaires concernant les Options de sauvegarde  
+##  <a name="Additional_Considerations"></a>Considérations supplémentaires concernant les options de sauvegarde  
   
 ###  <a name="Interactions_SKIP_etc"></a>Interaction de SKIP, NOSKIP, INIT et NOINIT  
  Le tableau suivant décrit les interactions entre le { **NOINIT** | INIT} et { **NOSKIP** | Options SKIP}.  
   
 > [!NOTE]  
->  Si le support de bande est vide ou que le fichier de sauvegarde sur disque n'existe pas, toutes ces interactions écrivent un en-tête de support, puis se poursuivent. Si le support n'est pas vide et qu'il ne contient pas d'en-tête de support valide, ces opérations signalent qu'il ne s'agit pas d'un support MTF valide et mettent fin à l'opération de sauvegarde.  
+> Si le support de bande est vide ou que le fichier de sauvegarde sur disque n'existe pas, toutes ces interactions écrivent un en-tête de support, puis se poursuivent. Si le support n'est pas vide et qu'il ne contient pas d'en-tête de support valide, ces opérations signalent qu'il ne s'agit pas d'un support MTF valide et mettent fin à l'opération de sauvegarde.  
   
 ||NOINIT|INIT|  
 |------|------------|----------|  
-|NOSKIP|Si le volume contient un en-tête de support valide, vérifie que le nom du support correspond à la valeur de MEDIANAME, si elle est spécifiée. Si les deux noms correspondent, ajoute le jeu de sauvegarde en gardant ceux qui existent déjà.<br /> Si le volume ne contient pas d'en-tête de support valide, une erreur se produit.|Si le volume contient un en-tête de support valide, effectue les vérifications suivantes :<br /> -Si MEDIANAME a été spécifié, vérifie que le nom indiqué correspond à support name.* * l’en-tête du<br /> -Vérifie qu’il n’y a aucun jeux de sauvegarde non expirés déjà présent sur le support. S'il y en a, met fin à la sauvegarde.<br /> Si toutes ces vérifications sont validées, écrase tous les jeux de sauvegardes présents sur le support en ne conservant que l'en-tête de support.<br /> Si le volume ne contient pas d'en-tête de support valide, en génère un en utilisant les valeurs de MEDIANAME et MEDIADESCRIPTION si elles sont spécifiées.|  
-|SKIP|Si le volume contient un en-tête de support valide, ajoute le jeu de sauvegarde, en gardant ceux qui existent déjà.|Si le volume contient un élément valide * en-tête de support, remplace les jeux de sauvegarde sur le support en ne gardant seulement l’en-tête de support.<br /> Si le support est vide, génère un en-tête de support en utilisant les valeurs de MEDIANAME et MEDIADESCRIPTION si elles sont spécifiées.|  
-  
- * Validité inclut le numéro de version MTF et d’autres informations d’en-tête. Si la version indiquée n'est pas prise en charge ou pas reconnue, une erreur se produit.  
-  
- ** L’utilisateur doit appartenir aux fixe de base de données ou serveur de rôles approprié pour effectuer une opération de sauvegarde.  
+|NOSKIP|Si le volume contient un en-tête de support valide, vérifie que le support de nom correspond à la donnée `MEDIANAME`, le cas échéant. Si les deux noms correspondent, ajoute le jeu de sauvegarde en gardant ceux qui existent déjà.<br /> Si le volume ne contient pas d'en-tête de support valide, une erreur se produit.|Si le volume contient un en-tête de support valide, effectue les vérifications suivantes :<br /><ul><li>Si `MEDIANAME` a été spécifié, vérifie que le nom indiqué correspond au nom de l’en-tête du support.<sup> 1</sup></li><li>Vérifie qu'il n'y a pas déjà sur le support des jeux de sauvegardes qui ne seraient pas encore arrivés à expiration. S'il y en a, met fin à la sauvegarde.</li></ul><br />Si toutes ces vérifications sont validées, écrase tous les jeux de sauvegardes présents sur le support en ne conservant que l'en-tête de support.<br /> Si le volume ne contient pas d’en-tête de support valide, génère un en utilisant les spécifié `MEDIANAME` et `MEDIADESCRIPTION`, le cas échéant.|  
+|SKIP|Si le volume contient un en-tête de support valide, ajoute le jeu de sauvegarde, en gardant ceux qui existent déjà.|Si le volume contient un élément valide<sup>2</sup> en-tête de support, remplace les jeux de sauvegarde sur le support en ne gardant seulement l’en-tête de support.<br /> Si le support est vide, génère un en-tête de support à l’aide de la `MEDIANAME` et `MEDIADESCRIPTION`, le cas échéant.|  
+
+<sup>1</sup> l’utilisateur doit appartenir aux fixe de base de données ou serveur de rôles approprié pour effectuer une opération de sauvegarde.    
+
+<sup>2</sup> validité inclut le numéro de version MTF et d’autres informations d’en-tête. Si la version indiquée n'est pas prise en charge ou pas reconnue, une erreur se produit.  
   
 ## <a name="compatibility"></a>Compatibilité  
   
 > [!CAUTION]  
->  Les sauvegardes créées avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Les sauvegardes créées avec une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- BACKUP prend en charge l'option RESTART pour assurer la compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mais RESTART est inopérant.  
+BACKUP prend en charge la `RESTART` possibilité de fournir une compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mais RESTART est inopérant.  
   
-## <a name="general-remarks"></a>Remarques d'ordre général  
- Les sauvegardes de base de données ou de fichier journal peuvent être ajoutées à n'importe quel périphérique de disque ou à bandes, ce qui permet de conserver au même emplacement physique la base de données et ses journaux de transactions.  
+## <a name="general-remarks"></a>Remarques générales  
+Les sauvegardes de base de données ou de fichier journal peuvent être ajoutées à n'importe quel périphérique de disque ou à bandes, ce qui permet de conserver au même emplacement physique la base de données et ses journaux de transactions.  
   
- L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou implicite.  
+L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou implicite.  
   
- Les opérations de sauvegarde inter-plateformes, impliquant éventuellement des types de processeurs différents, peuvent être réalisées tant que le classement de la base de données est pris en charge par le système d'exploitation.  
-  
+Les opérations de sauvegarde inter-plateformes, impliquant éventuellement des types de processeurs différents, peuvent être réalisées tant que le classement de la base de données est pris en charge par le système d'exploitation.  
+ 
+Lors de l’utilisation de la compression de sauvegarde avec [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) activé des bases de données avec un seul fichier de données, il est recommandé d’utiliser un `MAXTRANSFERSIZE` paramètre **supérieure à 65 536 (64 Ko)**.   
+En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cette permet un algorithme de compression optimisé pour le chiffrement transparent des données chiffrées des bases de données tout d’abord déchiffre une page, compresse et chiffre à nouveau. Si vous utilisez `MAXTRANSFERSIZE = 65536` (64 Ko), compression de la sauvegarde des bases de données de chiffrement transparent des données chiffrées directement compresse les pages chiffrées et ne peut pas produire les taux de compression de bonne. Pour plus d’informations, consultez [la Compression des sauvegardes de bases de données compatibles sur le chiffrement transparent des données](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
 > [!NOTE]  
->  Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+> L’algorithme de compression optimisé pour les bases de données de chiffrement transparent des données chiffrées est utilisé automatiquement quand :
+> * Sauvegarde vers une URL est utilisée, auquel cas la valeur par défaut `MAXTRANSFERSIZE` est modifié à 1 048 576 (1 Mo) et n’est pas forcé à une valeur inférieure.
+> * La base de données a plusieurs fichiers de données, auquel cas la valeur par défaut `MAXTRANSFERSIZE` est remplacée par un multiple de 65 536 (64 Ko) n’est pas modifié sur une valeur inférieure (tel que `MAXTRANSFERSIZE = 65536`). 
+  
+Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ## <a name="interoperability"></a>Interopérabilité  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utilise un processus de sauvegarde en ligne pour permettre une sauvegarde de base de données pendant que la base de données est en cours d’utilisation. Lors d'une sauvegarde, la plupart des opérations sont possibles ; par exemple, les instructions INSERT, UPDATE et DELETE sont autorisées.  
   
  Parmi les opérations qui ne peuvent pas être effectuées lors d'une sauvegarde de base de données ou du journal des transactions, citons :  
   
--   Les opérations de gestion des fichiers telles que l'instruction ALTER DATABASE employée avec les options ADD FILE et REMOVE FILE.  
+-   Opérations de gestion de fichiers tels que le `ALTER DATABASE` instruction avec le `ADD FILE` ou `REMOVE FILE` options.  
   
 -   Les opérations de compactage de base de données ou de fichier. Cela comprend également les opérations de compactage automatique.  
   
@@ -708,16 +717,16 @@ Si une opération de sauvegarde chevauche une gestion des fichiers ou l’opéra
 ## <a name="metadata"></a>Métadonnées  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre les tables d'historique de sauvegarde suivantes pour assurer le suivi des activités de sauvegarde :  
   
--   [backupfile &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
--   [backupfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
+-   [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
+-   [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
 -   [backupmediafamily &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
--   [backupmediaset &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
+-   [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
 -   [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)  
   
 Lorsqu’une restauration est effectuée, si le jeu de sauvegarde n’est pas encore enregistré dans le **msdb** de base de données, l’historique de sauvegarde tables susceptibles d’être modifiés.  
   
 ## <a name="security"></a>Sécurité  
- À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le **mot de passe** et **MEDIAPASSWORD** options sont suspendues pour la création de sauvegardes. Il est encore possible de restaurer des sauvegardes créées avec des mots de passe.  
+ À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le `PASSWORD` et `MEDIAPASSWORD` options sont suspendues pour la création de sauvegardes. Il est encore possible de restaurer des sauvegardes créées avec des mots de passe.  
   
 ### <a name="permissions"></a>Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
@@ -735,10 +744,10 @@ Lorsqu’une restauration est effectuée, si le jeu de sauvegarde n’est pas en
 -   F. [Création et la sauvegarde sur un support de mise en miroir de plusieurs familles](#create_multifamily_mirrored_media_set)  
 -   G [support de sauvegarde miroir de sauvegarde existant](#existing_mirrored_media_set)  
 -   H. [Création d’une sauvegarde compressée dans un jeu de supports](#creating_compressed_backup_new_media_set)  
--   I.  [Sauvegarde sur le service de stockage d’objets Blob Microsoft Azure](#url)  
+-   I. [Sauvegarde sur le service de stockage d’objets Blob Microsoft Azure](#url)  
   
 > [!NOTE]  
->  Les rubriques de procédures de sauvegarde contiennent des exemples supplémentaires. Pour plus d’informations, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+> Les rubriques de procédures de sauvegarde contiennent des exemples supplémentaires. Pour plus d’informations, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="backing_up_db"></a> A. Sauvegarde d'une base de données complète  
  L’exemple suivant sauvegarde la [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] base de données à un fichier de disque.  
@@ -839,7 +848,7 @@ WITH
    MEDIANAME = 'AdventureWorksSet1';  
 ```  
   
-###  <a name="existing_mirrored_media_set"></a>G. Sauvegarde dans un support de sauvegarde miroir existant  
+###  <a name="existing_mirrored_media_set"></a> G. Sauvegarde dans un support de sauvegarde miroir existant  
  L'exemple suivant illustre l'ajout d'un jeu de sauvegarde au support de sauvegarde créé dans l'exemple précédent.  
   
 ```sql  
@@ -854,7 +863,7 @@ WITH
 > [!NOTE]  
 >  NOINIT, par défaut, est indiqué ici pour plus de clarté.  
   
-###  <a name="creating_compressed_backup_new_media_set"></a>H. Création d'une sauvegarde compressée dans un nouveau support de sauvegarde  
+###  <a name="creating_compressed_backup_new_media_set"></a> H. Création d'une sauvegarde compressée dans un nouveau support de sauvegarde  
  L'exemple suivant illustre le formatage du support avec la création d'un nouveau jeu de médias et une sauvegarde complète compressée de la base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
   
 ```sql  
@@ -864,7 +873,7 @@ WITH
    COMPRESSION;  
 ```  
 
-###  <a name="url"></a>I. Sauvegarde du service de stockage d’objets blob Microsoft Azure 
+###  <a name="url"></a> I. Sauvegarde du service de stockage d’objets blob Microsoft Azure 
 L’exemple effectue une sauvegarde complète de la base de données de `Sales` pour le service de stockage d’objets Blob Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur se nomme `myfirstcontainer`.  Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste.  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , informations d’identification `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, a été créé à l’aide d’une Signature d’accès partagé qui est associé à la stratégie d’accès stockée.  Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sauvegarde pour le service de stockage d’objets Blob Windows Azure, consultez [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
@@ -879,7 +888,7 @@ WITH STATS = 5;
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC SQLPERF &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
@@ -887,8 +896,8 @@ WITH STATS = 5;
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Restauration fragmentaire de bases de données avec des tables à mémoire optimisée](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)  
   

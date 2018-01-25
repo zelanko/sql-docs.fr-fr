@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e424279e5136d8334d37de754f5e3b5a087296b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Créer des scripts Analysis Services dans Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclut les fonctionnalités de génération de script, des modèles et des éditeurs que vous pouvez utiliser un script pour les objets Analysis Services et tâches.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclut des fonctionnalités de génération de script, des modèles et des éditeurs dont vous pouvez vous servir pour créer des scripts d'objets et de tâches Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Créer des scripts de tâches Analysis Services dans Management Studio  
  Les tâches de script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont accomplies en cliquant sur l’une des options de script dans une boîte de dialogue orientée tâche. Toutes les boîtes de dialogue que vous utilisez pour effectuer des tâches telles que la sauvegarde ou la restauration de la base de données, pour traiter un objet, ou pour concevoir un regroupement, incluent une option de script en haut de la boîte de dialogue. La sélection de l'une de ces options génère un script XMLA en fonction des informations et des paramètres de la boîte de dialogue.  

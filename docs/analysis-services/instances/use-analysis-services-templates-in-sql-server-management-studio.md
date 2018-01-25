@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un ensemble de modèles pour vous aider à créer rapidement des scripts XMLA, les requêtes DMX ou MDX, créer des indicateurs de performance clés dans un cube ou modèle tabulaire, la sauvegarde de script et les opérations de restauration et effectuer de nombreuses autres tâches. Les modèles sont situés dans l' **Explorateur de modèles** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un ensemble de modèles qui vous aident à créer rapidement des scripts XMLA et des requêtes DMX ou MDX, à créer des indicateurs de performance clés dans un cube ou un modèle tabulaire, à générer des scripts pour les opérations de sauvegarde et de restauration et à effectuer de nombreuses autres tâches. Les modèles sont situés dans l' **Explorateur de modèles** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Cette rubrique inclut une liste de modèles pour les modèles MDX et tabulaires et fournit des exemples de génération d'une requête MDX et d'une instruction XMLA à l'aide de l'explorateur de métadonnées et de l'explorateur de modèles.  
   
@@ -171,7 +173,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Référence du modèle Analysis Services  
  Les modèles suivants sont fournis pour travailler avec les bases de données Analysis Services et les objets qu'elles contiennent, notamment les structures et les modèles d'exploration de données, les cubes et les modèles tabulaires :  
   
-|Catégorie|Modèle d'élément|Description|  
+|Catégorie|Modèle d'élément| Description|  
 |--------------|-------------------|-----------------|  
 |DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >*. Instruction de contenu pour extraire le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
 ||Valeurs des colonnes continues|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction avec l’instruction DMX **RangeMin** et **RangeMax** fonctions pour récupérer un ensemble de valeurs dans une plage spécifiée à partir de colonnes continues dans un modèle d’exploration de données spécifié.|  
@@ -214,14 +216,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Gestion|Sauvegarde|Indique comment utiliser la commande XMLA **Sauvegarde** pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier.|  
 ||Annuler|Indique comment utiliser la commande XMLA **Annuler** pour annuler toutes les opérations en cours d’exécution dans la session (pour les utilisateurs autres que les administrateurs ou les administrateurs de serveur), la base de données (pour les administrateurs) ou l’instance (pour les administrateurs de serveur) actuelle.|  
 ||Créer une base de données de partition distante|Indique comment utiliser la commande XMLA **Créer** avec l’élément ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) Database pour créer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une source de données pour stocker les partitions distantes.|  
-||DELETE|Indique comment utiliser la commande XMLA **Supprimer** pour supprimer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante.|  
+||Supprimer|Indique comment utiliser la commande XMLA **Supprimer** pour supprimer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante.|  
 ||Traiter la dimension|Indique comment utiliser la commande XMLA **Batch** , associée à l'élément **Parallel** et à la commande **Process** , pour mettre à jour les attributs d'une dimension en utilisant une opération de traitement par lots parallèle.|  
 ||Traiter la partition|Indique comment utiliser la commande XMLA **Batch** , associée à l'élément **Parallel** et à la commande **Process** , pour traiter complètement une partition en utilisant une opération de traitement par lots parallèle.|  
-||Restaurer|Indique comment utiliser la commande XMLA **Restore** pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir d'un fichier de sauvegarde existant.|  
+||Restore|Indique comment utiliser la commande XMLA **Restore** pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir d'un fichier de sauvegarde existant.|  
 ||Synchroniser|Indique comment utiliser la commande XMLA **Synchroniser** pour synchroniser une autre base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SynchroniserSecurity tag.|  
 |XMLA\Ensembles de lignes du schéma|Découvrir des ensembles de lignes de schéma|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\État de serveur|Connexions|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_CONNECTIONS.|  
-||travaux|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_JOBS.|  
+||Travaux|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_JOBS.|  
 ||Emplacements|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_LOCATIONS, en spécifiant le chemin des fichiers de sauvegarde d’emplacement.|  
 ||Verrous|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_LOCKS.|  
 ||Mémoire octroyée|Indique comment utiliser la méthode XMLA **Découvrir** pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_MEMORYGRANT.|  
@@ -232,7 +234,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence MDX &#40;Multidimensional Expressions&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Référence DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Langage de script Analysis Services &#40;ASSL pour XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services Scripting Language &#40; ASSL de XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "Propriétés de mémoire | Documents Microsoft"
 ms.custom: 
-ms.date: 11/17/2016
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -30,18 +30,20 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8aa2f5f5c3e39680a9b0fe41e1b92443db4c8509
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="memory-properties"></a>Propriétés de mémoire
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-alloue une petite quantité de mémoire au début des afin que les demandes peuvent être traitées immédiatement. De la mémoire supplémentaire est allouée à mesure que les charges de travail de requête et de traitement augmentent. 
   
   En spécifiant des paramètres de configuration, vous pouvez contrôler les seuils auxquels la mémoire est libérée. Par exemple, le paramètre **HardMemoryLimit** spécifie une condition de mémoire insuffisante auto-imposée (par défaut, ce seuil est désactivé), où les nouvelles requêtes sont rejetées en bloc jusqu’à ce que des ressources supplémentaires soient disponibles.
+
+Pour en savoir plus sur la mémoire maximale utilisée par instance d’Analysis Services par l’édition, consultez [éditions et des fonctionnalités prises en charge de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **S'applique à :** mode serveur multidimensionnel et tabulaire, sauf indication contraire.  
+ Les paramètres suivants s’appliquent à la fois en mode serveur multidimensionnel et tabulaire, sauf indication contraire.  
  
 ## <a name="default-memory-configuration"></a>Configuration par défaut de la mémoire
 
@@ -51,7 +53,7 @@ Rappelez-vous que les paramètres de configuration sont définie par instance. S
 
 Le tableau ci-dessous décrit brièvement les paramètres de mémoire les plus couramment utilisés (avec des détails supplémentaires dans la section de référence). Il s’agit des paramètres que vous devez configurer si Analysis Services est en concurrence avec d’autres applications sur le même serveur pour obtenir de la mémoire :
 
-Paramètre | Description
+Paramètre |  Description
 --------|------------
 LowMemoryLimit | Pour les instances multidimensionnelles, seuil inférieur auquel le serveur commence tout d’abord à libérer la mémoire allouée aux objets peu fréquemment utilisés.
 VertiPaqMemoryLimit | Pour les instances tabulaires, seuil inférieur auquel le serveur commence tout d’abord à libérer la mémoire allouée aux objets peu fréquemment utilisés.
@@ -81,7 +83,7 @@ Sauf indication contraire, les propriétés suivantes s’appliquent à la fois 
   
   
 
-Paramètre  |Description  
+Paramètre  | Description  
 ---------|---------
 **0**     |  Désactive la pagination. Si la mémoire est insuffisante, le traitement échoue avec une erreur de mémoire insuffisante. Si vous désactivez la pagination, vous devez accorder des privilèges Windows au compte de service. Pour obtenir des instructions, consultez [Configurer les comptes de service &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
 **1**     |  (par défaut) Cette propriété active la pagination sur le disque à l’aide du fichier de pagination du système d’exploitation (pagefile.sys).   
@@ -103,7 +105,7 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
  **MemoryHeapType**  
   Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les valeurs valides dans SQL Server 2016 SP1 Analysis Services et version ultérieure sont les suivantes :
   
-  Paramètre | Description
+  Paramètre |  Description
 --------|------------
 **-1** | (par défaut) Automatique. Le moteur décidera de l’option à utiliser.
 **1** | Segment de mémoire Analysis Services.
@@ -115,7 +117,7 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
  **HeapTypeForObjects**  
   Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les valeurs valides sont les suivantes :
   
-   Paramètre | Description
+   Paramètre |  Description
 --------|------------
 **0** | Segment de mémoire LFH Windows.
 **1** | Allocateur d’emplacement Analysis Services.
@@ -146,5 +148,3 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [SQL Server 2008 R2 Analysis Services Operations Guide (Guide des opérations SQL Server 2008 R2 Analysis Services)](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

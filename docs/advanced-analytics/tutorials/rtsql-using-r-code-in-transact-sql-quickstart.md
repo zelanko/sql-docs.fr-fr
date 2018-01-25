@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>À l’aide de code R dans Transact-SQL (R dans démarrage rapide de SQL)
 
@@ -39,7 +39,7 @@ Ce didacticiel vise à vous familiariser avec les mécanismes basiques d’appel
 
 30 minutes, sans l’étape de configuration
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Vous devez avoir accès à une instance de SQL Server avec l’un des déjà installé les composants suivants :
 
@@ -50,7 +50,7 @@ Votre instance de SQL Server peut être dans une machine virtuelle Azure ou loca
 
 Pour exécuter des requêtes SQL incluant des scripts de R, vous pouvez utiliser n’importe quelle autre application qui peut se connecter à une base de données et exécutez le code T-SQL. Professionnels de l’informatique SQL peuvent utiliser SQL Server Management Studio (SSMS) ou Visual Studio.
 
-Dans ce didacticiel, pour indiquer combien il est facile à exécuter R dans SQL Server, nous avons utilisé la nouvelle **extension mssql pour le Code de Visual Studio**. Code de Visual Studio est un environnement de développement gratuit qui peut s’exécuter sur Linux, Mac OS ou Windows. Le **mssql*** extension est une extension léger pour l’exécution des requêtes SQL. Pour l’installer, consultez cet article : [Utiliser l’extension mssql pour Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Dans ce didacticiel, pour indiquer combien il est facile à exécuter R dans SQL Server, nous avons utilisé la nouvelle **extension mssql pour le Code de Visual Studio**. Code de Visual Studio est un environnement de développement gratuit qui peut s’exécuter sur Linux, Mac OS ou Windows. Le **mssql** extension est une extension léger pour l’exécution de requêtes T-SQL. Pour l’installer, consultez cet article : [Utiliser l’extension mssql pour Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Se connecter à une base de données et exécuter un script de test Hello World
 
