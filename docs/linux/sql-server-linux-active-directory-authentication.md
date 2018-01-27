@@ -1,6 +1,6 @@
 ---
 title: Authentification Active Directory avec SQL Server sur Linux | Documents Microsoft
-description: "Ce didacticiel fournit les étapes de configuration pour l’authentification AAD pour SQL Server sur Linux."
+description: "Ce didacticiel fournit les étapes de configuration pour l’authentification AD pour SQL Server sur Linux."
 author: meet-bhagdev
 ms.date: 10/09/2017
 ms.author: meetb
@@ -25,21 +25,21 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Ce didacticiel explique comment configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux pour prendre en charge l’authentification Active Directory (AD), également appelée authentification. L’authentification Active Directory permet appartenant au domaine des clients sur Windows ou Linux s’authentifier auprès de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de leurs informations d’identification de domaine et le protocole Kerberos.
+Ce didacticiel explique comment configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux pour prendre en charge l’authentification Active Directory (AD), également appelée authentification intégrée. L’authentification Active Directory permet à des clients appartenant au domaine sur Windows ou Linux de s’authentifier auprès de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de leurs informations d’identification de domaine et le protocole Kerberos.
 
-L’authentification Active Directory offre les avantages suivants sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l’authentification :
+L’authentification Active Directory offre les avantages suivants sur l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :
 
 * Les utilisateurs s’authentifient via l’authentification unique, sans être invité à entrer un mot de passe.   
 * En créant des comptes de connexion des groupes Active Directory, vous pouvez gérer l’accès et les autorisations dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide d’appartenances Active Directory.  
-* Chaque utilisateur possède une identité unique de votre organisation, donc vous n’êtes pas obligé d’effectuer le suivi de qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connexions correspondent aux personnes.   
+* Chaque utilisateur possède une identité unique dans votre organisation, donc vous n’êtes pas obligé d’effectuer le suivi de quelles connexions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] correspondent à quelles personnes.   
 * Active Directory vous permet d’appliquer une stratégie de mot de passe centralisée de votre organisation.   
 
 Ce didacticiel comprend les tâches suivantes :
 
 > [!div class="checklist"]
-> * Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte de domaine Active Directory.
-> * Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définissez le nom principal de service
-> * Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de service
+> * Joindre un hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à un domaine Active Directory.
+> * Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définir le nom principal de service
+> * Configurer le service keytab de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 > * Créer des comptes de connexion basée sur Active Directory dans Transact-SQL
 > * Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’authentification Active Directory
 
@@ -48,21 +48,21 @@ Ce didacticiel comprend les tâches suivantes :
 Avant de configurer l’authentification Active Directory, vous devez :
 
 * Configurer un contrôleur de domaine Active Directory (Windows) sur votre réseau  
-* Installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+* Installer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
 > Limitations :
-> - À ce stade, la seule méthode d’authentification pris en charge pour le point de terminaison de mise en miroir de base de données est le certificat. Méthode d’authentification WINDOWS est activée dans une version ultérieure.
+> - À ce stade, la seule méthode d’authentification prise en charge pour le point de terminaison de mise en miroir de base de données est le certificat. La méthode d’authentification WINDOWS sera activée dans une version ultérieure.
 > - les outils tiers AD 3e comme Centrify, Powerbroker et Vintela ne sont pas pris en charge. 
 
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte de domaine Active Directory.
+## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Joindre un hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à un domaine Active Directory.
 
-Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte à un domaine Active Directory :
+Utilisez les étapes suivantes pour joindre un hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à un domaine Active Directory :
 
-1. Utilisez  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  pour joindre votre ordinateur hôte pour votre domaine Active Directory. Si vous n’avez pas encore, installer les packages du client Kerberos et realmd sur la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte à l’aide du Gestionnaire de package de votre distribution Linux :
+1. Utilisez **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** pour joindre votre ordinateur hôte à votre domaine Active Directory. Si vous ne l’avez pas encore fait, installer les packages du client Kerberos et realmd sur l'ordinateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte à l’aide du Gestionnaire de package de votre distribution Linux :
 
    ```bash
    # RHEL
@@ -80,7 +80,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
    > [!NOTE]
    > Cette procédure pas à pas utilise « contoso.com » et « CONTOSO.COM » en tant qu’exemples de noms de domaine et le domaine, respectivement. Vous devez remplacer par vos propres valeurs. Ces commandes respectent la casse, par conséquent, assurez-vous que vous utilisez majuscules partout où il est utilisé dans cette procédure pas à pas.
 
-1. Configurer votre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte à utiliser l’adresse de votre contrôleur de domaine Active Directory en tant qu’un serveur de noms DNS. 
+1. Configurer votre ordinateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte pour utiliser l’adresse de votre contrôleur de domaine Active Directory en tant qu’un serveur de noms DNS. 
 
    - **Ubuntu**:
 
@@ -96,7 +96,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
       ```
 
       > [!NOTE]
-      > L’interface réseau (eth0) peut-être différer pour les ordinateurs de différente. Pour déterminer l’application que vous utilisez, exécutez ifconfig et copier l’interface qui possède une adresse IP et les octets transmis et reçus.
+      > L’interface réseau (eth0) peut-être différer pour les ordinateurs différents. Pour déterminer l’application que vous utilisez, exécutez ifconfig et copier l’interface qui possède une adresse IP et les octets transmis et reçus.
 
       Après avoir modifié ce fichier, redémarrez le service réseau :
 
@@ -145,7 +145,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
    ```
 
    > [!NOTE]
-   > Si vous voyez une erreur, « les packages nécessaires ne sont pas installés », puis vous devez installer ces packages à l’aide du Gestionnaire de package de votre distribution Linux avant d’exécuter le `realm join` réexécutez la commande.
+   > Si vous voyez une erreur, « les packages nécessaires ne sont pas installés », vous devez alors installer ces packages à l’aide du Gestionnaire de package de votre distribution Linux avant d’exécuter le `realm join` réexécutez la commande.
    >
    > Si vous recevez une erreur, « Autorisations insuffisantes pour joindre le domaine, » vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour joindre des ordinateurs Linux à votre domaine.
    
@@ -156,7 +156,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
   
 5. Vérifiez que vous pouvez maintenant collecter des informations relatives à un utilisateur du domaine, et que vous pouvez obtenir un ticket Kerberos en tant qu’utilisateur.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   Nous utiliserons les commandes **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** et **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** pour cela.
 
    ```bash
    id user@contoso.com
@@ -174,7 +174,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
    > [!NOTE]
    > Si `id user@contoso.com` retourne, « Utilisateur inexistant, » assurez-vous que le service SSSD a démarré en exécutant la commande `sudo systemctl status sssd`. Si le service est en cours d’exécution et que vous rencontrez l’erreur « Aucun utilisateur », essayez d’activer la journalisation documentée pour SSSD. Pour plus d’informations, consultez la documentation de Red Hat pour [SSSD de résolution des problèmes](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > Si `kinit user@CONTOSO.COM` retourne, « réponse du contrôleur de domaine Kerberos ne correspond pas à attentes lors de l’obtention des informations d’identification initiales, » vérifiez que vous avez spécifié le domaine en majuscules.
+   > Si `kinit user@CONTOSO.COM` retourne, « la réponse du contrôleur de domaine Kerberos ne correspond pas à attentes lors de l’obtention des informations d’identification initiales, » vérifiez que vous avez spécifié le domaine en majuscules.
 
 Pour plus d’informations, consultez la documentation de Red Hat pour [découverte et la jointure de domaines d’identité](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
@@ -232,16 +232,16 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    ```
 
    > [!NOTE]
-   > L’outil ktutil ne pas valider le mot de passe, par conséquent, assurez-vous que vous l’entrez correctement.
+   > L’outil ktutil ne valider pas le mot de passe, par conséquent, assurez-vous que vous l’entrez correctement.
 
-3. Toute personne ayant accès à ce `keytab` fichier peut emprunter l’identité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le domaine, assurez-vous donc vous restreigniez l’accès au fichier tels que seuls les `mssql` compte a accès en lecture :
+3. Toute personne ayant accès à ce fichier `keytab` peut emprunter l’identité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le domaine, assurez-vous donc de restreindre l’accès au fichier tel que seul le compte `mssql` ait accès en lecture :
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser cette `keytab` fichier pour l’authentification Kerberos :
+4. Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour utiliser ce fichier `keytab` pour l’authentification Kerberos :
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
@@ -256,7 +256,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-2. Vérifiez que la connexion est maintenant répertoriée dans le [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) affichage catalogue système :
+2. Vérifiez que la connexion est maintenant répertoriée dans l' affichage de catalogue système [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) :
 
    ```sql
    SELECT name FROM sys.server_principals;
@@ -264,7 +264,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
 
 ## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’authentification Active Directory
 
-Connectez-vous à un ordinateur client à l’aide de vos informations d’identification de domaine. Maintenant vous pouvez vous connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sans devoir entrer de nouveau votre mot de passe, à l’aide de l’authentification Active Directory. Si vous créez une connexion pour un groupe AD, tout utilisateur d’Active Directory qui est un membre de ce groupe peut se connecter de la même façon.
+Connectez-vous à un ordinateur client à l’aide de vos informations d’identification de domaine. Vous pouvez maintenant vous connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sans devoir entrer de nouveau votre mot de passe, à l’aide de l’authentification Active Directory. Si vous créez une connexion pour un groupe AD, tout utilisateur d’Active Directory qui est un membre de ce groupe peut se connecter de la même façon.
 
 Le paramètre de chaîne de connexion spécifique pour les clients à utiliser l’authentification Active Directory varie selon le pilote que vous utilisez. Voici quelques exemples figurent ci-dessous.
 
@@ -284,9 +284,9 @@ Le paramètre de chaîne de connexion spécifique pour les clients à utiliser l
 
 * SSMS sur un client Windows appartenant au domaine
 
-   Connectez-vous à un client Windows appartenant au domaine à l’aide de vos informations d’identification de domaine. Assurez-vous que [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] est installé, puis vous connecter à votre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance en spécifiant **l’authentification Windows** dans les **se connecter au serveur** boîte de dialogue.
+   Connectez-vous à un client Windows appartenant au domaine à l’aide de vos informations d’identification de domaine. Assurez-vous que [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] est installé, puis connectez-vous à votre instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en spécifiant **Authentification Windows** dans la boîte de dialogue **se connecter au serveur**.
 
-* Authentification d’Active Directory à l’aide d’autres pilotes de clients
+* Authentification d’Active Directory à l’aide d’autres pilotes clients
 
   * JDBC : [à l’aide de Kerberos intégré à l’authentification de connexion SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC : [à l’aide de l’authentification intégrée](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
@@ -298,7 +298,7 @@ Dans ce didacticiel, nous avons parcouru comment faire pour configurer l’authe
 > [!div class="checklist"]
 > * Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte de domaine Active Directory.
 > * Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définissez le nom principal de service
-> * Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de service
+> * Configurer le service keytab de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > * Créer des comptes de connexion basée sur Active Directory dans Transact-SQL
 > * Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’authentification Active Directory
 
