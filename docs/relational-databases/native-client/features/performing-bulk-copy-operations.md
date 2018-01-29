@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client, bulk copy operations
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6070899aab81b6e3cef56a7c6320934d57a21d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea17b70786b4b059417c8cf0f8b514fc6a6208e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,9 +104,9 @@ ms.lasthandoff: 01/08/2018
   
 -   **ISupportErrorInfo**  
   
- Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le *rgProperties* membre d’un *rgPropertySets***IOpenRowset**membre de paramètre.  
+ Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le *rgProperties* membre d’un * rgPropertySets ***IOpenRowset**membre de paramètre.  
   
-|ID de propriété|Description|  
+|ID de propriété| Description|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Maintient les valeurs d'identité fournies par le consommateur.<br /><br /> VARIANT_FALSE : les valeurs pour une colonne d'identité dans la table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toute valeur liée pour la colonne est ignorée par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.<br /><br /> VARIANT_TRUE : le consommateur lie un accesseur qui fournit une valeur pour une colonne d'identité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La propriété identity n’est pas disponible sur les colonnes qui acceptent NULL, le consommateur fournit une valeur unique sur chaque **IRowsetFastLoad::Insert** appeler.|  
 |SSPROP_FASTLOADKEEPNULLS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : maintient la valeur NULL pour les colonnes avec une contrainte DEFAULT. Affecte uniquement les colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui acceptent NULL et auxquelles une contrainte DEFAULT est appliquée.<br /><br /> VARIANT_FALSE : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insère la valeur par défaut pour la colonne lorsque le consommateur du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client insère une ligne contenant NULL pour la colonne.<br /><br /> VARIANT_TRUE : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insère NULL pour la valeur de colonne lorsque le consommateur du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client insère une ligne contenant NULL pour la colonne.|  
@@ -119,9 +119,9 @@ ms.lasthandoff: 01/08/2018
  Le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client maintient la même prise en charge pour les opérations de copie en bloc qui faisaient partie des versions précédentes du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les opérations de copie en bloc à l’aide de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, consultez [effectuant des opérations de copie en bloc &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Fonctionnalités SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propriétés de Source de données &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
- [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Importation et exportation de données &#40; en bloc SQL Server &#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Optimisation des performances de l’importation en bloc](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,7 +26,8 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -55,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: "136"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9f5e2a5754f0dc603b2a275cb62bf639fee2d858
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs de requête (Transact-SQL) :
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -300,7 +302,7 @@ INDICATEUR de TABLE  **(*** exposed_object_name* [ **,** \<indicateur de table >
   
  Lorsque *exposed_object_name* est spécifié sans spécifier également un indicateur de table, tous les index spécifiés dans la requête comme partie d’un indicateur de table pour l’objet sont ignorées et l’utilisation des index est déterminée par l’optimiseur de requête. Vous pouvez utiliser cette technique pour éliminer l'effet d'un indicateur de table INDEX lorsque vous ne pouvez pas modifier la requête d'origine. Voir l'exemple J.  
   
-**\<indicateur de table > :: =** {[NOEXPAND] {INDEX ( *index_value* [,... *n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(*** index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SÉRIALISABLE | INSTANTANÉ | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} est l’indicateur de table à appliquer à la table ou la vue qui correspond à *exposed_object_name* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<indicateur de table > :: =** {[NOEXPAND] {INDEX ( *index_value* [,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(*** index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SÉRIALISABLE | INSTANTANÉ | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} est l’indicateur de table à appliquer à la table ou la vue qui correspond à *exposed_object_name* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Pour plus d'informations, consultez la section Notes.  
   

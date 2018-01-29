@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,23 +23,24 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +125,7 @@ Spécifie le nom du nouvel index.
   
 Si la table possède déjà un index cluster columnstore, vous pouvez spécifier le même nom que l’index existant, ou vous pouvez utiliser l’option pour spécifier un nouveau nom.  
   
-ON [*nom_base_de_données*. [*schema_name* ]. | *schema_name* . ] *nom_table*  
+ON [*nom_base_de_données*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Spécifie le nom à une, deux ou trois parties de la table à stocker en tant qu'index columnstore cluster. Si la table est un segment de mémoire ou index ordonné en clusters de la table est converti de rowstore en columnstore. Si la table est déjà un index columnstore, cette instruction permet de reconstruire l’index columnstore cluster.  
   
 par  
@@ -168,10 +170,10 @@ ON
  
    *column_name* spécifie la colonne sur laquelle un index partitionné est partitionné. Cette colonne doit correspondre au type de données, longueur, et la précision de l’argument de la partition de fonction qui *partition_scheme_name* est à l’aide.  
 
-   *FILEGROUP_NAME*  
+   *filegroup_name*  
    Spécifie le groupe de fichiers pour le stockage de l'index columnstore cluster. Si aucun emplacement n'est défini et que la table n'est pas partitionnée, l'index utilise le même groupe de fichiers que la table ou vue sous-jacente. Le groupe de fichiers doit déjà exister.  
 
-   **«**par défaut**»**  
+   **"**default**"**  
    Pour créer l’index sur le groupe de fichiers par défaut, utilisez « default » ou [default].  
   
    Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. QUOTED_IDENTIFIER est activé par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -186,7 +188,7 @@ Créer un index non cluster en mémoire sur une table rowstore stockées sous fo
     Spécifie les colonnes à stocker. Un index non cluster est limité à 1 024 colonnes.  
    Chaque colonne doit appartenir à un type de données pris en charge pour les index columnstore. Consultez [Limitations et Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) pour obtenir la liste des types de données pris en charge.  
 
-ON [*nom_base_de_données*. [*schema_name* ]. | *schema_name* . ] *nom_table*  
+ON [*nom_base_de_données*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Spécifie un, deux ou nom en trois parties de la table qui contient l’index.  
 
 WITH DROP_EXISTING = [OFF] | ON  
@@ -252,15 +254,15 @@ ON
    Un index columnstore sur une table partitionnée doit être aligné sur les partitions.  
    Pour plus d’informations sur le partitionnement des index, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
 
-*FILEGROUP_NAME*  
+*filegroup_name*  
    Spécifie un nom de groupe de fichiers sur lequel créer l'index. Si *filegroup_name* n’est pas spécifié et que la table n’est pas partitionnée, l’index utilise le même groupe de fichiers que la table sous-jacente. Le groupe de fichiers doit déjà exister.  
  
-**«**par défaut**»**  
+**"**default**"**  
 Crée l'index spécifié sur le groupe de fichiers par défaut.  
   
 Le terme « default », dans ce contexte, n'est pas un mot clé. Il est un identificateur pour le groupe de fichiers par défaut et doit être délimité, comme dans ON **»**par défaut**»** ou ON **[**par défaut**]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="GenRemarks"></a>Remarques d’ordre général  
@@ -275,7 +277,7 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
 - L'opération INSERT, UPDATE, DELETE ou MERGE modifie les données dans un index filtré.  
 - L’index filtré est utilisé par l’optimiseur de requête pour générer le plan de requête.  
   
-    |Options définies|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
+    |Options SET|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -300,29 +302,29 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
 ##  <a name="LimitRest"></a> Limitations et restrictions  
 
 **Chaque colonne dans un index columnstore doit être l’un des types de données métier courantes suivantes :** 
--   DateTimeOffset [(  *n*  )]  
--   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetimeoffset [ ( *n* ) ]  
+-   datetime2 [ ( *n* ) ]  
+-   datetime  
 -   smalldatetime  
--   Date  
--   heure [(  *n*  )]  
+-   date  
+-   time [ ( *n* ) ]  
 -   float [(  *n*  )]  
 -   Real [(  *n*  )]  
--   Decimal [( *précision* [ *, échelle* ] **)** ]
+-   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numérique [( *précision* [ *, échelle* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   INT  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)   
--   NCHAR [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)
--   Char [(  *n*  )]  
+-   char [ ( *n* ) ]  
 -   varbinary [(  *n*  )] 
 -   varbinary (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)
 -   binaire [(  *n*  )]  
@@ -353,7 +355,7 @@ Si la table sous-jacente possède une colonne de type de données qui n’est pa
  **Index ColumnStore ne peut pas être combinés avec les fonctionnalités suivantes :**  
 -   Colonnes calculées À partir de SQL Server 2017, un index columnstore cluster peut contenir une colonne calculée non persistante. Toutefois, dans SQL Server 2017, les index cluster columnstore ne peut pas contenir de colonnes calculées persistantes, et vous ne pouvez pas créer des index non cluster sur des colonnes calculées. 
 -   La compression de page et de ligne, et **vardecimal** le format de stockage (un index columnstore est déjà compressé dans un format différent.)  
--   REPLICATION  
+-   Réplication  
 -   Filestream
 
 Vous ne pouvez pas utiliser les curseurs ou les déclencheurs sur une table avec un index cluster columnstore. Cette restriction ne s’applique pas aux index de cluster ; Vous pouvez utiliser les curseurs et les déclencheurs sur une table avec un index non cluster.
@@ -622,7 +624,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  Une fois que vous avez créé un index columnstore non cluster sur une table, vous ne pouvez pas modifier directement les données dans cette table. Une requête avec INSERT, UPDATE, DELETE ou MERGE échoue et retourne un message d’erreur. Pour ajouter ou modifier les données de la table, effectuez les tâches suivantes :  
   
--   Désactivez ou supprimez l'index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple,  
+-   Désactivez ou supprimez l'index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple :  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
