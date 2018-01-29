@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +208,7 @@ ALTER INDEX { index_name | ALL }
  *schema_name*  
  Nom du schéma auquel la table ou la vue appartient.  
   
- *nom_table_ou_vue*  
+ *table_or_view_name*  
  Nom de la table ou de la vue associée à l'index. Pour afficher un rapport des index sur un objet, utilisez le [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]prend en charge le nom_base_de_données de format de nom en trois parties. [nom_schéma] .nom_table_ou_vue lorsque nom_bd est la base de données actuelle ou nom_bd est tempdb et nom_table_ou_vue commence par #.  
@@ -250,7 +252,7 @@ PARTITION
   
  Numéro de partition d'un index partitionné à reconstruire ou à réorganiser. *partition_number* est une expression constante qui permettre référencer des variables. Cela inclut les fonctions ou variables de types définies par l'utilisateur et les fonctions définies par l'utilisateur, mais exclut l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* doit exister ou l’instruction échoue.  
   
- AVEC **(**\<single_partition_rebuild_index_option >**)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -307,7 +309,10 @@ Pour les index columnstore dans [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 -   Pour les rowgroups dans laquelle au moins 10 % des lignes ont été logiquement supprimé, SQL Server va tenter d’associer ce groupe de lignes avec un ou plusieurs groupes de lignes.    Par exemple, 1 de rowgroup est compressé avec 500 000 lignes et 21 de rowgroup est compressé avec la valeur maximale de 1 048 576 lignes.  Rowgroup 21 a 60 % des lignes supprimées qui laisse 409,830 lignes. SQL Server favorise la combinaison de ces deux groupes de lignes pour compresser un nouveau rowgroup qui a des 909,830 lignes.  
   
 RÉORGANISER AVEC (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le COMPRESS_ALL_ROW_GROUPS offre un moyen pour les rowgroups delta ouvert ou fermé dans le columnstore. Avec cette option, il n’est pas nécessaire de reconstruire l’index pour vider les rowgroups delta.  Ceci, combiné avec les autres supprimer et fusion défragmentation fonctionnalités fait il n’est plus nécessaire de reconstruire l’index dans la plupart des situations.    
+
+ **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS offre un moyen pour les rowgroups delta ouvert ou fermé dans le columnstore. Avec cette option, il n’est pas nécessaire de reconstruire l’index pour vider les rowgroups delta.  Ceci, combiné avec les autres supprimer et fusion défragmentation fonctionnalités fait il n’est plus nécessaire de reconstruire l’index dans la plupart des situations.    
 
 -   ON force tous les rowgroups dans le columnstore, quelle que soit la taille et l’état (fermées ou ouvertes).  
   
@@ -457,7 +462,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}
  OFF  
  Les verrous de ligne ne sont pas utilisés.  
   
-ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
+ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
   
 **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -472,18 +477,18 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
 > [!NOTE]
 >  Un index ne peut pas être réorganisé lorsque ALLOW_PAGE_LOCKS est désactivé (OFF).  
   
- MAXDOP  **=**  max_degree_of_parallelism  
+ MAXDOP **=** max_degree_of_parallelism  
  
 **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Remplace le **degré maximal de parallélisme** option de configuration pour la durée de l’opération d’index. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
+ Remplace le **degré maximal de parallélisme** option de configuration pour la durée de l’opération d’index. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
 > [!IMPORTANT]
 >  Bien que l'option MAXDOP soit prise en charge syntaxiquement pour tous les index XML, pour un index spatial ou un XML primaire, ALTER INDEX utilise actuellement seulement un processeur unique.  
   
  *max_degree_of_parallelism* peut être :  
   
-  1  
+ 1  
  Supprime la création de plans parallèles.  
   
  \>1  
@@ -584,7 +589,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Temps d'attente (valeur entière spécifiée en minutes) pendant lequel les verrous de reconstruction d'index en ligne devront attendre avec une faible priorité lors de l'exécution de la commande DDL. Si l’opération est bloquée pendant la **MAX_DURATION** de temps, un de la **ABORT_AFTER_WAIT** actions seront exécutées. **MAX_DURATION** heure est toujours en minutes et le mot **MINUTES** peut être omis.  
  
- ABORT_AFTER_WAIT = [**NONE** | **SELF** | **DES BLOCAGES** }]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
 **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -629,7 +634,7 @@ ABANDON
 
 Abandonner une opération d’index en cours d’exécution ou en pause qui a été déclarée comme pouvant être reprise. Vous devez exécuter explicitement une **abandonner** opération de reconstruction de commande pour mettre fin à un index peut être repris. Échec ou la suspension d’une opération d’index peut être repris n’arrête pas son exécution ; au lieu de cela, elle laisse l’opération dans un état de pause indéterminée.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ALTER INDEX ne peut pas être utilisé pour recréer la partition d'un index ou le déplacer vers un autre groupe de fichiers. Cette instruction ne peut pas être utilisée pour modifier la définition de l'index, comme l'ajout ou la suppression de colonnes ou la modification de l'ordre des colonnes. Exécutez CREATE INDEX avec la clause DROP_EXISTING afin de procéder aux opérations suivantes.  
   
  Si une option n'est pas spécifiée de façon explicite, le paramètre actuel s'applique. Par exemple, si un paramètre FILLFACTOR n'est pas indiqué dans la clause REBUILD, la valeur de facteur de remplissage stockée dans le catalogue système est utilisée lors du processus de reconstruction. Pour afficher les paramètres de l’index en cours, utilisez [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Compresser tous les rowgroups delta ouvert et fermé dans le columnstore  
- Ne s’applique pas aux : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez exécuter REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) pour compresser chaque rowgroup delta ouvert et fermé dans le columnstore en tant qu’un rowgroup compressé. Vide le deltastores il force toutes les lignes à compressées dans le columnstore. Cela est utile en particulier après l’exécution de nombreuses opérations d’insertion dans la mesure où ces opérations stockent les lignes dans un ou plusieurs deltastores.  
+ La commande REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compreses ouvrent chacun et fermé le rowgroup delta dans le columnstore en tant qu’un rowgroup compressé. Vide le deltastores il force toutes les lignes à compressées dans le columnstore. Cela est utile en particulier après l’exécution de nombreuses opérations d’insertion dans la mesure où ces opérations stockent les lignes dans un ou plusieurs deltastores.  
   
  REORGANIZE combine rowgroups pour remplir les rowgroups jusqu'à un nombre maximal de lignes \<= 1,024,576. Par conséquent, lorsque vous compressez tous les rowgroups ouvert et fermé vous ne retrouvez avec un grand nombre de rowgroups compressés qui contiennent uniquement quelques lignes. Vous souhaitez que les rowgroups à être aussi complète que possible réduire la taille compressée et améliorer les performances des requêtes.  
   
@@ -1165,14 +1170,14 @@ Pour des exemples de la compression des données supplémentaires, consultez [la
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [CRÉER un INDEX XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Désactiver les index et contraintes](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Exécuter des opérations d’Index en ligne](../../relational-databases/indexes/perform-index-operations-online.md)   
  [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
+ [Sys.dm_db_index_physical_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
