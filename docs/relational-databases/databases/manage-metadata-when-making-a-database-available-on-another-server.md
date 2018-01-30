@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1385db80093f2304ac998d6c6f1834aedf3ff31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique concerne les situations suivantes :  
@@ -334,7 +335,7 @@ ms.lasthandoff: 11/17/2017
  Pour plus d'informations sur cette fonctionnalité, consultez [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)   
  [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

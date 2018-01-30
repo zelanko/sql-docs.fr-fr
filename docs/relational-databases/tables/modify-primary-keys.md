@@ -8,23 +8,24 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - modifying primary keys
 - primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee0f0825c66c10ba5412a2b5d8ffc3db23077970
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: becb37a9eb7767299706bd354e7801a255b0dc96
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-primary-keys"></a>Modifier des clés primaires
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/17/2017
     |Définir un taux de remplissage|Développez la catégorie **Spécification du remplissage** et tapez un entier compris entre 0 et 100 dans la zone **Taux de remplissage** . Pour plus d’informations sur les facteurs de remplissage et leurs utilisations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).|  
     |Changer l'ordre des colonnes|Sélectionnez **Colonnes**, puis cliquez sur le bouton de sélection **(…)** situé à droite de la propriété. Dans la boîte de dialogue  **Colonnes d'index** , supprimez les colonnes de la clé primaire. Rajoutez-les ensuite dans l'ordre voulu. Pour supprimer une colonne clé, retirez simplement le nom de la colonne de la liste **Nom de la colonne** .|  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
+4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé primaire**  

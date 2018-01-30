@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a au moins deux fichiers de système d'exploitation : un fichier de données et un fichier journal. Les fichiers de données contiennent des données et des objets tels que des tables, des index, des procédures stockées et des vues. Les fichiers journaux contiennent les informations nécessaires pour récupérer toutes les transactions de la base de données. Les fichiers de données peuvent être regroupés dans des groupes de fichiers à des fins d'allocation et d'administration.  
@@ -102,19 +103,29 @@ Le format de fichier utilisé par un instantané de base de données pour stocke
 ## <a name="filegroups"></a>Groupes de fichiers  
  Chaque base de données possède un groupe de fichiers primaire. Celui-ci contient le fichier de données primaire et tous les fichiers secondaires qui n'ont pas été placés dans d'autres groupes de fichiers. Il est possible de créer des groupes de fichiers définis par l'utilisateur pour regrouper des fichiers de données à des fins d'administration, d'allocation des données et de placement.  
   
- Par exemple, trois fichiers (Data1.ndf, Data2.ndf, et Data3.ndf) peuvent être créés sur trois lecteurs, respectivement, puis affectés au groupe de fichiers **fgroup1**. Une table peut alors être créée spécialement pour le groupe de fichiers **fgroup1**. Les requêtes portant sur des données de la table seront réparties sur les trois disques, ce qui permettra d'améliorer les performances. Une amélioration similaire des performances pourra être obtenue en créant un fichier unique sur un jeu de bandes RAID (Redundant Array of Independent Disks). Cependant, les fichiers et les groupes de fichiers vous permettent d'ajouter facilement des fichiers sur de nouveaux disques.  
+ Par exemple, trois fichiers `Data1.ndf`, `Data2.ndf` et `Data3.ndf` peuvent être créés sur trois lecteurs, respectivement, puis affectés au groupe de fichiers `fgroup1`. Une table peut alors être créée spécifiquement pour le groupe de fichiers `fgroup1`. Les requêtes portant sur des données de la table seront réparties sur les trois disques, ce qui permettra d'améliorer les performances. Une amélioration similaire des performances pourra être obtenue en créant un fichier unique sur un jeu de bandes RAID (Redundant Array of Independent Disks). Cependant, les fichiers et les groupes de fichiers vous permettent d'ajouter facilement des fichiers sur de nouveaux disques.  
   
  Tous les fichiers de données sont stockés dans les groupes de fichiers répertoriés dans le tableau suivant.  
   
 |Groupe de fichiers|Description|  
 |---------------|-----------------|  
 |Principal|Groupe de fichiers qui contient le fichier primaire. Toutes les tables système sont allouées au groupe de fichiers primaire.|  
+|Données optimisées en mémoire|Un groupe de fichiers optimisé en mémoire est basé sur un groupe de fichiers Filestream|  
+|Filestream||    
 |Définie par l'utilisateur|Groupe de fichiers créé par l'utilisateur lorsque celui-ci crée la base de données ou lorsqu'il la modifie ultérieurement.|  
   
-### <a name="default-filegroup"></a>Groupe de fichiers par défaut  
+### <a name="default-primary-filegroup"></a>Groupe de fichiers (principal) par défaut  
  Lorsque des objets sont créés dans la base de données, sans spécifier le groupe de fichiers auquel ils appartiennent, ces objets sont affectés au groupe de fichiers par défaut. À tout moment, un groupe de fichiers précis est désigné comme étant le groupe de fichiers par défaut. Les fichiers du groupe de fichiers par défaut doivent être suffisamment volumineux pour contenir tous les nouveaux objets qui ne sont pas affectés à d'autres groupes de fichiers.  
   
  Le groupe de fichiers PRIMARY est le groupe de fichiers par défaut sauf s'il est modifié par l'instruction ALTER DATABASE. Les objets et tables système restent affectés au groupe de fichiers PRIMARY, et non au nouveau groupe par défaut.  
+ 
+### <a name="memory-optimized-data-filegroup"></a>Groupe de fichiers de données optimisé en mémoire
+
+Pour plus d’informations sur les groupes de fichiers optimisés en mémoire, consultez [Groupes de fichiers optimisés en mémoire](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
+
+### <a name="filestream-filegroup"></a>Groupe de fichiers Filestream
+
+Pour plus d’informations sur les groupes de fichiers Filestream, consultez [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) et [Créer une base de données compatible FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md).
 
 ### <a name="file-and-filegroup-example"></a>Exemple de fichier et de groupe de fichiers
  L’exemple ci-dessous crée une base de données sur une instance de SQL Server. La base de données possède un fichier de données primaire, un groupe de fichiers défini par l'utilisateur et un fichier journal. Le fichier de données primaire fait partie du groupe de fichiers primaire et le groupe de fichiers défini par l'utilisateur possède deux fichiers de données secondaires. Une instruction ALTER DATABASE fait du groupe de fichiers défini par l'utilisateur le groupe par défaut. Une table est ensuite créée en spécifiant le groupe de fichiers défini par l'utilisateur. Cet exemple utilise le chemin générique `c:\Program Files\Microsoft SQL Server\MSSQL.1` pour éviter de spécifier une version de SQL Server.
@@ -123,7 +134,7 @@ Le format de fichier utilisé par un instantané de base de données pour stocke
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-L'illustration ci-dessous récapitule les résultats de l'exemple précédent.
+L’illustration suivante récapitule les résultats de l’exemple précédent (excepté pour les données Filestream).
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

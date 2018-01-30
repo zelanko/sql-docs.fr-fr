@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51ee95780b228a723be7c5f86b4a64c171bf5df2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **Définir la valeur par défaut** Affecte la valeur par défaut définie pour la colonne si toutes les colonnes clés étrangères de la table ont des valeurs par défaut définies.  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
+4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé étrangère**  

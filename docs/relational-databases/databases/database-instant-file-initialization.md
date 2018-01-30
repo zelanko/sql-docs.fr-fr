@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-file-initialization"></a>Initialisation des fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les fichiers de données et les fichiers journaux sont initialisés pour remplacer toutes les données existantes laissées sur le disque par des fichiers précédemment supprimés. Les fichiers de données et les fichiers journaux sont d’abord initialisés en étant remplis avec des zéros quand vous effectuez une des opérations suivantes :  
@@ -89,6 +90,10 @@ Database Instant File Initialization: disabled. For security and performance con
 
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
 Quand vous utilisez l’initialisation instantanée de fichiers (IFI), comme le contenu du disque supprimé n’est remplacé qu’au moment où de nouvelles données sont écrites dans les fichiers, il est éventuellement accessible à un principal non autorisé jusqu’à ce que d’autres données soient écrites sur cette zone spécifique du fichier de données. Même si le fichier de base de données est attaché à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le risque de divulgation de ces informations est limité par la liste de contrôle d’accès discrétionnaire (DACL, Discretionary Access Control List) du fichier. Cette liste DACL n'autorise l'accès au fichier qu'à l'administrateur local et au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cependant, quand le fichier est détaché, un utilisateur ou un service ne bénéficiant pas de l’autorisation *SE_MANAGE_VOLUME_NAME* peut y accéder. Cette situation se présente aussi quand la base de données est sauvegardée : si le fichier de sauvegarde n’est pas protégé par une liste DACL appropriée, le contenu supprimé peut devenir accessible à un utilisateur ou à un service non autorisé.  
+
+Une autre considération est que quand la taille est augmentée avec IFI, un administrateur SQL Server peut potentiellement accéder au contenu de la page brute et voir le contenu précédemment supprimé.
+
+Si les fichiers de base de données sont hébergés sur un réseau de zone de stockage, il est également possible que le réseau de zone de stockage présente toujours les nouvelles pages préinitialisées. Or, laisser le système d’exploitation réinitialiser les pages peut représenter une charge supplémentaire non nécessaire.
  
 > [!NOTE]
 > Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé dans un environnement physique sécurisé, les gains de performance de l’activation de l’initialisation instantanée de fichiers peuvent primer sur les risques de sécurité et, donc, justifier cette recommandation.

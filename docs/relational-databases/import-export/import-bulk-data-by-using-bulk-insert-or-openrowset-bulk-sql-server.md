@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7fc748d4db517846a890850cba1198e940f9a395
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 925da6e2a1db4855df32a5b34a6903dbce7125d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="openrowsetbulk-function"></a>Fonction OPENROWSET(BULK…)  
  Le fournisseur d'ensembles de lignes en bloc OPENROWSET est accessible en appelant la fonction OPENROWSET et en spécifiant l'option BULK. La fonction OPENROWSET(BULK…) vous permet d'accéder aux données distantes en vous connectant à une source de données distante (un fichier de données) par l'intermédiaire d'un fournisseur OLE DB.  

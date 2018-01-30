@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 23aaaed04bfb552865cf9eb95b3150d520499dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique contient des informations sur la façon de surveiller la taille d’un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de réduire le journal des transactions, d’ajouter ou d’agrandir un fichier journal de transactions, d’optimiser le taux de croissance du journal des transactions de **tempdb**, et de contrôler la croissance d’un fichier journal de transactions.  
@@ -105,9 +106,9 @@ Voici une série de recommandations générales à suivre pendant l’utilisatio
       |À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|  
       |Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|10 % de données. 10 % de fichiers journaux.|  
 
--   Un incrément de croissance réduit peut générer un nombre excessif de petits [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) et réduire le niveau de performance. 
+-   Un incrément de croissance réduit peut générer un nombre excessif de petits [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) et réduire le niveau de performance. Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Un incrément de croissance élevé peut générer un nombre insuffisants de [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) volumineux et affecter également le niveau de performance. 
+-   Un incrément de croissance élevé peut générer un nombre insuffisants de [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) volumineux et affecter également le niveau de performance. Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Même si la croissance automatique est activée, vous pouvez recevoir un message indiquant que le journal des transactions est complet, s’il ne peut pas croître suffisamment rapidement pour répondre aux besoins de votre requête. Pour plus d’informations sur le changement de l’incrément de croissance, consultez [Options de fichiers et de groupes de fichiers &#40;Transact-SQL&#41; ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

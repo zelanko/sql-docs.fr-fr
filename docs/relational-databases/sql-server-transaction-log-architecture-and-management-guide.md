@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divise chaque fich
 >    -  Si la croissance se situe entre 64 Mo et 1 Go, 8 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 512 Mo, huit fichiers journaux virtuels de 64 Mo sont créés)
 >    -  Si la croissance est supérieure à 1 Go, 16 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 8 Go, seize fichiers journaux virtuels de 512 Ko sont créés)
 
-Si la taille des fichiers journaux s'accroît par de petits incréments, de nombreux fichiers journaux virtuels vont être créés, **ce qui peut ralentir le démarrage de la base de données ainsi que les opérations de sauvegarde et de restauration.** Il est conseillé d’affecter aux fichiers journaux une valeur *size* proche de la taille finale souhaitée et une valeur *growth_increment* relativement importante. Consultez le conseil ci-dessous pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions.
+Si la taille des fichiers journaux s’accroît par de nombreux petits incréments, de nombreux fichiers journaux virtuels sont créés. **ce qui peut ralentir le démarrage de la base de données ainsi que les opérations de sauvegarde et de restauration.** À l’inverse, si les fichiers journaux sont définis avec une grande taille et avec un seul incrément ou peu d’incréments, un petit nombre de fichiers journaux virtuels très volumineux sont créés. Pour plus d’informations sur une estimation correcte de la **taille nécessaire** et de la **croissance automatique** d’un journal des transactions, reportez-vous à la section *Recommandations* de [Gérer la taille du fichier journal des transactions](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
+Il est conseillé d’affecter aux fichiers journaux une *taille* proche de la taille finale nécessaire, avec les incréments nécessaires pour atteindre la distribution optimale des fichiers journaux virtuels, et un *incrément_accroissement* relativement important. Consultez le conseil ci-dessous pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions. 
  - La valeur *size*, telle que définie par l’argument `SIZE` de `ALTER DATABASE` est la taille initiale du fichier journal.
- - La valeur *growth_increment*, telle que définie par l’argument `FILEGROWTH` de `ALTER DATABASE`, correspond à la quantité d’espace ajoutée au fichier chaque fois qu’un espace supplémentaire s’avère nécessaire. 
+ - La valeur de *incrément_accroissement* (également appelée valeur d’accroissement automatique), telle que définie par l’argument `FILEGROWTH` de `ALTER DATABASE`, correspond à la quantité d’espace ajoutée au fichier chaque fois de l’espace supplémentaire s’avère nécessaire. 
  
 Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DATABASE`, consultez [Options de fichiers et de groupes de fichiers &#40;Transact-SQL&#41; ALTER DATABASE](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
   

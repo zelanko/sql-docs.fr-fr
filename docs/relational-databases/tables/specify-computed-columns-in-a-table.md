@@ -8,21 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: computed columns, define
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99d055062a15f35f31a44176ece3af03e3dc5771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Spécifier les colonnes calculées dans une table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -71,9 +73,9 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Lorsqu'une formule combine deux expressions de type de données différents, les règles de priorité des types de données spécifient que le type ayant une priorité plus faible est converti dans un type ayant une priorité plus élevée. Si la conversion n'est pas prise en charge en tant que conversion implicite, l'erreur «`Error validating the formula for column column_name.`» est retournée. Utilisez la fonction CAST ou CONVERT pour résoudre le conflit de type de données. Par exemple, si une colonne de type **nvarchar** est associée à une colonne de type **int**, le type entier doit être converti en **nvarchar** comme indiqué dans cette formule `('Prod'+CONVERT(nvarchar(23),ProductID))`. Pour plus d’informations, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-5.  Indiquez si les données doivent être enregistrées en choisissant **Oui** ou **Non** dans la liste déroulante de la propriété enfant **Is Persisted**.  
+5.  Indiquez si les données doivent être enregistrées en choisissant **Oui** ou **Non** dans la liste déroulante de la propriété enfant **Is Persisted** .  
   
-6.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
+6.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Pour ajouter une définition de colonne calculée à une colonne existante  
   

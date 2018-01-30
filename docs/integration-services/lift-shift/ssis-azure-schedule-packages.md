@@ -1,6 +1,6 @@
 ---
 title: "Planifier l’exécution d’un package SSIS sur Azure | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 01/16/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26160f982982b1a8163662f57cb317e7252ab0e4
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planifier l’exécution d’un package SSIS sur Azure
 Vous pouvez planifier l’exécution de packages stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database en choisissant l’une des options de planification suivantes :
@@ -27,9 +28,42 @@ Vous pouvez planifier l’exécution de packages stockés dans la base de donné
 
 ## <a name="agent"></a> Planifier un package avec SQL Server Agent
 
-### <a name="prerequisite"></a>Condition préalable
+### <a name="prerequisite---create-a-linked-server"></a>Prérequis : Créer un serveur lié
 
-Avant de pouvoir utiliser SQL Server Agent localement pour planifier l’exécution des packages stockés sur un serveur Azure SQL Database, vous devez ajouter le serveur SQL Database en tant que serveur lié. Pour plus d’informations, consultez [Créer des serveurs liés](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) et [Serveurs liés](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Avant de pouvoir utiliser SQL Server Agent localement pour planifier l’exécution des packages stockés sur un serveur Azure SQL Database, vous devez ajouter le serveur SQL Database à votre serveur SQL Server local en tant que serveur lié.
+
+1.  **Configurer le serveur lié**
+
+    ```sql
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',     
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location=‘’,
+        @provstr=‘’,
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **Configurer les informations d’identification du serveur lié**
+
+    ```sql
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer’,
+        @useself = 'false’,
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **Configurer les options du serveur lié**
+
+    ```sql
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+Pour plus d’informations, consultez [Créer des serveurs liés](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) et [Serveurs liés](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### <a name="create-a-sql-server-agent-job"></a>Créer un travail de SQL Server Agent
 
@@ -43,19 +77,21 @@ Pour planifier un package avec SQL Server Agent localement, créez un travail av
 
 4.  Dans la boîte de dialogue **Nouvelle étape du travail**, sélectionnez `SSISDB` en tant que **Base de données**.
 
-5.  Dans le champ de commande, entrez un script Transact-SQL similaire au script indiqué dans l’exemple suivant :
+5.  Dans le champ **Commande**, entrez un script Transact-SQL similaire au script figurant dans l’exemple suivant :
 
     ```sql
+    -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
     DECLARE @return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-    @folder_name=N'folderName', @project_name=N'projectName', 
-    @package_name=N'packageName', @use32bitruntime=0, 
-    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
- 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
-    GO
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
+        @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  Finissez de configurer et de planifier le travail.

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: "72"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b677b08f0643a4e37ca217338187302bae4f1b8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cebfe2bb8751a2aebff7b71d5b1e661a751014f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-security-model"></a>Modèle de sécurité de l'Agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le modèle de sécurité de l’Agent de réplication permet un contrôle précis des comptes sous lesquels les agents de réplication s’exécutent et établissent des connexions : un compte distinct peut être spécifié pour chaque agent. Pour plus d’informations sur la manière de spécifier des comptes, consultez [Gérer les connexions et les mots de passe dans la réplication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
@@ -77,9 +78,9 @@ ms.lasthandoff: 11/17/2017
 |Agent d'instantané pour une partition de publication de fusion|**Dyn_\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<GUID>**|  
 |l'Agent de lecture du journal ;|**\<ServeurPublication>-\<BasededonnéesPublication>-\<entier>**|  
 |Agent de fusion pour les abonnements extraits|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<Base_de_données_Abonnement>-\<entier>**|  
-|Agent de fusion pour abonnements par envoi de données (push)|**\<Serveur_Publication>-\<Base_de_données_Publication>-\<Publication>-\<Abonné>-\<entier>**|  
+|Agent de fusion pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
 |Agent de distribution pour abonnements par envoi de données (push)|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>***|  
-|Agent de distribution pour abonnements par extraction de données (pull)|**\<Serveur de publication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<BasededonnéesAbonnement>-\<GUID>***\*|  
+|Agent de distribution pour abonnements par extraction de données (pull)|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|  
 |Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|  
 |Agent de lecture de la file d'attente|**[\<Distributeur>].\<entier>**|  
   
@@ -96,9 +97,9 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Ces informations sont fournies pour vous aider à comprendre les conséquences de l'exécution d'agents dans le contexte de sécurité approprié. Il ne devrait pas être nécessaire d'interagir directement avec les informations d'identification ou les proxys qui ont été créés.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Sécurité et protection &#40;Réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [Sécuriser le dossier d’instantanés](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

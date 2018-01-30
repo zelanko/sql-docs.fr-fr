@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 476c518e454bbd02f5f17678a74fb32c987d3cd9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d28310275dd8df9e8e0ee205322291098ea4a626
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="replication-merge-agent"></a>Agent de fusion de réplication
+# <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Agent de fusion de réplication est un fichier exécutable d’utilitaire qui applique l’instantané initial contenu dans les tables de base de données aux Abonnés. Il fusionne également les modifications de données incrémentielles ayant eu lieu sur le serveur de publication après la création de l'instantané initial, puis harmonise les conflits soit en fonction des règles que vous configurez, soit à l'aide d'un programme de résolution personnalisé que vous créez.  
   
 > [!NOTE]  
@@ -277,7 +278,7 @@ replmerg [-?]
  Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la table système **sysmergeschemachange** dans la base de données de publication. **MaxBcpThreads** doit avoir une valeur supérieure à 0 et n'a aucune limite supérieure codée en dur. La valeur par défaut est **1**.  
   
  **-MaxDownloadChanges** *number_of_download_changes*  
- Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées du serveur de publication vers l'Abonné. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
+ Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées du serveur de publication vers l'Abonné. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
   
  **-MaxUploadChanges** *number_of_upload_changes*  
  Spécifie le nombre maximal de lignes modifiées qui doivent être téléchargées de l'Abonné au serveur de publication. Le nombre de lignes téléchargées peut être supérieur au nombre maximal spécifié. Cela est dû au fait que des générations complètes sont traitées et que des threads de destination parallèles peuvent s'exécuter, chacun traitant au moins 100 modifications lors du premier passage. Par défaut, toutes les modifications qui sont prêtes à être téléchargées sont envoyées.  
@@ -304,7 +305,7 @@ replmerg [-?]
  Spécifie un profil d'agent à utiliser pour les paramètres d'agent. Si **ProfileName** a la valeur NULL, le profil d'agent est désactivé. Si **ProfileName** n'est pas spécifié, le profil par défaut du type d'agent est utilisé. Pour plus d’informations, consultez [Profils de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Nom de connexion du serveur de publication. Si **PublisherSecurityMode** a la valeur **0** (pour l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), ce paramètre doit être spécifié.  
@@ -389,7 +390,7 @@ replmerg [-?]
  **-ValidateInterval** *validate_interval*  
  Fréquence, en minutes, de validation de l'abonnement en mode continu. La valeur par défaut est **60** minutes.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si vous avez installé l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour s'exécuter sous un compte système local plutôt que sous un compte d'utilisateur de domaine (option par défaut), le service peut uniquement accéder à l'ordinateur local. Si l'Agent de fusion qui s'exécute sous l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré pour utiliser le mode d'authentification Windows lorsqu'il se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'Agent de fusion échoue. Le paramètre par défaut est l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -398,7 +399,7 @@ replmerg [-?]
   
  L'historique de l'agent de fusion pour la session active n'est pas supprimé lors de l'exécution en mode continu. Un agent dont l'exécution est longue peut générer un grand nombre d'entrées dans les tables de l'historique de fusion, ce qui peut impacter les performances. Pour résoudre ce problème, passez en mode planifié, ou continuez à utiliser le mode continu mais créez une tâche dédiée pour redémarrer régulièrement l'agent de fusion, ou baissez le niveau de détail de l'historique pour réduire le nombre de lignes et, par conséquent, l'impact sur les performances.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

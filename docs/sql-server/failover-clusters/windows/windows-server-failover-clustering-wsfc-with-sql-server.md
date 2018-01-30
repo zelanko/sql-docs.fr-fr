@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de basculement Windows Server avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un cluster *WSFC* (Windows Server Failover Cluster, cluster de basculement Windows Server) est un groupe de serveurs indépendants qui fonctionnent conjointement afin d’augmenter la disponibilité des applications et des services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tire parti des services et des fonctionnalités de WSFC afin de prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  Ressource de cluster  
  Entité physique ou logique qui peut être détenue par un nœud, être mise en ligne et hors connexion, déplacée entre des nœuds et être gérée comme un objet cluster. Une ressource de cluster ne peut appartenir qu'à un seul nœud à un moment donné.  
   
- Rôle Collection de ressources de cluster gérée comme objet de cluster unique pour fournir des fonctions spécifiques. Pour SQL Server, un rôle est un groupe de disponibilité Always On ou une instance de cluster de basculement Always On. Un rôle contient toutes les ressources de cluster qui sont requises pour un groupe de disponibilité ou une instance de cluster de basculement. Le basculement et la restauration automatique agissent toujours dans le contexte des rôles. Pour une instance de cluster de basculement, le rôle contient une ressource d’adresse IP, une ressource de nom de réseau et les ressources SQL Server. Un rôle de groupe de disponibilité contient la ressource de groupe de disponibilité et, si un écouteur est configuré, un nom de réseau et une ressource d’adresse IP. 
+ Role  
+ Collection de ressources de cluster gérée comme un même objet de cluster pour fournir des fonctionnalités spécifiques. Pour SQL Server, un rôle est un groupe de disponibilité Always On ou une instance de cluster de basculement Always On. Un rôle contient toutes les ressources de cluster qui sont requises pour un groupe de disponibilité ou une instance de cluster de basculement. Le basculement et la restauration automatique agissent toujours dans le contexte des rôles. Pour une instance de cluster de basculement, le rôle contient une ressource d’adresse IP, une ressource de nom de réseau et les ressources SQL Server. Un rôle de groupe de disponibilité contient la ressource de groupe de disponibilité et, si un écouteur est configuré, un nom de réseau et une ressource d’adresse IP. 
 
  Ressource de nom réseau  
  Nom de serveur logique qui est géré en tant que ressource de cluster. La ressource de nom réseau doit être utilisée avec une ressource d'adresse IP. Ces entrées peuvent nécessiter des objets dans Active Directory Domain Services et/ou DNS. 

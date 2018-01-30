@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Agent de distribution de réplication est un fichier exécutable qui déplace l’instantané (pour la réplication d’instantané et la réplication transactionnelle) et les transactions contenues dans les tables de base de données de distribution (pour la réplication transactionnelle) vers les tables de destination au niveau des Abonnés.  
@@ -277,7 +278,7 @@ distrib [-?]
  Spécifie le type d'abonnement pour la distribution. La valeur **0** indique un abonnement par émission de données, la valeur **1** un abonnement par extraction et la valeur **2** un abonnement anonyme.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. Voir le paramètre **–MessageInterval**décrit précédemment.  
+ Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Doit être spécifié en tant que paramètre pour une publication qui autorise la transformation de données.  
@@ -288,7 +289,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  S'il est spécifié, active la liaison des données des objets blob sous la forme d'un flux. Utilisez **-OledbStreamThreshold** pour spécifier la taille, en octets, au-dessus de laquelle un flux sera utilisé. **UseOledbStreaming** est activé par défaut. **UseOledbStreaming** écrit dans le dossier **C:\Program Files\Microsoft SQL Server\\<version\>\COM**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si vous avez installé l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour s'exécuter sous un compte système local plutôt que sous un compte d'utilisateur de domaine (paramètre par défaut), le service peut uniquement accéder à l'ordinateur local. Si l'Agent de distribution qui s'exécute sous l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré pour utiliser le mode d'authentification Windows lorsqu'il se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'Agent de distribution échoue. Le paramètre par défaut est l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur la modification des comptes de sécurité, consultez [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -301,7 +302,7 @@ distrib [-?]
 |---------------------|  
 |Ajout du paramètre **ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

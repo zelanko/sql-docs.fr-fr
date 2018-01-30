@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,21 +22,21 @@ helpviewer_keywords:
 - file restores [SQL Server], simple recovery model
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 074f5bd73d1396fbef668ac9ce4b8de58fd1a2df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 306ad5cc252c5ba99704f649e24530c3d699de4c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauration de fichiers (mode de récupération simple)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique ne concerne que les bases de données en mode simple contenant au moins un groupe de fichiers secondaire en lecture seule.  
+   Cette rubrique ne concerne que les bases de données en mode simple contenant au moins un groupe de fichiers secondaire en lecture seule.  
   
  Le but d'une restauration de fichiers est de restaurer un ou plusieurs fichiers endommagés sans restaurer l'ensemble de la base de données. Dans le cadre du mode de récupération simple, les sauvegardes de fichiers sont prises en charge uniquement pour les fichiers en lecture seule. Le groupe de fichiers primaire et les groupes de fichiers secondaires en lecture-écriture sont toujours restaurés conjointement lors de la restauration d'une sauvegarde partielle ou d'une base de données.  
   
@@ -74,13 +75,13 @@ ms.lasthandoff: 11/17/2017
   
  La séquence de restauration contient uniquement deux instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . La première instruction restaure un fichier secondaire, le fichier `A`, qui est restauré avec WITH NORECOVERY. La seconde opération restaure deux autres fichiers, `B` et `C` , qui sont restaurés avec WITH RECOVERY depuis une unité de sauvegarde différente :  
   
-1.  RESTORE DATABASE *base_de_données* FILE **=***nom_fichier_A*  
+1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
   
      FROM *sauvegarde_de_fichier_A*  
   
      WITH NORECOVERY**;**  
   
-2.  RESTORE DATABASE *base_de_données* FILE **=***nom_fichier_B***,***nom_fichier_C*  
+2.  RESTORE DATABASE *database* FILE **=***name_of_file_B***,***name_of_file_C*  
   
      FROM *sauvegarde_des_fichiers_B_et_C*  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Restore.SqlRestore, méthode (Serveur) (SMO)](http://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   

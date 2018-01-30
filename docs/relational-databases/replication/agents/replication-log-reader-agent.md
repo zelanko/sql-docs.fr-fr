@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e94c508c47e4783c289c00480dbd492a10070361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf4fda73309e49d009d156fa8c18063e495bac92
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-log-reader-agent"></a>Agent de lecture du journal des réplications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Agent de lecture du journal des réplications est un fichier exécutable qui analyse le journal des transactions de chaque base de données configurée pour la réplication transactionnelle, et qui copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution.  
@@ -167,7 +168,7 @@ logread [-?]
  Spécifie un profil d'agent à utiliser pour les paramètres d'agent. Si **ProfileName** a la valeur NULL, le profil d'agent est désactivé. Si **ProfileName** n'est pas spécifié, le profil par défaut du type d'agent est utilisé. Pour plus d’informations, consultez [Profils de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Spécifie le mode de sécurité du serveur de publication. La valeur **0** indique le mode d'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par défaut), tandis que la valeur **1** indique le mode d'authentification Windows.  
@@ -190,7 +191,7 @@ logread [-?]
  **-RecoverFromDataErrors**  
  Spécifie que l'Agent de lecture du journal poursuit son exécution lorsqu'il rencontre des erreurs dans les données de colonne publiées à partir d'un serveur de publication non-SQL Server. Par défaut, de telles erreurs provoquent l'échec de l'Agent de lecture du journal. Lorsque vous utilisez **-RecoverFromDataErrors**, les données de colonne erronées sont répliquées soit en tant que valeur NULL, soit en tant que valeur non nulle appropriée, et des messages d'avertissement sont journalisés dans la table [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) . Ce paramètre est uniquement pris en charge pour les serveurs de publication Oracle.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si vous avez installé l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour s'exécuter sous un compte système local et non sous un compte d'utilisateur de domaine (valeur par défaut), le service peut uniquement accéder à l'ordinateur local. Si l'Agent de lecture du journal qui s'exécute sous l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré pour utiliser le mode d'authentification Windows lorsqu'il se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'Agent de lecture du journal échoue. Le paramètre par défaut est l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur la modification des comptes de sécurité, consultez [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -203,7 +204,7 @@ logread [-?]
 |---------------------|  
 |Ajout du paramètre **ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

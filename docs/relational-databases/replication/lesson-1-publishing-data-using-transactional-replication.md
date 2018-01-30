@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6d053d9a0e80785e375fdb1f796ddf01894d993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : publication de données à l'aide de la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous créez une publication transactionnelle en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble filtré de la table **Product** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Vous allez aussi ajouter à la liste d'accès à la publication le compte de connexion SQL Server utilisée par l'Agent de distribution. Avant de commencer ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur à la réplication](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
@@ -80,14 +83,14 @@ ms.lasthandoff: 11/17/2017
   
     La boîte de dialogue **Propriétés de la publication** s’affiche.  
   
-3.  Sélectionnez la page **Liste d’accès à la publication**, puis cliquez sur **Ajouter**.  
+3.  Sélectionnez la page **Liste d’accès à la publication** , puis cliquez sur **Ajouter**.  
   
-4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez *nom_ordinateur>***\repl_distribution** et cliquez sur **OK**. Cliquez sur **OK**.  
+4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez *nom_ordinateur>***\repl_distribution* et cliquez sur **OK**. Cliquez sur **OK**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Vous avez créé avec succès la publication transactionnelle. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la publication transactionnelle](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)  
 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)  
 [Créer et appliquer un instantané](../../relational-databases/replication/create-and-apply-the-snapshot.md)  

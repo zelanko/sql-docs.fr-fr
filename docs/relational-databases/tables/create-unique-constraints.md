@@ -8,25 +8,27 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: UNIQUE_TSQL
+f1_keywords:
+- UNIQUE_TSQL
 helpviewer_keywords:
 - UNIQUE constraints [SQL Server], creating
 - constraints [SQL Server], creating
 - constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f910102bc812d065d63632335714c1e4609aecf3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e17b48e1575ba0be09eea74cb96d8f471d67185d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-unique-constraints"></a>Créer des contraintes uniques
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -64,13 +66,13 @@ ms.lasthandoff: 11/17/2017
   
 4.  Dans la grille sous **Général**, cliquez sur **Type** et choisissez **Clé unique** dans la zone de liste déroulante située à droite de la propriété.  
   
-5.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
+5.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>Pour créer une contrainte unique  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>Pour créer une contrainte unique sur une table existante  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Pour créer une contrainte unique sur une nouvelle table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

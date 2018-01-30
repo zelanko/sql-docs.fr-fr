@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9f981407068d6a1d526581de6c2250f71825c64b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4df806bf334669e1faf22111db1a03e192ff80c7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Le type de données spatiales géographiques (**geography**) représente des données dans un système de coordonnées de monde sphérique. Ce type est implémenté en tant que type de données CLR (Common Language Runtime) .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** stocke des données ellipsoïdes, telles que des coordonnées de latitude et de longitude GPS.  
@@ -179,13 +180,13 @@ ms.lasthandoff: 11/17/2017
  [STArea &#40;type de données geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Vide  
- Une instance **geography** *vide* n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
+ Une instance *vide***geography** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> Fermeture  
- Une instance **geography** *fermée* est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance *fermée***geography** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   
@@ -272,7 +273,7 @@ ms.lasthandoff: 11/17/2017
     SELECT @result.STAsText();  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

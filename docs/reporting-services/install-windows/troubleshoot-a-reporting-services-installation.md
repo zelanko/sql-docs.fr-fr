@@ -1,7 +1,7 @@
 ---
 title: "Dépanner une installation de Reporting Services | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7829577ad1b8b1a1eedd883373c0805a267a4ad
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d71e0f0bfd70ec17552a6114c4378bd79bdfff25
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
@@ -276,10 +276,10 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_additional"></a> Ressources supplémentaires  
  Vous trouverez ci-dessous des ressources complémentaires pour vous aider à résoudre les problèmes :  
   
--   Wiki TechNet : rubriques de dépannage [Dépanner SQL Server Reporting Services (SSRS) en mode intégré SharePoint](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Wiki TechNet : [Dépanner SQL Server Reporting Services (SSRS) en mode intégré SharePoint 2010](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [Forum : SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") [Soumettre des commentaires et fournir ses coordonnées via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+-   Vous avez des commentaires ou d’autres questions ? Visitez [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   
   

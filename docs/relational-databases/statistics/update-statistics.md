@@ -8,23 +8,24 @@ ms.service:
 ms.component: statistics
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-statistics
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a029e607ad80933f8d7d76778a01ffcd8c3581b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7ded952390ac489e8ac82cc4e2e8da4d825c5867
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="update-statistics"></a>Mettre à jour les statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez mettre à jour les statistiques d’optimisation de requête sur une table ou une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par défaut, l'optimiseur de requête met à jour les statistiques en fonction des besoins afin d'améliorer le plan de requête ; dans certains cas, vous pouvez optimiser les performances des requêtes en utilisant UPDATE STATISTICS ou la procédure stockée `sp_updatestats` pour mettre à jour les statistiques de manière plus fréquente qu'avec les mises à jour par défaut.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  L'utilisation d'UPDATE STATISTICS ou l'apport de modifications par le biais de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]exige l'autorisation ALTER sur la table ou la vue. En cas d’utilisation de `sp_updatestats`, nécessite l’appartenance au rôle serveur fixe **sysadmin** ou la propriété de la base de données (**dbo**).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -64,13 +65,13 @@ ms.lasthandoff: 11/17/2017
   
 5.  Cliquez avec le bouton droit sur l’objet de statistiques à mettre à jour et sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques –***nom_statistiques* , cochez la case **Mettre à jour les statistiques pour ces colonnes** , puis cliquez sur **OK**.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques –***nom_statistiques*, cochez la case **Mettre à jour les statistiques pour ces colonnes**, puis cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-update-a-specific-statistics-object"></a>Pour mettre à jour un objet de statistiques spécifique  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-update-all-statistics-in-a-table"></a>Pour mettre à jour toutes les statistiques d'une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-update-all-statistics-in-a-database"></a>Pour mettre à jour toutes les statistiques d'une base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

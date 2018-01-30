@@ -8,21 +8,23 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Policy-Based Management, view facet properties
+helpviewer_keywords:
+- Policy-Based Management, view facet properties
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa79b708310837ef8d4b7f03e452ad459e42769
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ef0cb61dbfbf8e026b64db3ce97c24a3806be5b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Afficher les propriétés d'une facette de gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment afficher les propriétés d’une facette de gestion basée sur des stratégies dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Facettes** .  
   
-5.  Cliquez avec le bouton droit sur la facette dont vous souhaitez afficher les propriétés, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans le boîte de dialogue **Propriétés de la facette –***nom_facette* , consultez [Boîte de dialogue Propriétés de la facette, page Général](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)et [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Cliquez avec le bouton droit sur la facette dont vous souhaitez afficher les propriétés, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans la boîte de dialogue **Propriétés de la facette –***nom_facette*, consultez [Boîte de dialogue Propriétés de la facette, page Général](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md) et [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **Fermer**.  
   

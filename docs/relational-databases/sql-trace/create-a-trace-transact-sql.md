@@ -8,23 +8,24 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], example
 - traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f792b1c20378d0fd08c355a1ca2ca5694f59d724
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d56ed4af251bb739c6717afa6373d4eac1ed9105
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>Créer une trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer une trace à l’aide de procédures stockées.  
@@ -40,9 +41,9 @@ ms.lasthandoff: 11/17/2017
      **sp_trace_setevent** et **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes arrêtées.  
   
     > [!IMPORTANT]  
-    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées du Générateur de profils SQL Server (**sp_trace_*xx***) sont de type strict et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
+    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées de SQL Server Profiler (**sp_trace_*xx***) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant montre comment créer une trace à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il est divisé en trois sections : création de la trace, remplissage du fichier de trace et arrêt de la trace. Personnalisez la trace en ajoutant les événements dont vous souhaitez effectuer le suivi. Pour obtenir la liste des événements et des colonnes, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Le code suivant crée une trace, y ajoute des événements, puis la démarre :  
@@ -77,7 +78,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Maintenant que la trace a été créée et démarrée, exécutez le code ci-dessous pour la remplir avec l'activité.  
   
 ```  
@@ -88,7 +89,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La trace peut être arrêtée et redémarrée à tout moment. Dans cet exemple, exécutez le code ci-dessous pour arrêter et fermer la trace, puis supprimer sa définition.  
   
 ```  
@@ -104,10 +105,10 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour examiner le fichier de trace, ouvrez le fichier SampleTrace.trc à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées de SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

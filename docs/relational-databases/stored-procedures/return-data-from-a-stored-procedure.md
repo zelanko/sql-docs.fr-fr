@@ -8,29 +8,57 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 785491c26c65252756c49e7b405d10cdbece831c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a897bca7cfcda1d5b4d5186958f96521ec4c9bf9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Retour de données à partir d’une procédure stockée](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  Il existe deux méthodes permettant de retourner des jeux de résultats ou des données d'une procédure vers un programme appelant : les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur ces deux approches.  
+  Il existe trois méthodes permettant de retourner des données depuis une procédure vers un programme appelant : les jeux de résultats, les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur les trois approches.  
+  
+  ## <a name="returning-data-using-result-sets"></a>Retour de données avec des jeux de résultats
+ Si vous incluez une instruction SELECT dans le corps d’une procédure stockée (mais pas une instruction SELECT... INTO ou INSERT... SELECT), les lignes spécifiées par l’instruction SELECT sont envoyées directement au client.  Pour les jeux de résultats volumineux, l’exécution de la procédure stockée ne passe pas à l’instruction tant que le jeu de résultat n’a pas été entièrement envoyé au client.  Pour les jeux de résultats de petite taille, les résultats sont spoulés pour être retournés au client et l’exécution se poursuit.  Si plusieurs de ces instructions SELECT sont exécutées pendant l’exécution de la procédure stockée, plusieurs jeux de résultats sont envoyés au client.  Ce comportement s’applique également aux lots TSQL imbriqués, aux procédures stockées imbriquées et aux lots TSQL du plus haut niveau.
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>Exemples de retour de données avec un jeu de résultats 
+  L’exemple suivant montre une procédure stockée qui retourne les valeurs LastName et SalesYTD pour toutes les lignes de SalesPerson qui apparaissent aussi dans la vue vEmployee.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>Retour de données à l'aide d'un paramètre de sortie  
  Si vous spécifiez le mot clé OUTPUT pour un paramètre dans la définition de procédure, la procédure peut retourner la valeur actuelle du paramètre au programme appelant lors de la sortie de la procédure. Pour enregistrer la valeur du paramètre dans une variable afin que le programme appelant puisse l'utiliser, ce dernier doit inclure le mot clé OUTPUT lorsqu'il exécute la procédure. Pour plus d’informations sur les types de données qui peuvent être utilisés comme paramètres de sortie, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -114,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Exemples de paramètres de sortie de curseur  
  L’exemple ci-dessous crée une procédure avec un paramètre de sortie `@currency_cursor` utilisant le type de données **cursor**. La procédure stockée est ensuite appelée dans un traitement.  
-  
+ 
  Commencez par créer la procédure qui déclare puis ouvre un curseur dans la table Currency.  
   
 ```  
@@ -161,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- Les codes de retour sont couramment utilisés dans les blocs de contrôle de flux des procédures pour définir la valeur du code de retour pour chaque situation d'erreur possible. Vous pouvez utiliser la fonction @@ERROR après une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pour détecter si une erreur s’est produite pendant l’exécution de l’instruction.  
+ Les codes de retour sont couramment utilisés dans les blocs de contrôle de flux des procédures pour définir la valeur du code de retour pour chaque situation d'erreur possible. Vous pouvez utiliser la fonction @@ERROR après une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pour détecter si une erreur s’est produite pendant l’exécution de l’instruction.  Avant l’introduction de la gestion des erreurs TRY/CATCH/THROW dans TSQL, les codes de retour étaient parfois nécessaires pour déterminer la réussite ou l’échec des procédures stockées.  Les procédures stockées doivent toujours indiquer un échec avec une erreur (générée avec THROW/RAISERROR si nécessaire) et ne pas utiliser un code de retour pour indiquer l’échec.  Il est également recommandé d’éviter d’utiliser le code de retour pour retourner des données d’application.
   
 ### <a name="examples-of-return-codes"></a>Exemples de codes de retour  
  L'exemple suivant illustre la procédure `usp_GetSalesYTD` de gestion d'erreurs qui définit les valeurs du code de retour pour diverses erreurs. Le tableau suivant montre la valeur entière attribuée par la procédure à chaque erreur possible, et la signification correspondante pour chaque valeur.  
@@ -169,7 +197,7 @@ EXECUTE @result = my_proc;
 |Valeur du code de retour|Signification|  
 |-----------------------|-------------|  
 |0|Exécution réussie.|  
-|1|La valeur du paramètre nécessaire n'est pas spécifiée.|  
+| 1|La valeur du paramètre nécessaire n'est pas spécifiée.|  
 |2|Valeur du paramètre spécifiée non valide.|  
 |3|Erreur lors de l'obtention de la valeur des ventes.|  
 |4|Valeur des ventes NULL trouvée pour le vendeur.|  
@@ -262,7 +290,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   

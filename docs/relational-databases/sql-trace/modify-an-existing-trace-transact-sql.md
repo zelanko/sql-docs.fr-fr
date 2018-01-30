@@ -8,23 +8,24 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], modifying
 - modifying traces
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ed7f6f2eddbc9f53b2c77375ea6b0f5beb3c29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a35ea0dfbdebb71e2e67c1b8596b4b48741af48f
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modifier une trace existante (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit l’utilisation de procédures stockées pour modifier une trace existante.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
      Lorsque vous modifiez le paramètre **@on** , pensez à son interaction avec le paramètre **@columnid** :  
   
-    |ON|ID de la colonne|Résultat|  
+    |ON|ID de la colonne|Résultats|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|Événement activé. Toutes les colonnes sont effacées.|  
     ||NOT NULL|La colonne est activée pour l'événement spécifié.|  
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/17/2017
     ||NOT NULL|La colonne est désactivée pour l'événement spécifié.|  
   
 > [!IMPORTANT]  
->  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_*xx***) sont de type strict et ne prennent pas en charge la conversion automatique de type de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
+>  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_*xx***) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
