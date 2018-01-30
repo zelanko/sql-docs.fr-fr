@@ -149,7 +149,7 @@ Utilisez les étapes suivantes pour joindre un hôte [!INCLUDE[ssNoVersion](../i
    >
    > Si vous recevez une erreur, « Autorisations insuffisantes pour joindre le domaine, » vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour joindre des ordinateurs Linux à votre domaine.
    
-   > SQL Server utilise SSSD et NSS pour le mappage des comptes d’utilisateurs et des groupes aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution dans l’ordre pour SQL Server créer les connexions AD avec succès. Realmd généralement cette opération automatiquement dans le cadre de joindre le domaine, mais dans certains cas, vous devez procéder séparément.
+   > SQL Server utilise SSSD et NSS pour le mappage des comptes d’utilisateurs et des groupes aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution dans l’ordre pour SQL Server créer les connexions AD avec succès. Realmd fera généralement cette opération automatiquement dans le cadre de joindre le domaine, mais dans certains cas, vous devez procéder séparément.
    >
    > Consultez les ressources suivantes pour configurer [SSSD manuellement](https://access.redhat.com/articles/3023951), et [configurer NSS pour travailler avec SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -172,9 +172,9 @@ Utilisez les étapes suivantes pour joindre un hôte [!INCLUDE[ssNoVersion](../i
    ```
 
    > [!NOTE]
-   > Si `id user@contoso.com` retourne, « Utilisateur inexistant, » assurez-vous que le service SSSD a démarré en exécutant la commande `sudo systemctl status sssd`. Si le service est en cours d’exécution et que vous rencontrez l’erreur « Aucun utilisateur », essayez d’activer la journalisation documentée pour SSSD. Pour plus d’informations, consultez la documentation de Red Hat pour [SSSD de résolution des problèmes](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > Si `id user@contoso.com` retourne, « Utilisateur inexistant, » assurez-vous que le service SSSD a démarré en exécutant la commande `sudo systemctl status sssd`. Si le service est en cours d’exécution et que vous rencontrez l’erreur « Aucun utilisateur », essayez d’activer la journalisation documentée pour SSSD. Pour plus d’informations, consultez la documentation de Red Hat pour [la résolution des problèmes SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > Si `kinit user@CONTOSO.COM` retourne, « la réponse du contrôleur de domaine Kerberos ne correspond pas à attentes lors de l’obtention des informations d’identification initiales, » vérifiez que vous avez spécifié le domaine en majuscules.
+   > Si `kinit user@CONTOSO.COM` retourne, « la réponse du contrôleur de domaine Kerberos ne correspond pas aux attentes lors de l’obtention des informations d’identification initiales, » vérifiez que vous avez spécifié le domaine en majuscules.
 
 Pour plus d’informations, consultez la documentation de Red Hat pour [découverte et la jointure de domaines d’identité](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
@@ -201,15 +201,15 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    ```
 
    > [!NOTE]
-   > Si vous recevez une erreur, « droits d’accès insuffisants », vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour définir un nom SPN sur ce compte.
+   > Si vous recevez une erreur, « droits d’accès insuffisants », vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour définir un SPN sur ce compte.
    >
    > Si vous modifiez le port TCP à l’avenir, vous devrez exécuter de nouveau la commande setspn avec le nouveau numéro de port. Vous devrez également ajouter le nouveau nom SPN pour le fichier keytab service de SQL Server en suivant les étapes décrites dans la section suivante.
 
 3. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de service
+## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Configurer le service keytab de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-1. Vérifier le numéro de Version de clé (kvno) pour le compte AD créé à l’étape précédente. Généralement, il sera 2, mais il peut être un autre entier si vous avez modifié le mot de passe plusieurs fois. Sur le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte, exécutez la commande suivante :
+1. Vérifier le numéro de Version de clé (kvno) pour le compte AD créé à l’étape précédente. Généralement, il sera à 2, mais il peut s'agir d'un autre entier si vous avez modifié le mot de passe plusieurs fois. Sur le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte, exécutez la commande suivante :
 
    ```bash
    kinit user@CONTOSO.COM
@@ -232,7 +232,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    ```
 
    > [!NOTE]
-   > L’outil ktutil ne valider pas le mot de passe, par conséquent, assurez-vous que vous l’entrez correctement.
+   > L’outil ktutil ne validera pas le mot de passe, par conséquent, assurez-vous que vous l’entrez correctement.
 
 3. Toute personne ayant accès à ce fichier `keytab` peut emprunter l’identité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le domaine, assurez-vous donc de restreindre l’accès au fichier tel que seul le compte `mssql` ait accès en lecture :
 
@@ -241,7 +241,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour utiliser ce fichier `keytab` pour l’authentification Kerberos :
+4. Configurez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour utiliser ce fichier `keytab` pour l’authentification Kerberos :
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
@@ -250,7 +250,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
 
 ## <a name="create-ad-based-logins-in-transact-sql"></a>Créer des comptes de connexion basée sur Active Directory dans Transact-SQL
 
-1. Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et créer une nouvelle connexion basée sur Active Directory :
+1. Connectez-vous à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et créer une nouvelle connexion basée sur Active Directory :
 
    ```sql
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
@@ -276,7 +276,7 @@ Le paramètre de chaîne de connexion spécifique pour les clients à utiliser l
    ssh -l user@contoso.com client.contoso.com
    ```
 
-   Vérifiez que vous avez installé le [mssql-tools](sql-server-linux-setup-tools.md) du package, puis se connecter à l’aide de `sqlcmd` sans spécifier d’informations d’identification :
+   Vérifiez que vous avez installé le package [mssql-tools](sql-server-linux-setup-tools.md), puis connectez-vous à l’aide de `sqlcmd` sans spécifier d’informations d’identification :
 
    ```bash
    sqlcmd -S mssql.contoso.com
@@ -302,7 +302,7 @@ Dans ce didacticiel, nous avons parcouru comment faire pour configurer l’authe
 > * Créer des comptes de connexion basée sur Active Directory dans Transact-SQL
 > * Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’authentification Active Directory
 
-Ensuite, Explorer d’autres scénarios de sécurité pour SQL Server sur Linux.
+Ensuite, explorez d’autres scénarios de sécurité pour SQL Server sur Linux.
 
 > [!div class="nextstepaction"]
 >[Chiffrement des connexions à SQL Server sur Linux](sql-server-linux-encrypted-connections.md)
