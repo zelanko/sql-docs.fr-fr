@@ -31,7 +31,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 > * Copier le fichier de base de données wideworldimporters dans le conteneur.
 > * Restaurer la base de données dans le conteneur.
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.
-> * Sauvegardre la base de données modifiée.
+> * Sauvegarder la base de données modifiée.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -76,7 +76,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Port SQL Server **1433** est exposée sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` paramètre crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
+    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Le port SQL Server **1433** est exposé sur l’ordinateur hôte esur le port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
 
    > [!NOTE]
    > Le processus d’exécution des éditions de SQL Server de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de cette procédure pas à pas fonctionne toujours avec des conteneurs de production.
@@ -144,7 +144,7 @@ Ce didacticiel utilise la [base de donnéesd'exemple Wide World Importers](../sa
 Le fichier de sauvegarde se trouve désormais dans le conteneur. Avant de restaurer la sauvegarde, il est important de connaître les noms de fichiers logiques et les types de fichiers à l’intérieur de la sauvegarde. Les commandes Transact-SQL suivantes inspectent la sauvegarde et effectuent la restauration à l’aide de **sqlcmd** dans le conteneur.
 
 > [!TIP]
-> Ce didacticiel utilise **sqlcmd** à l’intérieur du conteneur, car le conteneur est fourni avec cet outil préinstallé. Toutefois, vous pouvez également exécuter les instructions Transact-SQL avec un autre client outils en dehors du conteneur, tel que [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Pour vous connecter, utilisez le port de l’hôte qui a été mappé au port 1433 dans le conteneur. Dans cet exemple, qui est **localhost, 1401** sur l’ordinateur hôte et **Host_IP_Address, 1401** à distance.
+> Ce didacticiel utilise **sqlcmd** à l’intérieur du conteneur, car le conteneur est fourni avec cet outil préinstallé. Toutefois, vous pouvez également exécuter les instructions Transact-SQL avec un autre client outils en dehors du conteneur, tel que [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Pour vous connecter, utilisez le port de l’hôte qui a été mappé au port 1433 dans le conteneur. Dans cet exemple, c'est **localhost, 1401** sur l’ordinateur hôte et **Host_IP_Address, 1401** à distance.
 
 1. Exécutez **sqlcmd** dans le conteneur à la liste des noms de fichiers logiques et les chemins d’accès à l’intérieur de la sauvegarde. Cette opération s’effectue avec l'instruction Transact-SQL **RESTORE FILELISTONLY**.
 
