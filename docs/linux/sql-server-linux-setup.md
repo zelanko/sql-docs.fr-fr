@@ -56,7 +56,7 @@ SQL Server 2017 a les pré-requis suivants pour Linux :
 
 Si vous utilisez les partages distants **Network File System (NFS)** en production, notez les exigences de prise en charge suivantes :
 
-- z la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, commune aux systèmes de fichiers modernes.
+- Utilisez la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, courante dans les systèmes de fichiers modernes.
 - Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
 - Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
 
@@ -67,10 +67,10 @@ Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Po
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Exécutez sur Docker](quickstart-install-connect-docker.md)
+- [Exécuter sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="upgrade"></a>Mettre à jour de SQL Server
+## <a id="upgrade"></a>Mis à jour de SQL Server
 
 Pour mettre à jour le package **mssql-server** vers la dernière version, utilisez une des commandes suivantes en fonction de votre plateforme :
 
@@ -97,13 +97,13 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> Il est uniquement pris en charge de mettre à niveau vers une version avec la même version majeure, telles que SQL Server 2017.
+> La mise à niveau est uniquement prise en charge vers une version avec la même version majeure, telles que SQL Server 2017.
 
 ## <a id="versioncheck"></a>Vérifiez la version installée de SQL Server
 
 Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
 
-1. Si pas déjà installé, installez le [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
+1. Si pas encore installé, installez le [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
 
 1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL qui affiche la version de SQL Server et l’édition.
 
@@ -205,7 +205,7 @@ Vous pouvez effectuer une installation sans assistance de la manière suivante 
 - Suivez les étapes initial dans le [didacticiels de démarrage rapide](#platforms) pour inscrire les référentiels, installez SQL Server.
 - Lorsque vous exécutez `mssql-conf setup`, définissez [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utiliser le `-n` (sans invite) option.
 
-L’exemple suivant configure l’Édition Developer de SQL Server avec le **MSSQL_PID** variable d’environnement. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le `-n` paramètre effectue une installation exemple où les valeurs de configuration sont extraites les variables d’environnement.
+L’exemple suivant configure l’Édition Developer de SQL Server avec la variable d’environnement **MSSQL_PID**. Il accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n` effectue une installation par défaut où les valeurs de configuration sont extraites des variables d’environnement.
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
@@ -224,7 +224,7 @@ Pour un exemple de script plus détaillée, consultez les exemples suivants :
 Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne utilisés dans le [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers du package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
-> Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement le package (s) ci-dessous. Cette section concerne uniquement le scénario hors connexion.
+> Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement le(s) package(s) ci-dessous. Cette section concerne uniquement le scénario hors connexion.
 
 1. **Télécharger le package de moteur de base de données pour votre plateforme**. Rechercher des liens de téléchargement de package dans la section des détails du package le [Notes de publication](sql-server-linux-release-notes.md).
 
@@ -251,7 +251,7 @@ Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne ut
 
    Après avoir résolu les dépendances manquantes, essayez d’installer le package serveur mssql à nouveau.
 
-1. **Terminer l’installation de SQL Server**. Utiliser **mssql-conf** pour terminer l’installation de SQL Server :
+1. **Terminer l’installation de SQL Server**. Utilisez **mssql-conf** pour terminer l’installation de SQL Server :
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
