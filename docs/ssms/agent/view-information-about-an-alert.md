@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a4e7a268473f799ef068005378e413c1a91aece
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 69ce81f865d3b01d2316f913317fe63505b49aa9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-information-about-an-alert"></a>Afficher les informations relatives à une alerte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment afficher des informations relatives aux alertes [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -63,7 +64,7 @@ Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des
   
 4.  Cliquez avec le bouton droit sur l'alerte comportant les informations que vous voulez afficher, puis sélectionnez **Propriétés**.  
   
-    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés de l’alerte***nom_alerte** , consultez :  
+    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés de l’alerte***nom_alerte*, consultez :  
   
     -   [Propriétés de l’alerte - Nouvelle alerte &#40;page Général&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

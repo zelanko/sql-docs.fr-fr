@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 490130b298e35c512a7837f97b696376bf05c4d4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: bc667253caf16c4d4065bf4f472d7b8461ddd92a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/02/2018
   
 8.  Cliquez sur **Fermer**.  
   
-9. Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
+9. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Pour créer un index non-cluster à l'aide de l'Explorateur d'objets  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/02/2018
   
 6.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non cluster.  
+7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non-cluster.  
   
 8.  Cliquez sur **OK**.  
   

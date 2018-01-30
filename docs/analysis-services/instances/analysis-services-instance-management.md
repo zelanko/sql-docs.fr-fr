@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Gestion d'instances Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une instance d’Analysis Services est une copie de la **msmdsrv.exe** exécutable qui s’exécute comme un service de système d’exploitation. Chaque instance est entièrement indépendante des autres instances situées sur le même serveur et dispose de ses propres paramètres de configuration, autorisations, ports, comptes de démarrage, stockage de fichier, et propriétés de mode serveur.  
+
+  Une instance d'Analysis Services est une copie de l'exécutable **msmdsrv.exe** qui s'exécute en tant que service du système d'exploitation. Chaque instance est entièrement indépendante des autres instances situées sur le même serveur et dispose de ses propres paramètres de configuration, autorisations, ports, comptes de démarrage, stockage de fichier, et propriétés de mode serveur.  
   
  Chaque instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécute un service Windows, Msmdsrv.exe, dans le contexte de sécurité d'un compte d'ouverture de session défini.  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/08/2018
   
 |Lien|Description de la tâche|  
 |----------|----------------------|  
-|[Configuration consécutive à l’installation &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
+|[Configuration de post-installation &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
 |[Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Décrit les propriétés des chaînes de connexion, les bibliothèques clientes, les méthodologies d'authentification, ainsi que les étapes requises pour établir ou désactiver des connexions.|  
-|[Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
+|[Surveiller une Instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
 |[Haute disponibilité et extensibilité](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. |  
 |[Scénarios de globalisation pour Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Explique la prise en charge linguistique et du classement, décrit les étapes permettant de modifier les deux propriétés et fournit des conseils pour définir et tester les comportements de langue et de classement.|  
 |[Enregistrer les opérations dans Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Décrit les journaux et explique comment les configurer.|  
@@ -64,6 +65,6 @@ ms.lasthandoff: 01/08/2018
  [Comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Outils de Configuration Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

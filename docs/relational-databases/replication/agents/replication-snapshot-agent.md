@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 368401643f14af5c3f59621ce5ef6180305318cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf23217acf677478ae0dc46b161f1731e4d88494
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Agent d’instantané de réplication est un fichier exécutable qui prépare les fichiers d’instantané contenant les schémas, ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d’instantanés, et enregistre les travaux de synchronisation dans la base de données de distribution.  
@@ -219,7 +220,7 @@ snapshot [ -?]
 |**1**|L'Agent d'instantané a priorité lorsqu'un blocage se produit au niveau du serveur de publication.|  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Nom de connexion utilisé pour la connexion au serveur de publication avec l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -245,14 +246,14 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  Ce paramètre est déconseillé et n'est pris en charge que dans un but de compatibilité ascendante.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si vous avez installé l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour s'exécuter sous un compte système local plutôt que sous un compte d'utilisateur de domaine (option par défaut), le service peut uniquement accéder à l'ordinateur local. Si l'Agent d'instantané qui s'exécute sous l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré pour utiliser le mode d'authentification Windows lorsqu'il se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'Agent d'instantané échoue. Le paramètre par défaut est l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Pour démarrer l'Agent d'instantané, exécutez **snapshot.exe** à l'invite de commandes. Pour plus d'informations, consultez [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

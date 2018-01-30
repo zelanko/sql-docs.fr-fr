@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: "95"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
@@ -92,11 +93,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attribut Server  
  La chaîne de connexion doit contenir un attribut **Server** indiquant le nom du serveur partenaire initial, lequel doit identifier l'instance du serveur principal actuel.  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à spécifier son nom : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*]. Par exemple :  
+ La façon la plus simple d’identifier l’instance de serveur est de spécifier son nom : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*]. Exemple :  
   
  `Server=Partner_A;`  
   
- ou  
+ ou Gestionnaire de configuration  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -136,7 +137,7 @@ Server=123.34.45.56,4724;
 |Pilote ODBC|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à employer son nom système : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*].  
+ La façon la plus simple d’identifier l’instance de serveur consiste à utiliser son nom système : *<nom_serveur>*[**\\***<nom_instance_SQL_Server>*].  
   
  Il est également possible de fournir l’adresse IP et le numéro de port dans l’attribut **Failover Partner** . Si la tentative de connexion initiale échoue au cours de la première connexion à la base de données, la tentative de connexion au partenaire de basculement ne sera pas tributaire de DNS et de SQL Server Browser. Une fois qu'une connexion est établie, le nom du partenaire de basculement sera remplacé par le nom du partenaire de basculement, si bien qu'en cas de basculement, les connexions redirigées feront appel à DNS et à SQL Server Browser.  
   
@@ -181,7 +182,7 @@ Server=123.34.45.56,4724;
   
 |Arrondi|Calcul de*RetryTime* |Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(**0,08 **\*** 15**)**|1,2 secondes|  
+| 1|0 **+(**0,08 **\*** 15**)**|1,2 secondes|  
 |2|1,2 **+(**0,08 **\*** 15**)**|2,4 secondes|  
 |3|2,4 **+(**0,08 **\*** 15**)**|3,6 secondes|  
 |4|3,6 **+(**0,08 **\*** 15**)**|4,8 secondes|  
@@ -246,12 +247,12 @@ Server=123.34.45.56,4724;
 |Configuration|Serveur principal|Serveur miroir|Comportement lors de la tentative de connexion en spécifiant Partner_A et Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuration de la mise en miroir de départ.|Partner_A|Partner_B|Partner_A est mis en cache en tant que nom du partenaire initial. Le client réussit à se connecter à Partner_A. Le client télécharge le nom du serveur miroir, Partner_B, et le met en cache en ignorant le nom du partenaire de basculement fourni par le client.|  
-|Partner_A subit une défaillance matérielle et un basculement a lieu (suivi d'une déconnexion des clients).|Partner_B|aucun|Partner_A est toujours mis en cache comme nom de partenaire initial, mais le nom de partenaire de basculement fourni par le client, Partner_B, permet au client de se connecter au serveur principal actuel.|  
+|Partner_A subit une défaillance matérielle et un basculement a lieu (suivi d'une déconnexion des clients).|Partner_B|none|Partner_A est toujours mis en cache comme nom de partenaire initial, mais le nom de partenaire de basculement fourni par le client, Partner_B, permet au client de se connecter au serveur principal actuel.|  
 |L'administrateur de base de données arrête la mise en miroir (et déconnecte les clients), remplace Partner_A par Partner_C et redémarre la mise en miroir.|Partner_B|Partner_C|Le client essaie de se connecter à Partner_A sans succès. Ensuite, il essaie avec Partner_B (le serveur principal actuel) et sa tentative aboutit. Le fournisseur d'accès aux données télécharge le nom du serveur miroir actuel, Partner_C, et le met en cache comme nom de partenaire de basculement.|  
 |Le service est manuellement basculé vers Partner_C (déconnexion des clients).|Partner_C|Partner_B|Le client tente tout d'abord de se connecter à Partner_A, puis à Partner_B. Ces deux noms échouent et la demande de connexion finit par expirer et par échouer.|  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
   

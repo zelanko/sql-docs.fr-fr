@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 369df35942080871a30d478de180b15fe49a7326
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 361727b4d3a6e5373470c8f82319c6447438cf28
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cet exemple décrit toutes les étapes de création d’une session de mise en miroir de bases de données à l’aide de l’authentification basée sur les certificats. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. À moins que vous ne puissiez garantir la sécurité de votre réseau, il est recommandé d'utiliser le chiffrement pour les connexions de mise en miroir de bases de données.  
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée. Veillez particulièrement à sécuriser tous vos certificats.  
@@ -267,7 +268,7 @@ ms.lasthandoff: 11/20/2017
     ```  
   
     > [!NOTE]  
-    >  Si vous envisagez d’utiliser le mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie avec la valeur FULL (valeur par défaut) et ajoutez dès que possible le témoin après l’exécution de la deuxième instruction SET PARTNER **’***serveur_partenaire***’** . Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
+    >  Si vous envisagez d’utiliser le mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie avec la valeur FULL (valeur par défaut) et ajoutez dès que possible le témoin après l’exécution de la deuxième instruction SET PARTNER **'***serveur_partenaire***'**. Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
@@ -285,7 +286,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

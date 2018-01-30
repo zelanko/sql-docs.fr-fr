@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8bbf78a982b6f0f4742722ec368119c33cbc330d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique fournit des informations destinées à résoudre les problèmes de configuration d’une session de mise en miroir de base de données.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |[Accès réseau](#NetworkAccess)|Traite de l'exigence selon laquelle chaque instance de serveur doit être autorisée à accéder aux ports de l'autre instance ou des autres instances de serveur par le biais du protocole TCP.|  
 |[Préparation de la base de données miroir](#MirrorDbPrep)|Résume les conditions requises pour la préparation de la base de données miroir afin de permettre le démarrage de la mise en miroir.|  
 |[Échec d'opération de création de fichier](#FailedCreateFileOp)|Décrit comment réagir à un échec d'opération de création de fichier.|  
-|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='***serveur_partenaire***'** .|  
+|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='***serveur_partenaire***'**.|  
 |[Transactions entre bases de données](#CrossDbTxns)|Un basculement automatique peut entraîner une résolution automatique et éventuellement incorrecte des transactions incertaines. Pour cette raison, la mise en miroir de bases de données ne prend pas en charge les transactions entre bases de données.|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
     1.  Si les comptes fonctionnent dans les mêmes comptes de domaine, les risques de problèmes de configuration sont réduits.  
   
-    2.  Si les comptes s'exécutent dans des domaines différents ou ne sont pas des comptes de domaine, la connexion d'un compte doit être créée dans la base de données **master** sur l'autre ordinateur et des autorisations CONNECT doivent être octroyées à cette connexion sur le point de terminaison. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md). Ceci inclut le compte intégré Service réseau.  
+    2.  Si les comptes s'exécutent dans des domaines différents ou ne sont pas des comptes de domaine, la connexion d'un compte doit être créée dans la base de données **master** sur l'autre ordinateur et des autorisations CONNECT doivent être octroyées à cette connexion sur le point de terminaison. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md). Ceci inclut le compte intégré Service réseau.  
   
 2.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution en tant que service utilisant le compte système local, vous devez utiliser des certificats pour l'authentification. Pour plus d'informations, consultez [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Pour pouvoir ajouter un fichier sans compromettre une session de mise en miroir, il est nécessaire que le chemin d'accès au fichier existe sur les deux serveurs. Par conséquent, si vous déplacez des fichiers de base de données lors de la création de la base de données miroir, une opération d'ajout de fichier ultérieure peut échouer sur la base de données miroir et entraîner la suspension de la mise en miroir.  
   
- Pour corriger le problème :  
+ Pour corriger le problème :  
   
 1.  Le propriétaire de la base de données doit supprimer la session de mise en miroir et restaurer une sauvegarde complète du groupe de fichiers qui contient le fichier ajouté.  
   
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations, consultez [Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Sécurité du transport pour la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   

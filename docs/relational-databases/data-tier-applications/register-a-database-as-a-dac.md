@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,21 +23,21 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f79711d831a0f92805f8a9c59b003aed3fe1c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez **l’Assistant Inscrire l’application de la couche Données** ou un script Windows PowerShell pour générer une définition d’application de la couche Données (DAC) qui décrit les objets d’une base de données existante, et inscrivez la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Pour mettre à niveau une DAC, en utilisant :**  [L’Assistant Inscrire l’application de la couche Données](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Vous ne pouvez pas inscrire de DAC si la base de données a des objets qui ne sont pas pris en charge dans une DAC, ou des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  L’inscription d’une DAC dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] nécessite au moins les autorisations ALTER ANY LOGIN et VIEW DEFINITION de l’étendue de la base de données, les autorisations SELECT sur **sys.sql_expression_dependencies**, et l’appartenance au rôle serveur fixe **dbcreator** . Les membres du rôle serveur fixe **sysadmin** ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également inscrire une DAC. L'inscription d'une DAC qui ne contient pas de connexions dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles **dbmanager** ou **serveradmin** . L'inscription d'une DAC comportant des connexions dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles **loginmanager** ou **serveradmin** .  
   
 ##  <a name="UsingRegisterDACWizard"></a> Utilisation de l'Assistant Inscrire l'application de la couche Données  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Cliquez avec le bouton droit sur la base de données à inscrire, pointez sur **Tâches**, puis sélectionnez **Inscrire en tant qu’application de la couche Données**.  
   
-4.  Renseignez les boîtes de dialogue de l'Assistant :  
+4.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     1.  [Page Introduction](#Introduction)  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/17/2017
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validation d'objets  
- **Vérification de**  *Nom_schéma* **.** *Nom_objet* **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. *SchemaName***.***ObjectName* identifient quel objet est vérifié actuellement.  
+ **Vérification de**  *Nom_schéma* **.** *Nom_objet* **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. *nom_schéma***.***nom_objet* identifie l’objet en cours de vérification.  
   
  **< Précédent** : vous renvoie à la page **Définir les propriétés** pour modifier vos entrées.  
   
@@ -182,7 +183,7 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

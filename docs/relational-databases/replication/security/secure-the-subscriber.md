@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], security
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eab9cb8f16911076421ac1c230de2a7d3f176f84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c12d1c2ed7f777d147c6cb94c93bb5c7e8b4e1e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-subscriber"></a>Sécuriser l'abonné
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les Agents de fusion et les Agents de distribution se connectent à l’Abonné. Ces connexions peuvent être effectuées dans le contexte d'un nom de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'un nom de connexion Windows. Il est important de fournir un nom de connexion approprié à ces agents tout en respectant le principe consistant à attribuer les droits nécessaires minimaux et à protéger aussi le stockage de tous les mots de passe. Pour des informations sur les autorisations requises pour chaque agent, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -79,8 +80,8 @@ ms.lasthandoff: 11/17/2017
   
      Pour plus d’informations, consultez le Guide pratique pour créer un abonnement pouvant être mis à jour à une publication transactionnelle (SQL Server Management Studio) et [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   

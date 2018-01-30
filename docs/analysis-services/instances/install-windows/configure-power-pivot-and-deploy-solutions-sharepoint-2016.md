@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le déploiement et la configuration des améliorations de niveau intermédiaire pour le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des fonctionnalités dans [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] notamment [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] la galerie, l’actualisation des données du calendrier, tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2016** pour effectuer les opérations suivantes :  
@@ -33,18 +33,6 @@ ms.lasthandoff: 01/08/2018
 -   Pour plus d’informations sur les services principaux et l’installation d’un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , consultez [Installer Analysis Services en mode Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Pour plus d’informations sur l’installation de le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour l’outil de Configuration de SharePoint 2016, consultez [installer ou désinstaller le Power Pivot pour SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
-  
- Cette rubrique contient les sections suivantes :  
-  
- [Exécuter Configuration de PowerPivot pour SharePoint 2016](#bkmk_run_configuration_tool)  
-  
- [Vérifier la configuration de PowerPivot](#bkmk_verify_powerpivot)  
-  
- [Résoudre les problèmes](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Exécuter Configuration de PowerPivot pour SharePoint 2016  
  **Remarque :** pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  

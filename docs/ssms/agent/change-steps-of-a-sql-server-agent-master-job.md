@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de8e702c1ba529814ad3ac974e05a25bf6e7771
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d6a1d661300b777f799bbe43396bcfd5d29b3e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Modifier les étapes d'un travail maître SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment modifier les étapes d’un travail maître SQL Server Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -62,13 +63,13 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 4.  Cliquez avec le bouton droit sur le travail dont vous voulez modifier les étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail –***nom_travail* , sous **Sélectionner une page**, sélectionnez **Étapes**.  
+5.  Dans la boîte de dialogue **Propriétés du travail –***nom_travail*, sous **Sélectionner une page**, sélectionnez **Étapes**.  
   
-6.  Cliquez sur **Modifier** pour ouvrir la boîte de dialogue **Propriétés de l’étape du travail –***nom_étape_de_travail*. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Général&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) et [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Avancé&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Cliquez sur **Modifier** pour ouvrir la boîte de dialogue *Propriétés de l’étape du travail –***nom_étape_de_travail*. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Général&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) et [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Avancé&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-8.  Dans la boîte de dialogue **Propriétés du travail–***nom_travail* , cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Propriétés du travail–***nom_travail*, cliquez sur **OK**.  
   
 ## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
   

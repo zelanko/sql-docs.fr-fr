@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, assigning
 - assigning job to category
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6aa65abcd0f7e4bee884319cd49f639b4d8b226a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 924c9c2c5ab1f18907f48528ab4043b6899d77cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Affecter un travail à une catégorie de travaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment affecter des travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent aux catégories de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou SQL Server Management Objects.  
@@ -66,7 +67,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 4.  Cliquez avec le bouton droit sur le travail à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -***nom_travail* , dans la liste **Catégorie** , sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
+5.  Dans la boîte de dialogue **Propriétés du travail -***nom_travail*, dans la liste **Catégorie**, sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
   
 6.  Cliquez sur **OK**.  
   

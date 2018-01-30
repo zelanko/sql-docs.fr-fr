@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d35953fbdf67c20e857b3b7e4d29e57f0c1a4b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit aux administrateurs une connexion de diagnostic spéciale lorsque des connexions standard au serveur sont impossibles. Cette connexion de diagnostic permet aux administrateurs d'accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter des requêtes de diagnostic et résoudre des problèmes, même lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne répond pas à des demandes de connexion standard.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/27/2017
   
     -   BACKUP  
   
--   Seules des ressources limitées sont garanties disponibles avec la connexion DAC. N'utilisez pas la connexion DAC pour exécuter des requêtes à utilisation intensive des ressources (par exemple, une jointure complexe sur une grande table) ou des requêtes pouvant créer des blocages. Cela permet d'éviter que la connexion DAC n'amplifie d'éventuels problèmes de serveur existants. Pour éviter les scénarios de blocages potentiels, si vous devez exécuter des requêtes pouvant créer un blocage, exécutez la requête sous des niveaux d'isolement basés si possible sur un instantané ; sinon, réglez le niveau d'isolement des transactions à READ UNCOMMITTED et attribuez à LOCK_TIMEOUT une valeur faible, par exemple 2 000 millisecondes, ou les deux. Vous éviterez ainsi le blocage de la session DAC. Cependant, selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la session DAC pourrait se bloquer sur un verrou. La session DAC peut éventuellement être terminée avec Ctrl+C, mais ceci n’est pas garanti. Dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Seules des ressources limitées sont garanties disponibles avec la connexion DAC. N'utilisez pas la connexion DAC pour exécuter des requêtes à utilisation intensive des ressources (par exemple, une jointure complexe sur une grande table) ou des requêtes pouvant créer des blocages. Cela permet d'éviter que la connexion DAC n'amplifie d'éventuels problèmes de serveur existants. Pour éviter les scénarios de blocages potentiels, si vous devez exécuter des requêtes pouvant créer un blocage, exécutez la requête sous des niveaux d'isolement basés si possible sur un instantané ; sinon, réglez le niveau d'isolement des transactions à READ UNCOMMITTED et attribuez à LOCK_TIMEOUT une valeur faible, par exemple 2 000 millisecondes, ou les deux. Vous éviterez ainsi le blocage de la session DAC. Cependant, selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la session DAC pourrait se bloquer sur un verrou. La session DAC peut éventuellement être terminée avec Ctrl+C, mais ceci n’est pas garanti. Dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Pour garantir la connectivité et le dépannage avec la connexion DAC, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réserve des ressources limitées pour traiter les commandes exécutées sur la connexion DAC. Ces ressources ne permettent généralement que de simples fonctions de diagnostic et de dépannage, telles que celles répertoriées ci-dessous.  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/27/2017
 > [!TIP]  
 >  Lors de la connexion à [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] via une connexion DAC, vous devez également spécifier le nom de la base de données dans la chaîne de connexion, à l’aide de l’option -d.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans cet exemple, un administrateur note que le serveur `URAN123` ne répond pas et souhaite diagnostiquer le problème. Pour ce faire, l'utilisateur active l'utilitaire de ligne de commande `sqlcmd` et se connecte au serveur `URAN123` en utilisant `-A` pour indiquer la connexion DAC.  
   
  `sqlcmd -S URAN123 -U sa -P <xxx> –A`  

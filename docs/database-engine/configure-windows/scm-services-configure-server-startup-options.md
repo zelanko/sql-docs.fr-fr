@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - SQL Server services, setting startup options
 - SQL Server services, setting startup parameters
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c72c931a590cf1c00923df80677b28e3f491365
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ff11f5d2ec4c086733793ebb13e54ab5448b9dd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scm-services---configure-server-startup-options"></a>Services SCM - Configurer les options de démarrage du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment configurer les options de démarrage à utiliser à chaque démarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/27/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  La configuration des options de démarrage du serveur est limitée aux utilisateurs qui peuvent modifier les entrées associées dans le Registre. Notamment :  
   
 -   les membres du groupe Administrateurs local ;  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/27/2017
     > [!WARNING]  
     >  Au terme de l’utilisation du mode mono-utilisateur, dans la zone Paramètres de démarrage, sélectionnez le paramètre **-m** dans la zone **Paramètres existants** , puis cliquez sur **Supprimer**. Redémarrez le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour rétablir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode multi-utilisateur habituel.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer SQL Server en mode mono-utilisateur](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Se connecter à SQL Server quand les administrateurs système n’y ont plus accès](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)   
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a705efcec62c826d391d302f73d2656ee694cbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique s’applique uniquement aux bases de données qui contiennent des transactions marquées et qui utilisent le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -116,10 +117,10 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Récupérez chaque base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

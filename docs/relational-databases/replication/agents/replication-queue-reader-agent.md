@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9a3a11396c67d2afa1fa8368812a700c48590
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Agent de lecture de la file d’attente de réplication est un fichier exécutable qui lit les messages stockés dans une file d’attente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une file d’attente de messages [!INCLUDE[msCoName](../../../includes/msconame-md.md)], puis qui applique ces messages au serveur de publication. L'Agent de lecture de la file d'attente est utilisé avec les publications transactionnelles et les publications d'instantané qui autorisent la mise à jour en attente.  
@@ -128,10 +129,10 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  Spécifie comment les conflits de mise à jour en attente sont résolus. La valeur **1** indique que le serveur de publication remporte le conflit. Dans ce cas, la transaction en file d'attente actuellement en conflit est restaurée sur le serveur de publication et sur l'Abonné de mise à jour d'origine ; le traitement des transactions en file d'attente suivantes continue. La valeur **2** indique que l'Abonné remporte le conflit, et la transaction en file d'attente remplace les valeurs sur le serveur de publication. La valeur **3** indique que tout conflit provoquera la réinitialisation de l'Abonné ; le serveur de publication remporte le conflit, le traitement des transactions en file d'attente suivantes est terminé, et l'abonnement est réinitialisé. Le paramètre par défaut est **1** pour les publications transactionnelles et **3** pour les publications d'instantané.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour démarrer l'Agent de lecture de la file d'attente, exécutez **qrdrsvc.exe** à l'invite de commandes. Pour plus d'informations, consultez [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aee364c04f3f9531948a834d555e34f34d838a6b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrer PowerPivot vers SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,9 @@ ms.lasthandoff: 01/08/2018
   
  Si vous avez une installation [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d'application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013. Cette rubrique est une vue d’ensemble des étapes requises pour effectuer une mise à niveau avec liaison des bases de données et pour effectuer une migration associée à [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]:  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ### <a name="migration-overview"></a>Vue d'ensemble de la migration  
   
-| 1|2|3|4|  
+|1|2|3|4|  
 |-------|-------|-------|-------|  
 |Préparer la batterie de serveurs SharePoint 2013|Sauvegarder, copier et restaurer les bases de données|Monter les bases de données de contenu|Migrer les planifications [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Administration centrale de SharePoint<br /><br /> - Windows PowerShell|- Pages d’application SharePoint<br /><br /> - Windows PowerShell|  

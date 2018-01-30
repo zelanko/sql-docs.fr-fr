@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - index names [SQL Server]
 - indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2e1d073d82d3afbdaea87be57cb19b75578674c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 762a39c3dd93d1cfde4bb536f182225f390a03c8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rename-indexes"></a>Renommer des index
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Cliquez sur **Fermer**.  
   
-8.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
+8.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>Pour renommer un index à l'aide de l'Explorateur d'objets  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-rename-an-index"></a>Pour renommer un index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

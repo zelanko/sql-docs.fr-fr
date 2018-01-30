@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 40c852b19c2b2ed8a1f7f8b304c30d6214bcee21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4459bfad325436c9de896e0ad40deb60e2a707a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/17/2017
   
 13. Cliquez sur **Fermer**.  
   
-14. Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
+14. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Créer un index unique à l'aide de l'Explorateur d'objets  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
+8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   
 9. Cliquez sur **OK**.  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Pour créer un index unique sur une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

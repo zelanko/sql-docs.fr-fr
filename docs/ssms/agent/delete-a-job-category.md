@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b1e0e46a690917a37e1a51f49c72032e71e5520
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7dffa6ac4140d71fdd8800a6696f48ecb7023799
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-job-category"></a>Supprimer une catégorie de travaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment supprimer une catégorie de travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou SQL Server Management Objects.  
@@ -68,13 +69,13 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur* , sélectionnez la catégorie de travaux à supprimer.  
+4.  Dans la boîte de dialogue**Gérer les catégories de travaux***nom_serveur*, sélectionnez la catégorie de travaux à supprimer.  
   
 5.  Cliquez sur **Supprimer**.  
   
 6.  Dans la boîte de dialogue **Catégories de travaux** , cliquez sur **Oui**.  
   
-7.  Fermez la boîte de dialogue **Gérer les catégories de travaux***nom_serveur* .  
+7.  Fermez la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*.  
   
 ## <a name="TSQL"></a>Utilisation de Transact-SQL  
   

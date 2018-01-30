@@ -8,22 +8,25 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.main.f1
-helpviewer_keywords: Database Mirroring Monitor [SQL Server], interface
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34171578d9cf3b544106acdb7f017cb33fd3ccf9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si vous disposez des autorisations appropriées, vous pouvez utiliser le Moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  *<PRINCIPAL_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur principal. Ce nom respecte le format suivant :  
   
- *<NOM_SYSTÈME>*[**\\***<nom_instance>*]  
+ *<SYSTEM_NAME>*[**\\***<instance_name>*]  
   
  où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur autre que l’instance par défaut, le nom de l’instance s’affiche également : *<NOM_SYSTÈME>***\\***<nom_instance>*.  
   
@@ -106,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   

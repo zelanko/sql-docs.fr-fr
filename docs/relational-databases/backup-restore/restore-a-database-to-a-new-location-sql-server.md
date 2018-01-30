@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa80d1e050c08e66b1576835045f4faf2ef497a5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurer une base de données à un nouvel emplacement (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment restaurer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un nouvel emplacement, et éventuellement renommer la base de données, dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de SQL Server Management Studio(SSMS) ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez déplacer une base de données vers un nouveau chemin d'accès au répertoire ou créer une copie d'une base de données sur la même instance de serveur ou sur une instance différente.  
@@ -144,7 +145,7 @@ ms.lasthandoff: 01/02/2018
      *unité_sauvegarde* [ **,**...*n* ]  
      Spécifie une liste séparée par des virgules de 1 à 64 unités de sauvegarde à partir desquelles la sauvegarde de la base de données sera restaurée. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :  
   
-     {DISQUE | TAPE} **=***nom_unité_sauvegarde_physique*  
+     { DISK | TAPE } **=***physical_backup_device_name*  
   
      Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/02/2018
   
      Pour plus d’informations, consultez « Spécification d’un jeu de sauvegarde » dans [RESTORE, arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **’***nom_fichier_logique_dans_sauvegarde***’** TO **’***nom_fichier_système_d’exploitation***’** [ **,**...*n* ]  
+     MOVE **'***nom_fichier_logique_dans_sauvegarde***'** TO **'***nom_fichier_système_exploitation***'** [ **,**...*n* ]  
      Spécifie que le fichier de données ou le fichier journal spécifié par *nom_fichier_logique_dans_sauvegarde* doit être restauré à l’emplacement spécifié par *nom_fichier_système_d’exploitation*. Spécifiez une instruction MOVE pour chaque fichier logique du jeu de sauvegarde que vous voulez restaurer à un nouvel emplacement.  
   
     |Option|Description|  

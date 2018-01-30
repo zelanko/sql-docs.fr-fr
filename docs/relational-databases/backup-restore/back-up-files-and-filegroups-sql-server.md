@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sauvegarder des fichiers et des groupes de fichiers (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment sauvegarder des fichiers et des groupes de fichiers dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de PowerShell. Lorsque la taille de la base de données et les exigences en matière de performances rendent impraticable une sauvegarde complète de la base de données, créez une sauvegarde de fichiers. Une *sauvegarde de fichiers* contient toutes les données dans un ou plusieurs fichiers (ou groupes de fichiers). Pour plus d’informations sur les sauvegardes de fichiers, consultez [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
@@ -144,10 +145,10 @@ ms.lasthandoff: 01/02/2018
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Correspond à la base de données à partir de laquelle va être opérée la sauvegarde du journal des transactions, c'est à dire la sauvegarde complète ou partielle.|  
-    |FILE **=***nom_fichier_logique*|Indique le nom logique d'un fichier à inclure dans la sauvegarde de fichiers.|  
-    |FILEGROUP **=***nom_groupe_fichiers_logique*|Indique le nom logique d'un groupe de fichiers à inclure dans la sauvegarde de fichiers. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.|  
+    |FILE **=***logical_file_name*|Indique le nom logique d'un fichier à inclure dans la sauvegarde de fichiers.|  
+    |FILEGROUP **=***logical_filegroup_name*|Indique le nom logique d'un groupe de fichiers à inclure dans la sauvegarde de fichiers. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.|  
     |[ **,**...*f* ]|Espace réservé indiquant qu'il est possible de spécifier plusieurs fichiers et groupes de fichiers. Le nombre de fichiers ou de groupes de fichiers est illimité.|  
-    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***nom_unité_sauvegarde_physique*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *options_with* [ **,**...*o* ]|Spécifie, éventuellement, une ou plusieurs options supplémentaires telles que DIFFERENTIAL.<br /><br /> Remarque : une sauvegarde différentielle de fichiers requiert une sauvegarde complète de fichiers comme base. Pour plus d’informations, consultez [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  En mode de restauration complète, vous devez aussi sauvegarder le journal des transactions. Pour utiliser un jeu complet de sauvegardes de fichiers complètes afin de restaurer une base de données, vous devez aussi disposer de suffisamment de sauvegardes de journal pour couvrir toutes les sauvegardes de fichiers depuis la première sauvegarde de fichiers. Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
@@ -201,9 +202,9 @@ GO
   
 1.  Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Files** comme valeur du paramètre **-BackupAction** . Spécifiez également l'un des paramètres suivants :  
   
-    -   Pour sauvegarder un fichier spécifique, spécifiez le paramètre **-DatabaseFile***String* , où *String* représente un ou plusieurs fichiers de base de données à sauvegarder.  
+    -   Pour sauvegarder un fichier spécifique, spécifiez le paramètre **-DatabaseFile***chaîne*, où *chaîne* représente un ou plusieurs fichiers de base de données à sauvegarder.  
   
-    -   Pour sauvegarder tous les fichiers d’un groupe de fichiers donné, spécifiez le paramètre **-DatabaseFileGroup***String* , où *String* représente un ou plusieurs groupes de fichiers de base de données à sauvegarder.  
+    -   Pour sauvegarder tous les fichiers d’un groupe de fichiers donné, spécifiez le paramètre **-DatabaseFileGroup***chaîne*, où *chaîne* représente un ou plusieurs groupes de fichiers de base de données à sauvegarder.  
   
      L'exemple suivant crée une sauvegarde complète de tous les fichiers dans les groupes de fichiers secondaires 'FileGroup1' et 'FileGroup2' dans la base de données `MyDB` . Les sauvegardes sont créées à l’emplacement de sauvegarde par défaut de l’instance de serveur `Computer\Instance`.  
   

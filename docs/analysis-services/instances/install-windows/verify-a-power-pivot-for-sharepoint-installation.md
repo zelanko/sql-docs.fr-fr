@@ -12,23 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e2dad4e17ebee4497c4e62f15c5706affb62182
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Vérifier une installation Power Pivot pour SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint l’instance que vous installez dans une batterie de serveurs SharePoint est administrée via l’Administration centrale SharePoint. Au minimum, vous pouvez vérifier des pages dans l’Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d’un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d’une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d’exemple contenant déjà des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et l’utiliser pour confirmer que l’intégration SharePoint est correctement configurée.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124 SharePoint 2013|  
+
   
 ##  <a name="verifyinstall"></a> Vérifiez l'intégration de l'Administration centrale  
  Pour vérifier l’intégration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] avec l’Administration centrale, procédez comme suit :  

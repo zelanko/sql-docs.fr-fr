@@ -8,23 +8,24 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section présente le moniteur de mise en miroir de bases de données et les procédures stockées système **sp_dbmmonitor** ; par ailleurs, elle décrit le fonctionnement de la surveillance de la mise en miroir de bases de données (ainsi que du **travail du Moniteur de mise en miroir de bases de données**) et récapitule les informations que vous pouvez surveiller en matière de sessions de mise en miroir de bases de données. De plus, cette section explique comment définir des seuils d'avertissement pour un jeu d'événements de mise en miroir de bases de données prédéfinis et comment configurer des alertes pour des événements de mise en miroir de bases de données.  
@@ -182,7 +183,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Connexion témoin  
   
-     État de connexion du témoin. Les états possibles sont les suivants :  
+     État de connexion du témoin. Les états possibles sont les suivants :  
   
     -   Unknown  
   
@@ -335,7 +336,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

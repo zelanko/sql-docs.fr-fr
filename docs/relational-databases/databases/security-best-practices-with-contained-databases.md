@@ -8,21 +8,23 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: contained database, threats
+helpviewer_keywords:
+- contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bonnes pratiques de sécurité recommandées avec les bases de données à relation contenant-contenu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Création d'un utilisateur qui duplique une connexion  
  Lorsqu'un utilisateur de base de données à relation contenant-contenu est créé avec un mot de passe, si vous utilisez le même nom qu'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue en spécifiant la base de données à relation contenant-contenu comme catalogue initial, la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera impossible. La connexion sera évaluée en tant qu'utilisateur de base de données à relation contenant-contenu avec principal de mot de passe sur la base de données à relation contenant-contenu et non en tant qu'utilisateur basé sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela risque de provoquer un déni de service intentionnel ou accidentel pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Il est recommandé que les membres du rôle serveur fixe **sysadmin** se connectent toujours sans utiliser l'option de catalogue initial. Cela connecte la connexion à la base de données master et évite toute utilisation malveillante de la tentative de connexion de la part d'un propriétaire de base de données. L’administrateur peut ensuite indiquer la base de données à relation contenant-contenu, à l’aide de l’instruction **USE***\<base_de_données>*. Vous pouvez également définir la base de données par défaut de la connexion sur la base de données à relation contenant-contenu, qui complète la connexion à **master**, puis transférer la connexion vers la base de données à relation contenant-contenu.  
+-   Il est recommandé que les membres du rôle serveur fixe **sysadmin** se connectent toujours sans utiliser l'option de catalogue initial. Cela connecte la connexion à la base de données master et évite toute utilisation malveillante de la tentative de connexion de la part d'un propriétaire de base de données. L’administrateur peut ensuite passer à la base de données à relation contenant-contenu en utilisant l’instruction **USE***\<base_de_données>*. Vous pouvez également définir la base de données par défaut de la connexion sur la base de données à relation contenant-contenu, qui complète la connexion à **master**, puis transférer la connexion vers la base de données à relation contenant-contenu.  
   
 -   Il est recommandé de ne pas créer d'utilisateurs de base de données à relation contenant-contenu avec mot de passe en utilisant le même nom que les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

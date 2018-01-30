@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50739a7be9e57ebcc0353ab0aba05d8a51f0301d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7188c78647298e2eb382fded68e9c5bfd1a44bc6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Définir la réponse à une alerte (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment définir la manière dont [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] répond à des alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -71,9 +72,9 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir la répons
   
 4.  Cliquez avec le bouton droit sur l'alerte dont vous voulez définir une réponse, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue *Propriétés de l'alerte***nom_alerte** , sous **Sélectionner une page**, sélectionnez **Réponse**.  
+5.  Dans la boîte de dialogue *Propriétés de l’alerte***nom_alerte**, sous **Sélectionner une page**, sélectionnez **Réponse**.  
   
-6.  Sélectionnez la case à cocher **Exécuter le travail** , puis dans la liste figurant sous la case à cocher **Exécuter le travail** , sélectionnez un travail à exécuter quand une alerte se produit. Vous pouvez créer un nouveau travail en cliquant sur **Nouveau travail**. Vous pouvez afficher plus d'informations sur le travail en cliquant sur **Afficher le travail**. Pour plus d'informations sur les options disponibles dans les boîtes de dialogue **Nouveau travail** et **Propriétés du travail***nom_travail* , consultez [Créer un travail](../../ssms/agent/create-a-job.md) et [Afficher un travail](../../ssms/agent/view-a-job.md).  
+6.  Sélectionnez la case à cocher **Exécuter le travail** , puis dans la liste figurant sous la case à cocher **Exécuter le travail** , sélectionnez un travail à exécuter quand une alerte se produit. Vous pouvez créer un nouveau travail en cliquant sur **Nouveau travail**. Vous pouvez afficher plus d'informations sur le travail en cliquant sur **Afficher le travail**. Pour plus d’informations sur les options disponibles dans les boîtes de dialogue **Nouveau travail** et **Propriétés du travail***nom_travail*, consultez [Créer un travail](../../ssms/agent/create-a-job.md) et [Afficher un travail](../../ssms/agent/view-a-job.md).  
   
 7.  Activez la case à cocher **Notifier les opérateurs** si vous souhaitez avertir les opérateurs lorsque l'alerte est activée. Dans **Liste d'opérateurs**, sélectionnez une ou plusieurs des méthodes suivantes pour notifier le ou les opérateurs : **Messagerie électronique**, **Radiomessagerie**ou **Net Send**. Vous pouvez créer un nouvel opérateur en cliquant sur **Nouvel opérateur**. Vous pouvez afficher plus d'informations sur un opérateur en cliquant sur **Afficher l'opérateur**. Pour plus d'informations sur les options disponibles dans les boîtes de dialogue **Nouvel opérateur** et **Afficher les propriétés de l'opérateur** , consultez [Create an Operator](../../ssms/agent/create-an-operator.md) et [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md).  
   

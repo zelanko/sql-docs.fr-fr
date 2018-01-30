@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2563b8b93e4f3f9d4d0387a6cda8804b2f0453e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33ae2be4dae083d5b404bdcb4cd1b91d5b85feea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La configuration d’une session de mise en miroir de bases de données requiert une adresse réseau de serveur pour chaque instance de serveur. L'adresse réseau de serveur d'une instance de serveur doit identifier sans ambiguïté l'instance en fournissant une adresse système et le numéro du port sur lequel l'instance est à l'écoute.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Syntax"></a> Syntaxe d'une adresse réseau de serveur  
  La syntaxe d'une adresse réseau de serveur est de la forme :  
   
- TCP**://***\<adresse-système>***:***\<port>*  
+ TCP**://***\<system-address>***:***\<port>*  
   
  où  
   
@@ -45,15 +46,15 @@ ms.lasthandoff: 11/20/2017
   
     -   Si les systèmes sont dans le même domaine, vous pouvez utiliser le nom du système informatique ; par exemple, `SYSTEM46`.  
   
-    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[***<adresse_IPv6>***]**.  
+    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[***<adresse_IPv6>***]**.  
   
          Pour connaître l'adresse IP d'un système, à l'invite de commandes Windows, entrez la commande **ipconfig** .  
   
     -   L'utilisation du nom de domaine complet garantit un fonctionnement correct. Il s'agit d'une chaîne d'adresse définie localement qui présente des formes différentes dans des emplacements différents. Souvent, mais pas systématiquement, un nom de domaine complet correspond à un nom composé qui inclut le nom de l'ordinateur et une série de segments de domaine séparés par des points, de la forme :  
   
-         *nom_ordinateur* **.** *segment_domaine*[...**.***segment_domaine*]  
+         *nom_ordinateur* **.** *domain_segment*[...**.***domain_segment*]  
   
-         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.***segment_domaine*] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
+         où *nom_ordinateur* correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.***segment_domaine*] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Si vous ne connaissez pas le nom de domaine complet de votre serveur, contactez votre administrateur système.  
   
@@ -138,7 +139,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbc4482ae5b9c9b020a160cc76814236a8e80b02
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 19c834e42cd6b2a9526b6ab894a33e4ef9aafc95
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique indique comment configurer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent pour inclure des messages de trace d’exécution dans le journal des erreurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -72,7 +73,7 @@ Pour plus d’informations sur les autorisations Windows nécessaires pour le co
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent –***nom_serveur* , sous **Journal des erreurs** dans la page **Général** , cochez la case **Inclure les messages de trace d’exécution** .  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent –***nom_serveur*, sous **Journal des erreurs** dans la page **Général**, cochez la case **Inclure les messages de trace d’exécution**.  
   
 4.  Cliquez sur **OK**.  
   

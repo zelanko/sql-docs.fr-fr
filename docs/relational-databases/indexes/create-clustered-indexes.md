@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec406af911a0ea95910eba4a7bf35b68544418cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9aca99e368fa95b55877b7c654be2fec55dbab2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-indexes"></a>Créer des index cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la case de la colonne de la table à ajouter à l’index cluster.  
+5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la case de la colonne de la table à ajouter à l’index cluster.  
   
 6.  Cliquez sur **OK**.  
   
@@ -120,13 +121,13 @@ ms.lasthandoff: 11/17/2017
   
 9. Cliquez sur **Fermer**.  
   
-10. Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
+10. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Pour créer un index cluster  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer des clés primaires](../../relational-databases/tables/create-primary-keys.md)   
  [Créer des contraintes uniques](../../relational-databases/tables/create-unique-constraints.md)  
   

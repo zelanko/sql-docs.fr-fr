@@ -8,29 +8,30 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44ea42f601222565a395a808c9c22fceadf95a1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mise en miroir de base de données - Établir une session - Authentification Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Après avoir préparé la base de données miroir (voir [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), vous pouvez établir une session de mise en miroir de bases de données. Le principal, le serveur miroir et le serveur témoin doivent être trois instances distinctes, ayant chacune un système d'hébergement qui lui est propre.  
   
@@ -70,13 +71,13 @@ ms.lasthandoff: 11/20/2017
   
 4.  Pour définir le serveur principal comme partenaire sur la base de données miroir, connectez-vous au serveur miroir et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<nom_base_de_données>* SET PARTNER **=***<adresse_réseau_serveur>*  
+     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
   
      où *<nom_base_de_données>* correspond au nom de la base de données à mettre en miroir (ce nom est identique sur les deux partenaires) et *<adresse_réseau_serveur>* est l’adresse réseau du serveur principal.  
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
-     TCP**://**\<*adresse-système>***:**\<*port>*  
+     TCP**://**\<*system-address>***:**\<*port>*  
   
      où \<*adresse-système>* est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et \<*port>* est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Pour définir le serveur miroir comme partenaire sur la base de données principale, connectez-vous au serveur principal et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<nom_base_de_données>* SET PARTNER **=***<adresse_réseau_serveur>*  
+     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
   
      Pour plus d'informations, consultez l'étape 4.  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
         > [!NOTE]  
         >  En mode hautes performances, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 > [!NOTE]  
 >  L'exemple suivant établit une session de mise en miroir de base de données entre partenaires d'une base de données miroir existante. Pour plus d’informations sur la création d’une base de données miroir, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
@@ -199,7 +200,7 @@ ms.lasthandoff: 11/20/2017
     ```  
   
     > [!IMPORTANT]  
-    >  Une session de mise en miroir de bases de données s'exécute par défaut en mode synchrone, ce qui dépend de la sécurité des transactions totale (SAFETY défini sur FULL). Pour qu'une session s'exécute en mode hautes performances asynchrone, définissez SAFETY sur OFF. Pour en savoir plus, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+    >  Une session de mise en miroir de bases de données s'exécute par défaut en mode synchrone, ce qui dépend de la sécurité des transactions totale (SAFETY défini sur FULL). Pour qu'une session s'exécute en mode hautes performances asynchrone, définissez SAFETY sur OFF. Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
 8.  Dans l'instance de serveur principal, définissez l'instance de serveur sur `PARTNERHOST5` comme étant le partenaire (ce qui en fait le serveur miroir initial) :  
   
@@ -216,7 +217,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Pour voir un exemple illustrant la configuration de la sécurité, la préparation de la base de données miroir, la définition des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   

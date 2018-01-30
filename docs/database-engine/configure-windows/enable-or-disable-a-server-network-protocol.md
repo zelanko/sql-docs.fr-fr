@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 704c3179dad246685c7b6099e75a28005e1d4c8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Activer ou désactiver un protocole réseau de serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tous les protocoles réseau sont installés par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais ils peuvent être activés ou non. Cette rubrique décrit comment activer ou désactiver un protocole réseau de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de PowerShell. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être arrêté et redémarré pour que la modification soit prise en compte.  

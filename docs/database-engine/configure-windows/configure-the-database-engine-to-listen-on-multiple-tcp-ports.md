@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee0dc1c49fd1bb0b61729614bb4ba87d1683a60c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cde3b735d73b7e7a53948a67e77e7f7ca07da43
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment configurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter sur plusieurs ports TCP dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide du Gestionnaire de configuration SQL Server. Lorsque TCP/IP est activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les connexions entrantes sur un point de connexion composé d'une adresse IP et d'un numéro de port TCP. Les procédures suivantes créent un point de terminaison TDS (Tabular Data Stream, flux de données tabulaires), afin que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute sur un port TCP supplémentaire.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Pour configurer le moteur de base de données SQL Server de manière à écouter sur un port TCP supplémentaire  
   
-1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour***<nom_instance>*.  
+1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur *Protocoles pour***<nom_instance>*.  
   
 2.  Développez **Protocoles pour***<nom_instance>*, puis cliquez sur **TCP/IP**.  
   
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/20/2017
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [Autorisations GRANT sur point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

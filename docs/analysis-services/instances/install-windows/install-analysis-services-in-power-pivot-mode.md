@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installation d’Analysis Services en mode Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Les procédures décrites dans cette rubrique vous guident dans une installation d’un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode pour un déploiement de SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124 SharePoint 2013|  
-  
- **Dans cette rubrique :**  
-  
- [Arrière-plan](#bkmk_background)  
-  
- [Configuration requise](#bkmk_prereq)  
-  
- [Étape 1 : installer Power Pivot pour SharePoint](#InstallSQL)  
-  
- [Étape 2 : configurer l'intégration SharePoint de base pour Analysis Services](#bkmk_config)  
-  
- [Étape 3 : vérifier l'intégration](#bkmk_verify)  
-  
- [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](#bkmk_firewall)  
-  
- [Mettre à niveau les classeurs et l'actualisation planifiée des données](#bkmk_upgrade_workbook)  
-  
- [Au-delà de l'installation de serveur unique - Power Pivot pour Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Arrière-plan  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint est une collection de services intermédiaires et de services principaux qui fournissent un accès aux données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans une batterie de serveurs SharePoint 2016 ou SharePoint 2013.  

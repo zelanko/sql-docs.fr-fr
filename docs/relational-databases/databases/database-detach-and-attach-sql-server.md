@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: "98"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df36f7e602f85000e2254b1bffa3d240ab7321a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les données et les journaux de transactions d’une base de données peuvent être détachés, puis rattachés à la même instance ou à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le détachement et l'attachement d'une base de données sont utiles pour transférer la base de données dans une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même ordinateur ou pour la déplacer.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Si le fichier de données primaires attaché est en lecture seule, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] suppose que la base de données est en lecture seule.  
   
- La première fois qu’une base de données chiffrée est attachée à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le propriétaire de cette base de données doit ouvrir la clé principale de la base de données en exécutant l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD = **’***mot de passe***’**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ La première fois qu’une base de données chiffrée est attachée à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le propriétaire de cette base de données doit ouvrir la clé principale de la base de données en exécutant l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD = **’***mot_de_passe***’**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Les conditions requises pour attacher des fichiers journaux dépendent en partie des autorisations de lecture-écriture ou de lecture seule de la base de données. Elles sont exposées ci-dessous.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

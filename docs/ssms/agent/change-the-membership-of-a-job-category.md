@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - members [SQL Server], job categories
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fb956f7cd8fa5673cce4a3a437879d57ac8b280
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4deacdb5c6ca7d770e6899906827fb6ddcde7f78
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modifier l'appartenance d'une catégorie de travaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment changer l’appartenance de la catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou SQL Server Management Objects.  
@@ -62,13 +63,13 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur* , sélectionnez la catégorie de travaux que vous souhaitez modifier, puis cliquez sur **Afficher les travaux**.  
+4.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*, sélectionnez la catégorie de travaux que vous souhaitez modifier, puis cliquez sur **Afficher les travaux**.  
   
 5.  Sélectionnez la case à cocher **Afficher tous les travaux** .  
   
 6.  Pour ajouter un travail à la catégorie, dans la grille principale, sélectionnez la case à cocher correspondant au travail dans la colonne **Sélectionner** . Pour supprimer un travail de la catégorie, désactivez la case à cocher correspondante. Lorsque vous avez terminé, cliquez sur **OK**.  
   
-7.  Fermez la boîte de dialogue **Gérer les catégories de travaux***nom_serveur* .  
+7.  Fermez la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*.  
   
 ## <a name="TSQL"></a>Utilisation de Transact-SQL  
   

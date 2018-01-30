@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +269,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Base de données à sauvegarder|  
-    |*unité_sauvegarde* [ **, de**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***nom_unité_sauvegarde_physique*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*unité_sauvegarde* [ **, de**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *options_with* [ **,**...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
   
 2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour plus d’informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -281,10 +282,10 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Dans SQL Server 2014 ou les versions ultérieures, spécifiez l'algorithme de chiffrement à utiliser, ainsi que le certificat ou la clé asymétrique pour sécuriser le chiffrement.  
   
-         DESCRIPTION **=** { **’***texte***’** | **@***variable_texte* }  
+         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
          Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
-         NAME **=** { *nom_jeu_sauvegarde* | **@***var_nom_jeu_sauvegarde* }  
+         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
          Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
     -   Options WITH de base relatives au jeu de sauvegarde :  
@@ -293,7 +294,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
   
          Une autre méthode pour formater le support de sauvegarde consiste à utiliser l'option FORMAT :  
   
-         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@***variable_nom_support* } ] [ **,** MEDIADESCRIPTION **=** { *texte* | **@***variable_texte* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@***variable_nom_support* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***variable_texte* } ]  
          Utilisez la clause FORMAT si vous utilisez le support pour la première fois ou si vous souhaitez écraser toutes les données existantes. Assignez éventuellement un nom et une description au nouveau support.  
   
         > [!IMPORTANT]  

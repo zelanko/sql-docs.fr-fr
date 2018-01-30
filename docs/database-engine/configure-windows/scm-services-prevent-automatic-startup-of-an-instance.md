@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - stopping SQL Server
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5867f6317bef2a7c7a9cf958a5be71847bbfb3b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a47e6e4da6d415de5d5b8fac1150c0da21980f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Services SCM - Empêcher le démarrage automatique d'une instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment empêcher une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de démarrer automatiquement dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide du Gestionnaire de configuration SQL Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en principe configuré afin de démarrer automatiquement. Vous pouvez modifier ce comportement en définissant le mode de démarrage de l'instance sur Manuel.  
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/20/2017
   
 4.  Dans la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>**, sous l’onglet **Service**, dans la zone **Général**, définissez la valeur de **Mode de démarrage** sur **Manuel**.  
   
-5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>** et fermez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>**, puis fermez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

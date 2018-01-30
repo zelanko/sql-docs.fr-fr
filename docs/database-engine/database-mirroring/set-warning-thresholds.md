@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d’avertissement pour la base de données sélectionnée dans l’arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données**.  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si une instance de serveur n'est pas connectée, ses colonnes affichent des cellules vides sur un fond gris. Lorsque la connexion s'ouvre, la grille affiche automatiquement le contenu à partir de l'instance.  
   
- La grille contient les colonnes suivantes :  
+ Cette grille comporte les colonnes suivantes :  
   
  **Avertissements**  
  Répertorie les avertissements pris en charge :  
@@ -88,12 +90,12 @@ ms.lasthandoff: 11/20/2017
  **OK**  
  Quand vous cliquez sur **OK** , cette boîte de dialogue se ferme et les valeurs actuellement spécifiées pour les seuils d’avertissement s’affichent dans la grille **Seuils** de la page à onglets **Avertissements**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un seuil est applicable à un seul partenaire à la fois, mais nous vous recommandons de définir un seuil pour un événement donné sur les deux partenaires, afin de vous assurer que l'avertissement persiste lors du basculement de la base de données. Le seuil approprié pour chaque partenaire dépend des capacités de performance du système du partenaire.  
   
  Un événement est écrit dans le journal des événements pour une performance uniquement si sa valeur est identique ou supérieure au seuil au moment de la mise à jour de la table d'état. Si une valeur maximale atteint momentanément le seuil entre des mises à jour d'état, cette valeur est ignorée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

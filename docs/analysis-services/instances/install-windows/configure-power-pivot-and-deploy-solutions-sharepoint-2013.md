@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: power-view
+ms.technology:
+- power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le déploiement et la configuration des améliorations de niveau intermédiaire pour le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des fonctionnalités dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] notamment [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] la galerie, l’actualisation des données du calendrier, tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013** pour effectuer les opérations suivantes :  
@@ -34,22 +35,10 @@ ms.lasthandoff: 01/08/2018
   
  Pour plus d’informations sur l’installation de l’outil de configuration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013, consultez [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
- Cette rubrique contient les sections suivantes :  
-  
- [Exécuter Configuration de PowerPivot pour SharePoint 2013](#bkmk_run_configuration_tool)  
-  
- [Vérifier la configuration de PowerPivot](#bkmk_verify_powerpivot)  
-  
- [Résoudre les problèmes](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Exécuter Configuration de PowerPivot pour SharePoint 2013  
  **Remarque :** l'Assistant Installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installe deux outils de configuration différents pour [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Chacun d'eux prend en charge une version différente de SharePoint.  
   
-|Nom   |Description|  
+|Nom| Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Outil de configuration|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  

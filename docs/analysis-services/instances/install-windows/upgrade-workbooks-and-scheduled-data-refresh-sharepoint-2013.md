@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique explique l’utilisation des classeurs créés dans la précédente [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environnements et la mise à niveau [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] classeurs afin que vous pouvez tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -29,17 +30,6 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  Vous ne pouvez pas restaurer la mise à niveau de classeurs qui sont mis à niveau automatiquement sur le serveur. Une fois qu'un classeur est mis à niveau, il le reste. Pour utiliser une version antérieure, vous pouvez republier le classeur précédent dans SharePoint, restaurer une version antérieure ou recycler le classeur. Pour plus d'informations sur la restauration ou le recyclage d'un document dans SharePoint, consultez [Planifier la protection du contenu à l’aide de corbeilles et du contrôle de version](http://go.microsoft.com/fwlink/?LinkId=238669).  
   
- Cette rubrique contient les sections suivantes :  
-  
--   [Vue d'ensemble de la mise à niveau des classeurs](#bkmk_overview)  
-  
--   [Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [Mise à niveau vers des classeurs Office 2013 à partir de versions créées à l’aide du complément Power Pivot 2012 pour Excel](#bkmk_to_2012sp1_from_2012)  
-  
--   [Mise à niveau vers des classeurs SQL Server 2012 à partir de versions créées à l’aide du complément Power Pivot 2008 R2 pour Excel 2010](#bkmk_to_2012_from_2008R2)  
-  
--   [Exécution de plusieurs versions de classeurs sur un serveur plus récent](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Vue d'ensemble de la mise à niveau des classeurs  
  Un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] est un fichier de classeur Excel qui contient des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] intégrées. La mise à niveau d'un classeur présente deux avantages :  

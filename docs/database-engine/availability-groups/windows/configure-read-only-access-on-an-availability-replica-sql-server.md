@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53cbcf0647eeacd5efb7d8f5445b3fc56e5d9770
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 478e1cb5daa89873a1417846a40f69a8f7f7af27
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurer l'accès en lecture seule sur un réplica de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Par défaut l’accès en lecture/écriture et l’intention de lecture sont autorisés sur le réplica principal et aucune connexion directe n’est autorisée sur les réplicas secondaires d’un groupe de disponibilité Always On. Cette rubrique explique comment configurer l’accès à la connexion sur un réplica de disponibilité d’un groupe de disponibilité Always On dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
   
 |Tâche|Autorisations|  
 |----------|-----------------|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
+2.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
 3.  Cliquez sur le groupe de disponibilité dont vous souhaitez modifier le réplica.  
   
@@ -163,7 +164,7 @@ GO
   
 2.  Quand vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l’applet de commande **New-SqlAvailabilityReplica** . Quand vous modifiez un réplica de disponibilité existant, utilisez l’applet de commande **Set-SqlAvailabilityReplica** . Les paramètres pertinents sont les suivants :  
   
-    -   Pour configurer l’accès à la connexion pour le rôle secondaire, spécifiez le paramètre **ConnectionModeInSecondaryRole***mot_clé_rôle_secondaire* , où *mot_clé_rôle_secondaire* correspond à l’une des valeurs suivantes :  
+    -   Pour configurer l’accès à la connexion pour le rôle secondaire, spécifiez le paramètre **ConnectionModeInSecondaryRole***mot_clé_rôle_secondaire*, où *mot_clé_rôle_secondaire* correspond à une des valeurs suivantes :  
   
          **AllowNoConnections**  
          Aucune connexion directe n'est autorisée aux bases de données dans le réplica secondaire et les bases de données ne sont pas disponibles pour un accès en lecture. Il s'agit du paramètre par défaut.  
@@ -174,7 +175,7 @@ GO
          **AllowAllConnections**  
          Toutes les connexions sont autorisées aux bases de données dans le réplica secondaire pour un accès en lecture seule.  
   
-    -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ConnectionModeInPrimaryRole***mot_clé_rôle_principal*, où *mot_clé_rôle_principal* correspond à l’une des valeurs suivantes :  
+    -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ConnectionModeInPrimaryRole***mot_clé_rôle_principal*, où *mot_clé_rôle_principal* correspond à une des valeurs suivantes :  
   
          **AllowReadWriteConnections**  
          Les connexions où la propriété de connexion d'intention de l'application a la valeur ReadOnly ne sont pas autorisées. Lorsque la propriété d'intention de l'application a la valeur ReadWrite ou si cette propriété n'est pas définie, la connexion est autorisée. Pour plus d'informations sur la propriété de connexion d'intention de l'application, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
@@ -183,11 +184,11 @@ GO
          Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du paramètre par défaut.  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="PSExample"></a> Exemple (PowerShell)  
  L'exemple suivant définit les paramètres **ConnectionModeInSecondaryRole** et **ConnectionModeInPrimaryRole** sur **AllowAllConnections**.  
@@ -230,7 +231,7 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Always On : Proposition de valeur du réplica secondaire accessible en lecture](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx)  
   
@@ -252,7 +253,7 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [Always On : réplica secondaire accessible en lecture et latence des données](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secondaires actifs : réplicas secondaires lisibles &#40;Groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  

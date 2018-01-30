@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ff43bd1953f7f175bc8726cc617081c6173b1d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -49,10 +51,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@configname=** ] **'***nom_option***'**  
+ [ **@configname=** ] **'***option_name***'**  
  Nom d'une option de configuration. *option_name* est **varchar(35)**, avec NULL comme valeur par défaut. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
   
- [ **@configvalue=** ] **'***valeur***'**  
+ [ **@configvalue=** ] **'***value***'**  
  Nouveau paramètre de configuration. *value* est de type **int**, avec NULL comme valeur par défaut. La valeur maximale dépend de l'option individuelle.  
   
  **'connectivité hadoop'**  
@@ -98,10 +100,10 @@ RECONFIGURE
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**nvarchar(35)**|Nom de l'option de configuration.|  
-|**minimum**|**int**|Valeur minimale de l'option de configuration.|  
-|**maximum**|**int**|Valeur maximale de l'option de configuration.|  
-|**config_value**|**int**|Valeur qui avait été définie à l’aide de **sp_configure**.|  
-|**run_value**|**int**|Valeur actuelle en cours d'utilisation par PolyBase. Cette valeur est définie en exécutant RECONFIGURE.<br /><br /> Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.<br /><br /> Un redémarrage peut être nécessaire pour obtenir une valeur d'exécution précise, si la reconfiguration est en cours.|  
+|**minimum**|**Int**|Valeur minimale de l'option de configuration.|  
+|**maximum**|**Int**|Valeur maximale de l'option de configuration.|  
+|**config_value**|**Int**|Valeur qui avait été définie à l’aide de **sp_configure**.|  
+|**run_value**|**Int**|Valeur actuelle en cours d'utilisation par PolyBase. Cette valeur est définie en exécutant RECONFIGURE.<br /><br /> Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.<br /><br /> Un redémarrage peut être nécessaire pour obtenir une valeur d'exécution précise, si la reconfiguration est en cours.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], après exécution de RECONFIGURE, vous devez redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour activer la connectivité hadoop.  
@@ -110,7 +112,7 @@ Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], après exécution de RECONFI
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  RECONFIGURE n'est pas autorisée dans une transaction explicite ou implicite.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent exécuter **sp_configure** sans paramètres ou avec le paramètre @configname .  
   
  Nécessite une autorisation **ALTER SETTINGS** au niveau du serveur ou l’appartenance rôle de serveur **sysadmin** pour modifier une valeur de configuration ou pour exécuter RECONFIGURE.  
@@ -145,7 +147,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

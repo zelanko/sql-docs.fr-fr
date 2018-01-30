@@ -8,21 +8,23 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: database snapshots [SQL Server], creating
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f7597f066fa8346be7f5a7c95b75b7c18648ca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57985ae3903c8c27b702818897e9889ecc0c01bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Créer un instantané de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour créer un instantané de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez impérativement utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne prend pas en charge la création d'instantanés de base de données.  
@@ -91,7 +93,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Tout utilisateur ayant la possibilité de créer une base de données peut également créer un instantané de base de données. Toutefois, pour créer un instantané d’une base de données miroir, vous devez être membre du rôle serveur fixe **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Comment créer un instantané de base de données (en utilisant Transact-SQL)  
@@ -119,7 +121,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Où *nom_**base_de_données_source* représente la base de données source, *nom_fichier_logique*le nom logique utilisé dans SQL Server pour référencer le fichier, *nom_fichier_se* le chemin et le nom de fichier utilisés par le système d’exploitation quand vous créez le fichier, et *nom_capture_instantanée_base_de_données* le nom de la capture instantanée à laquelle vous souhaitez restaurer la base de données. Pour obtenir une description complète de cette syntaxe, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)+.  
+     Où *nom_base_de_données_**source* représente la base de données source, *nom_fichier_logique* le nom logique utilisé dans SQL Server pour référencer le fichier, *nom_fichier_se* le chemin et le nom de fichier utilisés par le système d’exploitation quand vous créez le fichier, et *nom_capture_instantanée_base_de_données* le nom de la capture instantanée à laquelle vous souhaitez restaurer la base de données. Pour obtenir une description complète de cette syntaxe, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)+.  
   
     > [!NOTE]  
     >  Lorsque vous créez un instantané de base de données, les fichiers journaux, les fichiers hors connexion, les fichiers de restauration et les anciens fichiers ne sont pas autorisés dans l'instruction CREATE DATABASE.  
@@ -129,7 +131,7 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  L'extension `.ss` utilisée dans les exemples est arbitraire.  
   
- Cette section contient les exemples suivants :  
+ Cette section contient les exemples suivants :  
   
 -   A. [Création d'un instantané sur la base de données AdventureWorks](#Creating_on_AW)  
   
@@ -173,11 +175,11 @@ GO
   
 -   [Afficher un instantané de base de données &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [Rétablir une base de données dans l'état d'un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [Rétablir une base de données dans l’état d’un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

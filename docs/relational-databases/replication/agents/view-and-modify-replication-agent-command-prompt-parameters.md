@@ -8,42 +8,44 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: agents [SQL Server replication], command prompt parameters
+helpviewer_keywords:
+- agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c380a4d550eaa2cb509073b4715dfbbde14bbdaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3edb80c4a90ede1059481d918506b97cb1669901
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Afficher et modifier les paramètres d’invite de commandes d’un Agent de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les Agents de réplication sont des fichiers exécutables qui acceptent des paramètres de ligne de commande. Par défaut, les agents s’exécutent dans des étapes de travail de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, et ces paramètres peuvent être affichés et modifiés à l’aide de la boîte de dialogue **Propriétés du travail - \<travail>**. Cette boîte de dialogue est disponible dans le dossier **Travaux** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et sous l'onglet **Agents** du moniteur de réplication. Pour plus d’informations sur le démarrage du moniteur de réplication, consultez [Démarrer le moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les Agents de réplication sont des fichiers exécutables qui acceptent des paramètres de ligne de commande. Par défaut, les agents s’exécutent dans des étapes de travail de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, et ces paramètres peuvent être affichés et modifiés à l’aide de la boîte de dialogue **Propriétés du travail - \<travail>**. Cette boîte de dialogue est disponible dans le dossier **Travaux** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et sous l'onglet **Agents** du moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer.  
   
- Bien que les paramètres puissent être modifiés directement, il est plus courant de les modifier dans un profil d'Agent. Pour plus d’informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Bien que les paramètres puissent être modifiés directement, il est plus courant de les modifier dans un profil d'Agent. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  Si vous accédez à des travaux d'Agent à partir du dossier **Travaux** , utilisez la table ci-dessous pour déterminer le nom du travail d'Agent et les paramètres disponibles pour chaque Agent.  
   
 |Agent|Nom du travail|Pour obtenir une liste des paramètres, voir…|  
 |-----------|--------------|------------------------------------|  
-|Agent d'instantané|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<entier>**|[Agent d’instantané de réplication](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Agent d'instantané pour une partition de publication de fusion|**Dyn_\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<GUID>**|[Agent d’instantané de réplication](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agent d'instantané|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<entier>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agent d'instantané pour une partition de publication de fusion|**Dyn_\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |l'Agent de lecture du journal ;|**\<serveur_publication>-\<serveur_publication>-\<entier>**|[Agent de lecture du journal des réplications](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
 |Agent de fusion pour les abonnements extraits|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<base_de_données_abonnement>-\<entier>**|[Agent de fusion de réplication](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Agent de fusion pour abonnements par envoi de données (push)|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<entier>**|[Agent de fusion de réplication](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agent de distribution pour abonnements par envoi de données (push)|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<entier>***|[Agent de distribution de réplication](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agent de distribution pour abonnements par extraction de données (pull)|**\<serveur_publication de publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<base_de_données_abonnement>-\<GUID>***\*|[Agent de distribution de réplication](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<entier>**|[Agent de distribution de réplication](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agent de distribution pour abonnements par envoi de données (push)|**\<serveur_publication>-\<base_de_données_publication>-\<publication>-\<abonné>-\<entier>***|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agent de distribution pour abonnements par extraction de données (pull)|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>***\*|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agent de distribution pour les abonnements par envoi de données aux Abonnés non SQL Server|**\<ServeurPublication>-\<BasededonnéesPublication>-\<Publication>-\<Abonné>-\<entier>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Agent de lecture de la file d'attente|**[\<base_de_données_distribution>].\<entier>**|[Agent de lecture de la file d’attente de réplication](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
  \*Pour les abonnements par émission de données aux publications Oracle, il s’agit de **\<serveur_publication>-\<serveur_publication**> au lieu de **\<serveur_publication>-\<serveur_publication>**.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Cliquez sur **OK** dans les deux boîtes de dialogue.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Concepts des exécutables de l’Agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  

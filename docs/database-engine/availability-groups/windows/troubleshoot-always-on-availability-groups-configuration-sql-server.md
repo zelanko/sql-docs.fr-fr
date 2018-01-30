@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe26c36dc6b8b5c5cdcde7013764246275f5ae6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Résoudre des problèmes de configuration des groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,8 +144,8 @@ ms.lasthandoff: 11/20/2017
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Assurez-vous que l'écouteur du groupe de disponibilité est en ligne.|**Pour vérifier si l'écouteur en ligne :**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Pour redémarrer un écouteur hors connexion :**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Réplica principal actuel|Vérifiez que l'option READ_ONLY_ROUTING_LIST contient uniquement les instances de serveur qui hébergent un réplica secondaire accessible en lecture.|**Pour identifier des réplicas secondaires accessibles en lecture :** sys.availability_replicas (colonne**secondary_role_allow_connections_desc** )<br /><br /> **Pour consulter une liste de routage en lecture seule :** sys.availability_read_only_routing_lists<br /><br /> **Pour modifier une liste de routage en lecture seule :** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Assurez-vous que le Pare-feu Windows ne bloque pas le port READ_ONLY_ROUTING_URL.|—|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Dans le gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vérifiez que :<br /><br /> La connectivité à distance SQL Server est activée.<br /><br /> TCP/IP est activé<br /><br /> Les adresses IP sont configurées correctement.|—|[Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurer un serveur pour écouter un port TCP spécifique &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Vérifiez que READ_ONLY_ROUTING_URL (TCP**://***system-address***:***port*) contient le nom de domaine complet (FQDN) et le numéro de port corrects.|—|[Calcul de l’URL de routage en lecture seule pour Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Dans le gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vérifiez que :<br /><br /> La connectivité à distance SQL Server est activée.<br /><br /> TCP/IP est activé<br /><br /> Les adresses IP sont configurées correctement.|—|[Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurer un serveur pour écouter un port TCP spécifique &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque réplica de read_only_routing_list|Vérifiez que READ_ONLY_ROUTING_URL (TCP**://***adresse_système***:***port*) contient le nom de domaine complet (FQDN) et le numéro de port corrects.|—|[Calcul de l’URL de routage en lecture seule pour Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Système client|Vérifiez que le pilote client prend en charge le routage en lecture seule.|—|[Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
@@ -171,9 +172,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configuration réseau du client](../../../database-engine/configure-windows/client-network-configuration.md)   
- [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 338525d93093788e60c208f2f8351836aaab9c04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81d0af19646a19135d6d52b2e6384b84cf23a5e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Spécifier l’URL de point de terminaison - Ajout ou modification d’un réplica de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour héberger un réplica de disponibilité pour un groupe de disponibilité, une instance de serveur doit posséder un point de terminaison de mise en miroir de bases de données. L'instance de serveur utilise ce point de terminaison pour écouter les messages [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] des réplicas de disponibilité hébergés par d'autres instances de serveur. Pour définir un réplica de disponibilité pour un groupe de disponibilité, vous devez spécifier l'URL de point de terminaison de l'instance de serveur qui hébergera le réplica. L' *URL de point de terminaison* identifie le protocole de transport du point de terminaison de mise en miroir de bases de données (TCP), l'adresse système de l'instance de serveur et le numéro de port associé au point de terminaison.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="SyntaxOfURL"></a> Syntaxe pour une URL de point de terminaison  
  La syntaxe d'une URL de point de terminaison est la suivante :  
   
- TCP**://***\<adresse-système>***:***\<port>*  
+ TCP**://***\<system-address>***:***\<port>*  
   
  où  
   
@@ -53,15 +54,15 @@ ms.lasthandoff: 11/20/2017
   
     -   Étant donné que les nœuds du cluster WSFC (clustering de basculement Windows Server) figurent dans le même domaine, vous pouvez utiliser le nom du système informatique, par exemple `SYSTEM46`.  
   
-    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[***<adresse_IPv6>***]**.  
+    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[***<adresse_IPv6>***]**.  
   
          Pour connaître l'adresse IP d'un système, à l'invite de commandes Windows, entrez la commande **ipconfig** .  
   
     -   L'utilisation du nom de domaine complet garantit un fonctionnement correct. Il s'agit d'une chaîne d'adresse définie localement qui prend des formes différentes dans des emplacements différents. Souvent, mais pas systématiquement, un nom de domaine complet correspond à un nom composé qui inclut le nom de l'ordinateur et une série de segments de domaine séparés par des points, de la forme :  
   
-         *nom_ordinateur* **.** *segment_domaine*[...**.***segment_domaine*]  
+         *nom_ordinateur* **.** *domain_segment*[...**.***domain_segment*]  
   
-         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.***segment_domaine*] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
+         où *nom_ordinateur* correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.***segment_domaine*] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Pour plus d'informations, consultez [Recherche du nom de domaine complet](#Finding_FQDN), plus loin dans cette rubrique.  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef5b39e2192d0e5814c3b3ab5525eb69330cf51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle s’adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
  Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *jeu de supports* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers disque ou d’objets blob Azure auxquels une ou plusieurs opérations de sauvegarde ont été appliquées en utilisant un type et un nombre fixes d’unités de sauvegarde. Un jeu de supports donné utilise des lecteurs de bandes, lecteurs de disque ou objets blob Azure, mais pas une combinaison de deux ou plus. 
  
-**Exemple :** Les unités de sauvegarde associées à un jeu de supports peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
+**Exemple :** Les unités de sauvegarde associées à un jeu de supports peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
   
  Un jeu de supports est créé sur le support de sauvegarde en formatant le support au cours d'une opération de sauvegarde. Pour plus d'informations, consultez [Création d'un jeu de supports](#CreatingMediaSet), plus loin dans cette rubrique. Après le formatage, chaque fichier ou bande contient un en-tête de support pour le jeu de supports et est prêt à recevoir le contenu de la sauvegarde. Lorsque l'en-tête est en place, l'opération de sauvegarde se poursuit pour sauvegarder les données spécifiées sur le support de sauvegarde de toutes les unités de sauvegarde spécifiées pour l'opération.  
   
@@ -76,7 +77,7 @@ Dans un support de sauvegarde en miroir, chaque famille de support est mise en m
 ## <a name="the-media-header"></a>En-tête de support  
  Chaque volume de support de sauvegarde (fichier sur disque ou bande) contient un en-tête de support créé par la première opération de sauvegarde qui utilise la bande (ou le disque). Cet en-tête reste intact jusqu'à ce que le support soit reformaté.  
   
- L'en-tête de support contient toutes les informations indispensables à l'identification du support (fichier sur disque ou bande) et son emplacement dans la famille de supports à laquelle il appartient. Les informations indiquent les éléments suivants :  
+ L'en-tête de support contient toutes les informations indispensables à l'identification du support (fichier sur disque ou bande) et son emplacement dans la famille de supports à laquelle il appartient. Les informations indiquent les éléments suivants :  
   
 -   Nom du support.  
   
@@ -104,7 +105,7 @@ Dans un support de sauvegarde en miroir, chaque famille de support est mise en m
   
 -   Date et heure de création de l'étiquette.  
   
--   Nombre de miroirs dans le jeu (1 à 4) ; 1 indique une unité non mise en miroir.  
+-   Nombre de miroirs dans le jeu (1 à 4) ; 1 indique une unité non mise en miroir.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] peut traiter des supports formatés par des versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]antérieures.  
   
@@ -144,7 +145,7 @@ WITH
   
  ![Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde")  
   
- Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=***backup_set_file_number* lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
+ Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=***numéro_fichier_jeu_sauvegardes* lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
