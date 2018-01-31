@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e34f2e09e740e44566fb6081ebfe1dcd5842d97
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d06d4934318a045fff483e9866a72b929e69850d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-instance"></a>Instance Oracle CDC
   L'instance Oracle CDC est un processus créé par le service de capture de données modifiées Oracle pour traiter les modifications capturées d'une seule base de données source Oracle. L’instance Oracle CDC récupère sa configuration à partir de la table **cdc.xdbcdc_config** et conserve son état dans la table **cdc.xdbcdc_state** . Ces tables font partie de la base de données CDC, qui définit l'instance Oracle CDC. Pour plus d'informations sur la base de données xdbcdc et les tables, consultez [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
     -   elle cesse de lire dans le journal des transactions Oracle ;  
   
-    -   elle cesse d'écrire les transactions Oracle terminées dans la base de données CDC ;  
+    -   elle cesse d'écrire les transactions Oracle terminées dans la base de données CDC ;  
   
     -   elle attend 30 secondes (si nécessaire) jusqu'à ce que l'écriture de la transaction actuelle soit terminée dans la base de données CDC. Si plus de 30 secondes s'écoulent, l'écriture est annulée et la transaction est restaurée (pour une nouvelle tentative lors du redémarrage de l'instance de capture de données modifiées) ;  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Gestion de la récupération**: quand une instance Oracle CDC démarre, son état interne est restauré à partir des tables **xdbcdc_state** et **xdbcdc_staged_transactions** . Une fois l'état restauré, l'instance de capture de données modifiées s'exécute de manière habituelle.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion des erreurs](../../integration-services/change-data-capture/error-handling.md)  
   
   

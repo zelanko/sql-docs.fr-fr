@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77947b1eb88d2601770cb7c016998092f3fe3ebd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b33ae44bfdadf24771772fe5a834acb39256b469
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-tasks"></a>Tâches Integration Services
   Les tâches sont des éléments de flux de contrôle qui définissent des unités de travail qui sont exécutées dans un flux de contrôle de package. Un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est composé d’une ou plusieurs tâches. Si le package contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="types-of-tasks"></a>Types de tâches  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les types de tâches suivants.  
   
- tâche de flux de données  
+ Tâche de flux de données  
  Tâche qui exécute les flux de données pour extraire les données, pour appliquer les transformations au niveau des colonnes et pour charger des données.  
   
  Tâches de préparation des données  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/20/2017
   
  Les tâches peuvent être regroupées et exécutées en tant qu'unité de travail unique ou répétées dans une boucle. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md), [Conteneur de boucles For](../../integration-services/control-flow/for-loop-container.md)et [Conteneur de séquences](../../integration-services/control-flow/sequence-container.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

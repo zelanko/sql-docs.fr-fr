@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2863f66086895e30369e0ed88f77592f8178ff6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf39c984e5bd78b9ac11ff057fdfd7f81d6726a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (expression SSIS)
   Renvoie le nombre de limites de date et d'heure traversées entre deux dates données. Le paramètre *datepart* identifie quelles limites de date et d’heure il faut comparer.  
@@ -49,14 +50,14 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant décrit les parties de date et les abréviations reconnues par l'évaluateur d'expression.  
   
 |datepart|Abréviations|  
 |--------------|-------------------|  
 |Année|yy, yyyy|  
 |Quarter|qq, q|  
-|Mois|mm, m|  
+|Month|mm, m|  
 |Jour de l'année|dy, y|  
 |Jour|dd, d|  
 |Week|wk, ww|  
@@ -68,7 +69,7 @@ DATEDIFF(datepart, startdate, endate)
   
  La fonction DATEDIFF renvoie un résultat NULL si un argument est NULL.  
   
- Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Une erreur se produit dans les cas suivants : une date n'est pas valide, l'unité de date ou d'heure n'est pas une chaîne, la date de début n'est pas une date ou la date de fin n'est pas une date.  
   
@@ -93,7 +94,7 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DATEADD &#40;expression SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEPART &#40;expression SSIS&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY &#40;expression SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   

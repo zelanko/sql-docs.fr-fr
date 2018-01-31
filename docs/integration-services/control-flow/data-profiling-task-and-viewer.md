@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b092926fc7354192293ccdbd7371998354fb626a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 57a83b83294d77831e9ef688e12d4ec2879ad3ec
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tâche de profilage des données et visionneuse
   La tâche de profilage des données fournit des fonctionnalités de profilage de données à l'intérieur du processus d'extraction, de transformation et de chargement de données. Grâce à la tâche de profilage des données, vous pouvez bénéficier des avantages suivants :  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Ajout de la logique conditionnelle au flux de travail de profilage des données  
  La tâche de profilage des données n'inclut pas de fonctionnalités intégrées vous permettant d'utiliser la logique conditionnelle pour connecter cette tâche aux tâches en aval basées sur la sortie du profil. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Par exemple, vous pouvez définir une tâche de script qui effectue une requête XPath sur le fichier de sortie de la tâche de profilage des données. La requête peut déterminer si le pourcentage de valeurs NULL dans une colonne particulière dépasse un certain seuil. Si tel est le cas, vous pouvez interrompre le package et résoudre le problème dans les données sources avant de continuer. Pour plus d’informations, consultez [Incorporer une tâche de profilage des données dans le flux de travail du package](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Schéma du profileur de données](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

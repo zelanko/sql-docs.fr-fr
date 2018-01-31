@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e0fb65fba9e0a9d600af89fd6b77c1a38030e08
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
   La tâche d'insertion en bloc est un moyen efficace pour copier de gros volumes de données dans une table ou une vue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, supposons que votre entreprise stocke la liste de ses produits d’un million de lignes sur un mainframe, mais que son système d’e-commerce utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour fournir des données à des pages web. Vous devez mettre à jour la table des produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les nuits, à l'aide de la liste principale des produits depuis le gros ordinateur. Pour mettre à jour la table, vous enregistrez la liste des produits dans un fichier au format délimité par des tabulations, puis vous utilisez la tâche d'insertion en bloc pour copier les données directement dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 -   La tâche d'insertion en bloc n'enregistre pas les lignes à l'origine d'erreurs. Si vous devez capturer ces informations, utilisez les sorties d'erreur des composants de flux de données afin de récupérer dans un fichier d'exception les lignes à l'origine des erreurs.  
   
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Entrées de journal personnalisées disponibles dans la tâche d'insertion en bloc  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
  Si la tâche d'insertion en bloc se sert d'un gestionnaire de connexions de fichiers plats pour accéder au fichier source, elle n'utilise pas le format spécifié dans ce gestionnaire. Elle utilise à la place le format spécifié dans un fichier de format, ou les valeurs des propriétés RowDelimiter et ColumnDelimiter de la tâche.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -109,10 +110,10 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=233693), sur support.microsoft.com.  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Format**  
  Sélectionnez la source du format de l'insertion en bloc. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
 |**Spécifier**|Spécifiez le format. Cette option affiche les options dynamiques **RowDelimiter** et **ColumnDelimiter**.|  

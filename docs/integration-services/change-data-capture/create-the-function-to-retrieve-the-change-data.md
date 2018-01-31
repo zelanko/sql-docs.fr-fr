@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: incremental load [Integration Services],creating function
+helpviewer_keywords:
+- incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3e717ccf46cc7929c510229b19a16eb5a857487
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
   Une fois que vous avez terminé le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la tâche suivante consiste à créer une fonction table qui récupère les données modifiées. Vous ne devez créer cette fonction qu'une seule fois avant le premier chargement incrémentiel.  
@@ -215,7 +217,7 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal associé à la transaction de validation de la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de mise à jour sur la table source modifie deux lignes différentes, la table de modifications contient quatre lignes (deux avec les anciennes valeurs et deux avec les nouvelles valeurs), chacune avec la même valeur **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Valeur de classement utilisée pour classer les modifications de ligne dans une transaction.|  
-|**__$operation**|**int**|Opération de langage de manipulation de données associée à la modification. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (valeurs avant l'opération de mise à jour)<br /><br /> 4 = mise à jour (valeurs après l'opération de mise à jour)|  
+|**__$operation**|**Int**|Opération de langage de manipulation de données associée à la modification. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (valeurs avant l'opération de mise à jour)<br /><br /> 4 = mise à jour (valeurs après l'opération de mise à jour)|  
 |**__$update_mask**|**varbinary(128)**|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes modifiées. Vous pouvez examiner cette valeur pour déterminer les colonnes qui ont été modifiées.|  
 |**\<<colonnes_de_table_source_capturées>**|variable|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée à l'origine dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   

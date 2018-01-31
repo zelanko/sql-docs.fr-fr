@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -94,7 +95,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 |EXCEL|Établit une connexion à un fichier de classeur Excel.|[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Établit une connexion à un fichier ou un dossier.|[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|  
 |FLATFILE|Établit une connexion à des données dans un fichier plat unique.|[Gestionnaire de connexions de fichiers plats](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
-|FTP|Établit une connexion à un serveur FTP.|[Gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|  
+|FTP|Établit une connexion à un serveur FTP.|[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|Établit une connexion à un serveur Web.|[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ|Établit une connexion à une file d'attente de messages.|[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
 |MSOLAP100|Établit une connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
