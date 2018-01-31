@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  Les contraintes CHECK pouvant référencer uniquement les colonnes sur lesquelles des contraintes de niveau table ou colonne sont définies, toutes les contraintes entre tables (dans ce cas, des règles de gestion) doivent être définies sous la forme de déclencheurs.  
   
- L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Créer de déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
