@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
   La gestion de packages inclut la surveillance, la gestion, l’importation et l’exportation de packages.  
@@ -190,7 +191,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
          Cliquez sur le bouton Parcourir **(…)**, développez le dossier **Packages SSIS** , puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(…)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
+7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(…)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package**. Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   
 8.  Cliquez sur **OK** pour terminer l'exportation.  
 
@@ -219,7 +220,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
  **Type d'authentification**  
  Sélectionnez un type d'authentification.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un nom d’utilisateur.  
   
  **Mot de passe**  
@@ -243,7 +244,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
  **SQL Server**  
   
- **Système de fichiers**  
+ **File System**  
   
  **Magasin de packages SSIS**  
   
@@ -259,7 +260,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
  **Type d'authentification**  
  Sélectionnez un type d'authentification.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un nom d’utilisateur.  
   
  **Mot de passe**  
@@ -289,7 +290,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
 ### <a name="packages-stored-in-the-file-system"></a>Packages stockés dans le système de fichiers  
  La sauvegarde des packages enregistrés dans le système de fichiers doit être incluse dans le plan de sauvegarde du système de fichiers du serveur. Le ficher de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , dont le nom par défaut est MsDtsSrvr.ini.xml, donne la liste des dossiers sur le serveur contrôlé par le service. Vous devez vous assurer que ces dossiers sont sauvegardés. En outre, les packages peuvent être stockés dans d'autres dossiers sur le serveur et vous devez vous assurer que ces dossiers sont inclus dans la sauvegarde.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

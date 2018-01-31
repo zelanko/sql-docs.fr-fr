@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -158,12 +159,12 @@ ms.lasthandoff: 11/20/2017
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans SQL Server Data Tools](#ssdt).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](#saved_config).  
   
 ### <a name="configuration-of-log-provider"></a>Configuration du module fournisseur d'informations  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Un module fournisseur d'informations est créé et configuré dans le cadre de l'implémentation d'un package.  
   
@@ -244,7 +245,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Pour les fichiers XML, utilisez un gestionnaire de connexions de fichiers.  
   
-5.  Répétez les étapes 3 et 4 pour chaque journal à utiliser dans le package.  
+5.  Répétez les étapes 3 et 4 pour chaque journal à utiliser dans le package.  
   
     > [!NOTE]  
     >  Un package peut utiliser plusieurs journaux du même type.  
@@ -414,10 +415,10 @@ ms.lasthandoff: 11/20/2017
   
 |Niveau de journalisation|Description|  
 |-------------------|-----------------|  
-|Aucun|La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
-|Basic|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Ceci est la valeur par défaut.|  
+|None|La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
+|Simple|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut.|  
 |RuntimeLineage|Collecte les données nécessaires au suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage afin de mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations.|  
-|Performance|Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.<br /><br /> Le rapport **Performances de l'exécution** affiche le temps d'activité et le temps total écoulé des composants de flux de données du package. Ces informations sont disponibles si le niveau de journalisation de la dernière exécution du package a été défini sur **Performances** ou **Commentaires**. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vue [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) affiche les heures de début et de fin des composants de flux de données, pour chaque phase d’exécution. Cette vue affiche ces informations pour ces composants uniquement lorsque le niveau de journalisation de l'exécution du package est défini sur **Performances** ou **Commentaires**.|  
+|Performances|Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.<br /><br /> Le rapport **Performances de l'exécution** affiche le temps d'activité et le temps total écoulé des composants de flux de données du package. Ces informations sont disponibles si le niveau de journalisation de la dernière exécution du package a été défini sur **Performances** ou **Commentaires**. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vue [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) affiche les heures de début et de fin des composants de flux de données, pour chaque phase d’exécution. Cette vue affiche ces informations pour ces composants uniquement lorsque le niveau de journalisation de l'exécution du package est défini sur **Performances** ou **Commentaires**.|  
 |Commentaires|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> Les événements personnalisés sont notamment les événements consignés par les tâches [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les événements personnalisés, consultez [Custom Messages for Logging](#custom_messages).<br /><br /> L'événement **DiagnosticEx** est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, cet événement capture les valeurs de paramètres passées aux packages enfants.<br /><br /> L’événement **DiagnosticEx** vous permet également d’obtenir les noms des colonnes dans lesquelles des erreurs se produisent au niveau des lignes. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur.  Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> La valeur de la colonne de message pour **DiagnosticEx** est du texte XML. Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> La vue [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>Créer et gérer des niveaux de journalisation personnalisés à l'aide de la boîte de dialogue de gestion des niveaux de journalisation personnalisés  
@@ -473,7 +474,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Tâche de transfert de bases de données](#TransferDatabase)  
   
- [Tâche de transfert de messages d’erreur](#TransferErrorMessages)  
+ [Tâche de transfert de messages d'erreur](#TransferErrorMessages)  
   
  [Tâche de transfert de travaux](#TransferJobs)  
   
@@ -487,7 +488,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Tâche Lecteur de données WMI](#WMIDataReader)  
   
- [Tâche Observateur d’événement WMI](#WMIEventWatcher)  
+ [Tâche Observateur d'événement WMI](#WMIEventWatcher)  
   
  [Tâche XML](#XML)  
   
@@ -678,10 +679,10 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |---------------|-----------------|  
 |**XMLOperation**|Fournit des informations sur l'opération que la tâche effectue.|  
 
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer les tâches relatives à la fonctionnalité de journalisation.  
   
 -   [Événements journalisés par un package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Outil DTLoggedExec pour un enregistrement complet et détaillé (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  

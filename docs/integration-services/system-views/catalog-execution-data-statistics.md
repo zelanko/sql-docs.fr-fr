@@ -8,27 +8,28 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd542c253583fe1513947475dfca65db686fab5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dca56725e70ab1d73d13592faeb40f7c37674099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Cette vue affiche une ligne chaque fois qu'un composant de flux de données envoie des données à un composant en aval, pour une exécution de package donnée. Les informations de cette vue peuvent être utilisées pour calculer le débit des données pour un composant.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|Identificateur (ID) unique des données.|  
 |execution_id|**bigint**|ID unique de l'instance d'exécution.|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |created_time|**datatimeoffset(7)**|Heure à laquelle les valeurs ont été obtenues.|  
 |execution_path|**nvarchar(max)**|Chemin d'accès d'exécution du composant.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Lorsqu'il existe plusieurs sorties du composant, une ligne est ajoutée pour chacune d'elles.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Pour afficher ces données pour une exécution de package donnée, définissez le niveau de journalisation sur **Verbose**. Pour plus d’informations, consultez [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'instance d'exécution  

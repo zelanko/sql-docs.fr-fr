@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfecde5790f25c254428d53ec613b968d7d3efd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server)
 Cette rubrique décrit comment se connecter à une source de données **Microsoft Access** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
@@ -54,10 +55,10 @@ Spécifiez le chemin et le nom de fichier du fichier Access. Par exemple, **C:\\
  >   [!NOTE] 
  > Si vous cliquez sur **Parcourir** pour localiser le fichier Access, la boîte de dialogue **Ouvrir** filtre les fichiers pour n’afficher par défaut que les fichiers dans l’ancien format et portant l’ancienne extension de fichier .MDB. Toutefois, le fournisseur de données peut également ouvrir des fichiers dans le nouveau format et portant la nouvelle extension de fichier .ACCDB.
   
- **Parcourir**  
+ **...**  
  Permet de rechercher le fichier de la base de données à l’aide de la boîte de dialogue **Ouvrir**.  
   
- **Nom d'utilisateur**  
+ **User name**  
 Si un fichier de groupe de travail est associé à la base de données, fournissez un nom d’utilisateur valide.  
   
  **Mot de passe**  
@@ -81,7 +82,7 @@ La dernière version des composants peut ouvrir des fichiers créés dans des ve
 
 Si la version 32 bits de Microsoft Office est installée sur l’ordinateur, vous devez installer la version 32 bits des composants et vérifier que vous exécutez le package en mode 32 bits.
 
-Si vous avez un abonnement Office 365, veillez à télécharger Access Database Engine 2016 Redistributable et non Microsoft Access 2016 Runtime. Lorsque vous exécutez le programme d’installation, il est possible qu’un message d’erreur s’affiche indiquant que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Exemple :
+Si vous avez un abonnement Office 365, veillez à télécharger Access Database Engine 2016 Redistributable et non Microsoft Access 2016 Runtime. Lorsque vous exécutez le programme d’installation, il est possible qu’un message d’erreur s’affiche indiquant que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Exemple :
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

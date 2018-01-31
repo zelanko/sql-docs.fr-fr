@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20b136348f21d6b688d86039e96c5f16f1fa7d10
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1c4130b66a7c9c2011aaf1e2af30f799d753162
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_tap_id = ] *data_tap_id*  
  Retourne l'ID de la collecte de données. *data_tap_id* est de type **bigint**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `'Paths[OLE DB Source.OLE DB Source Output]`, dans la tâche de flux de données, `\Package\Data Flow Task`. Les données drainées sont stockées dans le fichier `output0.txt` dans le dossier DataDumps (\<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
@@ -82,7 +83,7 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour ajouter des drainages de données, l’instance d’exécution doit avoir l’état Created (valeur 1 dans la colonne **status** de la vue [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). La valeur d'état change lorsque vous exécutez l'exécution. Vous pouvez créer une exécution en appelant [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Les considérations suivantes sont à prendre en compte pour la procédure stockée add_data_tap.  
@@ -105,9 +106,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
  Lorsque la procédure stockée échoue, elle génère une erreur.  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations MODIFY sur l'instance d'exécution  
@@ -130,7 +131,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="external-resources"></a>Ressources externes  
  Entrée de blog, [SSIS 2012: A Peek to Data Taps](http://go.microsoft.com/fwlink/?LinkId=239983), sur le site rafael-salas.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   

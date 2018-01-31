@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -2082,8 +2083,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tâche n'a pas réussi à exécuter l'opération « %1 ».|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Le fichier/processus « %1 » n'est pas dans le chemin d'accès.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|Le sujet est vide.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « \@ » est absent ou elle n'est pas valide.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « \@ » est absent ou elle n'est pas valide.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Les deux documents XML sont différents.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validation DTD utilisera le fichier DTD défini dans la ligne DOCTYPE du document XML. Elle n'utilisera pas ce qui est attribué à la propriété « %1 ».|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|La tâche n'a pas réussi à valider « %1 ».|  

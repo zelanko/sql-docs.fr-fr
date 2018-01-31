@@ -8,30 +8,31 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
   Vous pouvez surveiller les exécutions des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les validations de projet et d’autres opérations en utilisant un ou plusieurs des outils suivants. Certains outils tels que les drainages de données ne sont disponibles que pour les projets déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 -   Journaux  
   
-     Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+     Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 -   Rapports  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|Initialisation d'Integration Services|1|  
+|Initialisation d'Integration Services| 1|  
 |Nettoyage des opérations (travail de l'Agent SQL)|2|  
 |Nettoyage des versions du projet (travail de l'Agent SQL)|3|  
 |Déployer le projet|101|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
 |Section|Description|  
 |-------------|-----------------|  
-|Filtrer|Indique le filtre actif appliqué au rapport, tel que la plage d'heures de début.|  
+|Filtre|Indique le filtre actif appliqué au rapport, tel que la plage d'heures de début.|  
 |Informations sur l'exécution|Indique l'heure de début, l'heure de fin, la durée d'exécution de chaque package. Vous pouvez afficher la liste des valeurs de paramètre utilisées avec une exécution de package, telles que les valeurs qui ont été passées à un package enfant à l'aide de la tâche d'exécution de package. Pour afficher la liste des paramètres, cliquez sur Vue d'ensemble.|  
   
  Pour plus d’informations sur l’utilisation de la tâche d’exécution de package afin de rendre des valeurs disponibles dans un package enfant, consultez [Tâche d’exécution de package](../../integration-services/control-flow/execute-package-task.md).  
@@ -204,6 +205,6 @@ ms.lasthandoff: 11/20/2017
   
     -   **Toutes les connexions**  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exécution de projets et de packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Rapports de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

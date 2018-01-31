@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: Slowly Changing Dimension Wizard
+helpviewer_keywords:
+- Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f2885362d9bbf6ba180978a2d917a760eed8d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d5e2b892c6619082a9df165aa3a30ab92a95f20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Aide (F1) de l'Assistant Dimension à variation lente
   Utilisez l' **Assistant Dimension à variation lente** pour configurer le chargement des données dans divers types de dimensions à variation lente. Cette section fournit l'aide (accessible à l'aide de la touche F1) **relative aux pages de cet Assistant**. Le tableau suivant décrit les rubriques de cette section.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/20/2017
  [Fin de l'Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Prenez connaissance des options de configuration sélectionnées par l'utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
  [Configurer les sorties à l'aide de l'Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   

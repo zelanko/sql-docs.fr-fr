@@ -8,35 +8,36 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16fa5f45b6d4368816e7d5ea115d7f4cff6aa9cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccb26f47a44f02f17cc0b17df078d7daf0b43977
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche les propriétés du catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar (256)**|Nom de la propriété de catalogue.|  
 |property_value|**nvarchar (256)**|Valeur de la propriété de catalogue.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque propriété de catalogue.
   
-|Nom de la propriété| Description|  
+|Nom de la propriété|Description|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Mode d’exécution par défaut à l’échelle du serveur pour les packages : `Server` (0) ou `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|Type d'algorithme de chiffrement utilisé pour chiffrer des données sensibles. Les valeurs prises en charge incluent : `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` et `AES_256`. Remarque : la base de données de catalogue doit être en mode mono-utilisateur pour modifier cette propriété.|
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |**VERSION_CLEANUP_ENABLED**|Quand la valeur est `TRUE`, seul le nombre de versions de projet **MAX_PROJECT_VERSIONS** est stocké dans le catalogue et toutes les autres versions de projet seront supprimées. Quand la valeur est **FALSE**, toutes les versions du projet sont stockées dans le catalogue. Remarque : un travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue le nettoyage de l'opération.|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Appartenance au rôle de base de données **ssis_admin**  

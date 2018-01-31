@@ -8,20 +8,21 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 053744fd9493aae1c4d0cb4c2235a3da5a465397
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -107,10 +108,10 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Quand un package s’exécute, **dtexec** peut retourner un code de sortie. Le code de sortie est utilisé pour remplir la variable ERRORLEVEL, dont la valeur peut être testée dans des instructions conditionnelles ou la logique dans un fichier de commandes. Le tableau suivant répertorie les valeurs que l’utilitaire **dtexec** peut définir lors de la sortie.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|L'exécution du package a réussi.|  
-|1|Le package a échoué.|  
+| 1|Le package a échoué.|  
 |3|Le package a été annulé par l'utilisateur.|  
 |4|L'utilitaire n'a pas pu localiser le package demandé. Le package est introuvable.|  
 |5|L'utilitaire n'a pas pu localiser le package demandé. Le package ne peut pas être chargé.|  
@@ -155,7 +156,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/?** [*option_name*] : (Facultatif). Affiche les options d’invite de commandes ou l’aide pour l’argument *option_name* spécifié, puis ferme l’utilitaire.  
   
-     Si vous spécifiez un argument *option_name* , **dtexec** ouvre la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche la rubrique relative à l’utilitaire dtexec.  
+     Si vous spécifiez un argument *option_name*, **dtexec** ouvre la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche la rubrique relative à l’utilitaire dtexec.  
   
 -   **/Ca[llerInfo]**: (Facultatif). Spécifie des informations supplémentaires pour l'exécution d'un package. Lorsque vous exécutez un package à l'aide de SQL Server Agent, l'agent définit cet argument afin d'indiquer que l'exécution du package est appelée par SQL Server Agent. Ce paramètre est ignoré lorsque l’utilitaire **dtexec** est exécuté à partir de la ligne de commande.  
   
@@ -219,7 +220,7 @@ dtexec /option [value] [/option [value]]...
   
      Pour afficher plusieurs exemples de l’option **/ConsoleLog** , consultez la section **Notes** .  
   
---   **/D [ts]** *package_path* (Facultatif). Charge un package à partir du magasin de packages SSIS. Les packages stockés dans le Magasin de packages SSIS sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D [ts]** *package_path* (Facultatif). Charge un package à partir du magasin de packages SSIS. Les packages stockés dans le Magasin de packages SSIS sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer**. Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -294,19 +295,19 @@ dtexec /option [value] [/option [value]]...
   
     -   Fichier texte :  
   
-        -   ProgID : DTS.LogProviderTextFile.1  
+        -   ProgID : DTS.LogProviderTextFile.1  
   
         -   ClassID : {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   ProgID : DTS.LogProviderSQLProfiler.1  
+        -   ProgID : DTS.LogProviderSQLProfiler.1  
   
         -   ClassID : {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   ProgID : DTS.LogProviderSQLServer.1  
+        -   ProgID : DTS.LogProviderSQLServer.1  
   
         -   ClassID : {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
@@ -316,7 +317,7 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID : {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
-    -   Fichier XML :  
+    -   Fichier XML :  
   
         -   ProgID : DTS.LogProviderXMLFile.1  
   
@@ -634,7 +635,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ```  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), sur www.mattmasson.com.  
   
   

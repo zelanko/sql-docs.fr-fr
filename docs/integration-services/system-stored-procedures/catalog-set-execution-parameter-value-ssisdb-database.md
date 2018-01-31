@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  Valeur du paramètre. *parameter_value* est de type **sql_variant**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour découvrir les valeurs de paramètre utilisées pour une exécution donnée, interrogez la vue catalog.execution_parameter_values.  
   
  Pour spécifier l’étendue des informations enregistrées durant une exécution de package, attribuez au paramètre *parameter_name* la valeur LOGGING_LEVEL et au paramètre *parameter_value* l’une des valeurs suivantes.  
@@ -81,9 +82,9 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Aucune<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
-|1|Basic<br /><br /> Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Ceci est la valeur par défaut.|  
-|2|Performance<br /><br /> Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.|  
+|0|None<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
+| 1|Simple<br /><br /> Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut.|  
+|2|Performances<br /><br /> Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.|  
 |3|Commentaires<br /><br /> Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic. <br />Les événements personnalisés sont notamment ces événements consignés par les tâches Integration Services. Pour plus d’informations, consultez [Messages personnalisés pour la journalisation](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Lignage de l’exécution<br /><br /> Collecte les données nécessaires au suivi du lignage dans le flux de données.|  
 |100|Niveau de journalisation personnalisée<br /><br /> Spécifiez les valeurs du paramètre CUSTOMIZED_LOGGING_LEVEL. Pour plus d’informations sur les valeurs que vous pouvez spécifier, consultez [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Pour plus d’informations sur les niveaux de journalisation personnalisée, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
@@ -95,7 +96,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|Identificateur unique de l'instance d'exécution|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_ERROR|  
-|*parameter_value*|1|  
+|*parameter_value*| 1|  
   
  Pour spécifier que le serveur Integration Services doit générer des fichiers de vidage lorsque des événements se produisent pendant une exécution de package, définissez les valeurs de paramètre suivantes pour une instance d'exécution qui n'a pas été exécutée.  
   
@@ -104,7 +105,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|Identificateur unique de l'instance d'exécution|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_EVENT|  
-|*parameter_value*|1|  
+|*parameter_value*| 1|  
   
  Pour spécifier les événements lors d'une exécution de package qui provoquent la génération de fichiers de vidage par le serveur Integration Services, définissez les valeurs de paramètre suivantes pour une instance d'exécution qui n'a pas été exécutée. Séparez plusieurs codes d'événement à l'aide d'un point-virgule.  
   
@@ -115,7 +116,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|Un ou plusieurs codes d'événement|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant spécifie que le serveur Integration Services doit générer des fichiers de vidage lorsqu'une erreur se produit pendant une exécution de package.  
   
 ```sql
@@ -123,7 +124,7 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant spécifie que le serveur Integration Services doit générer des fichiers de vidage lorsque des événements se produisent pendant une exécution de package, et identifie l'événement qui provoque la génération des fichiers par le serveur.  
   
 ```sql
@@ -139,9 +140,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'instance d'exécution  
@@ -161,7 +162,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   Le type de données de la valeur de paramètre ne correspond pas au type du paramètre.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [catalog.execution_parameter_values &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [Générer de fichiers de vidage pour l’exécution des packages](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

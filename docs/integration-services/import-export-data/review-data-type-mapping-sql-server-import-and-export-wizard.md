@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords:
+- sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Vérifier le mappage de type de données (Assistant Importation et Exportation SQL Server)
 Si vous avez spécifié un mappage de type de données qui risque d’échouer dans la liste **Mappages** de la boîte de dialogue **Mappages de colonnes** , l’Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Vérifier le mappage de type de données** . Dans cette page, vous passez en revue des informations détaillées sur les conversions de types de données que l’Assistant doit effectuer pour que les données sources soient compatibles avec la destination. Ces informations incluent des aides visuelles permettant de différencier les conversions de type de données qui sont censées aboutir de celles qui sont susceptibles de provoquer des erreurs ou des troncations. Pour chaque conversion, vous choisissez d’accepter, ou non, la conversion que l’Assistant suggère. De plus, vous spécifiez comment gérer les éventuelles erreurs.   
@@ -49,7 +51,7 @@ Dans cet exemple, les résultats de la requête fournie par l’utilisateur vont
   
  Le tableau suivant décrit les colonnes de la liste **Table** .  
   
-|Colonne| Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |(Icône Source)|Indique la probabilité de réussite des conversions de types de données :<br /> -   Une icône représentant une coche **verte** indique que l’Assistant prévoit la réussite de toutes les conversions de types de données de cette table.<br />-   Une icône d’avertissement **jaune** indique que vous devez vérifier les différentes conversions qui seront effectuées par l’Assistant. Pour ce faire, sélectionnez la table, puis examinez les conversions correspondant aux différentes colonnes dans la liste **Mappage de type de données** .<br />-   Une icône d’erreur **rouge** indique que l’Assistant n’est pas en mesure d’effectuer de manière fiable certaines conversions pour cette table.|  
 |**Source**|Nom de la table source.|  
@@ -65,7 +67,7 @@ Dans cet exemple, chaque colonne de la source va être copiée dans une colonne 
 
 Le tableau suivant décrit les colonnes de la liste **Mappage de type de données** . 
 
-|Colonne| Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |(Icône Conversion)|Indique la probabilité de réussite des conversions de types de données :<br /> -   Une icône représentant une coche **verte** indique que l’Assistant prévoit la réussite de la conversion des types de données de cette colonne.<br />-   Une icône d’avertissement **jaune** indique que vous devez examiner la conversion qui sera effectuée par l’Assistant. Pour vérifier la conversion, double-cliquez sur la colonne afin d’afficher la boîte de dialogue **Détails de la conversion de colonne** . Pour plus d’informations, consultez [Boîte de dialogue Détails de la conversion de colonne](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />-   Une icône d’erreur **rouge** indique que l’Assistant n’est pas en mesure d’effectuer la conversion de manière fiable.|  
 |**Colonne source**|Nom de la colonne source.|  
@@ -88,15 +90,15 @@ Cet exemple montre les valeurs par défaut pour les deux options globales de ges
 
  **En cas d’erreur (global)**  
  Spécifiez comment l'Assistant gère les erreurs :  
- -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Ceci est la valeur par défaut.
+ -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s'agit de la valeur par défaut.
  -   Ignorez l'erreur et poursuivez le processus d'importation ou d'exportation.  
   
  **En cas de troncation (global)**  
  Spécifiez comment l’Assistant gère les troncations de données :  
- -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Ceci est la valeur par défaut.
+ -   Échouez avec une erreur et arrêtez le processus d'importation ou d'exportation. Il s'agit de la valeur par défaut.
  -   Ignorez la troncation et poursuivez le processus d'importation ou d'exportation.  
    
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez consulté les avertissements, spécifié les options de conversion et indiqué la façon de gérer les erreurs, la page **Vérifier le mappage de type de données** vous fait revenir à la boîte de dialogue **Mappage de colonnes** . Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Voir aussi

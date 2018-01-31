@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
   Si vous avez indiqué dans la page **Enregistrer et exécuter le package** que vous souhaitiez enregistrer vos paramètres sous la forme d’un package SQL Server Integration Service (SSIS), l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche l’option **Enregistrer le package SSIS**. Cette page vous permet de spécifier d’autres options pour l’enregistrement du package créé par l’Assistant.  
@@ -66,7 +68,7 @@ Connectez-vous au serveur à l’aide de l’authentification intégrée Windows
  **Utiliser l’authentification SQL Server**  
 Connectez-vous au serveur à l’aide de l’authentification SQL Server.  
   
- **Nom d'utilisateur**  
+ **User name**  
 Si vous avez choisi d’utiliser l’authentification SQL Server, entrez le nom d’utilisateur.  
   
  **Mot de passe**  
@@ -88,7 +90,7 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
 >   
 >  Souvenez-vous de l’endroit où vous enregistrez le fichier du package.  
   
- **Parcourir**  
+ **...**  
  (Facultatif) Vous pouvez rechercher et sélectionner le chemin du fichier de destination dans la boîte de dialogue **Enregistrer le package**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Présentation des deux pages d’options pour l’enregistrement du package  
@@ -112,10 +114,10 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
 ## <a name="customize-the-saved-package"></a>Personnaliser le package enregistré  
  Pour savoir comment personnaliser le package enregistré, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez spécifié les autres options d’enregistrement du package, la page suivante s’intitule **Terminer l’Assistant**. Cette page vous permet d’examiner les choix effectués dans l’Assistant et de lancer l’opération. Pour plus d’informations, consultez [Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Enregistrer des packages](../../integration-services/save-packages.md)  
 [Exécuter des packages Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

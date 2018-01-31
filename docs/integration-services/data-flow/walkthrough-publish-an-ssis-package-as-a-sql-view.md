@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.packagepublishwizard.f1
+f1_keywords:
+- sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
   Cette procédure pas à pas fournit des étapes détaillées sur la publication d’un package SSIS en tant que vue SQL dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour pouvoir effectuer cette procédure pas à pas, vous devez disposer des logiciels suivants installés sur votre ordinateur.  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou version ultérieure avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |1|John|Doe|  
+        | 1|John|Doe|  
         |2|Jane|Doe|  
   
     4.  Faites glisser le composant **Source OLE DB** de la **Boîte à outils SSIS** vers le **Concepteur de flux de données**.  
@@ -252,7 +254,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Les paramètres Folder, Project et Package sont obligatoires. Use32BitRuntime, Timeout et Parameters sont facultatifs.  
   
- Use32BitRuntime peut avoir la valeur 0, 1, true ou false. Il indique si le package doit être exécuté avec le runtime 32 bits (1 ou true) quand la plateforme de SQL Server est de type 64 bits.  
+ Use32BitRuntime peut avoir la valeur 0, 1, true ou false. Il indique si le package doit être exécuté avec le runtime 32 bits (1 ou true) quand la plateforme de SQL Server est de type 64 bits.  
   
  Timeout indique le délai d’attente en secondes du fournisseur OLE DB pour SSIS avant l’arrivée de nouvelles données en provenance du package SSIS. Par défaut, le délai d’expiration est de 60 secondes. Vous pouvez spécifier une valeur entière pour indiquer un délai d’attente compris entre 20 et 32 000.  
   
@@ -270,7 +272,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Barre oblique (\\) – Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
  [Configurer Data Streaming Destination](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1540c3396879dc12a5af6e321ec009700d7c658
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35ad9901e974ffa4283aed56b03e2cb75a66f178
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +53,14 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et EXECUTE sur le projet et, si applicable, autorisations READ sur les environnements référencés.  
   
 -   L’appartenance au rôle de base de données **ssis_admin**.  
   
--   L’appartenance au rôle serveur **sysadmin**.  
+-   Appartenance au rôle serveur **sysadmin**.  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  Cette procédure stockée génère des erreurs dans les scénarios suivants :  
@@ -68,10 +69,10 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   La base de données SSISDB n’est pas en mode mono-utilisateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  SQL Server 2012 Service Pack 2 a ajouté la propriété SERVER_OPERATION_ENCRYPTION_LEVEL à la table **internal.catalog_properties**. Cette propriété a deux valeurs possibles :  
   
--   **PER_EXECUTION (1)** : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Ceci est la valeur par défaut. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
+-   **PER_EXECUTION (1)** : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Il s'agit de la valeur par défaut. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
   
 -   **PER_PROJECT (2)** : le certificat et la clé symétrique utilisés pour protéger les paramètres sensibles sont créés pour chaque projet. Vous obtenez de meilleures performances qu’avec le niveau PER_EXECUTION, car la clé et le certificat sont générés une fois par projet et non à chaque exécution.  
   
@@ -91,7 +92,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
  Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance quand vous utilisez SSISDB comme magasin de déploiement dans SQL Server 2012](http://support.microsoft.com/kb/2972285)  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant appelle la procédure stockée cleanup_server_execution_keys.  
   
 ```sql  

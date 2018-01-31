@@ -8,10 +8,12 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.setbreakpoints.f1
+f1_keywords:
+- sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau suivant indique les couleurs utilisées pour décrire l'état de l'exécution.  
   
-|Color|État de l'exécution|  
+|Couleur|État de l'exécution|  
 |-----------|----------------------|  
 |Gris|En attente d'exécution|  
 |Jaune|Exécution en cours|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 |Fenêtre|Description|  
 |------------|-----------------|  
-|Points d'arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
+|Points d’arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
 |Sortie|Affiche les messages d’état relatifs aux fonctionnalités de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immédiat|Utilisée pour déboguer et évaluer des expressions, et imprimer des valeurs variables.|  
 
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Type du nombre d'accès**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Always**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
@@ -165,6 +167,6 @@ ms.lasthandoff: 11/20/2017
  **Nombre d'accès**  
  Spécifiez le nombre d'accès à partir duquel déclencher un arrêt. Cette option n'est pas disponible si le point d'arrêt est constamment en vigueur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Déboguer un script en définissant des points d’arrêt dans une tâche de script et un composant de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

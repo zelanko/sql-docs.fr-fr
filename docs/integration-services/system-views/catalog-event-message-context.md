@@ -8,44 +8,45 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche des informations sur les conditions associées aux messages d'événements d'exécution, pour les exécutions sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|ID unique du contexte de l'erreur.|  
-|Event_message_id|bigint|ID unique du message auquel le contexte est associé.|  
-|Context_depth|int|À mesure que la profondeur augmente, le contexte s'éloigne de l'erreur. Lorsqu'une erreur se produit, la profondeur du contexte commence à 1. La valeur 0 indique l'état du package avant le démarrage de l'exécution.|  
+|Context_id|BIGINT|ID unique du contexte de l'erreur.|  
+|Event_message_id|BIGINT|ID unique du message auquel le contexte est associé.|  
+|Context_depth|INT|À mesure que la profondeur augmente, le contexte s'éloigne de l'erreur. Lorsqu'une erreur se produit, la profondeur du contexte commence à 1. La valeur 0 indique l'état du package avant le démarrage de l'exécution.|  
 |Package_path|Nvarchar(max)|Chemin d'accès au package de la source du contexte.|  
-|Context_type|smallint|Type de l'objet qui est la source du contexte. Consultez la section **Remarques** pour obtenir la liste des types de contexte.|  
+|Context_type|SMALLINT|Type de l'objet qui est la source du contexte. Consultez la section **Remarques** pour obtenir la liste des types de contexte.|  
 |Context_source_name|Nvarchar(4000)|Nom de l'objet qui est la source du contexte.|  
 |Context_source_id|Nvarchar(38)|ID unique de l'objet qui est la source du contexte.|  
 |Property_name|Nvarchar(4000)|Nom de la propriété associée à la source du contexte.|  
 |Property_value|Sql_variant|Valeur de la propriété associée à la source du contexte.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant répertorie les types de contexte.  
   
 ||||  
 |-|-|-|  
-|Valeur du type de contexte|Nom de type| Description|  
+|Valeur du type de contexte|Nom de type|Description|  
 |10|Tâche|État d'une tâche lorsqu'une erreur s'est produite.|  
 |20|Pipeline|L'erreur provient d'un composant de pipeline : source, destination ou composant de transformation.|  
 |30|Séquence|État d'une séquence.|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |70|Variable|Valeur de variable|  
 |80|Gestionnaire de connexions|Propriétés d'un gestionnaire de connexions.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'opération  

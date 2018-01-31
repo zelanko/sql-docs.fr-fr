@@ -8,27 +8,28 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e8082e110053c9ec8405c2ec1bb544c1c91f47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8c5a94903b6cac800063e9c6c437dc1926385976
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche les détails de toutes les validations du package et du projet dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|Identificateur (ID) unique de la validation.|  
 |environment_scope|**Char(1)**|Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation.|  
@@ -44,27 +45,27 @@ ms.lasthandoff: 11/20/2017
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
 |start_time|**datetimeoffset(7)**|Heure de début de l'opération, si disponible.|  
 |end_time|**datetimeoffsset(7)**|Heure à laquelle l'opération s'est terminée.|  
-|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**Int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
 |caller_name|**nvarchar(128)**|Nom du compte qui a effectué l'opération.|  
-|process_id|**int**|ID de processus externe, le cas échéant.|  
+|process_id|**Int**|ID de processus externe, le cas échéant.|  
 |stopped_by_sid|**varbinary(85)**|SID de l'utilisateur qui a arrêté l'opération.|  
 |stopped_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a arrêté l'opération.|  
 |server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
 |dump_id|**uniqueidentifier**|ID du vidage d'exécution.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque validation dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'opération correspondante  
   
--   L’appartenance au rôle de base de données **ssis_admin**  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance au rôle serveur **sysadmin**  
+-   Appartenance au rôle serveur **sysadmin**  
   
 > [!NOTE]  
 >  Lorsque vous avez l'autorisation pour effectuer une opération sur le serveur, vous avez également l'autorisation pour consulter les informations de l'opération. La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf0f550930ac73199276dc403763f49ce45b5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et EXECUTE sur le projet et, si applicable, autorisations READ sur les environnements référencés.  
@@ -59,7 +60,7 @@ catalog.cleanup_server_log
   
 -   La base de données SSISDB n’est pas en mode mono-utilisateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  SQL Server 2012 Service Pack 2 a ajouté la propriété SERVER_OPERATION_ENCRYPTION_LEVEL à la table **internal.catalog_properties**. Cette propriété a deux valeurs possibles :  
   
 -   **PER_EXECUTION (1)** : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
@@ -82,7 +83,7 @@ catalog.cleanup_server_log
   
  Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance quand vous utilisez SSISDB comme magasin de déploiement dans SQL Server 2012](http://support.microsoft.com/kb/2972285)  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant appelle la procédure stockée cleanup_server_log.  
   
 ```sql  

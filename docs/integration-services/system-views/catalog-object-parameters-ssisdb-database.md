@@ -8,27 +8,28 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27e51e480c01395d69396656b263162d93233440
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c154da24447377cb9f2602a46a116364336e1c1e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche les paramètres de tous les packages et projets dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|Identificateur (ID) unique du paramètre.|  
 |project_id|**bigint**|ID unique du projet.|  
@@ -47,14 +48,14 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|Identifié à titre d'information uniquement. Inutilisé dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |last_validation_time|**datetimeoffset(7)**|Identifié à titre d'information uniquement. Inutilisé dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour consulter des lignes dans cette vue, vous devez avoir l'une des autorisations suivantes :  
   
 -   Autorisation READ sur le projet  
   
--   L’appartenance au rôle de base de données **ssis_admin**  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance au rôle serveur **sysadmin**  
+-   Appartenance au rôle serveur **sysadmin**  
   
  La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  
   

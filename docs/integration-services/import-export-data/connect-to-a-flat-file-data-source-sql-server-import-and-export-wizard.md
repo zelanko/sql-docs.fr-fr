@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données de **fichier plat** (fichier texte) à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Ces deux pages de l’Assistant présentent des jeux d’options différents pour les fichiers plats, ainsi cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.
@@ -38,7 +39,7 @@ Si vous devez importer un fichier texte dans SQL Server et que vous n’avez pas
 Radiomessagerie|Recommandation  |Type  
 ----|---------|---------
 **Général**|Assurez-vous de mettre à jour les options de la section **Format**.|Recommandation    
-**Columns**|Veillez à contrôler les délimiteurs de colonnes et de lignes (pour un fichier délimité), ou de marquer les colonnes (pour un fichier de largeur fixe).|Recommandation
+**Colonnes**|Veillez à contrôler les délimiteurs de colonnes et de lignes (pour un fichier délimité), ou de marquer les colonnes (pour un fichier de largeur fixe).|Recommandation
 **Avancé**|Si vous le souhaitez, vérifiez les types de données ainsi que d’autres propriétés attribuées par défaut aux colonnes.|Ce paramètre est facultatif
 **Aperçu**|Le cas échéant, prévisualisez un échantillon de données en utilisant les paramètres que vous avez spécifiés.|Ce paramètre est facultatif
 
@@ -52,7 +53,7 @@ Radiomessagerie|Recommandation  |Type
  **Nom de fichier**  
  Entrez le chemin et le nom du fichier plat.  
   
- **Parcourir**  
+ **...**  
  Recherchez le fichier plat.  
   
  **Paramètres régionaux**  
@@ -207,7 +208,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
  **Configurez les propriétés de chaque colonne**  
  Dans le volet gauche, sélectionnez une colonne pour afficher ses propriétés dans celui de droite. Le tableau suivant fournit une description des propriétés de colonne. Certaines de ces propriétés sont configurables uniquement pour quelques formats de fichier plat et des colonnes de certains types de données.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**Nom**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**. Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}**. Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}**. Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}**. Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}**. Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}**. Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}**. Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}**. Les colonnes sont séparées par une barre verticale.|
@@ -222,7 +223,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
 **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Ajouter une colonne**|Ajoute une colonne à la fin de la liste.|  
 |**Insérer avant**|Insère une nouvelle colonne avant la colonne sélectionnée.|  
@@ -275,7 +276,7 @@ Pour une destination de fichier plat, il n’existe qu’une seule page d’opti
  **Nom de fichier**  
  Entrez le chemin et le nom du fichier plat.  
   
- **Parcourir**  
+ **...**  
  Recherchez le fichier plat.  
   
  **Paramètres régionaux**  

@@ -11,8 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87b01494565e58186b1f461f61c71a8180f53ec0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77962f05ede4b2650db4af59fdbde5ec42fdf1d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilisation d'images à l'aide de la tâche de script
   Une base de données de produits ou d'utilisateurs contient généralement des images, en plus du texte et des données numériques. L’espace de noms **System.Drawing** dans le Microsoft .NET Framework fournit des classes permettant de manipuler des images.  

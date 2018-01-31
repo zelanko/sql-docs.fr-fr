@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82aeb62f5c160ef11d3a815b73212910e9fe016e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8a121ff43135e79da3e02ede0d2e67e0290f225
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +48,14 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ## <a name="result-sets"></a>Jeux de résultats  
  Le flux binaire du projet est retourné sous forme de **varbinary(MAX)**. Aucun résultat n'est retourné si le dossier ou le projet est introuvable.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ sur le projet  
   
--   L’appartenance au rôle de base de données **ssis_admin**  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance au rôle serveur **sysadmin**  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur de procédure stockée get_project :  

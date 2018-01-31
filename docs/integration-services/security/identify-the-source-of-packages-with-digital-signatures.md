@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.digitalsigning.f1
+f1_keywords:
+- sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
   Il est possible de signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec un certificat numérique pour identifier sa source. Après avoir signé un package avec un certificat numérique, vous pouvez utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package. Pour vérifier la signature à l’aide d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez définir une option dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans l’utilitaire **dtexec** (dtexec.exe), ou définir une valeur de Registre facultative.  
@@ -63,10 +65,10 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau suivant répertorie les valeurs valides des données DWORD et leur stratégie associée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|Pas de restriction administrative.|  
-|1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
+| 1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
 |2|Bloquer les signatures non valides et non approuvées.<br /><br /> Ce paramètre ne bloque pas les packages non signés mais bloque les signatures générées automatiquement.|  
 |3|Bloquer les signatures non valides et non approuvées et les packages non signés.<br /><br /> Ce paramètre bloque lui aussi les signatures générées automatiquement.|  
   

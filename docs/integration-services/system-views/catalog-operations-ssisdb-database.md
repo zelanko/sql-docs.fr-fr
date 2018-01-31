@@ -8,30 +8,31 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da7c2512b5163153aaa4da37e946bd9a7e550e85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a738859dc30fc1a845b15903a8b3691b431f3d1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche les détails de toutes les opérations dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|Identificateur (ID) unique de l'opération.|  
 |operation_type|**smallint**|Type d’opération.|  
@@ -39,18 +40,18 @@ ms.lasthandoff: 11/20/2017
 |object_type|**smallint**|Type d'objet affecté par l'opération. L'objet peut être un dossier (`10`), un projet (`20`), un package (`30`), un environnement (`40`) ou une instance d'exécution (`50`).|  
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
 |object_name|**nvarchar(260)**|Nom de l'objet.|  
-|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**Int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |start_time|**datetimeoffset**|Heure de début de l'opération, si disponible.|  
 |end_time|**datetimeoffsset**|Heure à laquelle l'opération s'est terminée.|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
 |caller_name|**nvarchar(128)**|Nom du compte qui a effectué l'opération.|  
-|process_id|**int**|ID de processus externe, le cas échéant.|  
+|process_id|**Int**|ID de processus externe, le cas échéant.|  
 |stopped_by_sid|**varbinary(85)**|SID de l'utilisateur qui a arrêté l'opération.|  
 |stopped_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a arrêté l'opération.|  
 |server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque opération dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Elle permet à l'administrateur d'énumérer toutes les opérations logiques effectuées sur le serveur, telles que le déploiement d'un projet ou l'exécution d'un package.  
   
  Cette vue affiche les types d’opération suivants, répertoriés dans la colonne **operation_type** :  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
 |`301`|**validate_package**<br /><br /> (Procédure stockée)|ID de projet|Nom du package|  
 |`1000`|**configure_catalog**<br /><br /> (Procédure stockée)|**NULL**|**NULL**||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'opération  

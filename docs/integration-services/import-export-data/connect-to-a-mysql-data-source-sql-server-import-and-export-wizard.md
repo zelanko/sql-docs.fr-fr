@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données MySQL (Assistant Importation et Exportation SQL Server)
 Cette rubrique explique comment se connecter à une source de données **MySQL** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Vous pouvez utiliser plusieurs fournisseurs de données pour vous connecter à MySQL.
@@ -41,7 +42,7 @@ Après avoir sélectionné le **Fournisseur de données .NET Framework pour MySQ
 |Informations nécessaires|Fournisseur de données .NET Framework pour la propriété MySQL|
 |---|---|
 |Nom du serveur|**Server**|
-|Nom de la base de données|**Base de données**|
+|Nom de la base de données|**Sauvegarde de la base de données**|
 |Informations d’authentification (connexion)|**ID d’utilisateur** et **Mot de passe**|
 
 Il n’est pas nécessaire d’entrer la chaîne de connexion dans le champ **ConnectionString** de la liste. Une fois que vous avez entré les valeurs individuelles pour le nom du serveur MySQL (**Serveur**) et les informations de connexion, l’Assistant assemble la chaîne de connexion à partir des propriétés individuelles et de leurs valeurs. 
@@ -73,7 +74,7 @@ Nom du pilote ODBC.
 **Server**  
 Nom du serveur MySQL. 
 
-**Base de données**  
+**Sauvegarde de la base de données**  
 Nom de la base de données MySQL.
 
 **UID** et **Pwd**   

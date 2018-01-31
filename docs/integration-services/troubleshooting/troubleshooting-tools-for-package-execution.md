@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/20/2017
   
     1.  **Créez une table parent chargée de consigner chaque exécution d'un package**. Cette table parent dispose d'une seule ligne pour chaque exécution d'un package et utilise l'ExecutionID pour établir un lien avec les enregistrements enfants de la table de journalisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez exécuter une tâche d'exécution SQL au début de chaque package pour créer cette nouvelle ligne et enregistrer l'heure de début. Vous pouvez ensuite utiliser une autre tâche d'exécution SQL à la fin du package pour mettre à jour la ligne avec l'heure de fin, la durée et l'état.  
   
-    2.  **Ajoutez des informations d'audit au flux de données**. Vous pouvez utiliser la transformation d'audit pour ajouter aux lignes du flux de données des informations sur l'exécution de package ayant entraîné la création ou la modification de chaque ligne. La transformation d'audit met neuf éléments d'information à disposition, notamment les variables PackageName et ExecutionInstanceGUID. Pour plus d’informations, voir [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Si vous disposez d'informations personnalisées que vous aimeriez inclure dans chaque ligne à des fins d'audit, vous pouvez les ajouter aux lignes dans le flux de données à l'aide d'une transformation de colonne dérivée. Pour plus d’informations, voir [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Ajoutez des informations d'audit au flux de données**. Vous pouvez utiliser la transformation d'audit pour ajouter aux lignes du flux de données des informations sur l'exécution de package ayant entraîné la création ou la modification de chaque ligne. La transformation d'audit met neuf éléments d'information à disposition, notamment les variables PackageName et ExecutionInstanceGUID. Pour plus d’informations, voir [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Si vous disposez d'informations personnalisées que vous aimeriez inclure dans chaque ligne à des fins d'audit, vous pouvez les ajouter aux lignes dans le flux de données à l'aide d'une transformation de colonne dérivée. Pour plus d'informations, consultez [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Si possible, capturez les données sur le nombre de lignes**. Si possible, créez une table séparée pour les informations concernant le nombre de lignes dans laquelle chaque instance d'exécution de package est identifiée par son ExecutionID. Utilisez la transformation de calcul du nombre de lignes pour enregistrer le nombre de lignes dans une série de variables à des étapes critiques du flux de données. À la fin du flux de données, utilisez une tâche d'exécution SQL pour insérer la série de valeurs dans une ligne de la table en vue d'une analyse et d'un rapport ultérieurs.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>Résoudre les erreurs sans description  
  Si vous rencontrez une erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sans description qui l'accompagne, vous pouvez localiser cette dernière dans le [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md) en recherchant l'erreur d'après son numéro. La liste ne comporte actuellement aucune information de dépannage.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Contenu associé  

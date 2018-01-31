@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dtsserver.packageroles.f1
+f1_keywords:
+- sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - security [Integration Services], roles
 - db_ssisoperator role
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e618908333f48e0a86fa7974ce82f0a48293c5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Rôles Integration Services (Service SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit certains rôles fixes de niveau base de données pour aider à sécuriser l’accès aux packages stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les rôles disponibles diffèrent selon que vous enregistrez les packages dans la base de données du catalogue SSIS (SSISDB) ou dans la base de données msdb.  
@@ -50,11 +52,11 @@ ms.lasthandoff: 11/20/2017
 ### <a name="read-and-write-actions"></a>Actions de lecture et d'écriture  
  Le tableau suivant décrit les actions de lecture et d’écriture de Windows et des rôles fixes de niveau base de données dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Rôle|Action de lecture|Action d'écriture|  
+|Role|Action de lecture|Action d'écriture|  
 |----------|-----------------|------------------|  
-|**db_ssisadmin**<br /><br /> ou<br /><br /> **sysadmin**|Énumérer ses packages.<br /><br /> Énumérer tous les packages.<br /><br /> Afficher ses packages.<br /><br /> Afficher tous les packages.<br /><br /> Exécuter ses packages.<br /><br /> Exécuter tous les packages.<br /><br /> Exporter ses packages.<br /><br /> Exporter tous les packages.<br /><br /> Exécuter tous les packages dans l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Importer des packages.<br /><br /> Supprimer ses packages.<br /><br /> Supprimer tous les packages.<br /><br /> Modifier les rôles de ses packages.<br /><br /> Modifier tous les rôles de package.<br /><br /> <br /><br /> **\*\* Avertissement \*\***Il se peut que les membres du rôle db_ssisadmin et du rôle dc_admin puissent élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.|  
+|**db_ssisadmin**<br /><br /> ou Gestionnaire de configuration<br /><br /> **sysadmin**|Énumérer ses packages.<br /><br /> Énumérer tous les packages.<br /><br /> Afficher ses packages.<br /><br /> Afficher tous les packages.<br /><br /> Exécuter ses packages.<br /><br /> Exécuter tous les packages.<br /><br /> Exporter ses packages.<br /><br /> Exporter tous les packages.<br /><br /> Exécuter tous les packages dans l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Importer des packages.<br /><br /> Supprimer ses packages.<br /><br /> Supprimer tous les packages.<br /><br /> Modifier les rôles de ses packages.<br /><br /> Modifier tous les rôles de package.<br /><br /> <br /><br /> **\*\* Avertissement \*\***Il se peut que les membres du rôle db_ssisadmin et du rôle dc_admin puissent élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.|  
 |**db_ssisltduser**|Énumérer ses packages.<br /><br /> Énumérer tous les packages.<br /><br /> Afficher ses packages.<br /><br /> Exécuter ses packages.<br /><br /> Exporter ses packages.|Importer des packages.<br /><br /> Supprimer ses packages.<br /><br /> Modifier les rôles de ses packages.|  
-|**db_ssisoperator**|Énumérer tous les packages.<br /><br /> Afficher tous les packages.<br /><br /> Exécuter tous les packages.<br /><br /> Exporter tous les packages.<br /><br /> Exécuter tous les packages dans l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Aucun|  
+|**db_ssisoperator**|Énumérer tous les packages.<br /><br /> Afficher tous les packages.<br /><br /> Exécuter tous les packages.<br /><br /> Exporter tous les packages.<br /><br /> Exécuter tous les packages dans l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|None|  
 |**Administrateurs Windows**|Afficher les détails d'exécution de tous les packages en cours d'exécution.|Arrêter tous les packages en cours d'exécution.|  
   
 ### <a name="sysssispackages-table"></a>Table sysssispackages  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 -   La colonne **ownersid** contient l'identificateur de sécurité unique de l'utilisateur qui a créé le package. Cette colonne définit le propriétaire du package.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Par défaut, les autorisations des rôles fixes de niveau base de données **db_ssisadmin** et **db_ssisoperator** et l’identificateur de sécurité unique de l’utilisateur qui a créé le package s’appliquent au rôle de lecteur pour les packages, tandis que les autorisations du rôle **db_ssisadmin** et l’identificateur de sécurité unique de l’utilisateur qui a créé le package s’appliquent au rôle de rédacteur. Un utilisateur doit être membre du rôle **db_ssisadmin**, **db_ssisltduser**ou **db_ssisoperator** pour bénéficier d’un accès en lecture au package. Un utilisateur doit être membre du rôle **db_ssisadmin** pour bénéficier d’un accès en écriture.  
   
 ### <a name="access-to-packages"></a>Accès aux packages  

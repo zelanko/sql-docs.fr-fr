@@ -8,30 +8,31 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a095bff8fd8feec5a278ed8dc7de648babaa7c2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche des messages entrés pendant des opérations dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Identificateur (ID) unique du message.|  
 |operation_id|**bigint**|ID unique de l'opération.|  
@@ -41,15 +42,15 @@ ms.lasthandoff: 11/20/2017
 |message|**nvarchar(max)**|Texte du message.|  
 |extended_info_id|**bigint**|ID des informations supplémentaires relatives au message d’opération, trouvé dans la vue [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque message entré pendant une opération dans le catalogue. Le message peut être généré par le serveur, par le processus d'exécution du package ou par le moteur d'exécution.  
   
  Cette vue affiche les types de message suivants :  
   
-|Valeur **message_type**| Description|  
+|Valeur **message_type**|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
-|120|Erreur|  
+|120|Error|  
 |110|Avertissement|  
 |70|Informations|  
 |10|Pré-valider|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
  Cette vue affiche les types de source de message suivants.  
   
-|**message_source_type**| Description|  
+|**message_source_type**|Description|  
 |-------------------------------|-----------------|  
 |10|API d'entrée, telles que T-SQL et les procédures stockées CLR|  
 |20|Processus externe utilisé pour exécuter le package (ISServerExec.exe)|  
@@ -77,14 +78,14 @@ ms.lasthandoff: 11/20/2017
 |50|Conteneurs de flux de contrôle|  
 |60|Tâche de flux de données|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'opération  
   
--   L’appartenance au rôle de base de données **ssis_admin**  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance au rôle serveur **sysadmin**  
+-   Appartenance au rôle serveur **sysadmin**  
   
 > [!NOTE]  
 >  Lorsque vous avez l'autorisation pour effectuer une opération sur le serveur, vous avez également l'autorisation pour consulter les informations de l'opération. La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  

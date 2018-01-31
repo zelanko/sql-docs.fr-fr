@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
   La transformation de recherche floue effectue des tâches de nettoyage des données telles que la standardisation des données, la correction des données et la fourniture de données manquantes.  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  Les performances de cette transformation peuvent s'améliorer si les tables et les index qu'elle utilise sont situés sur l'ordinateur local. Si la table de référence que la transformation de recherche floue utilise se trouve sur le serveur de production, vous devez envisager de copier la table sur un serveur qui ne soit pas un serveur production et de configurer la transformation de recherche floue pour accéder à la copie. Ce faisant, vous pouvez empêcher les requêtes de recherche de consommer des ressources sur le serveur de production. En outre, si la transformation de recherche floue gère l’index de correspondances (c’est-à-dire si MatchIndexOptionsis a pour valeur **GenerateAndMaintainNewIndex**), la transformation peut verrouiller la table de référence durant l’opération de nettoyage des données et empêcher les autres utilisateurs et applications d’accéder à la table.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configuration de la transformation de recherche floue  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d’informations sur la définition des propriétés d’un composant de flux de données, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche floue (onglet Table de référence)
@@ -219,7 +220,7 @@ ms.lasthandoff: 11/20/2017
  **Séparateurs de jetons**  
  Indiquez les séparateurs utilisés par la transformation pour marquer les valeurs de colonne.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformation de recherche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

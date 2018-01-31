@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/12/2017
 -   Les caractères suivants peuvent être des lettres ou des nombres conformément à la norme Unicode 2.0, ou un trait de soulignement (_).  
   
 ###  <a name="EnvironmentVariable"></a> Variable d'environnement  
- Lorsque vous attribuez un nom à une variable d'environnement, respectez les règles suivantes :  
+ Lorsque vous attribuez un nom à une variable d'environnement, respectez les règles suivantes :  
   
 -   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), le signe supérieur à (>), la barre verticale (|), le retour arrière (\b), la valeur null (\0) et la tabulation (\t).  
   
@@ -178,7 +179,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
 |Nombre maximal de versions par projet|MAX_PROJECT_VERSIONS|  
 |Niveau d'enregistrement par défaut au niveau du serveur|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Les projets, les environnements et les packages sont contenus dans des dossiers qui sont des objets sécurisables. Vous pouvez accorder des autorisations à un dossier, notamment l'autorisation de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS vous permet de déléguer l'administration du contenu du dossier à un utilisateur sans avoir à accorder à celui-ci l'appartenance au rôle ssis_admin. Vous pouvez également accorder des autorisations relatives à des projets, des environnements et des opérations. Les opérations incluent l'initialisation de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le déploiement de projets, la création et le démarrage d'exécutions, la validation de projets et de packages, ainsi que la configuration du catalogue **SSISDB** .  
   
  Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -464,7 +465,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
     ```  
   
-3.  Restaurez la base de données SSISDB à partir de la sauvegarde, à l’aide de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez les rubriques suivantes :  
+3.  Restaurez la base de données SSISDB à partir de la sauvegarde, à l’aide de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez les rubriques suivantes :  
   
     -   [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -662,7 +663,7 @@ Si l’option **Activer la prise en charge d’Always On** du menu contextuel se
   
 5.  Suivez les instructions de [l’étape 3 : activer la prise en charge de SSIS pour AlwaysOn](#Step3).  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   Entrée de blog, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
   

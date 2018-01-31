@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.createtablesql.f1
+f1_keywords:
+- sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 094f418f8304742c462ff119c2e55d3d9cace1ad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 750f5f411660a80f81522e591b28dc3956fa1eee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instruction SQL de création de table (Assistant Importation et Exportation SQL Server)
 Dans la boîte de dialogue **Mappage de colonnes** , si vous sélectionnez **Créer la table de destination** , puis **Modifier SQL** , l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la boîte de dialogue **Instruction SQL de création de table** . Dans cette page, vous passez en revue et éventuellement personnalisez les options de la commande **CREATE TABLE** que l’Assistant doit exécuter pour créer la nouvelle table de destination.
@@ -57,7 +59,7 @@ Pour plus d’informations sur l’instruction CREATE TABLE et sa syntaxe, consu
 
 Pour plus d’informations sur la syntaxe, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Pour plus d’informations sur FILESTREAM, consultez [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez passé en revue et personnalisé les options de la commande CREATE TABLE, cliquez sur **OK**. La boîte de dialogue **Instruction SQL de création de table** vous renvoie alors à la boîte de dialogue **Mappages de colonnes** . Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Voir aussi

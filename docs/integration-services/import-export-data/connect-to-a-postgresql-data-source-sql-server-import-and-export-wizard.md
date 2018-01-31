@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58d8e69ae49c56716d8d0f5393fad329bd924b21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données PostgreSQL (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données **PostgreSQL** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. 
@@ -40,21 +41,21 @@ Exécutez Stack Builder pour ajouter le pilote ODBC PostgreSQL (psqlODBC) à vot
 Téléchargez le Windows Installer de la dernière version du pilote ODBC PostgreSQL (psqlODBC) directement à partir de ce site FTP : [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extrayez les fichiers du fichier .zip et exécutez le fichier .msi.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Se connecter à PostgreSQL avec le pilote ODBC PostgreSQL (psqlODBC)
-Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une Destination**. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
+Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une destination**. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
 
-Voici l’écran générique que vous affichez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
+Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
 
 ![Connexion à PostgreSQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
 ### <a name="options-to-specify-postgresql-odbc-driver"></a>Options à spécifier (pilote ODBC PostgreSQL)
 
 > [!NOTE]
-> Les options de connexion de ce fournisseur de données et pilote ODBC sont les mêmes, que PostgreSQL soit la source ou la destination. Autrement dit, les options que vous affichez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
+> Les options de connexion de ce fournisseur de données et pilote ODBC sont les mêmes, que PostgreSQL soit la source ou la destination. Autrement dit, les options que vous voyez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
 Pour vous connecter à PostgreSQL au moyen du pilote ODBC PostgreSQL, assemblez une chaîne de connexion qui inclut les paramètres suivants accompagnés de leur valeur. Le format d’une chaîne de connexion complète est donné immédiatement après la liste des paramètres.
 
 > [!TIP]
-> Obtenez de l’aide pour l’assemblage d’une chaîne de connexion correcte. Au lieu de produire une chaîne de connexion, vous pouvez fournir un DSN (nom de source de données) existant ou en créer un. Pour obtenir plus d’informations sur ces options, consultez [Se connecter à une source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+> Obtenez de l’aide pour l’assemblage d’une chaîne de connexion correcte. Au lieu de produire une chaîne de connexion, vous pouvez fournir un nom de source de données (DSN, data source name) existant ou en créer un. Pour obtenir plus d’informations sur ces options, consultez [Se connecter à une source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Driver**  
 Nom du pilote ODBC, soit **PostgreSQL ODBC Driver(UNICODE)** ou **PostgreSQL ODBC Driver(ANSI)**.
@@ -65,21 +66,21 @@ Nom du serveur PostgreSQL.
 **Port**  
 Port à utiliser pour se connecter au serveur PostgreSQL.
 
-**Database**  
+**Sauvegarde de la base de données**  
 Nom de la base de données PostgreSQL.
 
 **UID** et **Pwd**   
 **Uid** (id d’utilisateur) et **Pwd** (mot de passe) pour se connecter.
 
 ### <a name="connection-string-format"></a>Format de chaîne de connexion
-Voici le format d’une chaîne de connexion par défaut. 
+Voici le format d’une chaîne de connexion standard. 
 
     ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
     ```
 
 ### <a name="enter-the-connection-string"></a>Entrer la chaîne de connexion
-Indiquez la chaîne de connexion dans le champ **ConnectionString** ou entrez le nom DSN dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une Destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.
+Indiquez la chaîne de connexion dans le champ **ConnectionString** ou entrez le nom de la source de données dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une Destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.
 
 L’exemple suivant utilise cette chaîne de connexion.
 
@@ -87,7 +88,7 @@ L’exemple suivant utilise cette chaîne de connexion.
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
     ```
 
-Voici l’écran que vous affichez après avoir entré la chaîne de connexion.
+Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
 
 ![Connexion à PostgreSQL avec ODBC](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
 

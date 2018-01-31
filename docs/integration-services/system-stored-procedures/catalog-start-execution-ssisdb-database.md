@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33f50d558073a82985ef225288471489d220e2c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  Nombre de nouvelles tentatives en cas d’échec de l’exécution. Il prend effet uniquement si l’exécution a lieu dans Scale Out. Ce paramètre est facultatif. S’il n’est pas spécifié, sa valeur est définie sur 0. *retry_count* est de type **int**.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une exécution est utilisée pour spécifier les valeurs de paramètre qui sont utilisées par un package pendant une instance d’exécution unique du package. Le projet correspondant peut être redéployé une fois une instance d'exécution créée et avant son démarrage. Dans ce cas, l’instance d’exécution référence un projet obsolète. Cette référence non valide provoque l’échec de la procédure stockée.  
   
 > [!NOTE]  
 >  Les exécutions peuvent être démarrées uniquement une fois. Pour démarrer une instance d’exécution, elle doit avoir l’état Created (valeur `1` dans la colonne **status** de la vue [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant appelle catalog.create_execution pour créer une instance d'exécution pour le package Child1.dtsx. Project1 Integration Services contient le package. L'exemple appelle catalog.set_execution_parameter_value afin de définir des valeurs pour les paramètres Parameter1, Parameter2 et LOGGING_LEVEL. L'exemple appelle catalog.start_execution pour démarrer une instance d'exécution.  
   
 ```sql
@@ -68,9 +69,9 @@ GO
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'instance d'exécution, autorisations READ et EXECUTE sur le projet, et si applicable, autorisations READ sur l'environnement référencé  

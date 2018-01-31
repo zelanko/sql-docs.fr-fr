@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>Déploiement de packages hérités (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des outils et des assistants qui facilitent le déploiement de packages de l’ordinateur de développement au serveur de production ou à d’autres ordinateurs.  
@@ -193,7 +194,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  À partir de la boîte de dialogue **Bibliothèque des configurations du package** , vous pouvez exécuter l'Assistant Configuration de package, qui vous guide à travers les étapes de création d'une configuration. Pour exécuter l'Assistant Configuration de package, ajoutez une nouvelle configuration dans la boîte de dialogue **Bibliothèque des configurations du package** ou modifiez une configuration existante. Sur les pages de l'Assistant, vous choisissez un type de configuration, vous choisissez si vous souhaitez accéder directement à la configuration ou utiliser des variables d'environnement, et vous sélectionnez les propriétés à enregistrer dans la configuration.  
   
- L'exemple suivant illustre les propriétés cibles d'une variable et d'un package telles qu'elles apparaissent dans la page Fin de l'Assistant de l'Assistant Configuration de package :  
+ L'exemple suivant illustre les propriétés cibles d'une variable et d'un package telles qu'elles apparaissent dans la page Fin de l'Assistant de l'Assistant Configuration de package :  
   
  \Package.Variables[User::TodaysDate].Properties[RaiseChangedEvent]  
   
@@ -221,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Le tableau suivant décrit les colonnes dans la liste des configurations de la boîte de dialogue **Bibliothèque des configurations du package** .  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |**Nom de la configuration**|Le nom de la configuration.|  
 |**Type de configuration**|Le type de la configuration.|  
@@ -343,7 +344,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Nom du fichier de configuration**|Tapez le chemin d'accès du fichier de configuration généré par l'Assistant.|  
-|**Parcourir**|La boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** permet de spécifier le chemin d’accès au fichier de configuration généré par l’Assistant. Si le fichier n'existe pas, l'Assistant le crée.|  
+|**...**|La boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** permet de spécifier le chemin d’accès au fichier de configuration généré par l’Assistant. Si le fichier n'existe pas, l'Assistant le crée.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
@@ -600,7 +601,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Type**  
  Affiche le type des données de la propriété.  
   
- **Valeur**  
+ **Value**  
  Spécifiez la valeur de la configuration.  
   
  **Suivant**  
@@ -653,7 +654,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Dossier**  
  Définissez le chemin d'accès et le dossier de copie du package et de ses dépendances.  
   
- **Parcourir**  
+ **...**  
  Accédez au dossier cible via la boîte de dialogue **Rechercher un dossier** .  
   
  **Suivant**  
@@ -675,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Utiliser l'authentification SQL Server**  
  Permet d'indiquer si la méthode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être utilisée pour ouvrir une session sur le serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Indique un nom d'utilisateur.  
   
  **Mot de passe**  

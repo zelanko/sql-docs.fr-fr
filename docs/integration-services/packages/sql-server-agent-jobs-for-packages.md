@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4b24dfbb66204f7506cac9612f46e04836f70e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Travaux de l'Agent SQL Server pour les packages
   Automatisez et planifiez l’exécution des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/20/2017
     ||**Vider en cas d'erreurs**<br /><br /> Déterminez si des fichiers de vidage du débogage sont générés lorsqu'une erreur se produit pendant l'exécution du package. Les fichiers contiennent des informations sur l'exécution du package qui peuvent vous aider à résoudre les problèmes d'exécution. Quand vous sélectionnez cette option et qu’une erreur se produit pendant l’exécution, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un fichier .mdmp (fichier binaire) et un fichier .tmp (fichier texte). Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke ces fichiers dans le dossier *\<lecteur>:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Runtime 32 bits**<br /><br /> Indiquez si le package est exécuté à l’aide de la version 32 bits de l’utilitaire dtexec sur un ordinateur 64 bits contenant une version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.<br /><br /> Il peut être nécessaire d'exécuter le package à l'aide de la version 32 bits de dtexec si, par exemple, le package utilise un fournisseur OLE DB natif qui n'est pas disponible en version 64 bits. Pour plus d'informations, consultez [Considérations 64 bits pour Integration Services](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Par défaut, lorsque vous sélectionnez le type d'étape de travail **Package SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent exécute le package à l'aide de la version de l'utilitaire dtexec qui est appelée automatiquement par le système. Le système appelle la version 32 bits ou 64 bits de l'utilitaire selon le processeur de l'ordinateur, et de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui s'exécute sur l'ordinateur.|  
   
-     **Source du package**: SQL Server, Magasin de packages SSIS ou Système de fichiers  
+     **Source du package**:  SQL Server, Magasin de packages SSIS ou Système de fichiers  
   
      Plusieurs options que vous pouvez définir pour les packages stockées dans SQL Server, le magasin de packages SSIS ou le système de fichiers correspondent aux options de ligne de commande de l’utilitaire d’invite de commandes **dtexec** . Pour plus d’informations sur l’utilitaire et les options de la ligne de commande, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/20/2017
     > [!TIP]  
     >  Lorsque vous nommez la planification, utilisez un nom unique et un descriptif, pour différencier plus facilement la planification des autres planifications de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exécution de projets et de packages](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>Ressources externes  

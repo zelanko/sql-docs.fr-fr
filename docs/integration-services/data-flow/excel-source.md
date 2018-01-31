@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-source"></a>Source Excel
   La source Excel extrait des données de feuilles de calcul ou de plages dans des classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Texte tronqué**. Lorsque le pilote détermine qu'une colonne Excel contient des données texte, il sélectionne le type de données (string ou memo) en fonction de la valeur la plus longue qu'il échantillonne. Si le pilote ne découvre pas de valeurs comptant plus de 255 caractères dans les lignes échantillonnées, il traite la colonne comme une colonne de type string à 255 caractères et non comme une colonne de type memo. Par conséquent, les valeurs de plus de 255 caractères peuvent être tronquées. Pour importer des données à partir d'une colonne de type memo sans troncation, vous devez vous assurer que la colonne de type memo dans au moins une des lignes échantillonnées contient une valeur comptant plus de 255 caractères, sinon, vous devez augmenter le nombre de lignes échantillonnées par le pilote pour inclure une telle ligne. Vous pouvez augmenter le nombre de lignes échantillonnées en augmentant la valeur de **TypeGuessRows** sous la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Pour plus d’informations, consultez [PRB : échec de transfert de données de source Jet 4.0 OLEDB avec erreur de dépassement de mémoire tampon](http://support.microsoft.com/kb/281517).  
   
--   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
+-   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
   
     -   Numérique – virgule flottante à double précision (DT_R8)  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/20/2017
     -   Conversion entre des colonnes numériques Excel à double précision et des colonnes numériques d'autres types.  
   
 ## <a name="excel-source-configuration"></a>Configuration d'une source Excel  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  La boîte de dialogue **Éditeur avancé** reflète toutes les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations sur le bouclage dans un groupe de fichiers Excel, consultez [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Mapper des paramètres de requête à des variables dans un composant de flux de données](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **Mode d'accès aux données**  
  Spécifiez la méthode de sélection des données dans la source.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Table ou vue|Récupérez des données à partir d'une feuille de calcul ou d'une plage nommée dans le fichier Excel.|  
 |Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -153,8 +154,8 @@ ms.lasthandoff: 11/20/2017
  **Build query**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
- **Parcourir**  
- Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+ **...**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
  **Analyser la requête**  
  Vérifiez la syntaxe du texte de la requête.  

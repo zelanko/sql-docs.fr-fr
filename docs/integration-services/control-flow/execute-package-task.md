@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Contrôle de la sécurité des packages. Les auteurs de package ont besoin d'accéder à une seule partie d'une solution multipackage. En séparant un package en plusieurs packages, vous pouvez fournir un niveau de sécurité plus élevé ; en effet, vous pouvez permettre à un auteur d'accéder aux seuls packages appropriés.  
   
- Un package qui exécute d'autres packages est généralement appelé « package parent », tandis que les packages exécutés par un flux de travail parent sont appelés « packages enfants ».  
+ Un package qui exécute d'autres packages est généralement appelé « package parent », tandis que les packages exécutés par un flux de travail parent sont appelés « packages enfants ».  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des tâches qui effectuent des opérations de flux de travail, telles que l'exécution de fichiers de commandes, d'exécutables et de packages. Pour plus d'informations, consultez [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Lorsque vous entrez le nom de la variable de package parent sur la page **Script** dans l' **Éditeur de tâche de script**, n'incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable lorsque vous exécutez le package parent.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configuration de la tâche d'exécution de package  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/20/2017
  **Emplacement**  
  Sélectionnez l'emplacement du package enfant. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**SQL Server**|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Système de fichiers**|Permet de définir l'emplacement du système de fichiers.|  

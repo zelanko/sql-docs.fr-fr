@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="execute-sql-task"></a>Exécuter des requêtes SQL, tâche
+# <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
   
 -   Tronquer une table ou une vue pour la préparer à l'insertion de données.  
@@ -159,7 +160,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
   
  Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définissez la source d'une instruction Transact-SQL. Sélectionnez cette valeur pour afficher l'option dynamique **SQLStatement**.|  
 |**Connexion de fichiers**|Sélectionnez un fichier qui contient une instruction Transact-SQL. Configurez cette option pour afficher l'option dynamique **FileConnection**.|  
@@ -173,7 +174,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
   
  **Rubriques connexes :**  [Exécution préparée](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **Parcourir**  
+ **...**  
  Utilisez la boîte de dialogue **Ouvrir** pour rechercher un fichier qui contient une instruction SQL. Sélectionnez un fichier dont vous voulez copier le contenu en tant qu'instruction SQL dans la propriété **SQLStatement** .  
   
  **Générer la requête**  
@@ -333,7 +334,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 -   Un paramètre de sortie doté du type de données approprié, tel que répertorié dans le tableau suivant.  
   
-    |Type de paramètre de**sortie** |Type de données Date|  
+    |Type de paramètre de **sortie**|Type de données Date|  
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
@@ -353,7 +354,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> - ou -<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> -ou-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  Si les données ne sont pas stockées dans le paramètre d'entrée ou de sortie approprié, le package échoue.  
@@ -491,7 +492,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
   
  L'utilisation d'ensembles de résultats dans une tâche d'exécution SQL ne permet pas uniquement de savoir si la commande SQL retourne un ensemble de résultats et ce que celui-ci contient. D'autres indications et spécifications d'utilisation permettent d'utiliser avec succès des jeux de résultats dans la tâche d'exécution SQL. Le reste de cette rubrique traite de ces indications et spécifications d'utilisation.  
   
--   [Spécifier un type d'ensemble de résultats](#Result_set_type)  
+-   [Spécification d'un type d'ensemble de résultats](#Result_set_type)  
   
 -   [Remplir une variable à l’aide d’un jeu de résultats](#Populate_variable_with_result_set)  
   
@@ -529,7 +530,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
 |---------------------|---------------------------|--------------------|  
 |Ligne unique|Tout type compatible avec la colonne de type contenue dans l'ensemble de résultats.|Non applicable|  
 |Ensemble de résultats complet|**Objet**|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un **Recordset**ADO.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l’objet retourné est un **System.Data.DataSet**.<br /><br /> Vous pouvez utiliser une tâche de script pour accéder à l'objet **System.Data.DataSet** , comme le montre l'exemple suivant.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**Chaîne**|**Chaîne**|  
+|XML|**String**|**String**|  
 |XML|**Objet**|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)], l’objet retourné est un **System.Xml.XmlDocument**.|  
   
  Vous pouvez définir la variable dans l'étendue de la tâche d'exécution SQL ou dans celle du package. Si la variable a l'étendue d'un package, le jeu de résultats est disponible pour les autres tâches et conteneurs figurant dans le package, ainsi que pour les packages exécutés par les tâches d'exécution de package ou d'exécution de package DTS 2000.  
@@ -577,7 +578,7 @@ Cette section décrit comment créer un mappage entre un jeu de résultats et un
 -   Lorsque vous utilisez les gestionnaires de connexions ODBC et ADO.NET, la tâche n'ignore pas les jeux de résultats qui se produisent après le premier jeu de résultats. Avec ces gestionnaires de connexions, la tâche échoue avec une erreur quand un jeu de résultats autre que le premier jeu de résultats contient une erreur.  
   
 ### <a name="custom-log-entries"></a>Entrées de journal personnalisées  
- Le tableau suivant décrit les entrées de journal personnalisées pour la tâche d'exécution SQL. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Le tableau suivant décrit les entrées de journal personnalisées pour la tâche d'exécution SQL. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  

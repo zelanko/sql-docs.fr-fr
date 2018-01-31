@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc4746e92e02c76248323cb48389826cc3890a4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8233e11171d5adc7656fd2b2ce75c86fca2c07fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le programme d'installation vous permet d'installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d'autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur unique.    
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
 |**Configuration de l'instance**|Aucune sélection effectuée dans la page **Configuration de l'instance** n'affecte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> Vous pouvez installer une seule instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur. Vous vous connectez au service en utilisant le nom d'ordinateur.<br /><br /> Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages qui sont stockés dans la base de données **msdb** , dans l'instance du moteur de base de données qui est installée au même moment qu' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si une instance du moteur de base de données n'est pas installée au même moment qu' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages qui sont stockés dans la base de données **msdb** de l'instance locale par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour gérer des packages stockés dans une instance nommée ou une instance distante de [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou dans plusieurs instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez modifier le fichier de configuration. Pour plus d’informations sur la modification de ce fichier de configuration, consultez [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|    
 |**Configuration du serveur**|Passez en revue les paramètres du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans l'onglet **Comptes de service** de la page **Configuration du serveur** .<br /><br /> Si Windows 7 ou Windows Server 2008 R2 est installé, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est inscrit pour s’exécuter sous le compte virtuel NT Services\MsDtsServer130, et le **Type de démarrage** est **Automatique**.  Vous n'êtes pas tenu d'entrer un mot de passe pour le compte virtuel. Si Microsoft Vista ou Windows Server 2008 est installé, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est inscrit pour s’exécuter sous le compte Service Réseau intégré et le **Type de démarrage** est **Automatique**. Vous n'êtes pas tenu d'entrer un mot de passe pour le compte de service réseau intégré.|    
     
- Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser les événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d'entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1.    
+ Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser les événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d'entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1.    
     
 ## <a name="understanding-the-integration-services-service"></a>Fonctionnement du service Integration Services    
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .    

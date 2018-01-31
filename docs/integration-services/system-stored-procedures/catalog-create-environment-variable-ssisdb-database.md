@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e020fef5d484af024ef822cf6fcc654e547b7b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7bd491ec0bc33dbcc35a309208b37cf3893d062
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'environnement  
@@ -86,7 +87,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une variable d'environnement peut être utilisée pour affecter efficacement une valeur à un paramètre du projet ouà  un paramètre du package pour une utilisation dans l'exécution d'un package. Les variables d'environnement permettent d'organiser les valeurs de paramètre. Les noms de variable doivent être uniques dans un environnement.  
   
  La procédure stockée valide le type de données de la variable pour s'assurer qu'elle est prise en charge par le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -103,10 +104,10 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
 |**Double**|Valeur numérique exacte : **decimal**, **numeric** ; Valeur numérique approchée : **float**, **real**|  
 |**Int16**|**smallint**|  
-|**Int32**|**int**|  
+|**Int32**|**Int**|  
 |**Int64**|**bigint**|  
 |**Unique**|Valeur numérique exacte : **decimal**, **numeric** ; Valeur numérique approchée : **float**, **real**|  
-|**Chaîne**|**varchar**, **nvarchar**, **char**|  
+|**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** est le mappage le plus proche de **Uint32**.)|  
 |**UInt64**|**bigint** (**int** est le mappage le plus proche de **Uint64**.)|  
   

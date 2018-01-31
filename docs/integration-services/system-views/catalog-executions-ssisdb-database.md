@@ -8,30 +8,31 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4bb75156f20f2d652d7553937ac5772a56fdf91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9660ea26696e31362bf9b88b343a08936f8e9ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche les instances d'exécution du package dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Packages exécutés avec la tâche d'exécution du package dans la même instance d'exécution comme package parent.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Identificateur unique (ID) de l’instance d’exécution.|  
 |folder_name|**sysname(nvarchar(128))**|Nom du dossier qui contient le projet.|  
@@ -47,34 +48,34 @@ ms.lasthandoff: 11/20/2017
 |use32bitruntime|**bit**|Indique si l'exécution 32 bits est utilisée pour exécuter le package sur un système d'exploitation 64 bits. Quand la valeur est `1`, l’exécution 32 bits est utilisée. Lorsque la valeur est `0`, l'exécution 64 bits est utilisée.|  
 |object_type|**smallint**|Type de l'objet. L'objet peut être un projet (`20`) ou un package (`30`).|  
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
-|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**Int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |start_time|**datetimeoffset**|Heure de démarrage de l'instance d'exécution.|  
 |end_time|**datetimeoffsset**|Heure d'exécution de l'instance d'exécution.|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
 |caller_name|**nvarchar(128)**|Nom du compte qui a effectué l'opération.|  
-|process_id|**int**|ID de processus externe, le cas échéant.|  
+|process_id|**Int**|ID de processus externe, le cas échéant.|  
 |stopped_by_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur qui a arrêté l'instance d'exécution.|  
 |stopped_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a arrêté l'instance d'exécution.|  
 |total_physical_memory_kb|**bigint**|Mémoire physique totale (en mégaoctets) sur le serveur au démarrage de l'exécution.|  
 |available_physical_memory_kb|**bigint**|Mémoire physique disponible (en mégaoctets) sur le serveur au démarrage de l'exécution.|  
 |total_page_file_kb|**bigint**|Mémoire de pages totale (en mégaoctets) sur le serveur au démarrage de l'exécution.|  
 |available_page_file_kb|**bigint**|Mémoire de pages disponible (en mégaoctets) sur le serveur au démarrage de l'exécution.|  
-|cpu_count|**int**|Nombre d'UC logiques sur le serveur au démarrage de l'exécution.|  
+|cpu_count|**Int**|Nombre d'UC logiques sur le serveur au démarrage de l'exécution.|  
 |server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
 |dump_id|**uniqueidentifier**|ID d'un vidage d'exécution.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque instance d'exécution dans le catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'instance d'exécution  
   
--   L’appartenance au rôle de base de données **ssis_admin**  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance au rôle serveur **sysadmin**  
+-   Appartenance au rôle serveur **sysadmin**  
   
 > [!NOTE]  
 >  La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  

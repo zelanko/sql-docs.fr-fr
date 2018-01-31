@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab3783ac708dcf3d8f683af6958ec43087303136
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a7692c229728e97bc830020d6ec2cdc35843af4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données **ODBC** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
@@ -42,7 +43,7 @@ Vous devrez peut-être également rechercher les informations de connexion requi
 > [!TIP]
 > Si vous savez que votre pilote est installé mais que vous ne le voyez dans l’applet 64 bits, recherchez-le dans l’applet 32 bits. Cela vous indique également si vous devez exécuter l’Assistant Importation et Exportation SQL Server 64 bits ou 32 bits.
 >
-> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, notamment la version 32 bits de l’Assistant.
+> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
     
 ## <a name="step-1---select-the-data-source"></a>Étape 1 : sélectionner la source de données
 Les pilotes ODBC installés sur votre ordinateur ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une Destination** de l’Assistant. Ce fournisseur agit comme un wrapper autour du pilote ODBC.

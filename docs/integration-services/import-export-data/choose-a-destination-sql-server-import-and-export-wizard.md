@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.chooseadestination.f1
+f1_keywords:
+- sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-caps.latest.revision: "104"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fb047a5e5130a16ffa9dfa3d520ddc97b17e635
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 192e3acf3aae6f26a1c67188b022c45fea08b238
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
  Une fois que vous avez fourni les informations relatives à la source de vos données et indiqué comment s’y connecter, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Choisir une destination**. Dans cette page, vous fournissez les informations relatives à la destination de vos données et à la façon de s’y connecter.
@@ -52,7 +54,7 @@ La capture d’écran suivante montre la première partie de la page **Choisir u
 -   **Fournisseurs 32 bits et 64 bits.** Si vous exécutez l’Assistant 64 bits, vous ne voyez pas les destinations pour lesquelles seul un fournisseur 32 bits est installé, et vice versa.
 
 > [!NOTE]
-> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, notamment la version 32 bits de l’Assistant.
+> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
 
 ## <a name="after-you-choose-a-destination"></a>Après avoir choisi une destination
 Après avoir choisi une destination, le reste de la page **Choisir une destination** présente un nombre variable d’options qui dépendent du fournisseur de données choisi.
@@ -70,7 +72,7 @@ Pour se connecter à une destination couramment utilisée, consultez une de ces 
 
 Pour plus d’informations sur la façon de se connecter à une destination qui n’est pas répertoriée ici, consultez [The Connection Strings Reference](https://www.connectionstrings.com/). Ce site tiers contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
 
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez fourni les informations relatives à la destination de vos données et à la façon de s’y connecter, la page suivante est **Spécifier la copie ou l’interrogation de table**. Dans cette page, vous indiquez si vous voulez copier la totalité d’une table ou uniquement certaines lignes. Pour plus d’informations, consultez [Spécifier la copie ou l’interrogation de table](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Voir aussi

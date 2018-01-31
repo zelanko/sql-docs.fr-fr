@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.specifytablecopyorquery.f1
+f1_keywords:
+- sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ba4c750ecf556cdaae6fdbdfb08b6991316e544
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56babe19727ca9ac7e0f364f64c91716508f4dfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Spécifier la copie ou l'interrogation de table (Assistant Importation et Exportation SQL Server)
   Une fois que vous avez fourni les informations relatives à la destination de vos données et à la façon de s’y connecter, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Spécifier la copie ou l’interrogation de table**. Dans cette page, choisissez l’une des options suivantes.
@@ -74,7 +76,7 @@ Dans la mesure où vous connaissez le nom de la table à exporter, vous pouvez t
     
  Les développeurs tiers peuvent rendre l’option **Copier les données à partir d’une ou plusieurs tables ou vues** disponible pour leurs fournisseurs en ajoutant une section ProviderDescriptor au fichier ProviderDescriptors.xml. Pour vérifier les spécifications de la section ProviderDescriptor, consultez le fichier de schéma ProviderDescriptors.xsd qui figure par défaut dans le même dossier que le fichier ProviderDescriptors.xml.    
     
-## <a name="whats-next"></a>Étape suivante    
+## <a name="whats-next"></a>Quelle est l’étape suivante ?    
  Une fois que vous avez indiqué si vous voulez copier la totalité d’une table ou fournir une requête, la page suivante varie en fonction de l’option que vous avez choisie sur cette page, ainsi que de la destination de vos données.    
     
 -   Si vous avez sélectionné **Copier les données à partir d’une ou plusieurs tables ou vues**, pour la plupart des destinations, la page suivante est **Sélectionner les tables et les vues sources**. Dans cette page, vous sélectionnez les tables et les vues existantes à copier à partir de la source de données vers la destination. Pour plus d’informations, consultez [Sélectionner les tables et les vues sources](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).    

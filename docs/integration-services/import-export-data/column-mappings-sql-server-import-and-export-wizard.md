@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.columnmapandtransform.f1
+f1_keywords:
+- sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 350b2694806d617fa81eba1020828816101aceba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4658903e7454c5a001f27b3bda781be34e6a55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mappage de colonnes (Assistant Importation et exportation SQL Server)
   Une fois que vous avez sélectionné les tables et vues existantes pour copier ou vérifier la requête que vous avez fournie, l’Assistant Importation et Exportation **affiche la boîte de dialogue**Mappage de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous cliquez sur **Modifier les mappages** . Dans cette page, vous spécifiez et configurez des colonnes de destination pour recevoir les données copiées à partir des colonnes sources. Souvent, il n’y a pas de modification à apporter à cette page.
@@ -113,7 +115,7 @@ La liste **Mappages** comprend les colonnes suivantes.
  -   **Échelle**  
     Spécifiez l’échelle des données numériques dans la colonne de destination, autrement dit le nombre de décimales, si applicable.  
   
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Après avoir vérifié et configuré les colonnes de destination pour qu’elles reçoivent les données copiées depuis les colonnes sources, cliquez ensuite sur **OK** pour quitter la boîte de dialogue **Mappage de colonnes** et revenir à la page **Sélectionner les tables et les vues sources** ou **Configurer la destination du fichier plat**. Pour plus d’informations, consultez [Sélectionner les tables et les vues sources](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) ou [Configurer la destination du fichier plat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Si vous avez spécifié un mappage qui risque d’échouer dans la liste **Mappages** , la boîte de dialogue **Mappage de colonnes** affiche la page **Vérifier le mappage de type de données** . Dans cette page, vous passez en revue les avertissements, vous spécifiez les options de conversion et vous indiquez aussi comment gérer les erreurs. Pour plus d’informations, consultez [Vérifier le mappage de type de données](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  

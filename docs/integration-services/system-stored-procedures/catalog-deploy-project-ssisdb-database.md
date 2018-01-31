@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b056ec4e0d4f762190154988fe3fa225e447c315
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55fafb278e55a6044cd92f4c1dede3b574bd4c0a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +59,9 @@ catalog.deploy_project [@folder_name =] folder_name
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations CREATE_OBJECTS sur le dossier pour déployer un nouveau projet ou des autorisations MODIFY sur le projet pour mettre à jour un projet  
@@ -78,7 +79,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   L'utilisateur n'a pas des autorisations suffisantes.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pendant un déploiement ou une mise à jour de projet, la procédure stockée ne vérifie pas le niveau de protection des packages individuels dans le projet.  
   
   

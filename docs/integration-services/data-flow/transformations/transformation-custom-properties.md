@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a69a7252045efacefccfa0847741e76309999ce9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données possèdent des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -87,16 +88,16 @@ ms.lasthandoff: 11/20/2017
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Entier|Valeur entre 1 et 100 qui spécifie le pourcentage d'extension possible de la mémoire lors de l'opération d'agrégation. La valeur par défaut de cette propriété est de **25**.|  
 |CountDistinctKeys|Entier|Valeur précisant le nombre exact de comptages de valeurs que l'agrégation peut écrire. Si une valeur CountDistinctScale est spécifiée, la valeur dans CountDistinctKeys est prioritaire.|  
-|CountDistinctScale|Entier (énumération)|Valeur qui décrit le nombre approximatif de valeurs distinctes que peut totaliser l'agrégation dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée. L’utilisation de l’option **Non spécifié** (0) peut avoir un impact sur les performances dans les jeux de données volumineux.|  
+|CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs distinctes que peut totaliser l'agrégation dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée. L’utilisation de l’option **Non spécifié** (0) peut avoir un impact sur les performances dans les jeux de données volumineux.|  
 |Keys|Entier|Valeur qui spécifie le nombre exact de clés GROUP BY écrites par l'agrégation. Si une valeur KeyScalevalue est spécifiée, la valeur dans Keys est prioritaire.|  
-|KeyScale|Entier (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
+|KeyScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
   
  Le tableau suivant décrit les propriétés personnalisées de la sortie de la transformation d'agrégation. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |Keys|Entier|Valeur qui spécifie le nombre exact de clés GROUP BY que l'agrégation peut écrire. Si une valeur KeyScale est spécifiée, la valeur dans Keys est prioritaire.|  
-|KeyScale|Entier (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
+|KeyScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation d'agrégation. Toutes les propriétés sont en lecture/écriture.  
   
@@ -104,9 +105,9 @@ ms.lasthandoff: 11/20/2017
 |--------------|---------------|-----------------|  
 |AggregationColumnId|Entier|**LineageID** d'une colonne participant à des fonctions GROUP BY ou d'agrégation.|  
 |AggregationComparisonFlags|Entier|Valeur qui spécifie la manière dont la transformation d'agrégation compare les données de chaîne dans une colonne. Pour plus d'informations, voir [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|AggregationType|Entier (énumération)|Valeur qui spécifie l'opération d'agrégation à appliquer à la colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Group by** (0)<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)|  
+|AggregationType|Integer (énumération)|Valeur qui spécifie l'opération d'agrégation à appliquer à la colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Group by** (0)<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)|  
 |CountDistinctKeys|Entier|Valeur spécifiant le nombre exact de clés que l'agrégation peut écrire lorsque le type d'agrégation est **COUNT DISTINCT**. Si une valeur CountDistinctScale est spécifiée, la valeur dans CountDistinctKeys est prioritaire.|  
-|CountDistinctScale|Entier (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés que peut écrire l'agrégation lorsque le type d'agrégation est **COUNT DISTINCT**. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée.|  
+|CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés que peut écrire l'agrégation lorsque le type d'agrégation est **COUNT DISTINCT**. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée.|  
 |IsBig|Booléen|Valeur qui indique si la colonne contient une valeur supérieure à 4 milliards ou une valeur avec une meilleure précision qu'une valeur à virgule flottante double précision. La valeur peut être 0 ou 1. 0 indique que IsBig a la valeur **False** et que la colonne ne contient aucune valeur élevée ou exacte. La valeur par défaut de cette propriété est 1.|  
   
  L'entrée et les colonnes d'entrée de la transformation d'agrégation ne sont pas dotées de propriétés personnalisées.  
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|LineageItemSelected|Entier (énumération)|Élément d'audit sélectionné pour la sortie. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **GUID d’instance d’exécution** (0)<br /><br /> **Heure de début de l’exécution** (4)<br /><br /> **Nom de l’ordinateur** (5)<br /><br /> **ID du package** (1)<br /><br /> **Nom du package** (2)<br /><br /> **ID de la tâche** (8)<br /><br /> **Nom de la tâche** (7)<br /><br /> **Nom d’utilisateur** (6)<br /><br /> **ID de version** (3)|  
+|LineageItemSelected|Integer (énumération)|Élément d'audit sélectionné pour la sortie. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **GUID d’instance d’exécution** (0)<br /><br /> **Heure de début de l’exécution** (4)<br /><br /> **Nom de l’ordinateur** (5)<br /><br /> **ID du package** (1)<br /><br /> **Nom du package** (2)<br /><br /> **ID de la tâche** (8)<br /><br /> **Nom de la tâche** (7)<br /><br /> **Nom d’utilisateur** (6)<br /><br /> **ID de version** (3)|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation d'audit ne disposent pas de propriétés personnalisées.  
   
@@ -133,11 +134,11 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|Connectionmanager|Chaîne|Spécifie le nom du gestionnaire de connexions.|  
+|Connectionmanager|String|Spécifie le nom du gestionnaire de connexions.|  
 |ValidateExternalMetadata|Booléen|Indique si la transformation du cache est validée à l'aide de sources de données externes au moment de la conception. Si la propriété possède la valeur **False**, la validation avec des sources de données externes a lieu au moment de l'exécution.<br /><br /> La valeur par défaut est **True**.|  
-|AvailableInputColumns|Chaîne|Liste des colonnes d'entrée disponibles.|  
-|InputColumns|Chaîne|Liste des colonnes d'entrée sélectionnées.|  
-|CacheColumnName|Chaîne|Spécifie le nom de la colonne mappée à une colonne d'entrée sélectionnée.<br /><br /> Le nom de la colonne dans la propriété CacheColumnName doit correspondre au nom de la colonne correspondante répertoriée dans la page **Colonnes** de **l’Éditeur du gestionnaire de connexions du cache**.<br /><br /> Pour plus d'informations, consultez [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
+|AvailableInputColumns|String|Liste des colonnes d'entrée disponibles.|  
+|InputColumns|String|Liste des colonnes d'entrée sélectionnées.|  
+|CacheColumnName|String|Spécifie le nom de la colonne mappée à une colonne d'entrée sélectionnée.<br /><br /> Le nom de la colonne dans la propriété CacheColumnName doit correspondre au nom de la colonne correspondante répertoriée dans la page **Colonnes** de **l’Éditeur du gestionnaire de connexions du cache**.<br /><br /> Pour plus d'informations, consultez [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
   
 ##  <a name="charmap"></a> Transformation de la table des caractères, propriétés personnalisées  
  La transformation de la table des caractères dispose uniquement des propriétés communes à l'ensemble des composants de flux de données au niveau du composant.  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Entier|Valeur spécifiant le **LineageID** de la colonne d'entrée qui correspond à la source de la colonne de sortie.|  
-|MapFlags|Entier (énumération)|Valeur précisant les opérations de chaîne que la transformation de la table des caractères applique dans la colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Inversion d’octet** (2)<br /><br /> **Pleine chasse** (6)<br /><br /> **Demi-chasse** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Casse linguistique** (7)<br /><br /> **Minuscules** (0)<br /><br /> **Chinois simplifié** (8)<br /><br /> **Chinois traditionnel**(9)<br /><br /> **Majuscules** (1)|  
+|MapFlags|Integer (énumération)|Valeur précisant les opérations de chaîne que la transformation de la table des caractères applique dans la colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Inversion d’octet** (2)<br /><br /> **Pleine chasse** (6)<br /><br /> **Demi-chasse** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Casse linguistique** (7)<br /><br /> **Minuscules** (0)<br /><br /> **Chinois simplifié** (8)<br /><br /> **Chinois traditionnel**(9)<br /><br /> **Majuscules** (1)|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation de la table des caractères ne disposent pas de propriétés personnalisées.  
   
@@ -161,8 +162,8 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Entier|Valeur qui spécifie la position d'une condition, associée à une sortie, dans la liste des conditions évaluées par la transformation de fractionnement conditionnel. Les conditions sont évaluées dans l'ordre, de la valeur la plus basse à la valeur la plus élevée.|  
-|Expression|Chaîne|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par les identificateurs de lignage.|  
-|FriendlyExpression|Chaîne|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par leurs noms.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|Expression|String|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par les identificateurs de lignage.|  
+|FriendlyExpression|String|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par leurs noms.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
 |IsDefaultOut|Booléen|Valeur indiquant si la sortie est la sortie par défaut.|  
   
  L'entrée, les colonnes d'entrée et les colonnes de sortie de la transformation de fractionnement conditionnel ne disposent pas de propriétés personnalisées.  
@@ -203,13 +204,13 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|ASConnectionId|Chaîne|Identificateur unique de l'objet de connexion.|  
-|ASConnectionString|Chaîne|Chaîne de connexion d'un projet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou d'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
-|CatalogName|Chaîne|Nom d'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
-|ModelName|Chaîne|Nom du modèle d'exploration de données.|  
-|ModelStructureName|Chaîne|Nom de la structure d'exploration de données.|  
-|ObjectRef|Chaîne|Balise XML qui identifie la structure d'exploration de données utilisée par la transformation.|  
-|QueryText|Chaîne|Instruction de requête de prédiction utilisée par la transformation.|  
+|ASConnectionId|String|Identificateur unique de l'objet de connexion.|  
+|ASConnectionString|String|Chaîne de connexion d'un projet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou d'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|CatalogName|String|Nom d'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|ModelName|String|Nom du modèle d'exploration de données.|  
+|ModelStructureName|String|Nom de la structure d'exploration de données.|  
+|ObjectRef|String|Balise XML qui identifie la structure d'exploration de données utilisée par la transformation.|  
+|QueryText|String|Instruction de requête de prédiction utilisée par la transformation.|  
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie de la transformation de requête d'exploration de données ne disposent pas de propriétés personnalisées.  
   
@@ -222,8 +223,8 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|Expression|Chaîne|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par la propriété **LineageID** pour la colonne.|  
-|FriendlyExpression|Chaîne|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par leurs noms.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|Expression|String|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par la propriété **LineageID** pour la colonne.|  
+|FriendlyExpression|String|Expression qui représente la condition évaluée par la transformation de fractionnement conditionnel. Les colonnes sont représentées par leurs noms.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
   
  L'entrée et la sortie de la transformation de colonne dérivée ne sont pas dotées de propriétés personnalisées.  
   
@@ -266,7 +267,7 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|Séparateurs|Chaîne|Séparateurs de jetons utilisés par la transformation. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;), signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
+|Séparateurs|String|Séparateurs de jetons utilisés par la transformation. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;), signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
 |Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur **True** sert principalement à des fins de débogage. La valeur par défaut de cette propriété est **False**.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de regroupement probable**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |MaxMemoryUsage|Entier|Quantité de mémoire maximale que peut utiliser la transformation. La valeur par défaut de cette propriété est **0**, permettant ainsi l'utilisation dynamique de la mémoire.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de regroupement probable**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise pour identifier des doublons.  La valeur par défaut de cette propriété est de 0,8.|  
@@ -275,9 +276,9 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|ExactFuzzy|Entier (énumération)|Valeur qui spécifie si la transformation réalise une correspondance approximative ou une correspondance exacte. Les valeurs valides sont **Exacte** et **Approximative**. La valeur par défaut de cette propriété est **Approximative**.|  
-|FuzzyComparisonFlags|Entier (énumération)|Valeur qui spécifie la manière dont la transformation compare les données de chaîne dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Pour plus d'informations, voir [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|LeadingTrailingNumeralsSignificant|Entier (énumération)|Valeur qui précise l'importance des chiffres. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **NumeralsNotSpecial** (0) : à utiliser si les chiffres ne sont pas significatifs.<br /><br /> **LeadingNumeralsSignificant** (1) : à utiliser si les premiers chiffres sont significatifs.<br /><br /> **TrailingNumeralsSignificant** (2) : à utiliser si les derniers chiffres sont significatifs.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) : à utiliser si les premiers et les derniers chiffres sont significatifs.|  
+|ExactFuzzy|Integer (énumération)|Valeur qui spécifie si la transformation réalise une correspondance approximative ou une correspondance exacte. Les valeurs valides sont **Exacte** et **Approximative**. La valeur par défaut de cette propriété est **Approximative**.|  
+|FuzzyComparisonFlags|Integer (énumération)|Valeur qui spécifie la manière dont la transformation compare les données de chaîne dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Pour plus d'informations, voir [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
+|LeadingTrailingNumeralsSignificant|Integer (énumération)|Valeur qui précise l'importance des chiffres. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **NumeralsNotSpecial** (0) : à utiliser si les chiffres ne sont pas significatifs.<br /><br /> **LeadingNumeralsSignificant** (1) : à utiliser si les premiers chiffres sont significatifs.<br /><br /> **TrailingNumeralsSignificant** (2) : à utiliser si les derniers chiffres sont significatifs.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) : à utiliser si les premiers et les derniers chiffres sont significatifs.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) utilisé pour la jointure sur la colonne. Seules les lignes supérieures au seuil sont validées comme des correspondances.|  
 |ToBeCleaned|Booléen|Valeur qui spécifie si la colonne est utilisée pour identifier des doublons, à savoir s'il s'agit d'une colonne dans laquelle vous procédez à des regroupements. La valeur par défaut de cette propriété est **False**.|  
   
@@ -285,7 +286,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|ColumnType|Entier (énumération)|Valeur qui identifie le type de colonne de sortie. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Undefined** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)|  
+|ColumnType|Integer (énumération)|Valeur qui identifie le type de colonne de sortie. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Undefined** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonica**l (6)|  
 |InputID|Entier|**LineageID** de la colonne d'entrée correspondante.|  
   
  L'entrée et la sortie de la transformation de regroupement probable ne sont pas dotées de propriétés personnalisées.  
@@ -300,16 +301,16 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Booléen|Spécifie si une copie de la table de référence doit être réalisée pour la construction de l'index de recherche floue et les recherches suivantes. La valeur par défaut de cette propriété est **True**.|  
-|Séparateurs|Chaîne|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (\\), barre oblique inverse (\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;). signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
+|Séparateurs|String|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (\\), barre oblique inverse (\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;). signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
 |DropExistingMatchIndex|Booléen|Valeur spécifiant si l’index de correspondance spécifié dans MatchIndexName est supprimé quand MatchIndexOptions n’est pas défini sur ReuseExistingIndex. La valeur par défaut de cette propriété est **True**.|  
 |Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur **True** sert principalement à des fins de débogage. La valeur par défaut de cette propriété est **False**.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de recherche floue**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
-|MatchIndexName|Chaîne|Nom de l'index de correspondance. L'index de correspondance désigne la table dans laquelle la transformation crée et enregistre l'index qu'elle utilise. En cas de réutilisation de l’index de correspondance, MatchIndexName spécifie l’index à réutiliser. MatchIndexName doit être un nom d’identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
-|MatchIndexOptions|Entier (énumération)|Valeur précisant la manière dont la transformation gère l'index de correspondance. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **ReuseExistingIndex** (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
+|MatchIndexName|String|Nom de l'index de correspondance. L'index de correspondance désigne la table dans laquelle la transformation crée et enregistre l'index qu'elle utilise. En cas de réutilisation de l’index de correspondance, MatchIndexName spécifie l’index à réutiliser. MatchIndexName doit être un nom d’identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
+|MatchIndexOptions|Integer (énumération)|Valeur précisant la manière dont la transformation gère l'index de correspondance. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **ReuseExistingIndex** (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
 |MaxMemoryUsage|Entier|Taille maximale du cache pour la table de recherche. La valeur par défaut de cette propriété est **0**, ce qui signifie que la taille du cache est illimitée.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de recherche floue**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |MaxOutputMatchesPerInput|Entier|Nombre maximal de correspondances que la transformation peut retourner pour chaque ligne d'entrée. La valeur par défaut de cette propriété est **1**.<br /><br /> Remarque : les valeurs supérieures à 100 sont uniquement définissables à l’aide de l’ **éditeur avancé**.|  
 |MinSimilarity|Entier|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise au niveau du composant. Seules les lignes supérieures au seuil sont validées comme des correspondances.|  
-|ReferenceMetadataXML|Chaîne|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
-|ReferenceTableName|Chaîne|Nom de la table de recherche. Le nom doit être un nom d'identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
+|ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
+|ReferenceTableName|String|Nom de la table de recherche. Le nom doit être un nom d'identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
 |WarmCaches|Booléen|Lorsque la valeur définie est True, la recherche charge partiellement l'index et la table de référence dans la mémoire avant le début de l'exécution, ce qui permet d'améliorer les performances.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes d'entrée de la transformation de recherche floue. Toutes les propriétés sont en lecture/écriture.  
@@ -317,8 +318,8 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Entier|Valeur qui spécifie la manière dont la transformation compare les données de chaîne dans une colonne. Pour plus d'informations, voir [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|FuzzyComparisonFlagsEx|Entier (énumération)|Valeur qui spécifie quels indicateurs de comparaison étendus sont utilisés par la transformation. Les valeurs peuvent comprendre **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**et **NoMapping**. **NoMapping** ne peut être utilisé avec d'autres indicateurs.|  
-|JoinToReferenceColumn|Chaîne|Valeur spécifiant le nom de la colonne dans la table de référence à laquelle la colonne est jointe.|  
+|FuzzyComparisonFlagsEx|Integer (énumération)|Valeur qui spécifie quels indicateurs de comparaison étendus sont utilisés par la transformation. Les valeurs peuvent comprendre **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**et **NoMapping**. **NoMapping** ne peut être utilisé avec d'autres indicateurs.|  
+|JoinToReferenceColumn|String|Valeur spécifiant le nom de la colonne dans la table de référence à laquelle la colonne est jointe.|  
 |JoinType|Entier|Valeur qui spécifie si la transformation réalise une correspondance approximative ou une correspondance exacte. La valeur par défaut de cette propriété est **Approximative**. La valeur entière pour le type de jointure exact est **1** et la valeur pour le type de jointure flou est **2**.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise au niveau de la colonne. Seules les lignes supérieures au seuil sont validées comme des correspondances.|  
   
@@ -330,7 +331,7 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |ColumnType|Entier (énumération)|Valeur qui identifie le type de colonne de sortie pour les colonnes que la transformation ajoute à la sortie. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Undefined** (0)<br /><br /> **Similarity** (1)<br /><br /> **Confidence** (2)<br /><br /> **ColumnSimilarity** (3)|  
-|CopyFromReferenceColumn|Chaîne|Valeur précisant le nom de la colonne dans la table de référence qui fournit la valeur dans une colonne de sortie.|  
+|CopyFromReferenceColumn|String|Valeur précisant le nom de la colonne dans la table de référence qui fournit la valeur dans une colonne de sortie.|  
 |SourceInputColumnLineageId|Entier|Valeur identifiant la colonne d'entrée qui fournit des valeurs à cette colonne de sortie.|  
   
  L'entrée et la sortie de la transformation de recherche floue ne sont pas dotées de propriétés personnalisées.  
@@ -348,24 +349,24 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Entier|Page de codes à utiliser par défaut lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données.|  
 |MaxMemoryUsage|Entier|Taille maximale du cache pour la table de recherche. La valeur par défaut de cette propriété est **25**, ce qui signifie que la taille du cache est illimitée.|  
 |MaxMemoryUsage64|Entier|Taille maximale du cache pour la table de recherche sur un ordinateur 64 bits.|  
-|NoMatchBehavior|Entier (énumération)|Valeur qui spécifie si les lignes qui ne disposent pas d'entrées correspondantes dans le dataset de référence sont traitées comme des erreurs.<br /><br /> Quand la propriété est définie avec la valeur **Traiter comme erreurs les lignes sans entrées correspondantes** (0), les lignes sans entrées correspondantes sont traitées comme des erreurs. Vous pouvez spécifier la démarche à suivre lorsque ce type d'erreur se produit à partir de la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de transformation de recherche** . Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Quand la propriété est définie avec la valeur **Envoyer les lignes sans entrées correspondantes dans la sortie sans correspondance** (1), les lignes ne sont pas traitées comme des erreurs.<br /><br /> La valeur par défaut est **Traiter comme erreurs les lignes sans entrées correspondantes** (0).|  
-|ParameterMap|Chaîne|Liste délimitée par des points-virgules d’identificateurs de lignage mappés aux paramètres utilisés dans l’instruction **SqlCommand** .|  
-|ReferenceMetadataXML|Chaîne|Métadonnées des colonnes de la table de recherche que la transformation copie vers sa sortie.|  
-|SqlCommand|Chaîne|Instruction SELECT qui remplit la table de recherche.|  
-|SqlCommandParam|Chaîne|Instruction SQL paramétrable qui remplit la table de recherche.|  
+|NoMatchBehavior|Integer (énumération)|Valeur qui spécifie si les lignes qui ne disposent pas d'entrées correspondantes dans le dataset de référence sont traitées comme des erreurs.<br /><br /> Quand la propriété est définie avec la valeur **Traiter comme erreurs les lignes sans entrées correspondantes** (0), les lignes sans entrées correspondantes sont traitées comme des erreurs. Vous pouvez spécifier la démarche à suivre lorsque ce type d'erreur se produit à partir de la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de transformation de recherche** . Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Quand la propriété est définie avec la valeur **Envoyer les lignes sans entrées correspondantes dans la sortie sans correspondance** (1), les lignes ne sont pas traitées comme des erreurs.<br /><br /> La valeur par défaut est **Traiter comme erreurs les lignes sans entrées correspondantes** (0).|  
+|ParameterMap|String|Liste délimitée par des points-virgules d’identificateurs de lignage mappés aux paramètres utilisés dans l’instruction **SqlCommand** .|  
+|ReferenceMetadataXML|String|Métadonnées des colonnes de la table de recherche que la transformation copie vers sa sortie.|  
+|SqlCommand|String|Instruction SELECT qui remplit la table de recherche.|  
+|SqlCommandParam|String|Instruction SQL paramétrable qui remplit la table de recherche.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes d'entrée de la transformation de recherche. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|CopyFromReferenceColumn|Chaîne|Nom de la colonne dans la table de référence depuis laquelle une colonne est copiée.|  
-|JoinToReferenceColumns|Chaîne|Nom de la colonne dans la table de référence à laquelle une colonne source est jointe.|  
+|CopyFromReferenceColumn|String|Nom de la colonne dans la table de référence depuis laquelle une colonne est copiée.|  
+|JoinToReferenceColumns|String|Nom de la colonne dans la table de référence à laquelle une colonne source est jointe.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de recherche. Toutes les propriétés sont en lecture/écriture.  
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|CopyFromReferenceColumn|Chaîne|Nom de la colonne dans la table de référence depuis laquelle une colonne est copiée.|  
+|CopyFromReferenceColumn|String|Nom de la colonne dans la table de référence depuis laquelle une colonne est copiée.|  
   
  L'entrée et la sortie de la transformation de recherche ne sont pas dotées de propriétés personnalisées.  
   
@@ -378,7 +379,7 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|JoinType|Entier (énumération)|Spécifie si la jointure est une jointure interne (2), externe gauche (1) ou complète (0).|  
+|JoinType|Integer (énumération)|Spécifie si la jointure est une jointure interne (2), externe gauche (1) ou complète (0).|  
 |MaxBuffersPerInput|Entier|Vous n'avez plus à configurer la valeur de la propriété **MaxBuffersPerInput** car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme de la mémoire en excès. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.|  
 |NumKeyColumns|Entier|Nombre de colonnes utilisées dans la jointure.|  
 |TreatNullsAsEqual|Booléen|Valeur qui spécifie si la transformation gère les valeurs NULL comme valeurs égales. La valeur par défaut de cette propriété est **True**. Si la valeur de la propriété est **False**, la transformation gère les valeurs NULL de la même manière que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
@@ -402,9 +403,9 @@ ms.lasthandoff: 11/20/2017
 |-------------------|---------------|-----------------|  
 |CommandTimeout|Entier|Nombre maximal de secondes pendant lesquelles la commande SQL peut être exécutée avant d'arriver à expiration. Une valeur égale à **0** indique une durée illimitée. La valeur par défaut de cette propriété est **0**.|  
 |DefaultCodePage|Entier|Page de codes à utiliser lorsque les informations de page de codes ne sont pas disponibles depuis la source de données.|  
-|SqlCommand|Chaîne|Instruction Transact-SQL que la transformation exécute pour chaque ligne dans le flux de données.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|SqlCommand|String|Instruction Transact-SQL que la transformation exécute pour chaque ligne dans le flux de données.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
   
- Le tableau suivant décrit les propriétés personnalisées des colonnes externes de la transformation de commande OLE DB. Toutes les propriétés sont en lecture/écriture.  
+ Le tableau suivant décrit les propriétés personnalisées des colonnes externes de la transformation de commande OLE DB. Toutes les propriétés sont en lecture/écriture.  
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
@@ -445,13 +446,13 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Entier (énumération)|Valeur qui spécifie le rôle d'une colonne lorsque le jeu de données est croisé.<br /><br /> **0**:<br />                      La colonne n'est pas croisée dynamiquement et les valeurs de la colonne sont transmises à la sortie de la transformation.<br /><br /> **1**:<br />                      La colonne fait partie de la clé d'ensemble qui identifie une ou plusieurs lignes comme appartenant à un même ensemble. Toutes les lignes d'entrée portant la même clé d'ensemble sont combinées dans une ligne de sortie.<br /><br /> **2**:<br />                      La colonne est une colonne tableau croisé dynamique. Au moins une colonne est créée à partir de chaque valeur de colonne.<br /><br /> **3**:<br />                      Les valeurs de cette colonne sont placées dans les colonnes créées à la suite du croisement dynamique.|  
+|PivotUsage|Integer (énumération)|Valeur qui spécifie le rôle d'une colonne lorsque le jeu de données est croisé.<br /><br /> **0**:<br />                      La colonne n'est pas croisée dynamiquement et les valeurs de la colonne sont transmises à la sortie de la transformation.<br /><br /> **1**:<br />                      La colonne fait partie de la clé d'ensemble qui identifie une ou plusieurs lignes comme appartenant à un même ensemble. Toutes les lignes d'entrée portant la même clé d'ensemble sont combinées dans une ligne de sortie.<br /><br /> **2**:<br />                      La colonne est une colonne tableau croisé dynamique. Au moins une colonne est créée à partir de chaque valeur de colonne.<br /><br /> **3**:<br />                      Les valeurs de cette colonne sont placées dans les colonnes créées à la suite du croisement dynamique.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation de tableau croisé dynamique. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|PivotKeyValue|Chaîne|Une des valeurs possibles de la colonne marquée comme clé de tableau croisé dynamique par la valeur de sa propriété PivotUsage.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|PivotKeyValue|String|Une des valeurs possibles de la colonne marquée comme clé de tableau croisé dynamique par la valeur de sa propriété PivotUsage.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
 |SourceColumn|Entier|**LineageID** d’une colonne d’entrée qui contient une valeur croisée dynamique ou -1. La valeur -1 indique que la colonne ne participe à aucune opération croisée dynamique.|  
   
  Pour plus d’informations, voir [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md).  
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|VariableName|Chaîne|Nom de la variable contenant le nombre de lignes.|  
+|VariableName|String|Nom de la variable contenant le nombre de lignes.|  
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie de la transformation de calcul du nombre de lignes ne disposent pas de propriétés personnalisées.  
   
@@ -502,8 +503,8 @@ ms.lasthandoff: 11/20/2017
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|ReadOnlyVariables|Chaîne|Liste séparée par des virgules de variables disponibles pour l'accès en lecture seule du composant Script.|  
-|ReadWriteVariables|Chaîne|Liste séparée par des virgules de variables disponibles pour l'accès en lecture/écriture du composant Script.|  
+|ReadOnlyVariables|String|Liste séparée par des virgules de variables disponibles pour l'accès en lecture seule du composant Script.|  
+|ReadWriteVariables|String|Liste séparée par des virgules de variables disponibles pour l'accès en lecture/écriture du composant Script.|  
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie du composant Script ne disposent pas de propriétés personnalisées, sauf si le développeur du script crée des propriétés personnalisées pour elles.  
   
@@ -516,20 +517,20 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|CurrentRowWhere|Chaîne|Clause WHERE dans l'instruction SELECT chargée de sélectionner la ligne actuelle parmi des lignes dotées de la même clé d'entreprise.|  
+|CurrentRowWhere|String|Clause WHERE dans l'instruction SELECT chargée de sélectionner la ligne actuelle parmi des lignes dotées de la même clé d'entreprise.|  
 |EnableInferredMember|Booléen|Valeur indiquant si les mises à jour de membre déduit sont détectées. La valeur par défaut de cette propriété est **True**.|  
 |FailOnFixedAttributeChange|Booléen|Valeur qui indique si la transformation échoue lorsque les colonnes de ligne comportant des attributs fixes contiennent des modifications ou lorsque la recherche dans la table de dimension se solde par un échec. Si vous vous attendez à ce que les lignes entrantes contiennent de nouveaux enregistrements, définissez cette valeur sur **True** pour poursuivre la transformation après l'échec de la recherche car la transformation se fonde sur cet échec pour identifier de nouveaux enregistrements. La valeur par défaut de cette propriété est **False**.|  
 |FailOnLookupFailure|Booléen|Valeur qui indique si la transformation échoue lorsque la recherche d'un enregistrement existant se solde également par un échec. La valeur par défaut de cette propriété est **False**.|  
 |IncomingRowChangeType|Entier|Valeur qui spécifie si toutes les lignes entrantes sont des nouvelles lignes ou si la transformation doit détecter le type de modification.|  
-|InferredMemberIndicator|Chaîne|Nom de la colonne du membre déduit.|  
-|SqlCommand|Chaîne|Instruction SQL employée pour créer un ensemble de lignes de schéma.|  
+|InferredMemberIndicator|String|Nom de la colonne du membre déduit.|  
+|SqlCommand|String|Instruction SQL employée pour créer un ensemble de lignes de schéma.|  
 |UpdateChangingAttributeHistory|Booléen|Valeur qui indique si les mises à jour d'attribut d'historique sont dirigées sur la sortie de la transformation pour les mises à jour d'attribut variable.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes d'entrée de la transformation de dimension à variation lente. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|ColumnType|Entier (énumération)|Type de mise à jour de la colonne. Les valeurs sont les suivantes : **Attribut de variation** (2), **Attribut fixe** (4), **Attribut d’historique** (3), **Clé** (1) et **Autre** (0).|  
+|ColumnType|Integer (énumération)|Type de mise à jour de la colonne. Les valeurs sont les suivantes : **Attribut de variation** (2), **Attribut fixe** (4), **Attribut d’historique** (3), **Clé** (1) et **Autre** (0).|  
   
  L'entrée, les sorties et les colonnes de sortie de la transformation de dimension à variation lente ne disposent pas de propriétés personnalisées.  
   
@@ -573,8 +574,8 @@ ms.lasthandoff: 11/20/2017
 |IsCaseSensitive|Booléen|Valeur qui précise si l'extraction de noms et d'expressions nominales doit tenir compte de la casse. La valeur par défaut de cette propriété est **False**.|  
 |MaxLengthOfTerm|Entier|Valeur numérique qui indique la longueur maximale d'un terme. Cette propriété concerne uniquement les expressions. La valeur par défaut de cette propriété est de **12**.|  
 |NeedRefenceData|Booléen|Valeur qui spécifie si la transformation utilise une liste de termes d'exclusion stockée dans une table de référence. La valeur par défaut de cette propriété est **False**.|  
-|OutTermColumn|Chaîne|Nom de la colonne qui contient les termes d'exclusion.|  
-|OutTermTable|Chaîne|Nom de la table contenant la colonne qui comporte des termes d'exclusion.|  
+|OutTermColumn|String|Nom de la colonne qui contient les termes d'exclusion.|  
+|OutTermTable|String|Nom de la table contenant la colonne qui comporte des termes d'exclusion.|  
 |ScoreType|Entier|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d’un terme T = (fréquence de T) \* log( (#lignes en entrée) / (#lignes ayant T)). La valeur par défaut de cette propriété est **0**.|  
 |WordOrPhrase|Entier|Valeur qui spécifie le type de terme. Les valeurs valides sont 0 qui indique des mots uniquement, 1 qui désigne des expressions nominales seulement et 2 qui indique des mots et des expressions nominales à la fois. La valeur par défaut de cette propriété est **0**.|  
   
@@ -590,8 +591,8 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Booléen|Valeur qui spécifie si une comparaison respectant la casse s'applique à la correspondance du texte de la colonne d'entrée et au terme de recherche. La valeur par défaut de cette propriété est **False**.|  
-|RefTermColumn|Chaîne|Nom de la colonne qui contient les termes de recherche.|  
-|RefTermTable|Chaîne|Nom de la table contenant la colonne qui comporte des termes de recherche.|  
+|RefTermColumn|String|Nom de la colonne qui contient les termes de recherche.|  
+|RefTermTable|String|Nom de la table contenant la colonne qui comporte des termes de recherche.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes d'entrée de la transformation de recherche de terme. Toutes les propriétés sont en lecture/écriture.  
   
@@ -620,7 +621,7 @@ ms.lasthandoff: 11/20/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Entier|**LineageID** de la colonne de sortie à laquelle la colonne d'entrée est mappée. Une valeur égale à -1 indique que la colonne d'entrée n'est pas mappée à une colonne de sortie.|  
-|PivotKeyValue|Chaîne|Valeur copiée vers une colonne de sortie de la transformation.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Dans le scénario UnPivot décrit dans [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), les valeurs de tableau croisé dynamique sont les valeurs texte Ham, Coke, Milk, Beer et Chips. Ces valeurs apparaîtront sous la forme de valeurs texte dans la nouvelle colonne Product définie au moyen de l'option **Nom de colonne de la valeur de clé de tableau croisé dynamique** .|  
+|PivotKeyValue|String|Valeur copiée vers une colonne de sortie de la transformation.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Dans le scénario UnPivot décrit dans [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), les valeurs de tableau croisé dynamique sont les valeurs texte Ham, Coke, Milk, Beer et Chips. Ces valeurs apparaîtront sous la forme de valeurs texte dans la nouvelle colonne Product définie au moyen de l'option **Nom de colonne de la valeur de clé de tableau croisé dynamique** .|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation UnPivot. Toutes les propriétés sont en lecture/écriture.  
   
@@ -632,7 +633,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations, voir [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Propriétés du chemin](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
