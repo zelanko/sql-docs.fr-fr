@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.selectsourcetablesandviews.f1
+f1_keywords:
+- sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: "96"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 407e1b75ca60bb8a36040883c472dce8e059188e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Sélectionner les tables et les vues sources (Assistant Importation et Exportation SQL Server)
   Une fois que vous avez indiqué que vous voulez copier la totalité d’une table ou après avoir fourni une requête, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Sélectionner les tables et les vues sources**. Dans cette page, vous sélectionnez les tables et les vues existantes à copier. Vous mappez ensuite les tables sources aux tables de destination nouvelles ou existantes. Si vous le souhaitez, vous pouvez aussi passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.
@@ -58,14 +60,14 @@ Si vous avez fourni une requête, la liste ne contient qu’un élément portant
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>Éventuellement, vérifier le mappage de colonnes et afficher un aperçu des données
 **Modifier les mappages**   
-Le cas échéant, cliquez sur **Modifier les mappages** pour afficher la boîte de dialogue **Mappage de colonnes** pour la table sélectionnée. Utilisez la boîte de dialogue **Mappage de colonnes** pour effectuer les opérations suivantes.
+Cliquez sur **Modifier les mappages** pour afficher la boîte de dialogue **Mappage de colonnes** de la table sélectionnée. Utilisez la boîte de dialogue **Mappage de colonnes** pour effectuer les opérations suivantes.
 -   Passer en revue le mappage des colonnes entre la source et la destination.
 -   Vous pouvez copier uniquement un sous-ensemble de colonnes en sélectionnant **ignorer** pour les colonnes que vous souhaitez ignorer.
 
 Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Aperçu**  
-Le cas échéant, cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de données maximum dans la boîte de dialogue **Aperçu des données**. Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de données maximum dans la boîte de dialogue **Aperçu des données**. Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Après avoir affiché un aperçu des données, vous souhaiterez peut-être modifier les options que vous avez sélectionnées dans les pages précédentes de l’Assistant. Pour effectuer ces modifications, retournez dans la page **Sélectionner les tables et les vues sources** , puis cliquez sur **Précédent** pour retourner aux pages précédentes où vous pouvez modifier vos sélections.  
 
@@ -109,7 +111,7 @@ Quand l’Assistant doit effectuer des conversions explicites de types de donné
 -   Si la table de destination contient déjà des lignes de données, les 8 premières lignes échantillonnées par l’Assistant doivent contenir au moins une ligne avec une valeur de plus de 255 caractères dans la colonne mémo.
 -   Si la table de destination est créée par l’Assistant, l’instruction **CREATE TABLE** doit utiliser **LONGTEXT** (ou un de ses synonymes) comme type de données de la colonne mémo. Vérifiez l’instruction **CREATE TABLE** et corrigez-la, si nécessaire, en cliquant sur **Modifier SQL** en regard de l’option **Créer une table de destination** dans la page **Mappage de colonnes**.
 
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez sélectionné les tables et vues existantes à copier et que vous les avez mappées à leurs destinations, la page suivante est **Enregistrer et exécuter le package**. Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer le package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] créé par l’Assistant pour le personnaliser et le réutiliser ultérieurement. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Voir aussi

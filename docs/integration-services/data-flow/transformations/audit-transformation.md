@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |Variable système|Index|Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|GUID identifiant l'instance d'exécution du package.|  
-|**PackageID**|1|Identificateur unique du package.|  
+|**PackageID**| 1|Identificateur unique du package.|  
 |**PackageName**|2|Nom du package.|  
 |**VersionID**|3|Version du package.|  
 |**ExecutionStartTime**|4|Heure à laquelle l'exécution du package a commencé.|  
@@ -52,15 +53,15 @@ ms.lasthandoff: 11/20/2017
   
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="audit-transformation-editor"></a>Éditeur de transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
  **Type d'audit**  
  Sélectionne une variable système disponible pour fournir les informations d'audit.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**GUID d'instance d'exécution**|Insérez le GUID qui identifie de manière unique l'instance d'exécution du package.|  
 |**ID du package**|Insérez le GUID qui identifie de manière unique le package.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**ID de version**|Insérez le GUID qui identifie de manière unique la version du package.|  
 |**Heure de début de l'exécution**|Insérez l'heure à laquelle l'exécution du package a commencé.|  
 |**Nom de l'ordinateur**|Insérez le nom de l'ordinateur sur lequel le package a été lancé.|  
-|**Nom d'utilisateur**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
+|**User name**|Insérez le nom de connexion de l'utilisateur qui a lancé le package.|  
 |**Nom de la tâche**|Insérez le nom de la tâche de flux de données à laquelle la transformation d'audit est associée.|  
 |**ID de la tâche**|Insérez le GUID qui identifie de manière unique le flux de données à laquelle la transformation d'audit est associée.|  
   

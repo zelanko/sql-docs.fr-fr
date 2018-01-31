@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b829adf4536d23646eea1c4cfa1d9aa6d622e4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8de4f380006eb9d584cdeff8e71e8df82ed3d700
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (expression SSIS)
   Renvoie la partie d'une expression de caractères qui commence à la position spécifiée et qui a la longueur spécifiée. Les paramètres *position* et *length* doivent correspondre à des entiers.  
@@ -37,7 +38,7 @@ SUBSTRING(character_expression, position, length)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
+ *expression_caractère*  
  Expression de caractères à partir de laquelle doivent être extraits les caractères.  
   
  *position*  
@@ -49,7 +50,7 @@ SUBSTRING(character_expression, position, length)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  SUBSTRING utilise un index de base un. Si *position* est 1, la sous-chaîne commence par le premier caractère de *character_expression*.  
   
  La fonction SUBSTRING n'est opérationnelle qu'avec le type de données DT_WSTR. Un argument *character_expression* représentant un littéral de chaîne ou une colonne de données du type de données DT_STR est implicitement converti dans le type de données DT_WSTR avant que la fonction SUBSTRING soit exécutée. Les autres types de données doivent être explicitement convertis vers le type de données DT_WSTR. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md) et [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
@@ -97,7 +98,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

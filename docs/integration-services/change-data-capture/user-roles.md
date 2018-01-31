@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01d18033764d683871cbc8d5883e25c78b7d958
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abefa916dda5690d033bc9cd74ac5f75245d408
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="user-roles"></a>Rôles d'utilisateur
   Cette section décrit les rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity. Les rôles décrits sont des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les rôles Windows ou des rôles de base de données Oracle.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Agir en tant qu'administrateur de l'ordinateur autorisé en tant qu'administrateur sur l'ordinateur où le service de capture de données modifiées pour Oracle est installé. Cette personne installe le service de capture de données modifiées pour Oracle et utilise la console de configuration du service de capture de données modifiées pour configurer un service de capture de données modifiées pour Oracle sur un ordinateur local.  
   
-### <a name="service-account-oracle-cdc-service"></a>Compte de service : service de capture de données modifiées Oracle  
+### <a name="service-account-oracle-cdc-service"></a>Compte de service : service de capture de données modifiées Oracle  
  Il s'agit d'un compte de service Windows de capture de données modifiées Oracle utilisé pour exécuter le service de capture de données modifiées Oracle (le compte de service).  
   
  Le seul privilège obligatoire nécessaire pour le compte de service est de pouvoir utiliser le client Oracle et le fournisseur ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce compte n’a pas besoin d’accéder aux fichiers à moins que cela ne soit requis par des fournisseurs spécifiques (par exemple, si la chaîne de connexion du client Oracle référence des instances de base de données Oracle dans un fichier **tnsnames.ora** , puis ce fichier doit être accessible en lecture au compte de service).  

@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02bddca5baa37f7dc76a8943ac5df0d270d1cb70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f51b9d3dfcfab48a18536be0d15ff28ef7833b03
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilisation de sorties d'erreur dans un composant de flux de données
   Il est possible d'ajouter des objets <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> spéciaux appelés sorties d'erreur à des composants afin de permettre à un composant de rediriger les lignes qu'il ne parvient pas à traiter pendant l'exécution. Les problèmes qu'un composant peut rencontrer sont en général classés en tant qu'erreurs ou troncations et sont propres à chaque composant. Les composants qui fournissent des sorties d'erreur offrent à leurs utilisateurs la flexibilité de gérer les conditions d'erreur en filtrant les lignes d'erreur du jeu de résultats, en provoquant l'échec du composant lorsqu'un problème se produit ou en ignorant des erreurs afin de continuer.  

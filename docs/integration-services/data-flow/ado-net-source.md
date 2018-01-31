@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>Source ADO NET
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  La source ADO .NET a une sortie normale et une sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -138,11 +139,11 @@ ms.lasthandoff: 11/20/2017
  **Texte de la commande SQL**  
  Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
- **Build query**  
+ **Construire une requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
- **Parcourir**  
- Utilisez la boîte de dialogue **Ouvrir** pour accéder au fichier contenant le texte de la requête SQL.  
+ **...**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
 ## <a name="ado-net-source-editor-columns-page"></a>Éditeur de source ADO NET (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source ADO NET** pour mapper une colonne de sortie à chaque colonne externe (source).  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Destination DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Destination ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  

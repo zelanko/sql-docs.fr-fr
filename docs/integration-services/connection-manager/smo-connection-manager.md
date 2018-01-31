@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.smoconnection.f1
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eace0d881304757c067c95a30fadb2bc0e960641
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d9541fc983610a90fdd847ed752e6eaf493331b4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="smo-connection-manager"></a>Gestionnaire de connexions SMO
   Un gestionnaire de connexions SMO permet à un package de se connecter à un serveur SMO (SQL Management Object). Les tâches de transfert incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent un gestionnaire de connexions SMO. Par exemple, la tâche de transfert de connexions qui transfère des connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un gestionnaire de connexions SMO.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 -   Sélectionnez le mode d'authentification pour la connexion au serveur.  
   
 ## <a name="configuration-of-the-smo-connection-manager"></a>Configuration du gestionnaire de connexions SMO  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md).  
   
@@ -61,10 +63,10 @@ ms.lasthandoff: 11/20/2017
  **Utiliser l'authentification Windows**  
  Utilisez l'authentification Windows pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnée.  
   
- **Utiliser l'authentification SQL Server**  
+ **Utiliser l’authentification SQL Server**  
  Utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnée.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si vous avez sélectionné l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Mot de passe**  
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Tester la connexion**  
  Testez la connexion telle qu'elle est configurée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

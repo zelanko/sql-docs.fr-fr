@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,18 +18,19 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords: Transfer Database task [Integration Services]
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
   La tâche de transfert de bases de données transfère une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contrairement aux autres tâches qui ne transfèrent les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'en les copiant, la tâche de transfert de base de données peut copier ou déplacer une base de données. Cette tâche peut également servir à copier une base de données sur le même serveur.  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  À l'exécution, la tâche de transfert de base de données se connecte aux serveurs source et destination en utilisant un ou deux gestionnaires de connexions SMO. Lorsque vous créez une copie de base de données sur le même serveur, un seul gestionnaire de connexions SMO est requis. Les gestionnaires de connexions SMO sont configurés indépendamment de la tâche de transfert de bases de données, puis sont référencés dans cette tâche. Les gestionnaires de connexions SMO spécifient le serveur et le mode d'authentification à utiliser lorsque la tâche accède au serveur. Pour plus d'informations, consultez [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md).  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   

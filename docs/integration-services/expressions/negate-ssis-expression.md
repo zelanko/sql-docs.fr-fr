@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6471c613697e083efef7a72db41dee58e7573ee
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e2a59d861afa6a7c7b2bd321d431b52f9e63b0d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--negate-ssis-expression"></a>- (Négatif) (expression SSIS)
   Inverse une expression numérique.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="arguments"></a>Arguments  
  *numeric_expression*  
- Toute expression valide d’un type de données numérique. Seuls les types de données numériques signés sont pris en charge. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Toute expression valide d’un type de données numérique. Seuls les types de données numériques signés sont pris en charge. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données *numeric_expression*.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 -@Counter + 50  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

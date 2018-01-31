@@ -8,10 +8,12 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.pivottrans.f1
+f1_keywords:
+- sql13.dts.designer.pivottrans.f1
 helpviewer_keywords:
 - Pivot transformation
 - normalized data [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 304f81b9440295e12a05df8955c1b232cd445aa2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 41e027c10bfdb1e9309c6ee1226694c1c9601837
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="pivot-transformation"></a>transformation de tableau croisé dynamique
   La transformation de tableau croisé dynamique transforme un dataset normalisé en une version moins normalisée mais plus compacte en croisant dynamiquement les données d'entrée sur une valeur de colonne. Par exemple, un dataset **Commandes** normalisé comprenant le nom de client, le produit et la quantité achetée contient généralement plusieurs lignes pour un même client ayant acheté plusieurs produits ; chaque ligne indiquant les détails de commande d’un produit différent. En croisant dynamiquement le dataset sur la colonne de produit, la transformation de tableau croisé dynamique peut sortir un dataset contenant une seule ligne par client. Cette ligne unique indique tous les achats du client ; le nom des produits est indiqué sous forme de nom de colonne et la quantité sous forme de valeur de la colonne de produit. Dans la mesure où tous les clients n'achètent pas chacun des produits, de nombreuses colonnes peuvent contenir des valeurs null.  
@@ -127,7 +129,7 @@ ms.lasthandoff: 11/20/2017
      [2002],[2003],[2004]  
   
 ## <a name="configuration-of-the-pivot-transformation"></a>Configuration de la transformation Pivot  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** , cliquez sur l'une des rubriques suivantes :  
   
@@ -135,10 +137,10 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformation Unpivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: edd73fe8a391928eb895ba7feb9dc55e8472fb4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66e45a47fd340aa62b852193ec75aac7c1cde8ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derived-column-transformation"></a>Transformation de colonne dérivée
   La transformation de colonne dérivée crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Une expression peut contenir toute combinaison de variables, de fonctions, d'opérateurs et de colonnes provenant de l'entrée de transformation. Le résultat peut être ajouté en tant que nouvelle colonne ou inséré dans une colonne existante en tant que valeur de remplacement. La transformation de colonne dérivée peut définir plusieurs colonnes dérivées, et toute variable ou colonne d'entrée peut apparaître dans plusieurs expressions.  
@@ -63,9 +64,9 @@ ms.lasthandoff: 11/20/2017
   
  Cette transformation a une entrée, une sortie standard et une sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -73,9 +74,9 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d'informations sur la définition des propriétés, cliquez sur l'une des rubriques suivantes :  
   
--   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Dériver les valeurs de colonnes à l’aide de la transformation de colonne dérivée](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

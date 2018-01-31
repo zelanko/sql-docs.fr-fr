@@ -16,13 +16,13 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e867d2f9ab34ed2fa97b0e4f8bb6b4510ba0038
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6f3d5ba79da0e39806ba9ad9e3d36cb726802efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-work-with-cdc-services"></a>Procédure : utiliser des services de capture de données modifiées
   Cette procédure décrit comment utiliser la console de configuration du service de capture de données modifiées pour préparer une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en vue de l'utilisation des services de capture de données modifiées Oracle et de la création d'un service de capture de données modifiées.  
@@ -55,13 +55,13 @@ ms.lasthandoff: 11/20/2017
   
          La boîte de dialogue Nouveau service de capture de données modifiées Oracle s'ouvre.  
   
-         Pour plus d'informations sur l'utilisation de cette boîte de dialogue, consultez [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Pour plus d'informations sur la façon de créer ou modifier un service de capture de données modifiées, consultez [Procédure : créer et modifier un service de capture de données modifiées](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
+         Pour plus d'informations sur l'utilisation de cette boîte de dialogue, consultez [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Pour plus d'informations sur la façon de créer ou modifier un service de capture de données modifiées, consultez [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
          La connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par le service de capture de données modifiées Oracle doit être membre du rôle serveur fixe `public` ; aucun autre privilège n'est nécessaire. Toutefois, pour créer le service de capture de données modifiées Oracle, la connexion doit avoir l’autorisation d’écriture dans la base de données MSXDBCDC, par exemple le rôle de base de données **db_owner** doit être assigné à la connexion. Lorsqu'une connexion sans autorisation d'écriture sur la base de données MSXDBDCDC tente de créer une instance Oracle CDC un message d'erreur s'affiche. Cliquez sur **OK** dans cette boîte de dialogue pour afficher la boîte de dialogue Connexion à SQL Server.  
   
          Pour plus d’informations sur la façon d’entrer des informations d’identification pour une connexion ayant l’autorisation d’écriture dans la base de données MSXDBCDC, tel le rôle de base de données **db_owner** , consultez [Créer et modifier un service de capture de données modifiées Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) et [Connexion à SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser des services de capture de données modifiées](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

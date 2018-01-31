@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
   Cette section décrit des concepts importants du service de capture de données modifiées Oracle. Les concepts inclus dans cette section sont les suivants :  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
  **Voir aussi :**  
   
- [Procédure : préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [Guide pratique pour préparer SQL Server pour CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
 ### <a name="the-msxdbcdc-database-tables"></a>Tables de la base de données MSXDBCDC  
  Cette section décrit les tables suivantes dans la base de données MSXDBCDC.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 |Élément|Description|  
 |----------|-----------------|  
-|timestamp|Horodateur UTC exact de l'enregistrement de trace.|  
+|TIMESTAMP|Horodateur UTC exact de l'enregistrement de trace.|  
 |type|Contient l'une des valeurs suivantes :<br /><br /> erreur<br /><br /> INFO<br /><br /> trace|  
 |node|Nom du nœud sur lequel l'enregistrement a été écrit.|  
 |status|Code d'état utilisé par la table d'état.|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |Élément|Description|  
 |----------|-----------------|  
-|name|Nom de la base de données Oracle dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|NAME|Nom de la base de données Oracle dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Horodateur (UTC) pour la dernière modification de la table **xdbcdc_config** de base de données CDC correspondante ou horodateur (UTC) pour la ligne actuelle dans cette table.<br /><br /> Le déclencheur UPDATE applique la valeur GETUTCDATE() pour cet élément. **config_version** permet au service de capture de données modifiées d’identifier l’instance de capture de données modifiées qui doit être examinée pour la modification de configuration ou pour l’activation/désactivation.|  
 |cdc_service_name|Cet élément détermine le service de capture de données modifiées Oracle qui gère la base de données Oracle sélectionnée.|  
 |activé|Indique si l'instance Oracle CDC est activée (1) ou désactivée (0). Lorsque le service de capture de données modifiées Oracle démarre, seules les instances marquées comme étant activées (1) sont démarrées.<br /><br /> **Remarque**: Une instance Oracle CDC peut être désactivée en raison d’une erreur qui n’est pas renouvelable. Dans ce cas, l'instance doit être redémarrée manuellement une fois l'erreur corrigée.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/20/2017
   
  **Voir aussi**  
   
- [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
+ [Guide pratique pour utiliser l’interface de ligne de commande du service CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
 ### <a name="service-program-commands"></a>Commandes du programme de service  
  Cette section décrit les commandes suivantes utilisées pour configurer le service CDC.  
@@ -266,7 +267,7 @@ ms.lasthandoff: 11/20/2017
   
  **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [Guide pratique pour préparer SQL Server pour CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

@@ -8,21 +8,23 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Excel [Integration Services]
+helpviewer_keywords:
+- Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0acf0c57aae829f41b4af1b48018fa60eef0da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ece6c4ef032f7b60f82f3f58ee602d0a4ac1196
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-workbook"></a>Établir une connexion à un classeur Excel
   Pour connecter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à un classeur Microsoft Office Excel, vous devez utiliser un gestionnaire de connexions Excel.  
@@ -33,11 +35,11 @@ ms.lasthandoff: 11/20/2017
   
 Vous devrez peut-être télécharger les composants de connectivité pour les fichiers Microsoft Office s’ils ne sont pas déjà installés. Téléchargez la dernière version des composants de connectivité pour les fichiers Excel et Access ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
-La dernière version des composants peut ouvrir des fichiers créés dans des versions antérieures d’Excel.
+La dernière version des composants peut ouvrir les fichiers créés dans des versions antérieures d’Excel.
 
 Si la version 32 bits de Microsoft Office est installée sur l’ordinateur, vous devez installer la version 32 bits des composants et vérifier que vous exécutez le package en mode 32 bits.
 
-Si vous avez un abonnement Office 365, assurez-vous que vous téléchargez Access Database Engine 2016 Redistributable et non Microsoft Access 2016 Runtime. Lorsque vous exécutez le programme d’installation, il est possible qu’un message d’erreur s’affiche indiquant que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur et installer les composants avec succès, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Exemple :
+Si vous avez un abonnement Office 365, veillez à télécharger Access Database Engine 2016 Redistributable et non Microsoft Access 2016 Runtime. Lorsque vous exécutez le programme d’installation, il est possible qu’un message d’erreur s’affiche indiquant que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur et installer les composants avec succès, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Exemple :
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -61,7 +63,7 @@ Si vous avez un abonnement Office 365, assurez-vous que vous téléchargez Acce
   
      Pour plus d’informations sur les options de configuration qui sont disponibles pour ce type de connexion, consultez [Éditeur du gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Établir une connexion à une base de données Access](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 316fa73c7acd3e66a21ae285217c8ec917c7afbc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 -   En présence de plusieurs correspondances dans la table de référence, la transformation de recherche retourne uniquement la première correspondance retournée par la requête de recherche. Si plusieurs correspondances sont trouvées, la transformation de recherche génère une erreur ou un avertissement uniquement lorsque la transformation a été configurée pour charger tout le dataset de référence dans le cache. Dans ce cas, la transformation de recherche génère un avertissement lorsque la transformation détecte plusieurs correspondances au moment où la transformation remplit le cache.  
   
- La jointure peut être une jointure composite, auquel cas vous pouvez joindre plusieurs colonnes de l'entrée de transformation à des colonnes du dataset de référence. La transformation prend en charge les colonnes de jointure de n'importe quel type de données, à l'exception des types DT_R4, DT_R8, DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La jointure peut être une jointure composite, auquel cas vous pouvez joindre plusieurs colonnes de l'entrée de transformation à des colonnes du dataset de référence. La transformation prend en charge les colonnes de jointure de n'importe quel type de données, à l'exception des types DT_R4, DT_R8, DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  En règle générale, les valeurs du dataset de référence sont ajoutées à la sortie de la transformation. Par exemple, la transformation de recherche peut extraire un nom de produit d'une table à l'aide d'une valeur d'une colonne d'entrée, puis l'ajouter à la sortie de la transformation. Les valeurs de la table de référence peuvent remplacer des valeurs de colonne ou être ajoutées à de nouvelles colonnes.  
   
@@ -123,8 +124,8 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diffèrent par leur manière de comparer les chaînes. Si la transformation de recherche est configurée pour charger le dataset de référence dans le cache avant l’exécution de la transformation de recherche, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] effectue la comparaison de recherche dans le cache. Autrement, l’opération de recherche utilise une instruction SQL paramétrable et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue la comparaison de recherche. Cela signifie que la transformation de recherche peut retourner un nombre différent de correspondances à partir de la même table de recherche, selon le type de cache.  
   
-## <a name="related-tasks"></a>Tâches associées  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations, consultez les rubriques suivantes.  
+## <a name="related-tasks"></a>Related Tasks  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations, consultez les rubriques suivantes.  
   
 -   [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
@@ -132,9 +133,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
--   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](http://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
   
@@ -181,7 +182,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="options"></a>Options  
  Les options suivantes sont disponibles quand vous sélectionnez **Cache complet** et **Gestionnaire de connexions du cache** dans la page Général de la boîte de dialogue **Éditeur de transformation de recherche** .  
   
- **Gestionnaire de connexions du cache**  
+ **Cache connection manager**  
  Sélectionnez un gestionnaire de connexions du cache existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
@@ -210,14 +211,14 @@ ms.lasthandoff: 11/20/2017
  **Construire une requête**  
  Créez l’instruction Transact-SQL à exécuter à l’aide du **Générateur de requêtes**. Cet outil graphique permet de créer des requêtes en explorant les données.  
   
- **Parcourir**  
+ **...**  
  Permet de rechercher une requête existante enregistrée dans un fichier.  
   
  **Analyser la requête**  
  Contrôle la syntaxe d'une requête.  
   
  **Aperçu**  
- Affiche un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
   
 ### <a name="external-resources"></a>Ressources externes  
  Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
@@ -279,7 +280,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="external-resources"></a>Ressources externes  
  Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformation de recherche de terme](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/20/2017
   
  La transformation d'extraction de terme possède une entrée régulière, une sortie et une sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -186,7 +187,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Éditeur de transformation d'extraction de terme (onglet Extraction de terme)
   Utilisez l'onglet **Extraction de terme** de la boîte de dialogue **Éditeur de transformation d'extraction de terme** pour définir une colonne de texte qui contient le texte à extraire.  
@@ -214,7 +215,7 @@ ms.lasthandoff: 11/20/2017
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions OLE DB existant ou créez une connexion en cliquant sur **Nouvelle**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à une base de données à l’aide de la boîte de dialogue **Configurer le Gestionnaire de connexions OLE DB** .  
   
  **Table ou vue**  
@@ -257,7 +258,7 @@ ms.lasthandoff: 11/20/2017
  **Configurer la sortie d'erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation de recherche de terme](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

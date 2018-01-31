@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.ftpconnectionmanager.f1
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ff7c6e45082cff952c8d5e9df711884019000e2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25fa55ddb7dc23df266460732e78712551230b26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-connection-manager"></a>Gestionnaires de connexion FTP
   Un gestionnaire de connexions FTP permet à un package de se connecter à un serveur FTP (File Transfer Protocol). La tâche FTP incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/20/2017
  Un gestionnaire de connexions FTP peut envoyer et recevoir des fichiers en mode actif ou passif. En mode actif, le serveur initie la connexion de données, alors qu'en mode passif il s'agit du client.  
   
 ## <a name="configuration-of-the-ftp-connection-manager"></a>Configuration du gestionnaire de connexions FTP  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md).  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/20/2017
  **Port du serveur**  
  Spécifiez le numéro de port sur le serveur FTP à utiliser pour la connexion. La valeur par défaut de cette propriété est **21**.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Indiquez un nom d'utilisateur pour accéder au serveur FTP. La valeur par défaut de cette propriété est **anonyme**.  
   
  **Mot de passe**  
@@ -100,7 +102,7 @@ ms.lasthandoff: 11/20/2017
  **Tester la connexion**  
  Après avoir configuré le gestionnaire de connexions FTP, confirmez que la connexion est viable en cliquant sur **Tester la connexion**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche FTP](../../integration-services/control-flow/ftp-task.md)   
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

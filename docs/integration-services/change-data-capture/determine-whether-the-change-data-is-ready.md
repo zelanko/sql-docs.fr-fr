@@ -8,27 +8,29 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: incremental load [Integration Services],determining readiness
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dff547a6882d13763b471185f9ac486facc946b9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d2f30ddb989c9d92d0972f85af33e3b0496ba56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Déterminer si les données modifiées sont prêtes
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue une charge incrémentielle des données modifiées, la deuxième tâche consiste à s’assurer que les données modifiées pour l’intervalle sélectionné sont prêtes. Cette étape est nécessaire car le processus de capture asynchrone n'a peut-être pas encore pu traiter toutes les modifications jusqu'au point de terminaison sélectionné.  
   
 > [!NOTE]  
->  La première tâche pour le flux de contrôle consiste à calculer les points de terminaison de l'intervalle de modification. Pour plus d’informations sur cette tâche, consultez [Spécifier un intervalle de données modifiées](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). Pour obtenir une description du processus global de la conception du flux de contrôle, consultez [Capture de données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
+>  La première tâche pour le flux de contrôle consiste à calculer les points de terminaison de l'intervalle de modification. Pour plus d’informations sur cette tâche, consultez [Spécifier un intervalle de données modifiées](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). Pour obtenir une description du processus d’ensemble de la conception du flux de contrôle, consultez [Capture de données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
 ## <a name="understanding-the-components-of-the-solution"></a>Présentation des composants de la solution  
  La solution décrite dans cette rubrique utilise quatre composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/20/2017
 |Valeur retournée|Signification|Réponse|  
 |------------------|-------------|--------------|  
 |0|Indique que les données modifiées ne sont pas prêtes.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées postérieur au point de fin de l'intervalle sélectionné.|L'exécution se poursuit avec le composant qui implémente un délai. Le contrôle retourne ensuite au conteneur de boucles For qui continue à vérifier la tâche d'exécution SQL tant que la valeur retournée est 0.|  
-|1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  
+| 1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  
 |2|Indique que les données sont prêtes.<br /><br /> Il existe des enregistrements de capture de données modifiées qui sont antérieurs au point de départ et postérieurs au point de fin de l'intervalle sélectionné.|L'exécution sort du conteneur de boucles For et le chargement incrémentiel démarre.|  
 |3|Indique le chargement initial de toutes les données modifiées disponibles.<br /><br /> La logique conditionnelle obtient cette valeur à partir d'une variable de package spéciale qui est utilisée uniquement dans ce but.|L'exécution sort du conteneur de boucles For et le chargement incrémentiel démarre.|  
 |5|Indique que la variable TimeoutCeiling a été atteinte.<br /><br /> La boucle a testé les données le nombre spécifié de fois et les données ne sont toujours pas disponibles. Sans ce test ou un test semblable, le package peut s'exécuter indéfiniment.|L'exécution se poursuit avec le composant facultatif qui enregistre le délai d'attente.|  
@@ -278,7 +280,7 @@ ms.lasthandoff: 11/20/2017
   
      Si vous souhaitez inclure les informations de certaines variables système (par exemple, System::PackageName) dans les informations que vous écrivez dans le journal, sélectionnez également ces variables.  
   
-6.  Dans **Éditeur de tâche de script**, dans la page **Script** , cliquez sur **Modifier le script** pour ouvrir l’environnement de développement de script.  
+6.  Dans **l’Éditeur de tâche de script**, dans la page **Script** , cliquez sur **Modifier le script** pour ouvrir l’environnement de développement de script.  
   
 7.  Dans la procédure Main, entrez le code soit pour enregistrer une erreur en appelant la méthode **Dts.Log** , soit pour déclencher un événement en appelant l’une des méthodes de l’interface **Dts.Events** . Informez le package de l'erreur en retournant `Dts.TaskResult = Dts.Results.Failure`.  
   

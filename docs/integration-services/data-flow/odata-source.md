@@ -8,7 +8,8 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source"></a>Source OData
 Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol). Le composant prend en charge les protocoles OData v3 et v4.  
@@ -60,7 +61,7 @@ La source OData prend en charge les sources de données suivantes :
   
 ### <a name="static-options"></a>Options statiques  
  **Gestionnaire de connexions OData**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
  Après la sélection ou la création d’un gestionnaire de connexions, la boîte de dialogue affiche la version du protocole OData qui utilise le gestionnaire de connexions.  
   
@@ -134,7 +135,7 @@ La source OData prend en charge les sources de données suivantes :
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

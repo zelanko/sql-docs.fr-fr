@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94d528e378d85709f8accc5526636d73d305d6a2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3bd6e635fb364619933d23699f99da85591df31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transform-data-with-transformations"></a>Transformer des données avec des transformations
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut trois types de composants de flux de données : les sources, les transformations et les destinations.  
@@ -62,9 +63,9 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="to-set-the-properties-of-a-transformation"></a>Pour définir les propriétés d'une transformation  
   
--   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Connecter des composants avec des chemins](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

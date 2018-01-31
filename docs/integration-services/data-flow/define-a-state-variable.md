@@ -8,22 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5266703e8a7644a36ebf7eeeaccde1456ce735e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 292a24071ea7d6247972353a0dbe7d5bdb689f69
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="define-a-state-variable"></a>Définir une variable d'état
+# <a name="define-a-state-variable"></a>Définir une variable d’état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
   
  La variable d'état de capture de données modifiées est chargée, initialisée et mise à jour par la tâche de contrôle de capture de données modifiées et est utilisée par le composant de flux de données de la source CDC pour déterminer la plage de traitement actuelle des enregistrements de modification. La variable d'état de capture de données modifiées peut être définie sur n'importe quel conteneur commun à la tache de contrôle de capture de données modifiées et à la source CDC. La définition peut être effectuée au niveau du package mais également sur d'autres conteneurs, tel qu'un conteneur de boucles.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
  Le tableau suivant fournit une description globale des composants de la valeur de variable d'état de capture de données modifiées.  
   
-|Composant| Description|  
+|Composant|Description|  
 |---------------|-----------------|  
 |**\<state-name>**|Il s'agit du nom de l'état de capture de données modifiées actuel.|  
 |**CS**|Cela marque le point de départ de la plage de traitement actuelle (début actuel).|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |**\<ir-start>**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
 |**\<ir-end>**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  
 |**TS**|Cela marque l'horodateur pour la dernière mise à jour de l'état de capture de données modifiées.|  
-|**\<timestamp>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
+|**\<timestamp>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
 |**ER**|Ce message apparaît lorsque la dernière opération a échoué et il inclut une brève description de la cause de l'erreur. Si ce composant est présent, il apparaît toujours en dernier.|  
 |**\<short-error-text>**|Il s'agit de la brève description de l'erreur.|  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
  Si vous n'utilisez pas la tâche de contrôle de capture de données modifiées avec Permanence d'état automatique, vous devez charger la valeur de la variable depuis le stockage permanent dans lequel sa valeur a été enregistrée lors la dernière exécution du package, puis la réécrire dans le stockage permanent une fois le traitement de la plage de traitement actuelle terminé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)   
  [Éditeur de tâche de contrôle CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

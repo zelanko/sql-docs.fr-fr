@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset destination
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7cf8f2ed8875856da5756288c8e3fb707f1a397
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
   La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d’enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type **Object** . Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  

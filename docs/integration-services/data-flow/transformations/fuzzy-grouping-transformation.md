@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 817cb1690c8b166a0e1760c3e3bb298dfd130278
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
   La transformation de regroupement probable effectue des tâches de nettoyage des données en identifiant les lignes de données susceptibles d'être des doublons et en sélectionnant une ligne canonique de données à utiliser pour standardiser les données.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  La transformation de regroupement approximatif nécessite une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour créer les tables temporaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessaires à l'algorithme de transformation. La connexion doit correspondre à un utilisateur disposant de l'autorisation de créer des tables dans la base de données.  
   
- Pour configurer la transformation, vous devez sélectionner les colonnes d'entrée à utiliser lors de l'identification des doublons, et vous devez sélectionner le type de correspondance (approximative ou exacte) pour chaque colonne. Une correspondance exacte garantit que seules les lignes possédant des valeurs identiques dans cette colonne seront regroupées. La correspondance exacte peut être appliquée aux colonnes de n'importe quel type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , à l'exception des types DT_TEXT, DT_NTEXT et DT_IMAGE. Une correspondance approximative regroupe des lignes ayant à peu près les mêmes valeurs. La méthode utilisée pour la correspondance approximative des données est basée sur un score de similarité spécifié par l'utilisateur. Seules les colonnes avec les types de données DT_WSTR et DT_STR peuvent être utilisées dans la correspondance approximative. Pour plus d’informations, consultez [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Pour configurer la transformation, vous devez sélectionner les colonnes d'entrée à utiliser lors de l'identification des doublons, et vous devez sélectionner le type de correspondance (approximative ou exacte) pour chaque colonne. Une correspondance exacte garantit que seules les lignes possédant des valeurs identiques dans cette colonne seront regroupées. La correspondance exacte peut être appliquée aux colonnes de n'importe quel type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , à l'exception des types DT_TEXT, DT_NTEXT et DT_IMAGE. Une correspondance approximative regroupe des lignes ayant à peu près les mêmes valeurs. La méthode utilisée pour la correspondance approximative des données est basée sur un score de similarité spécifié par l'utilisateur. Seules les colonnes avec les types de données DT_WSTR et DT_STR peuvent être utilisées dans la correspondance approximative. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  La sortie de transformation comprend toutes les colonnes d'entrée, une ou plusieurs colonnes avec des données standardisées et une colonne contenant le score de similarité. Le score est représenté par une valeur décimale entre 0 et 1. La ligne canonique obtient le score de 1. Les scores des autres lignes dans le regroupement probable indiquent leur degré de correspondance avec cette ligne canonique. Plus le score se rapproche de 1, plus la ligne correspond à la ligne canonique. Si le regroupement probable comprend des lignes qui sont des doublons exacts de la ligne canonique, ces lignes ont également pour score la valeur 1. La transformation ne supprime pas les lignes dupliquées, mais les regroupe en créant une clé qui associe la ligne canonique à des lignes similaires.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  La transformation de regroupement probable comprend deux fonctionnalités de personnalisation du regroupement qu'elle effectue : les séparateurs de jetons et les seuils de similarité. La transformation fournit un ensemble par défaut de délimiteurs utilisés pour marquer des données, mais vous pouvez ajouter de nouveaux délimiteurs pour améliorer la création de jetons pour vos données.  
   
- Le seuil de similarité indique le degré de précision avec lequel la transformation identifie les doublons. Les seuils de similarité peuvent être définis au niveau du composant et de la colonne. Le seuil de similarité n'est disponible que pour les colonnes participant à une correspondance approximative. La plage de similarité va de 0 à 1. Plus le seuil s'approche de 1, plus les lignes et les colonnes doivent être similaires pour être répertoriées comme doublons. Vous spécifiez le seuil de similarité en définissant la propriété MinSimilarity au niveau du composant et de la colonne. Pour obtenir la similarité spécifiée au niveau du composant, toutes les lignes doivent montrer une similarité à travers toutes les colonnes qui est supérieure ou égale au seuil de similarité spécifié au niveau du composant.  
+ Le seuil de similarité indique le degré de précision avec lequel la transformation identifie les doublons. Les seuils de similarité peuvent être définis au niveau du composant et de la colonne. Le seuil de similarité n'est disponible que pour les colonnes participant à une correspondance approximative. La plage de similarité va de 0 à 1. Plus le seuil s'approche de 1, plus les lignes et les colonnes doivent être similaires pour être répertoriées comme doublons. Vous spécifiez le seuil de similarité en définissant la propriété MinSimilarity au niveau du composant et de la colonne. Pour obtenir la similarité spécifiée au niveau du composant, toutes les lignes doivent montrer une similarité à travers toutes les colonnes qui est supérieure ou égale au seuil de similarité spécifié au niveau du composant.  
   
  La transformation de regroupement probable calcule les mesures internes de similarité ; les lignes moins similaires à la valeur spécifiée dans MinSimilarity ne sont pas regroupées.  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
  Les performances de cette transformation peuvent s'améliorer si les tables et les index qu'elle utilise sont situés sur l'ordinateur local.  
   
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>Configuration de la transformation de regroupement probable  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d'informations sur la définition des propriétés de cette tâche, cliquez sur l'une des rubriques suivantes :  
   
 -   [Identifier des lignes de données semblables à l'aide de la transformation de regroupement probable](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez une connexion OLE DB existante en utilisant la zone de liste, ou créez une connexion en utilisant le bouton **Nouvelle** .  
   
- **Nouvelle**  
+ **Nouveau**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Éditeur de transformation de regroupement approximatif (onglet Colonnes)
@@ -182,7 +183,7 @@ ms.lasthandoff: 11/20/2017
  **Séparateurs de jetons**  
  La transformation fournit un ensemble de séparateurs par défaut pour marquer des données, mais vous devez ajouter ou supprimer des séparateurs en modifiant la liste en fonction des besoins.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

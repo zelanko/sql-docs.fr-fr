@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.selectapackage.f1
-helpviewer_keywords: Select a Package dialog box
+f1_keywords:
+- sql13.dts.designer.selectapackage.f1
+helpviewer_keywords:
+- Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0814aa6eda28588f7dce26bf823583acc631deb5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fab572c14d87acd3776a94675063ffe372525a5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-a-package"></a>Sélectionner un package
   Utilisez la boîte de dialogue **Sélectionner un package** pour spécifier le package à partir duquel la tâche MSMQ peut recevoir des messages.  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/20/2017
  **Emplacement**  
  Spécifiez l'emplacement du package. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sélection de cette valeur affiche les options dynamiques, **Serveur**, **Utiliser l'authentification Windows**, **Utiliser l'authentification SQL Server**, **Nom d'utilisateur**et **Mot de passe**.|  
 |Fichier DTSX|Définissez l'emplacement d'un fichier DTSX. La sélection de cette valeur affiche l'option dynamique **Nom de fichier**.|  
@@ -43,16 +46,16 @@ ms.lasthandoff: 11/20/2017
  **Nom du package**  
  Sélectionnez un package stocké sur le serveur spécifié.  
   
- **Serveur**  
+ **Server**  
  Tapez le nom d'un serveur ou sélectionnez-en un dans la liste.  
   
  **Utiliser l'authentification Windows**  
  Cliquez pour utiliser l'authentification Windows.  
   
- **Utiliser l'authentification SQL Server**  
+ **Utiliser l’authentification SQL Server**  
  Cliquez pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fournissez un nom d’utilisateur à utiliser pour ouvrir une session sur le serveur.  
   
  **Mot de passe**  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/20/2017
  **Nom de fichier**  
  Indiquez le chemin d’un package ou cliquez sur le bouton Parcourir **(…)** pour rechercher le package.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche MSMQ](../../integration-services/control-flow/message-queue-task.md)  
   
   

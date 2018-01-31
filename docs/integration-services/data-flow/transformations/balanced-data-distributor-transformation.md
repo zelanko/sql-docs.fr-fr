@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.balanceddatadistributor.f1
+f1_keywords:
+- sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c625840d537599994213b51cfd0d53601f904ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a054a759317186f4d060442ff20e642d9ab67190
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformation du distributeur de données équilibrées (BDD)
   La transformation du distributeur de données équilibrées (BDD) bénéficie de la fonction de traitement simultané des unités centrales modernes. Elle distribue des tampons de lignes entrantes uniformément dans les sorties sur des threads distincts. En utilisant des threads distincts pour chaque chemin de sortie, le composant BDD améliore les performances d'un package SSIS sur des ordinateurs à plusieurs cœurs ou plusieurs processeurs.  

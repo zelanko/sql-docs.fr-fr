@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.configureflatfiledest.f1
+f1_keywords:
+- sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e312251291cbf2e8850b7900793b8d32e7c3d53b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
   Si vous avez sélectionné une destination de fichier plat, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Configurer la destination du fichier plat** une fois que vous avez spécifié que vous souhaitiez copier une table ou que vous avez fourni une requête. Dans cette page, vous spécifiez les options de mise en forme du fichier plat de destination. Si vous le souhaitez, vous pouvez passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 |**Tabulation {t}**|Délimiter les colonnes avec une tabulation.|  
 |**Barre verticale {&#124;}**|Délimiter les colonnes avec une barre verticale.|  
 
-## <a name="optionally-review-column-mappings-and-preview-data"></a>(Facultatif) Passer en revue les mappages de colonnes et afficher un aperçu des données
+## <a name="optionally-review-column-mappings-and-preview-data"></a>Éventuellement, vérifier le mappage de colonnes et afficher un aperçu des données
 
 **Modifier les mappages**   
 Cliquez sur **Modifier les mappages** pour afficher la boîte de dialogue **Mappage de colonnes** de la table sélectionnée. Utilisez la boîte de dialogue **Mappage de colonnes** pour effectuer les opérations suivantes.
@@ -84,6 +86,6 @@ Cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de 
   
 Après avoir affiché un aperçu des données, vous souhaiterez peut-être modifier les options que vous avez sélectionnées dans les pages précédentes de l’Assistant. Pour effectuer ces modifications, retournez dans la page **Configurer la destination du fichier plat** , puis cliquez sur **Précédent** pour revenir aux pages précédentes où vous pouvez modifier vos sélections.  
 
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Après avoir spécifié les options de mise en forme pour le fichier plat de destination, la page suivante est **Enregistrer et exécuter le package**. Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer vos paramètres sous la forme d’un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour le personnaliser et le réutiliser ultérieurement. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 

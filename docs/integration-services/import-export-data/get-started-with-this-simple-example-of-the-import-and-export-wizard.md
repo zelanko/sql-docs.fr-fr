@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
-ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
+ms.openlocfilehash: 6455a2881d11ccd10c7be65a437357b1d1431dda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation
 Découvrez la série des opérations de l’Assistant Importation et exportation SQL Server en suivant un scénario courant : l’importation de données à partir d’une feuille de calcul Excel dans une base de données SQL Server. Même si vous envisagez d’utiliser une source et une destination différentes, cette rubrique vous montre l’essentiel de ce que vous devez savoir sur l’exécution de l’Assistant.

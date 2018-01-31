@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataflowtask.f1
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
 - data flow task [Integration Services]
 - performance [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3021aa51460aee1d74acdaa383aeca6ca4edd534
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
   La tâche de flux de données encapsule le moteur de flux de données chargé de déplacer des données entre les sources et les destinations et permet à l'utilisateur de transformer, nettoyer et modifier les données au cours de leur déplacement. L'ajout d'une tâche de flux de données à un flux de contrôle de package permet au package d'extraire, de transformer et de charger des données.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
  ![Flux de données](../../integration-services/control-flow/media/mw-dts-09.gif "Flux de données")  
   
 ## <a name="log-entries"></a>Entrées du journal  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -93,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
  Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Tri : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l’événement **OnPipelineRowsSent** au moment où les lignes ont été envoyées de la source OLE DB à la transformation de tri.  
   
-|Colonne|Description|Value|  
+|colonne|Description|Valeur|  
 |------------|-----------------|-----------|  
 |**PathID**|Valeur de la propriété **ID** du chemin entre la source OLE DB et la transformation de tri.|1185|  
 |**PathName**|Valeur de la propriété **Nom** du chemin.|Sortie de source OLE DB|  
@@ -115,10 +117,10 @@ ms.lasthandoff: 11/20/2017
   
 -   [Ajout de la tâche de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
   

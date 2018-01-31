@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.issuedetails.f1
+f1_keywords:
+- sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81ff6011b40700f75dba019356e3c0d80e94f969
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5d4adb7bfee3533830b3d806b666ee8866fc57bb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Boîte de dialogue Détails de la conversion de colonne (Assistant Importation et Exportation SQL Server)
   Si vous double-cliquez sur la ligne d’une colonne dans la page **Vérifier le mappage de type de données** , l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] présente la boîte de dialogue **Détails de la conversion de colonne** . Dans cette page, vous pouvez passer en revue des informations de conversion détaillées pour une colonne individuelle. Ces informations comprennent les éléments suivants :
@@ -41,7 +43,7 @@ Dans cet exemple, vous voyez les éléments répertoriés ici.
   
  ![Page Conversion de colonne de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/column-conversion.png "Page Conversion de colonne de l’Assistant Importation et Exportation") 
   
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez passé en revue les détails de la conversion de colonne et cliqué sur **OK**, la boîte de dialogue **Détails de la conversion de colonne** vous renvoie à la page **Vérifier le mappage de type de données** . Pour plus d’informations, consultez [Vérifier le mappage de type de données](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Voir aussi

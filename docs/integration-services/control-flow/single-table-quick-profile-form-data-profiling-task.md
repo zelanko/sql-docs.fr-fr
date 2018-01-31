@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.quickprofile.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa61ac73fbc2ec86424728393e9ff9651b502e60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc9d58ae7577204988fefcf0364c48a8a2695201
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulaire de profil rapide de table simple (tâche de profilage des données)
   Utilisez le **Formulaire de profil rapide de table simple** pour configurer rapidement la tâche de profilage des données afin de profiler une table ou une vue unique à l'aide des paramètres par défaut.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/20/2017
  **Calculer**  
  Sélectionnez les profils à calculer.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Profil de ratio de colonne Null**|Calculez un profil de ratio de colonne Null à l'aide des paramètres par défaut pour toutes les colonnes applicables dans la table ou la vue sélectionnée.<br /><br /> Ce profil signale le pourcentage de valeurs NULL dans la colonne sélectionnée. Ce profil peut vous aider à identifier des problèmes dans vos données, tels qu'un ratio élevé inattendu de valeurs Null dans une colonne. Pour plus d’informations sur les paramètres de ce profil, consultez [Options Demande de profil de ratio de colonne Null &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Profil de statistiques de colonnes**|Calculez un profil de statistiques de colonnes à l'aide des paramètres par défaut pour toutes les colonnes applicables dans la table ou la vue sélectionnée.<br /><br /> Ce profil répertorie des statistiques, telles que l'écart minimal, maximal, moyen et type pour les colonnes numériques, ainsi que l'écart minimal et maximal pour les colonnes **datetime** . Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des dates non valides. Pour plus d’informations sur les paramètres de ce profil, consultez [Options Demande de profil de statistiques de colonnes &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md).|  
@@ -50,12 +53,12 @@ ms.lasthandoff: 11/20/2017
 |**Profil de clé candidate**|Calculez un profil de clé candidate pour les combinaisons de colonnes qui incluent jusqu'au nombre de colonnes spécifié dans **pour au plus N clés de colonne**.<br /><br /> Ce profil signale si une colonne ou un ensemble de colonnes est adapté en tant que clé pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs dupliquées dans une colonne clé potentielle. Pour plus d’informations sur les paramètres de ce profil, consultez [Options Demande de profil de clé candidate &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md).|  
 |**pour au plus N clés de colonne**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme clé de la table ou de la vue. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 3 teste les combinaisons de clé d'une colonne, de deux colonnes et de trois colonnes.|  
 |**Profil de dépendance fonctionnelle**|Calculez un profil de dépendance fonctionnelle pour les combinaisons de colonnes déterminantes qui incluent jusqu'au nombre de colonnes spécifié dans **pour au moins N colonnes comme colonnes déterminantes**.<br /><br /> Ce profil indique le degré de dépendance entre les valeurs d'une colonne (colonne dépendante) et celles d'une autre colonne ou d'un ensemble de colonnes (colonne déterminante). Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs non valides. Pour plus d’informations sur les paramètres de ce profil, consultez [Options Demande de profil de dépendance fonctionnelle &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md).|  
-|**pour au moins N colonnes comme colonnes déterminantes**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme colonnes déterminantes. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 2 teste les combinaisons dans lesquelles les combinaisons d'une colonne ou de deux colonnes sont les colonnes déterminantes d'une autre colonne (dépendante).|  
+|**pour au moins N colonnes comme colonnes déterminantes**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme colonnes déterminantes. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 2 teste les combinaisons dans lesquelles les combinaisons d'une colonne ou de deux colonnes sont les colonnes déterminantes d'une autre colonne (dépendante).|  
   
 > [!NOTE]  
 >  Le type de profil d’inclusion de valeur n’est pas disponible à partir du **formulaire de profil rapide de table simple**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Éditeur de tâche de profilage de données &#40;page Demandes de profil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   

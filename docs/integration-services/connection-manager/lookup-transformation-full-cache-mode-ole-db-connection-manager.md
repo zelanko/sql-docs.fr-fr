@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Lookup transformation [Integration Services]
+helpviewer_keywords:
+- Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25e4840c5fa2b9ae98c172549467811150ec0217
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions OLE DB. Dans le mode Cache complet, le dataset de référence est chargé dans le cache avant l’exécution de la transformation de recherche.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/20/2017
     >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
   
     > [!NOTE]  
-    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 11. Incluez des colonnes de recherche dans la sortie en exécutant les tâches suivantes :  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/20/2017
   
 13. Cliquez sur **OK** pour enregistrer les modifications apportées à la transformation de recherche, puis exécutez le package.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

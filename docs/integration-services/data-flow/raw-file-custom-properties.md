@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e347cdfd00f6e9e06ab8de49a4db3a382ae4eba7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b007bc2aa2f8e8a2b7f9b7d3dfbfbbeece4730cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raw-file-custom-properties"></a>Propriétés personnalisées des fichiers bruts
   **Propriétés personnalisées des sources**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (énumération)|Mode utilisé pour accéder aux données brutes. Les valeurs possibles sont **Nom de fichier** (0) et **Nom de fichier à partir d’une variable** (1). La valeur par défaut est **Nom de fichier** (0).|  
-|FileName|Chaîne|Chemin d'accès et nom de fichier du fichier source.|  
+|FileName|String|Chemin d'accès et nom de fichier du fichier source.|  
   
  La sortie et les colonnes de sortie de la source de fichier brut ne disposent pas de propriétés personnalisées.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (énumération)|Valeur qui indique si la propriété FileName contient un nom de fichier ou le nom d’une variable qui contient un nom de fichier. Les options proposées sont **Nom de fichier** (0) et **Nom de fichier à partir d’une variable** (1).|  
-|FileName|Chaîne|Nom du fichier dans lequel la destination de fichier brut écrit.|  
+|FileName|String|Nom du fichier dans lequel la destination de fichier brut écrit.|  
 |WriteOption|Integer (énumération)|Valeur qui spécifie si la destination de fichier brut supprime un fichier existant qui porte le même nom. Les options proposées sont **Toujours créer** (0), **Créer une fois** (1), **Tronquer et ajouter** (3) et **Ajouter** (2). La valeur par défaut de cette propriété est **Toujours créer** (0).|  
   
 > [!NOTE]  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations, consultez [Destination de fichier brut](../../integration-services/data-flow/raw-file-destination.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73ab1f41223d78f627bd13523bf76eb4ab4d19e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
   Un gestionnaire de connexions de fichiers plats permet à un package d'accéder aux données d'un fichier plat. Ainsi, les sources et destinations de fichiers plats peuvent utiliser des gestionnaires de connexions de fichiers plats pour extraire et charger des données.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
  Vous pouvez utiliser une expression pour créer un nom de fichier au moment de l'exécution à l'aide du gestionnaire de connexions de fichiers plats, avec la destination du fichier plat.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
  **Nom de fichier**  
  Tapez le chemin d'accès et le nom de fichier à utiliser dans la connexion de fichier plat.  
   
- **Parcourir**  
+ **...**  
  Recherchez le nom de fichier à utiliser dans la connexion de fichier plat.  
   
  **Paramètres régionaux**  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
  **Format**  
  Indique si le fichier utilise une mise en forme délimitée, à largeur fixe ou en drapeau à droite.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Délimité|Les colonnes sont séparées par les séparateurs spécifiés à la page **Colonnes** .|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
@@ -238,7 +239,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="flat-file-connection-manager-editor-advanced-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Avancé)
   La page **Avancé** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de définir des propriétés qui spécifient la manière dont Integration Services lit et écrit des données dans les fichiers plats. Vous pouvez modifier les noms des colonnes dans le fichier plat et définir des propriétés qui incluent le type de données et des séparateurs pour chaque colonne du fichier.  
   
- Par défaut, la longueur des colonnes de type chaîne est de 50 caractères. Vous pouvez redimensionner la longueur de ces colonnes pour empêcher la troncation des données ou une largeur de colonne excessive. Vous pouvez également mettre à jour d'autres métadonnées pour permettre la compatibilité avec les colonnes de destination. Par exemple, vous pouvez convertir le type de données d'une colonne qui contient uniquement des données de type entier en type de données numérique, tel que DT_I2. Vous pouvez apporter ces modifications manuellement ou cliquer sur le bouton **Sélectionner les types** pour utiliser la boîte de dialogue **Suggérer les types de colonnes** pour évaluer des échantillons de données et effectuer automatiquement une partie de ces modifications.  
+ Par défaut, la longueur des colonnes de type chaîne est de 50 caractères. Vous pouvez redimensionner la longueur de ces colonnes pour empêcher la troncation des données ou une largeur de colonne excessive. Vous pouvez également mettre à jour d'autres métadonnées pour permettre la compatibilité avec les colonnes de destination. Par exemple, vous pouvez convertir le type de données d'une colonne qui contient uniquement des données de type entier en type de données numérique, tel que DT_I2. Vous pouvez apporter ces modifications manuellement ou cliquer sur le bouton **Sélectionner les types** pour utiliser la boîte de dialogue **Suggérer les types de colonnes** pour évaluer des échantillons de données et effectuer automatiquement une partie de ces modifications.  
   
  Pour en savoir plus sur le gestionnaire de connexions de fichiers plats, consultez [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/20/2017
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Celle-ci est délimitée par le séparateur de ligne.|  
+|**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
 |**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur correspond à un nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources. Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
 |**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont pas qualifiées.|  
@@ -267,7 +268,7 @@ ms.lasthandoff: 11/20/2017
  **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Ajouter une colonne**|Ajoute une colonne à la fin de la liste.|  
 |**Insérer avant**|Insère une nouvelle colonne avant la colonne sélectionnée.|  

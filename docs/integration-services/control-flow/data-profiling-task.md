@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.f1
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about Data Profiling task
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c047b4a34bc300c7caacd020dd4c1833077dd5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
   La tâche de profilage des données calcule différents profils qui vous aident à vous familiariser avec une source de données et à identifier les problèmes à résoudre au niveau des données.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 |Profils qui analysent des colonnes individuelles|Description|  
 |----------------------------------------------|-----------------|  
 |Profil de distribution de longueurs de colonne|Signale toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque longueur représente.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels que des valeurs non valides. Par exemple, vous profilez une colonne des codes des États américains, ceux-ci comportant deux caractères, et découvrez des valeurs excédant deux caractères.|  
-|Profil de ratio de colonne Null|Signale le pourcentage de valeurs Null dans la colonne sélectionnée.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels qu'un ratio élevé inattendu de valeurs Null dans une colonne. Par exemple, vous profilez une colonne de codes postaux et découvrez un pourcentage élevé et inacceptable de codes manquants.|  
+|Profil de ratio de colonne Null|Signale le pourcentage de valeurs Null dans la colonne sélectionnée.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels qu'un ratio élevé inattendu de valeurs Null dans une colonne. Par exemple, vous profilez une colonne de codes postaux et découvrez un pourcentage élevé et inacceptable de codes manquants.|  
 |Profil de modèle de colonne|Signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié de valeurs dans une colonne de chaîne.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels que des chaînes non valides. Il peut également suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, un profil de motif d’une colonne de codes postaux américains peut générer les expressions régulières suivantes : \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.|  
 |Profil de statistiques de colonnes|Fournit des statistiques, telles que la valeur minimale, la valeur maximale, la moyenne et l’écart type pour des colonnes numériques, ainsi que la valeur minimale et la valeur maximale pour des colonnes **datetime** .<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels que des dates non valides. Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximum dont l'échéance est à venir.|  
 |Profil de distribution de valeurs de colonne|Signale toutes les valeurs distinctes dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque valeur représente. Peut également signaler des valeurs qui représentent plus qu'un pourcentage de lignes spécifié dans la table.<br /><br /> Ce profil vous aide à identifier des problèmes dans vos données, tels qu'un nombre incorrect de valeurs distinctes dans une colonne. Par exemple, vous profilez une colonne supposée contenir les États américains et découvrez plus de 50 valeurs distinctes.|  
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 -   **Profil rapide** Vous pouvez sélectionner Profil rapide pour configurer la tâche rapidement. Un profil rapide profile une table ou une vue en utilisant tous les profils et paramètres par défaut.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Messages de journalisation personnalisés disponibles dans la tâche de profilage des données  
- Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de profilage des données. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées pour la tâche de profilage des données. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  

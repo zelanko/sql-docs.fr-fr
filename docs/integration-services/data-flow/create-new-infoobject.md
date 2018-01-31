@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>Créer un nouvel InfoObject
   Utilisez la boîte de dialogue **Créer un nouvel InfoObject** pour créer un InfoObject dans le système SAP Netweaver BW.  
   
- Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [Destination SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
  **Supprimer**  
  Supprimez l’InfoObject sélectionné de la liste **Attributs** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer un InfoCube pour les données de transaction](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Créer un InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Créer un InfoSource pour les données de transaction](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

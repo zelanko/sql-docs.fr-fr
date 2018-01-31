@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.wmiconnection.f1
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3043e761402ae70369990d281bedede9c7bc39b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d432432905afd9a1ef2355e16540cc5caa64e0a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-connection-manager"></a>Gestionnaire de connexions WMI
   Un gestionnaire de connexions WMI permet à un package d'utiliser WMI (Windows Management Instrumentation) pour gérer des informations dans un environnement d'entreprise. La tâche de service web incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions WMI.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Sélectionnez le mode d'authentification pour la connexion au serveur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md).  
   
@@ -69,15 +71,15 @@ ms.lasthandoff: 11/20/2017
  **Utiliser l’authentification Windows**  
  Sélectionnez cette option pour utiliser l'authentification Windows. Si vous utilisez l'authentification Windows, vous n'avez pas besoin de fournir un nom d'utilisateur ou un mot de passe pour la connexion.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si vous n'utilisez pas l'authentification Windows, vous devez fournir un nom d'utilisateur pour la connexion.  
   
  **Mot de passe**  
  Si vous n'utilisez pas l'authentification Windows, vous devez fournir le mot de passe de la connexion.  
   
- **Test**  
+ **Tester**  
  Testez les paramètres du gestionnaire de connexions.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche de service Web](../../integration-services/control-flow/web-service-task.md)   
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

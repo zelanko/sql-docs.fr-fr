@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 648e58e6b8f86648d1e3bf1d80ff02916c4276be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
   Quand vous travaillez dans le concepteur de flux de contrôle, la boîte à outils du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] énumère les tâches proposées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer le flux de contrôle d’un package. Pour plus d’informations sur la boîte à outils, consultez [Boîte à outils SSIS](../../integration-services/ssis-toolbox.md).  
@@ -87,7 +88,7 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
     > [!NOTE]  
     >  Vous pouvez définir les propriétés en tapant une valeur directement dans la zone de texte ou en sélectionnant une valeur dans une liste. Néanmoins, certaines propriétés sont plus complexes et disposent d'un éditeur de propriétés personnalisées. Pour définir la propriété, cliquez dans la zone de texte, puis sur le bouton Générer **(…)** pour ouvrir l’éditeur personnalisé.  
   
-6.  Si vous le souhaitez, créez des expressions de propriété afin de mettre à jour de manière dynamique les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, créez des expressions de propriété afin de mettre à jour de manière dynamique les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
 7.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
@@ -110,13 +111,13 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
   
 5.  Si l'éditeur de tâche ou de conteneur comporte plusieurs nœuds, cliquez sur celui qui contient la propriété à définir.  
   
-6.  Si vous le souhaitez, cliquez sur **Expressions** , puis dans la page **Expressions** , créez des expressions de propriété afin de mettre à jour dynamiquement les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, cliquez sur **Expressions** , puis dans la page **Expressions** , créez des expressions de propriété afin de mettre à jour dynamiquement les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
 7.  Mettez à jour la valeur de la propriété.  
   
 8.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Conteneurs Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  

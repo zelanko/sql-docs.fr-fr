@@ -8,23 +8,24 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4b1a7480113be51245c8c01a087a65ce616cb2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-ssis"></a>Capture de données modifiées (SSIS)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la capture de données modifiées constitue une solution efficace au défi de l'optimisation des chargements incrémentiels de tables sources vers des mini-Data Warehouses et des entrepôts de données.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
  La fonction de capture des modifications de données de [!INCLUDE[ssDE](../../includes/ssde-md.md)] capture les activités d’insertion, de mise à jour et de suppression appliquées aux tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et rend les détails des modifications disponibles dans un format relationnel simple à utiliser. Les tables de modifications utilisées par la capture de données modifiées contiennent des colonnes qui reflètent la structure de colonne des tables sources suivies, ainsi que les métadonnées nécessaires à la compréhension des modifications effectuées ligne par ligne.  
   
 > [!NOTE]  
->  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Fonctionnement de la capture de données modifiées dans Integration Services  
  Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut facilement collecter les données modifiées dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer des chargements incrémentiels efficaces dans un entrepôt de données. Toutefois, avant de pouvoir utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour charger des données modifiées, un administrateur doit activer la capture de données modifiées sur la base de données et les tables à partir desquelles vous souhaitez capturer les modifications. Pour plus d’informations sur la configuration de la capture des données modifiées sur une base de données, consultez [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md).  
@@ -99,13 +100,13 @@ ms.lasthandoff: 11/20/2017
  Le processus exposé précédemment fait référence à un chargement incrémentiel à partir d'une table unique. Pour effectuer un chargement incrémentiel à partir de plusieurs tables, le processus d'ensemble est le même. Toutefois, la conception du package doit être modifié pour prendre en charge le traitement de plusieurs tables. Pour plus d’informations sur la création d’un package qui effectue un chargement incrémentiel à partir de plusieurs tables, consultez [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Exemples de packages de capture de données modifiées  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser la capture de données modifiées dans des packages. Pour plus d'informations, consultez les rubriques suivantes :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser la capture de données modifiées dans des packages. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   [Fichier Lisezmoi de l'exemple de package de capture de données modifiées pour l'intervalle spécifié](http://go.microsoft.com/fwlink/?LinkId=133507)  
   
 -   [Fichier Lisez-moi de l'exemple de package Change Data Capture since Last Request](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Spécifier un intervalle de données modifiées](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), sur sqlblog.com  
   
   

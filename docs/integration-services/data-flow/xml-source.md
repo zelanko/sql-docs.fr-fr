@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc10de2bb6f4d9cebf341242321e692ec9a4614e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>Source XML
   La source XML lit un fichier de données XML et remplit les colonnes de la sortie source avec les données.  
@@ -63,13 +64,13 @@ ms.lasthandoff: 11/20/2017
   
  Si le fichier de données XML contient des éléments qui ne figurent pas dans le fichier XSD, ces éléments sont ignorés et aucune sortie correspondante n'est générée. Par contre, s'il manque dans le fichier de données XML des éléments représentés dans le fichier XSD, la sortie contient des colonnes comportant des valeurs NULL.  
   
- Quand les données sont extraites du fichier de données XML, elles sont converties en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Toutefois, la source XML ne peut pas convertir les données XML en types de données DT_TIME2 ou DT_DBTIMESTAMP2, car elle ne prend pas en charge ces types de données. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Quand les données sont extraites du fichier de données XML, elles sont converties en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Toutefois, la source XML ne peut pas convertir les données XML en types de données DT_TIME2 ou DT_DBTIMESTAMP2, car elle ne prend pas en charge ces types de données. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Le fichier XSD ou le schéma inclus peuvent spécifier le type de données des éléments mais, s’ils ne le font pas, la boîte de dialogue **Éditeur de source XML** affecte le type de données chaîne Unicode (DT_WSTR) à la colonne de sortie qui contient l’élément et définit pour celle-ci une longueur de 255 caractères.  
   
  Si le schéma spécifie la longueur maximale d'un élément, la longueur de la colonne de sortie prend cette valeur. Si la longueur maximale est supérieure à la longueur prise en charge par le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans lequel l’élément est converti, les données sont tronquées à la longueur maximale du type de données. Par exemple, si une chaîne a une longueur de 5000, elle est tronquée au 4000e caractère car la longueur maximale du type de données DT_WSTR est de 4000 caractères ; de même, les données de type octet sont tronquées au 8000e caractère, car la longueur maximale du type de données DT_BYTES est de 4000 caractères. Si le schéma ne spécifie aucune longueur maximale, la longueur par défaut des colonnes, indépendamment de leur type de données, est de 255. La troncation des données dans la source XML est gérée de la même manière que dans les autres composants de flux de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).  
   
- Vous pouvez modifier le type de données et la longueur de la colonne. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Vous pouvez modifier le type de données et la longueur de la colonne. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="configuration-of-the-xml-source"></a>Configuration de la source XML  
  La source XML prend en charge trois modes différents d'accès aux données. Vous pouvez spécifier l'emplacement du fichier de données XML, la variable qui contient cet emplacement ou celle qui contient les données XML.  
@@ -80,9 +81,9 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut la boîte de dialogue **Éditeur de source XML**pour configurer la source XML. Cette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations sur la définition des propriétés, cliquez sur l’une des rubriques suivantes :  
   
--   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d'un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="xml-source-editor-connection-manager-page"></a>Éditeur de source XML (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de source XML** pour spécifier un fichier XML et le schéma XSD qui transforme les données XML.  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
  **Mode d'accès aux données**  
  Spécifiez la méthode de sélection des données dans la source.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
 |Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  **Emplacement XSD**  
  Tapez le chemin et le nom de fichier du schéma XSD, ou recherchez le fichier en cliquant sur **Parcourir**.  
   
- **Parcourir**  
+ **...**  
  Dans la boîte de dialogue **Ouvrir** , recherchez le fichier de schéma XSD.  
   
  **Créer XSD**  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **Emplacement XML**  
  Tapez le chemin et le nom du fichier de données XML, ou recherchez le fichier en cliquant sur **Parcourir**.  
   
- **Parcourir**  
+ **...**  
  Dans la boîte de dialogue **Ouvrir** , recherchez le fichier de données XML.  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>Mode d'accès aux données = fichier XML à partir d'une variable  
@@ -174,5 +175,5 @@ ms.lasthandoff: 11/20/2017
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Extraire des données à l’aide de la source XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88edf86e9f00e890f3e390f801ae208be3bb2799
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3159eaf47849fc3efd5f2392875217d4aa87a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="left-ssis-expression"></a>LEFT (expression SSIS)
   Renvoie le nombre de caractères spécifié en commençant par la partie la plus à gauche d'une expression de caractères donnée.  
@@ -34,7 +35,7 @@ LEFT(character_expression,number)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
+ *expression_caractère*  
  Expression de caractères à partir de laquelle doivent être extraits les caractères.  
   
  *number*  
@@ -43,7 +44,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si *number* est supérieur à la longueur de *character_expression*, la fonction retourne *character_expression*.  
   
  Si l'argument *number* a pour valeur zéro, la fonction renvoie une chaîne de longueur nulle.  
@@ -63,7 +64,7 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RIGHT &#40;expression SSIS&#41;](../../integration-services/expressions/right-ssis-expression.md)   
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

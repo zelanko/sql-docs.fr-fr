@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Démarrer l’Assistant Importation et Exportation SQL Server
 
@@ -114,7 +115,7 @@ Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includ
 > [!TIP]
 > Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.   
 
- ## <a name="whats-next"></a>Étape suivante  
+ ## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Quand vous démarrez l’Assistant, la première page est **Assistant Importation et Exportation SQL Server**. Vous n’avez aucune action à effectuer dans cette page. Pour plus d’informations, consultez [Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
 ## <a name="related"></a> Tâches et contenus connexes  

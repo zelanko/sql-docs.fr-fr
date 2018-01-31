@@ -8,26 +8,28 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: f1Help
+f1_keywords:
+- f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7ee7e2cd15592db9013ca38ecf71dc3750eaf78
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9b325d98bfad926ae8832c2cc765ddfb05c8da5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1
   Le concepteur de capture de données modifiées pour Oracle par Attunity permet de créer et gérer une instance Oracle CDC. Les rubriques de cette section expliquent comment effectuer les tâches disponibles dans la console du concepteur CDC.  
   
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
 -   [Accéder à la console du concepteur CDC](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)  
   

@@ -8,28 +8,30 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Créer et modifier un service de capture de données modifiées Oracle
   Vous créez et modifiez un service Windows de capture de données modifiées Oracle dans la console de configuration du service de capture de données modifiées.  
   
  Pour créer un service Windows de capture de données modifiées Oracle, sélectionnez **Services de capture de données modifiées locaux** et cliquez sur **Nouveau service** dans le volet **Actions** . Vous pouvez également cliquer avec le bouton droit sur **Services de capture de données modifiées locaux** et sélectionner **Nouveau service**. La boîte de dialogue Nouveau service Windows de capture de données modifiées Oracle s'ouvre.  
   
- **- ou -**  
+ **OR**  
   
  Pour modifier les propriétés du service de capture de données modifiées, sélectionnez le service pour lequel vous souhaitez modifier les propriétés et cliquez sur **Propriétés** dans le volet **Actions** . Vous pouvez également cliquer avec le bouton droit sur le service que vous utilisez et sélectionner **Propriétés**. La boîte de dialogue de propriétés du service CDC s'ouvre.  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
  Le même mot de passe principal doit également être utilisé lorsque d'autres instances du même service sont configurées sur d'autres nœuds sur un cluster dans une configuration haute disponibilité. Si vous perdez ou modifiez le mot de passe principal, tous les mots de passe d'exploration de données de journaux stockés dans des bases de données d'instance Oracle CDC doivent être entrés de nouveau via la console du concepteur CDC.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : créer et modifier un service de capture de données modifiées](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

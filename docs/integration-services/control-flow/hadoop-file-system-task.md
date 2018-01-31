@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hadoopfiletask.f1
+f1_keywords:
+- sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9cc77b27b5e2b53b8790cdbd99324166f4ca659
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 540e8e939321a81dfcf044516ce81fd0e6b4d6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-file-system-task"></a>Tâche du système de fichiers Hadoop
   Une tâche du système de fichiers Hadoop permet à un package SSIS de copier des fichiers à partir d’un cluster Hadoop, vers un cluster Hadoop ou au sein d’un cluster Hadoop.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |**Connexion de fichiers locaux**|Spécifiez un gestionnaire de connexions de fichiers existant ou créez-en un. Ce gestionnaire de connexions indique où se trouvent les fichiers source.|  
 |**Est récursif**|Indiquez si vous souhaitez copier tous les sous-dossiers de manière récursive.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   

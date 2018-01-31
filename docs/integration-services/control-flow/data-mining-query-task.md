@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,25 +21,25 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-mining-query-task"></a>Tâche de requête d'exploration de données
+# <a name="data-mining-query-task"></a>Data Mining Query Task
   La tâche de requête d'exploration de données exécute des requêtes de prédiction basées sur les modèles d'exploration de données intégrés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La requête de prédiction crée une prédiction de nouvelles données à l'aide de modèles d'exploration de données. Par exemple, une requête de prédiction peut prédire le nombre de voiliers susceptibles d'être vendus pendant les mois d'été ou générer la liste des prospects susceptibles d'acheter un voilier.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] met à votre disposition des tâches qui effectuent d’autres opérations Business Intelligence, telles que l’exécution d’instructions DDL (Data Definition Language) et le traitement d’objets analytiques.  
   
  Pour plus d'informations sur les autres tâches Business Intelligence, cliquez sur l'une des rubriques suivantes :  
   
--   [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
 -   [Tâche de traitement d'Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="configuration-of-the-data-mining-query-task"></a>Configuration de la tâche de requête d'exploration de données  
  La tâche de requête d'exploration de données requiert deux connexions. La première connexion est celle d'un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient la structure et le modèle d'exploration de données. La seconde connexion est celle d'un gestionnaire de connexions OLE DB à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table dans laquelle la tâche écrit les données. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) et [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
 > [!NOTE]  
 >  L'éditeur de tâche de requête d'exploration de données n'a pas de page Expressions. À la place, utilisez la fenêtre **Propriétés** pour accéder aux outils de création et de gestion des expressions des propriétés de la tâche de requête d'exploration de données.  

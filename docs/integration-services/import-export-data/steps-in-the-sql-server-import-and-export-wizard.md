@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aed445a4a884aa07f1fa93a0f27cfe2763bfe4b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1f3defee5da1c6cc98e985cf6f8eb6bc30479b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Étapes de l’Assistant Importation et Exportation SQL Server
 Cette rubrique décrit la série d’étapes permettant d’importer et d’exporter des données avec l’Assistant Importation et Exportation SQL Server. Elle contient également des liens vers les différentes pages de documentation qui décrivent chaque page ou boîte de dialogue s’affichant dans l’Assistant.
@@ -47,10 +48,10 @@ Pour un rapide aperçu des différents écrans qui s’affichent dans une sessio
 > Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.
 
 ## <a name="related"></a> Tâches et contenus connexes  
-Voici quelques tâches de base parmi d’autres.
+Voici d’autres tâches élémentaires.
 -   **Consulter un exemple rapide sur le fonctionnement de l’Assistant.**
 
-    -   **Si vous préférez afficher des captures d’écran.** Examinez en entier cet exemple facile tenant sur une seule page : [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+    -   **Si vous préférez afficher des captures d’écran.** Jetez un œil à cet exemple simple et complet qui tient sur une seule page : [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
     -   **Si vous préférez regarder une vidéo.** Regardez cette vidéo de quatre minutes sur YouTube qui décrit l’Assistant et explique à l’aide d’instructions claires et simples comment exporter des données vers Excel : [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 

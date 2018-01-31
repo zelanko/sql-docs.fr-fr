@@ -8,25 +8,26 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d3286ac5f6a85b05babf3df26bb525cf18357ee5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services prises en charge par les éditions de SQL Server
  Cette rubrique fournit des détails sur les fonctionnalités de SQL Server Integration Services (SSIS) prises en charge par les différentes éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
-Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez les fonctionnalités listées pour l’édition Entreprise dans les tableaux suivants.
+Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez les fonctionnalités répertoriées pour Enterprise Edition dans les tableaux suivants.
   
 Pour obtenir les notes de publication les plus récentes et des informations sur les nouveautés, consultez les articles suivants :
 -   [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
@@ -41,7 +42,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
     
 ## <a name="ISNew"></a> Nouvelles fonctionnalités Integration Services dans SQL Server 2017
   
-|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|Oui|||||
 |Scale Out Worker|Oui|Oui <sup>1</sup>|TBD|TBD|TBD|
@@ -53,13 +54,13 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 ## <a name="IEWiz"></a> Assistant Importation et Exportation SQL Server
 
-|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Assistant Importation et Exportation SQL Server|Oui|Oui|Oui|Oui|Oui|  
 
 ## <a name="IS"></a> Integration Services  
   
-|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Connecteurs de source de données intégrés|Oui|Oui|||| 
 |Tâches et transformations intégrées|Oui|Oui||||  
@@ -70,7 +71,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 
 ## <a name="ISAA"></a> Integration Services - sources et destinations avancées  
   
-|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Source et destination Oracle hautes performances par Attunity|Oui|||||  
 |Source et destination hautes performances Teradata par Attunity|Oui|||||  
@@ -81,7 +82,7 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
   
 ## <a name="ISAT"></a> Integration Services - Tâches et transformations avancées  
   
-|Fonctionnalité|Entreprise|Standard|Web|Express with Advanced Services|Express|  
+|Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Composants de capture de données modifiées par Attunity <sup>1</sup>|Oui|||||  
 |Transformation de requête d'exploration de données|Oui|||||  

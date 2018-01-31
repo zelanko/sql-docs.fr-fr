@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aea4b25c91b2282085070152da6f7c34d2373848
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0796a4b0f07f249e2f7e882ec11b9a843a2e29ca
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="request-log"></a>Journal des requêtes
   Utilisez la boîte de dialogue **Journal des requêtes** pour afficher les événements journalisés lors de la demande qui est effectuée au système SAP Netweaver BW pour les exemples de données. Ces informations peuvent être utiles si vous devez dépanner votre configuration de la source SAP BW.  
@@ -54,18 +55,18 @@ ms.lasthandoff: 11/20/2017
  **Type**  
  Affiche le type de l'événement qui a été journalisé. Le tableau suivant répertorie les types d'événements possibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |S|Message de réussite.|  
 |E|Message d'erreur|  
 |W|Message d'avertissement.|  
 |I|Message d’information.|  
-|Objet|L'opération a été abandonnée.|  
+|Un|L'opération a été abandonnée.|  
   
  **Message**  
  Affiche le texte du message associé à l'événement journalisé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Éditeur de source SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

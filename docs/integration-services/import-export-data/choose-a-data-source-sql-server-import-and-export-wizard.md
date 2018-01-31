@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.chooseadatasource.f1
+f1_keywords:
+- sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 90577058fc3501239ac1c3ad72c96e9df2bc5f04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fe6c34e33f62bf5205763b2f2cf22f868ff418e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
   Après la page d’accueil, l’Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Choisir une source de données**. Dans cette page, vous indiquez la source de vos données et la façon de s’y connecter.
@@ -52,7 +54,7 @@ Spécifiez la source de données en sélectionnant le fournisseur de données qu
 -   **Fournisseurs 32 bits et 64 bits.** Si vous exécutez l’Assistant 64 bits, vous ne voyez pas les sources de données pour lesquelles seul un fournisseur 32 bits est installé, et vice versa.
 
 > [!NOTE]
-> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, notamment la version 32 bits de l’Assistant.
+> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
 
 ## <a name="after-you-choose-a-data-source"></a>Une fois que vous avez choisi une source de données
 Une fois que vous avez choisi une source de données, le reste de la page **Choisir une source de données** présente un nombre variable d’options qui dépendent du fournisseur de données que vous sélectionnez.
@@ -70,7 +72,7 @@ Pour se connecter à une source de données couramment utilisée, consultez une 
 
 Pour plus d’informations sur la façon de se connecter à une source de données qui n’est pas répertoriée ici, consultez [The Connection Strings Reference](https://www.connectionstrings.com/) (Références en matière de chaînes de connexion). Ce site tiers contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
 
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez fourni les informations relatives à la source de vos données et indiqué comment s’y connecter, la page **Choisir une destination**s’affiche. Dans cette page, vous fournissez les informations relatives à la destination de vos données et à la façon de s’y connecter. Pour plus d’informations, consultez [Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
  
 ## <a name="see-also"></a>Voir aussi

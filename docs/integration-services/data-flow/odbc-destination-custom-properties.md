@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dacb3a2eea675e85b23fc2b05443d14a95983c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfeeaa38de94dfe2f1d716cda8eee0e5e5faf6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-destination-custom-properties"></a>Propriétés personnalisées des destinations ODBC
   Le tableau suivant décrit les propriétés personnalisées de la destination ODBC. Toutes les propriétés peuvent être définies à partir des expressions de propriété SSIS.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Entier|Page de codes à utiliser pour les colonnes de chaîne.<br /><br /> **Remarque :**Cette propriété n’est pas disponible dans **l’Éditeur de destination ODBC**mais peut être définie à l’aide de **l’Éditeur avancé**.|  
 |InsertMethod|Integer (énumération)|Méthode utilisée pour insérer les données. Les valeurs possibles sont Ligne par ligne (0) et Lot (1). La valeur par défaut est Lot (1).<br /><br /> Pour plus d’informations sur ces options, consultez « Options de chargement » dans la rubrique [Destination ODBC](../../integration-services/data-flow/odbc-destination.md).|  
 |StatementTimeout|Entier|Nombre de secondes pendant lequel attendre l'exécution d'une instruction SQL avant de la retourner à l'application avec une erreur. La valeur par défaut est 120.|  
-|TableName|Chaîne|Nom de la table de destination dans laquelle les données sont insérées.|  
+|TableName|String|Nom de la table de destination dans laquelle les données sont insérées.|  
 |TransactionSize|Entier|Nombre d'insertions dans une transaction unique. La valeur par défaut est 0, ce qui signifie que la destination ODBC fonctionne en mode de validation automatique.<br /><br /> Étant donné que le gestionnaire de connexions ODBC ne prend pas en charge les transactions distribuées, il est possible d'attribuer à cette propriété une valeur autre que 0. Toutefois, si la propriété **RetainSameConnection** du gestionnaire de connexions a la valeur **true** , cette propriété doit avoir la valeur 0.<br /><br /> **Remarque :**Cette propriété n’est pas disponible dans **l’Éditeur de destination ODBC**mais peut être définie à l’aide de **l’Éditeur avancé**.|  
 |LobChunkSize|Entier|Taille de segment allouée pour les colonnes LOB.|  
   

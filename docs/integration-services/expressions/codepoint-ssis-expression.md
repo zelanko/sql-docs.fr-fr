@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19af45b2e69490b3573dde39a81fabe103bcf4a0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43a96940ba28fc76ae271ff0f10b2b3177635346
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (expression SSIS)
   Renvoie le point de code Unicode du caractère placé à l'extrême gauche d'une expression de caractères.  
@@ -37,13 +38,13 @@ CODEPOINT(character_expression)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
+ *expression_caractère*  
  Expression de type caractère dont le caractère situé à l'extrême gauche sera évalué.  
   
 ## <a name="result-types"></a>Types des résultats  
  DT_UI2  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  *character_expression* doit être du type de données DT_WSTR.  
   
  CODEPOINT retourne un résultat Null si *character_expression* est Null ou est une chaîne vide.  
@@ -61,7 +62,7 @@ CODEPOINT("Mountain Bike")
 CODEPOINT(@Name)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

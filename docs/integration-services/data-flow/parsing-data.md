@@ -8,23 +8,24 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48579e225f90fe074aaaffa22f6424f1fe90dddd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parsing-data"></a>Analyse de données
   Les flux de données des packages extraient et chargent des données à partir de banques de données hétérogènes qui peuvent utiliser différents types de données standard et personnalisés. Dans un flux de données, les sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont chargées d’extraire les données, d’analyser les données de type string et de les convertir en données de type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les transformations effectuées par la suite peuvent analyser les données afin de les convertir en un type distinct ou créer des copies de colonnes avec d'autres types de données. Les expressions utilisées dans les composants peuvent également convertir les arguments et opérandes en d'autres types de données. Enfin, lorsque les données sont chargées dans une banque de données, la destination peut analyser les données afin de les convertir en un type de données utilisé par la destination. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -54,7 +55,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
 L'analyse rapide fournit un ensemble de routines simple, rapide et insensible aux paramètres régionaux pour l'analyse des données. Elle prend en charge uniquement un ensemble limité de formats pour les types de données integer.  
   
 ### <a name="integer-data-type"></a>Type de données integer
- Les types de données integer fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 et DT_UI8. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Les types de données integer fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 et DT_UI8. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'analyse rapide prend en charge les formats suivants pour les types de données integer :  
   
@@ -140,7 +141,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
     |-HH|Format tronqué qui indique le nombre d'heures soustraites du temps universel coordonné (UTC) pour obtenir l'heure locale.|  
     |Z|Valeur 0 qui indique que l'heure est représentée au format UTC.|  
   
-     Les formats de toutes les données d'heure et de date/heure peuvent inclure un élément de fuseau horaire. Toutefois, le système ignore la valeur de fuseau horaire, sauf lorsque les données sont de type DT_DBTIMESTAMPOFFSET. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+     Les formats de toutes les données d'heure et de date/heure peuvent inclure un élément de fuseau horaire. Toutefois, le système ignore la valeur de fuseau horaire, sauf lorsque les données sont de type DT_DBTIMESTAMPOFFSET. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
      Dans les formats qui incluent un élément de fuseau horaire, aucun espace ne figure entre l'élément d'heure et l'élément de fuseau horaire, comme le montre l'exemple suivant :  
   

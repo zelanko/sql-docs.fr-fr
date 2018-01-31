@@ -8,22 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords: Expression Builder dialog box
+f1_keywords:
+- sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords:
+- Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 18364f265be288c9e1cb4be8d97731086c993c4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expression-builder"></a>Générateur d'expressions
   Utilisez la boîte de dialogue **Générateur d’expressions** pour créer et modifier l’expression d’une propriété ou écrire l’expression qui définit la valeur d’une variable à l’aide d’une interface graphique utilisateur qui affiche la liste des variables et fournit une référence intégrée aux fonctions, aux conversions de type et aux opérateurs que contient le langage d’expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 |**Valeur évaluée**|Donne le résultat de l'évaluation de l'expression.|  
 |**Évaluer l'expression**|Cliquez sur **Évaluer l'expression** pour afficher le résultat de l'évaluation de l'expression|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Page Expressions](../../integration-services/expressions/expressions-page.md)   
  [Éditeur d’expressions de la propriété](../../integration-services/expressions/property-expressions-editor.md)   
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   

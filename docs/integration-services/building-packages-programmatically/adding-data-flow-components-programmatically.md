@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d730302cddaba05d9160489fab2bf761986fca9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a8d8daada2aebcf1b2ef650cf9409c73ad6d1084
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Ajout de composants de flux de données par programme
   Lorsque vous générez un flux de données, vous commencez par ajouter des composants. Puis vous configurez ces composants et vous les connectez ensemble pour établir le flux de données au moment de l'exécution. Cette section décrit l'ajout d'un composant à la tâche de flux de données, lequel permet de créer l'instance du moment de la conception du composant, puis de configurer ce composant. Pour plus d’informations sur la connexion de composants, consultez [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
