@@ -28,7 +28,7 @@ ms.lasthandoff: 11/20/2017
 Ce document décrit comment résoudre les problèmes de Microsoft SQL Server s'exécutant sur Linux ou dans un conteneur Docker. Lors du dépannage de SQL Server sur Linux, n’oubliez pas de consulter les fonctionnalités prises en charge et les limitations connues dans les [notes de publication de SQL Server sur Linux](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Résoudre les échecs de connexion
-Si vous rencontrez des difficultés en vous connectant à votre serveur SQL de Linux, il existe quelques éléments à vérifier. 
+Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL de Linux, il existe quelques éléments à vérifier.  
 
 - Vérifiez que le nom du serveur ou l’adresse IP est accessible à partir de votre ordinateur client.
 
@@ -53,7 +53,7 @@ Si vous rencontrez des difficultés en vous connectant à votre serveur SQL de L
 
 - Essayez de définir explicitement le numéro de port et de protocole avec le nom du serveur comme suit : **tcp:servername, 1433**.
 
-- Des problèmes de connectivité réseau peuvent également entraîner des délais d’attente et les erreurs de connexion. Après avoir vérifié vos informations de connexion et la connectivité réseau, recommencez l’opération.
+- Des problèmes de connectivité réseau peuvent également entraîner des délais d’attente et des erreurs de connexion. Après avoir vérifié vos informations de connexion et la connectivité réseau, recommencez l’opération.
 
 ## <a name="manage-the-sql-server-service"></a>Gérer le service SQL Server
 
