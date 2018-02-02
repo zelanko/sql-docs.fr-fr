@@ -8,11 +8,14 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: "81"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a3ff34e28c937c83e43860129f8185ae0ed1b1d6
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
@@ -228,7 +231,7 @@ To open Help, press F1.
   
  La classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> contient également quelques membres publics que vous n'utiliserez probablement pas.  
   
-|Membre| Description|  
+|Membre|Description|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|La propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> fournit un accès plus pratique aux variables. Vous pouvez utiliser <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, mais vous devez alors appeler des méthodes de manière explicite pour verrouiller et déverrouiller l'accès en lecture ou en écriture aux variables. La tâche de script se charge de gérer la sémantique de verrouillage lorsque vous utilisez la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.|  
   
@@ -236,7 +239,7 @@ To open Help, press F1.
  Pour déboguer le code dans votre tâche de script, définissez au moins un point d'arrêt dans le code, puis fermez l'environnement de développement intégré VSTA pour exécuter le package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Lorsque l'exécution du package entre la tâche de script, l'environnement de développement intégré s'ouvre à nouveau et affiche votre code en lecture seule. Lorsque l'exécution atteint le point d'arrêt, vous pouvez examiner les valeurs des variables et exécuter pas à pas le code restant.  
   
 > [!WARNING]  
->  Vous pouvez déboguer la tâche de script lorsque vous exécutez le package en mode 64 bits.  
+>  Vous ne pouvez pas déboguer la tâche de script lorsque vous exécutez le package en mode 64 bits.  
   
 > [!NOTE]  
 >  Vous devez exécuter le package à déboguer dans votre tâche de script. Si vous exécutez uniquement la tâche, les points d'arrêt figurant dans le code de tâche de script sont ignorés.  
@@ -251,7 +254,7 @@ To open Help, press F1.
   
 -   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Référencement d’autres assemblys dans les solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
  [Configuration de la tâche de script dans l’éditeur de tâche de script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   

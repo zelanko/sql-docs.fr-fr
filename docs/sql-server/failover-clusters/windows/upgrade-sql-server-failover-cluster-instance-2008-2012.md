@@ -1,11 +1,12 @@
 ---
 title: "Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012 | Microsoft Docs"
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] et [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] empêchent les clusters de basculement Windows Server d’effectuer des mises à niveau du système d’exploitation sur place, ce qui limite la version autorisée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] pour un cluster. Une fois que le cluster est mis à niveau vers au moins [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il peut rester à jour.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] et [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] empêchent les clusters de basculement Windows Server d’effectuer des mises à niveau du système d’exploitation sur place, ce qui limite la version autorisée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] pour un cluster. Une fois que le cluster est mis à niveau avec au moins [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il peut rester à jour.
 
 ## <a name="prerequisites"></a>Prerequisites
 
 -   Avant d’effectuer l’une des stratégies de migration, un cluster de basculement Windows Server parallèle avec Windows Server 2016/2012 R2 doit être préparé. Tous les nœuds comprenant des instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] doivent être joints au cluster Windows où les instances de cluster de basculement parallèles sont installées. Aucun ordinateur autonome **ne doit** être joint au cluster de basculement Windows Server avant la migration. Les bases de données utilisateur doivent être synchronisées dans le nouvel environnement avant la migration.
-
 -   Toutes les instances de destination doivent exécuter la même version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que leur instance parallèle dans l’environnement d’origine, avec les mêmes noms et ID d’instance, et elles doivent être installées avec les mêmes fonctionnalités. Les chemins d’installation et la structure de répertoire doivent être identiques sur les ordinateurs de destination. Cela n’inclut pas les noms de réseaux virtuels des instances de cluster de basculement, qui doivent être différents avant la migration. Toutes les fonctionnalités activées par l’instance d’origine (Always On, FILESTREAM, etc.) doivent être activées sur l’instance de destination.
 
 -   Aucun [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] ne doit être installé sur le cluster parallèle avant la migration.
@@ -41,7 +41,6 @@ ms.lasthandoff: 01/09/2018
 -   Tous les partages de fichiers réseau et lecteurs mappés réseau utilisés dans l’environnement de cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] d’origine doivent toujours exister et rester accessibles au cluster cible avec les mêmes autorisations que les instances d’origine.
 
 -   Tous les ports TCP/IP écoutés par l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] d’origine doivent être inutilisés et autoriser le trafic entrant sur l’ordinateur cible.
-
 -   Tous les services liés à SQL doivent être installés et exécutés par le même utilisateur Windows.
 
 -   Les instances de destination doivent être installées avec les mêmes paramètres régionaux que les instances d’origine.
@@ -57,8 +56,8 @@ La stratégie de migration appropriée dépend de certains paramètres de la top
 | **Le cluster utilise des instances autonomes** | [Scénario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scénario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scénario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scénario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* À l’exception des noms des écouteurs de groupe de disponibilité
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>Scénario 1 : Le cluster à migrer utilise strictement des groupes de disponibilité (Windows Server 2008 R2 SP1+)
-Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] qui utilise strictement des groupes de disponibilité, vous pouvez migrer vers un nouveau cluster en créant un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] parallèle sur un autre cluster Windows avec Windows Server 2016/2012 R2. Après cela, vous pouvez créer un groupe de disponibilité distribué où le cluster cible est le groupe secondaire pour le cluster de production actuel. Cela nécessite que l’utilisateur effectue la mise à niveau vers [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] ou version ultérieure.
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Scénario 1 : Cluster Windows avec des groupes de disponibilité SQL Server et aucune instance de cluster de basculement
+Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] qui utilise des groupes de disponibilité mais pas d’instance de cluster de basculement, vous pouvez migrer vers un nouveau cluster en créant un déploiement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] parallèle sur un autre cluster Windows avec Windows Server 2016/2012 R2. Après cela, vous pouvez créer un groupe de disponibilité distribué où le cluster cible est le groupe secondaire pour le cluster de production actuel. Cela nécessite que l’utilisateur effectue la mise à niveau vers [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] ou version ultérieure.
 
 ###  <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
@@ -69,7 +68,7 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 3.  Formez un groupe de disponibilité distribué où le cluster cible est le groupe de disponibilité secondaire.
 
     >[!NOTE]
-    >Le paramètre LISTENER\_URL de la requête Créer un groupe de disponibilité distribué se comporte de façon légèrement différente pour les groupes de disponibilité avec une instance de cluster de basculement servant d’instance principale. S’il s’agit du scénario pour le groupe de disponibilité principal ou secondaire, utilisez le nom de réseau virtuel de l’instance de cluster de basculement SQL principale en tant qu’URL d’écouteur à la place du nom de réseau de l’écouteur, toujours avec le port du point de terminaison de mise en miroir de bases de données dans les deux scénarios.
+    >Le paramètre LISTENER\_URL pour Créer un groupe de disponibilité distribué T-SQL se comporte différemment pour les groupes de disponibilité avec une instance de cluster de basculement SQL comme instance principale. Si c’est le cas pour le groupe de disponibilité principal ou secondaire, utilisez le nom de réseau virtuel de l’instance de cluster de basculement SQL principale comme URL d’écouteur à la place du nom de réseau de l’écouteur, avec le port du point de terminaison de mise en miroir de bases de données.
 
 4.  Joignez le groupe de disponibilité secondaire au groupe de disponibilité distribué.
 
@@ -80,7 +79,7 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 6.  Interrompez tout le trafic vers le groupe de disponibilité principal et autorisez le groupe de disponibilité secondaire à synchroniser.
 
-7.  Remplacez la stratégie de validation sur les deux groupes de disponibilité par SYNCHRONOUS\_COMMIT et basculez vers le cluster cible une fois que l’état est SYNCHRONIZED.
+7.  Remplacez la stratégie de validation sur les deux groupes de disponibilité par SYNCHRONOUS_COMMIT et basculez vers le cluster cible une fois que l’état est SYNCHRONIZED.
 
 8.  Supprimez le groupe de disponibilité distribué.
 
@@ -93,9 +92,9 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 11. Reprenez le trafic vers l’écouteur.
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>Scénario 2 : Le cluster à migrer n’a que des instances de cluster de basculement SQL et aucun groupe de disponibilité
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Scénario 2 : Clusters Windows avec des instances de cluster de basculement SQL Server
 
-Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] qui n’utilise aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] autonome (uniquement des instances de cluster de basculement SQL), vous pouvez migrer vers un nouveau cluster en créant un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] parallèle sur un autre cluster Windows avec Windows Server 2016/2012 R2. Vous allez migrer vers le cluster cible en « volant » les noms de réseaux virtuels des anciennes instances de cluster de basculement SQL et en les obtenant sur les nouveaux clusters. Cela va créer un temps d’arrêt supplémentaire qui varie selon les durées de propagation DNS.
+Si vous avez un environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] avec uniquement des instances de cluster de basculement SQL, vous pouvez migrer vers un nouveau cluster en créant un environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] parallèle sur un autre cluster Windows avec Windows Server 2016/2012 R2. Vous allez migrer vers le cluster cible en « volant » les noms de réseaux virtuels des anciennes instances de cluster de basculement SQL et en les obtenant sur les nouveaux clusters. Cela va créer un temps d’arrêt supplémentaire qui varie selon les durées de propagation DNS.
 
 ###  <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
@@ -126,7 +125,7 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 12. Comme les ordinateurs reviennent en ligne après le redémarrage, démarrez chacun des rôles d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] dans le Gestionnaire du cluster de basculement.
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>Scénario 3 : Le cluster n’a que des instances de cluster de basculement SQL et utilise des groupes de disponibilité
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Scénario 3 : Le cluster Windows dispose à la fois d’instances de cluster de basculement SQL et de groupes de disponibilité SQL Server
 
 Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] qui n’utilise aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] autonome, uniquement des instances de cluster de basculement SQL contenues dans au moins un groupe de disponibilité, vous pouvez effectuer cette migration vers un nouveau cluster à l’aide de méthodes similaires à celles du scénario « aucun groupe de disponibilité, aucune instance autonome ». Avant de copier des tables système sur les disques partagés d’instance de cluster de basculement cible, vous devez supprimer tous les groupes de disponibilité dans l’environnement d’origine. Une fois que toutes les bases de données ont été migrées vers les ordinateurs cibles, vous allez recréer les groupes de disponibilité avec les mêmes noms de schéma et d’écouteur. Ce faisant, les ressources de cluster de basculement Windows Server sont correctement formées et gérées sur le cluster cible. **Always On doit être activé dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] sur chaque ordinateur dans l’environnement cible avant la migration.**
 
@@ -164,7 +163,7 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 16. Créez un écouteur dans le nouveau groupe de disponibilité avec le nom de l’écouteur du groupe de disponibilité d’origine.
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>Scénario 4 : Le cluster n’a que quelques instances autonomes et aucun groupe de disponibilité
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Scénario 4 : Cluster Windows avec des instances SQL Server autonomes et aucun groupe de disponibilité
 
 La migration d’un cluster avec des instances autonomes est similaire au processus de migration d’un cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] avec uniquement des instances de cluster de basculement mais, au lieu de modifier le nom de réseau virtuel de la ressource de cluster de l’instance de cluster de basculement, vous changez le nom de l’ordinateur autonome d’origine et « volez » le nom de l’ancien ordinateur sur l’ordinateur cible. Cette opération génère un temps d’arrêt supplémentaire par rapport aux scénarios sans instance autonome, car vous ne pouvez pas joindre l’ordinateur autonome cible au cluster WSFC tant que vous n’avez pas obtenu le nom de réseau de l’ancien ordinateur.
 
@@ -200,9 +199,9 @@ La migration d’un cluster avec des instances autonomes est similaire au proces
 
 15. Comme les ordinateurs reviennent en ligne après le redémarrage, démarrez chacun des rôles d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] dans le Gestionnaire du cluster de basculement.
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>Scénario 5 : Le cluster a quelques instances autonomes et utilise des groupes de disponibilité
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Scénario 5 : Cluster Windows avec des instances SQL Server autonomes et des groupes de disponibilité
 
-La migration d’un cluster qui utilise des groupes de disponibilité avec des réplicas autonomes est similaire au processus de migration d’un cluster avec uniquement des instances de cluster de basculement utilisant des groupes de disponibilité. Vous devez toujours supprimer les groupes de disponibilité d’origine et les reconstruire sur le cluster cible ; toutefois, un temps d’arrêt supplémentaire est généré en raison des frais additionnels de la migration des instances autonomes. **Always On doit être activé sur chaque instance de cluster de basculement dans l’environnement cible avant la migration.**
+La migration d’un cluster qui utilise des groupes de disponibilité avec des réplicas autonomes est similaire au processus de migration d’un cluster avec des instances de cluster de basculement utilisant des groupes de disponibilité. Vous devez toujours supprimer les groupes de disponibilité d’origine et les reconstruire sur le cluster cible ; toutefois, un temps d’arrêt supplémentaire est généré en raison des frais additionnels de la migration des instances autonomes. **Always On doit être activé sur chaque instance de cluster de basculement dans l’environnement cible avant la migration.**
 
 ###  <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
