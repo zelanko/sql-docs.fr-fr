@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (Transact-SQL) | Documents Microsoft
+title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
-dev_langs: TSQL
-helpviewer_keywords: sp_help_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a48991c0baec6c8466d0ce33bee730d0948c97e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e5669438c159010e1b5011418df913c3c2743aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +51,11 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Spécifie l’ID de plan du plan de maintenance. *plan_id* est **UNIQUEIDENTIFIER**. La valeur par défaut est NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Si *plan_id* est spécifié, **sp_help_maintenance_plan** renvoie trois tables : Plan, Database et Job.  
@@ -63,13 +66,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Identificateur du plan de maintenance.|  
 |**plan_name**|**sysname**|Nom du plan de maintenance.|  
-|**date_de_création**|**datetime**|Date de création du plan de maintenance.|  
+|**date_created**|**datetime**|Date de création du plan de maintenance.|  
 |**propriétaire**|**sysname**|Propriétaire du plan de maintenance.|  
 |**max_history_rows**|**int**|Nombre maximal de lignes allouées pour l'enregistrement de l'historique du plan de maintenance dans la table système.|  
 |**remote_history_server**|**int**|Le nom du serveur distant sur lequel le rapport d’historique peut être écrit.|  
 |**max_remote_history_rows**|**int**|Nombre maximal de lignes allouées dans la table système d'un serveur distant sur lequel le rapport de l'historique peut être écrit.|  
 |**user_defined_1**|**int**|La valeur par défaut est NULL.|  
-|**user_defined_2**|**nvarchar (100)**|La valeur par défaut est NULL.|  
+|**user_defined_2**|**nvarchar(100)**|La valeur par défaut est NULL.|  
 |**user_defined_3**|**datetime**|La valeur par défaut est NULL.|  
 |**user_defined_4**|**uniqueidentifier**|La valeur par défaut est NULL.|  
   
@@ -88,7 +91,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ## <a name="remarks"></a>Notes  
  **sp_help_maintenance_plan** est dans le **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemples  

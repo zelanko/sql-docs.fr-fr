@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_descriptors (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_buffer_descriptors_TSQL
 - sys.dm_os_buffer_descriptors
 - dm_os_buffer_descriptors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_buffer_descriptors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225d94ec7bf9b8a74289f52462f64d6d444e1d44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,28 +49,28 @@ ms.lasthandoff: 11/17/2017
 |page_id|**int**|Identificateur de la page dans le fichier. Autorise la valeur NULL.|  
 |page_level|**int**|Niveau d'index de la page. Autorise la valeur NULL.|  
 |allocation_unit_id|**bigint**|Identificateur de l'unité d'allocation de la page. Cette valeur peut être utilisée pour la jointure de sys.allocation_units. Autorise la valeur NULL.|  
-|page_type|**nvarchar (60)**|Type de la page, par exemple page de données ou page d'index. Autorise la valeur NULL.|  
+|page_type|**nvarchar(60)**|Type de la page, par exemple page de données ou page d'index. Autorise la valeur NULL.|  
 |row_count|**int**|Nombre de lignes dans la page. Autorise la valeur NULL.|  
 |free_space_in_bytes|**int**|Quantité d'espace disponible dans la page, en octets. Autorise la valeur NULL.|  
 |is_modified|**bit**|1 = la page a été modifiée après avoir été lue sur le disque. Autorise la valeur NULL.|  
 |numa_node|**int**|Nœud NUMA (Nonuniform Memory Access) pour la mémoire tampon. Autorise la valeur NULL.|  
 |read_microsec|**bigint**|Temps réel (en microsecondes) requis pour lire la page dans la mémoire tampon. Ce nombre est réinitialisé lorsque la mémoire tampon est réutilisée. Autorise la valeur NULL.|  
 |is_in_bpool_extension|**bit**|1 = Page est dans l’extension du pool de mémoires tampons. Autorise la valeur NULL.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
   
 ## <a name="remarks"></a>Notes  
  Sys.dm_os_buffer_descriptors retourne les pages qui sont utilisés par la base de données de la ressource. Sys.dm_os_buffer_descriptors ne retourne pas d’informations sur les pages libres ou occultées, ni sur les pages qui contenaient des erreurs lors de leur lecture.  
   
-|De|Pour|Le|Relation|  
+|From|Pour|Le|Relation|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|\<UserDB >. est introuvable|allocation_unit_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|\<UserDB >. sys.database_files|file_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|Sys.dm_os_buffer_pool_extension_configuration|file_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|plusieurs-à-un|  
   
 ## <a name="examples"></a>Exemples  
   
@@ -115,11 +118,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [Système d’exploitation de serveur SQL relatives des vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Base de données Resource](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [Sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

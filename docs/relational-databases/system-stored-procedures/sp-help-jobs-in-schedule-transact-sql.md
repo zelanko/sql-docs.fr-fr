@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobs_in_schedule (Transact-SQL) | Documents Microsoft
+title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobs_in_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff12f4e1ee3f994a74360969cacd51d9e479a70e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@schedule_id =** ] *id_de_la_planification*  
+ [ **@schedule_id =** ] *schedule_id*  
  Identificateur de la planification pour laquelle répertorier des informations. *id_de_la_planification* est **int**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* peut être spécifié.  
   
- [  **@schedule_name =** ] **'***nom_de_la_planification***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  Nom de la planification pour laquelle répertorier des informations. *nom_de_la_planification* est **sysname**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* peut être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -60,12 +63,12 @@ sp_help_jobs_in_schedule
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID unique du travail.|  
-|**originating_server**|**nvarchar (30)**|Nom du serveur d'origine du travail|  
+|**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
 |**nom**|**sysname**|Nom du travail.|  
-|**activé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**Description**|**nvarchar(512)**|Description de la tâche.|  
+|**enabled**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
+|**description**|**nvarchar(512)**|Description de la tâche.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
-|**catégorie**|**sysname**|Catégorie de travail.|  
+|**category**|**sysname**|Catégorie de travail.|  
 |**propriétaire**|**sysname**|Propriétaire du travail.|  
 |**notify_level_eventlog**|**int**|Masque binaire indiquant les circonstances entraînant la consignation d'une notification d'événement dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = en cas de succès du travail<br /><br /> **2** = lors de l’échec du travail<br /><br /> **3** = chaque fois que le travail est terminé (quel que soit le résultat du travail)|  
 |**notify_level_email**|**int**|Masque de bits indiquant les conditions d'envoi d'un message électronique en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
@@ -74,10 +77,10 @@ sp_help_jobs_in_schedule
 |**notify_email_operator**|**sysname**|Nom d'adresse électronique de l'opérateur à avertir.|  
 |**notify_netsend_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer les messages sur le réseau.|  
 |**notify_page_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer une page.|  
-|**niveau_suppression**|**int**|Masque de bits indiquant les conditions de suppression du travail en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
-|**date_de_création**|**datetime**|Date de que création du travail.|  
-|**date_de_modification**|**datetime**|Date de dernière modification du travail.|  
-|**numéro_version**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
+|**delete_level**|**int**|Masque de bits indiquant les conditions de suppression du travail en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
+|**date_created**|**datetime**|Date de que création du travail.|  
+|**date_modified**|**datetime**|Date de dernière modification du travail.|  
+|**version_number**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
 |**last_run_date**|**int**|Date du début de la dernière exécution du travail.|  
 |**last_run_time**|**int**|Heure du début de la dernière exécution du travail.|  
 |**last_run_outcome**|**int**|Résultat du travail lors de sa dernière exécution :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
@@ -95,7 +98,7 @@ sp_help_jobs_in_schedule
 ## <a name="remarks"></a>Notes  
  Cette procédure affiche des informations sur les travaux attachés à la planification spécifiée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -104,7 +107,7 @@ sp_help_jobs_in_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Membres de **SQLAgentUserRole** peut uniquement afficher l’état des travaux dont ils sont propriétaires.  
   
@@ -122,9 +125,9 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [L’Agent SQL Server stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

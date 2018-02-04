@@ -8,25 +8,28 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
 - sp_wait_for_database_copy_sync
-dev_langs: TSQL
-helpviewer_keywords: sp_wait_for_database_copy_sync
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b2d41c9c87b483ab500ad351361a511ca66004
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca693b57fe2178a1b817ca76579ad3e7194f7c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Géo-réplication Active - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +65,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   La connectivité de l'interlien est perdue. **sp_wait_for_database_copy_sync** est retourné après le délai de connexion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tout utilisateur dans la base de données primaire peut appeler cette procédure stockée système. La connexion doit être un utilisateur dans les bases de données primaire et secondaire active.  
   
 ## <a name="remarks"></a>Notes  
@@ -79,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.dm_continuous_copy_status &#40; Base de données SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [Les fonctions et vues de gestion dynamique de géo-réplication &#40; Base de données SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

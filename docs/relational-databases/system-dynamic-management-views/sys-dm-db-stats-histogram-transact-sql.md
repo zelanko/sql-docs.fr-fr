@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_db_stats_histogram_TSQL
 - dm_db_stats_histogram
 - dm_db_stats_histogram_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_stats_histogram dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4ce36dbcac1e0df3f8cbe4020e87fc32af36920a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Retourne l’histogramme des statistiques pour l’objet de base de données spécifiée (table ou vue indexée) dans le courant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Semblable à `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
@@ -53,18 +56,18 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|object_id |**Int**|ID de l'objet (table ou vue indexée) pour lequel retourner les propriétés de l'objet de statistiques.|  
-|stats_id |**Int**|ID de l'objet de statistiques. Unique dans la table ou la vue indexée. Pour plus d’informations, consultez [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**Int** |Le numéro de l’étape dans l’histogramme. |
+|object_id |**int**|ID de l'objet (table ou vue indexée) pour lequel retourner les propriétés de l'objet de statistiques.|  
+|stats_id |**int**|ID de l'objet de statistiques. Unique dans la table ou la vue indexée. Pour plus d’informations, consultez [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
+|step_number |**int** |Le numéro de l’étape dans l’histogramme. |
 |range_high_key |**sql_variant** |Valeur de colonne de limite supérieure pour une étape d'histogramme. La valeur de colonne est également appelée « valeur de clé ».|
-|RANGE_ROWS |**real** |Nombre estimé de lignes dont la valeur de colonne est comprise dans une étape d'histogramme, à l'exception de la limite supérieure. |
+|range_rows |**real** |Nombre estimé de lignes dont la valeur de colonne est comprise dans une étape d'histogramme, à l'exception de la limite supérieure. |
 |equal_rows |**real** |Nombre estimé de lignes dont la valeur de colonne est égale à la limite supérieure de l'étape d'histogramme. |
-|DISTINCT_RANGE_ROWS |**bigint** |Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure. |
+|distinct_range_rows |**bigint** |Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure. |
 |average_range_rows |**real** |Nombre moyen de lignes avec des valeurs de colonne en double dans une étape d’histogramme, à l’exclusion de la limite supérieure (`RANGE_ROWS / DISTINCT_RANGE_ROWS` pour `DISTINCT_RANGE_ROWS > 0`). |
   
- ## <a name="remarks"></a>Notes   
+ ## <a name="remarks"></a>Notes  
  
  Le jeu de résultats pour `sys.dm_db_stats_histogram` retourne des informations semblables à `DBCC SHOW_STATISTICS WITH HISTOGRAM` et inclut également `object_id`, `stats_id`, et `step_number`.
 
@@ -150,4 +153,4 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ## <a name="see-also"></a>Voir aussi  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Fonctions (Transact-SQL) et les vues de gestion dynamique relatives aux objets](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
-[Sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

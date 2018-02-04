@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - conversation_endpoints
 - sys.conversation_endpoints
 - sys.conversation_endpoints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.conversation_endpoints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c748d55f2de1ddfdda1edbf1465e4874faec5a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +48,9 @@ ms.lasthandoff: 11/17/2017
 |service_id|**int**|Identificateur du service associé à ce côté de la conversation. Cette colonne n'accepte pas la valeur NULL.|  
 |lifetime|**datetime**|Date/heure d'expiration de la conversation. Cette colonne n'accepte pas la valeur NULL.|  
 |state|**char(2)**|État actuel de la conversation. Cette colonne n'accepte pas la valeur NULL. Une des valeurs suivantes :<br /><br /> Par conséquent, démarrée en sortie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a traité une instruction BEGIN CONVERSATION pour cette conversation, mais aucun message n'a été envoyé pour l'instant.<br /><br /> SI démarrée en entrée. Une autre instance a démarré une nouvelle conversation avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a toujours pas complètement reçu le premier message. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans cet état si le premier message est fragmenté ou si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit des messages inexploitables. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans l'état CO (conversation en cours) si la première transmission reçue pour cette conversation contient la totalité du premier message.<br /><br /> CO conversation en cours. La conversation est établie et les deux côtés peuvent envoyer des messages. La majeure partie de la communication associée à un service a généralement lieu lorsque la conversation est dans cet état.<br /><br /> DI déconnectée entrant. La partie distante de la conversation a émis une instruction END CONVERSATION. La conversation demeure dans cet état jusqu'à ce que la partie locale de la conversation émette une instruction END CONVERSATION. Une application peut toujours recevoir des messages pour la conversation. Dans la mesure où la partie distante de la conversation a terminé celle-ci, une application ne peut pas envoyer de messages sur cette conversation. Lorsqu’une application émet une instruction END CONVERSATION, la conversation passe en état CD (fermée).<br /><br /> DO déconnectée en sortie. La partie locale de la conversation a émis une instruction END CONVERSATION. La conversation reste dans cet état jusqu'à ce que le côté distant accuse réception de la commande END CONVERSATION. Une application ne peut pas envoyer ou recevoir des messages pour la conversation. Lorsque le côté distant de la conversation accuse réception de la commande END CONVERSATION, la conversation passe en état CD (fermée).<br /><br /> ER erreur. Une erreur s'est produite sur ce point de terminaison. Le message d'erreur est placé dans la file d'attente de l'application. Si la file d'attente de l'application est vide, cela signifie que l'application a déjà consommé le message d'erreur.<br /><br /> CD fermée. Le point de terminaison de la conversation n'est plus en cours d'utilisation.|  
-|state_desc|**nvarchar (60)**|Description de l’état du point de terminaison de conversation. Cette colonne autorise la valeur Null. Une des valeurs suivantes :<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSATION EN COURS**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **FERMÉ**<br /><br /> **ERROR**|  
+|state_desc|**nvarchar(60)**|Description de l’état du point de terminaison de conversation. Cette colonne autorise la valeur Null. Une des valeurs suivantes :<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSATION EN COURS**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **FERMÉ**<br /><br /> **ERROR**|  
 |far_service|**nvarchar (256)**|Nom du service du côté distant de la conversation. Cette colonne n'accepte pas la valeur NULL.|  
-|far_broker_instance|**nvarchar (128)**|Instance du Broker associée au côté distant de la conversation. Accepte la valeur NULL.|  
+|far_broker_instance|**nvarchar(128)**|Instance du Broker associée au côté distant de la conversation. Accepte la valeur NULL.|  
 |principal_id|**int**|Identificateur du principal dont le certificat est utilisé par le côté local du dialogue. Cette colonne n'accepte pas la valeur NULL.|  
 |far_principal_id|**int**|Identificateur de l'utilisateur dont le certificat est utilisé par le côté distant du dialogue. Cette colonne n'accepte pas la valeur NULL.|  
 |outbound_session_key_identifier|**uniqueidentifier**|Identificateur de la clé de chiffrement sortante pour le dialogue. Cette colonne n'accepte pas la valeur NULL.|  
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |is_system|**bit**|1 s'il s'agit d'un dialogue système. Cette colonne n'accepte pas la valeur NULL.|  
 |priority|**tinyint**|Priorité de conversation assignée à ce point de terminaison. Cette colonne n'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

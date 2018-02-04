@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store (Transact-SQL) | Documents Microsoft
+title: sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_version_store
 - dm_tran_version_store
 - dm_tran_version_store_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea010f2430dc839e05074e49c5854d796fd49071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be8779d40624e9f88ee74ea85a1126c1b4b76ebf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,11 +60,11 @@ sys.dm_tran_version_store
 |**status**|**tinyint**|Indique si un enregistrement avec version a été réparti sur deux enregistrements. Si la valeur est 0, l'enregistrement est stocké sur une seule page. Si la valeur est 1, l'enregistrement est réparti sur deux enregistrements, lesquels sont stockés sur deux pages différentes.|  
 |**min_length_in_bytes**|**smallint**|Longueur minimale de l'enregistrement, en octets.|  
 |**record_length_first_part_in_bytes**|**smallint**|Longueur de la première partie de l'enregistrement avec contrôle de version, en octets.|  
-|**record_image_first_part**|**varbinary (8000)**|Image binaire de la première partie de l'enregistrement avec contrôle de version.|  
+|**record_image_first_part**|**varbinary(8000)**|Image binaire de la première partie de l'enregistrement avec contrôle de version.|  
 |**record_length_second_part_in_bytes**|**smallint**|Longueur de la deuxième partie de l'enregistrement avec contrôle de version, en octets.|  
-|**record_image_second_part**|**varbinary (8000)**|Image binaire de la deuxième partie de l'enregistrement avec contrôle de version.|  
+|**record_image_second_part**|**varbinary(8000)**|Image binaire de la deuxième partie de l'enregistrement avec contrôle de version.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
  

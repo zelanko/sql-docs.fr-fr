@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_current_transaction (Transact-SQL) | Documents Microsoft
+title: sys.dm_tran_current_transaction (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_current_transaction dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_current_transaction dynamic management view
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55c0179a2c589a8dad2d178693593a943adba445
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 37deeb2752cc1e96c5c3ddc0719d2f71dce2283a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrancurrenttransaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +52,15 @@ sys.dm_tran_current_transaction
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**Identificateur transaction_id :**|**bigint**|ID de transaction de l'instantané actif.|  
+|**transaction_id**|**bigint**|ID de transaction de l'instantané actif.|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence de la transaction qui produit la version de l'enregistrement.|  
 |**transaction_is_snapshot**|**bit**|État d'isolement de l'instantané. Cette valeur est 1 si la transaction a démarré sous l'isolement d'instantané. Dans le cas contraire, la valeur est 0.|  
 |**first_snapshot_sequence_num**|**bigint**|Il s'agit du plus petit numéro de séquence des transactions qui étaient actives lors de la création d'un instantané. Lors de l'exécution, une transaction d'instantané prend un instantané de toutes les transactions actives présentes. Pour les transactions non liées à des instantanés, la valeur 0 est affichée dans cette colonne.|  
 |**last_transaction_sequence_num**|**bigint**|Numéro de séquence global. Cette valeur représente le dernier numéro de séquence de transaction généré par le système.|  
 |**first_useful_sequence_num**|**bigint**|Numéro de séquence global. Cette valeur représente le plus ancien numéro de séquence de la transaction qui possède des versions de ligne devant être conservées dans la banque des versions. Les versions de ligne qui ont été créées par des transactions antérieures peuvent être supprimées.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  

@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_table (Transact-SQL) | Documents Microsoft
+title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
 - sp_fulltext_table
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ca014dd3d76c57402fe8a3af7bb8bb33fa4fce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Active ou désactive l'indexation de texte intégral pour une table.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), et [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), et [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +55,10 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tabname=**] **'***nom_table_qualifée***'**  
+ [ **@tabname=**] **'***qualified_table_name***'**  
  Nom de table en une ou deux parties. La table doit déjà exister dans la base de données actuelle. *nom_table_qualifée* est **nvarchar (517)**, sans valeur par défaut.  
   
- [  **@action=**] **'***action***'**  
+ [ **@action=**] **'***action***'**  
  Action à exécuter. *action* est **nvarchar (50)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
@@ -63,7 +66,7 @@ sp_fulltext_table
 |**Créer**|Crée les métadonnées pour un index de recherche en texte intégral pour la table référencée par *nom_table_qualifée* et spécifie que les données d’index de recherche en texte intégral pour cette table doivent résider dans *fulltext_catalog_name*. Cette opération permet également l’utilisation de *nom_index_unique* en tant que la colonne de clé de recherche en texte intégral. Cet index unique doit déjà exister et être défini sur une colonne de la table.<br /><br /> Une recherche en texte intégral ne peut pas être réalisée vis à vis de cette table tant que le catalogue de texte intégral n'est pas rempli.|  
 |**Supprimer**|Supprime les métadonnées de l’index de recherche en texte intégral pour *nom_table_qualifée*. Si cet index est actif, il est automatiquement désactivé avant d'être supprimé. Il n'est pas nécessaire de supprimer les colonnes avant de supprimer l'index de texte intégral.|  
 |**Activate**|Active la possibilité pour les données d’index de texte intégral doivent être collectées pour *nom_table_qualifée*, une fois qu’il a été désactivé. Une colonne au moins doit faire partie de l'index de texte intégral pour pouvoir activer cette option.<br /><br /> Un index de texte intégral est automatiquement activé (au niveau du remplissage) dès l'ajout de la première colonne à indexer. Si la dernière colonne est supprimée de l'index, celui-ci devient inactif. Si le suivi des modifications est activé, l'activation d'un index inactif démarre un nouveau remplissage.<br /><br /> Notez que cela n’est pas réellement effectué de l’index de recherche en texte intégral, mais simplement la table est inscrite dans le catalogue de texte intégral dans le système de fichiers afin que les lignes à partir de *nom_table_qualifée* peuvent être récupérées au cours du remplissage d’index de recherche en texte intégral suivant.|  
-|**Désactiver**|Désactive l’index de recherche en texte intégral pour *nom_table_qualifée* afin que les données de l’index de recherche en texte intégral n’est plus peuvent être regroupées pour le *nom_table_qualifée*. Les métadonnées de l'index de texte intégral sont conservées et la table peut être réactivée.<br /><br /> Si le suivi des modifications est activé, la désactivation d'un index actif gèle l'état de l'index : tout remplissage en cours est arrêté et aucune modification supplémentaire n'est diffusée à l'index.|  
+|**Deactivate**|Désactive l’index de recherche en texte intégral pour *nom_table_qualifée* afin que les données de l’index de recherche en texte intégral n’est plus peuvent être regroupées pour le *nom_table_qualifée*. Les métadonnées de l'index de texte intégral sont conservées et la table peut être réactivée.<br /><br /> Si le suivi des modifications est activé, la désactivation d'un index actif gèle l'état de l'index : tout remplissage en cours est arrêté et aucune modification supplémentaire n'est diffusée à l'index.|  
 |**start_change_tracking**|Démarre un remplissage incrémentiel de l'index de texte intégral. Si la table ne dispose pas de données d'une colonne de type timestamp, démarre un remplissage complet de l'index de texte intégral. Démarre le suivi des modifications apportées à la table.<br /><br /> Suivi des modifications de texte intégral ne suit pas toutes les opérations WRITETEXT ou UPDATETEXT effectuées sur les colonnes indexées en texte intégral qui sont de type **image**, **texte**, ou **ntext**.|  
 |**stop_change_tracking**|Arrête le suivi des modifications apportées à la table.|  
 |**update_index**|Diffuse le jeu courant des modifications suivies à l'index de texte intégral.|  
@@ -73,17 +76,17 @@ sp_fulltext_table
 |**start_incremental**|Démarre un remplissage incrémentiel de l'index de texte intégral de la table.|  
 |**Arrêter**|Arrête un remplissage complet ou incrémentiel.|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  Est un nom de catalogue de texte intégral existant valide pour un **créer** action. Pour toutes les autres actions, ce paramètre doit avoir la valeur NULL. *fulltext_catalog_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@keyname=**] **'***nom_index_unique***'**  
+ [ **@keyname=**] **'***unique_index_name***'**  
  Est un index valide non null de colonne de clé unique, unique sur *nom_table_qualifée* pour un **créer** action. Pour toutes les autres actions, ce paramètre doit avoir la valeur NULL. *nom_index_unique* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Une fois un index de recherche en texte intégral est désactivé pour une table particulière, l’index de recherche en texte intégral existant reste en place jusqu'à ce que le remplissage complet suivant ; Toutefois, cet index n’est pas utilisé, car [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloque les requêtes sur les tables désactivées.  
@@ -94,7 +97,7 @@ sp_fulltext_table
   
  La taille de la colonne clé de texte intégral doit être de 900 octets ou moins. Pour des raisons de performances, il est recommandé de limiter au minimum la taille de la colonne clé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle de serveur fixe **db_owner** et **db_ddladmin** fixe des rôles de base de données ou d’un utilisateur avec des autorisations sur le catalogue de texte intégral peuvent exécuter la référence **sp_fulltext_table**.  
   
 ## <a name="examples"></a>Exemples  
@@ -137,9 +140,9 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recherche en texte intégral et la recherche sémantique stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

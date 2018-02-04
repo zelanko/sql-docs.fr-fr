@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_uncontained_entities_TSQL
 - sys.dm_db_uncontained_entities_TSQL
 - dm_db_uncontained_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_uncontained_entities dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +43,17 @@ ms.lasthandoff: 01/02/2018
 ||||  
 |-|-|-|  
 |**Nom de colonne**|**Type**|**Description**|  
-|*class*|**Int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
-|*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. Une des options suivantes pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **PRINCIPAL_BASE_DE_DONNÉES**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**Int**|ID de l'entité.<br /><br /> Si *classe* = 1, puis object_id<br /><br /> Si *classe* = 4, puis sys.database_principals.principal_id.<br /><br /> Si *classe* = 5, puis sys.assemblies.assembly_id.<br /><br /> Si *classe* = 6, puis sys.types.user_type_id.<br /><br /> Si *classe* = 7, puis sys.indexes.index_id.<br /><br /> Si *classe* = 12, puis sys.triggers.object_id.<br /><br /> Si *classe* = 19, sys.routes.Route_ID.<br /><br /> Si *classe* = 30, puis sys. database_audit_specifications.databse_specification_id.|  
-|*statement_line_number*|**Int**|Si la classe est un module, retourne le numéro de ligne sur lequel l'utilisation sans relation contenant-contenu se trouve.  Sinon, la valeur est Null.|  
-|*statement_ offset_begin*|**Int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  
-|*statement_ offset_end*|**Int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de fin de l'utilisation sans relation contenant-contenu. La valeur -1 indique la fin du module. Sinon, la valeur de retour est Null.|  
-|*argument statement_type*|**nvarchar(512)**|Type d'instruction.|  
+|*class*|**int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
+|*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. Une des options suivantes pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*major_id*|**int**|ID de l'entité.<br /><br /> Si *classe* = 1, puis object_id<br /><br /> Si *classe* = 4, puis sys.database_principals.principal_id.<br /><br /> Si *classe* = 5, puis sys.assemblies.assembly_id.<br /><br /> Si *classe* = 6, puis sys.types.user_type_id.<br /><br /> Si *classe* = 7, puis sys.indexes.index_id.<br /><br /> Si *classe* = 12, puis sys.triggers.object_id.<br /><br /> Si *classe* = 19, sys.routes.Route_ID.<br /><br /> Si *classe* = 30, puis sys. database_audit_specifications.databse_specification_id.|  
+|*statement_line_number*|**int**|Si la classe est un module, retourne le numéro de ligne sur lequel l'utilisation sans relation contenant-contenu se trouve.  Sinon, la valeur est Null.|  
+|*statement_ offset_begin*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  
+|*statement_ offset_end*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de fin de l'utilisation sans relation contenant-contenu. La valeur -1 indique la fin du module. Sinon, la valeur de retour est Null.|  
+|*statement_type*|**nvarchar(512)**|Type d'instruction.|  
 |*nom de feature_*|**nvarchar (256)**|Retourne le nom externe de l'objet.|  
 |*feature_type_name*|**nvarchar (256)**|Renvoie le type de fonctionnalité.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Sys.dm_db_uncontained_entities affiche les entités qui peuvent potentiellement traverser la limite de la base de données. Toutes les entités de l'utilisateur qui ont la possibilité d'utiliser des objets en dehors de la base de données sont retournées.  
   
  Les types de fonctionnalité suivants sont signalés.  

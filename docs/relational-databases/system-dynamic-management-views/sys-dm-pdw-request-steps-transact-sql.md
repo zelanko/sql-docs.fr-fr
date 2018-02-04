@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_request_steps (Transact-SQL) | Documents Microsoft
+title: sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 846806609d926aef8bfc7f9c15238dfec069727c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3c98aeb3ebc26d6ffd762e301c915b1522ce888a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>Sys.dm_pdw_request_steps (Transact-SQL)
+# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur toutes les étapes qui composent une demande donnée ou une requête dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il répertorie une ligne pour chaque étape de requête.  
@@ -33,9 +35,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id et step_index composent la clé pour cette vue.<br /><br /> Id numérique unique associé à la demande.|Consultez request_id dans [sys.dm_pdw_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id et step_index composent la clé pour cette vue.<br /><br /> La position de cette étape dans la séquence d’étapes qui composent la demande.|0 pour (n-1) pour une demande avec les n étapes suivantes.|  
-|type_opération|**nvarchar(35)**|Type de l’opération représentée par cette étape.|**Opérations de plan de requête de DMS :** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Opérations de plan de requête SQL :** 'OnOperation', 'RemoteOperation'<br /><br /> **Autres opérations de plan de requête :** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Les opérations externes pour les lectures :** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Les opérations externes pour MapReduce :** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Les opérations externes pour les écritures :** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Pour plus d’informations, consultez « Présentation des Plans de requête » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
-|distribution_type|**nvarchar(32)**|Type de cette étape est soumises à distribution.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'N’est pas spécifiées'|  
-|élément location_type|**nvarchar(32)**|Où l’étape est exécutée.|'Compute', 'Control', 'DMS'|  
+|operation_type|**nvarchar(35)**|Type de l’opération représentée par cette étape.|**Opérations de plan de requête de DMS :** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Opérations de plan de requête SQL :** 'OnOperation', 'RemoteOperation'<br /><br /> **Autres opérations de plan de requête :** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Les opérations externes pour les lectures :** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Les opérations externes pour MapReduce :** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Les opérations externes pour les écritures :** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Pour plus d’informations, consultez « Présentation des Plans de requête » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
+|distribution_type|**nvarchar(32)**|Type de cette étape est soumises à distribution.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
+|location_type|**nvarchar(32)**|Où l’étape est exécutée.|'Compute', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|État de cette étape.|En attente, en cours, terminé, échec, UndoFailed, PendingCancel, annulé, annulé, abandonnée|  
 |error_id|**nvarchar(36)**|Id unique de l’erreur associée à cette étape, le cas échéant.|Consultez ID_erreur de [sys.dm_pdw_errors &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL si aucune erreur ne s’est produite.|  
 |start_time|**datetime**|Heure de début de l’exécution de l’étape.|Inférieure ou égale à l’heure actuelle et supérieurs ou égaux à end_compile_time de la requête à laquelle appartient cette étape. Pour plus d’informations sur les requêtes, consultez [sys.dm_pdw_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

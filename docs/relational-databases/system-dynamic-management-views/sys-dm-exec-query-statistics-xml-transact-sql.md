@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_statistics_xml (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml
-helpviewer_keywords: sys.dm_exec_query_statistics_xml management view
+helpviewer_keywords:
+- sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
+# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Plan d’exécution pour les demandes en cours de requête retourne. Utilisez cette vue de gestion dynamique pour récupérer de showplan XML avec des statistiques temporaires. 
@@ -51,15 +53,15 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>Table retournée
-|Nom de la colonne|Type de données|Description|  
+|Nom de la colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID de la session. N'accepte pas la valeur NULL.|
-|request_id|**Int**|ID de la demande. N'accepte pas la valeur NULL.|
+|request_id|**int**|ID de la demande. N'accepte pas la valeur NULL.|
 |sql_handle|**varbinary(64)**|Table de hachage du texte SQL de la requête. Autorise la valeur Null.|
 |plan_handle|**varbinary(64)**|Table de hachage du plan de requête. Autorise la valeur Null.|
 |query_plan|**xml**|Showplan XML avec des statistiques partielles. Autorise la valeur Null.|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage les statistiques d’exécution de requête.  

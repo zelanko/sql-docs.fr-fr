@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_file_space_usage (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_file_space_usage_TSQL
 - sys.dm_db_file_space_usage
 - dm_db_file_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_file_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d362be9a5cf9e3b60f30760073ec4ea30288a61
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e4e6cfa5fd274a9a3bc3e7a9e3a0f981be8e2b46
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_db_file_space_usage**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|ID de la base de données.|  
 |file_id|**smallint**|ID de fichier.<br /><br /> FILE_ID correspond à file_id dans [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) et à fileid dans [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
@@ -50,11 +53,11 @@ ms.lasthandoff: 01/02/2018
 |user_object_reserved_page_count|**bigint**|Nombre total de pages allouées à partir d'étendues uniformes pour les objets utilisateur de la base de données. Ce nombre inclut les pages non utilisées provenant d'une étendue allouée.<br /><br /> Les pages IAM ne sont pas incluses parce qu'elles sont toujours allouées à partir d'étendues mixtes. Les pages PFS sont incluses si elles sont allouées à partir d'une étendue uniforme.<br /><br /> Vous pouvez utiliser la colonne total_pages le [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) catalogue pour retourner le nombre de pages réservées de chaque unité d’allocation de l’objet utilisateur. Notez toutefois que la colonne total_pages inclut les pages IAM.|  
 |internal_object_reserved_page_count|**bigint**|Nombre total de pages d'étendues uniformes allouées pour des objets internes dans le fichier. Ce nombre inclut les pages non utilisées provenant d'une étendue allouée.<br /><br /> Les pages IAM ne sont pas incluses parce qu'elles sont toujours allouées à partir d'étendues mixtes. Les pages PFS sont incluses si elles sont allouées à partir d'une étendue uniforme.<br /><br /> Il n'existe pas d'affichage catalogue ni d'objet de gestion dynamique qui retourne le nombre de pages de chaque objet interne.|  
 |mixed_extent_page_count|**bigint**|Nombre total de pages allouées et non allouées dans les étendues mixtes allouées du fichier. Les étendues mixtes contiennent des pages allouées à différents objets. Ce nombre comprend toutes les pages IAM du fichier.|
-|modified_extent_page_count|**bigint**|**À partir de**:[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />Nombre total de pages modifiées dans allouée étendues du fichier depuis la dernière sauvegarde de base de données complète. Le nombre de pages modifiées peut être utilisé pour effectuer le suivi des modifications différentielles de la base de données depuis la dernière sauvegarde complète pour décider s’il est préférable d’effectuer la sauvegarde différentielle.|
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
-|distribution_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associée à la distribution.|  
+|modified_extent_page_count|**bigint**|**À partir de**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />Nombre total de pages modifiées dans allouée étendues du fichier depuis la dernière sauvegarde de base de données complète. Le nombre de pages modifiées peut être utilisé pour effectuer le suivi des modifications différentielles de la base de données depuis la dernière sauvegarde complète pour décider s’il est préférable d’effectuer la sauvegarde différentielle.|
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|distribution_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associée à la distribution.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le nombre de pages se situe toujours au niveau des étendues. Les nombres de pages sont donc toujours des multiples de huit. Les étendues qui contiennent des pages d'allocation GAM (Global Allocation Map) et SGAM (Shared Global Allocation Map) sont des étendues uniformes allouées. Elles ne sont pas incluses dans les nombres de pages décrits précédemment.  
   
  Le contenu de la banque des versions en cours est dans [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). Le suivi des pages du magasin de versions n'est pas effectué au niveau des sessions et des tâches, mais au niveau des fichiers. En effet, il s'agit de ressources globales. Une session peut générer des versions, mais ces dernières ne peuvent pas être supprimées lorsque la session se termine. Le nettoyage du magasin de versions doit considérer la transaction la plus longue ayant besoin d'accéder à une version particulière. La transaction en cours d’exécution plus longue pour la version nettoyage du magasin peut être détectée en consultant la colonne elapsed_time_seconds dans [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
@@ -123,5 +126,5 @@ FROM sys.dm_db_file_space_usage;
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Base de données associés des vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [Sys.dm_db_task_space_usage &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

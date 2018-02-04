@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_xe_file_target_read_file (Transact-SQL) | Documents Microsoft
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/22/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - fn_xe_file_target_read_file
 - sys.fn_xe_file_target_read_file_TSQL
 - sys.fn_xe_file_target_read_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], functions
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 603253fffd3d3ea6d5a42b37f9d7f4fc8a3edccd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b21b45c9d4932ca82de404fcb3b984ef2149034a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   Lit des fichiers créés par la cible de fichier asynchrone d'événements étendus. Au format XML, un événement par ligne est retourné.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accepter les résultats de trace générés au format XEL et XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Étendue des résultats de trace au format XEL prend en charge uniquement des événements. Nous vous recommandons d'utiliser SQL Server Management Studio pour lire les résultats de trace au format XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accepter les résultats de trace générés au format XEL et XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Étendue des résultats de trace au format XEL prend en charge uniquement des événements. Nous vous recommandons d'utiliser SQL Server Management Studio pour lire les résultats de trace au format XEL.    
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,14 +53,14 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *chemin d’accès*  
+ *path*  
  Chemin d'accès aux fichiers à lire. *chemin d’accès* peut contenir des caractères génériques et inclure le nom d’un fichier. *chemin d’accès* est **nvarchar (260)**. Il n'y a pas de valeur par défaut. Dans le contexte de base de données SQL Azure, cette valeur est une URL HTTP dans un fichier dans le stockage Azure.
   
  *mdpath*  
  Le chemin d’accès au fichier de métadonnées qui correspond à l’ou les fichiers spécifiés par le *chemin d’accès* argument. *mdpath* est **nvarchar (260)**. Il n'y a pas de valeur par défaut. Ce paramètre peut être donné à partir de SQL Server 2016, en tant que valeur null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ne nécessite pas le *mdpath* paramètre. Toutefois, celui-ci est conservé pour la compatibilité descendante des fichiers journaux générés dans les versions antérieures de SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne nécessite pas le *mdpath* paramètre. Toutefois, celui-ci est conservé pour la compatibilité descendante des fichiers journaux générés dans les versions antérieures de SQL Server.  
   
  *initial_file_name*  
  Le premier fichier à lire à partir de *chemin d’accès*. *initial_file_name* est **nvarchar (260)**. Il n'y a pas de valeur par défaut. Si **null** est spécifié comme argument de tous les fichiers trouvés dans *chemin d’accès* sont lus.  
@@ -77,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |package_guid|**uniqueidentifier**|GUID du package d'événement. N'accepte pas la valeur NULL.|  
 |object_name|**nvarchar (256)**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |event_data|**nvarchar(max)**|Contenu de l'événement, au format XML. N'accepte pas la valeur NULL.|  
-|file_name|**nvarchar (260)**|Nom du fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
+|file_name|**nvarchar(260)**|Nom du fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
 |file_offset|**bigint**|Offset du bloc dans le fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
 |timestamp_utc|**datetime2**|**S’applique aux**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Date et heure (fuseau horaire UTC) de l’événement. N'accepte pas la valeur NULL.|  
 
@@ -85,7 +87,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ## <a name="remarks"></a>Notes  
  La lecture des résultats de grande taille définit par l’exécution de **sys.fn_xe_file_target_read_file** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut entraîner une erreur. Utilisez le **résultats dans un fichier** mode (**Ctrl + Maj + F**) pour exporter les grands jeux de résultats dans un fichier et lire le fichier avec un autre outil à la place.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

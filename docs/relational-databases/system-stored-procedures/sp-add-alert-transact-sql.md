@@ -1,5 +1,5 @@
 ---
-title: sp_add_alert (Transact-SQL) | Documents Microsoft
+title: sp_add_alert (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
 - sp_add_alert_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_alert
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb817f23a97ff491c213cde35ba5e1d8eef4387b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +63,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@name =** ] **'***nom***'**  
  Le nom de l'alerte. Ce nom apparaît dans le message envoyé par courrier électronique ou par radiomessagerie en réponse à l'alerte. Il doit être unique et peut contenir le pourcentage (**%**) caractères. *nom* est **sysname**, sans valeur par défaut.  
   
- [  **@message_id =** ] *message_id*  
+ [ **@message_id =** ] *message_id*  
  Numéro du message d'erreur définissant l'alerte. (Il correspond généralement à un numéro d’erreur dans le **sysmessages** table.) *message_id* est **int**, avec une valeur par défaut **0**. Si *gravité* est utilisé pour définir l’alerte, *message_id* doit être **0** ou NULL.  
   
 > [!NOTE]  
@@ -72,7 +75,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@enabled =** ] *activé*  
  Indique l'état actuel de l'alerte. *activé* est **tinyint**, par défaut est 1 (activé). Si **0**, l’alerte n’est pas activé et ne sont pas activés.  
   
- [  **@delay_between_responses =** ] *délai_entre_réponses*  
+ [ **@delay_between_responses =** ] *delay_between_responses*  
  Le délai d’attente, en secondes, entre les réponses à l’alerte. *délai_entre_réponses*est **int**, avec une valeur par défaut **0**, ce qui signifie il n’existe aucun délai d’attente entre les réponses (chaque occurrence de l’alerte génère une réponse). La réponse peut prendre l'une des formes suivantes, ou les deux :  
   
 -   Une ou plusieurs notifications envoyées par courrier électronique ou par radiomessagerie  
@@ -81,10 +84,10 @@ sp_add_alert [ @name = ] 'name'
   
  En définissant cette valeur, il est possible d'éviter, par exemple, l'envoi d'un flot de messages par courrier électronique lorsqu'une alerte se produit à plusieurs reprises en peu de temps.  
   
- [  **@notification_message =** ] **'***message_notification***'**  
+ [ **@notification_message =** ] **'***notification_message***'**  
  Est un message supplémentaire facultatif envoyé à l’opérateur comme faisant partie du message électronique, **envoi réseau**, ou par radiomessagerie. *message_notification* est **nvarchar (512)**, avec NULL comme valeur par défaut. Spécification de *message_notification* est utile pour l’ajout de remarques particulières telles que des procédures correctives.  
   
- [  **@include_event_description_in =** ] *inclure_description_événement_dans*  
+ [ **@include_event_description_in =** ] *include_event_description_in*  
  Argument à utiliser si la description de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être incluse dans le message de notification. *inclure_description_événement_dans*est **tinyint**, avec une valeur par défaut **5** (courrier électronique et **envoi réseau**) et peut prendre l’une ou plusieurs de ces valeurs combinées avec un **OR** opérateur logique.  
   
 > [!IMPORTANT]  
@@ -92,27 +95,27 @@ sp_add_alert [ @name = ] 'name'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Aucune|  
-|**1**|E-mail|  
-|**2**|Récepteur de radiomessagerie|  
+|**0**|Aucun|  
+|**1**|Messagerie électronique|  
+|**2**|Radiomessagerie|  
 |**4**|**net send**|  
   
  [  **@database_name =** ] **'***base de données***'**  
  Base de données dans laquelle l'erreur doit survenir pour que l'alerte soit déclenchée. Si *base de données*n’est pas fourni, l’alerte se déclenche, quelle que soit l’endroit où l’erreur s’est produite. *base de données* est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
- [  **@event_description_keyword =** ] **'***modèle_mots_clés_description_événement***'**  
+ [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  Séquence de caractères à laquelle la description de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être conforme. Les caractères correspondant au modèle d'expression [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE sont admis. *modèle_mots_clés_description_événement* est **nvarchar (100)**, avec NULL comme valeur par défaut. Ce paramètre est utile pour filtrer les noms d’objet (par exemple, **% customer_table %**).  
   
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  Numéro d'identification du travail à exécuter en réponse à l'alerte. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  Nom du travail à exécuter en réponse à cette alerte. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@raise_snmp_trap =** ] *raise_snmp_trap*  
+ [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Non implémenté dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0. *raise_snmp_trap* est **tinyint**, avec 0 comme valeur par défaut.  
   
  [  **@performance_condition =** ] **'***l’argument condition_performances***'**  
@@ -121,23 +124,23 @@ sp_add_alert [ @name = ] 'name'
 |Élément de format| Description|  
 |--------------------|-----------------|  
 |*Élément*|Objet de performances, compteur de performances ou instance nommée du compteur.|  
-|*Comparateur*|Un des opérateurs suivants : >, < ou =|  
-|*Valeur*|Valeur numérique du compteur.|  
+|*Comparator*|Un des opérateurs suivants : >, < ou =|  
+|*Value*|Valeur numérique du compteur.|  
   
- [  **@category_name =** ] **'***catégorie***'**  
+ [ **@category_name =** ] **'***category***'**  
  Nom de la catégorie d'alerte. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@wmi_namespace** =] **'***wmi_namespace***'**  
  Espace de noms WMI permettant de rechercher des événements via des requêtes. *wmi_namespace* est **sysname**, avec NULL comme valeur par défaut. Seuls les espaces de noms situés sur le serveur local sont pris en charge.  
   
- [  **@wmi_query** =] **'***wmi_query***'**  
+ [ **@wmi_query**= ] **'***wmi_query***'**  
  Requête spécifiant l'événement WMI pour l'alerte. *wmi_query* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_alert** doit être exécuté à partir de la **msdb** base de données.  
@@ -164,7 +167,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Les événements créés à l’aide de **xp_logevent** surviennent dans la base de données master. Ainsi, la procédure **xp_logevent** ne déclenche pas d’alerte sauf si la valeur de **@database_name** pour l’alerte est **'master'** ou NULL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter la procédure **sp_add_alert**.  
   
 ## <a name="examples"></a>Exemples  
@@ -187,12 +190,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [Sys.sysperfinfo &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

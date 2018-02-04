@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a41d50de801b0b52027a22ddef1c676d8b4f465
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b05b54ffc39e8b15f2ea60c01bf868de55279777
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>Notification Services (Gestionnaire de configuration SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il s’agit du service qui prend en charge [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Il s'agit du service qui prend en charge [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  
   
  Pour plus d'informations sur [!INCLUDE[ssNS](../../includes/ssns-md.md)], consultez la documentation en ligne.  
   

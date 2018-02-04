@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Documents Microsoft
+title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_delete_policy_execution_history
 - sp_syspolicy_delete_policy_execution_history_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_delete_policy_execution_history
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_delete_policy_execution_history
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17fe4c1e46fe42228c058990473bfe3b34ace2b0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c505a71c0906e46719f92959c61858af5cacec8a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@policy_id=** ] *policy_id*  
+ [ **@policy_id=** ] *policy_id*  
  Identificateur de la stratégie pour laquelle vous voulez supprimer l'historique d'exécution. *policy_id* est **int**et est requis. Sa valeur peut être NULL.  
   
- [  **@oldest_date=** ] **'***oldest_date***'**  
+ [ **@oldest_date=** ] **'***oldest_date***'**  
  Date la plus ancienne pour laquelle vous voulez conserver l'historique d'exécution de la stratégie. Tout historique d'exécution antérieur à cette date est supprimé. *l’argument oldest_date* est **datetime**et est requis. Sa valeur peut être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -75,7 +78,7 @@ ON a.policy_id = b.policy_id
   
  Pour archiver l'historique d'exécution de la stratégie, vous pouvez ouvrir le journal Historique de la stratégie dans l'Explorateur d'objets et exporter l'historique d'exécution dans un fichier. Pour accéder à l’historique de stratégie, développez **gestion**, avec le bouton droit **gestion des stratégies de**, puis cliquez sur **afficher l’historique**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
@@ -93,7 +96,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion basée sur la stratégie stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+ [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_cdc_get_min_lsn (Transact-SQL) | Documents Microsoft
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn_TSQL
 - sys.fn_cdc_get_min_lsn_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b54b199b86c14f4a7b100f231d0b91d0e0a133a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6d77250f4e595d121f89a112366dfbc9ee9600ad
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +62,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
  Cette fonction est utilisée en général pour identifier le point de terminaison inférieur de la chronologie de capture des données modifiées associé à une instance de capture. Vous pouvez également utiliser cette fonction pour valider que les points de terminaison d'une plage de requêtes se situent dans la chronologie de l'instance de capture avant de demander les données de modification. Il est important d'effectuer de tels contrôles, car le point de terminaison inférieur d'une instance de capture change lorsque le nettoyage est effectué sur les tables de modifications. Si l'intervalle entre les demandes de données de modification est significatif, même un point de terminaison inférieur qui a pour valeur le point de terminaison supérieur de la demande de données de modification précédente peut se trouver à l'extérieur de la chronologie actuelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -101,7 +104,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.fn_cdc_get_max_lsn &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

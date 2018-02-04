@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (Transact-SQL) | Documents Microsoft
+title: xp_sqlmaint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: xp_sqlmaint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b32c6c32d3af26713713d513fa3c8255cfd3ef9d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b39c93aa08d46dd31b2a063631ce567593319df4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *chaîne_de_commutateurs* **'**  
+ **'** *switch_string* **'**  
  Est une chaîne contenant le **sqlmaint** commutateurs de l’utilitaire. Les commutateurs et leurs valeurs doivent être séparés par un espace.  
   
  Le **- ?** commutateur n’est pas valide pour **xp_sqlmaint**.  
@@ -55,9 +58,9 @@ xp_sqlmaint 'switch_string'
  Aucun. Retourne une erreur si le **sqlmaint** utilitaire échoue.  
   
 ## <a name="remarks"></a>Notes  
- Si cette procédure est appelée par un utilisateur connecté à l’aide de l’authentification SQL Server, le **- U «***login_id***»** et **-P «***mot de passe***»** commutateurs sont ajoutés à *chaîne_de_commutateurs* avant l’exécution. Si l’utilisateur est connecté avec l’authentification Windows, *chaîne_de_commutateurs* est transmis sans modification à **sqlmaint**.  
+ Si cette procédure est appelée par un utilisateur connecté à l’aide de l’authentification SQL Server, le **- U «***login_id***»** et **-P «***mot de passe***»** commutateurs sont ajoutés au début *chaîne_de_commutateurs* avant l’exécution. Si l’utilisateur est connecté avec l’authentification Windows, *chaîne_de_commutateurs* est transmis sans modification à **sqlmaint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -75,7 +78,7 @@ The command(s) executed successfully.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilitaire sqlmaint](../../tools/sqlmaint-utility.md)   
+ [sqlmaint Utility](../../tools/sqlmaint-utility.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

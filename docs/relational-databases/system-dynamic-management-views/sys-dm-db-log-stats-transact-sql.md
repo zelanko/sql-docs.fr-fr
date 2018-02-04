@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_log_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_db_log_stats
 - sys.dm_db_log_stats_TSQL
 - dm_db_log_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_log_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_log_stats dynamic management function
 ms.assetid: 
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa7b169b3ff6887616346a8324854ab10aceab07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>Sys.dm_db_log_stats (Transact-SQL)   
+# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Retourne les attributs de niveau résumés et des informations sur les fichiers journaux des transactions de bases de données. Utilisez ces informations pour la surveillance et de diagnostics de contrôle d’intégrité des journaux de transaction.   
@@ -45,7 +48,7 @@ Retourne les attributs de niveau résumés et des informations sur les fichiers 
   
 ## <a name="arguments"></a>Arguments  
 
-*database_id* | NULL | **Par défaut**
+*database_id* | NULL | **DEFAULT**
 
 Est l’ID de la base de données. `database_id` a la valeur `int`. Les entrées valides sont le numéro d’ID de base de données, `NULL`, ou `DEFAULT`. La valeur par défaut est `NULL`. `NULL`et `DEFAULT` sont des valeurs équivalentes dans le contexte de base de données actuelle.  
 La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifié. Lorsque vous utilisez `DB_ID` sans spécifier un nom de base de données, le niveau de compatibilité de la base de données en cours doit être supérieur ou égal à 90.
@@ -53,10 +56,10 @@ La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|database_id    |**Int**    |ID de la base de données |  
-|recovery_model |**nvarchar (60)**   |   Mode de récupération de la base de données. Les valeurs possibles sont : <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|database_id    |**int**    |ID de la base de données |  
+|recovery_model |**nvarchar(60)**   |   Mode de récupération de la base de données. Les valeurs possibles sont : <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   Début [numéro de séquence journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) dans le journal des transactions.|  
 |log_end_lsn    |**nvarchar(24)**   |   [numéro de séquence journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) du dernier enregistrement du journal dans le journal des transactions.|  
 |current_vlf_sequence_number    |**bigint** |   En cours [le fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) numéro de séquence au moment de l’exécution.|  
@@ -65,7 +68,7 @@ La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut
 |total_log_size_mb  |**float**  |   Taille du journal des transactions totale en Mo. |  
 |active_vlf_count   |**bigint** |   Nombre total d’active [les fichiers journaux virtuels (fichiers journaux virtuels)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) dans le journal des transactions.|  
 |active_log_size_mb |**float**  |   Taille du journal des transactions actif total en Mo.|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   Raison de retard de troncation du journal. La valeur est identique à `log_reuse_wait_desc` colonne de `sys.databases`.  (Pour plus d’explications de ces valeurs, consultez [du journal des transactions](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Les valeurs possibles sont : <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />AUTRE TEMPORAIRE |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Raison de retard de troncation du journal. La valeur est identique à `log_reuse_wait_desc` colonne de `sys.databases`.  (Pour plus d’explications de ces valeurs, consultez [du journal des transactions](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Les valeurs possibles sont : <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />AUTRE TEMPORAIRE |  
 |log_backup_time    |**datetime**   |   Transaction sauvegarde heure du dernier journal.|   
 |log_backup_lsn |**nvarchar(24)**   |   Dernière sauvegarde du journal des transactions [numéro de séquence journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Taille du journal en Mo depuis la dernière sauvegarde du journal des transactions [numéro de séquence journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  

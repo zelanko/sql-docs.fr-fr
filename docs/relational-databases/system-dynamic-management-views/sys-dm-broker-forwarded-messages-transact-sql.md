@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_forwarded_messages (Transact-SQL) | Documents Microsoft
+title: sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_broker_forwarded_messages
 - sys.dm_broker_forwarded_messages_TSQL
 - dm_broker_forwarded_messages_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_broker_forwarded_messages dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_broker_forwarded_messages dynamic management view
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7292ca6344c7492da82c3d65ff4003f23f95f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a6bfdaa9e43129a67c7be9aec6d2c2df9bbc11d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +52,15 @@ ms.lasthandoff: 11/17/2017
 |**message_fragment_number**|**int**|Si le message est fragmenté, numéro du fragment transporté par le message. Accepte la valeur NULL.|  
 |**hops_remaining**|**tinyint**|Nombre de tentatives de retransmission du message jusqu'à sa destination finale. Cette valeur est décrémentée de 1 à chaque transfert du message. Accepte la valeur NULL.|  
 |**time_to_live**|**int**|Durée maximale d'activité du message. Lorsque cette valeur atteint 0, le message est supprimé. Accepte la valeur NULL.|  
-|**time_consumed**|**int**|Durée totale d'activité du message. Chaque fois que le message est transféré, cette valeur est augmentée du temps de transfert correspondant.. Cette colonne n'accepte pas la valeur NULL.|  
+|**time_consumed**|**int**|Durée totale d'activité du message. Chaque fois que le message est transféré, cette valeur est augmentée du temps de transfert correspondant. Cette colonne n'accepte pas la valeur NULL.|  
 |**message_id**|**uniqueidentifier**|ID du message. Accepte la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues de gestion dynamique liées à Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique &#40; liées à Service Broker Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

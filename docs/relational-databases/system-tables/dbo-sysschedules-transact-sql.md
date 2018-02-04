@@ -1,5 +1,5 @@
 ---
-title: dbo.sysschedules (Transact-SQL) | Documents Microsoft
+title: dbo.sysschedules (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysschedules
 - sysschedules_TSQL
 - dbo.sysschedules
-dev_langs: TSQL
-helpviewer_keywords: sysschedules system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d97d48155a5f9ff41ee8255e9a28a8c1c82443d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9e402dfb4c7643c0f52965cfb69414810c0db21c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,25 +41,25 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**id_de_la_planification**|**int**|ID de la planification de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**schedule_id**|**int**|ID de la planification de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**schedule_uid**|**uniqueidentifier**|Identificateur unique de la planification du travail. Cette valeur permet d'identifier une planification pour les travaux distribués.|  
 |**originating_server_id**|**int**|ID du serveur principal duquel provient la planification du travail.|  
 |**nom**|**sysname (nvarchar(128))**|Nom de la planification du travail défini par l'utilisateur. Ce nom doit être unique au sein d'un travail.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *identificateur_sécurisé* de l’utilisateur ou le groupe qui possède la planification du travail.|  
-|**activé**|**int**|État de la planification du travail :<br /><br /> **0** = non activé.<br /><br /> **1** = activé.<br /><br /> Si la planification n'est pas activée, aucun travail n'est exécuté sur la planification.|  
+|**enabled**|**int**|État de la planification du travail :<br /><br /> **0** = non activé.<br /><br /> **1** = activé.<br /><br /> Si la planification n'est pas activée, aucun travail n'est exécuté sur la planification.|  
 |**freq_type**|**int**|Fréquence d'exécution d'un travail pour cette planification.<br /><br /> **1** = une seule fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, fonction **freq_interval**<br /><br /> **64** = s’exécute au démarrage du service de l’Agent SQL Server<br /><br /> **128** = s’exécute lorsque l’ordinateur est inactif|  
 |**freq_interval**|**int**|Jours d'exécution du travail. Dépend de la valeur de **freq_type**. La valeur par défaut est **0**, ce qui indique que **freq_interval** n’est pas utilisée. Consultez le tableau ci-dessous pour les valeurs possibles et leurs effets.|  
 |**freq_subday_type**|**int**|Unités pour la **freq_subday_interval**. Voici les valeurs possibles et leurs descriptions.<br /><br /> <br /><br /> **1** : à l’heure spécifiée<br /><br /> **2** : secondes<br /><br /> **4** : minutes<br /><br /> **8** : heures|  
 |**freq_subday_interval**|**int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail.|  
 |**freq_relative_interval**|**int**|Lorsque **freq_interval** se produit chaque mois, si **freq_interval** est **32** (mensuel relatif). Il peut s'agir de l'une des valeurs suivantes :<br /><br /> **0** = **freq_relative_interval** n’est pas utilisé<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
-|**freq_recurrence_**<br /><br /> **facteur**|**int**|Nombre de semaines ou de mois entre chaque exécution d’une tâche planifiée. **freq_recurrence_factor** est utilisée uniquement si **freq_type** est **8**, **16**, ou **32**. Si cette colonne contient **0**, **freq_recurrence_factor** n’est pas utilisée.|  
+|**freq_recurrence_**<br /><br /> **factor**|**int**|Nombre de semaines ou de mois entre chaque exécution d’une tâche planifiée. **freq_recurrence_factor** est utilisée uniquement si **freq_type** est **8**, **16**, ou **32**. Si cette colonne contient **0**, **freq_recurrence_factor** n’est pas utilisée.|  
 |**active_start_date**|**int**|Date de démarrage de l'exécution d'un travail. La date est au format AAAAMMJJ. NULL indique la date du jour.|  
 |**active_end_date**|**int**|Date d'arrêt de l'exécution d'un travail. La date se présente sous la forme AAAAMMJJ.|  
-|**heure_de_début_active**|**int**|Heure de n’importe quel jour entre **active_start_date** et **active_end_date** que le travail commence à s’exécuter. L'heure est au format HHMMSS, exprimée sur 24 h.|  
-|**heure_fin_active**|**int**|Heure de n’importe quel jour entre **active_start_date** et **active_end_date** cette tâche arrête l’exécution. L'heure est au format HHMMSS, exprimée sur 24 h.|  
-|**date_de_création**|**datetime**|Date et heure de création de la planification.|  
-|**date_de_modification**|**datetime**|Date et heure de dernière modification de la planification.|  
-|**numéro_version**|**int**|Numéro de version en cours de la planification. Par exemple, si une planification a été modifiée 10 fois, le **numéro_version** est 10.|  
+|**active_start_time**|**int**|Heure de n’importe quel jour entre **active_start_date** et **active_end_date** que le travail commence à s’exécuter. L'heure est au format HHMMSS, exprimée sur 24 h.|  
+|**active_end_time**|**int**|Heure de n’importe quel jour entre **active_start_date** et **active_end_date** cette tâche arrête l’exécution. L'heure est au format HHMMSS, exprimée sur 24 h.|  
+|**date_created**|**datetime**|Date et heure de création de la planification.|  
+|**date_modified**|**datetime**|Date et heure de dernière modification de la planification.|  
+|**version_number**|**int**|Numéro de version en cours de la planification. Par exemple, si une planification a été modifiée 10 fois, le **numéro_version** est 10.|  
   
 |Valeur de freq_type|Effet sur freq_interval|  
 |-------------------------|------------------------------|  

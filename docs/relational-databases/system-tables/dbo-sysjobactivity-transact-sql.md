@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,40 +17,42 @@ f1_keywords:
 - dbo.sysjobactivity
 - sysjobactivity
 - sysjobactivity_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobactivity system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6270ef7364bfd4d1c599a9feb564e36fc6f217a2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d0edab9e591470a0100bde529f53cee44a016dab
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enregistre l'état et l'activité des travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  Cette table est stockée dans le **msdb** base de données.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**Int**|ID de la session stockée dans le **syssessions** de table dans le **msdb** base de données.|  
+|**session_id**|**int**|ID de la session stockée dans le **syssessions** de table dans le **msdb** base de données.|  
 |**job_id**|**uniqueidentifier**|ID du travail.|  
 |**run_requested_date**|**datetime**|Date et heure auxquelles le travail devait s'exécuter.|  
 |**run_requested_source**|**sysname(nvarchar(128))**|Demandeur de l'exécution du travail.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Date et heure auxquelles ce travail a intégré une file d'attente. Si le travail est exécuté directement, cette colonne affiche la valeur NULL.|  
 |**start_execution_date**|**datetime**|Date et heure auxquelles l'exécution du travail a été prévue.|  
-|**last_executed_step_id**|**Int**|ID de la dernière étape exécutée dans le travail.|  
+|**last_executed_step_id**|**int**|ID de la dernière étape exécutée dans le travail.|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|Date et heure auxquelles l'exécution de la dernière étape du travail a démarré.|  
 |**stop_execution_date**|**datetime**|Date et heure auxquelles l'exécution du travail s'est terminée.|  
-|**job_history_id**|**Int**|Utilisé pour identifier une ligne dans le **sysjobhistory** table.|  
+|**job_history_id**|**int**|Utilisé pour identifier une ligne dans le **sysjobhistory** table.|  
 |**next_scheduled_run_date**|**datetime**|Prochaines date et heure prévues pour l'exécution du travail.|  
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 Cet exemple retourne l’état d’exécution de tous les travaux de l’Agent SQL Server.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT sj.Name, 
@@ -66,6 +69,6 @@ WHERE session_id = (
 ```
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo.sysjobhistory &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98a5f763d57c6cfb3a6c11d308fbe71e53ded7f4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>Service SQL Server Browser
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l’écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l’ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser contribue aux actions suivantes :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l’écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l’ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser contribue aux actions suivantes :  
   
 -   Affichage de la liste des serveurs disponibles  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  Pour chaque instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de [!INCLUDE[ssAS](../../includes/ssas-md.md)], le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser (sqlbrowser) fournit le nom de l’instance et le numéro de version. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser est installé avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser peut être configuré pendant l’installation ou à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Par défaut, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser démarre automatiquement :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser peut être configuré pendant l’installation ou en utilisant le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser démarre automatiquement :  
   
 -   lors de la mise à niveau d'une installation ;  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/17/2018
 -   Le port que vous choisissez pour chaque instance peut être utilisé par un autre service ou une autre application présents sur le serveur, ce qui entraîne la non-disponibilité de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="clustering"></a>Clustering  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser n’est pas une ressource en cluster et ne prend pas en charge le basculement d’un nœud de cluster à l’autre. Par conséquent, dans le cas d'un cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser doit être installé et activé pour chaque nœud du cluster. Dans les clusters, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute de IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser n’est pas une ressource cluster et ne prend pas en charge le basculement d’un nœud de cluster à l’autre. Par conséquent, dans le cas d'un cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser doit être installé et activé pour chaque nœud du cluster. Dans les clusters, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute de IP_ANY.  
   
 > [!NOTE]  
 >  Dans ce cas, si vous activez l'écoute sur des ports IP spécifiques, l'utilisateur doit configurer le même port TCP sur chaque adresse IP, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser renvoie la première paire IP/port qu'il détecte.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/17/2018
   
  Le service de navigateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désinstallé lorsque la dernière instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est supprimée.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser peut être démarré à partir de l’invite de commandes pour le dépannage, à l’aide de la **- c** commutateur :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser peut être démarré à partir de l’invite de commandes à des fins de dépannage au moyen du commutateur **-c** :  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="security"></a>Sécurité  
   
 ### <a name="account-privileges"></a>Privilèges de compte  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser écoute sur un port UDP et accepte les demandes non authentifiées à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] résolution protocole SSRP (). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser doit être exécuté dans le contexte de sécurité d’un utilisateur privilégié pour réduire les risques d’attaque malveillante. Le compte de connexion peut être modifié à partir du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les droits d'utilisateur minimaux pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sont les suivants :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l’écoute d’un port UDP et accepte les demandes non authentifiées via le protocole SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser doit être exécuté dans le contexte de sécurité d’un utilisateur privilégié pour réduire les risques d’attaque malveillante. Le compte de connexion peut être modifié à partir du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les droits d'utilisateur minimaux pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sont les suivants :  
   
 -   Refuser l'accès à cet ordinateur à partir du réseau  
   

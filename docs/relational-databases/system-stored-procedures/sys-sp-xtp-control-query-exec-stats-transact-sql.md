@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Documents Microsoft
+title: sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2015
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
 - sys.sp_xtp_control_query_exec_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_control_query_exec_stats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeae0a552d2df0c911b2a95a4578c3b835192612
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 86ab826d23f50868259edc5ae3b2bffa55359ce2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +50,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @new_collection_value= *valeur*  
+ @new_collection_value = *value*  
  Détermine si la collection de statistiques au niveau de la procédure est activée (1) ou désactivée (0).  
   
  @new_collection_valuea la valeur zéro lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre.  
   
- @database_id== *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  ID de base de données et ID d'objet pour la procédure stockée compilée en mode natif. Si la collection de statistiques est activée pour l’instance ([sys.sp_xtp_control_proc_exec_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), les statistiques sur une procédure stockée compilée en mode natif sont collectées. Le fait de désactiver la collection de statistiques sur l'instance ne désactive pas la collection de statistiques pour les procédures stockées individuelles compilées en mode natif.  
   
  Utilisez [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys.procedures &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/db-id-transact-sql.md), ou [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md) pour obtenir un ID pour une base de données et de la procédure stockée.  
   
- @old_collection_value= *valeur*  
+ @old_collection_value = *value*  
  Retourne l'état actuel.  
   
 ## <a name="return-code"></a>Code de retour  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_waiting_tasks (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_waiting_tasks_TSQL
 - dm_os_waiting_tasks_TSQL
 - sys.dm_os_waiting_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_waiting_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52f867ccc301a710656739bf49ec1a11a50fcee1
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5b3a3122f9f0908e063685941f58bb03281659e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,32 +41,32 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary (8)**|Adresse de la tâche en attente.|  
+|**waiting_task_address**|**varbinary(8)**|Adresse de la tâche en attente.|  
 |**session_id**|**smallint**|ID de la session associée à la tâche.|  
-|**exec_context_id**|**Int**|ID du contexte d'exécution associé à la tâche.|  
+|**exec_context_id**|**int**|ID du contexte d'exécution associé à la tâche.|  
 |**wait_duration_ms**|**bigint**|Temps d'attente total de ce type d'attente (en millisecondes). Ce temps **signal_wait_time**.|  
-|**wait_type**|**nvarchar (60)**|Nom du type d'attente.|  
-|**resource_address**|**varbinary (8)**|Adresse de la ressource que la tâche attend.|  
-|**blocking_task_address**|**varbinary (8)**|Tâche qui mobilise actuellement cette ressource.|  
+|**wait_type**|**nvarchar(60)**|Nom du type d'attente.|  
+|**resource_address**|**varbinary(8)**|Adresse de la ressource que la tâche attend.|  
+|**blocking_task_address**|**varbinary(8)**|Tâche qui mobilise actuellement cette ressource.|  
 |**blocking_session_id**|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé en raison de transitions d'état de verrou interne.|  
-|**blocking_exec_context_id**|**Int**|ID du contexte d'exécution de la tâche bloquante.|  
+|**blocking_exec_context_id**|**int**|ID du contexte d'exécution de la tâche bloquante.|  
 |**resource_description**|**nvarchar(3072)**|Description de la ressource actuellement mobilisée. Pour plus d'informations, consultez la liste ci-dessous.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
 ## <a name="resourcedescription-column"></a>Colonne resource_description  
  La colonne resource_description a les valeurs possibles suivantes.  
   
  **Propriétaire de ressources de pool de threads :**  
   
--   id du pool de threads = planificateur\<hex-address >  
+-   threadpool id=scheduler\<hex-address>  
   
  **Propriétaire de la ressource requête parallèle :**  
   
--   id d’exchangeEvent = {Port | Canal}\<hex-address > WaitType =\<type d’attente exchange > nodeId =\<exchange-nœud-id >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
- **Exchange--type d’attente :**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 01/02/2018
   
  **Propriétaire de ressource de verrou :**  
   
--   \<type-specific-description > id = verrou\<verrou-hex-address > mode =\<mode > associatedObjectId =\<associés-obj-id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<type-specific-description > peut être :**  
   
@@ -131,17 +134,17 @@ ms.lasthandoff: 01/02/2018
   
  **Propriétaire de ressource de verrou :**  
   
--   \<DB-id > :\<id de fichier > :\<page dans le fichier >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID >  
+-   \<GUID>  
   
--   \<classe de verrous > (\<verrou-address >)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
  
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 Cet exemple montre comment identifier les sessions bloquées.  Exécutez le [!INCLUDE[tsql](../../includes/tsql-md.md)] de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 

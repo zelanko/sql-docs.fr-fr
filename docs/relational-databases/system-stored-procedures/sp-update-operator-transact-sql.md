@@ -1,5 +1,5 @@
 ---
-title: sp_update_operator (Transact-SQL) | Documents Microsoft
+title: sp_update_operator (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
 - sp_update_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_update_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a297d3a5dd0252dce89a5cf5a779c8b3fa06d8d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,22 +78,22 @@ sp_update_operator
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée à cet opérateur sur son récepteur de radiomessagerie, du lundi au vendredi. *heure_début_radiomessagerie_semaine*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @weekday_pager_end_time=] *au vendredi*  
+ [ @weekday_pager_end_time=] *weekday_pager_end_time*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée à l'opérateur spécifié sur son récepteur de radiomessagerie, du lundi au vendredi. *au vendredi*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @saturday_pager_start_time=] *heure_début_radiomessagerie_samedi*  
+ [ @saturday_pager_start_time=] *saturday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée le samedi à l'opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_samedi*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @saturday_pager_end_time=] *heure_fin_radiomessagerie_samedi*  
+ [ @saturday_pager_end_time=] *saturday_pager_end_time*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée le samedi à l'opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_samedi*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @sunday_pager_start_time=] *heure_début_radiomessagerie_dimanche*  
+ [ @sunday_pager_start_time=] *sunday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée le dimanche à l'opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_dimanche*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
  [ @sunday_pager_end_time=] *sunday_pager_end_time*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée le dimanche à l'opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_dimanche*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @pager_days=] *jours_radiomessagerie*  
+ [ @pager_days=] *pager_days*  
  Indique les jours où l'opérateur est en mesure de recevoir des notifications par radiomessagerie (en fonction des heures de début/fin précisées). *jours_radiomessagerie*est **tinyint**, avec NULL comme valeur par défaut et doit être une valeur à partir de **0** via **127**. *jours_radiomessagerie* est calculée en ajoutant les valeurs représentant les jours voulus. Par exemple, du lundi au vendredi est **2**+**4**+**8**+**16**+**32** = **64**.  
   
 |Valeur|Description|  
@@ -103,7 +106,7 @@ sp_update_operator
 |**32**|Vendredi|  
 |**64**|Samedi|  
   
- [ @netsend_address=] '*adresse_envoiréseau*'  
+ [ @netsend_address=] '*netsend_address*'  
  Adresse réseau de l'opérateur à qui est envoyé le message réseau. *adresse_envoiréseau*est **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
  [ @category_name=] '*catégorie*'  
@@ -115,7 +118,7 @@ sp_update_operator
 ## <a name="remarks"></a>Notes  
  La procédure sp_update_operator doit être exécutée à partir de la base de données msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution de cette procédure sont octroyées par défaut aux membres du rôle de serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  
@@ -137,9 +140,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

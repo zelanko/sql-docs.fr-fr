@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (Transact-SQL) | Documents Microsoft
+title: sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_proxy_for_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b708d467cf246a221d14802abb839c96de85ffe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf94c94aed1f43e747703d5f82a7b842252dafef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +50,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@proxy_id**  =] *proxy_id*  
+ [ **@proxy_id** = ] *proxy_id*  
  Numéro d'identification du proxy pour lequel répertorier des informations. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
   
  [  **@proxy_name**  =] **'***proxy_name***'**  
  Nom du serveur proxy pour lequel énumérer les informations. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
   
- [  **@subsystem_id**  =] *subsystem_id*  
+ [ **@subsystem_id** = ] *subsystem_id*  
  Numéro d'identification du sous-système pour lequel répertorier des informations. Le *subsystem_id* est **int**, avec NULL comme valeur par défaut. Soit le *subsystem_id* ou *subsystem_name* peut être spécifié.  
   
  [  **@subsystem_name**  =] **'***subsystem_name***'**  
@@ -80,7 +83,7 @@ sp_enum_proxy_for_subsystem
   
  Cette procédure stockée se trouve dans **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -110,6 +113,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_grant_proxy_to_subsystem &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

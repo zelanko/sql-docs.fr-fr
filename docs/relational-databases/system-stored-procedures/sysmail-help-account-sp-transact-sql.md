@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_help_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
 - sysmail_help_account_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfc032a279abad7949e67f4c232cbe30219baa30
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID du compte pour lequel les informations seront répertoriées. *account_id* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@account_name**  =] **'***account_name***'**  
@@ -60,14 +63,14 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Nom de colonne|Type de données| Description|  
 |**account_id**|**int**|Identificateur du compte.|  
 |**nom**|**sysname**|Nom du compte|  
-|**Description**|**nvarchar (256)**|Description du compte.|  
-|**email_address**|**nvarchar (128)**|Adresse électronique à partir de laquelle les messages sont envoyés.|  
-|**nom_complet**|**nvarchar (128)**|Nom d'affichage du compte|  
-|**replyto_address**|**nvarchar (128)**|L’adresse où les réponses aux messages de ce compte sont envoyés.|  
-|**type de serveur**|**sysname**|Type de serveur de messagerie pour le compte.|  
-|**nom du serveur**|**sysname**|Nom du serveur de messagerie pour le compte.|  
+|**description**|**nvarchar (256)**|Description du compte.|  
+|**email_address**|**nvarchar(128)**|Adresse électronique à partir de laquelle les messages sont envoyés.|  
+|**display_name**|**nvarchar(128)**|Nom d'affichage du compte|  
+|**replyto_address**|**nvarchar(128)**|L’adresse où les réponses aux messages de ce compte sont envoyés.|  
+|**servertype**|**sysname**|Type de serveur de messagerie pour le compte.|  
+|**servername**|**sysname**|Nom du serveur de messagerie pour le compte.|  
 |**port**|**int**|Numéro de port utilisé par le serveur de messagerie.|  
-|**nom d’utilisateur**|**nvarchar (128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **nom d’utilisateur** est NULL, la messagerie de base de données n’utilise pas l’authentification pour ce compte.|  
+|**username**|**nvarchar(128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **nom d’utilisateur** est NULL, la messagerie de base de données n’utilise pas l’authentification pour ce compte.|  
 |**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de type bit, sans valeur par défaut. Lorsque ce paramètre est 1, la messagerie de base de données utilise les informations d’identification de le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Lorsque ce paramètre est 0, la messagerie de base de données utilise le  **@username**  et  **@password**  pour l’authentification sur le serveur SMTP. Si  **@username**  et  **@password**  ont la valeur NULL, alors que la messagerie de base de données utilise l’authentification anonyme. Consultez administrateur SMTP avant de spécifier ce paramètre.|  
 |**enable_ssl**|**bit**|Spécifie si la messagerie de base de données chiffre les communications à l'aide de la technologie SSL (Secure Sockets Layer). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de type bit, sans valeur par défaut. 1 indique que la messagerie de base de données chiffre les communications au moyen de SSL tandis que la valeur 0 indique qu'elle envoie le courrier sans le chiffrement SSL.|  
   
@@ -76,7 +79,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
  La procédure stockée **sysmail_help_account_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

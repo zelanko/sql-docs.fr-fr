@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_unsentitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +52,22 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
 |**profile_id**|**int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**destinataires**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
-|**destinataires_en_copie**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
-|**destinataires_en_copie_aveugle**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**Objet**|**nvarchar(510)**|Ligne d'objet du message.|  
-|**corps**|**varchar(max)**|Le corps du message.|  
-|**body_format**|**varchar (20)**|Le format du corps du message. Les valeurs possibles sont **texte** et **HTML**.|  
+|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
+|**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
+|**subject**|**nvarchar(510)**|Ligne d'objet du message.|  
+|**body**|**varchar(max)**|Le corps du message.|  
+|**body_format**|**varchar(20)**|Le format du corps du message. Les valeurs possibles sont **texte** et **HTML**.|  
 |**importance**|**varchar(6)**|Le **importance** paramètre du message.|  
-|**respect de la**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
+|**sensitivity**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
-|**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**attachment_encoding**|**varchar(20)**|Type de pièce jointe.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
 |**query_result_width**|**int**|Le **query_result_width** paramètre du message.|  
-|**query_result_separator**|**char (1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
+|**query_result_separator**|**char(1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
 |**exclude_query_output**|**bit**|Le **exclude_query_output** paramètre du message. Pour plus d’informations, consultez [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Le **append_query_error** paramètre du message. La valeur 0 indique que la messagerie de base de données ne doit pas envoyer le message électronique s'il existe une erreur dans la requête.|  
 |**send_request_date**|**datetime**|Date et heure d'arrivée du message dans la file d'attente des messages.|  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="remarks"></a>Notes  
  En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous montrant le nombre de messages se trouvant en file d'attente et leur temps d'attente. Si aucun message n'est envoyé, soit le programme externe de messagerie de base de données n'est pas en cours d'exécution, soit un problème réseau empêche la messagerie de base de données de contacter les serveurs SMTP. Si la plupart des messages non envoyés ont la même **profile_id**, il peut y avoir un problème avec le serveur SMTP. Pensez à ajouter des comptes supplémentaires au profil. Si les messages sont envoyés mais qu'ils restent trop longtemps dans la file d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite peut-être des ressources plus importantes pour traiter le volume de messages dont vous avez besoin.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Accordées à **sysadmin** rôle serveur fixe et **DatabaseMailUserRole** rôle de base de données. Lors de l’exécution par un membre de la **sysadmin** rôle serveur fixe, cette vue affiche toutes les **non envoyé** ou **une nouvelle tentative** messages. Tous les autres utilisateurs voient uniquement les **non envoyé** ou **une nouvelle tentative** les messages qu’ils ont envoyés.  
   
   

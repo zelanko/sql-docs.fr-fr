@@ -1,5 +1,5 @@
 ---
-title: sysdac_instances_internal (Transact-SQL) | Documents Microsoft
+title: sysdac_instances_internal (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdac_instances_internal_TSQL
 - sysdac_instances_internal
-dev_langs: TSQL
-helpviewer_keywords: sysdac_instances_internal
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdac_instances_internal
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7760659f0f4158a47b1e775106f376aa9f0f13a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f50931e2ba9a0fefab9e87f3bbde0c850b3ca933
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Tables d’Application de couche données - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |instance_id|**uniqueidentifier**|Identificateur de l'instance DAC.|  
 |nom_instance|**sysname**|Nom de l'instance DAC spécifiée quand l'instance a été déployée.|  
 |type_name|**sysname**|Nom de la DAC spécifiée quand le package DAC a été créé.|  
-|type_version|**nvarchar (64)**|Version de la DAC spécifiée quand le package DAC a été créé.|  
+|type_version|**nvarchar(64)**|Version de la DAC spécifiée quand le package DAC a été créé.|  
 |description|**nvarchar(4000)**|Description de la DAC écrite quand le package DAC a été créé.|  
 |type_stream|**varbinary(max)**|Flux de données qui contient la représentation encodée des objets logiques, tels que les tables et vues, contenus dans la DAC.|  
 |date_created|**datetime**|Date et heure de création de l'instance DAC.|  
@@ -47,11 +50,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Notes  
  Accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données master.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

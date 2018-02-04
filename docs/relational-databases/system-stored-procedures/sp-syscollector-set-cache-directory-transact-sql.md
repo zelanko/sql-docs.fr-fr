@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_cache_directory (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
 - sp_syscollector_set_cache_directory
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d43024a0e094e3f5f59c8929db30ed809884cb5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 504a7b7c769910fafa8b598c5a3f20714a50dcd6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +47,13 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@cache_directory =** ] **'***cache_directory***'**  
+ [ **@cache_directory =** ] **'***cache_directory***'**  
  Répertoire du système de fichiers où les données collectées sont stockées temporairement. *cache_directory* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si aucune valeur n'est spécifiée, le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporaire par défaut est utilisé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous devez désactiver le collecteur de données avant de modifier la configuration du répertoire de cache. Cette procédure stockée échoue si le collecteur de données est activé. Pour plus d’informations, consultez [activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md), et [gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Le répertoire spécifié n'a pas besoin d'exister au moment où le sp_syscollector_set_cache_directory est exécuté ; toutefois, les données ne peuvent pas être correctement mises en cache et téléchargées tant que le répertoire n'a pas été créé. Nous vous recommandons de créer le répertoire avant d'exécuter cette procédure stockée.  

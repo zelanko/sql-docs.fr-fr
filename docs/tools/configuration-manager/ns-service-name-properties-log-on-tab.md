@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe580f038bce9676e30249765ccc02fe43696b38
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;nom du service&gt; propriétés (onglet Ouvrir une session)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez le **session** onglet de la **propriétés de Notification Services** boîte de dialogue pour spécifier le compte utilisé par le [!INCLUDE[ssNS](../../includes/ssns-md.md)] service et pour démarrer et arrêter le service.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de Notification Services** permet de spécifier le compte utilisé par le service [!INCLUDE[ssNS](../../includes/ssns-md.md)] , ainsi que de démarrer et d'arrêter ce service.  
   
 ## <a name="options"></a>Options  
  **Compte système local**  

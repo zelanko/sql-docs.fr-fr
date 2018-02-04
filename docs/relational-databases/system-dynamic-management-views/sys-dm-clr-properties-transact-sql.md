@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_properties_TSQL
 - dm_clr_properties_TSQL
 - dm_clr_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_properties dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,10 +40,10 @@ ms.lasthandoff: 11/27/2017
   
  Le **sys.dm_clr_properties** vue contient les **nom** et **valeur** colonnes. Chaque ligne de cette vue fournit des détails sur une propriété du CLR hébergé. Utilisez cette vue pour recueillir des informations sur le CLR hébergé, telles que le répertoire d'installation du CLR, sa version ou encore son état actuel. Cette vue peut vous aider à déterminer que le code d'intégration CLR ne fonctionne pas en raison de problèmes d'installation du CLR sur le serveur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar (128)**|Nom de la propriété.|  
-|**valeur**|**nvarchar (128)**|Valeur de la propriété.|  
+|**nom**|**nvarchar(128)**|Nom de la propriété.|  
+|**valeur**|**nvarchar(128)**|Valeur de la propriété.|  
   
 ## <a name="properties"></a>Propriétés  
  Le **répertoire** propriété indique le répertoire .NET Framework a été installé sur le serveur. Il existe plusieurs façons d'installer le .NET Framework sur le serveur et la valeur de cette propriété identifie l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est utilisée.  
@@ -74,7 +77,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="remarks"></a>Notes  
  Les propriétés et les valeurs de cette vue peuvent changer dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en raison des améliorations de la fonctionnalité d’intégration de CLR.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  

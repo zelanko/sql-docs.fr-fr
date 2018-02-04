@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (Transact-SQL) | Documents Microsoft
+title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobserver
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83de0b76e66e08571a53e3ea62c665ba595a6572
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d96dc4e024ab65f47f313247835878aabbce6225
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Numéro d'identification du travail pour lequel renvoyer des informations. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  Nom du travail pour lequel renvoyer des informations. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@show_last_run_details=** ] *afficher_les_détails_de_dernière_exécution*  
+ [ **@show_last_run_details=** ] *show_last_run_details*  
  Indique si les informations de la dernière exécution doivent faire partie du jeu de résultats. *afficher_les_détails_de_dernière_exécution* est **tinyint**, avec une valeur par défaut **0**. **0** n’inclut pas les informations de la dernière exécution, et **1** est.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -66,7 +69,7 @@ sp_help_jobserver
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numéro d'identification du serveur cible.|  
-|**nom_serveur**|**nvarchar (30)**|Nom de l'ordinateur du serveur cible.|  
+|**server_name**|**nvarchar(30)**|Nom de l'ordinateur du serveur cible.|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur cible sur le serveur maître.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
   
@@ -77,10 +80,10 @@ sp_help_jobserver
 |**last_run_date**|**int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
 |**last_run_time**|**int**|Heure du début de la dernière exécution du travail sur ce serveur.|  
 |**last_run_duration**|**int**|Durée du travail lors de sa dernière exécution sur ce serveur cible (en secondes).|  
-|**last_outcome_message**|**nvarchar (1024)**|Décrit le dernier résultat du travail.|  
+|**last_outcome_message**|**nvarchar(1024)**|Décrit le dernier résultat du travail.|  
 |**last_run_outcome**|**int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -89,7 +92,7 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Membres de **SQLAgentUserRole** peut uniquement afficher des informations sur les travaux dont ils sont propriétaires.  
   
@@ -107,8 +110,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

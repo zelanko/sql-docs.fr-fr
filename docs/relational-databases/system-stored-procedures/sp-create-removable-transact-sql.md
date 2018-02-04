@@ -1,5 +1,5 @@
 ---
-title: sp_create_removable (Transact-SQL) | Documents Microsoft
+title: sp_create_removable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
 - sp_create_removable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_create_removable
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 792413d9fc09f565dba0b73bbe5d10824e5ddd28
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Cette procédure crée une base de données sur un support amovible. Elle crée trois fichiers minimum (un pour les tables de catalogue système, un pour le journal des transactions et un ou plus pour les tables de données) et place la base de données sur ces fichiers.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser [créer la base de données](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser [créer la base de données](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,30 +65,30 @@ sp_create_removable
  [  **@dbname=** ] **'***dbname***'**  
  Nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est **sysname**.  
   
- [  **@syslogical=** ] **'***syslogical***'**  
+ [ **@syslogical=** ] **'***syslogical***'**  
  Nom logique du fichier qui contient les tables du catalogue système. *syslogical* est **sysname**.  
   
- [  **@sysphysical=** ] **'***sysphysical***'**  
+ [ **@sysphysical=** ] **'***sysphysical***'**  
  Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **nvarchar (260)**.  
   
- [  **@syssize=** ] *syssize*  
+ [ **@syssize=** ] *syssize*  
  Taille, en Mo, du fichier contenant les tables du catalogue système. *syssize* est **int**. La valeur minimale *syssize* est 1.  
   
- [  **@loglogical=** ] **'***loglogical***'**  
+ [ **@loglogical=** ] **'***loglogical***'**  
  Nom logique du fichier contenant le journal des transactions. *loglogical* est **sysname**.  
   
- [  **@logphysical=** ] **'***logphysical***'**  
+ [ **@logphysical=** ] **'***logphysical***'**  
  Nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **nvarchar (260)**.  
   
  [  **@logsize=** ] *logsize*  
  Taille, en Mo, du fichier contenant le journal des transactions. *LogSize* est **int**. La valeur minimale *logsize* est 1.  
   
- [  **@datalogical1=** ] **'***datalogique***'**  
+ [ **@datalogical1=** ] **'***datalogical***'**  
  Nom logique d'un fichier contenant les tables de données. *datalogique* est **sysname**.  
   
  Il doit exister entre 1 et 16 fichiers de données. Habituellement, plusieurs fichiers de données sont créés lorsqu'il est prévu que la base de données soit volumineuse et qu'elle doive être distribuée sur plusieurs disques.  
   
- [  **@dataphysical1=** ] **'***dataphysique***'**  
+ [ **@dataphysical1=** ] **'***dataphysical***'**  
  Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysique* est **nvarchar (260)**.  
   
  [  **@datasize1=** ] **'***datasize***'**  
@@ -95,12 +98,12 @@ sp_create_removable
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Si vous souhaitez faire une copie de votre base de données sur un support amovible (par exemple un CD-ROM) pour la distribuer à d'autres utilisateurs, utilisez cette procédure stockée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'autorisation CREATE DATABASE, CREATE ANY DATABASE ou ALTER ANY DATABASE est obligatoire.  
   
  Pour garder le contrôle de l'utilisation du disque sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorisation de création de bases de données est généralement limitée à quelques comptes de connexion.  
@@ -115,7 +118,7 @@ sp_create_removable
 |Restaurée|Détachée|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne définit pas d'autorisations sur les fichiers de données et les journaux.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne pas de jeu de données et le journal des autorisations de fichier.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée la base de données `inventory` comme base de données amovible.  
@@ -134,12 +137,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>Voir aussi  
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_connections (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8bee848550fb2120fd02c31b505fc0b8da90b5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,31 +41,31 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]
 > Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez [sys.dm_pdw_exec_connections &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**Int**|Identifie la session associée à cette connexion. Autorise la valeur NULL.|  
-|most_recent_session_id|**Int**|Représente l'ID de session de la requête la plus récente associée à cette connexion. (Les connexions SOAP peuvent être réutilisées par une autre session.) Autorise la valeur NULL.|  
+|session_id|**int**|Identifie la session associée à cette connexion. Autorise la valeur NULL.|  
+|most_recent_session_id|**int**|Représente l'ID de session de la requête la plus récente associée à cette connexion. (Les connexions SOAP peuvent être réutilisées par une autre session.) Autorise la valeur NULL.|  
 |connect_time|**datetime**|Cachet temporel d'établissement de la connexion. N'accepte pas la valeur NULL.|  
-|net_transport|**nvarchar (40)**|Retourne toujours **Session** lorsqu’une connexion comporte plusieurs jeux de résultats actifs (MARS) activé.<br /><br /> **Remarque :** décrit le protocole de transport physique utilisé par cette connexion. N'accepte pas la valeur NULL.|  
-|protocol_type|**nvarchar (40)**|Spécifie le type de protocole de la charge utile. Il effectue la distinction entre TDS (TSQL) et SOAP. Autorise la valeur NULL.|  
-|protocol_version|**Int**|Version du protocole d'accès aux données associé à cette connexion. Autorise la valeur NULL.|  
-|endpoint_id|**Int**|Identificateur qui décrit le type de connexion. endpoint_id peut être utilisé pour interroger la vue sys.endpoints. Autorise la valeur NULL.|  
-|encrypt_option|**nvarchar (40)**|Valeur booléenne pour décrire le chiffrement activé pour cette connexion. N'accepte pas la valeur NULL.|  
-|auth_scheme|**nvarchar (40)**|Spécifie le schéma d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows utilisé avec cette connexion. N'accepte pas la valeur NULL.|  
+|net_transport|**nvarchar(40)**|Retourne toujours **Session** lorsqu’une connexion comporte plusieurs jeux de résultats actifs (MARS) activé.<br /><br /> **Remarque :** décrit le protocole de transport physique utilisé par cette connexion. N'accepte pas la valeur NULL.|  
+|protocol_type|**nvarchar(40)**|Spécifie le type de protocole de la charge utile. Il effectue la distinction entre TDS (TSQL) et SOAP. Autorise la valeur NULL.|  
+|protocol_version|**int**|Version du protocole d'accès aux données associé à cette connexion. Autorise la valeur NULL.|  
+|endpoint_id|**int**|Identificateur qui décrit le type de connexion. endpoint_id peut être utilisé pour interroger la vue sys.endpoints. Autorise la valeur NULL.|  
+|encrypt_option|**nvarchar(40)**|Valeur booléenne pour décrire le chiffrement activé pour cette connexion. N'accepte pas la valeur NULL.|  
+|auth_scheme|**nvarchar(40)**|Spécifie le schéma d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows utilisé avec cette connexion. N'accepte pas la valeur NULL.|  
 |node_affinity|**smallint**|Identifie le nœud de mémoire avec lequel cette connexion présente une affinité. N'accepte pas la valeur NULL.|  
-|num_reads|**Int**|Nombre de lectures d’octets qui se sont produites sur cette connexion. Autorise la valeur NULL.|  
-|num_writes|**Int**|Nombre d’écritures d’octets qui se sont produites sur cette connexion. Autorise la valeur NULL.|  
+|num_reads|**int**|Nombre de lectures d’octets qui se sont produites sur cette connexion. Autorise la valeur NULL.|  
+|num_writes|**int**|Nombre d’écritures d’octets qui se sont produites sur cette connexion. Autorise la valeur NULL.|  
 |last_read|**datetime**|Cachet temporel de la dernière lecture à travers cette connexion. Autorise la valeur NULL.|  
 |last_write|**datetime**|Cachet temporel de la dernière écriture à travers cette connexion. N'accepte pas la valeur NULL.|  
-|net_packet_size|**Int**|Taille du paquet réseau utilisé pour le transfert d'informations et de données. Autorise la valeur NULL.|  
+|net_packet_size|**int**|Taille du paquet réseau utilisé pour le transfert d'informations et de données. Autorise la valeur NULL.|  
 |client_net_address|**varchar(48)**|Adresse hôte du client se connectant à ce serveur. Autorise la valeur NULL.<br /><br /> Avant V12 dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette colonne renvoie toujours la valeur NULL.|  
-|client_tcp_port|**Int**|Numéro de port sur l'ordinateur client associé à cette connexion. Autorise la valeur NULL.<br /><br /> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette colonne retourne toujours NULL.|  
+|client_tcp_port|**int**|Numéro de port sur l'ordinateur client associé à cette connexion. Autorise la valeur NULL.<br /><br /> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette colonne retourne toujours NULL.|  
 |local_net_address|**varchar(48)**|Représente l'adresse IP sur le serveur ciblé par cette connexion. Disponible uniquement pour les connexions utilisant le fournisseur de transport TCP. Autorise la valeur NULL.<br /><br /> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette colonne retourne toujours NULL.|  
-|local_tcp_port|**Int**|Représente le port TCP du serveur ciblé par cette connexion s'il s'agissait d'une connexion utilisant le transport TCP. Autorise la valeur NULL.<br /><br /> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette colonne retourne toujours NULL.|  
+|local_tcp_port|**int**|Représente le port TCP du serveur ciblé par cette connexion s'il s'agissait d'une connexion utilisant le transport TCP. Autorise la valeur NULL.<br /><br /> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette colonne retourne toujours NULL.|  
 |connection_id|**uniqueidentifier**|Identifie chaque connexion de façon unique. N'accepte pas la valeur NULL.|  
 |parent_connection_id|**uniqueidentifier**|Identifie la connexion principale utilisée par la session MARS. Autorise la valeur NULL.|  
 |most_recent_sql_handle|**varbinary(64)**|Descripteur SQL de la dernière requête exécutée sur cette connexion. La colonne most_recent_sql_handle est toujours synchronisée avec la colonne most_recent_session_id. Autorise la valeur NULL.|  
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   

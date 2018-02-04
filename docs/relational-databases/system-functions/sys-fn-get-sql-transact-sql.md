@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_get_sql (Transact-SQL) | Documents Microsoft
+title: sys.fn_get_sql (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_get_sql_TSQL
 - fn_get_sql_TSQL
 - sys.fn_get_sql
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_get_sql function
 - text [SQL Server], SQL handles
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87cac4a79dc4e155974006f05920ab7a1cad9899
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ad0861b72965936dfb673774a339ab7769f63689
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +68,7 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|Identificateur de l'objet de base de données. NULL pour les instructions SQL ad hoc.|  
 |nombre|**smallint**|Indique le numéro du groupe, si les procédures sont groupées.<br /><br /> 0 = les entrées ne sont pas des procédures.<br /><br /> NULL = instructions SQL ad hoc.|  
 |encrypted|**bit**|Indique si l'objet est chiffré.<br /><br /> 0 = Non chiffrée<br /><br /> 1 = Chiffrée|  
-|texte|**text**|Texte de l'instruction SQL. NULL pour les objets chiffrés.|  
+|texte|**texte**|Texte de l'instruction SQL. NULL pour les objets chiffrés.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez obtenir un handle SQL valide à partir de la colonne sql_handle de la [sys.dm_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vue de gestion dynamique.  
@@ -83,7 +85,7 @@ sys.fn_get_sql ( SqlHandle )
   
 -   lorsque vous devez renvoyer le niveau d'imbrication actuel le plus élevé d'une procédure stockée. Imaginons par exemple deux procédures stockées appelées sp_1 et sp_2. Si sp_1 appelle sp_2 et que vous obtenez le handle de la vue de gestion dynamique sys.dm_exec_requests alors que sp_2 est en cours d'exécution, la fonction fn_get_sql renvoie des informations sur sp_2. En outre, la fonction fn_get_sql renvoie le texte complet de la procédure stockée au niveau d'imbrication actuel le plus élevé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilisateur a besoin de l’autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -99,8 +101,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DBCC INPUTBUFFER &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [Sys.sysprocesses &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [Sys.dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

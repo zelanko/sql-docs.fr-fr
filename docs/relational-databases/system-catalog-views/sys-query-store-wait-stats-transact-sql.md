@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_wait_stats (Transact-SQL) | Documents Microsoft
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/21/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.query_store_wait_stats
 - query_store_wait_stats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: AndrejsAnt
 ms.author: AndrejsAnt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 3133014e12f52b58e3beacdc0ba09083c661ff63
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
+# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Contient des informations sur les informations de l’attente de la requête.  
@@ -59,18 +61,18 @@ ms.lasthandoff: 01/12/2018
 |**0**|**Unknown**|Unknown |  
 |**1**|**Unité centrale**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread de travail**|THREADPOOL|
-|**3**|**Verrou**|LCK_M_ %|
-|**4**|**Verrou**|LATCH_ %|
-|**5**|**Verrou de mémoire tampon**|PAGELATCH_ %|
-|**6**|**Mémoire tampon d’e/s**|PAGEIOLATCH_ %|
+|**3**|**Lock**|LCK_M_ %|
+|**4**|**Latch**|LATCH_%|
+|**5**|**Verrou de mémoire tampon**|PAGELATCH_%|
+|**6**|**Mémoire tampon d’e/s**|PAGEIOLATCH_%|
 |**7**|**Compilation***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**CLR SQL**|CLR, SQLCLR %|
+|**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Mise en miroir**|DBMIRROR %|
-|**10**|**Transaction**|XACT %, DTC %, TRAN_MARKLATCH_ %, MSQL_XACT_ %, TRANSACTION_MUTEX|
-|**11**|**Des temps d’inactivité**|% SLEEP_, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
-|**12**|**PreEmptive**|PREEMPTIVE_ %|
+|**10**|**Transaction**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
+|**11**|**Idle**|% SLEEP_, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**12**|**Preemptive**|PREEMPTIVE_ %|
 |**13**|**Service Broker**|BROKER_ % **(mais pas BROKER_RECEIVE_WAITFOR)**|
-|**14**|**Tran journal e/s**|GESTIONNAIRE DE FICHIERS JOURNAUX, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
+|**14**|**Tran journal e/s**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
 |**15**|**E/s réseau**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelism**|CXPACKET, EXCHANGE|
 |**17**|**Mémoire**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
@@ -88,12 +90,12 @@ ms.lasthandoff: 01/12/2018
  Requiert le **VIEW DATABASE STATE** autorisation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.database_query_store_options &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [Sys.query_context_settings &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [Sys.query_store_plan &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [Sys.query_store_query_text &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [Sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Magasin de requêtes stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

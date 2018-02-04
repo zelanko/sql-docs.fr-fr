@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_column_store_segments (Transact-SQL) | Documents Microsoft
+title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,46 +8,48 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b10564c7736dce2ab21cc83bed819606230e7b9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c5982fa99effc211d23c7e92557d96e20d131ad4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>Sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient une ligne pour chaque colonne dans un index columnstore.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
 |**hobt_id**|**bigint**|ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore.|  
-|**column_id**|**Int**|ID de la colonne columnstore.|  
-|**segment_id**|**Int**|Retourne le segment de la colonne.|  
-|**version**|**Int**|Version du format de segment de colonne.|  
-|**encoding_type**|**Int**|Type d'encodage utilisé pour ce segment.|  
-|**row_count**|**Int**|Nombre de lignes dans le groupe de lignes.|  
-|**has_nulls**|**Int**|1 si le segment de colonne a des valeurs NULL.|  
+|**column_id**|**int**|ID de la colonne columnstore.|  
+|**segment_id**|**int**|Retourne le segment de la colonne.|  
+|**version**|**int**|Version du format de segment de colonne.|  
+|**encoding_type**|**int**|Type d'encodage utilisé pour ce segment.|  
+|**row_count**|**int**|Nombre de lignes dans le groupe de lignes.|  
+|**has_nulls**|**int**|1 si le segment de colonne a des valeurs NULL.|  
 |**base_id**|**bigint**|Id de la valeur de base si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, ID a la valeur 1.|  
-|**ordre de grandeur**|**float**|Grandeur si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, ordre de grandeur a la valeur 1.|  
-|**primary__dictionary_id**|**Int**|ID du dictionnaire principal.|  
-|**secondary_dictionary_id**|**Int**|ID du dictionnaire secondaire. Retourne -1 s'il n'y a aucun dictionnaire secondaire.|  
+|**magnitude**|**float**|Grandeur si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, ordre de grandeur a la valeur 1.|  
+|**primary__dictionary_id**|**int**|ID du dictionnaire principal.|  
+|**secondary_dictionary_id**|**int**|ID du dictionnaire secondaire. Retourne -1 s'il n'y a aucun dictionnaire secondaire.|  
 |**min_data_id**|**bigint**|ID de données minimum dans le segment de colonne.|  
 |**max_data_id**|**bigint**|ID de données maximum dans le segment de colonne.|  
 |**null_value**|**bigint**|Valeur utilisée pour représenter les valeurs NULL.|  
 |**on_disk_size**|**bigint**|Taille de segment en octets.|  
-|**pdw_node_id**|**Int**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Remarque.|  
+|**pdw_node_id**|**int**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Remarque.|  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  La requête suivante retourne des informations sur les segments d'un index columnstore.  
@@ -87,8 +89,8 @@ ORDER BY css.hobt_id, css.column_id;
 ## <a name="see-also"></a>Voir aussi  
  [Entrepôt de données SQL et les vues de catalogue de l’entrepôt de données en parallèle](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CRÉER des INDEX COLUMNSTORE &#40; Transact-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [Sys.pdw_nodes_column_store_row_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [Sys.pdw_nodes_column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   
 

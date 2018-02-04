@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_execution_stats_TSQL
 - dm_external_script_execution_stats
 - dm_external_script_execution_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_execution_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_execution_stats dynamic management view
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80c26130d5671dd387122930e599a2c33a5db60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8306c682ddf8e376e13629cc6fe13472e08f59b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Cette vue de gestion dynamique est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations sur la manière de procéder pour les scripts R, consultez [Configurer SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |langue|**nvarchar**|Nom du langage enregistré de script externe. Chaque script externe doit spécifier le langage dans la demande de requête utilisé pour le démarrage du lanceur associé. |  
 |counter_name|**nvarchar**|Nom de la fonction enregistrée de script externe. N'accepte pas la valeur NULL.|  
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Les utilisateurs qui exécutent des scripts externes doivent avoir l’autorisation supplémentaire EXECUTE ANY EXTERNAL SCRIPT, toutefois, cette vue de gestion dynamique peut être utilisée par les administrateurs sans cette autorisation. 
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   Cette vue de gestion dynamique est fournie pour la télémétrie interne, afin de contrôler l’utilisation générale de la nouvelle fonction d’exécution de script externe fournie dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. La télémétrie démarre au lancement de LaunchPad et incrémente un compteur sur disque à chaque fois qu’une fonction enregistrée de script externe est appelée.
 
 En règle générale, les compteurs de performance demeurent valides tant que le processus qui les a générés reste actif. Par conséquent, une demande sur une vue de gestion dynamique ne peut pas faire état des données des services qui ne sont plus en cours d’exécution. Par exemple, si le lanceur exécute le script externe tout en les terminant très rapidement, une vue de gestion dynamique conventionnelle n’indiquera pas forcément les données.

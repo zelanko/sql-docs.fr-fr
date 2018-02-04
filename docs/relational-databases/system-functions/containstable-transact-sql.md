@@ -1,5 +1,5 @@
 ---
-title: CONTAINSTABLE (Transact-SQL) | Documents Microsoft
+title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2015
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - fuzzy (less precise) word or phrase search [full-text search]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,7 +124,7 @@ CONTAINSTABLE
   
  *table* ne peut pas spécifier un nom de serveur et ne peut pas être utilisé dans les requêtes sur des serveurs liés.  
   
- *nom_colonne*  
+ *column_name*  
  Nom d'une ou de plusieurs colonnes indexées pour la recherche en texte intégral. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **texte**, **ntext**, **image**, **xml**, **varbinary**, ou **varbinary (max)**.  
   
  *column_list*  
@@ -131,10 +133,10 @@ CONTAINSTABLE
  \*  
  Spécifie que dans les colonnes indexées en texte intégral tous les *table* doit être utilisée pour rechercher la condition de recherche donnée. À moins que *language_term* est spécifié, la langue de toutes les colonnes de la table doit être le même.  
   
- LANGAGE *language_term*  
+ LANGUAGE *language_term*  
  Est la langue dont les ressources seront utilisées pour l’analyse lexicale, recherche de radical, dictionnaire des synonymes et des mots vides (ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) dans le cadre de la requête. Ce paramètre est facultatif et peut être spécifié sous la forme d'une chaîne, d'un entier ou d'une valeur hexadécimale correspondant à l'identificateur de paramètres régionaux (LCID) d'une langue. Si *language_term* est spécifié, la langue représentée est appliquée à tous les éléments de la condition de recherche. Si aucune valeur n'est définie, la langue du texte intégral de la colonne est utilisée.  
   
- Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Lorsque vous interrogez une telle colonne, en spécifiant *langage**language_term* permet d’augmenter la probabilité d’une correspondance correcte.  
+ Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Lorsque vous interrogez une telle colonne, en spécifiant *langage ** language_term* permet d’augmenter la probabilité d’une correspondance correcte.  
   
  Lorsque spécifié sous forme de chaîne, *language_term* correspond à la **alias** valeur de colonne dans la [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) affichage de compatibilité.  La chaîne doit être entourée de guillemets simples, comme dans «*language_term*'. Lorsque spécifié en tant qu’entier, *language_term* est l’identificateur LCID réel qui identifie la langue. Lorsque spécifié en tant que valeur hexadécimale *language_term* est 0 x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs.  
   
@@ -142,7 +144,7 @@ CONTAINSTABLE
   
  Si la langue spécifiée n'est pas valide ou si aucune ressource correspondant à cette langue n'est installée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. Pour utiliser les ressources de langue neutre, spécifiez 0 x 0 *language_term*.  
   
- *Top_n_by_rank*  
+ *top_n_by_rank*  
  Spécifie que seules les  *n*  des correspondances de rang le plus élevés, par ordre décroissant, sont retournées. S’applique uniquement lorsqu’une valeur entière,  *n* , est spécifié. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *Top_n_by_rank* permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
   
  <contains_search_condition>  
@@ -168,7 +170,7 @@ FROM table AS FT_TBL INNER JOIN
   
 -   dans la liste de sélection, pour indiquer la valeur de classement affectée à chaque ligne.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution sont disponibles uniquement aux utilisateurs bénéficiant des privilèges SELECT appropriés sur la table ou sur les colonnes de la table référencée.  
   
 ## <a name="examples"></a>Exemples  
@@ -215,7 +217,7 @@ GO
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
  L'exemple suivant utilise NEAR pour rechercher « `bracket` » et « `reflector` » à proximité l'un de l'autre dans la table `Production.Document`. Seules les lignes avec une valeur de rang supérieur ou égal à 50 sont retournées.  
   

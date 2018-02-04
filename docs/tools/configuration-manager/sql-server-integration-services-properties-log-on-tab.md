@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24c2acb97db0241f1f9ee061196e48e8f5c45086
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b9f0024d74d44cafaa46f03571f74bf644d0f63e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Propriétés de SQL Server Integration Services (onglet Ouvrir une session)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez le **session** onglet de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **propriétés** boîte de dialogue pour spécifier le compte utilisé par le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service et pour démarrer et arrêter le service.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+L'onglet **Ouvrir une session** de la boîte de dialogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Propriétés de** permet de spécifier le compte utilisé par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ainsi que de démarrer et d'arrêter ce service.  
   
 ## <a name="options"></a>Options  
  **Compte système local**  

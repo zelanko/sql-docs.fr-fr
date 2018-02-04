@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_qn_subscriptions (Transact-SQL) | Documents Microsoft
+title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,38 +17,40 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>-Les Notifications de requête sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur les abonnements aux notifications de requêtes actifs dans le serveur. Vous pouvez utiliser cette vue pour vérifier les abonnements actifs dans le serveur ou une base de données spécifiée, ou pour vérifier un principal de serveur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID d'un abonnement.|  
 |**database_id**|**int**|ID de la base de données dans laquelle la requête de notification a été exécutée. Cette base de données stocke les informations relatives à cet abonnement.|  
-|**SID**|**varbinary(85)**|ID de sécurité du principal du serveur qui a créé cet abonnement et qui en est propriétaire.|  
+|**sid**|**varbinary(85)**|ID de sécurité du principal du serveur qui a créé cet abonnement et qui en est propriétaire.|  
 |**object_id**|**int**|ID de la table interne qui stocke les informations sur les paramètres de l'abonnement.|  
-|**créé**|**datetime**|Date et heure de création de l’abonnement.|  
-|**délai d’attente**|**int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : L’heure de déclenchement réel peut dépasser le délai d’attente spécifié. Cependant, si une modification qui invalide l'abonnement a lieu après le délai d'expiration, mais avant le déclenchement de l'abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait en sorte que le déclenchement ait lieu au moment de la modification.|  
+|**created**|**datetime**|Date et heure de création de l’abonnement.|  
+|**timeout**|**int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : L’heure de déclenchement réel peut dépasser le délai d’attente spécifié. Cependant, si une modification qui invalide l'abonnement a lieu après le délai d'expiration, mais avant le déclenchement de l'abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait en sorte que le déclenchement ait lieu au moment de la modification.|  
 |**status**|**int**|Indique l'état de l'abonnement. Consultez le tableau sous la section Remarques pour obtenir la liste de codes.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|Pour|Actif|Type|  
+|From|Pour|Actif|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Plusieurs-à-un|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Plusieurs-à-un|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |Code|État secondaire|Info|  
 |----------|------------------|----------|  
 |65798|L'abonnement a été déclenché parce que les données ont été modifiées|Abonnement déclenché par insertion|  
-|65799|L'abonnement a été déclenché parce que les données ont été modifiées|DELETE|  
+|65799|L'abonnement a été déclenché parce que les données ont été modifiées|Supprimer|  
 |65800|L'abonnement a été déclenché parce que les données ont été modifiées|Update|  
 |65801|L'abonnement a été déclenché parce que les données ont été modifiées|Fusion|  
 |65802|L'abonnement a été déclenché parce que les données ont été modifiées|Troncation de la table|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |199168|L'abonnement est actif|Mode d'information indéfini|  
 |199424|L'abonnement a été initialisé, mais n'est pas encore actif|Mode d'information indéfini|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
 > [!NOTE]  

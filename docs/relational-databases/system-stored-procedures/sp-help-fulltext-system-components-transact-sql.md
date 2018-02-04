@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Documents Microsoft
+title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,20 +51,20 @@ sp_help_fulltext_system_components
  'all'  
  Retourne des informations pour tous les composants de recherche en texte intégral.  
   
- [  **@component_type=** ] *component_type*  
+ [ **@component_type=** ] *component_type*  
  Spécifie le type de composant. *component_type* peut prendre l’une des opérations suivantes :  
   
--   **séparateur de mots**  
+-   **wordbreaker**  
   
 -   **Filter**  
   
 -   **Gestionnaire de protocole**  
   
--   **FullPath**  
+-   **fullpath**  
   
  Si vous spécifiez un chemin d'accès complet, *param* doit également être spécifié avec le chemin d'accès complet à la bibliothèque de liens dynamiques (DLL) du composant, sans quoi un message d'erreur est retourné.  
   
- [  **@param=** ] *param*  
+ [ **@param=** ] *param*  
  Selon le type de composant, il peut s'agir d'un des éléments suivants : un identificateur local (LCID), l'extension de fichier précédée d'un « . », le nom de composant complet du gestionnaire de protocole ou le chemin d'accès complet à la bibliothèque de liens dynamiques (DLL) du composant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -72,12 +75,12 @@ sp_help_fulltext_system_components
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> filtre<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|Nom du composant.|  
-|**CLSID**|**uniqueidentifier**|Identificateur de classe du composant.|  
-|**FullPath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre **serveradmin** rôle serveur fixe.|  
-|**version**|**nvarchar (30)**|Numéro de version du composant.|  
-|**fabricant**|**sysname**|Nom du fabricant du composant.|  
+|**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
+|**fullpath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre **serveradmin** rôle serveur fixe.|  
+|**version**|**nvarchar(30)**|Numéro de version du composant.|  
+|**manufacturer**|**sysname**|Nom du fabricant du composant.|  
   
  Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existe qui utilise *component_type*.  
   
@@ -86,7 +89,7 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|ID de la base de données.|  
 |**ftcatid**|**int**|Identificateur du catalogue de texte intégral.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **public** rôle ; Toutefois, les utilisateurs peuvent voir uniquement les informations sur les catalogues de texte intégral pour lesquels ils ont l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
   
 ## <a name="remarks"></a>Notes  

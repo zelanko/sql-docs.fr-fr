@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_item (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e112c3e144679a71e12ea1890826a7b598d51aa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3fac04c31bdebdc98aa082fb9809fe505ce66eef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +53,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int**.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  GUID qui identifie le type de collecteur à utiliser pour cet élément *collector_type_uid* est **uniqueidentifier** sans valeur par défaut... Pour obtenir une liste de types de collecteurs, interrogez la vue système syscollector_collector_types.  
   
  [ @name =] '*nom*'  
@@ -62,7 +64,7 @@ sp_syscollector_create_collection_item
   
  *nom* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency =] *fréquence*  
+ [ @frequency = ] *frequency*  
  Permet de spécifier (en secondes) la fréquence de collecte des données par cet élément de collecte. *fréquence* est **int**, avec 5 comme valeur par défaut. La valeur minimale pouvant être spécifiée est de 5 secondes.  
   
  Si le jeu d'éléments de collecte est défini en mode non mis en cache, la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher le mode de collecte de l’ensemble de la collection, interrogez la [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vue système.  
@@ -70,7 +72,7 @@ sp_syscollector_create_collection_item
  [ @parameters =] '*paramètres*'  
  Les paramètres d'entrée pour le type de collecteur. *paramètres* est **xml** avec NULL comme valeur par défaut. Le *paramètres* schéma doit correspondre au schéma de paramètres du type de collecteur.  
   
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  Identificateur unique qui identifie l'élément du jeu d'éléments de collecte. *collection_item_id* est **int** et a une sortie.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -81,7 +83,7 @@ sp_syscollector_create_collection_item
   
  Le jeu d'éléments de collecte auquel l'élément de collecte est ajouté doit être arrêté avant que ce dernier ne soit créé. Il est impossible d'ajouter des éléments de collecte à des jeux d'éléments de collecte système.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -123,10 +125,10 @@ EXEC sp_syscollector_create_collection_item
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_update_collection_item &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [sp_syscollector_delete_collection_item &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [syscollector_collector_types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

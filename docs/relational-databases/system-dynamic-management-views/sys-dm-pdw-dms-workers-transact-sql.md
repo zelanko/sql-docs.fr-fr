@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_dms_workers (Transact-SQL) | Documents Microsoft
+title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1b24d8da86c779a9964d41921aa614bcd2d8d4f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aac00b2fd1ba5a5922c2618ccfadad6fc2d2b8ac
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwdmsworkers-transact-sql"></a>Sys.dm_pdw_dms_workers (Transact-SQL)
+# <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur tous les traitements étapes en DMS.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |dms_step_index|**int**|L’étape dans le plan DMS ce processus de travail est en cours d’exécution.<br /><br /> request_id, step_index et dms_step_index forment la clé pour cette vue.||  
 |pdw_node_id|**int**|Nœud qui le processus de travail est en cours d’exécution.|Consultez node_id dans [sys.dm_pdw_nodes &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribution du travail s’exécute, le cas échéant.|Consultez distribution_id dans [sys.pdw_distributions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Type|**nvarchar(32)**|Type de thread de travail DMS que cette entrée représente.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', « REJECT_WRITER », « WRITER »|  
+|type|**nvarchar(32)**|Type de thread de travail DMS que cette entrée représente.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|**nvarchar(32)**|État du processus de travail DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Débit de lecture ou d’écriture de la dernière seconde.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  
 |bytes_processed|**bigint**|Nombre total d’octets traité par ce processus de travail.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  

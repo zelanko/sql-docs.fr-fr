@@ -8,24 +8,26 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38d4047f13b52c89eefe4bca89e7ed5d5afdbf11
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4ce952a3ae9bee22333fa30648bbc20931432b48
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>L’Agent SQL Server &lt;server&gt; (Gestionnaire de Configuration SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il s’agit du service qui prend en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Agent. Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Il s'agit du service qui prend en charge l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent est un [!INCLUDE[msCoName](../../includes/msconame-md.md)] service Windows qui exécute des tâches administratives planifiées appelé *travaux*. Pour plus d'informations sur l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez « À propos de l'Agent SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un service [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows qui exécute des tâches administratives planifiées, nommées *travaux*. Pour plus d'informations sur l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez « À propos de l'Agent SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_service (Transact-SQL) | Documents Microsoft
+title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], properties
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac28028d1e888724417d1a313e229beb479e8ea2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@action=**] **'***action***'**  
+ [ **@action=**] **'***action***'**  
  Propriété à modifier ou à réinitialiser. *action* est **nvarchar (100),** sans valeur par défaut. Pour obtenir la liste d’un*c*tion propriétés, leurs descriptions et les valeurs qui peuvent être définies, consultez le tableau sous la *valeur* argument. Cet argument retourne les propriétés suivantes : type de données, valeur d'exécution actuelle, valeur minimum ou maximum et état de désapprobation, le cas échéant.  
   
- [  **@value=**] *valeur*  
+ [ **@value=**] *value*  
  Valeur de la propriété spécifiée. *valeur* est **sql_variant**, avec NULL comme valeur par défaut. Si @value a la valeur null, **sp_fulltext_service** retourne le paramètre actuel. Ce tableau répertorie les propriétés relatives aux actions, leurs descriptions et les valeurs qui peuvent être définies.  
   
 > [!NOTE]  
@@ -73,9 +75,9 @@ sp_fulltext_service [ [@action=] 'action'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **serveradmin** rôle serveur fixe ou l’administrateur système peut exécuter **sp_fulltext_service**.  
   
 ## <a name="examples"></a>Exemples  
@@ -98,7 +100,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)   
- [FULLTEXTSERVICEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

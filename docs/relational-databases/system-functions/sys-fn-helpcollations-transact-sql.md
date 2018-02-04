@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_helpcollations (Transact-SQL) | Documents Microsoft
+title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_helpcollations
 - fn_helpcollations_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_helpcollations function
 - collations [SQL Server], supported
 - fn_helpcollations function
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5497e1204273c811e5e62efcc8f34b30b7d1715
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9af8d5bc07f81ef34cca10cb2886035b740a5eec
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -51,7 +53,7 @@ fn_helpcollations ()
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |Nom|**sysname**|Nom de classement standard|  
-| Description|**nvarchar (1000)**|Description du classement|  
+| Description|**nvarchar(1000)**|Description du classement|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge un nombre limité (<80) de classements appelés classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été développés avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prenne en charge les classements Windows. Les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont encore pris en charge à des fins de compatibilité descendante, mais ne doivent pas être utilisés pour les nouveaux travaux de développement. Pour plus d’informations sur les classements Windows, consultez [nom de classement Windows &#40; Transact-SQL &#41; ](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [prise en charge Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -82,6 +84,6 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
   
 ## <a name="see-also"></a>Voir aussi  
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[Commande COLLATIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Prise en charge du classement de base de données pour l’entrepôt de données SQL Azure](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
 
