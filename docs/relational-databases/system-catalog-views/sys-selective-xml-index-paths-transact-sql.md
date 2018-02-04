@@ -1,5 +1,5 @@
 ---
-title: Sys.selective_xml_index_paths (Transact-SQL) | Documents Microsoft
+title: sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f8156f9821bb6d4d0f70ae1af200a33ce3cb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f71e46667c56b628965eab154af0c3e15c421f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +55,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|ID de table avec une colonne XML.|  
 |**index_id**|**int**|ID unique de l'index XML sélectif.|  
 |**path_id**|**int**|ID du chemin d'accès XML promu.|  
-|**chemin d’accès**|**nvarchar(4000)**|Chemin d'accès promu. Par exemple, '/a/b/c/d/e'.|  
+|**path**|**nvarchar(4000)**|Chemin d'accès promu. Par exemple, '/a/b/c/d/e'.|  
 |**nom**|**sysname**|Chemin d'accès.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|En fonction de **path_type** 'XQUERY' ou 'SQL' de valeur.|  
@@ -65,16 +68,16 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|ID du type de système de la colonne.|  
 |**user_type_id**|**tinyint**|ID du type d'utilisateur de la colonne.|  
 |**max_length**|**smallint**|Length maximale (en octets) du type.<br /><br /> -1 = le type de données de colonne est varchar(max), nvarchar(max), varbinary(max) ou xml.|  
-|**précision**|**tinyint**|Précision maximale du type s'il est basé sur un nombre. Sinon, 0.|  
-|**mise à l’échelle**|**tinyint**|Échelle maximale du type s'il est basé sur un nombre. Sinon, il prend la valeur 0.|  
+|**precision**|**tinyint**|Précision maximale du type s'il est basé sur un nombre. Sinon, 0.|  
+|**scale**|**tinyint**|Échelle maximale du type s'il est basé sur un nombre. Sinon, il prend la valeur 0.|  
 |**collation_name**|**sysname**|Nom du classement du type s'il est de type caractère. Sinon, NULL.|  
 |**is_singleton**|**bit**|0 = l'indicateur SINGLETON n'est pas présent.<br /><br /> 1 = l'indicateur d'optimisation SINGLETON est appliqué.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Schémas XML &#40; Système de Type XML &#41; Affichages catalogue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [XML Schemas &#40;XML Type System&#41; Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

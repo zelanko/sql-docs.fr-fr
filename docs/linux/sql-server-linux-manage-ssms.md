@@ -1,9 +1,9 @@
 ---
 title: "Utilisez SSMS pour gérer SQL Server sur Linux | Documents Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: f7999536135bed5a06d54b2e54e5d965df966c09
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilisez SQL Server Management Studio sur Windows pour gérer SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cette rubrique présente les [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) et présente quelques tâches courantes. SSMS est une application Windows, par conséquent, utilisez SSMS lorsque vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.
 
@@ -97,4 +97,4 @@ Lorsqu’un volet est développé, le moniteur d’activité interroge l’insta
 - [Exporter et importer une base de données avec SSMS](sql-server-linux-migrate-ssms.md)
 - [Didacticiel : SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [Didacticiel : écriture d'instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Analyse des performances et surveillance de l’activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)
+- [Analyse des performances et surveillance de l'activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)

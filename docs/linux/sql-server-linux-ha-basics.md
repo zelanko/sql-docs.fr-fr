@@ -3,7 +3,7 @@ title: "Principes fondamentaux de disponibilité de SQL Server pour les déploie
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En commençant par [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] est pris en charge sous Linux et Windows. Comme basés sur Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] déploiements, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bases de données et les instances doivent être hautement disponible sous Linux. Cet article traite des aspects techniques de planification et de déploiement à haute disponibilité basés sur Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bases de données et instances, ainsi que certaines des différences dans les installations basées sur Windows. Étant donné que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] peuvent ne pas pour les professionnels de Linux et Linux peuvent être nouvelles pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] professionnels, l’article à des moments introduit des concepts qui peuvent être familiarisé à certaines et peu d’autres.
 
@@ -88,7 +88,7 @@ Enfin, à l’aide d’un partage NFS (système) de fichiers réseau est une opt
 ### <a name="configure-the-firewall"></a>Configurer le pare-feu
 Comme pour Windows, les distributions Linux ont un pare-feu intégré. Si votre entreprise utilise un pare-feu externe pour les serveurs, la désactivation du pare-feu dans Linux peut être acceptable. Toutefois, quel que soit l’endroit où le pare-feu est activé, les ports doivent être ouverts. Le tableau suivant répertorie les ports communes nécessaires pour haut [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] déploiements sur Linux.
 
-| Numéro de port | Type     | Description                                                                                                                 |
+| Numéro de port | Type     |  Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS :`rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (si utilisé) – le mappeur de Point de terminaison                                                                                          |
@@ -96,12 +96,12 @@ Comme pour Windows, les distributions Linux ont un pare-feu intégré. Si votre 
 | 138         | UDP      | Samba (si utilisé) – datagramme NetBIOS                                                                                          |
 | 139         | TCP      | Samba (si utilisé) – NetBIOS Session                                                                                           |
 | 445         | TCP      | Samba (si utilisé) – SMB sur TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– par défaut le port ; Si vous le souhaitez, peut changer à`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – par défaut le port ; Si vous le souhaitez, peut changer à`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (si utilisé)                                                                                                               |
 | 2224        | TCP      | STIMULATEUR – utilisé par`pcsd`                                                                                                |
 | 3121        | TCP      | STIMULATEUR – requis s’il existe des nœuds distants STIMULATEUR                                                                    |
 | 3260        | TCP      | l’initiateur (si utilisé) – iSCSI peut être modifiée dans `/etc/iscsi/iscsid.config` (RHEL), mais doit correspondre au port de cible iSCSI |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-par défaut le port utilisé pour un point de terminaison du groupe de disponibilité ; peut être modifié lors de la création du point de terminaison                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -par défaut le port utilisé pour un point de terminaison du groupe de disponibilité ; peut être modifié lors de la création du point de terminaison                                |
 | 5403        | TCP      | STIMULATEUR                                                                                                                   |
 | 5404        | UDP      | STIMULATEUR – requis par Corosync si vous utilisez la multidiffusion UDP                                                                     |
 | 5405        | UDP      | STIMULATEUR – requis par Corosync                                                                                            |
@@ -125,7 +125,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] packages pour la disponibilité
-Sur un Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installation, certains composants sont installés même dans une installation du moteur de base, tandis que d’autres ne le sont pas. Sous Linux, uniquement le [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] moteur est installé dans le cadre du processus d’installation. Tout le reste est facultative. Pour haut [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instances sous Linux, deux packages doivent être installés avec [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) et le package de haute disponibilité (HA) (* MSSQL-server-ha*). Alors que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent est techniquement facultatif, il est [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]du Planificateur de travaux et est requise par l’envoi de journaux, afin de l’installation est recommandée. Sur les installations basées sur Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] l’Agent n’est pas facultatif.
+Sur un Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installation, certains composants sont installés même dans une installation du moteur de base, tandis que d’autres ne le sont pas. Sous Linux, uniquement le [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] moteur est installé dans le cadre du processus d’installation. Tout le reste est facultative. Pour haut [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instances sous Linux, deux packages doivent être installés avec [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) et le package de haute disponibilité (HA) ( *MSSQL-server-ha*). Alors que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent est techniquement facultatif, il est [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]du Planificateur de travaux et est requise par l’envoi de journaux, afin de l’installation est recommandée. Sur les installations basées sur Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] l’Agent n’est pas facultatif.
 
 >[!NOTE]
 >Pour les nouveaux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent est [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]du Planificateur de travaux intégrées. Il s’agit d’une méthode courante pour les administrateurs de planifier des éléments tels que les sauvegardes et d’autres [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] maintenance. Contrairement à une installation de Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] où [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent est un service complètement différent, sur Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent s’exécute dans le contexte de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] lui-même.

@@ -1,5 +1,5 @@
 ---
-title: sysmail_sentitems (Transact-SQL) | Documents Microsoft
+title: sysmail_sentitems (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_sentitems_TSQL
 - sysmail_sentitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_sentitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b9dabd7adad6155d6acac5ffc5aab112a2a9551
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5545beff62c4c5e46664bcfe570f5cb147122744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +42,22 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
 |**profile_id**|**int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**destinataires**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
-|**destinataires_en_copie**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
-|**destinataires_en_copie_aveugle**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**Objet**|**nvarchar(510)**|Ligne d'objet du message.|  
-|**corps**|**varchar(max)**|Le corps du message.|  
-|**body_format**|**varchar (20)**|Le format du corps du message. Les valeurs possibles sont **texte** et **HTML**.|  
+|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
+|**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
+|**subject**|**nvarchar(510)**|Ligne d'objet du message.|  
+|**body**|**varchar(max)**|Le corps du message.|  
+|**body_format**|**varchar(20)**|Le format du corps du message. Les valeurs possibles sont **texte** et **HTML**.|  
 |**importance**|**varchar(6)**|Le **importance** paramètre du message.|  
-|**respect de la**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
+|**sensitivity**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
-|**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**attachment_encoding**|**varchar(20)**|Type de pièce jointe.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
 |**query_result_width**|**int**|Le **query_result_width** paramètre du message.|  
-|**query_result_separator**|**char (1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
+|**query_result_separator**|**char(1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
 |**exclude_query_output**|**bit**|Le **exclude_query_output** paramètre du message. Pour plus d’informations, consultez [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Le **append_query_error** paramètre du message. La valeur 0 indique que la messagerie de base de données ne doit pas envoyer le message électronique s'il existe une erreur dans la requête.|  
 |**send_request_date**|**datetime**|Date et heure d'arrivée du message dans la file d'attente des messages.|  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Notes  
  En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous montrant les attributs des messages qui ont été correctement envoyés. La messagerie de base de données marque les messages comme envoyés ('sent') lorsqu'ils sont soumis avec succès à un serveur de messagerie SMTP. En principe, le message est reçu en l'espace de quelques minutes, mais il peut être retardé en raison de problèmes avec le serveur SMTP. La messagerie de base de données marque le message comme envoyé lorsque celui-ci est accepté par le serveur de messagerie SMTP. Les erreurs qui se produisent sur le serveur de messagerie SMTP, par exemple lorsque le message ne peut pas être remis à l'adresse de messagerie du destinataire, ne sont pas renvoyées à la messagerie de base de données. Ces messages sont donc considérés comme envoyés, bien qu'ils n'aient pas été remis. Vous devez résoudre ce type d'erreur sur le serveur SMTP. Le serveur de messagerie SMTP peut également envoyer un avis de non remise à l'adresse de réponse d'un compte de messagerie de base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Accordées à **sysadmin** rôle serveur fixe et **databasemailuserrole** rôle de base de données. Lors de l’exécution par un membre de la **sysadmin** rôle serveur fixe, cette vue affiche tous les messages envoyés. Les autres utilisateurs voient uniquement les messages qu'ils ont envoyés.  
   
 ## <a name="see-also"></a>Voir aussi  

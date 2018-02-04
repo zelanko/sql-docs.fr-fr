@@ -1,9 +1,9 @@
 ---
 title: "Développer des applications pour SQL Server sur Linux | Documents Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.workload: On Demand
-ms.openlocfilehash: 7358ecf1ce1371b37e96b8125473e5ecb8a37e12
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 9bfd1b4f30593fa6ae4d17ec92bfa0047ea751bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Pour commencer à développer des applications pour SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Vous pouvez créer des applications qui se connectent à et utilisent SQL Server 2017 sur Linux à partir de divers langages de programmation, tels que c#, Java, Node.js, PHP, Python, Ruby et C++. Vous pouvez également utiliser les infrastructures web les plus courants et les structures relationnelles mappage ORM (Object).
 
@@ -71,9 +71,9 @@ Vous pouvez utiliser la nouvelle [mssql extension](https://aka.ms/mssql-marketpl
 
 Vous pouvez également utiliser les nouveaux outils de ligne de commande qui sont natifs pour Linux. Ces outils sont les suivantes :
 
-- [Sqlcmd](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [MSSQL-conf](sql-server-linux-configure-mssql-conf.md)
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

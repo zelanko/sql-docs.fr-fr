@@ -3,7 +3,7 @@ title: "Configurer des clusters de disques partagés SLES pour SQL Server | Docu
 description: "Implémenter la haute disponibilité en configurant des clusters de disques partagés SUSE Linux Enterprise Server (SLES) pour SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,21 +15,21 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés SLES pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce guide fournit des instructions pour créer un cluster de disque partagé de deux nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES). La couche de gestion de clusters est basée sur SUSE [haute disponibilité Extension (HAÉ)](https://www.suse.com/products/highavailability) construit sur [STIMULATEUR](http://clusterlabs.org/). 
 
 Pour plus d’informations sur la configuration du cluster, les options de l’agent de ressources, la gestion, meilleures pratiques et recommandations, consultez [SUSE Linux Enterprise haute disponibilité Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le partage NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
@@ -254,7 +254,7 @@ Full list of resources:
 
 Pour gérer vos ressources de cluster, reportez-vous à la rubrique suivante de SUSE : [la gestion des ressources de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>Basculement manuel
+### <a name="manual-failover"></a>basculement manuel
 
 Bien que les ressources sont configurées pour effectuer un basculement automatique (ou migrer) vers d’autres nœuds du cluster en cas de défaillance matérielle ou logicielle, vous pouvez également déplacer une ressource vers un autre nœud du cluster à l’aide de l’interface utilisateur graphique de STIMULATEUR ou de la ligne de commande. 
 

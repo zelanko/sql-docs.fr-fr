@@ -3,7 +3,7 @@ title: "Créer et configurer un groupe de disponibilité pour SQL Server sur Lin
 description: "Ce didacticiel montre comment créer et configurer des groupes de disponibilité pour SQL Server sur Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce didacticiel décrit comment créer et configurer un groupe de disponibilité (AG) pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux. Contrairement aux [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] et précédemment sur Windows, vous pouvez activer groupes de disponibilité avec ou sans créer au préalable le cluster STIMULATEUR sous-jacent. Intégration avec le cluster, si nécessaire, n’est effectuée qu’ultérieurement.
 

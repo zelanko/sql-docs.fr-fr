@@ -1,5 +1,5 @@
 ---
-title: FileTableRootPath (Transact-SQL) | Documents Microsoft
+title: FileTableRootPath (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
 - FileTableRootPath
-dev_langs: TSQL
-helpviewer_keywords: FileTableRootPath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d784eb9aa4447a60006a5b14d1b525337cb5b87c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ce67b12aa19c8229969bd5b96c838447429b203
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Retourne le nom de serveur converti au format NetBIOS, par exemple :<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Il s'agit de la valeur par défaut.|  
+|**0**|Retourne le nom de serveur converti au format NetBIOS, par exemple :<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Ceci est la valeur par défaut.|  
 |**1**|Retourne le nom de serveur non converti, par exemple :<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
 |**2**|Retourne le chemin d'accès complet du serveur, par exemple :<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
   
@@ -109,6 +112,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Travailler avec des répertoires et des chemins d’accès dans des FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

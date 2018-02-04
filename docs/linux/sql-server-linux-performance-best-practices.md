@@ -3,7 +3,7 @@ title: Meilleures pratiques de performances pour SQL Server sur Linux | Document
 description: "Cette rubrique fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Meilleures pratiques de performance et des instructions de configuration pour 2017 du serveur SQL sur Linux
 
@@ -76,7 +76,7 @@ Le tableau suivant fournit des recommandations pour les paramètres de disque :
 | Paramètre | Valeur | Informations complémentaires |
 |---|---|---|
 | lues par anticipation de disque | 4096 | Consultez le **blockdev** commande |
-| paramètres de sysctl | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns = 15 000 000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Consultez le **sysctl** commande |
+| paramètres de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consultez le **sysctl** commande |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Noyau paramètre auto numa équilibrage pour les systèmes à plusieurs nœuds NUMA
 
@@ -102,7 +102,7 @@ Utilisez le **noatime** attribut avec n’importe quel système de fichiers qui 
 
 La plupart des installations de Linux doit disposer de cette option sur par défaut. Nous vous recommandons de l’expérience de performances plus cohérent de laisser cette option de configuration activée.
 
-### <a name="swapfile"></a>fichier d’échange
+### <a name="swapfile"></a>swapfile
 
 Assurez-vous de qu'avoir un fichier d’échange configuré correctement pour éviter les problèmes de mémoire insuffisante. Consultez votre documentation Linux pour savoir comment créer et dimensionner correctement un fichier d’échange.
 

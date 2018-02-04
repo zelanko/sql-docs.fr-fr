@@ -3,7 +3,7 @@ title: Installer les outils de ligne de commande de SQL Server sur Linux | Docum
 description: "Cette rubrique décrit comment installer les outils SQL Server sur Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installer les outils de ligne de commande SQL Server sqlcmd et bcp sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Les étapes suivantes installer les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le **mssql-tools** package contient :
 
@@ -206,7 +206,7 @@ brew install --no-sandbox mssql-tools
 
 Le tableau suivant fournit l’emplacement pour les packages d’outils plus récentes :
 
-| Package d’outils | Options de version | Télécharger |
+| Package d’outils | Version | Télécharger |
 |-----|-----|-----|
 | Package d’outils de Red Hat RPM | 14.0.5.0-1 | [package RPM de MSSQL-outils](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Package d’outils SLES RPM | 14.0.5.0-1 | [package RPM de MSSQL-outils](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ Le tableau suivant fournit l’emplacement pour les packages d’outils plus ré
 
 Ces packages dépendent de **msodbcsql**, qui doit être installé en premier. Le **msodbcsql** celui-ci a également une dépendance sur le **unixODBC-développement** (RPM) ou **unixodbc-dev** (Debian). L’emplacement de la **msodbcsql** packages sont répertoriés dans le tableau suivant :
 
-| package de msodbcsql | Options de version | Télécharger |
+| package de msodbcsql | Version | Télécharger |
 |-----|-----|-----|
 | Red Hat RPM de msodbcsql | 13.1.6.0-1 | [package RPM de msodbcsql](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM de msodbcsql | 13.1.6.0-1 | [package RPM de msodbcsql](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 

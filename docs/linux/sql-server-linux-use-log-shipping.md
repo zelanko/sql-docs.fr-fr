@@ -3,7 +3,7 @@ title: "Configurer l’envoi de journaux pour SQL Server sur Linux | Documents M
 description: "Ce didacticiel montre un exemple de base de la réplication d’une instance de SQL Server sur Linux sur une instance secondaire à l’aide des journaux de transaction."
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 4317dd2b7dc32f552988eb3c33c33b8bbe8a3dfb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Prise en main l’envoi de journaux sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Envoi de journaux du serveur SQL est une configuration à haute disponibilité où une base de données à partir d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En bref, une sauvegarde de la base de données est restaurée sur le serveur secondaire. Puis le serveur principal crée des sauvegardes du journal des transactions régulièrement, et les serveurs secondaires de les restaurent, mise à jour de la copie secondaire de la base de données. 
 
@@ -36,7 +36,7 @@ Comme indiqué dans l’image ci-dessus, une session d’envoi de journaux impli
 - Copie le fichier de sauvegarde du journal des transactions sur le réseau à une ou plusieurs instances de SQL Server secondaire
 - Restaurer le fichier de sauvegarde du journal de transactions sur les instances de SQL Server secondaire
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 - [Installer l’Agent SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurez un partage réseau pour l’envoi de journaux à l’aide de CIFS 

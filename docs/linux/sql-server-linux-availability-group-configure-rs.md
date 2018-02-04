@@ -3,7 +3,7 @@ title: "Configurer un groupe de disponibilité de SQL Server pour la lecture à 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 1b7705c33b252dc7cb032976b15c7c0efe28de8d
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurer un groupe de disponibilité de SQL Server pour la lecture à l’échelle sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Vous pouvez configurer un SQL Server toujours sur disponibilité Group (AG) pour les charges de travail en lecture à l’échelle sur Linux. Il existe deux types d’architectures pour les groupes de disponibilité. Une architecture pour la haute disponibilité utilise un gestionnaire de cluster pour assurer la continuité améliorée. Cette architecture peut également inclure des réplicas de la lecture à l’échelle. Pour créer l’architecture haute disponibilité, consultez [configurer SQL serveur de groupe de disponibilité AlwaysOn pour une haute disponibilité sur Linux](sql-server-linux-availability-group-configure-ha.md). L’autre architecture prend en charge uniquement les charges de travail en lecture à l’échelle. Cet article explique comment créer un groupe de disponibilité sans un gestionnaire de cluster pour les charges de travail en lecture à l’échelle. Cette architecture fournit à l’échelle en lecture uniquement. Il ne fournit pas une haute disponibilité.
 

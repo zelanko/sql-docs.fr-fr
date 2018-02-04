@@ -3,7 +3,7 @@ title: "Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Serve
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 9f037f1e5c6f093582aeec4d2080a52e280718a4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document explique comment créer un cluster de groupe de disponibilité de trois nœuds pour SQL Server sur Red Hat Enterprise Linux. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). La couche de clustering basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire de haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construit sur [STIMULATEUR](http://clusterlabs.org/). 
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur la configuration du cluster, options d’agents d
 
 Les sections suivantes les différentes étapes pour configurer un cluster STIMULATEUR et ajouter un groupe de disponibilité en tant que ressource dans le cluster pour la haute disponibilité.
 
-## <a name="roadmap"></a>Feuille de route
+## <a name="roadmap"></a>Roadmap
 
 Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
 

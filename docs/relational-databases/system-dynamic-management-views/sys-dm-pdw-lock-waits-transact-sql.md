@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_lock_waits (Transact-SQL) | Documents Microsoft
+title: sys.dm_pdw_lock_waits (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 8ef966f8-d14e-40d3-9626-3508ada9b8fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 659b4750c0cad521cdc34fe7b07763dea7238581
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 982f09ecacbf68ab0e55c41943f765c8f8cdedc8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwlockwaits-transact-sql"></a>Sys.dm_pdw_lock_waits (Transact-SQL)
+# <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur les demandes en attente de verrous.  
@@ -33,9 +35,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Position de la demande dans la liste d’attente.|ordinal à partir de 0. Cela n’est pas unique pour toutes les entrées de l’attente.|  
 |session_id|**nvarchar(32)**|ID de la session dans laquelle l’état d’attente s’est produite.|Consultez session_id dans [sys.dm_pdw_exec_sessions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Type|**nvarchar(255)**|Type d’attente de que cette entrée représente.|Valeurs possibles :<br /><br /> Partagés<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> Exclusive|  
+|type|**nvarchar(255)**|Type d’attente de que cette entrée représente.|Valeurs possibles :<br /><br /> Partagés<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> Exclusive|  
 |object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|Valeurs possibles :<br /><br /> OBJECT<br /><br /> DATABASE<br /><br /> SYSTEM<br /><br /> SCHEMA<br /><br /> APPLICATION|  
-|object_name|**nvarchar (386)**|Nom ou le GUID de l’objet spécifié qui a été affectée par l’attente.|Tables et vues sont affichent avec des noms en trois parties.<br /><br /> Index et les statistiques sont affichées avec des noms en quatre parties.<br /><br /> Noms principaux et bases de données sont des noms de chaîne.|  
+|object_name|**nvarchar(386)**|Nom ou le GUID de l’objet spécifié qui a été affectée par l’attente.|Tables et vues sont affichent avec des noms en trois parties.<br /><br /> Index et les statistiques sont affichées avec des noms en quatre parties.<br /><br /> Noms principaux et bases de données sont des noms de chaîne.|  
 |request_id|**nvarchar(32)**|ID de la demande sur laquelle l’état d’attente s’est produite.|ID de la demande.<br /><br /> Il s’agit d’un GUID pour les demandes de charge.|  
 |request_time|**datetime**|Heure à laquelle le verrou ou la ressource a été demandée.||  
 |acquire_time|**datetime**|Heure à laquelle le verrou ou la ressource a été acquis.||  

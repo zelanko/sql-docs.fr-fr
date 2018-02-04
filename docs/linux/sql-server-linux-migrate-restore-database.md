@@ -3,7 +3,7 @@ title: "Migrer une base de données SQL Server à partir de Windows et Linux | D
 description: "Ce didacticiel montre comment exécuter la sauvegarde une base de données SQL Server sur Windows et de restauration sur un ordinateur Linux en cours d’exécution SQL Server 2017."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: c97bdbafa557f8d3fe9346431926b9f1a490a286
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrer une base de données SQL Server à partir de Windows et Linux à l’aide de la sauvegarde et restauration
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server de la sauvegarde et la fonctionnalité de restauration est la méthode recommandée pour migrer une base de données SQL Server sur Windows à 2017 du serveur SQL sur Linux. Dans ce didacticiel, vous guidera à travers les étapes requises pour déplacer une base de données pour Linux avec sauvegarde et restauration des techniques.
 

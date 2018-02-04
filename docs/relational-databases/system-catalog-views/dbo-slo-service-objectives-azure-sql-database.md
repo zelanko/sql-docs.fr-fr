@@ -1,5 +1,5 @@
 ---
-title: "dbo.slo_service_objectives (de base de données SQL Azure) | Documents Microsoft"
+title: dbo.slo_service_objectives (Azure SQL Database) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
@@ -7,32 +7,35 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: sql-database
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: Azure SQL Database
+applies_to:
+- Azure SQL Database
 f1_keywords:
 - dbo.slo_service_objectives
 - dbo.slo_service_objectives_TSQL
 - slo_service_objectives
 - slo_service_objectives_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.slo_service_objectives
 - slo_service_objectives
 ms.assetid: d5dd7ed9-440a-4432-ad45-644e4e72318f
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f91dccf478821047e4c3a25ea19d35d1a2774fd
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 3a5d3a911aa1ffa5088f2a817c2434c98eb7cbe3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="dbosloserviceobjectives-azure-sql-database"></a>dbo.slo_service_objectives (de base de données SQL Azure)
+# <a name="dbosloserviceobjectives-azure-sql-database"></a>dbo.slo_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -44,10 +47,10 @@ ms.lasthandoff: 12/21/2017
 |-|  
 |**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11.|  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |objective_id|**uniqueidentifier**|ID de l'objectif de niveau de service.|  
-|NAME|**sysname**|Nom de l'objectif de niveau de service.|  
+|name|**sysname**|Nom de l'objectif de niveau de service.|  
 |description|**nvarchar**|Description de l'objectif de niveau de service.|  
 |create_date|**datetimeoffset(7)**|Date de création de l'objet de niveau de service sur le serveur.|  
 |is_system|**bit**|1 = Objectif de niveau de service système|  

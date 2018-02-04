@@ -3,7 +3,7 @@ title: Configurer le stockage iSCSI basculement cluster instance - SQL Server su
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article explique comment configurer le stockage iSCSI pour une instance de cluster de basculement (FCI) sur Linux. 
 
@@ -57,7 +57,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions de pr
 
     - iface.net_ifacename est le nom de la carte réseau comme indiqué dans le système d’exploitation.
     - iface.hwaddress est l’adresse MAC du nom unique qui sera créé pour cette interface ci-dessous.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Observez l'exemple suivant :

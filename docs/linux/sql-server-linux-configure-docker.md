@@ -3,7 +3,7 @@ title: Options de configuration de SQL Server 2017 sur Docker | Documents Micros
 description: "Explorer les différentes façons d’utilisation et d’interagir avec SQL Server 2017 les images de conteneur dans Docker. Cela inclut les données persistantes, copie de fichiers et de résolution des problèmes."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurer SQL Server 2017 les images de conteneur sur Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cette rubrique explique comment configurer et utiliser le [image de conteneur de mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) avec Docker. Cette image se compose de SQL Server est en cours d’exécution sur Linux basé sur Ubuntu 16.04. Il peut être utilisé avec le moteur Docker 1.8 + sur Linux ou sur Docker pour Mac et Windows.
 
@@ -86,7 +86,7 @@ Vous pouvez vous connecter et de requêtes SQL Server dans un conteneur depuis l
 
 Vous pouvez vous connecter à l’instance de SQL Server sur votre ordinateur Docker à partir de n’importe quel outil externe macOS, Windows ou Linux qui prend en charge les connexions SQL. Certains outils courants incluent :
 
-- [Sqlcmd](sql-server-linux-setup-tools.md)
+- [sqlcmd](sql-server-linux-setup-tools.md)
 - [Code Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) sur Windows](sql-server-linux-develop-use-ssms.md)
 
@@ -351,7 +351,7 @@ Sous Windows, vérifiez que vous démarrez PowerShell ou l’invite de commandes
 
 Si le conteneur de SQL Server ne parvient pas à exécuter, essayez les tests suivants :
 
-- Si vous obtenez une erreur telle que **' n’a pas pu créer de point de terminaison nom_conteneur sur le pont réseau. Erreur lors du démarrage du proxy : liaison de 0.0.0.0:1433 d’écoute tcp : adresse déjà en cours d’utilisation. »** , puis vous essayez de mapper le port 1433 du conteneur à un port qui est déjà en cours d’utilisation. Cela peut se produire si vous utilisez SQL Server localement sur l’ordinateur hôte. Il peut également se produire si vous démarrez les deux conteneurs de SQL Server et que vous essayez de mapper tous les deux sur le même port de l’hôte. Si cela se produit, utilisez le `-p` paramètre à mapper le port 1433 du conteneur à un port d’hôte différent. Exemple : 
+- Si vous obtenez une erreur telle que **' n’a pas pu créer de point de terminaison nom_conteneur sur le pont réseau. Erreur lors du démarrage du proxy : liaison de 0.0.0.0:1433 d’écoute tcp : adresse déjà en cours d’utilisation. »** , puis vous essayez de mapper le port 1433 du conteneur à un port qui est déjà en cours d’utilisation. Cela peut se produire si vous utilisez SQL Server localement sur l’ordinateur hôte. Il peut également se produire si vous démarrez les deux conteneurs de SQL Server et que vous essayez de mapper tous les deux sur le même port de l’hôte. Si cela se produit, utilisez le `-p` paramètre à mapper le port 1433 du conteneur à un port d’hôte différent. Par exemple : 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.

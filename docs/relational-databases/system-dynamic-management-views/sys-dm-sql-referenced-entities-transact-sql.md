@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_sql_referenced_entities (Transact-SQL) | Documents Microsoft
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,30 +71,30 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ *nom_schéma*. ] *referencing_entity_name*  
+ [ *schema_name*. ] *referencing_entity_name*  
  Nom de l'entité de référence. *schema_name* est requis lorsque la classe de référence est OBJECT.  
   
  *schema_name.referencing_entity_name* est **nvarchar (517)**.  
   
- *< Referencing_class >* :: = {objet | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  Classe de l'entité de référence spécifiée. Une seule classe peut être spécifiée par instruction.  
   
  *< referencing_class >* est **nvarchar (60)**.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|referencing_minor_id|**Int**|ID de colonne lorsque l'entité de référence est une colonne ; sinon 0. N'accepte pas la valeur NULL.|  
+|referencing_minor_id|**int**|ID de colonne lorsque l'entité de référence est une colonne ; sinon 0. N'accepte pas la valeur NULL.|  
 |referenced_server_name|**sysname**|Nom du serveur de l'entité référencée.<br /><br /> Cette colonne est remplie pour les dépendances entre serveurs qui sont établies en spécifiant un nom en quatre parties valide. Pour plus d’informations sur les noms en plusieurs parties, consultez [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL pour les dépendances non liées au schéma pour lesquelles l'entité a été référencée sans spécifier un nom en quatre parties.<br /><br /> NULL pour les entités liées au schéma, car ils doivent être dans la même base de données et par conséquent peuvent uniquement être définies à l’aide de deux parties (*schema.object*) nom.|  
 |referenced_database_name|**sysname**|Nom de la base de données de l'entité référencée.<br /><br /> Cette colonne est remplie pour les références des bases de données croisées et entre serveurs qui sont établies en spécifiant un nom en trois ou quatre parties valide.<br /><br /> NULL pour les références non liées au schéma en cas de spécification à l'aide d'un nom en une ou deux parties.<br /><br /> NULL pour les entités liées au schéma, car ils doivent être dans la même base de données et par conséquent peuvent uniquement être définies à l’aide de deux parties (*schema.object*) nom.|  
 |referenced_schema_name|**sysname**|Schéma auquel l'entité référencée appartient.<br /><br /> NULL pour les références non liées au schéma dans lesquelles l'entité a été référencée sans spécifier le nom de schéma.<br /><br /> Jamais NULL pour les références liées au schéma.|  
 |referenced_entity_name|**sysname**|Nom de l'entité référencée. N'accepte pas la valeur NULL.|  
 |referenced_minor_name|**sysname**|Nom de la colonne lorsque l'entité référencée est une colonne ; sinon NULL. Par exemple, referenced_minor_name est NULL dans la ligne qui répertorie l'entité référencée elle-même.<br /><br /> Une entité référencée est une colonne lorsqu'une colonne est identifiée par son nom dans l'entité de référence, ou lorsque l'entité parente est utilisée dans une instruction SELECT *.|  
-|referenced_id|**Int**|ID de l'entité référencée. Lorsque referenced_minor_id n'est pas égal à 0, referenced_id est l'entité dans laquelle la colonne est définie.<br /><br /> Toujours NULL pour les références entre serveurs.<br /><br /> NULL pour les références des bases de données croisées lorsque l'ID ne peut pas être déterminé, car la base de données est hors connexion ou l'entité ne peut pas être liée.<br /><br /> NULL pour les références dans la base de données si l'ID ne peut pas être déterminé. Pour les références non liées au schéma, l’ID ne peut pas être résolu lorsque l’entité référencée n’existe pas dans la base de données ou lors de la résolution de noms est dépend de l’appelant.  Dans ce cas, is_caller_dependent a la valeur 1.<br /><br /> Jamais NULL pour les références liées au schéma.|  
-|referenced_minor_id|**Int**|ID de colonne lorsque l'entité référencée est une colonne ; sinon 0. Par exemple, referenced_minor_name est 0 dans la ligne qui répertorie l'entité référencée elle-même.<br /><br /> Pour les références non liées au schéma, les dépendances de colonnes sont signalées uniquement lorsque toutes les entités référencées peuvent être liées. Si une entité référencée ne peut pas être liée, aucune dépendance au niveau des colonnes n'est signalée et referenced_minor_id est égal à 0. Voir l'exemple D.|  
+|referenced_id|**int**|ID de l'entité référencée. Lorsque referenced_minor_id n'est pas égal à 0, referenced_id est l'entité dans laquelle la colonne est définie.<br /><br /> Toujours NULL pour les références entre serveurs.<br /><br /> NULL pour les références des bases de données croisées lorsque l'ID ne peut pas être déterminé, car la base de données est hors connexion ou l'entité ne peut pas être liée.<br /><br /> NULL pour les références dans la base de données si l'ID ne peut pas être déterminé. Pour les références non liées au schéma, l’ID ne peut pas être résolu lorsque l’entité référencée n’existe pas dans la base de données ou lors de la résolution de noms est dépend de l’appelant.  Dans ce cas, is_caller_dependent a la valeur 1.<br /><br /> Jamais NULL pour les références liées au schéma.|  
+|referenced_minor_id|**int**|ID de colonne lorsque l'entité référencée est une colonne ; sinon 0. Par exemple, referenced_minor_name est 0 dans la ligne qui répertorie l'entité référencée elle-même.<br /><br /> Pour les références non liées au schéma, les dépendances de colonnes sont signalées uniquement lorsque toutes les entités référencées peuvent être liées. Si une entité référencée ne peut pas être liée, aucune dépendance au niveau des colonnes n'est signalée et referenced_minor_id est égal à 0. Voir l'exemple D.|  
 |referenced_class|**tinyint**|Classe de l'entité référencée.<br /><br /> 1 = Objet ou colonne<br /><br /> 6 = Type<br /><br /> 10 = Collection du schéma XML<br /><br /> 21 = Fonction de partition|  
-|referenced_class_desc|**nvarchar (60)**|Description de la classe de l'entité référencée.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Description de la classe de l'entité référencée.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indique que la liaison de schéma pour l'entité référencée se produit au moment de l'exécution ; par conséquent, la résolution de l'ID d'entité dépend du schéma de l'appelant. Cela se produit lorsque l'entité référencée est une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur appelée dans une instruction EXECUTE.<br /><br /> 1 = l'entité référencée dépend de l'appelant et est résolue au moment de l'exécution. Dans ce cas, referenced_id a la valeur NULL.<br /><br /> 0 = l'ID de l'entité référencée ne dépend pas de l'appelant. Toujours 0 pour les références liées au schéma et pour les références des bases de données croisées et entre serveurs qui spécifient explicitement un nom de schéma. Par exemple, une référence à une entité au format `EXEC MyDatabase.MySchema.MyProc` ne dépend pas de l'appelant. Toutefois, une référence au format `EXEC MyDatabase..MyProc` dépend de l'appelant.|  
 |is_ambiguous|**bit**|Indique la référence est ambiguë et peut être convertie au moment de l’exécution pour une fonction définie par l’utilisateur, un type défini par l’utilisateur (UDT) ou une référence xquery à une colonne de type **xml**. Par exemple, supposons que l’instruction `SELECT Sales.GetOrder() FROM Sales.MySales` est défini dans une procédure stockée. Jusqu'à ce que la procédure stockée soit exécutée, il n'est pas possible de savoir si `Sales.GetOrder()` est une fonction définie par l'utilisateur dans le schéma `Sales` ou une colonne nommée `Sales` de type défini par l'utilisateur avec une méthode nommée `GetOrder()`.<br /><br /> 1 = la référence à une fonction définie par l'utilisateur ou méthode de type défini par l'utilisateur de colonne est ambiguë.<br /><br /> 0 = la référence n'est pas équivoque ou l'entité peut être liée avec succès lorsque la fonction est appelée.<br /><br /> Toujours 0 pour les références liées au schéma.|  
 |is_selected|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet ou la colonne est sélectionné.|  
@@ -116,23 +119,23 @@ sys.dm_sql_referenced_entities (
   
  Retourne l'erreur 2020 lorsque des dépendances de colonnes ne peuvent pas être résolues. Cette erreur n'empêche pas la requête de retourner des dépendances au niveau objet.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction peut être exécutée dans le contexte de n'importe quelle base de données pour retourner les entités qui référencent un déclencheur DDL au niveau du serveur.  
   
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table de charge de travail|Oui*|Oui|  
+|Table|Oui*|Oui|  
 |Affichage|Oui|Oui|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée **|Oui|Oui|  
 |Procédure stockée CLR|non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] fonction définie par l'utilisateur|Oui|Oui|  
 |Fonction CLR définie par l'utilisateur|non|Oui|  
 |Déclencheur CLR (DML et DDL)|non|non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML|Oui|non|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DDL au niveau de la base de données|Oui|non|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DDL au niveau du serveur|Oui|non|  
 |Procédures stockées étendues|non|Oui|  
 |File d'attente|non|Oui|  
 |Synonyme|non|Oui|  

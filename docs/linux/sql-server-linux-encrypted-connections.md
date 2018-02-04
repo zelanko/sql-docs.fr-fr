@@ -2,9 +2,9 @@
 title: "Chiffrement des connexions à SQL Server sur Linux | Documents Microsoft"
 description: "Cette rubrique décrit le chiffrement des connexions à SQL Server sur Linux."
 author: tmullaney
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,19 +14,20 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords: Linux, encrypted connections
+helpviewer_keywords:
+- Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: 57fe1aac60bdb888ccbc47ebee33687dd309c8b7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Chiffrement des connexions à SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur Linux peuvent utiliser sécurité TLS (Transport Layer) pour chiffrer les données transmises sur un réseau entre une application cliente et une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]prend en charge les mêmes protocoles TLS sur Windows et Linux : TLS 1.0, 1.1 et 1.2. Toutefois, les étapes de configuration TLS sont spécifiques au système d’exploitation sur lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est en cours d’exécution.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux peuvent utiliser sécurité TLS (Transport Layer) pour chiffrer les données transmises sur un réseau entre une application cliente et une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]prend en charge les mêmes protocoles TLS sur Windows et Linux : TLS 1.0, 1.1 et 1.2. Toutefois, les étapes de configuration TLS sont spécifiques au système d’exploitation sur lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est en cours d’exécution.  
 
 ## <a name="requirements-for-certificates"></a>Exigences relatives aux certificats 
 Avant de commencer, vous devez vous assurer que vos certificats de respecter les règles suivantes :
@@ -36,7 +37,7 @@ Avant de commencer, vous devez vous assurer que vos certificats de respecter les
 - La propriété de sujet du certificat doit indiquer que le nom commun (CN) est le même que le nom d’hôte ou le nom de domaine complet (FQDN) de l’ordinateur serveur. Remarque : les certificats génériques sont pris en charge. 
 
 ## <a name="overview"></a>Vue d'ensemble
-TLS est utilisé pour chiffrer les connexions à partir d’une application cliente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En cas de correctement configuré, TLS fournit la confidentialité et l’intégrité des données pour les communications entre le client et le serveur.  Les connexions TLS peuvent être initited intiated ou un serveur de client. 
+TLS est utilisé pour chiffrer les connexions à partir d’une application cliente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En cas de correctement configuré, TLS fournit la confidentialité et l’intégrité des données pour les communications entre le client et le serveur.  Les connexions TLS peuvent être initié par le client ou initiée par le serveur. 
 
 
 ## <a name="client-initiated-encryption"></a>Chiffrement initiée par le client 
@@ -63,10 +64,10 @@ TLS est utilisé pour chiffrer les connexions à partir d’une application clie
 - **Inscrire le certificat sur votre ordinateur client (Windows, Linux ou macOS)**
 
     -   Si vous utilisez un certificat signé d’autorité de certification, vous devez copier le certificat d’autorité de certification (CA) au lieu du certificat de l’utilisateur sur l’ordinateur client. 
-    -   Si vous utilisez un certificat autosigné simplement copier le fichier .pem dans les dossiers suivants correspondant à la distribution et exécutez les commandes pour leur permettre de 
-        - **Ubuntu** : certificat copie à ```/usr/share/ca-certificates/``` renommer extension .crt utiliser des certificats d’autorité de certification dpkg-reconfigure pour l’activer en tant que certificat de système d’autorité de certification. 
-        - **RHEL** : certificat copie à ```/etc/pki/ca-trust/source/anchors/``` utiliser ```update-ca-trust``` pour l’activer en tant que certificat de système d’autorité de certification.
-        - **SUSE** : cert copie à ```/usr/share/pki/trust/anchors/``` utiliser ```update-ca-certificates``` pour permettre que le certificat du système d’autorité de certification.
+    -   Si vous utilisez le certificat auto-signé, simplement copier le fichier .pem dans les dossiers suivants correspondant à la distribution et exécutez les commandes pour leur permettre de 
+        - **Ubuntu**: certificat copie à ```/usr/share/ca-certificates/``` renommer extension .crt utiliser des certificats d’autorité de certification dpkg-reconfigure pour l’activer en tant que certificat de système d’autorité de certification. 
+        - **RHEL**: certificat copie à ```/etc/pki/ca-trust/source/anchors/``` utiliser ```update-ca-trust``` pour l’activer en tant que certificat de système d’autorité de certification.
+        - **SUSE**: certificat copie à ```/usr/share/pki/trust/anchors/``` utiliser ```update-ca-certificates``` pour l’activer en tant que certificat de système d’autorité de certification.
         - **Windows**: importer le fichier .pem en tant que certificat sous utilisateur actuel -> approuvé autorités de certification racine -> certificats
         - **macOS**: 
            - Copiez le certificat à```/usr/local/etc/openssl/certs```

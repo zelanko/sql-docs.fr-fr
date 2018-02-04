@@ -2,9 +2,9 @@
 title: Authentification Active Directory avec SQL Server sur Linux | Documents Microsoft
 description: "Ce didacticiel fournit les étapes de configuration pour l’authentification AAD pour SQL Server sur Linux."
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,17 +13,18 @@ ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords: Linux, AAD authentication
+helpviewer_keywords:
+- Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Authentification Active Directory avec SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce didacticiel explique comment configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux pour prendre en charge l’authentification Active Directory (AD), également appelée authentification. L’authentification Active Directory permet appartenant au domaine des clients sur Windows ou Linux s’authentifier auprès de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de leurs informations d’identification de domaine et le protocole Kerberos.
 
@@ -43,12 +44,12 @@ Ce didacticiel comprend les tâches suivantes :
 > * Créer des comptes de connexion basée sur Active Directory dans Transact-SQL
 > * Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de l’authentification Active Directory
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de configurer l’authentification Active Directory, vous devez :
 
 * Configurer un contrôleur de domaine Active Directory (Windows) sur votre réseau  
-* Installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -56,7 +57,7 @@ Avant de configurer l’authentification Active Directory, vous devez :
 > [!IMPORTANT]
 > Limitations :
 > - À ce stade, la seule méthode d’authentification pris en charge pour le point de terminaison de mise en miroir de base de données est le certificat. Méthode d’authentification WINDOWS est activée dans une version ultérieure.
-> - les outils tiers AD 3e comme Centrify, Powerbroker et Vintela ne sont pas pris en charge. 
+> - Centrify, Powerbroker, comme les outils de tiers AD et Vintela ne sont pas pris en charge. 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte de domaine Active Directory.
 
@@ -84,7 +85,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
 
    - **Ubuntu**:
 
-      Modifier la `/etc/network/interfaces` de fichiers afin que l’adresse de votre contrôleur de domaine Active Directory est répertorié comme un serveur de noms dns. Exemple : 
+      Modifier la `/etc/network/interfaces` de fichiers afin que l’adresse de votre contrôleur de domaine Active Directory est répertorié comme un serveur de noms dns. Par exemple : 
 
       ```/etc/network/interfaces
       <...>
@@ -96,7 +97,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
       ```
 
       > [!NOTE]
-      > L’interface réseau (eth0) peut-être différer pour les ordinateurs de différente. Pour déterminer l’application que vous utilisez, exécutez ifconfig et copier l’interface qui possède une adresse IP et les octets transmis et reçus.
+      > L’interface réseau (eth0) peut-être différer pour des ordinateurs différents. Pour déterminer l’application que vous utilisez, exécutez ifconfig et copier l’interface qui possède une adresse IP et les octets transmis et reçus.
 
       Après avoir modifié ce fichier, redémarrez le service réseau :
 
@@ -104,7 +105,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      Ensuite, vérifier que votre `/etc/resolv.conf` fichier contient une ligne semblable à la suivante :  
+      Ensuite, vérifier que votre `/etc/resolv.conf` fichier contient une ligne à l’exemple suivant :  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -126,7 +127,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
      sudo systemctl restart network
      ```
 
-     Ensuite, vérifier que votre `/etc/resolv.conf` fichier contient une ligne semblable à la suivante :  
+     Ensuite, vérifier que votre `/etc/resolv.conf` fichier contient une ligne à l’exemple suivant :  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -134,9 +135,9 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
 
 1. Joindre le domaine
 
-   Une fois que vous avez vérifié que votre serveur DNS est correctement configuré, joindre le domaine en exécutant la commande ci-dessous. Vous devez vous authentifier à l’aide d’un compte Active Directory qui dispose de privilèges suffisants dans Active Directory pour joindre un ordinateur au domaine.
+   Une fois que vous avez vérifié que votre serveur DNS est correctement configuré, joindre le domaine en exécutant la commande suivante. Vous devez vous authentifier à l’aide d’un compte Active Directory qui dispose de privilèges suffisants dans Active Directory pour joindre un ordinateur au domaine.
 
-   Plus précisément, cette commande sera créer un nouveau compte d’ordinateur dans Active Directory, créez le `/etc/krb5.keytab` héberger le fichier keytab et configurer le domaine dans `/etc/sssd/sssd.conf`:
+   Plus précisément, cette commande crée un nouveau compte d’ordinateur dans Active Directory, créez le `/etc/krb5.keytab` héberger le fichier keytab et configurer le domaine dans `/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -149,7 +150,7 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
    >
    > Si vous recevez une erreur, « Autorisations insuffisantes pour joindre le domaine, » vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour joindre des ordinateurs Linux à votre domaine.
    
-   > SQL Server utilise SSSD et NSS pour le mappage des comptes d’utilisateurs et des groupes aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution dans l’ordre pour SQL Server créer les connexions AD avec succès. Realmd généralement cette opération automatiquement dans le cadre de joindre le domaine, mais dans certains cas, vous devez procéder séparément.
+   > SQL Server utilise SSSD et NSS pour le mappage des comptes d’utilisateurs et des groupes aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution dans l’ordre pour SQL Server créer les connexions AD avec succès. Realmd généralement effectue automatiquement dans le cadre de joindre le domaine, mais dans certains cas vous devez le faire séparément.
    >
    > Consultez les ressources suivantes pour configurer [SSSD manuellement](https://access.redhat.com/articles/3023951), et [configurer NSS pour travailler avec SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -181,7 +182,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définissez le nom principal de service
 
   > [!NOTE]
-  > Dans les étapes suivantes, nous allons utiliser votre [nom de domaine complet](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si vous êtes sur **Azure**, vous devrez  **[créer un](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  avant de continuer.
+  > Dans les étapes suivantes, nous allons utiliser votre [nom de domaine complet](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si vous êtes sur **Azure**, vous devez  **[créer un](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  avant de continuer.
 
 1. Sur votre contrôleur de domaine, exécutez le [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) commande PowerShell pour créer un nouvel utilisateur AD avec un mot de passe n’expire jamais. Cet exemple montre comment le nom du compte « mssql », mais le nom du compte peut être comme vous le souhaitez. Vous devrez entrer un mot de passe pour le compte :
 
@@ -203,13 +204,13 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    > [!NOTE]
    > Si vous recevez une erreur, « droits d’accès insuffisants », vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour définir un nom SPN sur ce compte.
    >
-   > Si vous modifiez le port TCP à l’avenir, vous devrez exécuter de nouveau la commande setspn avec le nouveau numéro de port. Vous devrez également ajouter le nouveau nom SPN pour le fichier keytab service de SQL Server en suivant les étapes décrites dans la section suivante.
+   > Si vous modifiez le port TCP à l’avenir, vous devez exécuter la commande setspn à nouveau avec le nouveau numéro de port. Vous devez également ajouter le nouveau nom SPN pour le fichier keytab service de SQL Server en suivant les étapes décrites dans la section suivante.
 
 3. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de service
 
-1. Vérifier le numéro de Version de clé (kvno) pour le compte AD créé à l’étape précédente. Généralement, il sera 2, mais il peut être un autre entier si vous avez modifié le mot de passe plusieurs fois. Sur le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte, exécutez la commande suivante :
+1. Vérifier le numéro de Version de clé (kvno) pour le compte AD créé à l’étape précédente. Il est généralement de 2, mais il peut être un autre entier si vous avez modifié le mot de passe plusieurs fois. Sur le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte, exécutez la commande suivante :
 
    ```bash
    kinit user@CONTOSO.COM
@@ -294,7 +295,7 @@ Le paramètre de chaîne de connexion spécifique pour les clients à utiliser l
   
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, nous avons parcouru comment faire pour configurer l’authentification d’Active Directory avec SQL Server sur Linux. Vous avez appris comment à :
+Dans ce didacticiel, nous avons passé en revue la définition de l’authentification Active Directory avec SQL Server sur Linux. Vous avez appris comment à :
 > [!div class="checklist"]
 > * Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte de domaine Active Directory.
 > * Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définissez le nom principal de service

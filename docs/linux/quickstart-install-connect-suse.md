@@ -3,7 +3,7 @@ title: Prise en main 2017 du serveur SQL sur SUSE Linux Enterprise Server | Docu
 description: "Ce démarrage rapide montre comment installer SQL Server 2017 sur SUSE Linux Enterprise Server puis créer et interroger une base de données avec sqlcmd."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: b92036d4b706b5e76165708438d350c1883db912
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: fddc7cf6f0badfdb07414c2fc4b51cc2dad5a12a
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installer SQL Server et de créer une base de données sur SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce guide de démarrage rapide, vous d’abord installez SQL Server 2017 sur SUSE Linux Enterprise Server (SLES) v12 SP2. Se connecter avec **sqlcmd** à créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
 > Ce didacticiel nécessite l’entrée d’utilisateur et une connexion internet. Si vous êtes intéressé par le [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline) procédures d’installation, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Vous devez disposer d’un ordinateur de SP2 SLES v12 avec **au moins 2 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. Autres systèmes de fichiers, tel que **BTRFS**, non pris en charge.
 
@@ -121,6 +121,6 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
 > * [SQL Server Operations Studio (version préliminaire)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
 > * [Code Visual Studio](sql-server-linux-develop-use-vscode.md).
-> * [MSSQL-cli (version préliminaire)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

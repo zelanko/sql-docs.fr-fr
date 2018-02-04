@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,23 +8,25 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db242a2add7add3528e5fe2743a78f13e40b8b43
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f062c426525c8c6692fd56d5599bc5fac0f589ec
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>Sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
+# <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   E/s, verrouillage, au niveau des lignes retourne actuel et la méthode d’accès pour les rowgroups compressés dans un index columnstore. Utilisez **sys.dm_db_column_store_row_group_operational_stats** pour effectuer le suivi de la durée pendant laquelle une requête de l’utilisateur doit attendre pour lire ou écrire dans un rowgroup compressé ou une partition d’un index columnstore et identifier les rowgroups qui connaissent une activité d’e/s importante ou des zones réactives.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**rowgroup_lock_wait_count**|**bigint**|Nombre cumulatif de fois où le moteur de base de données a attendu sur ce verrou de groupe de lignes depuis le dernier redémarrage SQL.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|Nombre cumulatif de millisecondes attendues dans le moteur de base de données sur ce verrou de groupe de lignes depuis le dernier redémarrage SQL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations suivantes sont nécessaires :  
   
 -   Autorisation CONTROL sur la table spécifiée par object_id.  
@@ -60,13 +62,13 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Index liés les fonctions et vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [Sys.dm_db_index_usage_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [Sys.dm_os_latch_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [Sys.dm_db_partition_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [Sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Sys.dm_db_index_physical_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

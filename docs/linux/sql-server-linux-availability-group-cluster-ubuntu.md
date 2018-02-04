@@ -3,8 +3,8 @@ title: "Configurer le groupe de disponibilité de SQL Server du Cluster Ubuntu |
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et de ressources du groupe de disponibilité
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document explique comment créer un cluster de trois nœuds sur Ubuntu et ajouter un groupe de disponibilité créé précédemment en tant que ressource dans le cluster. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les l’orchestration est en dehors d’et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Toujours sur le vues de gestion dynamique qui interrogent des informations de cluster retournera des lignes vides. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous).
+> À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les orchestration est en dehors de, et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Toujours sur le vues de gestion dynamique qui interrogent des informations de cluster retournera des lignes vides. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous).
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
 ## <a name="roadmap"></a>Roadmap
 
-Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes de haut niveau : 
+Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
 
 1. [Configurer SQL Server sur les nœuds de cluster](sql-server-linux-setup.md).
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Créer le cluster. 
 
    >[!WARNING]
-   >En raison d’un problème connu que le fournisseur de clustering est le problème, en commençant le cluster ('PC cluster start') échoue avec erreur ci-dessous. Il s’agit, car le fichier journal est configuré dans /etc/corosync/corosync.conf qui est créé lorsque la commande d’installation de cluster est exécutée, est incorrect. Pour résoudre ce problème, modifiez le fichier journal pour : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
+   >En raison d’un problème connu que le fournisseur de clustering est le problème, en commençant le cluster ('PC cluster start') échoue avec erreur ci-dessous. Il s’agit, car le fichier journal est configuré dans /etc/corosync/corosync.conf qui est créé lorsque la commande d’installation de cluster est exécutée, est incorrect. Pour contourner ce problème, modifiez le fichier journal : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -139,7 +139,7 @@ La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le sc
 
 Fournisseurs de cluster STIMULATEUR nécessitent STONITH doit être activée et un appareil de délimitation configuré pour une installation de clusters prises en charge. Lorsque le Gestionnaire de ressources de cluster ne peut pas déterminer l’état d’un nœud ou d’une ressource sur un nœud, délimitation est utilisée pour remettre le cluster à un état connu. Délimitation de niveau de ressources permet de garantir principalement aucune altération des données en cas de panne en configurant une ressource. Vous pouvez utiliser la délimitation au niveau de la ressource, par exemple, avec DRBD (Distributed répliquées bloc Device) pour marquer le disque sur un nœud comme obsolètes lorsque la liaison de communication s’arrête. Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas toutes les ressources. Pour ce faire, vous devez réinitialiser le nœud et l’implémentation de stimulateur de celle-ci est appelée STONITH (ce qui signifie « dépanner l’autre nœud dans l’en-tête »). STIMULATEUR prend en charge une grande variété d’appareils de délimitation, par exemple, une alimentation de secours ou la gestion cartes d’interface pour les serveurs. Pour plus d’informations, consultez [Clusters STIMULATEUR partant](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) et [délimitation et Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Étant donné que le niveau de nœud clôtures configuration dépend largement de votre environnement, nous la désactivera pour ce didacticiel (il peut être configuré à une date ultérieure). Exécutez le script suivant sur le nœud principal : 
+Étant donné que le niveau de nœud clôtures configuration dépend largement de votre environnement, nous la désactiver pour ce didacticiel (il peut être configuré à une date ultérieure). Exécutez le script suivant sur le nœud principal : 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->Après un basculement automatique, lorsque `start-failure-is-fatal = true` le Gestionnaire de ressources va tenter de démarrer la ressource. En cas d’échec de la première tentative vous devez exécuter manuellement `pcs resource cleanup <resourceName>` pour le nettoyage, le nombre d’échecs de ressources et réinitialiser la configuration.
+>Après un basculement automatique, lorsque `start-failure-is-fatal = true` le Gestionnaire de ressources tente de démarrer la ressource. En cas d’échec de la première tentative vous devez exécuter manuellement `pcs resource cleanup <resourceName>` pour nettoyer le nombre d’échecs de ressources et de réinitialiser la configuration.
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installer l’agent de ressources SQL Server pour l’intégration avec STIMULATEUR
 

@@ -3,7 +3,7 @@ title: "Fonctionner Red Hat Enterprise Linux partagé du cluster pour SQL Server
 description: "Implémenter la haute disponibilité en configurant des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document décrit comment effectuer les tâches suivantes pour SQL Server sur un cluster de basculement de disque partagé avec Red Hat Enterprise Linux.
 
@@ -214,7 +214,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Dans la résolution des problèmes de cluster, il peut vous aider à comprendre comment les trois processus fonctionnent ensemble pour gérer les ressources de cluster. 
 
-| Daemon | Description 
+| Daemon |  Description 
 | ----- | -----
 | Corosync | Fournit l’appartenance de quorum et de la messagerie entre les nœuds de cluster.
 | STIMULATEUR | Réside au-dessus Corosync et fournit les machines d’état pour les ressources. 
@@ -261,7 +261,7 @@ Dans l’exemple, `partition with quorum` signifie qu’un quorum de la majorit�
 
 Vérifiez les éléments suivants lorsqu’un nœud est hors connexion.
 
-- **Pare-feu**
+- **Firewall**
 
     Les ports suivants doivent être ouverts sur tous les nœuds pour STIMULATEUR être en mesure de communiquer.
     

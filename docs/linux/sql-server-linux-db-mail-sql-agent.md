@@ -3,7 +3,7 @@ title: "Messagerie de base de données et les alertes par courrier électronique
 description: "Cette rubrique décrit comment utiliser la messagerie de base de données et les alertes par courrier électronique avec SQL Server sur Linux"
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
-ms.openlocfilehash: 5ee028c91cfc9a3a5b32a7f75526c9a10b01db86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 96a9f93ed1a8fb2fea9ef3e524b78266291ce69d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Messagerie de base de données et les alertes par courrier électronique avec l’Agent SQL sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Les étapes suivantes vous montrent comment configurer la messagerie de base de données et l’utiliser avec l’Agent SQL Server (**mssql-server-agent**) sur Linux. 
 
 > [!NOTE]
 > Pour utiliser la messagerie de base de données avec SQL Server sur Linux, vous devez utiliser SQL Server 2017 RC1 ou version ultérieure.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 - SQL Server 2017 RC1 et versions ultérieures
 - L’Agent SQL Server v14.0.800.90-2 et versions ultérieures (si vous envisagez d’utiliser la messagerie pour les alertes)

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_memory_pools (Transact-SQL) | Documents Microsoft
+title: sys.dm_fts_memory_pools (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_fts_memory_pools_TSQL
 - sys.dm_fts_memory_pools
 - dm_fts_memory_pools
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_memory_pools dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_memory_pools dynamic management view
 ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4200878f1147ba2ec91e7ab4e86b3bca3a5b0b4d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 02b742ae19835ef9167351bac9db6f53cfb5b08d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**max_buffer_limit**|**int**|Nombre maximum de mémoires tampons allouées dans le pool de mémoire.|  
 |**buffer_count**|**int**|Nombre actuel de mémoires tampons partagées dans le pool de mémoire.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
 
@@ -52,7 +55,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|Pour|Relation|  
+|From|Pour|Relation|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|Plusieurs-à-un|  
   

@@ -3,7 +3,7 @@ title: Notes de publication pour 2017 de SQL Server sur Linux | Documents Micros
 description: "Cette rubrique contient les notes de publication et les fonctionnalités prises en charge pour SQL Server 2017 est en cours d’exécution sur Linux. Notes de publication sont inclus dans la version la plus récente et plusieurs versions précédentes."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5b66fa7db6547bfbb9340ce5738dff064f6a48c9
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 661c3797ef0881efd49921231c2899f5391e4e27
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
@@ -54,7 +54,7 @@ Le tableau suivant répertorie l’historique de publication pour SQL Server 201
 | [CU3](#CU3) | 14.0.3015.40| 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
-| [DISPONIBILITÉ GÉNÉRALE](#GA) | 14.0.1000.169 | 10-2017 |
+| [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
 ## <a id="cuinstall"></a>Comment installer les mises à jour cumulatives
 

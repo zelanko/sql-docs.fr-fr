@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_wait_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +43,12 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
+|wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
-|pdw_node_id|**int**|L’identificateur du nœud qui se trouve sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|L’identificateur du nœud qui se trouve sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
@@ -127,7 +130,7 @@ Cette commande remet tous les compteurs à 0.
 |BROKER_FORWARDER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Se produit lors de l’initialisation du Service Broker dans chaque base de données active. Cela ne doit pas arriver souvent.| 
 |BROKER_MASTERSTART |Se produit lorsqu’une tâche est en attente pour le Gestionnaire d’événements principal de Service Broker pour démarrer. Ce doit être très bref.| 
-|BROKER_RECEIVE_WAITFOR |Se produit lorsque RECEIVE WAITFOR attend. Typique si aucun message n'est prêt à être reçu.| 
+|BROKER_RECEIVE_WAITFOR |Se produit lorsque RECEIVE WAITFOR attend. Cela peut signifier qu’aucun message n’est prêt à être reçu dans la file d’attente ou une contention de verrouillage empêche de recevoir des messages de la file d’attente.| 
 |BROKER_REGISTERALLENDPOINTS |Se produit pendant l’initialisation d’un point de terminaison de connexion de Service Broker. Ce doit être très bref.| 
 |BROKER_SERVICE |Se produit lorsque la liste de destination Service Broker qui est associée à un service cible est mis à jour ou retriée.| 
 |BROKER_SHUTDOWN |Se produit lors d’un arrêt programmé de Service Broker. Ce doit être très bref, voire inexistant.| 
@@ -169,7 +172,7 @@ Cette commande remet tous les compteurs à 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Se produit avec les plans de requête parallèles lorsqu’un thread consommateur attend qu’un thread producteur envoyer des lignes. Il s’agit d’un composant normal de l’exécution des requêtes parallèles. <br /> **S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |Se produit avec les plans de requête parallèles lorsqu’un thread consommateur attend qu’un thread producteur envoyer des lignes. Il s’agit d’un composant normal de l’exécution des requêtes parallèles. <br /> **S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |Se produit avec les plans de requête parallèles, lors de la synchronisation de l’itérateur exchange de processeur de requêtes et lors de la production et la consommation des lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET fait référence uniquement à la synchronisation de l’itérateur exchange de processeur de requêtes et à produire des lignes pour les threads de consommateur. Threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
 |CXROWSET_SYNC |Se produit pendant une analyse de plage parallèle.| 
 |DAC_INIT |Se produit alors que la connexion administrateur dédiée est en cours d'initialisation.| 
@@ -1024,8 +1027,8 @@ Cette commande remet tous les compteurs à 0.
 ## <a name="see-also"></a>Voir aussi  
     
  [Système d’exploitation de serveur SQL relatives des vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [Sys.dm_db_wait_stats &#40; Base de données SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change_TSQL
 - sys.dm_db_objects_disabled_on_compatibility_level_change
 - sys.dm_db_objects_disabled_on_compatibility_level_change_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f52daf2257ac6a2d8ea34d61ed2dd869b0363bce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Données spatiales - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,18 +47,18 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
- *COMPATIBILITY_LEVEL*  
+ *compatibility_level*  
  **int** qui identifie le niveau de compatibilité que vous souhaitez définir.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**Int**|1 = contraintes<br /><br /> 7 = index et segments|  
-|**class_desc**|**nvarchar (60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
-|**major_id**|**Int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
-|**minor_id**|**Int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|**dépendance**|**nvarchar (60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
+|**class**|**int**|1 = contraintes<br /><br /> 7 = index et segments|  
+|**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
+|**major_id**|**int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
+|**minor_id**|**int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
+|**dependency**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les colonnes calculées persistantes qui utilisent des fonctions intrinsèques sont désactivées lorsque le niveau de compatibilité est modifié. En outre, les colonnes calculées persistantes qui utilisent une méthode de type geometry ou geography sont désactivées lorsqu'une base de données est mise à niveau.  
@@ -67,29 +70,29 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Lorsque les fonctions suivantes sont utilisées dans l'expression d'une colonne calculée persistante, elles entraînent la désactivation des index et des contraintes qui font référence à ces colonnes lorsque le niveau de compatibilité est modifié de 100 à 110 ou plus :  
   
--   **SOUNDEX**  
+-   **Soundex**  
   
 -   **Geography :: GeomFromGML**  
   
--   **Geography :: STGeomFromText**  
+-   **Geography:: STGeomFromText**  
   
--   **Geography :: STLineFromText**  
+-   **Geography:: STLineFromText**  
   
--   **Geography :: STPolyFromText**  
+-   **Geography:: STPolyFromText**  
   
--   **Geography :: STMPointFromText**  
+-   **Geography:: STMPointFromText**  
   
--   **Geography :: STMLineFromText**  
+-   **Geography:: STMLineFromText**  
   
--   **Geography :: STMPolyFromText**  
+-   **Geography:: STMPolyFromText**  
   
--   **Geography :: STGeomCollFromText**  
+-   **Geography:: STGeomCollFromText**  
   
 -   **Geography :: STGeomFromWKB**  
   
 -   **Geography :: STLineFromWKB**  
   
--   **Geography :: STPolyFromWKB**  
+-   **Geography:: STPolyFromWKB**  
   
 -   **Geography :: STMPointFromWKB**  
   
@@ -107,7 +110,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geography :: STBuffer**  
   
--   **Geography :: BufferWithTolerance**  
+-   **Geography:: BufferWithTolerance**  
   
 -   **Geography :: analyser**  
   
@@ -148,7 +151,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant illustre une requête sur **sys.dm_db_objects_disabled_on_compatibility_level_change** pour trouver les objets affectés par la modification du niveau de compatibilité à 120.  
   
 ```sql  

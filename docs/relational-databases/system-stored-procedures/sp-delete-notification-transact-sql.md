@@ -1,5 +1,5 @@
 ---
-title: sp_delete_notification (Transact-SQL) | Documents Microsoft
+title: sp_delete_notification (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_notification_TSQL
 - sp_delete_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_notification
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e346749b4aa7cdcb44763302bc9f8315773c72d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ce0585cca4efc974346f3117ba8a129c09d3edaa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +48,22 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@alert_name=** ] **'***alerte***'**  
+ [ ** @alert_name=** ] **'***alerte***'**  
  Le nom de l'alerte. *alerte* est **sysname**, sans valeur par défaut.  
   
- [  **@operator_name=** ] **'***opérateur***'**  
+ [ **@operator_name=** ] **'***operator***'**  
  Nom de l'opérateur. *opérateur* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Lorsque vous supprimez une notification, seule celle-ci est supprimée, tandis que l'alerte et l'opérateur demeurent intacts.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -78,13 +81,13 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_help_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

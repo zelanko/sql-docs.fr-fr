@@ -1,5 +1,5 @@
 ---
-title: Sys.external_library_files (Transact-SQL) | Documents Microsoft
+title: sys.external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
@@ -16,27 +16,29 @@ f1_keywords:
 - external_library_files_TSQL
 - sys.external_library_files
 - sys.external_library_files_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.external_library_files catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.external_library_files catalog view
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a03a50bdeda18d027fbad56e2cd4b86a261052b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: cf8a1b59827c53bc4ae04f76dbe7084a4ad828d4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>Sys.external_library_files (Transact-SQL)  
+# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Répertorie une ligne pour chaque fichier qui compose une bibliothèque externe.
 
-|Nom de colonne |Type de données |Description|
+|Nom de colonne |Type de données | Description|
 |------|------|-----|
-|external_library_id | INT |ID de l’objet de bibliothèque externe. |
+|external_library_id | int |ID de l’objet de bibliothèque externe. |
 |content |varbinary(max) |Contenu de l’artefact de fichier de bibliothèque externe. |
-|Plateforme |TINYINT |ID de la plateforme hôte sur lequel SQL Server est installé. |
+|Plateforme |tinyint |ID de la plateforme hôte sur lequel SQL Server est installé. |
 |platform_desc | nvarchar(60) |Nom de la plateforme de l’ordinateur hôte. Les valeurs valides sont 'WINDOWS', 'LINUX'. |
 
 ### <a name="see-also"></a>Voir aussi  

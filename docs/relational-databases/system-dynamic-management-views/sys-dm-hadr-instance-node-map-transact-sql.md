@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_instance_node_map (Transact-SQL) | Documents Microsoft
+title: sys.dm_hadr_instance_node_map (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.sys.dm_hadr_instance_node_map
 - sys.dm_hadr_instance_node_map_TSQL
 - sys.dm_hadr_instance_node_map
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b600f8821e65745a64b0f7487e136b9d3031ede6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 61d86f7ac8fda6d975f9f0ff2fc9aaf58af55aa9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +48,15 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar (256)**|ID unique du groupe de disponibilité en tant que ressource dans le cluster WSFC.|  
 |**nom_instance**|**nvarchar (256)**|Nom :*server*/*instance*, d’une instance de serveur qui héberge un réplica pour le groupe de disponibilité.|  
-|**nom_nœud**|**nvarchar (256)**|Nom du nœud de cluster WSFC.|  
+|**node_name**|**nvarchar (256)**|Nom du nœud de cluster WSFC.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues et fonctions de gestion dynamiques de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Affichages catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Surveiller les groupes de disponibilité &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

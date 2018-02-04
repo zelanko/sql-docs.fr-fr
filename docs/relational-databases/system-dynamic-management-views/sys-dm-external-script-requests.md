@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_requests_TSQL
 - dm_external_script_requests
 - dm_external_script_requests_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cde483c6fab14391f74a52bb9ad5fbcf9fee8d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>Sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +42,11 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
 >  
 >  Cette vue de gestion dynamique est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations sur la manière de procéder pour les scripts R, consultez [Configurer SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus comme reçu par[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus tel que reçu par [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |langue|**nvarchar**|Mot clé qui représente un langage de script pris en charge. Actuellement, seul `R` est pris en charge.|  
-|degree_of_parallelism|**Int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
+|degree_of_parallelism|**int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
 |external_user_name|**nvarchar**|Le compte de travail Windows sous lequel le script a été exécuté.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -54,7 +56,7 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
 >   
 >  Les utilisateurs qui exécutent des scripts externes doivent avoir l’autorisation supplémentaire EXECUTE ANY EXTERNAL SCRIPT, toutefois, cette vue de gestion dynamique peut être utilisée par les administrateurs sans cette autorisation. 
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 Cette vue peut être filtrée à l’aide de l’identificateur de langage de script.
 
@@ -83,7 +85,7 @@ Résultats
 
 external_script_request_id  |langue  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
-183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |       1   |  MSSQLSERVER01       
+183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
 
 
   

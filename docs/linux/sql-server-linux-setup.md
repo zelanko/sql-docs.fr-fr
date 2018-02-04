@@ -3,7 +3,7 @@ title: Installer SQL Server 2017 sur Linux | Documents Microsoft
 description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. Cette rubrique couvre les scénarios en ligne, hors connexion et sans assistance."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cette rubrique explique comment installer, mettre à jour et désinstaller 2017 du serveur SQL sur Linux. SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également disponible sous une image Docker qui peut s’exécuter sur le moteur Docker sur Linux ou Docker pour Windows/Mac.
 
@@ -52,7 +52,7 @@ SQL Server 2017 requise est la suivante pour Linux :
 |||
 |-----|-----|
 | **Mémoire** | 2 Go |
-| **File System** | **XFS** ou **EXT4** (autres systèmes de fichiers, tel que **BTRFS**, non pris en charge) |
+| **Système de fichiers** | **XFS** ou **EXT4** (autres systèmes de fichiers, tel que **BTRFS**, non pris en charge) |
 | **Espace disque** | 6 GO |
 | **Vitesse du processeur** | 2 GHz |
 | **Cœurs de processeur** | 2 cœurs |

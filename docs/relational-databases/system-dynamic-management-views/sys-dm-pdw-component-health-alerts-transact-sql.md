@@ -8,22 +8,23 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f8a0a4af0fafa03492217a72626c17e394c3afc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51360614a6939c64b005a93cd178b2e6ff22e4e2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwcomponenthealthalerts-transact-sql"></a>Sys.dm_pdw_component_health_alerts (Transact-SQL)
+# <a name="sysdmpdwcomponenthealthalerts-transact-sql"></a>sys.dm_pdw_component_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Magasins précédemment émis des alertes sur les composants de l’application.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |Nom de la colonne|Type de données| Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Identificateur unique d’un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nœud.<br /><br /> pdw_node_id id_composant, component_instance_id, id_alerte et alert_instance_id forment la clé pour cette vue.|NOT NULL|  
-|id_composant|**int**|L’ID du composant. Consultez [sys.pdw_health_components &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id id_composant, component_instance_id, id_alerte et alert_instance_id forment la clé pour cette vue.|NOT NULL|  
+|component_id|**int**|L’ID du composant. Consultez [sys.pdw_health_components &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id id_composant, component_instance_id, id_alerte et alert_instance_id forment la clé pour cette vue.|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|pdw_node_id id_composant, component_instance_id, id_alerte et alert_instance_id forment la clé pour cette vue.|NOT NULL|  
 |alert_id|**int**|L’ID pour le type d’alerte. Consultez [sys.pdw_health_alerts &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md).<br /><br /> pdw_node_id id_composant, component_instance_id, id_alerte et alert_instance_id forment la clé pour cette vue.|NOT NULL|  
 |alert_instance_id|**nvarchar(36)**|Identifie une instance d’une alerte donnée.<br /><br /> pdw_node_id id_composant, component_instance_id, id_alerte et alert_instance_id forment la clé pour cette vue.|NOT NULL|  

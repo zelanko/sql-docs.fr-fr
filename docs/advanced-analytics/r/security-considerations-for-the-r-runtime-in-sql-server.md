@@ -1,6 +1,6 @@
 ---
 title: "Considérations sur la sécurité pour l’apprentissage dans SQL Server | Documents Microsoft"
-ms.date: 11/16/2017
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -10,16 +10,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 67beebd9c35ddddbfbc56f606ec1b7df3671ae64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7262b804c1712e7ea962feefd88f3b2f64146a9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Considérations sur la sécurité pour l’apprentissage dans SQL Server
 
@@ -37,7 +37,7 @@ Nous recommandons fortement d’activer le pare-feu Windows (ou un autre pare-fe
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>Méthodes d’authentification pris en charge pour les contextes de calcul à distance
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]prend en charge les connexions à la fois l’authentification intégrée Windows et SQL lors de la création des connexions entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un client de science des données distantes.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] prend en charge les connexions à la fois l’authentification intégrée Windows et SQL lors de la création des connexions entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un client de science des données distantes.
 
 Par exemple, que vous développez une solution R sur votre ordinateur portable et que vous souhaitez effectuer des calculs sur l’ordinateur SQL Server. Vous devez créer une source de données SQL Server dans R, à l’aide de la **rx** fonctions et la définition d’une chaîne de connexion en fonction de vos informations d’identification Windows.
 
@@ -50,9 +50,9 @@ L’utilisation de connexions SQL est également pris en charge dans ce scénari
  En règle générale, le [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] démarre l’exécution du script externe et exécute des scripts sous son propre compte. Toutefois, si le runtime externe effectue un appel ODBC, le [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] emprunte l’identité de l’identification de l’utilisateur qui a envoyé la commande pour vous assurer que l’appel ODBC n’échoue pas. C’est ce que l’on appelle l’*authentification implicite*.
  
  > [!IMPORTANT]
- > Pour que l’authentification implicite aboutisse, le groupe d’utilisateurs Windows qui contient les comptes de travail (par défaut, **SQLRUser**) doit posséder un compte dans la base de données MASTER pour l’instance, et ce compte doit avoir reçu les autorisations permettant de se connecter à l’instance.
+ > Pour l’authentification implicite réussisse, le groupe d’utilisateurs Windows qui contient les comptes de travail (par défaut, **SQLRUserGroup**) doit avoir un compte dans la base de données master pour l’instance et ce compte doivent être autorisé à Connectez-vous à l’instance.
  > 
- > Le groupe **SQLRUser** est également utilisé lors de l’exécution de scripts Python. 
+ > Le groupe **SQLRUserGroup** est également utilisé lors de l’exécution de scripts Python. 
 
 En général, nous recommandons que vous déplacez des jeux de données volumineux dans SQL Server au préalable, au lieu de tentez de lire les données à l’aide de RODBC ou une autre bibliothèque. En outre, utilisez une requête SQL Server ou une vue en tant que votre source de données principale, pour de meilleures performances. 
 

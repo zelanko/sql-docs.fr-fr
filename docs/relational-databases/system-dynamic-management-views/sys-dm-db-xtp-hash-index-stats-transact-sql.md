@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_hash_index_stats_TSQL
 - dm_db_xtp_hash_index_stats
 - dm_db_xtp_hash_index_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_hash_index_stats (dynamic management view)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83e0b404fddcabaa9a70acda6718a3c53d7ba7de
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 00716b0d86e0f59c4b7a904ef682f92d41566742
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,11 +51,11 @@ Les chaînes de type Long peuvent affecter les performances des opérations DML 
   
 Pour plus d’informations, consultez [index de hachage pour les Tables optimisées en mémoire](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
-|object_id|**Int**|ID d'objet d'une table parent.|  
+|object_id|**int**|ID d'objet d'une table parent.|  
 |xtp_object_id|**bigint**|ID de la table optimisée en mémoire.|  
-|index_id|**Int**|ID d'index.|  
+|index_id|**int**|ID d'index.|  
 |total_bucket_count|**bigint**|Nombre total de compartiments de hachage dans l'index.|  
 |empty_bucket_count|**bigint**|Nombre total de compartiments de hachage vides dans l'index.|  
 |avg_chain_length|**bigint**|Longueur moyenne des chaînes de ligne sur tous les compartiments de hachage dans l'index.|  

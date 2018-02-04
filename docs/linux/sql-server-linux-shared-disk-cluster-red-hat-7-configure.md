@@ -3,7 +3,7 @@ title: "Configurer un cluster partagé de Red Hat Enterprise Linux pour SQL Serv
 description: "Implémenter la haute disponibilité en configurant des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce guide fournit des instructions pour créer un cluster de disque partagé de deux nœuds pour SQL Server sur Red Hat Enterprise Linux. La couche de clustering basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire de haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construit sur [STIMULATEUR](http://clusterlabs.org/). L’instance de SQL Server est active sur un nœud ou l’autre.
 
@@ -43,7 +43,7 @@ Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de cha�
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
@@ -143,7 +143,7 @@ Sur le serveur NFS, procédez comme suit :
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Exemple : 
+1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Par exemple : 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

@@ -3,7 +3,7 @@ title: "Configurer SLES Cluster pour le groupe de disponibilité de SQL Server |
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer SLES Cluster pour le groupe de disponibilité de SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce guide fournit des instructions pour créer un cluster à trois nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES) 12 SP2. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). La couche de gestion de clusters est basée sur SUSE [haute disponibilité Extension (HAÉ)](https://www.suse.com/products/highavailability) construit sur [STIMULATEUR](http://clusterlabs.org/). 
 
@@ -33,7 +33,7 @@ Pour plus d’informations sur la configuration du cluster, les options de l’a
 >À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Service SQL Server sur Linux n’est pas compatible avec les clusters. STIMULATEUR gère l’ensemble de l’orchestration de ressources de cluster, y compris la ressource de groupe de disponibilité. Sur Linux, ne vous fiez pas à toujours sur Disponibilité groupe vues de gestion dynamique (DMV) qui fournissent des informations de cluster comme sys.dm_hadr_cluster. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous).
 
 
-## <a name="roadmap"></a>Feuille de route
+## <a name="roadmap"></a>Roadmap
 
 Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes de haut niveau : 
 
@@ -52,7 +52,7 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
 
 5. [Ajouter le groupe de disponibilité en tant que ressource dans le cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de trois ordinateurs pour déployer le trois nœuds cluster. Les étapes ci-dessous décrivent comment configurer ces serveurs.
 
@@ -122,9 +122,9 @@ Sur des serveurs Linux configurer le groupe de disponibilité, puis configurez l
 
 3. Pour configurer la couche de communication du cluster (Corosync) : 
 
-   a. Entrez une adresse réseau à lier. Par défaut, le script va vous proposer l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
+   A. Entrez une adresse réseau à lier. Par défaut, le script va vous proposer l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
 
-   b. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
+   B. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
 
    c. Entrez un port de multidiffusion. Le script propose 5405 comme valeur par défaut. 
 
@@ -147,7 +147,7 @@ Sur des serveurs Linux configurer le groupe de disponibilité, puis configurez l
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Ajouter des nœuds au cluster existant
 
-Si vous avez un cluster exécutant avec un ou plusieurs nœuds, ajouter des nœuds de cluster avec le script de démarrage à haute disponibilité cluster-jointure. Le script requiert seulement l’accès à un nœud de cluster existant et terminera automatiquement la configuration de base sur l’ordinateur actuel. Suivez les étapes ci-dessous :
+Si vous avez un cluster exécutant avec un ou plusieurs nœuds, ajouter des nœuds de cluster avec le script de démarrage à haute disponibilité cluster-jointure. Le script requiert seulement l’accès à un nœud de cluster existant et terminera automatiquement la configuration de base sur l’ordinateur actuel. Suivez les étapes ci-dessous :
 
 Si vous avez configuré les nœuds de cluster existants avec les `YaST` module de cluster, assurez-vous que les conditions préalables suivantes sont remplies avant d’exécuter `ha-cluster-join`:
 - L’utilisateur racine sur les nœuds existants a des clés SSH en place pour la connexion passwordless. 

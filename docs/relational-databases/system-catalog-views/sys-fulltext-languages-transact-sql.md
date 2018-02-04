@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fulltext_languages_TSQL
 - fulltext_languages
 - fulltext_languages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - languages [full-text search]
 - sys.fulltext_languages catalog view
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e128525420e741af2ddca0c2584f55a950d98c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb66c10f797c7951f54125c7b5b99cfc25f983ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
    
 |Colonne|Data type| Description|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificateur de paramètres régionaux Windows (LCID) de la langue.|  
 |**nom**|**sysname**|Représente la valeur de l’alias dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondant à la valeur de **lcid** ou la représentation sous forme de chaîne du LCID numérique.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
@@ -48,8 +50,8 @@ ms.lasthandoff: 11/17/2017
 |Language|LCID|  
 |--------------|----------|  
 |Arabe|1025|  
-|Bengali (Inde)|1093|  
-|Anglais britannique|2057|  
+|Bengali (India)|1093|  
+|British English|2057|  
 |Bulgare|1026|  
 |Catalan|1027|  
 |Chinois (Hong Kong R.A.S., RPC)|3076|  
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |Anglais|1033|  
 |Français|1036|  
 |Allemand|1031|  
-|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Grec|1032|  
+|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
 |Goudjrati|1095|  
 |Hébreu|1037|  
 |Hindi|1081|  
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 |Marathe|1102|  
 |Neutre|0|  
 |Norwegian (Bokmål)|1044|  
-|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polonais|1045|  
+|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polonais|1045|  
 |Portuguese (Brazil)|1046|  
 |Portuguese (Portugal)|2070|  
 |Pendjabi|1094|  
@@ -96,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |Télougou|1098|  
 |Thaïlandais|1054|  
 |Chinois traditionnel|1028|  
-|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Turc|1055|  
+|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Turc|1055|  
 |Ukrainien|1058|  
 |Ourdou|1056|  
 |Vietnamien|1066|  
@@ -104,11 +106,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Notes  
  Pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral, utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_fulltext_load_thesaurus_file &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer des fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

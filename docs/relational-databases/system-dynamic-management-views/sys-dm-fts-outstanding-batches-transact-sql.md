@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.dm_fts_outstanding_batches dynamic management view
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab9d21dfa1c3aefb34f59dde7d4af5141e483682
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 06490fd099957c3636f05dcfe4e8f0ba9deab8d3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |catalog_id|**int**|ID du catalogue de texte intégral|  
 |table_id|**int**|ID de l'ID de table qui contient l'index de texte intégral|  
 |batch_id|**int**|ID de lot|  
-|memory_address|**varbinary (8)**|Adresse mémoire de l'objet de lot|  
-|crawl_memory_address|**varbinary (8)**|Adresse mémoire de l'objet d'analyse (objet parent)|  
-|memregion_memory_address|**varbinary (8)**|Adresse mémoire de la région mémoire de la mémoire de partage sortante de l'hôte de démon de filtre (fdhost.exe)|  
+|memory_address|**varbinary(8)**|Adresse mémoire de l'objet de lot|  
+|crawl_memory_address|**varbinary(8)**|Adresse mémoire de l'objet d'analyse (objet parent)|  
+|memregion_memory_address|**varbinary(8)**|Adresse mémoire de la région mémoire de la mémoire de partage sortante de l'hôte de démon de filtre (fdhost.exe)|  
 |hr_batch|**int**|Code d'erreur le plus récent pour le lot|  
 |is_retry_batch|**bit**|Indique s'il s'agit d'une nouvelle tentative de lot :<br /><br /> 0 = Non<br /><br /> 1 = Oui|  
 |retry_hints|**int**|Type de nouvelle tentative nécessaire pour le lot :<br /><br /> 0 = pas de nouvelle tentative<br /><br /> 1 = nouvelle tentative multithread<br /><br /> 2 = nouvelle tentative à thread unique<br /><br /> 3 = nouvelle tentative à thread unique et multithread<br /><br /> 5 = dernière tentative multithread<br /><br /> 6 = dernière tentative à thread unique<br /><br /> 7 = dernière tentative à thread unique et multithread|  
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |doc_failed|**bigint**|Nombre de documents ayant échoué dans le lot|  
 |batch_timestamp|**timestamp**|Valeur d'horodatage obtenue lorsque le lot a été créé|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_nodes (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_nodes_TSQL
 - dm_os_nodes
 - sys.dm_os_nodes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cf36f7156f9297231fc232e8fecafee5e77427c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +45,10 @@ ms.lasthandoff: 11/17/2017
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Identificateur du nœud.|  
-|node_state_desc|**nvarchar (256)**|Description de l'état du nœud. Les valeurs sont affichées avec, en premier, les valeurs qui s'excluent mutuellement, suivies par les valeurs pouvant être associées. Exemple :<br /><br /> En ligne, Ressources de thread réduites, Préemptif différé<br /><br /> Il existe quatre valeurs node_state_desc qui s’excluent mutuellement. Ils sont répertoriés ci-dessous avec leurs descriptions.<br /><br /> En ligne : Le nœud est en ligne<br /><br /> En mode hors connexion : Nœud est hors connexion<br /><br /> INACTIF : Nœud n’a aucune demande en attente de travail et a entré un état inactif.<br /><br /> IDLE_READY : Nœud n’a pas de demandes de travail en attente et est prêt à entrer dans un état inactif.<br /><br /> Il existe cinq valeurs node_state_desc pouvant être associées, répertoriées ci-dessous, avec leurs descriptions.<br /><br /> DAC : Ce nœud est réservé à la connexion d’administration dédiée.<br /><br /> THREAD_RESOURCES_LOW : Aucun nouveau thread ne peut être créés sur ce nœud en raison d’une condition de mémoire insuffisante.<br /><br /> AJOUT à chaud : Indique les nœuds ont été ajoutés en réponse à un accès rapide Ajouter des événements de l’UC.|  
-|memory_object_address|**varbinary (8)**|Adresse de l'objet mémoire associé à ce nœud. Relation un-à-un à sys.dm_os_memory_objects.memory_object_address.|  
-|memory_clerk_address|**varbinary (8)**|Adresse du régisseur de mémoire associé à ce nœud. Relation un-à-un à sys.dm_os_memory_clerks.memory_clerk_address.|  
-|io_completion_worker_address|**varbinary (8)**|Adresse du thread de travail assigné à l'achèvement d'E/S pour ce nœud. Relation un-à-un à sys.dm_os_workers.worker_address.|  
+|node_state_desc|**nvarchar (256)**|Description de l'état du nœud. Les valeurs sont affichées avec, en premier, les valeurs qui s'excluent mutuellement, suivies par les valeurs pouvant être associées. Par exemple :<br /><br /> En ligne, Ressources de thread réduites, Préemptif différé<br /><br /> Il existe quatre valeurs node_state_desc qui s’excluent mutuellement. Ils sont répertoriés ci-dessous avec leurs descriptions.<br /><br /> En ligne : Le nœud est en ligne<br /><br /> En mode hors connexion : Nœud est hors connexion<br /><br /> INACTIF : Nœud n’a aucune demande en attente de travail et a entré un état inactif.<br /><br /> IDLE_READY : Nœud n’a pas de demandes de travail en attente et est prêt à entrer dans un état inactif.<br /><br /> Il existe cinq valeurs node_state_desc pouvant être associées, répertoriées ci-dessous, avec leurs descriptions.<br /><br /> DAC : Ce nœud est réservé à la connexion d’administration dédiée.<br /><br /> THREAD_RESOURCES_LOW : Aucun nouveau thread ne peut être créés sur ce nœud en raison d’une condition de mémoire insuffisante.<br /><br /> AJOUT à chaud : Indique les nœuds ont été ajoutés en réponse à un accès rapide Ajouter des événements de l’UC.|  
+|memory_object_address|**varbinary(8)**|Adresse de l'objet mémoire associé à ce nœud. Relation un-à-un à sys.dm_os_memory_objects.memory_object_address.|  
+|memory_clerk_address|**varbinary(8)**|Adresse du régisseur de mémoire associé à ce nœud. Relation un-à-un à sys.dm_os_memory_clerks.memory_clerk_address.|  
+|io_completion_worker_address|**varbinary(8)**|Adresse du thread de travail assigné à l'achèvement d'E/S pour ce nœud. Relation un-à-un à sys.dm_os_workers.worker_address.|  
 |memory_node_id|**smallint**|ID du nœud de mémoire auquel ce nœud appartient. Relation plusieurs-à-un à sys.dm_os_memory_nodes.memory_node_id.|  
 |cpu_affinity_mask|**bigint**|Bitmap qui identifie les unités centrales auxquelles ce nœud est associé.|  
 |online_scheduler_count|**smallint**|Nombre de planificateurs en ligne qui sont gérés par ce nœud.|  
@@ -58,9 +61,9 @@ ms.lasthandoff: 11/17/2017
 |online_scheduler_mask|**bigint**|Identifie le masque d'affinité de processus pour ce nœud.|  
 |processor_group|**smallint**|Identifie le groupe de processeurs pour ce nœud.|  
 |cpu_count |**int** |Nombre de processeurs disponibles pour ce nœud. |
-|pdw_node_id|**int**|L’identificateur du nœud qui se trouve sur cette distribution.<br /><br /> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|L’identificateur du nœud qui se trouve sur cette distribution.<br /><br /> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
   

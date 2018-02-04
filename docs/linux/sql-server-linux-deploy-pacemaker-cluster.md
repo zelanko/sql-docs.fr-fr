@@ -3,7 +3,7 @@ title: "Déployer un cluster STIMULATEUR pour SQL Server sur Linux | Documents M
 description: "Ce didacticiel montre comment déployer un cluster STIMULATEUR pour SQL Server sur Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Déployer un cluster STIMULATEUR pour SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce didacticiel décrit les tâches requises pour déployer un cluster Linux STIMULATEUR pour un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] toujours sur le groupe de disponibilité (AG) ou de l’instance de cluster de basculement (FCI). Contrairement à Windows Server étroitement couplé /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pile, la création du cluster STIMULATEUR comme configuration de groupe (AG) de disponibilité sur Linux peut être effectuée avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie STIMULATEUR du déploiement d’un groupe de disponibilité ou ICF est effectuée une fois que le cluster est configuré.
 > [!IMPORTANT]

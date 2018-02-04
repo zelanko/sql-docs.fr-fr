@@ -3,7 +3,7 @@ title: "Toujours sur les groupes de disponibilité pour SQL Server sur Linux | D
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Toujours sur les groupes de disponibilité sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article décrit les caractéristiques des groupes de disponibilité AlwaysOn (groupes de disponibilité) sous basés sur Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installations. Elle traite également des différences entre Linux et le cluster de basculement Windows Server (WSFC)-en fonction des groupes de disponibilité. Consultez le [documentation sur Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) pour les principes fondamentaux de groupes de disponibilité, comme ils fonctionnent de la même sur Windows et Linux à l’exception du cluster WSFC.
 
@@ -53,7 +53,7 @@ Un type de cluster None signifie qu’il n’est pas obligatoire pour, ni le gro
 
 Type de cluster est stocké dans le [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] vue de gestion dynamique (DMV) `sys.availability_groups`, dans les colonnes `cluster_type` et `cluster_type_desc`.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>requis\_synchronisé\_secondaires\_à\_validation
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 Vous débutez avec [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] est un paramètre qui est utilisé par les groupes de disponibilité appelés `required_synchronized_secondaries_to_commit`. Le groupe de disponibilité vous indique le nombre de réplicas secondaires qui doivent être en parallèle avec le réplica principal. Cela permet des éléments tels que le basculement automatique (uniquement lors d’intégrer STIMULATEUR avec un type de cluster d’externes) et contrôle le comportement des éléments comme la disponibilité des principales si le nombre approprié de réplicas secondaires est en ligne ou hors connexion. Pour en savoir plus sur cette procédure, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). Le `required_synchronized_secondaries_to_commit` valeur est la valeur par défaut et gérée par STIMULATEUR /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Vous pouvez substituer manuellement cette valeur.
 

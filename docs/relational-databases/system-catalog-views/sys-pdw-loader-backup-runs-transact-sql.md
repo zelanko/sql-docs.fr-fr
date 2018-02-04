@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ebdadbeeba70444eda300f44480e49fa9992d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bc42a27de363d0c1f3e62a4b3f69b8b9fbb95de
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwloaderbackupruns-transact-sql"></a>Sys.pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur la sauvegarde en cours et terminée et les opérations de restauration dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], ainsi que sur la sauvegarde en cours et terminée, restaurer et opérations de chargement dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Les informations sont conservées entre les redémarrages du système.  
@@ -37,8 +39,8 @@ ms.lasthandoff: 11/17/2017
 |start_time|**datetime**|Heure à laquelle l'opération a commencé.||  
 |end_time|**datetime**|Heure de l’opération terminée, a échoué ou a été annulée.||  
 |total_elapsed_time|**int**|Temps total écoulé entre start_time et l’heure actuelle, ou entre start_time et heure_fin pour terminée, annulée ou qui ont échoué exécute.|Si total_elapsed_time dépasse la valeur maximale pour un entier (24.8 jours en millisecondes), cela entraînera l’échec de matérialisation en raison d’un dépassement de capacité.<br /><br /> La valeur maximale, en millisecondes est équivalente à 24.8 jours.|  
-|type_opération|**nvarchar(16)**|Le type de charge.|« BACKUP », « CHARGEMENT', 'RESTORE'|  
-|mode|**nvarchar(16)**|Le mode dans le type d’exécution.|Pour type_opération = **sauvegarde**<br />**SAUVEGARDE DIFFÉRENTIELLE**<br />**FULL**<br /><br /> Pour type_opération = **charge**<br />**AJOUTER**<br />**RECHARGER**<br />**UPSERT**<br /><br /> Pour type_opération = **restaurer**<br />**DATABASE**<br />**HEADER_ONLY**|  
+|operation_type|**nvarchar(16)**|Le type de charge.|« BACKUP », « CHARGEMENT', 'RESTORE'|  
+|mode|**nvarchar(16)**|Le mode dans le type d’exécution.|Pour type_opération = **sauvegarde**<br />**SAUVEGARDE DIFFÉRENTIELLE**<br />**FULL**<br /><br /> Pour type_opération = **charge**<br />**APPEND**<br />**RELOAD**<br />**UPSERT**<br /><br /> Pour type_opération = **restaurer**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Nom de la base de données qui est le contexte de cette opération||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID de l’utilisateur qui demande l’opération.||  

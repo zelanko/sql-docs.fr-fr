@@ -3,7 +3,7 @@ title: SQL Server sur Linux FAQ | Documents Microsoft
 description: "Cet article fournit des réponses aux questions fréquemment posées sur SQL Server en cours d’exécution sur Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: eb12be6910b669b3fbc60c8846f102f2e77fc955
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 2da90e6cdf49531980e9014075d7b094b61271fd
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server sur Linux Forum aux Questions (FAQ)
 

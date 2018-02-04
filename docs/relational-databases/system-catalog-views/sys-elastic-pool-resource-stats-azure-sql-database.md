@@ -8,27 +8,30 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: Azure SQL Database
-f1_keywords: sys.elastic_pool_resource_stats catalog view
+applies_to:
+- Azure SQL Database
+f1_keywords:
+- sys.elastic_pool_resource_stats catalog view
 helpviewer_keywords:
 - sys.elastic_pool_resource_stats_TSQL
 - sys.elastic_pool_resource_stats
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9505470a81f88e457a8b2f0b9429cee60cef7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (de base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,22 +44,22 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**heure_début**|**datetime2**|Heure UTC indiquant le début de l’intervalle de rapports de 15 secondes.|  
-|**heure_fin**|**datetime2**|Heure UTC indiquant la fin de l’intervalle de rapports de 15 secondes.|  
-|**elastic_pool_name**|**nvarchar (128)**|Nom du pool élastique de base de données.|  
-|**avg_cpu_percent**|**Decimal(5,2)**|Utilisation de calcul moyenne en pourcentage de la limite du pool.|  
-|**avg_data_io_percent**|**Decimal(5,2)**|Utilisation d’e/s moyenne en pourcentage de la limite du pool.|  
-|**avg_log_write_percent**|**Decimal(5,2)**|L’utilisation des ressources d’écriture moyenne en pourcentage de la limite du pool.|  
-|**avg_storage_percent**|**Decimal(5,2)**|Moyenne de l’utilisation du stockage en pourcentage de la limite de stockage du pool.|  
-|**max_worker_percent**|**Decimal(5,2)**|Traitements simultanés maximales (demandes) en pourcentage de la limite du pool.|  
-|**max_session_percent**|**Decimal(5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite du pool.|  
+|**start_time**|**datetime2**|Heure UTC indiquant le début de l’intervalle de rapports de 15 secondes.|  
+|**end_time**|**datetime2**|Heure UTC indiquant la fin de l’intervalle de rapports de 15 secondes.|  
+|**elastic_pool_name**|**nvarchar(128)**|Nom du pool élastique de base de données.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Utilisation de calcul moyenne en pourcentage de la limite du pool.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Utilisation d’e/s moyenne en pourcentage de la limite du pool.|  
+|**avg_log_write_percent**|**decimal(5,2)**|L’utilisation des ressources d’écriture moyenne en pourcentage de la limite du pool.|  
+|**avg_storage_percent**|**decimal(5,2)**|Moyenne de l’utilisation du stockage en pourcentage de la limite de stockage du pool.|  
+|**max_worker_percent**|**decimal(5,2)**|Traitements simultanés maximales (demandes) en pourcentage de la limite du pool.|  
+|**max_session_percent**|**decimal(5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite du pool.|  
 |**elastic_pool_dtu_limit**|**int**|Max pool élastique DTU paramètre actuel de ce pool élastique pendant cet intervalle.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Limite de stockage maximale du pool élastique actuelle définition pour ce pool élastique en mégaoctets pendant cet intervalle.|  
   
 ## <a name="remarks"></a>Notes  
  Cette vue existe dans la base de données master du serveur logique. Vous devez être connecté à la base de données master pour la requête **sys.elastic_pool_resource_stats**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **dbmanager** rôle.  
   
 ## <a name="examples"></a>Exemples  
@@ -81,7 +84,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>Voir aussi  
  [Réduire croissance des bases de données élastiques](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [Créer et gérer un pool élastique de base de données SQL (version préliminaire)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [Sys.resource_stats &#40; Base de données SQL Azure &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Sys.dm_db_resource_stats &#40; Base de données SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

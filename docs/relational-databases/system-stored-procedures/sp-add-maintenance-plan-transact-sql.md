@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (Transact-SQL) | Documents Microsoft
+title: sp_add_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan
 - sp_add_maintenance_plan_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_maintenance_plan
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed1cd1c66e277e9705a89b07cee5e6564455040d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 44a663e97610514204c6209c13be4d515197af33
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@plan_name =**] **'***plan_name***'**  
+ [ **@plan_name =**] **'***plan_name***'**  
  Indique le nom du plan de maintenance à ajouter. *plan_name* est **varchar (128)**.  
   
- **@plan_id= '** *plan_id* **'**  
+ **@plan_id = '** *plan_id* **'**  
  Spécifie l'identificateur du plan de maintenance. *plan_id* est **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -61,7 +64,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="remarks"></a>Notes  
  **sp_add_maintenance_plan** doit être exécuté à partir de la **msdb** de base de données et crée un plan de maintenance de nouveau, mais il est vide. Pour ajouter une ou plusieurs bases de données et les associer à un ou plusieurs travaux, exécutez **sp_add_maintenance_plan_db** et **sp_add_maintenance_plan_job**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemples  

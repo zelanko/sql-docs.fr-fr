@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: sql-database
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,21 +16,22 @@ f1_keywords:
 - slo_assignment_history
 - slo_assignment_history_TSQL
 - dbo.slo_assignment_history_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.slo_assignment_history
 - slo_assignment_history
 ms.assetid: 048a6fb5-2fc2-4d12-a436-4c53ecd413f3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 61bab47646d1acff9edcfbf461588b3560916acd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,17 +50,17 @@ ms.lasthandoff: 12/21/2017
   
 -   Toutes les erreurs d'affectation de SLO qui sont enregistrées dans les colonnes error_code et error_desc.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Nom de la base de données.|  
-|database_id|**Int**|ID de la base de données.|  
+|database_id|**int**|ID de la base de données.|  
 |create_date|**datetimeoffset(7)**|Date de création de la base de données.|  
 |service_objective_name|**sysname**|Nom de l'objectif de niveau de service (SLO).|  
 |service_objective_id|**uniqueidentifier**|ID de l'objectif SLO.|  
 |operation_id|**uniqueidentifier**|ID de l'opération.|  
 |operation_start_time|**datetimeoffset(7)**|Heure de début de la demande de modification de SLO de la base de données.|  
 |operation_end_time|**datetimeoffset(7)**|Heure de fin de la demande de modification de SLO de la base de données.|  
-|error_code|**Int**|Code d'erreur de la demande de modification de SLO de la base de données.|  
+|error_code|**int**|Code d'erreur de la demande de modification de SLO de la base de données.|  
 |error_desc|**nvarchar**|Description de l'erreur dans la demande de modification de SLO de la base de données.|  
   
 ## <a name="permissions"></a>Autorisations  
