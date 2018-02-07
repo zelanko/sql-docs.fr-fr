@@ -8,24 +8,27 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: OLE Automation [SQL Server], examples
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99b9e3c7e3bd0e75e80418f26cfbc9f9bafb8562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d2a76d1009cede00b373eac16b143743332d8fe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-sample-script"></a>Exemple de script OLE Automation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique contient un exemple de lot d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui utilise les procédures stockées OLE Automation pour créer et utiliser un objet SQL-DMO SQLServer dans l’instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Certains extraits du code sont utilisés comme exemples dans les rubriques de référence des procédures stockées système OLE Automation.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Cette rubrique contient un exemple de lot d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui utilise les procédures stockées OLE Automation pour créer et utiliser un objet SQL-DMO SQLServer dans l’instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Certains extraits du code sont utilisés comme exemples dans les rubriques de référence des procédures stockées système OLE Automation.  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +146,7 @@ RETURN;
 GO  
 ```  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Objets OLE Automation dans Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  

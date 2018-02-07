@@ -8,24 +8,27 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: format files [SQL Server], creating
+helpviewer_keywords:
+- format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e4eb0b49bbf52926536293cf26cd47046329abaf
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 39e7e7d14ab96b696ac5b849b413544f1de24c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Lorsque vous importez des données en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou exportez en bloc des données à partir d’une table, utilisez un fichier de format pour un système souple afin d’écrire des fichiers de données nécessitant peu ou pas d’édition pour la conformité aux autres formats de données, ou de lire des fichiers de données provenant d’autres logiciels.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Lorsque vous importez des données en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données à partir d'une table, utilisez un fichier de format vers un système souple pour l'écriture de fichiers de données nécessitant peu ou pas d'édition pour la conformité aux autres formats de données ou pour la lecture des fichiers de données provenant d'autres logiciels.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichier de format : format XML et format non-XML. Le format non-XML est le format d'origine pris en charge dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

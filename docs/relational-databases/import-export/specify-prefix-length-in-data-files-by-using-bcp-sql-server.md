@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d649216f87a35c21430cd2d9b16bd4a4085b485
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: cf8736be942f9edd7c23da9f7acf6191b6eab625
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Demande de longueur de préfixe par la commande bcp  
  Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), la commande demande la longueur de préfixe de chaque champ de données, comme suit :  

@@ -20,16 +20,17 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c3ee049fdaaee08c9e1e3cf698a52ac8950afef
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit un schéma XML qui définit la syntaxe des *fichiers de format XML* à utiliser pour l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fichiers de format XML doivent respecter ce schéma, qui est défini en langage XSDL (XML Schema Definition Language). Les fichiers de format XML ne sont pris en charge que si les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés conjointement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit un schéma XML qui définit la syntaxe des *fichiers de format XML* à utiliser pour l'importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les fichiers de format XML doivent respecter ce schéma, qui est défini en langage XSDL (XML Schema Definition Language). Les fichiers de format XML ne sont pris en charge que si les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés conjointement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Vous pouvez utiliser un fichier de format XML avec une commande **bcp**, une instruction BULK INSERT ou une instruction INSERT... Instruction SELECT \* FROM OPENROWSET(BULK...). La commande **bcp** vous permet de générer automatiquement un fichier de format XML pour une table. Pour plus d’informations, voir [bcp Utility](../../tools/bcp-utility.md).  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cadbf946728917df5cef464ab75c96b412f931f4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 9cfbcd4fe05f6c9ab00227990793d045ab442d12
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
   

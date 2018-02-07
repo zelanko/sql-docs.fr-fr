@@ -8,26 +8,28 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a691fe8063a6cfd62d8be010acf34244bd4d671
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il est recommandé d’utiliser le format natif lorsque vous transférez des données en bloc entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen d’un fichier de données qui ne contient pas de caractères appartenant à un jeu de caractères étendus/codés sur deux octets (DBCS).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Il est recommandé d'utiliser le format natif lorsque vous transférez des données en bloc entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen d'un fichier de données qui ne contient pas de caractères appartenant à un jeu de caractères étendus/codés sur deux octets (DBCS).  
 
 > [!NOTE]
 >  Pour transférer des données en bloc entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen d'un fichier de données qui contient des caractères appartenant à un jeu de caractères étendus/codés sur deux octets, utilisez de préférence le format natif Unicode. Pour plus d’informations, consultez [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).

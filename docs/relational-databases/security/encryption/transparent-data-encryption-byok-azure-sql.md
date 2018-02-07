@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
-ms.date: 11/15/2017
+ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 5621bbaf20f30371ffabafddc0520dd15b8e4723
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de la fonctionnalité BYOK (préversion) pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 
 ## <a name="guidelines-for-configuring-tde-with-byok"></a>Instructions de configuration de TDE pour BYOK
 
-### <a name="general-guidelines"></a>Instructions générales
+### <a name="general-guidelines"></a>Règles générales
 - Vérifiez qu’Azure Key Vault et Azure SQL Database sont dans le même locataire.  Les interactions entre coffre de clés et serveur qui sont dans des locataires différents **ne sont pas prises en charge**.
 
 - Décidez des abonnements qui vont être utilisés pour les ressources requises. Si par la suite vous déplacez le serveur parmi les abonnements, vous devrez réinstaller TDE avec des clés BYOK.
@@ -82,7 +82,7 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 
 ### <a name="guidelines-for-configuring-the-tde-protector-asymmetric-key-stored-in-azure-key-vault"></a>Instructions de configuration du protecteur TDE (clé asymétrique) stocké dans Azure Key Vault
 
-- Créez votre clé de chiffrement localement sur un appareil HSM local. Vérifiez qu’il s’agit d’une clé RSA 2048 bits asymétrique, et donc stockable dans Azure Key Vault.
+- Créer votre clé de chiffrement localement sur un appareil HSM local. Vérifiez qu’il s’agit d’une clé RSA 2048 bits asymétrique, et donc stockable dans Azure Key Vault.
 - Déposez la clé dans un système de dépôt de clés.  
 - Importez le fichier de clé de chiffrement (.pfx, .byok ou .backup) dans Azure Key Vault. 
     

@@ -8,24 +8,26 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: views [SQL Server], about views
+helpviewer_keywords:
+- views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0606a99500fcc797b00988664951137c01e0d40d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ba650c638d855556ec2afe992f26ff3f6ad2460
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="views"></a>Vues
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Une vue est une table virtuelle dont le contenu est défini par une requête. À l'instar d'une table, une vue est un ensemble de colonnes et de lignes nommées de données. À moins d'être indexée, elle n'existe pas en tant qu'ensemble de valeurs de données stocké dans une base de données. Les lignes et les colonnes de données proviennent de tables référencées dans la requête qui définit la vue et sont produites dynamiquement lorsque la vue est référencée.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Une vue est une table virtuelle dont le contenu est défini par une requête. À l'instar d'une table, une vue est un ensemble de colonnes et de lignes nommées de données. À moins d'être indexée, elle n'existe pas en tant qu'ensemble de valeurs de données stocké dans une base de données. Les lignes et les colonnes de données proviennent de tables référencées dans la requête qui définit la vue et sont produites dynamiquement lorsque la vue est référencée.  
   
  Une vue fait office de filtre sur les tables sous-jacentes qui y sont référencées. La requête qui définit la vue peut émaner d'une ou de plusieurs tables ou d'autres vues de la base de données en cours ou d'autres bases de données. Les requêtes distribuées peuvent également être employées pour définir des vues qui utilisent des données provenant de plusieurs sources hétérogènes. Cela est particulièrement utile si vous souhaitez combiner des données de structure similaire issues de différents serveurs, chacun hébergeant des données relatives à une région différente de votre organisation.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |Explique comment retourner des informations sur une vue comme la définition de la vue.|[Obtenir des informations au sujet d’une vue](../../relational-databases/views/get-information-about-a-view.md)|  
 |Explique comment renommer une vue.|[Renommer des vues](../../relational-databases/views/rename-views.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer des vues sur les colonnes XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a7a6c256b102c43decf8cc003ce2ceae808e621
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: f886fae083af54f2d6eb619b215330921f2e1d2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importation et exportation en bloc de données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée. 
   
 -   L'*exportation en bloc* consiste à copier des données d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données.
 
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux genres de fichiers de format : XML et non-XML.  
   
- L’ [utilitaire bcp](../../tools/bcp-utility.md) est le seul outil capable de générer un fichier de format. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Pour plus d’informations sur les fichiers de format, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+ L’[utilitaire bcp](../../tools/bcp-utility.md) est le seul outil capable de générer un fichier de format. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md). Pour plus d’informations sur les fichiers de format, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 > [!NOTE]
 > Si, à l'occasion d'une opération d'exportation ou d'importation en bloc, aucun fichier de format n'est fourni, vous pouvez choisir de remplacer le formatage par défaut via la ligne de commande.

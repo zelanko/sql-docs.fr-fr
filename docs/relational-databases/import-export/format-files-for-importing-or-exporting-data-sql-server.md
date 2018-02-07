@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dbc0e4d2b87b277479796aa99235dc1f47921db6
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 68184c18cc03daf8798d62c819ef0866f7d592b7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Fichiers de format pour l'importation ou l'exportation de données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Lorsque vous importez en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données depuis une table, utilisez un *fichier de format* pour stocker toutes les informations de format nécessaires à l’exportation ou l’importation en bloc des données. Cela inclut les informations de format pour chaque champ dans un fichier de données relatif à cette table.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Lorsque vous importez en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données depuis une table, utilisez un *fichier de format* pour stocker toutes les informations de format nécessaires à l'exportation ou l'importation en bloc des données. Cela inclut les informations de format pour chaque champ dans un fichier de données relatif à cette table.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : XML et non XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   

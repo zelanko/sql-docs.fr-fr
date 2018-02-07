@@ -22,16 +22,17 @@ ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5c79f8e898fd3ec5a70e98c7e34daef5180fb0a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l'aide de bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données correspondant à son type de table de base de données (format natif), dans sa représentation caractère (format caractère) ou en tant que tout type de données pour lequel la conversion implicite est prise en charge, par exemple, en copiant un type de données **smallint** comme **int**. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données correspondant à son type de table de base de données (format natif), dans sa représentation caractère (format caractère) ou en tant que tout type de données pour lequel la conversion implicite est prise en charge, par exemple, en copiant un type de données **smallint** comme **int**. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Invite bcp pour le type de stockage de fichier  
  Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), la commande demande le type de stockage de fichiers de chaque champ de données, comme suit :  

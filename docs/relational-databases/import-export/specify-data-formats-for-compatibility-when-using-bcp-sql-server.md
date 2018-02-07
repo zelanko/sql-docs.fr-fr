@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c373de30a62be5afa38398bbd7bc4d55ebf45d25
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: af46687cb2c5d387063dc86fa0373b8262b74ca9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les attributs de format de données, les invites spécifiques aux champs et le stockage des données champ par champ dans un fichier de format non XML de la commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp**. La compréhension de ces notions peut être utile lorsque vous exportez des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc à des fins d'importation en bloc dans un autre programme, tel qu'un autre programme de base de données. Les formats de données par défaut (natif, caractère ou Unicode) dans la table source peuvent être incompatibles avec la disposition des données attendue par l'autre programme. S'il existe une discordance lorsque vous exportez les données, vous devez décrire la disposition des données.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Cette rubrique décrit les attributs de format de données, les invites spécifiques aux champs et le stockage des données champ par champ dans un fichier de format non-XML de la commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** . La compréhension de ces notions peut être utile lorsque vous exportez des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en bloc à des fins d'importation en bloc dans un autre programme, tel qu'un autre programme de base de données. Les formats de données par défaut (natif, caractère ou Unicode) dans la table source peuvent être incompatibles avec la disposition des données attendue par l'autre programme. S'il existe une discordance lorsque vous exportez les données, vous devez décrire la disposition des données.  
   
 > [!NOTE]  
 >  Si vous ne maîtrisez pas les formats de données pour l’importation ou l’exportation de données, consultez [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md).  

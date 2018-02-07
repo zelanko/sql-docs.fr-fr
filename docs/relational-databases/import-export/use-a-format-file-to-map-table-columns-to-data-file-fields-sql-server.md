@@ -8,26 +8,28 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a1bf24416a17e5e6b13b09b35a640aa7a56bcf9
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 238bde9c0928554b38c0f7411cf29863d6f17019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utiliser un fichier de format pour mapper les colonnes d'une table aux champs d'un fichier de données (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il se peut que les champs d’un fichier de données ne soient pas dans le même ordre que les colonnes correspondantes présentes dans la table. Cette rubrique présente les fichiers de format XML et non-XML ayant été modifiés de sorte à accepter un fichier de données dont les champs sont organisés dans un ordre différent de celui des colonnes de la table correspondante. Le fichier de format modifié permet de mapper les champs de données sur les colonnes correspondantes de la table.  Veuillez consulter [Créer un fichier de format (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) pour plus d’informations.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Il se peut que les champs d'un fichier de données ne soient pas dans le même ordre que les colonnes correspondantes présentes dans la table. Cette rubrique présente les fichiers de format XML et non-XML ayant été modifiés de sorte à accepter un fichier de données dont les champs sont organisés dans un ordre différent de celui des colonnes de la table correspondante. Le fichier de format modifié permet de mapper les champs de données sur les colonnes correspondantes de la table.  Veuillez consulter [Créer un fichier de format (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) pour plus d’informations.
 
 |Contour|
 |---|

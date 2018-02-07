@@ -8,10 +8,12 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.viewproperties.general.f1
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
 helpviewer_keywords:
 - views [SQL Server], status information
 - metadata [SQL Server], views
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - status information [SQL Server], views
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af43ce48156e6e233159b19c608324edcb17205e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfbfda8cf3759f89bf2b0f8ae43257e64e82c779
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Vous pouvez obtenir des informations sur la définition ou les propriétés d’une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la vue pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la vue.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Vous pouvez obtenir des informations sur la définition ou les propriétés d'une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la vue pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la vue.  
   
 > [!IMPORTANT]  
 >  Si vous modifiez le nom d'un objet auquel une vue fait référence, vous devez modifier la vue pour que son texte reflète le nouveau nom de l'objet. Dès lors, avant de renommer un objet, affichez ses dépendances afin de déterminer si les vues sont affectées par la modification envisagée.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  L'utilisation de `sp_helptext` pour retourner la définition d'une vue nécessite l'appartenance au rôle **public** . L'utilisation de `sys.sql_expression_dependencies` pour rechercher toutes les dépendances d'une vue nécessite l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur `sys.sql_expression_dependencies` pour la base de données. Les définitions d'objets système, telles que celles retournées dans SELECT OBJECT_DEFINITION, sont visibles publiquement.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Propriétés de la vue** .  
   
-     **Base de données**  
+     **Sauvegarde de la base de données**  
      Nom de la base de données contenant cette vue.  
   
      **Server**  
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/17/2017
      **(Nom)**  
      Nom de la vue actuelle.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Nom de la base de données contenant cette vue.  
   
      **Description**  

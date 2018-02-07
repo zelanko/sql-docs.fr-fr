@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], result sets
 - arrays [SQL Server]
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baef4873acc75daecf116f482cb1e1401015e82a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 905993b308116f12259c5d0b47c0c3094514d735
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-result-sets"></a>Jeux de résultats OLE Automation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si une propriété ou une méthode OLE Automation retourne des données dans un tableau à une ou deux dimensions, ce tableau est retourné au client sous la forme d’un jeu de résultats :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Si une propriété ou une méthode OLE Automation retourne des données dans un tableau à une ou deux dimensions, ce tableau est retourné au client sous la forme d'un jeu de résultats :  
   
 -   Un tableau à une dimension est retourné au client sous la forme d'un jeu de résultats d'une seule ligne avec autant de colonnes qu'il y a d'éléments dans le tableau. Par exemple, array(10) est retourné sous la forme d'une seule ligne de 10 colonnes.  
   
@@ -43,15 +45,15 @@ ms.lasthandoff: 11/17/2017
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||**int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
-|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+||**Int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
+|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Procédures stockées OLE Automation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
  [Procédures OLE Automation (option de configuration de serveur)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  

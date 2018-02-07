@@ -22,16 +22,17 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e2f902b7afaadf936102b90c542d97d5450c7995
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans le cas de champs de données caractères, des caractères facultatifs de fin vous permettent d’indiquer la fin de chaque champ inclus dans un fichier de données par une *marque de fin de champ*, et la fin de chaque ligne par une *marque de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
   
 > [!IMPORTANT]  
 >  Lorsque vous utilisez le format natif ou natif Unicode, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent en effet entrer en conflit avec les indicateurs de fin, car les fichiers de données sont stockés au format de données binaire interne de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

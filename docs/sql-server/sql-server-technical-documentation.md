@@ -11,7 +11,8 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.portal.f1
+f1_keywords:
+- sql13.portal.f1
 helpviewer_keywords:
 - documentation [SQL Server], home page
 - Help [SQL Server]
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15e4d0a993dbc4b97413f94ccdb2620fc2baf24a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-documentation"></a>Documentation SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +57,8 @@ SQL Server est un élément central de la plateforme de données Microsoft. SQL 
     
 |||    
 |-|-|    
-|![Moteur de base de données SQL](../sql-server/media/sql-database-engine.png "Moteur de base de données SQL")|**[Moteur de base de données](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> Le moteur de base de données est un service central qui permet de stocker, traiter et sécuriser les données. Il fournit des accès contrôlés et des traitements de transactions rapides pour répondre aux besoins des applications les plus gourmandes en données utilisées au sein des entreprises. Il offre également les fonctions nécessaires pour faire face à des besoins de haute disponibilité.|
-|![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme permettant de créer des solutions d’intégration de données à hautes performances, y compris des packages qui autorisent les processus d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données.|    
+|![Moteur de base de données SQL](../sql-server/media/sql-database-engine.png "Moteur de base de données SQL")|**[Moteur de base de données](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Le moteur de base de données est un service central qui permet de stocker, traiter et sécuriser les données. Il fournit des accès contrôlés et des traitements de transactions rapides pour répondre aux besoins des applications les plus gourmandes en données utilisées au sein des entreprises. Il offre également les fonctions nécessaires pour faire face à des besoins de haute disponibilité.|
+|![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme permettant de créer des solutions d'intégration de données à hautes performances, y compris des packages qui autorisent les processus d'extraction, de transformation et de chargement (ETL) pour l'entreposage de données.|    
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] est une plateforme de données analytiques et un ensemble d'outils dédié au décisionnel personnel, en équipe et en entreprise. Les serveurs et concepteurs de clients prennent en charge des solutions OLAP traditionnelles, de nouvelles solutions de modélisation tabulaire, ainsi que des fonctionnalités d’analyse et de collaboration en libre-service grâce à [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], à Excel et à un environnement de serveur SharePoint. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] propose également l’exploration des données pour que vous puissiez découvrir les modèles et relations masqués à l’intérieur de grands volumes de données.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services fournit des fonctionnalités web de création de rapports d’entreprise.  Vous pouvez créer des rapports qui extraient du contenu de sources de données très diverses, publier des rapports dans différents formats et gérer de façon centralisée la sécurité et les abonnements.|
 |![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning Services prend en charge l’intégration de la technologie Machine Learning, à l’aide des langages R et Python populaires, dans les workflows d’entreprise.<br /><br /> Machine Learning Services (dans la base de données) intègre R et Python à SQL Server, ce qui permet de générer, reformer et évaluer facilement les modèles en appelant des procédures stockées.  Microsoft Machine Learning Server fournit la prise en charge de R et Python à l’échelle de l’entreprise, sans nécessiter SQL Server.|
