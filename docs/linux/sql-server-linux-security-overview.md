@@ -27,14 +27,14 @@ ms.lasthandoff: 11/20/2017
 
 Actuellement, SQL Server sur Linux a les limitations suivantes :
 
-* Une stratégie de mot de passe standard est fournie. La seule option que vous pouvez configurer l’option MUST_CHANGE a.  
-* Gestion de clés extensible n’est pas pris en charge. 
-* À l’aide des clés stockées dans le coffre de clés Azure n’est pas pris en charge.
-* SQL Server génère son propre certificat auto-signé pour le chiffrement des connexions. Actuellement, SQL Server ne peut pas être configuré pour utiliser un utilisateur de certificat pour SSL ou TLS. 
+* Une stratégie de mot de passe standard est fournie. La seule option que vous pouvez configurer est l’option MUST_CHANGE.  
+* La gestion de clés extensible (EKM) n’est pas prise en charge. 
+* Le stockage des clés dans Azure Key Vault n’est pas pris en charge.
+* SQL Server génère son propre certificat auto-signé pour sécuriser le processus de connexion. Pour SSL ou TLS, SQL Server peut être configuré pour utiliser un certificat fourni par l'utilisateur. 
 
 Pour plus d’informations sur les fonctionnalités de sécurité disponibles dans SQL Server, consultez le [centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour les tâches de sécurité courantes, consultez [prise en main des fonctionnalités de sécurité de SQL Server sur Linux](sql-server-linux-security-get-started.md).   
-Pour obtenir un script modifier le protocole TCP numéro de port, les répertoires de SQL Server et configurer des traceflags ou le classement, consultez [configurer SQL Server sur Linux avec mssql-conf](sql-server-linux-configure-mssql-conf.md).
+Pour obtenir un script pour modifier numéro de port TCP, les répertoires de SQL Server et configurer des traceflags ou le classement, consultez [configurer SQL Server sur Linux avec mssql-conf](sql-server-linux-configure-mssql-conf.md).
