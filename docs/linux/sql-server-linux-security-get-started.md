@@ -1,5 +1,5 @@
 ---
-title: "Prise en main la sécurité SQL Server sur Linux | Documents Microsoft"
+title: "Prise en main de la sécurité SQL Server sur Linux | Documents Microsoft"
 description: "Cette rubrique décrit les actions de sécurité standard."
 author: BYHAM
 ms.author: rickbyh
@@ -23,24 +23,24 @@ ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
 
-Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais elle permet de vous donner une idée des zones pour approfondir vos recherches. Dans chaque exemple, un lien est fourni à la documentation détaillée de cette zone.
+Si vous êtes un utilisateur Linux pour qui SQL Server est une nouveauté, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais cela permet de vous donner une idée des domaines à approfondir. Dans chaque exemple, un lien est fourni, menant à la documentation détaillée pour ce domaine.
 
 >  [!NOTE]
->  Les exemples suivants utilisent le **AdventureWorks2014** base de données exemple. Pour obtenir des instructions sur la façon d’obtenir et installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
+>  Les exemples suivants utilisent la base de données exemple **AdventureWorks2014**. Pour obtenir des instructions sur la façon d’obtenir et installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
 
 
 ## <a name="create-a-login-and-a-database-user"></a>Créez une connexion et un utilisateur de base de données 
 
-D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Exemple :
+Accordez l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la commande [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md). Exemple :
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 >  [!NOTE]
->  Utilisez toujours un mot de passe à la place les astérisques ci-dessus.
+>  Utilisez toujours un mot de passe à la place des astérisques ci-dessus.
 
-Comptes de connexion peuvent se connecter à SQL Server et avoir accès (avec des autorisations limitées) à la base de données master. Pour vous connecter à une base de données utilisateur, un compte de connexion a besoin d’une identité correspondante au niveau base de données, appelé utilisateur de base de données. Les utilisateurs sont spécifiques à chaque base de données et doivent être créés séparément dans chaque base de données à leur accorder l’accès. L’exemple suivant vous permet de passer dans la base de données AdventureWorks2014 et utilise ensuite la [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instruction pour créer un utilisateur nommé Larry qui est associé à la connexion nommée Larry. Bien que la connexion et l’utilisateur sont liées (mappé à l’autre), ils sont des objets différents. La connexion est un principe de niveau serveur. L’utilisateur est un principal au niveau de la base de données.
+Les comptes de connexion peuvent se connecter à SQL Server et avoir accès (avec des autorisations limitées) à la base de données master. Pour vous connecter à une base de données utilisateur, un compte de connexion a besoin d’une identité correspondante au niveau base de données, appelé utilisateur de base de données. Les utilisateurs sont spécifiques à chaque base de données et doivent être créés séparément dans chaque base de données pour leur accorder l’accès. L’exemple suivant vous positionne dans la base de données AdventureWorks2014 et utilise ensuite l'instruction [CREATE USER](../t-sql/statements/create-user-transact-sql.md) pour créer un utilisateur nommé Larry qui est associé à la connexion nommée Larry. Bien que la connexion et l’utilisateur soient liées (mappés l'un à l’autre), ce sont des objets différents. La connexion est un principal (entité de sécurité) de niveau serveur. L’utilisateur est un principal (entité de sécurité) au niveau de la base de données.
 
 ```
 USE AdventureWorks2014;
@@ -49,10 +49,10 @@ CREATE USER Larry;
 GO
 ```
 
-- Un compte d’administrateur SQL Server peut se connecter à une base de données et pouvez créer plusieurs connexions et utilisateurs dans une base de données.  
-- Lorsqu’un utilisateur crée une base de données qu’ils deviennent le propriétaire de base de données, ce qui peut se connecter à cette base de données. Les propriétaires de base de données peuvent créer d’autres utilisateurs.
+- Un compte d’administrateur SQL Server peut se connecter à n'importe quelle base de données et peut créer plusieurs connexions et utilisateurs supplémentaires dans une base de données.  
+- Lorsqu’un utilisateur crée une base de données, il en devient le propriétaire, ce qui lui permet de se connecter à cette base de données. Les propriétaires de base de données peuvent créer d’autres utilisateurs.
 
-Ultérieurement, vous pouvez autoriser des connexions pour créer une connexion plus en leur octroyant le `ALTER ANY LOGIN` autorisation. À l’intérieur d’une base de données, vous pouvez autoriser d’autres utilisateurs à créer d’autres utilisateurs en leur octroyant le `ALTER ANY USER` autorisation. Exemple :   
+Ultérieurement, vous pouvez autoriser des connexions à créer des connexions en leur octroyant la permission `ALTER ANY LOGIN`. À l’intérieur d’une base de données, vous pouvez autoriser certains utilisateurs à créer d’autres utilisateurs en leur octroyant la permission `ALTER ANY USER`. Exemple :   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -64,14 +64,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-La connexion Jerry peut créer plusieurs connexions, et l’utilisateur Jerry peuvent créer d’autres utilisateurs.
+La connexion Larry peut créer d'autres connexions, et l’utilisateur Jerry peut créer d’autres utilisateurs.
 
 
 ## <a name="granting-access-with-least-privileges"></a>Octroi d’accès avec des privilèges minimum
 
-Les premiers à se connecter à une base de données utilisateur sera l’administrateur et les comptes de propriétaire de base de données. Toutefois ces utilisateurs ont toutes les autorisations disponibles sur la base de données. Il s’agit plus d’autorisations que la plupart des utilisateurs doivent avoir. 
+Les premières personnes à se connecter à une base de données utilisateur seront l’administrateur et les comptes de propriétaire de base de données. Ces utilisateurs possèdent toutes les autorisations disponibles sur la base de données. C'est plus que la plupart des utilisateurs devraient avoir. 
 
-Lorsque vous êtes novice, vous pouvez attribuer des catégories générales d’autorisations à l’aide de la fonction intégrée *base de données fixe*. Par exemple, le `db_datareader` rôle de base de données fixe peut lire toutes les tables de la base de données, mais n’apportez aucune modification. Accorder une appartenance à un rôle de base de données fixe à l’aide de la [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) instruction. L’exemple suivant ajouter l’utilisateur `Jerry` à la `db_datareader` rôle de base de données fixe.   
+Lorsque vous êtes novice, vous pouvez attribuer des catégories générales d’autorisations à l’aide des *rôles de base de données fixes*. Par exemple, le rôle de base de données fixe `db_datareader` peut lire toutes les tables de la base de données, mais ne peut effectuer aucune modification. Accordez une appartenance à un rôle de base de données fixe à l’aide de l'instruction [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md). L’exemple suivant ajoute l’utilisateur `Jerry` au rôle de base de données fixe `db_datareader`.   
    
 ```   
 USE AdventureWorks2014;   
@@ -80,11 +80,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Pour obtenir la liste des rôles de base de données fixe, consultez [rôles au niveau de la base de données](../relational-databases/security/authentication-access/database-level-roles.md).
+Pour obtenir la liste des rôles de base de données fixes, consultez [rôles au niveau de la base de données](../relational-databases/security/authentication-access/database-level-roles.md).
 
-Ensuite, lorsque vous êtes prêt à configurer l’accès plus précis à vos données (hautement recommandés), créer vos propres rôles de base de données défini par l’utilisateur à l’aide de [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) instruction. Affecter des autorisations granulaires spécifiques à vous des rôles personnalisés.
+Ensuite, lorsque vous êtes prêt à configurer l’accès à vos données de manière plus précise (hautement recommandé), créez vos propres rôles de base de données définis par l’utilisateur à l’aide de l'instruction [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md). Ensuite, octroyez des autorisations granulaires spécifiques à vos rôles personnalisés.
 
-Par exemple, les instructions suivantes créent un rôle de base de données nommé `Sales`, accorde le `Sales` la possibilité de voir, mettre à jour et supprimer des lignes de groupe la `Orders` de table, puis ajoute l’utilisateur `Jerry` à la `Sales` rôle.   
+Par exemple, les instructions suivantes créent un rôle de base de données nommé `Sales`, accordent à ce rôle `Sales` la possibilité de voir, mettre à jour et supprimer des lignes dans la table `Orders`, puis ajoutent l’utilisateur `Jerry` au rôle `Sales`.   
    
 ```   
 CREATE ROLE Sales;   
@@ -99,9 +99,9 @@ Pour plus d’informations sur le système d’autorisation, consultez [mise en 
 
 ## <a name="configure-row-level-security"></a>Configurer la sécurité de niveau ligne  
 
-[Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios de s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement les données pertinentes à leur service.   
+La [Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios où l'on doit s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement aux données pertinentes pour leur service.   
 
-Les étapes ci-dessous vous guide dans le paramétrage de plusieurs utilisateurs avec différents au niveau des lignes accès à la `Sales.SalesOrderHeader` table. 
+Les étapes ci-dessous vous guident dans le paramétrage de deux utilisateurs avec différents accès au niveau des lignes de la table `Sales.SalesOrderHeader` . 
 
 Créez deux comptes d’utilisateur pour tester la sécurité au niveau des lignes :    
    
@@ -121,7 +121,7 @@ GRANT SELECT ON Sales.SalesOrderHeader TO Manager;
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
 ```   
    
-Créer un nouveau schéma inline et fonction table. La fonction renvoie 1 lorsqu’une ligne dans le `SalesPersonID` colonne correspond à l’ID d’un `SalesPerson` connexion ou si l’utilisateur exécutant la requête est l’utilisateur du gestionnaire.   
+Créer un nouveau schéma et une fonction table en ligne. La fonction renvoie 1 lorsqu’une ligne dans la colonne `SalesPersonID` correspond à l’ID de connexion d'un `vendeur` ou bien si l’utilisateur exécutant la requête est le manager.   
    
 ```     
 CREATE SCHEMA Security;   
@@ -136,7 +136,7 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
     OR (USER_NAME() = 'Manager');    
 ```   
 
-Créer une stratégie de sécurité ajoutant la fonction comme un filtre et un prédicat block sur la table :  
+Créer une stratégie de sécurité ajoutant la fonction aussi bien comme un filtre que comme prédicat bloquant les mises à jour sur la table :  
 
 ```
 CREATE SECURITY POLICY SalesFilter   
@@ -147,7 +147,7 @@ ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)
 WITH (STATE = ON);   
 ```
 
-Exécutez le code suivant pour interroger la `SalesOrderHeader` table que chaque utilisateur. Vérifiez que `SalesPerson280` voit uniquement les 95 lignes à partir de leurs propres ventes et que les `Manager` peuvent voir toutes les lignes de la table.  
+Exécutez le code suivant pour interroger la table `SalesOrderHeader` en tant que chacun des utilisateurs. Vérifiez que `SalesPerson280` voit uniquement les 95 lignes de leurs propres ventes et que les `Manager` peuvent voir toutes les lignes de la table.  
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
@@ -169,9 +169,9 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>Activer le masquage dynamique des données
 
-[Masquage dynamique des données](../relational-databases/security/dynamic-data-masking.md) vous permet de limiter l’exposition des données sensibles aux utilisateurs d’une application en complètement ou partiellement masquant certaines colonnes. 
+Le [Masquage dynamique des données](../relational-databases/security/dynamic-data-masking.md) vous permet de limiter l’exposition des données sensibles aux utilisateurs d’une application en masquant complètement ou partiellement certaines colonnes. 
 
-Utilisez un `ALTER TABLE` instruction pour ajouter une fonction de masquage à la `EmailAddress` colonne dans la `Person.EmailAddress` table : 
+Utilisez une instruction `ALTER TABLE` pour ajouter une fonction de masquage à la colonne `EmailAddress` dans la table `Person.EmailAddress`  : 
  
 ```
 USE AdventureWorks2014;
@@ -181,7 +181,7 @@ ALTER COLUMN EmailAddress
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
-Créer un nouvel utilisateur `TestUser` avec `SELECT` autorisation sur la table, puis exécutez une requête en tant que `TestUser` pour afficher les données masquées :   
+Créez un nouvel utilisateur `TestUser` avec l'autorisation `SELECT` sur la table, puis exécutez une requête en tant que `TestUser` pour afficher les données masquées :   
 
 ```  
 CREATE USER TestUser WITHOUT LOGIN;   
@@ -192,7 +192,7 @@ SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;
 REVERT;    
 ```
  
-Vérifiez que la fonction de masquage modifie l’adresse de messagerie dans le premier enregistrement à partir de :
+Vérifiez que la fonction de masquage modifie l’adresse de messagerie dans le premier enregistrement, en transformant :
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -207,11 +207,11 @@ en
 
 ## <a name="enable-transparent-data-encryption"></a>Activer le chiffrement transparent des données
 
-Une menace pour votre base de données est le risque qu’une personne sera voler les fichiers de base de données sur votre disque dur. Cela peut se produire avec une intrusion qui obtient avec élévation de privilèges d’accès à votre système, les actions d’un employé de problème, ou en vol de l’ordinateur contenant les fichiers (par exemple, un ordinateur portable).
+Une menace pour votre base de données est le risque qu’une personne vole les fichiers de base de données situés sur votre disque dur. Cela peut se produire par une intrusion qui réussirait à obtenir une élévation de ses privilèges d’accès à votre système, les actions d’un employé à problème, ou en cas de vol de l’ordinateur contenant les fichiers (par exemple, un ordinateur portable).
 
-Chiffrement transparent des données (TDE) chiffre les fichiers de données stockées sur le disque dur. La base de données master du moteur de base de données SQL Server a la clé de chiffrement, afin que le moteur de base de données peut manipuler les données. Les fichiers de base de données ne peut pas être lus sans accès à la clé. Les administrateurs de niveau supérieur peuvent gérer, la sauvegarde et recréez la clé, afin de pouvoir déplacer la base de données, mais uniquement par les personnes sélectionnées. Lorsque le chiffrement transparent des données sont configurée, le `tempdb` base de données est chiffrée automatiquement. 
+Le chiffrement transparent des données (TDE) chiffre les fichiers de données stockés sur le disque dur. La base de données master du moteur de base de données SQL Server possède la clé de chiffrement, afin que le moteur de base de données puisse manipuler les données. Les fichiers de base de données ne peuvent pas être lus sans accès à la clé. Les administrateurs peuvent administrer, sauvegarder et recréer la clé afin de pouvoir déplacer la base de données, mais ceci ne pourra être fait que par des personnes habilitées. Lorsque le chiffrement transparent des données est configuré, la base de données `tempdb` est automatiquement chiffrée. 
 
-Étant donné que le moteur de base de données peut lire les données, le chiffrement Transparent des données ne protège pas contre les accès non autorisés par les administrateurs de l’ordinateur qui peut directement lire la mémoire, ou accéder à SQL Server via un compte d’administrateur.
+Étant donné que le moteur de base de données peut lire les données, le chiffrement Transparent des données ne protège pas contre les accès non autorisés par les administrateurs de l’ordinateur qui peuvent directement lire la mémoire, ou accéder à SQL Server via un compte d’administrateur.
 
 ### <a name="configure-tde"></a>Configurer le chiffrement transparent des données
 
@@ -220,7 +220,7 @@ Chiffrement transparent des données (TDE) chiffre les fichiers de données stoc
 - Créez une clé de chiffrement de base de données et protégez-la à l'aide du certificat.
 - Configurez la base de données pour qu'elle utilise le chiffrement.
 
-La configuration de chiffrement transparent des données requiert `CONTROL` autorisation sur la base de données master et `CONTROL` sur la base de données utilisateur. En général, un administrateur configure chiffrement transparent des données. 
+La configuration de chiffrement transparent des données requiert l'autorisation `CONTROL` sur la base de données master et `CONTROL` sur la base de données utilisateur. En général, c'est un administrateur qui configure le chiffrement transparent des données. 
 
 L'exemple ci-dessous illustre le chiffrement et le déchiffrement de la base de données `AdventureWorks2014` à l'aide d'un certificat installé sur le serveur nommé `MyServerCert`.
 
@@ -249,7 +249,7 @@ SET ENCRYPTION ON;
 
 Pour supprimer le chiffrement transparent des données, exécutez`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
-Les opérations de chiffrement et le déchiffrement sont planifiées sur les threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
+Les opérations de chiffrement et le déchiffrement sont planifiées sur des threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
 
 >  [!WARNING]
 >  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -261,7 +261,7 @@ Pour plus d’informations sur le chiffrement transparent des données, consulte
 SQL Server a la possibilité de chiffrer les données lors de la création d’une sauvegarde. En spécifiant l’algorithme de chiffrement et le chiffreur (un certificat ou clé asymétrique) lors de la création d’une sauvegarde, vous pouvez créer un fichier de sauvegarde chiffré.    
   
 > [!WARNING]  
->  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un emplacement autre que le fichier de sauvegarde pour lequel il a été utilisé pour le chiffrement. Sans certificat ou clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable. 
+>  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un autre emplacement que le fichier de sauvegarde qu'il a servi à chiffrer. Sans le certificat ou la clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable. 
  
  
 L’exemple suivant crée un certificat, puis crée une sauvegarde protégée par le certificat.
