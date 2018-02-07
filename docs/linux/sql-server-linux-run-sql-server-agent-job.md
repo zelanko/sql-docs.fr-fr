@@ -25,7 +25,7 @@ ms.lasthandoff: 02/01/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Travaux de SQL Server sont utilisés pour exécuter régulièrement la même séquence de commandes dans votre base de données SQL Server. Ce didacticiel fournit un exemple montrant comment créer un travail de l’Agent SQL Server sur Linux à l’aide de Transact-SQL et SQL Server Management Studio (SSMS).
+Les travaux de SQL Server sont utilisés pour exécuter régulièrement la même séquence de commandes dans votre base de données SQL Server. Ce didacticiel fournit un exemple montrant comment créer un travail de l’Agent SQL Server sur Linux à l’aide de Transact-SQL et SQL Server Management Studio (SSMS).
 
 > [!div class="checklist"]
 > * Installer l’Agent SQL Server sur Linux
