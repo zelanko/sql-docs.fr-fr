@@ -45,7 +45,7 @@ sudo yum install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si **mssql-server-agent** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo yum check-update
@@ -65,7 +65,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si **mssql-server-agent** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo apt-get update 
@@ -86,7 +86,7 @@ sudo zypper install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si **mssql-server-agent** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo zypper refresh
