@@ -21,18 +21,18 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 16d6097ac129874ac5fb7f27118e499d86606ba7
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Cette rubrique décrit comment créer des index sur une vue. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Cette rubrique décrit comment créer des index sur une vue. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Les étapes suivantes de création d'une vue indexée sont essentielles à la réussite de l'implémentation de la vue indexée :  

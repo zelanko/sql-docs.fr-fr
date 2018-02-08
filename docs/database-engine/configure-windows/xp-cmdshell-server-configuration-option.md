@@ -8,27 +8,30 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: xp_cmdshell
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26f411ba59dba9213e5432cd1ef36f346caed509
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5bfdb40617fe5620854ff7c953736c63a2e31ca0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  L’option **xp_cmdshell** est une option de configuration de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux administrateurs système de contrôler l’autorisation d’exécuter la procédure stockée étendue **xp_cmdshell** sur un système. Par défaut, l’option **xp_cmdshell** est désactivée sur toutes les nouvelles installations et peut être activée au moyen de la gestion basée sur une stratégie ou en exécutant la procédure stockée système **sp_configure** comme dans l’exemple de code suivant :  
+  L’option **xp_cmdshell** est une option de configuration de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux administrateurs système de contrôler l’autorisation d’exécuter la procédure stockée étendue **xp_cmdshell** sur un système. Par défaut, l’option **xp_cmdshell** est désactivée sur les nouvelles installations. Avant d’activer cette option, il est important de prendre en compte les implications de sécurité potentielles associées à son utilisation. Un code récemment développé ne doit pas utiliser cette option, qui doit généralement rester désactivée. Certaines applications héritées nécessitent qu’elle soit activée ; si vous ne pouvez pas les modifier de manière à éviter l’utilisation de cette option, vous pouvez l’activer à l’aide de la gestion basée sur des stratégies ou en exécutant la procédure stockée système **sp_configure**, comme l’illustre l’exemple de code suivant :  
   
 ```  
 -- To allow advanced options to be changed.  

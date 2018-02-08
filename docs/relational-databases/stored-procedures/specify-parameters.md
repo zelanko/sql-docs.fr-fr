@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0b580149c946b88eafc138dc69e55ef673aafc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 029b4f8eab1af6ebbd26c1d8fe877d38420e7f5c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
   
  Une procédure peut contenir jusqu'à 2100 paramètres ; chacun ayant un nom, un type de données et une direction. Éventuellement, les paramètres peuvent avoir des valeurs par défaut.  
   
@@ -208,7 +210,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
