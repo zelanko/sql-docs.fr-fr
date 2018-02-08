@@ -23,7 +23,7 @@ ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de performances de SQL Server sur Linux
 
-Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les tâches suivantes vous guident certaines des fonctionnalités de performances. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais elle permet de vous donner une idée des zones pour approfondir vos recherches. Dans chaque exemple, un lien est fourni à la documentation de profondeur pour cette zone.
+Si vous êtes un utilisateur Linux qui découvre SQL Server, les tâches suivantes vous guident parmi les fonctionnalités de performances. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais cela permet de vous donner une idée des domaines à approfondir. Dans chaque exemple, un lien est fourni menant à la documentation pour ce domaine.
 
 > [!NOTE]
 > Les exemples suivants utilisent la base de données AdventureWorks. Pour obtenir des instructions sur la façon d’obtenir et installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
@@ -40,7 +40,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
    GO
    ```
 
-2. Exécutez la requête suivante qui utilisera le Columnstore Index pour analyser la table :
+2. Exécutez la requête suivante qui utilisera l'index Columnstore pour parcourir la table :
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -50,7 +50,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
       ORDER BY ProductID
    ```
 
-3. Vérifiez que le Columnstore Index a été utilisé en recherchant l’object_id de l’index Columnstore et en vérifiant qu’il apparaît dans les statistiques d’utilisation de la table SalesOrderDetail :
+3. Vérifiez que l'index Columnstore a bien été utilisé en recherchant l’object_id de l’index Columnstore et en vérifiant qu’il apparaît dans les statistiques d’utilisation de la table SalesOrderDetail :
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -63,7 +63,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
    ```
    
 ## <a name="use-in-memory-oltp"></a>Utiliser l’OLTP en mémoire
-SQL Server fournit les fonctionnalités OLTP en mémoire qui peuvent améliorer considérablement les performances des systèmes d’applications.  Cette section du Guide d’évaluation vous guidera tout au long des étapes de création d’une table mémoire optimisée est stockée dans la mémoire et une procédure stockée compilée en mode natif qui peut accéder à la table sans avoir besoin d’être compilées ou interprétées.
+SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer considérablement les performances des systèmes d’applications.  Cette section du Guide d’évaluation vous guidera tout au long des étapes de création d’une table optimisée en mémoire et d'une procédure stockée compilée en mode natif qui peut accéder à la table sans avoir besoin d’être interprétée ou compilée.
 
 ### <a name="configure-database-for-in-memory-oltp"></a>Configurer la base de données pour OLTP en mémoire
 1. Il est recommandé de définir la base de données à un niveau de compatibilité d’au moins 130 pour utiliser OLTP en mémoire.  Utilisez la requête ci-dessous pour vérifier le niveau de compatibilité actuel d’AdventureWorks :  
@@ -85,14 +85,14 @@ SQL Server fournit les fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
 
-2. Une transaction impliquant une table basée sur disque et une table mémoire optimisée, il est essentiel que la partie mémoire optimisée de la transaction fonctionne au niveau d’isolation des transactions nommé SNAPSHOT.  Pour appliquer les fiable ce niveau pour les tables optimisées en mémoire dans une transaction entre conteneurs, exécutez la commande suivante :
+2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire , il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT.  Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. Avant de pouvoir créer une table mémoire optimisée, vous devez d’abord créer un groupe de fichiers mémoire optimisé et un conteneur pour les fichiers de données :
+3. Avant de pouvoir créer une table optimisée en mémoire, vous devez d’abord créer un groupe de fichiers optimisé en mémoire et un conteneur pour les fichiers de données :
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -102,9 +102,9 @@ SQL Server fournit les fonctionnalités OLTP en mémoire qui peuvent améliorer 
    ```
 
 ### <a name="create-a-memory-optimized-table"></a>Créer une Table optimisée en mémoire
-Le magasin principal des tables optimisées en mémoire est la mémoire principale, de sorte qu’à la différence des tables sur disque, données n’a pas besoin de lire à partir du disque dans les mémoires tampons.  Pour créer une table optimisée en mémoire, utilisez le MEMORY_OPTIMIZED = ON clause.
+Le stockage des tables optimisées en mémoire est la mémoire principale, de sorte qu’à la différence des tables sur disque, les données n’ont pas besoin d'être lues à partir du disque pour les charger dans les mémoires tampons.  Pour créer une table optimisée en mémoire, utilisez la clause MEMORY_OPTIMIZED = ON.
 
-1. Exécutez la requête suivante pour créer le dbo de la table mémoire optimisée. ShoppingCart.  Par défaut, les données sont rendues persistantes sur disque pour la durabilité (Notez que la durabilité peut également être définie pour conserver le schéma uniquement). 
+1. Exécutez la requête suivante pour créer la table optimisée en mémoire  dbo.ShoppingCart.  Par défaut, les données sont rendues persistantes sur disque pour assurer la durabilité (Notez qu'il est aussi possible de définir la durabilité pour conserver le schéma uniquement). 
 
    ```sql
    CREATE TABLE dbo.ShoppingCart ( 
@@ -126,7 +126,7 @@ Le magasin principal des tables optimisées en mémoire est la mémoire principa
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>Procédure stockée compilée en mode natif
-SQL Server prend en charge les procédures stockées compilées en mode natif qui accèdent aux tables optimisées en mémoire. Les instructions T-SQL sont compilées en code machine et stockées en tant que DLL natives, permettant l’accès aux données plus rapide et l’exécution des requêtes plus efficace que T-SQL traditionnel.   Les procédures stockées qui sont identifiées par NATIVE_COMPILATION sont compilées en mode natif. 
+SQL Server prend en charge les procédures stockées compilées en mode natif qui accèdent aux tables optimisées en mémoire. Les instructions T-SQL sont compilées en code machine et stockées en tant que DLL natives, permettant l’accès aux données plus rapide et l’exécution des requêtes plus efficace que le T-SQL traditionnel.  Les procédures stockées qui sont identifiées par NATIVE_COMPILATION sont compilées en mode natif. 
 
 1. Exécutez le script suivant pour créer une procédure stockée compilée en mode natif qui insère un grand nombre d’enregistrements dans la table ShoppingCart :
 
@@ -167,16 +167,16 @@ Pour plus d’informations sur l’OLTP en mémoire, consultez les rubriques sui
 - [Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [OLTP en mémoire (optimisation en mémoire)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
-## <a name="use-query-store"></a>Utilisez le magasin de requête
-Magasin de requêtes collecte des informations détaillées sur les performances sur les requêtes, les plans d’exécution et les statistiques d’exécution.
+## <a name="use-query-store"></a>Utiliser le magasin de requête
+Le magasin de requêtes (Query Store) collecte des informations détaillées sur les performances sur les requêtes, les plans d’exécution et les statistiques d’exécution.
 
-Magasin de requêtes n’est pas actif par défaut et peut être activé avec ALTER DATABASE :
+Le magasin de requêtes n’est pas actif par défaut et peut être activé avec ALTER DATABASE :
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-Exécutez la requête suivante pour retourner des informations sur les requêtes et plans du magasin de requêtes : 
+Exécutez la requête suivante pour retourner des informations sur les requêtes et plans d'exécution du magasin de requêtes : 
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
@@ -187,10 +187,10 @@ Exécutez la requête suivante pour retourner des informations sur les requêtes
          ON Qry.query_text_id = Txt.query_text_id ;
    ```
 
-## <a name="query-dynamic-management-views"></a>Vues de gestion dynamique de requête
-Vues de gestion dynamique retournent des informations d’état de serveur qui peuvent être utilisées pour surveiller l’intégrité d’une instance de serveur, diagnostiquer les problèmes et régler les performances.
+## <a name="query-dynamic-management-views"></a>Interroger les vues de gestion dynamique
+Les vues de gestion dynamique retournent des informations d’état de serveur qui peuvent être utilisées pour surveiller l’intégrité d’une instance de serveur, diagnostiquer les problèmes et optimiser les performances.
 
-Pour interroger la vue de gestion dynamique de statistiques dm_os_wait :
+Pour interroger la vue de gestion dynamique dm_os_wait_stats :
 
    ```sql
    SELECT wait_type, wait_time_ms
