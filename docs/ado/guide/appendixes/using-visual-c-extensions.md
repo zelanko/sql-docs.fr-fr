@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Extensions Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L’Interface IADORecordBinding
@@ -91,36 +93,36 @@ Update(CADORecordBinding *binding)
  Pour plus d’informations, consultez [Appendix A: Data Types](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de référence du programmeur OLE DB.
 
 ### <a name="begin-binding-entries"></a>Commencer les entrées de liaison
- **BEGIN_ADO_BINDING**(*classe*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Données de longueur fixe
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, type de données, mémoire tampon, état, modifier*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, type de données, mémoire tampon, modifier*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Données numériques
- **ADO_NUMERIC_ENTRY**(*Ordinal, type de données, mémoire tampon, précision, échelle, état, modifier*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, type de données, mémoire tampon, précision, échelle, modifier*)
+ **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Données de longueur variable
  **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, type de données, mémoire tampon, taille, état, longueur, modifier*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, type de données, mémoire tampon, taille, état, modifier*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
  **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, type de données, mémoire tampon, taille, longueur, modifier*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, type de données, mémoire tampon, taille, modifier*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>Fin d’entrées de liaison
  **END_ADO_BINDING**()
 
-|Paramètre|Description|
+|Paramètre| Description|
 |---------------|-----------------|
 |*Classe*|Classe dans laquelle les entrées de liaison et les variables C/C++ sont définis.|
 |*Ordinal*|Nombre ordinal, à partir d’un, de la **Recordset** champ correspondant à la variable C/C++.|
-|*Type de données*|Type de données ADO équivalent de la variable C/C++ (voir [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) pour obtenir la liste des types de données valide). La valeur de la **Recordset** champ sera converti en ce type de données si nécessaire.|
-|*Mémoire tampon*|Nom de la variable C/C++ dans laquelle le **Recordset** champ sera stocké.|
+|*DataType*|Type de données ADO équivalent de la variable C/C++ (voir [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) pour obtenir la liste des types de données valide). La valeur de la **Recordset** champ sera converti en ce type de données si nécessaire.|
+|*Buffer*|Nom de la variable C/C++ dans laquelle le **Recordset** champ sera stocké.|
 |*Taille*|Taille maximale en octets de *tampon*. Si *tampon* contient une chaîne de longueur variable, prévoyez de l’espace pour un zéro de fin.|
 |*État*|Nom d’une variable qui indique si le contenu de *tampon* sont valides et si la conversion du champ à *type de données* a réussi.<br /><br /> Les deux valeurs plus importantes de cette variable sont **adFldOK**, ce qui signifie que la conversion a réussi ; et **adFldNull**, ce qui signifie que la valeur du champ est une variante de type VT_NULL et pas simplement vide.<br /><br /> Les valeurs possibles pour *état* sont répertoriées dans le tableau suivant, « Valeurs d’état ».|
 |*Modifier*|Indicateur booléen ; Si la valeur est TRUE, indique à ADO est autorisé à mettre à jour les correspondants **Recordset** champ avec la valeur contenue dans *tampon*.<br /><br /> Définissez la valeur booléenne *modifier* paramètre TRUE pour permettre à ADO mettre à jour le champ lié, et FALSE si vous souhaitez examiner ce champ, mais pas le modifier.|
@@ -133,10 +135,10 @@ Update(CADORecordBinding *binding)
 
  Lors de la définition de données, *état* peut être définie sur **adFldNull** pour indiquer le **Recordset** champ doit être défini avec la valeur null.
 
-|Constante|Valeur|Description|
+|Constante|Valeur| Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Une valeur de champ non null a été retournée.|
-|**adFldBadAccessor**| 1|Liaison n’était pas valide.|
+|**adFldBadAccessor**|1|Liaison n’était pas valide.|
 |**adFldCantConvertValue**|2|Valeur n’a pas pu être convertie pour des raisons d’autre que la non-correspondance des signes ou données débordement.|
 |**adFldNull**|3|Lors de l’obtention d’un champ, indique une valeur null a été retournée.<br /><br /> Lorsque vous définissez un champ, indique le champ doit être défini sur **NULL** lorsque le champ ne peut pas encoder **NULL** elle-même (par exemple, un tableau de caractères ou un nombre entier).|
 |**adFldTruncated**|4|Chiffres ou des données de longueur variable ont été tronquées.|

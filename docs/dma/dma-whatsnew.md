@@ -1,33 +1,40 @@
 ---
 title: "Nouveautés de l’Assistant de Migration de données (SQL Server) | Documents Microsoft"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de l’Assistant Migration de données
 
 Cette rubrique répertorie les ajouts dans chaque version de données de Migration Assistant (DMA).
+
+## <a name="dma-v34"></a>DMA v3.4
+La version de v3.4 de DMA inclut les ajouts suivants :
+- Prise en charge 2017 du serveur SQL en tant que source pour les migrations vers la base de données SQL Azure.
+- Améliorations apportées à la stabilité, de performances et d’évaluation de la vérification de règle.
 
 ## <a name="dma-v33"></a>DMA v3.3
 La version v3.3 de DMA permet la migration d’une instance de SQL Server locale vers la nouvelle version de SQL Server 2017, Windows et Linux. Pendant le processus de migration globale pour Windows et Linux sont identiques, la migration vers SQL Server 2017 pour Linux nécessite quelques considérations supplémentaires.
@@ -84,7 +91,7 @@ La version 1.0 de DMA est la version initiale, et il fournit pour :
     - Fonctionnalités déconseillées
 
 - Détection des nouvelles fonctionnalités de la plateforme cible SQL Server que la base de données peut bénéficier d’une mise à niveau. Les conclusions sont décrits comme des recommandations de fonctionnalité, et ils sont classés dans les domaines suivants :
-    - Performances
+    - Performance
     - Sécurité
     - Stockage
 

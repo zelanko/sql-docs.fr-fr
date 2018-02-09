@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,30 +19,30 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7880a6a3d2499735ad31b92d3c67cdfcafd8325d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52d78d1a6ae1fc2ccb34ee6b8d810f1ca5ba1c22
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-events"></a>Types d’événements
 Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement « Est » dans leur nom, par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent « Complète » dans leur nom, par exemple, **RecordChangeComplete** ou **ConnectComplete**. Existe des exceptions, telles que **InfoMessage** , mais ces modifications se produisent après l’opération associée est terminée.  
   
 ## <a name="will-events"></a>Événements Will  
- Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou autoriser qu’elle se termine. Ces routines de gestionnaires d’événements ont généralement des noms au format  **sera*événement***.  
+ Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou autoriser qu’elle se termine. Ces routines de gestionnaires d’événements ont généralement des noms au format **sera*événement ***.  
   
 ## <a name="complete-events"></a>Événements de fin  
- Gestionnaires d’événements appelés au terme d’une opération peuvent avertir votre application qu’une opération est terminée. Ce type de gestionnaire d’événements est également informé lorsqu’un gestionnaire d’événements Will annule une opération en attente. Ces routines de gestionnaires d’événements ont généralement des noms au format  ***événement*Complete**.  
+ Gestionnaires d’événements appelés au terme d’une opération peuvent avertir votre application qu’une opération est terminée. Ce type de gestionnaire d’événements est également informé lorsqu’un gestionnaire d’événements Will annule une opération en attente. Ces routines de gestionnaires d’événements ont généralement des noms au format ***événement * terminé**.  
   
  Événements Will et Complete sont généralement utilisées par paires.  
   
 ## <a name="other-events"></a>Autres événements  
- Les autres gestionnaires d’événements : autrement dit, les événements dont les noms ne sont pas sous la forme  **sera*événement*** ou  ***événement*Complete** , sont appelés uniquement après qu’une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
+ Les autres gestionnaires d’événements, autrement dit, les événements dont les noms ne sont pas sous la forme **sera * événement*** ou ***événement * terminé** — sont appelées uniquement après une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

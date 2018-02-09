@@ -8,26 +8,29 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - XQuery, sequence
 - ordered expressions [XQuery]
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 553e7168b0a977eb1c7d1f24e1c50c8fb8876247
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ade45beb1eed3079937b6d9302500b10adcca162
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-involving-order"></a>Requêtes XQuery impliquant un ordre
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Les expressions entre accolades sont remplacées par le résultat de son évaluation. Pour plus d’informations, consultez [Construction XML &#40; XQuery &#41; ](../xquery/xml-construction-xquery.md).  
   
@@ -73,7 +76,7 @@ WHERE ProductModelID=7
   
 -   Le [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) inclut la valeur relationnelle dans le code XML qui est en cours de construction.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -119,13 +122,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La requête construit le < paramètres régionaux`tion`> élément et récupère les valeurs de son attribut à partir de la base de données.  
   
 -   Elle utilise deux itérations FLWOR (for...return) : la première pour récupérer les outils et la deuxième pour récupérer les matières.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="10" SetupHours=".5"   
@@ -161,13 +164,13 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
  Le corps de la requête construit du code XML qui englobe l'élément <`ProductModel`> ayant ProductModelID et ProductModelName comme attributs.  
   
 -   La requête utilise une boucle FOR ... RETURN pour récupérer les descriptions des composants du modèle de produit. Le **position()** fonction est utilisée pour récupérer les deux premiers composants.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -210,7 +213,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="10" SetupHours=".5"   
@@ -240,7 +243,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <LastTwoManuSteps>  

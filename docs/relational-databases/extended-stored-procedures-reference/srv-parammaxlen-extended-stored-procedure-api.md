@@ -8,31 +8,36 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: srv_parammaxlen
-apilocation: opends60.dll
+apiname:
+- srv_parammaxlen
+apilocation:
+- opends60.dll
 apitype: DLLExport
-dev_langs: C++
-helpviewer_keywords: srv_parammaxlen
+dev_langs:
+- C++
+helpviewer_keywords:
+- srv_parammaxlen
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56d250a5d5a411de47cc90f00ee0ba2f350eb3c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72ea59fa456192441921afb5aee4d7066cfb3dbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez plutôt l'intégration du CLR.  
   
  Retourne la longueur de données maximale d'un paramètre d'appel de procédure stockée distante. Cette fonction a été remplacée par la fonction **srv_paraminfo**.  
   
@@ -64,12 +69,12 @@ n
 |Nouveaux types de données|Longueur de données d'entrée|  
 |--------------------|-----------------------|  
 |**BITN**|**NULL :** 1<br /><br /> **ZERO :** 1<br /><br /> **>=255 :** N/A<br /><br /> **<255 :** N/A|  
-|**BIGVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255:** 255|  
+|**BIGVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255 :** 255|  
 |**BIGCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255 :** 255|  
 |**BIGBINARY**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255 :** 255|  
 |**BIGVARBINARY**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255 :** 255|  
 |**NCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255 :** 255|  
-|**NVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255 :** 255<br /><br /> **<255 :** 255|  
 |**NTEXT**|**NULL :** -1<br /><br /> **ZERO :** -1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
 ## <a name="remarks"></a>Notes  

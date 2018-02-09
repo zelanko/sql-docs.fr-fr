@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de forme
 La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un enfant **Recordset**.  
@@ -36,10 +37,10 @@ La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Reco
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  Les parties de cette clause sont les suivantes :  
   
- *commande parent*  
+ *parent-command*  
  Zéro ou un des éléments suivants (vous pouvez omettre le *parent-command* complètement) :  
   
 -   Une commande fournisseur entourée accolades (« {} ») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *alias-parent*  
+ *parent-alias*  
  Alias facultatif qui fait référence au parent **Recordset**.  
   
- *liste de colonnes*  
+ *column-list*  
  Un ou plusieurs des opérations suivantes :  
   
 -   Une colonne d’agrégation.  
@@ -70,8 +71,8 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Notes   
- *jeu d’enregistrements enfants*  
+## <a name="remarks"></a>Notes  
+ *child-recordset*  
  -   Une commande fournisseur entourée accolades (« {} ») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
   
 -   Une autre commande shape placée entre parenthèses.  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *alias-enfant*  
+ *child-alias*  
  Un alias qui fait référence à l’enfant **Recordset**.  
   
- *colonne-parent*  
+ *parent-column*  
  Une colonne dans la **Recordset** retourné par la *parent-command.*  
   
- *colonne de l’enfant*  
+ *child-column*  
  Une colonne dans la **Recordset** retournée par le *commande enfant*.  
   
- *nombre de param*  
+ *param-number*  
  Consultez [fonctionnement des commandes paramétrées](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *alias-chapitre*  
+ *chapter-alias*  
  Un alias qui fait référence à la colonne de chapitre ajoutée au parent.  
   
 > [!NOTE]
@@ -101,7 +102,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  La clause après le mot-clé APPEND est en fait une liste, où chaque clause est séparée par une virgule et définit une autre colonne à ajouter au parent.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque vous construisez des commandes de fournisseur à partir de l’entrée d’utilisateur dans le cadre d’une commande SHAPE, SHAPE traite fournie par l’utilisateur une commande fournisseur comme une chaîne opaque et passe fidèlement au fournisseur. Par exemple, dans la commande SHAPE suivante,  
   
 ```  

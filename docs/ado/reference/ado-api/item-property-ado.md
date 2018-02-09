@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -44,18 +45,19 @@ f1_keywords:
 - Parameters::get_Item
 - Errors::Item
 - Procedures::get_Item
-helpviewer_keywords: Item property [ADO]
+helpviewer_keywords:
+- Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bec4236ff89d27a4db3e4606ea95401e75ba2590
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 48abf6f8e4b1e99d498130aedfee6d653f214579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-property-ado"></a>Élément propriété (ADO)
 Indique un membre spécifique d’une collection, par nom ou un nombre ordinal.  
@@ -73,7 +75,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant** expression qui correspond au nom ou au nombre ordinal d’un objet dans une collection.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **élément** propriété pour retourner un objet spécifique dans une collection. Si **élément** Impossible de trouver un objet dans la collection correspondant à la *Index* argument, une erreur se produit. En outre, certaines collections ne prennent en charge les objets nommés ; pour ces collections, vous devez utiliser des références d’un nombre ordinal.  
   
  Le **élément** propriété est la propriété par défaut pour toutes les collections ; par conséquent, les formes de syntaxe suivantes sont interchangeables :  

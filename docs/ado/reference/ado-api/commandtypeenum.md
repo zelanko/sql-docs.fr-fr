@@ -1,10 +1,11 @@
 ---
-title: CommandTypeEnum | Documents Microsoft
+title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,31 +13,33 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CommandTypeEnum
-helpviewer_keywords: CommandTypeEnum enumeration [ADO]
+f1_keywords:
+- CommandTypeEnum
+helpviewer_keywords:
+- CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Spécifie comment un argument de commande doit être interprété.  
   
  Il est important de valider fourni par l’utilisateur *CommandString* valeurs pour éviter de révéler les utilisateurs de l’application la possibilité d’injecter des commandes potentiellement dangereuses pour ADO exécuter.  
   
-|Constante|Valeur|Description|  
+|Constante|Valeur| Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Ne spécifiez pas l’argument de type de commande.|  
-|**adCmdText**| 1|Prend la valeur [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) une définition textuelle d’une commande ou une procédure stockée à appeler.|  
+|**adCmdText**|1|Prend la valeur [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) une définition textuelle d’une commande ou une procédure stockée à appeler.|  
 |**adCmdTable**|2|Prend la valeur **CommandText** comme nom de table dont les colonnes sont renvoyées par une requête SQL générée en interne.|  
-|**valeur adCmdStoredProc**|4|Prend la valeur **CommandText** comme nom de procédure stockée.|  
+|**adCmdStoredProc**|4|Prend la valeur **CommandText** comme nom de procédure stockée.|  
 |**adCmdUnknown**|8|Valeur par défaut. Indique que le type de commande dans le **CommandText** propriété n’est pas connue.<br /><br /> Lorsque le type de commande n’est pas connu, ADO effectuera plusieurs tentatives d’interpréter le **CommandText**.<br /><br /> -   **CommandText** est interprété comme une définition textuelle d’un appel de procédure stockée ou de commande. Il s’agit du même comportement que **adCmdText**.<br />-   **CommandText** est le nom d’une procédure stockée. Il s’agit du même comportement que **valeur adCmdStoredProc**.<br />-   **CommandText** est interprété comme le nom d’une table. Toutes les colonnes sont retournées par une requête SQL générée en interne. Il s’agit du même comportement que **adCmdTable**.|  
 |**adCmdFile**|256|Prend la valeur **CommandText** comme nom de fichier de façon persistante stockée [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Utilisé avec **Recordset.** [Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) ou [Requery](../../../ado/reference/ado-api/requery-method.md) uniquement.|  
 |**adCmdTableDirect**|512|Prend la valeur **CommandText** comme nom de table dont les colonnes sont renvoyées. Utilisé avec **Recordset.Open** ou **Requery** uniquement. Pour utiliser le [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode), la **Recordset** doit être ouvert avec **adCmdTableDirect**.<br /><br /> Cette valeur ne peut pas être combinée avec le [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeur **adAsyncExecute**.|  

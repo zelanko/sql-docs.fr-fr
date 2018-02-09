@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,27 +13,29 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: MarshalOptionsEnum
-helpviewer_keywords: MarshalOptionsEnum enumeration [ADO]
+f1_keywords:
+- MarshalOptionsEnum
+helpviewer_keywords:
+- MarshalOptionsEnum enumeration [ADO]
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f54d75168f07056ca1edb8aa74d78ae289f4fde
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 837e648bdc05324fe1a1618fec69d778b8cafd5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="marshaloptionsenum"></a>MarshalOptions
+# <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Spécifie les enregistrements qui doivent être renvoyées au serveur.  
   
-|Constante|Valeur|Description|  
+|Constante|Valeur| Description|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|Valeur par défaut. Retourne toutes les lignes sur le serveur.|  
-|**adMarshalModifiedOnly**| 1|Retourne uniquement les lignes modifiées au serveur.|  
+|**adMarshalModifiedOnly**|1|Retourne uniquement les lignes modifiées au serveur.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
  Package : **com.ms.wfc.data**  

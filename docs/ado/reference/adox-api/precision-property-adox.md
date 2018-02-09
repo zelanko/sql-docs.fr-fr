@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::GetPrecision
 - _Column::get_Precision
 - _Column::Precision
-helpviewer_keywords: Precision property [ADOX]
+helpviewer_keywords:
+- Precision property [ADOX]
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16b8471b83283a95998ca6e58047774678d4db63
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b27fa294315704dc0f7f7b86db061f1094491412
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="precision-property-adox"></a>Precision, propriété (ADOX)
 Indique la précision maximale de valeurs de données dans le [colonne](../../../ado/reference/adox-api/column-object-adox.md).  
@@ -37,7 +39,7 @@ Indique la précision maximale de valeurs de données dans le [colonne](../../..
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **Long** valeur de la précision maximale de valeurs de données dans la colonne lorsque le [Type](../../../ado/reference/adox-api/type-property-column-adox.md) propriété est un type numérique. **Précision** est ignoré pour toutes les autres types de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur par défaut est zéro (**0**).  
   
  Cette propriété est en lecture seule pour [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets déjà ajoutés à une collection.  

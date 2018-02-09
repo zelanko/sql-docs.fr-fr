@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::Update
-helpviewer_keywords: Update method [ADO]
+f1_keywords:
+- Recordset15::Update
+helpviewer_keywords:
+- Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6cf6ded5026c89caa6e8656cf9160ab192650484
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-method"></a>Update (méthode)
 Enregistre les modifications apportées à la ligne actuelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  
@@ -39,12 +42,12 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Paramètres  
  *Fields*  
- Facultatif. A **Variant** qui représente un nom unique, ou un **Variant** tableau qui représente les noms ou les positions ordinales des champs que vous souhaitez modifier.  
+ Ce paramètre est facultatif. A **Variant** qui représente un nom unique, ou un **Variant** tableau qui représente les noms ou les positions ordinales des champs que vous souhaitez modifier.  
   
  *Valeurs*  
- Facultatif. A **Variant** qui représente une valeur unique, ou un **Variant** tableau qui représente les valeurs pour les champs dans le nouvel enregistrement.  
+ Ce paramètre est facultatif. A **Variant** qui représente une valeur unique, ou un **Variant** tableau qui représente les valeurs pour les champs dans le nouvel enregistrement.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="recordset"></a>Ensemble d'enregistrements  
  Utilisez le **mise à jour** méthode pour enregistrer les modifications apportées à l’enregistrement en cours d’un **Recordset** objet depuis l’appel le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) (méthode) ou parce que la modification des valeurs des champs d’un enregistrement existant. Le **Recordset** objet doit prendre en charge les mises à jour.  

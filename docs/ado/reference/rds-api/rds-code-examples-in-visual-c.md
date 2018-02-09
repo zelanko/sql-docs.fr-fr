@@ -1,6 +1,7 @@
 ---
 title: "Exemples Visual c++ de Code de services Bureau à distance | Documents Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,21 +11,22 @@ ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa04fcda3a8f040e05b93d24d4bffb8e7d1550e4
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 034f55413c65799f6f7a905a3857cbfa20ee14e9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Exemples de Code des services Bureau à distance dans Visual C++
 Utilisez les exemples de code suivants pour apprendre à utiliser les propriétés des services Bureau à distance lors de l’écriture dans Microsoft Visual C++.  

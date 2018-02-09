@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, objects and collections
+helpviewer_keywords:
+- ADO, objects and collections
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b2bd4d1caf6ad0f2b180804407aede35155208e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae5e56e0440901de5c40ab4a2256c076f702d6e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-objects-and-collections"></a>Collections et les objets ADO
 ADO comprend les objets suivants de neuf et quatre regroupements.  
   
-|Objet ou la Collection|Description|  
+|Objet ou la Collection| Description|  
 |--------------------------|-----------------|  
 |**Connexion** objet|Représente une session unique avec une source de données. Dans le cas d’un système de base de données client/serveur, il peut être équivalente à une connexion réseau réelle au serveur. Selon les fonctionnalités prises en charge par le fournisseur, certaines collections, des méthodes ou propriétés d’un **connexion** objet n’est peut-être pas disponible.|  
 |Objet**Command** |Permet de définir une commande spécifique, comme une requête SQL, destinée à s’exécuter sur une source de données.|  

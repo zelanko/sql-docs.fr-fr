@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be30c3c81333080fdcf3bc40bd6abad7c7449d5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Si une transaction est active au point le code du common language runtime (CLR) en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée via le **transaction System.Transactions.Transaction** classe. La propriété **Transaction.Current** est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie **Transaction.Current** automatiquement lorsque la méthode **Connection.Open** est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé **Enlist** n'ait la valeur « false » dans la chaîne de connexion).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Si une transaction est active au point le code du common language runtime (CLR) en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée via le **transaction System.Transactions.Transaction** classe. La propriété **Transaction.Current** est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie **Transaction.Current** automatiquement lorsque la méthode **Connection.Open** est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé **Enlist** n'ait la valeur « false » dans la chaîne de connexion).  
   
  Vous souhaiter peut-être utiliser l'objet **Transaction** directement dans les scénarios suivants :  
   
@@ -69,7 +70,7 @@ The context transaction which was active before entering user defined routine, t
   
  Cette exception est également attendue et, pour que l'exécution continue, vous devez avoir un bloc try/catch autour de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui effectue l'action qui active le déclencheur. Malgré les deux exceptions levées, la transaction est restaurée et les modifications ne sont pas validées.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Voici un exemple de transaction restaurée à partir d'une procédure managée à l'aide de la méthode **Transaction.Rollback** . Remarquez le bloc try/catch autour de la méthode **Transaction.Rollback** dans le code managé. Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] crée un assembly et une procédure stockée managée. Sachez que l'instruction **EXEC uspRollbackFromProc** est englobée dans un bloc try/catch afin que l'exception levée lorsque la procédure managée se termine soit interceptée.  
   
 ```csharp  
@@ -207,6 +208,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Intégration et transactions du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Transactions et l’intégration du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

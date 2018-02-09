@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS programming model [ADO]
+helpviewer_keywords:
+- RDS programming model [ADO]
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a206bd1a158b09e3b7041a995bc98351975dfe6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08544cd52698b2c28eb8dd56ee59bbe1c2662acd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="basic-rds-programming-model"></a>Modèle de programmation RDS de base
 > [!IMPORTANT]
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/21/2017
  [Modèle de programmation des services Bureau à distance en détail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [Scénario des services Bureau à distance](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Utilisation et sécurité de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

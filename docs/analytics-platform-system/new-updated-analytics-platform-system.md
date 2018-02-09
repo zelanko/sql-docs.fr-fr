@@ -1,43 +1,34 @@
 ---
 title: "Mise à jour - système de plateforme d’Analytique des documents de SQL Server | Documents Microsoft"
 description: "Extraits de l’affichage de contenu mis à jour pour obtenir une documentation récemment modifié, pour le système de plateforme Analytique pour Microsoft SQL Server."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.suite: sql
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.topic: article
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: sql-analytics-platform-system
-ms.openlocfilehash: 2d7342f4b533a4cc42e00dd04520bc4a28654410
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: aps-pdw
+ms.date: 02/03/2018
+ms.openlocfilehash: 2ae6339897b52cd16ad3417cc218afe1df95ba2a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>Nouveaux et mis à jour récemment : système de plateforme d’Analytique pour SQL Server
 
 
 
-Presque tous les jours, Microsoft met à jour certains de ses articles sur son site web de documentation [Docs.Microsoft.com](http://docs.microsoft.com/). Cet article contient des extraits d’articles récemment mis à jour. Des liens vers de nouveaux articles peuvent également être répertoriés.
+Presque tous les jours Microsoft met à jour certains de ses articles existants sur son [Docs.Microsoft.com](http://docs.microsoft.com/) site Web de documentation. Cet article affiche des extraits d’articles récemment mis à jour. Des liens vers nouveaux articles peuvent également être répertoriés.
 
-Cet article est généré par un programme qui est réexécuté régulièrement. Un extrait peut parfois apparaître avec une mise en forme imparfaite ou au format Markdown de l’article source. Les images ne sont jamais affichées ici.
+Cet article est généré par un programme est exécuté à nouveau régulièrement. Parfois un extrait peut apparaître avec mise en forme imparfait, ou en tant que markdown de l’article de la source. Les images ne sont jamais affichés ici.
 
-Les mises à jour récentes sont signalées pour la plage de dates et le sujet suivants :
+Mises à jour récentes sont signalés pour la plage de dates suivante et l’objet :
 
 
 
-- *Période des mises à jour :* &nbsp; **28-09-2017** &nbsp; au &nbsp; **02-12-2017**
+- *Plage de dates de mises à jour :* &nbsp; **2017-12-03** &nbsp; - à - &nbsp; **2018-02-03**
 - *Zone de sujet :* &nbsp; **système de plateforme d’Analytique pour SQL Server**.
 
 
@@ -45,98 +36,12 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Nouveaux articles créés récemment
+## <a name="new-articles-created-recently"></a>Nouveaux Articles vient d’être créés
 
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-1. [Obtenir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md)
-2. [Obtenir et configurer un serveur de chargement](acquire-and-configure-loading-server.md)
-3. [Logiciel antivirus](antivirus-software.md)
-4. [Configuration du matériel](appliance-configuration.md)
-5. [Installation du matériel et présentation de la Configuration](appliance-installation-and-configuration-overview.md)
-6. [Tâches de gestion d’application](appliance-management-tasks.md)
-7. [Surveillance de l’appliance](appliance-monitoring.md)
-8. [Configuration réseau](appliance-network-configuration.md)
-9. [Configuration du fuseau horaire matériel](appliance-time-zone-configuration.md)
-10. [Topologie d’appliances](appliance-topology.md)
-11. [Appliquer des correctifs de système de plateforme Analytique](apply-analytics-platform-system-hotfixes.md)
-12. [Sauvegarde et chargement de vue d’ensemble du matériel](backup-and-loading-hardware.md)
-13. [Sauvegarde et restauration](backup-and-restore-overview.md)
-14. [Feuille de planification de la capacité du serveur de sauvegarde](backup-capacity-planning-worksheet.md)
-15. [Configurer un serveur SQL SMP externes pour recevoir une copie de la Table distante](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)
-16. [Configuration d’un système Windows externe pour recevoir une copie de Table distante à l’aide de InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)
-17. [Configurer des cartes réseau InfiniBand pour système de plateforme Analytique](configure-infiniband-network-adapters.md)
-18. [Configurer la connectivité PolyBase pour données externes](configure-polybase-connectivity-to-external-data.md)
-19. [Configurer SCOM pour surveiller le système de plateforme Analytique](configure-scom-to-monitor-analytics-platform-system.md)
-20. [Configurer SQL Server PDW pour les Copies de la Table distante](configure-sql-server-pdw-for-remote-table-copies.md)
-21. [Configurer Windows Server Update Services (WSUS)](configure-windows-server-update-services-wsus.md)
-22. [Se connecter à des nœuds de l’équipement](connect-to-appliance-nodes.md)
-23. [Créer un administrateur de domaine APS](create-an-aps-domain-administrator-aps.md)
-24. [Comment créer une tâche de script qui utilise l’adaptateur de destination SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)
-25. [Déterminer la fréquence d’interrogation](determine-polling-frequency.md)
-26. [Déterminer quel nœud du Cluster a échoué.](determine-which-cluster-node-failed.md)
-27. [Téléchargez et appliquez les mises à jour Microsoft](download-and-apply-microsoft-updates.md)
-28. [Chargeur de ligne de commande de dwloader](dwloader.md)
-29. [Règles de conversion du type de données pour dwloader](dwloader-data-type-conversion-rules.md)
-30. [Messages d’erreur](error-messages.md)
-31. [Accorder des autorisations](grant-permissions.md)
-32. [Composants matériels de système de plateforme Analytique](hardware-components.md)
-33. [Configurations matérielles](hardware-configurations.md)
-34. [Installation matérielle](hardware-installation.md)
-35. [Haute disponibilité de système de plateforme Analytique](high-availability.md)
-36. [Importez le Pack d’administration SCOM pour PDW](import-the-scom-management-pack-for-pdw.md)
-37. [Pour plus d’informations à obtenir à partir de votre fabricant de matériel](information-to-obtain-from-your-ihv.md)
-38. [Installer les Packs d’administration SCOM](install-the-scom-management-packs.md)
-39. [Configuration de l’initialisation instantanée des fichiers](instant-file-initialization-configuration.md)
-40. [Lancer Configuration Manager](launch-the-configuration-manager.md)
-41. [Feuille de planification de la capacité du serveur de chargement](loading-server-capacity-planning-worksheet.md)
-42. [Charge (SQL Server PDW)](load-overview.md)
-43. [Charger des données avec INSERT](load-with-insert.md)
-44. [Charger les données avec Integration Services](load-with-ssis.md)
-45. [Comportement de verrouillage](locking-behavior.md)
-46. [Base de données master](master-database.md)
-47. [État de contrôle d’intégrité de l’analyse](monitor-appliance-health-state.md)
-48. [Analyse des requêtes actives](monitoring-active-queries.md)
-49. [Surveiller les chargements](monitor-loads.md)
-50. [Surveiller l’application à l’aide de System Center Operations Manager](monitor-the-appliance-by-using-system-center-operations-manager.md)
-51. [Surveiller l’application à l’aide de vues système](monitor-the-appliance-by-using-system-views.md)
-52. [Contrôler le matériel à l’aide de la Console d’administration](monitor-the-appliance-by-using-the-admin-console.md)
-53. [Vue d’ensemble de Parallel Data Warehouse](parallel-data-warehouse-overview.md)
-54. [Réinitialisation du mot de passe](password-reset.md)
-55. [Composants physiques PDW et l’infrastructure d’application](pdw-and-appliance-fabric-physical-components.md)
-56. [Configuration de certificats PDW](pdw-certificate-provisioning.md)
-57. [Configuration du pare-feu PDW](pdw-firewall-configuration.md)
-58. [Autorisations de PDW](pdw-permissions.md)
-59. [État des Services PDW](pdw-services-status.md)
-60. [Topologie PDW](pdw-topology.md)
-61. [Le dispositif de points d’accès de l’alimentation ou désactiver](power-the-aps-appliance-on-or-off.md)
-62. [Capacité de traitement et de stockage de système de plateforme Analytique](processing-and-storage-capacity-planning.md)
-63. [Configuration de certificats PDW](provision-certificate.md)
-64. [Copie de la Table distante](remote-table-copy.md)
-65. [Noms de base de données réservé](reserved-database-names.md)
-66. [Restaurer une base de données protégée par TDE](restore-database-protected-by-tde.md)
-67. [Restaurer la base de données Master](restore-the-master-database.md)
-68. [Envoyer des commentaires de télémétrie à Microsoft](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)
-69. [Définir le mot de passe administrateur pour ouvrir une session sur les nœuds AD dans le Mode restauration Services d’annuaire (DSRM)](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)
-70. [Maintenance de logiciel](software-servicing.md)
-71. [Base de données intermédiaire](staging-database.md)
-72. [Bases de données système](system-databases.md)
-73. [Base de données tempdb](tempdb-database.md)
-74. [Suivi des alertes de l’Appliance](track-appliance-alerts.md)
-75. [Transparent Data Encryption](transparent-data-encryption.md)
-76. [Éléments de langage](tsql-language-elements.md)
-77. [Rubriques de T-SQL](tsql-statements.md)
-78. [Vues système](tsql-system-views.md)
-79. [Présentation des alertes de la Console d’administration](understanding-admin-console-alerts.md)
-80. [Désinstallation de correctifs de système de plateforme Analytique](uninstall-analytics-platform-system-hotfixes.md)
-81. [Désinstaller les mises à jour Microsoft](uninstall-microsoft-updates.md)
-82. [Un redirecteur DNS permet de résoudre les noms DNS de l’autre que l’Appliance](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)
-83. [Sessions utilisateur](user-sessions.md)
-84. [Utilisation de la capacité d’affichage](view-capacity-utilization.md)
-85. [Nouveautés de l’Analytique plateforme System 2016, un entrepôt de données MPP montée en puissance parallèle](whats-new-analytics-platform-system.md)
-86. [Gestion de la charge de travail](workload-management.md)
-87. [Tâches de gestion de la charge de travail](workload-management-tasks.md)
+***Il n’y a aucun nouvel article.***
 
 
 
@@ -146,9 +51,9 @@ Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 Cette section affiche les extraits des mises à jour collectés dans des articles qui ont récemment fait l’objet d’une mise à jour importante.
 
-Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Ces extraits sont donc donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
+Les extraits affichés ici apparaissent séparés à partir de leur contexte sémantique spécifique. En outre, parfois un extrait est séparé à partir de la syntaxe markdown important qui l’entoure dans l’article. Par conséquent, ces extraits sont pour des conseils généraux. Les extraits permettent uniquement de savoir si votre intérêt justifie pris le temps de cliquer sur et consultez l’article.
 
-Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Consultez plutôt l’article.
+Pour celles-ci et d’autres raisons, ne pas copier le code à partir de ces extraits et ne prennent pas en tant que vérité exacte tout extrait de texte. Au lieu de cela, consultez l’article.
 
 
 
@@ -158,63 +63,106 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’articles mis à jour récemment
+### <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’Articles récemment mis à jour
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
+1. [Configurer la connectivité PolyBase pour données externes](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***Aucun article dans ce domaine n’a été mis à jour récemment.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### <a name="1-nbsp-configure-polybase-connectivity-to-external-dataconfigure-polybase-connectivity-to-external-datamd"></a>1. &nbsp;[Configurer la connectivité PolyBase pour données externes](configure-polybase-connectivity-to-external-data.md)
+
+*Mise à jour : 2018-01-29* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+
+<!-- Source markdown line 132.  ms.author= "barbkess".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 947f789480da66b9f636f39b30caec6be60d8c4d d4d4d45fbbb8e10ed6f26fe12f9a25d2e8e4f068  (PR=4741  ,  Filename=configure-polybase-connectivity-to-external-data.md  ,  Dirpath=docs\analytics-platform-system\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
+
+
+
+**Configuration de Kerberos**
+
+Notez que lorsque PolyBase s’authentifie auprès d’un cluster sécurisé Kerberos, le paramètre hadoop.rpc.protection doit être défini à l’authentification. Cette opération laisse la communication de données entre les nœuds Hadoop non chiffrés.
+
+ Pour se connecter à un cluster Hadoop sécurisé Kerberos [à l’aide de MIT KDC] :
+
+
+1.  Rechercher le répertoire de configuration Hadoop dans le chemin d’accès de l’installation sur le nœud de contrôle :
+
+    ```
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```
+
+2.  Recherchez la valeur de configuration côté Hadoop des clés de configuration répertoriées dans le tableau. Sur l’ordinateur Hadoop, recherchez les fichiers dans le répertoire de configuration Hadoop.
+
+3.  Copiez les valeurs de configuration dans la propriété de valeur dans les fichiers correspondants sur le nœud de contrôle.
+
+    |**#**|**Fichier de configuration**|**Clé de configuration**|**Action**|
+    |------------|----------------|---------------------|----------|
+    |1|core-site.xml|polybase.kerberos.kdchost|Spécifiez le nom d’hôte KDC. Par exemple : kerberos.votre-domaine.com.|
+    |2|core-site.xml|polybase.kerberos.realm|Spécifiez le domaine Kerberos. Par exemple : VOTRE-DOMAINE.COM|
+    |3|core-site.xml|hadoop.security.authentication|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : KERBEROS<br></br>**Note de sécurité :** KERBEROS doit être écrit en majuscules. Dans le cas contraire, il pourrait ne pas être activé.|
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : hdfs/_HOST@YOUR-REALM.COM|
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : mapred/_HOST@YOUR-REALM.COM|
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : 10.193.26.174:10020|
+    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : yarn/_HOST@YOUR-REALM.COM|
 
 
 
 
 
 
-## <a name="similar-articles"></a>Articles similaires
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articles similaires sur les articles nouveaux ou mis à jour
 
 Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveaux + Mis à jour (3 + 14) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
-- [Nouveaux + Mis à jour (87 + 0) : **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nouveaux + Mis à jour (5 + 4) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
-- [Nouveaux + Mis à jour (0 + 1) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
-- [Nouveaux + Mis à jour (2 + 2) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
-- [Nouveaux + Mis à jour (10 + 9) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
-- [Nouveaux + Mis à jour (2 + 4) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
-- [Nouveaux + Mis à jour (4 + 2) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
-- [Nouveaux + Mis à jour (0 + 1) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
-- [Nouveaux + Mis à jour (21 + 0) : **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nouveaux + Mis à jour (5 + 1) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Assistant Migration SQL Server (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
-- [Nouveaux + Mis à jour (0 + 2) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Zones de sujet qui *faire* ont nouveaux ou récemment mis à jour articles
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
+
+- [Nouveau + mis à jour (1 + 3) :&nbsp; **avancées d’Analytique pour SQL** documents](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveau + mis à jour (0 + 1) :&nbsp; **système de plateforme d’Analytique pour SQL** documents](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nouveau + mis à jour (0 + 1) :&nbsp; **se connecter à SQL** documents](../connect/new-updated-connect.md)
+- [Nouveau + mis à jour (0 + 1) :&nbsp; **moteur de base de données pour SQL** documents](../database-engine/new-updated-database-engine.md)
+- [Nouveau + mis à jour (12 + 1) : **Integration Services pour SQL** documents](../integration-services/new-updated-integration-services.md)
+- [Nouveau + mis à jour (6 + 2) :&nbsp; **Linux pour SQL** documents](../linux/new-updated-linux.md)
+- [Nouveau + mis à jour (15 + 0) : **PowerShell pour SQL** documents](../powershell/new-updated-powershell.md)
+- [Nouveau + mis à jour (2 + 9) :&nbsp; **des bases de données relationnelles pour SQL** documents](../relational-databases/new-updated-relational-databases.md)
+- [Nouveau + mis à jour (1 + 0) :&nbsp; **Reporting Services pour SQL** documents](../reporting-services/new-updated-reporting-services.md)
+- [Nouveau + mis à jour (1 + 1) :&nbsp; **SQL opérations Studio** documents](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nouveau + mis à jour (1 + 1) :&nbsp; **Microsoft SQL Server** documents](../sql-server/new-updated-sql-server.md)
+- [Nouveau + mis à jour (0 + 1) :&nbsp; **SQL Server Data Tools (SSDT)** documents](../ssdt/new-updated-ssdt.md)
+- [Nouveau + mis à jour (1 + 2) :&nbsp; **SQL Server Management Studio (SSMS)** documents](../ssms/new-updated-ssms.md)
+- [Nouveau + mis à jour (0 + 2) :&nbsp; **Transact-SQL** documents](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Zones de font l’objet *pas* ont tous nouveaux ou récemment mis à jour articles
+
 
 - [Nouveaux + Mis à jour (0 + 0) : **Data Migration Assistant (DMA) pour SQL** (documentation)](../dma/new-updated-dma.md)
-- [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
+- [Nouveau + mis à jour (0 0 +) : **ActiveX Data Objects (ADO) pour SQL** documents](../ado/new-updated-ado.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
+- [Nouveau + mis à jour (0 0 +) : **Data Quality Services pour SQL** documents](../data-quality-services/new-updated-data-quality-services.md)
+- [Nouveau + mis à jour (0 0 +) : **Extensions DMX (Data Mining) pour SQL** documents](../dmx/new-updated-dmx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
-- [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
+- [Nouveau + mis à jour (0 0 +) : **MDX (Multidimensional Expressions) pour SQL** documents](../mdx/new-updated-mdx.md)
+- [Nouveau + mis à jour (0 0 +) : **ODBC (Open Database Connectivity) pour SQL** documents](../odbc/new-updated-odbc.md)
+- [Nouveau + mis à jour (0 0 +) : **exemples pour SQL** documents](../sample/new-updated-sample.md)
+- [Nouveau + mis à jour (0 0 +) : **SQL Server Migration Assistant (SSMA)** documents](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
-- [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
+- [Nouveau + mis à jour (0 0 +) : **XQuery pour SQL** documents](../xquery/new-updated-xquery.md)
 
 

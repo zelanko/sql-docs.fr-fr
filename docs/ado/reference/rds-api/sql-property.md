@@ -1,6 +1,7 @@
 ---
 title: "Propriété SQL | Documents Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SQL property [RDS]
+helpviewer_keywords:
+- SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3488758fb803b33be03a0126b0e514279ea8c4bc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-property"></a>Propriété SQL
 Indique la chaîne de requête utilisée pour récupérer le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -41,13 +43,13 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Chaîne de requête*  
+ *QueryString*  
  A **chaîne** valeur qui contient une demande de données SQL valide.  
   
  *DataControl*  
  Une variable objet qui représente un **RDS. DataControl** objet.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  En règle générale, il s’agit d’une instruction de SQL (à l’aide de dialecte du serveur de base de données), tel que `"Select * from NewTitles"`. Pour vous assurer que les enregistrements sont mis en correspondance et mise à jour, une requête actualisable doit contenir un champ autre qu’un champ Long Binary ou un champ calculé.  
   
  Le **SQL** propriété est facultative si un objet métier côté serveur extrait les données pour le client.  

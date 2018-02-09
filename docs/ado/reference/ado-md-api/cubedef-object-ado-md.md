@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CubeDef
-helpviewer_keywords: CubeDef object [ADO MD]
+f1_keywords:
+- CubeDef
+helpviewer_keywords:
+- CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0317420ee6839e3b445784665a0a2594fb1083c1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea97010f67e571ddf9ddfb1dcc1cf36e38769710
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
 Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les collections et les propriétés d’un **CubeDef** de l’objet, vous pouvez procédez comme suit :  
   
 -   Identifier un **CubeDef** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) propriété.  
@@ -42,15 +45,15 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom| Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
-|Créé à|Date et heure de création du cube.|  
+|CreatedOn|Date et heure de création du cube.|  
 |CubeGUID|GUID du cube.|  
 |CubeName|Nom du cube.|  
 |CubeType|Type du cube.|  
 |DataUpdatedBy|ID utilisateur de la personne qui effectue la dernière mise à jour de données.|  
-|Description|Description explicite du cube.|  
+| Description|Description explicite du cube.|  
 |LastSchemaUpdate|Date et heure de dernière mise à jour de schéma.|  
 |SchemaName|Le nom du schéma auquel appartient ce cube.|  
 |SchemaUpdatedBy|ID utilisateur de la personne qui effectue la dernière mise à jour de schéma.|  

@@ -17,26 +17,26 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66111dcdc5c69df0edbda0f57143873c89e12ac1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f70abd5174790d445e4b3854bcb6efd8576ff83
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>Création de procédures stockées étendues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l'intégration CLR à la place.  
   
  Une procédure stockée étendue est une fonction avec un prototype :  
   
- SRVRETCODE *xp_extendedProcName* **(**SRVPROC  **\*) ;**  
+ SRVRETCODE *xp_extendedProcName* **(**SRVPROC **\*);**  
   
  L'utilisation du préfixe xp_ est facultative. Les noms de procédures stockées étendues respectent la casse lorsqu'ils sont référencés dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], indépendamment de la page de codes/de l'ordre de tri sur le serveur. Lorsque vous générez une DLL :  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  Ces fichiers sont requis pour la création d'une DLL de procédure stockée étendue.  
   
-|Fichier|Description|  
+|Fichier| Description|  
 |----------|-----------------|  
 |Srv.h|Fichier d'en-tête de l'API de procédure stockée étendue|  
 |Opends60.lib|Bibliothèque d'importation pour Opends60.dll|  

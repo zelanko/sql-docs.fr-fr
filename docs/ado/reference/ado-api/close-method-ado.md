@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Recordset15::Close
 - _Stream::Close
 - _Record::Close
-helpviewer_keywords: Close method [ADO]
+helpviewer_keywords:
+- Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79b6267de87409f4b1e7d07a6b42d85e22042def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 693f6adc51682fec4f9890d7d7618aa53e43593d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado"></a>Close (méthode) (ADO)
 Ferme un objet ouvert et tous les objets dépendants.  
@@ -39,7 +41,7 @@ Ferme un objet ouvert et tous les objets dépendants.
 object.Close  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **fermer** méthode pour fermer une [connexion](../../../ado/reference/ado-api/connection-object-ado.md), un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), ou un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet pour libérer les ressources système associées. Fermeture d’un objet ne le supprime pas de la mémoire. Vous pouvez modifier ses paramètres de propriété et ouvrez à nouveau ultérieurement. Pour éliminer définitivement un objet de la mémoire, fermez l’objet et ensuite définir la variable objet *rien* (en Visual Basic).  
   
 ## <a name="connection"></a>Connexion  
@@ -49,7 +51,7 @@ object.Close
   
  Fermeture un **connexion** lorsqu’il y a ouvert de l’objet **Recordset** objets sur la connexion annule toutes les modifications en attente dans tous les **Recordset** objets. Fermer explicitement un **connexion** objet (appelant le **fermer** méthode) lorsqu’une transaction est en cours génère une erreur. Si un **connexion** objet devient hors de portée lorsqu’une transaction est en cours, ADO restaure automatiquement la transaction.  
   
-## <a name="recordset-record-stream"></a>Jeu d’enregistrements, l’enregistrement, de flux  
+## <a name="recordset-record-stream"></a>Recordset, Record, Stream  
  À l’aide de la **fermer** méthode pour fermer une **Recordset**, **enregistrement**, ou **flux** objet libère les données associées et un accès exclusif vous disposiez aux données via cet objet spécifique. Vous pouvez appeler ultérieurement la [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode pour rouvrir l’objet avec le même ou modifiée, les attributs.  
   
  Pendant un **Recordset** objet est fermé, l’appel d’une méthode nécessitant un curseur actif génère une erreur.  

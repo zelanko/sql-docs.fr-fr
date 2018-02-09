@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::AbsolutePosition
-helpviewer_keywords: AbsolutePosition property [ADO]
+f1_keywords:
+- Recordset15::AbsolutePosition
+helpviewer_keywords:
+- AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17fe4e32b8a54d51ac3009e06e74e77e74321171
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e2d1df667bb580d451e527e458d83703940483f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition, propriété (ADO)
 Indique la position ordinale d’une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) enregistrement en cours de l’objet.  
@@ -34,7 +37,7 @@ Indique la position ordinale d’une [Recordset](../../../ado/reference/ado-api/
   
  Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser soit Long, soit une autre valeur longueur 64 bits comme DBORDINAL. N’utilisez pas **PositionEnum** valeurs, car ils sont limités à la longueur de 32 bits.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour définir le **AbsolutePosition** propriété, ADO nécessite que le fournisseur OLE DB que vous utilisez implémenter le [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interface.  
   
  L’accès à la **AbsolutePosition** propriété d’un **Recordset** qui a été ouvert avec l’avant uniquement ou curseur dynamique génère l’erreur **adErrFeatureNotAvailable**. Avec d’autres types de curseur, la position correcte sera retournée tant que le fournisseur OLE DB prend en charge la **IRowsetScroll:IRowsetLocate** interface. Si le fournisseur ne prend pas en charge la **IRowsetScroll** interface, la propriété est définie **adPosUnknown**. Consultez la documentation de votre fournisseur pour déterminer si elle prend en charge **IRowsetScroll**.  

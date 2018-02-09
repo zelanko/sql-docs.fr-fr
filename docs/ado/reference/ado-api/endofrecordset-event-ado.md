@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - EndOfRecordset
 - Recordset::EndOfRecordset
-helpviewer_keywords: EndOfRecordset event [ADO]
+helpviewer_keywords:
+- EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9bedfab5204ec93f5f3de8e0f574640e2b04429
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 79d37ae42a9c9e607ba4d8dba8917fccd7f20c42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="endofrecordset-event-ado"></a>Événement EndOfRecordset (ADO)
 Le **EndOfRecordset** événement est appelé lorsqu’une tentative de déplacement vers une ligne après la fin de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -42,17 +44,17 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *fMoreData*  
  A **VARIANT_BOOL** valeur de la valeur VARIANT_TRUE, indique plusieurs lignes ont été ajoutés à la **Recordset**.  
   
- *N'*  
+ *adStatus*  
  Un [il ne](../../../ado/reference/ado-api/eventstatusenum.md) valeur d’état.  
   
  Lorsque **EndOfRecordset** est appelée, ce paramètre est défini sur **adStatusOK** si l’opération qui a provoqué l’événement a réussi. Il est défini sur **adStatusCantDeny** si cet événement ne peut pas demander l’annulation de l’opération qui a provoqué cet événement.  
   
  Avant de **EndOfRecordset** retourne, définissez ce paramètre sur **adStatusUnwantedEvent** pour éviter toute notification.  
   
- *Connection*  
+ *pRecordset*  
  A **Recordset** objet. Le **Recordset** pour laquelle cet événement s’est produit.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un **EndOfRecordset** événement peut se produire si le [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) échoue.  
   
  Ce gestionnaire d’événements est appelé lorsqu’une tentative est faite pour déplacer après la fin de la **Recordset** objet, par exemple suite à l’appel **MoveNext**. Toutefois, alors que dans ce cas, vous pouvez récupérer plusieurs enregistrements d’une base de données et les ajouter à la fin de la **Recordset**. Dans ce cas, définissez *fMoreData* à VARIANT_TRUE et à retourner **EndOfRecordset**. Appelez ensuite **MoveNext** à nouveau pour accéder aux nouveaux enregistrements récupérés.  

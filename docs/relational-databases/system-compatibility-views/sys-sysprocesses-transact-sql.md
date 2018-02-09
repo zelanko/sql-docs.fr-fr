@@ -1,5 +1,5 @@
 ---
-title: Sys.sysprocesses (Transact-SQL) | Documents Microsoft
+title: sys.sysprocesses (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysprocesses_TSQL
 - sys.sysprocesses
 - sysprocesses
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8589b865843b0ec7a8d4a087dee5bbc0a646b289
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +44,13 @@ ms.lasthandoff: 11/27/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|spid|**smallint**|ID de la session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de session.|  
 |kpid|**smallint**|ID de thread Windows.|  
 |blocked|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé en raison de transitions d'état de verrou interne.|  
 |waittype|**binary(2)**|Réservé.|  
 |waittime|**bigint**|Temps d'attente total (en millisecondes).<br /><br /> 0 = Le processus n'est pas en attente.|  
-|lastwaittype|**NCHAR(32)**|Chaîne indiquant le nom du dernier type d'attente ou celui du type d'attente actuel.|  
-|waitresource|**NCHAR(256)**|Description textuelle d'une ressource de verrouillage.|  
+|lastwaittype|**nchar(32)**|Chaîne indiquant le nom du dernier type d'attente ou celui du type d'attente actuel.|  
+|waitresource|**nchar(256)**|Description textuelle d'une ressource de verrouillage.|  
 |dbid|**smallint**|ID de la base de données actuellement utilisée par le processus.|  
 |uid|**smallint**|ID de l'utilisateur qui a exécuté la commande. Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |cpu|**int**|Temps UC cumulé pour l'exécution du processus. L'entrée est mise à jour pour tous les processus, indépendamment de la valeur de l'option SET STATISTICS TIME (ON ou OFF).|  
@@ -58,17 +60,17 @@ ms.lasthandoff: 11/27/2017
 |last_batch|**datetime**|Dernière exécution par un processus client d'un appel de procédure stockée distante ou d'une instruction EXECUTE.|  
 |ecid|**smallint**|ID du contexte d'exécution utilisé pour identifier de façon unique les sous-threads exécutés pour le compte d'un seul et même processus.|  
 |open_tran|**smallint**|Nombre de transactions en cours pour le processus.|  
-|status|**NCHAR(30)**|État de l'ID processus. Les valeurs possibles sont les suivantes :<br /><br /> **dormant**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **en cours d’exécution** = la session est en cours d’un ou plusieurs lots. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan** = la session s’exécute une tâche en arrière-plan, telles que la détection de blocage.<br /><br /> **restauration** = la session a une annulation de la transaction dans le processus.<br /><br /> **en attente** = la session est en attente d’un thread de travail soient disponibles.<br /><br /> **exécutable** = la tâche dans la session est dans la file d’attente exécutable d’un planificateur lors de l’attente pour obtenir un quantum.<br /><br /> **spinloop** = la tâche dans la session est en attente d’un verrouillage spinlock se libère.<br /><br /> **suspendu** = la session est en attente d’un événement, telles que les e/s, pour terminer.|  
+|status|**nchar(30)**|État de l'ID processus. Les valeurs possibles sont les suivantes :<br /><br /> **dormant**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **en cours d’exécution** = la session est en cours d’un ou plusieurs lots. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan** = la session s’exécute une tâche en arrière-plan, telles que la détection de blocage.<br /><br /> **restauration** = la session a une annulation de la transaction dans le processus.<br /><br /> **en attente** = la session est en attente d’un thread de travail soient disponibles.<br /><br /> **exécutable** = la tâche dans la session est dans la file d’attente exécutable d’un planificateur lors de l’attente pour obtenir un quantum.<br /><br /> **spinloop** = la tâche dans la session est en attente d’un verrouillage spinlock se libère.<br /><br /> **suspendu** = la session est en attente d’un événement, telles que les e/s, pour terminer.|  
 |sid|**binary(86)**|GUID (Globally Unique Identifier) de l'utilisateur.|  
-|hostname|**NCHAR(128)**|Nom de la station de travail.|  
-|program_name|**NCHAR(128)**|Nom du logiciel d'application.|  
-|hostprocess|**NCHAR(10)**|Numéro d'identification du processus de la station de travail.|  
-|cmd|**NCHAR(16)**|Commande actuellement en cours d’exécution.|  
-|nt_domain|**NCHAR(128)**|Domaine Windows du client (s'il utilise l'authentification Windows) ou d'une connexion approuvée.|  
-|nt_username|**NCHAR(128)**|Nom d'utilisateur Windows pour le processus (s'il utilise l'authentification Windows) ou une connexion approuvée.|  
-|net_address|**NCHAR(12)**|Identificateur unique affecté à la carte réseau de la station de travail de chaque utilisateur. Lorsqu'un utilisateur se connecte, cet identificateur est inséré dans la colonne net_address.|  
-|net_library|**NCHAR(12)**|Colonne dans laquelle est enregistrée la bibliothèque réseau du client. Chaque processus client arrive sur une connexion réseau. Les connexions réseau ont une bibliothèque réseau associée qui leur permet de se connecter.|  
-|loginame|**NCHAR(128)**|Nom de connexion.|  
+|hostname|**nchar(128)**|Nom de la station de travail.|  
+|program_name|**nchar(128)**|Nom du logiciel d'application.|  
+|hostprocess|**nchar(10)**|Numéro d'identification du processus de la station de travail.|  
+|cmd|**nchar(16)**|Commande actuellement en cours d’exécution.|  
+|nt_domain|**nchar(128)**|Domaine Windows du client (s'il utilise l'authentification Windows) ou d'une connexion approuvée.|  
+|nt_username|**nchar(128)**|Nom d'utilisateur Windows pour le processus (s'il utilise l'authentification Windows) ou une connexion approuvée.|  
+|net_address|**nchar(12)**|Identificateur unique affecté à la carte réseau de la station de travail de chaque utilisateur. Lorsqu'un utilisateur se connecte, cet identificateur est inséré dans la colonne net_address.|  
+|net_library|**nchar(12)**|Colonne dans laquelle est enregistrée la bibliothèque réseau du client. Chaque processus client arrive sur une connexion réseau. Les connexions réseau ont une bibliothèque réseau associée qui leur permet de se connecter.|  
+|loginame|**nchar(128)**|Nom de connexion.|  
 |context_info|**binary(128)**|Données stockées dans un lot à l'aide de l'instruction SET CONTEXT_INFO.|  
 |sql_handle|**binary(20)**|Représente le lot ou l'objet en cours d'exécution.<br /><br /> **Remarque** cette valeur est dérivée de l’adresse du lot ou de la mémoire de l’objet. Cette valeur n'est pas calculée à l'aide de l'algorithme de hachage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |stmt_start|**int**|Décalage de début de l'instruction SQL en cours pour la colonne sql_handle spécifiée.|  

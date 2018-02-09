@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Command15::CommandType
-helpviewer_keywords: CommandType property [ADO]
+f1_keywords:
+- Command15::CommandType
+helpviewer_keywords:
+- CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d838b150f678fc0ee720a91d2a1de3311a433e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 607c78b7026d482660c4866be58ffa30d0b86196
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtype-property-ado"></a>CommandType, propriété (ADO)
 Indique le type d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
@@ -35,7 +38,7 @@ Indique le type d’un [commande](../../../ado/reference/ado-api/command-object-
 > [!NOTE]
 >  N’utilisez pas le **CommandTypeEnum** les valeurs de **adCmdFile** ou **adCmdTableDirect** avec **CommandType**. Ces valeurs peuvent uniquement être utilisées en tant qu’options avec les [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [Requery](../../../ado/reference/ado-api/requery-method.md) méthodes d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **CommandType** propriété pour optimiser l’évaluation de la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété.  
   
  Si le **CommandType** valeur de propriété est définie sur la valeur par défaut, **adCmdUnknown**, vous pouvez rencontrer des performances car ADO doit effectuer des appels au fournisseur pour déterminer si le  **CommandText** propriété est une instruction SQL, une procédure stockée ou un nom de table. Si vous connaissez le type de commande que vous utilisez, la définition de la **CommandType** propriété à ADO d’accéder directement au code approprié. Si le **CommandType** propriété ne correspond pas au type de commande dans le **CommandText** propriété, une erreur se produit lorsque vous appelez le [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) (méthode).  

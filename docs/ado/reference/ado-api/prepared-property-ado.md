@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Command15::Prepared
-helpviewer_keywords: Prepared property [ADO]
+f1_keywords:
+- Command15::Prepared
+helpviewer_keywords:
+- Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a938fcdbf5fbdbe73ca61465063ccd3622711920
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b45f14d0513dfda61688dc664affbf760c8598
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepared-property-ado"></a>Prepared, propriété (ADO)
 Indique s’il faut enregistrer la version compilée d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) avant l’exécution.  
@@ -32,7 +35,7 @@ Indique s’il faut enregistrer la version compilée d’un [commande](../../../
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **booléenne** valeur, si la valeur **True**, indique que la commande doit être préparée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **Prepared** propriété pour que le fournisseur enregistre une version préparée (ou compilée) de la requête spécifiée dans le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété avant une [commande](../../../ado/reference/ado-api/command-object-ado.md) l’objet première exécution. Cela peut ralentir l’exécution du premier d’une commande, mais une fois que le fournisseur compile une commande, le fournisseur utilise la version compilée de la commande pour des exécutions suivantes, ce qui entraîne une amélioration des performances.  
   
  Si la propriété est **False**, le fournisseur s’exécutera la **commande** objet directement sans création d’une version compilée.  

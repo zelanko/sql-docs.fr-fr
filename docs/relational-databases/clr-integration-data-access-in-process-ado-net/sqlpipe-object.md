@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e99da62dd46ff34e13cb009ef1dd20141be75ead
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5db45b3c67fcf865214ad422662acfb80bab293e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est très courant d’écrire une procédure stockée (ou une procédure stockée étendue) qui envoie des résultats ou des paramètres de sortie au client appelant.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est très fréquent d'écrire une procédure stockée (ou une procédure stockée étendue) qui envoie des résultats ou des paramètres de sortie au client appelant.  
   
  Dans une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , toute instruction **SELECT** qui retourne zéro ou plusieurs lignes envoie les résultats au « canal » de l'appelant connecté.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Après l'appel de la méthode **SendResultsStart** , seules **SendResultsRow** et **SendResultsEnd** peuvent être appelées. L'appel de toute autre méthode dans la même instance de **SqlPipe** entraîne **InvalidOperationException**. **SendResultsEnd** rétablit **SqlPipe** à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  La procédure stockée **uspGetProductLine** retourne les nom, numéro de produit, couleur et tarif de tous les produits dans une ligne de produit spécifiée. Cette procédure stockée accepte des correspondances exactes pour *prodLine*.  
   
  C#  

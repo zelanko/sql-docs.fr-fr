@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0d73ed8eda955b5b027b662e3e5c80c50730b7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>Paramètres d’événement
 Chaque gestionnaire d’événements a un paramètre d’état qui contrôle le Gestionnaire d’événements. Pour les événements terminées, ce paramètre est également utilisé pour indiquer la réussite ou l’échec de l’opération qui a généré l’événement. Événements plus complètes ont également un paramètre d’erreur pour fournir des informations sur toute erreur qui se sont produites et un ou plusieurs paramètres de l’objet qui font référence à des objets ADO utilisés pour effectuer l’opération. Par exemple, le [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) événement inclut les paramètres de l’objet pour le **commande**, **Recordset**, et **connexion** objets associé à l’événement. Dans l’exemple suivant de Microsoft® Visual Basic®, vous pouvez voir les pCommand, Connection et pConnection objets qui représentent les **commande**, **Recordset**, et **deconnexion** les objets qui sont utilisés par le **Execute** (méthode).  
@@ -49,17 +50,17 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Paramètre d’état  
  Lorsque la routine de gestionnaire d’événements est appelée, le *état* est affectée à une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |**adStatusOK**|Passé à va et événements Complete. Cette valeur signifie que l’opération qui a provoqué l’événement s’est terminée correctement.|  
-|**Contraire**|Transmis uniquement aux événements Complete. Cette valeur signifie que l’opération qui a provoqué l’événement a échoué ou qu’un événement Will a annulé l’opération. Vérifiez le *erreur* paramètre pour plus de détails.|  
+|**adStatusErrorsOccurred**|Transmis uniquement aux événements Complete. Cette valeur signifie que l’opération qui a provoqué l’événement a échoué ou qu’un événement Will a annulé l’opération. Vérifiez le *erreur* paramètre pour plus de détails.|  
 |**adStatusCantDeny**|Passé sera uniquement aux événements. Cette valeur signifie que l’opération ne peut pas être annulée par l’événement Will. Elle doit être effectuée.|  
   
  Si vous déterminez, dans l’événement Will, que l’opération doit continuer, laissez le *état* paramètre inchangé. Tant que le paramètre d’état entrant n’a pas été défini **adStatusCantDeny**, toutefois, vous pouvez annuler l’opération en attente en modifiant *état* à **adStatusCancel**. Dans ce cas, l’événement Complete associé à l’opération a son *état* paramètre la valeur **contraire**. Le **erreur** objet passé à l’événement Complete contiendra la valeur **adErrOperationCancelled**.  
   
  Si vous ne voulez plus traiter un événement, vous pouvez définir *état* à **adStatusUnwantedEvent** et votre application n’est plus reçoivent une notification de cet événement. Toutefois, n’oubliez pas que certains événements peuvent être déclenchés pour plusieurs raisons. Dans ce cas, vous devez spécifier **adStatusUnwantedEvent** pour chaque raison possible. Par exemple, pour arrêter de recevoir des notifications en attente **RecordChange** des événements, vous devez définir le *état* paramètre **adStatusUnwantedEvent** pour  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, et **adRsnFirstChange** qu’ils se produisent.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Demande que ce gestionnaire d’événements ne recevoir aucune autre notification.|  
 |**adStatusCancel**|Demander l’annulation de l’opération qui doit se produire.|  

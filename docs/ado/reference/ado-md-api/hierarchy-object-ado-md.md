@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Hierarchy
-helpviewer_keywords: Hierarchy object [ADO MD]
+f1_keywords:
+- Hierarchy
+helpviewer_keywords:
+- Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0802ae503911ec8b84ee2f01b15de9ed7f57c4af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>Objet de hiérarchie (ADO MD)
 Représente un mode dans lequel les membres d’un [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) peuvent être agrégées ou « remontées ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les collections et les propriétés d’un **hiérarchie** de l’objet, vous pouvez procédez comme suit :  
   
 -   Identifier les **hiérarchie** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) et [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propriétés.  
@@ -42,13 +45,13 @@ Représente un mode dans lequel les membres d’un [dimension](../../../ado/refe
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom| Description|  
 |----------|-----------------|  
 |AllMember|Le membre au niveau plus élevé de la hiérarchie.|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  
 |DefaultMember|Le nom unique du membre par défaut pour cette hiérarchie.|  
-|Description|Description explicite de la hiérarchie.|  
+| Description|Description explicite de la hiérarchie.|  
 |DimensionType|Le type de dimension à laquelle appartient cette hiérarchie.|  
 |DimensionUniqueName|Le nom non ambigu de la dimension.|  
 |HierarchyCaption|Étiquette ou légende associée à la hiérarchie.|  

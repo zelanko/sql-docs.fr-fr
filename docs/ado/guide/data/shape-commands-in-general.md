@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fb85b1f835f494e7f86e69d25ed225ce4c605e55
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-commands-in-general"></a>En général, les commandes de forme
 Mise en forme des données définit les colonnes d’une forme **Recordset**, les relations entre les entités représentées par les colonnes et la façon dont le **Recordset** remplie avec des données.  
   
  Une forme **Recordset** peut se composer des types de colonnes suivants.  
   
-|Type de colonne|Description|  
+|Type de colonne| Description|  
 |-----------------|-----------------|  
 |données|Des champs une **Recordset** retournées par une commande de requête à un fournisseur de données, de table ou précédemment mise en forme **Recordset**.|  
 |chapitre|Une référence à un autre **Recordset**, appelé un *chapitre*. Les colonnes de chapitres permettent de définir un *parent-enfant* relation où la *parent* est la **Recordset** qui contient la colonne de chapitre et le *enfant* est la **Recordset** représenté par le chapitre.|  

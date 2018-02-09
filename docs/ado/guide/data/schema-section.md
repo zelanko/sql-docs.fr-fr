@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Schema section [ADO]
+helpviewer_keywords:
+- Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>Section de schéma
 La section de schéma est requise. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées à propos de chaque colonne pour préserver la sémantique des valeurs de données autant que possible pour la mise à jour. Toutefois, pour charger le fichier XML, ADO requiert uniquement les noms des colonnes et de l’ensemble de lignes auquel elles appartiennent. Voici un exemple de schéma minimal :  
@@ -103,7 +105,7 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
  De même, étant donné qu’aucun alias n’est défini pour `CompanyName` dans l’exemple précédent, `CompanyName` doit être utilisé de manière cohérente dans tout le document.  
   
 ## <a name="data-types"></a>Types de données  
- Vous pouvez appliquer un type de données à une colonne avec l’attribut dt : type. Pour le guide de référence pour les types XML autorisés, consultez la section Types de données de la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Vous pouvez spécifier un type de données de deux façons : spécifiez l’attribut dt : type directement sur la définition de la colonne ou utiliser la construction s : DataType comme élément imbriqué de la définition de colonne. Par exemple,  
+ Vous pouvez appliquer un type de données à une colonne avec l’attribut dt : type. Pour le guide de référence pour les types XML autorisés, consultez la section Types de données de la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Vous pouvez spécifier un type de données de deux façons : spécifiez l’attribut dt : type directement sur la définition de la colonne ou utiliser la construction s : DataType comme élément imbriqué de la définition de colonne. Par exemple :  
   
 ```  
 <s:AttributeType name="Phone" >  

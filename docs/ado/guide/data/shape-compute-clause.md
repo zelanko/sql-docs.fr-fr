@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de forme
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constitués d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation de l’enfant **Recordset** ou un préalablement mis en forme **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans le paramètre facultatif par clause.  
@@ -38,10 +39,10 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  Les parties de cette clause sont les suivantes :  
   
- *commande-enfant*  
+ *child-command*  
  Se compose d’une des opérations suivantes :  
   
 -   Une commande de requête entre accolades (« {} ») qui retourne un enfant **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *alias-enfant*  
+ *child-alias*  
  Un alias utilisés pour faire référence à la **Recordset** retourné par la *commande-enfant.* Le *alias-enfant* est requis dans la liste des colonnes dans la clause COMPUTE et définit la relation entre parent et enfant **Recordset** objets.  
   
- *liste de colonnes ajoutées*  
+ *appended-column-list*  
  Une liste dans laquelle chaque élément définit une colonne dans le parent généré. Chaque élément contient une colonne de chapitre, une nouvelle colonne, une colonne calculée ou une valeur obtenue à partir d’une fonction d’agrégation de l’enfant **Recordset**.  
   
- *liste de champs de groupe*  
+ *grp-field-list*  
  Une liste de colonnes dans le parent et enfant **Recordset** objets qui spécifie la façon dont les lignes doivent être groupées dans l’enfant.  
   
  Pour chaque colonne dans la *groupe-field-list,* il existe une colonne correspondante dans l’enfant et parent **Recordset** objets. Pour chaque ligne de la page parente **Recordset**, le *liste de champs de groupe* colonnes ont des valeurs uniques et l’enfant **Recordset** référencé par le parent ligne se compose uniquement d’enfant les lignes dont *liste de champs de groupe* colonnes ont les mêmes valeurs que la ligne parente.  
@@ -67,7 +68,7 @@ SHAPE child-command [AS] child-alias
   
  Si la clause BY est omise, l’intégralité de l’enfant **Recordset** est traité comme un seul groupe et le parent **Recordset** contient exactement une ligne. Cette ligne référence tout l’enfant **Recordset**. L’omission de la clause BY vous permet de calculer des agrégats de « total général » sur l’intégralité de l’enfant **Recordset**.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -123,7 +124,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
-## <a name="child2"></a>Enfant2  
+## <a name="child2"></a>Child2  
   
 |État|Ville|Remplissage|  
 |-----------|----------|----------------|  
@@ -143,7 +144,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Vue d’ensemble de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
  [Objet Field](../../../ado/reference/ado-api/field-object.md)   
  [Grammaire de mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   
  [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)   

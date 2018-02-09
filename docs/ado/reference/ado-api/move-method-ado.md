@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::Move
 - Recordset15::raw_Move
-helpviewer_keywords: Move method [ADO]
+helpviewer_keywords:
+- Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47239335259fc7bee4d01ef01741e4148f1a3ea0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 098ef46d9d0e336cb142b29b9b899ec0bcaf2eba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-ado"></a>Move, méthode (ADO)
 Déplace la position de l’enregistrement actif dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -39,13 +41,13 @@ recordset.Move NumRecords, Start
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *NbEnregistrements*  
+ *NumRecords*  
  Connecté **Long** expression qui spécifie le nombre d’enregistrements qui se déplace de la position actuelle.  
   
  *Démarrer*  
- Facultatif. A **chaîne** valeur ou **Variant** qui correspond à un signet. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
+ Ce paramètre est facultatif. A **chaîne** valeur ou **Variant** qui correspond à un signet. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **déplacer** méthode est prise en charge sur tous les **Recordset** objets.  
   
  Si le *NbEnregistrements* argument est supérieure à zéro, la position actuelle se déplace vers l’avant (vers la fin de la **Recordset**). Si *NbEnregistrements* est inférieur à zéro, la position actuelle se déplace vers l’arrière (vers le début de la **Recordset**).  

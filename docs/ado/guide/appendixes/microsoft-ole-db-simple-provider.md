@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49eb75b772d3e8532074bcc1f9bccfd703d622ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae0672fc209e2a31608a36fdef6757bef8d60cf6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Vue d’ensemble de la Simple fournisseur Microsoft OLE DB
 Le Microsoft OLE DB Simple fournisseur (OSP) permet à ADO d’accéder aux données pour laquelle un fournisseur a été écrite à l’aide de la [outils d’analyse OLE DB Simple fournisseur (OSP)](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Les fournisseurs de simples sont conçus pour accéder aux sources de données qui nécessitent la prise en charge OLE DB uniquement fondamentaux, tels que des tableaux en mémoire ou des documents XML.
@@ -50,7 +51,7 @@ MSDAOSP
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé|Description|
+|Mot clé| Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour SQL Server.|
 |**Source de données**|Spécifie le nom d’un serveur.|

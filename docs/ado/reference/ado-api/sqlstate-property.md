@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::GetSQLState
 - Error::SQLState
 - Error::get_SQLState
-helpviewer_keywords: SQLState property
+helpviewer_keywords:
+- SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9acd68c473f43fcbc4763dc2e76d80015fdca93c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13ca3fb822dc6ea79f835a3d50cac847b345c29b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqlstate-property"></a>SQLState, propriété
 Indique l’état SQL d’une donnée [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
@@ -35,7 +37,7 @@ Indique l’état SQL d’une donnée [erreur](../../../ado/reference/ado-api/er
 ## <a name="return-value"></a>Valeur retournée  
  Retourne les cinq caractères **chaîne** valeur respecte la norme SQL ANSI et indique le code d’erreur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **SQLState** propriété à lire le code d’erreur à cinq caractères renvoyé par le fournisseur lorsqu’une erreur se produit pendant le traitement d’une instruction SQL. Par exemple, lorsque vous utilisez le fournisseur Microsoft OLE DB pour ODBC avec une base de données Microsoft SQL Server, codes d’erreur SQL état issus de ODBC, basé sur les erreurs spécifiques à ODBC ou sur les erreurs qui proviennent de Microsoft SQL Server, puis sont mappés vers ODBC erreurs. Ces codes d’erreur sont documentés dans la norme SQL ANSI, mais peuvent être implémentés différemment par différentes sources de données.  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Procedures::Append
 - Procedures::raw_Append
-helpviewer_keywords: Append method [ADOX]
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71a98af48fe93c74ce16111b8018fa04764f597d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cdf43784501659e3fd4da883ddeac33439a30719
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-procedures"></a>Append (méthode) (procédures ADOX)
 Ajoute un nouveau [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) de l’objet à la [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  
@@ -42,10 +44,10 @@ Procedures.Append Name, Command
  *Nom*  
  A **chaîne** valeur qui spécifie le nom de la procédure pour créer et à ajouter.  
   
- *Commandee*  
+ *Command*  
  ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui représente la procédure à créer et à ajouter.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Crée une procédure dans la source de données avec le nom et les attributs spécifiés dans le **commande** objet.  
   
  Si le texte de commande par l’utilisateur représente une vue, plutôt qu’une procédure, le comportement dépend du fournisseur utilisé. **Ajouter** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  

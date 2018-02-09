@@ -8,10 +8,12 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - node comparison operators [XQuery]
 - comparison expressions [XQuery]
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09bf123f7c3b1175c004c4d4a173c667d505aad1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparison-expressions-xquery"></a>Expressions de comparaison (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +128,7 @@ WHERE ContactID=1
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<act:number   
@@ -170,7 +172,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19         
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   `declare namespace` définit le préfixe d'espace de noms qui est utilisé par la suite dans la requête.  
   
@@ -178,7 +180,7 @@ WHERE ProductModelID=19
   
 -   Étant donné que les opérateurs de valeur fonctionnent uniquement sur les valeurs atomiques, le **data()** fonction est implicitement utilisée pour récupérer la valeur du nœud. Autrement dit, `data($P/PD:Size) eq "small"` donne le même résultat.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<PD:Picture   
@@ -212,7 +214,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID       Result          
@@ -243,7 +245,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **value()** méthode de la **xml**type de données est utilisé dans la requête.  
   
@@ -252,7 +254,7 @@ where ProductModelID=19
 -   La requête renvoie la valeur True.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Système de type &#40; XQuery &#41;](../xquery/type-system-xquery.md)   
+ [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Expressions XQuery](../xquery/xquery-expressions.md)  
   
   

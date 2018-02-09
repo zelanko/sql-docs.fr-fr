@@ -15,25 +15,26 @@ helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9336adaca5a3e0aebd1e18dce5c58e97b1d2be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **SqlDataRecord** objet représente une seule ligne de données, ainsi que ses métadonnées connexes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'objet **SqlDataRecord** représente une ligne unique de données avec ses métadonnées connexes.  
   
  Les procédures stockées managées peuvent envoyer au client des jeux de résultats clients qui ne proviennent pas d'un **SqlDataReader**. La classe **SqlDataRecord** , avec les méthodes **SendResultsStart**, **SendResultsRow**et **SendResultsEnd** de l'objet **SqlPipe** , permet aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
  Pour plus d'informations, consultez la documentation de référence sur la classe **Microsoft.SqlServer.Server.SqlDataRecord** dans la documentation du Kit de développement logiciel (SDK) .NET Framework.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant crée un nouvel enregistrement d'employé et le retourne à l'appelant.  
   
  C#  

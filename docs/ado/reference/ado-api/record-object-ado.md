@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Record
-helpviewer_keywords: Record object [ADO]
+f1_keywords:
+- Record
+helpviewer_keywords:
+- Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1246dfe943ae415f7777e5924c14580fe05afbe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aa00ab893549eee36bc1d1b0e858c7bc326fb83b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="record-object-ado"></a>Objet d’enregistrement (ADO)
 Représente une ligne d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou le fournisseur de données, ou un objet retourné par un fournisseur de données semi-structurées, par exemple un fichier ou répertoire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  A **enregistrement** objet représente une ligne de données et présente certaines ressemblances conceptuels avec une seule ligne **Recordset**. En fonction des capacités de votre fournisseur, **enregistrement** objets peuvent être retournés directement à partir de votre fournisseur au lieu d’une ligne **Recordset**, par exemple, lorsqu’une requête SQL qui sélectionne une seule ligne est exécutée. Ou, un **enregistrement** objet peut être obtenu directement à partir d’un **Recordset** objet. Ou, un **enregistrement** peuvent être retournées directement à partir d’un fournisseur de données semi-structurées, tel que le fournisseur OLE DB pour Microsoft Exchange.  
   
  Vous pouvez afficher les champs associés le **enregistrement** de l’objet par le biais de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection sur le **enregistrement** objet. Valeur d’objet de colonnes, y compris **Recordset**, **SafeArray**et les valeurs scalaires dans le **champs** collection de **enregistrement** objets.  

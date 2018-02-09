@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _User25::raw_ChangePassword
 - _User25::ChangePassword
-helpviewer_keywords: ChangePassword method [ADOX]
+helpviewer_keywords:
+- ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4df8c533048ae51662369b66361fb6b642c97f03
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 76814245ef5e41e12774df25ea23283f98fd9100
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword, méthode (ADOX)
 Modifie le mot de passe pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) compte.  
@@ -45,7 +47,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  A **chaîne** valeur qui spécifie le nouveau mot de passe.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour des raisons de sécurité, l’ancien mot de passe doit être spécifié en plus du nouveau mot de passe.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge l’administration des propriétés de tiers de confiance.  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::IsolationLevel
-helpviewer_keywords: IsolationLevel property
+f1_keywords:
+- Connection15::IsolationLevel
+helpviewer_keywords:
+- IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9b94c3d33c04f71adbbf82c9a4aa672d04fc482
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b66b246ef3bc64e841ec6322de41ba0fc1e7af97
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-property"></a>Propriété IsolationLevel
 Indique le niveau d’isolement d’une [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
@@ -32,7 +35,7 @@ Indique le niveau d’isolement d’une [connexion](../../../ado/reference/ado-a
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) valeur. La valeur par défaut est **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **IsolationLevel** propriété à définir l’isolation au niveau d’un **connexion** objet. Le paramètre ne prendre effet qu’après la prochaine fois que vous appelez le [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (méthode). Si le niveau d’isolation demandé n’est pas disponible, le fournisseur peut renvoyer le niveau d’isolation supérieur suivant sans mettre à jour le **IsolationLevel** propriété.  
   
  Le **IsolationLevel** propriété est en lecture/écriture.  

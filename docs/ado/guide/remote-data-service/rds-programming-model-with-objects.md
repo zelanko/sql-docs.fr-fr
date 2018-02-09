@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0f2d2e5cfb50df5fa6a6b1eaace7ba285b0855e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46dcfe88b0405eaf34a52f2b25e131b5ba72eafe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>Modèle de programmation des services Bureau à distance avec des objets
 L’objectif des services Bureau à distance consiste à accéder à et de mettre à jour les sources de données via un intermédiaire tel que IIS. Le modèle de programmation spécifie la séquence d’activités nécessaires pour atteindre cet objectif. Le modèle objet spécifie les objets dont les méthodes et propriétés affectent le modèle de programmation.  
@@ -53,7 +54,7 @@ L’objectif des services Bureau à distance consiste à accéder à et de mettr
  [DataSpace, objet (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Scénario des services Bureau à distance](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Utilisation et sécurité de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

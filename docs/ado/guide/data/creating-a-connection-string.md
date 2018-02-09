@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7d9d2c913324578d80d9dc52fb8a8aedf9ec78d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d8c472f66f0b39e575b96d874d60948bb1a98b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
-Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Exemple :  
+Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Par exemple :  
   
 ```  
 "arg1=val1; arg2=val2; ... argN=valN;"  
@@ -37,7 +38,7 @@ Une chaîne de connexion se compose d’une liste de paires de valeur d’argume
   
  ADO reconnaît les cinq arguments dans une chaîne de connexion suivants.  
   
-|Argument|Description|  
+|Argument| Description|  
 |--------------|-----------------|  
 |*Fournisseur*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
 |*Nom de fichier*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  

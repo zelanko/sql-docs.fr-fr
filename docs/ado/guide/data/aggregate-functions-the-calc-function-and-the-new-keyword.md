@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,39 +18,39 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab522abece6300345819649380be206a277a456
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Fonctions d’agrégation, la fonction de calcul et le mot clé NEW
 Mise en forme des données prend en charge les fonctions suivantes. Le nom attribué au chapitre contenant la colonne à traiter est le *alias-chapitre*.  
   
  Un alias-chapitre peut être complet, constitué de chaque nom de colonne de chapitre menant au chapitre contenant le *-nom de la colonne,* séparés par des points. Par exemple, si le chapitre parent, chap1, contient un chapitre enfant, chap2, qui possède une colonne de montant, amt, puis le nom qualifié serait Chap1.Chap2.mnt.  
   
-|Fonctions d'agrégation|Description|  
+|Fonctions d'agrégation| Description|  
 |-------------------------|-----------------|  
 |SUM (*alias-chapitre*. *nom de la colonne*)|Calcule la somme de toutes les valeurs dans la colonne spécifiée.|  
-|AVG (*alias-chapitre*. *nom de la colonne*)|Calcule la moyenne de toutes les valeurs dans la colonne spécifiée.|  
-|MAX (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur maximale dans la colonne spécifiée.|  
-|MIN (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur minimale de la colonne spécifiée.|  
-|NOMBRE (*alias-chapitre*[. *nom de la colonne*])|Compte le nombre de lignes dans l’alias spécifié. Si une colonne est spécifiée, seules les lignes pour lesquelles cette colonne n’est pas nulle sont inclus dans le nombre.|  
+|AVG(*chapter-alias*.*column-name*)|Calcule la moyenne de toutes les valeurs dans la colonne spécifiée.|  
+|MAX(*chapter-alias*.*column-name*)|Calcule la valeur maximale dans la colonne spécifiée.|  
+|MIN(*chapter-alias*.*column-name*)|Calcule la valeur minimale de la colonne spécifiée.|  
+|COUNT(*chapter-alias*[.*column-name*])|Compte le nombre de lignes dans l’alias spécifié. Si une colonne est spécifiée, seules les lignes pour lesquelles cette colonne n’est pas nulle sont inclus dans le nombre.|  
 |STDEV (*alias-chapitre*. *nom de la colonne*)|Calcule l’écart type de la colonne spécifiée.|  
-|N’importe quel (*alias-chapitre*. *nom de la colonne*)|Valeur de la colonne spécifiée. UNE a une valeur prévisible uniquement lorsque la valeur de la colonne est la même pour toutes les lignes dans le chapitre.<br /><br /> **Remarque** si la colonne ne contient pas la même valeur pour toutes les lignes dans le chapitre, la commande SHAPE retourne arbitrairement l’une des valeurs pour la valeur de la fonction de n’importe quel.|  
+|ANY(*chapter-alias*.*column-name*)|Valeur de la colonne spécifiée. UNE a une valeur prévisible uniquement lorsque la valeur de la colonne est la même pour toutes les lignes dans le chapitre.<br /><br /> **Remarque** si la colonne ne contient pas la même valeur pour toutes les lignes dans le chapitre, la commande SHAPE retourne arbitrairement l’une des valeurs pour la valeur de la fonction de n’importe quel.|  
   
-|Expression calculée|Description|  
+|Expression calculée| Description|  
 |---------------------------|-----------------|  
-|CALCUL (*expression*)|Calcule une expression arbitraire, mais uniquement sur la ligne de la **Recordset** contenant la fonction de calcul. Toute expression utilisant ces [Visual Basic pour Applications (VBA) fonctions](../../../ado/guide/data/visual-basic-for-applications-functions.md) est autorisée.|  
+|CALC(*expression*)|Calcule une expression arbitraire, mais uniquement sur la ligne de la **Recordset** contenant la fonction de calcul. Toute expression utilisant ces [Visual Basic pour Applications (VBA) fonctions](../../../ado/guide/data/visual-basic-for-applications-functions.md) est autorisée.|  
   
-|NOUVEAU mot clé|Description|  
+|NOUVEAU mot clé| Description|  
 |-----------------|-----------------|  
-|NOUVELLE *type de champ* [(*largeur* &#124; *échelle* &#124; *précision* &#124; *erreur* [, *échelle* &#124; *erreur*])]|Ajoute une colonne vide du type spécifié à la **Recordset**.|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|Ajoute une colonne vide du type spécifié à la **Recordset**.|  
   
  Le *type de champ* passé avec le mot clé NEW peut être un des types de données suivants.  
   

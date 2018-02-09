@@ -1,6 +1,6 @@
 ---
 title: "Problèmes connus dans Machine Learning Services | Documents Microsoft"
-ms.date: 01/31/2018
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problèmes connus dans les Services de Machine Learning
 
@@ -71,17 +71,31 @@ Pour éviter des problèmes avec les packages R, vous pouvez également mettre �
 
 **S’applique à :** SQL Server 2016 R Services, avec R Server version9.0.0 ou une version antérieure
 
+### <a name="r-components-missing-from-cu3-setup"></a>Composants R manquant dans le programme d’installation CU3
+
+Un nombre limité de machines virtuelles ont été configuré sans les fichiers d’installation R qui doivent être inclus avec SQL Server. Le problème s’applique aux machines virtuelles configurées dans la période de 2018-01-05 à 2018-01-23. Ce problème peut également affecter les installations locales, si vous avez appliqué la mise à jour CU3 pour SQL Server 2017 pendant la période de 2018-01-05 2018-01-23.
+
+Une version de service a été fournie qui inclut la version correcte des fichiers d’installation R.
+
++ [Le Package de mise à jour cumulative 3 pour SQL Server 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
+
+Pour installer les composants et réparer SQL Server 2017 CU3, vous devez désinstaller CU3 et réinstaller la version mise à jour :
+
+1. Téléchargez le fichier d’installation mis à jour CU3, qui inclut les programmes d’installation de R.
+2. Désinstallez CU3. Dans le panneau de configuration, recherchez **désinstaller une mise à jour**, puis sélectionnez « Correctif 3015 pour 2017 (KB4052987) (64 bits) de SQL Server ». Effectuez les étapes de désinstallation.
+3. Réinstaller la mise à jour CU3, en double-cliquant sur la mise à jour pour KB4052987 que vous venez de télécharger : `SQLServer2017-KB4052987-x64.exe`. Suivez les instructions d'installation.
+
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>Impossible d’installer les composants de Python dans les installations en mode hors connexion de SQL Server 2017 CTP 2.0 ou version ultérieure
 
 Si vous installez une version préliminaire de SQL Server 2017 sur un ordinateur sans accès à internet, le programme d’installation peut échouer afficher la page qui vous invite à spécifier l’emplacement des composants téléchargés Python. Dans ce cas, vous pouvez installer la fonctionnalité Services de Machine Learning, mais pas les composants de Python.
 
-Ce problème est résolu dans la version release. Si vous rencontrez ce problème, comme une solution de contournement, vous pouvez activer temporairement les accès à internet pour la durée de l’installation. Cette limitation ne s’applique pas à R.
+Ce problème est résolu dans la version release. En outre, cette restriction ne s’applique pas aux composants de R.
 
 **S’applique à :** SQL Server 2017 avec Python
 
 ### <a name="bkmk_sqlbindr"></a>Avertissement de version non compatible lorsque vous vous connectez à une version antérieure de SQL Server R Services à partir d’un client à l’aide de[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-Lorsque vous exécutez le code R dans un contexte de calcul de SQL Server 2016, vous pouvez rencontrer une erreur comme suit :
+Lorsque vous exécutez le code R dans un SQL Server 2016 contexte de calcul, vous pouvez rencontrer l’erreur suivante :
 
 > *Vous exécutez la version 9.0.0 de Microsoft R Client sur votre ordinateur, ce qui est incompatible avec la version 8.0.3 de Microsoft R Server. Téléchargez et installez une version compatible.*
 
@@ -170,13 +184,13 @@ Pour les autres problèmes connus qui peuvent affecter des solutions R, consulte
 
 Si l’instance de SQL Server a été installé à un emplacement non définis par défaut, comme à l’extérieur de la `Program Files` dossier, l’avertissement ACCESS_DENIED est déclenché lorsque vous essayez d’exécuter des scripts qui installent un package. Par exemple :
 
-> *NormalizePath(path.expand(path), winslash, mustWork) : chemin d’accès [2] = « ~ExternalLibraries/R/8/1 » : l’accès est refusé.*
+> *Dans `normalizePath(path.expand(path), winslash, mustWork)` : chemin d’accès [2] = « ~ExternalLibraries/R/8/1 » : l’accès est refusé.*
 
 La raison est qu’une fonction R tente de lire le chemin d’accès et échoue si le groupe d’utilisateurs intégrés **SQLRUserGroup**, n’a pas accès en lecture. L’avertissement est générée ne bloque pas l’exécution du script R en cours, mais l’avertissement peut se répéter à plusieurs reprises à chaque fois que l’utilisateur exécute tous les autres scripts.
 
 Si vous avez installé SQL Server à l’emplacement par défaut, cette erreur ne se produit pas, car tous les utilisateurs Windows ont des autorisations de lecture sur le `Program Files` dossier.
 
-Ce problème sera résolu dans une version de service à venir. Pour résoudre ce problème, fournissez le groupe, **SQLRUserGroup**, avec accès en lecture pour tous les dossiers parents de `ExternalLibraries`.
+Ce problème ia résolu dans une version de service à venir. Pour résoudre ce problème, fournissez le groupe, **SQLRUserGroup**, avec accès en lecture pour tous les dossiers parents de `ExternalLibraries`.
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>Erreur de sérialisation entre les versions anciennes et nouvelles de RevoScaleR
 
@@ -192,13 +206,13 @@ L’erreur n’apparaît pas si la version de l’API est la même, ou si vous d
 
 En d’autres termes, utiliser la même version de RevoScaleR pour les opérations de sérialisation et la désérialisation.
 
-### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>Calculer les scores en temps réel ne gèrent pas correctement le paramètre learningRate dans les modèles d’arborescence et de forêt
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>Calculer les scores en temps réel ne gèrent pas correctement le _learningRate_ paramètre dans les modèles d’arborescence et de forêt
 
 Si vous créez un modèle à l’aide d’un arbre de décision ou de la méthode de forêt de décision et que vous spécifiez le taux d’apprentissage, vous pouvez voir des résultats incohérents lorsque vous utilisez `sp_rxpredict` ou l’instruction SQL `PREDICT` fonction, par rapport à le `rxPredict`.
 
 La cause est une erreur dans l’API qui modélise les processus sérialisés et est limitée à la `learningRate` paramètre : par exemple, dans [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), ou
 
-Ce problème sera résolu dans une version de service à venir.
+Ce problème est résolu dans une version de service à venir.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>Limitations sur l’affinité du processeur pour les tâches R
 
@@ -376,7 +390,7 @@ Il existe plusieurs solutions possibles :
 
 + Lorsque vous installez les modèles préformés, choisissez un emplacement personnalisé.
 + Si possible, installez l’instance de SQL Server sous un chemin d’accès de l’installation personnalisée avec un chemin plus court, par exemple C:\SQL\MSSQL14. MSSQLSERVER.
-+ Utilisez l’utilitaire Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) pour créer un lien réel qui mappe le fichier de modèle sur un chemin plus court. 
++ Utilisez l’utilitaire Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) pour créer un lien physique qui mappe le fichier de modèle sur un chemin plus court.
 + Mettre à jour vers la dernière version de service.
 
 ### <a name="error-when-saving-serialized-model-to-sql-server"></a>Erreur lors de l’enregistrement sérialisé de modèle à SQL Server

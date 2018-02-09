@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,18 +21,19 @@ f1_keywords:
 - _Catalog::putref_ActiveConnection
 - _Catalog::ActiveConnection
 - _Catalog::GetActiveConnection
-helpviewer_keywords: ActiveConnection property [ADOX]
+helpviewer_keywords:
+- ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6edb5e36a0b8da56dd1761b188427b403ad5b153
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 44d7173ddce5577cdb62a4208ed005d7e40daad8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection, propriété (ADOX)
 Indique l’ADO [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet auquel le [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) appartient.  
@@ -39,7 +41,7 @@ Indique l’ADO [connexion](../../../ado/reference/ado-api/connection-object-ado
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit un **connexion** objet ou un **chaîne** contenant la définition d’une connexion. Retourne l’actif **connexion** objet.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur par défaut est une référence d’objet null.  
   
 ## <a name="applies-to"></a>S'applique à  

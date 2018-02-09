@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a81ac91a4a159d41e711f79f76f79d9f168e23af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Fournisseur Microsoft OLE DB pour la présentation de SQL Server
 Le fournisseur Microsoft OLE DB pour SQL Server, SQLOLEDB, permet à ADO pour accéder à Microsoft SQL Server.
@@ -50,7 +51,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé|Description|
+|Mot clé| Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour SQL Server.|
 |**Source de données** ou **Server**|Spécifie le nom d’un serveur.|
@@ -64,7 +65,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Paramètres de connexion spécifique au fournisseur
  Le fournisseur prend en charge plusieurs paramètres de connexion spécifique au fournisseur en plus de ceux définis par ADO. Comme avec les propriétés de connexion ADO, ces propriétés spécifiques au fournisseur peuvent être définies la [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ou peut être définie dans le cadre de la **ConnectionString**.
 
-|Paramètre|Description|
+|Paramètre| Description|
 |---------------|-----------------|
 |Trusted_Connection|Indique le mode d’authentification utilisateur. Cela peut être défini sur **Oui** ou **non**. La valeur par défaut est **non**. Si cette propriété est définie sur **Oui**, SQLOLEDB utilise le Mode d’authentification Microsoft Windows NT pour autoriser l’accès utilisateur à la base de données SQL Server spécifiée par le **emplacement** et [source de données ](../../../ado/reference/ado-api/datasource-property-ado.md) valeurs de propriété. Si cette propriété est définie sur **non**, SQLOLEDB utilise le Mode mixte pour autoriser l’accès utilisateur à la base de données SQL Server. Le compte de connexion SQL Server et le mot de passe sont spécifiés dans le **Id utilisateur** et **mot de passe** propriétés.|
 |Langue actuelle|Indique un nom de langage SQL Server. Identifie la langue utilisée pour le choix et la mise en forme des messages système. La langue doit être installée sur le serveur SQL Server, la connexion échoue lors de l’ouverture dans le cas contraire.|
@@ -214,7 +215,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Ordre d’accès|DBPROP_ACCESSORDER|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
@@ -287,7 +288,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Chemin d’accès de base|SSPROP_STREAM_BASEPATH|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|

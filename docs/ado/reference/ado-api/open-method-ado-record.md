@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 627000fbf4b3b153895d64ba0bd7560654d63719
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-record"></a>Open (méthode) (enregistrement ADO)
 Ouvre une existante [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) de l’objet ou crée un nouvel élément représenté par le **enregistrement**, par exemple un fichier ou répertoire.  
@@ -40,27 +42,27 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. A **Variant** qui peut représenter l’URL de l’entité pour être représentée par ce **enregistrement** objet, un **commande**, open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou un autre **enregistrement** (objet), une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
+ Ce paramètre est facultatif. A **Variant** qui peut représenter l’URL de l’entité pour être représentée par ce **enregistrement** objet, un **commande**, open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou un autre **enregistrement** (objet), une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
   
  *ActiveConnection*  
- Facultatif. A **Variant** qui représente la chaîne de connexion ou ouvrez [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
+ Ce paramètre est facultatif. A **Variant** qui représente la chaîne de connexion ou ouvrez [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
   
  *Mode*  
- Facultatif. A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **enregistrement** objet. Valeur par défaut est **adModeUnknown**.  
+ Ce paramètre est facultatif. A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **enregistrement** objet. Valeur par défaut est **adModeUnknown**.  
   
  *CreateOptions*  
- Facultatif. A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valeur qui spécifie si un fichier ou répertoire existant doit être ouvert ou un nouveau fichier ou répertoire doit être créé. Valeur par défaut est **adFailIfNotExists**. Si défini sur la valeur par défaut, le mode d’accès est obtenu à partir de la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété. Ce paramètre est ignoré lors de la *Source* paramètre ne contient pas une URL.  
+ Ce paramètre est facultatif. A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valeur qui spécifie si un fichier ou répertoire existant doit être ouvert ou un nouveau fichier ou répertoire doit être créé. Valeur par défaut est **adFailIfNotExists**. Si défini sur la valeur par défaut, le mode d’accès est obtenu à partir de la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété. Ce paramètre est ignoré lors de la *Source* paramètre ne contient pas une URL.  
   
  *Options*  
- Facultatif. A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valeur qui spécifie les options pour l’ouverture du **enregistrement**. Valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
+ Ce paramètre est facultatif. A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valeur qui spécifie les options pour l’ouverture du **enregistrement**. Valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
   
  *UserName*  
- Facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Source*.  
+ Ce paramètre est facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Source*.  
   
  *Mot de passe*  
- Facultatif. A **chaîne** valeur qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
+ Ce paramètre est facultatif. A **chaîne** valeur qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  *Source* peut être :  
   
 -   UNE URL. Si le protocole de l’URL est http, le fournisseur Internet sera appelé par défaut. Si l’URL pointe vers un nœud qui contient un script exécutable (comme un. Page ASP), un **enregistrement** qui contient la source à la place exécuté contenu s’ouvre par défaut. Utilisez le *Options* argument pour modifier ce comportement.  

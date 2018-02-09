@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Member
-helpviewer_keywords: Member object [ADO MD], members
+f1_keywords:
+- Member
+helpviewer_keywords:
+- Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6624e44343ef680c317338ea1fe32ead2aa0d9d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7b34e45ff23a1a71c1a45b1190d923e94328154
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-ado-md"></a>Objet de membre (ADO MD)
 Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les propriétés d’un **membre** diffèrent selon le contexte dans lequel elle est utilisée. A **membre** d’un [au niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) dans un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) a un [enfants](../../../ado/reference/ado-md-api/children-property-ado-md.md) propriété qui retourne le **membres** du niveau inférieur suivant dans la hiérarchie à partir du **membre**. Pour un **membre** d’un [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md), le **enfants** collection est toujours vide. En outre, le [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriété s’applique uniquement aux **membres** d’un **au niveau**.  
   
  A **membre** de **Position** a deux propriétés qui sont utiles lors de l’affichage du [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) et [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Une erreur se produit si ces propriétés sont accessibles sur un **membre** d’un **niveau**.  
@@ -72,12 +75,12 @@ Représente un membre d’un niveau dans un cube, les enfants d’un membre d’
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom| Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |ChildrenCardinality|Nombre d'enfants de ce membre.|  
 |CubeName|Nom du cube.|  
-|Description|Description explicite du membre.|  
+| Description|Description explicite du membre.|  
 |DimensionUniqueName|Le nom non ambigu de la [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Le nom non ambigu de la hiérarchie.|  
 |LevelNumber|La distance entre le niveau et la racine de la hiérarchie.|  
@@ -87,7 +90,7 @@ Représente un membre d’un niveau dans un cube, les enfants d’un membre d’
 |MemberName|Nom du membre.|  
 |MemberOrdinal|Le nombre ordinal du membre.|  
 |MemberType|Type du membre.|  
-|Nom unique de membre|Nom du membre et non équivoque.|  
+|MemberUniqueName|Nom du membre et non équivoque.|  
 |ParentCount|Décompte du nombre de parents de ce membre.|  
 |ParentLevel|Le numéro de niveau du parent du membre.|  
 |ParentUniqueName|Le nom non ambigu du parent du membre.|  

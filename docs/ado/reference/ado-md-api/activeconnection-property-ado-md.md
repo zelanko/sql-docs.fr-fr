@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - ActiveConnection
 - Cellset::ActiveConnection
 - Catalog::ActiveConnection
-helpviewer_keywords: ActiveConnection property [ADO MD]
+helpviewer_keywords:
+- ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00f177b12594e834f5ab7a15a4d357bd4a7f75f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection, propriété (ADO MD)
 Indique à quel ADO [connexion](../../../ado/reference/ado-api/connection-object-ado.md) l’ensemble de cellules en cours de l’objet ou le catalogue auquel appartient actuellement.  
@@ -35,7 +37,7 @@ Indique à quel ADO [connexion](../../../ado/reference/ado-api/connection-object
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Variant** qui contient une chaîne de définition d’une connexion ou **connexion** objet. La valeur par défaut est vide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez définir cette propriété à un ADO valide **connexion** objet ou une chaîne de connexion valide. Lorsque cette propriété est définie à une chaîne de connexion, le fournisseur crée un **connexion** de l’objet à l’aide de cette définition et ouvre la connexion.  
   
  Si vous utilisez la *ActiveConnection* argument de la [ouvrir](../../../ado/reference/ado-md-api/open-method-ado-md.md) méthode pour ouvrir un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet, le **ActiveConnection** propriété dont la valeur hériter de la valeur de l’argument.  

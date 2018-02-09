@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Fournisseur Microsoft OLE DB pour Oracle présentation
 > [!IMPORTANT]
@@ -53,7 +54,7 @@ MSDAORA
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé|Description|
+|Mot clé| Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour Oracle.|
 |**Source de données**|Spécifie le nom d’un serveur.|
@@ -68,12 +69,12 @@ MSDAORA
 
  Ces paramètres sont entièrement décrits dans le [de référence du programmeur OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). Le [Index des propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fournit une référence croisée entre ces noms de paramètres et les propriétés OLE DB correspondantes.
 
-|Paramètre|Description|
+|Paramètre| Description|
 |---------------|-----------------|
 |**Handle de fenêtre**|Indique le handle de fenêtre à utiliser pour demander des informations supplémentaires.|
 |**Identificateur de paramètres régionaux**|Indique un nombre 32 bits unique (par exemple, 1033) qui spécifie les préférences liées à la langue de l’utilisateur. Ces préférences indiquent la façon dont les dates et heures sont formatées, les éléments sont triés par ordre alphabétique, les chaînes sont comparées et ainsi de suite.|
-|**Services OLE DB**|Indique le masque de bits qui spécifie les services OLE DB pour activer ou désactiver.|
-|**Invite**|Indique s’il faut inviter l’utilisateur pendant une connexion est établie.|
+|**OLE DB Services**|Indique le masque de bits qui spécifie les services OLE DB pour activer ou désactiver.|
+|**Prompt**|Indique s’il faut inviter l’utilisateur pendant une connexion est établie.|
 |**Propriétés étendues**|Chaîne contenant les informations de connexion étendues spécifiques au fournisseur. Utilisez cette propriété uniquement pour les informations de connexion spécifique au fournisseur qui ne peut pas être décrites par le biais du mécanisme de propriété.|
 
 ## <a name="see-also"></a>Voir aussi

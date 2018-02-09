@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Command15::CommandText
-helpviewer_keywords: CommandText property [ADO]
+f1_keywords:
+- Command15::CommandText
+helpviewer_keywords:
+- CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e67ea9d0a7d34477a73c09c99689e0c953f4b905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1edaf4f4d9e4132547bfa1c44308806743ed98e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtext-property-ado"></a>CommandText, propriété (ADO)
 Indique le texte d’une commande pour être émise sur un fournisseur.  
@@ -32,7 +35,7 @@ Indique le texte d’une commande pour être émise sur un fournisseur.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Obtient ou définit un **chaîne** valeur contenant une commande de fournisseur, comme une instruction SQL, un nom de table, une URL relative ou un appel de procédure stockée. La valeur par défaut est une chaîne vide (« »).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **CommandText** propriété pour définir ou retourner le texte d’une commande représentée par un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Généralement cela sera une instruction SQL, mais peut également être n’importe quel autre type d’instruction de commande reconnue par le fournisseur, tel qu’un appel de procédure stockée. Une instruction SQL doit être de la version prise en charge par le processeur de requêtes du fournisseur ou le dialecte particulier.  
   
  Si le [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propriété de la **commande** objet a la valeur **True** et **commande** objet est lié à une connexion ouverte lorsque vous définissez le **CommandText** propriété, ADO prépare la requête (c'est-à-dire, une forme compilée de la requête est stockée par le fournisseur) lorsque vous appelez le [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) ou [ouvrir](../../../ado/reference/ado-api/open-method-ado-connection.md)méthodes.  

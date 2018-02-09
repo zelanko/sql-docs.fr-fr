@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e668f5d2644ece0fa9210bdb492fd37ca8089a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93be03c62c7950e2cd41a3ab5b56670c2e70b11c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sort-property"></a>Propriété de tri
 Indique un ou plusieurs noms de champ sur lequel le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est triée, et indique si chaque champ est trié dans l’ordre croissant ou décroissant.  
@@ -40,7 +41,7 @@ Indique un ou plusieurs noms de champ sur lequel le [Recordset](../../../ado/ref
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur qui indique le champ noms dans le **Recordset** sur laquelle effectuer le tri. Chaque nom est séparé par une virgule et peut être suivi d’un espace et le mot clé, **ASC**, laquelle trier le champ dans l’ordre croissant, ou **DESC**, laquelle trier le champ dans l’ordre décroissant. Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette propriété requiert le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété à définir **adUseClient**. Un index temporaire est créé pour chaque champ spécifié dans le **tri** si aucun index n’existe pas déjà une propriété.  
   
  L’opération de tri est efficace, car les données ne sont pas réorganisées physiquement, mais simplement accédées dans l’ordre spécifié par l’index.  
@@ -61,6 +62,6 @@ Indique un ou plusieurs noms de champ sur lequel le [Recordset](../../../ado/ref
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété de tri (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Exemple de propriété de tri (VC ++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimiser la propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
+ [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn, propriété (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection, propriété (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

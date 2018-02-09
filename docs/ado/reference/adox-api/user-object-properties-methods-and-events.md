@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: User object [ADOX], members
+helpviewer_keywords:
+- User object [ADOX], members
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7bd2e3e934058ce97305fb3fd1ce7b796285649
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8904d64ba5f46d1492a83488c346270ddff32791
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-object-properties-methods-and-events"></a>Propriétés de l’objet utilisateur, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+## <a name="propertiescollections"></a>Properties/Collections  
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [ParentCatalog, propriété (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  

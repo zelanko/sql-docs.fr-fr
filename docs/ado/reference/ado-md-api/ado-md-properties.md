@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae381b20c4073ff5da87b6e3d26a964ed6a6ca60
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-properties"></a>Propriétés ADO MD
 |||  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[Légende](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indique la légende de texte à utiliser lors de l’affichage un **niveau** ou **membre** objet.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indique le nombre de membres pour lesquels actuel **membre** objet est le parent dans une hiérarchie.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Retourne une collection de **membres** pour lequel actuel **membre** est le parent dans la hiérarchie.|  
-|[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
+|[Compter](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[Profondeur](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indique le nombre de niveaux entre le **niveau** et la racine de la hiérarchie.|  
 |[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Retourne une description de texte de l’objet actuel.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indique le nombre de dimensions sur un axe.|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Indique le nombre de niveaux entre la racine de la hiérarchie et un membre.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indique le nom du niveau d’un membre.|  
 |[Nom](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Indique le nom d’un objet.|  
-|[Ordinal (cellule)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifie de façon unique une cellule par sa position dans un ensemble de cellules.|  
+|[Ordinal (Cell)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifie de façon unique une cellule par sa position dans un ensemble de cellules.|  
 |[Ordinal (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifie de façon unique une position le long d’un axe.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indique le membre qui est le parent du membre actuel dans une hiérarchie.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indique si le parent de ce membre de position est le même que le parent du membre immédiatement précédent.|  

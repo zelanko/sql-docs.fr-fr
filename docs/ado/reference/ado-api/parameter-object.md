@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Parameter
-helpviewer_keywords: Parameter object [ADO]
+f1_keywords:
+- Parameter
+helpviewer_keywords:
+- Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf234fd6cee37c525533bc082f4ae6c41a7b23f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec8556b03b2f0d3a3d7d439ae223385860040c63
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-object"></a>Objet Parameter
 Représente un paramètre ou un argument associé à un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet basé sur une procédure stockée ou une requête paramétrable.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  De nombreux fournisseurs prennent en charge les commandes paramétrées. Il s’agit de commandes dans lequel l’action souhaitée est définie une seule fois, mais les variables (ou paramètres) sont utilisées pour modifier certains détails de la commande. Par exemple, une instruction SQL SELECT peut utiliser un paramètre pour définir les critères de correspondance d’une clause WHERE et l’autre pour définir le nom de colonne pour une clause de tri.  
   
  **Paramètre** objets représentent des paramètres associés aux requêtes paramétrables ou les arguments d’entrée/sortie et les valeurs de retour de procédures stockées. Selon les fonctionnalités du fournisseur, certaines collections, des méthodes ou propriétés d’un **paramètre** objet n’est peut-être pas disponible.  

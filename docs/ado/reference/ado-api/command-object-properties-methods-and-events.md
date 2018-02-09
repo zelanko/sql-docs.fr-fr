@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Command object [ADO], members
+helpviewer_keywords:
+- Command object [ADO], members
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87dcaa16105f9d683167dd2cf7abd64c6f8be2d9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 061053ef36157124cee9ca2de56a12b0def480a2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-properties-methods-and-events"></a>Propriétés de l’objet commande, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+## <a name="propertiescollections"></a>Properties/Collections  
  [Propriété ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
  [Propriété CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d9e2ea77de53256e075db07b8f809298e74628d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>Section du fichier de personnalisation UserList
 Le **userlist** section relative à la **connecter** section avec la même *identificateur* paramètre.  
@@ -37,12 +38,12 @@ Le **userlist** section relative à la **connecter** section avec la même *iden
 ## <a name="syntax"></a>Syntaxe  
  Une entrée d’accès utilisateur est sous la forme :  
   
- *nom d’utilisateur***=**   
+ *userName* **=**   
  ***accessRights***  
   
-|Élément|Description|  
+|Élément| Description|  
 |----------|-----------------|  
-|*nom d’utilisateur*|Le *nom d’utilisateur* de la personne utilisant cette connexion. Noms d’utilisateur valides sont établies avec IIS **Service Manager** boîte de dialogue.|  
+|*userName*|Le *nom d’utilisateur* de la personne utilisant cette connexion. Noms d’utilisateur valides sont établies avec IIS **Service Manager** boîte de dialogue.|  
 |***accessRights***|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** : utilisateur ne peut pas accéder à la source de données.<br />-   **En lecture seule** : l’utilisateur peut lire la source de données.<br />-   **ReadWrite** : utilisateur peut lire ou écrire dans la source de données.|  
   
 ## <a name="see-also"></a>Voir aussi  

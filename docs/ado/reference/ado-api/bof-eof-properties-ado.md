@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c2b827856eac7ec2eed9ca4f3580b2a12418933
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-properties-ado"></a>Début de fichier EOF, propriétés (ADO)
 -   **BOF** indique que la position actuelle se trouve avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-value"></a>Valeur retournée  
  Le **BOF** et **EOF** propriétés retour **booléenne** valeurs.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **BOF** et **EOF** propriétés afin de déterminer si un **Recordset** objet contient des enregistrements ou si vous avez dépassé les limites d’un **Recordset**  lorsque vous déplacez d’un enregistrement à l’objet.  
   
  Le **BOF** propriété renvoie **True** (-1) si la position actuelle est avant le premier enregistrement et **False** (0) si la position actuelle est l’ou après le premier enregistrement.  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/21/2017
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Déplacer < 0|Déplacer 0|MoveNext,<br /><br /> Déplacer > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Autorisé|Error|Error|Autorisé|  
-|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Error|Error|  
-|Les deux **True**|Error|Error|Error|Error|  
+|**BOF**=**True**, **EOF**=**False**|Autorisé|Erreur|Erreur|Autorisé|  
+|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Erreur|Erreur|  
+|Les deux **True**|Erreur|Erreur|Erreur|Erreur|  
 |Les deux **False**|Autorisé|Autorisé|Autorisé|Autorisé|  
   
  Ce qui permet une **déplacer** méthode ne garantit pas que la méthode parviendra à localiser un enregistrement ; cela signifie uniquement que l’appel spécifié **déplacer** méthode ne génère pas d’une erreur.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|La valeur **True**|La valeur **True**|  
 |**Déplacer** 0|Aucun changement|Aucun changement|  
-|**MovePrevious**, **déplacer** < 0|La valeur **True**|Aucun changement|  
+|**MovePrevious**, **Move** < 0|La valeur **True**|Aucun changement|  
 |**MoveNext**, **déplacer** > 0|Aucun changement|La valeur **True**|  
   
 ## <a name="applies-to"></a>S'applique à  

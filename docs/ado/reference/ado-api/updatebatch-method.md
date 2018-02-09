@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
 - Recordset15::raw_UpdateBatch
-helpviewer_keywords: UpdateBatch method [ADO]
+helpviewer_keywords:
+- UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a1b1e31de97eb701fed5db18acf45b7551f5984
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-method"></a>Méthode UpdateBatch
 Écrit toutes les mises à jour par lot en attente sur le disque.  
@@ -40,12 +42,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- Facultatif. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui indique le nombre d’enregistrements le **UpdateBatch** méthode affectera.  
+ Ce paramètre est facultatif. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui indique le nombre d’enregistrements le **UpdateBatch** méthode affectera.  
   
  *PreserveStatus*  
- Facultatif. A **booléenne** valeur qui spécifie si les modifications locales, comme indiqué par le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété, doivent être validées. Si cette valeur est définie sur **True**, le **état** propriété de chaque enregistrement reste inchangée après la mise à jour est terminée.  
+ Ce paramètre est facultatif. A **booléenne** valeur qui spécifie si les modifications locales, comme indiqué par le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété, doivent être validées. Si cette valeur est définie sur **True**, le **état** propriété de chaque enregistrement reste inchangée après la mise à jour est terminée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **UpdateBatch** méthode lorsque vous modifiez un **Recordset** objet en mode de mise à jour par lot pour transmettre toutes les modifications apportées dans un **Recordset** objet à la base de données sous-jacente.  
   
  Si le **Recordset** objet prend en charge la mise à jour par lot, vous pouvez mettre en cache plusieurs modifications apportées à un ou plusieurs enregistrements localement jusqu'à ce que vous appeliez la **UpdateBatch** (méthode). Si vous modifiez l’enregistrement actif ou ajoutez un nouvel enregistrement lorsque vous appelez le **UpdateBatch** (méthode), ADO appelle automatiquement la [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode pour enregistrer les modifications en attente à l’enregistrement actif avant transmettre les modifications par lot au fournisseur. Vous devez utiliser les commandes de mise à jour avec un jeu de clés ou un curseur statique uniquement.  

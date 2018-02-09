@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Supports
 - Recordset15::Supports
-helpviewer_keywords: Supports method [ADO]
+helpviewer_keywords:
+- Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c415490b1193a5dcbc8ef20e5975149a8519f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b78cb1325b720207f6a18201971ef627314bfee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method"></a>Prend en charge (méthode)
 Détermine si un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet prend en charge un type particulier de fonctionnalité.  
@@ -45,7 +47,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  A **Long** expression se compose d’un ou plusieurs [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valeurs.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **prend en charge** méthode pour déterminer les types de fonctionnalités un **Recordset** prend en charge de l’objet. Si le **Recordset** objet prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, le **prend en charge** méthode retourne **True**. Sinon, elle retourne **False**.  
   
 > [!NOTE]

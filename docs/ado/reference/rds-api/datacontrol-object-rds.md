@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - DataControl
 - RDS.DataControl
-helpviewer_keywords: DataControl object [ADO]
+helpviewer_keywords:
+- DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4921e2895aeeede12f161b31a5dac83e0276822a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl, objet (RDS)
 Lie une requête de données [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à un ou plusieurs contrôles (par exemple, une zone de texte, contrôle de grille ou zone de liste déroulante) pour afficher la **Recordset** données sur une page Web.  
@@ -45,7 +47,7 @@ Lie une requête de données [Recordset](../../../ado/reference/ado-api/recordse
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’ID de classe pour le **RDS. DataControl** objet est 0-983A-00C04FC29E33 BD96C556 65A3 - 11 D.  
   
 > [!NOTE]

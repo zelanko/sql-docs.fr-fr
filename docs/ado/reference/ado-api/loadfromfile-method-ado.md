@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::raw_LoadFromFile
-helpviewer_keywords: LoadFromFile method [ADO]
+f1_keywords:
+- _Stream::raw_LoadFromFile
+helpviewer_keywords:
+- LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c50565a087c9323a7f4dbafb9c604a42a19e1179
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 071ba2d6a2aa5af96af07274455a7495a9650dea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile, méthode (ADO)
 Charge le contenu d’un fichier existant dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -40,7 +43,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  A **chaîne** valeur qui contient le nom d’un fichier doit être chargé dans le **flux**. *Nom de fichier* peut contenir un chemin d’accès valide et un nom au format UNC. Si le fichier spécifié n’existe pas, une erreur d’exécution se produit.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode peut être utilisée pour charger le contenu d’un fichier local dans un **flux** objet. Cela permet de télécharger le contenu d’un fichier local sur un serveur.  
   
  Le **flux** objet doit être déjà ouvert avant d’appeler **LoadFromFile**. Cette méthode ne modifie pas la liaison de la **flux** de l’objet ; il sera toujours lié à l’objet spécifié par l’URL ou **enregistrement** avec lequel le **flux** était à l’origine ouvert.  

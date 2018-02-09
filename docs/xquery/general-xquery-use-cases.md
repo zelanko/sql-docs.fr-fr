@@ -8,23 +8,27 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
-helpviewer_keywords: XQuery, general usage cases
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- XQuery, general usage cases
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45aa3a2cc22121e6d8d69e06c79fde603a6b7427
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13b88814a7d0d9b0d0154b8e010b6aa76c85c6e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-xquery-use-cases"></a>Cas d'emploi généraux des requêtes XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +61,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription is not null  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **espace de noms** mot clé dans le prologue XQuery définit un préfixe d’espace de noms qui est utilisé dans le corps de la requête.  
   
@@ -65,7 +69,7 @@ WHERE CatalogDescription is not null
   
 -   Dans la clause WHERE, le **exist()** méthode est utilisée pour rechercher uniquement les lignes qui contiennent les descriptions du catalogue de produits. Autrement dit, le code XML qui contient l'élément <`ProductDescription`>.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -120,7 +124,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Angle)[1]'
 AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]', 'varchar(20)')  = 'small'  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Dans la clause WHERE, le **exist()** méthode est utilisée pour récupérer uniquement les lignes qui ont produit des descriptions de catalogue avec le <`Picture`> élément.  
   
@@ -158,7 +162,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   $pd/p1:Features/* renvoie uniquement les enfants du nœud d'élément <`Features`>, mais $pd/p1:Features/node() renvoie tous les nœuds, notamment les nœuds d'élément et de texte, les instructions de traitement et les commentaires.  
   
@@ -252,7 +256,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription is not NULL  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La structure de bouclage FOR ... La boucle RETURN récupère les deux premières caractéristiques du produit. Le **position()** fonction est utilisée pour rechercher la position des éléments dans la séquence.  
   
@@ -302,7 +306,7 @@ WHERE CatalogDescription.value('
   
  Notez que la requête SELECT spécifie **query()** et **value()** méthodes de la **xml** type de données. Par conséquent, au lieu de répéter deux fois la déclaration des espaces de noms dans deux prologues de requête différents, le préfixe pd est utilisé dans la requête, puis défini une seule fois à l'aide de WITH XMLNAMESPACES.  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La clause WHERE sert à récupérer uniquement les lignes où la description du catalogue contient le mot « Aerodynamic » dans l'élément <`Summary`>.  
   
@@ -310,7 +314,7 @@ WHERE CatalogDescription.value('
   
 -   Le **value()** méthode de la **xml** type de données compare la valeur retournée par **contains()** à 1.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result        
@@ -337,7 +341,7 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
 ') = 0  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Si le **exist()** méthode dans la clause WHERE renvoie la valeur False (0), l’ID de modèle de produit est retournée. Dans le cas contraire, aucune donnée n'est renvoyée.  
   

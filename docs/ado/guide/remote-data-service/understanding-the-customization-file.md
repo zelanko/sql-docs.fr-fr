@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section dans le fichier de personnalisation est constitué de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiquées par les chaînes littérales **connecter**, **sql**, **userlist**, ou **journaux**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien du tout.  
@@ -46,20 +48,20 @@ identifier
   
  Les en-têtes de la section des éléments suivants.  
   
-|Élément|Description|  
+|Élément| Description|  
 |----------|-----------------|  
-|**se connecter**|Une chaîne littérale qui modifie une chaîne de connexion.|  
-|**SQL**|Une chaîne littérale qui modifie une chaîne de commande.|  
-|**UserList**|Une chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
-|**journaux**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement des erreurs opérationnelles.|  
-|**par défaut**|Une chaîne littérale est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
-|*Identificateur*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur est trouvée dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur est trouvée dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
+|**connect**|Une chaîne littérale qui modifie une chaîne de connexion.|  
+|**sql**|Une chaîne littérale qui modifie une chaîne de commande.|  
+|**userlist**|Une chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
+|**logs**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement des erreurs opérationnelles.|  
+|**default**|Une chaîne littérale est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
+|*identifier*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur est trouvée dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur est trouvée dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
   
  Le **DataFactory** appelle le gestionnaire, en passant les paramètres client. Le Gestionnaire de recherche des chaînes entières dans les paramètres client qui correspondent aux identificateurs dans les en-têtes de la section appropriée. Si une correspondance est trouvée, le contenu de cette section est appliqué au paramètre du client.  
   
  Une section spécifique est utilisée dans les circonstances suivantes :  
   
--   A **connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, «**Source de données =***valeur*», correspond à un **connecter** identificateur de la section*.*  
+-   A **connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, « **Source de données = *** valeur*», correspond à un **connecter** identificateur de la section*.*  
   
 -   Un **sql** section est utilisée si la chaîne de commande client contient une chaîne qui correspond à un **sql** identificateur de section.  
   

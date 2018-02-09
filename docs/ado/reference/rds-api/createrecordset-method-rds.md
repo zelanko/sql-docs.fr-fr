@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
 Crée un vide, déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,9 +53,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** tableau d’attributs qui définit chaque colonne dans la **Recordset** créé. Chaque définition de colonne contient un tableau de quatre attributs obligatoires et un attribut facultatif.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|Nom   |Nom de l’en-tête de colonne.|  
+|Nom|Nom de l’en-tête de colonne.|  
 |Type|Entier du type de données.|  
 |Taille|Entier de la largeur en caractères, quel que soit le type de données.|  
 |Possibilité de valeurs nulles|Valeur booléenne.|  
@@ -61,7 +63,7 @@ object.CreateRecordset(ColumnInfos)
   
  L’ensemble de tableaux de colonnes est ensuite regroupé dans un tableau, qui définit le **Recordset**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’objet métier côté serveur peut remplir résultant **Recordset** avec des données à partir d’un fournisseur de données non OLE DB, comme un système d’exploitation fichier cotations boursières qui le contient.  
   
  Le tableau suivant répertorie les [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeurs prises en charge par le **CreateRecordset** (méthode). Le nombre répertorié est le numéro de référence utilisé pour définir des champs.  
@@ -74,14 +76,14 @@ object.CreateRecordset(ColumnInfos)
 |------------|--------------|------------|------------------|  
 |Fixe|**adTinyInt**|16||  
 |Fixe|**adSmallInt**|2||  
-|Fixe|**tous les types**|3||  
+|Fixe|**adInteger**|3||  
 |Fixe|**adBigInt**|20||  
 |Fixe|**adUnsignedTinyInt**|17||  
 |Fixe|**adUnsignedSmallInt**|18||  
 |Fixe|**adUnsignedInt**|19||  
 |Fixe|**adUnsignedBigInt**|21||  
 |Fixe|**adSingle**|4||  
-|Fixe|**longueur fixe**|5||  
+|Fixe|**adDouble**|5||  
 |Fixe|**adCurrency**|6||  
 |Fixe|**adDecimal**|14||  
 |Fixe|**adNumeric**|131||  

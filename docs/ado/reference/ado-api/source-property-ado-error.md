@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::get_Source
 - Error::Source
 - Error::GetSource
-helpviewer_keywords: Source property [ADO Error]
+helpviewer_keywords:
+- Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b237e278cc2dd082ad653687126716a2b0a7380f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-error"></a>Source, propriété (erreur ADO)
 Indique le nom de l’objet ou l’application qui a généré une erreur.  
@@ -35,8 +37,8 @@ Indique le nom de l’objet ou l’application qui a généré une erreur.
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un **chaîne** valeur qui indique le nom d’un objet ou l’application.  
   
-## <a name="remarks"></a>Notes   
- Utilisez le **Source** propriété sur une [erreur](../../../ado/reference/ado-api/error-object.md) objet afin de déterminer le nom de l’objet ou l’application qui a généré une erreur. Cela peut être l’objet nom de classe ou l’ID programmatique. Pour les erreurs dans ADO, la valeur de propriété sera **ADODB.** *ObjectName*, où *ObjectName* est le nom de l’objet qui a déclenché l’erreur. Pour ADOX et ADO MD, la valeur sera **ADOX.** *ObjectName* et **ADOMD.** *ObjectName,* respectivement.  
+## <a name="remarks"></a>Notes  
+ Utilisez le **Source** propriété sur une [erreur](../../../ado/reference/ado-api/error-object.md) objet afin de déterminer le nom de l’objet ou l’application qui a généré une erreur. Cela peut être l’objet nom de classe ou l’ID programmatique. Pour les erreurs dans ADO, la valeur de propriété sera **ADODB. *** ObjectName*, où *ObjectName* est le nom de l’objet qui a déclenché l’erreur. Pour ADOX et ADO MD, la valeur sera **ADOX. *** ObjectName* et **ADOMD. *** ObjectName,* respectivement.  
   
  En fonction de la documentation à partir de la **Source**, [nombre](../../../ado/reference/ado-api/number-property-ado.md), et [Description](../../../ado/reference/ado-api/description-property.md) propriétés de **erreur** des objets, vous pouvez écrire du code qui gère l’erreur en conséquence.  
   

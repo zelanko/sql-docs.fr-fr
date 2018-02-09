@@ -33,19 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Création de Types définis par l’utilisateur - codage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Lorsque vous codez votre définition de type défini par l’utilisateur (UDT), vous devez implémenter des fonctionnalités différentes, selon que vous implémentez l’UDT comme une classe ou une structure, ainsi que sur les options de format et de sérialisation que vous avez choisi.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Lorsque vous codez votre définition de type défini par l'utilisateur (UDT, User-Defined Type), vous devez implémenter différentes fonctionnalités, selon que vous implémentez le type défini par l'utilisateur comme classe ou comme structure, et selon les options de format et de sérialisation que vous avez choisies.  
   
  L’exemple de cette section illustre l’implémentation d’un **Point** UDT comme un **struct** (ou **Structure** en Visual Basic). Le **Point** UDT se compose de X et Y coordonnées implémentés en tant que procédures de propriété.  
   
@@ -100,7 +101,7 @@ public struct Point : INullable
   
  Le **get()** méthode **IsNull** n’est pas de cas spéciaux en aucune façon. Si un **Point** variable  **@p**  est **Null**, puis  **@p.IsNull**  , par défaut, prendra la valeur « NULL », pas « 1 ». C’est parce que le **SqlMethod(OnNullCall)** attribut de la **IsNull get()** méthode false par défaut. Étant donné que l’objet est **Null**, lorsque la propriété est requise, l’objet n’est pas désérialisé, la méthode n’est pas appelée et une valeur par défaut de « NULL » est retournée.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Dans l'exemple suivant, la variable `is_Null` est privée et contient l'état de Null pour l'instance du type défini par l'utilisateur. Votre code doit maintenir une valeur appropriée pour `is_Null`. L’UDT doit également avoir une propriété statique nommée **Null** qui retourne une instance de valeur null de l’UDT. Cela permet au type défini par l'utilisateur de renvoyer une valeur Null si l'instance est en effet Null dans la base de données.  
   
 ```vb  
@@ -297,7 +298,7 @@ public Int32 Y
   
  Le **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName** propriété de la **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** vous permet de fournir le nom d’une méthode de validation exécutée par le serveur lorsque des données sont affectées à un type UDT ou converties en un type UDT. **ValidationMethodName** est également appelé pendant l’exécution de l’utilitaire bcp, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, requête distribuée et données tabulaires stream (TDS) procédure distante (RPC) fonctionnement d’appels. La valeur par défaut **ValidationMethodName** a la valeur null, indiquant qu’il n’existe aucune méthode de validation.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Le fragment de code suivant illustre la déclaration de la **Point** (classe), qui spécifie un **ValidationMethodName** de **ValidatePoint**.  
   
 ```vb  
@@ -498,7 +499,7 @@ public Int32 Y
 ## <a name="coding-udt-methods"></a>Codage de méthodes UDT  
  Lors du codage de méthodes UDT, considérez si l'algorithme utilisé pourrait changer avec le temps. Si c'est le cas, vous pourriez envisager de créer une classe séparée pour les méthodes utilisées par votre type défini par l'utilisateur. Si l'algorithme change, vous pouvez recompiler la classe avec le nouveau code et charger l'assembly dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans affecter le type défini par l'utilisateur. Dans de nombreux cas, les types définis par l'utilisateur peuvent être rechargés à l'aide de l'instruction  [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mais cela pourrait provoquer des problèmes avec les données existantes. Par exemple, le **devise** UDT inclus avec le **AdventureWorks** exemple de base de données utilise un **ConvertCurrency** de fonction pour convertir des valeurs monétaires, implémentée dans une classe distincte. Il est possible que les algorithmes de conversion puissent changer de manière imprévisible dans le futur, ou que de nouvelles fonctionnalités soient requises. Séparer le **ConvertCurrency** fonction à partir de la **devise** implémentation d’UDT offre davantage de flexibilité lors de la planification des modifications futures.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Le **Point** classe contient trois méthodes simples pour calculer la distance : **Distance**, **DistanceFrom** et **DistanceFromXY**. Chacune retourne un **double** calcule la distance de **Point** à zéro, la distance à partir d’un point spécifié à **Point**, et la distance spécifiée des coordonnées X et Y à **Point**. **Distance** et **DistanceFrom** chaque appel **DistanceFromXY**et montrent comment utiliser différents arguments pour chaque méthode.  
   
 ```vb  
@@ -568,7 +569,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  OnNullCall  
  Indique si la méthode est appelée lorsque des arguments d'entrée de référence nulle sont spécifiés. Valeur par défaut est **true**.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Le **Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator** propriété vous permet de marquer une méthode qui autorise une modification de l’état d’une instance d’un type UDT. [!INCLUDE[tsql](../../includes/tsql-md.md)] ne vous permet pas de définir deux propriétés de type défini par l'utilisateur dans la clause SET d'une instruction UPDATE. Toutefois, vous pouvez avoir une méthode marquée comme mutateur qui modifie les deux membres.  
   
 > [!NOTE]  

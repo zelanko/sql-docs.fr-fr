@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::GetRows
 - Recordset15::raw_GetRows
-helpviewer_keywords: Getrows method [ADO]
+helpviewer_keywords:
+- Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 317e654699ab6e2c6abc349d91ed58d4c97a7a19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1fb0ab2e6673a85b7204cacfbeed5bf4968970b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrows-method-ado"></a>GetRows, méthode (ADO)
 Récupère plusieurs enregistrements d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet dans un tableau.  
@@ -43,15 +45,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Paramètres  
  *Lignes*  
- Facultatif. A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valeur qui indique le nombre d’enregistrements à récupérer. La valeur par défaut est **adGetRowsRest**.  
+ Ce paramètre est facultatif. A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valeur qui indique le nombre d’enregistrements à récupérer. La valeur par défaut est **adGetRowsRest**.  
   
  *Démarrer*  
- Facultatif. A **chaîne** valeur ou **Variant** qui correspond au signet de l’enregistrement à partir de laquelle le **GetRows** opération doit commencer. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
+ Ce paramètre est facultatif. A **chaîne** valeur ou **Variant** qui correspond au signet de l’enregistrement à partir de laquelle le **GetRows** opération doit commencer. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
   
  *Fields*  
- Facultatif. A **Variant** qui représente un seul nom de champ ou position ordinale ou un tableau de noms de champs ou de positions ordinales. ADO retourne uniquement les données de ces champs.  
+ Ce paramètre est facultatif. A **Variant** qui représente un seul nom de champ ou position ordinale ou un tableau de noms de champs ou de positions ordinales. ADO retourne uniquement les données de ces champs.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **GetRows** méthode pour copier des enregistrements d’un **Recordset** dans un tableau à deux dimensions. Le premier indice identifie le champ et le second identifie le numéro d’enregistrement. Le *tableau* variable est automatiquement dimensionnée à la bonne taille lors la **GetRows** méthode retourne les données.  
   
  Si vous ne spécifiez pas une valeur pour le *lignes* argument, la **GetRows** méthode récupère automatiquement tous les enregistrements dans la **Recordset** objet. Si vous demandez plus d’enregistrements sont disponibles, **GetRows** retourne uniquement le nombre d’enregistrements disponibles.  

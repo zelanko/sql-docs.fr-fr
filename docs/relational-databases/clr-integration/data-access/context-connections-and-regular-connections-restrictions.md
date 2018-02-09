@@ -15,19 +15,20 @@ helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b7986fadc999eaa721e774ff95b04aa5b861c41
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 01a520c613a93806736d8e11fd1d451fe67b4eb0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Connexions de contexte et des connexions normales - Restrictions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique décrit les restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit les restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrictions applicables aux connexions contextuelles  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions contextuelles :  
@@ -58,6 +59,6 @@ ms.lasthandoff: 01/08/2018
 -   **SqlDependency** objet n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexion contextuelle](../../../relational-databases/clr-integration/data-access/context-connection.md)  
+ [Connexion de contexte](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

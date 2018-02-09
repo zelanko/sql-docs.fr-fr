@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADORecordsetConstruction
-helpviewer_keywords: ADORecordsetConstruction interface [ADO]
+f1_keywords:
+- ADORecordsetConstruction
+helpviewer_keywords:
+- ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad2a33da2d2e54f45e765bf21b2bca018128d139
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be4c36c5bd69fe6657b57d74e8808259fe602db0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interface ADORecordsetConstruction
 Le **ADORecordsetConstruction** interface est utilisée pour construire un ADO **Recordset** objet OLE DB **ensemble de lignes** objet dans une application C/C++.  
@@ -35,7 +38,7 @@ Le **ADORecordsetConstruction** interface est utilisée pour construire un ADO *
   
 |||  
 |-|-|  
-|[Chapitre](../../../ado/reference/ado-api/chapter-property-ado.md)|En lecture/écriture.<br />Obtient ou définit un OLE DB **chapitre** objet à partir de/sur cette ADO **Recordset** objet.|  
+|[Chapter](../../../ado/reference/ado-api/chapter-property-ado.md)|En lecture/écriture.<br />Obtient ou définit un OLE DB **chapitre** objet à partir de/sur cette ADO **Recordset** objet.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|En lecture/écriture.<br />Obtient ou définit un OLE DB **RowPosition** objet à partir de/sur cette ADO **Recordset** objet.|  
 |[Ensemble de lignes](../../../ado/reference/ado-api/rowset-property-ado.md)|En lecture/écriture.<br />Obtient ou définit un OLE DB **ensemble de lignes** objet à partir de/sur cette ADO **Recordset** objet.|  
   
@@ -45,7 +48,7 @@ Le **ADORecordsetConstruction** interface est utilisée pour construire un ADO *
 ## <a name="events"></a>Événements  
  Aucun.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Étant donné un OLE DB **ensemble de lignes** objet (`pRowset`), la construction de ADO **Recordset** objet (`adoRs`) s’élève à trois opérations ci-après :  
   
 1.  Créer un ADO **Recordset** objet :  
@@ -83,5 +86,5 @@ Le **ADORecordsetConstruction** interface est utilisée pour construire un ADO *
  **UUID :** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset, propriété (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

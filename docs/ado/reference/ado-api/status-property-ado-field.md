@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Field::Status
 - Field::get_Status
 - Field::GetStatus
-helpviewer_keywords: Status property [ADO Field]
+helpviewer_keywords:
+- Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c87d755bf90398a7c15bb097499c309ec478173a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb695fae69ace4e65fea116ad125bb79f414a820
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-ado-field"></a>Propriété d’état (champ ADO)
 Indique l’état d’un [champ](../../../ado/reference/ado-api/field-object.md) objet.  
@@ -35,7 +37,7 @@ Indique l’état d’un [champ](../../../ado/reference/ado-api/field-object.md)
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valeur. La valeur par défaut est **adFieldOK**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="record-field-status"></a>Champ État de l’enregistrement  
  Modifications apportées à la valeur d’un **champ** objet dans la collection de champs d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet sont mis en cache jusqu'à ce que l’objet [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode est appelée. À ce stade, si la modification de la valeur du champ a provoqué une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status d’un de la **champ** des objets dans le **champs** collection qui a provoqué l’erreur contiendra une valeur à partir de la [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) décrivant la cause de le problème.  

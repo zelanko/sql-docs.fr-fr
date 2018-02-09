@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Level
-helpviewer_keywords: Level object [ADO MD]
+f1_keywords:
+- Level
+helpviewer_keywords:
+- Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6bd8424c137f459fafeced07a46f0c2735a9264
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f690e2efc97b4da9ea588e5028055fb758b93a48
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="level-object-ado-md"></a>Objet de niveau (ADO MD)
 Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hiérarchie.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les collections et les propriétés d’un **niveau** de l’objet, vous pouvez procédez comme suit :  
   
 -   Identifier les **niveau** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) et [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propriétés.  
@@ -46,11 +49,11 @@ Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hié
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom| Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  
-|Description|Description explicite du niveau.|  
+| Description|Description explicite du niveau.|  
 |DimensionUniqueName|Le nom non ambigu de la [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Le nom non ambigu de la hiérarchie.|  
 |LevelCaption|Étiquette ou légende associée au niveau.|  

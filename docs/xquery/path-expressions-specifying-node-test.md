@@ -8,24 +8,26 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87ad8f138eee79e84b9cc1056959ebf93a2c3aaa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressions de chemin d’accès - spécification de Test de nœud
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/05/2017
 >  Les noms de nœuds précisés dans les expressions de chemin d'accès XQuery ne sont pas soumis aux mêmes règles dépendantes du classement que les requêtes Transact-SQL et respectent toujours la casse.  
   
 ## <a name="node-name-as-node-test"></a>Nom de nœud en tant que test de nœud  
- Pour indiquer un nom de nœud en tant que test de nœud dans une étape d'expression du chemin d'accès, vous devez au préalable comprendre le concept de type de nœud principal. Chaque axe child (enfant), parent ou attribute (attribute) possède un type de nœud principal. Exemple :  
+ Pour indiquer un nom de nœud en tant que test de nœud dans une étape d'expression du chemin d'accès, vous devez au préalable comprendre le concept de type de nœud principal. Chaque axe child (enfant), parent ou attribute (attribute) possède un type de nœud principal. Par exemple :  
   
 -   Un axe attribute ne peut contenir que des attributs. L'axe attribute correspond par conséquent au type de nœud principal de l'axe.  
   
@@ -152,7 +154,7 @@ select @x.query('
   
  Cette expression renvoie le nœud élément `<b>` ainsi que les nœuds éléments descendants. En renvoyant les nœuds descendants, le type de nœud primaire de l'axe descendant-or-self, correspondant au type de nœud élément, détermine les type de nœuds qui sont renvoyés.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <b>text1  
@@ -174,7 +176,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- Étant donné que `node()` est un type de nœud, vous allez recevoir tous les nœuds de l’axe descendant. Voici le résultat obtenu :  
+ Étant donné que `node()` est un type de nœud, vous allez recevoir tous les nœuds de l’axe descendant. Voici le résultat obtenu :  
   
 ```  
 text1  
@@ -218,7 +220,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le mot clé `namespace` mentionné dans le prologue XQuery définit un préfixe utilisé dans le corps de la requête. Pour plus d’informations sur le prologue XQuery, consultez [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
   
@@ -228,7 +230,7 @@ WHERE ProductModelID=19
   
  La requête renvoie les enfants de l'élément <`Warranty`> issus de l'enfant de l'élément <`Features`> provenant lui même de l'élément <`ProductDescription`>.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <wm:Warranty xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -302,7 +304,7 @@ WHERE ProductModelID=19
   
 -   L'expression renvoie les enfants du nœud de texte issus de l'enfant de l'élément <`Features`> provenant lui-même du nœud élément <`ProductDescription`>.  
   
- Un seul nœud de texte est renvoyé. Voici le résultat obtenu :  
+ Un seul nœud de texte est renvoyé. Voici le résultat obtenu :  
   
 ```  
 These are the product highlights.   
@@ -320,13 +322,13 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La deuxième étape indique un type de nœud comme test de nœud.  
   
 -   La requête renvoie comme résultat les enfants du nœud de commentaire provenant des nœuds éléments <`ProductDescription`>.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <!-- add one or more of these elements... one for each specific product in this product model -->  
@@ -345,7 +347,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>   

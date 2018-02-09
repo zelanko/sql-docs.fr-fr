@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RightsEnum
-helpviewer_keywords: RightsEnum enumeration [ADOX]
+f1_keywords:
+- RightsEnum
+helpviewer_keywords:
+- RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02710ace5ce804a6470212de576a8f1aa6cb430b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 044edb8cf9fbbc464f653419346637ea0a23de42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rightsenum"></a>RightsEnum
 Spécifie les droits ou autorisations pour un groupe ou utilisateur sur un objet.  
   
-|Constante|Valeur|Description|  
+|Constante|Valeur| Description|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (& H4000)|L’utilisateur ou le groupe a l’autorisation de créer des objets de ce type.|  
 |**adRightDelete**|65536 (& H10000)|L’utilisateur ou le groupe a l’autorisation de supprimer des données à partir d’un objet. Pour les objets tels que **Tables**, l’utilisateur est autorisé à supprimer des valeurs de données à partir d’enregistrements.|  

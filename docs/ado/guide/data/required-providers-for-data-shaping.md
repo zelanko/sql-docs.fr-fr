@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,27 +16,27 @@ helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87c86790165d7f428ec3a5d5328fd36cd8165acf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 577c377c4c8022272ffb7c55507d3fdc378aa440
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>Fournisseurs requis pour la mise en forme des données
 Mise en forme des données requiert généralement deux fournisseurs. Le fournisseur de services, [le Service de mise en forme des données pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fournit les données de mise en forme des fonctionnalités et un fournisseur de données, telles que le fournisseur OLE DB pour SQL Server, fournit les lignes de données pour remplir la forme [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Le nom du fournisseur de services (MSDataShape) peut être spécifié comme valeur de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) le mot-clé de chaîne de connexion ou de la propriété « fournisseur = MSDataShape ; ».  
   
- Le nom du fournisseur de données peut être spécifié comme valeur de la **fournisseur de données** propriété dynamique, qui est ajoutée à la **connexion** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection par le Service de mise en forme des données pour OLE DB ou le mot-clé de chaîne de connexion «**fournisseur de données =***fournisseur*».  
+ Le nom du fournisseur de données peut être spécifié comme valeur de la **fournisseur de données** propriété dynamique, qui est ajoutée à la **connexion** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection par le Service de mise en forme des données pour OLE DB ou le mot-clé de chaîne de connexion « **fournisseur de données = *** fournisseur*».  
   
  Aucun fournisseur de données n’est requise si le **Recordset** n’est pas remplie (par exemple, comme dans un fabriqués **Recordset** contenant des colonnes créées avec le mot clé NEW). Dans ce cas, spécifiez «**fournisseur de données =**none ; ».  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 Dim cnn As New ADODB.Connection  

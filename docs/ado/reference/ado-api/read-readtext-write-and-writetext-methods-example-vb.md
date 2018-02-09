@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ReadText method [ADO], Visual Basic example
 - Write method [ADO], Visual Basic example
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4811b1ad46663baa1aadf0e4f89313520913974e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c51ca097f3c1a9c71dbd75d00f7411b6dd61d03b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lecture, ReadText, écriture et WriteText, méthodes-exemple (VB)
 Cet exemple montre comment lire le contenu d’une zone de texte dans les deux un texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) et un fichier binaire **flux**. Incluent d’autres propriétés et méthodes indiqués [Position](../../../ado/reference/ado-api/position-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), et [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
@@ -122,6 +124,6 @@ End Sub
  [ReadText, méthode](../../../ado/reference/ado-api/readtext-method.md)   
  [SetEOS, méthode](../../../ado/reference/ado-api/seteos-method.md)   
  [Taille, propriété (flux ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write, méthode](../../../ado/reference/ado-api/write-method.md)   
  [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)

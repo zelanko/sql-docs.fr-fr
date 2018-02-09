@@ -15,21 +15,21 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eab2fac5e1d2f944228e75f00fb8ecc8596b9c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0a245945c5dbe9262d251af67a138739b1888da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-programming-task-table"></a>Tableau de tâches de programmation ADO
 Le tableau suivant répertorie les tâches de programmation contenus dans le *Guide du programmeur ADO* et fournit des références pour chaque tâche. Ces références peuvent être des descriptions ou des exemples de code dans laquelle vous trouverez des informations sur la fonctionnalité ADO qui effectue la tâche.
 
-|Tâche ADO|References|
+|Tâche ADO|Références|
 |--------------|----------------|
 |Connexion à un fournisseur de données|[Se connecter aux Sources de données](../../ado/guide/data/connecting-to-data-sources.md)|
 |L’exécution de commandes ou appel de procédures stockées|[Préparer et exécuter des commandes](../../ado/guide/data/preparing-and-executing-commands.md)|

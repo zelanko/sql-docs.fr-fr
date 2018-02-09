@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::EditMode
-helpviewer_keywords: EditMode property
+f1_keywords:
+- Recordset15::EditMode
+helpviewer_keywords:
+- EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2b87ff648d38e0c69ef69686c7901cc7f141bbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 759d8891929bf546d9dc81f66367c866b23c6e6c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="editmode-property"></a>EditMode, propriété
 Indique l’état de modification de l’enregistrement actif.  
@@ -32,7 +35,7 @@ Indique l’état de modification de l’enregistrement actif.
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) valeur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ADO gère un tampon d’édition associé à l’enregistrement actif. Cette propriété indique si les modifications ont été apportées à cette mémoire tampon, ou si un enregistrement a été créé. Utilisez le **EditMode** propriété pour déterminer l’état de modification de l’enregistrement actif. Vous pouvez tester les modifications en attente si un processus de modification a été interrompu et déterminer si vous devez utiliser le [mise à jour](../../../ado/reference/ado-api/update-method.md) ou [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) (méthode).  
   
  Dans *en mode de mise à jour immédiate* le **EditMode** propriété est réinitialisée à **adEditNone** après un appel réussi au **mettre à jour** méthode est appelée. . Lorsqu’un appel à [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) ne pas supprimer l’ou les enregistrements dans la source de données (par exemple, en raison de violations d’intégrité référentielle), la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) reste en mode d’édition (**EditMode** = **adEditInProgress**). Par conséquent, **CancelUpdate** doit être appelée avant de quitter l’enregistrement actif (par exemple avec [déplacer](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), ou [fermer](../../../ado/reference/ado-api/close-method-ado.md) ).  

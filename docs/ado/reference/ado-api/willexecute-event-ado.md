@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>WillExecute, événement (ADO)
 Le **WillExecute** événement est appelé juste avant l’exécution d’une commande en attente sur une connexion.  
@@ -51,25 +53,25 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *Options*  
  A **Long** valeur qui indique les options qui peuvent être utilisées pour exécuter la commande ou ouvrir le **Recordset**.  
   
- *N'*  
+ *adStatus*  
  Un [il ne](../../../ado/reference/ado-api/eventstatusenum.md) valeur d’état qui peut-être être **adStatusCantDeny** ou **adStatusOK** lorsque cet événement est appelé. S’il s’agit **adStatusCantDeny**, cet événement ne peut pas demander l’annulation de l’opération en attente.  
   
  *pCommand*  
  Le [commande Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md) de l’objet pour lequel cette notification d’événement s’applique.  
   
- *Connection*  
+ *pRecordset*  
  Le [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet pour lequel cette notification d’événement s’applique.  
   
  *pConnection*  
  Le [connexion Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet pour lequel cette notification d’événement s’applique.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  A **WillExecute** événement peut se produire en raison d’une connexion.  [Execute (méthode) (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute, méthode (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), ou [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode le *pConnection* paramètre doit toujours contenir une référence valide à un **connexion** objet. Si l’événement est dû à **Connection.Execute**, le *Connection* et *pCommand* paramètres sont définis sur **rien**. Si l’événement est dû à **Recordset.Open**, le *Connection* paramètre référence la **Recordset** objet et la *pCommand* paramètre est défini sur **rien**. Si l’événement est dû à **Command.Execute**, le *pCommand* paramètre référence la **commande** objet et la *Connection* paramètre est défini sur **rien**.  
   
  **WillExecute** vous permet d’examiner et modifier les paramètres d’exécution en attente. Cet événement peut retourner une demande d’annulation de la commande en attente.  
   
 > [!NOTE]
->  Si la source de la version d’origine pour un **commande** est un flux de données spécifié par le [propriété CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété, en assignant une nouvelle chaîne à la **WillExecute** *Source* paramètre modifie la source de la **commande**. Le **CommandStream** propriété est effacée et [propriété CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété sera mise à jour avec la nouvelle source. Le flux d’origine spécifié par **CommandStream** seront publiés et ne sont pas accessibles.  
+>  Si la source de la version d’origine pour un **commande** est un flux de données spécifié par le [propriété CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété, en assignant une nouvelle chaîne à la **WillExecute *** Source* paramètre modifie la source de la **commande**. Le **CommandStream** propriété est effacée et [propriété CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété sera mise à jour avec la nouvelle source. Le flux d’origine spécifié par **CommandStream** seront publiés et ne sont pas accessibles.  
   
  Si le dialecte de la nouvelle chaîne source diffère de la configuration d’origine de la [propriété Dialect](../../../ado/reference/ado-api/dialect-property.md) propriété (qui correspondait à la **CommandStream**), le dialecte correct doit être spécifié en définissant le **dialecte** propriété de l’objet de commande référencé par *pCommand*.  
   

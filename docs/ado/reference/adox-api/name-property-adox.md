@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -40,18 +41,19 @@ f1_keywords:
 - _User25::put_Name
 - _Index::GetName
 - _User25::GetName
-helpviewer_keywords: Name property [ADOX]
+helpviewer_keywords:
+- Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 048d40c828f67a7be682dd2880cce66d6c7dd61d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10e899d43bd2990bff5724d87b4deefffd559090
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="name-property-adox"></a>Nom, propriété (ADOX)
 Indique le nom de l’objet.  
@@ -59,7 +61,7 @@ Indique le nom de l’objet.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Noms n’ont pas à être uniques dans une collection.  
   
  Le **nom** propriété est en lecture/écriture sur [colonne](../../../ado/reference/adox-api/column-object-adox.md), [groupe](../../../ado/reference/adox-api/group-object-adox.md), [clé](../../../ado/reference/adox-api/key-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), [Table](../../../ado/reference/adox-api/table-object-adox.md), et [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) objets. Le **nom** propriété est en lecture seule sur [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md), [procédure](../../../ado/reference/adox-api/procedure-object-adox.md), et [vue](../../../ado/reference/adox-api/view-object-adox.md) objets.  

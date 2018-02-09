@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::CursorType
-helpviewer_keywords: CursorType property [ADO]
+f1_keywords:
+- Recordset15::CursorType
+helpviewer_keywords:
+- CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 605fd338c9a5f41a893eccc885a610770c4e37bc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b2123fe185bd52947812bea251c7af4b46989a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-property-ado"></a>CursorType, propriété (ADO)
 Indique le type de curseur utilisé dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -32,7 +35,7 @@ Indique le type de curseur utilisé dans un [Recordset](../../../ado/reference/a
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valeur. La valeur par défaut est **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **CursorType** propriété pour spécifier le type de curseur qui doit être utilisé lors de l’ouverture du **Recordset** objet.  
   
  Seule la valeur **adOpenStatic** est pris en charge si le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) est définie sur **adUseClient**. Si une valeur non prise en charge est définie, aucune erreur n’est générée ; prise en charge la plus proche **CursorType** sera utilisé à la place.  
@@ -43,7 +46,7 @@ Indique le type de curseur utilisé dans un [Recordset](../../../ado/reference/a
   
 |Pour un jeu d’enregistrements de ce type de curseur|La méthode doit retourner True pour toutes les constantes suivantes :|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|none|  
+|**adOpenForwardOnly**|aucun|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  

@@ -1,24 +1,26 @@
 ---
 title: "Index des propriétés dynamiques ADO | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: dynamic properties [ADO], index
+helpviewer_keywords:
+- dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: f126cc040174725ded02bd320e54a76536c0d516
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-property-index"></a>Index des propriétés dynamiques ADO
 Fournisseurs de données, les fournisseurs de services et les composants de service peuvent ajouter des propriétés dynamiques pour la **propriétés** collections de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets. Un fournisseur donné peut également insérer des propriétés supplémentaires lors de l’ouverture de ces objets. Certaines de ces propriétés sont répertoriées dans le [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. D’autres sont répertoriées sous les fournisseurs spécifiques dans le [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md) section.  
@@ -135,7 +137,7 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |Taille de lot|DBPROP_ADC_BATCHSIZE|  
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|  
 |Type de signet|DBPROP_BOOKMARKTYPE|  
-|Signet|DBPROP_IROWSETLOCATE|  
+|Bookmarkable|DBPROP_IROWSETLOCATE|  
 |Signets ordonnés|DBPROP_ORDEREDBOOKMARKS|  
 |Mettre en cache les lignes enfants|DBPROP_ADC_CACHECHILDROWS|  
 |Mettre en cache les colonnes différées|DBPROP_CACHEDEFERRED|  
@@ -196,7 +198,7 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |Forte identité de ligne|DBPROP_STRONGIDENTITY|  
 |Catalogue unique|DBPROP_ADC_UNIQUECATALOG|  
 |Lignes uniques|DBPROP_UNIQUEROWS|  
-|Schéma unique|DBPROP_ADC_UNIQUESCHEMA|  
+|Unique Schema|DBPROP_ADC_UNIQUESCHEMA|  
 |Table unique|DBPROP_ADC_UNIQUETABLE|  
 |Mise à jour|DBPROP_UPDATABILITY|  
 |Critères de mise à jour|DBPROP_ADC_UPDATECRITERIA|  

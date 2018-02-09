@@ -1,6 +1,7 @@
 ---
 title: "Refresh, méthode (RDS) | Documents Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ f1_keywords:
 - Refresh
 - RDS.DataControl::Refresh
 - DataControl::Refresh
-helpviewer_keywords: Refresh method [RDS]
+helpviewer_keywords:
+- Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5730f11f027cf6fb4492f8133f88ce80ac35aee3
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 26182bb5f3ec1d60b66e5c16bf403a1f427c8b87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-rds"></a>Refresh, méthode (RDS)
 Actualise la source de données spécifiée dans le [Connect](../../../ado/reference/rds-api/connect-property-rds.md) mises à jour les résultats de requête et la propriété.  
@@ -45,7 +47,7 @@ DataControl.Refresh
  *DataControl*  
  Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous devez définir le [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), et [SQL](../../../ado/reference/rds-api/sql-property.md) propriétés avant d’utiliser le **Actualiser** (méthode). Tous les contrôles liés aux données sur le formulaire associé à un **RDS. DataControl** objet reflète le nouveau jeu d’enregistrements. Toutes les existantes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet est libéré et les modifications non enregistrées sont ignorées. Le **Actualiser** méthode fait automatiquement du premier enregistrement l’enregistrement actif.  
   
  Il est judicieux d’appeler le **Actualiser** méthode régulièrement lorsque vous travaillez avec des données. Si vous récupérez des données et laissez sur un ordinateur client pendant un certain temps, il est susceptible de devenir obsolètes. Il est possible que les modifications que vous apportez échouera, car une autre personne peut avoir modifié l’enregistrement valide les modifications avant vous.  

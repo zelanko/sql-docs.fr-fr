@@ -24,19 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 971e75599c1b0d0ac6960a8db45a9ed6cfab9041
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf8ac790f91779407bb60fa1f3cfe8f675a7e8f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>L’accès à des Types définis par l’utilisateur - extraction de données UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Pour créer un type défini par l’utilisateur (UDT) sur le client, l’assembly qui a été enregistré comme UDT dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données doit être disponible pour l’application cliente. L'assembly de type défini par l'utilisateur (UDT) peut être placé dans le même répertoire que l'application, ou dans le Global Assembly Cache (GAC). Vous pouvez également définir une référence à l'assembly dans votre projet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour créer un type défini par l'utilisateur (UDT) sur le client, l'assembly enregistré comme UDT dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être accessible par l'application cliente. L'assembly de type défini par l'utilisateur (UDT) peut être placé dans le même répertoire que l'application, ou dans le Global Assembly Cache (GAC). Vous pouvez également définir une référence à l'assembly dans votre projet.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Conditions requises pour utiliser les UDT dans ADO.NET  
  L'assembly chargé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'assembly sur le client doivent être compatibles pour que l'UDT puisse être créé sur le client. Pour les UDT définis avec la **natif** format de sérialisation, les assemblys doivent être structurellement compatibles. Pour les assemblys définis avec la **UserDefined** format, l’assembly doit être disponible sur le client.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="accessing-udts-with-a-sqldatareader"></a>Accès aux UDT avec un SqlDataReader  
  A **System.Data.SqlClient.SqlDataReader** peut être utilisé à partir du code client pour récupérer un jeu de résultats qui contient une colonne UDT, qui est exposée comme une instance de l’objet.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser le **principal** pour créer une nouvelle méthode **SqlDataReader** objet. Les actions suivantes se produisent dans l'exemple de code :  
   
 1.  La méthode Main crée un **SqlDataReader** de l’objet et récupère les valeurs de la table de Points, qui comporte une colonne UDT intitulée Point.  
@@ -165,7 +166,7 @@ static void Main()
 ## <a name="binding-udts-as-bytes"></a>Liaison des UDT comme octets  
  Dans certaines situations, vous pouvez extraire les données brutes de la colonne UDT. Peut-être le type n'est-il pas disponible localement ou ne souhaitez-vous pas instancier une instance de l'UDT. Vous pouvez lire les octets bruts dans un tableau d’octets à l’aide du **GetBytes** méthode d’un **SqlDataReader**. Cette méthode lit un flux d'octets à partir de l'offset de colonne spécifié dans la mémoire tampon d'un tableau commençant à un offset de mémoire tampon donné. Une autre option consiste à utiliser une de le **GetSqlBytes** ou **GetSqlBinary** méthodes et tout le contenu en une seule opération de lecture. Dans l'un et l'autre cas, comme l'objet UDT n'est jamais instancié, vous n'avez pas besoin de définir une référence à l'UDT dans l'assembly client.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Cet exemple montre comment récupérer le **Point** données comme octets bruts dans un tableau d’octets à l’aide un **SqlDataReader**. Le code utilise un **System.Text.StringBuilder** pour convertir les octets bruts en une représentation de chaîne à afficher dans la fenêtre de console.  
   
 ```vb  
@@ -385,7 +386,7 @@ class GetRawBytes
 > [!NOTE]  
 >  Une copie locale de l'assembly UDT doit être accessible par le projet client.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Le code dans cet exemple crée **SqlCommand** et **SqlParameter** objets à insérer des données dans une colonne UDT dans une table. Le code utilise le **SqlDbType.Udt** énumération pour spécifier le type de données et le **UdtTypeName** propriété de la **SqlParameter** pour spécifier le nom qualifié complet de l’UDT dans la base de données.  
   
 ```vb  
@@ -459,6 +460,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux types définis par l’utilisateur dans ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [L’accès à des Types définis par l’utilisateur dans ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

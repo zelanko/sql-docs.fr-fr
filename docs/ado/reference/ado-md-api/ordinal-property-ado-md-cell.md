@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Cell::Ordinal
 - Ordinal
-helpviewer_keywords: Ordinal property [ADO MD]
+helpviewer_keywords:
+- Ordinal property [ADO MD]
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 076fb009f4ce9212e16774787c7eb9464c6f58d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70c8bb0793791873663c561ccafcdc37bcb37b8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal, propriété (cellule ADO MD)
 Identifie de façon unique un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) par sa position dans un ensemble de cellules.  
@@ -34,7 +36,7 @@ Identifie de façon unique un [cellule](../../../ado/reference/ado-md-api/cell-o
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **Long** entier et est en lecture seule.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Valeur ordinale de la cellule identifie de façon unique la cellule au sein d’un ensemble de cellules. Point de vue conceptuel, les cellules sont numérotées dans un ensemble de cellules comme si ce dernier était un *p*-tableau unidimensionnel, où *p* est le nombre de [axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md). Les cellules sont numérotées à partir de zéro dans l’ordre ligne-champ. Voici la formule pour calculer le nombre ordinal d’une cellule :  
   
  Valeur ordinale de la cellule peut être utilisée avec le [élément](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriété de la [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet à récupérer rapidement le [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

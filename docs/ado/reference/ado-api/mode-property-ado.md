@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::Mode
 - _Stream::Mode
 - _Record::Mode
-helpviewer_keywords: Mode property [ADO]
+helpviewer_keywords:
+- Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21a3257ff92cd73d10f0685a7727d98417a917ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 032780415e0869c5994b4630546131b4ad51e8c4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mode-property-ado"></a>Mode, propriété (ADO)
 Indique les autorisations disponibles pour la modification des données dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -35,7 +37,7 @@ Indique les autorisations disponibles pour la modification des données dans un 
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur. La valeur par défaut pour un **connexion** est **adModeUnknown**. La valeur par défaut pour un **enregistrement** objet est **adModeRead**. La valeur par défaut pour un **flux** associé à une source sous-jacente (ouverte avec une URL comme source, ou en tant que la valeur par défaut **flux** d’un **enregistrement**) est  **adModeRead**. La valeur par défaut pour un **flux** non associé à un sous-jacent source (instanciée en mémoire) est **adModeUnknown**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **Mode** propriété pour définir ou retourner les autorisations d’accès en cours d’utilisation par le fournisseur sur la connexion actuelle. Vous pouvez définir le **Mode** propriété uniquement lorsque la **connexion** objet est fermé.  
   
  Pour un **flux** de l’objet, si le mode d’accès n’est pas spécifié, il est hérité de la source utilisée pour ouvrir le **flux** objet. Par exemple, si un **flux** est ouvert à partir d’un **enregistrement** objet, par défaut, il est ouvert dans le même mode que le **enregistrement**.  

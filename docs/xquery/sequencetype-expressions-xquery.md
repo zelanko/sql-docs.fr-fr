@@ -8,27 +8,30 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - SequenceType expressions
 - instance of operator [XQuery]
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c4cb7ecd33427d382704bccc19dbae0d22cc84
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expressions  SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 12/05/2017
  Le nom de type atomique peut également être utilisé dans le **castés en tant que** expression XQuery. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le **instance de** et **castés en tant que** expressions XQuery sur des expressions Sequencetype sont partiellement supportées.  
   
 ## <a name="instance-of-operator"></a>Opérateur instance of  
- Le **instance de** opérateur peut être utilisé pour déterminer le type dynamique, ou d’exécution, de la valeur de l’expression spécifiée. Exemple :  
+ Le **instance de** opérateur peut être utilisé pour déterminer le type dynamique, ou d’exécution, de la valeur de l’expression spécifiée. Par exemple :  
   
 ```  
   
@@ -331,7 +334,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   Pour le **//processing-instruction ()** et **document-node()** les types de séquence, seules les formes sans arguments sont autorisés. Par exemple, `processing-instruction()` est autorisée, mais `processing-instruction('abc')` n’est pas autorisée.  
   
 ## <a name="cast-as-operator"></a>Opérateur cast as  
- Le **castés en tant que** expression peut être utilisée pour convertir une valeur en un type de données spécifique. Exemple :  
+ Le **castés en tant que** expression peut être utilisée pour convertir une valeur en un type de données spécifique. Par exemple :  
   
 ```  
   
@@ -406,7 +409,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <a>2002-05-25Z</a>  
@@ -414,6 +417,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions XQuery](../xquery/xquery-expressions.md)   
- [Système de type &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

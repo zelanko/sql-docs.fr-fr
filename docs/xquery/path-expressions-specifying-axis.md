@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressions de chemin d’accès - spécification de l’axe
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +54,11 @@ ms.lasthandoff: 12/05/2017
   
 |Axis| Description|  
 |----------|-----------------|  
-|**enfant**|Retourne l'enfant du nœud du contexte.|  
+|**child**|Retourne l'enfant du nœud du contexte.|  
 |**descendant**|Retourne tous les descendants du nœud du contexte.|  
 |**parent**|Retourne le parent du nœud du contexte.|  
-|**attribut**|Retourne les attributs du nœud du contexte.|  
-|**Self**|Retourne le nœud du contexte lui-même.|  
+|**attribute**|Retourne les attributs du nœud du contexte.|  
+|**self**|Retourne le nœud du contexte lui-même.|  
 |**descendant-or-self**|Retourne le nœud du contexte et tous ses descendants.|  
   
  Tous ces axes, sauf le **parent** axe, sont des axes vers l’avant. Le **parent** axe est un axe inverse, parce qu’il recherche vers l’arrière dans la hiérarchie du document. Par exemple, l'expression de chemin d'accès relative `child::ProductDescription/child::Summary` comprend deux étapes, chacune spécifiant un axe `child`. La première étape extrait le \<ProductDescription > éléments enfants du nœud de contexte. Pour chaque \<ProductDescription > nœud d’élément, la seconde étape extrait la \<Résumé > enfants du nœud élément.  
@@ -76,7 +79,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le `query()` méthode de la **xml** type de données spécifie l’expression de chemin d’accès.  
   
@@ -129,7 +132,7 @@ select @y
   
  Si vous spécifiez un axe descendant-or-self au lieu d'un axe descendant, `/child::a/child::b/descendant-or-self::*` retourne le nœud du contexte, l'élément <`b`> et son descendant.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <b>text1  

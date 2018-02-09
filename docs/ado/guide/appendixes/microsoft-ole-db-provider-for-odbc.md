@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez les interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette manière. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui accessibles via ODBC.
@@ -55,12 +56,12 @@ MSDASQL
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé|Description|
+|Mot clé| Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour ODBC.|
-|**SOURCE DE DONNÉES**|Spécifie le nom de source de données.|
+|**DSN**|Spécifie le nom de source de données.|
 |**UID**|Spécifie le nom d’utilisateur.|
-|**MOT DE PASSE**|Spécifie le mot de passe.|
+|**PWD**|Spécifie le mot de passe.|
 |**URL**|Spécifie l’URL d’un fichier ou un répertoire publié dans un dossier Web.|
 
  Comme il s’agit du fournisseur par défaut pour ADO, si vous omettez le **fournisseur =** paramètre à partir de la chaîne de connexion ADO va tenter d’établir une connexion à ce fournisseur.
@@ -86,7 +87,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
  Si vous utilisez un **DSN** ou **FileDSN**, il doit être défini via l’administrateur de Source de données ODBC dans le panneau de configuration Windows. Dans Microsoft Windows 2000, l’administrateur ODBC se trouve sous Outils d’administration. Dans les versions antérieures de Windows, l’icône de l’administrateur ODBC est appelée **ODBC 32 bits** ou simplement **ODBC**.
 
  Comme alternative au paramètre un **DSN**, vous pouvez spécifier le pilote ODBC (**pilote =**), tels que « SQL Server » ; le nom du serveur (**SERVER =**) ; et le nom de la base de données (**Base de données =**).
@@ -98,7 +99,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propriétés de connexion spécifique au fournisseur
  Le fournisseur OLE DB pour ODBC ajoute plusieurs propriétés pour le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la **connexion** objet. Le tableau suivant répertorie ces propriétés avec le nom de propriété OLE DB correspondant entre parenthèses.
 
-|Nom de la propriété|Description|
+|Nom de la propriété| Description|
 |-------------------|-----------------|
 |Procédures accessibles (KAGPROP_ACCESSIBLEPROCEDURES)|Indique si l’utilisateur a accès à des procédures stockées.|
 |Table accessible (KAGPROP_ACCESSIBLETABLES)|Indique si l’utilisateur a l’autorisation d’exécuter des instructions SELECT sur les tables de base de données.|
@@ -108,7 +109,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Utilisation du fichier (KAGPROP_FILEUSAGE)|Indique comment le pilote traite un fichier dans la source de données. sous la forme d’une table ou un catalogue.|
 |Comme la Clause d’échappement (KAGPROP_LIKEESCAPECLAUSE)|Indique si le pilote prend en charge la définition et l’utilisation d’un caractère d’échappement de pour le caractère de pourcentage (%) et le caractère de soulignement (_) dans le prédicat LIKE d’une clause WHERE.|
 |Nombre maximal de colonnes Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indique le nombre maximal de colonnes qui peuvent être répertoriées dans la clause GROUP BY d’une instruction SELECT.|
-|Nombre maximal de colonnes dans l’Index (KAGPROP_MAXCOLUMNSININDEX)|Indique le nombre maximal de colonnes qui peuvent être inclus dans un index.|
+|Max Columns in Index (KAGPROP_MAXCOLUMNSININDEX)|Indique le nombre maximal de colonnes qui peuvent être inclus dans un index.|
 |Nombre maximal de colonnes dans la clause Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indique le nombre maximal de colonnes qui peuvent être répertoriées dans la clause ORDER BY d’une instruction SELECT.|
 |Nombre maximal de colonnes dans Select (KAGPROP_MAXCOLUMNSINSELECT)|Indique le nombre maximal de colonnes qui peuvent être répertoriées dans la partie SELECT d’une instruction SELECT.|
 |Nombre maximal de colonnes dans la Table (KAGPROP_MAXCOLUMNSINTABLE)|Indique le nombre maximal de colonnes autorisé dans une table.|
@@ -120,12 +121,12 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Fonctions de chaîne (KAGPROP_STRINGFUNCTIONS)|Indique les fonctions de chaîne sont pris en charge par le pilote ODBC. Pour une liste des noms de fonction et valeurs associées utilisés dans ce masque de bits, consultez [les fonctions scalaires annexe e :](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), dans la documentation ODBC.|
 |Fonctions système (KAGPROP_SYSTEMFUNCTIONS)|Indique les fonctions système sont prises en charge par le pilote ODBC. Pour une liste des noms de fonction et valeurs associées utilisés dans ce masque de bits, consultez [les fonctions scalaires annexe e :](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), dans la documentation ODBC.|
 |Fonctions de Date/heure (KAGPROP_TIMEDATEFUNCTIONS)|Indique les fonctions de date et heure sont pris en charge par le pilote ODBC. Pour une liste des noms de fonction et valeurs associées utilisés dans ce masque de bits, consultez [les fonctions scalaires annexe e :](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), dans la documentation ODBC.|
-|Prise en charge de grammaire SQL (KAGPROP_ODBCSQLCONFORMANCE)|Indique la grammaire SQL qui prend en charge par le pilote ODBC.|
+|SQL Grammar Support (KAGPROP_ODBCSQLCONFORMANCE)|Indique la grammaire SQL qui prend en charge par le pilote ODBC.|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>Jeu d’enregistrements spécifiques au fournisseur et les propriétés de commande
  Le fournisseur OLE DB pour ODBC ajoute plusieurs propriétés pour le **propriétés** collection de la **Recordset** et **commande** objets. Le tableau suivant répertorie ces propriétés avec le nom de propriété OLE DB correspondant entre parenthèses.
 
-|Nom de la propriété|Description|
+|Nom de la propriété| Description|
 |-------------------|-----------------|
 |Requête en fonction des mises à jour/supprime/insertions (KAGPROP_QUERYBASEDUPDATES)|Indique si les insertions, suppressions et mises à jour peuvent être effectuées à l’aide de requêtes SQL.|
 |Type de concurrence ODBC (KAGPROP_CONCURRENCY)|Indique la méthode utilisée pour réduire les problèmes éventuels engendrés par deux utilisateurs qui tentent d’accéder simultanément aux mêmes données à partir de la source de données.|
@@ -184,7 +185,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Lecture seule|Lecture seule|Lecture seule|Lecture seule|
-|[Signet](../../../ado/reference/ado-api/bookmark-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
@@ -210,9 +211,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|Oui|Oui|Oui|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Oui|Oui|Oui|Oui|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|non|non|Oui|Oui|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|non|Non|Oui|Oui|
 |[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|Oui|Oui|Oui|
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|Oui|Oui|Oui|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Oui|
@@ -222,8 +223,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Oui|Oui|Oui|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[Requery)](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Oui|
-|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|non|non|Oui|Oui|
-|[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
+|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|non|Non|Oui|Oui|
+|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|
 
@@ -311,7 +312,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Ordre d’accès|DBPROP_ACCESSORDER|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
@@ -377,7 +378,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Ordre d’accès|DBPROP_ACCESSORDER|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|

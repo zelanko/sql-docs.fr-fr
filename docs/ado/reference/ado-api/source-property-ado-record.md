@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,18 +20,19 @@ f1_keywords:
 - _Record::put_Source
 - _Record::putref_Source
 - _Record::get_Source
-helpviewer_keywords: Source property [ADO Record]
+helpviewer_keywords:
+- Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c096d669bbda0fa5dde92b6aed25374fb456d30a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ea9472275b0dbaa8a1a88ba70c21e8b6576af14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-record"></a>Source, propriété (enregistrement ADO)
 Indique la source de données ou l’objet représenté par le [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -38,7 +40,7 @@ Indique la source de données ou l’objet représenté par le [enregistrement](
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Variant** valeur qui indique l’entité représentée par le **enregistrement**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Source** propriété retourne le *Source* argument de la **enregistrement** objet [ouvrir](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Il peut contenir une chaîne d’URL absolue ou relative. Une URL absolue peut être utilisée sans le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété pour ouvrir directement le **enregistrement** objet. Implicite **connexion** objet est créé dans ce cas.  
   
  Le **Source** propriété peut également contenir une référence à un déjà ouvert **Recordset**, qui ouvre un **enregistrement** objet représentant la ligne actuelle dans le  **Jeu d’enregistrements**.  

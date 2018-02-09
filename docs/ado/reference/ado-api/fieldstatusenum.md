@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,33 +13,35 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldStatusEnum
-helpviewer_keywords: FieldStatusEnum enumeration [ADO]
+f1_keywords:
+- FieldStatusEnum
+helpviewer_keywords:
+- FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Spécifie le [état](../../../ado/reference/ado-api/status-property-ado-field.md) d’un [objet Field](../../../ado/reference/ado-api/field-object.md).  
   
  Le **adFieldPending\***  valeurs indiquent l’opération qui a provoqué l’état et peut être combinée avec d’autres valeurs d’état.  
   
-|Constante|Valeur|Description|  
+|Constante|Valeur| Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indique que le champ spécifié existe déjà.|  
 |**adFieldBadStatus**|12|Indique qu’une valeur d’état non valide a été envoyée à partir d’ADO pour le fournisseur OLE DB. Les causes possibles incluent un OLE DB 1.0 ou 1.1 fournisseur ou une combinaison incorrecte de [valeur](../../../ado/reference/ado-api/value-property-ado.md) et [état](../../../ado/reference/ado-api/status-property-ado-field.md).|  
 |**adFieldCannotComplete**|20|Indique que le serveur de l’URL spécifiée par [Source](../../../ado/reference/ado-api/source-property-ado-record.md) ne peut pas terminer l’opération.|  
 |**adFieldCannotDeleteSource**|23|Indique que pendant une opération de déplacement, un arbre ou sous-arbre a été déplacé vers un nouvel emplacement, mais la source n’a pas pu être supprimée.|  
 |**adFieldCantConvertValue**|2|Indique que le champ ne peut pas être extraites ou stocké sans perte de données.|  
-|**Stocké**|7|Indique que le champ ne peut pas ajouté, car le fournisseur a dépassé une limite (par exemple, le nombre de champs autorisé).|  
+|**adFieldCantCreate**|7|Indique que le champ ne peut pas ajouté, car le fournisseur a dépassé une limite (par exemple, le nombre de champs autorisé).|  
 |**adFieldDataOverflow**|6|Indique que les données renvoyées par le fournisseur a dépassé le type de données du champ.|  
 |**adFieldDefault**|13|Indique que la valeur par défaut pour le champ a été utilisée lors de la définition de données.|  
 |**adFieldDoesNotExist**|16|Indique que le champ spécifié n’existe pas.|  
@@ -48,7 +51,7 @@ Spécifie le [état](../../../ado/reference/ado-api/status-property-ado-field.md
 |**adFieldIsNull**|3|Indique que le fournisseur a retourné une valeur de type VARIANT de type VT_NULL et que le champ n’est pas vide.|  
 |**adFieldOK**|0|Valeur par défaut. Indique que le champ a été correctement ajouté ou supprimé.|  
 |**adFieldOutOfSpace**|22|Indique que le fournisseur est impossible d’obtenir un espace de stockage suffisant pour terminer un déplacement ou de l’opération de copie.|  
-|**égales à adFieldPendingChange**|0x40000|Indique soit qui le champ a été supprimé puis rajouté, peut-être avec un type de données différent, ou que la valeur du champ état connu de **adFieldOK** a changé. La forme finale du champ modifiera la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection après le [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode est appelée.|  
+|**adFieldPendingChange**|0x40000|Indique soit qui le champ a été supprimé puis rajouté, peut-être avec un type de données différent, ou que la valeur du champ état connu de **adFieldOK** a changé. La forme finale du champ modifiera la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection après le [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode est appelée.|  
 |**adFieldPendingDelete**|0x20000|Indique que le **supprimer** l’opération a provoqué l’état à définir. Le champ a été marqué pour suppression à partir de la **champs** collection après le **mise à jour** méthode est appelée.|  
 |**adFieldPendingInsert**|0x10000|Indique que le **Append** l’opération a provoqué l’état à définir. Le **champ** a été marqué pour être ajouté à la **champs** collection après le **mise à jour** méthode est appelée.|  
 |**adFieldPendingUnknown**|0x80000|Indique que le fournisseur ne peut pas déterminer le statut de champ d’opération a entraîné à définir.|  

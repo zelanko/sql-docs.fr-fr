@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords: CreateParameter method [RDS]
+helpviewer_keywords:
+- CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter, méthode (ADO)
 Crée un nouveau [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet avec les propriétés spécifiées.  
@@ -43,21 +45,21 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Paramètres  
  *Nom*  
- Facultatif. A **chaîne** valeur qui contient le nom de la **paramètre** objet.  
+ Ce paramètre est facultatif. A **chaîne** valeur qui contient le nom de la **paramètre** objet.  
   
  *Type*  
- Facultatif. A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeur qui spécifie le type de données de la **paramètre** objet.  
+ Ce paramètre est facultatif. A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeur qui spécifie le type de données de la **paramètre** objet.  
   
- *Sens*  
- Facultatif. A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valeur qui spécifie le type de **paramètre** objet.  
+ *Direction*  
+ Ce paramètre est facultatif. A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valeur qui spécifie le type de **paramètre** objet.  
   
  *Taille*  
- Facultatif. A **Long** valeur qui spécifie la longueur maximale de la valeur du paramètre en caractères ou en octets.  
+ Ce paramètre est facultatif. A **Long** valeur qui spécifie la longueur maximale de la valeur du paramètre en caractères ou en octets.  
   
  *Value*  
- Facultatif. A **Variant** qui spécifie la valeur pour le **paramètre** objet.  
+ Ce paramètre est facultatif. A **Variant** qui spécifie la valeur pour le **paramètre** objet.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez le **CreateParameter** pour créer une nouvelle méthode **paramètre** objet avec le nom spécifié, direction, taille, valeur et un type. Toutes les valeurs passées dans les arguments sont écrites correspondant **paramètre** propriétés.  
   
  Cette méthode n’ajoute pas automatiquement le **paramètre** de l’objet à la **paramètres** collection d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Cela vous permet de définir des propriétés supplémentaires dont ADO de valeurs valide lorsque vous ajoutez le **paramètre** objet à la collection.  

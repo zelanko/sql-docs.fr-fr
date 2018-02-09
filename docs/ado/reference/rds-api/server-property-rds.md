@@ -1,6 +1,7 @@
 ---
 title: "Propriété du serveur (RDS) | Documents Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,19 +12,21 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RDS::IBindMgr21::Server
-helpviewer_keywords: Server property [RDS]
+f1_keywords:
+- RDS::IBindMgr21::Server
+helpviewer_keywords:
+- Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9225e5184faf0087458a9e3ca3828fa75f259d6
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="server-property-rds"></a>Propriété du serveur (RDS)
 Indique le protocole de nom et la communication Internet Information Services (IIS).  
@@ -92,7 +95,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **Dans le processus**  
+ **In-process**  
   
  Syntaxe d’au moment du design  
   
@@ -114,12 +117,12 @@ DataControl.Server=""
  A **chaîne** valeur contenant un Internet ou le chemin d’accès de l’intranet ou le nom de l’ordinateur, si le serveur se trouve sur un ordinateur distant ; ou une chaîne vide si le serveur se trouve sur l’ordinateur local.  
   
  *port*  
- Facultatif. Un port qui est utilisé pour se connecter à un serveur qui exécute IIS. Le numéro de port est défini dans Internet Explorer (sur le **vue** menu, cliquez sur **Options**, puis sélectionnez le **connexion** onglet) ou dans IIS.  
+ Ce paramètre est facultatif. Un port qui est utilisé pour se connecter à un serveur qui exécute IIS. Le numéro de port est défini dans Internet Explorer (sur le **vue** menu, cliquez sur **Options**, puis sélectionnez le **connexion** onglet) ou dans IIS.  
   
  *DataControl*  
  Une variable objet qui représente un **RDS. DataControl** objet.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le serveur est l’emplacement où le **RDS. DataControl** demande (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par le [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet [MSDFMAP. Gestionnaire](../../../ado/guide/remote-data-service/datafactory-customization.md) composant, et [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) fichier sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour comparer les paramètres des anciennes et nouvelles **MSDFMAP. INI** fichiers. Incompatibilités peuvent entraîner des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie à la chaîne vide « », ces objets seront utilisés sur l’ordinateur local.  
   
 ## <a name="applies-to"></a>S'applique à  

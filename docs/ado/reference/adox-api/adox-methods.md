@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad8a7eb710e129b6ba9110694c8cebfddeab85d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>Méthodes ADOX
 |||  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[Append (vues)](../../../ado/reference/adox-api/append-method-adox-views.md)|Ajoute un nouveau **vue** de l’objet à la **vues** collection.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifie le mot de passe pour un compte d’utilisateur.|  
 |[Créer](../../../ado/reference/adox-api/create-method-adox.md)|Crée un nouveau catalogue.|  
-|[Supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Supprime un objet d’une collection.|  
+|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Supprime un objet d’une collection.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retourne le propriétaire d’un objet dans un catalogue.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retourne les autorisations pour un groupe ou utilisateur sur un objet.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Spécifie le propriétaire d’un objet dans un catalogue.|  

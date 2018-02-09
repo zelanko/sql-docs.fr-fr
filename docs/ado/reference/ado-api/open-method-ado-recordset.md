@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
 - Recordset15::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 81a22742808fe2663f5601af91cb554764a8e46c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open (méthode) (jeu d’enregistrements ADO)
 Ouvre un curseur sur une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -40,19 +42,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. A **Variant** qui prend la valeur valide [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, une instruction SQL, un nom de table, un appel de procédure stockée, une URL ou le nom d’un fichier ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet contenant un stocké de manière permanente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Ce paramètre est facultatif. A **Variant** qui prend la valeur valide [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, une instruction SQL, un nom de table, un appel de procédure stockée, une URL ou le nom d’un fichier ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet contenant un stocké de manière permanente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Facultatif. Soit un **Variant** qui prend la valeur valide [connexion](../../../ado/reference/ado-api/connection-object-ado.md) nom de la variable objet, ou un **chaîne** contenant [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) paramètres.  
+ Ce paramètre est facultatif. Soit un **Variant** qui prend la valeur valide [connexion](../../../ado/reference/ado-api/connection-object-ado.md) nom de la variable objet, ou un **chaîne** contenant [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) paramètres.  
   
  *CursorType*  
- Facultatif. A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valeur qui détermine le type de curseur que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adOpenForwardOnly**.  
+ Ce paramètre est facultatif. A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valeur qui détermine le type de curseur que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adOpenForwardOnly**.  
   
  *LockType*  
- Facultatif. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui détermine le type de verrouillage (accès concurrentiel) que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adLockReadOnly**.  
+ Ce paramètre est facultatif. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui détermine le type de verrouillage (accès concurrentiel) que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adLockReadOnly**.  
   
  *Options*  
- Facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer le *Source* argument s’il représente un élément autre qu’un **commande** objet, ou que le **Recordset** doit être restauré à partir d’un fichier dans lequel il a été précédemment enregistré. Peut être un ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs, qui peuvent être combinées avec un opérateur OR au niveau du bit.  
+ Ce paramètre est facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer le *Source* argument s’il représente un élément autre qu’un **commande** objet, ou que le **Recordset** doit être restauré à partir d’un fichier dans lequel il a été précédemment enregistré. Peut être un ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs, qui peuvent être combinées avec un opérateur OR au niveau du bit.  
   
 > [!NOTE]
 >  Si vous ouvrez un **Recordset** à partir d’un **flux** contenant un persistante **Recordset**, à l’aide un [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeur **adAsyncFetchNonBlocking** n’a aucun effet ; l’extraction sera synchrone et bloquante.  
@@ -60,7 +62,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  Le **ExecuteOpenEnum** les valeurs de **adExecuteStream** ou **adExecuteStream** ne doit pas être utilisé avec **ouvrir**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le curseur par défaut pour ADO **Recordset** est un curseur avant uniquement en lecture seule sur le serveur.  
   
  À l’aide de la **ouvrir** méthode sur un **Recordset** objet ouvre un curseur qui représente des enregistrements d’une table de base, les résultats d’une requête ou précédemment enregistré **Recordset**.  

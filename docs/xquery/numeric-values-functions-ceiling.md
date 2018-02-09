@@ -8,25 +8,28 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:ceiling function
 - ceiling function [XQuery]
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f470dc4c609fb4f9fcfda2203a546feb233c593b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f50d1816ea6adb7e11bbf583f37ca8e8b9176223
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numeric-values-functions---ceiling"></a>Fonctions de valeurs numériques - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +78,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le préfixe d'espace de noms AWMI signifie Adventure Works Manufacturing Instructions (instructions de fabrication d'Adventure Works). Ce préfixe fait référence à l'espace de noms utilisé dans le document interrogé.  
   
@@ -87,7 +90,7 @@ WHERE ProductModelID=7
   
     -   Le {$i/@LotSize } expression récupère l’attribut LotSize du document, le cas échéant.  
   
-    -   Voici le résultat obtenu :  
+    -   Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result    

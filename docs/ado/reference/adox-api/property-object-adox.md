@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,23 +13,24 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Property object [ADOX]
+helpviewer_keywords:
+- Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0009151b5700cbd262ecf91ed09f325528548ff7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c9d13366eb3554738fbd50da2ed09db8bceb6f5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-adox"></a>Objet de propriété (ADOX)
 Représente une caractéristique d’un objet ADOX.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les objets ADOX ont deux types de propriétés : intégrées et dynamiques.  
   
  Les propriétés intégrées sont les propriétés immédiatement disponibles pour tout nouvel objet, à l’aide de la syntaxe MyObject.Property. Ils n’apparaissent pas en tant qu’objets de propriété dans un objet [collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md), de sorte que vous pouvez modifier leurs valeurs, vous ne pouvez pas modifier leurs caractéristiques.  

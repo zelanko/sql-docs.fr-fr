@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et de ressources du groupe de disponibilité
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 Ce document explique comment créer un cluster de trois nœuds sur Ubuntu et ajouter un groupe de disponibilité créé précédemment en tant que ressource dans le cluster. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les orchestration est en dehors de, et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Toujours sur le vues de gestion dynamique qui interrogent des informations de cluster retournera des lignes vides. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous).
+> À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les orchestration est en dehors de, et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Toujours sur le vues de gestion dynamique qui interrogent des informations de cluster retourner des lignes vides. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous).
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
@@ -95,18 +95,18 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->Commande d’activation du STIMULATEUR terminera avec l’erreur « STIMULATEUR de démarrage par défaut ne contient aucun runlevels abandon ». Cela est sans conséquence, la configuration du cluster peut continuer. Nous continuons à avec des fournisseurs de cluster pour résoudre ce problème.
+>Commande d’activation du STIMULATEUR peut se terminer avec l’erreur « STIMULATEUR de démarrage par défaut ne contient aucun runlevels abandon ». Cela est sans conséquence, la configuration du cluster peut continuer. 
 
 ## <a name="create-the-cluster"></a>Créer le Cluster
 
 1. Supprimez toute configuration de cluster existant à partir de tous les nœuds. 
 
-   En cours d’exécution 'sudo apt-get install PC' installe STIMULATEUR corosync et PC en même temps et démarre l’exécution de toutes les 3 des services.  Démarrage corosync génère un modèle de ' / etc/cluster/corosync.conf' fichier.  Pour que les étapes suivantes à réussir ce fichier ne doit pas exister : la solution de contournement consiste donc à arrêter STIMULATEUR / corosync et supprimer ' / etc/cluster/corosync.conf', et ensuite les étapes suivantes seront termine correctement. « PC cluster destroy » produit la même chose, et vous pouvez l’utiliser comme une étape d’installation initiale du cluster.
+   En cours d’exécution 'sudo apt-get install PC' installe STIMULATEUR corosync et PC en même temps et démarre l’exécution de toutes les 3 des services.  Démarrage corosync génère un modèle de ' / etc/cluster/corosync.conf' fichier.  Pour que les étapes suivantes à réussir ce fichier ne doit pas exister : la solution de contournement consiste donc à arrêter STIMULATEUR / corosync et supprimer ' / etc/cluster/corosync.conf', et ensuite les étapes suivantes se termine correctement. « PC cluster destroy » produit la même chose, et vous pouvez l’utiliser comme une étape d’installation initiale du cluster.
    
    La commande suivante supprime tous les fichiers de configuration de cluster existants et arrête tous les services de cluster. Cela détruit définitivement le cluster. Exécuter en tant qu’une première étape dans un environnement de pré-production. Notez que « PC cluster destroy' désactivé le service de STIMULATEUR et doit être réactivé. Exécutez la commande suivante sur tous les nœuds.
    
    >[!WARNING]
-   >La commande détruira toutes les ressources de cluster existant.
+   >La commande supprime toutes les ressources de cluster existant.
 
    ```bash
    sudo pcs cluster destroy 
@@ -116,18 +116,18 @@ sudo systemctl enable pacemaker
 1. Créer le cluster. 
 
    >[!WARNING]
-   >En raison d’un problème connu que le fournisseur de clustering est le problème, en commençant le cluster ('PC cluster start') échoue avec erreur ci-dessous. Il s’agit, car le fichier journal est configuré dans /etc/corosync/corosync.conf qui est créé lorsque la commande d’installation de cluster est exécutée, est incorrect. Pour contourner ce problème, modifiez le fichier journal : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
+   >En raison d’un problème connu que le fournisseur de clustering est le problème, en commençant le cluster ('PC cluster start') échoue avec l’erreur ci-dessous. Il s’agit, car le fichier journal est configuré dans /etc/corosync/corosync.conf qui est créé lorsque la commande d’installation de cluster est exécutée, est incorrect. Pour contourner ce problème, modifiez le fichier journal : /var/log/corosync/corosync.log. Vous pouvez également créer le fichier /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`. Exécutez la commande suivante sur le nœud principal. 
+La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le script, remplacez les valeurs entre `< ... >`. Exécutez la commande suivante sur le nœud principal. 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -146,11 +146,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->La désactivation de STONITH est uniquement pour des tests. Si vous envisagez d’utiliser STIMULATEUR dans un environnement de production, vous devez planifier une implémentation STONITH en fonction de votre environnement et qu’il soit activé. Notez qu’actuellement il n’y aucun agent de délimitation Hyper-V ou des environnements de cloud (y compris Azure). Par conséquent, le fournisseur de cluster n’offre pas de prise en charge des clusters de production en cours d’exécution dans ces environnements. Nous travaillons sur une solution pour cet intervalle qui est disponible dans les versions futures.
+>La désactivation de STONITH est uniquement pour des tests. Si vous envisagez d’utiliser STIMULATEUR dans un environnement de production, vous devez planifier une implémentation STONITH en fonction de votre environnement et qu’il soit activé. Notez qu’actuellement il n’y aucun agent de délimitation Hyper-V ou des environnements de cloud (y compris Azure). Par conséquent, le fournisseur de cluster n’offre pas de prise en charge des clusters de production en cours d’exécution dans ces environnements. 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Définissez la propriété cluster start-échec-est-irrécupérable false
 
-`start-failure-is-fatal`Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Par conséquent, une fois le basculement se produit, STIMULATEUR va tenter de démarrage de la ressource de groupe de disponibilité sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR sera rétrograder le réplica secondaire, et il rejoindra automatiquement le groupe de disponibilité. 
+`start-failure-is-fatal`Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Par conséquent, après que le basculement se produit, les tentatives de STIMULATEUR à partir de la disponibilité ressource groupe sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR rétrograde le réplica de base de données secondaire, et il rejoint automatiquement le groupe de disponibilité. 
 
 Pour mettre à jour la valeur de propriété à `false` exécuter le script suivant :
 
@@ -187,17 +187,17 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>Créer la ressource IP virtuelle
 
-Pour créer la ressource d’adresse IP virtuelle, exécutez la commande suivante sur un nœud. Utilisez une adresse IP statique disponible à partir du réseau. Avant d’exécuter le script, remplacez les valeurs comprises entre `**< ... >**` avec une adresse IP valide.
+Pour créer la ressource d’adresse IP virtuelle, exécutez la commande suivante sur un nœud. Utilisez une adresse IP statique disponible à partir du réseau. Avant d’exécuter le script, remplacez les valeurs comprises entre `< ... >` avec une adresse IP valide.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Aucun nom de serveur virtuel est STIMULATEUR équivalents. Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, inscrire l’adresse de la ressource IP et nom de serveur virtuel souhaité dans DNS. Pour les configurations de récupération d’urgence, inscrire le nom du serveur virtuel souhaitée et une adresse IP avec les serveurs DNS sur le serveur principal et le site de récupération d’urgence.
 
 ## <a name="add-colocation-constraint"></a>Ajouter une contrainte de colocalisation
 
-Presque chaque décision dans un cluster STIMULATEUR, comme choisir où une ressource doit s’exécuter, s’effectue en comparant les scores. Les scores sont calculés par la ressource et le Gestionnaire de ressources de cluster choisit le nœud avec le score le plus élevé pour une ressource particulière. (Si un nœud possède un score négatif pour une ressource, la ressource ne peut pas s’exécuter sur ce nœud.) Nous pouvons manipuler les décisions du cluster avec des contraintes. Les contraintes ont un score. Si une contrainte a un score inférieur à l’infini, il est uniquement une recommandation. Un score d’infini signifie qu’il est indispensable. Vous souhaitez vous assurer que principal du groupe de disponibilité et virtuel ressource ip sont exécutés sur le même hôte, donc nous allons définir une contrainte de colocalisation avec un score d’infini. Pour ajouter la contrainte de colocalisation, exécutez la commande suivante sur un nœud. 
+Presque chaque décision dans un cluster STIMULATEUR, comme choisir où une ressource doit s’exécuter, s’effectue en comparant les scores. Les scores sont calculés par la ressource et le Gestionnaire de ressources de cluster choisit le nœud avec le score le plus élevé pour une ressource particulière. (Si un nœud possède un score négatif pour une ressource, la ressource ne peut pas s’exécuter sur ce nœud.) Utilisez des contraintes pour configurer les décisions du cluster. Les contraintes ont un score. Si une contrainte a un score inférieur à l’infini, il est uniquement une recommandation. Un score d’infini, qu'il est obligatoire. Pour vous assurer que le réplica principal et la ressource d’adresse ip virtuelle sont sur le même hôte, définir une contrainte de colocalisation avec un score d’infini. Pour ajouter la contrainte de colocalisation, exécutez la commande suivante sur un nœud. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

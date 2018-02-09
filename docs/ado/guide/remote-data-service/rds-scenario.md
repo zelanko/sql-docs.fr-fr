@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10c9ee41428ab7a43beae2269060618f7d6e296b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>Scénario des services Bureau à distance
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  Ce scénario suppose que vous savez comment utiliser les balises de mise en page HTML, les techniques de liaison de données utilisez DHTML et programme base avec des contrôles ActiveX.  
   
- Si vous avez installé le Kit de développement, vous pouvez trouver le code source complet pour l’exemple d’application de carnet d’adresses dans le répertoire SDK samples\dataaccess\rds\AddressBook\AddressBook.asp. Pour afficher le scénario de carnet d’adresses, dans Internet Explorer 4.0 ou version ultérieure, tapez  **http://*webserver*/RDS/AddressBook/AddressBook.asp** où *webserver* est le nom votre ordinateur de serveur Windows NT 4.0 ou Windows 2000 Web qui exécute Internet Information Services (IIS) et ASP donné.  
+ Si vous avez installé le Kit de développement, vous pouvez trouver le code source complet pour l’exemple d’application de carnet d’adresses dans le répertoire SDK samples\dataaccess\rds\AddressBook\AddressBook.asp. Pour afficher le scénario de carnet d’adresses, dans Internet Explorer 4.0 ou version ultérieure, tapez **http://*webserver*/RDS/AddressBook/AddressBook.asp** où *webserver* est le nom donné sur votre ordinateur de serveur Windows NT 4.0 ou Windows 2000 Web qui exécute Internet Information Services (IIS) et ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introduction au carnet d’adresses  
  L’exemple d’application de carnet d’adresses fournit un carnet d’adresses en ligne simple que vous pouvez utiliser pour publier un répertoire consultable via un intranet. Le carnet d’adresses est conçu afin qu’un utilisateur puisse entrer une chaîne de recherche dans un ou plusieurs champs pour demander des informations sur les employés. Pour vous montrer les fonctionnalités de base du Service de données distant, l’application d’exemple est intentionnellement réduite, avec un nombre minimal d’objets et des champs de recherche.  

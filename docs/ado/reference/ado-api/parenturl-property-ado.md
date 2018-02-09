@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Record::ParentURL
-helpviewer_keywords: ParentURL property [ADO]
+f1_keywords:
+- _Record::ParentURL
+helpviewer_keywords:
+- ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62c0bf264bb42ad8598140dfb2e4330b2d747a80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eca04999eece256ef22503c4d227ffcec297c79a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parenturl-property-ado"></a>ParentURL, propriété (ADO)
 Indique une chaîne URL absolue qui pointe vers le parent [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) actuelles **enregistrement** objet.  
@@ -32,7 +35,7 @@ Indique une chaîne URL absolue qui pointe vers le parent [enregistrement](../..
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un **chaîne** valeur qui indique l’URL du parent **enregistrement**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **ParentURL** propriété dépend de la source utilisée pour ouvrir le **enregistrement** objet. Par exemple, le **enregistrement** peut être ouvert avec une source qui contient un nom de chemin d’accès relatif d’un répertoire référencé par le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété.  
   
  Supposons que « second » est un sous-dossier de sous « first ». Ouvrez le **enregistrement** objet à l’aide de la syntaxe suivante :  

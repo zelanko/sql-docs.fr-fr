@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords: Find method [ADO]
+helpviewer_keywords:
+- Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f2a2af33a7355084f85e80fda3ff92e5415adcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-ado"></a>Find (méthode) (ADO)
 Recherche un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour la ligne qui répond aux critères spécifiés. Si vous le souhaitez, la direction de recherche, de la ligne de début et du décalage à partir de la ligne de début peut être spécifiée. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement trouvé. dans le cas contraire, la position est définie à la fin (ou démarrer) de la **Recordset**.  
@@ -43,15 +45,15 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A **chaîne** valeur qui contient une instruction en spécifiant le nom de colonne, un opérateur de comparaison et une valeur à utiliser dans la recherche.  
   
  *SkipRows*  
- Facultatif*.* A **Long** valeur, dont la valeur par défaut est zéro, ce qui spécifie le décalage de ligne de la ligne actuelle ou *Démarrer* signet pour commencer la recherche. Par défaut, la recherche commence sur la ligne actuelle.  
+ Optional*.* A **Long** valeur, dont la valeur par défaut est zéro, ce qui spécifie le décalage de ligne de la ligne actuelle ou *Démarrer* signet pour commencer la recherche. Par défaut, la recherche commence sur la ligne actuelle.  
   
  *SearchDirection*  
- Facultatif*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valeur qui spécifie si la recherche doit commencer sur la ligne actuelle ou de la ligne suivante dans la direction de la recherche. Une recherche s’arrête à la fin de la **Recordset** si la valeur est **adSearchForward**. Une recherche s’arrête au début de la **Recordset** si la valeur est **adSearchBackward**.  
+ Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valeur qui spécifie si la recherche doit commencer sur la ligne actuelle ou de la ligne suivante dans la direction de la recherche. Une recherche s’arrête à la fin de la **Recordset** si la valeur est **adSearchForward**. Une recherche s’arrête au début de la **Recordset** si la valeur est **adSearchBackward**.  
   
  *Démarrer*  
- Facultatif. A **Variant** signet qui indique la position de départ pour la recherche.  
+ Ce paramètre est facultatif. A **Variant** signet qui indique la position de départ pour la recherche.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Seul un nom de colonne unique peut être spécifié dans *critères*. Cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  
   
  L’opérateur de comparaison dans *critères* peut être «**>**« (supérieur à), »**\<**» (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), « <> » (différent de) ou « like » (correspondance).  
@@ -74,5 +76,5 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="see-also"></a>Voir aussi  
  [Exemple (VB) de la méthode Find](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Propriété index](../../../ado/reference/ado-api/index-property.md)   
- [Optimiser la propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
+ [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)

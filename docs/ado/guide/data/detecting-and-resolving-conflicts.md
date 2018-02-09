@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23ed1396e76f0339c2fdda92501aca751d2d4559
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
 Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il est beaucoup moins le risque de problèmes d’accès concurrentiel se produise. En revanche, si votre application utilise le mode de traitement par lots mise à jour, il peut être une bonne chance qu’un utilisateur modifie un enregistrement avant l’enregistrement des modifications apportées par un autre utilisateur, ce même enregistrement. Dans ce cas, vous préférerez votre application de façon à gérer le conflit. Il peut être votre souhait de la dernière personne à envoyer une mise à jour sur le serveur « remporte ». Ou vous pouvez souhaiter permettre à l’utilisateur la plus récente afin de déterminer la mise à jour est prioritaire en lui offrant un choix entre les deux valeurs en conflit.  
   
  Quel que soit le cas, ADO fournit les propriétés invoquez de l’objet de champ à gérer ces types de conflits. Utilisez ces propriétés en combinaison avec la méthode Resync et la propriété Filter de l’objet Recordset.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque ADO rencontre un conflit pendant une mise à jour par lots, un avertissement sera ajouté à la collection d’erreurs. Par conséquent, vous devez toujours vérifier les erreurs immédiatement après que vous appelez BatchUpdate et si vous en trouvez, commencez le test de l’hypothèse que vous avez rencontré un conflit. La première étape consiste à définir la propriété Filter sur l’objet Recordset la valeur adFilterConflictingRecords. Cela limite la vue sur le jeu d’enregistrements, seuls les enregistrements qui sont en conflit. Si la propriété RecordCount est égale à zéro après cette étape, vous savez que l’erreur a été levée par autre chose qu’un conflit.  
   
  Lorsque vous appelez BatchUpdate, ADO et le fournisseur génèrent des instructions SQL pour effectuer des mises à jour sur la source de données. N’oubliez pas que certaines sources de données ont des limitations sur lequel les types de colonnes peuvent être utilisés dans une clause WHERE.  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
 - _Stream::ReadText
-helpviewer_keywords: ReadText method [ADO]
+helpviewer_keywords:
+- ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e26f365d2b25bab878f0a8b9a321240d7c8ee347
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readtext-method"></a>ReadText, méthode
 Lit un nombre spécifié de caractères à partir d’un fichier texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -40,12 +42,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Paramètres  
  *NumChars*  
- Facultatif. A **Long** valeur qui spécifie le nombre de caractères à lire à partir du fichier, ou un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur. La valeur par défaut est **adReadAll**.  
+ Ce paramètre est facultatif. A **Long** valeur qui spécifie le nombre de caractères à lire à partir du fichier, ou un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur. La valeur par défaut est **adReadAll**.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Le **ReadText** méthode lit un nombre spécifié de caractères, une ligne entière ou l’intégralité du flux d’un **flux** de l’objet et retourne la chaîne résultante.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si *NUMCHARS* est supérieur au nombre de caractères présents dans le flux, seuls les caractères restants sont retournés. La chaîne de lecture n’est pas remplie pour correspondre à la longueur spécifiée par *NUMCHARS*. S’il n’y a pas de caractères pour lire, une valeur de type variant null est retournée. **ReadText** ne peut pas être utilisé pour lire vers l’arrière.  
   
 > [!NOTE]

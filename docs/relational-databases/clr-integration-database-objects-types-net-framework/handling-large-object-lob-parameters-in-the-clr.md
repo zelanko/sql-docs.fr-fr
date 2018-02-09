@@ -17,21 +17,22 @@ helpviewer_keywords:
 - SqlBytes data type
 - SqlChars data type
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2fa2bb9022d5bc53ecf8424211b1a9bb6a8fe00
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c9692632501eec31e517fb1bade2b3810c18c2b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>Gestion des paramètres LOB dans le CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez **SqlBytes** et **SqlChars** pour passer les type binaire LOB (large object) (**varbinary (max)**) et le type de caractère LOB (**nvarchar (max)**) paramètres, respectivement. Ces types autorisent la diffusion en continu des valeurs LOB de la base de données à la routine CLR (Common Language Runtime), au lieu de copier la valeur entière dans l'espace managé. **SqlBinary** et **SqlString** doit être utilisé uniquement pour les petite binaire et les valeurs de chaîne de caractères.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Utilisez **SqlBytes** et **SqlChars** pour passer les type binaire LOB (large object) (**varbinary (max)**) et le type de caractère LOB (**nvarchar (max)**) paramètres, respectivement. Ces types autorisent la diffusion en continu des valeurs LOB de la base de données à la routine CLR (Common Language Runtime), au lieu de copier la valeur entière dans l'espace managé. **SqlBinary** et **SqlString** doit être utilisé uniquement pour les petite binaire et les valeurs de chaîne de caractères.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données SQL Server dans .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Types de données SQL Server dans le .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

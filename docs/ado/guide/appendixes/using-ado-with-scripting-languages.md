@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,36 +16,36 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Utilisation d’ADO avec des langages de script
 Dans un environnement de script, ADO vous permet d’exposer des données par le biais de script côté serveur. Dans ce scénario, ADO, le fournisseur OLE DB sous-jacent qu’il utilise, et tous les autres composants nécessaires pour faire référence à un magasin de données installées sur un serveur exécutant Internet Information Services (IIS). À l’aide d’Active Server Pages (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu peut être passé via le protocole HTTP pour un navigateur Web client. À l’aide de scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, de traverser ou afficher des données spécifiques.  
   
  Avant d’utiliser un objet ActiveX dans une page Web, il est important de savoir si l’objet est sécurisé pour le script. Lorsqu’un objet est considéré comme sécurisé pour le script, cela signifie que le contrôle ne peut pas prendre toute action néfaste sur l’ordinateur de l’utilisateur et par conséquent, peut être exécuté sans demander l’approbation de l’utilisateur. Le tableau suivant répertorie les objets ADO et indique s’ils sont sécurisés pour les scripts.  
   
-|Object|Sécurisée pour le script ?|  
+|Objet|Sécurisée pour le script ?|  
 |------------|-------------------------|  
 |Connexion ADO|Oui|  
 |Commande ADO|non|  
 |Paramètre ADO|non|  
-|Jeu d’enregistrements ADO|Oui|  
+|ADO Recordset|Oui|  
 |Enregistrement ADO|Oui|  
-|Flux de données ADO|Oui|  
+|ADO Stream|Oui|  
 |Erreur ADO|non|  
 |Catalogue ADOX|non|  
-|Ensemble de cellules ADOX|non|  
+|ADOX CellSet|non|  
 |DataControl des services Bureau à distance|Oui|  
 |Espace de données de services Bureau à distance|Oui|  
-|DataFactory des services Bureau à distance|non|  
+|RDS DataFactory|non|  
   
  Le tableau suivant répertorie les fournisseurs inclus avec Windows DAC/MDAC et indique s’ils sont sécurisés pour les scripts.  
   
