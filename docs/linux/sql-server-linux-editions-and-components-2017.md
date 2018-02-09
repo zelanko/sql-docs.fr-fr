@@ -41,7 +41,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/20/2017
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et des fonctionnalités prises en charge de 2017 du serveur SQL sur Linux
+# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge pour serveur SQL Server 2017 sous Linux
 
 Cet article fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de 2017 du serveur SQL sur Linux. Pour les éditions et les fonctionnalités prises en charge de SQL Server sur Windows, consultez [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -74,14 +74,14 @@ Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
-2017 du serveur SQL sur Linux prend en charge le moteur de base de données SQL Server. Le tableau suivant décrit les fonctionnalités dans le moteur de base de données.   
+SQL Server 2017 sous Linux prend en charge le moteur de base de données SQL Server. Le tableau suivant décrit les fonctionnalités dans le moteur de base de données.   
   
 |Composants serveur| Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et l’intégration de base de données analytique.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal pour stocker, traiter et de sécuriser les données, la réplication, la recherche en texte intégral, les outils pour gérer les données relationnelles et XML et l’intégration de base de données analytique.|  
 
 **Éditions Developer, Enterprise Core et d’évaluation**  
-Pour les fonctionnalités prises en charge par les principaux de l’entreprise, développeur et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition de SQL Server Enterprise dans les tableaux ci-dessous.
+Pour les fonctionnalités prises en charge par l'édition Enterprise, Developer et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition Enterprise de SQL Server  dans les tableaux ci-dessous.
 
 L’édition Developer continue à prendre en charge seulement 1 client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -96,13 +96,13 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
 |Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
   
-<sup>1</sup> Enterprise edition avec serveur + Client accès licences (CAL) (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance de SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par l’édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+<sup>1</sup> L'édition Enterprise avec un mode de licences serveur + CAL (Client accès licences), non disponible pour les nouveaux contrats, est limitée à un maximum de 20 cœurs par instance de SQL Server. Il n'existe aucune limite dans le mode de licence Serveur par cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par l’édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
 ##  <a name="RDBMSHA"></a> Haute disponibilité SGBDR  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Copie des journaux de transaction|Oui|Oui|Oui|Non|  
+|Envoi des journaux de transaction|Oui|Oui|Oui|Non|  
 |Compression de sauvegarde|Oui|Oui|Non|Non| 
 |Instantané de base de données|Oui|Non|Non|Non|
 |Instance de cluster de basculement Always On<sup>1</sup>|Oui|Oui|Non|Non| 
@@ -120,11 +120,11 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
   
-<sup>1</sup> sur Enterprise edition, le nombre de nœuds est au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
+<sup>1</sup> sur l'édition Enterprise, le nombre de nœuds est le maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 
-<sup>2</sup> sur Enterprise edition prend en charge jusqu'à 8 réplicas secondaires - notamment 2 réplicas secondaires synchrones. 
+<sup>2</sup> l'édition Enterprise prend en charge jusqu'à 8 réplicas secondaires - incluant 2 réplicas secondaires synchrones. 
 
-<sup>3</sup> standard edition prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> l'édition standard prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une seule base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
@@ -149,7 +149,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Améliorations de l’insertion en bloc|Oui|Oui|Oui|Oui|
 
 
-<sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Les degrés de parallélisme de processus (DOP) pour la création d’un index est limitée à 2 de parallélisme maximal pour l’Édition Standard et 1 degré de parallélisme pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables basées sur des disques et des tables à mémoire optimisée.
+<sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le degré maximum de parallélisme est limité. Les degrés de parallélisme (DOP) pour la création d’un index est limitée au maximum à 2 pour l’Édition Standard et 1 pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables sur disque et les tables optimisées en mémoire.
 
 ##  <a name="RDBMSS"></a> Sécurité SGBDR  
   
@@ -175,13 +175,13 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
 |Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
 |Rapports de performances standard|Oui|Oui|Oui|Non|Non| 
-|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|Non|   
+|Repères de plan et gel de plan|Oui|Oui|Oui|Non|Non|   
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui| 
 |Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|Non| 
 |Vues partitionnées distribuées|Oui|Non|Non|Non| 
 |Opérations d'index parallèles|Oui|Non|Non|Non|  
 |Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|Non| 
-|Vérifications de cohérence parallèles|Oui|Non|Non|Non| 
+|Vérifications de cohérence en parallèle|Oui|Non|Non|Non| 
 |Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|Non|    
 
 ##  <a name="Programmability"></a> Programmability  
@@ -207,7 +207,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 
 ## <a name="IS"></a> Integration Services
 
-Pour plus d’informations sur les fonctionnalités d’Integration Services (SSIS) pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consultez [fonctionnalités Integration Services pris en charge par les éditions de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+Pour plus d’informations sur les fonctionnalités d’Integration Services (SSIS) prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consultez [fonctionnalités Integration Services pris en charge par les éditions de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="SLS"></a> Services d’emplacement et spatiaux  
   
