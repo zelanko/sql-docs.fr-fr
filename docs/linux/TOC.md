@@ -35,7 +35,7 @@
 ### [Installer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Installer la recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Référentiel de registre GA](sql-server-linux-change-repo.md)
+### [Configurer les référentiels](sql-server-linux-change-repo.md)
 
 ## Configurer
 ### [Configurer avec mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [Opérer](sql-server-linux-availability-group-failover-ha.md)
 #### [Créer pour l’échelle lecture uniquement]()
 ##### [Configurer un groupe de disponibilité](sql-server-linux-availability-group-configure-rs.md)
+#### [Configurer la fonctionnalité multiplateforme (Windows et Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Sécurité](sql-server-linux-security-overview.md)
 ### [Bien démarrer avec les fonctionnalités de sécurité](sql-server-linux-security-get-started.md)
