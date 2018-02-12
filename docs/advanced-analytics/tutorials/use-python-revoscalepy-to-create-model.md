@@ -1,6 +1,7 @@
 ---
 title: "Utiliser Python avec revoscalepy pour créer un modèle | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 09/19/2017
 mms.reviewer: 
 ms.suite: sql
@@ -10,17 +11,18 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: b85213fee582bc240f83446f911c4d16056f997e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1ced0d05a74f43c6b80be6717826ab288ee25374
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Utiliser Python avec revoscalepy pour créer un modèle
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet exemple montre comment vous pouvez créer un modèle de régression linéaire dans SQL Server, à l’aide d’un algorithme à partir de la **revoscalepy** package.
 

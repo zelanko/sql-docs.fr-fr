@@ -10,20 +10,22 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c180282735da59d8d3dfa039e70d0eea5ebd7e5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scénarios de science des données et des modèles de solution
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Les modèles sont des exemples de solutions qui illustrent les bonnes pratiques et fournissent les bases qui vous aideront à implémenter une solution rapidement. Chaque modèle est conçu pour résoudre un problème spécifique, pour un vertical spécifique ou d’un secteur d’activité. Les tâches dans chaque modèle vont de la préparation des données à la formation du modèle et au calcul des scores, en passant par l’ingénierie des caractéristiques. Utilisez ces modèles pour savoir comment [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] fonctionne. Ensuite, n’hésitez pas à personnaliser le modèle pour l’adapter à votre propre scénario et créer une solution personnalisée. 
 

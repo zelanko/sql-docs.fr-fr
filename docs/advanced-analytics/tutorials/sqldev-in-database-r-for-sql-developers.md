@@ -10,23 +10,25 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e1bb6f2e586bb2a4b8b2a92c8099dc33603e8475
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analytique de R dans base de données pour les développeurs SQL (didacticiel)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’objectif de ce didacticiel est de fournir des programmeurs SQL avec une expérience pratique de créer une solution dans SQL Server d’apprentissage. Dans ce didacticiel, vous allez apprendre à intégrer R dans une application ou d’une solution Décisionnelle en insérant le code R dans les procédures stockées.
 

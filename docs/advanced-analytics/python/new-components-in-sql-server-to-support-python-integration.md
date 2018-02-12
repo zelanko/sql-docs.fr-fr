@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 519422bad57d384466b2ff705b331a0731506caf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Composants de SQL Server pour prendre en charge l’intégration Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 À compter de SQL Server 2017, Machine Learning Services prend en charge Python comme un langage externe qui peut être exécuté à partir de T-SQL ou exécutés à distance à l’aide de SQL Server en tant que le contexte de calcul.
 
@@ -116,7 +117,7 @@ Lorsque vous exécutez Python « dans » [!INCLUDE[ssNoVersion_md](../../inclu
 
 Une fois que le script a été incorporé dans la procédure stockée, toute application qui peut appeler une procédure stockée peut initier l’exécution du code Python.  Par la suite [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gère l’exécution de code, comme indiqué dans le diagramme suivant.
 
-![script de base de données python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Une demande pour le runtime Python est indiquée par le paramètre `@language='Python'` passé à la procédure stockée. SQL Server envoie cette demande au service Launchpad.
 2. Le service Launchpad démarre le service de lancement approprié ; Dans ce cas, PythonLauncher.
@@ -124,7 +125,7 @@ Une fois que le script a été incorporé dans la procédure stockée, toute app
 4. BxlServer coordonne avec le runtime Python pour gérer les échanges de données et le stockage des résultats du travail.
 5. SQL Satellite gère les communications sur les tâches associées et les processus avec [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer utilise SQL Satellite pour communiquer l’état et les résultats à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtient les résultats, puis ferme les processus et tâches associés.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Obtient les résultats et ferme des processus et des tâches connexes.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Scripts Python exécutés à partir d’un client distant
 
@@ -135,7 +136,7 @@ Vous pouvez exécuter des scripts Python à partir d’un ordinateur distant, pa
 
 Le diagramme suivant résume le flux de travail global lorsque les scripts sont envoyées à partir d’un ordinateur distant.
 
-![sqlcc à distance à partir de python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Pour les fonctions qui sont prises en charge **revoscalepy**, le runtime Python appelle une fonction de liaison, qui à son tour appelle BxlServer.
 2. BxlServer est inclus avec Machine Learning Services (de-de base de données) et s’exécute dans un processus séparé du runtime Python.
@@ -145,7 +146,7 @@ Le diagramme suivant résume le flux de travail global lorsque les scripts sont 
 6. PythonLauncher effectue un appel à l’instance de Python qui est installé sur le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ordinateur.
 7. Les résultats sont retournés à BxlServer.
 8. SQL Satellite gère la communication avec [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et le nettoyage des objets de travail associés.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] renvoie les résultats au client.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] transmet les résultats au client.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

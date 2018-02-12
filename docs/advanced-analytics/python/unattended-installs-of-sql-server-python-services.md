@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ec10bd25b3709a578ea5dee6c109da69ff7d3327
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Installation sans assistance de Python Machine Learning Services (de-de base de données)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit comment utiliser les arguments de ligne de commande dans le programme d’installation de SQL Server 2017 pour installer le moteur de base de données SQL Server avec les Services de Machine Learning et Python, à l’aide du mode silencieux.
 

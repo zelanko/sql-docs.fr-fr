@@ -11,18 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f7f613516ce1cdad72c9bb07c6201e5f19421b36
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>Utilisation des fonctions de profilage de code R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 En plus des ressources et des outils SQL Server permettant de surveiller l’exécution de script R, vous pouvez utiliser les outils de performances fournis par d’autres packages R pour obtenir des informations complémentaires sur les appels de fonctions internes. Cette rubrique vous propose une liste de ressources de base comme point de départ. Pour obtenir des conseils d’expert, nous vous recommandons de lire le chapitre [Performance](http://adv-r.had.co.nz/Performance.html) de l’ouvrage de Hadley Wickham, « Advanced R ».
 
 ## <a name="using-rprof"></a>Utilisation de RPROF

@@ -12,20 +12,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a8fe18a578391beaae79259440779b0a76336ee2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 003434a055ab73afb288ea5801130ce1c06aa9c5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>Présentation approfondie de science des données : utilisation de packages RevoScaleR avec SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Ce didacticiel montre comment utiliser les packages R améliorés fournis dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] pour travailler avec des données SQL Server et créer des solutions R évolutives, en utilisant le serveur en tant qu’un contexte de calcul pour l’analytique des données hautes performances.
 
@@ -84,7 +86,7 @@ Vous devez également être familiarisé avec [!INCLUDE[tsql](../../includes/tsq
 > [!TIP]
 > Enregistrez votre espace de travail R entre les leçons pour pouvoir facilement reprendre là où vous en étiez.
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Configuration requise
 
 - **SQL Server avec prise en charge pour R**
   

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dfb238cc1ba7c981dbeec22e76616e45d93f72dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Créer un pool de ressources pour l’apprentissage
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit comment vous pouvez créer un pool de ressources conçus spécifiquement pour gérer les charges de travail machine learning dans SQL Server. Il part du principe que vous avez déjà installé et activé les fonctionnalités d’apprentissage automatique et reconfigurer l’instance pour prendre en charge une gestion plus affinée les ressources utilisées par les processus externes tels que R ou Python.
 
@@ -34,7 +35,7 @@ Le processus comporte plusieurs étapes :
 4.  Créer une fonction de classification pour identifier les demandes de script externe.
 5.  Vérifiez que le nouveau pool de ressources externes capture des travaux R ou Python des comptes clients spécifiés.
 
-**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] et [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] et [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> Examiner l’état des pools de ressources existants
   
@@ -46,7 +47,7 @@ Le processus comporte plusieurs étapes :
 
     **Exemples de résultats**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|par défaut|0|100|0|100|100|0|0|
 
@@ -58,7 +59,7 @@ Le processus comporte plusieurs étapes :
 
     **Exemples de résultats**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|par défaut|100|20|0|2|
  
@@ -168,9 +169,9 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
 
     **Exemples de résultats**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    | 1|interne|Moyenne|25|0|0|0|0| 1|2|
+    |1|interne|Moyenne|25|0|0|0|0|1|2|
     |2|par défaut|Moyenne|25|0|0|0|0|2|2|
     |256|ds_wg|Moyenne|25|0|0|0|0|2|256|
   
@@ -182,10 +183,10 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
 
     **Exemples de résultats**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|par défaut|100|20|0|2|
-    |256|ds_ep|100|40|0| 1|
+    |256|ds_ep|100|40|0|1|
   
      Pour plus d’informations, consultez [Affichages catalogue de Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).
   

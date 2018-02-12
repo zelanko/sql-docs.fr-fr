@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5e8d61735b5a40f178c76ccb6549150a2e9f0ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Événements étendus pour la Machine Learning Services SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server fournit un ensemble d’événements étendus pour résoudre les opérations liées à la [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], ainsi que les travaux de Python ou R envoyés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -54,7 +55,7 @@ Pour plus d’informations, consultez la section [collecte d’événements à p
 
 ##  <a name="bkmk_xeventtable"></a>Tableau des événements étendus
 
-|Événement|Description|Remarques|  
+|Événement| Description|Remarques|  
 |-----------|-----------------|---------|  
 |connection_accept|Se produit lorsqu’une nouvelle connexion est acceptée. Cet événement permet de journaliser toutes les tentatives de connexion.||  
 |failed_launching|Le lancement a échoué.|Indique une erreur.|  

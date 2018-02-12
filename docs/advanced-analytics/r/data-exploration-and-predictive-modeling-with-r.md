@@ -1,6 +1,7 @@
 ---
 title: "Exploration de données et modélisation prédictive avec R | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f700b865e2ee353872e8e0e67adf9e7c78060570
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Exploration de données et modélisation prédictive avec R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit les améliorations apportées au processus de science des données qui sont possibles via l’intégration avec SQL Server.
 
@@ -30,7 +32,7 @@ S’applique à : SQL Server 2016 R Services, SQL Server 2017 Machine Learnign 
 
 ## <a name="the-data-science-process"></a>Le processus de science des données
 
-Les spécialistes de données adoptent le langage R pour explorer les données et créer des modèles prédictifs. C’est généralement un processus itératif d’essais et d’erreurs qui s’exécute jusqu’à obtenir un bon modèle prédictif. En tant que spécialiste des données, vous pouvez vous connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et extraire les données vers votre poste de travail local à l’aide du package RODBC, explorer vos données et créer un modèle prédictif à l’aide des packages R standard.
+Les spécialistes de données adoptent le langage R pour explorer les données et créer des modèles prédictifs. C’est généralement un processus itératif d’essais et d’erreurs qui s’exécute jusqu’à obtenir un bon modèle prédictif. En tant que spécialiste des données, vous pouvez vous connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et extraire les données vers votre poste de travail local à l’aide du package RODBC, explorer vos données et créer un modèle prédictif à l’aide des packages R standard.
 
 Toutefois, cette approche présente plusieurs inconvénients, qui possèdent rigoureuse l’adoption plus large de R dans l’entreprise. 
 
@@ -55,7 +57,7 @@ L’environnement R pris en charge dans [!INCLUDE[rsql_productname](../../includ
 
 En plus des bibliothèques R propriétaires inclus avec Microsoft Machine Learning, vous pouvez utiliser presque toutes les packages R dans votre solution, y compris :
 
-+ Packages R génériques de référentiels publics. Vous pouvez obtenir les packages R open source les plus populaires auprès de référentiels publics, tels que le CRAN, lequel héberge plus de 6 000 packages utilisables par les spécialistes de données.
++ Packages R génériques de référentiels publics. Vous pouvez obtenir les packages R open source les plus populaires auprès de référentiels publics, tels que le CRAN, lequel héberge plus de 6 000 packages utilisables par les scientifiques des données.
   
   Pour la plateforme Windows, les packages R sont fournis sous forme de fichiers .zip, qui peuvent être téléchargés et installés avec la licence GPL.  
   

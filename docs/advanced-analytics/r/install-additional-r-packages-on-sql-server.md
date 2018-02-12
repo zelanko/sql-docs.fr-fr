@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2821983b39dcd4c301ea4b49713de0cdd3550a65
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installer des packages R supplémentaires sur SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit comment installer de nouveaux packages R à une instance de SQL Server où l’apprentissage automatique est activé.
 
@@ -29,7 +30,7 @@ Cet article décrit comment installer de nouveaux packages R à une instance de 
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 + [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 + Déterminer s’il existe une version de Windows du package : [mise en route de la version de package approprié et le format](#packageVersion)
 
@@ -271,7 +272,7 @@ Si vous avez besoin d’installer plusieurs packages ou souhaitez vous assurer q
 
 Cette section décrit le différents niveaux d’autorisations requises pour l’installation des packages dans SQL Server 2016 et SQL Server 2017. L’installation peut être réalisée à l’aide des outils R ou SQL Server, mais les processus et les autorisations diffèrent légèrement.
 
--   SQL Server 2016
+-   SQL Server 2016
 
     Dans cette version, seul un administrateur sur l’ordinateur peut installer des packages à l’emplacement requis. Les outils R standard vous permet d’installer des packages, mais vous devez exécuter en tant qu’administrateur et utiliser les outils R associés à l’instance.
 

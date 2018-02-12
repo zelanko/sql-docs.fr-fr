@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Configurer les Python Machine Learning Services (de-de base de données)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Cet article décrit comment installer les composants requis pour Python en exécutant le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation et suivez les instructions interactives.
 
@@ -32,7 +33,7 @@ Le **fonctionnalités partagées** section contient une option d’installation 
 
 Une fois l’installation terminée, reconfigurer l’instance pour permettre l’exécution de scripts qui utilisent un fichier exécutable externe. Vous devrez peut-être apporter des modifications supplémentaires au serveur pour prendre en charge les charges de travail machine learning. Modifications de configuration nécessitent généralement un redémarrage de l’instance, ou un redémarrage du service Launchpad.
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Configuration requise
 
 + SQL Server 2017 est requis. Intégration de Python n’est pas prise en charge des versions antérieures de SQL Server.
 + Veillez à installer le moteur de base de données. Une instance de SQL Server est requise pour exécuter les Python scripts dans la base de données.
@@ -273,7 +274,7 @@ Si vous disposez de SQL Server Enterprise Edition, utilisez le gouverneur de res
   
      [Options de configuration de serveur de mémoire serveur](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   Modifier le nombre de comptes de travail qui peut être démarrée par[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   Modifier le nombre de comptes de travail qui peut être démarrée par [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [Modifier le pool de comptes d’utilisateur pour SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

@@ -1,6 +1,7 @@
 ---
 title: "Utilisation des types de données R | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 01/31/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 14bfba68925f357c39fc192ae7852055a7e91f4f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliothèques R et les Types de données R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit les bibliothèques R inclus et les types de données qui sont prises en charge dans les produits suivants :
 
@@ -158,7 +160,7 @@ outputDataSet <- inputDataSet'
 |1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
 |1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
-Notez l’utilisation de la fonction `str` dans R pour obtenir le schéma des données de sortie. Cette fonction retourne les informations suivantes :
+Notez l’utilisation de la fonction `str` dans R pour obtenir le schéma des données de sortie. Cette fonction retourne les informations suivantes :
 
 <code>'data.frame':2 obs. of  4 variables:</code>
 <code> $ c1: int  1 -11</code>

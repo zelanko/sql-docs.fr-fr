@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 6aea91e6ed80a1697b1eb8004debef557496818c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>Prédire et tracer le modèle (R Guide de démarrage rapide SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Pour effectuer _score_ à l’aide de nouvelles données, d’obtenir les modèles formés à partir de la table et appelez ensuite un nouveau jeu de données sur lequel baser vos prévisions. Calcul du score du terme est parfois utilisé dans la science des données pour générer des prédictions, les probabilités ou les autres valeurs basées sur les nouvelles données sont chargées dans un modèle formé.
 

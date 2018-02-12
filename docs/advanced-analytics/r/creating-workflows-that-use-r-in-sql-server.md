@@ -1,6 +1,7 @@
 ---
 title: "Création de Workflows de BI avec R | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 53359b392f1936fa968d22b8ae58c1f3816771d8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Création de Workflows de BI avec R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Une base de données est une technologie hautement optimisée permettant de fournir des solutions évolutives de traitement transactionnel, de stockage et d’interrogation des données.
 
@@ -67,7 +69,7 @@ Voici certains ideass pour comment vous pouvez automatiser vos données un dmode
 
 Ce billet de blog montre des techniques de base pour la manipulation à l’aide du code R [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ Appeler le code R à l’aide de la tâche d’exécution SQL, pour générer des données et l’enregistrer dans[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ Appeler le code R à l’aide de la tâche d’exécution SQL, pour générer des données et l’enregistrer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + Utiliser une procédure stockée pour former un modèle R et le stocker dans la base de données
 
@@ -79,7 +81,7 @@ Si R permet de créer des graphiques et offre une visualisation intéressante, i
 
 Avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], vous pouvez effectuer des opérations complexes dans R avec des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)], qui peuvent facilement être utilisées par divers outils de rapports d’entreprise, y compris [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et Power BI.
 
-+ Visualiser les objets graphiques retournés à partir d'un script R avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ Visualiser les objets graphiques retournés à partir d’un script R avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Utiliser la table dans Power BI
 
 ### <a name="examples"></a>Exemples

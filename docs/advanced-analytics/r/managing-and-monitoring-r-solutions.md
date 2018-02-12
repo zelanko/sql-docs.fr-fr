@@ -1,6 +1,7 @@
 ---
 title: "Gestion et surveillance des solutions d’apprentissage machine | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 07/26/2016
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ac7b8138a4bfb137169236a68845e9f762711993
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Gestion et surveillance des solutions machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit les fonctionnalités de SQL Server Machine Learning Services qui sont pertinents pour les administrateurs de base de données qui ont besoin pour commencer à travailler avec des solutions R et Python.
 
@@ -50,7 +52,7 @@ Pour plus d'informations, consultez ces ressources :
 
 ## <a name="configuration-and-management"></a>Configuration et gestion
 
-Les administrateurs de base de données doivent intégrer des projets et priorités concurrents dans un point de contact unique : le serveur de base de données. Ils doivent prendre en charge analytique tout en conservant l’intégrité des magasins de données opérationnelles et de rapport. L’intégration d’apprentissage avec SQL Server offre de nombreux avantages à l’administrateur de base de données, qui sert de plus en plus un rôle essentiel dans le déploiement d’une infrastructure efficace pour la science des données.
+Les administrateurs de base de données doivent intégrer des projets et priorités concurrents dans un point de contact unique : le serveur de base de données. Ils doivent prendre en charge analytique tout en conservant l’intégrité des magasins de données opérationnelles et de rapport. L’intégration d’apprentissage avec SQL Server offre de nombreux avantages à l’administrateur de base de données, qui sert de plus en plus un rôle essentiel dans le déploiement d’une infrastructure efficace pour la science des données.
 
 + Les sessions R et Python sont exécutées dans un processus séparé pour garantir que votre serveur continue à exécuter comme d’habitude, même si l’exécution du script externe a des problèmes.
 

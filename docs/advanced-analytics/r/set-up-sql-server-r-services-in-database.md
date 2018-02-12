@@ -16,18 +16,19 @@ keywords:
 - Configurer les Services de R
 - "installer l’apprentissage de SQL"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurer SQL Server Machine Learning Services (de-de base de données)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique explique comment installer et configurer le fonctionnalités qui prennent en charge dans base de données analytique dans SQL Server d’apprentissage suivante :
 
@@ -41,7 +42,7 @@ Cette rubrique explique comment installer et configurer le fonctionnalités qui 
 
 + Un serveur d’apprentissage machine avec **aucune** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le programme d’installation inclut également la possibilité d’installer une version « autonome » de l’apprentissage automatique des composants qui ne nécessite pas le moteur de base de données et ne s’exécute pas dans SQL Server.  En règle générale, nous recommandons que vous installez cette option sur un ordinateur autre que l’ordinateur qui héberge SQL Server.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation inclut également la possibilité d’installer une version « autonome » de l’apprentissage automatique des composants qui ne nécessite pas le moteur de base de données et ne s’exécute pas dans SQL Server.  En règle générale, nous recommandons que vous installez cette option sur un ordinateur autre que l’ordinateur qui héberge SQL Server.
     
     [Configurer un serveur autonome apprentissage](create-a-standalone-r-server.md).
 
@@ -231,7 +232,7 @@ Cette section décrit comment reconfigurer l’instance pour l’apprentissage. 
 
     | hello |
     |----|
-    |  1|
+    | 1|
 
 
 8. Si vous obtenez des erreurs, passez à la section décrivant les autres modifications facultatif que vous devrez peut-être effectuer une fois l’installation terminée, ou consultez le guide de dépannage :

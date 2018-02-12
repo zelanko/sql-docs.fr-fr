@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 422b1e72c38493b2092a8682ade5077069af24f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c4fc8ef42cf38e908aca8dbbfeacbfd5fdf0ece4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-overview-for-python-in-sql-server"></a>Vue d’ensemble de la sécurité pour Python dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit l’architecture de sécurité qui permet de connecter le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] les composants de Python et de moteur de base de données. Exemples du processus de sécurité sont fournis pour deux scénarios courants : Python en cours d’exécution dans SQL Server à l’aide d’une procédure stockée et l’exécution de Python avec SQL Server en tant que le contexte de calcul à distance.
 

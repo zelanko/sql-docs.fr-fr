@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0708a96a8ee4e22f3eec5587f87ac09c8408301a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f58cb0fbc6ca62bbd4fe02e0c29d71569140fde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Comment éviter les erreurs sur les packages R sont installés dans les bibliothèques utilisateur
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Les utilisateurs expérimentés de R sont habitués à l’installation des packages R dans une bibliothèque de l’utilisateur, chaque fois que la bibliothèque par défaut est bloqué ou non disponible. Toutefois, cette approche n’est pas pris en charge dans SQL Server, et l’installation dans une bibliothèque de l’utilisateur se termine généralement une erreur « package introuvable ».
 

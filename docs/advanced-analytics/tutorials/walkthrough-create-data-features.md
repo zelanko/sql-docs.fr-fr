@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 79cc7e334c3aab4fb7702e368a3188db98eaaced
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’ingénierie des données est un aspect important du Machine Learning. Données nécessitent souvent une transformation avant de pouvoir l’utiliser pour la modélisation prédictive. Si les données n’ont pas les caractéristiques dont vous avez besoin, vous pouvez les créer à partir de valeurs existantes.
 
@@ -33,7 +36,7 @@ Pour cette tâche de modélisation, plutôt que d’utiliser les valeurs brutes 
 Dans cette étape, nous comparons les deux méthodes différentes pour la création d’une fonctionnalité à partir des données :
 
 - À l’aide d’une fonction R personnalisée
-- À l’aide d’une fonction personnalisée de T-SQL dans[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- À l’aide d’une fonction personnalisée de T-SQL dans [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 L’objectif est de créer un nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeu de données qui incluant les colonnes d’origine et la nouvelle fonctionnalité numérique, *direct_distance*.
 

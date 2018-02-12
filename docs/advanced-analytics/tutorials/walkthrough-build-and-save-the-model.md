@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e2fc182a273a9b6adee4a59729b023d3113507a8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Générer un modèle R et l’enregistrer dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans cette étape, vous allez apprendre à créer un modèle d’apprentissage automatique et enregistrez le modèle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -162,7 +165,7 @@ Dans cette section, vous allez faire des essais avec ces deux techniques.
 > [!NOTE]
 > Vos graphiques peuvent différer de ces options, selon le nombre de points de données utilisé.
 
-## <a name="deploy-the-model"></a>Déployez le modèle
+## <a name="deploy-the-model"></a>Déployer le modèle
 
 Après avoir créé un modèle et a établi qu’elle fonctionne correctement, vous souhaiterez probablement déployer sur un site où les utilisateurs ou les personnes de votre organisation faire en utilisation du modèle, ou peut-être recycler et étalonner le modèle sur une base régulière. Ce processus est parfois appelé *Opérationnalisation* un modèle.
 

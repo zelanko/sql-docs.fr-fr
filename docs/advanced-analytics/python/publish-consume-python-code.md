@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 281f3beb3678d74fb03b3dc68a4a9b58d44f261e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Publier et consommer des services web de Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Vous pouvez déployer une solution de Python de travail à un service web à l’aide de la fonctionnalité à l’Opérationnalisation dans Microsoft Machine Learning Server. Cette rubrique décrit les étapes pour publier, puis exécutez votre solution.
 

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Quelles sont les nouveautés dans Machine Learning Services dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans SQL Server 2016, Microsoft a introduit une fonctionnalité qui prend en charge la science des données de l’échelle de l’entreprise, en intégrant le langage R avec le moteur de base de données SQL Server de SQL Server R Services.
 
@@ -60,7 +61,7 @@ Python en cours d’exécution dans la base de données n’est pas seulement un
 
 + Prise en charge de Python dans Microsoft Machine Learning Server (autonome)
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]inclut la possibilité d’installer une version autonome du serveur Microsoft Machine Learning. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] inclut la possibilité d’installer une version autonome du serveur Microsoft Machine Learning. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
 
 ### <a name="linux-support"></a>Support Linux
 
@@ -86,7 +87,7 @@ Cette version contient plusieurs options et fonctionnalités pour vous aider à 
 
     Le **mrsdeploy** package pour [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)] et [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] prend en charge le déploiement des modèles de Python et des scripts en tant que services web. Pour obtenir un exemple de son fonctionnement, consultez [publier et consommer le code Python](python/publish-consume-python-code.md).
 
-+ Performances
++ Performance
 
     Microsoft a envoyé les limites des performances pour calculer les scores. Avec la base de données de calcul de score, nous avions traité un million de lignes par seconde à l’aide des modèles R. Dans cette version, les nouvelles fonctionnalités pour **en temps réel de calcul de score** et **score native** obtenir de meilleures performances dans une ligne et le calcul du score du lot.
 

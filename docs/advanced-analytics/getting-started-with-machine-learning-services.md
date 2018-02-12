@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0d1b3a2a69a08495b5860b3aef2587dd61d9327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>Prise en main d’apprentissage dans SQL Server
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>Bien démarrer avec Machine Learning dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft fournit un ensemble intégré et évolutif des solutions d’apprentissage pour à la fois localement et le cloud :
 
@@ -39,7 +40,7 @@ Cet article fournit des liens vers des ressources pour chaque produit dans la pl
     + [Présentation de l’architecture pour Python dans SQL Server](/python/architecture-overview-sql-server-python.md)
     + [Configurer SQL Server R Services ou des Services de Machine Learning](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
-+ SQL Server 2016
++ SQL Server 2016
 
   SQL Server 2016 prend en charge l’exécution du code R dans SQL Server à l’aide de procédures stockées. Cela facilite l’automatisation des tâches d’apprentissage automatique à l’aide des outils SQL. Ou bien, vous pouvez exécuter le code R à partir d’un ordinateur portable à distance ou d’un environnement de développement R, lors de l’utilisation de l’ordinateur SQL Server en tant que le _contexte de calcul_.
 

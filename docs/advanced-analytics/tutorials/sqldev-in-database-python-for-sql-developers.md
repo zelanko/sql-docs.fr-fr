@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analytique Python de la base de données pour les développeurs SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’objectif de cette procédure pas à pas est de fournir des programmeurs SQL avec une expérience pratique de créer une solution à l’aide de Python qui s’exécute dans SQL Server d’apprentissage. Dans cette procédure pas à pas, vous allez apprendre à ajouter le code Python aux procédures stockées et exécuter des procédures stockées pour générer et de prédire à partir de modèles.
 
@@ -45,7 +47,7 @@ Le processus de création d’une solution d’apprentissage est complexe qui pe
 
 Les données sont dans le jeu de données NYC Taxi bien connu. Pour effectuer cette procédure pas à pas simple et rapide, les données sont échantillonnées. Vous allez créer un modèle de classification binaire qui prédit si un voyage particulier est susceptible d’obtenir un Conseil ou non, en fonction des colonnes, telles que l’heure du jour, distance et l’emplacement d’extraction.
 
-Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées dans l’environnement familier de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées dans l’environnement familier de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Étape 1 : Télécharger les exemples de données](sqldev-py1-download-the-sample-data.md)
 

@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 743d7159bd8937fe90be4016ad361d13b7a15c36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Préparer les données à l’aide de PowerShell (procédure pas à pas)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 À ce stade, vous devez avoir un des éléments suivants installés :
 
@@ -290,7 +293,7 @@ Les données sont un échantillon représentatif du jeu de données sur les taxi
 
 Le script PowerShell s’exécute plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] des scripts sur l’instance de SQL Server. Le tableau suivant répertorie les [!INCLUDE[tsql](../../includes/tsql-md.md)] des scripts et leur signification.
 
-|Nom du fichier de script SQL|Description|
+|Nom du fichier de script SQL| Description|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|Crée une base de données et deux tables :<br /><br /> *nyctaxi_sample*: table qui contient les données de formation, un échantillon de 1 % du jeu de données sur les taxis de New York. Un index cluster columnstore est ajouté à la table pour améliorer les performances de stockage et des requêtes.<br /><br /> *nyc_taxi_models*: une table utilisée pour stocker les modèles formés au format binaire.|
 |PredictTipBatchMode.sql|Crée une procédure stockée qui appelle un modèle formé pour prédire les étiquettes des nouvelles observations. Il accepte une requête comme paramètre d’entrée.|

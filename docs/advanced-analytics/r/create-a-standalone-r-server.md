@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408e2503-5c7d-4ec4-9d3d-bba5a8c7661d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5c27e75bf6248ebb403235e339750cf935ee3a3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Installer Machine Learning Server (autonome) ou R Server (autonome)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Le programme d’installation de SQL Server inclut la possibilité d’installer un serveur qui s’exécute en dehors de SQL Server d’apprentissage. Cette option peut être utile si vous avez besoin développer des solutions d’apprentissage machine de hautes performances qui peuvent utiliser les contextes de calcul à distance, ou qui peuvent être déployées sur plusieurs plateformes, notamment :
   
@@ -146,14 +147,14 @@ Pour référence, si vous avez installé une instance de SQL Server avec R Servi
 
 Le tableau suivant répertorie les chemins d’accès pour chaque installation.
 
-|Options de version| Méthode d’installation | Dossier par défaut|
+|Version| Méthode d’installation | Dossier par défaut|
 |----|----|----|
 |R Server (autonome) |Assistant Installation de SQL Server 2016|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (autonome) |Le programme d’installation de Windows autonome|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Machine Learning Server (autonome) |  Assistant Installation de SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Machine Learning Server (autonome) |  Le programme d’installation de Windows autonome |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (dans la base de données) |Assistant Installation de SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning Services (en base de données) |Assistant Installation de SQL Server 2017|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` ou `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|Machine Learning Services (en base de données) |Assistant Installation de SQL Server 2017|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`ou`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>Outils de développement
 

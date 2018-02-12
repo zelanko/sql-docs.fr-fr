@@ -1,6 +1,7 @@
 ---
 title: "Configuration des Options avancées pour Services de Machine Learning | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/31/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Options de configuration avancée pour les Services de Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit les modifications que vous pouvez effectuer après l’installation, pour modifier la configuration de l’exécution du script externe et d’autres services associés d’apprentissage dans SQL Server.
 
@@ -45,7 +47,7 @@ En outre, votre administrateur de base de données doit permettre à ce groupe l
 
 + Les noms de comptes d’utilisateur dans le pool sont au format SQLInstanceName*nn*. Par exemple, si vous utilisez l’instance par défaut pour l’apprentissage, le pool de comptes d’utilisateur prend en charge les noms de compte tels que MSSQLSERVER01, MSSQLSERVER02 et ainsi de suite.
 
-+ La taille du pool de comptes d’utilisateur est statique et sa valeur par défaut est 20. Le nombre de sessions de runtime externe qui peuvent s’exécuter simultanément est limité par la taille de ce pool de comptes d’utilisateur. Pour modifier cette limite, un administrateur doit utiliser le Gestionnaire de Configuration SQL Server.
++ La taille du pool de comptes d’utilisateur est statique et sa valeur par défaut est 20. Le nombre de sessions de runtime externe qui peuvent s’exécuter simultanément est limité par la taille de ce pool de comptes d’utilisateur. Pour modifier cette limite, un administrateur doit utiliser le Gestionnaire de Configuration SQL Server.
 
 Pour plus d’informations sur la façon d’apporter des modifications pour le pool de comptes d’utilisateur, consultez [modifier le pool de comptes d’utilisateur pour SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
