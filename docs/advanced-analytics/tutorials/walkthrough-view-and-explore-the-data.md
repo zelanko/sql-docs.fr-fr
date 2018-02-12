@@ -20,13 +20,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 49b3174910ca8b5ce1b590f1205bc3d134b76f4b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Afficher et Explorer les données à l’aide de SQL (procédure pas à pas)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’exploration de données est une partie importante de la modélisation des données et implique l’examen de synthèses d’objets de données à utiliser dans les analyses, ainsi que la visualisation des données. Dans cette leçon, vous avez exploré les objets de données et générer des graphiques, à l’aide de deux [!INCLUDE[tsql](../../includes/tsql-md.md)] et des fonctions R incluses dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 

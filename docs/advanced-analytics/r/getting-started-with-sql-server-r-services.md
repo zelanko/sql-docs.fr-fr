@@ -1,6 +1,7 @@
 ---
 title: Prise en main de SQL Server apprentissage | Documents Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 12/07/2016
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a6e15767282d347fc92b7decf2963d85827cf6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d643bbdf32b946c5342484fa531303b5b74f4bcb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Prise en main de SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services dans SQL Server est conçu pour prendre en charge des tâches courantes relatives aux données sans exposer vos données à des risques de sécurité ou de déplacement unnecesarily de données.
 
@@ -98,7 +100,7 @@ Une fois le script ou modèle R est prêt pour la production, un développeur de
 
 ![rsql_keyscenario1](media/rsql-keyscenario1.png)
 
-+ **Sécurisé et extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise une nouvelle architecture d’extensibilité qui protège votre moteur de base de données et isole les sessions R. Vous pouvez contrôler les utilisateurs autorisés à exécuter des scripts R, et spécifier les bases de données accessibles au code R. Vous pouvez contrôler la quantité de ressources allouées au runtime R afin d’éviter que des calculs massifs ne mettent en péril les performances globales du serveur.
++ **Sécurisé et extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise une nouvelle architecture d’extensibilité qui protège votre moteur de base de données et isole les sessions R. Vous pouvez contrôler les utilisateurs autorisés à exécuter des scripts R, et spécifier les bases de données accessibles au code R. Vous pouvez contrôler la quantité de ressources allouées au runtime R afin d’éviter que des calculs massifs ne mettent en péril les performances globales du serveur.
 
 + **Planification et d’audit**. Lors de l’exécution des tâches de script externe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez contrôler et auditer les données utilisées par les chercheurs de données. Vous pouvez également planifier des travaux et créer des workflows contenant des scripts R ou Python externes, tout comme vous planifiez tout autre travail T-SQL ou procédure stockée.
 

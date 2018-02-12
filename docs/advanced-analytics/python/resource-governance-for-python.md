@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Gouvernance des ressources pour Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Car Python est activée via la même architecture d’extensibilité qui a été implémentée dans le langage R dans SQL Server 2016, vous pouvez utiliser les outils existants dans SQL Server, tels que le gouverneur de ressources, vues de gestion dynamique et les événements étendus, pour surveiller l’exécution de scripts Python dans SQL Server.
 

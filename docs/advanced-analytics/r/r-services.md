@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc3d80c01bc16d6d89bbf3e97ddf88089e9379fd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft Machine Learning Services vise à fournir une plateforme extensible et évolutive pour l’intégration des outils et les tâches d’apprentissage automatique avec les applications qui utilisent des services de machine learning. La plate-forme doit répondre aux besoins de tous les utilisateurs impliqués dans le processus de l’analytique et le développement de données à partir des chercheurs de données, pour les architectes et les administrateurs de base de données.
 
@@ -39,7 +40,7 @@ Principaux avantages :
 
 Dans SQL Server 2016, Microsoft a lancé deux plateformes serveur permettant d’intégrer le langage R open source populaires avec les applications d’entreprise :
 
-+ **SQL Server R Services (dans la base de données)**, pour l’intégration avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services (de-de base de données)**, pour l’intégration avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, pour les déploiements de R au niveau de l’entreprise sur les serveurs Windows et Linux
 
 Dans SQL Server 2017, le nom a été modifié pour refléter la prise en charge pour le langage Python populaire.

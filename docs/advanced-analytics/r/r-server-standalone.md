@@ -1,6 +1,7 @@
 ---
 title: R Server (autonome) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.reviewer: 
 ms.suite: sql
@@ -10,19 +11,21 @@ ms.component: r
 vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: d7136f051317f7ffeb26d779b3cf611edef13592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="r-server-standalone"></a>R Server (autonome)
+# <a name="r-server-standalone"></a>R Server (autonome)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans SQL Server 2016, Microsoft a publié **R Server (autonome)**, dans le cadre de sa plate-forme pour prendre en charge d’analytique de l’entreprise.  Microsoft R Server fournit l’évolutivité et la sécurité pour le langage R et résout les limitations de mémoire de l’open source R. Comme SQL Server R Services, Microsoft R Server (autonome) fournit le traitement parallèle et mémorisé en bloc de données, permettant aux utilisateurs de R d’utiliser beaucoup plus volumineuses que la mémoire peut contenir des données.
 

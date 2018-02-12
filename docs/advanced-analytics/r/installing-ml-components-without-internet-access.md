@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b84c15fba4b363eee589b6ff1d2a19d142100c32
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Installation des composants d’apprentissage machine sans accès à internet
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Étant donné que les composants R et Python fournis avec SQL Server 2016 et SQL Server 2017 sont open source, Microsoft n’installe pas les composants de R ou Python par défaut. Au lieu de cela, nous fournir les programmes d’installation connexes et fourni des packages pour des raisons pratiques du Microsoft Download Center et d’autres sites de confiance. Vous devez donner son consentement à la licence appropriée, et ensuite le programme d’installation de SQL Server installe les composants de R ou Python pour vous.
 
@@ -198,7 +199,7 @@ Si vous souhaitez afficher le code source pour Microsoft R, il est disponible en
 
 Selon votre environnement, vous devrez peut-être effectuer des copies locales des programmes d’installation pour les prérequis suivants.
 
-Composant  |Options de version
+Composant  |Version
 ---------|---------
 [Fournisseur Microsoft OLE DB AS pour SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
 [Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1

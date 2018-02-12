@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Interopérabilité de Python avec SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit les composants de Python qui sont installés si vous activez la fonctionnalité **Machine Learning Services (de-de base de données)** et sélectionnez les Python comme la langue.
 
 ## <a name="python-components"></a>Composants de Python
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ne modifiez pas les exécutables de Python. Le runtime Python est installé indépendamment des outils SQL et est exécuté en dehors de la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] processus.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ne modifiez pas les exécutables de Python. Le runtime Python est installé indépendamment des outils SQL et est exécuté en dehors de la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] processus.
 
 La distribution est associée à un spécifique [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance se trouve dans le dossier associé à l’instance.
 
