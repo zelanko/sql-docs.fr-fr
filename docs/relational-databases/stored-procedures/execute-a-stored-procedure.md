@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Définition, désactivation et contrôle de l'exécution automatique  
   
-     Seul l’administrateur système (**sa**) peut marquer une procédure de sorte qu’elle s’exécute automatiquement. En outre, la procédure doit se trouver dans la base de données **master** , être la propriété de **sa**et ne pas posséder de paramètres d'entrée ou de sortie.  
+     Seul l’administrateur système (**sa**) peut marquer une procédure de sorte qu’elle s’exécute automatiquement. En outre, la procédure doit se trouver dans la base de données **master** , être la propriété de **sa** et ne pas posséder de paramètres d'entrée ou de sortie.  
   
      Utilisez [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) pour :  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Développez la base de données que vous souhaitez, développez **Programmabilité**, puis développez **Procédures stockées**.  
   
-3.  Cliquez avec le bouton droit sur la procédure stockée définie par l’utilisateur à supprimer, puis cliquez sur **Exécuter la procédure stockée**.  
+3.  Cliquez avec le bouton droit sur la procédure stockée définie par l’utilisateur à executer, puis cliquez sur **Exécuter la procédure stockée**.  
   
 4.  Dans la boîte de dialogue **Exécuter la procédure** , entrez une valeur pour chaque paramètre et indiquez si le paramètre doit passer une valeur Null.  
   
