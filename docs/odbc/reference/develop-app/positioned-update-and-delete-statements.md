@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,25 +18,25 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Mise à jour positionnée et les instructions Delete
 Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un jeu de résultats avec une mise à jour positionnée ou instruction. Positionné mise à jour et supprimer les instructions sont pris en charge par certaines sources de données, mais pas toutes. Pour déterminer si un prend en charge de source de données positionné instructions update et delete, une application appelle **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1, ou SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (selon le type du curseur). Notez que la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer les instructions.  
   
  Pour utiliser une mise à jour positionnée ou l’instruction delete, l’application doit créer un jeu de résultats avec un **sélectionner pour la mise à jour** instruction. La syntaxe de cette instruction est la suivante :  
   
- **Sélectionnez** [**tous les** &#124; **DISTINCT**] *liste de sélection*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
- **À partir de** *liste de références de table*  
+ **FROM** *table-reference-list*  
   
  [**Où** *condition de recherche*]  
   
@@ -43,7 +44,7 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  L’application puis place le curseur sur la ligne doit être mis à jour ou supprimé. Il peut le faire en appelant **SQLFetchScroll** pour récupérer un ensemble de lignes contenant la ligne requise et l’appel **SQLSetPos** pour positionner le curseur de l’ensemble de lignes sur cette ligne. L’application exécute ensuite la mise à jour positionnée ou une instruction delete sur une instruction autre que l’instruction utilisée par le jeu de résultats. La syntaxe de ces instructions est :  
   
- **Mise à jour** *-nom de la table*  
+ **UPDATE** *table-name*  
   
  **Définissez** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}  
   
