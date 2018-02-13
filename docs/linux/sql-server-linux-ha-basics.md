@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 
@@ -32,7 +32,7 @@ En dehors de la sauvegarde et de restauration, les mêmes fonctionnalités de di
 -   Instances de Cluster de basculement (fci) Always On
 -   [Copie des journaux de transaction](sql-server-linux-use-log-shipping.md)
 
-Sur Windows, les instances fci nécessite toujours un cluster de basculement Windows Server (WSFC) sous-jacent. Selon le scénario de déploiement, un groupe de disponibilité nécessite généralement un cluster WSFC sous-jacent, avec l’exception en cours de la nouvelle variante dans aucun [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Un cluster WSFC n’existe pas dans Linux. Implémentation dans Linux est présenté ci-dessous dans [STIMULATEUR pour le cluster de basculement et de groupes de disponibilité AlwaysOn des instances sur Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+Sur Windows, les instances fci nécessite toujours un cluster de basculement Windows Server (WSFC) sous-jacent. Selon le scénario de déploiement, un groupe de disponibilité nécessite généralement un cluster WSFC sous-jacent, avec l’exception en cours de la nouvelle variante dans aucun [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Un cluster WSFC n’existe pas dans Linux. Implémentation dans Linux est décrite dans la section [STIMULATEUR pour le cluster de basculement et de groupes de disponibilité AlwaysOn des instances sur Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## <a name="a-quick-linux-primer"></a>Une présentation rapide
 Alors que certaines installations Linux peuvent être installées avec une interface, la plupart ne sont pas, ce qui signifie que presque tous les éléments au niveau du système d’exploitation sont effectué via la ligne de commande. Le terme courantes pour cette ligne de commande dans le monde Linux est un *bash shell*.
@@ -59,9 +59,9 @@ Certaines commandes courantes, chacun d'entre eux ont différents commutateurs e
 Cette section présente les tâches qui sont communes à tous les basés sur Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] déploiements.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Assurez-vous que les fichiers peuvent être copiés.
-Une chose que vous soyez à l’aide de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux doit être en mesure de faire est de copier les fichiers d’un serveur vers un autre. Cette tâche est très importante pour les configurations de groupe de disponibilité.
+Copie des fichiers d’un serveur vers un autre est une tâche que vous soyez à l’aide de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux doit être en mesure d’effectuer. Cette tâche est très importante pour les configurations de groupe de disponibilité.
 
-Des éléments tels que des problèmes d’autorisation peuvent exister sur Linux, ainsi que sur les installations basées sur Windows. Toutefois, ceux qui connaissent la copie de serveur à serveur sur Windows peut-être pas familiarisés avec la façon dont elle est effectuée sur Linux. Une méthode courante consiste à utiliser l’utilitaire de ligne de commande `scp`, ce qui signifie copie sécurisée. Les coulisses, `scp` utilise OpenSSH. SSH est l’acronyme shell sécurisé. Selon la distribution de Linux, OpenSSH lui-même ne peut-être pas être installé. Si elle n’est pas le cas, OpenSSH devrez d’abord installé. Pour plus d’informations sur la configuration OpenSSH, consultez les informations sur les liens suivants pour chaque point de distribution :
+Des éléments tels que des problèmes d’autorisation peuvent exister sur Linux, ainsi que sur les installations basées sur Windows. Toutefois, ceux qui connaissent la copie de serveur à serveur sur Windows peut-être pas familiarisés avec la façon dont elle est effectuée sur Linux. Une méthode courante consiste à utiliser l’utilitaire de ligne de commande `scp`, ce qui signifie copie sécurisée. Les coulisses, `scp` utilise OpenSSH. SSH est l’acronyme shell sécurisé. Selon la distribution de Linux, OpenSSH lui-même ne peut-être pas être installé. Si elle n’est pas le cas, OpenSSH doit être installé en premier. Pour plus d’informations sur la configuration OpenSSH, consultez les informations sur les liens suivants pour chaque point de distribution :
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -112,7 +112,7 @@ Comme pour Windows, les distributions Linux ont un pare-feu intégré. Si votre 
 | Variable    | TCP/UDP  | NFS – port pour `MOUNTD_PORT` (trouvé dans `/etc/sysconfig/nfs` sur RHEL)                                                |
 | Variable    | TCP/UDP  | NFS – port pour `STATD_PORT` (trouvé dans `/etc/sysconfig/nfs` sur RHEL)                                                 |
 
-Pour des ports supplémentaires qui peuvent être utilisées par Samba, reportez-vous à [l’utilisation du Port Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
+Pour des ports supplémentaires qui peuvent être utilisées par Samba, consultez [l’utilisation du Port Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
 À l’inverse, le nom du service sous Linux peut également être ajouté en tant qu’exception au lieu du port ; par exemple, `high-availability` pour STIMULATEUR. Reportez-vous à la distribution pour les noms si la direction que vous souhaitez poursuivre. Par exemple, la commande à ajouter dans STIMULATEUR est sur RHEL
 
@@ -135,7 +135,7 @@ Lorsque les groupes de disponibilité ou fci est configurés sur une configurati
 Les autres packages facultatifs pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] recherche en texte intégral (*FTP du serveur mssql*) et [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql server est*), ne sont pas requis pour la haute disponibilité, soit pour une instance de cluster ou un groupe de disponibilité.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>STIMULATEUR pour les groupes de disponibilité AlwaysOn et les instances de cluster de basculement sur Linux
-Comme indiqué ci-dessus, le seul mécanisme clustering actuellement pris en charge par Microsoft pour les groupes de disponibilité et de fci est STIMULATEUR avec Corosync. Cette section décrit les informations de base pour comprendre la solution, ainsi que comment planifier et déployer pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurations.
+Précédente comme indiqué, le seul mécanisme clustering actuellement pris en charge par Microsoft pour les groupes de disponibilité et de fci est STIMULATEUR avec Corosync. Cette section décrit les informations de base pour comprendre la solution, ainsi que comment planifier et déployer pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurations.
 
 ### <a name="ha-add-onextension-basics"></a>Notions de base sur complémentaires/extension haute disponibilité
 Toutes les distributions actuellement pris en charge sont fournis une haute disponibilité complémentaires-on/extension, qui est basé sur le Pacemaker clustering pile. Cette pile comprend deux composants principaux : STIMULATEUR et Corosync. Tous les composants de la pile sont :
@@ -171,7 +171,7 @@ Un nœud est un serveur faisant partie du cluster. Un cluster STIMULATEUR prend 
 #### <a name="resource"></a>Ressource
 Un cluster WSFC et un cluster STIMULATEUR présentent le concept d’une ressource. Une ressource est une fonctionnalité spécifique qui s’exécute dans le contexte d’un cluster, comme un disque ou une adresse IP. Par exemple, sous STIMULATEUR ICF et le groupe de disponibilité des ressources peuvent être créés. Ce n’est pas différent aux opérations réalisées dans un cluster WSFC, où vous voyez un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] une ressource pour une FCI ou groupe de disponibilité lors de la configuration d’un groupe de disponibilité, mais est pas identique au dû aux différences sous-jacentes dans la procédure [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] s’intègre avec STIMULATEUR.
 
-STIMULATEUR dispose des ressources standard et le clone. Ressources de clonage sont ceux qui s’exécutent simultanément sur tous les nœuds. Un exemple serait une adresse IP qui s’exécute sur plusieurs nœuds à des fins d’équilibrage de charge. N’importe quelle ressource qui est créé pour les instances fci utilise une ressource standard, car un seul nœud peut héberger une instance FCI à tout moment donné.
+STIMULATEUR dispose des ressources standard et le clone. Ressources de clonage sont ceux qui s’exécutent simultanément sur tous les nœuds. Un exemple serait une adresse IP qui s’exécute sur plusieurs nœuds à des fins d’équilibrage de charge. N’importe quelle ressource qui est créé pour les instances fci utilise une ressource standard, car un seul nœud peut héberger une instance de cluster à un moment donné.
 
 Lorsqu’un groupe de disponibilité est créé, il nécessite un type spécial d’une ressource de clone appelé une ressource plusieurs état. Alors qu’un groupe de disponibilité a uniquement un réplica principal, le groupe de disponibilité est en cours d’exécution sur tous les nœuds qu’il est configuré pour fonctionner sur et permet à des éléments tels que l’accès en lecture seule. Comme il s’agit d’une utilisation « dynamique » du nœud, les ressources présentent le concept de deux états : maître et esclave. Pour plus d’informations, consultez [états multiples ressources : ressources qui ont plusieurs modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
