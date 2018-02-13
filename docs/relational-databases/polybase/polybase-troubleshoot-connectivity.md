@@ -21,17 +21,18 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
 ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez utiliser un outil de diagnostic interactif qui a été intégré à PolyBase pour résoudre les problèmes d’authentification lors de l’utilisation de PolyBase dans un cluster Hadoop sécurisé par Kerberos. 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vous pouvez utiliser un outil de diagnostic interactif qui a été intégré à PolyBase pour résoudre les problèmes d’authentification lors de l’utilisation de PolyBase dans un cluster Hadoop sécurisé par Kerberos. 
 
 Cet article sert de guide tout le long du processus de débogage de tels problèmes en tirant parti de cet outil.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 1. SQL Server 2016 RTM mise à jour cumulative 6 / SQL Server 2016 SP1 mise à jour cumulative 3 / SQL Server 2017 ou version ultérieure avec PolyBase installé
 1. Un cluster Hadoop (Cloudera ou Hortonworks) sécurisé avec Kerberos (Active Directory ou MIT)
@@ -93,7 +94,7 @@ Comme l’outil s’exécute indépendamment de SQL Server, il n’a pas à êtr
 ```
 
 ## <a name="arguments"></a>Arguments
-| Argument |  Description|
+| Argument | Description|
 | --- | --- |
 | *Name Node Address* | Adresse IP ou nom de domaine complet du nœud de nom. Cela fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE.|
 | *Name Node Port* | Port du nœud de nom. Cela fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE. Il s’agit généralement de 8020. |
@@ -101,7 +102,7 @@ Comme l’outil s’exécute indépendamment de SQL Server, il n’a pas à êtr
 | *Service Password* | Au lieu de taper votre mot de passe sur la console, stockez-le dans un fichier et indiquez le chemin du fichier ici. Le contenu du fichier doit correspondre à ce que vous utilisez comme argument « SECRET » dans votre instruction T-SQL CREATE DATABASE SCOPED CREDENTIAL. |
 | *Remote HDFS file path (facultatif) * | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 ```dos
 java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
 ```

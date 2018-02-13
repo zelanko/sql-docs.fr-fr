@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: 12a0f16762cac5411616d2add3fe548d7f7ec6c7
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Données de copie en bloc avec bcp à SQL Server sur Linux
 
@@ -35,7 +35,7 @@ Cet article vous montre comment à :
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Installer les outils de ligne de commande SQL Server
 
-`bcp`fait partie des outils de ligne de commande SQL Server, qui ne sont pas installés automatiquement avec SQL Server sur Linux. Si vous n’avez pas déjà installé les outils de ligne de commande de SQL Server sur l’ordinateur Linux, vous devez les installer. Pour plus d’informations sur la façon d’installer les outils, sélectionnez votre distribution Linux à partir de la liste suivante :
+`bcp` fait partie des outils de ligne de commande SQL Server, qui ne sont pas installés automatiquement avec SQL Server sur Linux. Si vous n’avez pas déjà installé les outils de ligne de commande de SQL Server sur l’ordinateur Linux, vous devez les installer. Pour plus d’informations sur la façon d’installer les outils, sélectionnez votre distribution Linux à partir de la liste suivante :
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
@@ -62,7 +62,7 @@ Créer la table **TestEmployees** dans la base de données **BcpSampleDB**:
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>Créez le fichier de données source
-Copiez et collez la commande suivante dans votre fenêtre de Terminal Server. Nous allons utiliser la fonction intégrée `cat` commande pour créer un fichier de données texte avec trois enregistrements enregistrez le fichier dans votre répertoire de base en tant que **~/test_data.txt**. Les champs dans les enregistrements sont délimités par une virgule.
+Copiez et collez la commande suivante dans votre fenêtre de Terminal Server. Nous utilisons la fonction intégrée `cat` commande pour créer un fichier de données texte avec trois enregistrements enregistrez le fichier dans votre répertoire de base en tant que **~/test_data.txt**. Les champs dans les enregistrements sont délimités par une virgule.
 
 ```bash
 cat > ~/test_data.txt << EOF

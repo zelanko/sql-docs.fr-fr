@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - NFS - SQL Server sur Linux
 
@@ -33,8 +33,8 @@ NFS ou système de fichiers réseau, est une méthode courante pour le partage d
 La source d’hébergement NFS (un serveur Linux ou quelque chose d’autre) doit être à l’aide de/conforme à la version 4.2 ou ultérieure. Les versions antérieures ne fonctionnera pas avec SQL Server sur Linux.
 
 Lorsque vous configurez l’ou les dossiers à partager sur le serveur NFS, assurez-vous qu’ils les options générales de ces instructions :
-- `rw`Pour vous assurer que le dossier permettre être lues et écrites dans
-- `sync`Pour garantir la garantie d’écritures dans le dossier
+- `rw` Pour vous assurer que le dossier permettre être lues et écrites dans
+- `sync` Pour garantir la garantie d’écritures dans le dossier
 - N’utilisez pas `no_root_squash` en tant qu’option ; il est considéré comme un risque de sécurité
 - Assurez-vous que le dossier dispose des droits d’accès complets (777) appliquées
 
@@ -124,7 +124,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour accéder à. Lor
 
     \<IPAddressOfNFSServer > est l’adresse IP du serveur NFS que vous vous apprêtez à utiliser 
 
-    \<FolderOnNFSServer > est le nom du partage NFS. L’exemple de syntaxe ci-dessous correspondent aux informations NFS à l’étape 2.
+    \<FolderOnNFSServer > est le nom du partage NFS. L’exemple de syntaxe suivant correspond aux informations NFS à l’étape 2.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -167,7 +167,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour accéder à. Lor
     sudo systemctl status mssql-server
     ```
     
-   * Créer une base de données pour tester que sécurité est correctement configuré. L’exemple ci-dessous illustre qui en cours d’exécution via Transact-SQL ; Il est possible via SSMS.
+   * Créer une base de données pour tester que sécurité est correctement configuré. L’exemple suivant montre qu’effectué via Transact-SQL ; Il est possible via SSMS.
  
     ![CreateTestdatabase][3]
 
@@ -204,7 +204,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour accéder à. Lor
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet sera doivent être spécifiés if pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -230,7 +230,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour accéder à. Lor
   
    * Type de sortie ne peut plus être le super utilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple ci-dessous utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
 
     ![15-createtestdatabase][4]
  

@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graphique de traitement avec SQL Server et la base de données SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre des fonctionnalités de base de données de graphique pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées dans [!INCLUDE[tsql-md](../../includes/tsql-md.md)] et recevoir les avantages de l’utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que le système de gestion de base de la base de données.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre des fonctionnalités de base de données de graphique pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées dans [!INCLUDE[tsql-md](../../includes/tsql-md.md)] et recevoir les avantages de l’utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que le système de gestion de base de la base de données.
 
 
 ## <a name="what-is-a-graph-database"></a>Qu’est une base de données de graphique ?  
@@ -46,12 +47,12 @@ Rien n’est qu'une base de données du graphique peut atteindre, qui ne peut pa
 -   Votre application a des relations plusieurs-à-plusieurs complexes ; évolution de l’application, des relations sont ajoutées.
 -   Vous devez analyser les relations et interconnectés.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Fonctionnalités de graphique introduites dans[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Fonctionnalités de graphique introduites dans [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Nous avons commencé à ajouter des extensions de graphique à SQL Server, afin de faciliter le stockage et interrogation des données de graphique. Les fonctionnalités suivantes sont introduites dans la première version. 
 
 
 ### <a name="create-graph-objects"></a>Créer des objets de graphique
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]extensions permettra aux utilisateurs de créer des tableaux de bord ou de nœud. Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Depuis, nœuds et bords sont stockées en tant que tables, toutes les opérations qui sont pris en charge sur les tables relationnelles sont pris en charge sur le tableau de bord ou le nœud. Par exemple :  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions permettra aux utilisateurs de créer des tableaux de bord ou de nœud. Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Depuis, nœuds et bords sont stockées en tant que tables, toutes les opérations qui sont pris en charge sur les tables relationnelles sont pris en charge sur le tableau de bord ou le nœud. Par exemple :  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

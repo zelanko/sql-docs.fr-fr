@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8954831cd600a5e10ec9e98879d8d68568c837d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Spécification d'un chemin d'accès d'emplacement (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Requêtes XPath sont spécifiées sous la forme d’une expression. Il existe divers types d'expressions. Un chemin d'accès d'emplacement est une expression qui sélectionne un ensemble de nœuds associés au nœud de contexte. L'évaluation d'un chemin d'accès d'emplacement doit aboutir à un élément node-set.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Les requêtes XPath sont spécifiées sous la forme d'une expression. Il existe divers types d'expressions. Un chemin d'accès d'emplacement est une expression qui sélectionne un ensemble de nœuds associés au nœud de contexte. L'évaluation d'un chemin d'accès d'emplacement doit aboutir à un élément node-set.  
   
 ## <a name="types-of-location-paths"></a>Types de chemin d'accès d'emplacement  
  Un chemin d'accès d'emplacement peut adopter l'une ou l'autre des formes suivantes :  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="location-steps"></a>Étapes d'emplacement  
  Un chemin d'accès d'emplacement (absolu ou relatif) est composé d'étapes d'emplacement contenant trois parties :  
   
--   **Axis**  
+-   **Axe**  
   
      L'axe spécifie la relation d'arborescence entre les nœuds sélectionnés par l'étape d'emplacement et le nœud de contexte. Le **parent**, **enfant**, **attribut**, et **self** axes sont pris en charge. Si un **enfant** axe est spécifié dans le chemin d’accès de l’emplacement, tous les nœuds sélectionnés par la requête sont les enfants du nœud de contexte. Si un **parent** axe est spécifié, le nœud sélectionné est le nœud parent du nœud de contexte. Si un **attribut** axe est spécifié, les nœuds sélectionnés sont les attributs du nœud de contexte.  
   

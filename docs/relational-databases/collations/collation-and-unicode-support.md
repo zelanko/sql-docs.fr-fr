@@ -8,7 +8,8 @@ ms.service:
 ms.component: collations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1fd84b774ee2ea2a7af3db4f1cd015dfbd3176d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les types de données character, tels que **char** et **varchar** , déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. Qu’il s’agisse d’installer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de restaurer une sauvegarde de base de données ou de connecter un serveur à des bases de données clientes, vous devez bien comprendre les exigences en termes de paramètres régionaux, d’ordre de tri et de respect de la casse et des accents des données que vous utilisez. Pour répertorier les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les types de données character, tels que **char** et **varchar** , déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. Qu’il s’agisse d’installer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de restaurer une sauvegarde de base de données ou de connecter un serveur à des bases de données clientes, vous devez bien comprendre les exigences en termes de paramètres régionaux, d’ordre de tri et de respect de la casse et des accents des données que vous utilisez. Pour répertorier les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  Quand vous sélectionnez un classement pour votre serveur, base de données, colonne ou expression, vous assignez certaines caractéristiques à vos données qui affectent les résultats de nombreuses opérations dans la base de données. Par exemple, lorsque vous construisez une requête à l'aide d'ORDER BY, l'ordre de tri de votre jeu de résultats peut dépendre du classement appliqué à la base de données ou stipulé dans une clause COLLATE au niveau expression de la requête.    
     
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Collation_Defn"></a> Classement    
  Un classement désigne les modèles binaires qui représentent chaque caractère dans un jeu de données. Les classements déterminent également les règles de tri et de comparaison des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le stockage d’objets ayant des classements différents dans une même base de données. Pour les colonnes non-Unicode, le paramètre de classement spécifie la page de codes pour les données et les caractères qui peuvent être représentés. Les données déplacées entre des colonnes non-Unicode doivent être converties de la page de codes source vers la page de codes de destination.    
     
- Le résultat d'une instruction[!INCLUDE[tsql](../../includes/tsql-md.md)] peut varier lorsque cette dernière est exécutée dans un contexte réunissant plusieurs bases de données dont chacune a un paramètre de classement différent. Dans la mesure du possible, choisissez un classement normalisé pour votre organisation. De cette manière, vous n'avez pas à spécifier explicitement le classement dans chaque caractère ou expression Unicode. Si vous devez utiliser des objets qui ont des paramètres de classement et de page de codes différents, codez vos requêtes conformément aux règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] peut varier lorsque cette dernière est exécutée dans un contexte réunissant plusieurs bases de données dont chacune a un paramètre de classement différent. Dans la mesure du possible, choisissez un classement normalisé pour votre organisation. De cette manière, vous n'avez pas à spécifier explicitement le classement dans chaque caractère ou expression Unicode. Si vous devez utiliser des objets qui ont des paramètres de classement et de page de codes différents, codez vos requêtes conformément aux règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
  Les options associées à un classement sont le respect de la casse, le respect des accents, le respect du jeu de caractères Kana, le respect de la largeur et le respect du sélecteur de variante. Pour spécifier ces options, vous devez les ajouter au nom du classement. Par exemple, le classement `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` respecte la casse, les accents, le jeu de caractères Kana et la largeur. Autre exemple : le classement `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` ne respecte pas la casse, ne respecte pas les accents, respecte le jeu de caractères Kana, respecte la largeur et respecte le sélecteur de variante.  Le tableau suivant décrit le comportement associé à ces différentes options.    
     
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |------------|-----------------|    
 |Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Si cette option n’est pas sélectionnée, le classement ne respecte pas la casse. Dans ce cas, SQL Server considère que les versions en majuscules et en minuscules des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect de la casse en spécifiant _CI.|    
 |Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « a » n'est pas équivalent à « ấ ». Si cette option n’est pas sélectionnée, le classement ne respecte pas les accents. Dans ce cas, SQL Server considère que les versions accentuées et non accentuées des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect des accents en spécifiant _AI.|    
-|Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option n'est pas sélectionnée, le classement ne respecte pas les caractères Kana. Dans ce cas, SQL Server considère que les caractères Hiragana et Katakana sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect du jeu de caractères Kana.|    
+|Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option n'est pas sélectionnée, le classement ne respecte pas les caractères Kana. Dans ce cas, SQL Server considère que les caractères Hiragana et Katakana sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect du jeu de caractères Kana.|    
 |Respecter la largeur (_WS)|Fait la différence entre les caractères pleine largeur et demi-largeur. Si cette option n'est pas sélectionnée, SQL Server considère que la représentation pleine largeur et demi-largeur d'un même caractère sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect de la largeur.|    
 |Respecter le sélecteur de variante (_VSS) | Fait la distinction entre différents sélecteurs de variante idéographiques dans les classements japonais Japanese_Bushu_Kakusu_140 et Japanese_XJIS_140 introduits dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Une séquence de variantes se compose d’un caractère de base et d’un sélecteur de variante supplémentaire. Si cette option _VSS n’est pas sélectionnée, le classement ne respecte pas le sélecteur de variante, et celui-ci n’est pas pris en compte dans la comparaison. Autrement dit, SQL Server considère comme identiques (à des fins de tri) les caractères basés sur le même caractère de base avec différents sélecteurs de variante. Voir aussi  [Unicode Ideographic Variation Database (Base de données de variantes idéographiques Unicode)](http://www.unicode.org/reports/tr37/). <br/><br/> Les classements qui respectent le sélecteur de variante (_VSS) ne sont pas pris en charge dans les index de recherche en texte intégral. Les index de recherche en texte intégral prennent uniquement en charge les options Respecter les accents (_AS), Respecter le jeu de caractères Kana (_KS) et Respecter la largeur (_WS). Les moteurs XML et CLR de SQL Server ne prennent pas en charge les sélecteurs de variante (_VSS).
     
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/17/2017
  Il existe deux types de classements binaires dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les anciens classements **BIN** et les nouveaux classements **BIN2** . Dans un classement **BIN2** tous les caractères sont triés en fonction de leurs points de code. Dans un classement **BIN** seul le premier caractère est trié selon le point de code, et les autres caractères sont triés en fonction de leurs valeurs d'octet. (En raison de l'architecture little endian de la plateforme Intel, les caractères de code Unicode sont toujours triés inversés par octet.)    
     
  classements SQL Server    
- Les classements (SQL_*)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent la compatibilité d'ordre de tri avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les règles de tri du dictionnaire pour les données non-Unicode ne sont pas compatibles avec les routines de tri fournies par les systèmes d'exploitation Windows. Toutefois, le tri de données Unicode est compatible avec une version particulière de règles de tri Windows. Comme les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des règles de comparaison différentes pour les données Unicode et non-Unicode, vous pouvez obtenir des résultats différents pour des comparaisons des mêmes données, selon le type de données sous-jacent. Pour plus d’informations, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les classements (SQL_*) fournissent la compatibilité d’ordre de tri avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les règles de tri du dictionnaire pour les données non-Unicode ne sont pas compatibles avec les routines de tri fournies par les systèmes d'exploitation Windows. Toutefois, le tri de données Unicode est compatible avec une version particulière de règles de tri Windows. Comme les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des règles de comparaison différentes pour les données Unicode et non-Unicode, vous pouvez obtenir des résultats différents pour des comparaisons des mêmes données, selon le type de données sous-jacent. Pour plus d’informations, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
     
 > [!NOTE]    
 >  Lorsque vous mettez à niveau une instance anglaise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez spécifier les classements (SQL_*) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour permettre la compatibilité avec les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existantes. Le classement par défaut d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant défini au cours de la procédure d'installation, assurez-vous de spécifier soigneusement les paramètres de classement dans les cas suivants :    
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  Lorsque vous créez ou modifiez une table, vous pouvez spécifier des classements pour chaque colonne de chaîne de caractères à l'aide de la clause COLLATE. Si aucun classement n'est spécifié, le classement par défaut de la base de données est attribué à la colonne.    
     
  Classements au niveau de l'expression    
- Les classements au niveau de l'expression sont définis lors de l'exécution d'une instruction et ils affectent la façon dont l'ensemble de résultats est retourné. Cela permet aux résultats de tri ORDER BY d'être spécifiques aux paramètres régionaux. Utilisez une clause COLLATE telle que la suivante pour implémenter les classements au niveau de l'expression :    
+ Les classements au niveau de l'expression sont définis lors de l'exécution d'une instruction et ils affectent la façon dont l'ensemble de résultats est retourné. Cela permet aux résultats de tri ORDER BY d'être spécifiques aux paramètres régionaux. Utilisez une clause COLLATE telle que la suivante pour implémenter les classements au niveau de l'expression :    
     
 ```    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
@@ -146,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Le tableau suivant présente des informations sur l'utilisation des données multilingues avec diverses combinaisons de serveurs Unicode et non-Unicode.    
     
-|Server|Client|Avantages ou restrictions|    
+|Serveur|Client|Avantages ou restrictions|    
 |------------|------------|-----------------------------|    
 |Unicode|Unicode|Comme les données Unicode sont utilisées dans tout le système, ce scénario fournit les meilleures performances et la meilleure protection contre l’altération des données récupérées. C’est le cas avec ActiveX Data Objects (ADO), OLE DB et ODBC 3.7 ou version ultérieure.|    
 |Unicode|Non-Unicode|Dans ce scénario, et surtout avec les connexions entre un serveur exécutant un système d'exploitation récent et un client exécutant une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou un système d'exploitation plus ancien, il peut y avoir des limitations ou des erreurs lorsque vous déplacez des données vers un ordinateur client. Les données Unicode sur le serveur tentent d’établir un mappage à une page de codes correspondante sur le client non-Unicode afin de convertir les données.|    
@@ -240,7 +242,7 @@ Ces classements sont pris en charge dans les index de moteur de base de données
     
  [Site web du consortium Unicode](http://go.microsoft.com/fwlink/?LinkId=48619)    
     
-## <a name="see-also"></a>Voir aussi    
+## <a name="see-also"></a> Voir aussi    
  [Classements de base de données à relation contenant-contenu](../../relational-databases/databases/contained-database-collations.md)     
  [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    

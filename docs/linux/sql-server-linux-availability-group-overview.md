@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Toujours sur les groupes de disponibilité sur Linux
 
@@ -65,9 +65,9 @@ Il existe trois valeurs qui peuvent être définies pour `required_synchronized_
 -   1 – un réplica secondaire doit être dans un état synchronisé avec le réplica principal ; le basculement automatique est possible. La base de données primaire n’est pas disponible jusqu'à ce qu’un réplica synchrone secondaire n’est disponible.
 -   2 – les deux réplicas secondaires dans une configuration de groupe de disponibilité au moins trois nœuds doivent être synchronisés avec le serveur principal ; le basculement automatique est possible.
 
-`required_synchronized_secondaries_to_commit`contrôle non seulement le comportement de basculement avec des réplicas synchrones, mais une perte de données. Avec la valeur 1 ou 2, un réplica secondaire est toujours requis pour être synchronisé, il y aura toujours la redondance des données. Cela signifie aucune perte de données.
+`required_synchronized_secondaries_to_commit` contrôle non seulement le comportement de basculement avec des réplicas synchrones, mais une perte de données. Avec la valeur 1 ou 2, un réplica secondaire est toujours requis pour être synchronisé, il y aura toujours la redondance des données. Cela signifie aucune perte de données.
 
-Pour modifier la valeur de `required_synchronized_secondaries_to_commit`, utilisez la syntaxe ci-dessous.
+Pour modifier la valeur de `required_synchronized_secondaries_to_commit`, utilisez la syntaxe suivante :
 
 >[!NOTE]
 >Modification de la valeur provoque à la ressource à redémarrer, ce qui signifie une brève interruption. La seule façon d’éviter ce problème consiste à définir des ne pas être géré par le cluster temporairement la ressource.
@@ -132,7 +132,7 @@ Comme sur les systèmes basés sur Windows, la structure de dossier pour les bas
 
 L’écouteur est une fonctionnalité facultative pour un groupe de disponibilité. Il fournit un point d’entrée unique pour toutes les connexions (en lecture/écriture sur le réplica principal et/ou les réplicas en lecture seule sur le site secondaire) afin que les applications et les utilisateurs finaux n’avez pas besoin de connaître le serveur qui héberge les données. Dans un cluster WSFC, ceci est la combinaison d’une ressource nom réseau et une ressource IP, qui est ensuite enregistrée dans les services AD DS (si nécessaire), ainsi que le DNS. En association avec la ressource de groupe de disponibilité elle-même, il fournit cette abstraction. Pour plus d’informations sur un écouteur, consultez [écouteurs, connectivité Client et basculement d’Application](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-L’écouteur sous Linux est configuré différemment, mais ses fonctionnalités sont identiques. Il n’existe aucun concept de ressource de nom réseau dans STIMULATEUR ni est un objet créé dans AD DS ; Il est simplement une ressource d’adresse IP créée dans STIMULATEUR pouvant s’exécuter sur tous les nœuds. Une entrée associée à la ressource IP de l’écouteur dans le système DNS avec un « nom convivial » sera doivent être créés. La ressource IP de l’écouteur sera active sur le serveur qui héberge le réplica principal pour ce groupe de disponibilité.
+L’écouteur sous Linux est configuré différemment, mais ses fonctionnalités sont identiques. Il n’existe aucun concept de ressource de nom réseau dans STIMULATEUR ni est un objet créé dans AD DS ; Il est simplement une ressource d’adresse IP créée dans STIMULATEUR pouvant s’exécuter sur tous les nœuds. Une entrée associée à la ressource IP de l’écouteur dans le système DNS avec un « nom convivial » doit être créé. La ressource IP de l’écouteur sera active sur le serveur qui héberge le réplica principal pour ce groupe de disponibilité.
 
 Si STIMULATEUR est utilisé et une ressource d’adresse IP est créée qui est associé à l’écouteur, il y aura une brève interruption comme l’adresse IP s’arrête sur un seul serveur et démarre sur l’autre, s’il s’agit de basculement automatique ou manuelle. Si cette fonction abstraction via la combinaison d’un nom unique et une adresse IP, il ne masque pas la panne. Une application doit être en mesure de gérer la déconnexion à un quelconque des fonctionnalités de détecter et de vous reconnecter.
 
@@ -147,11 +147,11 @@ L’instance associée à l’adresse IP fournie puis devienne le coordinateur �
 
 Un groupe de disponibilité qui a un type de cluster d’externe ou un WSFC ne peut pas avoir ses réplicas Cross-plateformes. Cela est vrai si le groupe de disponibilité est [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] ou [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Cela signifie que dans une configuration de groupe de disponibilité traditionnelle avec un cluster sous-jacent, un réplica ne peut pas être sur un cluster WSFC et l’autre sur Linux avec STIMULATEUR.
 
-Un groupe de disponibilité avec un type de cluster None peut avoir ses réplicas de franchir les limites du système d’exploitation, il peut y avoir deux réplicas basés sur Linux et Windows dans le même groupe de disponibilité. Un exemple est illustré ci-dessous dans lequel le réplica principal repose sur Windows, alors que la base de données secondaire se trouve sur une des distributions Linux.
+Un groupe de disponibilité avec un type de cluster None peut avoir ses réplicas de franchir les limites du système d’exploitation, il peut y avoir deux réplicas basés sur Linux et Windows dans le même groupe de disponibilité. Un exemple est illustré ici dans lequel le réplica principal repose sur Windows, alors que la base de données secondaire se trouve sur une des distributions Linux.
 
 ![Hybride None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Un groupe de disponibilité distribué peut également se croiser les limites du système d’exploitation. Les indicateurs de tables sous-jacentes sont liés par les règles de la façon dont ils sont configurés, tel que celui configuré étant externe Linux uniquement, mais le groupe de disponibilité auquel il est joint peut être configuré à l’aide d’un cluster WSFC. En voici un exemple :
+Un groupe de disponibilité distribué peut également se croiser les limites du système d’exploitation. Les indicateurs de tables sous-jacentes sont liés par les règles de la façon dont ils sont configurés, tel que celui configuré étant externe Linux uniquement, mais le groupe de disponibilité auquel il est joint peut être configuré à l’aide d’un cluster WSFC. Prenons l'exemple suivant :
 
 ![Groupe de disponibilité de serveur de distribution hybride](./media/sql-server-linux-availability-group-overview/image2.png)
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f687a25a48ff38ee8b109161e332f7306d64f177
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Présentation du chargement en masse XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables.  
   
  Vous pouvez insérer les données XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide d'une instruction INSERT et de la fonction OPENXML ; toutefois, l'utilitaire de chargement en masse fournit de meilleures performances lorsque vous avez besoin d'insérer des quantités importantes de données XML.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Schémas XSD et XDR annotés. Pour plus d’informations sur les schémas XSD annotés, consultez [Introduction aux schémas XSD annotés &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour plus d’informations sur les schémas XDR annotés, consultez [les schémas XDR annotés &#40; déconseillées dans SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   Mécanismes d'insertion en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tels que l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT et l'utilitaire bcp. Pour plus d’informations, consultez [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) et [utilitaire bcp](../../../tools/bcp-utility.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instruction BULK insert mécanismes, tels que le [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction BULK INSERT et l’utilitaire bcp. Pour plus d’informations, consultez [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) et [utilitaire bcp](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Diffusion en continu de données XML  
  Le document XML source pouvant être volumineux, le document n'est pas lu intégralement en mémoire au cours du traitement de chargement en masse. Au lieu de cela, le chargement en masse XML interprète les données XML en tant que flux et lit ce flux. À mesure que l'utilitaire lit les données, il identifie la ou les tables de base de données, génère le ou les enregistrements appropriés à partir de la source de données XML, puis envoie le ou les enregistrements à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des fins d'insertion.  

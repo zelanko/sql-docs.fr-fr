@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
@@ -64,7 +64,7 @@ Vous pouvez également modifier le `mssql.conf` fichier, situé sous le `/var/op
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Redémarrage[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Redémarrage [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Après avoir activé les groupes de disponibilité, comme sur Windows, vous devez redémarrer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Cela peut se faire par le texte suivant :
 
 ```bash
@@ -365,7 +365,7 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
 12. Cliquez sur **Suivant**.
 
-13. Choisissez comment l’ou les réplicas secondaire sont initialisé. La valeur par défaut consiste à utiliser [l’amorçage automatique](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), ce qui nécessite le même chemin d’accès sur tous les serveurs participant dans le groupe de disponibilité. Vous pouvez également laisser l’Assistant faire une copie de sauvegarde et restaurer (la deuxième option) ; il avoir une jointure si vous avez manuellement sauvegardée, copiée et restaurée de la base de données sur l’ou les réplicas (troisième option) ; ou les ajouter ultérieurement la base de données (la dernière option). Comme avec les certificats, si vous êtes manuellement les sauvegardes et les copier, les autorisations sur les fichiers de sauvegarde seront doivent à définir sur l’ou les autres réplicas. Cliquez sur **Suivant**.
+13. Choisissez comment l’ou les réplicas secondaire sont initialisé. La valeur par défaut consiste à utiliser [l’amorçage automatique](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), ce qui nécessite le même chemin d’accès sur tous les serveurs participant dans le groupe de disponibilité. Vous pouvez également laisser l’Assistant faire une copie de sauvegarde et restaurer (la deuxième option) ; il avoir une jointure si vous avez manuellement sauvegardée, copiée et restaurée de la base de données sur l’ou les réplicas (troisième option) ; ou les ajouter ultérieurement la base de données (la dernière option). Comme avec les certificats, si vous êtes manuellement les sauvegardes et les copier, les autorisations sur les fichiers de sauvegarde doit être définie sur l’ou les autres réplicas. Cliquez sur **Suivant**.
 
 14. Si tous les éléments ne sont fourni comme une réussite, recherchez dans la boîte de dialogue Validation. Des avertissements sont acceptables et pas fatale, comme si vous ne créez pas un écouteur. Cliquez sur **Suivant**.
 
@@ -596,7 +596,7 @@ La ressource de groupe de disponibilité est créée est un type spécial de res
     ```
 
     >[!NOTE]
-    >Sur RHEL 7.4, vous pouvez rencontrer un avertissement à l’aide de--principale. Pour éviter cela, utilisez`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >Sur RHEL 7.4, vous pouvez rencontrer un avertissement à l’aide de--principale. Pour éviter cela, utilisez `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

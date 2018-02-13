@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetStrValue Method (SqlServiceAdvancedProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetStrValue Method (SqlServiceAdvancedProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetStrValue method
+helpviewer_keywords:
+- SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 762ad4045b97a7e54b71a59f9f45c95565cbbb94
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 758fe6a7e32ac8bf6eaaa1340dba68f832a1d5b5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetStrValue (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Définit la valeur de chaîne d’une propriété.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Définit la valeur de chaîne d'une propriété.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +48,7 @@ object.SetStrValue(StrValue)
   
 #### <a name="parameters"></a>Paramètres  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |*StrValue*|Valeur de chaîne qui spécifie la valeur de la propriété avancée.|  
   

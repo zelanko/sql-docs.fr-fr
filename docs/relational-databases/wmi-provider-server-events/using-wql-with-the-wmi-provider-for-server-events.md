@@ -8,7 +8,8 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b153d808010e26b5454d1a78058938ed2ea00b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Accès aux applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] événements à l’aide du fournisseur WMI pour les événements serveur en émettant des instructions de langage de requête WMI (WQL). Le langage WQL est un sous-ensemble simplifié du langage SQL, avec quelques extensions spécifiques à WMI. Pour utiliser le WQL, une application extrait un type d'événement sur une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une base de données ou un objet de base de données (le seul objet pris en charge actuellement est la file d'attente). Le fournisseur WMI pour les événements serveur traduit la requête en une notification d’événement qui est créée dans la base de données cible pour les notifications d’événements de base de données ou objet de portée ou dans le **master** base de données pour les notifications d’événements serveur dans l’étendue.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les applications de gestion accèdent aux événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via le fournisseur WMI pour les événements serveur en émettant des instructions WQL (WMI Query Language). Le langage WQL est un sous-ensemble simplifié du langage SQL, avec quelques extensions spécifiques à WMI. Pour utiliser le WQL, une application extrait un type d'événement sur une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une base de données ou un objet de base de données (le seul objet pris en charge actuellement est la file d'attente). Le fournisseur WMI pour les événements serveur traduit la requête en une notification d’événement qui est créée dans la base de données cible pour les notifications d’événements de base de données ou objet de portée ou dans le **master** base de données pour les notifications d’événements serveur dans l’étendue.  
   
  Examinons, par exemple, la requête WQL suivante :  
   
@@ -71,7 +73,7 @@ WHERE where_condition
  *event_property*  
  Est la propriété d'un événement. Exemples **PostTime**, **SPID**, et **LoginName**. Examinez chaque événement répertorié dans [fournisseur WMI pour les Classes d’événements de serveur et les propriétés](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) pour déterminer quelles propriétés il contient. Par exemple, l’événement DDL_DATABASE_LEVEL_EVENTS contient le **DatabaseName** et **nom d’utilisateur** propriétés. Il hérite également la **SQLInstance**, **LoginName**, **PostTime**, **SPID**, et **Nom_Ordinateur** propriétés de ses événements parents.  
   
- **,** *.. .n*  
+ **,** *...n*  
  Indique que *event_property* peuvent être interrogées plusieurs fois, séparés par des virgules.  
   
  \*  

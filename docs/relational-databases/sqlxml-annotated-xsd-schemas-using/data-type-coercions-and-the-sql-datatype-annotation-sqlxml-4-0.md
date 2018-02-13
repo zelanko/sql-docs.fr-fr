@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 358a75a6cbc2ddd716c14297daa21881ea5c3304
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Forçages de type de données et annotation sql:datatype (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Dans un schéma XSD, les **xsd : type** attribut spécifie le type de données XSD d’un élément ou attribut. Lorsqu'un schéma XSD est utilisé pour extraire des données de la base de données, le type de données spécifié est utilisé pour formater les données.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dans un schéma XSD, les **xsd : type** attribut spécifie le type de données XSD d’un élément ou attribut. Lorsqu'un schéma XSD est utilisé pour extraire des données de la base de données, le type de données spécifié est utilisé pour formater les données.  
   
  En plus de spécifier un type XSD dans un schéma, vous pouvez également spécifier un Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données à l’aide de la **SQL : DataType** annotation. Le **xsd : type** et **SQL : DataType** attributs contrôlent le mappage entre les types de données XSD et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données.  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |-------------------|---------------------------|  
 |Booléen|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|decimal|CONVERT(money, COLUMN)|  
+|Décimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
@@ -78,11 +80,11 @@ ms.lasthandoff: 11/17/2017
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
-|**smallint**|**courte**|  
+|**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
 |**sql_variant**|**chaîne**|  
 |**sysname**|**chaîne**|  
-|**text**|**chaîne**|  
+|**texte**|**chaîne**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  

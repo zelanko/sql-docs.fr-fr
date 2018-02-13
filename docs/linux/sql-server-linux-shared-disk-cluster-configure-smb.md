@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - SMB - SQL Server sur Linux
 
@@ -81,7 +81,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
     mkdir <TempDir>
     ```
 
-    <TempDir>est le nom du dossier. L’exemple suivant crée un dossier nommé /var/opt/mssql/tmp.
+    <TempDir> est le nom du dossier. L’exemple suivant crée un dossier nommé /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
     sudo systemctl status mssql-server
     ```
  
-   *    Pour tester plus, créez une base de données pour vérifier que les autorisations sont correctement. L’exemple ci-dessous utilise Transact-SQL ; Vous pouvez utiliser SSMS.
+   *    Pour tester plus, créez une base de données pour vérifier que les autorisations sont correctement. L’exemple suivant utilise Transact-SQL ; Vous pouvez utiliser SSMS.
 
     ![10_testcreatedb][2] 
   
@@ -209,7 +209,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet sera doivent être spécifiés if pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
  
    * Type de sortie ne peut plus être le super utilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple ci-dessous utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
  
    * Démontez le partage 
 

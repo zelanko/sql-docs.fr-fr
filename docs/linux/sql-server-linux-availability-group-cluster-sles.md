@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer SLES Cluster pour le groupe de disponibilité de SQL Server
 
@@ -30,12 +30,12 @@ Ce guide fournit des instructions pour créer un cluster à trois nœuds pour SQ
 Pour plus d’informations sur la configuration du cluster, les options de l’agent de ressources, la gestion, meilleures pratiques et recommandations, consultez [SUSE Linux Enterprise haute disponibilité Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Service SQL Server sur Linux n’est pas compatible avec les clusters. STIMULATEUR gère l’ensemble de l’orchestration de ressources de cluster, y compris la ressource de groupe de disponibilité. Sur Linux, ne vous fiez pas à toujours sur Disponibilité groupe vues de gestion dynamique (DMV) qui fournissent des informations de cluster comme sys.dm_hadr_cluster. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous).
+>À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Service SQL Server sur Linux n’est pas compatible avec les clusters. STIMULATEUR gère l’ensemble de l’orchestration de ressources de cluster, y compris la ressource de groupe de disponibilité. Sur Linux, ne vous fiez pas à toujours sur Disponibilité groupe vues de gestion dynamique (DMV) qui fournissent des informations de cluster comme sys.dm_hadr_cluster. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Vous pouvez toujours créer un écouteur pour l’utiliser pour la reconnexion après un basculement transparente, mais vous devez inscrire manuellement le nom de l’écouteur sur le serveur DNS avec l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué dans les sections suivantes).
 
 
 ## <a name="roadmap"></a>Roadmap
 
-Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes de haut niveau : 
+La procédure de création d’un groupe de disponibilité pour la haute disponibilité diffère entre les serveurs Linux et d’un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
 
 1. [Configurer SQL Server sur les nœuds de cluster](sql-server-linux-setup.md).
 
@@ -46,7 +46,7 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
    La façon de configurer un gestionnaire de ressources du cluster dépend de la distribution Linux spécifique. 
 
    >[!IMPORTANT]
-   >Les environnements de production requièrent un agent de délimitation, tels que STONITH pour la haute disponibilité. Les démonstrations dans cette documentation n’utilisent pas les agents de délimitation. Les démonstrations sont pour le test et de validation uniquement. 
+   >Les environnements de production requièrent un agent de délimitation, tels que STONITH pour la haute disponibilité. Les exemples de cet article n’utilisent pas les agents de délimitation. Ils servent de test et de validation uniquement. 
    
    >Un cluster STIMULATEUR utilise délimitation pour retourner le cluster à un état connu. La façon de configurer la délimitation dépend de la distribution et l’environnement. À ce stade, la délimitation n’est pas disponible dans certains environnements de cloud. Consultez [SUSE Linux Enterprise haute disponibilité Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
@@ -54,7 +54,7 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de trois ordinateurs pour déployer le trois nœuds cluster. Les étapes ci-dessous décrivent comment configurer ces serveurs.
+Pour terminer le scénario de bout en bout suivant, vous avez besoin de trois ordinateurs pour déployer le trois nœuds cluster. Les étapes suivantes expliquent comment configurer ces serveurs.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installer et configurer le système d’exploitation sur chaque nœud de cluster 
 
@@ -92,7 +92,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
 
 ## <a name="configure-an-always-on-availability-group"></a>Configurer un groupe de disponibilité Always On
 
-Sur des serveurs Linux configurer le groupe de disponibilité, puis configurez les ressources de cluster. Pour configurer le groupe de disponibilité, consultez [configurer groupe de disponibilité AlwaysOn pour SQL Server sur Linux](sql-server-linux-availability-group-configure-ha.md)
+Sur des serveurs Linux, configurer le groupe de disponibilité, puis configurez les ressources de cluster. Pour configurer le groupe de disponibilité, consultez [configurer groupe de disponibilité AlwaysOn pour SQL Server sur Linux](sql-server-linux-availability-group-configure-ha.md)
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installer et configurer STIMULATEUR sur chaque nœud de cluster
 
@@ -118,11 +118,11 @@ Sur des serveurs Linux configurer le groupe de disponibilité, puis configurez l
 
    NTP n’a pas été configuré pour démarrer au démarrage, un message s’affiche. 
 
-   Si vous décidez de continuer, le script sera automatiquement générer des clés pour l’accès SSH et l’outil de synchronisation Csync2 et démarrer les services nécessaires pour les deux. 
+   Si vous décidez de continuer, le script génère des clés pour l’accès SSH et l’outil de synchronisation Csync2 automatiquement et démarre les services nécessaires pour les deux. 
 
 3. Pour configurer la couche de communication du cluster (Corosync) : 
 
-   A. Entrez une adresse réseau à lier. Par défaut, le script va vous proposer l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
+   A. Entrez une adresse réseau à lier. Par défaut, le script propose l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
 
    B. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
 
@@ -147,11 +147,11 @@ Sur des serveurs Linux configurer le groupe de disponibilité, puis configurez l
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Ajouter des nœuds au cluster existant
 
-Si vous avez un cluster exécutant avec un ou plusieurs nœuds, ajouter des nœuds de cluster avec le script de démarrage à haute disponibilité cluster-jointure. Le script requiert seulement l’accès à un nœud de cluster existant et terminera automatiquement la configuration de base sur l’ordinateur actuel. Suivez les étapes ci-dessous :
+Si vous avez un cluster exécutant avec un ou plusieurs nœuds, ajouter des nœuds de cluster avec le script de démarrage à haute disponibilité cluster-jointure. Le script requiert seulement l’accès à un nœud de cluster existant et terminera automatiquement la configuration de base sur l’ordinateur actuel. Utilisez les étapes suivantes :
 
 Si vous avez configuré les nœuds de cluster existants avec les `YaST` module de cluster, assurez-vous que les conditions préalables suivantes sont remplies avant d’exécuter `ha-cluster-join`:
 - L’utilisateur racine sur les nœuds existants a des clés SSH en place pour la connexion passwordless. 
-- `Csync2`est configuré sur les nœuds existants. Pour plus d’informations, reportez-vous à la configuration de Csync2 avec YaST. 
+- `Csync2` est configuré sur les nœuds existants. Pour plus d’informations, consultez Configuration de Csync2 avec YaST. 
 
 1. Ouvrez une session en tant que racine de l’ordinateur physique ou virtuel censé rejoindre le cluster. 
 2. Démarrez le script de démarrage en exécutant : 
@@ -166,9 +166,9 @@ Si vous avez configuré les nœuds de cluster existants avec les `YaST` module d
 
 4. Si vous n’avez pas déjà configuré un accès SSH passwordless entre les deux ordinateurs, vous serez également être invité au mot de passe racine du nœud existant. 
 
-   Une fois connecté au nœud spécifié, le script sera copier la configuration Corosync, configurer SSH et `Csync2`et entraîne l’affichage en ligne l’ordinateur actuel en tant que nouveau nœud du cluster. En outre, il démarrera le service requis pour Hawk. Si vous avez configuré le stockage partagé avec `OCFS2`, il créera automatiquement le répertoire de point de montage pour le `OCFS2` système de fichiers. 
+   Une fois connecté au nœud spécifié, le script copie la configuration Corosync, configure SSH et `Csync2`et met en ligne l’ordinateur actuel en tant que nouveau nœud du cluster. En outre, il démarre le service requis pour Hawk. Si vous avez configuré le stockage partagé avec `OCFS2`, il crée également automatiquement le répertoire de point de montage pour le `OCFS2` système de fichiers. 
 
-5. Répétez les étapes ci-dessus pour tous les ordinateurs que vous souhaitez ajouter au cluster. 
+5. Répétez les étapes précédentes pour tous les ordinateurs que vous souhaitez ajouter au cluster. 
 
 6. Pour obtenir les détails du processus, consultez `/var/log/ha-cluster-bootstrap.log`. 
 
@@ -185,37 +185,40 @@ Si vous avez configuré les nœuds de cluster existants avec les `YaST` module d
    ```
 
    >[!NOTE]
-   >`admin_addr`est la ressource de cluster IP virtuelle qui est configurée pendant l’installation de cluster à un nœud initial.
+   >`admin_addr` est la ressource de cluster IP virtuelle qui est configurée pendant l’installation de cluster à un nœud initial.
 
-Après avoir ajouté tous les nœuds, vérifiez si vous devez ajuster la stratégie quorum non dans les options de cluster global. Cela est particulièrement important pour les clusters à deux nœuds. Pour plus d’informations, reportez-vous à la Section 4.1.2, Option non-quorum-policy. 
+Après avoir ajouté tous les nœuds, vérifiez si vous devez ajuster la stratégie quorum non dans les options de cluster global. Cela est particulièrement important pour les clusters à deux nœuds. Pour plus d’informations, consultez la Section 4.1.2, Option non-quorum-policy. 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Définissez la propriété cluster start-échec-est-irrécupérable false
 
-`Start-failure-is-fatal`Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Par conséquent, une fois le basculement se produit, STIMULATEUR va tenter de démarrage de la ressource de groupe de disponibilité sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR s’occupe de rétrograder le réplica secondaire, et il rejoindra automatiquement le groupe de disponibilité. En outre, si `start-failure-is-fatal` a la valeur `false`, le cluster revient aux limites configurées failcount configurés avec le seuil de la migration, par conséquent, vous devez vous assurer par défaut pour le seuil de migration est mis à jour en conséquence.
+`Start-failure-is-fatal` Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Par conséquent, après que le basculement se produit, les tentatives de STIMULATEUR à partir de la disponibilité ressource groupe sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR s’occupe de rétrograder le réplica secondaire, et il rejoint automatiquement le groupe de disponibilité. En outre, si `start-failure-is-fatal` a la valeur `false`, le cluster se replie sur les limites de failcount configuré configurés avec un seuil de migration. Assurez-vous que la valeur par défaut pour le seuil de migration est mis à jour en conséquence.
 
 Pour mettre à jour la valeur de propriété d’exécution false :
 ```bash
 sudo crm configure property start-failure-is-fatal=false
 sudo crm configure rsc_defaults migration-threshold=5000
 ```
-Si la propriété a la valeur par défaut `true`, si la première tentative de démarrage de la ressource échoue, l’intervention de l’utilisateur est requis après un basculement automatique pour nettoyer le nombre d’échecs de ressources et réinitialiser la configuration à l’aide de : `sudo crm resource cleanup <resourceName>` commande.
+Si la propriété a la valeur par défaut `true`, si la première tentative de démarrage de la ressource échoue, l’intervention de l’utilisateur est nécessaire après un basculement automatique pour nettoyer le nombre d’échecs de ressource et de réinitialiser la configuration à l’aide de : `sudo crm resource cleanup <resourceName>` commande.
 
 Pour plus d’informations sur les propriétés du cluster STIMULATEUR, consultez [configuration des ressources de Cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
 # <a name="configure-fencing-stonith"></a>Configurer la délimitation (STONITH)
 Fournisseurs de cluster STIMULATEUR nécessitent STONITH doit être activée et un appareil de délimitation configuré pour une installation de clusters prises en charge. Lorsque le Gestionnaire de ressources de cluster ne peut pas déterminer l’état d’un nœud ou d’une ressource sur un nœud, délimitation est utilisée pour remettre le cluster à un état connu.
-Délimitation de niveau de ressources permet de garantir principalement aucune altération des données en cas de panne en configurant une ressource. Vous pouvez utiliser la délimitation au niveau de la ressource, par exemple, avec DRBD (Distributed répliquées bloc Device) pour marquer le disque sur un nœud comme obsolètes lorsque la liaison de communication s’arrête.
-Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas toutes les ressources. Pour ce faire, vous devez réinitialiser le nœud et l’implémentation de stimulateur de celle-ci est appelée STONITH (ce qui signifie « dépanner l’autre nœud dans l’en-tête »). STIMULATEUR prend en charge une grande variété d’appareils de délimitation, par exemple, une alimentation de secours ou la gestion cartes d’interface pour les serveurs.
+
+Délimitation de niveau de ressources permet de garantir principalement aucune altération des données pendant une panne en configurant une ressource. Vous pouvez utiliser la délimitation au niveau de la ressource, par exemple, avec DRBD (Distributed répliquées bloc Device) pour marquer le disque sur un nœud comme obsolètes lorsque la liaison de communication s’arrête.
+
+Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas toutes les ressources. Pour ce faire, vous devez réinitialiser le nœud et l’implémentation de stimulateur de celle-ci est appelée STONITH (ce qui signifie « dépanner l’autre nœud dans l’en-tête »). STIMULATEUR prend en charge une grande variété d’isolement des périphériques, tels qu’un onduleur approvisionnement ou gestion des cartes d’interface pour les serveurs.
+
 Pour plus d’informations, consultez [Clusters STIMULATEUR partant](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [délimitation et Stonith](http://clusterlabs.org/doc/crm_fencing.html) et [SUSE HA documentation : délimitation et STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
-Au moment de l’initialisation du cluster, STONITH est désactivée si aucune configuration n’est détectée. Il peut être activé ultérieurement par la commande ci-dessous en cours d’exécution
+Au moment de l’initialisation du cluster, STONITH est désactivée si aucune configuration n’est détectée. Il peut être activé ultérieurement en exécutant la commande suivante :
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->La désactivation de STONITH est uniquement pour des tests. Si vous envisagez d’utiliser STIMULATEUR dans un environnement de production, vous devez planifier une implémentation STONITH en fonction de votre environnement et qu’il soit activé. Notez que SUSE ne fournit pas de délimitation agents Hyper-V ou des environnements de cloud (y compris Azure). Par conséquent, le fournisseur de cluster n’offre pas de prise en charge des clusters de production en cours d’exécution dans ces environnements. Nous travaillons sur une solution pour cet intervalle qui est disponible dans les versions futures.
+>La désactivation de STONITH est uniquement pour des tests. Si vous envisagez d’utiliser STIMULATEUR dans un environnement de production, vous devez planifier une implémentation STONITH en fonction de votre environnement et qu’il soit activé. SUSE ne fournit pas de délimitation agents Hyper-V ou des environnements de cloud (y compris Azure). Par conséquent, le fournisseur de cluster n’offre pas de prise en charge des clusters de production en cours d’exécution dans ces environnements. Nous travaillons sur une solution pour cet intervalle qui est disponible dans les versions futures.
 
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurer les ressources de cluster pour SQL Server
@@ -224,7 +227,7 @@ Reportez-vous à [SLES Administration Guid](https://www.suse.com/documentation/s
 
 ### <a name="create-availability-group-resource"></a>Créer la ressource du groupe de disponibilité
 
-La commande suivante crée et configure la ressource du groupe de disponibilité pour les 3 réplicas du groupe de disponibilité [ag1]. Les opérations d’analyse et les délais d’attente doivent être spécifiés explicitement dans SLES basée sur le fait que des délais d’attente sont fortement dépendant de charge de travail et doivent être ajustés avec soin pour chaque déploiement.
+La commande suivante crée et configure la ressource du groupe de disponibilité pour les trois réplicas de groupe de disponibilité [ag1]. Les opérations d’analyse et les délais d’attente doivent être spécifiés explicitement dans SLES basée sur le fait que des délais d’attente sont fortement dépendants de la charge de travail et doivent être ajustés avec soin pour chaque déploiement.
 Exécutez la commande sur l’un des nœuds du cluster :
 
 1. Exécutez `crm configure` pour ouvrir l’invite de crm :
@@ -299,10 +302,10 @@ crm crm configure \
 >[!IMPORTANT]
 >Une fois que vous configurez le cluster et ajoutez le groupe de disponibilité en tant que ressource de cluster, vous ne pouvez pas utiliser Transact-SQL pour basculer les ressources de groupe de disponibilité. Ressources de cluster de SQL Server sur Linux non couplées aussi étroitement avec le système d’exploitation qu’ils sont sur un Cluster de basculement du serveur Windows (WSFC). Service SQL Server n’est pas informé de la présence du cluster. Orchestration toutes s’effectue via les outils de gestion de cluster. Dans SLES utiliser `crm`. 
 
-Basculer manuellement le groupe de disponibilité avec `crm`. Ne démarrez pas le basculement avec Transact-SQL. Pour obtenir des instructions, consultez [basculement](sql-server-linux-availability-group-failover-ha.md#failover).
+Basculer manuellement le groupe de disponibilité avec `crm`. Ne pas lancer le basculement avec Transact-SQL. Pour plus d’informations, consultez [basculement](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
-Pour plus d’informations, consultez :
+Pour plus d'informations, consultez :
 - [La gestion des ressources de cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [Haute disponibilité Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Référence rapide de STIMULATEUR](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 

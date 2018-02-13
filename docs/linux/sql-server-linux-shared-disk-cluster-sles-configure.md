@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés SLES pour SQL Server
 
@@ -31,7 +31,7 @@ Pour plus d’informations sur la configuration du cluster, les options de l’a
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le partage NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
+Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le partage NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installer et configurer le système d’exploitation sur chaque nœud de cluster
 
@@ -50,7 +50,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
 
     > [!NOTE]
     > Au moment de l’installation, une clé principale du serveur est généré pour l’instance de SQL Server et placées à `/var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal à chaque nœud secondaire pour chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur.
-4. Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilisera ce compte pour vérifier le nœud qui exécute SQL Server.
+4. Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -106,7 +106,7 @@ Une autre option de stockage consiste à utiliser le partage de fichiers SMB :
 
 ### <a name="configure-an-nfs-server"></a>Configurer un serveur NFS
 
-Pour configurer un serveur NFS, reportez-vous aux étapes suivantes dans la documentation SUSE : [configuration du serveur NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Pour configurer un serveur NFS, voir les étapes suivantes dans la documentation SUSE : [configuration du serveur NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurez tous les nœuds de cluster pour vous connecter au stockage partagées NFS
 
@@ -203,7 +203,7 @@ Les étapes suivantes expliquent comment configurer la ressource de cluster pour
 - **Nom de la ressource SQL Server**: un nom pour la ressource SQL Server en cluster. 
 - **Valeur de délai d’attente**: la valeur de délai d’attente est la durée pendant laquelle le cluster attend pendant une ressource est mise en ligne. Pour SQL Server, cela indique l’heure que vous prévoyez de SQL Server à suivre pour mettre le `master` en ligne de base de données. 
 
-Mettre à jour les valeurs dans le script ci-dessous pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.
+Mettre à jour les valeurs dans le script suivant pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.
 
 ```bash
 sudo crm configure
@@ -252,7 +252,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>La gestion des ressources de cluster
 
-Pour gérer vos ressources de cluster, reportez-vous à la rubrique suivante de SUSE : [la gestion des ressources de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Pour gérer vos ressources de cluster, consultez la rubrique suivante de SUSE : [la gestion des ressources de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>basculement manuel
 

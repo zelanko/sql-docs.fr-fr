@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: "141"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Avant d’installer un cluster de basculement SQL Server, vous devez sélectionner le matériel et le système d’exploitation que SQL Server utilisera. Vous devez aussi configurer le clustering de basculement Windows Server (WSFC) et examiner le réseau, la sécurité ainsi que les points importants à prendre en compte pour les autres logiciels qui seront exécutés sur votre cluster de basculement.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Avant d’installer un cluster de basculement SQL Server, vous devez sélectionner le matériel et le système d’exploitation que SQL Server utilisera. Vous devez aussi configurer le clustering de basculement Windows Server (WSFC) et examiner le réseau, la sécurité ainsi que les points importants à prendre en compte pour les autres logiciels qui seront exécutés sur votre cluster de basculement.  
   
  Si un cluster Windows dispose d'un lecteur de disque local et que la même lettre de lecteur est aussi utilisée sur un ou plusieurs nœuds de cluster en tant que lecteur partagé, vous ne pouvez pas installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce lecteur.  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |Description des rubriques|Rubrique|  
 |-----------------------|-----------|  
 |Décrit les concepts de clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens vers les contenus et tâches associés.|[Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Décrit les concepts de stratégie de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens pour la configuration de la stratégie de basculement selon les besoins de votre organisation.|[Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|Décrit les concepts de stratégie de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens pour la configuration de la stratégie de basculement selon les besoins de votre organisation.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |Décrit comment gérer votre cluster de basculement existant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Explique comment installer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur un cluster de basculement Windows Server (WSFC).|[Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
@@ -61,11 +63,11 @@ ms.lasthandoff: 12/05/2017
   
 -   Vérifiez qu'aucun logiciel antivirus n'est installé sur votre cluster WSFC. Pour plus d’informations, consultez l’article [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Le logiciel antivirus peut être à l’origine de problèmes avec les services de cluster [de la Base de connaissances](http://go.microsoft.com/fwlink/?LinkId=116986).  
   
--   Lorsque vous nommez un groupe de clusters pour votre installation de clusters de basculement, vous ne devez pas utiliser les caractères suivants dans le nom du groupe de clusters :  
+-   Lorsque vous nommez un groupe de clusters pour votre installation de clusters de basculement, vous ne devez pas utiliser les caractères suivants dans le nom du groupe de clusters :  
   
     -   Opérateur Inférieur à (\<)  
   
-    -   Opérateur Supérieur à (>)  
+    -   Opérateur Supérieur à (>)  
   
     -   Guillemet (")  
   
@@ -212,7 +214,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] requiert que tous les serveurs de clusters soient dans le même domaine Active Directory. Par conséquent, le cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert que tous les nœuds de cluster soient dans le même domaine Active Directory même s'ils se trouvent dans des sous-réseaux différents.  
   
-#### <a name="ip-address-and-ip-address-resource-dependencies"></a>Adresse IP et dépendances de ressource d'adresse IP  
+#### <a name="ip-address-and-ip-address-resource-dependencies"></a>Adresse IP et dépendances de ressource d'adresse IP  
   
 1.  La dépendance de ressource d'adresse IP est définie à OR dans une configuration de sous-réseaux multiples. Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -222,7 +224,7 @@ ms.lasthandoff: 12/05/2017
   
      Si vous décidez d'utiliser plusieurs adresses IP configurées pour le même sous-réseau, vous pouvez rencontrer des échecs de connexion client au démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-#### <a name="related-content"></a>Contenu connexe  
+#### <a name="related-content"></a>Contenu associé  
  Pour plus d’informations sur le basculement multisite [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , consultez [Site de clustering de basculement Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) et [Concevoir un service ou une application en cluster dans un clustering de basculement multisite](http://go.microsoft.com/fwlink/?LinkId=177873).  
   
 ##  <a name="WSFC"></a> Configurer le cluster de basculement Windows Server  
@@ -256,7 +258,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Configurer le coordinateur de transactions distribuées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MSDTC)  
  Une fois que vous avez installé le système d'exploitation et configuré votre cluster, vous devez configurer MSDTC pour qu'il fonctionne dans un cluster à l'aide de l'Administrateur de cluster. L'échec de la mise en cluster de MSDTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MSDTC n'est pas configuré correctement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  

@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>Notes de publication de SQL Server 2014
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d’installer ou de dépanner [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d'installer ou de dépanner [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Sommaire  
 [1.0 Avant l’installation](#BeforeInstall)  
@@ -245,7 +246,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8 L'utilisation d'un paramètre ou d'une variable avec DATEPART et des fonctions liées dans une procédure stockée compilée en mode natif génère une erreur  
 **Problème :** en utilisant un paramètre ou une variable qui a un type de données de chaîne tel que (var)char ou n(var)char avec les fonctions intégrées DATEPART, DAY, MONTH, et YEAR dans une procédure stockée compilée en mode natif, vous voyez un message d'erreur indiquant que le datetimeoffset du type de données n'est pas pris en charge par les procédures stockées compilées en mode natif.  
   
-**Solution de contournement :** attribuez le paramètre ou la variable de chaîne à une nouvelle variable de type datetime2, puis utilisez cette variable dans la fonction DATEPART, DAY, MONTH, ou YEAR. Par exemple :  
+**Solution de contournement :** attribuez le paramètre ou la variable de chaîne à une nouvelle variable de type datetime2, puis utilisez cette variable dans la fonction DATEPART, DAY, MONTH, ou YEAR. Exemple :  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -297,7 +298,7 @@ Si vous avez déjà le problème avec des valeurs d’instance_id non correspond
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Complément pour les produits SharePoint  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Service partagé SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint  
   
 L'installation côte à côte empêche le service Windows [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif de démarrer. Des messages d'erreur similaires aux messages suivants s'affichent dans le journal des événements Windows :  
   
@@ -362,7 +363,7 @@ Cela est dû au fait que les écouteurs du groupe de disponibilité ont besoin d
   
 1.  Téléchargez le fournisseur MSOLAP.5 à partir du Feature Pack [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installez le fournisseur sur les serveurs d'applications exécutant Excel Services. Pour plus d'informations, consultez la section « Fournisseur Microsoft Analysis Services OLE DB pour Microsoft SQL Server 2012 SP1 » [Feature Pack de Microsoft SQL Server 2012 SP1](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Inscrivez MSOLAP.5 en tant que fournisseur approuvé dans SharePoint Excel Services. Pour plus d'informations, consultez [Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Inscrivez MSOLAP.5 en tant que fournisseur approuvé dans SharePoint Excel Services. Pour plus d'informations, consultez [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Informations supplémentaires :**  
   
@@ -377,7 +378,7 @@ Cela est dû au fait que les écouteurs du groupe de disponibilité ont besoin d
   
 1.  Téléchargez le fournisseur MSOLAP.5 à partir du Feature Pack [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installez le fournisseur sur les serveurs d'applications exécutant Excel Services. Pour plus d'informations, consultez la section « Fournisseur Microsoft Analysis Services OLE DB pour Microsoft SQL Server 2012 SP1 » [Feature Pack de Microsoft SQL Server 2012 SP1](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Inscrivez MSOLAP.5 en tant que fournisseur approuvé dans SharePoint Excel Services. Pour plus d'informations, consultez [Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Inscrivez MSOLAP.5 en tant que fournisseur approuvé dans SharePoint Excel Services. Pour plus d'informations, consultez [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Informations supplémentaires :**  
   

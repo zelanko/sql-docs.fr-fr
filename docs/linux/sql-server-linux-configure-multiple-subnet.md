@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurer les sous-réseaux de plusieurs groupes de disponibilité AlwaysOn et les instances de cluster de basculement
 
@@ -58,7 +58,7 @@ Dans l’univers Windows, un Cluster de basculement de Windows Server (WSFC) en 
 
     Où *nom de fichier* est le nom que vous souhaitez appeler le CIM.
 
-2.  Modifiez le fichier qui a été généré. Recherchez la `<resources>` section. Vous verrez les différentes ressources qui ont été créés pour le groupe de disponibilité ou de la FCI. Trouver celui associé à l’adresse IP. Ajouter un `<instance attributes>` section avec les informations de la deuxième adresse IP supérieure ou inférieure à celle existant, mais avant que `<operations>`. Il ressemble à la syntaxe suivante :
+2.  Modifiez le fichier qui a été généré. Recherchez la `<resources>` section. Vous verrez les différentes ressources qui ont été créés pour le groupe de disponibilité ou de la FCI. Trouver celui associé à l’adresse IP. Ajouter un `<instance attributes>` section avec les informations de la deuxième adresse IP supérieure ou inférieure à celle existant, mais avant que `<operations>`. Il est similaire à la syntaxe suivante :
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

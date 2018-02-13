@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>Graphique de l’Architecture SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ Une table du bord représente une relation dans un graphique. Bords sont toujour
 
 |Nom de colonne    | Description  |
 |---   |---  |
-|`$edge_id`   |Identifie de façon unique un bord donné dans la base de données. Il s’agit d’une colonne générée et la valeur est une combinaison d’object_id de la table du bord et une valeur bigint généré en interne. Toutefois, lorsque la `$edge_id` colonne est sélectionnée, une valeur calculée sous la forme d’une chaîne JSON s’affiche. `$edge_id`est une pseudo-colonne, qui est mappé à un nom interne et qu’elle contient une chaîne hexadécimale. Lorsque vous sélectionnez `$edge_id` à partir de la table, le nom de colonne s’affiche en tant que `$edge_id_\<hex_string>`. À l’aide des noms de colonnes pseudo-aléatoire dans les requêtes est la méthode recommandée de l’interrogation interne `$edge_id` colonne et à l’aide du nom interne avec une chaîne hexadécimale doivent être évitées. |
+|`$edge_id`   |Identifie de façon unique un bord donné dans la base de données. Il s’agit d’une colonne générée et la valeur est une combinaison d’object_id de la table du bord et une valeur bigint généré en interne. Toutefois, lorsque la `$edge_id` colonne est sélectionnée, une valeur calculée sous la forme d’une chaîne JSON s’affiche. `$edge_id` est une pseudo-colonne, qui est mappé à un nom interne et qu’elle contient une chaîne hexadécimale. Lorsque vous sélectionnez `$edge_id` à partir de la table, le nom de colonne s’affiche en tant que `$edge_id_\<hex_string>`. À l’aide des noms de colonnes pseudo-aléatoire dans les requêtes est la méthode recommandée de l’interrogation interne `$edge_id` colonne et à l’aide du nom interne avec une chaîne hexadécimale doivent être évitées. |
 |`$from_id`   |Stocke le `$node_id` du nœud, à partir de l’origine du bord.  |
 |`$to_id`   |Stocke le `$node_id` du nœud, à laquelle la session se termine. |
 
@@ -99,7 +100,7 @@ Le tableau suivant répertorie les valeurs valides pour `graph_type` colonne
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`stocke également des informations sur les colonnes implicites créées dans les tableaux de bord ou le nœud. Informations suivantes peuvent être récupérées à partir de sys.columns, toutefois, les utilisateurs ne peuvent pas sélectionner ces colonnes à partir d’un tableau de bord ou de nœud. 
+`sys.columns` stocke également des informations sur les colonnes implicites créées dans les tableaux de bord ou le nœud. Informations suivantes peuvent être récupérées à partir de sys.columns, toutefois, les utilisateurs ne peuvent pas sélectionner ces colonnes à partir d’un tableau de bord ou de nœud. 
 
 Colonnes implicites dans une table de nœud  
 |Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
@@ -139,7 +140,7 @@ En savoir plus les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions int
 ### <a name="data-definition-language-ddl-statements"></a>Instructions de langage de définition (DDL) de données
 |Tâche   |Rubrique connexe  |Remarques
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `est maintenant étendue pour prendre en charge la création d’une table en tant que nœud ou en tant que session. Notez que le tableau de bord peut ou ne peut pas avoir de n’importe quel utilisateur les attributs définis.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` est maintenant étendue pour prendre en charge la création d’une table en tant que nœud ou en tant que session. Notez que le tableau de bord peut ou ne peut pas avoir de n’importe quel utilisateur les attributs définis.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Tables de nœud et le bord peuvent être modifiées de la même façon qu’une table relationnelle, en utilisant le `ALTER TABLE`. Les utilisateurs peuvent ajouter ou modifier les colonnes définies par l’utilisateur, les index ou contraintes. Cependant, comme la modification des colonnes de graphique interne, `$node_id` ou `$edge_id`, génère une erreur.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Les utilisateurs peuvent créer des index sur les pseudo colonnes et les colonnes définies par l’utilisateur dans les tables de nœud et le bord. Tous les types d’index sont pris en charge, y compris les index cluster et non cluster columnstore.  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Nœud et le bord de tables peuvent être supprimés de la même façon qu’une table relationnelle, en utilisant le `DROP TABLE`. Toutefois, dans cette version, il y a aucune contrainte pour garantir qu’aucune bords ne pointent vers un nœud supprimé et suppression en cascade des bords, lors de la suppression d’un nœud ou d’une table de nœud n’est pas pris en charge. Il est recommandé que si une table de nœud est supprimée, les utilisateurs déposez les bords connectés aux nœuds de cette table de nœud manuellement pour maintenir l’intégrité du graphique.  |
@@ -148,10 +149,10 @@ En savoir plus les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions int
 ### <a name="data-manipulation-language-dml-statements"></a>Instructions de données (DML, Data Manipulation Language)
 |Tâche   |Rubrique connexe  |Remarques
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertion dans une table de nœud n’est pas différente de l’insertion dans une table relationnelle. Les valeurs de `$node_id` colonne est générée automatiquement. La tentative d’insertion d’une valeur dans `$node_id` ou `$edge_id` colonne entraîne une erreur. Les utilisateurs doivent fournir des valeurs pour `$from_id` et `$to_id` colonnes lors de l’insertion dans un tableau de bord. `$from_id`et `$to_id` sont la `$node_id` les valeurs des nœuds un bord donné se connecte.  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertion dans une table de nœud n’est pas différente de l’insertion dans une table relationnelle. Les valeurs de `$node_id` colonne est générée automatiquement. La tentative d’insertion d’une valeur dans `$node_id` ou `$edge_id` colonne entraîne une erreur. Les utilisateurs doivent fournir des valeurs pour `$from_id` et `$to_id` colonnes lors de l’insertion dans un tableau de bord. `$from_id` et `$to_id` sont la `$node_id` les valeurs des nœuds un bord donné se connecte.  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Les données à partir des tableaux de bord ou le nœud peuvent être supprimées dans la même façon, car il est supprimé à partir des tables relationnelles. Toutefois, dans cette version, il y a aucune contrainte pour garantir qu’aucune bords ne pointent vers un nœud supprimé et suppression en cascade des bords, lors de la suppression d’un nœud n’est pas pris en charge. Il est recommandé que chaque fois qu’un nœud est supprimé, toutes les arêtes de connexion à ce nœud sont également supprimés, pour préserver l’intégrité du graphique.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Les valeurs dans les colonnes définies par l’utilisateur peuvent être mis à jour à l’aide de l’instruction de mise à jour. Mise à jour les colonnes de graphique interne `$node_id`, `$edge_id`, `$from_id` et `$to_id` n’est pas autorisée.  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`instruction n’est pas prise en charge sur un tableau de bord ou de nœud.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` instruction n’est pas prise en charge sur un tableau de bord ou de nœud.  |
 
 
 ### <a name="query-statements"></a>Instructions de requête

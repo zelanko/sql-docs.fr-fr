@@ -1,11 +1,11 @@
 ---
 title: "Éditions et des fonctionnalités prises en charge de SQL Server 2017 ~ Linux | Documents Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -35,13 +35,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1734b7ec7619a6943e1d79a0933b6189ad3162d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et des fonctionnalités prises en charge de 2017 du serveur SQL sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de 2017 du serveur SQL sur Linux. Pour les éditions et les fonctionnalités prises en charge de SQL Server sur Windows, consultez [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -81,7 +83,7 @@ Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et l’intégration de base de données analytique.|  
 
 **Éditions Developer, Enterprise Core et d’évaluation**  
-Pour les fonctionnalités prises en charge par les principaux de l’entreprise, développeur et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition de SQL Server Enterprise dans les tableaux ci-dessous.
+Pour les fonctionnalités prises en charge par les principaux de l’entreprise, développeur et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition de SQL Server Enterprise dans les tableaux suivants.
 
 L’édition Developer continue à prendre en charge seulement 1 client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   

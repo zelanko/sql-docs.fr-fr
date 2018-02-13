@@ -8,63 +8,67 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: WMI Classes
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- WMI Classes
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 helpviewer_keywords:
 - WMI Provider for Configuration Management, classes
 - classes [WMI]
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce49f66f7306b3677319683fa1dfa0a986cfa5b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 743d51467ade689f46643e566779dd507e852fe9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Fournisseur WMI pour les classes de gestion de la configuration
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Le fournisseur Windows Management Instrumentation (WMI) pour la gestion de la Configuration fournit des fonctionnalités pour les classes suivantes :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Le fournisseur WMI (Windows Management Instrumentation) pour la gestion de la configuration fournit des fonctionnalités pour les classes suivantes :  
   
- [CInstance, classe](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
+ [Classe CInstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
   
- [ClientNetLibInfo, classe](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)  
+ [Classe ClientNetLibInfo](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)  
   
- [ClientNetworkProtocol, classe](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)  
+ [Classe ClientNetworkProtocol](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)  
   
- [ClientNetworkProtocolProperty, classe](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)  
+ [Classe ClientNetworkProtocolProperty](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)  
   
- [ClientSettings, classe](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)  
+ [Classe ClientSettings](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)  
   
- [ClientSettingsGeneralFlag, classe](../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)  
+ [Classe ClientSettingsGeneralFlag](../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)  
   
- [SecurityCertificate, classe](../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)  
+ [Classe SecurityCertificate](../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)  
   
- [ServerNetworkProtocol, classe](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)  
+ [Classe ServerNetworkProtocol](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)  
   
- [ServerNetworkProtocolIPAddress, classe](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
+ [Classe ServerNetworkProtocolIPAddress](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
   
- [ServerNetworkProtocolProperty, classe](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
+ [Classe ServerNetworkProtocolProperty](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
   
- [ServerSettings, classe](../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)  
+ [Classe ServerSettings](../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)  
   
- [ServerSettingsGeneralFlag, classe](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
+ [Classe ServerSettingsGeneralFlag](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
   
- [SInstance, classe](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
+ [Classe SInstance](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
   
- [SqlErrorLogEvent, classe](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
+ [Classe SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   
- [SqlErrorLogFile, classe](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
+ [Classe SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
   
- [SqlServerAlias, classe](../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)  
+ [Classe SqlServerAlias](../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)  
   
- [SqlService, classe](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)  
+ [Classe SqlService](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)  
   
- [SqlServiceAdvancedProperty, classe](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)  
+ [Classe SqlServiceAdvancedProperty](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)  
   
   

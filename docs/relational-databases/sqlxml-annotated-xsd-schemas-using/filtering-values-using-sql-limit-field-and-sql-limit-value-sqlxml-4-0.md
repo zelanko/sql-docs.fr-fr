@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff0a1647573191483cc9c14e68734ee3a28707c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Vous pouvez limiter les lignes qui sont retournées par une requête de base de données sur la base d’une valeur de limitation. Le **SQL : limit-champ** et **SQL : limit-valeur** les annotations sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifiez une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Le **SQL : limit-champ** et **SQL : limit-valeur** les annotations sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifiez une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
   
  Le **SQL : limit-champ** annotation est utilisée pour identifier une colonne qui contient une valeur de limitation ; elle n’est autorisée sur chaque élément ou attribut mappé.  
   
@@ -154,7 +156,7 @@ ms.lasthandoff: 11/17/2017
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -293,7 +295,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Exécutez le fichier TestQuery.vbs en cliquant dessus dans l'Explorateur Windows.  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <root>  

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -30,7 +30,7 @@ Ce guide fournit des instructions pour créer un cluster de disque partagé de d
 > [!NOTE] 
 > Accès à un module complémentaire Red Hat à haute disponibilité et de la documentation nécessite un abonnement. 
 
-En tant que le diagramme ci-dessous illustre le stockage est présenté à deux serveurs. Les composants clusters - Corosync et STIMULATEUR - coordonnent les communications et gestion des ressources. Un des serveurs a la connexion active pour les ressources de stockage et le serveur SQL Server. Lorsque STIMULATEUR détecte une défaillance les composants clusters gèrent le déplacement des ressources vers un autre nœud.  
+Comme le montre le diagramme suivant, le stockage est présenté à deux serveurs. Les composants clusters - Corosync et STIMULATEUR - coordonnent les communications et gestion des ressources. Un des serveurs a la connexion active pour les ressources de stockage et le serveur SQL Server. Lorsque STIMULATEUR détecte une défaillance les composants clusters gèrent le déplacement des ressources vers un autre nœud.  
 
 ![Red Hat Enterprise Linux 7 partagé de Cluster de disque SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -39,13 +39,13 @@ Pour plus d’informations sur la configuration du cluster, options d’agents d
 
 > [!NOTE] 
 > À ce stade, l’intégration de SQL Server avec STIMULATEUR n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les l’orchestration est en dehors d’et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. Par exemple, sys.dm_os_cluster_properties et sys.dm_os_cluster_nodes de vues de gestion dynamique de cluster ne peut aucun enregistrement.
-Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, ils doivent inscrire dans leur serveur DNS à l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous) avec le nom du serveur choisi.
+Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, ils doivent inscrire dans leur serveur DNS l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué dans les sections suivantes) avec le nom de serveur choisi.
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
+Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installer et configurer le système d’exploitation sur chaque nœud de cluster
 
@@ -68,7 +68,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
 > [!NOTE] 
 > Au moment de l’installation, une clé principale du serveur est généré pour l’instance de SQL Server et placées à `/var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal à chaque nœud secondaire pour chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur. 
 
-1. Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilisera ce compte pour vérifier le nœud qui exécute SQL Server. 
+1. Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,13 +131,13 @@ Sur le serveur NFS, procédez comme suit :
    sudo yum -y install nfs-utils
    ```
 
-1. Activer et démarrer`rpcbind`
+1. Activer et démarrer `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Activer et démarrer`nfs-server`
+1. Activer et démarrer `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
@@ -233,7 +233,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Si vous utilisez une ressource de système de fichiers (FS) comme indiqué ci-dessous, il n’est pas nécessaire de conserver la commande de montage dans/etc/fstab. STIMULATEUR s’occupe de montage du dossier quand il démarre la ressource FS en cluster. À l’aide de délimitation, elle dépassera le projecteur offre FS n’est jamais monté à deux reprises. 
+>Si vous utilisez une ressource de système de fichiers (FS) comme indiqué ici, il n’est pas nécessaire de conserver la commande de montage dans/etc/fstab. STIMULATEUR s’occupe de montage du dossier quand il démarre la ressource FS en cluster. À l’aide de délimitation, elle garantit que le système de fichiers n’est jamais monté à deux reprises. 
 
 1.  Exécutez `mount -a` commande pour le système mettre à jour les chemins d’accès montés.  
 
@@ -332,7 +332,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Configurer les ressources de cluster de SQL Server, système de fichiers et les ressources IP virtuels et de distribuer la configuration pour le cluster. Vous aurez besoin des informations suivantes :
+2. Configurer les ressources de cluster de SQL Server, système de fichiers et les ressources IP virtuels et de distribuer la configuration pour le cluster. Vous avez besoin des informations suivantes :
 
    - **Nom de la ressource SQL Server**: un nom pour la ressource SQL Server en cluster. 
    - **Variable de nom de la ressource IP**: un nom pour la ressource d’adresse IP virtuelle.
@@ -342,7 +342,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    - **APPAREIL**: le chemin d’accès local, qu’il est monté sur le partage
    - **(fsType)**: type de partage de fichier (par exemple, nfs)
 
-   Mettre à jour les valeurs dans le script ci-dessous pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.  
+   Mettre à jour les valeurs dans le script suivant pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.  
 
    ```bash
    sudo pcs cluster cib cfg 

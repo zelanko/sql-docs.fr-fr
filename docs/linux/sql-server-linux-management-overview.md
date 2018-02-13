@@ -1,6 +1,6 @@
 ---
 title: "Gérer SQL Server sur Linux | Documents Microsoft"
-description: "Cette rubrique fournit des liens vers les tâches de gestion courantes et des outils pour SQL Server en cours d’exécution sur Linux."
+description: "Cet article fournit des liens vers les tâches de gestion courantes et des outils pour SQL Server en cours d’exécution sur Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: de19f1952465c62bf026dbd3d92666b7a1b968ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Choisissez l’outil approprié pour gérer SQL Server sur Linux
 
@@ -36,7 +36,7 @@ Presque tout ce dont vous pouvez faire dans un outil client peut également êtr
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (version préliminaire)
 
-Nouveau Microsoft SQL opérations Studio (version préliminaire) est un outil d’inter-plateformes de gestion SQL Server. Pour plus d’informations, consultez [Nouveautés opérations Studio (version préliminaire) de Microsoft SQL](../sql-operations-studio/what-is.md).
+Nouveau Microsoft SQL opérations Studio (version préliminaire) est un outil d’inter-plateformes de gestion SQL Server. Pour plus d’informations, consultez [opérations Studio (version préliminaire) de Microsoft SQL](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio sur Windows
 

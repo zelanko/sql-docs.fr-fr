@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Fonctionnement de SQL Server sur Linux - instance de cluster de basculement
 
@@ -38,7 +38,7 @@ Le moyen de basculement dépend de la distribution de Linux. Suivez les instruct
 - [RHEL ou Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>Basculement manuel (RHEL ou Ubuntu)
+## <a name = "#rhelFailover"></a> Basculement manuel (RHEL ou Ubuntu)
 
 Pour effectuer un basculement manuel, OGAM onn Red Hat Enterprise Linux (RHEL) ou des serveurs d’Ubuntu exécutent les étapes suivantes.
 1.  Exécutez la commande suivante : 
@@ -59,7 +59,7 @@ Pour effectuer un basculement manuel, OGAM onn Red Hat Enterprise Linux (RHEL) o
 
 \<FCIResourceName > est le nom de ressource STIMULATEUR pour l’instance FCI. 
 
-## <a name = "#slesFailover"></a>Basculement manuel (SLES)
+## <a name = "#slesFailover"></a> Basculement manuel (SLES)
 
 
 Dans Suse Linux Enterprise Server (SLES), utilisez la `migrate` de commande pour basculer manuellement une instance de cluster SQL Server. Par exemple :

@@ -1,6 +1,6 @@
 ---
 title: "Prise en main la sécurité SQL Server sur Linux | Documents Microsoft"
-description: "Cette rubrique décrit les actions de sécurité standard."
+description: "Cet article décrit les actions de sécurité standard."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais elle permet de vous donner une idée des zones pour approfondir vos recherches. Dans chaque exemple, un lien est fourni à la documentation détaillée de cette zone.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Utilisez toujours un mot de passe à la place les astérisques ci-dessus.
+>  Utilisez toujours un mot de passe à la place les astérisques dans la commande précédente.
 
 Comptes de connexion peuvent se connecter à SQL Server et avoir accès (avec des autorisations limitées) à la base de données master. Pour vous connecter à une base de données utilisateur, un compte de connexion a besoin d’une identité correspondante au niveau base de données, appelé utilisateur de base de données. Les utilisateurs sont spécifiques à chaque base de données et doivent être créés séparément dans chaque base de données à leur accorder l’accès. L’exemple suivant vous permet de passer dans la base de données AdventureWorks2014 et utilise ensuite la [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instruction pour créer un utilisateur nommé Larry qui est associé à la connexion nommée Larry. Bien que la connexion et l’utilisateur sont liées (mappé à l’autre), ils sont des objets différents. La connexion est un principe de niveau serveur. L’utilisateur est un principal au niveau de la base de données.
 
@@ -101,7 +103,7 @@ Pour plus d’informations sur le système d’autorisation, consultez [mise en 
 
 [Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios de s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement les données pertinentes à leur service.   
 
-Les étapes ci-dessous vous guide dans le paramétrage de plusieurs utilisateurs avec différents au niveau des lignes accès à la `Sales.SalesOrderHeader` table. 
+Les étapes suivantes dans la configuration des deux utilisateurs avec accès au niveau des lignes différent pour le `Sales.SalesOrderHeader` table. 
 
 Créez deux comptes d’utilisateur pour tester la sécurité au niveau des lignes :    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Pour supprimer le chiffrement transparent des données, exécutez`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Pour supprimer le chiffrement transparent des données, exécutez `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 Les opérations de chiffrement et le déchiffrement sont planifiées sur les threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
 

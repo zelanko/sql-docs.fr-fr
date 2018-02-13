@@ -1,6 +1,6 @@
 ---
 title: Meilleures pratiques de performances pour SQL Server sur Linux | Documents Microsoft
-description: "Cette rubrique fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux."
+description: "Cet article fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux."
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -9,20 +9,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Meilleures pratiques de performance et des instructions de configuration pour 2017 du serveur SQL sur Linux
 
-Cette rubrique fournit les meilleures pratiques et recommandations pour optimiser les performances pour les applications de base de données qui se connectent à SQL Server sur Linux. Ces recommandations sont spécifiques à l’exécution de la plate-forme Linux. Toutes les recommandations de SQL Server standard, telles que la création d’index, s’appliquent toujours.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Cet article fournit les meilleures pratiques et recommandations pour optimiser les performances pour les applications de base de données qui se connectent à SQL Server sur Linux. Ces recommandations sont spécifiques à l’exécution de la plate-forme Linux. Toutes les recommandations de SQL Server standard, telles que la création d’index, s’appliquent toujours.
 
 Les instructions suivantes contiennent des recommandations pour la configuration de SQL Server et le système d’exploitation Linux.
 

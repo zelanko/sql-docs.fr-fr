@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Déployer un cluster STIMULATEUR pour SQL Server sur Linux
 
@@ -38,7 +38,7 @@ Ce didacticiel décrit les tâches requises pour déployer un cluster Linux STIM
 [Installer SQL Server 2017](sql-server-linux-setup.md).
 
 ## <a name="install-the-high-availability-add-on"></a>Installer le module complémentaire de haute disponibilité
-Utilisez la syntaxe ci-dessous pour installer les packages qui composent le module complémentaire de haute disponibilité (HA) pour chaque point de distribution de Linux. 
+Utilisez la syntaxe suivante pour installer les packages qui composent le module complémentaire de haute disponibilité (HA) pour chaque point de distribution de Linux. 
 
 **Red Hat Enterprise Linux (RHEL)**
 1.  Inscrire le serveur à l’aide de la syntaxe suivante. Vous êtes invité à un nom d’utilisateur valide et un mot de passe.
@@ -123,7 +123,7 @@ STIMULATEUR lui-même utilise un utilisateur créé sur la distribution nommée 
 ## <a name="create-the-pacemaker-cluster"></a>Créer le cluster STIMULATEUR 
 Cette section décrit comment créer et configurer le cluster pour chaque point de distribution de Linux.
 
-**RHEL**
+RHEL
 
 1. Autoriser les nœuds
    
@@ -153,7 +153,7 @@ Configuration d’Ubuntu est similaire à RHEL. Toutefois, il existe une différ
 
 **SLES**
 
-Le processus de création d’un cluster STIMULATEUR est complètement différent sur SLES sur RHEL et Ubuntu. Document les étapes ci-dessous créer un cluster avec SLES.
+Le processus de création d’un cluster STIMULATEUR est complètement différent sur SLES sur RHEL et Ubuntu. Les étapes suivantes de la création d’un cluster avec SLES document.
 1. Démarrer le processus de configuration de cluster en exécutant 
    ```bash
    sudo ha-cluster-init
@@ -200,12 +200,12 @@ Le processus de création d’un cluster STIMULATEUR est complètement différen
 12. Répétez les étapes 8 à 11 pour tous les autres serveurs à ajouter au cluster.
 
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>Installer les packages SQL Server à haute disponibilité et l’Agent SQL Server
-Utilisez les commandes ci-dessous pour installer le package SQL Server à haute disponibilité et [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, s’ils ne sont pas déjà installés. Installation du package de haute disponibilité après l’installation [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nécessite un redémarrage de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pour pouvoir être utilisé. Ces instructions supposent que les référentiels pour les packages de Microsoft ont déjà été configurés, étant donné que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] doit être installé à ce stade.
+Utilisez les commandes suivantes pour installer le package SQL Server à haute disponibilité et [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, s’ils ne sont pas déjà installés. Installation du package de haute disponibilité après l’installation [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nécessite un redémarrage de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pour pouvoir être utilisé. Ces instructions supposent que les référentiels pour les packages de Microsoft ont déjà été configurés, étant donné que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] doit être installé à ce stade.
 > [!NOTE]
 > - Si vous ne souhaitez pas utiliser [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent pour l’envoi de journaux ou de toute autre utilisation, il n’a pas à installer, par conséquent, le package *mssql-server-agent* peut être ignorée.
 > - Les autres packages facultatifs pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] recherche en texte intégral (*FTP du serveur mssql*) et [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql server est*), ne sont pas requis pour la haute disponibilité, soit pour une instance de cluster ou un groupe de disponibilité.
 
-**RHEL**
+RHEL
 
 ```bash
 sudo yum install mssql-server-ha mssql-server-agent

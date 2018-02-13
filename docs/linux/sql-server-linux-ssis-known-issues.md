@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitations et problèmes connus pour SSIS sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article décrit les problèmes connus et les limitations actuelles pour SQL Server Integration Services (SSIS) sur Linux.
 
@@ -40,7 +42,7 @@ Les fonctionnalités suivantes ne sont pas pris en charge dans cette version de 
 
 Pour les autres limitations et problèmes connus avec SSIS sur Linux, consultez le [Notes de publication](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Composants pris en charge et non pris en charge
+## <a name="components"></a> Composants pris en charge et non pris en charge
 
 Les composants Integration Services intégrés suivants sont pris en charge sous Linux. Certaines d'entre elles ont des limitations sur la plate-forme Linux, comme décrit dans les tableaux suivants.
 
@@ -50,12 +52,12 @@ Les composants intégrés qui ne sont pas répertoriés ici ne sont pas pris en 
 - tâche d'insertion en bloc
 - tâche de flux de données
 - Tâche de profilage des données
-- Tache d'exécution de requêtes SQL
+- Tâche d’exécution de requêtes SQL
 - Tâche Exécuter l'instruction T-SQL
 - Tâche d'expression
 - Tâche FTP
 - Tâche de service Web
-- Tâche XML
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle pris en charge avec les limitations
 
@@ -84,7 +86,7 @@ Les composants intégrés qui ne sont pas répertoriés ici ne sont pas pris en 
 | ADO.NET source et destination | Prennent uniquement en charge le fournisseur de données SQLClient. |
 | Source de fichier plat et de destination | Prend en charge uniquement les chemins de fichier Windows de style, auquel la règle de mappage du chemin d’accès par défaut est appliquée. Par exemple `D:\home\ssis\travel.csv` devient `/home/ssis/travel.csv`. |
 | Source OData | Prend uniquement en charge l’authentification de base. |
-| ODBC source et destination | Prend en charge des pilotes ODBC Unicode de 64 bits sur Linux. Varie selon le Gestionnaire de pilotes UnixODBC sur Linux. |
+| Source et destination ODBC | Prend en charge des pilotes ODBC Unicode de 64 bits sur Linux. Varie selon le Gestionnaire de pilotes UnixODBC sur Linux. |
 | OLE DB source et destination | Prennent uniquement en charge SQL Server Native Client 11.0 et le fournisseur Microsoft OLE DB pour SQL Server. |
 | | |
 
