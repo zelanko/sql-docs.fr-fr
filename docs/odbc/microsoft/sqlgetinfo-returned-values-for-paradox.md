@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 12760717293ba8ea463ff53b78bfb49838a6eaa6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo les valeurs renvoyées pour Paradox
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes est retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant la liste en langage C# defines **SQLGetInfo** dans les *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez la *de référence du programmeur ODBC*.  
@@ -91,7 +92,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DATA_SOURCE_READ_ONLY|« N » (Cela dépend de la source de données.)|  
 |SQL_DATABASE_NAME|Répertoire de base de données en cours|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|« PARADOX »|  
+|SQL_DBMS_NAME|"PARADOX"|  
 |SQL_DBMS_VER|Valeurs multiples|  
 |SQL_DDL_INDEX|Valeurs multiples|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -100,7 +101,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DRIVER_HENV|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_HLIB|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_HSTMT|Gérée par le Gestionnaire de pilotes.|  
-|SQL_DRIVER_NAME|« OdbcJt32.dll »|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|« 4.00.*nnnn*» ( *nnnn*  spécifie la date de la build)|  
 |SQL_DROP_ASSERTION|0|  
@@ -116,7 +117,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|Valeurs multiples|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_MIXED EN|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_IDENTIFIER_QUOTE_CHAR|« ' » (guillemet arrière)|  
 |SQL_KEYWORDS|Valeurs multiples|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
@@ -147,7 +148,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Valeurs multiples|  
-|MISE EN CONFORMITÉ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|À partir du Gestionnaire de pilotes|  
 |SQL_OJ_CAPABILITIES|Valeurs multiples|  
@@ -155,13 +156,13 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_OUTER_JOINS|"Y"|  
 |SQL_PROCEDURE_TERM|""|  
 |SQL_PROCEDURES|"N"|  
-|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED EN|  
+|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
 |SQL_SCHEMA_TERM|""|  
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|« PARADOX »|  
+|SQL_SERVER_NAME|"PARADOX"|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  

@@ -14,12 +14,12 @@ description: '**dwloader** est un outil de ligne de commande Parallel Data Wareh
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: "90"
+caps.latest.revision: 
 ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dwloader-command-line-loader"></a>Chargeur de ligne de commande de dwloader
 **dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante. Lors du chargement des lignes, vous pouvez ajouter toutes les lignes à la fin de la table (*mode append* ou *fastappend mode*), ajouter de nouvelles lignes et mettre à jour des lignes existantes (*mode upsert*), ou supprimez tous les lignes avant le chargement existantes et insérez toutes les lignes dans une table vide (*recharger mode*).  
@@ -127,7 +127,7 @@ Affiche des informations d’aide simples sur l’utilisation du chargeur. Aide 
 **-U** *login_name*  
 Une connexion valide de l’authentification SQL Server disposant des autorisations appropriées pour effectuer le chargement.  
   
-**-P** *mot de passe*  
+**-P** *password*  
 Le mot de passe pour une authentification SQL Server *login_name*.  
   
 **-W**  
@@ -161,7 +161,7 @@ Si omis, dwloader par défaut la valeur qui a été spécifiée lors de l’inst
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schéma*]. *nom_table*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 Le nom en trois parties pour la table de destination.  
   
 **-I***source_data_location*  
@@ -215,32 +215,32 @@ S’il existe des échecs de chargement, **dwloader** stocke la ligne qui a éch
 **-fh** *number_header_rows*  
 Le nombre de lignes à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
   
-< variable_length_column_options >  
+<variable_length_column_options>  
 Les options pour un *source_data_file_name* qui est délimitée par des caractères des colonnes de longueur variable. Par défaut, *source_data_file_name* contient des caractères ASCII dans les colonnes de longueur variable.  
   
 Pour des fichiers ASCII, les valeurs NULL sont représentées en plaçant les délimiteurs de manière consécutive. Par exemple, dans un fichier délimité par des canaux (« | »), une valeur NULL est indiquée par « || ». Dans un fichier délimité par des virgules, une valeur NULL est indiquée par «, ». En outre, le **-E** (--emptyStringAsNull) option doit être spécifiée. Pour plus d’informations sur -E, voir ci-dessous.  
   
-**e -** *character_encoding*  
+**-e** *character_encoding*  
 Spécifie un type de codage de caractères pour les données doivent être chargées à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est en mode little endian et UTF16BE est big endian. Ces options sont la casse.  
   
-**-t** *séparateur_de_champs*  
+**-t** *field_delimiter*  
 Le délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces des caractères d’échappement ASCII ou les valeurs hexadécimales de ASCII...  
   
-|Nom   |Caractère d’échappement|Caractère hexadécimal|  
+|Nom|Caractère d’échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
-|Onglet|\t|0 x 09|  
-|Retour chariot (CR)|\r|0x0D|  
-|Saut de ligne (LF)|\n|0x0A|  
+|Onglet|\t|0x09|  
+|Retour chariot (CR)|\r|0x0d|  
+|Saut de ligne (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgule|','|0x2c|  
-|Guillemet double|\\"|0 x 22|  
-|Guillemet simple|\\'|0 x 27|  
+|Guillemet double|\\"|0x22|  
+|Guillemet simple|\\'|0x27|  
   
 Pour spécifier le caractère de la ligne de commande, le placer entre guillemets doubles, « | ». Cela permet d’éviter une erreur d’interprétation par l’Analyseur de ligne de commande. Autres caractères sont placés entre apostrophes.  
   
 Exemples :  
   
--t « | »  
+-t "|"  
   
 -t ' '  
   
@@ -250,7 +250,7 @@ Exemples :
   
 -t ' ~ | ~'  
   
-**r -** *séparateur_de_lignes*  
+**-r** *row_delimiter*  
 Le délimiteur pour chaque ligne du fichier de données source. Le séparateur de lignes est une ou plusieurs valeurs ASCII.  
   
 Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère de tabulation comme un délimiteur, vous pouvez utiliser les caractères d’échappement (\r, \n, \t) ou leurs valeurs hexadécimales (0 x, 0d, 09). Pour spécifier d’autres caractères spéciaux en tant que délimiteurs, utilisez leur valeur hexadécimale.  
@@ -259,11 +259,11 @@ Exemples de CR + LF :
   
 -r \r\n  
   
-r - 0x0d0x0a  
+-r 0x0d0x0a  
   
 Exemples de CR :  
   
-r - \r  
+-r \r  
   
 -r 0x0d  
   
@@ -280,11 +280,11 @@ Le délimiteur de chaîne de données de type champ d’un fichier d’entrée d
   
 Exemples :  
   
-s-*  
+-s *  
   
-s - 0 x 22  
+-s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 Les options pour un fichier de données source qui a des colonnes de longueur fixe. Par défaut, *source_data_file_name* contient des caractères ASCII dans les colonnes de longueur variable.  
   
 Les colonnes de longueur fixe ne sont pas pris en charge – e est UTF8.  
@@ -300,9 +300,9 @@ Ce fichier doit résider sur le serveur lors du chargement. Le chemin d’accès
   
 Exemple fixé du fichier de configuration de largeur :  
   
-SalesCode = 3  
+SalesCode=3  
   
-SalesID = 10  
+SalesID=10  
   
 Exemple de lignes dans *source_data_file_name*:  
   
@@ -314,12 +314,12 @@ Dans l’exemple précédent, la première ligne chargée aura SalesCode = '230'
   
 Pour plus d’informations sur la gestion de début et de fin de conversion de type des espaces ou des données en mode de largeur fixe, consultez [de dwloader les règles de conversion de type de données](dwloader-data-type-conversion-rules.md).  
   
-**e -** *character_encoding*  
+**-e** *character_encoding*  
 Spécifie un type de codage de caractères pour les données doivent être chargées à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est en mode little endian et UTF16BE est big endian. Ces options sont la casse.  
   
 Les colonnes de longueur fixe ne sont pas pris en charge – e est UTF8.  
   
-**r -** *séparateur_de_lignes*  
+**-r** *row_delimiter*  
 Le délimiteur pour chaque ligne du fichier de données source. Le séparateur de lignes est une ou plusieurs valeurs ASCII.  
   
 Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère de tabulation comme un délimiteur, vous pouvez utiliser les caractères d’échappement (\r, \n, \t) ou leurs valeurs hexadécimales (0 x, 0d, 09). Pour spécifier d’autres caractères spéciaux en tant que délimiteurs, utilisez leur valeur hexadécimale.  
@@ -328,11 +328,11 @@ Exemples de CR + LF :
   
 -r \r\n  
   
-r - 0x0d0x0a  
+-r 0x0d0x0a  
   
 Exemples de CR :  
   
-r - \r  
+-r \r  
   
 -r 0x0d  
   
@@ -344,7 +344,7 @@ Exemples de saut de ligne :
   
 Un saut de ligne est requis pour Unix. Une demande de modification est requis pour Windows.  
   
-**D -** { **ymd** | ydm | MJA | myd |  dmy | format | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 Spécifie l’ordre des mois (m), jour (d) et l’année (y) pour tous les champs de date/heure dans le fichier d’entrée. L’ordre par défaut est ymd. Pour spécifier plusieurs formats de commande pour le même fichier source, utilisez l’option-dt.  
   
 YMD | dmy  
@@ -393,7 +393,7 @@ Exemples :
 **-d** *staging_database_name*  
 Le nom de base de données qui contiendra la table intermédiaire. La valeur par défaut est la base de données spécifiée avec l’option -T, qui est la base de données pour la table de destination. Pour plus d’informations sur l’utilisation d’une base de données mise en lots, consultez [créer la base de données intermédiaire](staging-database.md).  
   
-**M -** *load_mode_option*  
+**-M** *load_mode_option*  
 Spécifie s’il faut ajouter, upsert, ou de recharger les données. Le mode par défaut est ajouté.  
   
 Ajouter  
@@ -402,7 +402,7 @@ Le chargeur insère des lignes à la fin des lignes existantes dans la table de 
 fastappend  
 Le chargeur insère des lignes directement, sans utiliser une table temporaire, à la fin des lignes existantes dans la table de destination. fastappend requiert la transaction multi (– m) option. Une base de données mise en lots ne peut pas être spécifié lors de l’utilisation de fastappend. Il n’existe aucune restauration avec fastappend, ce qui signifie que la récupération à partir d’un échec ou abandon de charge doit être gérée par votre propre processus de chargement.  
   
-upsert **-K***merge_column* [,...*n* ]  
+upsert **-K**  *merge_column* [ ,...*n* ]  
 Le chargeur utilise l’instruction de fusion de SQL Server pour mettre à jour les lignes existantes et insérer de nouvelles lignes.  
   
 L’option-K spécifie l’ou les colonnes sur la fusion de base. Ces colonnes forment une clé de fusion, qui doit représenter une ligne unique. Si la clé de fusion existe dans la table de destination, la ligne est mise à jour. Si la clé de fusion n’existe pas dans la table de destination, la ligne est ajoutée.  
@@ -427,7 +427,7 @@ Par exemple, si le mode de chargement est FASTAPPEND et la table a un index colu
   
 Si le type de charge est FASTAPPEND, le *batchsize* s’applique au chargement de données dans la table, sinon *batchsize* s’applique au chargement de données dans la table intermédiaire.  
   
-< reject_options >  
+<reject_options>  
 Spécifie les options permettant de déterminer le nombre d’échecs de chargement qui autorise le chargeur. Si les échecs de chargement dépassent le seuil, le chargeur arrêtera et pas valider toutes les lignes.  
   
 **-rt** { **valeur** | pourcentage}  
@@ -446,7 +446,7 @@ Lorsqu’il est utilisé avec la valeur de -rt, le chargeur arrête la charge lo
   
 Quand utiliser avec pourcentage de -rt, le chargeur calcule le pourcentage à intervalles (-option de rs). Par conséquent, le pourcentage de lignes ayant échoué peut dépasser *reject_value*.  
   
-**rs -** *reject_sample_size*  
+**-rs** *reject_sample_size*  
 Utilisé avec le `-rt percentage` permet de spécifier les vérifications de pourcentage incrémentielle. Par exemple, si reject_sample_size est 1000, le chargeur de calculer le pourcentage de lignes qui ont échoué après que qu’il a tenté de charger les 1000 lignes. Il recalcule le pourcentage de lignes qui ont échoué après tente de charger chaque 1000 lignes supplémentaires.  
   
 **-c**  
@@ -491,7 +491,7 @@ Ignorer le chargement des fichiers vides. Il ignore également décompression de
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
 0 (réussite) ou une autre valeur d’entier (échec)  
   
-Dans un fichier de lot ou de la fenêtre commande, utilisez `errorlevel` pour afficher le code de retour. Exemple :  
+Dans un fichier de lot ou de la fenêtre commande, utilisez `errorlevel` pour afficher le code de retour. Par exemple :  
   
 ```  
 dwloader  
@@ -553,16 +553,16 @@ Ajouter peut être exécuté en mode transactionnel multiples (à l’aide de l�
   
 Le mode append charge les données en deux phases. Première phase charge des données à partir du fichier source dans une table intermédiaire simultanément (la fragmentation peut se produire). Phase 2 charge des données à partir de la table intermédiaire pour la table finale. La deuxième phase effectue un **INSERT INTO... Sélectionnez WITH (TABLOCK)** opération. Le tableau suivant montre le comportement de verrouillage sur la table finale et le comportement de journalisation lorsque vous utilisez le mode adjonction :  
   
-|Type de table|Transactions multiples<br />Mode (-m)|Table est vide|Prise en charge de concurrence|Journalisation|  
+|Type de table|Multi-transaction<br />Mode (-m)|Table est vide|Prise en charge de concurrence|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Segment de mémoire (heap)|Oui|Oui|Oui|minimale|  
-|Segment de mémoire (heap)|Oui|non|Oui|minimale|  
+|Segment de mémoire (heap)|Oui|Non|Oui|minimale|  
 |Segment de mémoire (heap)|non|Oui|non|minimale|  
-|Segment de mémoire (heap)|non|non|non|minimale|  
-|CL|Oui|Oui|non|minimale|  
-|CL|Oui|non|Oui|Complète|  
-|CL|non|Oui|non|minimale|  
-|CL|non|non|Oui|Complète|  
+|Segment de mémoire (heap)|non|Non|non|minimale|  
+|Cl|Oui|Oui|non|minimale|  
+|Cl|Oui|Non|Oui|Complète|  
+|Cl|non|Oui|non|minimale|  
+|Cl|non|Non|Oui|Complète|  
   
 Le tableau ci-dessus montre **dwloader** en utilisant le mode append charger dans un segment de mémoire ou une table d’index cluster (CI), avec ou sans l’indicateur transactionnel multiples et la charger dans une table vide ou une table non vide. Le verrouillage et la journalisation du comportement de chaque combinaison de ce type de charge s’affiche dans la table. Par exemple, le chargement de phase (2e) avec le mode append en un index cluster sans mode transactionnel multiples, vide table auront PDW créer un verrou exclusif sur la table et la journalisation est minime. Cela signifie qu’un client ne sera pas en mesure de charger simultanément de phase (2) et requête dans une table vide. Toutefois, lors du chargement de la même configuration dans une table non vide, PDW n’émettra pas un verrou exclusif sur la table et l’accès simultané est possible. Malheureusement, une journalisation complète se produit, ce qui ralentit le processus.  
   

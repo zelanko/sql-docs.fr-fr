@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -246,7 +247,7 @@ Modification de l’édition échoue si la propriété MAXSIZE de la base de don
 |1 024 GO|Néant|√|√|√|√ (D)|  
 |À partir de 1 024 Go jusqu'à 4096 Go par incréments de 256 Go *|Néant|Néant|Néant|Néant|√|√|  
   
- \*P11 et P15 autorisent MAXSIZE jusqu'à 4 To de 1 024 Go en cours de la taille par défaut.  P11 et P15 peuvent utiliser jusqu'à 4 To de stockage inclus sans frais supplémentaires. Dans le niveau Premium, MAXSIZE supérieure à 1 to n’est actuellement disponible dans les régions suivantes : nous East2, ouest des États-Unis, nous Gov Virginie, Europe de l’ouest, Allemagne Central, Asie du Sud, l’est du Japon, est de l’Australie, Canada Central et est du Canada. Pour connaître les limitations actuelles, consultez [unique des bases de données](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 et P15 autorisent MAXSIZE jusqu'à 4 To de 1 024 Go en cours de la taille par défaut.  P11 et P15 peuvent utiliser jusqu'à 4 To de stockage inclus sans frais supplémentaires. Dans le niveau Premium, MAXSIZE supérieure à 1 to n’est actuellement disponible dans les régions suivantes : nous East2, ouest des États-Unis, nous Gov Virginie, Europe de l’ouest, Allemagne Central, Asie du Sud, l’est du Japon, est de l’Australie, Canada Central et est du Canada. Pour connaître les limitations actuelles, consultez [unique des bases de données](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
 
   
  Les règles suivantes s'appliquent aux arguments MAXSIZE et EDITION.  

@@ -14,12 +14,12 @@ description: "Décrit comment les données de sauvegarde et restauration fonctio
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: "50"
+caps.latest.revision: 
 ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore"></a>Sauvegarde et restauration
 Décrit comment les données de sauvegarde et restauration fonctionne pour SQL Server Parallel Data Warehouse (PDW). Opérations de sauvegarde et de restauration sont utilisées pour la récupération d’urgence. Sauvegarde et restauration peuvent également servir à copier une base de données à partir d’une application sur un autre matériel.  
@@ -129,11 +129,11 @@ Par exemple, lorsque vous restaurez une base de données de 60 Go à partir d’
   
 Après la redistribution de chaque nœud de calcul contient moins de données réelles et davantage d’espace libre que chaque nœud de calcul sur l’appareil source plus petit. L’espace supplémentaire permet d’ajouter des données à la base de données. Si la taille de la base de données restaurée est plus grande que vous avez besoin, vous pouvez utiliser [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) pour réduire la taille des fichiers de base de données.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
-|Sauvegarde et la tâche de restauration|Description|  
+|Sauvegarde et la tâche de restauration| Description|  
 |---------------------------|---------------|  
-|Préparer un serveur en tant qu’un serveur de sauvegarde.|[Obtenir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md)|  
+|Préparer un serveur en tant qu’un serveur de sauvegarde.|[Obtenir et configurer un serveur de sauvegarde ](acquire-and-configure-backup-server.md)|  
 |Sauvegarde une base de données.|[BASE DE DONNÉES DE SAUVEGARDE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restaurer une base de données.|[RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS

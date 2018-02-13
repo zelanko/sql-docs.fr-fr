@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="microsoft-time-series-algorithm-technical-reference"></a>Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique inclut deux algorithmes séparés pour l’analyse de série chronologique :  
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MTS (Microsoft Time Series)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algorithme MTS (Microsoft Time Series) [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclut deux algorithmes séparés pour l'analyse de la série chronologique :  
   
 -   L'algorithme ARTXP, qui a été introduit dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], est optimisé pour la prédiction de la valeur probable suivante d'une série.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 >  Il est disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; toutefois, certaines fonctionnalités avancées, dont les paramètres permettant de personnaliser l'analyse de la série chronologique, sont prises en charge uniquement dans les éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
 ### <a name="detection-of-seasonality"></a>Détection de saisonnalité  
- Les algorithmes ARIMA et ARTXP prennent tous les deux en charge la détection de la saisonnalité ou de la périodicité. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la transformation Fast Fourier pour détecter la saisonnalité avant l'apprentissage. Toutefois, vous pouvez affecter la détection de saisonnalité, et les résultats d'analyse en série chronologique, en définissant des paramètres d'algorithme.  
+ Les algorithmes ARIMA et ARTXP prennent tous les deux en charge la détection de la saisonnalité ou de la périodicité. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la transformation Fast Fourier pour détecter la saisonnalité avant l'apprentissage. Toutefois, vous pouvez affecter la détection de saisonnalité, et les résultats d'analyse en série chronologique, en définissant des paramètres d'algorithme.  
   
 -   En modifiant la valeur de *AUTODETECT_SEASONALITY*, vous pouvez influencer le nombre de segments temporels qui sont générés.  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/08/2018
 |*FORECAST_METHOD*|Spécifie l'algorithme à utiliser pour l'analyse et la prédiction. Les valeurs possibles sont ARTXP, ARIMA ou MIXED. La valeur par défaut MIXED.|  
 |*HISTORIC_MODEL_COUNT*|Spécifie le nombre de modèles historiques qui seront construits. La valeur par défaut est 1.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*HISTORICAL_MODEL_GAP*|Spécifie le décalage dans le temps entre deux modèles historiques successifs. La valeur par défaut est 10. La valeur représente plusieurs unités de temps, où l'unité est définie par le modèle.<br /><br /> Par exemple, la valeur g produit des modèles historiques générés pour des données tronquées par tranches de temps à des intervalles de g, 2*g, 3\*g et ainsi de suite.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*INSTABILITY_SENSITIVITY*|Contrôle le point à partir duquel la variance de prédiction dépasse un certain seuil, après quoi l'algorithme ARTXP supprime des prédictions. La valeur par défaut est 1.<br /><br /> Remarque : ce paramètre ne s’applique pas aux modèles qui utilisent uniquement ARIMA.<br /><br /> La valeur par défaut de 1 présente le même comportement que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] surveille l'écart type normalisé pour chaque prédiction. Dès que cette valeur dépasse le seuil d'une prédiction, l'algorithme de série chronologique retourne une valeur Null et arrête le processus de prédiction.<br /><br /> La valeur [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] arrête la détection d'instabilité. Cela signifie que vous pouvez créer un nombre infini de prédictions, quelle que soit la variance.<br /><br /> Remarque : ce paramètre est uniquement modifiable dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise uniquement la valeur par défaut 1.|  
+|*INSTABILITY_SENSITIVITY*|Contrôle le point à partir duquel la variance de prédiction dépasse un certain seuil, après quoi l'algorithme ARTXP supprime des prédictions. La valeur par défaut est 1.<br /><br /> Remarque : ce paramètre ne s’applique pas aux modèles qui utilisent uniquement ARIMA.<br /><br /> La valeur par défaut de 1 présente le même comportement que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] surveille l'écart type normalisé pour chaque prédiction. Dès que cette valeur dépasse le seuil d'une prédiction, l'algorithme de série chronologique retourne une valeur Null et arrête le processus de prédiction.<br /><br /> La valeur [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] arrête la détection d'instabilité. Cela signifie que vous pouvez créer un nombre infini de prédictions, quelle que soit la variance.<br /><br /> Remarque : ce paramètre est uniquement modifiable dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise uniquement la valeur par défaut 1.|  
 |*MAXIMUM_SERIES_VALUE*|Spécifie la valeur maximale à utiliser pour les prédictions. Ce paramètre est utilisé avec *MINIMUM_SERIES_VALUE*pour limiter les prédictions à une certaine plage attendue. Par exemple, vous pouvez spécifier que le volume de ventes prédites pour un jour ne doit jamais dépasser le nombre de produits dans l'inventaire.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Spécifie la valeur minimale qui peut être prédite. Ce paramètre est utilisé avec *MAXIMUM_SERIES_VALUE*pour limiter les prédictions à une certaine plage attendue. Par exemple, vous pouvez spécifier que la quantité de ventes prédite ne doit jamais être un nombre négatif.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Spécifie le nombre minimal de tranches de temps qui sont requises pour générer un fractionnement dans chaque arbre de série chronologique. La valeur par défaut est 10.|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) prend en charge les types de contenu de colonne d'entrée, types de contenu de colonne prédictible et indicateurs de modélisation spécifiques qui sont répertoriés dans le tableau suivant.  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Clé, Key Time et Table|  
 |Attribut prédictible|Continu, Table|  
@@ -173,8 +174,8 @@ ms.lasthandoff: 01/08/2018
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Algorithme de série chronologique de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

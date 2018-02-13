@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entrées de Registre (Visual FoxPro le pilote ODBC)
 Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installation met à jour le Registre de votre système, dans la clé de Registre HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, pour ajouter une nouvelle clé appelée pilote Microsoft Visual FoxPro. Sous cette clé, les valeurs décrites dans le tableau suivant sont ajoutés.  
@@ -37,7 +38,7 @@ Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installati
 |ConnectFunctions|REG_SZ|« YYN »|  
 |Pilote|REG_SZ|Chemin d’accès système au fichier vfpodbc.dll|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|« *.dbf,\*.cdx,\*.fpt »|  
+|FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
 |FileUsage|REG_SZ|"1"|  
 |Programme d'installation|REG_SZ|Chemin d’accès système au fichier vfpodbc.dll|  
 |SQLLevel|REG_SZ|"0"|  
@@ -53,12 +54,12 @@ Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installati
 |Nom de la valeur (mot clé)|Type de valeur|Valeur|  
 |----------------------------|----------------|-----------|  
 |Copies assemblées|REG_SQ|Prise en charge l’ordre de tri|  
-|Description|REG_SZ|Description de l’utilisateur de la source de données|  
+| Description|REG_SZ|Description de l’utilisateur de la source de données|  
 |Pilote||Chemin d’accès système au fichier vfpodbc.dll|  
 |Exclusive||Oui ou Non|  
 |BackgroundFetch||Oui ou Non|  
 |SourceDB|REG_SZ|Chemin d’accès. Fichier DBC|  
-|SourceType|REG_SZ|« DBC » ou « DBF »|  
+|SourceType|REG_SZ|"DBC" or "DBF"|  
   
  Vous ne devez pas accéder à ces informations directement. toute administration du Registre est gérée par l’administrateur ODBC lorsque vous ajoutez, modifiez ou supprimez une source de données.  
   

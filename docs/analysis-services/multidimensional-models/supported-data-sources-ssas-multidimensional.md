@@ -18,19 +18,20 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Sources de données prises en charge (SSAS - Multidimensionnel)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit les types de sources de données que vous pouvez utiliser dans un modèle multidimensionnel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique décrit les types de sources de données que vous pouvez utiliser dans un modèle multidimensionnel.  
   
 ##  <a name="bkmk_supported_ds"></a> Sources de données prises en charge  
  Vous pouvez récupérer des données à partir des sources de données dans la table suivante. Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le programme d'installation n'installe pas les fournisseurs répertoriés pour chaque source de données. Certains fournisseurs ont pu être déjà installés sur votre ordinateur avec d'autres applications ; dans le cas contraire, vous devez télécharger et installer le fournisseur.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [Sources de données dans des modèles multidimensionnels](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

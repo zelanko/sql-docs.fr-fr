@@ -16,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Attributs de Dimension parent-enfant - opérateurs unaires
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans une dimension qui contient une relation parent-enfant dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous spécifiez un unaire (ou cumul personnalisé) colonne de l’opérateur qui détermine le cumul personnalisé pour tous les membres non calculés de l’attribut parent. L'opérateur unaire est appliqué aux membres dès que les valeurs des membres parents sont évaluées. La propriété **UnaryOperatorColumn** définie sur un attribut parent (**Usage**=Parent) spécifie la colonne d’une table dans la vue de source de données qui contient les opérateurs unaires. Les valeurs des opérateurs de cumul personnalisé qui sont stockés dans cette colonne sont appliquées à chaque membre de l'attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans une dimension contenant une relation parent-enfant dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous spécifiez une colonne d’opérateur unaire (ou cumul personnalisé) qui détermine le cumul personnalisé de tous les membres non calculés de l’attribut parent. L'opérateur unaire est appliqué aux membres dès que les valeurs des membres parents sont évaluées. La propriété **UnaryOperatorColumn** définie sur un attribut parent (**Usage**=Parent) spécifie la colonne d’une table dans la vue de source de données qui contient les opérateurs unaires. Les valeurs des opérateurs de cumul personnalisé qui sont stockés dans cette colonne sont appliquées à chaque membre de l'attribut.  
   
  Vous pouvez créer et modifier un calcul nommé sur une table de dimension de la vue de source de données en tant que colonne d'opérateur unaire. L'expression la plus simple, soit « + », retourne le même opérateur pour tous les membres. Mais vous pouvez utiliser n'importe quelle expression dès lors qu'elle retourne un opérateur pour chaque membre.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  Sous l’onglet **Navigateur** du Concepteur de dimensions, vous pouvez afficher les opérateurs unaires en regard de chaque membre d’une hiérarchie. Vous pouvez également modifier les opérateurs unaires lorsque vous utilisez une dimension activée en écriture. Si la dimension n'est pas activée en écriture, vous devez utiliser un outil pour modifier directement la source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d'attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Opérateurs de cumul personnalisés dans les Dimensions Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Démarrer l’Assistant Business Intelligence dans le Concepteur de dimensions](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
