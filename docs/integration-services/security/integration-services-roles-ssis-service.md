@@ -29,10 +29,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Rôles Integration Services (Service SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit certains rôles fixes de niveau base de données pour aider à sécuriser l’accès aux packages stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les rôles disponibles diffèrent selon que vous enregistrez les packages dans la base de données du catalogue SSIS (SSISDB) ou dans la base de données msdb.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
      La liste de vues est la suivante : [catalog].[projects], [catalog].[packages], [catalog].[operations], [catalog].[extended_operation_info], [catalog].[operation_messages], [catalog].[event_messages], [catalog].[execution_data_statistics], [catalog].[execution_component_phases], [catalog].[execution_data_taps], [catalog].[event_message_context], [catalog].[executions], [catalog].[executables], [catalog].[executable_statistics], [catalog].[validations], [catalog].[execution_parameter_values] et [catalog].[execution_property_override_values].  
   
 ## <a name="roles-in-the-msdb-database"></a>Rôles dans la base de données msdb  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut trois rôles fixes de niveau base de données : **db_ssisadmin**, **db_ssisltduser**et **db_ssisoperator**. Ces rôles permettent de contrôler l’accès aux packages enregistrés dans la base de données **msdb** . Vous affectez des rôles à un package à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les affectations de rôles sont enregistrées dans la base de données **ms** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut trois rôles fixes de niveau base de données : **db_ssisadmin**, **db_ssisltduser** et **db_ssisoperator**. Ces rôles permettent de contrôler l’accès aux packages enregistrés dans la base de données **msdb**. Vous affectez des rôles à un package à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les affectations de rôles sont enregistrées dans la base de données **ms** .  
   
 ### <a name="read-and-write-actions"></a>Actions de lecture et d'écriture  
  Le tableau suivant décrit les actions de lecture et d’écriture de Windows et des rôles fixes de niveau base de données dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

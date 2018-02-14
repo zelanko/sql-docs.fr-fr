@@ -8,27 +8,31 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: instance configuration, Setup
+f1_keywords:
+- instance configuration, Setup
 helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: "62"
+caps.latest.revision: 
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 611c6f16d9b7e278a64af18e13c24ae7217a3d95
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 16c42d4f6864e94c475ba917c75c8219d96245ce
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="installation-wizard-help"></a>Aide de l’assistant Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit quelques-unes des pages de configuration de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Cet article décrit quelques-unes des pages de configuration de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 ## <a name="instance-configuration"></a>Configuration de l'instance
 Utilisez la page **Configuration d’une instance** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier s’il faut créer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas déjà installée, une instance par défaut est créée, sauf si vous spécifiez une instance nommée.  
@@ -108,7 +112,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
 -   **Même état cluster**  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est pas sensible aux clusters.  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas sensible aux clusters.  
   
 -   **Même système d’exploitation**  
   
@@ -125,7 +129,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
 > [!NOTE]  
 >  Le contrôle de compte d'utilisateur est une fonctionnalité de sécurité Windows qui requiert qu'un administrateur approuve de façon spécifique les actions ou applications administratives avant qu'elles soient autorisées à s'exécuter. Dans la mesure où le contrôle de compte d'utilisateur est activé par défaut, vous serez invité à autoriser des opérations spécifiques qui requièrent des privilèges élevés. Vous pouvez configurer le contrôle de compte d'utilisateur de manière à modifier son comportement par défaut ou à le personnaliser pour des programmes spécifiques. Pour plus d’informations sur la configuration des contrôles de compte d’utilisateur, consultez [Guide pas à pas du contrôle de compte d’utilisateur](http://go.microsoft.com/fwlink/?linkid=196350) et [User Account Control (Contrôle de compte d’utilisateur) Wikipédia](http://go.microsoft.com/fwlink/?linkid=196351).  
   
-### <a name="see-also"></a>Voir aussi  
+### <a name="see-also"></a> Voir aussi  
  [Configurer les comptes de service &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Configuration de Analysis Services – Répertoires de données
@@ -142,7 +146,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 ### <a name="notes"></a>Remarques  
   
--   Les instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployées sur une batterie de serveurs SharePoint stockent des fichiers d'application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d'application de service.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Les instances déployées sur une batterie de serveurs SharePoint stockent des fichiers d’application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d’application de service.  
   
 -   Lors de l'ajout de fonctionnalités à une installation existante, vous ne pouvez ni modifier l'emplacement d'une fonctionnalité précédemment installée, ni spécifier l'emplacement d'une nouvelle fonctionnalité.  
 
@@ -158,7 +162,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
     -   dans un répertoire où figurent des fichiers système ;  
   
-### <a name="see-also"></a>Voir aussi  
+### <a name="see-also"></a> Voir aussi  
  Pour plus d’informations sur les répertoires, les emplacements de fichiers et l’affectation de noms aux ID d’instance, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
 ## <a name="database-engine-configuration---data-directories"></a>Configuration du moteur de base de données – Répertoires de données
@@ -173,7 +177,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Répertoire de données racine|Disque local, serveur de fichiers SMB, stockage partagé* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d’accès pour les répertoires de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et met fin à l’héritage dans le cadre de la configuration.|  
+|Répertoire de données racine|Disque local, serveur de fichiers SMB, stockage partagé* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d'installation configurera les listes de contrôle d'accès pour les répertoires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rompra l'héritage dans le cadre de la configuration.|  
 |Répertoire de base de données utilisateur|Disque local, serveur de fichiers SMB, stockage partagé*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data |Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.|  
 |Répertoire du journal de la base de données utilisateur|Disque local, serveur de fichiers SMB, stockage partagé*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data|Assurez-vous que le répertoire du journal a un espace adéquat.|  
 |Répertoire de sauvegarde|Disque local, serveur de fichiers SMB, stockage partagé*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Backup|Définissez les autorisations appropriées pour empêcher la perte de données et vérifiez que le compte d'utilisateur pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
@@ -185,7 +189,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Répertoire de données racine|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d’accès pour les répertoires de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et met fin à l’héritage dans le cadre de la configuration.|  
+|Répertoire de données racine|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d'installation configurera les listes de contrôle d'accès pour les répertoires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rompra l'héritage dans le cadre de la configuration.|  
 |Répertoire de base de données utilisateur|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.|  
 |Répertoire du journal de la base de données utilisateur|Stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Assurez-vous que le répertoire du journal a un espace adéquat.|  
 |Répertoire de sauvegarde|Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Backup<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Définissez les autorisations appropriées pour empêcher la perte de données et vérifiez que le compte d'utilisateur pour le service SQL Server a les autorisations adéquates pour écrire dans le répertoire de sauvegarde. L'utilisation d'un lecteur mappé pour les répertoires de sauvegarde n'est pas prise en charge.|  
@@ -217,7 +221,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
     -   sur un lecteur réseau mappé sur une instance de cluster de basculement.  
   
-### <a name="see-also"></a>Voir aussi  
+### <a name="see-also"></a> Voir aussi  
 ### <a name="analysis-services-configuration---data-directories"></a>Configuration de Analysis Services – Répertoires de données
   Les répertoires par défaut indiqués dans le tableau suivant sont configurables par l'utilisateur pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’autorisation d’accéder à ces fichiers est accordée aux administrateurs locaux et aux membres du groupe de sécurité SQLServerMSASUser$\<instance> qui est créé et approvisionné lors de l’installation.  
   
@@ -232,7 +236,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 #### <a name="notes"></a>Remarques  
   
--   Les instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployées sur une batterie de serveurs SharePoint stockent des fichiers d'application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d'application de service.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Les instances déployées sur une batterie de serveurs SharePoint stockent des fichiers d’application, des fichiers de données et des propriétés dans les bases de données de contenu et les bases de données d’application de service.  
   
 -   Lors de l'ajout de fonctionnalités à une installation existante, vous ne pouvez ni modifier l'emplacement d'une fonctionnalité précédemment installée, ni spécifier l'emplacement d'une nouvelle fonctionnalité.  
 
@@ -248,7 +252,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
     -   dans un répertoire où figurent des fichiers système ;  
   
-#### <a name="see-also"></a>Voir aussi  
+#### <a name="see-also"></a> Voir aussi  
  Pour plus d’informations sur les répertoires, les emplacements de fichiers et l’affectation de noms aux ID d’instance, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
@@ -270,7 +274,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
  **Permettre aux clients distants d'avoir un accès en continu aux données FILESTREAM**  
  Sélectionnez ce contrôle pour permettre aux clients distants d'accéder à ces données FILESTREAM sur ce serveur.  
   
-### <a name="see-also"></a>Voir aussi  
+### <a name="see-also"></a> Voir aussi  
  [Activer et configurer FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
 
@@ -305,21 +309,21 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Ne définissez jamais un mot de passe d'administrateur système (SA) vide ou faible.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Ne définissez jamais un mot de passe sa vide ou faible.  
   
  **Mode mixte (authentification Windows ou authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
  Permet aux utilisateurs de se connecter en utilisant l'authentification Windows ou l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les utilisateurs qui se connectent via un compte d'utilisateur Windows peuvent utiliser des connexions approuvées qui sont validées par Windows.  
   
- Si vous devez choisir l'authentification en mode mixte et utiliser des connexions SQL pour vous adapter à des applications héritées, définissez des mots de passe forts pour tous les comptes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si vous devez choisir l'authentification en mode mixte et utiliser des connexions SQL pour vous adapter à des applications héritées, définissez des mots de passe forts pour tous les comptes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  L'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fournie uniquement dans un souci de compatibilité descendante. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’authentification est fournie uniquement dans un souci de compatibilité descendante. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **Entrez le mot de passe**  
  Entrez et confirmez la connexion d'administrateur système (sa). Les mots de passe constituant la première ligne de défense contre les intrus, le choix de mots de passe forts est essentiel à la sécurité de votre système. Ne définissez jamais un mot de passe sa vide ou faible.  
   
 > [!NOTE]  
->  Les mots de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent contenir de 1 à 128 caractères, constitués d’une combinaison quelconque de lettres, de symboles et de chiffres. Si vous choisissez l'authentification en mode mixte, vous devez d'abord entrer un mot de passe sa fort avant de passer à la page suivante de l'Assistant Installation.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les mots de passe peuvent contenir de 1 à 128 caractères, notamment des lettres, des symboles et des chiffres. Si vous choisissez l'authentification en mode mixte, vous devez d'abord entrer un mot de passe sa fort avant de passer à la page suivante de l'Assistant Installation.  
   
  **Instructions sur les mots de passe forts**  
  Les mots de passe forts ne peuvent pas être aisément devinés par une personne et ils ne sont pas aisément piratés par un programme informatique. Les mots de passe forts ne peuvent pas utiliser des conditions ou des termes interdits, notamment :  
@@ -354,7 +358,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
  Les mots de passe entrés sur cette page doivent répondre aux exigences des stratégies de mots de passe forts. Si vous avez un processus automatisé qui utilise l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assurez-vous que le mot de passe répond aux exigences des stratégies de mots de passe forts.  
   
-### <a name="related-content"></a>Contenu connexe  
+### <a name="related-content"></a>Contenu associé  
  Pour plus d'informations sur le choix de l'authentification Windows ou de Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], voir [Choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md).  
   
  Pour plus d’informations sur le choix d’un compte pour l’exécution de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
@@ -369,7 +373,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**Répertoires de données**|Disque local, serveur de fichiers SMB, stockage partagé* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data|Le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d’accès pour les répertoires de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et met fin à l’héritage dans le cadre de la configuration.<br /><br /> Les meilleures pratiques recommandées pour les répertoires **temdb** dépendent de la charge de travail et des exigences en matière de performances. Spécifiez plusieurs dossiers/lecteurs pour répartir les fichiers de données sur plusieurs volumes.|  
+|**Répertoires de données**|Disque local, serveur de fichiers SMB, stockage partagé* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d'installation configurera les listes de contrôle d'accès pour les répertoires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rompra l'héritage dans le cadre de la configuration.<br /><br /> Les meilleures pratiques recommandées pour les répertoires **temdb** dépendent de la charge de travail et des exigences en matière de performances. Spécifiez plusieurs dossiers/lecteurs pour répartir les fichiers de données sur plusieurs volumes.|  
 |**Répertoire du journal**|Disque local, serveur de fichiers SMB, stockage partagé*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data|Assurez-vous que le répertoire du journal a un espace adéquat.|  
   
  *Même si les disques partagés sont pris en charge, cette méthode n’est pas recommandée pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -379,7 +383,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Répertoire de données**tempdb** |Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\Data<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure les listes de contrôle d’accès pour les répertoires de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et met fin à l’héritage dans le cadre de la configuration.<br /><br /> Assurez-vous que le ou les répertoires spécifiés (si plusieurs fichiers sont spécifiés) sont valides pour tous les nœuds du cluster. Pendant le basculement, si les répertoires **tempdb** ne sont pas disponibles sur le nœud de basculement cible, la ressource SQL Server ne sera pas en ligne.|  
+|Répertoire de données**tempdb** |Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\Data<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d'installation configurera les listes de contrôle d'accès pour les répertoires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rompra l'héritage dans le cadre de la configuration.<br /><br /> Assurez-vous que le ou les répertoires spécifiés (si plusieurs fichiers sont spécifiés) sont valides pour tous les nœuds du cluster. Pendant le basculement, si les répertoires **tempdb** ne sont pas disponibles sur le nœud de basculement cible, la ressource SQL Server ne sera pas en ligne.|  
 |Répertoire du journal**tempdb** |Disque local, stockage partagé, serveur de fichiers SMB|\<Lecteur:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<ID_instance>\MSSQL\Data<br /><br /> Conseil : si le disque partagé a été sélectionné à la page **Sélection du disque du cluster** , la valeur par défaut est le premier disque partagé. La valeur par défaut de ce champ est vide si aucune sélection n'a été effectuée à la page **Sélection du disque du cluster** .|Les meilleures pratiques recommandées pour les répertoires de données utilisateur dépendent de la charge de travail et des exigences en matière de performances.<br /><br /> Assurez-vous que le répertoire spécifié est valide pour tous les nœuds du cluster. Pendant le basculement, si les répertoires **tempdb** ne sont pas disponibles sur le nœud de basculement cible, la ressource SQL Server ne sera pas en ligne.<br /><br /> Assurez-vous que le répertoire du journal a un espace adéquat.|  
   
 ### <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
@@ -428,11 +432,11 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 -   Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les composants [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent également être installés dans des répertoires distincts.  
   
-### <a name="see-also"></a>Voir aussi  
+### <a name="see-also"></a> Voir aussi  
  [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Autorisations de partage et NTFS sur un serveur de fichiers](http://go.microsoft.com/fwlink/?LinkID=206571)  
 
-## <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
+## <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
 La page **Instance utilisateur** permet de générer une instance distincte du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les utilisateurs sans autorisations d’administrateur, et d’ajouter des utilisateurs dans le rôle d’administrateur.  
   
 ### <a name="option"></a>Option  
@@ -447,7 +451,7 @@ La page **Instance utilisateur** permet de générer une instance distincte du [
  Ajouter l'utilisateur au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Par défaut, cette option est désactivée. Pour ajouter l'utilisateur du programme d'installation en cours au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , activez la case à cocher.  
   
- Les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui sont membres de BUILTIN\Administrateurs ne sont pas ajoutés automatiquement au rôle de serveur fixe sysadmin quand ils se connectent à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Seuls les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui ont été ajoutés explicitement à un rôle d'administrateur de niveau serveur peuvent administrer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tous les membres du groupe Built-In\Users peuvent se connecter à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mais ils auront des autorisations limitées pour effectuer les tâches de base de données. Pour cette raison, les utilisateurs dont les privilèges [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] sont hérités de BUILTIN\Administrators et de Built-In\Users dans les versions précédentes de Windows doivent bénéficier explicitement des privilèges d’administrateur dans les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui s’exécutent sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+ [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Les utilisateurs qui sont membres de BUILTIN\Administrateurs ne sont pas ajoutés automatiquement au rôle serveur fixe sysadmin quand ils se connectent à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Seuls les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui ont été ajoutés explicitement à un rôle d'administrateur de niveau serveur peuvent administrer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tous les membres du groupe Built-In\Users peuvent se connecter à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mais ils auront des autorisations limitées pour effectuer les tâches de base de données. Pour cette raison, les utilisateurs dont les privilèges [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] sont hérités de BUILTIN\Administrators et de Built-In\Users dans les versions précédentes de Windows doivent bénéficier explicitement des privilèges d’administrateur dans les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui s’exécutent sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
  Pour apporter des modifications quelconques aux rôles d'utilisateur une fois le programme d'installation terminé, utilisez l'outil Configuration de la surface d'exposition [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (SQLSAC.exe). Pour mettre à jour la liste des utilisateurs dans le rôle Administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur le lien **Ajouter un nouvel administrateur** .  
   

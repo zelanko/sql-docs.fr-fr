@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
@@ -31,7 +31,7 @@ Créez des rapports mobiles sur une aire de conception avec des lignes et des co
 Cet article explique comment :   
   
 - Créer un jeu de données et une source de données partagés sur le portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , avec la base de données AdventureWorks comme exemple de source de données.  
-- Créer un rapport mobile Reporting Services dans l’ [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
+- Créer un rapport mobile Reporting Services dans [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - Publier le rapport mobile sur le portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
 - Afficher le rapport mobile dans l’application mobile Power BI.  
   

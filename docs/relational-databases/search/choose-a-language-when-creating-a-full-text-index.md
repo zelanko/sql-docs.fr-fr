@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="breaking"></a> Analyse lexicale  
- Un analyseur lexical crée des jetons dans le texte indexé à partir des limites des mots, qui sont spécifiques aux langues. Par conséquent, le comportement d'analyse lexicale diffère d'une langue à l'autre. Si vous utilisez une langue x indexer plusieurs langues {x, y et z}, une partie du comportement peut donner lieu à des résultats inattendus. Par exemple, un tiret (-) ou une virgule (,) peut être un élément d'analyseur lexical pouvant être rejeté dans une langue mais pas dans un autre. Un comportement de génération de formes dérivées rarement inattendu peut également se produire parce qu'un mot donné peut être dérivé différemment dans une autre langue. Par exemple, en anglais, les limites des mots sont généralement fixées par des espaces blancs ou un signe de ponctuation. Dans d'autres langues, par exemple l'allemand, les mots ou les caractères peuvent être accolés. Par conséquent, le choix de la langue d'une colonne doit être représentatif de la langue destinée à être stockée dans les lignes de cette colonne.  
+ Un analyseur lexical crée des jetons dans le texte indexé à partir des limites des mots, qui sont spécifiques aux langues. Par conséquent, le comportement d'analyse lexicale diffère d'une langue à l'autre. Si vous utilisez une langue x pour indexer plusieurs langues {x, y et z}, une partie du comportement peut donner lieu à des résultats inattendus. Par exemple, un tiret (-) ou une virgule (,) peut être un élément d'analyseur lexical pouvant être rejeté dans une langue mais pas dans un autre. Un comportement de génération de formes dérivées rarement inattendu peut également se produire parce qu'un mot donné peut être dérivé différemment dans une autre langue. Par exemple, en anglais, les limites des mots sont généralement fixées par des espaces blancs ou un signe de ponctuation. Dans d'autres langues, par exemple l'allemand, les mots ou les caractères peuvent être accolés. Par conséquent, le choix de la langue d'une colonne doit être représentatif de la langue destinée à être stockée dans les lignes de cette colonne.  
   
 ### <a name="western-languages"></a>Langues occidentales  
  Pour la famille des langues occidentales, si vous êtes incertain quant aux langues qui seront stockées dans une colonne ou si vous pensez en stocker plusieurs, la solution de contournement générale est d'utiliser l'analyseur lexical pour la langue la plus complexe pouvant être stockée dans la colonne. Par exemple, vous pouvez vous attendre à stocker du contenu en anglais, en espagnol et en allemand dans une colonne unique. Ces trois langues occidentales possèdent des modes d'analyse lexicale très semblables, les modes allemands étant les plus complexes. Par conséquent, un bon choix dans ce cas serait d'utiliser l'analyseur lexical allemand, qui doit être en mesure de traiter le texte anglais et espagnol correctement. Par contre, il se peut que l'analyseur lexical anglais ne puisse pas traiter parfaitement le texte allemand à cause des mots composés allemands.  
