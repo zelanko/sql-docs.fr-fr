@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a6407cbe969ff2d5e016849acbcd148e540a69
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 643ba52d666c9661d66a8a7e8039dba5e7f38549
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-data-sql-server"></a>Utiliser les données modifiées (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Les données modifiées sont mises à disposition des consommateurs de capture de données modifiées par le biais de fonctions table. Toutes les requêtes de ces fonctions requièrent deux paramètres afin de définir la plage de numéros séquentiels dans le journal (LSN) éligibles lors du développement du jeu de résultats retourné. Les valeurs supérieures et inférieures de ces numéros qui lient l'intervalle sont considérées comme étant incluses dans l'intervalle.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les données modifiées sont mises à disposition des consommateurs de capture de données modifiées par le biais de fonctions table. Toutes les requêtes de ces fonctions requièrent deux paramètres afin de définir la plage de numéros séquentiels dans le journal (LSN) éligibles lors du développement du jeu de résultats retourné. Les valeurs supérieures et inférieures de ces numéros qui lient l'intervalle sont considérées comme étant incluses dans l'intervalle.  
   
  Plusieurs fonctions sont fournies pour aider à déterminer les valeurs LSN appropriées utilisables dans l'interrogation d'une fonction table. La fonction [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) retourne la valeur LSN la plus faible associée à un intervalle de validité d’instance de capture. L'intervalle de validité est l'intervalle de temps pendant lequel des données modifiées sont disponibles pour leurs instances de capture. La fonction [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) retourne la valeur LSN la plus élevée dans l’intervalle de validité. Les fonctions [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) et [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) aident à placer des valeurs LSN sur une chronologie classique. Étant donné que la capture de données modifiées utilise des intervalles de requête fermés, il est quelquefois nécessaire de générer la valeur LSN suivante dans une séquence afin de s'assurer que les modifications ne sont pas dupliquées dans des fenêtres de requête consécutives. Les fonctions [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) et [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) sont utiles quand un ajustement incrémentiel d’une valeur LSN est nécessaire.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Functions"></a> Fonctions de requête  
  Selon les caractéristiques de la table source faisant l'objet d'un suivi et la configuration de son instance de capture, une ou deux fonctions table sont générées pour la recherche des données modifiées.  
   
--   La fonction [cdc.fn_cdc_get_all_changes_<instance_de_capture>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) retourne toutes les modifications qui ont été effectuées pendant l’intervalle spécifié. Cette fonction est toujours générée. Les entrées sont toujours retournées triées, tout d'abord par le numéro LSN de validation de transaction de la modification, puis par une valeur qui classe la modification dans sa transaction. Selon l'option de filtre de lignes choisie, la ligne finale est retournée lors de la mise à jour (option de filtre de lignes « all ») ou les valeurs ancienne et nouvelle sont toutes deux retournées lors de la mise à jour (option de filtre de lignes « all update old »).  
+-   La fonction [cdc.fn_cdc_get_all_changes_<instance_de_capture>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) retourne toutes les modifications qui ont été effectuées pendant l’intervalle spécifié. Cette fonction est toujours générée. Les entrées sont toujours retournées triées, tout d'abord par le numéro LSN de validation de transaction de la modification, puis par une valeur qui classe la modification dans sa transaction. Selon l'option de filtre de lignes choisie, la ligne finale est retournée lors de la mise à jour (option de filtre de lignes « all ») ou les valeurs ancienne et nouvelle sont toutes deux retournées lors de la mise à jour (option de filtre de lignes « all update old »).  
   
 -   La fonction [cdc.fn_cdc_get_net_changes_<instance_de_capture>](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) est générée quand le paramètre @supports_net_changes a pour valeur 1 quand la table source est activée.  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="querying-using-datetime-wrapper-functions"></a>Recherche à l'aide de fonctions Wrapper Datetime  
  Un scénario d'application type de recherche de données modifiées consiste à demander périodiquement des données modifiées en utilisant une fenêtre glissante délimitée par des valeurs datetime. Pour cette classe de consommateurs, la capture des données modifiées fournit la procédure stockée [sys.sp_cdc_generate_wrapper_function](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md) qui génère des scripts permettant de créer des fonctions Wrapper personnalisées pour les fonctions de requête de capture des données modifiées. Ces wrappers personnalisés permettent d'exprimer l'intervalle de requête comme une paire de valeurs datetime.  
   
- L'appel d'options pour la procédure stockée permet de générer des wrappers pour toutes les instances de capture auquel l'appelant a accès, ou uniquement pour une instance de capture spécifiée. Les options prises en charge incluent également la capacité de spécifier si le point d'arrêt supérieur de l'intervalle de capture doit être ouvert ou fermé, laquelle des colonnes capturées disponibles doit être incluse dans le jeu de résultats et laquelle des colonnes incluses doit être associée à des indicateurs de mise à jour. La procédure retourne un jeu de résultats avec deux colonnes : le nom de fonction généré, qui peut être dérivé du nom d'instance de capture, et l'instruction de création pour la procédure stockée de wrapper. La fonction permettant d'inclure dans un wrapper la requête de recherche de toutes les modifications est toujours générée. Si le paramètre @supports_net_changes a été défini lors de la création de l’instance de capture, la fonction permettant d’inclure dans un wrapper la fonction de recherche des modifications nettes est également générée.  
+ L'appel d'options pour la procédure stockée permet de générer des wrappers pour toutes les instances de capture auquel l'appelant a accès, ou uniquement pour une instance de capture spécifiée. Les options prises en charge incluent également la capacité de spécifier si le point d'arrêt supérieur de l'intervalle de capture doit être ouvert ou fermé, laquelle des colonnes capturées disponibles doit être incluse dans le jeu de résultats et laquelle des colonnes incluses doit être associée à des indicateurs de mise à jour. La procédure retourne un jeu de résultats avec deux colonnes : le nom de fonction généré, qui peut être dérivé du nom d'instance de capture, et l'instruction de création pour la procédure stockée de wrapper. La fonction permettant d'inclure dans un wrapper la requête de recherche de toutes les modifications est toujours générée. Si le paramètre @supports_net_changes a été défini lors de la création de l’instance de capture, la fonction permettant d’inclure dans un wrapper la fonction de recherche des modifications nettes est également générée.  
   
  Le concepteur d'applications est chargé d'appeler la procédure stockée de génération de script afin de générer les instructions de création pour les procédures stockées de wrapper et d'exécuter les scripts de création résultants pour créer les fonctions. Cela ne se produit pas automatiquement lorsqu'une instance de capture est créée.  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-datetime-wrapper-functions-to-transition-between-capture-instances"></a>Utilisation des fonctions wrapper Datetime pour assurer la transition entre des instances de capture  
  La capture de données modifiées prend en charge jusqu'à deux instances de capture pour une seule table source suivie. Cette fonction est principalement utilisée pour permettre une transition entre plusieurs instances de capture lorsque les modifications de langage de définition de données (DDL) effectuées sur la table source étendent le jeu des colonnes disponibles à des fins de suivi. Lors de la transition vers une nouvelle instance de capture, l'une des méthodes permettant de protéger les niveaux d'application supérieurs contre tout changement éventuel de nom des fonctions de requête sous-jacentes consiste à utiliser une fonction wrapper pour inclure dans un wrapper l'appel sous-jacent. Ensuite, vous devez vous assurer que le nom de la fonction wrapper reste le même. Lorsque le changement est sur le point de se produire, l'ancienne fonction wrapper peut être supprimée, et une nouvelle fonction wrapper portant le même nom et faisant référence aux nouvelles fonctions de requête peut être créée. Le fait de commencer par modifier le script généré pour créer une fonction wrapper du même nom vous permet de passer à une nouvelle instance de capture sans affecter les couches d'application supérieures.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91fd4695d0b68aabf95f3ba43d2cb30c18595bb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cff6cc262957d8bffbdc0955a3d276b92b1094f6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events-tools"></a>Outils associés aux événements étendus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="ddl-statements"></a>Instructions DDL  
  Utilisez les instructions DDL suivantes pour créer, modifier et supprimer une session d'événements étendus.  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)|Crée un objet de session Événements étendus qui identifie la source des événements, les cibles de la session d'événements et les paramètres de la session d'événements.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|Démarre ou arrête une session d'événements, ou modifie la configuration d'une session d'événements.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="catalog-views"></a>Affichages catalogue  
  Utilisez les affichages catalogue ci-dessous pour obtenir les métadonnées créées lorsque vous créez une session d'événements.  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|Répertorie toutes les définitions de la session d'événements.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|Retourne une ligne pour chaque action d'un événement d'une session d'événements.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Ces vues ne contiennent pas de données de session tant qu'une session n'a pas démarré.  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|Retourne des informations sur les pools de répartiteurs de la session.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|Retourne une ligne pour chaque objet exposé par un package d'événement.|  
@@ -87,12 +87,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="system-tables"></a>Tables système  
  Utilisez les tables système suivantes pour obtenir les informations à propos des équivalents Événements étendus pour les classes d'événements Trace SQL et les colonnes.  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Contient une ligne pour chaque événement Événements étendus mappé à une classe d'événements Trace SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Tables des événements étendus SQL Server &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   

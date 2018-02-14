@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43888872cd4d686363fbf995a71e0367beb3c7e7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocs atomiques dans des procédures en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -149,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Lorsqu'il est spécifié, **DATEFORMAT** remplace le format de date par défaut associé à **LANGUAGE**.|  
 |**DATEFIRST**|Lorsqu'il est spécifié, **DATEFIRST** remplace la valeur par défaut associée à **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|Les valeurs prises en charge sont **OFF** et **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Les valeurs prises en charge sont **OFF** et **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Les options SET suivantes ont la même valeur système par défaut pour tous les blocs Atomic de toutes les procédures stockées compilées en mode natif :  
   

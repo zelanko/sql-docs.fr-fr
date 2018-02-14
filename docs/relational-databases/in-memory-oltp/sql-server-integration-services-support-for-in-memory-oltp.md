@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24f5b67b776e6ea2cdb8684a0732fd9f76114cb2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57a7662de278ed7122583bc62ab02895f29aeb8f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par SQL Server Integration Services
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilisez une table à mémoire optimisée, une vue référençant des tables à mémoire optimisée ou une procédure stockée compilée en mode natif en tant que source ou destination pour votre package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). Utilisez la [source ADO NET](../../integration-services/data-flow/ado-net-source.md), la [source OLE DB](../../integration-services/data-flow/ole-db-source.md)ou la [source ODBC](../../integration-services/data-flow/odbc-source.md) dans le flux de données d’un package SSIS et configurez le composant source pour récupérer des données d’une table mémoire optimisée ou d’une vue, ou spécifiez une instruction SQL pour exécuter une procédure stockée compilée en mode natif. De même, utilisez la [destination ADO NET](../../integration-services/data-flow/ado-net-destination.md), la [destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)ou la [destination ODBC](../../integration-services/data-flow/odbc-destination.md) pour charger des données dans une table mémoire optimisée ou une vue, ou spécifiez une instruction SQL pour exécuter une procédure stockée compilée en mode natif.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Utilisez une table mémoire optimisée, une vue référençant des tables mémoire optimisées ou une procédure stockée compilée en mode natif en tant que source ou destination pour votre package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). Utilisez la [source ADO NET](../../integration-services/data-flow/ado-net-source.md), la [source OLE DB](../../integration-services/data-flow/ole-db-source.md)ou la [source ODBC](../../integration-services/data-flow/odbc-source.md) dans le flux de données d’un package SSIS et configurez le composant source pour récupérer des données d’une table mémoire optimisée ou d’une vue, ou spécifiez une instruction SQL pour exécuter une procédure stockée compilée en mode natif. De même, utilisez la [destination ADO NET](../../integration-services/data-flow/ado-net-destination.md), la [destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)ou la [destination ODBC](../../integration-services/data-flow/odbc-destination.md) pour charger des données dans une table mémoire optimisée ou une vue, ou spécifiez une instruction SQL pour exécuter une procédure stockée compilée en mode natif.  
   
  Configurez les composants source et de destination mentionnés ci-dessus dans un package SSIS pour lire/écrire dans des tables mémoire optimisées et des vues de la même façon qu'avec d'autres tables et vues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Toutefois, vous devez prendre en compte les points importants de la section suivante lorsque vous utilisez des procédures stockées compilées en mode natif.  
   
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Utilisez également la source ADO.NET et la source OLE DB pour appeler une procédure stockée compilée en mode natif. Cependant, nous vous recommandons d'utiliser la source ODBC. Si vous configurez la source ADO.NET pour exécuter une procédure stockée compilée en mode natif, un message d'erreur s'affiche, car le fournisseur de données pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), que la source ADO.NET utilise par défaut, ne prend pas en charge l'exécution des procédures stockées compilées en mode natif. Configurez la source ADO .NET de façon à ce qu'elle utilise le fournisseur de données ODBC, le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Cependant, notez que la source ODBC est plus performante que la source ADO.NET avec le fournisseur de données ODBC.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,26 +23,27 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c00fc71fb0d0bd5dadd986b14d140e1293bcafba
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-nested-triggers"></a>Créer des déclencheurs imbriqués
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Les déclencheurs DML et DDL sont imbriqués lorsqu’un déclencheur exécute une action qui lance un autre déclencheur. Ces actions peuvent lancer d'autres déclencheurs, et ainsi de suite. Les déclencheurs DML et DDL peuvent avoir jusqu'à 32 niveaux d'imbrication. Vous pouvez définir si les déclencheurs AFTER peuvent être imbriqués à l’aide de l’option de configuration serveur **nested triggers** . Les déclencheurs INSTEAD OF (seuls les déclencheurs DML peuvent être des déclencheurs INSTEAD OF) peuvent être imbriqués quelle que soit la valeur de ce paramètre.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Les déclencheurs DML et DDL sont imbriqués lorsqu'un déclencheur exécute une action qui lance un autre déclencheur. Ces actions peuvent lancer d'autres déclencheurs, et ainsi de suite. Les déclencheurs DML et DDL peuvent avoir jusqu'à 32 niveaux d'imbrication. Vous pouvez définir si les déclencheurs AFTER peuvent être imbriqués à l’aide de l’option de configuration serveur **nested triggers** . Les déclencheurs INSTEAD OF (seuls les déclencheurs DML peuvent être des déclencheurs INSTEAD OF) peuvent être imbriqués quelle que soit la valeur de ce paramètre.  
   
 > [!NOTE]  
 >  Une référence au code managé à partir d'un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)] compte pour un niveau quant à la limite d'imbrication de 32 niveaux. Les méthodes appelées à partir du code managé ne comptent pas par rapport à cette limite.  
   
  Si l'imbrication est permise et qu'un déclencheur de la chaîne démarre une boucle infinie, le niveau d'imbrication maximal est dépassé et le déclencheur s'arrête.  
   
- Les déclencheurs imbriqués peuvent s'avérer utiles pour effectuer certaines fonctions de maintenance, comme stocker une copie de sauvegarde des lignes concernées par un déclencheur précédent. Par exemple, vous pouvez créer un déclencheur sur `PurchaseOrderDetail` , qui enregistre une copie de sauvegarde des lignes `PurchaseOrderDetail` qui ont été supprimées par le déclencheur `delcascadetrig` . Lorsque le déclencheur `delcascadetrig` est actif, la suppression de `PurchaseOrderID` 1965 de `PurchaseOrderHeader` supprime la ou les lignes correspondantes de `PurchaseOrderDetail`. Pour enregistrer les données, vous pouvez créer un déclencheur DELETE sur `PurchaseOrderDetail` , qui enregistre les données supprimées dans une autre table `del_save`créée séparément. Exemple :  
+ Les déclencheurs imbriqués peuvent s'avérer utiles pour effectuer certaines fonctions de maintenance, comme stocker une copie de sauvegarde des lignes concernées par un déclencheur précédent. Par exemple, vous pouvez créer un déclencheur sur `PurchaseOrderDetail` , qui enregistre une copie de sauvegarde des lignes `PurchaseOrderDetail` qui ont été supprimées par le déclencheur `delcascadetrig` . Lorsque le déclencheur `delcascadetrig` est actif, la suppression de `PurchaseOrderID` 1965 de `PurchaseOrderHeader` supprime la ou les lignes correspondantes de `PurchaseOrderDetail`. Pour enregistrer les données, vous pouvez créer un déclencheur DELETE sur `PurchaseOrderDetail` , qui enregistre les données supprimées dans une autre table `del_save`créée séparément. Exemple :  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -188,9 +190,9 @@ Paul                           Alice                          0
   
  **Pour définir l'option de base de données RECURSIVE_TRIGGERS**  
   
--   [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+-   [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Configurer l'option de configuration du serveur nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

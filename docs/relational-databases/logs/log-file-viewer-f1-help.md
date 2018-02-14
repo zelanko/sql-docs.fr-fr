@@ -8,25 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.swb.configurelogs.errorlog.f1
-helpviewer_keywords: Log File Viewer
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d31e8fe3a5403342c244df36810de2e76f8cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63be87acc6f5ef1f550f7ec9d03cad7eab93e6a6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="log-file-viewer-f1-help"></a>Visionneuse du fichier journal - Aide (F1)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La visionneuse du fichier journal affiche les informations de journalisation de nombreux composants différents. Après avoir ouvert la visionneuse du fichier journal, utilisez le volet **Sélectionner les journaux** pour sélectionner les journaux à afficher. Chaque journal affiche des colonnes appropriées à ce type de journal.  
+# <a name="log-file-viewer-f1-help"></a>Aide sur la visionneuse du fichier journal via la touche F1
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La visionneuse du fichier journal affiche les informations de journalisation de nombreux composants différents. Après avoir ouvert la visionneuse du fichier journal, utilisez le volet **Sélectionner les journaux** pour sélectionner les journaux à afficher. Chaque journal affiche des colonnes appropriées à ce type de journal.  
   
  Les journaux disponibles dépendent de la manière dont la visionneuse du fichier journal est ouverte. Pour plus d’informations, consultez [Ouvrir la Visionneuse du fichier journal](../../relational-databases/logs/open-log-file-viewer.md).  
   
@@ -81,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  L’accès aux fichiers journaux des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion nécessite un accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement10** et au dossier où sont stockés les fichiers journaux. Pour plus d’informations, consultez la section Sécurité de la rubrique [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)   
  [Ouvrir la Visionneuse du fichier journal](../../relational-databases/logs/open-log-file-viewer.md)   
  [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)  

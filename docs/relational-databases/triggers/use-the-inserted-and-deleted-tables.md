@@ -22,18 +22,19 @@ helpviewer_keywords:
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Les instructions de déclenchement DML utilisent deux tables spéciales : la table deleted et la table inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Ces tables temporaires résidant en mémoire servent à tester les effets de certaines modifications de données et à définir des conditions pour les actions de déclencheur DML. Vous ne pouvez pas modifier directement les données contenues dans les tables ou effectuer des opérations DDL (Data Definition Language) sur les tables, telles que CREATE INDEX.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Les instructions de déclenchement DML utilisent deux tables spéciales : la table deleted et la table inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Ces tables temporaires résidant en mémoire servent à tester les effets de certaines modifications de données et à définir des conditions pour les actions de déclencheur DML. Vous ne pouvez pas modifier directement les données contenues dans les tables ou effectuer des opérations DDL (Data Definition Language) sur les tables, telles que CREATE INDEX.  
   
  Dans les déclencheurs DML, les tables inserted et deleted sont principalement utilisées pour exécuter les opérations suivantes :  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  Les contraintes CHECK pouvant référencer uniquement les colonnes sur lesquelles des contraintes de niveau table ou colonne sont définies, toutes les contraintes entre tables (dans ce cas, des règles de gestion) doivent être définies sous la forme de déclencheurs.  
   
- L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Créer de déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  Lorsqu'une instruction INSERT, UPDATE ou DELETE fait référence à une vue possédant un déclencheur INSTEAD OF, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] appelle le déclencheur au lieu d'effectuer une opération directe sur une table. Le déclencheur doit utiliser les informations présentées dans les tables inserted et deleted pour élaborer toute instruction nécessaire à l'implémentation de l'action requise dans les tables de base, même si le format des informations contenues dans les tables inserted et deleted conçues pour la vue diffère de celui des données stockées dans les tables de base.  
   
- Le format des tables inserted et deleted passées à un déclencheur INSTEAD OF défini sur une vue correspond à la liste de sélection de l'instruction SELECT définie pour la vue. Par exemple :  
+ Le format des tables inserted et deleted passées à un déclencheur INSTEAD OF défini sur une vue correspond à la liste de sélection de l'instruction SELECT définie pour la vue. Exemple :  
   
 ```  
 USE AdventureWorks2012;  

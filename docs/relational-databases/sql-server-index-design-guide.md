@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d48c41769f674278a1597dd52e40758a928a9b6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ Ce guide couvre les types d’index suivants :
 -   Non-cluster
 -   Unique
 -   Filtré
--   Columnstore
+-   columnstore
 -   Hachage
 -   Non-cluster à mémoire optimisée
 
@@ -137,13 +138,13 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
 -   Pensez à indexer les colonnes calculées. Pour plus d'informations, consultez [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### <a name="index-characteristics"></a>Caractéristiques des index  
- Après avoir déterminé qu'un index est approprié pour une requête, vous pouvez sélectionner le type d'index qui convient le mieux à la situation. Un index peut avoir les caractéristiques suivantes :  
+ Après avoir déterminé qu'un index est approprié pour une requête, vous pouvez sélectionner le type d'index qui convient le mieux à la situation. Un index doit posséder les caractéristiques suivantes :  
   
 -   être cluster ou non-cluster ;  
 -   être unique ou non unique ;  
 -   être à une ou plusieurs colonnes ;  
 -   être trié par ordre croissant ou décroissant d'après les colonnes qui le constituent ;  
--   être de table entière ou filtré pour les index non-cluster ;  
+-   table entière plutôt que filtré pour les index non cluster.  
 -   être columnstore ou rowstore ;
 -   être de type hachage ou non-cluster pour les tables à mémoire optimisée.
   
@@ -154,7 +155,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
   
  Par défaut, les index sont stockés dans le même groupe de fichiers que la table de base sur laquelle est créé l'index. Un index cluster non partitionné et la table de base résident toujours dans le même groupe de fichiers. Toutefois, vous pouvez effectuer les opérations suivantes :  
   
--   créer des index non-cluster dans un groupe de fichiers différent de celui de la table de base ou de l'index cluster ;  
+-   créer des index non cluster dans un groupe de fichiers différent de celui de la table de base ou de l'index cluster ;  
 -   partitionner des index cluster et non-cluster pour qu'ils concernent plusieurs groupes de fichiers ;  
 -   déplacer une table d'un groupe de fichiers à un autre en supprimant l'index cluster et en spécifiant un nouveau groupe de fichiers ou un nouveau schéma de partition dans la clause MOVE TO de l'instruction DROP INDEX ou en utilisant l'instruction CREATE INDEX avec la clause DROP_EXISTING.  
   
@@ -174,7 +175,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
  Pour plus d’informations, consultez [Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Indications pour la conception de l'ordre de tri des index  
- Lorsque vous définissez des index, vous devez déterminer si les données de la colonne clé d'index doivent être stockées dans l'ordre croissant ou décroissant. L'ordre croissant est l'option par défaut et maintient la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La syntaxe des instructions CREATE INDEX, CREATE TABLE et ALTER TABLE permet l'application des mots clés ASC (croissant) et DESC (décroissant) à chaque colonne d'un index et d'une contrainte.  
+ Lorsque vous définissez des index, vous devez déterminer si les données de la colonne clé d'index doivent être stockées dans l'ordre croissant ou décroissant. L'ordre croissant est l'option par défaut et maintient la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La syntaxe des instructions CREATE INDEX, CREATE TABLE et ALTER TABLE permet l'application des mot clés ASC (croissant) et DESC (décroissant) à chaque colonne d'un index et d'une contrainte.  
   
  La spécification de l'ordre dans lequel les valeurs de clé sont stockées dans un index est utile lorsque les requêtes référençant la table possèdent des clauses ORDER BY qui définissent différents sens pour la ou les colonnes clés de cet index. Dans ces situations, l'index peut supprimer la nécessité d'un opérateur SORT dans le plan de requête, ce qui rend la requête plus efficace. Par exemple, les acheteurs du service achat de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] doivent évaluer la qualité des produits qu'ils acquièrent auprès des fournisseurs. Les acheteurs souhaitent notamment rechercher, parmi les produits envoyés par ces fournisseurs, ceux qui affichent un degré de rejet élevé. Comme le montre la requête suivante, l’extraction des données en fonction de ce critère nécessite que la colonne `RejectedQty` de la table `Purchasing.PurchaseOrderDetail` soit triée dans l’ordre décroissant (de la valeur la plus élevée à la valeur la plus faible), et que la colonne `ProductID` soit triée dans l’ordre croissant (de la valeur la plus faible à la valeur la plus élevée).  
   
@@ -262,7 +263,7 @@ Utilisez ces vues de métadonnées pour voir les attributs des index. Des inform
   
 -   utilisent des clauses `JOIN` ; ce sont en général des colonnes clés étrangères ;  
   
--   utilisent des clauses `ORDER BY` ou `GROUP BY`.  
+-   Utilisent des clauses `ORDER BY` ou `GROUP BY`.  
   
      Si un index est présent sur les colonnes spécifiées dans la clause ORDER BY ou GROUP BY, le [!INCLUDE[ssDE](../includes/ssde-md.md)] n'a plus besoin de trier les données car les lignes le sont déjà. Les requêtes présentent dès lors des performances accrues.  
   
@@ -633,7 +634,7 @@ Un *columnstore index* est une technologie permettant de stocker, extraire et g�
 
 ### <a name="columnstore-index-architecture"></a>Architecture des index columnstore
 
-La connaissance de ces informations de base permet de comprendre plus facilement d’autres articles relatifs aux columnstores qui expliquent comment les utiliser efficacement.
+La connaissances de ces informations de base permet de comprendre plus facilement d’autres articles relatifs aux columnstores qui expliquent comment les utiliser efficacement.
 
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>Le stockage de données utilise la compression de columnstore et de rowstore
 Quand nous parlons des index columnstore, nous utilisons les termes *rowstore* et *columnstore* pour indiquer clairement le format du stockage de données. Les index columnstore utilisent les deux types de stockage.
@@ -882,7 +883,7 @@ Les performances d’un index non-cluster sont meilleures que celles d’un inde
 
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
 [Amélioration des performances avec les vues indexées SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Créer des clés primaires](../relational-databases/tables/create-primary-keys.md)    
 [Index pour les tables optimisées en mémoire](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Index columnstore - Présentation](../relational-databases/indexes/columnstore-indexes-overview.md)  

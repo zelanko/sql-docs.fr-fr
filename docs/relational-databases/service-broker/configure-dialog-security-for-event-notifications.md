@@ -8,24 +8,27 @@ ms.service:
 ms.component: service-broker
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: event notifications [SQL Server], security
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1245278976e4befc38913410d1769bcfeadd1f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7f03652828e07ca4f89d8c6259e4a682735e947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurer la sécurité du dialogue pour les notifications d'événements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La sécurité du dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être configurée pour les notifications d’événements qui envoient des messages à un Service Broker résidant sur un serveur distant. La sécurité du dialogue doit être configurée manuellement conformément au modèle de sécurité totale du dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le modèle de sécurité totale permet le chiffrement et le déchiffrement des messages échangés avec les serveurs distants. Même si les notifications d'événements sont envoyées dans une direction, les autres messages, comme les erreurs, sont retournés dans la direction opposée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être configurée pour les notifications d'événements qui envoient des messages à un Service Broker résidant sur un serveur distant. La sécurité du dialogue doit être configurée manuellement conformément au modèle de sécurité totale du dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le modèle de sécurité totale permet le chiffrement et le déchiffrement des messages échangés avec les serveurs distants. Même si les notifications d'événements sont envoyées dans une direction, les autres messages, comme les erreurs, sont retournés dans la direction opposée.  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>Configuration de la sécurité du dialogue pour les notifications d'événements  
  Les étapes suivantes décrivent le processus à suivre pour implémenter la sécurité du dialogue des notifications d'événements. Ces étapes incluent les actions à exécuter aussi bien sur le serveur source que sur le serveur cible. Le serveur source correspond au serveur sur lequel la notification d'événement est en cours de création. Le serveur cible désigne le serveur qui reçoit le message de notification d'événement. Vous devez effectuer les actions de chaque étape aussi bien sur le serveur source que sur le serveur cible avant de passer à l'étape suivante.  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 |Basculez vers la base de données source sur laquelle créer la notification d'événement et, si vous n'êtes pas déjà connecté en tant qu'utilisateur de la base de données source, connectez-vous maintenant.|Basculez vers la base de données cible pour recevoir les messages de notification d'événement.|  
 |[Créez la notification d'événement](../../t-sql/statements/create-event-notification-transact-sql.md)et spécifiez le Service Broker, ainsi que l'identificateur de la base de données cible.||  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

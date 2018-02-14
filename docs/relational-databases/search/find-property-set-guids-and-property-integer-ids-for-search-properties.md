@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 881c663038225af57b33aeb655306f6ef1d1f1f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique explique comment extraire les valeurs nécessaires avant d’ajouter une propriété à une liste de propriétés de recherche, et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
   
  Les propriétés de document qui sont extraites par IFilters à partir des données binaires, c’est-à-dire les données stockées dans un type de colonne de données **varbinary**, **varbinary(max)** (y compris **FILESTREAM**) ou **image** , peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
@@ -107,7 +109,7 @@ GO
   
  Pour plus d’informations sur la création d’une liste de propriétés de recherche et son association à un index de recherche en texte intégral, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

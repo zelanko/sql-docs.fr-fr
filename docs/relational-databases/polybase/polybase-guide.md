@@ -8,7 +8,8 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>Guide de PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase est une technologie qui permet d’accéder aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, elle vous permet d’exécuter des requêtes sur des données externes dans Hadoop, ou d’importer/exporter des données à partir de Stockage Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans Azure SQL Data Warehouse, vous pouvez importer/exporter des données depuis Stockage Blob Azure et Azure Data Lake Store.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase est une technologie qui permet d’accéder aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, elle vous permet d’exécuter des requêtes sur des données externes dans Hadoop, ou d’importer/exporter des données à partir de Stockage Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans Azure SQL Data Warehouse, vous pouvez importer/exporter des données depuis Stockage Blob Azure et Azure Data Lake Store.
   
   
  Pour utiliser PolyBase, consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
@@ -57,7 +59,7 @@ Pour plus de simplicité, PolyBase vous dispense d’installer des logiciels sup
   
 -   **Intégration à des outils d’aide à la décision (BI).** Vous pouvez utiliser PolyBase avec la pile d’analyse et d’aide à la décision de Microsoft ou n’importe quel outil tiers compatible avec SQL Server.  
   
-## <a name="performance"></a>Performance  
+## <a name="performance"></a>Performances  
   
 -   **Délégation des calculs à Hadoop.**L’optimiseur de requête prend une décision basée sur les coûts de déléguer les calculs à Hadoop si doit permettre d’améliorer les performances des requêtes.  Il s’appuie sur les statistiques des tables externes pour prendre la décision basée sur les coûts. La délégation des calculs a pour effet de créer des tâches MapReduce et de tirer parti des ressources de calcul distribuées de Hadoop.  
   

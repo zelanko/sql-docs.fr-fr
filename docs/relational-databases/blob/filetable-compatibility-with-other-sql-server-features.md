@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], using with other features
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f1d34f1aef0eddb13a57860fa8eb9f4219ec577
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ba1eeb760eda46825448d3ba56bae1777c533ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Décrit le fonctionnement des FileTables avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit le fonctionnement des FileTables avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Groupes de disponibilité AlwaysOn et FileTables  
  Lorsque la base de données qui contient des données FILESTREAM ou FileTable appartient à un groupe de disponibilité AlwaysOn :  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
 -   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
   
--   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Par exemple :  
+-   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Exemple :  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/17/2017
  Actuellement, les vues indexées ne peuvent pas inclure de colonnes FILESTREAM ni de colonnes calculées/calculées persistantes qui dépendent des colonnes FILESTREAM. Ce comportement reste également inchangé avec les vues définies sur le FileTable.  
   
 ##  <a name="OtherSnapshots"></a> Isolement de capture instantanée et FileTables  
- L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
+ L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
   
 -   Une base de données qui contient des FileTables peut être modifiée pour activer l'isolement RCSI/SI.  
   
@@ -123,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Vous pouvez définir la relation contenant-contenu de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données à relation contenant-contenu, telles que les utilisateurs contenus. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

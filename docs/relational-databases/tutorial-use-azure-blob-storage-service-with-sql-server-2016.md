@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9d87679a2775450c37feedec713f00c077145d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26c6376594efc1b34e50f2c058578387b6f8b7f0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Didacticiel : Utiliser le service Stockage Blob Azure avec SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bienvenue dans le didacticiel sur l’utilisation de SQL Server 2016 dans le service Stockage Blob Microsoft Azure. Ce didacticiel explique comment utiliser le service Stockage Blob Microsoft Azure pour les fichiers de données SQL Server et les sauvegardes SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Bienvenue dans le didacticiel sur l’utilisation de SQL Server 2016 dans le service Stockage Blob Microsoft Azure. Ce didacticiel explique comment utiliser le service Stockage Blob Microsoft Azure pour les fichiers de données SQL Server et les sauvegardes SQL Server.  
   
 La prise en charge de l’intégration SQL Server pour le service Stockage Blob Microsoft Azure a commencé sous la forme d’une amélioration dans SQL Server 2012 Service Pack 1 CU2 et a été affinée avec SQL Server 2014 et SQL Server 2016. Pour obtenir une vue d’ensemble des fonctionnalités et des avantages offerts par cette fonctionnalité, consultez [Fichiers de données SQL Server dans Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Pour une démonstration en situation réelle, consultez [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Démonstration de la restauration à un point dans le temps).  
   
@@ -73,9 +76,9 @@ Dans cette leçon, vous effectuez une restauration à partir d’une sauvegarde 
 Dans cette leçon, vous supprimez les jeux de sauvegarde inutiles et découvrez comment supprimer les sauvegardes d’instantanés de fichiers orphelines (le cas échéant).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
-Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)  
+Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Envoyez vos commentaires à l’adresse [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Fichiers de données SQL Server dans Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Sauvegarde SQL Server vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)  

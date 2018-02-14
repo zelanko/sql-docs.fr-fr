@@ -21,14 +21,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa6e9e16be729fba7334b26b130c8e22525e479
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2701a951f0c8847b028e3a87717ad9ac3a965529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], certaines modifications sont activées uniquement une fois que le [niveau de compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) a été changé. Cette opération a été effectuée pour plusieurs raisons :  
   
@@ -37,8 +38,10 @@ Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCu
 - Les modifications apportées au processeur de requêtes peuvent avoir des effets complexes. Même si une « bonne » modification apportée au système peut être intéressante pour la plupart des charges de travail, elle peut provoquer une régression inacceptable sur une requête importante pour d’autres. Le fait de séparer cette logique du processus de mise à niveau permet à des fonctionnalités telles que le magasin des requêtes, d’atténuer rapidement les régressions de choix de plan ou même de les éviter complètement dans les serveurs de production.  
   
 > [!IMPORTANT]  
-> Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité d’une base de données utilisateur était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les niveaux de compatibilité des bases de données tempdb, model, msdb et Resource databases sont définis sur le niveau de compatibilité actuel après la mise à niveau.
-> La base de données système master conserve le niveau de compatibilité qu’elle avait avant la mise à niveau. 
+> Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau.    
+> Si le niveau de compatibilité d’une base de données utilisateur était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
+> Les niveaux de compatibilité des bases de données tempdb, model, msdb et Resource databases sont définis sur le niveau de compatibilité actuel après la mise à niveau.   
+> La base de données système master conserve le niveau de compatibilité qu’elle avait avant la mise à niveau.    
   
 Le processus de mise à niveau permettant d’activer la nouvelle fonctionnalité du processeur de requêtes concerne le modèle de maintenance post-lancement du produit.  Certains de ces correctifs sont publiés sous [l’indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Les clients nécessitant des correctifs peuvent les choisir sans provoquer de régressions inattendues pour d’autres clients. Le modèle de maintenance post-lancement des correctifs logiciels du processeur de requêtes est documenté [ici](http://support.microsoft.com/kb/974006). À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le passage à un nouveau niveau de compatibilité rend l’indicateur de trace 4199 inutile, dans la mesure où ces correctifs ne sont plus activés par défaut dans le tout dernier niveau de compatibilité. Par conséquent, dans le cadre du processus de mise à niveau, il est important de confirmer que 4199 n’est pas activé une fois le processus de mise à niveau terminé.  
 

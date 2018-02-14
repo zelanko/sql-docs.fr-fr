@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 86c13345caa59dfb4ef9dad6f9c9cdb0ea324472
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit l’activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit l'activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Activer la capture des données modifiées pour une base de données  
  Avant qu’une instance de capture puisse être créée pour des tables individuelles, un membre du rôle serveur fixe **sysadmin** doit d’abord activer la base de données pour la capture des données modifiées. Cela se fait en exécutant la procédure stockée [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) dans le contexte de la base de données. Pour déterminer si une base de données est déjà activée, interrogez la colonne **is_cdc_enabled** dans l’affichage catalogue **sys.databases**.  

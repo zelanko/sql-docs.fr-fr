@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe3fe62c9ab9ae24f0c3fdc366e61ebfd8d480a1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3b1f88c6df9ea20d8fb0b2b27dbd5e40d6c6dfa7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installer SQL Server avec le stockage de partage de fichiers SMB
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Le flux de fichier n'est pas pris en charge actuellement sur un partage de fichiers SMB.  
@@ -87,7 +91,7 @@ ms.lasthandoff: 01/18/2018
   
 |Système d'exploitation|Version de protocole SMB2|Avantages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Performances améliorées par rapport aux versions SMB précédentes.<br /><br /> Durabilité, ce qui aide à la récupération lors de problèmes temporaires du réseau.|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2|Performances améliorées par rapport aux versions SMB précédentes.<br /><br /> Durabilité, ce qui aide à la récupération lors de problèmes temporaires du réseau.|  
 |[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, comprenant Server Core|2.1|Prise en charge de MTU volumineuses, ce qui profite aux transferts de données volumineux, par exemple lors d'opérations de sauvegarde et de restauration SQL. Cette fonction doit être activée par l'utilisateur. Pour plus d’informations sur l’activation de cette fonction, consultez [Nouveautés du protocole SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Améliorations significatives des performances, en particulier pour les charges de travail de style SQL OLTP. Ces améliorations de performances requièrent l'application d'un correctif. Pour plus d’informations sur le correctif, consultez [cet article](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], comprenant Server Core|3|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB (Server Message Block), consultez [Vue d’ensemble du protocole SMB (Server Message Block)](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, comprenant Server Core|3.2|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau, à l'aide de SMB Multichannel.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA à l'aide de SMB Direct.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB (Server Message Block), consultez [Vue d’ensemble du protocole SMB (Server Message Block)](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.<br /><br /> Optimisé pour les E/S de lecture/écriture de petite taille courantes sur OLTP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> MTU (Maximum Transmission Unit) est activé par défaut, ce qui améliore grandement les performances lors des transferts séquentiels de grande taille comme pour l'entrepôt de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la sauvegarde et la restauration de base de données.|  

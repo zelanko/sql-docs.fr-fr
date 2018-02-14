@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,19 +36,20 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca2fd82971fa8d4eb8c874b809961f5052d5fbf5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6ae2dbced7f4a077bcab341abf84eba5c189c3da
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Des index XML peuvent être créés sur des colonnes de type **xml**. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Des index XML peuvent être créés sur des colonnes de type **xml** . L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
   
 -   Les requêtes portant sur des colonnes XML sont fréquentes dans votre charge de travail. Le coût de la maintenance des index XML au cours de la modification des données doit être pris en compte lors de l'évaluation des avantages.  
   

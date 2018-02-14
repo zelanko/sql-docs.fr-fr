@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4090777c8459e5367539cd61f185dec94ac683b3
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 686fe65b9749fbafd2052d7a531f11aae44c6b65
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Accorder des autorisations sur une collection de schémas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Vous pouvez attribuer des autorisations de création d’une collection de schémas XML et accorder des autorisations sur un objet de collection de schémas XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Vous pouvez attribuer des autorisations de création d'une collection de schémas XML et accorder des autorisations sur un objet collection de schémas XML.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Attribution d'autorisations de création d'une collection de schémas XML  
  Pour créer une collection de schémas XML, les autorisations d'accès suivantes sont requises :  

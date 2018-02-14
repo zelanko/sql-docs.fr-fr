@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5d37441c773b2934b544734889a9d7c86cbdfa2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L’administration de la recherche en texte intégral pour une instance de serveur comprend :  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+L'administration de la recherche en texte intégral pour une instance de serveur comprend :  
   
 -   Des tâches de gestion du système telles que la gestion du service du lanceur FDHOST (MSSQLFDLauncher), le redémarrage du processus hôte de démon de filtre si vous modifiez les informations d'identification du compte de service, la configuration des propriétés en texte intégral à l'échelle du serveur et la sauvegarde des catalogues de texte intégral. Au niveau du serveur, par exemple, vous pouvez spécifier une langue de texte intégral par défaut qui diffère de la langue par défaut de l'instance de serveur dans son ensemble.  
   

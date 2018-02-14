@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 524988d25f9517d32729b7f10a238c3ece02f243
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df60c8809510a17664f5a5a541cd2c497782c750
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Pour éviter que l’index de recherche en texte intégral ne devienne encombré, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un mécanisme qui ignore les chaînes courantes qui ne sont d’aucune utilité pour la recherche. Ces chaînes ignorées sont appelées des *mots vides*. Pendant la création d'un index, le moteur de texte intégral omet les mots vides de l'index de recherche en texte intégral. Cela signifie que les requêtes de texte intégral ne rechercheront pas les mots vides.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Pour éviter que l'index de recherche en texte intégral ne devienne encombré, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un mécanisme qui ignore les chaînes courantes qui ne sont d'aucune utilité pour la recherche. Ces chaînes ignorées sont appelées des *mots vides*. Pendant la création d'un index, le moteur de texte intégral omet les mots vides de l'index de recherche en texte intégral. Cela signifie que les requêtes de texte intégral ne rechercheront pas les mots vides.  
    
 **Mots vides**. Un mot vide peut être un mot avec une signification dans une langue spécifique. Par exemple, en français, les mots tels que « un », « et », « est » ou « le » sont écartés de l'index de recherche en texte intégral, car ils sont inutiles dans le cadre d'une recherche. Un mot vide peut également être un *jeton* qui n’a pas de signification linguistique.  
 
@@ -128,7 +130,7 @@ Utilisez l’option de configuration de serveur [Transformer les mots parasites]
   
 |Word|Position|  
 |----------|--------------|  
-|Instructions|1|  
+|Instructions| 1|  
 |are|2|  
 |applicable|3|  
 |to|4|  

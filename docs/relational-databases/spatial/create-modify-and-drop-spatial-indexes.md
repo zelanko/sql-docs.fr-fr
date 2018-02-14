@@ -23,16 +23,17 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11d8454a5862b02e162e22ead3ca46e68b4f1354
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du type de données **geometry** ou **geography** (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du type de données **geometry** ou **geography** (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
   
  Il existe plusieurs restrictions applicables à la création d'index spatiaux. Pour plus d'informations, consultez [Restrictions sur les index spatiaux](#restrictions) dans cette rubrique.  
   

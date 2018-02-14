@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a1c8d79b11e2700f126fcddd79c0f6b1e9adc8e
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 943c310fdcf8a38a9c0c51d8d97618497537caba
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables à mémoire optimisée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, ch
   
 1.  **Analyse**. Dans cette phase, un test est effectué sur les journaux des transactions actifs pour détecter les transactions validées et enregistrées. Le moteur OLTP en mémoire identifie le point de contrôle à charger et précharge ses entrées de journal de table système. Il traite également certains enregistrements du journal d’allocation de fichier.  
   
-2.  **Restauration par progression**. Cette étape est exécutée simultanément sur les tables sur disque et sur les tables à mémoire optimisée.  
+2.  **Restauration par progression**. Cette étape est exécutée simultanément sur les tables sur disque et sur les tables mémoire optimisées.  
   
     - Pour les tables sur disque, la base de données est déplacée à la date et heure actuelles et obtient les verrous pris par les transactions non validées.  
   
@@ -57,7 +58,7 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, ch
 3.  **Annulation**. Au cours de cette phase, les transactions non validées sont restaurées.  
   
 ## <a name="process-for-improving-load-time"></a>Processus pour améliorer les temps de chargement
-Le chargement des tables à mémoire optimisée dans la mémoire peut affecter les performances de l’objectif de temps de récupération (RTO). Pour améliorer le temps de chargement des données à mémoire optimisée à partir des fichiers de données et des fichiers delta, le moteur de l’OLTP en mémoire charge les fichiers de données/delta en parallèle, comme suit :  
+Le chargement des tables mémoire optimisées dans la mémoire peut affecter les performances de l'objectif de temps de récupération (RTO). Pour améliorer le temps de chargement des données mémoire optimisées à partir des fichiers de données et des fichiers delta, le moteur de l'OLTP en mémoire charge les fichiers de données/delta en parallèle, comme suit :  
   
 -   **Création d’un filtre de mappage de delta**. Le magasin de fichiers delta référence les lignes supprimées. Un thread par conteneur lit les fichiers delta et crée un filtre de mappage de delta. (Un groupe de fichiers de données à mémoire optimisée peut avoir un ou plusieurs conteneurs.)  
   
@@ -73,6 +74,6 @@ Les tables à mémoire optimisée peuvent généralement être chargées dans la
 -   Les grandes tables à mémoire optimisée avec un ou plusieurs index non-cluster peuvent entraîner une utilisation élevée du processeur. Contrairement à un index de hachage dont le nombre de compartiments est défini lors de la création, les index non-cluster grossissent de manière dynamique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarder, restaurer et récupérer des tables à mémoire optimisée](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

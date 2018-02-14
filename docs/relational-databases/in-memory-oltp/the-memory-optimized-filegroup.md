@@ -16,16 +16,17 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff868be847d703d4ce4b8b291a725abc255a5788
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: 039fb20caa7000d9253f88016f756b0cf7babaa5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-memory-optimized-filegroup"></a>Groupe de fichiers mémoire optimisé
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour créer des tables à mémoire optimisée, vous devez d’abord créer un groupe de fichiers à mémoire optimisée. Le groupe de fichiers mémoire optimisé contient un ou plusieurs conteneurs. Chaque conteneur contient des fichiers de données, des fichiers delta ou les deux.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour créer des tables mémoire optimisées, vous devez d'abord créer un groupe de fichiers mémoire optimisé. Le groupe de fichiers mémoire optimisé contient un ou plusieurs conteneurs. Chaque conteneur contient des fichiers de données, des fichiers delta ou les deux.  
   
  Bien que les lignes de données dans les tables SCHEMA_ONLY ne soient pas conservées et que les métadonnées des tables mémoire optimisées et des procédures stockées compilées en mode natif soient stockées dans des catalogues traditionnels, le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] requiert toujours un groupe de fichiers mémoire optimisé pour les tables mémoire optimisées SCHEMA_ONLY afin de fournir une expérience uniforme pour les bases de données avec des tables mémoire optimisées.  
   

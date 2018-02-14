@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0aaccaa65855630a7b08cdae1af41fdfeeba62a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 578d41ef39b11825a175d27dfcf9af08c658ad85
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -198,7 +199,7 @@ $cngAlgorithm = New-Object System.Security.Cryptography.CngAlgorithm($cngAlgorit
 $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyName, $cngKeyParams)
 ```
 
-#### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio
+#### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio
 
 Consultez [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)(Mise en service des clés principales de colonne à l’aide de SQL Server Management Studio (SSMS)).
 
@@ -232,7 +233,7 @@ Consultez la section « Mise en service des clés principales de colonne » dans
 Consultez la documentation relative au module de sécurité matériel et au fournisseur de services de chiffrement pour savoir comment configurer le fournisseur de services de chiffrement sur un ordinateur et comment accorder aux applications et aux utilisateurs l’accès au module de sécurité matériel.
  
  
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
   
 - [Configurer des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
 - [Permuter des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)

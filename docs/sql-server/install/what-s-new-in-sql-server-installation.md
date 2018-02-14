@@ -8,23 +8,26 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 795e9e627916e62545c95be34c30f79fb4c45d2d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0bcea823209741e5fb675ff770cd89d7ad44d194
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Nouveautés dans l’installation de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’installation est prise en charge uniquement sur les processeurs x64. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ L’installation est prise en charge uniquement sur les processeurs x64. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  L'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] vous invite à spécifier le répertoire dans lequel enregistrer le package extrait. Si aucun emplacement n’est indiqué, le serveur utilise par défaut le lecteur système de l’ordinateur. Les fichiers extraits sont conservés une fois que l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est terminée.  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 12/05/2017
  La mise à niveau depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est prise en charge, mais les installations côte\-à\-côte ne le sont pas. Pour plus d’informations sur la prise en charge de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Mises à niveau des versions et éditions prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Nouveautés de SQL Server](../../sql-server/what-s-new-in-sql-server-2017.md)
 
 [Spécifications de capacité maximale pour SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ac5a72654c11211df09c5e15eef3c4e6f02d314
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d95799838948ebbffa9141049d6c75cc1a44227
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +76,7 @@ FROM sys.dm_db_column_store_row_group_physical_stats
   
  ![Rowgroup et deltastore pour un chargement par lot](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup et deltastore pour un chargement par lot")  
   
-## <a name="use-a-staging-table-to-improve-performance"></a>Utiliser une table de mise en lots pour améliorer les performances
+## <a name="use-a-staging-table-to-improve-performance"></a>Utiliser une table en préproduction pour améliorer les performances
 Si vous chargez des données uniquement pour les mettre en préproduction avant d’exécuter d’autres transformations, il sera beaucoup plus rapide de charger la table dans une table de segments de mémoire que de charger des données dans une table columnstore cluster. De plus, le chargement de données dans une table temporaire [Temporary] s’effectue également beaucoup plus rapidement que le chargement d’une table dans un stockage permanent.  
 
  Un modèle commun pour le chargement de données consiste à charger celles-ci dans une table de mise en lots, à effectuer une transformation, puis à charger celle-ci dans la table cible à l’aide de la commande suivante :  

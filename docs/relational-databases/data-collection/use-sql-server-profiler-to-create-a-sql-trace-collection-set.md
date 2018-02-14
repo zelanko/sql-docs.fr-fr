@@ -8,24 +8,27 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQL Trace collector set
+helpviewer_keywords:
+- SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 441b368db0bdf4e4268afcc26f6feb1f40a78255
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a45938e5b0c204a59d512d4b4f994832293fa120
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
   
 1.  Créer et exporter une trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
   
-3.  Pour ce scénario, veillez à ce que les valeurs de durée soient configurées pour s'afficher en millisecondes (la valeur par défaut). Pour cela, procédez comme suit :  
+3.  Pour ce scénario, veillez à ce que les valeurs de durée soient configurées pour s'afficher en millisecondes (la valeur par défaut). Pour cela, procédez comme suit :  
   
     1.  Dans le menu **Outils** , cliquez sur **Options**.  
   
@@ -105,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Cliquez sur **Exécuter** pour exécuter la requête et créer le jeu d'éléments de collecte.  
   
-5.  Dans l'Explorateur d'objets, vérifiez que le jeu d'éléments de collecte a été créé. Pour cela, procédez comme suit :  
+5.  Dans l'Explorateur d'objets, vérifiez que le jeu d'éléments de collecte a été créé. Pour cela, procédez comme suit :  
   
     1.  Cliquez avec le bouton droit sur **Gestion**, puis cliquez sur **Actualiser**.  
   
@@ -115,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Utilisez l'Explorateur d'objets pour modifier les propriétés de SPROC_CollectionSet, tel que le mode de collecte et la planification de téléchargement. Procédez de la même manière que pour les jeux d'éléments de collecte de données système fournis avec le collecteur de données.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant est le script final obtenu après l'exécution des étapes documentées dans les procédures précédentes.  
   
 ```  

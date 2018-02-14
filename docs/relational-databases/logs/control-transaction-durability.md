@@ -8,28 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Les validations de transactions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).    
     
  Les validations de transactions à durabilité complète sont synchrones. Elles signalent la réussite de la validation (COMMIT) et restituent le contrôle au client uniquement lorsque les enregistrements de journal de transactions ont été écrits sur le disque. Les validations de transactions à durabilité retardée sont asynchrones. Elles signalent la réussite de la validation (COMMIT) avant que les enregistrements de journal de transactions ne soient écrits sur le disque. L'écriture des entrées du journal des transactions sur le disque est nécessaire pour qu'une transaction soit durable. Les transactions à durabilité retardée deviennent durables lorsque les enregistrements de journal de transactions sont vidés sur le disque.    
     

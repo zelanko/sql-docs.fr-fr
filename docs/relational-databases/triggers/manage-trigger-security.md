@@ -8,24 +8,27 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: triggers [SQL Server], security
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba64e3958c9bd8bb9873dec29016c56bb718e94c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5daea563cbc89957c525d2247f5c7537145d13b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-trigger-security"></a>Gérer la sécurité des déclencheurs
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Par défaut, les déclencheurs DML et DDL s’exécutent dans le contexte de l’utilisateur ayant appelé le déclencheur. L'appelant d'un déclencheur correspond à l'utilisateur exécutant l'instruction qui provoque l'activation du déclencheur. Par exemple, si l’utilisatrice **Mary** exécute une instruction DELETE provoquant l’activation d’un déclencheur DML intitulé **DML_trigMary** , le code inclus dans **DML_trigMary** s’exécute dans le contexte des autorisations utilisateur associées à **Mary**. Ce comportement par défaut peut malheureusement être exploité par des utilisateurs mal intentionnés voulant introduire du code dangereux dans une base de données ou une instance de serveur. Prenons pour exemple le déclencheur DDL suivant créé par l'utilisateur `JohnDoe`:  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Par défaut, les déclencheurs DML et DDL s'exécutent dans le contexte de l'utilisateur ayant appelé le déclencheur. L'appelant d'un déclencheur correspond à l'utilisateur exécutant l'instruction qui provoque l'activation du déclencheur. Par exemple, si l’utilisatrice **Mary** exécute une instruction DELETE provoquant l’activation d’un déclencheur DML intitulé **DML_trigMary** , le code inclus dans **DML_trigMary** s’exécute dans le contexte des autorisations utilisateur associées à **Mary**. Ce comportement par défaut peut malheureusement être exploité par des utilisateurs mal intentionnés voulant introduire du code dangereux dans une base de données ou une instance de serveur. Prenons pour exemple le déclencheur DDL suivant créé par l'utilisateur `JohnDoe`:  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/17/2017
     DEALLOCATE trig_cur;  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  

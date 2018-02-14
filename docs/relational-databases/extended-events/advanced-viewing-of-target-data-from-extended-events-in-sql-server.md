@@ -8,19 +8,20 @@ ms.service:
 ms.component: extended-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: xevents
+ms.technology:
+- xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 1733064f1503f9a8a0e082835b58f91ff195cd9e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ Cet article explique comment vous pouvez utiliser les fonctionnalités avancées
 
 
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prerequisites
 
 Cet article considère que vous savez déjà créer et démarrer une session d’événements. Des instructions sur la façon de créer une session d’événements sont fournies au début de l’article suivant :
 
@@ -289,7 +290,7 @@ Regrouper des lignes par la mise en correspondance des valeurs d’une colonne d
 #### <a name="d41-grouping"></a>D.4.1 Regroupement
 
 
-Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom* .
+Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom*.
 
 ![Barre d’outils > Bouton Regroupement, puis boîte de dialogue Regroupement](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 

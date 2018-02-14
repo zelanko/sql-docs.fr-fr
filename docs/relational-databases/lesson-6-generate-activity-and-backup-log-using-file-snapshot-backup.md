@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ba32c2a03abab77de366687c5e4fe3e72834204
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7deac98fa7bef4e087647aad142c735f01747c67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Leçon 6 : Générer un journal d’activité et de sauvegarde à l’aide d’une sauvegarde d’instantanés de fichiers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous allez générer une activité dans la base de données AdventureWorks2014 et créer régulièrement des sauvegardes de fichiers journaux des transactions à l’aide de sauvegardes d’instantanés de fichiers. Pour plus d’informations sur l’utilisation de sauvegardes d’instantanés de fichiers, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dans cette leçon, vous allez générer une activité dans la base de données AdventureWorks2014 et créer régulièrement des sauvegardes du journal des transactions à l’aide de sauvegardes d’instantanés de fichiers. Pour plus d’informations sur l’utilisation de sauvegardes d’instantanés de fichiers, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Pour générer une activité dans la base de données AdventureWorks2014 et créer régulièrement des sauvegardes du journal des transactions à l’aide de sauvegardes d’instantanés de fichiers, procédez comme suit :  
   

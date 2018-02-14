@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 833d774381654b77bc1efcfcb3efdbb1e6d61068
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ L’un des prérequis pour utiliser les fonctionnalités en mémoire peut concer
 
 Votre système dispose-t-il d’assez de mémoire active pour prendre en charge une nouvelle table optimisée en mémoire ?
 
-#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
+#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
 Une table optimisée en mémoire qui contient 200 Go de données nécessite plus de 200 Go de mémoire active dédiée pour sa prise en charge. Avant d’implémenter une table optimisée en mémoire contenant une grande quantité de données, vous devez prévoir la quantité de mémoire active supplémentaire que vous devrez peut-être ajouter à votre serveur. Pour obtenir des conseils sur l’estimation, consultez :
 
@@ -198,7 +199,7 @@ La commande [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-tr
 
 
 
-## <a name="d-performance"></a>D. Performance
+## <a name="d-performance"></a>D. Performances
 
 Cette section décrit les situations dans lesquelles les excellentes performances des tables optimisées en mémoire peuvent être freinées.
 

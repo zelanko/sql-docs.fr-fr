@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Security Audit event category
 - SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813f222c51539b67aa24f66949219cfcdb016164
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b93277d27d4a797fc5ca5924794a7631673445f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="security-audit-event-category-sql-server-profiler"></a>Catégorie d'événements d'audit de sécurité (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La catégorie d’événements **Audit de sécurité** contient, comme son nom l’indique, les événements liés à l’activité d’audit de la sécurité.  
+# <a name="security-audit-event-category-sql-server-profiler"></a>Audit de sécurité, catégorie d'événements (SQL Server Profiler)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La catégorie d’événements d’ **audit de sécurité** contient, comme son nom l’indique, les événements liés à l’activité d’audit de la sécurité.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |[Classe d'événements Audit Add Role](../../relational-databases/event-classes/audit-add-role-event-class.md)|Indique qu'un rôle de base de données a été ajouté à une base de données ou en a été supprimé.|  
 |[Classe d'événements Audit Addlogin](../../relational-databases/event-classes/audit-addlogin-event-class.md)|Indique qu'une connexion a été ajoutée ou supprimée.|  
 |[Classe d'événements Audit App Role Change Password](../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)|Indique qu'un mot de passe a été modifié pour un rôle d'application.|  
-|[Classe d’événements Audit Backup/Restore](../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)|Indique qu'une instruction de sauvegarde ou de restauration a été émise.|  
+|[Audit Backup/Restore, classe d’événements](../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)|Indique qu'une instruction de sauvegarde ou de restauration a été émise.|  
 |[Classe d'événement Audit Broker Conversation](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)|Crée un rapport de messages d'audit associés à la sécurité de boîte de dialogue Service Broker.|  
 |[Classe d'événements Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md)|Crée un rapport de messages d'audit associés à la sécurité de transport Service Broker.|  
 |[Classe d'événements Audit Change Audit](../../relational-databases/event-classes/audit-change-audit-event-class.md)|Indique qu'une modification de trace d'audit a été effectuée.|  
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 |[Classe d'événements Audit Server Starts and Stops](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Indique que l'état du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été modifié.|  
 |[Classe d'événements Audit Statement Permission](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|Indique qu'une autorisation relative aux instructions a été utilisée.|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

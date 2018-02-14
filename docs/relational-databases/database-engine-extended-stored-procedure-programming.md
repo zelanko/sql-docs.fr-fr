@@ -18,22 +18,22 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f67e296f88598bbcde596e9bbcdbe22fef816ad3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1da67999b5c0ae02606d83dfe47c194b2b4499ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Programmation de procédure stockée étendue de moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place. Pour plus d’informations, consultez [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] Utilisez l'intégration CLR à la place. Pour plus d’informations, consultez [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  L’API de procédure stockée étendue [!INCLUDE[msCoName](../includes/msconame-md.md)] fournit une interface de programmation d’applications serveur pour étendre les fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'API est constituée de fonctions C et C++ et de macros permettant de générer des applications dans les catégories suivantes : procédures stockées étendues et applications de passerelle.  
   

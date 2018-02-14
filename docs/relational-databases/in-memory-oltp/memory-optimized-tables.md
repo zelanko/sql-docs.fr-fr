@@ -8,25 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-caps.latest.revision: "66"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 813d5ece519cd6545ffbb1ebcb03271cadaa5bb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35719f81571bd58c96d9f451cab3caf0d09a459a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="memory-optimized-tables"></a>Tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  L'OLTP en mémoire[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contribue à améliorer les performances des applications OLTP grâce à un accès rapide aux données optimisées en mémoire, à la compilation en mode natif de la logique métier et aux algorithmes de verrous (internes et externes) gratuits. La fonctionnalité OLTP en mémoire comprend les tables optimisées en mémoire et les types de tables, ainsi que la compilation en mode natif des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] pour permettre un accès efficace à ces tables.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’OLTP en mémoire contribue à améliorer les performances des applications OLTP grâce à un accès rapide aux données optimisées en mémoire, à la compilation en mode natif de la logique métier et aux algorithmes de verrous (internes et externes) gratuits. La fonctionnalité OLTP en mémoire comprend les tables optimisées en mémoire et les types de tables, ainsi que la compilation en mode natif des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] pour permettre un accès efficace à ces tables.  
   
  Pour plus d'informations sur les tables optimisées en mémoire, consultez les rubriques suivantes :  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Guide du traitement des requêtes pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

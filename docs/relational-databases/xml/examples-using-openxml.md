@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce5f1474f03cad13c45eefe88202d15e706eb7bc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="examples-using-openxml"></a>Exemples : utilisation de OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d’un ensemble de lignes d’un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+# <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d'un ensemble de lignes d'un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemples  
  Lors de l’extraction de données, *rowpattern* sert à identifier les nœuds du document XML qui déterminent les lignes. De plus, *rowpattern* est exprimé dans le langage du modèle XPath utilisé dans la mise en œuvre XPath de MSXML. Par exemple, si le modèle s’achève au niveau d’un élément ou d’un attribut, une ligne est créée pour chaque nœud d’élément ou d’attribut sélectionné par *rowpattern*.  

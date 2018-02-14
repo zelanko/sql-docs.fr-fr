@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c4b42e36bb09b3fd5a642c5350287dd207d73f0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7c46c3a21aa5d2bed2f21b07a7085c4559bb164a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-sql-server"></a>Données XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue une puissante plateforme de développement d’applications d’une grande richesse pour la gestion des données semi-structurées. La prise en charge de XML est intégrée à tous les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sous-entend :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue une puissante plateforme de développement d’applications d’une grande richesse pour la gestion des données semi-structurées. La prise en charge de XML est intégrée à tous les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sous-entend :  
   
 -   Le type de données **xml** . Les valeurs XML peuvent être stockées de façon native dans une colonne de type de données **xml** qui peut être typée en fonction d’une collection de schémas XML ou rester non typée. Vous pouvez indexer la colonne XML.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,18 +22,21 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a6a5cbbe3366a14878086d24b1bddd52ec83ee13
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f849361162d08b14091ffd4ef43f4c6a104b6836
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renommer un ordinateur qui héberge une instance autonome de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lorsque vous modifiez le nom de l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nouveau nom est reconnu au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous n'avez pas besoin de réexécuter le programme d'installation pour réinitialiser le nom d'ordinateur. À la place, utilisez la procédure suivante pour mettre à jour les métadonnées système qui sont stockées dans sys.servers et signalées par la fonction système @@SERVERNAME. Mettez à jour les métadonnées système pour refléter les modifications opérées dans les noms d’ordinateurs pour les connexions à distance et les applications qui utilisent @@SERVERNAME, ou qui interrogent le nom du serveur à partir de sys.servers.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Lorsque vous modifiez le nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nouveau nom est reconnu au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous n'avez pas besoin de réexécuter le programme d'installation pour réinitialiser le nom d'ordinateur. À la place, utilisez la procédure suivante pour mettre à jour les métadonnées système qui sont stockées dans sys.servers et signalées par la fonction système @@SERVERNAME. Mettez à jour les métadonnées système pour refléter les modifications opérées dans les noms d’ordinateurs pour les connexions à distance et les applications qui utilisent @@SERVERNAME, ou qui interrogent le nom du serveur à partir de sys.servers.  
   
 Les procédures suivantes ne vous permettent pas de renommer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles ne peuvent être utilisées que pour renommer la partie du nom de l'instance qui correspond au nom de l'ordinateur. Par exemple, vous pouvez remplacer le nom d'un ordinateur nommé MB1 qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée Instance1 par un autre nom, tel que MB2. Cependant, la partie d'instance du nom, Instance1, restera inchangée. Dans cet exemple, la partie \\\\*Nom_ordinateur*\\*Nom_instance* nommée \\\MB1\Instance1 sera remplacée par \\\MB2\Instance1.  
   

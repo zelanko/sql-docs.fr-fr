@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,18 +21,19 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 4abe8b006f30fd200becd40374df8cd699ffaab0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 882f657706c9875732e89321ffb9d5fe3061b32a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursors"></a>Curseurs
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les opérations réalisées dans une base de données relationnelle s’exécutent sur un ensemble complet de lignes. Par exemple, l'ensemble de lignes retourné par une instruction SELECT contient toutes les lignes satisfaisant aux conditions de la clause WHERE de l'instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Les applications, en particulier les applications interactives en ligne, peuvent ne pas toujours fonctionner efficacement si l'ensemble de résultats est traité comme une unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Les opérations réalisées dans une base de données relationnelle s'exécutent sur un ensemble complet de lignes. Par exemple, l'ensemble de lignes retourné par une instruction SELECT contient toutes les lignes satisfaisant aux conditions de la clause WHERE de l'instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Les applications, en particulier les applications interactives en ligne, peuvent ne pas toujours fonctionner efficacement si l'ensemble de résultats est traité comme une unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
   
  Les curseurs permettent l'extension du traitement des résultats en procédant aux opérations suivantes :  
   
@@ -117,10 +119,10 @@ ms.lasthandoff: 11/17/2017
   
 5.  Fermez le curseur.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Comportement des curseurs](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Comment les curseurs sont implémentés](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Curseurs &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [Fonctions de curseur &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   
