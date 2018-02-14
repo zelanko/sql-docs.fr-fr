@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (base de données SQL Azure) | Documents Microsoft"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 02/13/2018
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -69,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -210,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- Modifier (édition  **=**  ['base' | « standard » | 'premium' | 'premiumrs'])    
- Modifie le niveau de service de la base de données. L’exemple suivant modifie l’édition à `premium`:
+ Modifier (édition  **=**  ['base' | « standard » | 'premium'])    
+ Modifie le niveau de service de la base de données. Prise en charge pour 'premiumrs' a été supprimé. Pour des questions, utilisez cet alias de messagerie : premium-rs@microsoft.com.
+
+L’exemple suivant modifie l’édition à `premium`:
   
 ```  
 ALTER DATABASE current 
@@ -223,7 +224,7 @@ Modification de l’édition échoue si la propriété MAXSIZE de la base de don
  MODIFIER (MAXSIZE  **=**  [100 MO | 500 MO | 1 | 1024... 4096] GO)  
  Spécifie la taille maximale de la base de données. La taille maximale doit être conforme au jeu de valeurs valide pour la propriété EDITION de la base de données. Le fait de modifier la taille maximale de la base de données peut entraîner la modification de la propriété EDITION de la base de données. Le tableau suivant contient la liste des valeurs de MAXSIZE prises en charge et des valeurs par défaut (D) des couches de service [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 et PRS1-PRS6**|**P11-P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 Mo|√|√|√|√|√|  
 |250 MO|√|√|√|√|√|  
@@ -266,7 +267,7 @@ Modification de l’édition échoue si la propriété MAXSIZE de la base de don
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- Les valeurs disponibles pour l’objectif de service sont : `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, et `PRS6`. Pour plus d’informations sur la taille, les éditions et les combinaisons d’objectifs de service et les descriptions des objectifs de service, consultez [niveaux de Service de base de données SQL Azure et les niveaux de Performance](http://msdn.microsoft.com/library/azure/dn741336.aspx). Si le SERVICE_OBJECTIVE spécifié n’est pas pris en charge par l’édition, vous recevez une erreur. Si vous voulez modifier la valeur de SERVICE_OBJECTIVE pour passer d'un niveau de service à un autre (par exemple de S1 à P1), vous devrez également modifier la valeur d'EDITION.  
+ Les valeurs disponibles pour l’objectif de service sont : `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, ou`P15`. Pour plus d’informations sur la taille, les éditions et les combinaisons d’objectifs de service et les descriptions des objectifs de service, consultez [niveaux de Service de base de données SQL Azure et les niveaux de Performance](http://msdn.microsoft.com/library/azure/dn741336.aspx). Si le SERVICE_OBJECTIVE spécifié n’est pas pris en charge par l’édition, vous recevez une erreur. Si vous voulez modifier la valeur de SERVICE_OBJECTIVE pour passer d'un niveau de service à un autre (par exemple de S1 à P1), vous devrez également modifier la valeur d'EDITION. Prise en charge des objectifs de service de réservations persistantes ont été supprimés. Pour des questions, utilisez cet alias de messagerie : premium-rs@microsoft.com. 
   
  Modifier (SERVICE_OBJECTIVE = élastique\_POOL (nom = \<elastic_pool_name >)  
  Pour ajouter une base de données existante à un pool élastique, la valeur ELASTIC_POOL le SERVICE_OBJECTIVE de la base de données et fournissez le nom du pool élastique. Vous pouvez également utiliser cette option pour modifier la base de données à un autre pool élastique du même serveur. Pour plus d’informations, consultez [créer et gérer un pool élastique de base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Pour supprimer une base de données à partir d’un pool élastique, utilisez ALTER DATABASE pour définir le SERVICE_OBJECTIVE à un niveau de performance de base de données unique.  
@@ -277,7 +278,7 @@ ALTER DATABASE current
  AVEC ALLOW_CONNECTIONS {TOUTES LES | **NON** }  
  Lorsque ALLOW_CONNECTIONS n’est pas spécifié, il a la valeur NO par défaut. Si elle est définie à tous, il est une base de données en lecture seule qui permet à toutes les connexions avec les autorisations appropriées pour vous connecter.  
   
- WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' }  
  Lorsque SERVICE_OBJECTIVE n’est pas spécifié, la base de données secondaire est créé au même niveau de service en tant que base de données primaire. Lorsque SERVICE_OBJECTIVE est spécifié, la base de données secondaire est créée au niveau spécifié. Cette option prend en charge la création de bases de données secondaires géo-répliquées avec des niveaux de service moins coûteux. Le SERVICE_OBJECTIVE spécifié doit figurer dans la même édition de la source. Par exemple, vous ne pouvez pas spécifier S0 si l’édition premium n’est.  
   
  ELASTIC_POOL (nom = \<elastic_pool_name)  
