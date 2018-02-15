@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurez des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article décrit comment configurer le référentiel correct pour les mises à niveau et les installations de SQL Server 2017 sur Linux.
 
@@ -37,7 +39,7 @@ Lorsque vous installez SQL Server sur Linux, vous devez configurer un référent
 | **CU** | **mssql-server-2017** | Référentiel de SQL Server 2017 Cumulative Update (CU). |
 | **GDR** | **mssql-server-2017-gdr** | Référentiel de SQL Server 2017 GDR uniquement les mises à jour critiques. |
 
-## <a id="cuversusgdr"></a>Mise à jour cumulative et GDR
+## <a id="cuversusgdr"></a> Mise à jour cumulative et GDR
 
 Il est important de noter qu’il existe deux principaux types de référentiels pour chaque point de distribution :
 
@@ -50,7 +52,7 @@ Chaque version de CU et correctif logiciel grand public contient le package SQL 
 > [!NOTE]
 > Vous pouvez mettre à jour à partir d’une version GDR CU libérer à tout moment en modifiant les référentiels. Mise à jour à partir d’une CU version à une version de correctif logiciel grand public n’est pas pris en charge. 
 
-## <a id="configure"></a>Configurer un référentiel
+## <a id="configure"></a> Configurer un référentiel
 
 Les sections suivantes décrivent comment vérifier et configurer un référentiel pour les plateformes prises en charge suivantes :
 
@@ -58,7 +60,7 @@ Les sections suivantes décrivent comment vérifier et configurer un référenti
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>Configurez des référentiels RHEL
+## <a id="rhel"></a> Configurez des référentiels RHEL
 Utilisez les étapes suivantes pour configurer des référentiels sur Red Hat Enterprise Server (RHEL).
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>Recherchez les référentiels configurées précédemment (RHEL)
@@ -97,7 +99,7 @@ Configurez le nouveau référentiel à utiliser pour les mises à niveau et les 
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>Configurez des référentiels SLES
+## <a id="sles"></a> Configurez des référentiels SLES
 Utilisez les étapes suivantes pour configurer des référentiels SLES.
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>Recherchez les référentiels configurées précédemment (SLES)
@@ -128,7 +130,7 @@ Configurez le nouveau référentiel à utiliser pour les mises à niveau et les 
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>Configurez des référentiels Ubuntu
+## <a id="ubuntu"></a> Configurez des référentiels Ubuntu
 Utilisez les étapes suivantes pour configurer des référentiels sur Ubuntu.
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>Recherchez les référentiels configurées précédemment (Ubuntu)
