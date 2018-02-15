@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de créer le groupe de disponibilité, vous devez :
 
@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Créer les points de terminaison de mise en miroir de bases de données sur tous les réplicas
 
-Les points de terminaison de mise en miroir de base de données utilisent le protocole TCP (Transmission Control) pour envoyer et recevoir des messages entre les instances de serveur qui participent aux sessions de mise en miroir de base de données ou hébergeront des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique. L’écouteur TCP requiert une adresse IP d’écouteur. L’adresse IP d’écouteur doit être une adresse IPv4. Vous pouvez également utiliser `0.0.0.0`. 
+Les points de terminaison de mise en miroir de base de données utilisent le protocole TCP (Transmission Control) pour envoyer et recevoir des messages entre les instances de serveur qui participent aux sessions de mise en miroir de base de données ou hébergeront des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique. 
 
-Le script Transact-SQL suivant crée un point de terminaison écoute nommé `Hadr_endpoint` pour le groupe de disponibilité. Il démarre le point de terminaison et autorise la connexion à l’utilisateur que vous avez créé. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`.
+Le script Transact-SQL suivant crée un point de terminaison écoute nommé `Hadr_endpoint` pour le groupe de disponibilité. Il démarre le point de terminaison et autorise la connexion à l’utilisateur que vous avez créé. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`. Si vous le souhaitez, vous pouvez inclure une adresse IP `LISTENER_IP = (0.0.0.0)`. L’adresse IP d’écouteur doit être une adresse IPv4. Vous pouvez également utiliser `0.0.0.0`. 
 
 Mettre à jour le script Transact-SQL suivant pour votre environnement sur toutes les instances de SQL Server : 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,

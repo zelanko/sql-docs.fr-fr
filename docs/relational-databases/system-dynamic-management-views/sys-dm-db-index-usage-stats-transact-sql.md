@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie le nombre des différents types d'opérations d'index et l'heure d'exécution de chaque opération dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Renvoie le nombre des différents types d'opérations d'index et l'heure d'exécution de chaque opération.  
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 >  **Sys.dm_db_index_usage_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation d’index optimisé en mémoire, consultez [sys.dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Pour appeler cette vue à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|ID de la table ou de la vue sur laquelle l'index est défini.|  
 |**index_id**|**int**|Identificateur de l'index.|  
 |**user_seeks**|**bigint**|Nombre de recherches par requête utilisateur.|  
-|**user_scans**|**bigint**|Nombre d'analyses par requête utilisateur. Il s’agit d’analyses qui n’utilisent pas le prédicat de « recherche ».|  
+|**user_scans**|**bigint**|Nombre d’analyses par requête utilisateur qui n’utilise pas « prédicat de recherche ».|  
 |**user_lookups**|**bigint**|Nombre de recherches de signets par les requêtes utilisateur.|  
-|**user_updates**|**bigint**|Nombre de mises à jour par requête utilisateur. Il s’agit de Insert, Delete et des mises à jour qui représente le nombre d’opérations n'effectuées pas les lignes réelles affectées. Par exemple, si vous supprimez les 1000 lignes dans une seule instruction, ce nombre s’incrémente de 1|  
+|**user_updates**|**bigint**|Nombre de mises à jour par requête utilisateur. Il s’agit de Insert, Delete et qui représente le nombre d’opérations n'effectuées pas les lignes réelles affectées des mises à jour. Par exemple, si vous supprimez les 1000 lignes dans une seule instruction, ce compteur incrémente de 1|  
 |**last_user_seek**|**datetime**|Heure de la dernière recherche utilisateur.|  
 |**last_user_scan**|**datetime**|Heure de la dernière analyse utilisateur.|  
 |**last_user_lookup**|**datetime**|Heure de la dernière recherche utilisateur.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
 

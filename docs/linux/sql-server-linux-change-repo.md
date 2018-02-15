@@ -4,7 +4,7 @@ description: "Vérifier et configurer les référentiels sources pour 2017 du se
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurez des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -181,8 +181,5 @@ Après avoir configuré le référentiel approprié, vous pouvez passer à [inst
 
 > [!IMPORTANT]
 > À ce stade, si vous choisissez d’utiliser un des articles de l’installation, tel que le [Démarrages rapides](sql-server-linux-setup.md#platforms), souvenez-vous que vous avez déjà configuré le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que les Démarrages rapides utilisent le référentiel CU.
-
-> [!IMPORTANT]
-> N’importe quelle version de 2017 du serveur SQL avant CTP 2.1 doit être mis à niveau au moins 2.1 avant la mise à niveau de disponibilité générale. Une autre option consiste à sauvegarder vos bases de données, désinstallez la version précédente, puis effectuez une nouvelle installation d’une version de la disponibilité générale.
 
 Pour plus d’informations sur l’installation de SQL Server 2017 sur Linux, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).

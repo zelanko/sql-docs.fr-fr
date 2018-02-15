@@ -1,14 +1,15 @@
 ---
 title: Utilitaire bcp | Documents Microsoft
 ms.custom: 
-ms.date: 09/26/2016
+ms.date: 02/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,22 +30,24 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [utilitaire bcp](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
+
+ > Pour plus d’informations sur l’utilisation de bcp avec Azure SQL Data Warehouse, consultez [charger les données avec bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur. L’utilitaire **bcp** permet d’importer un grand nombre de nouvelles lignes dans des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d’exporter des données de tables dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option **queryout** , l’utilitaire ne nécessite aucune connaissance de [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour importer des données dans une table, vous devez utiliser un fichier de format créé pour cette table ou comprendre la structure de la table et les types de données valides pour ses colonnes.  
   
@@ -66,6 +69,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -112,7 +116,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  ***owner***<a name="schema"></a>  
  Nom du propriétaire de la table ou de la vue. *owner* est facultatif si l'utilisateur qui effectue l'opération est le propriétaire de la table ou de la vue. Si la valeur de *owner* n’est pas spécifiée et si l’utilisateur effectuant l’opération ne possède pas la table ou la vue spécifiée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retourne un message d’erreur et l’opération est annulée.  
   
-**"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. Si la requête retourne plusieurs jeux de résultats, seul le premier jeu de résultats est copié dans le fichier de données ; les jeux de résultats suivants sont ignorés. Placez le nom de la requête entre guillemets doubles et tout élément imbriqué dans la requête entre guillemets simples. **queryout** doit également être spécifié uniquement lors d’une copie de données en bloc à partir d’une requête.  
+**«** ***requête*** **»** <a name="query"> </a> est un [!INCLUDE[tsql](../includes/tsql-md.md)] requête qui retourne un jeu de résultats. Si la requête retourne plusieurs jeux de résultats, seul le premier jeu de résultats est copié dans le fichier de données ; les jeux de résultats suivants sont ignorés. Placez le nom de la requête entre guillemets doubles et tout élément imbriqué dans la requête entre guillemets simples. **queryout** doit également être spécifié uniquement lors d’une copie de données en bloc à partir d’une requête.  
   
  La requête peut référencer une procédure stockée du moment que toutes les tables référencées dans la procédure stockée existent préalablement à l'exécution de l'instruction bcp. Par exemple, si la procédure stockée génère une table temp, l’instruction **bcp** échoue parce que la table temp est uniquement disponible au moment de l’exécution du programme et pas au moment de l’exécution de l’instruction. Dans ce cas, envisagez d’insérer les résultats de la procédure stockée dans une table, puis d’utiliser **bcp** pour copier les données de la table dans un fichier de données.  
   
@@ -177,10 +181,49 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Si *format_file* commence par un trait d’union (-) ou une barre oblique (/), n’incluez pas d’espace entre **-f** et la valeur *format_file* .  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  Spécifie le numéro de la première ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données. Ce paramètre nécessite une valeur supérieure à (>) 0 mais inférieure (<) ou égale au (=) nombre total de lignes. En l'absence de ce paramètre, la valeur par défaut est la première ligne du fichier.  
   
  *first_row* peut être un entier positif avec une valeur maximale de 2^63-1. **-F** *first_row* is 1-based.  
+
+**-G**<a name="G"></a>  
+ Ce commutateur est utilisé par le client lors de la connexion à la base de données SQL Azure ou Azure SQL Data Warehouse pour spécifier que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Le commutateur -G nécessite [version 14.0.3008.27 ou une version ultérieure](http://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp - v. Pour plus d’informations, consultez [utilisez authentification Azure Active Directory pour l’authentification de base de données SQL ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+
+> [!TIP]
+>  Pour vérifier si votre version de l’utilitaire bcp inclut la prise en charge pour le type d’authentification Azure Active Directory (AAD) **bcp--** (bcp\<espace >\<tiret >\<tiret >) et vérifiez que vous disposez - G dans la liste des arguments disponibles.
+
+- **Nom d’utilisateur et mot de passe Azure Active Directory :** 
+
+    Lorsque vous souhaitez utiliser un nom d’utilisateur Azure Active Directory et le mot de passe, vous pouvez fournir l’option **- G** et utiliser également le nom d’utilisateur et le mot de passe en fournissant les options **-U** et **-P** . 
+
+    L’exemple suivant exporte les données à l’aide du nom d’utilisateur Active Directory de Azure et le mot de passe étant d’utilisateur et mot de passe des informations d’identification AAD. L’exemple exporte table `bcptest` à partir de la base de données `testdb` à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data1.dat`:
+    ``` 
+    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ``` 
+
+    L’exemple suivant importe des données à l’aide du nom d’utilisateur Active Directory de Azure et le mot de passe étant d’utilisateur et mot de passe des informations d’identification AAD. L’exemple importe les données de fichier `c:\last\data1.dat` dans la table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide du mot de passe utilisateur AD Azure :
+    ```
+    bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ```
+
+
+
+- **Intégrée à Azure Active Directory** 
+ 
+    Pour l’authentification intégrée à Active Directory de Azure, vous devez fournir le **- G** option sans nom d’utilisateur ou mot de passe. Cette configuration suppose que le compte d’utilisateur Windows actuel (le compte qui exécute la commande bcp sous) est fédéré avec Azure AD : 
+
+    L’exemple suivant exporte les données à l’aide du compte intégré Azure AD. L’exemple exporte table `bcptest` à partir de la base de données `testdb` à l’aide d’Azure AD Integrated, à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data2.dat`:
+
+    ```
+    bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
+    L’exemple suivant importe des données à l’aide d’AUTH. intégrée à Azure AD L’exemple importe les données de fichier `c:\last\data2.txt` dans la table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide d’authentification intégrée à Azure AD :
+
+    ```
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
   
 **-h** ***« indicateurs de charge***[ ,... *n*]**"**<a name="h"></a> Indicateur ou indicateurs à utiliser lors de l’importation en bloc de données vers une table ou vue.  
   
@@ -321,7 +364,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100**  =  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -329,7 +372,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
   
  **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
- Par exemple, pour générer des données pour les types non pris en charge par [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], mais introduits dans les versions ultérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez l'option -V80.  
+ Par exemple, pour générer des données pour les types non pris en charge par [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], mais introduits dans les versions ultérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez l'option -V80.  
   
  Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
@@ -364,7 +407,7 @@ L’utilitaire bcp peut également être téléchargé séparément depuis le [M
  Les colonnes calculées et **timestamp** sont copiées en bloc de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers un fichier de données comme d’ordinaire.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Spécification d'identificateurs contenant des espaces ou des guillemets  
- Les identificateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure des caractères tels que des espaces et des guillemets incorporés. De tels identificateurs doivent être traités de la manière suivante :  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure des caractères tels que des espaces et des guillemets incorporés. De tels identificateurs doivent être traités de la manière suivante :  
   
 -   Quand vous spécifiez, à l'invite de commandes, un identificateur ou un nom de fichier comportant un espace ou une apostrophe, mettez cet identificateur entre guillemets doubles (" ").  
   
