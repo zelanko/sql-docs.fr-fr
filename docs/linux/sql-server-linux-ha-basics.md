@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 En commençant par [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] est pris en charge sous Linux et Windows. Comme basés sur Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] déploiements, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bases de données et les instances doivent être hautement disponible sous Linux. Cet article traite des aspects techniques de planification et de déploiement à haute disponibilité basés sur Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bases de données et instances, ainsi que certaines des différences dans les installations basées sur Windows. Étant donné que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] peuvent ne pas pour les professionnels de Linux et Linux peuvent être nouvelles pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] professionnels, l’article à des moments introduit des concepts qui peuvent être familiarisé à certaines et peu d’autres.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]options de disponibilité pour les déploiements de Linux
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] options de disponibilité pour les déploiements de Linux
 En dehors de la sauvegarde et de restauration, les mêmes fonctionnalités de disponibilité de trois sont disponibles sur Linux que pour les déploiements basés sur Windows :
 -   Groupes de disponibilité AlwaysOn (groupes de disponibilité)
 -   Instances de Cluster de basculement (fci) Always On
@@ -43,16 +43,16 @@ Sous Linux, plusieurs commandes doivent être exécutées avec des privilèges �
 2. Les plus courants et sécurité consciente pour exécuter des opérations consiste à utiliser `sudo` avant l’exécution de quoi que ce soit. La plupart des exemples dans cet article utilisent `sudo`.
 
 Certaines commandes courantes, chacun d'entre eux ont différents commutateurs et options que vous pouvant rechercher en ligne :
--   `cd`– Accédez au répertoire
--   `chmod`– modifier les autorisations d’un fichier ou un répertoire
--   `chown`: modifier la propriété d’un fichier ou un répertoire
--   `ls`: afficher le contenu d’un répertoire
--   `mkdir`: créez un dossier (répertoire) sur un lecteur
--   `mv`: déplacer un fichier d’un emplacement vers un autre
--   `ps`– afficher tous les processus de travail
--   `rm`: supprimer un fichier localement sur un serveur
--   `rmdir`: supprimer un dossier (répertoire)
--   `systemctl`– Démarrer, arrêter ou activer les services
+-   `cd` – Accédez au répertoire
+-   `chmod` – modifier les autorisations d’un fichier ou un répertoire
+-   `chown` : modifier la propriété d’un fichier ou un répertoire
+-   `ls` : afficher le contenu d’un répertoire
+-   `mkdir` : créez un dossier (répertoire) sur un lecteur
+-   `mv` : déplacer un fichier d’un emplacement vers un autre
+-   `ps` – afficher tous les processus de travail
+-   `rm` : supprimer un fichier localement sur un serveur
+-   `rmdir` : supprimer un dossier (répertoire)
+-   `systemctl` – Démarrer, arrêter ou activer les services
 -   Commandes de l’éditeur de texte. Sur Linux, il existe différentes options de l’éditeur de texte, telles que vi et emacs.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tâches courantes pour les configurations de la disponibilité de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux
@@ -90,15 +90,15 @@ Comme pour Windows, les distributions Linux ont un pare-feu intégré. Si votre 
 
 | Numéro de port | Type     |  Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS :`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS : `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (si utilisé) – le mappeur de Point de terminaison                                                                                          |
 | 137         | UDP      | Samba (si utilisé) – Service de noms NetBIOS                                                                                      |
 | 138         | UDP      | Samba (si utilisé) – datagramme NetBIOS                                                                                          |
 | 139         | TCP      | Samba (si utilisé) – NetBIOS Session                                                                                           |
 | 445         | TCP      | Samba (si utilisé) – SMB sur TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – par défaut le port ; Si vous le souhaitez, peut changer à`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – par défaut le port ; Si vous le souhaitez, peut changer à `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (si utilisé)                                                                                                               |
-| 2224        | TCP      | STIMULATEUR – utilisé par`pcsd`                                                                                                |
+| 2224        | TCP      | STIMULATEUR – utilisé par `pcsd`                                                                                                |
 | 3121        | TCP      | STIMULATEUR – requis s’il existe des nœuds distants STIMULATEUR                                                                    |
 | 3260        | TCP      | l’initiateur (si utilisé) – iSCSI peut être modifiée dans `/etc/iscsi/iscsid.config` (RHEL), mais doit correspondre au port de cible iSCSI |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -par défaut le port utilisé pour un point de terminaison du groupe de disponibilité ; peut être modifié lors de la création du point de terminaison                                |
@@ -203,15 +203,15 @@ Le `corosync.conf` fichier contient la configuration du cluster. Il se trouve da
 
 #### <a name="cluster-log-location"></a>Emplacement des journaux de cluster
 Emplacement des journaux pour les clusters de STIMULATEUR diffère en fonction de la distribution.
--   RHEL et SLES-`/var/log/cluster/corosync.log`
--   Ubuntu :`/var/log/corosync/corosync.log`
+-   RHEL et SLES- `/var/log/cluster/corosync.log`
+-   Ubuntu : `/var/log/corosync/corosync.log`
 
 Pour modifier l’emplacement du fichier journal par défaut, modifiez `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planifier les clusters STIMULATEUR pour[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planifier les clusters STIMULATEUR pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Cette section décrit les points importants de la planification pour un cluster STIMULATEUR.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pour les clusters virtualisation STIMULATEUR basés sur Linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pour les clusters virtualisation STIMULATEUR basés sur Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 À l’aide de machines virtuelles pour déployer basés sur Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] déploiements pour les groupes de disponibilité et de fci est couverte par les mêmes règles que pour leurs équivalents Windows. Il existe un ensemble de règles pour la prise en charge de base virtualisé [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fournis par Microsoft dans les déploiements [956893 de Ko de prise en charge de Microsoft](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Hyperviseurs différents tels que Microsoft Hyper-V et VMware ESXi peuvent avoir des variances différentes en plus de cela, en raison de différences dans les plateformes eux-mêmes.
 
 Lorsqu’il s’agit de groupes de disponibilité et les instances fci sous la virtualisation, assurez-vous qu’anti-d’affinité est définie pour les nœuds d’un cluster STIMULATEUR donné. Lorsque configuré pour la haute disponibilité dans une configuration de groupe de disponibilité ou instance de cluster, les machines virtuelles hébergeant [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ne doit jamais s’exécuter sur le même hyperviseur hôte. Par exemple, si une instance FCI à deux nœuds est déployée, il doit être *au moins* trois hôtes hyperviseur qui est donc quelque part pour l’une des machines virtuelles hébergeant un nœud pour accéder en cas de défaillance de l’hôte, en particulier si l’utilisation des fonctionnalités telles que Live La migration ou vMotion.
