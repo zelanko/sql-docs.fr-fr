@@ -11,10 +11,10 @@ ms.prod_service: sql-non-specified
 ms.component: 
 ms.date: 02/03/2018
 ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Nouveau et récemment mis à jour : SQL Server sur Linux docs
 
@@ -106,7 +106,7 @@ Le basculement automatique d’un groupe de disponibilité est possible lorsque 
 
 Si ces conditions sont réunies et que le serveur qui héberge le réplica principal échoue, le groupe de disponibilité changent de propriété vers un réplica synchrone. Le comportement de réplicas synchrones (de laquelle il peut y avoir trois total : un serveur principal et deux réplicas secondaires) peuvent également être gérées par `required_synchronized_secondaries_to_commit`. Cela fonctionne avec les groupes de disponibilité de Windows et Linux, mais il est configuré complètement différemment. Sur Linux, la valeur est configurée automatiquement par le cluster sur la ressource de groupe de disponibilité lui-même.
 
-**Quorum et le réplica de configuration uniquement**
+Quorum et le réplica de configuration uniquement
 
 
 Nouveau dans 2017 du serveur SQL à partir de CU1 est également un réplica de configuration. STIMULATEUR étant différent de celui d’un cluster WSFC, en particulier lorsqu’il s’agit de quorum et en demandant STONITH, seulement une configuration de deux nœuds ne fonctionnera pas lorsqu’il s’agit d’un groupe de disponibilité. Pour une instance de cluster, les mécanismes de quorum fournis par STIMULATEUR peuvent être précis, car tous les arbitrage de basculement FCI se produit au niveau du cluster. Pour un groupe de disponibilité, arbitrage sous Linux se produit dans SQL Server, où sont stockées toutes les métadonnées. Il s’agit là le réplica de configuration entre en jeu.
@@ -159,7 +159,7 @@ Sans quoi, un troisième nœud et au moins un réplica synchronisé est requis. 
     or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
-**Conception de packages**
+Conception de packages
 
 
 **Se connecter aux sources de données ODBC**. SSIS lors de l’actualisation de Linux CTP 2.1 et versions ultérieures, les packages SSIS permet les connexions ODBC sur Linux. Cette fonctionnalité a été testée avec les pilotes ODBC MySQL sur le serveur SQL Server, mais il est également prévue pour fonctionner avec n’importe quel pilote ODBC Unicode qui respecte la spécification ODBC. Au moment du design, vous pouvez fournir une source de données ou une chaîne de connexion pour se connecter aux données ODBC ; Vous pouvez également utiliser l’authentification Windows. Pour plus d’informations, consultez la [blog de l’annonce prise en charge d’ODBC sur Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
