@@ -8,11 +8,12 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
@@ -27,13 +28,13 @@ ms.lasthandoff: 11/18/2017
 
 ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Cet exemple doit être considérée comme une preuve de concept uniquement.  L’exemple de code est simplifiée par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft. Autres exemples qui utilisent les mêmes fonctions essentielles sont disponibles sur Github :
+Cet exemple doit être considéré comme une preuve de concept uniquement.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft. D'autres exemples qui utilisent les mêmes fonctions essentielles sont disponibles sur Github :
 
 - [https://github.com/tediousjs/tedious/BLOB/Master/Examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Étape 1 : se connecter  
   
-Le **nouvelle connexion** fonction est utilisée pour se connecter à la base de données SQL.  
+La fonction **new Connection** est utilisée pour se connecter à SQL Database.   
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -54,7 +55,7 @@ Le **nouvelle connexion** fonction est utilisée pour se connecter à la base de
 ## <a name="step-2--execute-a-query"></a>Étape 2 : Exécuter une requête  
   
   
-Toutes les instructions SQL sont exécutées à l’aide de la **Request() nouveau** (fonction). Si l’instruction retourne des lignes, par exemple une instruction select, vous pouvez les récupérer à l’aide de la **request.on()** (fonction). S’il n’y a aucune ligne, la fonction request.on() retourne des listes vides.  
+Toutes les instructions SQL sont exécutées à l’aide de la fonction **new Request()**. Si l’instruction retourne des lignes, par exemple une instruction select, vous pouvez les récupérer à l’aide de la fonction **request.on()**. S’il n’y a aucune ligne retournée, la fonction request.on() retourne des listes vides.  
   
   
 ```javascript  
@@ -103,7 +104,7 @@ Toutes les instructions SQL sont exécutées à l’aide de la **Request() nouve
   
 ## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à exécuter une [insérer](../../t-sql/statements/insert-transact-sql.md) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valeur.    
+Dans cet exemple, vous allez apprendre à passer en toute sécurité une commande [INSERT](../../t-sql/statements/insert-transact-sql.md), en passant des valeurs en paramètres qui protègeront votre application à partir des tentatives [d'injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```javascript  
