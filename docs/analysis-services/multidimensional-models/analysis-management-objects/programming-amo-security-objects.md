@@ -1,7 +1,7 @@
 ---
 title: "Programmation des objets de sécurité AMO | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,27 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, security
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f77d58eeaef6b127492f9944e15f0b751f03d704
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ee56a1d89bdf9d5712dcdb70043be95b9195d0ba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-security-objects"></a>Programmation d'objets de sécurité AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programmation des objets de sécurité ou d’applications qui utilisent des objets de sécurité AMO exige d’être membre du groupe administrateur du serveur ou du groupe administrateur de base de données. Administrateur du serveur et administrateur de base de données sont un accès niveaux fournie par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]la programmation d'objets de sécurité ou l'exécution d'applications qui utilisent des objets de sécurité AMO exige d'être membre du groupe Administrateur du serveur ou du groupe Administrateur de base de données. Administrateur du serveur et Administrateur de base de données représentent des niveaux d'accès fournis par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], l'accès utilisateur à tout objet est obtenu à travers la combinaison des rôles et des autorisations attribués à cet objet. Pour plus d’informations, consultez [Classes de sécurité AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
+ Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , l'accès utilisateur à tout objet est obtenu à travers la combinaison des rôles et des autorisations attribués à cet objet. Pour plus d’informations, consultez [Classes de sécurité AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   
 ## <a name="role-and-permission-objects"></a>Objets de rôle et d'autorisation  
  Les rôles de serveur contiennent un seul et même rôle dans la collection : le rôle Administrateurs. Il n'est pas possible d'ajouter de nouveaux rôles à la collection des rôles de serveur. L'appartenance au rôle Administrateurs autorise un accès complet à chaque objet du serveur  

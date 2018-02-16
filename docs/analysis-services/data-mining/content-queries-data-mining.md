@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une requête de contenu est une façon d’extraire des informations sur les statistiques internes et de la structure du modèle d’exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une requête de contenu est une façon d'extraire des informations sur les statistiques internes et la structure du modèle d'exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
   
  Cette section fournit des informations générales sur les types d'informations que vous pouvez récupérer à l'aide d'une requête de contenu, ainsi que la syntaxe DMX générale pour les requêtes de contenu.  
   
@@ -202,7 +203,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Pour plus d'informations sur l'utilisation des ensembles de lignes hiérarchiques, consultez la spécification OLEDB sur MSDN.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation de l'instruction DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
- [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Présentation de l’instruction DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

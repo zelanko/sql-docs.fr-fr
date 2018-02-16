@@ -17,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
   
  Il existe différentes implémentations de régression logistique dans la recherche de statistiques, qui utilisent différentes techniques d'apprentissage. L'algorithme de régression logistique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] a été implémenté en utilisant une variante de l'algorithme MNN de réseau neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Cet algorithme partage un grand nombre des qualités des réseaux neuronaux, mais son apprentissage est plus aisé.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Classification de documents, messages électroniques ou autres objets ayant de nombreux attributs.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Considérez un groupe de personnes qui partagent des informations démographiques similaires et qui achètent des produits de la société Adventure Works. En modélisant les données à lier à un résultat spécifique, tel que l'achat d'un produit cible, vous pouvez voir comment les informations démographiques contribuent à la probabilité de l’achat du produit cible.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  Les spécifications liées à un modèle de régression logistique sont les suivantes :  
   
- **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+ **Colonne à index unique** Chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
  **Colonnes d'entrée** Chaque modèle doit posséder au moins une colonne d'entrée qui contient les valeurs utilisées comme facteurs dans l’analyse. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Pour obtenir des exemples de requêtes sur un modèle de régression logistique, consultez [Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 -   Ne prend pas en charge l’extraction. Cela est dû au fait que la structure des nœuds du modèle d'exploration de données ne correspond pas nécessairement directement aux données sous-jacentes.  
   

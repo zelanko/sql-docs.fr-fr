@@ -16,19 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partitions de l’exploration de la structure dans le nombre spécifié de sections croisées, effectue l’apprentissage d’un modèle pour chaque partition, puis retourne les mesures de précision pour chaque partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Partitionne la structure d'exploration de données dans le nombre spécifié de sections croisées, effectue l'apprentissage d'un modèle pour chaque partition, puis retourne les mesures de précision de chaque partition.  
   
  **Remarque** : cette procédure stockée ne peut être utilisée qu’avec une structure d’exploration de données qui contient au moins un modèle de clustering. Pour la validation croisée des autres modèles, vous devez utiliser [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -93,7 +94,7 @@ SystemGetClusterCrossValidationResults(
   
  Le tableau suivant décrit les colonnes retournées.  
   
-|Nom de la colonne|Description|  
+|Nom de la colonne| Description|  
 |-----------------|-----------------|  
 |ModelName|Nom du modèle qui a été testé.|  
 |AttributeName|Nom de la colonne prédictible. Pour les modèles de cluster, toujours **null**.|  
@@ -104,7 +105,7 @@ SystemGetClusterCrossValidationResults(
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de valeur prévisible. Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Valeur|Valeur de la mesure de test spécifiée.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour retourner des mesures de précision pour tout l’ensemble de données, utilisez [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
  Par ailleurs, si le modèle d’exploration de données a déjà été partitionné en replis, vous pouvez contourner le traitement et retourner uniquement les résultats de la validation croisée en utilisant [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
@@ -131,10 +132,10 @@ CALL SystemGetClusterCrossValidationResults(
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Valeur|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Cluster 1||| 1|3025|Clustering|Probabilité de cas|0.930524511864121|  
+|Cluster 1|||1|3025|Clustering|Probabilité de cas|0.930524511864121|  
 |Cluster 1|||2|3025|Clustering|Probabilité de cas|0.919184178430778|  
 |Cluster 1|||3|3024|Clustering|Probabilité de cas|0.929651120490248|  
-|Cluster 2||| 1|1289|Clustering|Probabilité de cas|0.922789726933607|  
+|Cluster 2|||1|1289|Clustering|Probabilité de cas|0.922789726933607|  
 |Cluster 2|||2|1288|Clustering|Probabilité de cas|0.934865535691068|  
 |Cluster 2|||3|1288|Clustering|Probabilité de cas|0.924724595688798|  
   
@@ -145,6 +146,6 @@ CALL SystemGetClusterCrossValidationResults(
  [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

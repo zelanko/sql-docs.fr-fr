@@ -28,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir le deux le type de données physique pour une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne lorsqu’il est utilisé dans un modèle,  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir à la fois le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne quand elle est utilisée dans un modèle.  
   
  Le *type de données* détermine la façon dont les algorithmes traitent les données dans ces colonnes quand vous créez des modèles d’exploration de données. La définition du type de données d'une colonne donne les informations d'algorithme relatives au type de données des colonnes, ainsi que la façon de traiter les données. Chaque type de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge un ou plusieurs types de contenu pour l'exploration de données.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  Le type de contenu **Discrétisé** est pris en charge par les types de données suivants : **Date**, **Double**, **Long**et **Text**.  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>Clé  
  Le type de contenu *clé* (Key) signifie que la colonne identifie de façon unique une ligne. Dans une table de cas, la colonne clé est généralement un identificateur numérique ou texte. Vous attribuez la valeur **key** au type de contenu pour indiquer que la colonne doit uniquement servir au suivi des enregistrements, et non à des fins d’analyse.  
   
  Les tables imbriquées ont également des clés, mais l'utilisation de la clé de table imbriquée diffère quelque peu. Vous attribuez la valeur **key** au type de contenu dans une table imbriquée si la colonne est l’attribut à analyser. Les valeurs dans la clé de table imbriquée doivent être uniques pour chaque cas, mais il peut y avoir des doublons sur tout le jeu de cas.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  Ce type de contenu est pris en charge par les types de données suivants : **Double**, **Long**et **Date**.  
   
-## <a name="table"></a>Table de charge de travail  
+## <a name="table"></a>Table  
  Le type de contenu *table* indique que la colonne contient une autre table de données, comprenant une ou plusieurs colonnes et une ou plusieurs lignes. Pour toute ligne particulière de la table de cas, cette colonne peut contenir plusieurs valeurs qui sont toutes associées à l'enregistrement de cas parent. Par exemple, si la table de cas principale contient une liste de clients, vous pouvez avoir plusieurs colonnes qui contiennent des tables imbriquées, telles qu’une colonne **ProductsPurchased** dans laquelle la table imbriquée répertorie les produits précédemment achetés par ce client, et une colonne **Hobbies** qui répertorie les centres d’intérêt du client.  
   
  Le type de données de cette colonne est toujours **Table**.  
@@ -118,10 +119,10 @@ ms.lasthandoff: 01/08/2018
  En plus des types de contenu susmentionnés qui sont couramment utilisés avec tous les modèles, vous pouvez utiliser des colonnes classifiées pour définir les types de contenu de certains types de données. Pour plus d’informations sur les colonnes classifiées, consultez [Colonnes classifiées &#40;exploration de données&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Contenu des Types de &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
  [Types de données &#40; exploration de données &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Types de données &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [Modifier les propriétés d’une Structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
- [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colonnes de Structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

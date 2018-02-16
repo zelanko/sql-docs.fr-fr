@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les modèles d’exploration de données ont les types de propriétés suivants :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les modèles d'exploration de données ont les types de propriétés suivantes :  
   
 -   les propriétés qui sont héritées de la structure d'exploration de données et qui définissent le type de données et le type de contenu des données utilisées par le modèle ;  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|-----------------|  
 |**Algorithm**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
 |**AlgorithmParameters**|Définit les valeurs pour les paramètres d'algorithme disponibles pour chaque type d'algorithme.|  
-|**Filter**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
+|**Filtre**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
 |**Nom**|Définit le nom du modèle d'exploration de données.|  
 |**AllowDrillThrough**|Spécifie si l'extraction est activée sur le modèle d'exploration de données.|  
   
@@ -62,15 +63,15 @@ ms.lasthandoff: 01/08/2018
 |**Nom**|Définit le nom de la colonne du modèle d'exploration de données. Vous pouvez taper un nouveau nom, pour fournir un alias pour la colonne du modèle d'exploration de données.|  
 |**ModelingFlags**|Définit tous les indicateurs spécifiques des algorithmes pour la colonne.|  
 |**SourceColumnID**|Indique le nom de la colonne de structure d'exploration de données sur laquelle la colonne du modèle est basée.<br /><br /> Cette propriété est en lecture seule.|  
-|**Usage**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
+|**Utilisation**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
+ [Les Structures d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
- [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
- [Créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Créer un alias pour une colonne du modèle](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Créer une Structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Créer un Alias pour une colonne de modèle](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

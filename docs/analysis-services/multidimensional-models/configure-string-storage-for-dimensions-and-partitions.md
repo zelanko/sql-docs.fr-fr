@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
   
  Notez que vous pouvez augmenter le stockage des chaînes seulement sur les objets qui nécessitent une capacité supplémentaire. Dans la plupart des modèles multidimensionnels, des données de chaîne sont associées aux dimensions. Toutefois, les partitions qui contiennent des mesures de comptage distinctes sur les chaînes peuvent également bénéficier de ce paramètre. Le paramètre ne concernant que les chaînes, les données numériques ne sont pas affectées.  
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Valeur|Description|  
+|Value| Description|  
 |-----------|-----------------|  
 |**1050**|Spécifie l'architecture de stockage de chaînes par défaut, assujettie à une limite de taille de fichier de 4 Go par magasin.|  
 |**1100**|Spécifie le stockage de chaînes plus important, prend en charge jusqu'à 4 milliards de chaînes uniques par magasin.|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  Par opposition avec l'architecture de stockage de chaînes par défaut qui limite la taille du fichier physique, le stockage de chaînes plus important est basé sur un nombre maximal de chaînes. La limite maximale pour le stockage de chaînes plus important est de 4 milliards de chaînes uniques ou de 4 milliards d'enregistrements, l'élément qui atteint le premier cette limite étant applicable. Le stockage de chaînes plus important crée des enregistrements de taille égale, où chaque enregistrement est égal à une page de 64 Ko. Si vous avez des chaînes très longues qui ne rentre pas dans un seul enregistrement, votre limite effective sera inférieure à 4 milliards de chaînes.  
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a> Configuration requise  
  Vous devez avoir une version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Les dimensions et les partitions doivent utiliser le mode de stockage MOLAP.  
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils et approches de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Options de traitement et les paramètres &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Traitement et Modes de stockage de partitions](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Stockage de dimension](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

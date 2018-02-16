@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Retourne les mesures de précision de validation croisée d’une structure d’exploration de données et tous les modèles connexes, à l’exclusion des modèles de clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Retourne les mesures de précision de validation croisée d'une structure d'exploration de données et de tous les modèles connexes, à l'exclusion des modèles de clustering.  
   
  Cette procédure stockée retourne les mesures du jeu de données dans son ensemble sous forme de partition unique. Pour partitionner le jeu de données en sections croisées et retourner les mesures pour chaque partition, utilisez [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -107,7 +108,7 @@ SystemGetAccuracyResults(<mining structure>,
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par **GetValidationResults**.  
   
-|Nom de la colonne|Description|  
+|Nom de la colonne| Description|  
 |-----------------|-----------------|  
 |Modèle|Nom du modèle qui a été testé. **All** indique que le résultat est un agrégat de tous les modèles.|  
 |AttributeName|Nom de la colonne prédictible.|  
@@ -118,12 +119,12 @@ SystemGetAccuracyResults(<mining structure>,
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de modèle et du type de valeur prévisible.<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Valeur|Valeur de la mesure spécifiée.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le tableau suivant fournit des exemples des valeurs que vous pouvez utiliser pour spécifier les données de la structure d'exploration de données qui sont utilisées pour la validation croisée. Si vous souhaitez utiliser des scénarios de test pour la validation croisée, la structure d'exploration de données doit déjà contenir un jeu de données de test. Pour plus d’informations sur la définition d’un jeu de données de test quand vous créez une structure d’exploration de données, consultez [Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valeur de type entier|Description|  
+|Valeur de type entier| Description|  
 |-------------------|-----------------|  
-| 1|Seuls les cas d'apprentissage sont utilisés.|  
+|1|Seuls les cas d'apprentissage sont utilisés.|  
 |2|Seuls les scénarios de test sont utilisés.|  
 |3|Les cas d'apprentissage et les scénarios de test sont utilisés.|  
 |4|Combinaison incorrecte.|  
@@ -153,13 +154,13 @@ CALL SystemGetAccuracyResults (
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Valeur|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Vrai positif|605|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Faux positif|177|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Vrai négatif|501|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|classification.|Faux négatif|355|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|Vraisemblance|Score du journal|-0.598454638753028|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|Vraisemblance|Finesse|0.0936717116894395|  
-|v Target Mail DT|Bike Buyer| 1|0|1638|Vraisemblance|Erreur quadratique moyenne|0.361630800104946|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Vrai positif|605|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Faux positif|177|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Vrai négatif|501|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classification.|Faux négatif|355|  
+|v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Score du journal|-0.598454638753028|  
+|v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Finesse|0.0936717116894395|  
+|v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Erreur quadratique moyenne|0.361630800104946|  
   
 ## <a name="requirements"></a>Spécifications  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -168,6 +169,6 @@ CALL SystemGetAccuracyResults (
  [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

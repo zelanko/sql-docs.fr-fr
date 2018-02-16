@@ -25,23 +25,24 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal est une implémentation de l’architecture populaire et adaptables réseau neuronal pour l’apprentissage.  L’algorithme opère en testant chaque état possible de l’attribut d’entrée par rapport à chaque état possible de l’attribut prévisible, et en calculant des probabilités pour chaque combinaison en fonction des données d’apprentissage. Vous pouvez utiliser ces probabilités à des fins de classification ou de régression pour prédire un résultat en fonction de certains attributs d’entrée. Un réseau neuronal peut aussi être utile pour l’analyse d’association.  
+# <a name="microsoft-neural-network-algorithm"></a>Algorithme MNN (Microsoft Neural Network)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) est une implémentation de l’architecture de réseau neuronal à succès et modulable destinée à l’apprentissage automatique (Machine Learning).  L’algorithme opère en testant chaque état possible de l’attribut d’entrée par rapport à chaque état possible de l’attribut prévisible, et en calculant des probabilités pour chaque combinaison en fonction des données d’apprentissage. Vous pouvez utiliser ces probabilités à des fins de classification ou de régression pour prédire un résultat en fonction de certains attributs d’entrée. Un réseau neuronal peut aussi être utile pour l’analyse d’association.  
   
  Quand vous créez un modèle d’exploration de données avec l’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), vous pouvez inclure plusieurs sorties. L’algorithme crée alors plusieurs réseaux. Le nombre de réseaux contenus dans un même modèle d’exploration de données dépend du nombre d’états (ou de valeurs d’attribut) contenus dans les colonnes d’entrée, mais aussi du nombre de colonnes prédictibles qu’utilise le modèle d’exploration de données et du nombre d’états contenus dans ces colonnes.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) permet d'analyser des données d'entrée complexes, telles que les données d'un processus commercial ou de fabrication, ou des problèmes d'entreprise pour lesquels une quantité significative de données d'apprentissage est disponible, mais pour lesquels des règles ne peuvent pas être facilement dérivées en utilisant d'autres algorithmes.  
   
  Voici quelques suggestions de scénarios d'utilisation de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) :  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour obtenir des informations générales sur la création d’une requête sur un modèle d’exploration de données, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 -   Ne prend pas en charge l’extraction ou les dimensions d’exploration de données. Cela est dû au fait que la structure des nœuds du modèle d'exploration de données ne correspond pas nécessairement directement aux données sous-jacentes.  
   
@@ -95,9 +96,9 @@ ms.lasthandoff: 01/08/2018
 -   Ne prend pas en charge la création de dimensions d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Référence technique de Microsoft Neural Network algorithme](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requête de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
+ [Algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   

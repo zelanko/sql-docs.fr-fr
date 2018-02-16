@@ -15,32 +15,33 @@ helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lors du partitionnement d’un groupe de mesures, vous pouvez configurer une base de données secondaire sur une distance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance en tant que stockage de la partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous partitionnez un groupe de mesures, vous pouvez configurer une base de données secondaire sur une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme stockage de partition.  
   
  Les partitions distantes d'un cube (appelé la base de données master) sont stockées dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dédiée sur l'instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (appelée base de données secondaire).  
   
  Une base de données secondaire dédiée peut stocker les partitions distantes pour une seule base de données master, mais la base de données master peut utiliser plusieurs bases de données secondaires, tant que toutes les bases de données secondaires se trouvent sur la même instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les dimensions dans une base de données dédiée aux partitions distantes sont créées en tant que dimensions liées.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour vous permettre de créer une partition distante, les conditions suivantes doivent être remplies :  
   
 -   Vous devez disposer d’une seconde instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et d’une base de données dédiée pour stocker les partitions. La base de données secondaire a une fonction unique ; elle fournit le stockage des partitions distantes pour une base de données master.  
   
 -   Les deux instances du serveur doivent présenter la même version. Les deux bases de données doivent avoir le même niveau fonctionnel.  
   
--   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
+-   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
   
 -   Les paramètres de pare-feu sur les deux ordinateurs doivent être définis de manière à accepter les connexions externes. Pour plus d’informations sur la configuration du pare-feu, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -138,6 +139,6 @@ ms.lasthandoff: 01/08/2018
 >  Bien que les bases de données dédiées au stockage des partitions distantes ne soient pas exposées aux ensembles de lignes de schéma, les applications utilisant des objets AMO (Analysis Management Objects) peuvent toujours découvrir une base de données dédiée à l'aide de XML pour la commande Analysis Discover. Toute commande CREATE ou DELETE envoyée directement à une base de données dédiée à l'aide d'un protocole TCP ou client HTTP réussit, mais le serveur retourne un avertissement indiquant que l'action peut endommager cette base de données étroitement gérée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40; Analysis Services - données multidimensionnelles &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

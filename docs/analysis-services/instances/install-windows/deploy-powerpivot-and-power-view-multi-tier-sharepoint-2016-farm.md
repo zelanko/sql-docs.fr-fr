@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: da59f6eddb113c8af70e3ddcf3bcb3f35d6a6123
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>Déployer PowerPivot et Power View - 2016 batterie de serveurs SharePoint à plusieurs niveaux
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Résumé :** Résumé : ce livre blanc fournit aux administrateurs de SharePoint et les architectes obtenir des instructions détaillées pour déployer et configurer un environnement de démonstration Microsoft BI dans une batterie de serveurs SharePoint à plusieurs serveurs selon les versions préliminaires de SharePoint Server 2016, Office Online Server et la pile SQL Server 2016 BI pour SharePoint 2016. Après une brève présentation des modifications architecturales importantes et des dépendances système correspondantes, il décrit la configuration et les logiciels requis, ainsi que le chemin de déploiement recommandé pour activer et vérifier les fonctionnalités BI en trois étapes. Ce livre blanc aborde également les problèmes connus affectant SharePoint Server 2016 Bêta 2, Office Online Server Preview et SQL Server 2016 CTP 3.1. Il suggère également des solutions de contournement appropriées. Ces solutions ne seront plus nécessaires dans les versions finales de ces produits. Consultez une version à jour de ce livre blanc lors du déploiement de versions RTM.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  **Résumé :** Ce livre blanc fournit aux administrateurs et architectes SharePoint des instructions détaillées pour déployer et configurer un environnement de démonstration Microsoft BI dans une batterie de serveurs SharePoint à plusieurs serveurs en fonction des préversions de SharePoint Server 2016, Office Online Server et de la pile SQL Server 2016 BI pour SharePoint 2016. Après une brève présentation des modifications architecturales importantes et des dépendances système correspondantes, il décrit la configuration et les logiciels requis, ainsi que le chemin de déploiement recommandé pour activer et vérifier les fonctionnalités BI en trois étapes. Ce livre blanc aborde également les problèmes connus affectant SharePoint Server 2016 Bêta 2, Office Online Server Preview et SQL Server 2016 CTP 3.1. Il suggère également des solutions de contournement appropriées. Ces solutions ne seront plus nécessaires dans les versions finales de ces produits. Consultez une version à jour de ce livre blanc lors du déploiement de versions RTM.  
   
  **Auteur :**Kay Unkroth, Jason Haak  
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Afficher la formule d'un modèle de série chronologique (exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si vous avez créé un modèle de série de temps à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’exploration de données, le moyen le plus simple pour afficher l’équation de régression pour le modèle est d’utiliser le **légende d’exploration de données** de la [série de temps visionneuse](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), qui Affiche toutes les constantes dans un format lisible.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Si vous avez créé un modèle de série chronologique à l’aide de l’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le moyen le plus simple pour afficher l’équation de régression pour le modèle est d’utiliser la **légende d’exploration de données** de la [visionneuse de l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), qui présente toutes les constantes dans un format lisible.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Pour consulter la formule de régression ARTXP d'un modèle de série chronologique  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
     >  Si vous parcourez le contenu d’un modèle mixte qui utilise des modèles ARTXP et ARIMA, les deux modèles se trouvent dans des arborescences distinctes, jointes au niveau du nœud racine qui représentant le modèle. Bien que les modèles ARTXP et ARIMA soient présentés dans une seule visionneuse pour des raisons pratiques, les structures sont très différentes, comme le sont les équations, qui ne peuvent pas être associées ou comparées. Par exemple, l’arbre ARTXP s’apparente plutôt à un arbre de décision, alors que l’arbre ARIMA représente une série de moyennes mobiles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   
