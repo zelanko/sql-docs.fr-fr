@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accès aux données de modèles multidimensionnels (Analysis Services - Données multidimensionnelles)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Utilisez les informations de cette rubrique pour savoir comment accéder aux [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] des données multidimensionnelles à l’aide des méthodes de programmation, un script ou des applications clientes qui incluent la prise en charge intégrée pour la connexion à un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur sur votre réseau.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Utilisez les informations de cette rubrique pour savoir comment accéder aux données multidimensionnelles de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à l'aide des méthodes de programmation, d'un script ou d'applications clientes incluant la prise en charge intégrée pour se connecter à un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur votre réseau.  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="performancepoint-dashboards"></a>Tableaux de bord PerformancePoint  
  Les tableaux de bord PerformancePoint servent à créer des tableaux de bord SharePoint qui communiquent les performances métier sur des mesures prédéfinies. PerformancePoint inclut la prise en charge des connexions de données aux données multidimensionnelles Analysis Services. Pour plus d’informations, consultez [Créer des connexions de données Analysis Services (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+### <a name="sql-server-data-tools"></a>Outils de données SQL Server  
  Le modèle et les concepteurs de rapports utilisent des outils de données SQL Server pour créer des solutions qui incluent des modèles MDX. Le déploiement de la solution sur une instance Analysis Services permet de crée la base de données à laquelle vous allez vous connecter par la suite à partir d'Excel, Reporting Services et d'autres applications clientes Business Intelligence.  
   
  SQL Server Data Tools sont générés sur un shell Visual Studio et utilisent des projets pour organiser et contenir le modèle. Pour plus d’informations, consultez [Création de modèles MDX à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
@@ -75,11 +76,11 @@ ms.lasthandoff: 01/08/2018
   
  [Interrogation de données multidimensionnelles à l'aide de MDX](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Concepts clés dans MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Concepts clés dans MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Principes de base des scripts MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Principes de base de script MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Interfaces de programmation  
  Lorsque vous développez une application personnalisée qui utilise des données multidimensionnelles, votre approche pour accéder aux données tombera très probablement dans l'une des catégories suivantes :  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
   
  Le tableau suivant fournit des détails supplémentaires et des liens sur les bibliothèques clientes utilisées pour connecter Analysis Services à une application personnalisée.  
   
-|Interface|Description|  
+|Interface| Description|  
 |---------------|-----------------|  
 |Objets AMO (Analysis Management Objects) Analysis Services|AMO est le modèle d'objet principal pour administrer des instances d'Analysis Services et des bases de données multidimensionnelles dans le code. Par exemple, SQL Server Management Studio utilise AMO pour prendre en charge l'administration de serveur et de base de données. Pour plus d’informations, consultez [Développement avec AMO &#40;Analysis Management Objects&#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).|  
 |ADOMD.NET|ADOMD.NET est le modèle d'objet principal de création et d'accès aux données multidimensionnelles dans les applications personnalisées. Vous pouvez utiliser ADOMD.NET dans une application cliente managée pour récupérer des informations [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à l'aide des interfaces d'accès aux données classiques de Microsoft .NET Framework. Pour plus d’informations, consultez [Développement avec ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) et [Programmation du client ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md).|  

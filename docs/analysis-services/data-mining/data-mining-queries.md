@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-queries"></a>Requêtes d’exploration de données
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Requêtes d’exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
   
 -   Appliquer le modèle aux nouvelles données, pour créer des prédictions uniques ou multiples. Vous pouvez fournir des valeurs d'entrée sous forme de paramètres, ou dans un lot.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_Understand"></a> Fonctionnement des requêtes d'exploration de données  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de requêtes suivants :  
   
--   [Requêtes de prédiction &#40;Exploration de données&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Requêtes de prédiction &#40; exploration de données &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      Requêtes qui créent des inférences basées sur des schémas dans le modèle, et à partir des données d'entrée.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
      Requêtes qui retournent des métadonnées, des statistiques et d'autres informations sur le modèle lui-même.  
   
--   [Requêtes d’extraction &#40;exploration de données&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Requêtes d’extraction &#40; exploration de données &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      Requêtes qui peuvent récupérer les données de cas sous-jacentes pour le modèle, ou même les données de la structure qui n'ont pas été utilisées dans le modèle.  
   
@@ -115,9 +116,9 @@ ms.lasthandoff: 01/08/2018
     |||  
     |-|-|  
     |[Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)|[Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
-    |[Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Exemples de requêtes de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
+    |[Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Exemples de requête de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
     |[Exemples de requêtes de modèle d'arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Exemples de requêtes de modèle de séries chronologiques](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[Exemples de requêtes de modèle de régression logistique](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      Vous pouvez également appeler des fonctions VBA ou créer vos propres fonctions. Pour plus d’informations, consultez [Fonctions &#40;DMX&#41;](../../dmx/functions-dmx.md).  
@@ -148,17 +149,17 @@ ms.lasthandoff: 01/08/2018
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent chaque type de requête d'exploration de données plus en détail et fournissent des liens vers des exemples détaillés de création de requêtes sur des modèles d'exploration de données.  
   
- [Requêtes de prédiction &#40;Exploration de données&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40; exploration de données &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Requêtes de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Requêtes d’extraction &#40;exploration de données&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Requêtes de définition des données &#40;Exploration de données&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Requêtes de définition de données &#40; exploration de données &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Utilisez ces liens pour apprendre à créer et à utiliser des requêtes d'exploration de données.  
   
 |Tâches|Liens|  
@@ -167,13 +168,13 @@ ms.lasthandoff: 01/08/2018
 |Utiliser les outils de requête d'exploration de données dans SQL Server Management Studio et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Créer une requête DMX dans SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Appliquer des fonctions de prédiction à un modèle](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Modifier manuellement une requête de prédiction](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Utiliser des données externes utilisées dans des requêtes de prédiction|[Choisir et mapper les données d’entrée pour une requête de prédiction](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Choisir et mapper les données d’entrée pour une requête de prédiction](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Utiliser les résultats de requêtes|[Afficher et enregistrer les résultats d'une requête de prédiction](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|Utiliser les modèles de requête DMX et XMLA fournis dans Management Studio|[Créer une requête singleton de prédiction à partir d’un modèle](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Utiliser les modèles de requête DMX et XMLA fournis dans Management Studio|[Créer une requête de prédiction Singleton à partir d’un modèle](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |En savoir plus sur les requêtes de contenu et afficher des exemples|[Créer une requête de contenu sur un modèle d’exploration de données](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Interroger les paramètres utilisés pour créer un modèle d'exploration de données](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
-|Définir des options de requête et résoudre les problèmes liés aux autorisations et aux requêtes|[Modifier la valeur du délai d’attente pour les requêtes d’exploration de données](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
+|Définir des options de requête et résoudre les problèmes liés aux autorisations et aux requêtes|[Modifiez la valeur de délai d’attente pour les requêtes d’exploration de données](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |Utiliser les composants d'exploration de données dans Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

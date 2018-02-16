@@ -16,19 +16,20 @@ helpviewer_keywords:
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 24e661c0ba9bd5c143365c69282e2cdae91b174a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Octroyer des autorisations Lire la définition sur des métadonnées d'objets (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Autorisation de lire une définition d’objet, ou métadonnées, sur les objets sélectionnés permet à un administrateur accorder l’autorisation d’afficher des informations sur l’objet, sans accorder d’autorisations pour modifier la définition de l’objet, modifiez la structure des objets ou afficher le texte réel données de l’objet. Vous pouvez accorder des autorisations**Lire la définition** au niveau de la base de données, d’une source de données, d’une dimension, d’une structure d’exploration de données et d’un modèle d’exploration de données. Si vous avez besoin d’autorisations **Lire la définition** pour un cube, vous devez activer **Lire la définition** pour la base de données. N’oubliez pas que les autorisations s’ajoutent les unes aux autres. Par exemple, imaginez qu'un rôle accorde l'autorisation de lire les métadonnées d'un cube tandis qu'un second rôle accorde au même utilisateur l'autorisation de lire les métadonnées d'une dimension. Les autorisations des deux rôles se combinent et permettent à l'utilisateur de lire les métadonnées du cube et celles de la dimension dans cette base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'autorisation de lire une définition d'objets ou des métadonnées sur des objets sélectionnés permet à un administrateur d'accorder l'autorisation d'afficher des informations sur les objets sans accorder l'autoriser de modifier les définitions des objets, modifier la structure des objets ou afficher les données des objets. Vous pouvez accorder des autorisations**Lire la définition** au niveau de la base de données, d’une source de données, d’une dimension, d’une structure d’exploration de données et d’un modèle d’exploration de données. Si vous avez besoin d’autorisations **Lire la définition** pour un cube, vous devez activer **Lire la définition** pour la base de données. N’oubliez pas que les autorisations s’ajoutent les unes aux autres. Par exemple, imaginez qu'un rôle accorde l'autorisation de lire les métadonnées d'un cube tandis qu'un second rôle accorde au même utilisateur l'autorisation de lire les métadonnées d'une dimension. Les autorisations des deux rôles se combinent et permettent à l'utilisateur de lire les métadonnées du cube et celles de la dimension dans cette base de données.  
   
 > [!NOTE]  
 >  L'autorisation de lire les métadonnées d'une base de données est l'autorisation minimale nécessaire pour se connecter à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un utilisateur autorisé à lire les métadonnées peut également utiliser l’ensemble de lignes de schéma DISCOVER_XML_METADATA pour exécuter une requête sur l’objet et afficher ses métadonnées. Pour plus d’informations, consultez [Ensemble de lignes DISCOVER_XML_METADATA](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
  Nous vous suggérons d’inclure l’autorisation **Lire la définition** au niveau de la base de données chaque fois que vous définissez des rôles pour le traitement dédié. Le fait de disposer de l’autorisation **Lire la définition** permet aux non-administrateurs d’afficher la hiérarchie d’objets d’un modèle dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et d’accéder à des objets spécifiques pour un traitement ultérieur.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez **Rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance d’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez **Rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
   
 2.  Sous l’onglet **Général** , sélectionnez l’option **Lire la définition** .  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 5.  Cliquez sur **OK** pour terminer la création du rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Accorder des autorisations de base de données &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Accorder des autorisations de processus &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

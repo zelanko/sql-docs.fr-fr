@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partitions (Analysis Services - Données multidimensionnelles)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une partition est un conteneur pour une partie des données du groupe de mesures. Les partitions ne sont pas considérées comme des requêtes MDX ; toutes les requêtes reflètent le contenu entier du groupe de mesures, indépendamment du nombre de partitions défini pour le groupe de mesures. Le contenu des données d'une partition est défini par les liaisons de requête de la partition et par l'expression de découpage.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une partition est un conteneur d'une portion des données d'un groupe de mesures. Les partitions ne sont pas considérées comme des requêtes MDX ; toutes les requêtes reflètent le contenu entier du groupe de mesures, indépendamment du nombre de partitions défini pour le groupe de mesures. Le contenu des données d'une partition est défini par les liaisons de requête de la partition et par l'expression de découpage.  
   
  Un objet <xref:Microsoft.AnalysisServices.Partition> simple est composé des informations de base, de la définition de découpage, de la conception d'agrégation et d'autres données. Les informations de base incluent le nom de la partition, le mode de stockage, le mode de traitement et d'autres informations. La définition de découpage est une expression MDX qui spécifie un tuple ou un jeu. La définition de découpage a les mêmes restrictions que la fonction MDX StrToSet. Avec le paramètre CONSTRAINED, la définition de découpage peut utiliser la dimension, la hiérarchie, les noms de niveau et de membre, les clés, les noms uniques ou d'autres objets nommés dans le cube, mais ne peut pas utiliser de fonctions MDX. La conception d'agrégation est une collection de définitions d'agrégation qu'il est possible de partager sur plusieurs partitions dans une base de données. La valeur par défaut est prise de la conception d'agrégation du cube parent.  
   

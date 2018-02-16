@@ -15,19 +15,20 @@ helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 99ee0b35cbb913a1e0332bda07394fe6541309a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Requête MDX et les Axes de segment - spécifier le contenu d’un axe de requête
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Axes de requête spécifient les bords d’un ensemble de cellules renvoyées par une instruction SELECT MDX (Multidimensional Expressions). La spécification des bords d'un jeu de cellules vous permet de restreindre les données retournées qui sont visibles par le client.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Les axes de requête spécifient les bords d'un jeu de cellules retourné par une instruction SELECT MDX (Multidimensional Expressions). La spécification des bords d'un jeu de cellules vous permet de restreindre les données retournées qui sont visibles par le client.  
   
  Pour spécifier des axes de requête, utilisez la clause `<SELECT query axis clause>` pour attribuer un jeu à un axe de requête particulier. Chaque valeur `<SELECT query axis clause>` définit un axe de requête. Le nombre d'axes du dataset est égal au nombre de valeurs `<SELECT query axis clause>` de l'instruction SELECT.  
   
@@ -121,6 +122,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Spécification du contenu d’un axe de secteur &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

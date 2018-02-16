@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurer l’accès HTTP à Analysis Services sur IIS 8.0
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cet article explique comment configurer un point de terminaison HTTP pour accéder à une instance Analysis Services. Vous pouvez activer l'accès HTTP en configurant MSMDPUMP.dll, une extension ISAPI qui s'exécute dans Internet Information Services (IIS) et qui pompe des données entre des applications clientes et un serveur Analysis Services. Cette approche constitue une alternative à la connexion à Analysis Services lorsque votre solution de décisionnel nécessite les capacités suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cet article explique comment configurer un point de terminaison HTTP pour accéder à une instance Analysis Services. Vous pouvez activer l'accès HTTP en configurant MSMDPUMP.dll, une extension ISAPI qui s'exécute dans Internet Information Services (IIS) et qui pompe des données entre des applications clientes et un serveur Analysis Services. Cette approche constitue une alternative à la connexion à Analysis Services lorsque votre solution de décisionnel nécessite les capacités suivantes :  
   
 -   Un accès client via une connexion Internet ou extranet, avec des restrictions au niveau des ports à activer  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Vue d'ensemble](#bkmk_overview)  
   
--   [Conditions préalables](#bkmk_prereq)  
+-   [Configuration requise](#bkmk_prereq)  
   
 -   [Copier le fichier MSMDPUMP.dll dans un dossier du serveur Web](#bkmk_copy)  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
 |IIS et Analysis Services sur des ordinateurs différents|Pour cette topologie, vous devez installer le fournisseur OLE DB Analysis Services sur le serveur Web. Vous devez également modifier le fichier msmdpump.ini pour qu'il spécifie l'emplacement de l'instance Analysis Services sur l'ordinateur distant.<br /><br /> Cette topologie ajoute une étape d'authentification double saut, dans laquelle les informations d'identification doivent passer du client vers le serveur Web, jusqu'au serveur principal Analysis Services. Si vous utilisez des informations d'identification Windows et NTLM, vous obtiendrez une erreur car NTLM ne permet pas la délégation d'informations d'identification client à un autre serveur. La solution habituelle consiste à utiliser l'authentification de base avec le protocole SSL. Cela nécessite, cependant, que les utilisateurs fournissent un nom d'utilisateur et un mot de passe pour accéder au répertoire virtuel MSMDPUMP. Une approche plus simple consiste à activer Kerberos et à configurer une délégation contrainte Analysis Services pour que les utilisateurs puissent accéder à Analysis Services facilement. Pour plus d'informations, consultez [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) .<br /><br /> Réfléchissez aux ports à débloquer dans le Pare-feu Windows. Vous devrez débloquer les ports sur les deux serveurs pour permettre l'accès à l'application Web sur IIS et à Analysis Services sur un serveur distant.|  
 |Les connexions client proviennent d'un domaine non approuvé ou d'une connexion extranet|Les connexions client provenant d'un domaine non approuvé nécessitent davantage de restrictions d'authentification. Par défaut, Analysis Services utilise l'authentification intégrée de Windows, qui nécessite que les utilisateurs se trouvent dans le même domaine que le serveur. Si vos utilisateurs extranet se connectent à IIS depuis un domaine extérieur, ils obtiendront une erreur de connexion si le serveur est configuré pour utiliser les paramètres par défaut.<br /><br /> L'une des solutions de contournement consiste à demander aux utilisateurs extranet de se connecter via une connexion VPN à l'aide d'informations d'identification de domaine. Cependant, une meilleure approche serait d'activer l'authentification de base et le protocole SSL sur votre site Web IIS.|  
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a> Configuration requise  
  Les instructions de cet article supposent qu'IIS est déjà configuré et qu'Analysis Services est déjà installé. Windows Server 2012 est fourni avec IIS 8.x comme rôle serveur activable sur le système.  
   
  **Configuration supplémentaire dans IIS 8.0**  
@@ -128,11 +129,11 @@ ms.lasthandoff: 01/08/2018
   
 4.  Vérifiez que le dossier \inetpub\wwwroot\OLAP présent sur votre serveur Web contient ce qui suit : un fichier MSMDPUMP.DLL, un fichier MSMDPUMP.INI et un dossier Resources. La structure des dossiers doit ressembler à ceci :  
   
-    -   \<lecteur > : \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<lecteur > : \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<lecteur > : \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Étape 2 : créer un pool d'applications et un répertoire virtuel dans IIS  
  Ensuite, créez un pool d’applications et un point de terminaison pour la pompe.  

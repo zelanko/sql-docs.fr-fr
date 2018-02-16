@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d’un serveur Power Pivot dans l’Administration centrale
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] d’administration de serveur et de configuration est effectuée par les administrateurs d’application de service SharePoint à l’aide de l’Administration centrale de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sont gérées par les administrateurs d’application de service SharePoint à l’aide de l’Administration centrale SharePoint.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint doit être configuré avant de pouvoir être utilisé. Après avoir installé [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint à l’aide du programme d’installation de SQL Server, vous pouvez le configurer selon l’une des approches suivantes :  
   
@@ -46,12 +47,12 @@ ms.lasthandoff: 01/08/2018
   
  Contrairement aux outils de configuration de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ou aux applets de commande PowerShell, l’Administration centrale fournit des pages qui spécifient toutes les options que vous pouvez définir lors de la configuration d’une application ou d’un serveur. Les autres méthodes réduisent le nombre d'étapes impliquées dans le flux de travail de configuration, ou nécessitent des connaissances préalables concernant la configuration d'un serveur SharePoint à l'aide de PowerShell.  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  [Configuration de Power Pivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
  [Outils de configuration de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Lien|Type|Description de la tâche|  
 |----------|----------|----------------------|  

@@ -23,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Sélection des fonctionnalités* est une partie importante de l’apprentissage. Elle désigne le processus visant à réduire les entrées à traiter et à analyser, ou à identifier les entrées les plus pertinentes. Le terme connexe *ingénierie des fonctionnalités* (ou *extraction des fonctionnalités*) désigne le processus visant à extraire des informations ou des fonctionnalités utiles à partir de données existantes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La *sélection des fonctionnalités* est une partie importante de l’apprentissage automatique. Elle désigne le processus visant à réduire les entrées à traiter et à analyser, ou à identifier les entrées les plus pertinentes. Le terme connexe *ingénierie des fonctionnalités* (ou *extraction des fonctionnalités*) désigne le processus visant à extraire des informations ou des fonctionnalités utiles à partir de données existantes.  
   
 ## <a name="why-do-feature-selection"></a>Pourquoi utiliser la sélection des fonctionnalités ?  
  La sélection des fonctionnalités est essentielle à la création d’un modèle performant pour plusieurs raisons. La première raison est que la sélection des fonctionnalités implique une certaine *réduction de cardinalité*pour imposer une limite du nombre d’attributs pouvant être pris en compte lors de la création d’un modèle. Les données contiennent presque toujours plus d’informations que nécessaire pour générer le modèle ou elles contiennent un type d’informations inapproprié. Par exemple, vous pouvez avoir un dataset de 500 colonnes qui décrivent les caractéristiques des clients. Toutefois, si certaines colonnes contiennent des données éparses, cela n’est pas très utile de les ajouter au modèle et, si certaines colonnes sont en double, leur utilisation peut rendre le modèle inexact.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
   
 |Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme Microsoft Naïve Bayes accepte uniquement les attributs discrets ou discrétisés ; par conséquent, il ne peut pas utiliser le score d'intérêt et de pertinence.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Naive Bayes|L’entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme Microsoft Naïve Bayes accepte uniquement les attributs discrets ou discrétisés ; par conséquent, il ne peut pas utiliser le score d'intérêt et de pertinence.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |MDT (Microsoft Decision Trees)|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode de sélection des fonctionnalités par défaut ou la méthode que vous avez spécifiée lors de la création du modèle est utilisée.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Réseau neuronal|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme MNN (Microsoft Neural Network, réseau neuronal de Microsoft) peut utiliser les deux méthodes de type bayésien et entropie tant que les données contiennent des colonnes continues.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).|  
 |MLR (Microsoft Logistic Regression)|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Bien que l'algorithme MLR (Microsoft Logistic Regression) soit basé sur l'algorithme MNN (Microsoft Neural Network), vous ne pouvez pas personnaliser les modèles de régression logistique de façon à contrôler le comportement de la sélection des fonctionnalités ; par conséquent, la valeur par défaut de la sélection des fonctionnalités est toujours la méthode la plus appropriée pour l'attribut.<br /><br /> Si tous les attributs sont discrets ou discrétisés, la valeur par défaut est BDEU.<br /><br /> Pour plus d’informations sur cet algorithme, consultez [Informations techniques de référence relatives à l’algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).|  

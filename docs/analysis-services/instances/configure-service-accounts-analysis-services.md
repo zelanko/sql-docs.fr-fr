@@ -17,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurer les comptes de service (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’approvisionnement de comptes à l’échelle du produit est documenté dans [configurer les comptes de Service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), une rubrique qui fournit des informations de compte de service complet pour tous les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, y compris [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Reportez-vous à cette rubrique pour en savoir plus sur les types de comptes valides, les privilèges Windows assignés par le programme d'installation, les autorisations du système de fichiers, les autorisations de Registre et bien plus encore.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’approvisionnement de comptes à l’échelle du produit est traité dans la rubrique [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). Vous y trouverez des informations complètes sur les comptes de service pour tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y compris [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Reportez-vous à cette rubrique pour en savoir plus sur les types de comptes valides, les privilèges Windows assignés par le programme d'installation, les autorisations du système de fichiers, les autorisations de Registre et bien plus encore.  
   
  Cette rubrique fournit des informations complémentaires pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment sur les autorisations supplémentaires nécessaires pour les installations tabulaires et en cluster. Elle traite également des autorisations nécessaires pour prendre en charge les opérations de serveur. Par exemple, vous pouvez configurer des opérations de traitement et de requête pour qu'elles s'exécutent sous le compte de service, auquel cas vous devrez accordez des autorisations supplémentaires.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="logon-account-recommendations"></a>Recommandations relatives aux comptes d'ouverture de session  
  Dans un cluster de basculement, toutes les instances d'Analysis Services doivent être configurées pour utiliser un compte d'utilisateur de domaine Windows. Veuillez assigner le même compte à toutes les instances. Pour plus d'informations, consultez [Procédure de mise en cluster d'Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Les instances autonomes doivent utiliser le compte virtuel par défaut, **NT Service\MSSQLServerOLAPService** pour l’instance par défaut, ou **NT Service\MSOLAP$***nom-instance* pour une instance nommée. Cette recommandation s'applique aux instances d'Analysis Services dans tous les modes de serveur, en partant du principe que la version du système d'exploitation est Windows Server 2008 R2 et versions ultérieures, et que celle d'Analysis Services est SQL Server 2012 et versions ultérieures.  
+ Instances autonomes doivent utiliser le compte virtuel par défaut, **NT Service\MSSQLServerOLAPService** pour l’instance par défaut, ou **NT Service\MSOLAP$ ***-nom de l’instance* pour une instance nommée. Cette recommandation s'applique aux instances d'Analysis Services dans tous les modes de serveur, en partant du principe que la version du système d'exploitation est Windows Server 2008 R2 et versions ultérieures, et que celle d'Analysis Services est SQL Server 2012 et versions ultérieures.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Octroi d'autorisations à Analysis Services  
  Cette section présente les autorisations requises par Analysis Services pour les opérations locales et internes telles que le démarrage d'un exécutable, la lecture d'un fichier de configuration et le chargement de bases de données à partir du répertoire des données. Si vous recherchez plutôt des conseils sur la configuration des autorisations pour l'accès aux données externes et l'interopérabilité avec d'autres services et applications, consultez [Octroi d'autorisations supplémentaires pour des opérations de serveur spécifiques](#bkmk_tasks) plus loin dans cette rubrique.  
@@ -120,13 +121,13 @@ ms.lasthandoff: 01/08/2018
   
      `SC showsid MSSqlServerOlapService`  
   
-     Pour une instance nommée (où le nom de l'instance est Tabular), utilisez la syntaxe suivante :  
+     Pour une instance nommée (où le nom de l'instance est Tabular), utilisez la syntaxe suivante :  
   
      `SC showsid MSOlap$Tabular`  
   
 2.  Utilisez **Computer Manager** | **utilisateurs et groupes locaux** | **groupes** pour inspecter l’appartenance de SQLServerMSASUser$\<nom_serveur >$\<instancename > groupe de sécurité.  
   
-     Le SID de membre doit correspondre au SID par service obtenu à l'étape 1.  
+     Le SID de membre doit correspondre au SID par service obtenu à l'étape 1.  
   
 3.  Utilisez **Explorateur Windows** | **Program Files** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** pour vérifier que les propriétés de sécurité des dossiers sont accordées au groupe de sécurité de l’étape 2.  
   
@@ -155,12 +156,12 @@ ms.lasthandoff: 01/08/2018
 |Écrire dans une table du journal des requêtes d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Créer une connexion de base de données pour le compte de service et assigner des autorisations d'écriture sur la table du journal des requêtes|Activez la journalisation des requêtes afin de recueillir des données d'utilisation dans une table de base de données, en vue d'une analyse ultérieure. Le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit disposer d'autorisations d'écriture dans la table du journal des requêtes dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie. Si la table n'existe pas et doit être créée, le compte d'ouverture de session [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit également disposer des autorisations lui permettant de créer la table dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie. Pour plus d’informations, consultez le blog [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) (Améliorer les performances de SQL Server Analysis Services à l’aide de l’Assistant Optimisation basée sur l’utilisation) et le blog [Query Logging in Analysis Services](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)(Journalisation des requêtes dans Analysis Services).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Compte de Service SQL Server et le SID par Service (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server utilise un SID de service pour assurer l’isolation de service (Article de la base de connaissances)](http://support.microsoft.com/kb/2620201)   
- [Jeton d’accès (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
+ [Configurer les comptes de Service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [SQL Server Service Account and Per-Service SID (blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server utilise un SID de service pour assurer l'isolement du service (article de la Base de connaissances)](http://support.microsoft.com/kb/2620201)   
+ [Jeton d'accès (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [Identificateurs de sécurité (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
- [Jeton d’accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
- [Listes de contrôle d’accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
+ [Jeton d'accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
+ [Listes de contrôle d'accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

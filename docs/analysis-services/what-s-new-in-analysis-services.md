@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Quel &#39; nouveauté dans Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +89,7 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Traitement en parallèle de plusieurs partitions de tables dans les modèles tabulaires    
  Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et le traitement des tables, consultez [Partitions de modèle tabulaire &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Ajout de comptes d’ordinateur en tant qu’administrateurs dans SSMS    
- Les administrateurs de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe d’administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe Administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC pour Analysis Services    
  DBCC (Database Consistency Checker) s’exécute en interne pour détecter la présence potentielle de données endommagées au chargement d’une base de données, mais il peut aussi être exécuté à la demande si vous soupçonnez des problèmes dans vos données ou un modèle. DBCC exécute des vérifications différentes selon que le modèle est tabulaire ou multidimensionnel. Pour plus de détails, consultez [DBCC &#40;Database Consistency Checker&#41; pour les bases de données multidimensionnelles et tabulaires Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Mises à jour des événements étendus    

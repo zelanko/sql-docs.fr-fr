@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous ajoutez une action à une base de données à l’aide de la vue Actions du Concepteur de Cube. Cette vue est accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé une action, elle devient disponible aux utilisateurs une fois que vous avez retraité le cube approprié. Pour plus d'informations, consultez [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous ajoutez une action à une base de données à l'aide de la vue Actions du Concepteur de cube. Cette vue est accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé une action, elle devient disponible aux utilisateurs une fois que vous avez retraité le cube approprié. Pour plus d'informations, consultez [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 ### <a name="to-create-an-action"></a>Pour créer une action  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
         |Cellules|Toutes les cellules est la seule sélection disponible. Si vous choisissez **Cellules** comme type de cible, vous pouvez taper une expression dans **Condition** pour limiter les cellules auxquelles l'action est associée.|  
         |Cube|CURRENTCUBE est la seule sélection disponible. L'action est associée au cube actif.|  
         |Membres de dimension|Sélectionnez une seule dimension. L'action est associée à tous les membres de la dimension.|  
-        |Hierarchy|Sélectionnez une hiérarchie unique. L'action sera associée à l'objet hiérarchie uniquement. Les hiérarchies d'attribut apparaissent dans la liste uniquement si leurs propriétés **AttributeHierarchyEnabled** et **AttributeHierarchyVisible** sont définies avec la valeur **True**.|  
+        |Hiérarchie|Sélectionnez une hiérarchie unique. L'action sera associée à l'objet hiérarchie uniquement. Les hiérarchies d'attribut apparaissent dans la liste uniquement si leurs propriétés **AttributeHierarchyEnabled** et **AttributeHierarchyVisible** sont définies avec la valeur **True**.|  
         |Membres de hiérarchie|Sélectionnez une hiérarchie unique. L'action est associée à tous les membres de la hiérarchie sélectionnée. Les hiérarchies d'attribut apparaissent dans la liste uniquement si leurs propriétés **AttributeHierarchyEnabled** et **AttributeHierarchyVisible** sont définies avec la valeur **True**.|  
         |Level|Sélectionnez un niveau unique. L'action sera associée à l'objet niveau uniquement.|  
         |Membres de niveau|Sélectionnez un niveau unique. L'action est associée à tous les membres du niveau sélectionné.|  

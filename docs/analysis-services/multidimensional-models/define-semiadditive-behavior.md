@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Définir le comportement semi-additif
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mesures semi-additives, qui n’uniformément s’agrègent pas toutes les dimensions, sont très courantes dans de nombreux scénarios d’entreprise. Chaque cube qui se base sur l'instantané de soldes dans le temps pose ce problème. Ces instantanés s'utilisent dans des applications traitant de titres de placement, de soldes de compte, de budgétisation, de ressources humaines, de polices et de déclarations d'assurance, et de nombreux autres domaines d'activité.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les mesures semi-additives, qui n'agrègent pas uniformément toutes les dimensions, sont très fréquentes dans les scénarios d'entreprise. Chaque cube qui se base sur l'instantané de soldes dans le temps pose ce problème. Ces instantanés s'utilisent dans des applications traitant de titres de placement, de soldes de compte, de budgétisation, de ressources humaines, de polices et de déclarations d'assurance, et de nombreux autres domaines d'activité.  
   
  Ajoutez le comportement semi-additif à un cube pour définir une méthode d'agrégation de mesures ou de membres individuels de l'attribut de type de compte. Si le cube contient une dimension de comptes, vous pouvez automatiquement définir le comportement semi-additif sur la base du type de compte.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 -   First Nonempty Child  
   
--   None  
+-   Aucun  
   
  Cette option ne change pas les mesures ayant une fonction d’agrégation standard : **Sum**, **Min**, **Max**, **Count**ou **Distinct****Count**.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------------|-----------------|  
 |Average of Children|L'agrégation d'un membre est la moyenne de ses enfants.|  
 |ByAccount|Le système lit le comportement semi-additif spécifié pour le type de compte.|  
-|Compter|L'agrégation est un nombre de membres.|  
+|Count|L'agrégation est un nombre de membres.|  
 |Distinct Count|L'agrégation est un nombre de membres uniques.|  
 |First Child|La valeur de membre est évaluée comme la valeur de son premier enfant avec la dimension de temps.|  
 |FirstNonEmpty|La valeur de membre est évaluée comme la valeur de son premier enfant avec la dimension de temps qui contient les données.|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |LastNonEmpty|La valeur de membre est évaluée comme la valeur de son dernier enfant avec la dimension de temps qui contient les données.|  
 |Max|La fonction d'agrégation maximale standard est appliquée.|  
 |Min|La fonction d'agrégation minimale standard est appliquée.|  
-|None|Aucune agrégation n'est appliquée.|  
+|Aucun|Aucune agrégation n'est appliquée.|  
 |SUM|La fonction d'addition standard est appliquée.|  
   
  Tout comportement semi-additif existant est écrasé lorsque vous terminez l'Assistant.  

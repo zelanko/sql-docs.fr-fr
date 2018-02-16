@@ -23,10 +23,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
   Les procédures de cette rubrique expliquent comment effectuer une boucle dans les classeurs Excel d'un dossier, ou dans les tableaux d'un classeur Excel, à l'aide du conteneur de boucles Foreach et de l'énumérateur approprié.  

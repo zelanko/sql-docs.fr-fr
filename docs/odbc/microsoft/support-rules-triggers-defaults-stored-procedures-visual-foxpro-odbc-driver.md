@@ -37,10 +37,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Prise en charge pour les règles, les déclencheurs, les valeurs par défaut et les procédures stockées (le pilote ODBC Visual FoxPro)
 Impossible de créer des règles Visual FoxPro, des déclencheurs, des valeurs par défaut ou des procédures stockées à l’aide du pilote ODBC Visual FoxPro. Toutefois, votre application peut interagir avec des procédures stockées, des valeurs par défaut, des déclencheurs ou des règles existantes comme elle insère, met à jour ou supprime des données Visual FoxPro stockées dans une base de données.  

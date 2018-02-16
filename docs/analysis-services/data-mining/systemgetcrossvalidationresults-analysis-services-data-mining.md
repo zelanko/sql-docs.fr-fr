@@ -16,19 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partitions de l’exploration de la structure dans le nombre spécifié de sections croisées, effectue l’apprentissage d’un modèle pour chaque partition, puis retourne les mesures de précision pour chaque partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Partitionne la structure d'exploration de données dans le nombre spécifié de sections croisées, effectue l'apprentissage d'un modèle pour chaque partition, puis retourne les mesures de précision de chaque partition.  
   
 > [!NOTE]  
 >  Cette procédure stockée ne peut pas être utilisée pour effectuer la validation croisée de modèles de clustering ou de modèles créés à l’aide de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) ou de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Pour la validation croisée des modèles de clustering, vous pouvez utiliser la procédure stockée distincte [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
@@ -118,7 +119,7 @@ SystemGetCrossValidationResults(
  La valeur par défaut est **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ne génère pas d’une erreur si vous définissez *seuil d’état* à 0.0, mais vous ne devez jamais utiliser cette valeur. En effet, un seuil de 0.0 signifie que les prédictions avec une probabilité de 0 pour cent sont comptabilisées comme correctes.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne génère pas d’erreur si vous définissez *state threshold* sur 0.0, mais vous ne devez jamais utiliser cette valeur. En effet, un seuil de 0.0 signifie que les prédictions avec une probabilité de 0 pour cent sont comptabilisées comme correctes.  
   
  (Facultatif)  
   
@@ -134,7 +135,7 @@ SystemGetCrossValidationResults(
   
  Le tableau suivant décrit les colonnes de l'ensemble de lignes.  
   
-|Nom de la colonne|Description|  
+|Nom de la colonne| Description|  
 |-----------------|-----------------|  
 |ModelName|Nom du modèle qui a été testé.|  
 |AttributeName|Nom de la colonne prédictible.|  
@@ -145,7 +146,7 @@ SystemGetCrossValidationResults(
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de valeur prévisible. Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Valeur|Valeur de la mesure de test spécifiée.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour retourner des mesures de précision pour le jeu de données complet, utilisez [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Si le modèle d’exploration de données a déjà été partitionné en replis, vous pouvez contourner le traitement et retourner uniquement les résultats de la validation croisée en utilisant [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -174,20 +175,20 @@ NULL
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Valeur|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Vrai positif|144|  
-|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Faux positif|105|  
-|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Vrai négatif|186.|  
-|Target Mail DT|Bike Buyer| 1| 1|500|classification.|Faux négatif|65|  
-|Target Mail DT|Bike Buyer| 1| 1|500|Vraisemblance|Score du journal|-0.619042807138345|  
-|Target Mail DT|Bike Buyer| 1| 1|500|Vraisemblance|Finesse|0.0740963734002671|  
-|Target Mail DT|Bike Buyer| 1| 1|500|Vraisemblance|Erreur quadratique moyenne|0.346946279977653|  
-|Target Mail DT|Bike Buyer| 1|2|500|classification.|Vrai positif|162|  
-|Target Mail DT|Bike Buyer| 1|2|500|classification.|Faux positif|86|  
-|Target Mail DT|Bike Buyer| 1|2|500|classification.|Vrai négatif|165|  
-|Target Mail DT|Bike Buyer| 1|2|500|classification.|Faux négatif|87|  
-|Target Mail DT|Bike Buyer| 1|2|500|Vraisemblance|Score du journal|0.654117781086519|  
-|Target Mail DT|Bike Buyer| 1|2|500|Vraisemblance|Finesse|0.038997399132084|  
-|Target Mail DT|Bike Buyer| 1|2|500|Vraisemblance|Erreur quadratique moyenne|0.342721344892651|  
+|Target Mail DT|Bike Buyer|1|1|500|classification.|Vrai positif|144|  
+|Target Mail DT|Bike Buyer|1|1|500|classification.|Faux positif|105|  
+|Target Mail DT|Bike Buyer|1|1|500|classification.|Vrai négatif|186.|  
+|Target Mail DT|Bike Buyer|1|1|500|classification.|Faux négatif|65|  
+|Target Mail DT|Bike Buyer|1|1|500|Vraisemblance|Score du journal|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|1|1|500|Vraisemblance|Finesse|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|1|1|500|Vraisemblance|Erreur quadratique moyenne|0.346946279977653|  
+|Target Mail DT|Bike Buyer|1|2|500|classification.|Vrai positif|162|  
+|Target Mail DT|Bike Buyer|1|2|500|classification.|Faux positif|86|  
+|Target Mail DT|Bike Buyer|1|2|500|classification.|Vrai négatif|165|  
+|Target Mail DT|Bike Buyer|1|2|500|classification.|Faux négatif|87|  
+|Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Score du journal|0.654117781086519|  
+|Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Finesse|0.038997399132084|  
+|Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Erreur quadratique moyenne|0.342721344892651|  
   
 ## <a name="requirements"></a>Spécifications  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -196,6 +197,6 @@ NULL
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

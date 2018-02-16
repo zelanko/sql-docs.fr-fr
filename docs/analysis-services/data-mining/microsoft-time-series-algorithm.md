@@ -21,19 +21,20 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fournit plusieurs algorithmes qui sont optimisés pour prévoir les valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) fournit plusieurs algorithmes qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
   
  Le diagramme suivant représente un modèle standard pour prévoir les ventes d'un produit dans quatre régions de ventes différentes dans le temps. Le modèle affiché dans le diagramme affiche des ventes pour chaque région représentée sous la forme de traits de couleur rouge, jaune, violette et bleue. Le trait de chaque région est constitué de deux parties :  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  Les prédictions croisées sont une fonctionnalité importante de l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series). Si vous effectuez l'apprentissage de l'algorithme avec deux séries distinctes mais connexes, vous pouvez utiliser le modèle résultant pour prédire le résultat d'une série en fonction du comportement de l'autre série. Par exemple, les ventes constatées d'un produit peuvent influencer les prévisions de ventes d'un autre produit.  La prédiction croisée est également utile pour créer un modèle global qui peut s'appliquer à plusieurs séries. Par exemple, les prédictions pour une région particulière sont instables, car la série n'a pas de données de bonne qualité.  Vous pouvez instruire un modèle global sur une moyenne de l'ensemble des quatre régions, puis appliquer le modèle aux différentes séries pour créer des prédictions plus stables pour chaque région.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'équipe dirigeante de la société [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] souhaite prédire les ventes mensuelles de vélos pour l'année à venir. La société veut tout particulièrement savoir si la vente d'un modèle de vélo peut être utilisée pour prédire la vente d'un autre modèle. En appliquant l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) aux données historiques des trois dernières années, la société peut créer un modèle d'exploration de données pour prévoir les futures ventes de vélos. De plus, la société peut effectuer des prédictions croisées afin de déterminer si les tendances des ventes de différents modèles de vélos sont liées entre elles.  
   
  Chaque trimestre, la société projette de mettre à jour le modèle avec les données de ventes récentes ainsi que leurs prédictions pour modeler des tendances récentes. Pour corriger les magasins qui n'effectuent pas une mise à jour correcte ou régulière des données de ventes, elle créera un modèle de prédiction global et l'utilisera pour créer des prédictions pour toutes les régions.  
@@ -109,8 +110,8 @@ ms.lasthandoff: 01/08/2018
   
 |TimeID|Product|Ventes|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Un|1000|600|  
-|2/2001|Un|1100|500|  
+|1/2001|Objet|1000|600|  
+|2/2001|Objet|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Un modèle de série chronologique peut effectuer des prédictions qui diffèrent, quelquefois considérablement, selon le système d'exploitation 64 bits que le serveur utilise. Ces différences se produisent car un système [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]représente et gère des nombres pour l'arithmétique à virgule flottante différemment d'un système [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]. Dans la mesure où les résultats de prédiction peuvent être spécifiques au système d'exploitation, nous vous recommandons d'évaluer les modèles sur le système d'exploitation que vous utiliserez en production.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 -   Ne prend pas en charge l'utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d'exploration de données.  
   
@@ -159,10 +160,10 @@ ms.lasthandoff: 01/08/2018
 -   Prend en charge l’extraction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Référence technique de Microsoft Time Series algorithme](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

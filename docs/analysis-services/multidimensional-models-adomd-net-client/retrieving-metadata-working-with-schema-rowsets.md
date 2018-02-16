@@ -1,7 +1,7 @@
 ---
 title: "Utilisation des ensembles de lignes de schéma dans ADOMD.NET | Documents Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>La récupération des métadonnées - utilisation des ensembles de lignes de schéma
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous avez besoin de davantage de métadonnées que celles disponibles dans le modèle objet ADOMD.NET, ADOMD.NET permet de récupérer la plage complète de XML pour Analysis (XMLA), OLE DB, OLE DB pour OLAP et OLE DB pour les ensembles de lignes de schéma d’exploration de données :  
+  Lorsque vous avez besoin de plus de métadonnées que celles disponibles dans le modèle objet ADOMD.NET, ADOMD.NET offre la possibilité de récupérer la gamme complète d'ensembles de lignes de schéma XMLA (XML for Analysis), OLE DB, OLE DB pour OLAP et OLE DB pour l'exploration de données :  
   
  **Métadonnées XMLA**  
  Les ensembles de lignes de schéma XMLA offrent une méthode de récupération d'informations de bas niveau sur le serveur. Parmi les informations disponibles figurent entre autres les sources de données disponibles sur le serveur, les mots clés réservés par le fournisseur et les littéraux pris en charge par le fournisseur. Vous pouvez même utiliser un ensemble de lignes de schéma XMLA pour découvrir tous les ensembles de lignes de schéma pris en charge par le fournisseur.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  Chacune de ces méthodes retourne une instance d'un objet **DataSet** rempli des informations de schéma. L'objet **DataSet** provient de l'espace de noms **System.Data** de la bibliothèque de classes Microsoft .NET Framework.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans l’exemple suivant, la fonction GetActions prend une connexion, le nom du cube, une coordonnée et un type de coordonnée, récupère un [de lignes MDSCHEMA_ACTIONS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)et retourne les actions disponibles sur la coordonnée sélectionnée.  
   
  [!code-cs[Adomd.NetClient#GetActions](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-metadata-work_0_1.cs)]  

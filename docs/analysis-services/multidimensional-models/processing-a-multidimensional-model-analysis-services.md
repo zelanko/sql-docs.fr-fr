@@ -23,25 +23,26 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Traitement d’un modèle multidimensionnel (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le traitement est l’étape ou une série d’étapes, dans lesquelles Analysis Services charge des données à partir d’une source de données relationnelles dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Le traitement est l'étape, ou la série d'étapes, dans lesquelles Analysis Services charge des données d'une source de données relationnelle dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
   
  Par défaut, le traitement s'effectue lorsque vous déployez une solution sur le serveur. Vous pouvez également traiter une partie d'une solution, ad hoc ou à l'aide d'outils tels que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou selon une planification à l'aide de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et de SQL Server Agent. Lorsque vous apportez une modification structurelle au modèle, telle que la suppression d'une dimension ou la modification de son niveau de compatibilité, vous devez réeffectuer le traitement afin de synchroniser les aspects physiques et logiques du modèle.  
   
  Cette rubrique comprend les sections suivantes :  
   
- [Conditions préalables](#bkmk_prereq)  
+ [Configuration requise](#bkmk_prereq)  
   
  [Choix d'un outil ou d'une approche](#bkmk_tool)  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  [Reprocessing Objects](#bkmk_reproc)  
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a> Configuration requise  
   
 -   Le traitement nécessite des autorisations d'administration sur l'instance Analysis Services. Si effectuez le traitement de manière interactive dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous devez être membre du rôle administrateur de serveur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ce qui concerne le traitement sans assistance, par exemple à l'aide d'un package SSIS que vous planifiez via SQL Server Agent, le compte utilisé pour exécuter le package doit être membre du rôle administrateur de serveur. Pour plus d’informations sur la définition des autorisations d’administrateur, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -86,6 +87,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objets de bases de données &#40;Analysis Services – Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Les objets de base de données &#40; Analysis Services - données multidimensionnelles &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

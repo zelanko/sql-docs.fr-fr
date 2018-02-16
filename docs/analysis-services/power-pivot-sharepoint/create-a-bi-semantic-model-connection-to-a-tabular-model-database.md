@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Créer une connexion de modèle sémantique BI à une base de données model tabulaire
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers une base de données de modèle tabulaire s’exécutant sur une instance d’Analysis Services en dehors de la batterie de serveurs SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers une base de données model tabulaire qui s'exécute sur une instance Analysis Services en dehors de la batterie SharePoint.  
   
  Après avoir créé une connexion de modèle sémantique BI et configuré les autorisations SharePoint et Analysis Services, les utilisateurs peuvent l'utiliser comme source de données pour les rapports Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

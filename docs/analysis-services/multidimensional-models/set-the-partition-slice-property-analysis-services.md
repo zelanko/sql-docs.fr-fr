@@ -15,19 +15,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Définir la propriété Secteur de partition (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une tranche de données est une fonctionnalité d’optimisation importante qui permet de diriger les requêtes vers les données des partitions appropriées. Définir explicitement la propriété Slice peut améliorer les performances des requêtes en remplaçant les tranches par défaut générées pour les partitions MOLAP ou HOLAP. En outre, la propriété Slice permet un contrôle de validation supplémentaire lors du traitement de la partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une tranche de données est une fonctionnalité d'optimisation importante qui permet de diriger les requêtes vers les données des partitions appropriées. Définir explicitement la propriété Slice peut améliorer les performances des requêtes en remplaçant les tranches par défaut générées pour les partitions MOLAP ou HOLAP. En outre, la propriété Slice permet un contrôle de validation supplémentaire lors du traitement de la partition.  
   
  Vous pouvez spécifier une tranche de données après avoir créé une partition, mais avant son traitement, à l'aide de la propriété Slice. Sous l’onglet Partitions, développez un groupe de mesures, cliquez avec le bouton droit sur une partition, puis sélectionnez **Propriétés**.  
   
@@ -52,6 +53,6 @@ ms.lasthandoff: 01/08/2018
 >  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l’outil en ligne de commande ascmd ou la [tâche DDL d’exécution d’Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) dans Integration Services pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer une partition locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [Créer et gérer une Partition locale &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

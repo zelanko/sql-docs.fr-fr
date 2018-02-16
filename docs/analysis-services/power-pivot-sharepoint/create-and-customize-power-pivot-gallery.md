@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Est un type spécial de la bibliothèque de documents SharePoint qui fournit une gestion de documents et d’aperçus pour les classeurs Excel publiés et les rapports Reporting Services qui contiennent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un type de bibliothèque de documents SharePoint qui fournit des fonctions d’aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
   
--   [Conditions préalables](#prereq)  
+-   [Configuration requise](#prereq)  
   
 -   [Vue d'ensemble](#overview)  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Passer à la vue Galerie ou Théâtre](#switch)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prereq"></a> Configuration requise  
   
 -   Vous devez disposer de Silverlight. Silverlight peut être téléchargé et installé via Microsoft Update. Si vous affichez une bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à l'aide d'un navigateur qui ne dispose pas de Silverlight, cliquez sur le lien dans la page pour l'installer. Vous devez fermer le navigateur puis le rouvrir une fois que vous avez installé Silverlight.  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 01/08/2018
   
  Le tableau suivant décrit les différentes mises en page pour la présentation des croquis miniatures de chaque page affichée en aperçu :  
   
-|Affichage|Description|  
+|Affichage| Description|  
 |----------|-----------------|  
 |Vue Galerie (valeur par défaut)|Galerie constitue la vue par défaut pour une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'aperçu s'affiche à gauche. Des miniatures plus petites de chaque feuille de calcul s'affichent en regard de celui-ci, en ordre séquentiel de gauche à droite.|  
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  

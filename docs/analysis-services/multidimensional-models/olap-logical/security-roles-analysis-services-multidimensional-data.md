@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], roles
 - Analysis Services objects, roles
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], roles
 - access rights [Analysis Services], roles
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Rôles de sécurité (Analysis Services - Données multidimensionnelles)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Les rôles sont utilisés dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour gérer la sécurité pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets et données. En clair, un rôle associe les identificateurs de sécurité (SID) des utilisateurs de Microsoft Windows et des groupes qui ont des droits d’accès spécifiques et les autorisations définies pour les objets gérés par une instance de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Deux types de rôles sont fournis dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Les rôles sont utilisés dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour gérer la sécurité pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets et données. En clair, un rôle associe les identificateurs de sécurité (SID) des utilisateurs de Microsoft Windows et des groupes qui ont des droits d’accès spécifiques et les autorisations définies pour les objets gérés par une instance de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Deux types de rôles sont fournis dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   le rôle du serveur, un rôle fixe qui fournit un accès administrateur à une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)];  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/08/2018
   
  La classe <xref:Microsoft.AnalysisServices.Permission> est une classe abstraite. Par conséquent, vous devez utiliser les classes dérivées pour définir des autorisations sur les objets correspondants. Pour chaque objet, une classe d'autorisation dérivée est définie.  
   
-|Object|Classe|  
+|Objet|Classe|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  
@@ -84,9 +86,9 @@ ms.lasthandoff: 01/08/2018
   
 |Action|Valeurs|Explication|  
 |------------|------------|-----------------|  
-|Traiter|{**true**, **false**}<br /><br /> Valeur par défaut=**false**|Si **true**, les membres peuvent traiter l'objet et tout objet contenu dans l'objet.<br /><br /> Les autorisations de processus ne s'appliquent pas aux modèles d'exploration de données. <xref:Microsoft.AnalysisServices.MiningModel>les autorisations sont toujours héritées de <xref:Microsoft.AnalysisServices.MiningStructure>.|  
+|Traiter|{**true**, **false**}<br /><br /> Valeur par défaut=**false**|Si **true**, les membres peuvent traiter l'objet et tout objet contenu dans l'objet.<br /><br /> Les autorisations de processus ne s'appliquent pas aux modèles d'exploration de données. <xref:Microsoft.AnalysisServices.MiningModel> les autorisations sont toujours héritées de <xref:Microsoft.AnalysisServices.MiningStructure>.|  
 |ReadDefinition|{**None**, **Basic**, **Allowed**}<br /><br /> Valeur par défaut=**None**|Spécifie si les membres peuvent lire les définitions de données (ASSL) associées à l'objet.<br /><br /> Si **Allowed**, les membres peuvent lire les définitions ASSL associées à l'objet.<br /><br /> **Basic** et **Allowed** sont hérités par les objets contenus dans l'objet. **Allowed** remplace **Basic** et **None**.<br /><br /> **Allowed** est requis pour DISCOVER_XML_METADATA sur un objet. **Basic** est requis pour créer des objets liés et des cubes locaux.|  
-|Lire|{**None**, **Allowed**}<br /><br /> Valeur par défaut =**None** (sauf pour DimensionPermission, où la valeur par défaut est**Allowed**)|Spécifie si les membres ont l'accès en lecture aux ensembles de lignes et au contenu des données du schéma.<br /><br /> **Allowed** donne l'accès en lecture à une base de données, vous permettant de la découvrir.<br /><br /> **Autorisé** sur un cube permet d’accéder en lecture dans les ensembles de lignes de schéma et l’accès au contenu du cube (sauf si contraint par <xref:Microsoft.AnalysisServices.CellPermission> et <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> **Autorisé** sur une dimension, accorde autorisation de lecture sur tous les attributs de la dimension (sauf si contraint par <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). L'autorisation de lecture est utilisée uniquement pour l'héritage statique à l'objet <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. **None** sur une dimension masque la dimension et donne uniquement l'accès au membre par défaut pour les attributs pouvant faire l'objet d'une agrégation ; une erreur est levée si la dimension contient un attribut ne pouvant pas faire l'objet d'une agrégation.<br /><br /> **Autorisé** sur un <xref:Microsoft.AnalysisServices.MiningModelPermission> accorde des autorisations pour afficher les objets dans les ensembles de lignes de schéma et d’effectuer des jointures de prédiction.<br /><br /> **NoteAllowed** est nécessaire pour lire ou écrire sur n’importe quel objet dans la base de données.|  
+|Lecture|{**None**, **Allowed**}<br /><br /> Valeur par défaut =**None** (sauf pour DimensionPermission, où la valeur par défaut est**Allowed**)|Spécifie si les membres ont l'accès en lecture aux ensembles de lignes et au contenu des données du schéma.<br /><br /> **Allowed** donne l'accès en lecture à une base de données, vous permettant de la découvrir.<br /><br /> **Autorisé** sur un cube permet d’accéder en lecture dans les ensembles de lignes de schéma et l’accès au contenu du cube (sauf si contraint par <xref:Microsoft.AnalysisServices.CellPermission> et <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> **Autorisé** sur une dimension, accorde autorisation de lecture sur tous les attributs de la dimension (sauf si contraint par <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). L'autorisation de lecture est utilisée uniquement pour l'héritage statique à l'objet <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. **None** sur une dimension masque la dimension et donne uniquement l'accès au membre par défaut pour les attributs pouvant faire l'objet d'une agrégation ; une erreur est levée si la dimension contient un attribut ne pouvant pas faire l'objet d'une agrégation.<br /><br /> **Autorisé** sur un <xref:Microsoft.AnalysisServices.MiningModelPermission> accorde des autorisations pour afficher les objets dans les ensembles de lignes de schéma et d’effectuer des jointures de prédiction.<br /><br /> **NoteAllowed** est nécessaire pour lire ou écrire sur n’importe quel objet dans la base de données.|  
 |Write|{**None**, **Allowed**}<br /><br /> Valeur par défaut=**None**|Spécifie si les membres ont un accès en écriture aux données de l'objet parent.<br /><br /> L'accès s'applique aux sous-classes <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, et <xref:Microsoft.AnalysisServices.MiningModel>. Il ne s’applique pas à la base de données <xref:Microsoft.AnalysisServices.MiningStructure> sous-classes, ce qui génère une erreur de validation.<br /><br /> **Autorisé** sur un <xref:Microsoft.AnalysisServices.Dimension> accorde les autorisations d’écriture sur tous les attributs de la dimension.<br /><br /> **Autorisé** sur un <xref:Microsoft.AnalysisServices.Cube> accorde l’autorisation sur les cellules du cube pour les partitions définies en tant que Type d’écriture = l’écriture différée.<br /><br /> **Autorisé** sur un <xref:Microsoft.AnalysisServices.MiningModel> accorde l’autorisation de modifier le contenu du modèle.<br /><br /> **Autorisé** sur un <xref:Microsoft.AnalysisServices.MiningStructure> n’a aucune signification spécifique [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].<br /><br /> Remarque : L’écriture ne peut pas être définie sur **autorisées** , sauf si en lecture a également **autorisé**|  
 |Administer<br /><br /> Remarque : Uniquement dans les autorisations de base de données|{**true**, **false**}<br /><br /> Valeur par défaut=**false**|Spécifie si les membres peuvent administrer une base de données.<br /><br /> **true** accorde aux membres l'accès à tous les objets dans une base de données.<br /><br /> Un membre peut avoir des autorisations d'administrateur pour une base de données spécifique, mais pas pour les autres.|  
   

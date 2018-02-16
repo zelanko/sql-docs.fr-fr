@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Ensemble de lignes DISCOVER_CSDL_METADATA
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne des informations sur une [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modèle de données (tabulaire ou multidimensionnel), qui fournit la définition du modèle au format CSDLBI (Conceptual Schema Definition Language avec annotations BI). CSDLBI repose sur CSDL, un schéma XML exploité par l'infrastructure Entity Data Framework utilisée pour la communication entre un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et le client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Les annotations Business Intelligence (BI) fournissent des métadonnées supplémentaires sur les modèles tabulaires et les objets qu'ils contiennent. Pour plus d’informations sur les modèles de données tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retourne des informations sur un modèle de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (tabulaire ou multidimensionnel), qui fournit la définition du modèle au format CSDLBI (Conceptual Schema Definition avec annotations BI). CSDLBI repose sur CSDL, un schéma XML exploité par l'infrastructure Entity Data Framework utilisée pour la communication entre un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et le client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Les annotations Business Intelligence (BI) fournissent des métadonnées supplémentaires sur les modèles tabulaires et les objets qu'ils contiennent. Pour plus d’informations sur les modèles de données tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Le contexte de sécurité de la commande affecte l'ensemble de lignes retourné. Les autorisations de lecture sur l'instance Analysis Services sont requises pour obtenir la définition CSDL à partir du serveur.  
   
@@ -39,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Oui|Spécifie le nom de la base de données pour laquelle la description CSDLBI est demandée. Si omis, le nom de la base de données active est utilisé.<br /><br /> Cette restriction est nécessaire pour tous les types de modèle.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|Oui|Spécifie l'ID d'une perspective définie sur le modèle spécifié par CATALOG_NAME.<br /><br /> Restriction facultative. S'applique à tous les types de modèle.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|Oui|Spécifie le nom d'une perspective définie sur le modèle spécifié par CATALOG_NAME.<br /><br /> Cette restriction est nécessaire lorsque le modèle tabulaire inclut des perspectives ou lorsqu'une solution multidimensionnelle inclut plusieurs cubes ou perspectives.|  
-|**MÉTADONNÉES**|**DBTYPE_WSTR**|non|Chaîne qui contient la définition XML d'une source de données et ses propriétés, d'après le schéma CSDLBI.|  
+|**METADATA**|**DBTYPE_WSTR**|non|Chaîne qui contient la définition XML d'une source de données et ses propriétés, d'après le schéma CSDLBI.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|Oui|Identificateur de chaîne.<br /><br /> Cette restriction est facultative pour les bases de données multidimensionnelles. Si plusieurs cubes sont disponibles et la restriction est omise, le cube par défaut est retourné.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  DISCOVER_CSDL_METADATA a les configurations requises suivantes :  
   
 -   La demande DISCOVER échouera si un base de données n'est pas spécifiée en utilisant la restriction CATALOG_NAME.  
@@ -69,8 +71,8 @@ ms.lasthandoff: 01/08/2018
   
 -   IsRightToLeft  
   
-## <a name="example"></a> Exemple  
- **Tabulaire**  
+## <a name="example"></a>Exemple  
+ **Sous forme de tableau**  
   
  La requête XMLA suivante retourne la représentation CSDL de l'exemple de modèle tabulaire AdventureWorks 2012. Chaque solution tabulaire ne peut contenir qu'un seul modèle, la restriction PERSPECTIVE_NAME peut donc rester vide. Toutefois, ce modèle contient plusieurs perspectives.  
   
@@ -93,8 +95,8 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="example"></a> Exemple  
- **(Multidimensionnel)**  
+## <a name="example"></a>Exemple  
+ **Multidimensionnel**  
   
  La requête XMLA suivante retourne les représentations CSDLBI du cube Contoso Operations. La restriction VERSION est requise pour exécuter une requête sur une base de données multidimensionnelle. La base de données Contoso Retail contient deux cubes. Par conséquent, le cube Operations est référencé à l'aide de la restriction PERSPECTIVE_NAME.  
   

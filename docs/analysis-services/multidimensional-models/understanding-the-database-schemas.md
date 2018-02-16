@@ -19,19 +19,20 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’Assistant génération de schéma génère un schéma relationnel dénormalisé pour la base de données de zone sujet basée sur les dimensions et les groupes de mesures dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
   
 ## <a name="validation"></a>Validation  
  Avant de commencer à générer le schéma relationnel sous-jacent, l'Assistant Génération de schéma valide les cubes et les dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si l'Assistant détecte des erreurs, il s'arrête et signale ces erreurs dans la fenêtre Liste des tâches de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Voici quelques exemples d'erreurs qui empêchent la génération :  
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="dimension-tables"></a>Tables de dimension  
  Pour chaque dimension, l'Assistant Génération de schéma crée une table de dimension à inclure dans la base de données de la zone de sujet. La structure de la table de dimension dépend des choix effectués lors de la conception de la dimension sur laquelle elle est basée.  
   
- Colonnes  
+ Columns  
  L'Assistant génère une colonne pour les liaisons associées à chaque attribut de la dimension sur laquelle la table de dimension est basée, par exemple les liaisons pour les propriétés **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn**et **UnaryOperatorColumn** de chaque attribut.  
   
  Relations  
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="fact-tables"></a>Tables de faits  
  Pour chaque groupe de mesures d'un cube, l'Assistant Génération de schéma crée une table de faits à inclure dans la base de données de la zone de sujet. La structure de la table de faits dépend des choix effectués lors de la conception du groupe de mesures sur lequel elle est basée et des relations établies entre le groupe de mesures et les dimensions incluses.  
   
- Colonnes  
+ Columns  
  L’Assistant génère une colonne pour chaque mesure, sauf pour les mesures qui utilisent la fonction d'agrégation **Count** . En effet, de telles mesures ne nécessitent pas de colonne correspondante dans la table de faits.  
   
  L'Assistant génère également une colonne pour chaque colonne d'attribut de granularité de chaque relation de dimension régulière du groupe de mesures et, s'il y a lieu, une ou plusieurs colonnes pour les liaisons associées à chaque attribut d'une dimension qui entretient une relation de dimension de fait avec le groupe de mesures sur lequel cette table est basée.  
@@ -98,10 +99,10 @@ ms.lasthandoff: 01/08/2018
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn| 1|  
+|UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation de la génération incrémentielle](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gérer des modifications dans les vues de source de données et les sources de données](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Fonctionnement de la génération incrémentielle](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
+ [Gérer les modifications apportées aux vues de sources de données et Sources de données](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entityset-element-csdlbi"></a>Élément EntitySet (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément EntitySet définit une collection d’entités d’un type particulier dans un modèle de données CSDLBI.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'élément EntitySet définit une collection d'entités d'un type spécifique dans un modèle de données CSDLBI.  
   
  L'EntitySet doit spécifier chaque type d'entité inclus dans le modèle de données. Des informations sur ces entités de modèle sont spécifiées en répertoriant les entités enfants du type, élément Entity. Pour plus d’informations, consultez [Élément EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -36,13 +38,13 @@ ms.lasthandoff: 01/08/2018
   
 |Nom d'attribut|Est obligatoire|Description|  
 |--------------------|-----------------|-----------------|  
-|Légende|non|Description conviviale du jeu d'entités.|  
-|CollectionCaption|non|Chaîne qui contient le nom au pluriel de l'entité.|  
-|ReferenceName|non|Contient le nom non fusionné et complet de l'entité. Dans un modèle multidimensionnel, correspond au nom CubeDimension.|  
-|Hidden|non|Indique si l'entité est masquée. Par défaut, les entités ne sont pas masquées.|  
+|Légende|Non|Description conviviale du jeu d'entités.|  
+|CollectionCaption|Non|Chaîne qui contient le nom au pluriel de l'entité.|  
+|ReferenceName|Non|Contient le nom non fusionné et complet de l'entité. Dans un modèle multidimensionnel, correspond au nom CubeDimension.|  
+|Caché|Non|Indique si l'entité est masquée. Par défaut, les entités ne sont pas masquées.|  
   
-## <a name="example"></a> Exemple  
- **Tabulaire**  
+## <a name="example"></a>Exemple  
+ **Sous forme de tableau**  
   
  L'exemple suivant, en CSDLBI version 1.1, affiche les définitions des tables Date et Geography, du modèle tabulaire AdventureWorks.  
   
@@ -61,8 +63,8 @@ ms.lasthandoff: 01/08/2018
 </EntitySet>  
 ```  
   
-## <a name="example"></a> Exemple  
- **(Multidimensionnel)**  
+## <a name="example"></a>Exemple  
+ **Multidimensionnel**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre plusieurs éléments EntitySet du cube Contoso Retail Operations.  
   
@@ -78,6 +80,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Informations techniques de référence pour les Annotations BI au langage CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

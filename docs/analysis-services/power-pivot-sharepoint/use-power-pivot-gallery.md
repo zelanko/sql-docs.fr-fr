@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c6397bfd177a5d5901fdda29f4b34c9f6b7ffa7d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-power-pivot-gallery"></a>Utiliser la galerie PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Est une bibliothèque de documents SharePoint spéciale qui fournit une gestion de documents et d’aperçus pour les classeurs Excel publiés et les rapports Reporting Services qui contiennent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint spéciale qui fournit des fonctions d’aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
 >  En fonction de la configuration de votre serveur, vous pouvez voir des messages d'avertissement ou d'erreur dans la zone d'aperçu de documents spécifiques. Les messages peuvent apparaître lorsqu'un classeur Excel est configuré pour actualiser automatiquement ses données à chacune de ses ouvertures. Des messages d'avertissement de l'actualisation des données apparaîtront à la place d'une image d'aperçu si Excel Services est configuré pour afficher des messages d'erreur pour avertir de l'actualisation des données. Les administrateurs de la batterie de serveurs ou du service peuvent modifier les paramètres de configuration pour permettre l'affichage d'un aperçu de la feuille de travail réelle. Pour plus d’informations, voir [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
- [Conditions préalables](#prereq)  
+ [Configuration requise](#prereq)  
   
  [Icônes dans la Galerie PowerPivot](#icons)  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  [Problèmes connus](#bkmk_known_issues)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prereq"></a> Configuration requise  
   
 > [!NOTE]  
 >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="icons"></a> Icônes dans la Galerie PowerPivot  
  Les icônes fournissent une indication visuelle sur la disponibilité et l'état du contenu.  
   
-|Icône|Description|  
+|Icône| Description|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|L'icône de sablier apparaît lors de la génération d'une image miniature de chaque page dans le document. Actualisez la page pour afficher la mise à jour de l'image.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|l’icône de pages apparaît lorsqu’un classeur ou un rapport possède plus de pages que la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne peut en afficher. Pour consulter toutes les pages, vous devez utiliser une application cliente.|  

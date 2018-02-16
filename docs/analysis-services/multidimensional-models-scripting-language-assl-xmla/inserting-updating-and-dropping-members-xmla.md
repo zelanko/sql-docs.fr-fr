@@ -1,7 +1,7 @@
 ---
 title: "Insertion, mise à jour et suppression de membres (XMLA) | Documents Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - inserting dimension members
 - XML for Analysis, members
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - deleting dimension members
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17c8d0a3fddeb0cfd9d8a6ef69eac11bc9b2c34a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55572d91ab28593f17cda8ce400fcf7301e52c17
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Insertion, mise à jour et suppression de membres (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez utiliser la [insérer](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [mettre à jour](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), et [supprimer](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) commandes XML for Analysis (XMLA) pour respectivement, insérer, mettre à jour ou supprimer des membres dans une dimension activée en écriture. Pour plus d’informations sur les dimensions activées en écriture, consultez [Write Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Vous pouvez utiliser la [insérer](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [mettre à jour](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), et [supprimer](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) commandes XML for Analysis (XMLA) pour respectivement, insérer, mettre à jour ou supprimer des membres dans une dimension activée en écriture. Pour plus d’informations sur les dimensions activées en écriture, consultez [Write Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Insertion de nouveaux membres  
  Le **insérer** commande insère de nouveaux membres dans les attributs spécifiés dans une dimension activée en écriture.  

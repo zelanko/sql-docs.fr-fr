@@ -1,7 +1,7 @@
 ---
 title: "Classes d’exploration de données AMO | Documents Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>Classes d'exploration de données AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Classes d’exploration de données vous aident à créer, modifier, supprimer et traiter des objets d’exploration de données. L'utilisation d'objets d'exploration de données consiste notamment à créer des structures d'exploration de données, à créer des modèles d'exploration de données et à traiter les modèles.  
+  Les classes d'exploration de données vous permettent de créer, modifier, supprimer et traiter les objets d'exploration de données. L'utilisation d'objets d'exploration de données consiste notamment à créer des structures d'exploration de données, à créer des modèles d'exploration de données et à traiter les modèles.  
   
  Pour plus d’informations sur comment configurer l’environnement, puis sur <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, et <xref:Microsoft.AnalysisServices.DataSourceView> , consultez [des Classes fondamentales AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Classes DataMining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "Classes DataMining AMO")  
   
-##  <a name="MiningStructure"></a>Objets MiningStructure  
+##  <a name="MiningStructure">Objets MiningStructure</a>  
  Une structure d'exploration de données fait office de conteneur pour les modèles d'exploration de données. La structure définit toutes les colonnes que les modèles d'exploration de données sont susceptibles d'utiliser. Chaque modèle d'exploration de données définit ses propres colonnes à partir du jeu de colonnes définies dans la structure.  
   
  Un objet <xref:Microsoft.AnalysisServices.MiningStructure> simple se compose des éléments suivants : des informations de base, une vue de source de données, un ou plusieurs objets <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, zéro, un ou plusieurs objets <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>, ainsi qu'un objet <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  Le <xref:Microsoft.AnalysisServices.MiningStructure> peuvent être traitées à l’aide de sa propre méthode process ou elle peut être traitée lorsqu’un objet parent lui-même traite avec sa propre méthode process.  
   
-### <a name="columns"></a>Colonnes  
+### <a name="columns"></a>Columns  
  Les colonnes contiennent les données du modèle et peuvent être de différents types selon l'utilisation : Key, Input, Predictable ou InputPredictable. Les colonnes prédictibles sont la cible de la génération du modèle d'exploration de données.  
   
  Les colonnes à valeur unique sont appelées <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> dans AMO. Les colonnes à valeurs multiples sont appelées <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour supprimer un objet <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, il convient de le supprimer de la collection de l'objet <xref:Microsoft.AnalysisServices.MiningStructure> parent, et l'objet <xref:Microsoft.AnalysisServices.MiningStructure> parent doit être mis à jour sur le serveur à l'aide de la méthode Remove.  
   
-##  <a name="MiningModel"></a>Objets MiningModel  
+##  <a name="MiningModel">Objets MiningModel</a>  
  <xref:Microsoft.AnalysisServices.MiningModel> est l'objet qui vous permet de sélectionner les colonnes de la structure à utiliser, l'algorithme à utiliser et éventuellement des paramètres spécifiques afin de paramétrer le modèle. Par exemple, vous pouvez souhaiter définir plusieurs modèles d'exploration de données dans une même structure d'exploration de données qui utilisent les mêmes algorithmes. Vous pouvez également souhaiter ignorer certaines colonnes de la structure d'exploration de données dans un modèle, les utiliser comme entrées dans un autre modèle et les utiliser comme colonnes prédictibles et d'entrée dans un troisième modèle. Cela peut s'avérer utile si vous souhaitez traiter une colonne en tant que colonne continue dans un modèle d'exploration de données mais que vous souhaitez la traiter en tant que colonne discrétisée dans un autre.  
   
  Un objet <xref:Microsoft.AnalysisServices.MiningModel> simple est constitué d'informations de base, d'une définition d'algorithme et de colonnes.  

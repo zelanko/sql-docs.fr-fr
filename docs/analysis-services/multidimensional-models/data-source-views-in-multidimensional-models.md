@@ -20,23 +20,24 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une vue de source de données (DSV) est une abstraction d’une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une vue de source de données (DSV) est une abstraction d'une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
   
  Vous pouvez créer plusieurs vues de sources de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur une ou plusieurs sources de données et construire chacune d’elles en fonction de la configuration requise pour une solution différente.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Définition d’une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  

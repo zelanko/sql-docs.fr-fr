@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sélectionnez **construire le cube sans utiliser de source de données** sur la première page de l’Assistant Cube pour créer un cube sans utiliser une vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sélectionnez **Construire le cube sans utiliser de source de données** dans la première page de l’Assistant Cube pour créer un cube sans utiliser de vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Sélection de la méthode de construction  
  Dans l’Assistant Cube, dans la page **Sélectionner la méthode de construction** , cliquez sur **Construire le cube sans utiliser de source de données**. Pour construire le cube à l’aide d’un modèle de cube existant, cochez la case **Utiliser un modèle de cube** . . Si vous ne choisissez pas d'utiliser un modèle, vous devez définir les options manuellement.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  La grille **Sélectionnez des mesures dans le modèle** et la grille **Ajoutez de nouvelles mesures** affichent des valeurs dans les colonnes décrites dans le tableau suivant. Vous pouvez cliquer sur une valeur dans l'une ou l'autre liste pour la modifier.  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |**Nom de la mesure**|Une valeur de cette colonne définit le nom d'une mesure dans le cube. Cliquez sur une valeur dans cette colonne pour taper un nom. Cliquez sur **Ajouter une nouvelle mesure** dans cette colonne pour créer une nouvelle mesure. Cette colonne définit la propriété **Name** de l’objet de mesure.|  
 |**Groupe de mesures**|Nom du groupe de mesures qui contient la mesure. Cliquez sur cette valeur pour effectuer votre choix ou tapez un nom. Si vous supprimez toutes les mesures qui appartiennent à un groupe de mesures particulier, le groupe de mesures est également supprimé. Cette colonne définit la propriété **Name** du groupe de mesures.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  La grille **Sélectionnez des dimensions dans le modèle** et la grille **Ajoutez de nouvelles dimensions** affichent des valeurs dans les colonnes décrites dans le tableau suivant. Vous pouvez cliquer sur une valeur dans l'une ou l'autre liste pour la modifier.  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |**Type**|Affiche le type de dimension pour une dimension de modèle. Cliquez sur cette cellule pour modifier le type d'une dimension. Cette colonne définit la propriété **Type** de l’objet de dimension.|  
 |**Nom**|Affiche le nom de la dimension. Cliquez sur cette cellule pour taper un nom différent. Cette valeur définit la propriété **Name** de l’objet de dimension.|  

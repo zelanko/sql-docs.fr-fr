@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
 - trailing whitespace
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services Scripting Language (ASSL) représente la hiérarchie des objets sous la forme d’un ensemble de types d’éléments, chacun d’eux définit les éléments enfants qu’ils peuvent contenir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Le langage de script ASSL (Analysis Services Scripting Language) représente la hiérarchie d'objets comme un ensemble de types d'élément, chacun d'entre eux définissant les éléments enfants qu'il contient.  
   
  Pour représenter la hiérarchie d'objets, ASSL utilise les conventions XML suivantes :  
   
@@ -158,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |**Booléen**|False|  
 |**String**|"" (chaîne vide)|  
 |**Entier** ou **Long**|0 (zéro)|  
-|**Horodateur**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Frameworks **System.DateTime** avec 0 battement)|  
+|**Timestamp**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Frameworks **System.DateTime** avec 0 battement)|  
   
  Un élément qui est présent mais vide est considéré comme ayant une valeur de chaîne null, et non la valeur par défaut.  
   

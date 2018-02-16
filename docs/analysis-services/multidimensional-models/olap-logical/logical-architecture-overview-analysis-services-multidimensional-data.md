@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services s’exécute dans un mode de déploiement de serveur qui détermine l’environnement d’architecture et de runtime mémoire utilisé par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint, utilisé pour le chargement et l’interrogation d’Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des modèles de données à l’intérieur d’un classeur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint, utilisé pour le chargement et l’interrogation d’Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des modèles de données à l’intérieur d’un classeur.  
   
  Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [de modélisation tabulaire &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) et [comparaison des Solutions tabulaires et multidimensionnelles &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -65,14 +67,14 @@ ms.lasthandoff: 01/08/2018
   
 -   Il n'est pas possible de déterminer par programme si la propriété d'un objet enfant a été définie directement sur l'objet enfant ou héritée.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Le cube Imports contient deux mesures, Packages et Last, ainsi que trois dimensions connexes, Route, Source et Time.  
   
  ![Exemple de cube 1](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro1.gif "exemple de Cube 1")  
   
  Les petites valeurs alphanumériques autour du cube représentent les membres des dimensions. Les membres sont par exemple ground (membre de la dimension Route), Africa (membre de la dimension Source) et 1st quarter (membre de la dimension Time).  
   
-### <a name="measures"></a>mesures  
+### <a name="measures"></a>Mesures  
  Les valeurs dans les cellules de cube représentent les deux mesures, Packages et Last. La mesure Packages représente le nombre de lots importés et **somme** fonction est utilisée pour agréger les faits. La mesure Last représente la date de réception et le **Max** fonction est utilisée pour agréger les faits.  
   
 ### <a name="dimensions"></a>Dimensions  
@@ -88,13 +90,13 @@ ms.lasthandoff: 01/08/2018
 ||||.|||Dernière|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|DEC-29-99|DEC-22-99|DEC-29-99|  
+|All Time|||25110|6547|18563|DEC-29-99|Dec-22-99|DEC-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|DEC-29-99|DEC-22-99|DEC-29-99|  
+||2nd half||13937|3570|10367|DEC-29-99|Dec-22-99|DEC-29-99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|SEP-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
+|||4th quarter|7818|2126|5692|DEC-29-99|Dec-22-99|DEC-29-99|  
   
  Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe :**[agrégations et conceptions d’agrégation](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -117,12 +119,12 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Dernière|  
-|3516987| 1|6| 1|15|Janvier-10-99|  
-|3554790| 1|6| 1|40|Janvier-19-99|  
-|3572673| 1|6| 1|34|Jan-27-99|  
-|3600974| 1|6| 1|45|Feb-02-99|  
-|3645541| 1|6| 1|20|Feb-09-99|  
-|3674906| 1|6| 1|36|Feb-17-99|  
+|3516987|1|6|1|15|Janvier-10-99|  
+|3554790|1|6|1|40|Janvier-19-99|  
+|3572673|1|6|1|34|Jan-27-99|  
+|3600974|1|6|1|45|Feb-02-99|  
+|3645541|1|6|1|20|Feb-09-99|  
+|3674906|1|6|1|36|Feb-17-99|  
   
  Dans le tableau précédent, chaque ligne possède les mêmes valeurs pour le **RouteKey**, **SourceKey**, et **TimeKey** colonnes, indiquant que ces lignes participent à la même cellule de cube.  
   

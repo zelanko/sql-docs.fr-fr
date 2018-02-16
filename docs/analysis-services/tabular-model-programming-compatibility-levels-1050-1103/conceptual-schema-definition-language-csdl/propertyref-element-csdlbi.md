@@ -11,40 +11,42 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>Élément PropertyRef (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément PropertyRef est un type simple qui fournit une référence à une colonne qui fournit une valeur requise par une autre propriété.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'élément PropertyRef est un type simple qui référence une colonne qui fournit une valeur requise par une autre propriété.  
   
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau suivant répertorie les éléments et les attributs qui définissent l'élément PropertyRef.  
   
-|Nom   |Est obligatoire|Description|  
+|Nom|Est obligatoire|Description|  
 |----------|-----------------|-----------------|  
-|Nom   |Oui|Chaîne qui contient le nom de la propriété qui est la cible de la référence.|  
+|Nom|Oui|Chaîne qui contient le nom de la propriété qui est la cible de la référence.|  
   
 ## <a name="propertyrefs-element"></a>Élément PropertyRefs  
  PropertyRefs est un type complexe qui définit une collection de propriétés, chaque propriété étant contenue dans un élément PropertyRef.  
   
  Le tableau suivant répertorie les éléments et les attributs du type PropertyRefs.  
   
-|Nom   |Est obligatoire|Description|  
+|Nom|Est obligatoire|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Oui|Chaîne contenant la référence de la propriété.|  
   
-## <a name="example"></a> Exemple  
- **Tabulaire**  
+## <a name="example"></a>Exemple  
+ **Sous forme de tableau**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre un élément PropertyRef qui spécifie la source d'une formule utilisée dans une mesure, de l'exemple de modèle tabulaire AdventureWorks.  
   
@@ -61,8 +63,8 @@ ms.lasthandoff: 01/08/2018
 </bi:Measure>  
 ```  
   
-## <a name="example"></a> Exemple  
- **(Multidimensionnel)**  
+## <a name="example"></a>Exemple  
+ **Multidimensionnel**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre un indicateur de performance clé du cube Contoso Operations. Les éléments PropertyRef pointent vers les colonnes qui contiennent la formule ou les valeurs utilisées pour définir l'objectif de l'indicateur de performance clé et l'état en rapport avec cet objectif.  
   
@@ -89,6 +91,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Informations techniques de référence pour les Annotations BI au langage CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

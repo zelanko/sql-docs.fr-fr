@@ -16,19 +16,20 @@ helpviewer_keywords:
 - moving databases
 - operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 84c5085a6f43642bd59a88aef40bcb11172266e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="move-an-analysis-services-database"></a>Déplacer une base de données Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il existe souvent des situations lorsqu’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrateur de base de données (dba) souhaite déplacer une base de données de modèle multidimensionnel ou tabulaire vers un autre emplacement. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] souhaite déplacer une base de données de modèle multidimensionnel ou tabulaire à un emplacement différent. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit.  
   
  Une base de données peut être déplacée de différentes façons. Ce document explique les scénarios courants suivants :  
   
@@ -154,6 +155,6 @@ ms.lasthandoff: 01/08/2018
  [Élément Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Élément Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Élément ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation, élément](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Élément DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   

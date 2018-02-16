@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Configurer, réparer ou supprimer un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avec la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] outils de Configuration.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Configurez, réparez ou supprimez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avec les outils de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  L’Assistant d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n’installe pas les outils de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Les outils de configuration seront disponibles en téléchargement dans une future version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  Les outils ne peuvent être utilisés qu'avec une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Ne les utilisez pas avec des installations de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|Nom   |Version prise en charge de SharePoint|Détails de la configuration|  
+|Nom|Version prise en charge de SharePoint|Détails de la configuration|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013|SharePoint 2013|[Configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de configuration de PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Outil de configuration|SharePoint 2010 avec SharePoint 2010|[Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
@@ -129,7 +130,7 @@ ms.lasthandoff: 01/08/2018
   
  Lorsque vous cliquez sur Exécuter, l'outil traite toutes les actions par lots. Bien que chaque action s'affiche en tant qu'élément distinct dans la liste des tâches, toutes les actions incluses dans la tâche sont traitées ensemble. Seules les actions qui réussissent un contrôle de validation sont traitées. Vous devrez peut-être ajouter ou modifier une partie des valeurs d'entrée pour réussir le contrôle de validation.  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  [Upgrade Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Décrit le flux de travail qui met à niveau une installation existante dans une batterie de serveurs.  
   
  [Désinstaller PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) : décrit le flux de travail qui supprime [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] des services, des solutions et des pages d’application SharePoint dans une batterie de serveurs.  

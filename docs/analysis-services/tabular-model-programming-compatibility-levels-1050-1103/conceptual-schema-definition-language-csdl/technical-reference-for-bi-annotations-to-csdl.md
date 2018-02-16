@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4d2f4c509035a2d806704757ddda6ed4610f048f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Guide de référence technique pour les annotations BI du langage CSDL
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section répertorie les éléments, attributs et les propriétés de CSDL qui sont utilisées pour représenter [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] les modèles tabulaires. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Cette section répertorie les éléments, l'attribut et les propriétés dans le CSDL qui sont utilisés pour représenter les modèles tabulaires [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
   
  Pour une vue d’ensemble des modèles tabulaires et comment les entités, les relations et les formules sont représentées dans CSDL, consultez [Annotations CSDL pour Business Intelligence &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

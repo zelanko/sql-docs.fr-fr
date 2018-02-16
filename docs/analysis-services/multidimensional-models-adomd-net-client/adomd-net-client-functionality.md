@@ -1,7 +1,7 @@
 ---
 title: "Fonctionnalités clientes ADOMD.NET | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2d5cc63c0c6385a6457d725194f6fe0e7604c672
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-functionality"></a>Fonctionnalités clientes ADOMD.NET
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET, comme avec d’autres [!INCLUDE[msCoName](../../includes/msconame-md.md)] sert de pont entre une application et une source de données, fournisseurs de données .NET Framework. Cependant, ADOMD.NET se différencie des autres fournisseurs de données .NET Framework en ce sens qu'ADOMD.NET utilise des données analytiques. Pour ce faire, ADOMD.NET prend en charge des fonctionnalités très différentes de celles des autres fournisseurs de données .NET Framework. ADOMD.NET permet non seulement de récupérer des données, mais également d'extraire des métadonnées et modifier la structure de la banque de données analytiques :  
+  À l'image des autres fournisseurs de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ADOMD.NET joue le rôle de lien entre une application et une source de données. Cependant, ADOMD.NET se différencie des autres fournisseurs de données .NET Framework en ce sens qu'ADOMD.NET utilise des données analytiques. Pour ce faire, ADOMD.NET prend en charge des fonctionnalités très différentes de celles des autres fournisseurs de données .NET Framework. ADOMD.NET permet non seulement de récupérer des données, mais également d'extraire des métadonnées et modifier la structure de la banque de données analytiques :  
   
  **La récupération des métadonnées**  
  Les applications peuvent s'enquérir des données susceptibles d'être récupérées à partir de la source de données en recourant à la récupération de métadonnées via les ensembles de lignes de schéma ou le modèle objet. Certaines informations, telles que les types de chaque indicateur de performance clé (KPI) disponible, les dimensions d'un cube et les paramètres nécessaires aux modèles d'exploration de données, sont toutes détectables. Les métadonnées sont plus importantes pour *dynamique* les applications qui requièrent une entrée d’utilisateur pour déterminer le type, la profondeur et la portée des données à récupérer. Tel est le cas notamment de l'Analyseur de requêtes, de Microsoft Excel et d'autres outils d'interrogation. Les métadonnées sont moins cruciales pour *statique* applications qui effectuent des actions prédéfinies.  

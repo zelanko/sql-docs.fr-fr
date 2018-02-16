@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>Supprimer la galerie PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Suppression d’un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] galerie supprime également tous ses éléments, y compris l’historique d’actualisation des données pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] les classeurs qui sont configurés pour l’actualisation planifiée des données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La suppression d’une bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] supprime également tous ses éléments, notamment l’historique d’actualisation des données pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont configurés pour l’actualisation planifiée des données.  
   
 > [!NOTE]  
 >  Cette rubrique fournit des instructions sur la suppression d'une bibliothèque SharePoint. Pour obtenir des instructions sur la suppression des documents de la bibliothèque, consultez [Utiliser la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  

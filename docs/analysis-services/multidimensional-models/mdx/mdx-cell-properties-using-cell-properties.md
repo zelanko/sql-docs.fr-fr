@@ -17,19 +17,20 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9e6094d7b88ef2c8da50ced24b49c89dc9658885
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propriétés de la cellule MDX - à l’aide des propriétés de cellule
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Propriétés de cellule dans MDX (Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules dans une source de données multidimensionnelles, par exemple un cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
   
  La syntaxe MDX prend en charge le mot clé CELL PROPERTIES dans une instruction MDX SELECT pour l'extraction des propriétés de cellule intrinsèques. Ces propriétés sont principalement utilisées pour définir l'affichage des données des cellules.  
   
@@ -53,7 +54,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Propriétés de cellule intrinsèques prises en charge  
  Le tableau suivant dresse la liste des propriétés de cellule intrinsèques prises en charge utilisées dans la valeur `<property>` .  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : les actions d’extraction des requêtes dont la clause Where contient un jeu ne sont pas comprises.|  
 |**BACK_COLOR**|Couleur d’arrière-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE**. Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
@@ -112,6 +113,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

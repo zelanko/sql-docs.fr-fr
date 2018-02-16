@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Types de données dans Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Pour toutes les <xref:Microsoft.AnalysisServices.DataItem> objets, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge le sous-ensemble de **System.Data.OleDb.OleDbType**. Pour définir ou lire le type de données, utilisez [Type de données DataItem &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Pour toutes les <xref:Microsoft.AnalysisServices.DataItem> objets, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge le sous-ensemble de **System.Data.OleDb.OleDbType**. Pour définir ou lire le type de données, utilisez [Type de données DataItem &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
 ## <a name="supported-data-types"></a>Types de données pris en charge  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="amo-validations-on-data-types"></a>Validations AMO sur les types Data  
  Le tableau suivant contient les validations supplémentaires effectuées par AMO (Analysis Management Objects) pour certaines liaisons :  
   
-|Object|Binding|Types de données autorisés|  
+|Objet|Binding|Types de données autorisés|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Tous à l'exception de Binary|  
 ||NameColumn|WChar uniquement|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ||CustomRollupColumn|WChar uniquement|  
 ||CustomRollupPropertiesColumn|WChar uniquement|  
 ||UnaryOperatorColumn|WChar uniquement|  
-||ValueColumn|All|  
+||ValueColumn|Tous|  
 |AttributeTranslation|CaptionColumn|WChar uniquement|  
 |ScalarMiningStructureColumn|KeyColumns|Tous à l'exception de Binary|  
 ||NameColumn|WChar uniquement|  

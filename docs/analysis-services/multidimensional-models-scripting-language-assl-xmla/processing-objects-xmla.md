@@ -1,7 +1,7 @@
 ---
 title: Le traitement des objets (XMLA) | Documents Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - objects [XML for Analysis]
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-objects-xmla"></a>Traitement d'objets (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le traitement est l’étape ou la série d’étapes qui transforme les données en informations pour l’analyse de l’entreprise. Si le traitement varie selon le type d'objet, le traitement consiste toujours à transformer des données en informations.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le traitement est l’étape ou la série d’étapes qui transforme les données en informations pour l’analyse de l’entreprise. Si le traitement varie selon le type d'objet, le traitement consiste toujours à transformer des données en informations.  
   
  Processus un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de l’objet, vous pouvez utiliser la [processus](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) commande. Le **processus** commande peut traiter les objets suivants dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance :  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="description"></a>Description  
+### <a name="description"></a> Description  
  L'exemple suivant traite entièrement la base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Code  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a> Description  
  L’exemple suivant traite de façon incrémentielle le **Internet_Sales_2004** dans la partition la **Internet Sales** groupe de mesures de la **Adventure Works DW** de cube dans le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. Le **processus** commande consiste à ajouter des agrégations pour la commande dates postérieures au 31 décembre 2006 à la partition à l’aide d’une liaison de requête de sortie de la ligne dans le **liaisons** propriété de la **processus** commande pour récupérer les lignes de table de faits à partir de laquelle générer des agrégations à ajouter à la partition.  
   
 ### <a name="code"></a>Code  

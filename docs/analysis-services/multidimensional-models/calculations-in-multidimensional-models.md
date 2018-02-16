@@ -23,19 +23,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8b82aa83deb8d2b428972fb65a64383c6a3d7271
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculations-in-multidimensional-models"></a>Calculs dans les modèles multidimensionnels
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilisez le **calculs** onglet du Concepteur de Cube pour créer des membres calculés, jeux nommés et les autres calculs MDX (Multidimensional Expressions).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilisez l’onglet **Calculs** du Concepteur de cube pour créer des membres calculés, des jeux nommés et d’autres calculs MDX (Multidimensional Expressions).  
   
  L’onglet **Calculs** contient les trois volets suivants :  
   

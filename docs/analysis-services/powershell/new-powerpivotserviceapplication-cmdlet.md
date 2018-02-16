@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Applet de commande New-PowerPivotServiceApplication
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Crée un nouveau [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application de service.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Crée une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -37,14 +38,14 @@ ms.lasthandoff: 01/08/2018
 New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseServerName] <string> [-DatabaseName] <string> [-AddToDefaultProxyGroup <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  L’applet de commande New-PowerPivotServiceApplication permet de créer une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Vous devez définir au moins une application de service et celle-ci doit être membre du groupe de service de proxy par défaut. Éventuellement, vous pouvez créer des applications de service supplémentaires si vous devez utiliser plusieurs propriétés ou paramètres de configuration différents. Les applications de service supplémentaires doivent être membres des groupes de connexion de service personnalisés. Une seule application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peut être membre du groupe de proxys par défaut.  
   
  Une nouvelle application de service est créée à l'aide d'une configuration par défaut. Pour personnaliser les propriétés de configuration, utilisez l'applet de commande Set-PowerPivotServiceApplication.  
   
 ## <a name="parameters"></a>Paramètres  
   
-### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<chaîne >  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
  Définit le nom d'affichage de l'application de service.  
   
 |||  
@@ -55,18 +56,18 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-databaseservername-string"></a>-DatabaseServerName \<chaîne >  
+### <a name="-databaseservername-string"></a>-DatabaseServerName \<string>  
  Spécifie une instance du moteur de base de données relationnelle SQL Server qui héberge la base de données d'application. Par défaut, vous pouvez utiliser le serveur de base de données de la batterie de serveurs, ou vous pouvez choisir un autre serveur de base de données pour lequel vous disposez des droits requis pour créer des bases de données.  
   
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?| 1|  
+|Position ?|1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName \<chaîne >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  Spécifie le nom de la base de données relationnelle SQL Server qui stocke les données d'application. Veillez à spécifier un nom qui correspond à l'application afin que vous puissiez plus facilement identifier sa fonction. Vous pouvez créer une base de données ou spécifier une base de données d’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existante pour l’application que vous créez.  
   
 |||  
@@ -77,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<commutateur >  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
  Crée une connexion de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans le groupe de connexions de service par défaut. Les associations entre les applications Web et les applications de service sont déterminées par l'appartenance à ce groupe. Toutes les applications web abonnées au groupe de connexions de service par défaut peuvent utiliser l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous ajoutez au groupe. Bien que vous puissiez disposer de plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une batterie de serveurs, une seule application de service peut être membre du groupe de connexions de service par défaut.  
   
  Si vous disposez déjà d’une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] membre du groupe de proxys par défaut, vous devez définir AddToDefautlProxyGroup:$false pour l’application que vous créez. Vous devez ajouter la nouvelle application de service à un groupe de connexions de service personnalisé.  Vous pouvez utiliser les applets de commande SharePoint intégrées à cet effet.  Get-SPServiceApplicationProxyGroup retourne la liste des groupes de connexions de service définis dans la batterie.  
@@ -90,7 +91,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="commonparameters"></a>\<Paramètres_courants >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Cette applet de commande prend en charge les paramètres communs : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer et OutVariable. Pour plus d’informations, consultez [About_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entrées et sorties  

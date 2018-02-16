@@ -15,19 +15,20 @@ helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ee0964b6db7b8443d22ba850b84d451e14972937
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX jeux - création d’étendue de requête nommé de jeux nommés
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Si un jeu nommé est uniquement nécessaire pour une seule requête MDX (Multidimensional Expressions), vous pouvez le définir à l’aide du mot clé WITH. Un jeu nommé créé à l'aide du mot clé WITH n'existe plus une fois que l'exécution de la requête est terminée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Si un jeu nommé n'est nécessaire que pour une seule requête MDX (Multidimensional Expressions), vous pouvez le définir à l'aide du mot clé WITH. Un jeu nommé créé à l'aide du mot clé WITH n'existe plus une fois que l'exécution de la requête est terminée.  
   
  Comme l'explique cette rubrique, la syntaxe de WITH est très souple, et accepte même l'utilisation de fonctions pour définir le jeu nommé.  
   
@@ -99,7 +100,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Instruction SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [Création d’étendue de Session nommée Jeux &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

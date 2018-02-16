@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="neural-network-model-query-examples"></a>Exemples de requêtes de modèle de réseau neuronal
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les séquences découvertes dans l’analyse, ou d’une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de réseau neuronal peut extraire des métadonnées du modèle telles que le nombre de couches masquées. Une requête de prédiction peut également suggérer des classifications selon une entrée et fournir éventuellement des probabilités pour chaque classification.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de réseau neuronal peut extraire des métadonnées du modèle telles que le nombre de couches masquées. Une requête de prédiction peut également suggérer des classifications selon une entrée et fournir éventuellement des probabilités pour chaque classification.  
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network).  
   
@@ -71,7 +72,7 @@ WHERE NODE_TYPE = 24
   
 |MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Manquant|0|0| 1|  
+|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Manquant|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  Pour une définition de la signification des colonnes dans l’ensemble de lignes de schéma dans le contexte d’un modèle de réseau neuronal, consultez [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
@@ -161,7 +162,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Résultats de l'exemple :  
   
-|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -217,19 +218,19 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Détermine si un nœud est un enfant d'un autre nœud dans le graphique de réseau neuronal.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Retourne la probabilité pondérée.|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Retourne une table des valeurs associées à la valeur prédite actuelle.|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Détermine si un nœud est un enfant d'un autre nœud dans le graphique de réseau neuronal.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Retourne la probabilité pondérée.|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Retourne une table des valeurs associées à la valeur prédite actuelle.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance de la valeur prédite.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Retourne la probabilité pour la valeur prédite.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Retourne la déviance standard pour la valeur prédite.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Pour les modèles de réseau neuronal et de régression logistique, la fonction retourne une valeur unique qui représente la taille du jeu d'apprentissage pour le modèle entier.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Retourne la probabilité pour la valeur prédite.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Retourne la déviance standard pour la valeur prédite.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Pour les modèles de réseau neuronal et de régression logistique, la fonction retourne une valeur unique qui représente la taille du jeu d'apprentissage pour le modèle entier.|  
   
- Pour obtenir la liste des fonctions qui sont communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Informations de référence sur les algorithmes (Analysis Services - Exploration de données)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Pour obtenir la liste des fonctions qui sont communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Informations de référence sur les algorithmes (Analysis Services - Exploration de données)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Pour la syntaxe de fonctions spécifiques, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Référence technique de Microsoft Neural Network algorithme](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Leçon 5 : Génération neuronal réseau et les modèles de régression logistique &#40; didacticiel d’exploration de données intermédiaires &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   

@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverlocations-rowset"></a>Ensemble de lignes DISCOVER_LOCATIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne des informations sur le contenu d’un fichier de sauvegarde. Vous devez disposer de l'autorisation requise pour accéder à l'emplacement du fichier de sauvegarde.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retourne des informations sur le contenu d'un fichier de sauvegarde. Vous devez disposer de l'autorisation requise pour accéder à l'emplacement du fichier de sauvegarde.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_LOCATIONS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Restriction|Description|  
+|Nom de colonne|Indicateur de type|Restriction| Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Obligatoire, voir ci-dessous.|Emplacement du fichier de sauvegarde.|  
 |**LOCATION_PARTITION_OBJECTPATH**|**DBTYPE_WSTR**||Chemin d'accès à la partition en fonction du dossier de données.|  
@@ -62,6 +64,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|Emplacements|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

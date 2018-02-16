@@ -17,19 +17,20 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fc4dcd60f4a37b1b3f01844369f210a81653160b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Afficher l’historique d’actualisation des données (Power Pivot pour SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Historique d’actualisation des données est un enregistrement de toutes les activités d’actualisation des données pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] les données dans un classeur Excel. Dans une batterie de serveurs SharePoint, les opérations d'actualisation des données sont effectuées sur une instance du serveur Analysis Services, selon une planification que vous fournissez. Par défaut, l'historique d'actualisation des données est conservé pendant un an. Toutefois, un administrateur de batterie de serveurs peut, pour l'historique de l'utilisation et des événements, spécifier une stratégie de rétention différente qui détermine la durée de conservation des enregistrements d'actualisation des données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’historique d’actualisation des données est un enregistrement de toute l’activité d’actualisation de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un classeur Excel. Dans une batterie de serveurs SharePoint, les opérations d'actualisation des données sont effectuées sur une instance du serveur Analysis Services, selon une planification que vous fournissez. Par défaut, l'historique d'actualisation des données est conservé pendant un an. Toutefois, un administrateur de batterie de serveurs peut, pour l'historique de l'utilisation et des événements, spécifier une stratégie de rétention différente qui détermine la durée de conservation des enregistrements d'actualisation des données.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 |Élément|Description|  
 |----------|-----------------|  
-|Nom   |Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Nom|Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |État actuel|Les valeurs possibles sont **Planifiée**, **Actualisation**, **Opération réussie**ou **Échec**.<br /><br /> **Planifiée** apparaît la première fois que vous créez la planification. Une fois la première actualisation des données effectuée, ce message d'état ne s'affiche plus.<br /><br /> **Actualisation** indique que l'actualisation des données est en cours. Une requête figure dans la file d'attente des processus ou s'exécute activement sur le serveur.<br /><br /> **Opération réussie** indique que la dernière opération d'actualisation des données est terminée et que le classeur mis à jour est archivé dans la bibliothèque SharePoint.<br /><br /> **Échec** indique que la dernière opération d'actualisation des données n'a pas réussi. Les données actualisées n'ont pas été enregistrées. Le classeur contient les mêmes données qu'avant l'opération d'actualisation des données.|  
 |Dernière actualisation réussie|Spécifie la date de dernière exécution réussie de l'actualisation des données.|  
 |Prochaine actualisation planifiée|Spécifie la date prévue pour la prochaine actualisation des données.<br /><br /> Le lien **Configurer la planification** vous dirige vers la page de définition de la planification. Si vous disposez d’autorisations de collaboration sur le classeur, vous pouvez cliquer sur ce lien pour visualiser et modifier les informations de planification qui contrôlent l’actualisation sans assistance des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] du classeur.|  

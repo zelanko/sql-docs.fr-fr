@@ -30,19 +30,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] réseau neuronal utilise un *Perceptron MULTICOUCHE* réseau, également appelé un *réseau à règle Delta de rétropropagation*, composé de trois couches de neurones, ou  *PERCEPTRONS*. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’algorithme MNN ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) utilise un réseau *perceptron multicouche*, également appelé *réseau à règle delta à rétropropagation*, qui peut comporter jusqu’à trois couches de neurones, ou *perceptrons*. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
   
  Les réseaux neuronaux de type perceptron multicouche ne sont pas décrits en détails dans la présente documentation. Cette rubrique explique l'implémentation de base de l'algorithme, dont la méthode utilisée pour normaliser les valeurs d'entrée et de sortie, ainsi que les méthodes de sélection de fonctionnalités utilisées pour réduire la cardinalité de l'attribut. Cette rubrique décrit les paramètres et autres valeurs qui peuvent être utilisés pour personnaliser le comportement de l'algorithme, et fournit des liens vers des informations supplémentaires sur l'interrogation du modèle.  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
  MAXIMUM_INPUT_ATTRIBUTES  
  Détermine le nombre maximal d'attributs d'entrée qui peuvent être fournis à l'algorithme et au-delà duquel la sélection des fonctionnalités est utilisée. La valeur 0 désactive la sélection des fonctionnalités pour les attributs d'entrée.  
   
- La valeur par défaut est 255.  
+ La valeur par défaut est 255.  
   
  MAXIMUM_OUTPUT_ATTRIBUTES  
  Détermine le nombre maximal d'attributs de sortie qui peuvent être fournis à l'algorithme et au-delà duquel la sélection des fonctionnalités est utilisée. La valeur 0 désactive la sélection des fonctionnalités pour les attributs de sortie.  
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
   
  En d'autres termes, si HOLDOUT_PERCENTAGE a la valeur 30, l'algorithme utilisera soit la valeur de ce paramètre, soit une valeur égale à 70 % du nombre total de cas, la plus petite valeur étant retenue.  
   
- La valeur par défaut est 10 000.  
+ La valeur par défaut est 10 000.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  Les indicateurs de modélisation suivants sont pris en charge pour une utilisation avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network).  
@@ -198,7 +199,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) prend en charge les colonnes d'entrée spécifiques et les colonnes prédictibles répertoriées dans le tableau suivant.  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Cyclique, Discret, Discrétisé, Clé, Table et Trié|  
 |Attribut prédictible|Continu, Cyclique, Discret, Discrétisé et Trié|  
@@ -207,8 +208,8 @@ ms.lasthandoff: 01/08/2018
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Exemples de requêtes de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Exemples de requête de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

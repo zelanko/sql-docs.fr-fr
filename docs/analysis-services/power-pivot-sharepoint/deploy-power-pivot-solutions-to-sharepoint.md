@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Déployer des solutions Power Pivot sur SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilisez les instructions suivantes pour déployer manuellement deux packages de solution qui ajoutent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fonctionnalités dans un environnement SharePoint Server 2010. Le déploiement des solutions est une étape indispensable pour configurer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur un serveur SharePoint 2010. Pour obtenir la liste complète des étapes nécessaires, consultez [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilisez les instructions suivantes pour déployer manuellement deux packages de solution qui ajoutent des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à un environnement SharePoint Server 2010. Le déploiement des solutions est une étape indispensable pour configurer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur un serveur SharePoint 2010. Pour obtenir la liste complète des étapes nécessaires, consultez [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Pour déployer les solutions, vous pouvez également utiliser l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilisation de l'outil de configuration est plus simple et plus efficace pour une installation sur un serveur unique, mais vous souhaiterez peut-être recourir à l'Administration centrale et à PowerShell si vous préférez travailler avec un outil qui vous est familier ou si vous configurez plusieurs fonctionnalités en même temps. Pour plus d’informations sur l’utilisation de l’outil de configuration, consultez [Outils de configuration de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
@@ -148,7 +149,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  La solution d’application Web est d’abord déployée sur l’Administration centrale, puis sur d’autres applications Web qui prendront en charge les demandes de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour déployer la solution d’application Web sur l’Administration centrale, vous devez utiliser l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou l’applet de commande PowerShell. Pour toutes les autres applications Web, vous pouvez déployer la solution d'application Web manuellement à l'aide de l'Administration centrale ou de PowerShell.  
   
-|Solution|Description|  
+|Solution| Description|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Ajoute Microsoft.AnalysisServices.SharePoint.Integration.dll à l'assembly global.<br /><br /> Ajoute Microsoft.AnalysisServices.ChannelTransport.dll à l'assembly global.<br /><br /> Installe des fonctionnalités et des fichiers de ressources, et enregistre des types de contenu.<br /><br /> Ajoute des modèles de bibliothèque pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les bibliothèques de flux de données.<br /><br /> Ajoute des pages d’application pour la configuration de l’application de service, le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l’actualisation des données et la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |powerpivotwebapp.wsp|Ajoute les fichiers de ressources Microsoft.AnalysisServices.SharePoint.Integration.dll au dossier des extensions du serveur Web sur le Web frontal.<br /><br /> Ajoute le service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au serveur web frontal.<br /><br /> Ajoute la génération de miniatures pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Graphique des bénéfices (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un graphique des bénéfices affiche la rentabilité estimée associée à l’aide d’un modèle d’exploration de données. Par exemple, supposons que votre modèle prédit les clients qu'une société doit contacter dans un scénario d'application professionnelle. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un graphique des bénéfices affiche la rentabilité estimée associée à l'utilisation d'un modèle d'exploration de données. Par exemple, supposons que votre modèle prédit les clients qu'une société doit contacter dans un scénario d'application professionnelle. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
   
 ## <a name="build-a-profit-chart"></a>Créer un graphique des bénéfices  
  Un graphique des bénéfices est similaire à un graphique de courbes d'élévation. Commencez par créer un graphique de courbes d'élévation, puis ajoutez les informations relatives au coût et aux bénéfices.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
      Cette boîte de dialogue vous permet de spécifier les coûts et les bénéfices associés à une campagne de publipostage ciblée. Pour le graphique affiché dans ces exemples, nous avons utilisé les valeurs suivantes :  
   
-    |Paramètre|Valeur|Commentaires|  
+    |Paramètre|Value|Commentaires|  
     |-------------|-----------|--------------|  
     |**Remplissage**|20 000.|Définir la valeur de la population cible totale<br /><br /> Votre base de données peut contenir de nombreux clients, mais pour économiser sur les dépenses de publipostage, vous ne ciblez que les 20 000 clients les plus susceptibles de répondre. Vous pouvez obtenir cette liste lors de l'exécution d'une requête de prédiction et du tri sur la probabilité générée par le modèle prédictif.|  
     |**Coût fixe**|500|Entrez le coût fixe de la configuration d'une campagne de publipostage ciblée pour 20 000 personnes. Cela peut inclure l'impression, ou le coût de configuration d'une campagne de publipostage.|  
@@ -92,18 +93,18 @@ ms.lasthandoff: 01/08/2018
 ## <a name="saving-charts"></a>Enregistrement des graphiques  
  Lorsque vous créez un graphique d'analyse de précision ou un graphique des bénéfices, aucun objet n'est créé sur le serveur. À la place, les requêtes sont exécutées dans un modèle existant et les résultats sont générés dans la visionneuse. Si vous devez enregistrer les résultats, vous devez copier le graphique ou les résultats dans Excel ou dans un autre fichier.  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  Les rubriques suivantes contiennent davantage d'informations sur la façon dont vous pouvez créer et utiliser des graphiques d'analyse de précision.  
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel sur l'exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base de données](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test de la précision avec des graphiques de courbes d’élévation &#40; Didacticiel d’exploration de données de base de données &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[La Validation croisée &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Test et de tâches de Validation et de procédures &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
+ [Test et Validation &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Test de la précision avec des graphiques de courbes d’élévation &#40; Didacticiel d’exploration de données de base de données &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

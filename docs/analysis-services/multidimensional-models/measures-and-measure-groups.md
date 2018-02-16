@@ -22,28 +22,29 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un cube inclut *mesures* dans *groupes de mesures*, logique métier, ainsi qu’une collection de dimensions qui donnent le contexte pour l’évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
   
  Cette rubrique décrit les [Measures](#bkmk_measure) et les [Measure Groups](#bkmk_mg). Elle contient également le tableau suivant, avec des liens vers des procédures de création et de configuration de mesures et de groupes de mesures.  
   
 |**Lien**|**Description**|  
 |--------------|---------------------|  
-|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
-|[Configurer des propriétés de mesure](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Si vous avez utilisé l'Assistant Cube pour entreprendre la création de votre cube, vous devrez peut-être modifier la méthode d'agrégation, appliquer un format de données, définir la visibilité de la mesure dans les applications clientes ou éventuellement ajouter une expression de mesure pour manipuler les données avant que les valeurs soient agrégées.|  
-|[Configurer les propriétés d'un groupe de mesures](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
-|[Utiliser des fonctions d'agrégation](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
+|[Créer des mesures et groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
+|[Configurer les propriétés de mesure](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Si vous avez utilisé l'Assistant Cube pour entreprendre la création de votre cube, vous devrez peut-être modifier la méthode d'agrégation, appliquer un format de données, définir la visibilité de la mesure dans les applications clientes ou éventuellement ajouter une expression de mesure pour manipuler les données avant que les valeurs soient agrégées.|  
+|[Configurer les propriétés du groupe de mesures](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
+|[Utilisez les fonctions d’agrégation](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
 |[Définir le comportement semi-additif](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Le comportement semi-additif fait référence aux agrégations qui sont valides pour certaines dimensions, mais pas pour d'autres. Un solde de compte bancaire en est un exemple courant. Vous pouvez agréger des soldes par client et par région, mais pas sur une période donnée. Par exemple, il n'est pas souhaitable d'ajouter des soldes du même compte sur plusieurs jours consécutifs. Pour définir un comportement semi-additif, utilisez l'Assistant Ajouter Business Intelligence.|  
 |[Groupes de mesures liés](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Réaffectez un groupe de mesures existant à d'autres cubes de la même base de données ou à des bases de données Analysis Services différentes.|  
   
@@ -73,6 +74,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Cubes dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Création de mesures et de groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Propriétés d’attribut - configurer des Types d’attributs
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], types d’attributs permettent de classer un attribut en termes de fonctionnalités d’entreprise. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les types d’attributs permettent de classer un attribut en termes de fonctionnalité métier. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
   
 ##  <a name="setting_attibute_types"></a> Définition des types d'attributs  
  La valeur de la propriété **Type** d’un attribut détermine le type d’attribut de cet attribut. Différents assistants d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définissent les types d’attributs lors de la définition des dimensions ou des attributs. Ces Assistants d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définissent également les types d’attributs quand ils ajoutent des fonctionnalités à des dimensions. Par exemple, l'Assistant Business Intelligence applique des types d'attributs aux attributs d'une dimension lorsqu'il ajoute l'intelligence comptable pour identifier les attributs qui contiennent les noms, les codes, les numéros et la structure des comptes de la dimension. L'Assistant Business Intelligence utilise également les types d'attributs, par exemple pour la conversion de devises. Pour plus d’informations, consultez [Créer une dimension de type devise](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|Valeur de type d'attribut|Description|  
+|Valeur de type d'attribut| Description|  
 |--------------------------|-----------------|  
 |**Adresse**|Représente une adresse.|  
 |**AddressBuilding**|Représente un identificateur d'immeuble d'une adresse.|  
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Valeur de type d'attribut|Description|  
+|Valeur de type d'attribut| Description|  
 |--------------------------|-----------------|  
 |**Compte**|Représente le parent d'un compte. Ce type d'attribut est généralement appliqué à l'attribut parent d'une dimension de comptes.|  
 |**AccountName**|Représente le nom du compte. Ce type d'attribut est généralement appliqué aux attributs clés d'une dimension de comptes.|  
@@ -169,7 +170,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="currency_dimension_attribute_types"></a> Types d'attributs de dimension monétaire  
   
-|Valeur de type d'attribut|Description|  
+|Valeur de type d'attribut| Description|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|Représente la devise de destination d'une opération de change. Ce type d'attribut est généralement appliqué à l'attribut clé d'une dimension de rapport pour utilisation dans une conversion monétaire. Pour plus d’informations sur la conversion monétaire, consultez [Conversions monétaires &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
 |**CurrencyIsoCode**|Représente le code ISO (International Standards Organization) d'une devise. Pour plus d’informations sur la conversion monétaire, consultez [Conversions monétaires &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
@@ -178,7 +179,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> Types d'attributs de dimension à variation lente  
   
-|Valeur de type d'attribut|Description|  
+|Valeur de type d'attribut| Description|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Représente la date de fin effective d'un membre dans une dimension à variation lente.|  
 |**ScdOriginalID**|Représente l'identificateur d'origine d'un membre dans une dimension à variation lente.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="time_dimension_attribute_types"></a> Types d'attributs de dimension de temps  
   
-|Valeur de type d'attribut|Description|  
+|Valeur de type d'attribut| Description|  
 |--------------------------|-----------------|  
 |**Date**|Représente une date. Ce type d'attribut est généralement appliqué à l'attribut clé d'une dimension de temps ou d'une dimension de temps du serveur.|  
 |**DayOfHalfYear**|Représente l'ordinal de jour d'un semestre.|  
@@ -312,7 +313,7 @@ ms.lasthandoff: 01/08/2018
 |**Années**|Représente des années.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Référence des propriétés d’attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

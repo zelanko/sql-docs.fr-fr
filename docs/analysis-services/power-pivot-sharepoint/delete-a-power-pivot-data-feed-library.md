@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e1f2ed93aa09903f34ba5d6e1e177920157ea4dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Supprimer une bibliothèque de flux de données PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous devez être le propriétaire du site pour supprimer une bibliothèque de flux de données. Si la bibliothèque contient des éléments, ils seront supprimés avec la bibliothèque.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous devez être propriétaire du site pour supprimer une bibliothèque de flux de données. Si la bibliothèque contient des éléments, ils seront supprimés avec la bibliothèque.  
   
  Vous devez connaître le nom de la bibliothèque de source de données que vous souhaitez supprimer.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Cliquez sur **personnaliser «\<nom de votre bibliothèque > »**  
   
-5.  Sous Autorisations et gestion, cliquez sur **Supprimer cette bibliothèque**.  
+5.  Sous Autorisations et Gestion, cliquez sur **Supprimer cette bibliothèque**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  

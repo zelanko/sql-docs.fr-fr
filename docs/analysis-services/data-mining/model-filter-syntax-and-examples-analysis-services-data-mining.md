@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Syntaxe de filtre de modèle et exemples (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette section fournit des informations détaillées sur la syntaxe des filtres de modèle, ainsi que des exemples d’expressions.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette section fournit des informations détaillées sur la syntaxe des filtres de modèle, avec quelques exemples d'expressions.  
   
  [Syntaxe de filtre](#bkmk_Syntax)  
   
@@ -318,7 +319,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Filtres pour les modèles d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Test et Validation &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

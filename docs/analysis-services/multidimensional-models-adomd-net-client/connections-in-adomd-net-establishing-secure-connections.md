@@ -1,7 +1,7 @@
 ---
 title: "Établissement de connexions sécurisées dans ADOMD.NET | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6665fb3cc1ca653a35224300e6dc021646547d2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connexions dans ADOMD.NET - établissement de connexions sécurisées
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous utilisez une connexion dans ADOMD.NET, la méthode de sécurité qui est utilisée pour la connexion dépend de la valeur de la **ProtectionLevel** propriété de chaîne de connexion utilisée lorsque vous appelez le <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> méthode de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+  Lorsque vous utilisez une connexion dans ADOMD.NET, la méthode de sécurité qui est utilisée pour la connexion dépend de la valeur de la **ProtectionLevel** propriété de chaîne de connexion utilisée lorsque vous appelez le <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> méthode de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  Le **ProtectionLevel** propriété offre quatre niveaux de sécurité : non authentifié, authentifié, signé et chiffré. Le tableau suivant décrit ces différents niveaux de sécurité.  
   

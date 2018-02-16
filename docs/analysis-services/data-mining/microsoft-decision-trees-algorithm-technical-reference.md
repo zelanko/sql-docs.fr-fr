@@ -22,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MDT est un algorithme hybride qui incorpore des méthodes différentes pour la création d’une arborescence et prend en charge plusieurs tâches analytiques, y compris la régression, la classification et association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
   
  Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme pour différentes tâches et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles d'arbre de décision.  
   
@@ -155,9 +156,9 @@ ms.lasthandoff: 01/08/2018
  *SCORE_METHOD*  
  Spécifie la méthode utilisée pour calculer le résultat de la division. Les options suivantes sont disponibles :  
   
-|ID|Nom   |  
+|ID|Nom|  
 |--------|----------|  
-| 1|Entropie|  
+|1|Entropie|  
 |3|Bayésien avec a priori K2|  
 |4|Équivalent bayésien de Dirichlet (BDE) avec à priori uniforme<br /><br /> (par défaut)|  
   
@@ -168,9 +169,9 @@ ms.lasthandoff: 01/08/2018
  *SPLIT_METHOD*  
  Spécifie la méthode utilisée pour fractionner le nœud. Les options suivantes sont disponibles :  
   
-|ID|Nom   |  
+|ID|Nom|  
 |--------|----------|  
-| 1|**Binary:** Indique qu'indépendamment du nombre réel de valeurs pour l'attribut, l'arborescence doit être fractionnée en deux branches.|  
+|1|**Binary:** Indique qu'indépendamment du nombre réel de valeurs pour l'attribut, l'arborescence doit être fractionnée en deux branches.|  
 |2|**Complete:** Indique que l'arborescence peut créer autant de divisions qu'il y a de valeurs d'attribut.|  
 |3|**Both:** Spécifie qu'Analysis Services peut déterminer si un fractionnement binaire ou complet doit être utilisé pour produire les meilleurs résultats.|  
   
@@ -197,9 +198,9 @@ ms.lasthandoff: 01/08/2018
  Un modèle d'arbre de décision doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
- L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, cyclique, discret, discrétisé, clé, trié, table|  
 |Attribut prédictible|Continu, cyclique, discret, discrétisé, trié, table|  
@@ -210,6 +211,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Exemples de requête de modèle d’arborescences de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

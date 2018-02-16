@@ -16,10 +16,10 @@ ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: 
 ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dwloader-command-line-loader"></a>Chargeur de ligne de commande de dwloader
 **dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante. Lors du chargement des lignes, vous pouvez ajouter toutes les lignes à la fin de la table (*mode append* ou *fastappend mode*), ajouter de nouvelles lignes et mettre à jour des lignes existantes (*mode upsert*), ou supprimez tous les lignes avant le chargement existantes et insérez toutes les lignes dans une table vide (*recharger mode*).  

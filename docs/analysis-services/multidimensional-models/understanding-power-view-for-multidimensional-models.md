@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cet article décrit la fonctionnalité Power View pour les modèles multidimensionnels dans SQL Server et fournit des informations importantes pour les professionnels BI et les administrateurs qui envisagent d’implémenter Power View pour les modèles multidimensionnels dans leur organisation.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cet article décrit la fonctionnalité Power View pour les modèles multidimensionnels de SQL Server. Il fournit des informations importantes pour les administrateurs et les professionnels dans le secteur du décisionnel qui envisagent d’implémenter Power View pour les modèles multidimensionnels dans leur organisation.  
   
  Les modèles multidimensionnels fournissent des solutions d'analyse, de stockage et de modélisation des données OLAP à la pointe de la technologie. Les modèles multidimensionnels SQL Server prennent en charge l’analyse, l’exploration et la visualisation des données ad hoc grâce à Microsoft Power View.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View pour les modèles multidimensionnels architecture](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View pour les modèles multidimensionnels architecture")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Configuration requise  
  **Configuration requise au niveau du serveur**  
   
 -   Microsoft SQL Server 2016 Analysis Services exécuté en mode multidimensionnel.  
@@ -62,15 +63,15 @@ ms.lasthandoff: 01/08/2018
 |Objet multidimensionnel|Objet tabulaire|  
 |-----------------------------|--------------------|  
 |Cube|Modèle|  
-|Dimension de cube|Table de charge de travail|  
-|Attributs de dimension (clé, nom)|colonne|  
-|Groupe de mesures|Table de charge de travail|  
+|Dimension de cube|Table|  
+|Attributs de dimension (clé, nom)|Colonne|  
+|Groupe de mesures|Table|  
 |Measure|Measure|  
 |Mesure sans groupe de mesures|Dans un tableau nommé Mesures|  
 |Relations de dimension de cube de groupe de mesures|Relation|  
 |Perspective|Perspective|  
 |Indicateur de performance clé|Indicateur de performance clé|  
-|Hiérarchies parent-enfant/utilisateur|Hierarchy|  
+|Hiérarchies parent-enfant/utilisateur|Hiérarchie|  
 |Afficher le dossier|Afficher le dossier|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Mesures, groupes de mesures et indicateurs de performance clés  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/08/2018
   
  La requête DISCOVER_CSDL_METADATA présente les restrictions suivantes :  
   
-|Nom   |Requis|Description|  
+|Nom|Requis| Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Oui|Nom du catalogue\base de données.|  
 |PERSPECTIVE_NAME|Oui, si le cube contient plusieurs perspectives. Facultatif en présence d'un seul cube ou s'il existe une perspective par défaut.|Nom du cube ou de la perspective dans la base de données multidimensionnelle.|  

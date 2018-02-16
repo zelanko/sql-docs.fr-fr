@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualisation des données Power Pivot avec SharePoint 2013
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La conception de l’actualisation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèles de données dans SharePoint 2013 utilise Excel Services en tant que composant principal pour charger et actualiser les modèles de données sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en cours d’exécution en mode SharePoint. Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute en externe sur la batterie de serveurs SharePoint. L'architecture d'Excel Services dans SharePoint 2013 prend en charge l' **actualisation interactive des données** et l' **actualisation planifiée des données**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La conception de l'actualisation des modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint 2013 utilise Excel Services en tant que composant principal pour charger et actualiser des modèles de données sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécutée en mode SharePoint. Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute en externe sur la batterie de serveurs SharePoint. L'architecture d'Excel Services dans SharePoint 2013 prend en charge l' **actualisation interactive des données** et l' **actualisation planifiée des données**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 ||||  
 |-|-|-|  
 ||Classeurs Excel 2013|Classeurs Excel 2010|  
-|Déclencher l'actualisation des données|**Interactive :** Utilisateur authentifié<br /><br /> **Planifiée :** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système|  
+|Déclencher l'actualisation des données|**Interactive :** Utilisateur authentifié<br /><br /> **Planifiée :** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système|  
 |Charger le classeur depuis les bases de données de contenu|Excel Services dans SharePoint 2013|Excel Services dans SharePoint 2013|  
 |Charger le modèle de données sur l'instance Analysis Services|Excel Services dans SharePoint 2013|Excel Services dans SharePoint 2013|  
 |Envoyer les commandes de traitement à l'instance Analysis Services|Excel Services dans SharePoint 2013|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système|  
@@ -177,7 +178,7 @@ ms.lasthandoff: 01/08/2018
   
  ![architecture d’actualisation des données SQL Server 2012 SP1](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture d’actualisation des données SQL Server 2012 SP1")  
   
-||Description||  
+|| Description||  
 |-|-----------------|-|  
 |**(1)**|Moteur Analysis Services|Un serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécuté en mode SharePoint. Le serveur s'exécute à l'extérieur de la batterie de serveurs SharePoint.|  
 |**(2)**|Interface utilisateur|L'interface utilisateur est composée de deux pages. Une pour définir la planification et la seconde pour afficher l'historique de l'actualisation. Les pages n’accèdent pas directement aux bases de données d’application du service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mais utilisent le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour accéder aux bases de données.|  

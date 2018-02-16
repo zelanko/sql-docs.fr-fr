@@ -15,19 +15,20 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Requête MDX et les Axes de segment - spécifier le contenu d’un axe de secteur
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’axe de secteur filtre les données retournées par l’instruction SELECT de MDX (Multidimensional Expressions), en restreignant les données retournées afin que seules les données d’intersection avec les membres spécifiés soient retournées. Il peut être perçu comme un axe supplémentaire invisible dans une requête. L'axe de secteur est défini dans la clause WHERE de l'instruction SELECT de MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'axe de secteur filtre les données retournées par l'instruction SELECT MDX (Multidimensional Expressions), en restreignant les données retournées de telle sorte que seules les données communes aux membres spécifiés soient retournées. Il peut être perçu comme un axe supplémentaire invisible dans une requête. L'axe de secteur est défini dans la clause WHERE de l'instruction SELECT de MDX.  
   
 ## <a name="slicer-axis-syntax"></a>Syntaxe de l'axe de secteur  
  Pour spécifier de façon explicite un axe de secteur, utilisez la clause `<SELECT slicer axis clause>` dans MDX, comme dans la syntaxe suivante :  

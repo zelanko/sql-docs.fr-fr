@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un membre calculé est un membre de dimension dont la valeur est calculée à partir d’une expression au moment de l’exécution et peut être utilisée dans les sous-sélections et les sous-cubes plus définissent précisément l’espace de cube d’une requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Un membre calculé est un membre de dimension dont la valeur est calculée à partir d’une expression au moment de l’exécution, et qui peut être utilisé dans les sous-sélections et les sous-cubes afin de définir plus précisément l’espace de cube d’une requête.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Activation des membres calculés dans le sous-espace  
  La propriété de chaîne de connexion **SubQueries** de la propriété <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROPMSMDSUBQUERIES** décrite dans [Propriétés XMLA prises en charge &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) définit le comportement ou l’autorisation des membres calculés ou des ensembles calculés dans les sous-sélections ou les sous-cubes. Dans le cadre de ce document, sauf indication contraire, la sous-sélection fait référence aux sous-sélections et aux sous-cubes.  
@@ -33,9 +34,9 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Valeur|Description|  
+|Value|Description|  
 |0|Les membres calculés ne sont pas autorisés dans les sous-sélections ou les sous-cubes.<br /><br /> Une erreur est déclenchée lors de l'évaluation de la sous-sélection ou du sous-cube si un membre calculé est référencé.|  
-| 1|Les membres calculés sont autorisés dans les sous-sélections ou les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné.|  
+|1|Les membres calculés sont autorisés dans les sous-sélections ou les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné.|  
 |2|Les membres calculés sont autorisés dans les sous-sélections et les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné. Par ailleurs, la granularité mixte est autorisée dans la sélection des membres calculés.|  
   
  La définition des valeurs 1 ou 2 dans la propriété SubQueries autorise l'utilisation des membres calculés pour filtrer le sous-espace des sous-sélections retourné.  
@@ -121,11 +122,11 @@ Where [Measures].[Reseller Sales Amount]
 |Washington|$204,203.37|(Null)|(Null)|$114,345.85|$89,857.52|  
 |Spokane|$204,203.37|(Null)|(Null)|$114,345.85|$89,857.52|  
 |99202|$204,203.37|(Null)|(Null)|$114,345.85|$89,857.52|  
-|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
+|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
  Dans les résultats ci-dessus, les valeurs d'agrégation pour [All Geographies], [United States], [Oregon] et [Washington] proviennent de l'agrégation sur les descendants de &[Portland]&[OR] et &[Spokane]&[WA]. Rien ne provient du membre calculé.  
   
-### <a name="remarks"></a>Notes   
+### <a name="remarks"></a>Notes  
  Seuls les membres calculés globaux ou de session sont autorisés dans les expressions de sous-sélection ou de sous-cube. Si des membres calculés sont demandés dans l'expression MDX, une erreur est déclenchée lorsque l'expression de sous-sélection ou de sous-cube est évaluée.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f70a2f37df18dfae9ced1a1de2d9e4d991702db7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Configuration de Power Pivot à l’aide de Windows PowerShell
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclut des applets de commande Windows PowerShell que vous pouvez utiliser pour configurer une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. La configuration complète d’une installation avec PowerShell requiert l’utilisation des applets de commande SharePoint et de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. La majorité des configurations peut être effectuée avec un des outils de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations sur les outils, consultez [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclut des applets de commande Windows PowerShell que vous pouvez utiliser pour configurer une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. La configuration complète d’une installation avec PowerShell requiert l’utilisation des applets de commande SharePoint et de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. La majorité des configurations peut être effectuée avec un des outils de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations sur les outils, consultez [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
 >  Dans le cas d’une batterie de serveurs SharePoint 2010, vous devez avoir installé SharePoint 2010 SP1 pour être en mesure de configurer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, ou une batterie de serveurs SharePoint qui utilise un serveur de base de données [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . Si vous n'avez pas encore installé le Service Pack, installez-le avant de commencer la configuration du serveur.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
     Get-help new-powerpivotserviceapplication -example  
     ```  
   
-## <a name="enable-power-pivot-cmdlets-on-a-server"></a>Activer les applets de commande Power Pivot sur un serveur  
+## <a name="enable-power-pivot-cmdlets-on-a-server"></a>Activer les applets de commande Power Pivot sur un serveur  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont disponibles une fois que vous avez installé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et déployé la solution de batterie de serveurs. Les solutions sont déployées lorsque vous exécutez l'outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Suivez ces étapes pour pouvoir utiliser des applets de commande :  
   
 1.  Ouvrez SharePoint Management Shell à l'aide de l'option **Exécuter en tant qu'administrateur** .  
@@ -86,7 +87,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Fermez la fenêtre. Rouvrez-la, à nouveau à l'aide de l'option **Exécuter en tant qu'administrateur** .  
   
-## <a name="related-content"></a>Contenu associé  
+## <a name="related-content"></a>Contenu connexe  
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  

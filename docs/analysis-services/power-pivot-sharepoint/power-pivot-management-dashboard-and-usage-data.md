@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion Power Pivot et données d’utilisation
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Tableau de bord de gestion est une collection de rapports prédéfinis et de composants WebPart dans l’Administration centrale de SharePoint qui vous aident à administrer un serveur SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour le déploiement de SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] est une collection de rapports et de composants WebPart prédéfinis dans l’Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
   
   
 ##  <a name="prereq"></a> Conditions préalables  
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="items"></a> Présentation des différentes sections du tableau de bord  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] contient des composants WebPart et des rapports incorporés qui explorent des catégories d’informations spécifiques. La liste suivante décrit chaque élément du tableau de bord :  
   
-|Tableau de bord|Description|  
+|Tableau de bord| Description|  
 |---------------|-----------------|  
 |Infrastructure - Intégrité du serveur|Affiche les tendances d'utilisation de l'UC, de consommation de mémoire et de temps de réponse aux requêtes au fil du temps afin que vous puissiez évaluer si les ressources système s'approchent de leur capacité maximale ou sont sous-utilisées.|  
 |Actions|Contient des liens vers d'autres pages de l'Administration centrale, notamment l'application de service actuelle, une liste des applications de service et la journalisation de l'utilisation.|  

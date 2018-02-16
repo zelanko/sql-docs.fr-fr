@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une fonctionnalité de synchronisation de base de données qui rend deux [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données équivalentes en copiant les données et métadonnées d’une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comprend une fonctionnalité de synchronisation de bases de données qui rend deux bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] équivalentes en copiant les données et les métadonnées depuis une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
   
 -   Déployer une base de données à partir d'un serveur de mise en lots vers un serveur de production.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Les livres blancs suivants, écrits pour les versions antérieures d'Analysis Services, s'appliquent également aux solutions multidimensionnelles évolutives créées à l'aide de SQL Server 2012. Pour plus d’informations, consultez [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) (Requêtes de scale-out avec Analysis Services) et [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)(Requêtes de scale-out pour Analysis Services avec des bases de données en lecture seule)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Configuration requise  
  Vous devez être membre du rôle d'administrateur de serveur Analysis Services sur le serveur de destination (ou cible) à partir duquel vous lancez la synchronisation de bases de données. Sur le serveur source, votre compte d'utilisateur Windows doit disposer des autorisations de contrôle total sur la base de données source. Si vous synchroniserez les bases de données de manière interactive, souvenez-vous que la synchronisation s'exécute sous le contexte de sécurité de votre identité d'utilisateur Windows. Si votre compte n'a pas accès à des objets spécifiques, ces objets seront exclus de l'opération. Pour plus d’informations sur les rôles d’administrateur de serveur et les autorisations de base de données, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  Le port TCP 2383 doit être ouvert sur les deux serveurs pour autoriser les connexions distantes entre les instances par défaut. Pour plus d’informations sur la création d’une exception dans le Pare-feu Windows, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  Cliquez sur **Terminer** pour effectuer la synchronisation. Après avoir vérifié les options dans la page **Fin de l’Assistant** , cliquez à nouveau sur **Terminer** .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Si vous n'avez pas synchronisé les rôles ou l'appartenance, n'oubliez pas de spécifier les autorisations d'accès utilisateur sur la base de données de destination.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Déployer des solutions de modèle à l'aide de XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Déployer des solutions de modèle à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Déployer des Solutions de modèle à l’aide de XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Déployer des Solutions de modèle à l’aide de l’Assistant de déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

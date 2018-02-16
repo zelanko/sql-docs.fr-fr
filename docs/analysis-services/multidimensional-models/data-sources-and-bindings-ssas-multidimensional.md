@@ -35,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les cubes, dimensions et autres [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les cubes, les dimensions et autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
   
 -   Source de données relationnelle.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="analysis-services-data-types"></a>Types de données Analysis Services  
  Les types de données utilisés dans les liaisons doivent correspondre aux types de données pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les types de données suivants sont définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Type de données Analysis Services|Description|  
+|Type de données Analysis Services| Description|  
 |---------------------------------|-----------------|  
 |BigInt|Entier signé de 64 bits. Ce type de données est mappé au type de données Int64 dans Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I8 dans OLE DB.|  
 |Bool|Valeur booléenne. Ce type de données est mappé au type de données Boolean dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_BOOL dans OLE DB.|  
@@ -174,9 +175,9 @@ ms.lasthandoff: 01/08/2018
   
  Les liaisons hors ligne sont spécifiées en incluant l’objet de collection **Bindings** facultatif avec la commande de traitement. La collection **Bindings** facultative contient les éléments suivants.  
   
-|Propriété|Cardinalité|Type|Description|  
+|Propriété|Cardinalité|Type| Description|  
 |--------------|-----------------|----------|-----------------|  
-|**Binding**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
+|**Liaison**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
 |**DataSource**|0-1|**DataSource**|Remplace l'élément **DataSource** du serveur qui aurait été utilisé.|  
 |**DataSourceView**|0-1|**DataSourceView**|Remplace l'élément **DataSourceView** du<br /><br /> serveur qui aurait été utilisé.|  
   

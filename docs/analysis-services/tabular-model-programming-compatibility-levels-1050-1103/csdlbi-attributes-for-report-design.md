@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] création de requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Attributs de modèle  
  Ces attributs sont définis sur un sous-élément d'un élément [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) CSDL.  
   
-|Nom de l'attribut|Type de données|Description|  
+|Nom de l'attribut|Type de données| Description|  
 |--------------------|---------------|-----------------|  
 |Culture|Texte|Indique la culture utilisée pour les formats monétaires. En cas d'omission, EN-US est utilisé.|  
 |IsRightToLeft|Booléen|Indique si les valeurs des champs de texte doivent être lues de droite à gauche par défaut|  
@@ -38,9 +40,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="entity-attributes"></a>Attributs d'entité  
  Ces attributs sont définis sur un sous-élément d'un élément EntitySet ou EntityType CSDL.  
   
-|Nom de l'attribut|Type de données|Description|  
+|Nom de l'attribut|Type de données| Description|  
 |--------------------|---------------|-----------------|  
-|**Nom de la référence**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
+|**ReferenceName**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
 |**Légende**|Texte|Nom complet de l'entité.|  
 |**Documentation**|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification des données.|  
 |**Hidden**|Booléen|Indique si l'entité doit être affichée. La valeur par défaut est **false**.|  
@@ -55,9 +57,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="field-attributes"></a>Attributs de champ  
  Ces attributs sont définis sur un sous-élément d'un élément d'une propriété CSDL ou d'un élément [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) .  
   
-|Nom de l'attribut|Type de données|Description|  
+|Nom de l'attribut|Type de données| Description|  
 |--------------------|---------------|-----------------|  
-|**Nom de la référence**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
+|**ReferenceName**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
 |**Légende**|Texte|Nom complet de l'entité. En cas d'omission, **ReferenceName** est utilisé.|  
 |**Documentation**|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification du champ.|  
 |**Hidden**|Booléen|Indique si le champ doit être affiché. La valeur par défaut est **false**, qui signifie que le champ est affiché.|  
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |**Alignement**|Enum|Valeur indiquant comment les valeurs de champ doivent être alignées dans une présentation tabulaire. Les valeurs possibles sont les suivantes : **Default**, **Center**, **Left**, **Right**. En cas d'omission, la valeur par défaut détermine l'alignement selon le type de données du champ.|  
 |**FormatString**|Texte|Chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> Champs - Datetime : date courte régionale ou « d »<br /><br /> -Fonction d’agrégation de champs à virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br /><br /> -Fonction d’agrégation des entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
 |**Unités**|Texte|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités. En cas d'omission, les unités sont inconnues.|  
-|**Width**|Entier|Largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. En ca d'omission, une largeur par défaut est basée sur le type de données du champ.|  
+|**Largeur**|Entier|Largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. En ca d'omission, une largeur par défaut est basée sur le type de données du champ.|  
 |**SortDirection**|Enum|Valeur indiquant comment les valeurs de champs sont généralement triées. Les valeurs possibles sont les suivantes : **Default**, **Ascending**, **Descending**. En cas d'omission, la valeur par défaut affecte un ordre de tri basé sur le type de données du champ.|  
 |**IsRightToLeft**|Booléen|Indique si le champ contient du texte qui doit être lu de droite à gauche. En cas d'omission, le paramètre de modèle est utilisé.|  
 |**OrderBy**|MemberRef|Référence à un autre champ du modèle qui définit l'ordre de tri pour les valeurs de ce champ. Les valeurs des deux champs doivent avoir un mappage 1:1 sinon, le comportement de tri n'est pas défini. En cas d'omission, le champ est trié selon sa propre valeur.|  

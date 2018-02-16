@@ -11,24 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: StorageEngineUsed Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- StorageEngineUsed Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="storageengineused-element-xmla"></a>Élément StorageEngineUsed (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient une valeur en lecture seule qui décrit le type de base de données actuelle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Contient une valeur en lecture seule qui décrit le type de base de données actuel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,24 +75,24 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[database](../../../analysis-services/scripting/objects/database-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
-|*Traditionnel*|Le modèle de base de données correspond à un mode de stockage MOLAP, ROLAP ou HOLAP.|  
-|*En mémoire*|Le modèle de base de données correspond à un mode de stockage IMBI.|  
-|*Mixte*|Le modèle de base de données combine les modes de stockage IMBI et MOLAP, ROLAP ou HOLAP.|  
+|*Traditional*|Le modèle de base de données correspond à un mode de stockage MOLAP, ROLAP ou HOLAP.|  
+|*InMemory*|Le modèle de base de données correspond à un mode de stockage IMBI.|  
+|*Mixed*|Le modèle de base de données combine les modes de stockage IMBI et MOLAP, ROLAP ou HOLAP.|  
   
  L’énumération qui correspond aux valeurs autorisées pour **StorageEngineUsed** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.StorageEngineUsed>.  
   

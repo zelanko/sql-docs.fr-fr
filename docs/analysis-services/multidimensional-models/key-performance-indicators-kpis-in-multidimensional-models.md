@@ -21,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans la terminologie d’entreprise, un indicateur de Performance clé (KPI) est une mesure quantifiable jaugeant.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'une activité économique.  
   
  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI est un ensemble de calculs associés à un groupe de mesures dans un cube qui servent à évaluer les performances de l’entreprise. Généralement, ces calculs sont une combinaison d'expressions MDX (Multidimensional Expressions) ou de membres calculés. Les indicateurs de performance clés contiennent également des métadonnées supplémentaires qui fournissent des informations sur la manière dont les applications clientes doivent afficher les résultats des calculs d'un indicateur de performance clé.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |Terme|Définition|  
 |----------|----------------|  
 |Objectif|Expression numérique MDX ou calcul qui retourne la valeur cible du KPI.|  
-|Valeur|Expression numérique MDX qui retourne la valeur réelle du KPI.|  
+|Value|Expression numérique MDX qui retourne la valeur réelle du KPI.|  
 |État|Expression MDX qui représente l'état du KPI à un moment donné.<br /><br /> L'expression MDX d'état doit retourner une valeur normalisée comprise entre -1 et 1. Les valeurs inférieures ou égales à -1 sont considérées comme « mauvaises » ou « basses ». La valeur zéro (0) est considérée comme « acceptable » ou « moyenne ». Les valeurs supérieures ou égales à 1 sont considérées comme « bonnes » ou « élevées ».<br /><br /> Un nombre illimité de valeurs intermédiaires peut éventuellement être retourné, ces valeurs pouvant être utilisées pour afficher n'importe quel nombre d'états supplémentaires, si l'application cliente les prend en charge.|  
 |Tendance|Expression MDX qui évalue la valeur du KPI dans le temps. La tendance peut correspondre à n'importe quel critère de temps ayant une utilité dans un contexte d'entreprise.<br /><br /> L'expression MDX de tendance permet à un utilisateur professionnel de déterminer si le KPI s'améliore ou se dégrade au fil du temps.|  
 |Indicateur d’état|Élément visuel qui fournit une indication rapide de l'état d'un KPI. L'affichage de l'élément est déterminé par la valeur de l'expression MDX qui évalue l'état.|  

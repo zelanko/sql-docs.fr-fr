@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 045979085e6d8e1622fef2a961f6c9fdb21d772a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-powerpivotsystemservice-cmdlet"></a>Applet de commande Update-PowerPivotSystemService
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Met à niveau de l’objet parent de le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système dans la batterie de serveurs.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Met à niveau l’objet parent du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie.  
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  L’applet de commande **Update-PowerPivotSystemService** exécute une série d’actions de mise à niveau sur l’objet parent du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , les instances et les applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie. Tous les services et applications de niveau intermédiaire d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint doivent s’exécuter au même niveau fonctionnel. Cette applet de commande effectue les actions de mise à niveau sur tous ces objets.  
   
  Exécutez cette applet de commande après avoir exécuté le programme d’installation de SQL Server pour installer une version plus récente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ou si vous avez appliqué une mise à jour cumulative sur le serveur. Pour vérifier si une mise à niveau est requise, exécutez `Get-PowerPivotSystemService` pour examiner la propriété **NeedsUpgrade** . Si la propriété **NeedsUpgrade** a la valeur true, vous devez exécuter l’applet de commande pour mettre à niveau les objets [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de niveau intermédiaire dans la batterie.  
@@ -59,7 +60,7 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="commonparameters"></a>\<Paramètres_courants >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Cette applet de commande prend en charge les paramètres suivants :  
   
 -   Commentaires  

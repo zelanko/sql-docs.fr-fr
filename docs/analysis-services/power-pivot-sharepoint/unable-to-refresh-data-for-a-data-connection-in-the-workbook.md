@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Pour les classeurs Excel qui contiennent des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données, Excel Services retourne cette erreur si elle soumet une demande de connexion à un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serveur et l’échec de la demande.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Pour les classeurs Excel qui contiennent des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services retourne cette erreur en cas de demande de connexion à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui échoue.  
   
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
-|S'applique à :|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint|  
+|S'applique à :|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Cause|Voir ci-dessous.|  
 |Texte du message|Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Les connexions suivantes n’ont pas pu s’actualiser : données de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], dimensional modeling
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concepts clés dans MDX (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Avant de pouvoir utiliser MDX (Multidimensional Expressions) pour interroger des données multidimensionnelles ou créer des expressions MDX dans un cube, vous pour devez comprendre les termes et concepts multidimensionnels.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Avant de pouvoir utiliser MDX (Multidimensional Expressions) pour interroger des données multidimensionnelles ou créer des expressions MDX dans un cube, vous devez vous familiariser avec les concepts et les termes liés aux données multidimensionnelles.  
   
  Le plus simple est de commencer par un exemple de synthèse de données que vous connaissez déjà, puis d'évaluer MDX de ce point de vue. Voici un tableau croisé dynamique créé dans Excel, rempli avec des données d'un exemple de cube Analysis Services.  
   
@@ -141,24 +142,24 @@ ms.lasthandoff: 01/08/2018
   
  **Dimensions de base de données et dimensions de cube**. Dans un modèle, vous pouvez définir des dimensions autonomes qui sont ensuite incluses dans un nombre quelconque de cubes du même modèle. Lorsque vous ajoutez une dimension à un cube, elle porte le nom de dimension de cube. Seule dans un projet, en tant qu'élément autonome dans l'Explorateur d'objets, elle porte le nom de dimension de base de données. Pourquoi cette distinction ? Car vous pouvez définir des propriétés dessus indépendamment. Dans la documentation du produit, les deux termes sont employés. Il convient donc de bien comprendre leur signification.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Maintenant que vous avez compris la terminologie et saisi les concepts importants, vous pouvez continuer avec ces rubriques supplémentaires qui expliquent plus en détails les concepts fondamentaux d'Analysis Services :  
   
--   [Requête MDX de base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [La requête MDX de base &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [Script MDX de base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [Le Script MDX de base &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [Modélisation multidimensionnelles &#40;didacticiel Adventure Works&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Modélisation multidimensionnelle &#40; Didacticiel Adventure Works &#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Espace du cube](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuples](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Fonctionnalité Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Utilisation des membres, Tuples et jeux &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Valeurs totales et Non visibles](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Principes de base de script MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Informations de référence sur le langage MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Informations de référence sur les expressions multidimensionnelles &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Référence du langage MDX &#40; MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Expressions multidimensionnelles &#40; MDX &#41; Référence](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

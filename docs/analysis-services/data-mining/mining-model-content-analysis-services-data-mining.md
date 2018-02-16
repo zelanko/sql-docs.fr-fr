@@ -22,19 +22,20 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après avoir conçu et traité un modèle d’exploration de données à l’aide des données à partir de la structure d’exploration de données sous-jacente, le modèle d’exploration de données est terminé et qu’il contient *contenu du modèle d’exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
   
  Le contenu du modèle d'exploration de données inclut des métadonnées relatives au modèle, des statistiques sur les données, et les modèles découverts par l'algorithme d'exploration. Selon l'algorithme utilisé, le contenu du modèle peut inclure des formules de régression, les définitions de règles et jeux d'éléments, ou des pondérations et d'autres statistiques.  
   
@@ -82,8 +83,8 @@ ms.lasthandoff: 01/08/2018
   
 |NODE_TYPE ID|Étiquette de nœud|Contenu de nœud|  
 |-------------------|----------------|-------------------|  
-| 1|Modèle|Nœud de métadonnées et de contenu racine. S'applique à tous les types de modèle.|  
-|2|trEE|Nœud racine d'un arbre de classification. S'applique aux modèles d'arbre de décision|  
+|1|Modèle|Nœud de métadonnées et de contenu racine. S'applique à tous les types de modèle.|  
+|2|Arborescence|Nœud racine d'un arbre de classification. S'applique aux modèles d'arbre de décision|  
 |3|Intérieur|Nœud fractionné intérieur dans une arborescence. S'applique aux modèles d'arbre de décision|  
 |4|Distribution|Nœud de terminaison d'une arborescence. S'applique aux modèles d'arbre de décision|  
 |5|Cluster|Cluster détecté par l'algorithme. S'applique aux modèles de clustering et aux modèles Sequence Clustering.|  
@@ -219,7 +220,7 @@ ms.lasthandoff: 01/08/2018
   
 |ID VALUE_TYPE|Étiquette de valeur|Nom de type de valeur|  
 |--------------------|-----------------|---------------------|  
-| 1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L’état **Missing** est calculé séparément des attributs qui ont des valeurs.|  
+|1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L’état **Missing** est calculé séparément des attributs qui ont des valeurs.|  
 |2|Existing|Indique que les données de cas contiennent une valeur pour cet attribut.|  
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
@@ -258,7 +259,7 @@ ms.lasthandoff: 01/08/2018
   
 |Niveau de nœud/attribut et valeur|Probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
-|Racine du modèle<br /><br /> Tous les clients cibles| 1| 1|  
+|Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
 |Clients cibles répartis par sexe|.5|.5|  
 |Clients cibles répartis par sexe, et répartis de nouveau en trois directions selon le revenu|.33|.5 * .33 = .165|  
   
@@ -278,15 +279,15 @@ ms.lasthandoff: 01/08/2018
   
 |Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  
-|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)|  
+|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Modèles de réseau neuronal|[Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Outils pour afficher le contenu du modèle d'exploration de données  
  Lorsque vous parcourez ou explorez un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez consulter les informations dans la **Visionneuse de l'arborescence de contenu générique**qui est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -309,7 +310,7 @@ SELECT * FROM [<mining model name>].CONTENT
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez aussi accéder aux informations dans les ensembles de lignes de schéma d'exploration de données en ouvrant une connexion à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en interrogeant les tables système. Pour plus d’informations, consultez [Ensembles de lignes de schéma d’exploration de données &#40;SSAS&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Visionneuse de l’arborescence de contenu générique Microsoft &#40; exploration de données &#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

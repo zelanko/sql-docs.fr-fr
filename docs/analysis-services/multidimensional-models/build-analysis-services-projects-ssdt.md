@@ -15,19 +15,20 @@ helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Générer des projets Analysis Services (SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous générez une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] une grande partie du projet que vous générez un projet de programmation dans Visual Studio. Lorsque vous générez le projet, un ensemble de fichiers XML est créé dans le répertoire de sortie. Ces fichiers XML utilisent le langage ASSL (Analysis Services Scripting Language), qui correspond au dialecte XML utilisé par les applications clientes telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour communiquer avec une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de créer ou de modifier des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ils permettent de déployer des définitions d’objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans une instance spécifique d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la procédure de génération d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est semblable à celle que vous suivez pour générer un projet de programmation dans Visual Studio. Lorsque vous générez le projet, un ensemble de fichiers XML est créé dans le répertoire de sortie. Ces fichiers XML utilisent le langage ASSL (Analysis Services Scripting Language), qui correspond au dialecte XML utilisé par les applications clientes telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour communiquer avec une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de créer ou de modifier des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ils permettent de déployer des définitions d’objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans une instance spécifique d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="building-a-project"></a>Génération d'un projet  
  Si vous générez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère un ensemble complet de fichiers XML dans le dossier de sortie contenant toutes les commandes ASSL nécessaires pour générer tous les objets de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le projet. Si le projet a été généré précédemment et qu'un déploiement incrémentiel est spécifié pour la configuration active, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] créera également un fichier XML contenant les commandes ASSL pour effectuer une mise à jour incrémentielle des objets déployés. Ce fichier XML est écrit dans le dossier \obj\\<configuration_active\> du projet. Les générations incrémentielles permettent de gagner du temps lors du déploiement et du traitement d'une base de données ou d'un projet très volumineux.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  Une fois la validation terminée, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère les fichiers XML. Après la génération, le dossier de sortie contient les fichiers décrits dans le tableau suivant.  
   
-|Fichiers (dans le dossier bin)|Description|  
+|Fichiers (dans le dossier bin)| Description|  
 |-----------------------------|-----------------|  
 |*nom_projet*.asdatabase|Contient les éléments ASSL qui définissent les métadonnées des objets du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de script de déploiement. Ce fichier est utilisé par le moteur de déploiement pour déployer les objets dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |*nom_projet*.configsettings|Contient les paramètres de configuration utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, la chaîne de connexion pour les sources de données).|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |*nom_projet*.deploymentoptions|Contient plusieurs paramètres utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, les emplacements de stockage).|  
 |*nom_assembly*/*dllname.*DLL|Les dossiers sont distincts pour chaque assembly référencé ; chaque dossier contient la DLL de l'assembly, l'assembly référencé et les fichiers .pdb associés pour les informations de débogage de la sortie.|  
   
-|Fichiers (dans le dossier obj)|Description|  
+|Fichiers (dans le dossier obj)| Description|  
 |-----------------------------|-----------------|  
 |\<Nom de configuration > \LastBuilt.xml|Contient le cachet temporel et le code de hachage qui identifient la dernière fois où le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a été généré.|  
   
@@ -65,6 +66,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Langage de script Analysis Services &#40;ASSL pour XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Déployer des projets Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Déployer des projets Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

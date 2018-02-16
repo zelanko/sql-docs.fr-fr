@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-trace-events"></a>Événements de trace Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez suivre l’activité d’une instance de Microsoft SQL Server Analysis Services (SSAS) en capturant, puis en analysant les événements de trace générés par l’instance.  Les événements de trace sont regroupés afin que vous puissiez plus facilement rechercher des événements de trace connexes.  Chaque événement de trace contient un jeu de données concernant l'événement ; toutes les parties de données ne sont pas correctes pour tous les événements.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous pouvez suivre l'activité d'une instance Microsoft SQL Server Analysis Services (SSAS) en capturant, puis en analysant les événements de trace générés par l'instance.  Les événements de trace sont regroupés afin que vous puissiez plus facilement rechercher des événements de trace connexes.  Chaque événement de trace contient un jeu de données concernant l'événement ; toutes les parties de données ne sont pas correctes pour tous les événements.  
   
  Les événements de trace peuvent être démarrés et capturés à l’aide de **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**(consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)). Ils peuvent aussi être démarrés à partir d’une commande XMLA sous forme **d’événements étendus SQL Server** et analysés ultérieurement (consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
 |------------------|--------------------|---------------------------|  
-|17|Error|Erreur serveur.|  
+|17|Erreur|Erreur serveur.|  
   
  **[Chargement de fichier et enregistrement de catégorie d'événement](../../analysis-services/trace-events/file-load-and-save-event-category.md)**  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
 |------------------|--------------------|---------------------------|  
-| 1|Audit Login|Collecte tous les événements de connexion depuis le début de la trace, telle qu'une demande de connexion d'un client à un serveur qui exécute une instance de SQL Server.|  
+|1|Audit Login|Collecte tous les événements de connexion depuis le début de la trace, telle qu'une demande de connexion d'un client à un serveur qui exécute une instance de SQL Server.|  
 |2|Audit Logout|Collecte tous les nouveaux événements de déconnexion depuis le début de la trace, telle que l'émission par un client d'une commande de déconnexion.|  
 |4|Audit Server Starts And Stops|Enregistre l'arrêt du service, le début et la suspension des activités des services.|  
 |18|Audit Object Permission Event|Enregistre les modifications d'autorisations sur les objets.|  

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tous les modèles d’exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Tous les modèles d'exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
   
  Pour une explication du contenu général du modèle d’exploration de données qui s’applique à tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -127,7 +128,7 @@ ms.lasthandoff: 01/08/2018
   
  **ARTXP :**  
   
-|ID du type de nœud|Description|  
+|ID du type de nœud| Description|  
 |------------------|-----------------|  
 |1 (Modèle)|Série chronologique|  
 |3 (Intérieur)|Représente une branche intérieure d'un arbre de série chronologique ARTXP.|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
   
  **ARIMA :**  
   
-|ID du type de nœud|Description|  
+|ID du type de nœud| Description|  
 |------------------|-----------------|  
 |27 (Racine ARIMA)|Nœud supérieur d'un arbre ARIMA.|  
 |28 (Structure périodique ARIMA)|Composant d'un arbre ARIMA qui décrit une structure périodique unique.|  
@@ -377,7 +378,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>Formule de série chronologique pour ARIMA  
  Pour afficher la formule complète pour n'importe quel nœud ARIMA, nous vous recommandons d'utiliser la **légende d'exploration de données** de la [Visionneuse de l'algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), laquelle présente l'ordre autorégressif, les moyennes mobiles et d'autres éléments de l'équation déjà composés dans un format cohérent.  
   
--   [Afficher la formule d’un modèle de série chronologique &#40;exploration de données&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Afficher la formule d’une série chronologique en mode &#40; exploration de données &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Cette section présente un exemple d'équation et explique la terminologie de base.  
   
@@ -413,7 +414,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION :** affiche les termes de l’équation dans une table imbriquée, que vous pouvez interroger pour obtenir des termes spécifiques. La table de distribution du nœud suit la même structure hiérarchique que les règles XML. En d'autres termes, le nœud racine de la série ARIMA (NODE_TYPE = 27) contient la valeur de l'ordonnée à l'origine et les périodicités de l'équation complète, laquelle peut inclure plusieurs périodicités, alors que les nœuds enfants contiennent uniquement des informations spécifiques à une certaine structure périodique ou aux nœuds enfants de cette structure périodique.  
   
-|Type de nœud|Attribute|Type de valeur|  
+|Type de nœud|Attribut|Type de valeur|  
 |---------------|---------------|----------------|  
 |27 (Racine ARIMA)|Intercepter<br /><br /> Périodicité|11|  
 |28 (Structure périodique ARIMA)|périodicité<br /><br /> Ordre autorégressif<br /><br /> ordre des différences<br /><br /> Ordre des moyennes mobiles|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
@@ -439,12 +440,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   Représentation XML : utilisez une requête XML.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il peut être difficile de récupérer des informations d'un arbre ARTXP, car les informations relatives à chaque division se trouvent dans un emplacement différent dans l'arbre. Par conséquent, avec un modèle ARTXP, vous devez obtenir toutes les informations, puis procéder à un traitement pour reconstituer la formule complète. L'extraction d'une équation à partir d'un modèle ARIMA est plus simple car la formule est disponible dans l'ensemble de l'arbre. Pour plus d’informations sur la création d’une requête pour récupérer ces informations, consultez [Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Contenu du modèle d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algorithme de série chronologique de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   

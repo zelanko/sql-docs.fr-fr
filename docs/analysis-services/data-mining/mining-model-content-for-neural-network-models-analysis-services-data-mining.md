@@ -22,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le contenu du modèle d’exploration de données qui est spécifique aux modèles qui utilisent l’algorithme (Microsoft Neural Network). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de réseau neuronal (Analysis Services - Exploration de données)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme MNN (Microsoft Neural Network). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>Fonctionnement de la structure d'un modèle Neural Network  
  Chaque modèle de réseau neuronal a un nœud parent unique, qui représente le modèle et ses métadonnées, et un nœud de statistiques marginales (NODE_TYPE = 24), qui apporte des statistiques descriptives sur les attributs d'entrée. Le nœud des statistiques marginales est utile parce qu'il résume les informations sur les entrées, afin que vous n'ayez pas besoin d'interroger les données des nœuds individuels.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Nom d'attribut de sortie|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 |ID du type de nœud|Description|  
 |------------------|-----------------|  
-| 1|Modèle.|  
+|1|Modèle.|  
 |17|Nœud organisateur pour le sous-réseau.|  
 |18|Nœud organisateur pour la couche d'entrée.|  
 |19|Nœud organisateur pour la couche masquée.|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Entier qui indique la séquence du nœud masqué dans la liste de nœuds masqués.|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Si l'attribut de sortie est continu, contient le nom de l'attribut de sortie.<br /><br /> Si l'attribut de sortie est discret ou discrétisé, contient le nom de l'attribut et la valeur.|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 01/08/2018
  MSOLAP_NODE_SHORT_CAPTION  
  Dans les modèles de réseau neuronal, toujours vide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le but de la formation d'un modèle de réseau neuronal est de déterminer les poids associés à chaque transition d'une entrée à un point milieu et d'un point milieu à un point de terminaison. Par conséquent, la couche d'entrée du modèle existe principalement pour stocker les valeurs réelles utilisées pour générer le modèle. La couche masquée stocke les poids calculés et fournit des pointeurs aux attributs d'entrée. La couche de sortie stocke les valeurs prévisibles et fournit également des pointeurs aux points milieu dans la couche masquée.  
   
 ##  <a name="bkmk_NodeIDs"></a> Utilisation de noms des nœuds et ID  
@@ -243,8 +244,8 @@ ms.lasthandoff: 01/08/2018
  **Attribut continu :** les deux lignes finales de la table NODE_DISTRIBUTION contiennent la moyenne de l’attribut, le coefficient pour le nœud dans son ensemble et la variance du coefficient.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Exemples de requêtes de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Référence technique de Microsoft Neural Network algorithme](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Exemples de requête de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

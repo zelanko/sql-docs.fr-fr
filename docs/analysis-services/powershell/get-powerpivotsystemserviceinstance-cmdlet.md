@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5043f2f3966182853decdde119a6914f59e1c12d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemserviceinstance-cmdlet"></a>Applet de commande Get-PowerPivotSystemServiceInstance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Retourne une ou plusieurs instances de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système en cours d’exécution sur les serveurs d’applications dans la batterie de serveurs.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Retourne une ou plusieurs instances du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s’exécutant sur des serveurs d’applications de la batterie.  
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -37,12 +38,12 @@ ms.lasthandoff: 01/08/2018
 Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstancePipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  L’applet de commande Get-PowerPivotSystemServiceInstance retourne les propriétés d’une ou plusieurs instances du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s’exécutant dans la batterie. L'applet de commande indique le type de l'application, son état (en ligne ou hors connexion), et son identité. Pour afficher les propriétés supplémentaires d'une instance spécifique, ajoutez le paramètre Identity et l'option format-list à l'applet de commande.  
   
 ## <a name="parameters"></a>Paramètres  
   
-### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identité \<PowerPivotMidTierServiceInstancePipeBind >  
+### <a name="-identity-powerpivotmidtierserviceinstancepipebind"></a>-Identity \<PowerPivotMidTierServiceInstancePipeBind>  
  Spécifie l'instance de service à obtenir. La valeur doit être un GUID valide qui identifie l'objet de manière unique dans la batterie.  
   
 |||  
@@ -53,7 +54,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
 |Accepter l'entrée de pipeline ?|true|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="commonparameters"></a>\<Paramètres_courants >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Cette applet de commande prend en charge les paramètres communs : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer et OutVariable. Pour plus d’informations, consultez [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)  
   
 ## <a name="inputs-and-outputs"></a>Entrées et sorties  

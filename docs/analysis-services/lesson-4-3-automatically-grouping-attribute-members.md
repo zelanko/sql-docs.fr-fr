@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Leçon 4-3 - automatiquement les membres d’attribut de regroupement
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +33,10 @@ Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'un
 La propriété **DiscretizationMethod** détermine si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue le regroupement et détermine le type de regroupement effectué. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n'effectue aucun regroupement. Lorsque vous activez les regroupements automatiques, vous pouvez autoriser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à déterminer automatiquement la meilleure méthode de regroupement en se basant sur la structure de l'attribut ou bien, vous pouvez choisir l'un des algorithmes de regroupement dans la liste suivante pour spécifier la méthode de regroupement :  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes pour que la totalité de la population des membres de dimension soit distribuée de façon égale dans les groupes.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes pour que la totalité de la population des membres de dimension soit distribuée de façon égale entre les groupes.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en créant des clusters unidimensionnels sur les valeurs d'entrée en utilisant la méthode de clustering K-Means avec des distributions gaussiennes. Cette option est valide uniquement pour les colonnes numériques.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en créant des regroupements unidimensionnels sur les valeurs d’entrée en utilisant la méthode de clustering K-Means avec des distributions gaussiennes. Cette option est valide uniquement pour les colonnes numériques.  
   
 Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

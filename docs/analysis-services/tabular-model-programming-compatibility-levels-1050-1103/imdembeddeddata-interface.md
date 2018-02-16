@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>Interface de IMDEmbeddedData
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’interface IMDEmbeddedData est une interface publique utilisée pour gérer un incorporé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de données ou une base de données de modèle tabulaire. L’interface hérite de la **IPersistStream** interface. Elle permet les opérations suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’interface IMDEmbeddedData est une interface publique utilisée pour gérer un incorporé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de données ou une base de données de modèle tabulaire. L’interface hérite de la **IPersistStream** interface. Elle permet les opérations suivantes :  
   
 -   Ajouter un identificateur au flux de données incorporé dans le document conteneur.  
   
@@ -88,7 +90,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Ajoute l'identificateur utilisé par l'application hôte au flux de données incorporé dans le document conteneur.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -105,12 +107,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  Une erreur s'est produite lors de l'accès à l'identificateur de flux de données.  
   
-#### <a name="remarks"></a>Notes   
+#### <a name="remarks"></a>Notes  
  Pour vérifier si la connexion actuelle contient une base de données incorporée, l'utilisateur doit vérifier la valeur de la propriété DBPROP_MSMD_EMBEDDED_DATA depuis les propriétés de connexion OLE DB.  
   
  Les valeurs possibles pour DBPROP_MSMD_EMBEDDED_DATA sont :  
   
-|Nom   |Valeur|Définition|  
+|Nom|Valeur|Définition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Aucune base de données incorporée disponible|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'application actuelle contient la base de données incorporée|  
@@ -132,7 +134,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Définit l'URL pour le fichier qui contient le flux de données incorporé.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -162,7 +164,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Définit un indicateur pour indiquer si l'application d'incorporation est dans un environnement hébergé.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -192,7 +194,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Définit le chemin d'accès aux fichiers temporaires utilisés par l'application d'incorporation.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -220,7 +222,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Annule l'opération de base de données incorporée actuelle  
   
 #### <a name="parameters"></a>Paramètres  
@@ -251,7 +253,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -271,11 +273,11 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
- none  
+ aucun  
   
 #### <a name="return-values"></a>Valeur(s) de retour  
  **S_OK**  
@@ -295,7 +297,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Charge la base de données incorporée dans le moteur local ou in-process. Hérité de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -321,7 +323,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a> Description  
  Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  

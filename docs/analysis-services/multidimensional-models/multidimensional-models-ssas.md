@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modélisation multidimensionnelle (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une solution multidimensionnelle Analysis Services utilise des structures de cube pour analyser les données d’entreprise entre plusieurs dimensions. Le mode multidimensionnel est le mode serveur par défaut d'Analysis Services. Il inclut une requête et un moteur de calcul pour les données OLAP, avec les modes de stockage MOLAP, ROLAP et HOLAP pour équilibrer les performances par des conditions de données évolutives. Le moteur OLAP d'Analysis Services est un serveur OLAP leader de l'industrie qui fonctionne parfaitement avec de nombreux outils BI. La plupart des déploiements Analysis Services sont installés comme des serveurs OLAP classiques.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La solution multidimensionnelle Analysis Services utilise des structures de cube pour analyser les données d'entreprise entre plusieurs dimensions. Le mode multidimensionnel est le mode serveur par défaut d'Analysis Services. Il inclut une requête et un moteur de calcul pour les données OLAP, avec les modes de stockage MOLAP, ROLAP et HOLAP pour équilibrer les performances par des conditions de données évolutives. Le moteur OLAP d'Analysis Services est un serveur OLAP leader de l'industrie qui fonctionne parfaitement avec de nombreux outils BI. La plupart des déploiements Analysis Services sont installés comme des serveurs OLAP classiques.  
   
 ## <a name="benefits-of-using-multidimensional-solutions"></a>Avantages de l'utilisation des solutions multidimensionnelles  
  La raison première de générer un modèle multidimensionnel Analysis Services est d'accélérer les performances des requêtes ad hoc sur des données d'entreprise. Un modèle multidimensionnel est composé de cubes et de dimensions qui peuvent être annotés et étendus pour prendre en charge des constructions de requêtes complexes. Les développeurs BI créent des cubes pour accélérer les temps de réponse et fournir une seule source de données pour les rapports d'entreprise. Étant donné l'importance croissante des solutions décisionnelles à tous les niveaux d'une organisation, le fait d'avoir une seule source de données analytiques garantit que les anomalies sont limitées au minimum faute de pouvoir les éliminer entièrement.  
@@ -32,9 +33,9 @@ ms.lasthandoff: 01/08/2018
  Un autre avantage procuré par les bases de données multidimensionnelles Analysis Services est l'intégration avec les outils de création de rapports BI couramment utilisés tels qu'Excel, Reporting Services et PerformancePoint, ainsi que des application personnalisées et des solutions tierces.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+ [Solutions de modèles multidimensionnels &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Bases de données Model multidimensionnelles &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
@@ -42,6 +43,6 @@ ms.lasthandoff: 01/08/2018
   
  [Power View pour les modèles multidimensionnels](../../analysis-services/multidimensional-models/power-view-for-multidimensional-models.md)  
   
- [Gestion des assemblys de modèles multidimensionnels](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Gestion des assemblys de modèle multidimensionnel](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

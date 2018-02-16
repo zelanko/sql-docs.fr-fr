@@ -1,7 +1,7 @@
 ---
 title: "L’exécution de commandes sur une Source de données analytiques | Documents Microsoft"
 ms.custom: 
-ms.date: 03/04/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - AdomdCommand object
 - commands [ADOMD.NET]
 - ADOMD.NET, commands
 ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a280ee70cd6c2545abc6a50da15d1eb938090e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23c14b71b321ee8358d542bd10f8b6cb73ee9a9f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>Exécution de commandes sur une source de données analytiques
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après avoir établi une connexion à une source de données analytiques, vous pouvez utiliser un <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> objet pour exécuter des commandes sur et retourner les résultats de cette source de données. Ces commandes permettent de récupérer des données via MDX (Multidimensional Expressions), DMX (Data Mining Extensions), voire une syntaxe limitée de SQL. En outre, vous pouvez utiliser des commandes ASSL (Analysis Services Scripting Language) pour modifier la base de données sous-jacente.  
+  Après avoir établi une connexion à une source de données analytiques, vous pouvez utiliser un objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> pour exécuter des commandes sur cette source de données et en obtenir les résultats. Ces commandes permettent de récupérer des données via MDX (Multidimensional Expressions), DMX (Data Mining Extensions), voire une syntaxe limitée de SQL. En outre, vous pouvez utiliser des commandes ASSL (Analysis Services Scripting Language) pour modifier la base de données sous-jacente.  
   
 ## <a name="creating-a-command"></a>Création d'une commande  
  Avant d'exécuter une commande, vous devez la créer. Pour ce faire, vous pouvez employer deux méthodes différentes :  

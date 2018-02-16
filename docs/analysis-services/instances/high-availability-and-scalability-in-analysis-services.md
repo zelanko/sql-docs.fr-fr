@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Haute disponibilité et extensibilité dans Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cet article décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cet article décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
   
  L’inverse n’est cependant pas toujours vrai. La haute disponibilité, sans mise à l’échelle, peut être le seul objectif lorsque des contrats SLA stricts sont établis pour des charges de travail de requête critiques mais modérées.  
   

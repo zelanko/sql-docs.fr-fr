@@ -22,19 +22,20 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer soit une requête de contenu, qui fournit des détails sur les modèles découverts dans l’analyse, ou vous pouvez créer une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
+# <a name="time-series-model-query-examples"></a>Exemples de requêtes de modèle de série chronologique
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Cette section explique comment créer les deux types de requêtes pour les modèles basés sur l'algorithme MTS (Microsoft Time Series).  
   
@@ -104,17 +105,17 @@ WHERE NODE_NAME = 'TA00000007'
   
  Résultats de l'exemple :  
   
-|Équation abrégée|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Équation abrégée|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)| 1|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- Pour en savoir plus sur l’interprétation de ces informations, consultez [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Pour en savoir plus sur l’interprétation de ces informations, consultez [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ###  <a name="bkmk_Query3"></a> Exemple de requête 3 : récupération de l'équation d'un modèle ARTXP  
- Pour un modèle ARTXP, des informations différentes sont stockées à chaque niveau de l'arbre. Pour plus d’informations sur la structure d’un modèle ARTxp et sur l’interprétation de ces informations dans l’équation, consultez [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Pour un modèle ARTXP, des informations différentes sont stockées à chaque niveau de l'arbre. Pour plus d’informations sur la structure d’un modèle ARTxp et sur l’interprétation de ces informations dans l’équation, consultez [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  L'instruction DMX suivante extrait les informations de l'arbre ARTxp qui représente la quantité de ventes du modèle R250 en Europe.  
   
@@ -131,7 +132,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- Pour en savoir plus sur l’interprétation de ces informations, consultez [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Pour en savoir plus sur l’interprétation de ces informations, consultez [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>Création de prédictions sur un modèle de série chronologique  
@@ -193,7 +194,7 @@ AND NODE_TYPE = 15
   
  Quand vous utilisez l’argument **REPLACE_MODEL_CASES** , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajoute continuellement de nouveaux cas à la fin de l’ensemble de cas et supprime un nombre correspondant au début de l’ensemble de cas. Si vous ajoutez davantage de nouvelles données qu'il n'en existait dans le jeu d'apprentissages d'origine, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignore les données les plus anciennes. Si vous fournissez suffisamment de nouvelles valeurs, les prédictions peuvent être basées sur des données complètement nouvelles.  
   
- Par exemple, vous avez formé votre modèle sur un jeu de données de cas qui contenait 1000 lignes. Vous ajoutez ensuite 100 lignes de nouvelles données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime les 100 premières lignes du jeu d'apprentissage et ajoute les 100 lignes de nouvelles données à la fin du jeu pour un total de 1 000 lignes. Si vous ajoutez 1100 lignes de nouvelles données, seules les 1000 lignes les plus récentes sont utilisées.  
+ Par exemple, vous avez formé votre modèle sur un jeu de données de cas qui contenait 1000 lignes. Vous ajoutez ensuite 100 lignes de nouvelles données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime les 100 premières lignes du jeu d'apprentissage et ajoute les 100 lignes de nouvelles données à la fin du jeu pour un total de 1 000 lignes. Si vous ajoutez 1100 lignes de nouvelles données, seules les 1000 lignes les plus récentes sont utilisées.  
   
  Voici un autre exemple. Pour ajouter trois mois de nouvelles données et effectuer trois nouvelles prédictions, vous procéderiez comme suit :  
   
@@ -221,19 +222,19 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |Fonction de prédiction|Utilisation|  
-|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|Retourne un nombre de tranches de temps entre la date du cas en cours et la dernière date du jeu d'apprentissage.<br /><br /> En règle générale, cette fonction est utilisée pour identifier les cas d'apprentissage récents afin de vous permettre de récupérer des données détaillées sur les cas.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Retourne l'ID de nœud pour la colonne prédictible spécifiée.<br /><br /> En règle générale, cette fonction est utilisée pour identifier le nœud qui a généré une valeur prédite particulière afin que vous puissiez examiner les cas associés au nœud ou récupérer l'équation et d'autres détails.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Retourne l'écart type des prédictions dans la colonne prédictible spécifiée.<br /><br /> Cette fonction remplace l'argument INCLUDE_STATISTICS, qui n'est pas pris en charge pour les modèles de séries chronologiques.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance des prédictions pour la colonne prédictible spécifiée.<br /><br /> Cette fonction remplace l'argument INCLUDE_STATISTICS, qui n'est pas pris en charge pour les modèles de séries chronologiques.|  
-|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|Retourne des valeurs prédites historiques ou des valeurs prédites futures pour des séries chronologiques.<br /><br /> Vous pouvez aussi interroger des modèles de séries chronologiques en utilisant la fonction de prédiction générale, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
+|[Décalage &#40; DMX &#41;](../../dmx/lag-dmx.md)|Retourne un nombre de tranches de temps entre la date du cas en cours et la dernière date du jeu d'apprentissage.<br /><br /> En règle générale, cette fonction est utilisée pour identifier les cas d'apprentissage récents afin de vous permettre de récupérer des données détaillées sur les cas.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Retourne l'ID de nœud pour la colonne prédictible spécifiée.<br /><br /> En règle générale, cette fonction est utilisée pour identifier le nœud qui a généré une valeur prédite particulière afin que vous puissiez examiner les cas associés au nœud ou récupérer l'équation et d'autres détails.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Retourne l'écart type des prédictions dans la colonne prédictible spécifiée.<br /><br /> Cette fonction remplace l'argument INCLUDE_STATISTICS, qui n'est pas pris en charge pour les modèles de séries chronologiques.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance des prédictions pour la colonne prédictible spécifiée.<br /><br /> Cette fonction remplace l'argument INCLUDE_STATISTICS, qui n'est pas pris en charge pour les modèles de séries chronologiques.|  
+|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|Retourne des valeurs prédites historiques ou des valeurs prédites futures pour des séries chronologiques.<br /><br /> Vous pouvez aussi interroger des modèles de séries chronologiques en utilisant la fonction de prédiction générale, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
   
- Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Pour la syntaxe de fonctions spécifiques, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Algorithme de série chronologique de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Référence technique de Microsoft Time Series algorithme](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

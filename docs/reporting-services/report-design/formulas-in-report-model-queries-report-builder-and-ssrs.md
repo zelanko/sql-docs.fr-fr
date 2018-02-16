@@ -20,10 +20,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formules dans les requêtes de modèle de rapport (Générateur de rapports et SSRS)
   Les formules sont des calculs effectués sur les valeurs d'un rapport utilisant un modèle de rapport comme source de données. Vous définissez des formules dans la **boîte de dialogue Définir la formule** du concepteur de requêtes Modèle de rapport quand vous définissez une requête pour une source de données de modèle de rapport. Une formule peut contenir des fonctions, des opérateurs, des constantes et des références à des champs ou des entités. Les formules vous permettent de combiner, d'agréger, de filtrer et d'évaluer des données numériques et de texte. Vous pouvez créer des formules et les enregistrer en tant que nouveaux champs, ou vous pouvez modifier les formules des champs existants.  

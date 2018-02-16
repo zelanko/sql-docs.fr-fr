@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetClusterAccuracyResults
 - cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Retourne les mesures de précision de validation croisée d’une structure d’exploration de données et les modèles de clustering connexes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Retourne les mesures de précision de validation croisée d'une structure d'exploration de données et de tous les modèles de clustering connexes.  
   
  Cette procédure stockée retourne les mesures du jeu de données dans sa totalité sous forme de partition unique. Pour partitionner le jeu de données en sections croisées et retourner les mesures pour chaque partition, utilisez [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -82,7 +83,7 @@ SystemGetClusterAccuracyResults(
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par **SystemGetClusterAccuracyResults**. Pour en savoir plus sur l’interprétation des informations retournées par la procédure stockée, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Nom de la colonne|Description|  
+|Nom de la colonne| Description|  
 |-----------------|-----------------|  
 |ModelName|Nom du modèle qui a été testé. **All** indique que le résultat est un agrégat de tous les modèles.|  
 |AttributeName|Non applicable aux modèles de clustering.|  
@@ -93,12 +94,12 @@ SystemGetClusterAccuracyResults(
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de modèle et du type de valeur prévisible.<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Valeur|Score de probabilité qui indique la vraisemblance du cas de cluster.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le tableau suivant fournit des exemples des valeurs que vous pouvez utiliser pour spécifier les données de la structure d'exploration de données qui sont utilisées pour la validation croisée. Si vous souhaitez utiliser des scénarios de test pour la validation croisée, la structure d'exploration de données doit déjà contenir un jeu de données de test. Pour plus d’informations sur la définition d’un jeu de données de test quand vous créez une structure d’exploration de données, consultez [Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valeur de type entier|Description|  
+|Valeur de type entier| Description|  
 |-------------------|-----------------|  
-| 1|Seuls les cas d'apprentissage sont utilisés.|  
+|1|Seuls les cas d'apprentissage sont utilisés.|  
 |2|Seuls les scénarios de test sont utilisés.|  
 |3|Les cas d'apprentissage et les scénarios de test sont utilisés.|  
 |4|Combinaison incorrecte.|  

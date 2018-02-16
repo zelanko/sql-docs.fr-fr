@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Propriétés de cellule MDX - FORMATTED_VALUE (propriété)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
   
 ## <a name="value-formatstring-language-properties"></a>Propriétés VALUE, FORMAT_STRING et LANGUAGE  
  La table suivante décrit ces propriétés afin de vous aider à les combiner.  
@@ -84,14 +85,14 @@ ms.lasthandoff: 01/08/2018
   
 |Membre|FORMATTED_VALUE|Explication|  
 |------------|----------------------|-----------------|  
-|Un|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
+|Objet|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
 |B|€5.040,00|FORMAT_STRING a pour valeur `Currency` (hérité de A) et LANGUAGE a pour valeur explicite `1034` (Espagne), ce qui explique le symbole de l’euro, le séparateur décimal différent et le séparateur des milliers différent.|  
 |C|$5.040,00|FORMAT_STRING a pour valeur `$#,##0.00` en remplacement de la devise héritée de A, et LANGUAGE a pour valeur explicite `1034` (Espagne). Étant donné que la propriété FORMAT_STRING a pour valeur explicite le symbole monétaire $, FORMATTED_VALUE est présenté avec le signe $. Toutefois, étant donné que `.` (point) et `,` (virgule) sont respectivement des espaces réservés pour le séparateur décimal et le séparateur des milliers, la spécification de langue les affecte et une sortie localisée pour les séparateurs décimal et des milliers est générée.|  
 |D|5.04E+03|FORMAT_STRING a pour valeur `Scientific` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système. Le signe `.` (point) est donc utilisé comme séparateur décimal.|  
 |E|5,04E+03|FORMAT_STRING a pour valeur `Scientific` et LANGUAGE a pour valeur explicite `1034,` le signe `,` (virgule) est donc utilisé comme séparateur décimal.|  
 |F|50.40%|FORMAT_STRING a pour valeur `Percent` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système. Le signe `.` (point) est donc utilisé comme séparateur décimal.<br /><br /> Notez que VALUE est passé de 5040 à 0.5040|  
 |G|50,40|FORMAT_STRING a pour valeur `Percent`, valeur héritée de F, et LANGUAGE a pour valeur explicite `1034` . Le signe `,` (virgule) est donc utilisé comme séparateur décimal.<br /><br /> Notez que VALUE a été hérité de la valeur F.|  
-|H|non|FORMAT_STRING a pour valeur `YES/NO`, VALUE a pour valeur 0 et LANGUAGE a pour valeur explicite `1034`. Étant donné qu’il n’y a aucune différence entre le NO anglais et le NO espagnol, l’utilisateur ne voit aucune différence au niveau de FORMATTED_VALUE.|  
+|H|Non|FORMAT_STRING a pour valeur `YES/NO`, VALUE a pour valeur 0 et LANGUAGE a pour valeur explicite `1034`. Étant donné qu’il n’y a aucune différence entre le NO anglais et le NO espagnol, l’utilisateur ne voit aucune différence au niveau de FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING a pour valeur `YES/NO`, VALUE a pour valeur 59 et LANGUAGE a pour valeur explicite `1034`. Comme défini pour la mise en forme de YES/NO, toute valeur différente de zéro (0) est égale à YES et comme la langue est l’espagnol, FORMATTED_VALUE a pour valeur SI.|  
 |J|Desactivado|FORMAT_STRING a pour valeur `ON/OFF`, VALUE a pour valeur 0 et LANGUAGE a pour valeur explicite `1034`. Comme défini pour la mise en forme de ON/OFF, toute valeur égale à zéro (0) est égale à OFF et comme la langue est l’espagnol, FORMATTED_VALUE a pour valeur Desactivado.|  
 |K|Activado|FORMAT_STRING a pour valeur `ON/OFF`, VALUE a pour valeur -312 et LANGUAGE a pour valeur explicite `1034`. Comme défini pour la mise en forme de ON/OFF, toute valeur différente de zéro (0) est égale à ON et comme la langue est l'espagnol, FORMATTED_VALUE a pour valeur Activado.|  
@@ -148,9 +149,9 @@ ms.lasthandoff: 01/08/2018
 |L|06:30|FORMAT_STRING a pour valeur explicite `Short Time` et LANGUAGE a pour valeur explicite `1041` (japonais).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu de FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Contenu de FORMAT_STRING &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [À l’aide des propriétés de cellule &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Création et utilisation des valeurs de propriété &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

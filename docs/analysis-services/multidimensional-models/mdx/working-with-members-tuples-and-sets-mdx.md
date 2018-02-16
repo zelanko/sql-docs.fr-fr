@@ -29,19 +29,20 @@ helpviewer_keywords:
 - tuples
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Utilisation de membres, de tuples et de jeux (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX fournit de nombreuses fonctions qui retournent un ou plusieurs membres, tuples ou ensembles ; ou qui agissent sur un membre, tuple, ou définir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX fournit de nombreuses fonctions chargées de retourner un ou plusieurs membres, tuples ou jeux ou conçues pour agir sur un membre, un tuple ou un jeu donné.  
   
 ## <a name="member-functions"></a>Fonctions de membre  
  MDX intègre plusieurs fonctions à l'aide desquelles vous pouvez extraire des membres d'autres entités MDX, notamment des dimensions, des niveaux, des jeux ou des tuples. Par exemple, la fonction [FirstChild](../../../mdx/firstchild-mdx.md) est une fonction qui agit sur un membre et retourne un membre.  
@@ -82,10 +83,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- Pour plus d’informations sur les fonctions de tuple, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Pour plus d’informations sur les fonctions de tuple, consultez [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="set-functions"></a>Fonctions de jeu  
- MDX fournit plusieurs fonctions qui retournent des jeux. Pour extraire un jeu, il existe d'autres méthodes que la spécification explicite de tuples et leur mise entre accolades. Pour plus d’informations sur l’utilisation des fonctions de membre pour retourner un jeu, consultez [Concepts clés dans MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Il existe beaucoup d'autres fonctions de jeu.  
+ MDX fournit plusieurs fonctions qui retournent des jeux. Pour extraire un jeu, il existe d'autres méthodes que la spécification explicite de tuples et leur mise entre accolades. Pour plus d’informations sur l’utilisation des fonctions de membre pour retourner un jeu, consultez [Key Concepts in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Il existe beaucoup d'autres fonctions de jeu.  
   
  L'opérateur deux points (:) permet d'utiliser l'ordre naturel des membres pour créer un jeu. Par exemple, le jeu illustré dans l'exemple suivant contient des tuples pour les trimestres 1 à 4 (Q1 et Q4) de l'année civile 2002.  
   
@@ -111,16 +112,16 @@ FROM [Adventure Works]
   
  L'opérateur deux points est une fonction inclusive. Les membres situés de part et d'autre de celui-ci sont inclus dans le jeu de résultats.  
   
- Pour plus d’informations sur les fonctions de jeu, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Pour plus d’informations sur les fonctions de jeu, consultez [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="array-functions"></a>Fonctions de tableau  
- Une fonction de tableau agit sur un jeu et retourne un tableau. Pour plus d’informations sur les fonctions de tableau, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Une fonction de tableau agit sur un jeu et retourne un tableau. Pour plus d’informations sur les fonctions de tableau, consultez [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="hierarchy-functions"></a>Fonctions de hiérarchie  
- Une fonction de hiérarchie retourne une hiérarchie en agissant sur un membre, un niveau, une hiérarchie ou une chaîne. Pour plus d’informations sur les fonctions de hiérarchie, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Une fonction de hiérarchie retourne une hiérarchie en agissant sur un membre, un niveau, une hiérarchie ou une chaîne. Pour plus d’informations sur les fonctions de hiérarchie, consultez [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="level-functions"></a>Fonctions de niveau  
- Une fonction de niveau retourne un niveau en agissant sur un membre, un niveau ou une chaîne. Pour plus d’informations sur les fonctions de niveau, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
+ Une fonction de niveau retourne un niveau en agissant sur un membre, un niveau ou une chaîne. Pour plus d’informations sur les fonctions de niveau, consultez [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="logical-functions"></a>Fonctions logiques  
  Une fonction logique agit sur une expression MDX pour retourner des informations sur les tuples, les membres ou les jeux au sein de l'expression. Par exemple, la fonction [IsEmpty &#40;MDX&#41;](../../../mdx/isempty-mdx.md) évalue si une expression a retourné une valeur de cellule vide. Pour plus d’informations sur les fonctions logiques, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
@@ -132,7 +133,7 @@ FROM [Adventure Works]
  Une fonction de chaîne agit sur une expression MDX pour retourner une chaîne. Par exemple, la fonction [UniqueName &#40;MDX&#41;](../../../mdx/uniquename-mdx.md) retourne une valeur de chaîne qui contient le nom unique d’une dimension, d’une hiérarchie, d’un niveau ou d’un membre. Pour plus d’informations sur les fonctions de chaîne, consultez [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés dans MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Référence des fonctions MDX &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
   

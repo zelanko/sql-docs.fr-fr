@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application de service est une instance de service partagé le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système. Chaque application de service possède une identité d'application, des paramètres de configuration, des propriétés et un système de stockage des données internes qui lui sont propres.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une instance de service partagé du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Chaque application de service possède une identité d'application, des paramètres de configuration, des propriétés et un système de stockage des données internes qui lui sont propres.  
   
  Cette rubrique contient les sections suivantes :  
   

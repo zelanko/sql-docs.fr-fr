@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Progress Reports event category
 - event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c90cfbe7e30d0678d13a329737c21f7d45575e22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="progress-reports-event-category"></a>Rapports de progression, catégorie d'événement
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La catégorie d’événement rapports de progression comporte les classes d’événements décrites dans le tableau suivant.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La catégorie d'événement Rapports de progression contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |Classe d'événements|ID d'événement|Description|  
 |-----------------|--------------|-----------------|  
@@ -42,6 +43,6 @@ ms.lasthandoff: 01/08/2018
  Pour plus d’informations sur les colonnes associées à chaque classe d’événements Progress Report, consultez [Colonnes de données des rapports de progression](../../analysis-services/trace-events/progress-reports-data-columns.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
+ [Événements de Trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

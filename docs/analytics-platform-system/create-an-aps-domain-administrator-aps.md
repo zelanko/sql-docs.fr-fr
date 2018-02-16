@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
 caps.latest.revision: 
 ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Créer un administrateur de domaine APS
 Certaines opérations requièrent des privilèges d’administrateur de domaine de système de plateforme Analytique. Cette rubrique explique comment créer des administrateurs de domaine de matériel supplémentaire.  

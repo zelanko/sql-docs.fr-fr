@@ -20,19 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulation de données MDX - présentation de passage de commande et l’ordre de résolution
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Lorsqu’un cube est calculé en tant que le résultat d’un script MDX, il peut subir de nombreuses étapes de calcul en fonction de l’utilisation des diverses fonctionnalités de calcul. Chacune de ces étapes porte le nom de test de calcul.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Lorsqu'un cube est calculé dans le cadre d'un script MDX, il peut subir de nombreuses étapes de calcul, en fonction de l'utilisation de diverses fonctionnalités liées au calcul. Chacune de ces étapes porte le nom de test de calcul.  
   
  Un test de calcul peut être désigné par sa position ordinale, appelée numéro du test de calcul. Le nombre de tests nécessaires au calcul complet de toutes les cellules d'un cube représente la profondeur du test de calcul du cube.  
   
@@ -155,7 +156,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- Dans cet exemple de requête MDX combinée, `Profit Margin` a l’ordre de résolution le plus élevé ; il est donc prioritaire quand les deux expressions interagissent. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue la cellule en question à l’aide de la formule `Profit Margin` . Le tableau suivant présente les résultats de ces calculs imbriqués.  
+ Dans cet exemple de requête MDX combinée, `Profit Margin` a l’ordre de résolution le plus élevé ; il est donc prioritaire quand les deux expressions interagissent. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue la cellule en question à l'aide de la formule `Profit Margin`. Le tableau suivant présente les résultats de ces calculs imbriqués.  
   
 ||Internet Sales Amount|Internet Total Product Cost|Marge de bénéfice|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -169,7 +170,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- ou Gestionnaire de configuration  
+ ou  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -219,9 +220,9 @@ FROM [Adventure Works]
  L'ordre de résolution peut s'avérer très délicat à gérer, notamment dans les cubes qui contiennent de très nombreuses dimensions impliquant des membres calculés, des formules de cumul personnalisé ou des cellules calculées. Au moment où [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue une requête MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en compte les valeurs d'ordre de résolution de tous les éléments impliqués dans un test de calcul donné, y compris les dimensions du cube spécifié dans la requête MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40; MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40; MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [Instruction CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Manipulation de données &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CRÉER une instruction MEMBER &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Manipulation de données &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

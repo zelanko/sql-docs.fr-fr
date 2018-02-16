@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="querying-a-tabular-model"></a>Interrogation d'un modèle tabulaire
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]En tant que développeur interrogation d’un modèle tabulaire signifie que récupérer des données à partir de la base de données tabulaire ; pour atteindre cet objectif, vous avez deux options : utilisez des requêtes de table dans DAX ou MDX et récupérez les données comme si elles provenaient d’un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+En tant que développeur, l'interrogation d'un modèle tabulaire revient à récupérer des données de la base de données tabulaire ; vous avez deux options pour atteindre cet objectif : utilisez des requêtes de table dans DAX ou utilisez MDX et récupérez les données comme si elles provenaient d'un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Interrogation avec ADOMD.Net  
  L'utilisation d'ADOMD.Net pour interroger un modèle tabulaire est simple et flexible ; vous pouvez envoyer des instructions MDX ou des expressions de requêtes tabulaires depuis DAX vers le serveur pour obtenir les résultats.  
@@ -54,7 +56,7 @@ private DataTable tabularQueryExecute(string qry, ADOMD.AdomdConnection cnx)
   
 ```  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Si le code ci-dessus est utilisé avec l'expression MDX suivante :  
   
 ```  
@@ -110,7 +112,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-| 1| 1|Bikes|$  28,318,144.65|$  66,302,381.56|  
+|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|Components||$  11,799,076.66|  
   

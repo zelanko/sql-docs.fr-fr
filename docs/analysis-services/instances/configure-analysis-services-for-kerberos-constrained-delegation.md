@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurer Analysis Services pour la délégation contrainte Kerberos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lors de la configuration d’Analysis Services pour l’authentification Kerberos, vous cherchez probablement pour parvenir à une ou les deux résultats suivants : avoir Analysis Services à emprunter l’identité d’une identité d’utilisateur lors de l’interrogation des données ; ou demander à Analysis Services délègue une identité d’utilisateur à un service de bas niveau. Chaque scénario implique des spécifications de configuration légèrement différentes. De plus, dans les deux cas, une vérification doit avoir lieu pour s'assurer que la configuration a été effectuée correctement.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quand vous configurez Analysis Services pour l'authentification Kerberos, vous cherchez probablement à obtenir l'un des deux résultats suivants : laisser le soin à Analysis Services d'emprunter l'identité d'un utilisateur durant l'interrogation de données, ou demander à Analysis Services de déléguer l'identité d'utilisateur à un service de bas niveau. Chaque scénario implique des spécifications de configuration légèrement différentes. De plus, dans les deux cas, une vérification doit avoir lieu pour s'assurer que la configuration a été effectuée correctement.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_impersonate"></a> Autoriser Analysis Services à emprunter l'identité d'un utilisateur  
  Pour permettre aux services de haut niveau tels que Reporting Services, IIS ou SharePoint d'emprunter l'identité d'un utilisateur dans Analysis Services, vous devez configurer la délégation contrainte Kerberos pour ces services. Dans ce scénario, Analysis Services emprunte l'identité de l'utilisateur actuel à l'aide de l'identité fournie par le service de délégation et retourne des résultats selon l'appartenance au rôle de l'identité de cet utilisateur.  
   
-|Tâche|Description|  
+|Tâche| Description|  
 |----------|-----------------|  
 |Étape 1 : Vérifier que les comptes conviennent pour la délégation|Vérifiez que les comptes utilisés pour exécuter les services présentent les propriétés appropriées dans Active Directory. Les comptes de service dans Active Directory ne doivent pas être marqués comme comptes sensibles, ni être spécifiquement exclus des scénarios de délégation. Pour plus d'informations, consultez [Présentation des comptes d'utilisateurs](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Remarque : généralement, tous les comptes et les serveurs impliqués dans le traitement doivent appartenir au même domaine Active Directory ou à des domaines approuvés dans la même forêt. Toutefois, étant donné que Windows Server 2012 prend en charge la délégation entre les limites de domaine, vous pouvez configurer la délégation contrainte Kerberos si le niveau fonctionnel du domaine est Windows Server 2012. Sinon, vous pouvez configurer Analysis Services pour l'accès HTTP et utiliser les méthodes d'authentification IIS sur la connexion cliente. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Étape 2 : Inscrire le SPN|Avant de configurer une délégation contrainte, vous devez enregistrer un Nom de principal de service (SPN) pour l'instance du service Analysis Services. Vous aurez besoin du SPN Analysis Services lors de la configuration de la délégation contrainte Kerberos pour les services de niveau intermédiaire. Pour obtenir des instructions, consultez [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Un nom de principal du service (SPN) spécifie l'identité unique d'un service dans un domaine configuré pour l'authentification Kerberos. Les connexions clientes utilisant la sécurité intégrée demandent souvent un SPN dans le cadre de l'authentification SSPI. La demande est transmise à un contrôleur de domaine (DC) Active Directory, le centre de distribution de clés KDC accordant un ticket si le nom SPN présenté par le client comporte une inscription du nom SPN correspondante dans Active Directory.|  
@@ -119,9 +120,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [Kerberos à l’aide de l’authentification mutuelle](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [Authentification mutuelle à l'aide de Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Inscription SPN pour une instance Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propriétés de chaîne de connexion &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

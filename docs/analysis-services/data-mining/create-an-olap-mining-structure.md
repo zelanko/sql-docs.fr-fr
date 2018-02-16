@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il existe de nombreux avantages à la création d’un modèle d’exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  
+# <a name="create-an-olap-mining-structure"></a>Créer une structure d'exploration de données OLAP
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Il existe de nombreux avantages à la création d'un modèle d'exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  
   
  Cette rubrique décrit comment créer une structure d'exploration de données OLAP, en fonction d'une dimension et de mesures associées dans une solution multidimensionnelle existante.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 10. **Créer un jeu de test**: dans cette page, vous pouvez indiquer à l'Assistant combien de données doivent être mises de côté pour être utilisées lors du test du modèle. Si vos données prennent en charge plusieurs modèles, il est judicieux de créer un jeu de données d'exclusion, afin que tous les modèles puissent être testés sur les mêmes données.  
   
-     Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+     Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
 11. **Fin de l'Assistant**: dans cette page, vous donnez un nom à la nouvelle structure d'exploration de données et au modèle d'exploration de données associé, puis vous enregistrez la structure et le modèle.  
   
@@ -165,10 +166,10 @@ ms.lasthandoff: 01/08/2018
 >  Seuls les types de modèles suivants prennent en charge la création de dimensions d'exploration de données : modèles basés sur l'algorithme de gestion de clusters Microsoft, l'algorithme MDT (Microsoft Decision Trees) ou l'algorithme Microsoft Association.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Colonnes de Structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)   
- [Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
+ [Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
  [Propriétés du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propriétés des structures d’exploration de données et des colonnes de structure](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Propriétés de Structure d’exploration de données et les colonnes de Structure](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   

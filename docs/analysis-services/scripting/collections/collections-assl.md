@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7f121fbcd03bf3dace4c09c20925b7ce3d52baf5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collections-assl"></a>Collections (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui agit comme une collection dans le schéma d’Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui se comporte comme une collection dans le schéma ASSL (Analysis Services Scripting Language).  
   
  Bien que le schéma ASSL renferme uniquement des éléments XML à partir du point de vue d’un développeur, les éléments décrits dans cette section correspondent à des collections d’objets, tels que les **Dimensions** et **Cubes** collections.  
   
@@ -39,10 +41,10 @@ ms.lasthandoff: 01/08/2018
   
  Dans d'autres cas, une collection contient des éléments qui correspondent à des propriétés d'objet et non à des objets. Par exemple, le **alias** collection contient **Alias** propriétés, chacun d’eux est une valeur de chaîne simple.  
   
-|Élément|Description|  
+|Élément| Description|  
 |-------------|-----------------|  
 |[Élément Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)|Contient la collection des types de compte sont définies dans un [base de données](../../../analysis-services/scripting/objects/database-element-assl.md) élément.|  
-|[Élément actions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/actions-element-assl.md)|Contient la collection d’actions pour un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) élément.|  
+|[Élément actions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/actions-element-assl.md)|Contient la collection d'actions pour un élément [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Élément AggregationDesigns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregationdesigns-element-assl.md)|Contient la collection des conceptions d'agrégation qu'il est possible de partager sur plusieurs partitions dans une base de données.|  
 |[Élément AggregationInstances &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregationinstances-element-assl.md)|Contient la collection d’instances d’agrégation qui sont définies dans un [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) élément.|  
 |[Élément Aggregations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)|Contient la collection des agrégations définies pour un [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) élément.|  
@@ -75,13 +77,13 @@ ms.lasthandoff: 01/08/2018
 |[Élément de fichiers &#40; ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)|Contient la collection de [fichier](../../../analysis-services/scripting/objects/file-element-assl.md) les éléments qui composent un [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) élément.|  
 |[Élément ForeignKeyColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/foreignkeycolumns-element-assl.md)|Contient la collection des colonnes qui identifient la jointure à la table parente pour une source de données relationnelle.|  
 |[Élément Groups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/groups-element-assl.md)|Contient la collection des groupes de membres liés à un attribut.|  
-|[Élément Hierarchies &#40; ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|Contient la collection de [hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) éléments associés à l’élément parent.|  
+|[Élément Hierarchies &#40; ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|Contient la collection d'éléments [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) associée à l'élément parent.|  
 |[Élément IncrementalProcessingNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/incrementalprocessingnotifications-element-assl.md)|Contient la collection de [IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md) les éléments qui fournissent des informations pour le [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur les requêtes à exécuter afin de déterminer la progression du traitement incrémentiel.|  
 |[Élément KeyColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|Contient la collection de [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) définitions d’élément pour un objet parent.|  
 |[Élément KPIs &#40; ASSL &#41;](../../../analysis-services/scripting/collections/kpis-element-assl.md)|Contient la collection de [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) éléments associés à l’élément parent.|  
 |[Élément Levels &#40; ASSL &#41;](../../../analysis-services/scripting/collections/levels-element-assl.md)|Contient la collection de [niveau](../../../analysis-services/scripting/objects/level-element-assl.md) éléments dans un [hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) élément.|  
 |[Élément MdxScripts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)|Contient la collection de [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) éléments associés à un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.|  
-|[Élément MeasureGroups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/measuregroups-element-assl.md)|Contient la collection de [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) éléments associés à l’élément parent.|  
+|[Élément MeasureGroups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/measuregroups-element-assl.md)|Contient la collection d'éléments [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) associée à l'élément parent.|  
 |[Élément Measures &#40; ASSL &#41;](../../../analysis-services/scripting/collections/measures-element-assl.md)|Contient la collection de [mesure](../../../analysis-services/scripting/objects/measure-element-assl.md) éléments associés à l’élément parent.|  
 |[Membres de l’élément &#40; ASSL &#41;](../../../analysis-services/scripting/collections/members-element-assl.md)|Contient la collection d'éléments [Member](../../../analysis-services/scripting/objects/member-element-assl.md) de l'élément parent.|  
 |[Élément MiningModelPermissions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/miningmodelpermissions-element-assl.md)|Contient la collection d’autorisations pour un [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) élément.|  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 |[Élément MiningStructures &#40; ASSL &#41;](../../../analysis-services/scripting/collections/miningstructures-element-assl.md)|Contient la collection de [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) éléments dans un [base de données](../../../analysis-services/scripting/objects/database-element-assl.md) élément.|  
 |[Élément ModelingFlags &#40; ASSL &#41;](../../../analysis-services/scripting/collections/modelingflags-element-assl.md)|Contient la collection de [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) les éléments d’une colonne dans un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) ou un [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).|  
 |[Élément NamingTemplateTranslations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/namingtemplatetranslations-element-assl.md)|Fournit une collection de traductions localisées pour le [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) élément du parent [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md).|  
-|[Élément partitions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/partitions-element-assl.md)|Contient la collection de [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) éléments utilisés par un [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) élément ou la collection de liaisons de partition qui composent une hors ligne [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) élément.|  
+|[Élément partitions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/partitions-element-assl.md)|Contient la collection d'éléments [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) utilisée par un élément [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) , ou la collection des liaisons de partition qui composent un élément [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) hors ligne.|  
 |[Élément perspectives &#40; ASSL &#41;](../../../analysis-services/scripting/collections/perspectives-element-assl.md)|Contient la collection de [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) éléments associés à un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.|  
 |[Élément QueryNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/querynotifications-element-assl.md)|Contient la collection de [QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md) les éléments qui fournissent des informations pour le [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur les requêtes à exécuter pour déterminer si une source de données a été modifiée.|  
 |[Élément ReportFormatParameters &#40; ASSL &#41;](../../../analysis-services/scripting/collections/reportformatparameters-element-assl.md)|Contient la collection d'éléments [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md) pour un élément [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) .|  
@@ -99,7 +101,7 @@ ms.lasthandoff: 01/08/2018
 |[Élément ServerProperties &#40; ASSL &#41;](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)|Contient la collection de [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) éléments associés à un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) élément.|  
 |[Élément TableNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/tablenotifications-element-assl.md)|Contient la collection de [TableNotification](../../../analysis-services/scripting/objects/tablenotification-element-assl.md) les éléments qui fournissent des informations pour le [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur les tables ou vues dans une source de données qui ont été modifiées.|  
 |[Élément traces &#40; ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)|Contient la collection d'éléments [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) associée à un élément [Server](../../../analysis-services/scripting/objects/server-element-assl.md) .|  
-|[Élément translations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|Contient la collection de [traduction](../../../analysis-services/scripting/objects/translation-element-assl.md) éléments associés à l’élément parent.|  
+|[Élément translations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|Contient la collection d'éléments [Translation](../../../analysis-services/scripting/objects/translation-element-assl.md) associée à l'élément parent.|  
 |[Élément UnknownMemberTranslations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/unknownmembertranslations-element-assl.md)|Contient la collection de traductions pour la légende de la [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) élément d’une dimension.|  
   
 ## <a name="see-also"></a>Voir aussi  

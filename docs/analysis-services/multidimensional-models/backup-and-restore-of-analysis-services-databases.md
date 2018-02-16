@@ -23,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et restauration afin que vous pouvez récupérer une base de données et ses objets à partir d’un point particulier dans le temps. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et la restauration afin que vous puissiez récupérer une base de données et ses objets à partir d'une date et heure spécifiques. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
   
  Les commandes de restauration et sauvegarde sont effectuées sur une base de données Analysis Services déployée. Pour vos projets et solutions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez utiliser un contrôle de code source pour garantir la récupération des versions spécifiques de vos fichiers sources, puis créer un plan de récupération de données pour le référentiel du système de contrôle de code source que vous utilisez.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Restauration d'une base de données Analysis Services](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a> Configuration requise  
  Vous devez disposer d'autorisations administratives pour l'instance Analysis Services ou d'autorisations Contrôle total (administrateur) pour la base de données que vous sauvegardez.  
   
  L'emplacement de restauration doit être une instance Analysis Services de la même version, ou d'une version plus récente, que l'instance à partir de laquelle la sauvegarde a été effectuée. Bien qu’il soit impossible de restaurer une base de données d’une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers une instance d’une version antérieure d’Analysis Services, il est courant de restaurer une base de données de version antérieure, telle que SQL Server 2012, sur une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] plus récente.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
  Les administrateurs peuvent sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un seul fichier de sauvegarde [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), quelle que soit la taille de la base de données. Pour obtenir des instructions détaillées, consultez [How to Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) [(Comment sauvegarder une base de données Analysis Services Database (TechMantra)] et [Automate Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)[Automatiser la sauvegarde d’une base de données Analysis Services (TechMantra)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisé pour le chargement et l’interrogation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèles de données dans un environnement SharePoint, charge ses modèles à partir de bases de données de contenu SharePoint. Ces bases de données de contenu sont relationnelles et s'exécutent sur le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, il n’existe aucune stratégie de sauvegarde et de restauration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous avez mis en place un plan de récupération d’urgence pour le contenu SharePoint, ce plan englobe les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] stockés dans les bases de données de contenu.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisé pour le chargement et l’interrogation des modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un environnement SharePoint, charge ses modèles à partir des bases de données de contenu SharePoint. Ces bases de données de contenu sont relationnelles et s'exécutent sur le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, il n’existe aucune stratégie de sauvegarde et de restauration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous avez mis en place un plan de récupération d’urgence pour le contenu SharePoint, ce plan englobe les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] stockés dans les bases de données de contenu.  
   
  **Partitions distantes**  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 01/08/2018
 -   Vous pouvez décider que la commande de restauration modifie le dossier de restauration pour chaque partition à restaurer. Les partitions locales peuvent être restaurées dans tout emplacement de dossier local pour l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle la base de données est restaurée. Les partitions distantes peuvent être restaurées dans un dossier quelconque, sur un serveur quelconque, autre que le serveur local ; les partitions distantes ne peuvent pas devenir locales.  
   
     > [!IMPORTANT]  
-    >  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
+    >  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
   
     > [!NOTE]  
     >  Après la restauration d'une base de données existante, l'utilisateur qui a restauré la base de données peut perdre l'accès à la base de données restaurée. Cette perte d'accès peut se produire si, au moment de la sauvegarde, l'utilisateur n'était pas un membre du rôle de serveur ou un membre du rôle de base de données avec les autorisations de contrôle total (Administrateur).  

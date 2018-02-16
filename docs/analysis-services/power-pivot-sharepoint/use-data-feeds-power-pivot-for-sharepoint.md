@@ -12,27 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Utiliser des flux de données (Power Pivot pour SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Flux de données sont un ou plusieurs flux de données qui sont générés à partir d’une source de données en ligne et transmis en continu à une application ou le document de destination. Si vous utilisez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, les flux de données peuvent vous aider à obtenir des données d’entreprise ou des données métiers existantes à partir de sources de données arbitraires pour les afficher dans la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les flux de données comportent un ou plusieurs flux de données générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Si vous utilisez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, les flux de données peuvent vous aider à obtenir des données d’entreprise ou des données métiers existantes à partir de sources de données arbitraires pour les afficher dans la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
   
  La façon dont vous utilisez un flux varie selon que vous utilisez les fonctionnalités d'exportation intégrées dans les applications qui prennent en charge les flux Atom ou que vous créez et utilisez des services de données personnalisés. Les applications capables de publier et de lire des données XML Atom fournissent un transfert de données transparent ; la mécanique des flux et services de données est invisible pour l'utilisateur. À ses yeux, un utilisateur ne fait que déplacer des données d'une application vers un autre.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et Microsoft SharePoint 2010 fournissent des flux de données qui peuvent être utilisés dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Vous pouvez utiliser les informations de cette rubrique pour apprendre à accéder à des flux de rapports et listes que vous avez déjà.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et Microsoft SharePoint 2010 fournissent des données de flux qui peuvent être utilisés dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs. Vous pouvez utiliser les informations de cette rubrique pour apprendre à accéder à des flux de rapports et listes que vous avez déjà.  
   
  Cette rubrique contient les sections suivantes :  
   
- [Conditions préalables](#prereq)  
+ [Configuration requise](#prereq)  
   
  [Créer un flux de données à partir d'une liste SharePoint](#sharepointlist)  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  [Créer un flux à partir d'un document de service de données](#dsdoc)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prereq"></a> Configuration requise  
  Vous devez disposer de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel pour importer un flux de données dans Excel 2010.  
   
  Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  

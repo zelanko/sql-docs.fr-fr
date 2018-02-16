@@ -1,7 +1,7 @@
 ---
 title: "Exécution d’opérations de traitement par lots (XMLA) | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21116359cfbea301242d8e743ff2431e742c1960
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Exécution d'opérations de traitement par lot (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez utiliser la [lot](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) commande XML for Analysis (XMLA) pour exécuter plusieurs commandes XMLA à l’aide d’un seul XMLA [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) (méthode). Vous pouvez exécuter plusieurs commandes contenues dans le **lot** commande comme une transaction unique ou dans des transactions individuelles pour chaque commande, en série ou en parallèle. Vous pouvez également spécifier des liaisons hors ligne et autres propriétés dans le **lot** commande pour le traitement de plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.  
+  Vous pouvez utiliser la [lot](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) commande XML for Analysis (XMLA) pour exécuter plusieurs commandes XMLA à l’aide d’un seul XMLA [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) (méthode). Vous pouvez exécuter plusieurs commandes contenues dans le **lot** commande comme une transaction unique ou dans des transactions individuelles pour chaque commande, en série ou en parallèle. Vous pouvez également spécifier des liaisons hors ligne et autres propriétés dans le **lot** commande pour le traitement de plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Exécution de commandes Batch transactionnelles et non transactionnelles  
  Le **lot** commande exécute les commandes de deux manières :  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  Si l’échec d’une commande dans un lot transactionnel, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] annule les commandes le **lot** commande exécutée avant la commande qui a échoué et le **lot** commande se termine immédiatement. Toutes les commandes dans le **lot** commande qui n’ont pas encore été exécuté ne sont pas exécutées. Après le **lot** commande se termine, le **lot** commande signale des erreurs qui se sont produites pour la commande ayant échouée.  
   
- **Non transactionnel**  
+ **Nontransactional**  
  Si le **Transaction** attribut est défini sur false, le **lot** commande s’exécute chaque commande contenue par le **lot** dans une transaction distincte — un *non transactionnel* lot. Si l’échec d’une commande dans un lot non transactionnel, la **lot** commande continue d’exécuter des commandes après la commande qui a échoué. Après le **lot** commande tente d’exécuter toutes les commandes qui la **lot** commande contient, le **lot** commande signale des erreurs qui se sont produites.  
   
  Tous les résultats retournés par les commandes contenues dans un **lot** commande sont retournés dans le même ordre que celui dans lequel les commandes sont contenues dans le **lot** commande. Les résultats retournés par une **lot** commande varient selon que le **lot** commande est transactionnelle ou non transactionnelle.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour exécuter des commandes en parallèle, vous ajoutez les commandes à exécuter en parallèle pour le [parallèles](../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) propriété de la **lot** commande. Actuellement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut exécuter uniquement contiguës et séquentielles [processus](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) commandes en parallèle. Les autres commandes XMLA, tel que [créer](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) ou [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), inclus dans le **parallèles** propriété est exécutée en série.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tente d’exécuter tous les **processus** commandes incluses dans le **parallèles** propriété en parallèle, mais ne peut pas garantir que toutes les inclus **processus** commandes peuvent être exécutées en parallèle. L’instance analyse chaque **processus** commande et, si elle détermine que la commande ne peut pas être exécutée en parallèle, les **processus** commande est exécutée en série.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente d’exécuter tous les **processus** commandes incluses dans le **parallèles** propriété en parallèle, mais ne peut pas garantir que toutes les inclus **processus** commandes peuvent être exécutées en parallèle. L’instance analyse chaque **processus** commande et, si elle détermine que la commande ne peut pas être exécutée en parallèle, les **processus** commande est exécutée en série.  
   
 > [!NOTE]  
 >  Pour exécuter des commandes en parallèle, les **Transaction** attribut de la **lot** commande doit être définie à true, car [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge seulement une transaction active par lots de connexion et non transactionnels exécutent chaque commande dans une transaction distincte. Si vous incluez le **parallèles** propriété dans un lot non transactionnel, une erreur se produit.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  **Traiter**  
   
-7.  **Supprimer**  
+7.  **Delete**  
   
 8.  **Traiter**  
   

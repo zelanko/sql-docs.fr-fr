@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configuration des comptes de service Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installation inclut deux services qui prennent en charge les opérations du serveur. Le service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** est un service Windows qui assure le traitement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et la prise en charge des requêtes sur un serveur d’applications. Le compte de connexion pour ce service est toujours spécifié pendant l'installation de SQL Server lorsque vous installez Analysis Services en mode intégré SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]inclut deux services qui prennent en charge des opérations serveur. Le service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** est un service Windows qui assure le traitement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et la prise en charge des requêtes sur un serveur d’applications. Le compte de connexion pour ce service est toujours spécifié pendant l'installation de SQL Server lorsque vous installez Analysis Services en mode intégré SharePoint.  
   
  Un deuxième compte doit être spécifié pour l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un service web partagé qui s'exécute sous une identité du pool d'applications dans une batterie de serveurs SharePoint. Ce compte est spécifié quand vous configurez une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou de PowerShell.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="analysis-services-service-account"></a>Compte de service Analysis Services  
   
-|Condition requise|Description|  
+|Condition requise| Description|  
 |-----------------|-----------------|  
 |Spécification relative à la configuration|Ce compte doit être spécifié pendant l’installation de SQL Server dans la page **Analysis Services - Configuration** de l’Assistant Installation (ou dans le paramètre d’installation **ASSVCACCOUNT** dans le cas d’une installation en ligne de commande).<br /><br /> Vous pouvez modifier le nom d'utilisateur ou le mot de passe à l'aide de l'Administration centrale, de PowerShell ou de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilisation d'autres outils pour modifier les comptes et les mots de passe n'est pas prise en charge.|  
 |Spécification relative au compte d'utilisateur de domaine|Ce compte doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits. Le programme d'installation de SQL Server répond à la nécessité d'un compte d'utilisateur de domaine en bloquant l'installation chaque fois qu'un compte d'ordinateur est spécifié.|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="power-pivot-service-application-pool"></a>Pool d'applications de service Power Pivot  
   
-|Condition requise|Description|  
+|Condition requise| Description|  
 |-----------------|-----------------|  
 |Spécification relative à la configuration|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une ressource partagée de la batterie de serveurs qui devient disponible lorsque vous créez une application de service. Le pool d'applications de service doit être spécifié lors de la création de l'application de service. Il peut être spécifié de deux façons, soit à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , soit par le biais de commandes PowerShell.<br /><br /> Vous pouvez avoir configuré l'identité du pool d'applications de sorte qu'il s'exécute sous un compte unique. Si ce n'est pas le cas, envisagez de le modifier maintenant de manière à l'exécuter sous un autre compte.|  
 |Spécification relative au compte d'utilisateur de domaine|L'identité du pool d'applications doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits.|  

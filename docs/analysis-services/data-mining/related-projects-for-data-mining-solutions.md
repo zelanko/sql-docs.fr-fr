@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le minimum requis pour une solution d’exploration de données est le projet d’exploration de données, qui définit les sources de données, vues de sources de données, les structures d’exploration de données et les modèles d’exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
   
 -   Préparation et sélection des données et des variables. Inclut le nettoyage de données, la gestion et l'intégration des métadonnées de plusieurs sources de données, ainsi que la conversion, la fusion et le téléchargement de données dans un entrepôt de données.  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 01/08/2018
   
  **Composants de flux de contrôle**  
   
--   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution d’Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tâche de traitement Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)  
   
@@ -77,21 +78,21 @@ ms.lasthandoff: 01/08/2018
   
  **Composants de flux de données**  
   
--   [Composants de flux CDC](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [Composants de flux de capture de données modifiées](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [Transformation de fractionnement conditionnel](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Transformation de conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformation de Conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Destination d’apprentissage du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Données Destination de formation du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
 -   [Transformation de requête d’exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformation de colonne dérivée](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Transformation de l'échantillonnage du pourcentage](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Transformation d’échantillonnage par pourcentage](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformation d'extraction de terme](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Transformation d’Extraction de terme](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
 -   [Transformation de recherche de terme](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  Pour plus d'informations sur l'utilisation de Reporting Services avec les requêtes DMX comme source de données, consultez les liens suivants :  
   
- [Récupérer des données d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Récupérer des données à partir d’un modèle d’exploration de données &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Interface utilisateur du Concepteur de requêtes Analysis Services DMX](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Type de connexion Analysis Services pour DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Toutefois, il n'est pas nécessaire d'utiliser DMX comme source de données. Les composants d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour l'exploration de données prennent également en charge l'enregistrement des résultats d'une requête de prédiction dans une base de données relationnelle. Si vous avez établi un flux de travail pour mettre à jour des modèles à l'aide d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les prédictions persistantes et d'autres résultats de requête d'exploration de données dans SQL Server vous permettent d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour créer des rapports, ainsi que d'autres outils qui n'ont pas d'interface avec DMX.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 01/08/2018
 -   Les langues de texte intégral ne prennent pas toutes en charge l'indexation sémantique. Pour obtenir la liste des langues prises en charge, consultez [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Solutions de modèles multidimensionnels &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Solutions de modèle tabulaire &#40; SSAS tabulaire &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

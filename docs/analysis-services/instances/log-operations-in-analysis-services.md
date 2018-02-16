@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une instance Analysis Services enregistre les notifications du serveur, les erreurs et avertissements dans le fichier msmdsrv.log : une pour chaque instance que vous installez. Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
   
  En plus de la fonctionnalité de journalisation intégrée, de nombreux administrateurs et développeurs utilisent des outils fournis par la communauté Analysis Services pour recueillir des données sur les opérations du serveur, comme **ASTrace**. Pour obtenir des liens de téléchargement, consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) .  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 01/08/2018
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Désactive le fichier de vidage de la mémoire. Tous les autres paramètres dans la section Exceptions sont ignorés.|  
-| 1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
+|1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
 |2|Active et envoie automatiquement un rapport d'erreurs à Microsoft.|  
   
  **CrashReportsFolder** est l'emplacement des fichiers de vidage. Par défaut, un fichier .mdmp et les enregistrements de journaux associés se trouvent dans le dossier \Olap\Log.  
@@ -186,7 +187,7 @@ ms.lasthandoff: 01/08/2018
 -   Utilisez ASTrace2012 plutôt qu'un journal des requêtes pour savoir qui interroge les cubes. Le journal des requêtes sert généralement à fournir une entrée pour l'Assistant Optimisation de l'utilisation. Les données qu'il capture ne sont pas faciles à lire ou à interpréter. ASTrace2012 est un outil de la communauté, largement utilisé, qui capture les opérations de requêtes. Consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d'instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
+ [Gestion d’instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Introduction à la surveillance d’Analysis Services avec SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

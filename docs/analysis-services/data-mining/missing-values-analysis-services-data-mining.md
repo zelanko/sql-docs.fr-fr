@@ -19,19 +19,20 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valeurs manquantes (Analysis Services - Exploration de données)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La gestion des *les valeurs manquantes* correctement est une partie importante de la modélisation efficace. Cette section explique ce que sont les valeurs manquantes et décrit les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer les valeurs manquantes lors de la génération de structures et de modèles d'exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gérer les  *valeurs manquantes* correctement fait partie intégrante d’une modélisation efficace. Cette section explique ce que sont les valeurs manquantes et décrit les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer les valeurs manquantes lors de la génération de structures et de modèles d'exploration de données.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Définition des valeurs manquantes dans l'exploration de données  
  Une valeur manquante peut avoir plusieurs significations. Entre autres possibilités, le champ n'était pas applicable, l'événement n'a pas eu lieu ou bien les données n'étaient pas disponibles. Il se peut que la personne qui a saisi les données ne connaissait pas la valeur exacte ou ne s'est pas inquiété de l'absence de remplissage d'un champ.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 |Valeur|Cas|  
 |-----------|-----------|  
 |0|9296|  
-| 1|9098|  
+|1|9098|  
 |Manquant|0|  
   
  Cette distribution montre qu'environ la moitié des clients a acheté un vélo et que l'autre moitié n'en n'a pas acheté. Ce jeu de données particulier est très propre ; ainsi, chaque cas a une valeur dans la colonne [Bike Buyer] et le nombre de valeurs **Manquant** est de 0. Toutefois, si un cas comporte une valeur NULL dans la colonne [Bike Buyer], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] compte cette ligne comme un cas avec une valeur **Manquant** .  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |Valeur|Cas|Probabilité|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-| 1|9098|49.42%|  
+|1|9098|49.42%|  
 |Manquant|0|0.03%|  
   
  Il peut paraître étrange que la probabilité de la valeur **Manquant** soit de 0,03 % avec un nombre de cas égal à 0. En fait, ce comportement est normal et représente un ajustement qui permet au modèle de gérer les valeurs inconnues correctement.  
@@ -109,18 +110,18 @@ L’algorithme MDT fournit un ajustement supplémentaire qui permet à l’algor
   
  L'effet net de cet ajustement est de maintenir la stabilité de l'arbre.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Les rubriques suivantes fournissent des informations supplémentaires sur la manière de gérer les valeurs manquantes.  
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Ajouter des indicateurs à différentes colonnes du modèle pour contrôler la gestion des valeurs manquantes|[Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Ajouter des indicateurs à différentes colonnes du modèle pour contrôler la gestion des valeurs manquantes|[Afficher ou modifier la modélisation des indicateurs &#40; exploration de données &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Définir des propriétés sur un modèle d'exploration de données pour contrôler la gestion des valeurs manquantes|[Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Découvrir comment spécifier des indicateurs de modélisation dans DMX|[Indicateurs de modélisation &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Modifier la façon dont la structure d'exploration de données gère les valeurs manquantes|[Modifier les propriétés d’une structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
+|Découvrir comment spécifier des indicateurs de modélisation dans DMX|[Indicateurs de modélisation &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
+|Modifier la façon dont la structure d'exploration de données gère les valeurs manquantes|[Modifier les propriétés d’une Structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Indicateurs de modélisation &#40;exploration de données&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Contenu du modèle d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modélisation des indicateurs &#40; exploration de données &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

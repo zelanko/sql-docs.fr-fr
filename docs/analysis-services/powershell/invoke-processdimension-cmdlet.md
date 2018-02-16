@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Applet de commande Invoke-ProcessDimension
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Traitez une dimension à l’aide d’une variable de type de traitement spécifique.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Traitez une dimension en utilisant une variable de type de traitement spécifique.  
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -34,12 +35,12 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ProcessDimension –DatabaseDimension <Microsoft.AnalysisServices.Dimension> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  L'applet de commande Invoke-ProcessDimension traite la dimension spécifiée. Vous devez spécifier le type de traitement. Pour plus d’informations sur le traitement des types d’une dimension, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 ## <a name="parameters"></a>Paramètres  
   
-### <a name="-name-string"></a>-Name \<chaîne >  
+### <a name="-name-string"></a>-Name \<string>  
  Spécifie la dimension à traiter.  
   
 |||  
@@ -56,12 +57,12 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?| 1|  
+|Position ?|1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType>  
  Spécifie le type de processus : ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache, ProcessRecalc.  
   
 |||  
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |Accepter l'entrée de pipeline ?|True (ByPropertyName)|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="commonparameters"></a>\<Paramètres_courants >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  La commande cmdlet prend en charge les paramètres communs : -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer et -OutVariable. Pour plus d’informations, consultez [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entrées et sorties  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |Entrées|Microsoft.AnalysisSevices.Dimension|  
-|Sorties|None|  
+|Sorties|Aucun|  
   
 ## <a name="example-1"></a>Exemple 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Dimensions\Account> Get-Item .| Invoke-ProcessDimension –ProcessType:ProcessDefault`  

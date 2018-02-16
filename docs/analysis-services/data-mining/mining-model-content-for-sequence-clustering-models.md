@@ -15,19 +15,20 @@ helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5fefc08fae0dbb06692a914e72ce29f684db2161
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le contenu du modèle d’exploration de données qui est spécifique aux modèles qui utilisent l’algorithme Microsoft Sequence Clustering. Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Présentation de la structure d'un modèle Sequence Clustering  
  Un modèle Sequence Clustering comprend un nœud parent unique (NODE_TYPE = 1) qui représente le modèle et ses métadonnées. Le nœud parent, étiqueté **(Tout)**, a un nœud de séquence connexe (NODE_TYPE = 13) qui répertorie toutes les transitions détectées dans les données d’apprentissage.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
  NODE_TYPE  
  Un modèle Sequence Clustering génère les types de nœuds suivants :  
   
-|ID du type de nœud|Description|  
+|ID du type de nœud| Description|  
 |------------------|-----------------|  
 |1 (Modèle)|Nœud racine pour le modèle|  
 |5 (cluster)|Contient le nombre de transitions dans le cluster, une liste des attributs et des statistiques qui décrivent les valeurs dans le cluster.|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |14 (Transition)|Décrit une séquence d'événements sous forme de table dans laquelle la première ligne contient l'état initial, et toutes les autres lignes contiennent les états successifs, ainsi que les statistiques de prise en charge et de probabilité.|  
   
  NODE_GUID  
- : vide.  
+ Vide.  
   
  NODE_CAPTION  
  Étiquette ou légende associée au nœud à des fins d'affichage.  
@@ -184,7 +185,7 @@ ORDER BY Count(*) DESC
   
 |OrderNumber|LineNumber|Modèle|  
 |-----------------|----------------|-----------|  
-|SO58845| 1|Mountain-500|  
+|SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
 |SO58845|3|Mountain Tire Tube|  
 |SO58845|4|Fender Set - Mountain|  
@@ -267,8 +268,8 @@ ORDER BY Count(*) DESC
  Pour savoir comment obtenir la liste des chemins d’accès observés en interrogeant le contenu du modèle et pour voir d’autres exemples de requêtes sur un modèle Sequence Clustering, consultez [Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Contenu du modèle d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algorithme de Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Exemples de requêtes de modèle Sequence Clustering](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

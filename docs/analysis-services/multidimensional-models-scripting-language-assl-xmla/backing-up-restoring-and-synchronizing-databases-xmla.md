@@ -1,7 +1,7 @@
 ---
 title: "Sauvegarde, restauration et synchronisation de bases de données (XMLA) | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sauvegarde, restauration et synchronisation de bases de données (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis, il existe trois commandes de sauvegardent, restaurent et synchroniser les bases de données :  
+  XML for Analysis propose trois commandes qui permettent de sauvegarder, restaurer et synchroniser des bases de données :  
   
 -   Le [sauvegarde](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) commande sauvegarde un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la base de données un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le fichier de sauvegarde (.abf), comme décrit dans la section, [sauvegarde des bases de données](#backing_up_databases).  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Le [synchroniser](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) commande synchronise un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données avec les données et les métadonnées d’une autre base de données, comme décrit dans la section, [synchroniser les bases de données](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Sauvegarde des bases de données  
+##  <a name="backing_up_databases"></a> Sauvegarde des bases de données  
  Comme mentionné précédemment, le **sauvegarde** commande sauvegarde une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données à un fichier de sauvegarde. Le **sauvegarde** commande possède plusieurs propriétés qui permettent de spécifier la base de données à sauvegarder, le fichier de sauvegarde à utiliser, la sauvegarde des définitions de sécurité et les partitions distantes à sauvegarder.  
   
 > [!IMPORTANT]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  La valeur de la **sécurité** propriété est limitée à une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclut les définitions de sécurité dans le fichier de sauvegarde mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans le fichier de sauvegarde.|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour chaque source de données distante à sauvegarder, vous pouvez spécifier le fichier de sauvegarde correspondant en incluant un [emplacement](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) élément dans le [emplacements](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) propriété de la **sauvegarde** commande. Le **emplacement** élément doit avoir son **fichier** le nom de fichier et le chemin UNC du fichier de sauvegarde à distance, la valeur de propriété et sa [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) propriété définie à l’identificateur de la source de données distante définie dans la base de données.  
   
-##  <a name="restoring_databases"></a>Restauration des bases de données  
+##  <a name="restoring_databases"></a> Restauration des bases de données  
  Le **restaurer** commande restaure un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données à partir d’un fichier de sauvegarde. Le **restaurer** commande possède plusieurs propriétés qui permettent de spécifier la base de données à restaurer, le fichier de sauvegarde à utiliser, comment restaurer des définitions de sécurité, les partitions distantes à stocker et objets réadressage relationnelle ROLAP (OLAP).  
   
 > [!IMPORTANT]  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclut les définitions de sécurité dans la base de données mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  Vous pouvez utiliser la **emplacement** élément dans une **restaurer** commande pour déplacer des objets ROLAP. Pour chaque **emplacement** élément utilisé pour déplacer une source de données, le **DataSourceType** propriété doit être définie explicitement sur *Local*. Vous devez également définir le **ConnectionString** propriété de la **emplacement** élément à la chaîne de connexion du nouvel emplacement. Lors de la restauration, le **restaurer** commande remplace la chaîne de connexion pour la source de données identifiée par le **DataSourceID** propriété de la **emplacement** élément avec la valeur de la **ConnectionString** propriété de la **emplacement** élément.  
   
-##  <a name="synchronizing_databases"></a>Synchronisation de bases de données  
+##  <a name="synchronizing_databases"></a> Synchronisation de bases de données  
  Le **synchroniser** commande synchronise les données et métadonnées d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données avec une autre base de données. Le **synchroniser** commande possède plusieurs propriétés qui vous permettent de spécifier la base de données source, la synchronisation des définitions de sécurité, les partitions distantes à synchroniser et la synchronisation des objets ROLAP.  
   
 > [!NOTE]  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclut les définitions de sécurité dans la base de données de destination mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données de destination.|  
@@ -155,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Voir aussi  
  [Élément Backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restaurer l’élément &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Élément Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchroniser, élément &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Sauvegarde et restauration de bases de données Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

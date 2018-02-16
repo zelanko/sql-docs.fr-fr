@@ -1,7 +1,7 @@
 ---
 title: "Programmation d’objets fondamentaux AMO | Documents Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9ab80bdbb2a2cc6e27ce76577bdf7739e1b9b8b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programmation d'objets fondamentaux AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Les objets fondamentaux sont généralement des objets simples et explicites. En règle générale, ces objets sont créés et instanciés puis, une fois qu'ils n'ont plus d'utilité, l'utilisateur s'en déconnecte. Les classes fondamentales se composent des objets suivants : <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> et <xref:Microsoft.AnalysisServices.DataSourceView>. Parmi les objets fondamentaux AMO, le seul objet complexe est <xref:Microsoft.AnalysisServices.DataSourceView>. Celui-ci exige de nombreux détails pour générer le modèle abstrait qui représente la vue de source de données.  
+  Les objets fondamentaux sont généralement des objets simples et rudimentaires. En règle générale, ces objets sont créés et instanciés puis, une fois qu'ils n'ont plus d'utilité, l'utilisateur s'en déconnecte. Les classes fondamentales se composent des objets suivants : <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> et <xref:Microsoft.AnalysisServices.DataSourceView>. Parmi les objets fondamentaux AMO, le seul objet complexe est <xref:Microsoft.AnalysisServices.DataSourceView>. Celui-ci exige de nombreux détails pour générer le modèle abstrait qui représente la vue de source de données.  
   
  Les objets <xref:Microsoft.AnalysisServices.Server> et <xref:Microsoft.AnalysisServices.Database> doivent généralement utiliser les objets contenus en tant qu'objets OLAP ou objets d'exploration de données.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Objets DataSourceView](#DSV)  
   
-##  <a name="ServerObjects"></a>Objets serveur  
+##  <a name="ServerObjects"></a> Objets serveur  
  L'utilisation d'un objet <xref:Microsoft.AnalysisServices.Server> passe par les étapes suivantes : connexion au serveur, vérification que l'objet <xref:Microsoft.AnalysisServices.Server> est bien connecté au serveur et, le cas échéant, déconnexion du <xref:Microsoft.AnalysisServices.Server> du serveur.  
   
 ### <a name="connecting-to-the-server-object"></a>Connexion à l'objet Server  
@@ -109,7 +110,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-###  <a name="AMO"></a>Objets d’Exception AmoException  
+###  <a name="AMO"></a> Objets d’Exception AmoException  
  AMO lève des exceptions lorsque certains problèmes sont rencontrés. Pour obtenir une explication détaillée des exceptions, consultez [méthodes et Classes autres AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md). L'exemple de code suivant présente la méthode à employer pour capturer des exceptions dans AMO :  
   
 ```  
@@ -148,7 +149,7 @@ catch (  AMOException e)
 }  
 ```  
   
-##  <a name="DatabaseObjects"></a>Objets de base de données  
+##  <a name="DatabaseObjects"></a> Objets de base de données  
  L'utilisation d'un objet <xref:Microsoft.AnalysisServices.Database> est très simple et directe. Vous obtenez une base de données existante à partir de la collection de bases de données de l'objet <xref:Microsoft.AnalysisServices.Server>.  
   
 ### <a name="creating-dropping-and-finding-a-database"></a>Création, suppression et recherche d'une base de données  
@@ -195,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a>Objets de source de données  
+##  <a name="DataSource">Objets de source de données</a>  
  Un objet <xref:Microsoft.AnalysisServices.DataSource> est le lien entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et la base de données où résident les données. Le schéma qui représente le modèle sous-jacent pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est défini par l'objet <xref:Microsoft.AnalysisServices.DataSourceView>. Un objet <xref:Microsoft.AnalysisServices.DataSource> peut être envisagé comme une chaîne de connexion à la base de données où résident les données.  
   
  L'exemple de code suivant montre comment créer un objet <xref:Microsoft.AnalysisServices.DataSource>. L'exemple vérifie que le serveur existe toujours, que l'objet <xref:Microsoft.AnalysisServices.Server> est connecté et que la base de données existe. Si l'objet <xref:Microsoft.AnalysisServices.DataSource> existe, il est supprimé et recréé. L'objet <xref:Microsoft.AnalysisServices.DataSource> est créé avec les mêmes nom et ID interne. Dans cet exemple, aucune vérification n'est effectuée au niveau de la chaîne de connexion.  
@@ -218,7 +219,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV"></a>Objets DataSourceView  
+##  <a name="DSV">Objets DataSourceView</a>  
  L'objet <xref:Microsoft.AnalysisServices.DataSourceView> est chargé de conserver le modèle de schéma pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour que l'objet <xref:Microsoft.AnalysisServices.DataSourceView> conserve le schéma, ce dernier doit d'abord être construit. Les schémas sont construits sur les objets DataSet, à partir de l'espace de noms System.Data.  
   
  L'exemple de code suivant crée une partie du schéma inclus dans l'exemple de projet Analysis Services basé sur AdventureWorks. L'exemple crée des définitions de schéma pour les tables, les colonnes calculées, les relations et les relations composites. Les schémas sont des jeux de données persistantes.  

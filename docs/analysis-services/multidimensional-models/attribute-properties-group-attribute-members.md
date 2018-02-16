@@ -24,23 +24,24 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriétés - groupe attribut des membres d’attribut
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un groupe de membres est une collection de généré par le système de membres de dimension contigus. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un groupe de membres est une collection de membres de dimension contigus générée par le système. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
   
  La propriété **DiscretizationMethod** au niveau d’un attribut détermine la façon dont les membres sont regroupés.  
   
-|Définition de**DiscretizationMethod** |Description|  
+|Définition de**DiscretizationMethod** | Description|  
 |--------------------------------------|-----------------|  
 |**None**|Affiche les membres.|  
 |**Automatic**|Sélectionne la méthode qui représente le mieux les données : soit la méthode **EqualAreas** , soit la méthode **Clusters** .|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Pour inclure un point-virgule (;) comme caractère littéral dans le modèle de nom, faites-le précéder du signe de pourcentage (%).  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  L’expression de chaîne suivante peut être utilisée pour classer l’attribut Yearly Income de la dimension Customer de l’exemple de base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , où cet attribut fait appel au regroupement de membres :  
   
  "Less than %{Next Bucket Min};Between %{First bucket member} and %{Last bucket member};Greater than %{Previous Bucket Max}"  
@@ -116,6 +117,6 @@ ms.lasthandoff: 01/08/2018
 -   Si la table de dimension d'une dimension qui contient des groupes de membres est mise à jour et que la dimension fait ensuite l'objet d'un traitement complet, un nouveau jeu de groupes de membres est généré. Les noms et les enfants des nouveaux groupes de membres peuvent être différents de ceux des anciens groupes de membres.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

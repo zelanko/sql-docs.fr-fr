@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Annexe b : Tables de Transition d’état ODBC
 Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des transitions de l’environnement, connexion, l’instruction et états du descripteur. L’état de l’environnement, une connexion, une instruction ou une descripteur dicte généralement lorsque les fonctions qui utilisent le type de handle (environnement, connexion, instruction ou descripteur) correspondant peuvent être appelées. Les États de l’environnement, connexion, l’instruction et descripteur se chevauchent à peu près comme indiqué dans les illustrations suivantes. Par exemple, le chevauchement exact de connexion indique C5 et C6 et états d’instruction que s1 à S12 est source de données, car les transactions commencent à des moments différents sur différentes sources de données, et l’état descripteur D1i (implicitement alloué descripteur) dépend de l’état de l’instruction qui le descripteur est associé, tandis que l’état D1e (explicitement alloué descripteur) est indépendante de l’état de n’importe quelle instruction. Pour obtenir une description de chaque état, consultez [Transitions d’environnement](../../../odbc/reference/appendixes/environment-transitions.md), [connexion Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Transitions de l’instruction](../../../odbc/reference/appendixes/statement-transitions.md), et [descripteur Transitions](../../../odbc/reference/appendixes/descriptor-transitions.md), plus loin dans cette annexe.  
@@ -49,10 +49,10 @@ Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des 
   
  Chaque entrée dans une table de transition peut être une des valeurs suivantes :  
   
--   **--**: L’état reste inchangé après l’exécution de la fonction.  
+-   **--** : L’état reste inchangé après l’exécution de la fonction.  
   
 -   **E**  
-     ***n***, **C*n *** **S*n***, ou **D * n***  : l’état de l’environnement, connexion, instruction ou descripteur se déplace vers l’état spécifié.  
+     ***n*** , **C*n *** **S*n***, ou **D * n***  : l’état de l’environnement, connexion, instruction ou descripteur se déplace vers le état spécifié.  
   
 -   **(INCLUENT)**  : Un handle non valide a été passé à la fonction. Si le handle a été un handle null ou un handle valide d’un type incorrect, par exemple, un handle de connexion a été passé lorsqu’un descripteur d’instruction était nécessaire, la fonction retourne SQL_INVALID_HANDLE ; Sinon, le comportement est indéfini et probablement irrécupérable. Cette erreur apparaît uniquement lorsqu’il est le résultat n’est possible de l’appel de la fonction dans l’état spécifié. Cette erreur ne modifie pas l’état et est toujours détectée par le Gestionnaire de pilotes, comme indiqué par des parenthèses.  
   

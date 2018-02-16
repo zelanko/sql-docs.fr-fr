@@ -1,7 +1,7 @@
 ---
 title: "Conception d’agrégations (XMLA) | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Conception d'agrégations (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conceptions d’agrégation sont associées aux partitions d’un groupe de mesures particulier pour vous assurer que les partitions utilisent la même structure lors du stockage des agrégations. À l’aide de la même structure de stockage pour les partitions permet de définir facilement des partitions qui peuvent être fusionnées ultérieurement à l’aide de la [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande. Pour plus d’informations sur les conceptions d’agrégation, consultez [agrégations et conceptions d’agrégation](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Les conceptions d'agrégation sont associées aux partitions d'un groupe de mesures particulier pour s'assurer que les partitions utilisent la même structure lors du stockage d'agrégations. À l’aide de la même structure de stockage pour les partitions permet de définir facilement des partitions qui peuvent être fusionnées ultérieurement à l’aide de la [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande. Pour plus d’informations sur les conceptions d’agrégation, consultez [agrégations et conceptions d’agrégation](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Pour définir des agrégations pour une conception d’agrégation, vous pouvez utiliser la [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) commande XML for Analysis (XMLA). Le **DesignAggregations** commande possède des propriétés qui identifient la conception d’agrégation à utiliser comme référence et la façon de contrôler le processus de conception basé sur cette référence. À l’aide de la **DesignAggregations** commande et ses propriétés, vous pouvez concevoir des agrégations itérative ou dans un lot et puis afficher les statistiques de conception obtenues pour évaluer le processus de conception.  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="returning-design-statistics"></a>Retour des statistiques de conception  
  Lorsque le **DesignAggregations** commande retourne le contrôle à l’application cliente, la commande retourne un ensemble de lignes qui contient une ligne unique qui représente les statistiques de conception pour la commande. Cet ensemble de lignes se compose des colonnes répertoriées dans le tableau suivant.  
   
-|colonne|Data type|Description|  
+|Colonne|Data type| Description|  
 |------------|---------------|-----------------|  
 |Étapes|Entier|Nombre d'étapes parcourues par la commande avant de restituer le contrôle à l'application cliente.|  
 |Time|Entier long|Temps en millisecondes nécessaire à la commande pour restituer le contrôle à l'application cliente.|  
