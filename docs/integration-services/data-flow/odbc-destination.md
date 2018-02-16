@@ -24,10 +24,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>Destination ODBC
   La destination ODBC charge en masse les données dans les tables de base de données compatibles ODBC. La destination ODBC utilise un gestionnaire de connexions ODBC pour se connecter à la source de données.  

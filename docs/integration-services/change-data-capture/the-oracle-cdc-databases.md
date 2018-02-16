@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  

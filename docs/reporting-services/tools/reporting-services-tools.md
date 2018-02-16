@@ -29,10 +29,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement managé. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

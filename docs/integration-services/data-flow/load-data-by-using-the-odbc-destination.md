@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Charger des données à l'aide de la destination ODBC
   Cette procédure montre comment charger des données à l'aide de la destination ODBC. Pour pouvoir ajouter et configurer une destination ODBC, le package doit inclure au moins une tâche de flux de données et une source.  

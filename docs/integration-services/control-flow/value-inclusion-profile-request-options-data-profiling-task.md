@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Options Demande de profil d'inclusion de valeur (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil d’inclusion de valeur** sélectionnée dans le volet Demandes. Un profil d'inclusion de valeur calcule le chevauchement des valeurs entre deux colonnes ou des ensembles de colonnes. De cette manière, ce profil permet également de déterminer si une colonne ou un ensemble de colonnes peut servir de clé étrangère entre les tables sélectionnées. Ce profil peut également vous aider à identifier les problèmes dans vos données, tels que les valeurs non valides. Par exemple, vous utilisez un profil d'inclusion de valeur pour profiler la colonne ProductID d'une table Sales. et découvrez que la colonne contient des valeurs qui sont introuvables dans la colonne ProductID de la table Products.  

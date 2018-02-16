@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
   L’extension de rendu Excel de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restitue un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au format [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Avec l'extension de rendu Excel, la largeur des colonnes dans Excel correspond plus précisément à la largeur des colonnes dans les rapports.  
