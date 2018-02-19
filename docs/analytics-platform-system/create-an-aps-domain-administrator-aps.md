@@ -30,7 +30,7 @@ Dispose des autorisations appropriées pour configurer tous les nœuds de points
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Pour ajouter un utilisateur au groupe Admins du domaine  
   
-1.  Ouvrez une session sur le nœud actif AD **(*appliance_domain*-AD01** ou ***appliance_domain *-AD02**) à l’aide d’un compte d’administrateur de domaine appliance existant.  
+1.  Ouvrez une session sur le nœud actif AD **(*appliance_domain*-AD01** ou ***appliance_domain*-AD02**) à l’aide d’un compte d’administrateur de domaine appliance existant.  
   
 2.  Dans le menu Démarrer, cliquez sur **Exécuter**. Dans le **ouvrir** , tapez **DSA.msc**. Cliquez sur **OK**.  
   
