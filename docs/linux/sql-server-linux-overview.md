@@ -27,7 +27,7 @@ ms.lasthandoff: 10/05/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 
-SQL Server 2017 s’exécute désormais sur Linux. C'est le même moteur de base de données que MSSQL Server, avec de nombreuses fonctionnalités et des services équivalents, quel que soit votre système d’exploitation.
+SQL Server 2017 s’exécute désormais également sur Linux. Il s'agit du  même moteur de base de données MSSQL Server, avec ses nombreuses fonctionnalités et des services équivalents et cela quel que soit votre système d’exploitation.
 
 ## <a name="install"></a>Installation
 
@@ -40,11 +40,11 @@ Pour commencer, installez SQL Server sur Linux à l’aide d’un des didacticie
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> Docker lui-même s’exécute sur plusieurs plateformes, ce qui signifie que vous pouvez exécuter l’image Docker sur Windows, Mac et Linux.
+> Docker lui-même s’exécute sur plusieurs plateformes, ce qui signifie que vous pouvez exécuter l’image Docker sur Windows, Mac ou Linux.
 
 ## <a name="connect"></a>Se connecter
 
-Après l’installation, connectez-vous à l’instance de SQL Server sur l’ordinateur Linux. Vous pouvez vous connecter localement ou à distance et avec un large éventail d’outils et de pilotes. Les didacticiels de démarrage rapide montrent comment utiliser l'outil en ligne de commande [sqlcmd](sql-server-linux-setup-tools.md). Les autres outils possibles sont les suivants :
+Après l’installation, connectez-vous à l’instance de SQL Server installée sur un ordinateur Linux. Vous pouvez vous connecter localement ou à distance via un large éventail d’outils et de pilotes. Les didacticiels de démarrage rapide montrent comment utiliser l'outil en ligne de commande [sqlcmd](sql-server-linux-setup-tools.md). Les autres outils possibles sont les suivants :
 
 | Outil | Didacticiel |
 |-----|-----|
@@ -54,7 +54,7 @@ Après l’installation, connectez-vous à l’instance de SQL Server sur l’or
 
 ## <a name="explore"></a>Explorer
 
-SQL Server 2017 a le même moteur de base de données sous-jacent sur toutes les plateformes prises en charge, y compris Linux. Beaucoup de fonctionnalités et de capacités existent et fonctionnent de la même manière sur Linux. Cette partie de la documentation expose certaines de ces fonctionnalités du point de vue Linux. Elle indique également les parties qui ont des exigences spécifiques à Linux.
+SQL Server 2017 a le même moteur de base de données sous-jacent sur toutes les plateformes prises en charge, y compris Linux. Beaucoup de fonctionnalités et de possibilités existent et fonctionnent de la même manière sur Linux ou Windows. Cette partie de la documentation expose certaines de ces fonctionnalités du point de vue Linux. Elle contient également les fonctionnalités qui réclament des exigences spécifiques à Linux.
 
 Si vous êtes déjà familiarisé avec SQL Server, passez en revue les [notes de publication](sql-server-linux-release-notes.md) pour des recommandations générales et les problèmes connus pour cette version. Observez [quelles sont les nouveautés de SQL Server sur Linux](sql-server-linux-whats-new.md) ainsi que les [Nouveautés globales à SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
