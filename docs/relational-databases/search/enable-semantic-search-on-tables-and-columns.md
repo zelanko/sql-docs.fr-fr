@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], enabling
+helpviewer_keywords:
+- semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Décrit la procédure d’activation ou de désactivation de l’indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit la procédure d'activation ou de désactivation de l'indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
   
  La recherche sémantique statistique utilise les index créés par la recherche en texte intégral et crée des index supplémentaires. Conséquence de cette dépendance sur la recherche en texte intégral, vous créez un index sémantique lorsque vous définissez un nouvel index de recherche en texte intégral ou lorsque vous modifiez un index de recherche en texte intégral existant. Vous pouvez créer un index sémantique à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en utilisant l'Assistant Indexation de texte intégral et d'autres boîtes de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], comme décrit dans cette rubrique.  
   
@@ -162,7 +165,7 @@ GO
 Vous pouvez supprimer l’indexation sémantique lorsque vous modifiez un index de recherche en texte intégral existant avec l’instruction **ALTER FULLTEXT INDEX** . Vous pouvez également supprimer l'indexation sémantique à l'aide de différentes boîtes de dialogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Supprimer un index sémantique à l'aide de Transact-SQL  
-Pour supprimer l’indexation sémantique d’une ou de plusieurs colonnes, appelez l’instruction **ALTER FULLTEXT INDEX** avec l’option **ALTER COLUMN***nom_colonne***DROP STATISTICAL_SEMANTICS** . Vous pouvez supprimer l'indexation de plusieurs colonnes dans une instruction **ALTER** unique.  
+Pour supprimer l’indexation sémantique d’une ou plusieurs colonnes, appelez l’instruction **ALTER FULLTEXT INDEX** avec l’option **ALTER COLUMN***nom_colonne***DROP STATISTICAL_SEMANTICS**. Vous pouvez supprimer l'indexation de plusieurs colonnes dans une instruction **ALTER** unique.  
   
 ```sql  
 USE database_name  
@@ -174,7 +177,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Pour supprimer l’indexation de texte intégral et sémantique d’une colonne, appelez l’instruction **ALTER FULLTEXT INDEX** avec l’option **ALTER COLUMN***nom_colonne***DROP** .  
+Pour supprimer l’indexation de texte intégral et sémantique d’une colonne, appelez l’instruction **ALTER FULLTEXT INDEX** avec l’option **ALTER COLUMN***nom_colonne***DROP**.  
   
 ```sql  
 USE database_name  

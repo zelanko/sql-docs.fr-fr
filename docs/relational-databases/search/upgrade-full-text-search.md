@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: "106"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544e5cefe8b935086b93ac7f30acd033a8462aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l’installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l’aide de l’Assistant Copie de base de données.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
   
   
 ##  <a name="Upgrade_Server"></a> Mise à niveau d’une instance de serveur  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  Lors de la mise à niveau d'une instance de serveur vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interface utilisateur vous permet de choisir l'une des options de mise à niveau de texte intégral suivantes.  
   
 **Importer**  
- Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les nouveaux analyseurs lexicaux installés avec la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour garantir la cohérence dans les résultats de la requête, les catalogues de texte intégral doivent être reconstruits.  
+ Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les nouveaux analyseurs lexicaux installés avec la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour garantir la cohérence dans les résultats de la requête, les catalogues de texte intégral doivent être reconstruits.  
   
 > [!NOTE]  
 >  Le processus de reconstruction peut s'exécuter en mode multithread, et si plus de 10 processeurs sont disponibles, la reconstruction peut s'effectuer plus vite que l'importation si vous la laissez utiliser tous les processeurs.  
@@ -126,7 +128,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
  **Pour modifier le comportement de mise à niveau de texte intégral sur une instance de serveur**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] : Utiliser l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] : utilisez l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** utilisez **l’option de mise à niveau de texte intégral** de la boîte de dialogue **Propriétés du serveur** . Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -157,7 +159,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L'exemple suivant utilise la clause MOVE dans l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , afin de restaurer une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] nommée `ftdb1`. Les fichiers catalogue, le journal et la base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sont déplacés vers les nouveaux emplacements sur l'instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , comme suit :  
   
 -   Le fichier de base de données, `ftdb1.mdf`, est déplacé vers `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  

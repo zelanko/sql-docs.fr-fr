@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cb3c2ded87c3dd16f302aeab8e14c9ba09f92e88
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 24b9cf5cb7fd7a8359b7a946219b5e4a5eb5c037
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles.
   
 Le journal des transactions est un composant essentiel de la base de données. En cas de défaillance du système, vous aurez besoin de ce journal pour rétablir votre base de données à un état cohérent. 
 
@@ -95,10 +97,10 @@ Pour éviter de manquer d’espace, à moins que la troncation du journal soit r
  Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](#FactorsThatDelayTruncation), plus loin dans cette rubrique.  
   
 > [!NOTE]
-> La troncation du journal ne réduit pas la taille du fichier journal physique. Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d'informations sur la réduction de la taille du fichier journal physique, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> La troncation du journal ne réduit pas la taille du fichier journal physique. Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d'informations sur la réduction de la taille du fichier journal physique, consultez [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Toutefois, gardez à l’esprit les [facteurs pouvant retarder la troncation du journal](#FactorsThatDelayTruncation). Si l’espace de stockage est à nouveau nécessaire après une réduction de journal, le journal des transactions croît de nouveau, introduisant une surcharge au niveau des performances pendant les opérations d’accroissement du journal.
   
-##  <a name="FactorsThatDelayTruncation"></a> Facteurs pouvant retarder la troncation du journal  
+##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Lorsque les enregistrements de journal restent actifs longtemps, la troncation du journal des transactions est retardée et le journal des transactions peut se remplir entièrement, comme nous l’avons déjà mentionné dans cette longue rubrique.  
   
 > [!IMPORTANT]
@@ -135,7 +137,7 @@ La*journalisation minimale* implique de ne journaliser que les informations obli
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
--   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prérequis pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quand la réplication transactionnelle est activée, les opérations `BULK INSERT` sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
   

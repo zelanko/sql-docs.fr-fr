@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
   
 ##  <a name="causes"></a> Causes courantes des problèmes de performances
 ### <a name="hardware-resource-issues"></a>Problèmes liés aux ressources matérielles
@@ -58,7 +60,7 @@ La cause principale d’une baisse des performances de l’indexation de texte i
 ### <a name="full-text-index-population-issues"></a>Problèmes liés à l’alimentation d’un index de recherche en texte intégral
 -   **Type d’alimentation**. Contrairement à un remplissage complet, le remplissage du suivi des modifications automatique, incrémentiel ou manuel n'a pas pour objectif de maximiser les ressources matérielles en vue d'obtenir une vitesse supérieure. Par conséquent, les suggestions de paramétrage fournies dans cette rubrique peuvent ne pas améliorer les performances de l’indexation de texte intégral lorsqu’une alimentation de suivi des modifications incrémentielle, manuelle ou automatique est utilisée.  
   
--   **Fusion principale**. À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence. Toutefois, la fusion principale peut nécessiter de nombreuses entrées/sorties, car de grandes quantités de données doivent être écrites et lues lors de la fusion des fragments d’index, sans pour autant bloquer les requêtes entrantes.  
+-   **Fusion principale**. À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence. Toutefois, la fusion principale peut nécessiter de nombreuses entrées/sorties, car de grandes quantités de données doivent être écrites et lues lors de la fusion des fragments d’index, sans pour autant bloquer les requêtes entrantes.  
   
     La fusion principale d'une grande quantité de données peut créer une transaction dont l'exécution est longue, ce qui retarde la troncation du journal des transactions pendant le point de contrôle. Dans ce cas, en mode de récupération complète, la taille du journal des transactions peut s'accroître considérablement. Avant de réorganiser un index de recherche en texte intégral de grande taille dans une base de données qui utilise le mode de récupération complète, il est fortement recommandé de vous assurer que votre journal des transactions contient un espace suffisant pour une transaction dont l'exécution est longue. Pour plus d’informations, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
@@ -141,7 +143,7 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
 |x64|*F* = *Nombre de plages d’analyse* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **Remarques sur les formules**
-1.  Si plusieurs alimentations complètes sont en cours, calculez séparément les besoins en mémoire de chaque processus fdhost.exe, comme *F1*, *F2*, etc. Puis calculez *M* comme *T***–** sigma**(***F*i**)**.  
+1.  Si plusieurs alimentations complètes sont en cours, calculez séparément les besoins en mémoire de chaque processus fdhost.exe, comme *F1*, *F2*, etc. Ensuite, calculez *M* comme *T***–** sigma**(***F*i**)**.  
 2.  500 Mo est une estimation de la mémoire requise par les autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
 3.  .*ism_size* est censé être de 8 Mo pour les plateformes x64.  
   
@@ -213,7 +215,7 @@ Le moteur d’indexation et de recherche en texte intégral utilise deux types d
   
 Pour contourner ce problème, marquez le filtre du document conteneur (le document Word dans cet exemple) en tant que filtre monothread. Pour ce faire, définissez la valeur de Registre **ThreadingModel** pour le filtre en spécifiant **Thread cloisonné**. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](http://go.microsoft.com/fwlink/?LinkId=209159).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md)   

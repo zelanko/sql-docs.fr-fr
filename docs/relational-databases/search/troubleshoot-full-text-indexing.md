@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Résoudre l’indexation de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   L'indexeur ne peut pas trouver ou charger un composant de filtre ou d'analyseurs lexicaux. Ce problème peut se produire si la ligne de la table contient un format de document ou un contenu dans une langue qui n'a pas été inscrite avec l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il peut également se produire si le composant inscrit de l'analyseur lexical ou du filtre n'est pas signé, ou en cas d'échec de la vérification de la signature lors de son chargement.  
   
--   Un composant, par exemple un analyseur lexical ou un filtre, échoue et renvoie une erreur à l'indexeur. Cette situation peut se produire si le document en cours d'indexation est endommagé, interdisant au filtre d'extraire le texte du document. Elle peut également survenir lorsqu'un composant est incapable de traiter le contenu d'une même ligne au-delà d'une certaine taille, en raison de limitations de mémoire sur l'hôte de démon de filtre de texte intégral (fdhost.exe).  
+-   Un composant, par exemple un analyseur lexical ou un filtre, échoue et retourne une erreur à l’indexeur. Cet échec peut se produire si le document en cours d’indexation est endommagé, interdisant au filtre d’extraire le texte du document. Il peut également survenir quand un composant est incapable de traiter le contenu d’une même ligne au-delà d’une certaine taille, en raison de limitations de mémoire sur l’hôte de démon de filtre de texte intégral (fdhost.exe).  
   
  Pour chaque défaillance au niveau d'une ligne, le journal de l'analyse contient des détails sur les raisons qui l'ont provoquée. Le nombre d'erreurs est résumé à la fin d'un remplissage complet ou incrémentiel.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Un groupe de fichiers contenant la table en cours d'indexation de texte intégral est mis hors ligne ou en lecture seule.  
   
- Il convient de consulter le journal d'analyse à la fin de toutes les opérations lourdes de remplissage d'index de texte intégral ou lorsqu'un remplissage ne s'est pas achevé.  
+ Examinez le journal d’analyse à la fin de toutes les opérations lourdes de remplissage d’index de texte intégral ou quand un remplissage ne s’est pas achevé.  
   
 ### <a name="unsigned-components"></a>Composants non signés  
  Par défaut, l'indexeur de texte intégral requiert que les filtres et les analyseurs lexicaux qu'il charge soient signés. S'ils ne sont pas signés, ce qui arrive parfois lorsque des composants personnalisés sont installés, vous devez configurer l'indexeur de texte intégral pour qu'il ignore la vérification de signature.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Lors de la restauration du journal des transactions d'une base de données, il arrive qu'un message d'avertissement s'affiche en indiquant que l'index de recherche en texte intégral n'est pas dans un état cohérent. Cela se produit lorsque l'index de recherche en texte intégral d'une table est modifié après la sauvegarde de la base de données. Pour rendre un état cohérent à l'index de recherche en texte intégral, vous devez exécuter un remplissage complet (analyse) sur la table. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md)  
   

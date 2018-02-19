@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,7 +126,7 @@ Pipeline de traitement des requêtes SQL Server
  Pour le premier exemple de requête, le moteur d'exécution demande des lignes à l'index cluster sur la table Customer, et à l'index non cluster sur la table Order, à partir des méthodes d'accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Les lots ad hoc et procédures stockées sont également considérés comme du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété. « Interprété » fait référence au fait que le plan de requête est interprété par le moteur d'exécution de requête pour chaque opérateur inclus dans le plan de requête. Le moteur d'exécution lit l'opérateur et ses paramètres, et effectue l'opération.  
   
  Le [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables mémoire optimisées et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées :  
   
@@ -230,7 +231,7 @@ Exécution de procédures stockées compilées en mode natif.
   
  L'appel d'une procédure stockée compilée en mode natif se présente comme suit :  
   
-1.  L’utilisateur émet une instruction **EXEC***usp_myproc* .  
+1.  L’utilisateur émet une instruction **EXEC***usp_myproc*.  
   
 2.  L'analyseur extrait le nom et les paramètres de la procédure stockée.  
   

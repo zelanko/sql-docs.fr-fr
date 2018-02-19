@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/03/2018
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] prend en charge les colonnes calculées non persistantes dans les index columnstore cluster. Les colonnes persistantes ne sont pas prises en charge dans les index columnstore cluster. Vous ne pouvez pas créer d’index non cluster sur un index columnstore qui a une colonne calculée. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ajoute des améliorations clés pour optimiser les performances et la flexibilité des index columnstore. Ces améliorations touchent les scénarios d’entreposage de données et permettent l’analytique opérationnelle en temps réel.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ajoute des améliorations clés pour améliorer les performances et la flexibilité des index columnstore. Ces améliorations touchent les scénarios d’entreposage de données et permettent l’analytique opérationnelle en temps réel.  
   
 ### <a name="functional"></a>Fonctionnel  
   

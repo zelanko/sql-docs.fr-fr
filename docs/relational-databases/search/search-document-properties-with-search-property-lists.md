@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Auparavant, les propriétés de document était indiscernables du contenu du corps du document. Cela limitait les requêtes de texte intégral aux recherches génériques sur les documents entiers. Maintenant, vous pouvez configurer un index de recherche en texte intégral pour prendre en charge la recherche portant sur des propriétés, telles que les propriétés Auteur et Titre, pour les types de documents pris en charge dans une colonne de données binaires **varbinary**, **varbinary(max)** (incluant **FILESTREAM**) ou **image** . Cette forme de recherche s'appelle *recherche de propriétés*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Auparavant, les propriétés de document était indiscernables du contenu du corps du document. Cela limitait les requêtes de texte intégral aux recherches génériques sur les documents entiers. Maintenant, vous pouvez configurer un index de recherche en texte intégral pour prendre en charge la recherche portant sur des propriétés, telles que les propriétés Auteur et Titre, pour les types de documents pris en charge dans une colonne de données binaires **varbinary**, **varbinary(max)** (incluant **FILESTREAM**) ou **image** . Cette forme de recherche s'appelle *recherche de propriétés*.  
   
  Le [filtre](../../relational-databases/search/configure-and-manage-filters-for-search.md) associé (IFilter) détermine si la recherche de propriétés est possible sur un type spécifique de document. Pour certains types de document, l'IFilter associé extrait tout ou partie des propriétés définies pour ce le type de document, ainsi que le contenu du corps du document. Vous pouvez configurer un index de recherche en texte intégral de façon à prendre en charge la recherche de propriétés portant uniquement sur les propriétés extraites par un IFilter lors de l'indexation de texte intégral. Parmi les IFilters qui extraient plusieurs propriétés de document, il existe des IFilters pour les types de fichier document Microsoft Office (tels que .docx, .xlsx et .pptx). En revanche, XML IFilter n'émet pas des propriétés.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/02/2018
   
  Lorsqu’une propriété est enregistrée pour une liste de recherche, le moteur d’indexation et de recherche en texte intégral affecte arbitrairement un *ID de propriété interne* à la propriété. L'ID de propriété interne est un entier qui identifie de façon unique la propriété dans cette liste de propriétés de recherche.  
   
- L'illustration suivante montre une vue logique d'une liste de propriétés de recherche qui spécifie deux propriétés, Title et Keywords. Le nom de la liste de propriétés pour Keywords est « Tags ». Ces propriétés appartiennent au même jeu de propriétés, dont le GUID est F29F85E0-4FF9-1068-AB91-08002B27B3D9. Les identificateurs entiers de propriété sont 2 pour Title et 5 pour Tags (Keywords). Le moteur d'indexation et de recherche en texte intégral mappe arbitrairement chaque propriété à un ID de propriété interne qui est unique à la liste de propriétés de recherche. L'ID de propriété interne pour la propriété Title est 1, et l'ID de propriété interne pour la propriété Tags est 2.  
+ L'illustration suivante montre une vue logique d'une liste de propriétés de recherche qui spécifie deux propriétés, Title et Keywords. Le nom de la liste de propriétés pour Keywords est « Tags ». Ces propriétés appartiennent au même jeu de propriétés, dont le GUID est F29F85E0-4FF9-1068-AB91-08002B27B3D9. Les identificateurs entiers de propriété sont 2 pour Title et 5 pour Tags (Keywords). Le moteur d'indexation et de recherche en texte intégral mappe arbitrairement chaque propriété à un ID de propriété interne qui est unique à la liste de propriétés de recherche. L'ID de propriété interne pour la propriété Title est 1, et l'ID de propriété interne pour la propriété Tags est 2.  
   
  ![Mappage de la liste de propriétés de recherche à la table interne](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mappage de la liste de propriétés de recherche à la table interne")  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/02/2018
   
  ![Index de recherche en texte intégral qui utilise une liste de propriétés de recherche](../../relational-databases/search/media/ifts-spl-and-fti.gif "Index de recherche en texte intégral qui utilise une liste de propriétés de recherche")  
   
- Les termes de recherche de la propriété Title (« Favorite », « Biking », et « Trails ») sont associés à l'ID de propriété interne 1, affecté à Title pour cet index. Les termes de recherche de la propriété Keywords (« biking » et « mountain ») sont associés à l'ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes de recherche de la propriété Author (« Jane » et « Doe ») et les termes de recherche dans le corps du document, l'ID de propriété interne est 0. Notez que le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l'index n'avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
+ Les termes de recherche de la propriété Title (« Favorite », « Biking », et « Trails ») sont associés à l'ID de propriété interne 1, affecté à Title pour cet index. Les termes de recherche de la propriété Keywords (« biking » et « mountain ») sont associés à l'ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes de recherche de la propriété Author (« Jane » et « Doe ») et les termes de recherche dans le corps du document, l'ID de propriété interne est 0. Le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l’index n’avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
   
  Une requête de texte intégral de portée propriété utilise les ID de propriété internes enregistrés pour la liste de propriétés de recherche actuelle de l'index de recherche en texte intégral.  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Identificateur entier de propriété  
   
-     Chaque propriété de recherche possède un identificateur unique dans le jeu de propriétés. Notez que pour une propriété donnée, l'identificateur peut être un entier ou une chaîne ; cependant, la recherche en texte intégral ne prend en charge que des identificateurs entier.  
+     Chaque propriété de recherche possède un identificateur unique dans le jeu de propriétés. Pour une propriété donnée, l’identificateur peut être un entier ou une chaîne ; cependant, la recherche en texte intégral ne prend en charge que des identificateurs entiers.  
   
 -   Nom de la propriété  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/02/2018
   
  **Pour ajouter une propriété à une liste de propriétés de recherche avec Transact-SQL**  
   
- Utilisez l’instruction [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) avec les valeurs obtenues à l’aide de l’une des méthodes décrites dans la rubrique [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Utilisez l’instruction [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) avec les valeurs obtenues à l’aide de l’une des méthodes décrites dans l’article [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  L'exemple suivant montre l'utilisation de ces valeurs lors de l'ajout d'une propriété à une liste de propriétés de recherche :  
   
@@ -201,7 +203,7 @@ GO
   
 6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche** , utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
   
-    1.  Pour supprimer une propriété de document, cliquez sur l’en-tête de ligne à gauche de la propriété, puis appuyez sur Suppr.  
+    1.  Pour supprimer une propriété de document, cliquez sur l'en-tête de ligne à gauche de la propriété et appuyez sur DEL.  
   
     2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\***, et entrez les valeurs de la nouvelle propriété.  
   

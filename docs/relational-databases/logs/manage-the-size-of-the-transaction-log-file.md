@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique contient des informations sur la façon de surveiller la taille d’un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de réduire le journal des transactions, d’ajouter ou d’agrandir un fichier journal de transactions, d’optimiser le taux de croissance du journal des transactions de **tempdb**, et de contrôler la croissance d’un fichier journal de transactions.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique contient des informations sur la façon de surveiller la taille d’un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de réduire le journal des transactions, d’ajouter ou d’agrandir un fichier journal de transactions, d’optimiser le taux de croissance du journal des transactions de **tempdb**, et de contrôler la croissance d’un fichier journal de transactions.  
 
 ##  <a name="MonitorSpaceUse"></a>Surveiller l’utilisation de l’espace pour le journal  
 Surveillez l’utilisation de l’espace pour le journal à l’aide de [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Cette vue de gestion dynamique retourne des informations sur la quantité d’espace journal utilisée et indique à quel moment le journal des transactions a besoin d’être tronqué. 

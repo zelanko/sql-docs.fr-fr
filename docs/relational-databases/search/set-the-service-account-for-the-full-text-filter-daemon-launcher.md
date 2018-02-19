@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dea4f2872a3d60bc49b9cd028a3c19b32f7e3ce7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique explique comment définir ou changer le compte du service du Lanceur de démon de filtre de texte intégral SQL (MSSQLFDLauncher) à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le compte de service par défaut utilisé par le programme d’installation de SQL Server est `NT Service\MSSQLFDLauncher`.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Cette rubrique explique comment définir ou changer le compte du service du Lanceur de démon de filtre de texte intégral SQL (MSSQLFDLauncher) à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le compte de service par défaut utilisé par le programme d’installation de SQL Server est `NT Service\MSSQLFDLauncher`.
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>À propos du service du Lanceur de démon de filtre de texte intégral SQL
@@ -81,7 +83,7 @@ Le service du Lanceur de démon de filtre de texte intégral SQL est un service 
   
      Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait office de serveur de canaux nommés pour le client du service du Lanceur de démon de filtre de texte intégral SQL. Si le canal nommé a déjà été créé par un autre processus préalablement au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une erreur est consignée dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans le journal des événements Windows, et la recherche en texte intégral n'est pas disponible.  Identifiez le processus ou l'application qui tente d'utiliser le même canal nommé et arrêtez l'application.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Rubriques de procédures concernant la gestion des services &#40;Gestionnaire de configuration SQL Server&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md)  
   

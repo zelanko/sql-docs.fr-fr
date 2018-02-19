@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique décrit comment créer, remplir et gérer des index de recherche en texte intégral dans SQL Server.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Cette rubrique décrit comment créer, remplir et gérer des index de recherche en texte intégral dans SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Prérequis - Créer un catalogue de texte intégral
 Avant de pouvoir créer un index de recherche en texte intégral, vous devez disposer d’un catalogue de texte intégral. Le catalogue est un conteneur virtuel pour un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
@@ -80,7 +83,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Colonnes&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
     |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral** , la planification que vous venez de créer est associée à un travail de SQL Server Agent (Démarrer le remplissage incrémentiel de la table sur *nom_base_de_données*.*nom_table*).|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral** .  
   
 ##  <a name="props"></a> Afficher les propriétés des colonnes et tables indexées  
  Vous pouvez faire appel à plusieurs fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], comme OBJECTPROPERTYEX, pour vous procurer la valeur de diverses propriétés d'indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Rechercher l’identificateur de la colonne de clés de texte intégral  
   
-Chaque table activée pour la recherche en texte intégral comporte une colonne qui est utilisée pour garantir l’unicité des lignes de la table (*colonne clé* *unique*). La propriété **TableFulltextKeyColumn**, obtenue à l’aide de la fonction OBJECTPROPERTYEX, contient l’ID de la colonne clé unique.  
+Chaque table activée pour la recherche en texte intégral comporte une colonne qui est utilisée pour garantir l’unicité des lignes de la table (*colonne de clés**unique*). La propriété **TableFulltextKeyColumn**, obtenue à l’aide de la fonction OBJECTPROPERTYEX, contient l’ID de la colonne clé unique.  
  
 Pour obtenir cet identificateur, vous pouvez utiliser une instruction SELECT afin d'appeler la fonction OBJECTPROPERTYEX. Utilisez la fonction OBJECT_ID pour convertir le nom de la table (*nom_table*) en ID de table et spécifiez la propriété **TableFulltextKeyColumn** , comme suit :  
   

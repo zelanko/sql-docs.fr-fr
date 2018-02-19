@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,49 +17,50 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7731c50b99ae5602f29de94bfd098cd9906d48d8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="load-files-into-filetables"></a>Charger des fichiers dans FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Explique comment charger ou migrer des fichiers dans FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Explique comment charger ou migrer des fichiers dans FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Chargement ou migration de fichiers dans un FileTable  
  La méthode que vous choisissez pour le chargement ou la migration de fichiers dans un FileTable dépend de l'emplacement de stockage actuel des fichiers.  
   
 |Emplacement actuel des fichiers|Options de migration|  
 |-------------------------------|---------------------------|  
-|Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a aucune connaissance des fichiers.|Étant donné qu'un FileTable s'affiche en tant que dossier dans le système de fichiers Windows, vous pouvez charger facilement des fichiers dans un nouveau FileTable en faisant appel à l'une des méthodes disponibles pour le déplacement ou la copie de fichiers. Ces méthodes incluent l'Explorateur Windows, les options de ligne de commande, notamment xcopy et robocopy, ainsi que les applications ou les scripts personnalisés.<br /><br /> Il est impossible de convertir un dossier existant en FileTable.|  
-|Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une table de métadonnées qui contient des pointeurs sur les fichiers.|La première étape consiste à déplacer ou à copier les fichiers à l'aide de l'une des méthodes indiquées ci-dessus.<br /><br /> La deuxième étape consiste à mettre à jour la table de métadonnées existante de sorte qu'elle pointe sur le nouvel emplacement des fichiers.<br /><br /> Pour plus d'informations, consultez [Exemple : migration de fichiers à partir du système de fichiers dans un FileTable](#HowToMigrateFiles) dans cette rubrique.|  
+|Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a aucune connaissance des fichiers.|Étant donné qu'un FileTable s'affiche en tant que dossier dans le système de fichiers Windows, vous pouvez charger facilement des fichiers dans un nouveau FileTable en faisant appel à l'une des méthodes disponibles pour le déplacement ou la copie de fichiers. Ces méthodes incluent l’Explorateur Windows, les options de ligne de commande, notamment xcopy et robocopy, ainsi que les applications ou les scripts personnalisés.<br /><br /> Il est impossible de convertir un dossier existant en FileTable.|  
+|Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une table de métadonnées qui contient des pointeurs sur les fichiers.|La première étape consiste à déplacer ou à copier les fichiers à l’aide de l’une des méthodes indiquées plus haut.<br /><br /> La deuxième étape consiste à mettre à jour la table de métadonnées existante de sorte qu'elle pointe sur le nouvel emplacement des fichiers.<br /><br /> Pour plus d’informations, consultez [Exemple : migration de fichiers à partir du système de fichiers dans un FileTable](#HowToMigrateFiles) dans cet article.|  
   
 ###  <a name="HowToLoadNew"></a> Procédure : charger des fichiers dans un FileTable  
- Voici quelques-unes des méthodes que vous pouvez appliquer pour charger des fichiers dans un FileTable :  
+Vous pouvez appliquer les méthodes suivantes pour charger des fichiers dans un FileTable :  
   
 -   Faites glisser et déplacez des fichiers depuis les dossiers source vers le nouveau dossier FileTable dans l'Explorateur Windows.  
   
--   Utilisez les options de ligne de commande telles que MOVE, COPY, XCOPY ou ROBOCOPY de l'invite de commandes ou dans un fichier de commandes ou un script.  
+-   Utilisez les options de ligne de commande telles que MOVE, COPY, XCOPY ou ROBOCOPY de l’invite de commandes ou dans un fichier de commandes ou un script.  
   
--   Écrivez une application personnalisée en C# ou Visual Basic.NET qui utilise des méthodes de l’espace de noms **System.IO** pour déplacer ou copier les fichiers.  
+-   Écrivez une application personnalisée pour déplacer ou copier les fichiers en C# ou Visual Basic.NET. Appelez des méthodes à partir de l’espace de noms **System.IO**.  
   
 ###  <a name="HowToMigrateFiles"></a> Exemple : migration de fichiers à partir du système de fichiers dans un FileTable  
  Dans ce scénario, vos fichiers sont stockés dans le système de fichiers et vous disposez d'une table de métadonnées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient des pointeurs sur les fichiers. Vous souhaitez déplacer les fichiers dans un FileTable, puis remplacer le chemin UNC d'origine pour chaque fichier dans les métadonnées par le chemin UNC de FileTable. La fonction [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) vous aide à accomplir cet objectif.  
   
  Pour cet exemple, supposez qu'il existe une table de base de données nommée **PhotoMetadata**qui contient des données relatives à des photographies. Cette table comprend une colonne **UNCPath** du type **varchar**(512) qui contient le chemin UNC réel à un fichier .jpg.  
   
- Pour migrer les fichiers image du système de fichiers vers un FileTable, vous devez effectuer les opérations suivantes :  
+ Pour migrer les fichiers image du système de fichiers vers un FileTable, vous devez effectuer les opérations suivantes :  
   
 1.  Créez un nouveau FileTable pour contenir les fichiers. Cet exemple utilise le nom de la table, **dbo.PhotoTable**, mais ne fournit pas le code permettant de créer la table.  
   
 2.  Utilisez xcopy ou un outil similaire pour copier les fichiers .jpg, avec leur structure de répertoire, dans le répertoire racine du FileTable.  
   
-3.  Corrigez les métadonnées dans la table **PhotoMetadata** , en utilisant un code similaire à ce qui suit :  
+3.  Corrigez les métadonnées dans la table **PhotoMetadata**, en utilisant du code semblable à l’exemple suivant :  
   
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
@@ -83,9 +85,9 @@ UPDATE PhotoMetadata
 ```  
   
 ##  <a name="BasicsBulkLoad"></a> Chargement en masse de fichiers dans un FileTable  
- Un FileTable se comporte comme une table normale pour les opérations en bloc, avec les caractéristiques suivantes.  
+ Un FileTable se comporte comme une table normale pour les opérations en bloc, avec les caractéristiques suivantes :  
   
- Un FileTable a des contraintes définies par le système qui garantissent le maintien de l'intégrité de l'espace de noms de fichier/répertoire. Ces contraintes doivent être vérifiées sur le volume de données chargé dans le FileTable. Puisque certaines opérations d'insertion en masse permettent d'ignorer les contraintes de table, les conditions requises suivantes sont appliquées.  
+ Un FileTable a des contraintes définies par le système qui garantissent le maintien de l’intégrité de l’espace de noms de fichier/répertoire. Ces contraintes doivent être vérifiées sur le volume de données chargé dans le FileTable. Puisque certaines opérations d'insertion en masse permettent d'ignorer les contraintes de table, les conditions requises suivantes sont appliquées.  
   
 -   Les opérations de chargement en masse qui appliquent des contraintes peuvent être exécutées sur un FileTable comme sur toute autre table. Cette catégorie comprend les opérations suivantes :  
   

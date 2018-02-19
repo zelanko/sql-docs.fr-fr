@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ Pour être déclarée avec DURABILITY = SCHEMA\_AND_DATA (paramètre par défaut
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le nombre d’index par table à mémoire optimisée ou type de table est limité à 8. À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le nombre d’index n’est plus limité pour les tables à mémoire optimisée et les types de tables.
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ont une limite de huit index par table à mémoire optimisée ou type de table. À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le nombre d’index n’est plus limité pour les tables à mémoire optimisée et les types de tables.
   
 ### <a name="code-sample-for-syntax"></a>Exemple de code pour la syntaxe  
   
@@ -145,7 +146,7 @@ Quand vous implémentez des tables optimisées en mémoire dans une application 
   
 ### <a name="recommendations-for-nonclustered-index-use"></a>Recommandations d’utilisation d’un index non-cluster  
   
-Un index non-cluster est préférable à un index de hachage dans les cas suivants :  
+Un index non cluster est préférable à un index de hachage dans les cas suivants :  
   
 - Les requêtes ont une clause `ORDER BY` sur la colonne indexée.  
 - Requêtes où seule(s) la (les) colonne(s) de début d’un index sur plusieurs colonnes est (sont) testée(s).  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97c0483870e4f99b68265a09337109f1f0ce0ac2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d8c18a2198e32bae0427ea286a64998ab546e3ac
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/02/2018
     
 -   **Optimisez l’ordre d’insertion.** Dans un entrepôt de données standard, les données sont généralement insérées dans un ordre chronologique et analysées dans la dimension de temps. C’est le cas, par exemple, des analyses de ventes trimestrielles. Pour ce type de charge de travail, l’élimination des rowgroups est automatique. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], les rowgroups de nombres peuvent être ignorés dans le processus de traitement des requêtes.    
     
--   **Optimisez l’index cluster rowstore.** Si le prédicat de requête commun se trouve dans une colonne (par exemple, C1) qui n’est pas liée à l’ordre d’insertion de la ligne, vous pouvez créer un index cluster rowstore dans les colonnes C1, puis créer des index cluster columnstore en supprimant l’index cluster rowstore. Si vous créez l’index cluster columnstore explicitement avec `MAXDOP = 1`, l’index cluster columnstore obtenu est parfaitement ordonné dans la colonne C1. Si vous spécifiez `MAXDOP = 8`, vous observez un chevauchement des valeurs entre huit rowgroups. Ce cas se produit souvent quand vous créez l’index columnstore initial pour un jeu de données volumineux. Notez que, dans les index non-cluster columnstore (NCCI), les lignes sont déjà ordonnées si la table de base rowstore a un index cluster. Dans ce cas, l’index non-cluster columnstore résultant est automatiquement ordonné. Un point important à retenir est que l’index columnstore ne conserve pas l’ordre des lignes par héritage. Au fur et à mesure que vous ajoutez de nouvelles lignes ou que vous mettez à jour des lignes existantes, vous devrez répéter ce processus si vous constatez une baisse des performances des requêtes analytiques.    
+-   **Optimisez l’index cluster rowstore.** Si le prédicat de requête commun se trouve dans une colonne (par exemple, C1) qui n’est pas liée à l’ordre d’insertion de la ligne, vous pouvez créer un index cluster rowstore dans les colonnes C1, puis créer des index cluster columnstore en supprimant l’index cluster rowstore. Si vous créez l’index cluster columnstore explicitement avec `MAXDOP = 1`, l’index cluster columnstore obtenu est parfaitement ordonné dans la colonne C1. Si vous spécifiez `MAXDOP = 8`, vous observez un chevauchement des valeurs entre huit rowgroups. Ce cas se produit souvent quand vous créez l’index columnstore initial pour un jeu de données volumineux. Notez que, dans les index non-cluster columnstore (NCCI), les lignes sont déjà ordonnées si la table de base rowstore a un index cluster. Dans ce cas, l’index non cluster columnstore résultant est automatiquement ordonné. Un point important à retenir est que l’index columnstore ne conserve pas l’ordre des lignes par héritage. Au fur et à mesure que vous ajoutez de nouvelles lignes ou que vous mettez à jour des lignes existantes, vous devrez répéter ce processus si vous constatez une baisse des performances des requêtes analytiques.    
     
 -   **Optimisez le partitionnement de table.** Vous pouvez partitionner l’index columnstore, puis utiliser l’élimination de partition pour réduire le nombre de rowgroups à analyser. Par exemple, si vous avez une table de faits dans laquelle sont stockés les achats des clients, un modèle de requête courant est la recherche des achats effectués par un client spécifique par trimestre. Pour cela, vous pouvez combiner l’ordre d’insertion avec le partitionnement sur la colonne client. Dans chaque partition, les lignes sont classées par ordre chronologique pour un client spécifique.    
     
@@ -112,7 +113,7 @@ ms.lasthandoff: 01/02/2018
 |requêtes à thread unique avec un plan de requête série||non|non|oui||    
 |Sort|Tri par clause sur SCAN avec l’index columnstore.|non|non|oui||    
 |Top Sort||non|non|oui||    
-|Agrégats de fenêtre||N/A|N/A|oui|Nouvel opérateur dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
+|Window Aggregates||N/A|N/A|oui|Nouvel opérateur dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
  ¹S’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Édition Premium et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
@@ -147,7 +148,7 @@ FROM FactResellerSalesXL_CCI
 ### <a name="string-predicate-pushdown"></a>Prédicats de chaîne en mode Push    
 Quand vous créez un schéma d’entrepôt de données, le modèle de schéma recommandé est un schéma en étoile ou en flocon contenant une ou plusieurs tables de faits et de nombreuses tables de dimension. La [table de faits](https://en.wikipedia.org/wiki/Fact_table) stocke les mesures ou transactions d’entreprise et la [table de dimension](https://en.wikipedia.org/wiki/Dimension_table) stocke les dimensions sur lesquelles doit porter l’analyse des faits.    
     
-Par exemple, un fait est un enregistrement représentant la vente d’un produit particulier dans une région spécifique, tandis que la dimension représente un ensemble de régions, produits, etc. Les tables de faits et de dimension sont associées par une relation de clé primaire/étrangère. Les requêtes analytiques les plus courantes associent une ou plusieurs tables de dimension avec la table de faits.    
+Par exemple, un fait est un enregistrement représentant la vente d’un produit particulier dans une région spécifique, tandis que la dimension représente un ensemble de régions, produits, etc. Les tables de faits et de dimension sont associées par une relation de clé primaire/étrangère. Les requêtes analytiques les plus courantes associent une ou plusieurs tables de dimensions avec la table de faits.    
     
 Prenons l’exemple d’une table de dimension `Products`. `ProductCode` est une clé primaire classique qui est généralement représentée par un type de données string. Pour améliorer les performances des requêtes, il est recommandé de créer une clé de substitution, généralement une colonne de type integer, pour faire référence à la ligne dans la table de dimension à partir de la table de faits.    
     

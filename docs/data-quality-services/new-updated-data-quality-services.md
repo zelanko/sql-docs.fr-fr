@@ -11,10 +11,10 @@ ms.prod_service: sql-non-specified
 ms.component: dqs
 ms.date: 02/03/2018
 ms.openlocfilehash: e5d82b7e42b7a33edb9ff09acb891933a9fa1b31
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Nouveautés et mises à jour récentes : Data Quality Services pour SQL Server
 
@@ -28,7 +28,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
+- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
 - *Domaine :* &nbsp; **Data Quality Services pour SQL Server**.
 
 

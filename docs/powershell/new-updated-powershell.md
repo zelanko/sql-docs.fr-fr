@@ -11,10 +11,10 @@ ms.prod_service: sql-non-specified
 ms.component: powershell
 ms.date: 02/03/2018
 ms.openlocfilehash: 4c14ff7713b6ca4138407cd105bb010e004e781c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>Nouveautés et mises à jour récentes : documentation de PowerShell
 
@@ -28,7 +28,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
+- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
 - *Domaine :* &nbsp; **PowerShell**.
 
 
@@ -99,7 +99,7 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Zones de sujet *avec* des articles nouveaux ou mis à jour récemment
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Domaines *avec* des articles nouveaux ou mis à jour récemment
 
 
 - [Nouveaux + Mis à jour (1 + 3) :&nbsp; **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
@@ -119,7 +119,7 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 
 
 
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Zones de sujet *sans* articles nouveaux ou mis à jour récemment
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Domaines *sans* article nouveau ou mis à jour récemment
 
 
 - [Nouveaux + Mis à jour (0 + 0) : **Data Migration Assistant (DMA) pour SQL** (documentation)](../dma/new-updated-dma.md)
