@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,21 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f1f07cf2c53676a37f2c26dfebfd3ed623ec7a8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocoles réseau et bibliothèques réseau
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un serveur peut être à l’écoute ou contrôler plusieurs protocoles réseau simultanément. Cependant, chaque protocole doit être configuré. Lorsqu'un protocole spécifique n'est pas configuré, le serveur ne peut pas se placer à l'écoute de ce protocole. Après l'installation, vous pouvez modifier ces configurations de protocole avec le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Un serveur peut être à l'écoute ou contrôler plusieurs protocoles réseau simultanément. Cependant, chaque protocole doit être configuré. Lorsqu'un protocole spécifique n'est pas configuré, le serveur ne peut pas se placer à l'écoute de ce protocole. Après l'installation, vous pouvez modifier ces configurations de protocole avec le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="default-sql-server-network-configuration"></a>Configuration réseau par défaut de SQL Server  
  Une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configurée pour le port TCP/IP 1433 et le canal nommé \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont configurées pour des ports dynamiques TCP, avec un numéro de port attribué par le système d'exploitation.  
@@ -87,11 +90,11 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’informations sur les points de terminaison, consultez [Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) et [Affichages catalogue de points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Pour plus d'informations sur les configurations réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez les rubriques suivantes dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Pour plus d’informations sur les configurations réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les articles suivants dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration de la surface d'exposition](../../relational-databases/security/surface-area-configuration.md)   
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

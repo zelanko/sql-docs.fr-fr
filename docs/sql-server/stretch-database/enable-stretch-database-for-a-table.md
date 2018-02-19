@@ -8,26 +8,28 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 931c88853bc5f2b0ecca65aa40cf5d4b4f29bd48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="enable-stretch-database-for-a-table"></a>Activer Stretch Database pour une table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Pour configurer une table pour Stretch Database, sélectionnez **Stretch | Activer** pour une table dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la table pour Stretch**. Vous pouvez également utiliser Transact-SQL pour activer Stretch Database sur une table existante, ou pour créer une table avec Stretch Database.  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Si votre table contient des données actuelles et anciennes, vous pouvez spécifier une fonction de filtre pour sélectionner les lignes à migrer.    
  
- **Conditions préalables**. Si vous sélectionnez **Stretch | Activer** pour une table et que vous n’avez pas encore activé Stretch Database pour la base de données, l’Assistant configure d’abord la base de données pour Stretch Database. Suivez les étapes de la [Mise en route en exécutant l’Assistant Activer la base de données pour Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) au lieu des étapes décrites dans cette rubrique.  
+ **Conditions préalables**. Si vous sélectionnez **Stretch | Activer** pour une table et que vous n’avez pas encore activé Stretch Database pour la base de données, l’Assistant configure d’abord la base de données pour Stretch Database. Suivez les étapes de la [Mise en route en exécutant l’Assistant Activer la base de données pour Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) au lieu des étapes décrites dans cet article.  
   
  **Les autorisations**. L’activation de Stretch Database sur une table ou une base de données nécessite les autorisations db_owner. L'activation de Stretch Database requiert également des autorisations ALTER sur la table.  
 
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Exécutez l’instruction ALTER TABLE pour spécifier une fonction de filtre après avoir quitté l’Assistant. Pour connaître les étapes nécessaires, consultez [Ajouter une fonction de filtre après avoir exécuté l’Assistant](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
- La syntaxe ALTER TABLE est décrite plus loin dans cette rubrique.  
+ La syntaxe ALTER TABLE est décrite plus loin dans cet article.  
   
  **Résumé**  
  Passez en revue les valeurs que vous avez entrées et les options que vous avez sélectionnées dans l’Assistant. Puis sélectionnez **Terminer** pour activer Stretch.  
@@ -137,7 +139,7 @@ GO
   
  Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   

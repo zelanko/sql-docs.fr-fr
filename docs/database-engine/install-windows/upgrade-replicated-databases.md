@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0e323482ac2d762a24a2ef39f2922764a24d35b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Mettre à niveau des bases de données répliquées
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n’est pas nécessaire d’interrompre l’activité des autres nœuds lorsqu’un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il n’est pas nécessaire d’interrompre l’activité des autres nœuds quand un nœud est en cours de mise à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie :  
   
 -   Toute version convient pour le serveur de distribution dès lors qu'elle est égale ou supérieure à celle du serveur de publication (en général, l'instance du serveur de distribution est la même que celle du serveur de publication).  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 01/18/2018
     -   La version d'un Abonné à une publication de fusion peut être toute version inférieure ou égale à celle du serveur de publication.  
   
 > [!NOTE]  
->  Cette rubrique est disponible dans la documentation d'aide du programme d'installation et dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les liens vers des rubriques qui s'affichent en gras dans la documentation d'aide du programme d'installation font référence à des rubriques qui sont exclusivement disponibles dans la documentation en ligne. **Vous pouvez concevoir une stratégie de mise à niveau pour le serveur de publication, l’abonné et le serveur de distribution en utilisant les options décrites dans ce [billet](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+>  Cet article est disponible dans la documentation d’aide du programme d’installation et dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les liens vers des articles qui s’affichent en gras dans la documentation d’aide du programme d’installation font référence à des articles qui sont exclusivement disponibles dans la documentation en ligne. **Vous pouvez concevoir une stratégie de mise à niveau pour le serveur de publication, l’abonné et le serveur de distribution en utilisant les options décrites dans ce [billet](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Exécuter l'Agent de lecture du journal pour la réplication transactionnelle avant la mise à niveau  
  Avant d’effectuer la mise à niveau de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], vous devez vérifier que toutes les transactions validées des tables publiées ont été traitées par l’Agent de lecture du journal. Pour vous assurer que toutes les transactions ont été traitées, effectuez les étapes suivantes pour chaque base de données qui contient des publications transactionnelles :  
@@ -66,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
  La réplication de fusion stocke les métadonnées de publication et d'abonnement dans un certain nombre de tables système des bases de données de publication et d'abonnement. L'Agent d'instantané met à jour les métadonnées de publication et l'Agent de fusion met à jour les métadonnées d'abonnement. Il faut uniquement générer un instantané de publication. Si une publication de fusion utilise des filtres paramétrés, chaque partition a également un instantané. Il n'est pas nécessaire de mettre à jour ces instantanés partitionnés.  
   
- Exécutez les agents à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], du moniteur de réplication ou de la ligne de commande. Pour plus d'informations sur l'exécution de l'Agent d'instantané, consultez les rubriques suivantes :  
+ Exécutez les agents à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], du moniteur de réplication ou de la ligne de commande. Pour plus d’informations sur l’exécution de l’Agent d’instantané, consultez les articles suivants :  
   
 -   [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 01/18/2018
   
 -   [Concepts des exécutables de l'agent de réplication](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- Pour plus d'informations sur l'exécution de l'Agent de fusion, consultez les rubriques suivantes :  
+ Pour plus d’informations sur l’exécution de l’Agent de fusion, consultez les articles suivants :  
   
 -   [Synchroniser un abonnement par extraction (pull)](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

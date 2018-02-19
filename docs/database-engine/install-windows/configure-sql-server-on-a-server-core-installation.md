@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Cet article fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configurer et gérer Server Core sur Windows Server  
-Cette section fournit des références aux rubriques qui vous guident pour la configuration et la gestion d'une installation Server Core.  
+Cette section fournit des références aux articles qui vous guident pour la configuration et la gestion d’une installation Server Core.  
   
 Certaines fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ne sont pas prises en charge en mode Server Core.  Une partie de ces fonctionnalités peuvent être installées sur un ordinateur client ou un serveur différent qui n'exécute pas Server Core, et être connectées aux services de moteur de base de données installés sur Server Core.  
   
-Pour plus d'informations sur la configuration et la gestion d'une installation Server Core à distance, consultez les rubriques suivantes :  
+Pour plus d’informations sur la configuration et la gestion d’une installation Server Core à distance, consultez les articles suivants :  
   
 - [Installation de Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -227,10 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Utiliser les outils de dépannage  
  Vous pouvez utiliser l’ [utilitaire SQLdiag](../../tools/sqldiag-utility.md) pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et depuis d’autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. SQLdiag a été conçu pour accélérer et simplifier la collecte d'informations de diagnostic pour les services d'assistance Microsoft.  
   
- Vous pouvez lancer l'utilitaire dans l'invite de commandes d'administrateur sur Server Core, à l'aide de la syntaxe spécifiée dans la rubrique : [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Vous pouvez lancer l’utilitaire à partir de l’invite de commandes d’administrateur sur Server Core, à l’aide de la syntaxe spécifiée dans l’article : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Installer SQL Server sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Rubriques de procédures relatives à l’installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Articles de procédures relatives à l’installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

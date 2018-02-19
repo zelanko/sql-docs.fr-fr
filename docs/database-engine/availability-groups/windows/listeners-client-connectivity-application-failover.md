@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Écouteurs, connectivité client et basculement d'application
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et de fonctionnalité de basculement d’application.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
   
 > [!NOTE]  
 >  Pour la majorité des configurations habituelles d'écouteur, vous pouvez créer le premier écouteur de groupe de disponibilité simplement à l'aide d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou d'applets de commande PowerShell. Pour plus d'informations, consultez [Tâches associées](#RelatedTasks), plus loin dans cette rubrique.  
@@ -121,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’acheminer les connexions entrantes à un écouteur de groupe de disponibilité vers un réplica secondaire qui est configuré pour autoriser des charges de travail en lecture seule. Une connexion entrante faisant référence à un nom d'écouteur de groupe de disponibilité peut automatiquement être acheminée vers un réplica en lecture seule si les conditions suivantes sont réunies :  
   
 -   Au moins un réplica secondaire est défini sur l'accès en lecture seule, et chaque réplica secondaire en lecture seule et le réplica principal sont configurés pour prendre en charge le routage en lecture seule. Pour plus d’informations, consultez [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](#ConfigureARsForROR), plus loin dans cette section.  
-  
+
+-   La chaîne de connexion référence une base de données impliquée dans le groupe de disponibilité. Une alternative serait que la connexion utilisée ait la base de données configurée comme base de données par défaut. Pour plus d’informations, consultez [cet article sur le fonctionnement de l’algorithme avec le routage en lecture seule](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+
 -   La chaîne de connexion fait référence à un écouteur de groupe de disponibilité, et l’intention de l’application de la connexion entrante est définie en lecture seule (par exemple, à l’aide du mot clé **Application Intent=ReadOnly** dans les chaînes de connexion ODBC ou OLEDB, ou dans les attributs ou les propriétés de connexion). Pour plus d’informations, consultez [Intention de l’application en lecture seule et routage en lecture seule](#ReadOnlyAppIntent), plus loin dans cette section.  
   
 ###  <a name="ConfigureARsForROR"></a> Pour configurer des réplicas de disponibilité pour le routage en lecture seule  
@@ -152,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la propriété **ApplicationIntent** définie sur **ReadOnly**, ce qui en fait une *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
+ Dans cet exemple de chaîne de connexion, le client tente de se connecter à la base de données AdventureWorks par le biais d’un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l’écouteur du groupe de disponibilité écoute sur le port 1433).  La chaîne de connexion a la propriété **ApplicationIntent** définie sur **ReadOnly**, ce qui en fait une *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
   
  La base de données primaire du groupe de disponibilité traite la demande de routage en lecture seule entrante et tente de localiser un réplica en ligne et en lecture seule joint au réplica principal et configuré pour le routage en lecture seule.  Le client reçoit les informations de connexion depuis le serveur de réplica principal et se connecte au réplica en lecture seule identifié.  
   

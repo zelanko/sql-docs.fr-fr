@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les instances d’Analysis Services peuvent être mises à niveau vers une version SQL Server du même mode serveur pour tirer parti des fonctionnalités introduites dans la version actuelle, comme cela est décrit dans [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Les instances d’Analysis Services peuvent être mises à niveau vers une version SQL Server du même mode serveur pour tirer parti des fonctionnalités introduites dans la version actuelle, comme cela est décrit dans [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Vous pouvez mettre à niveau chaque instance sur place, indépendamment des autres instances exécutées sur le même matériel. Toutefois, la plupart des administrateurs choisissent d’installer une nouvelle instance de la nouvelle version pour pouvoir tester l’application avant de transférer les charges de travail de production vers le nouveau serveur. Une mise à niveau sur place peut cependant être plus adaptée pour les serveurs de développement ou de test.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  Les bases de données tabulaires et multidimensionnelles suivent des chemins d’accès de version différents. Des modèles multidimensionnels et tabulaires peuvent avoir par coïncidence un niveau de compatibilité similaire.  Les modes avancent à des vitesses différentes si les modifications de fonctionnalités n’affectent que l’un d’eux.  
   
- Le tableau suivant présente simplement les niveaux de compatibilité. Nous vous recommandons toutefois de consulter les rubriques détaillées pour savoir ce que fournit chaque niveau.  
+ Le tableau suivant présente simplement les niveaux de compatibilité. Nous vous recommandons toutefois de consulter les articles détaillés pour savoir ce que fournit chaque niveau.  
   
 ||||  
 |-|-|-|  

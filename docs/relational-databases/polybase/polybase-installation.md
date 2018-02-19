@@ -8,28 +8,30 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase, installation
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>Installation de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Pour installer une version d'évaluation de SQL Server, accédez à [Versions d’évaluation de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Version d’évaluation de SQL Server 64 bits  
   
@@ -51,7 +53,8 @@ ms.lasthandoff: 01/02/2018
 Avant de commencer l’installation de PolyBase sur vos instances SQL Server, il est judicieux de planifier si vous souhaitez une installation sur un nœud unique ou dans un groupe PolyBase avec montée en puissance parallèle. Pour un groupe PolyBase avec montée en puissance parallèle, vous devez vous assurer que : 
 - Toutes les machines figurent dans le même domaine.
 - Vous utilisez les mêmes compte de service et mot de passe pendant l’installation.
-- Vos instances SQL Server peuvent communiquer entre elles sur le réseau.
+- Vos instances de SQL Server peuvent communiquer entre elles sur le réseau.
+- Les instances de SQL Server sont toutes la même version de SQL Server.
 
 Une fois que vous avez installé PolyBase de façon autonome ou dans un groupe avec montée en puissance parallèle, vous ne pouvez plus modifier ce réglage. Vous devez désinstaller et réinstaller la fonctionnalité pour modifier ce paramètre.
 

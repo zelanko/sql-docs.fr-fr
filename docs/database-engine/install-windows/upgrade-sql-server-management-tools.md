@@ -8,24 +8,28 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: management tools, upgrading
+helpviewer_keywords:
+- management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b350052dbe780d37cfe84b5525e31d04b44801
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5c0a15d22956bc7b4076bceb2498cdaf2e5c3683
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Mettre à jour les outils d'administration SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau à partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Cette rubrique documente la prise en charge et le fonctionnement de la mise à niveau des Outils d'administration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des composants de gestion tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, la Messagerie de base de données, les Plans de Maintenance, XPStar et XPWeb.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau à partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Cet article documente la prise en charge et le fonctionnement de la mise à niveau des Outils d’administration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des composants de gestion tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, la Messagerie de base de données, les Plans de Maintenance, XPStar et XPWeb.  
   
 > [!IMPORTANT]  
 >  Dans le cas d'une installation locale, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en qualité d'administrateur. Si vous exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine doté des autorisations de lecture et d'exécution sur le partage distant.  

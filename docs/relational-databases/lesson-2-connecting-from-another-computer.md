@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d’un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
   
 Cette leçon contient les tâches suivantes :  
   
@@ -132,7 +135,7 @@ Lorsque le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browse
 3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:***<nom_ordinateur>*. Dans notre exemple d’instance nommée, tapez **tcp:***<nom_ordinateur>***,49172**.  
   
     > [!NOTE]  
-    > Si vous omettez  **tcp:** dans la zone **Nom du serveur**, le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
+    > Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
   
 4.  Dans la zone **Authentification** , confirmez **Authentification Windows**, puis cliquez sur **Se connecter**.  
   

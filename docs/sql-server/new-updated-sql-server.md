@@ -1,29 +1,20 @@
 ---
 title: "Mise à jour de la documentation de SQL Server | Microsoft Docs"
 description: "Affichage d’extraits du contenu mis à jour pour les modifications récentes de la documentation pour SQL Server."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: 
-ms.component: sql-non-specified
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: sql-server
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
 ms.author: genemi
-ms.openlocfilehash: 77a97d94d005b43bf4c1a313a15a501cbe74a216
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: sql-server
+ms.date: 02/03/2018
+ms.openlocfilehash: d819ecfc22e3a8e27fdfe7263b1d545298ca5055
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Nouveautés et mises à jour récentes : documentation de SQL Server
 
@@ -37,7 +28,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Période des mises à jour :* &nbsp; **28-09-2017** &nbsp; au &nbsp; **02-12-2017**
+- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
 - *Domaine :* &nbsp; **SQL Server**.
 
 
@@ -50,11 +41,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-1. [Partenaires pour le développement avec SQL Server](partner-dev-sql-server.md)
-2. [Partenaires pour la haute disponibilité et la récupération d’urgence de SQL Server](partner-hadr-sql-server.md)
-3. [Partenaires pour la gestion de SQL Server](partner-management-sql-server.md)
-4. [Partenaires pour la surveillance de SQL Server](partner-monitor-sql-server.md)
-5. [Notes de version de SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
+1. [Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012](failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
 
 
 
@@ -80,7 +67,7 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
-1. [Notes de publication de SQL Server 2017](#TitleNum_1)
+1. [Visionneuse d’aide et aide en mode hors connexion SQL Server](#TitleNum_1)
 
 
 
@@ -91,44 +78,49 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-2017-release-notessql-server-2017-release-notesmd"></a>1. &nbsp; [Notes de publication de SQL Server 2017](sql-server-2017-release-notes.md)
+### <a name="1-nbsp-sql-server-offline-help-and-help-viewersql-server-help-installationmd"></a>1. &nbsp; [Visionneuse d’aide et aide en mode hors connexion SQL Server](sql-server-help-installation.md)
 
-*Mise à jour : 20-11-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Mise à jour : 19-12-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 37.  ms.author= "craigg".  -->
+<!-- Source markdown line 67.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c9ac7e027e32b17bb9b54a4a878f70a70404f1cb 5b1aa8dc715fbb08d82b241f1e47f6e443b3e2fc  (PR=4032  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 ea491fdc173a54fb4cdb3dfa2e26bd206d1cc45d 22444427a48064b76088d19d1ffae0a885bfe2a7  (PR=4338  ,  Filename=sql-server-help-installation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=f2fde1c324466530f92006561a9a29decb711e1b) -->
 
 
 
-- **Solution de contournement :** redémarrez d’abord l’ordinateur, puis vérifiez si le partage réseau FILESTREAM est disponible. Si le partage n’est toujours pas disponible, effectuez les étapes suivantes :
+   La visionneuse d’aide s’ouvre et affiche l’onglet Gérer le contenu.
 
-    1. Dans le Gestionnaire de configuration SQL Server, cliquez avec le bouton droit sur l’instance SQL Server, puis cliquez sur **Propriétés**.
-    2. Sous l’onglet **FILESTREAM**, décochez **Activer FILESTREAM pour l’accès aux E/S de fichier**, puis cliquez sur **Appliquer**.
-    3. Recochez **Activer FILESTREAM pour l’accès aux E/S de fichier** avec le nom du partage d’origine, puis cliquez sur **Appliquer**.
+2. Pour installer le dernier package de contenu de l’aide, choisissez **En ligne** sous Source d’installation.
 
-**Master Data Services (MDS)**
+   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)
 
-- **Impact sur le problème et le client :** dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante :`"The model permission cannot be saved. The object guid is not valid"`
+   >[!NOTE]
+   > Pour une installation à partir du disque (aide de SQL Server 2014), choisissez **Disque** sous Source d’installation et spécifiez l’emplacement du disque.
 
-- **Solutions de contournement :**
-  - Accordez l’autorisation sur les sous-nœuds de l’arborescence au lieu de le faire au niveau racine.
-  - ou
-  - Exécutez le script décrit dans ce blog de l’équipe MDS : [erreur d’application d’une autorisation au niveau de l’entité](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+   L’option Chemin d’accès au stockage local sous l’onglet Gérer le contenu indique l’emplacement où le contenu est installé sur l’ordinateur local. Si vous souhaitez modifier l’emplacement, cliquez sur **Déplacer**, entrez un chemin de dossier différent dans le champ **Vers**, puis cliquez sur **OK**.
+   Si l’installation de l’aide échoue après avoir modifié le chemin d’accès au stockage local, fermez et rouvrez la visionneuse d’aide, vérifiez que le nouvel emplacement apparaît dans le chemin d’accès au stockage local, puis recommencez l’installation.
 
-**Analysis Services**
+3. Cliquez sur **Ajouter** en regard de chaque package de contenu (livre) que vous souhaitez installer.
+   Pour installer tout le contenu de l’aide de SQL Server, ajoutez l’ensemble des 13 livres sous SQL Server.
 
-- **Problème et impact sur le client :** les connecteurs de données pour les sources suivantes ne sont pas encore disponibles pour les modèles tabulaires au niveau de compatibilité 1400.
-  - Amazon Redshift
-  - IBM Netezza
-  - Impala
-- **Solution de contournement :** aucune.
+4. Cliquez sur **Mettre à jour** en bas à droite.
+   La table des matières de l’aide sur la gauche est automatiquement mise à jour avec les livres ajoutés.
 
-- **Impact sur le problème et le client :** les modèles Direct Query au niveau de compatibilité 1400 avec des perspectives peuvent échouer lors de l’interrogation ou la découverte des métadonnées.
-- **Solution de contournement :** supprimez les perspectives et redéployez.
+   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
+
+> [!NOTE]
+> Les titres de nœud supérieur dans la table des matières SQL Server ne correspondent pas tous exactement aux noms des livres d’aide téléchargeables associés. Les titres de la table des matières sont mappés aux noms des livres comme suit :
+
+| Volet de contenu | Livre SQL Server |
+|-----|-----|
+|Informations de référence sur le langage Analysis Services | Informations de référence sur le langage Analysis Services (MDX)|
+|Informations de référence sur le langage DAX (Data Analysis Expressions) | Informations de référence sur le langage DAX (Data Analysis Expressions)|
+|Informations de référence sur le langage DMX (Data Mining Extensions) | Informations de référence sur le langage DMX (Data Mining Extensions)|
+|Guides du développeur pour SQL Server | Référence du développeur SQL Server|
+|Télécharger SQL Server Management Studio | SQL Server Management Studio|
 
 
 
@@ -136,45 +128,44 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 
 
-## <a name="similar-articles"></a>Articles similaires
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articles similaires sur les articles nouveaux ou mis à jour
 
 Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveaux + Mis à jour (3 + 14) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
-- [Nouveaux + Mis à jour (87 + 0) : **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nouveaux + Mis à jour (5 + 4) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
-- [Nouveaux + Mis à jour (0 + 1) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
-- [Nouveaux + Mis à jour (2 + 2) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
-- [Nouveaux + Mis à jour (10 + 9) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
-- [Nouveaux + Mis à jour (2 + 4) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
-- [Nouveaux + Mis à jour (4 + 2) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
-- [Nouveaux + Mis à jour (0 + 1) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
-- [Nouveaux + Mis à jour (0 + 21)  : **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nouveaux + Mis à jour (5 + 1) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Assistant Migration SQL Server (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
-- [Nouveaux + Mis à jour (0 + 2) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Domaines *avec* des articles nouveaux ou mis à jour récemment
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
+
+- [Nouveaux + Mis à jour (1 + 3) :&nbsp; **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
+- [Nouveaux + Mis à jour (12 + 1) :**Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (6 + 2) :&nbsp; **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
+- [Nouveaux + Mis à jour (15 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
+- [Nouveaux + Mis à jour (2 + 9) :&nbsp; **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
+- [Nouveaux + Mis à jour (1 + 0) :&nbsp; **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
+- [Nouveaux + Mis à jour (1 + 1) :&nbsp; **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nouveaux + Mis à jour (1 + 1) :&nbsp; **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
+- [Nouveaux + Mis à jour (1 + 2) :&nbsp; **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
+- [Nouveaux + Mis à jour (0 + 2) :&nbsp; **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Domaines *sans* article nouveau ou mis à jour récemment
+
 
 - [Nouveaux + Mis à jour (0 + 0) : **Data Migration Assistant (DMA) pour SQL** (documentation)](../dma/new-updated-dma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
+- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
 

@@ -8,30 +8,32 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea4a52220729ad7d0fa69ef4e0784fd676aa3f5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 754e4cb8c56b3c118f7c3d0716b250b860fd73f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="enable-stretch-database-for-a-database"></a>Activer Stretch Database pour une base de données
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Pour configurer une base de données existante pour Stretch Database, sélectionnez **Tâches | Stretch | Activer** pour une base de données dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la base de données pour Stretch**. Vous pouvez également utiliser Transact-SQL pour activer Stretch Database pour une base de données.  
   
- Si vous sélectionnez **Tâches | Stretch | Activer** pour une table et que vous n’avez pas encore activé la base de données pour Stretch Database, l’Assistant configure la base de données pour Stretch Database et vous permet de sélectionner des tables dans le cadre du processus. Suivez les étapes décrites dans cette rubrique au lieu de la procédure décrite dans [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ Si vous sélectionnez **Tâches | Stretch | Activer** pour une table et que vous n’avez pas encore activé la base de données pour Stretch Database, l’Assistant configure la base de données pour Stretch Database et vous permet de sélectionner des tables dans le cadre du processus. Suivez les étapes décrites dans cet article au lieu de la procédure décrite dans [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
  L’activation de Stretch Database sur une table ou une base de données nécessite les autorisations db_owner. L’activation de Stretch Database sur une base de données nécessite également les autorisations CONTROL DATABASE.  
 
@@ -151,8 +153,8 @@ GO
   
 -   [Restaurer des bases de données Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

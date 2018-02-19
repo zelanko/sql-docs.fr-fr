@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42f27ae342fdd30ac608e1071029eb2415c9b896
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d18fdc2c65408898ed5faacc255e74b7a6261d57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Mettre à niveau Data Quality Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique fournit des informations sur la mise à niveau de votre installation existante de Data Quality Services (DQS) [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Dans le cadre de la mise à niveau de Data Quality Server [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vous devez également mettre à niveau le schéma des bases de données DQS.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Cet article fournit des informations sur la mise à niveau de votre installation existante de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Dans le cadre de la mise à niveau de Data Quality Server [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vous devez également mettre à niveau le schéma des bases de données DQS.  
   
 > [!IMPORTANT]  
 >  -   Vous devez sauvegarder vos bases de données DQS avant de mettre à niveau DQS afin d'empêcher toute perte accidentelle de données lors de la mise à niveau du schéma. Pour plus d'informations sur la sauvegarde des bases de données DQS, consultez [Sauvegarde et restauration de bases de données DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  

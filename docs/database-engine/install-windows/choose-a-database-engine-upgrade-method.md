@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Choisir une méthode de mise à niveau du moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à partir d’une version Release antérieure de SQL Server, pour réduire les interruptions de service et les risques, plusieurs approches sont possibles. Vous pouvez effectuer une mise à niveau sur place, une migration vers une nouvelle installation ou une mise à niveau propagée. Le diagramme suivant vous aidera à choisir l’approche appropriée. Les différentes approches sont également décrites ci-dessous. Pour vous aider avec les points de décision du diagramme, voir aussi [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à partir d’une version Release antérieure de SQL Server, pour réduire les interruptions de service et les risques, plusieurs approches sont possibles. Vous pouvez effectuer une mise à niveau sur place, une migration vers une nouvelle installation ou une mise à niveau propagée. Le diagramme suivant vous aidera à choisir l’approche appropriée. Les différentes approches sont également décrites ci-dessous. Pour vous aider avec les points de décision du diagramme, voir aussi [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Arbre de décision de la méthode de mise à niveau du moteur de base de données](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Arbre de décision de la méthode de mise à niveau du moteur de base de données")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   Vous avez un compte Azure ?  Cliquez **[ici](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** pour lancer une machine virtuelle avec [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition déjà installé.  
   
 > [!NOTE]  
->  Vous pouvez également envisager de mettre à niveau la Base de données SQL Azure ou de virtualiser votre environnement SQL Server dans le cadre de votre plan de mise à niveau. Bien que ces sujets ne soient pas abordés dans cette rubrique, voici quelques liens :
+>  Vous pouvez également envisager de mettre à niveau la Base de données SQL Azure ou de virtualiser votre environnement SQL Server dans le cadre de votre plan de mise à niveau. Bien que ces sujets ne soient pas abordés dans cet article, voici quelques liens :
 >   - [Vue d’ensemble de SQL Server sur des machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Sélection d’une option SQL Server dans Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![Nouvelle méthode de mise à niveau de l’installation utilisant le détachement et l’attachement pour le stockage SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nouvelle méthode de mise à niveau de l’installation utilisant le détachement et l’attachement pour le stockage SAN")  
   
 ##  <a name="RollingUpgrade"></a> Mise à niveau propagée  
- Une mise à niveau propagée est requise dans les environnements de solution SQL Server impliquant plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doivent être mises à niveau dans un certain ordre afin d’optimiser le temps de fonctionnement, de minimiser les risques et de préserver la fonctionnalité. Une mise à niveau propagée est essentiellement la mise à niveau de plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un ordre spécifique, soit en effectuant une mise à niveau sur place sur chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]existante, soit en mettant à niveau une nouvelle installation pour faciliter la mise à niveau du matériel et/ou du système d’exploitation dans le cadre du projet de mise à niveau. Il existe plusieurs scénarios dans lesquels vous devez utiliser l’approche de mise à niveau propagée. Ces résultats sont décrits dans les rubriques suivantes :  
+ Une mise à niveau propagée est requise dans les environnements de solution SQL Server impliquant plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doivent être mises à niveau dans un certain ordre afin d’optimiser le temps de fonctionnement, de minimiser les risques et de préserver la fonctionnalité. Une mise à niveau propagée est essentiellement la mise à niveau de plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un ordre spécifique, soit en effectuant une mise à niveau sur place sur chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]existante, soit en mettant à niveau une nouvelle installation pour faciliter la mise à niveau du matériel et/ou du système d’exploitation dans le cadre du projet de mise à niveau. Il existe plusieurs scénarios dans lesquels vous devez utiliser l’approche de mise à niveau propagée. Ces résultats sont décrits dans les articles suivants :  
   
 -   Groupes de disponibilité Always On : pour obtenir des instructions détaillées sur l’exécution d’une mise à niveau propagée dans cet environnement, consultez [Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   

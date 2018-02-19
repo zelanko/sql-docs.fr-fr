@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,18 +17,20 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 937779613dbabd97aa456f7dbe4cda623ea8532b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ccbcbc7c58b940a5438cf5ff2c42d8da8da89ec5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server"></a>Installer SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
  > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Installer SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  À partir de [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] est disponible uniquement en tant qu’application 64 bits. Voici des informations importantes sur la façon d’obtenir SQL Server et de l’installer.
@@ -53,17 +56,17 @@ ms.lasthandoff: 01/18/2018
  
 |Titre|Description|  
 |-----------|-----------------|  
-|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Prenez connaissance de cette rubrique pour installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur Windows Server Core.|  
+|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Prenez connaissance de cet article pour installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] sur Windows Server Core.|  
 |[Paramètres de l’outil d’analyse de configuration système](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Décrit les fonctions de l'Outil d'analyse de configuration système (SCC).|  
-|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à partir de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Rubrique de procédure pour une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typique à l'aide de l'Assistant Installation.|  
-|[Installer[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à partir d’une invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Rubrique de procédure qui fournit un exemple de syntaxe et de paramètres d'installation pour exécuter une installation sans assistance.|  
-|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Rubrique de procédure qui fournit un exemple de syntaxe et de paramètres d'installation pour exécuter une installation à l'aide d'un fichier de configuration.|  
-|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Rubrique de procédure qui fournit un exemple de syntaxe et de paramètres d’installation pour exécuter une installation à l’aide de SysPrep.|  
-|[Ajouter des fonctionnalités à une instance de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] &#40;programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Rubrique de procédure pour mettre à jour les composants d'une instance existante de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
-|[Réparer une installation défectueuse de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Rubrique de procédure pour réparer une installation endommagée de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
-|[Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Rubrique de procédure pour mettre à jour les métadonnées système stockées dans sys.servers.|  
-|[Installer les mises à jour de maintenance de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|Rubrique de procédure portant sur l’installation des mises à jour de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
-|[Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Rubrique de procédure pour rechercher des erreurs dans les fichiers journaux d'installation.|  
+|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à partir de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Article de procédure pour une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard à l’aide de l’Assistant Installation.|  
+|[Installer[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à partir d’une invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Article de procédure qui fournit un exemple de syntaxe et de paramètres d’installation pour exécuter une installation sans assistance.|  
+|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Article de procédure qui fournit un exemple de syntaxe et de paramètres d’installation pour exécuter une installation à l’aide d’un fichier de configuration.|  
+|[Installer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Article de procédure qui fournit un exemple de syntaxe et de paramètres d’installation pour exécuter une installation à l’aide de SysPrep.|  
+|[Ajouter des fonctionnalités à une instance de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] &#40;programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Article de procédure pour mettre à jour les composants d’une instance existante de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Réparer une installation défectueuse de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Article de procédure pour réparer une installation endommagée de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Article de procédure pour mettre à jour les métadonnées système stockées dans sys.servers.|  
+|[Installer les mises à jour de maintenance de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|Article de procédure portant sur l’installation des mises à jour de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Article de procédure pour rechercher des erreurs dans les fichiers journaux d’installation.|  
 |[Valider une installation SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)|Vérifiez l'utilisation du rapport de découverte SQL pour vérifier la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur.|  
   
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 01/18/2018
 |-----------|-----------------|  
 |[Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Explique comment installer et configurer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Installer la réplication SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Explique comment installer et configurer la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Install Distributed Replay - Présentation](../../tools/distributed-replay/install-distributed-replay-overview.md)|Répertorie les rubriques pour installer la fonctionnalité Distributed Replay.|  
+|[Install Distributed Replay - Présentation](../../tools/distributed-replay/install-distributed-replay-overview.md)|Répertorie les articles pour installer la fonctionnalité Distributed Replay.|  
 |[Installer les Outils d’administration SQL Server avec SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Décrit comment installer et configurer les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Installer SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Décrit les considérations relatives à l'installation des composants PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
@@ -82,9 +85,9 @@ ms.lasthandoff: 01/18/2018
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et décrit comment configurer le Pare-feu Windows.|  
-|[Configurer un ordinateur multirésident pour l’accès à SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.|  
-|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Vous pouvez suivre les étapes fournies dans cette rubrique pour configurer les paramètres de port et de pare-feu afin d’autoriser l’accès à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.|  
+|[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Cet article fournit une vue d’ensemble de la configuration du pare-feu et décrit comment configurer le Pare-feu Windows.|  
+|[Configurer un ordinateur multirésident pour l’accès à SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Cet article explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.|  
+|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Vous pouvez suivre les étapes fournies dans cet article pour configurer les paramètres de port et de pare-feu afin d’autoriser l’accès à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.|  
   
 ## <a name="related-sections"></a>Sections connexes  
 [Éditions et fonctionnalités prises en charge de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

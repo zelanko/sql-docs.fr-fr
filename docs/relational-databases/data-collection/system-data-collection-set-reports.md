@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Rapports de jeux d'éléments de collecte de données système
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le collecteur de données fournit un rapport historique pour chaque jeu d’éléments de collecte de données système. Chacun des rapports suivants utilise des données stockées dans l'entrepôt de données de gestion :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Le collecteur de données fournit un rapport historique pour chaque jeu d'éléments de collecte de données système. Chacun des rapports suivants utilise des données stockées dans l'entrepôt de données de gestion :  
   
 -   [Résumé sur l'utilisation du disque](#Disk)  
   
@@ -61,14 +63,14 @@ ms.lasthandoff: 11/17/2017
   
  La table située au-dessous du graphique répertorie les heures de collecte de données et les données d'utilisation correspondantes.  
   
-#### <a name="disk-usage-for-database-databasename-subreport"></a>Sous-rapport Utilisation du disque pour la base de données : <nom_base_de_données>  
- Le sous-rapport **Utilisation du disque pour la base de données :***<nom_base_de_données>* s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
+#### <a name="disk-usage-for-database-databasename-subreport"></a>Sous-rapport Utilisation du disque pour la base de données : <nom_base_de_données>  
+ Le sous-rapport **Utilisation du disque pour la base de données :***<nom_base_de_données>* s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
   
 |Catégorie|Définition|  
 |--------------|----------------|  
 |Index|Quantité d'espace disque utilisée pour contenir les pages d'index.|  
 |Non alloué|Quantité d'espace disque disponible pour la base de données mais non encore allouée à un objet.|  
-|Données|Quantité d'espace disque utilisée par les pages de données.|  
+|data|Quantité d'espace disque utilisée par les pages de données.|  
 |Inutilisé|Quantité d'espace disque allouée à un ou plusieurs objets, mais pas encore utilisée.|  
   
  L'utilisation de l'espace pour le fichier journal de transactions est catégorisée en tant qu'espace utilisé et espace inutilisé.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attentes|Le graphique Attentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche les attentes rencontrées par les threads exécutés par catégorie d'attente. Vous pouvez accéder à un rapport détaillé en cliquant sur un segment du graphique. En plus de fournir des statistiques sur les attentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une plage de temps plus étroite, ce rapport fournit des informations à propos des catégories d'attente sous forme de tableau. Pour chaque catégorie, telle que l'UC et ses sous-catégories, le tableau indique le nombre d'attentes, le temps d'attente et le pourcentage total de temps d'attente.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activité|Les différents aspects de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont accessibles à partir du graphique Activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les rapports que vous pouvez obtenir en cliquant sur un point sur la courbe de graphique de Compilations SQL/s sont les suivants :<br /><br /> <br /><br /> Connexions et sessions<br /><br /> Demandes<br /><br /> Taux d'accès au plan du travail<br /><br /> Caractéristiques tempdb|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
  [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   

@@ -1,32 +1,23 @@
 ---
 title: "Mise à jour - Documentation de SSMS pour SQL Server | Microsoft Docs"
 description: "Affichez des extraits de contenu mis à jour récemment dans la documentation, pour SQL Server Management Studio (SSMS) pour Microsoft SQL Server."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: 
-ms.component: ssms
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: 
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
 ms.author: genemi
-ms.workload: ssms-sql-server-management-studio
-ms.openlocfilehash: a1a9156ef4bc2846f377f9c0695ec015d58606dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssms
+ms.date: 02/03/2018
+ms.openlocfilehash: d69c32f2159c133d7c8042359b7d65885aac39d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Nouveautés et mises à jour récentes : SQL Server Management Studio (SSMS) pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 
 
 Presque tous les jours, Microsoft met à jour certains de ses articles sur son site web de documentation [Docs.Microsoft.com](http://docs.microsoft.com/). Cet article contient des extraits d’articles récemment mis à jour. Des liens vers de nouveaux articles peuvent également être répertoriés.
@@ -37,7 +28,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Période des mises à jour :* &nbsp; **28-09-2017** &nbsp; au &nbsp; **02-12-2017**
+- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
 - *Domaine :* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -50,7 +41,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-***Il n’y a aucun nouvel article pour cette fois.***
+1. [Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais](install-other-languages.md)
 
 
 
@@ -76,7 +67,8 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
-1. [SQL Server Management Studio : journal des modifications (SSMS)](#TitleNum_1)
+1. [Télécharger SQL Server Management Studio (SSMS)](#TitleNum_1)
+2. [SQL Server Management Studio : journal des modifications (SSMS)](#TitleNum_2)
 
 
 
@@ -87,39 +79,105 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1. &nbsp; [SQL Server Management Studio - Journal des modifications (SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1. &nbsp; [Télécharger SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
 
-*Mise à jour : 09-10-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Mise à jour : 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Suivant](#TitleNum_2))
 
-<!-- Source markdown line 23.  ms.author= "sstein".  -->
+<!-- Source markdown line 83.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 f483a7e0ba53cff80d3f2d33c9196906d27a7a61 c125f43f0a45e70ce180e62edecc68bdcffd5086  (PR=3441  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=29122bdf543e82c1f429cf401b5fe1d8383515fc) -->
+<!-- git diff --ignore-all-space --unified=0 0e123e7bdf04f02fcd26ac31fa30ed5f31b19c7d 924246b55d3cad6a5d068da8a41f4be23dcfeb2b  (PR=4652  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
 
 
 
-**[SSMS 17.3--download-sql-server-management-studio-ssms.md)**
+SSMS 17.4 est la dernière version de SQL Server Management Studio. La génération 17.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à SQL Server 2017. La version 17.x prend également en charge la PaaS SQL Analysis Services.
 
-Disponibilité générale | Numéro de build : 14.0.17199.0
+Contenu de la version 17.4 :
 
-**Améliorations**
+Évaluation des vulnérabilités :
+- Ajout d’un nouveau service d’évaluation des vulnérabilités SQL pour analyser la présence éventuelle de vulnérabilités et d’écarts par rapport aux meilleures pratiques dans les bases de données, par exemple, des erreurs de configuration, des autorisations excessives et des données sensibles exposées.
+- Les résultats de l’évaluation sont accompagnés d’étapes actionnables permettant de résoudre chaque problème et, le cas échéant, de scripts de correction personnalisés. Le rapport d’évaluation est adaptable à chaque environnement et aux exigences spécifiques. Pour en savoir plus, consultez la page [Évaluation des vulnérabilités SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+
+SMO :
+- Correction du problème à cause duquel *HasMemoryOptimizedObjects* levait une exception sur Azure.
+- Ajout de la prise en charge de la nouvelle fonctionnalité CATALOG_COLLATION.
+
+Tableau de bord Always On :
+- Amélioration de l’analyse de la latence dans les groupes de disponibilité.
+- Ajout de deux nouveaux rapports : *AlwaysOn\_Latency\_Primary* et *AlwaysOn\_Latency\_Secondary*.
+
+Plan d’exécution de requêtes :
+- Mise à jour des liens, de sorte qu’ils pointent vers la documentation appropriée.
+- Permet une analyse de plan unique directement à partir du plan réellement généré.
+- Nouvel ensemble d’icônes.
+- Ajout de la prise en charge permettant de reconnaître « Appliquer des opérateurs logiques », comme GbApply ou InnerApply.
+
+XE Profiler :
+- Renommé XEvent Profiler.
+- À présent, les commandes de menu Arrêter/Démarrer arrêtent/démarrent la session par défaut.
+- Activation des raccourcis clavier (par exemple, CTRL+F pour faire une recherche).
+- Ajout des actions database\_name et client\_hostname aux événements concernés dans les sessions XEvent Profiler. Pour que la modification prenne effet, vous devrez peut-être supprimer les instances de sessions QuickSessionStandard et QuickSessionTSQL sur les serveurs - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
 
 
-- Ajout du nouvel Assistant « Importer un fichier plat » pour simplifier l’importation des fichiers CSV avec une infrastructure intelligente, nécessitant une intervention de l’utilisateur ou des connaissances techniques minimes. Pour plus d’informations, consultez [Assistant Importation d’un fichier plat dans SQL--../relational-databases/import-export/import-flat-file-wizard.md).
-- Ajout du nœud « XEvent Profiler » à l’Explorateur d’objets. Pour plus d’informations, consultez [Utiliser SSMS XEvent Profiler--../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
-- Mise à jour du filtrage et de la catégorisation des attentes dans le rapport des attentes historiques du Tableau de bord Performances.
-- Ajout de la vérification syntaxique de la fonction « Predict ».
-- Ajout de la vérification syntaxique des requêtes External Library Management.
-- Ajout de la prise en charge SMO pour External Library Management.
-- Ajout de la prise en charge de « Démarrer PowerShell » dans la fenêtre « Serveurs inscrits » (nécessite un nouveau module SQL PowerShell).
-- Always On : Ajout de la [prise en charge du routage en lecture seule--../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) pour les groupes de disponibilité.
-- Ajout d’une option pour envoyer les informations de trace dans la fenêtre Sortie pour les connexions « Active Directory - Authentification universelle avec prise en charge de MFA » (option désactivée par défaut ; doit être activée dans les paramètres utilisateur sous « Outils > Options > Services Azure > Azure Cloud > Niveau de trace dans la fenêtre Sortie ADAL »).
-- Magasin des requêtes :
-  - L’interface utilisateur Magasin des requêtes est maintenant accessible même quand QDS est désactivé, si QDS a enregistré des données.
-  - L’interface utilisateur Magasin des requêtes expose maintenant les attentes par catégorie dans tous les rapports existants. Cela permet aux clients de gérer les scénarios avec des requêtes principales en attente, par exemple.
-- Ajout des en-têtes de paramètres de script rendu facultatif (désactivé par défaut ; peut être activé dans les paramètres utilisateur sous « Outils > Options > Explorateur d’objets SQL Server > Scripts > Inclure l’en-tête des paramètres de script ») - [Article Connect 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>2. &nbsp; [SQL Server Management Studio - Journal des modifications (SSMS)](sql-server-management-studio-changelog-ssms.md)
+
+*Mise à jour : 29-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_1))
+
+<!-- Source markdown line 27.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b5096fa8f1ae3f2e4bc040f43cb8810d96f2c69c eb641ac39386a26a76dc303f5bd55eb3f9f4c78d  (PR=0  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ba4b1c2e5200f2f78786b710da18fd38fedde6c9) -->
+
+
+
+**[SSMS 17.4](download-sql-server-management-studio-ssms.md)**
+
+Disponibilité générale | Numéro de build : 14.0.17213.0
+
+**Nouveautés**
+
+
+**SSMS général**
+
+Évaluation des vulnérabilités :
+- Ajout d’un nouveau service d’évaluation des vulnérabilités SQL pour analyser la présence éventuelle de vulnérabilités et d’écarts par rapport aux meilleures pratiques dans les bases de données, par exemple, des erreurs de configuration, des autorisations excessives et des données sensibles exposées.
+- Les résultats de l’évaluation sont accompagnés d’étapes actionnables permettant de résoudre chaque problème et, le cas échéant, de scripts de correction personnalisés. Le rapport d’évaluation est adaptable à chaque environnement et aux exigences spécifiques. Pour en savoir plus, consultez la page [Évaluation des vulnérabilités SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+
+SMO :
+- Correction du problème à cause duquel *HasMemoryOptimizedObjects* levait une exception sur Azure.
+- Ajout de la prise en charge de la nouvelle fonctionnalité CATALOG_COLLATION.
+
+Tableau de bord Always On :
+- Amélioration de l’analyse de la latence dans les groupes de disponibilité.
+- Ajout de deux nouveaux rapports : *AlwaysOn\_Latency\_Primary* et *AlwaysOn\_Latency\_Secondary*.
+
+Plan d’exécution de requêtes :
+- Mise à jour des liens, de sorte qu’ils pointent vers la documentation appropriée.
+- Permet une analyse de plan unique directement à partir du plan réellement généré.
+- Nouvel ensemble d’icônes.
+- Ajout de la prise en charge permettant de reconnaître « Appliquer des opérateurs logiques », comme GbApply ou InnerApply.
+
+XE Profiler :
+- Renommé XEvent Profiler.
+- À présent, les commandes de menu Arrêter/Démarrer arrêtent/démarrent la session par défaut.
+- Activation des raccourcis clavier (par exemple, CTRL+F pour faire une recherche).
+- Ajout des actions database\_name et client\_hostname aux événements concernés dans les sessions XEvent Profiler. Pour que la modification prenne effet, vous devrez peut-être supprimer les instances de sessions QuickSessionStandard et QuickSessionTSQL sur les serveurs - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
+
+Ligne de commande :
+- Ajout d’une nouvelle option de ligne de commande («-G ») qui permet de faire en sorte que SSMS se connecte automatiquement à un serveur/une base de données avec l’authentification Active Directory (« Intégré » ou « Mot de passe »). Pour plus d’informations, consultez la page [Utilitaire SSMS](ssms-utility.md).
 
 
 
@@ -127,45 +185,44 @@ Disponibilité générale | Numéro de build : 14.0.17199.0
 
 
 
-## <a name="similar-articles"></a>Articles similaires
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articles similaires sur les articles nouveaux ou mis à jour
 
 Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveaux + Mis à jour (3 + 14) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
-- [Nouveaux + Mis à jour (87 + 0) : **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nouveaux + Mis à jour (5 + 4) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
-- [Nouveaux + Mis à jour (0 + 1) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
-- [Nouveaux + Mis à jour (2 + 2) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
-- [Nouveaux + Mis à jour (10 + 9) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
-- [Nouveaux + Mis à jour (2 + 4) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
-- [Nouveaux + Mis à jour (4 + 2) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
-- [Nouveaux + Mis à jour (0 + 1) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
-- [Nouveaux + Mis à jour (21 + 0) : **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nouveaux + Mis à jour (5 + 1) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Assistant Migration SQL Server (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
-- [Nouveaux + Mis à jour (0 + 2) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Domaines *avec* des articles nouveaux ou mis à jour récemment
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
+
+- [Nouveaux + Mis à jour (1 + 3) :&nbsp; **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
+- [Nouveaux + Mis à jour (12 + 1) :**Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (6 + 2) :&nbsp; **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
+- [Nouveaux + Mis à jour (15 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
+- [Nouveaux + Mis à jour (2 + 9) :&nbsp; **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
+- [Nouveaux + Mis à jour (1 + 0) :&nbsp; **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
+- [Nouveaux + Mis à jour (1 + 1) :&nbsp; **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nouveaux + Mis à jour (1 + 1) :&nbsp; **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
+- [Nouveaux + Mis à jour (1 + 2) :&nbsp; **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
+- [Nouveaux + Mis à jour (0 + 2) :&nbsp; **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Domaines *sans* article nouveau ou mis à jour récemment
+
 
 - [Nouveaux + Mis à jour (0 + 0) : **Data Migration Assistant (DMA) pour SQL** (documentation)](../dma/new-updated-dma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
+- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
 

@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour mettre à niveau sur place les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+L’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour mettre à niveau sur place les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  
 >Quand vous effectuez une mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est remplacée et n’existe plus sur votre ordinateur. 
@@ -43,7 +47,7 @@ ms.lasthandoff: 01/18/2018
 > * [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Mettez à niveau PowerPivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prérequis  
 Vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine doté des autorisations de lecture et d'exécution sur le partage distant, et qui représente un administrateur local.  
   
 > [!WARNING]  
@@ -109,7 +113,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
      **Instances installées**  — La grille affichera les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l'ordinateur où le programme d'installation s'exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. Le flux de travail du reste de cette rubrique dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
+13. Le flux de travail du reste de cet article dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
   
 14. Dans la page Configuration du serveur — Comptes de service, les comptes de service par défaut s'affichent pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous mettez à niveau.  
   

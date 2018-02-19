@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La fin du support étendu pour SQL Server 2005 est une bonne raison d’effectuer une mise à niveau vers une version plus récente de SQL Server et vers Azure SQL Database. La mise à niveau vous permet de maintenir la sécurité et la conformité, d’atteindre des performances élevées et d’optimiser l’infrastructure de votre plateforme de données.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ La fin du support étendu pour SQL Server 2005 est une bonne raison d’effectuer une mise à niveau vers une version plus récente de SQL Server et vers Azure SQL Database. La mise à niveau vous permet de maintenir la sécurité et la conformité, d’atteindre des performances élevées et d’optimiser l’infrastructure de votre plateforme de données.  
   
  Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
@@ -64,10 +68,10 @@ Pour une analyse plus complète de ces options, [cliquez ici](http://sql05upgrad
   
 -   Découvrez comment effectuer la mise à niveau.  
   
-    -   Passez en revue les méthodes de mise à niveau disponibles et découvrez comment planifier et tester dans la rubrique [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
+    -   Passez en revue les méthodes de mise à niveau disponibles et découvrez comment planifier et tester dans l’article [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/upgrade-database-engine.md).  
   
         > [!IMPORTANT]  
-        >  Vous ne pouvez pas effectuer une mise à niveau sur place d’une instance de SQL Server 2005 vers un serveur SQL Server 2017. Vous devez installer une instance de SQL Server 2017, puis migrer vos bases de données SQL Server 2005 vers la nouvelle installation. Pour plus d’informations, consultez la section « New Installation Upgrade » (Mise à niveau d’une nouvelle installation) de la rubrique [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+        >  Vous ne pouvez pas effectuer une mise à niveau sur place d’une instance de SQL Server 2005 vers un serveur SQL Server 2017. Vous devez installer une instance de SQL Server 2017, puis migrer vos bases de données SQL Server 2005 vers la nouvelle installation. Pour plus d’informations, consultez la section « Mise à niveau d’une nouvelle installation » de l’article [Choisir une méthode de mise à niveau du moteur de base de données](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
    
   
 -   Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  

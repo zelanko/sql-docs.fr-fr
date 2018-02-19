@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Pour configurer une base de données pour Stretch Database, exécutez l’Assistant Activer la base de données pour Stretch.  Cette rubrique décrit les informations que vous devez entrer et les choix que vous avez à faire dans l'Assistant.  
+
+ Pour configurer une base de données pour Stretch Database, exécutez l’Assistant Activer la base de données pour Stretch.  Cet article décrit les informations que vous devez entrer et les choix que vous avez à faire dans l’Assistant.  
   
  Pour en savoir plus sur Stretch Database, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 2.  Cliquez avec le bouton droit et sélectionnez **Tâches**, puis **Stretch**. Ensuite, sélectionnez **Activer** pour lancer l’Assistant.  
   
 ##  <a name="Intro"></a> Introduction  
- Passez en revue l’objectif de l’Assistant et les conditions préalables.  
+ Passez en revue l'objectif de l'assistant et les conditions préalables.  
  
  Les conditions préalables importantes sont les suivantes.
  -   Vous devez être administrateur pour modifier les paramètres de base de données.
@@ -69,7 +71,7 @@ Les tables qui contiennent un grand nombre de lignes apparaissent en haut de la 
   
  ![Page Sélectionner des tables de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Page Sélectionner des tables de l’Assistant Stretch Database")  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |(sans titre)|Cochez la case de cette colonne de façon à activer la table sélectionnée pour Stretch.|  
 |**Nom**|Spécifie le nom de la table dans la base de données.|  
@@ -184,12 +186,12 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
 ##  <a name="KnownIssues"></a> Résolution des problèmes liés à l'Assistant  
  **Échec de l’Assistant Stretch Database.**  
- Si Stretch Database n'est pas encore activé au niveau du serveur et que vous exécutez l'Assistant sans les autorisations d'administrateur du système nécessaires pour l'activer, l'Assistant échoue. Demandez à l'administrateur système d’activer Stretch Database sur l'instance de serveur local, puis exécutez à nouveau l'Assistant. Pour plus d'informations, consultez [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Si Stretch Database n'est pas encore activé au niveau du serveur et que vous exécutez l'Assistant sans les autorisations d'administrateur du système nécessaires pour l'activer, l'Assistant échoue. Demandez à l'administrateur système d’activer Stretch Database sur l'instance de serveur local, puis exécutez à nouveau l'Assistant. Pour plus d'informations, consultez [Prérequis : Autorisation d’activer Stretch Database sur le serveur](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Activer des tables supplémentaires pour Stretch Database. Surveiller la migration des données et gérez les tables et les bases de données Stretch.  
   
--   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) pour activer des tables supplémentaires.  
+-   [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) pour activer des tables supplémentaires.  
   
 -   Pour connaître l’état de la migration de données, consultez [Surveiller et résoudre les problèmes de migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
@@ -201,7 +203,7 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
 -   [Restaurer des bases de données Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   

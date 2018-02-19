@@ -1,6 +1,6 @@
 ---
 title: "Se connecter à des sources de données et des partages de fichiers avec l’authentification Windows | Microsoft Docs"
-ms.date: 01/12/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Se connecter à des sources de données locales et des partages de fichiers Azure avec l’authentification Windows
 Cet article explique comment configurer le catalogue SSIS sur Azure SQL Database pour exécuter des packages qui utilisent l’authentification Windows afin de se connecter à des sources de données locales et des partages de fichiers Azure. Vous pouvez utiliser l’authentification Windows pour vous connecter à des sources de données dans le même réseau virtuel qu’Azure SSIS Integration Runtime, aussi bien localement que sur des machines virtuelles Azure et dans Azure Files.
@@ -25,7 +26,11 @@ Cet article explique comment configurer le catalogue SSIS sur Azure SQL Database
 > [!WARNING]
 > Si vous ne fournissez pas d’informations d’identification de domaine valides pour l’authentification Windows en exécutant `catalog`.`set_execution_credential`, comme décrit dans cet article, les packages qui dépendent de l’authentification Windows ne peuvent pas se connecter aux sources de données et échouent au moment de l’exécution.
 
-Les informations d’identification de domaine que vous fournissez quand vous suivez les étapes de cet article s’appliquent à toutes les exécutions de package, interactives ou planifiées, sur l’instance SQL Database, et ce jusqu’à ce que vous changiez ou supprimiez les informations d’identification.
+## <a name="you-can-only-use-one-set-of-credentials"></a>Vous ne pouvez utiliser qu’un seul jeu d’informations d’identification
+
+À l’heure actuelle, vous ne pouvez utiliser qu’un seul jeu d’informations d’identification dans un package. Les informations d’identification de domaine que vous fournissez quand vous suivez les étapes de cet article s’appliquent à toutes les exécutions de package, interactives ou planifiées, sur l’instance SQL Database, et ce jusqu’à ce que vous changiez ou supprimiez les informations d’identification. Si votre package doit se connecter à plusieurs sources de données avec différents jeux d’informations d’identification, vous devrez peut-être séparer le package en plusieurs packages.
+
+Si l’une de vos sources de données est Azure Files, vous pouvez contourner cette limitation en montant le partage de fichiers Azure au moment de l’exécution du package avec `net use` ou l’équivalent dans une tâche Exécuter le processus. Pour plus d’informations, consultez [Montage d’un partage de fichiers Azure et accès au partage dans Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fournir des informations d’identification de domaine pour l’authentification Windows
 Pour fournir des informations d’identification de domaine qui permettent aux packages d’utiliser l’authentification Windows afin de se connecter à des sources de données locales, effectuez les actions suivantes :
@@ -83,7 +88,7 @@ Pour vérifier si vous pouvez vous connecter à une instance SQL Server locale, 
 
 3.  À partir de SSMS, vérifiez si vous pouvez vous connecter à l’instance SQL Server locale à utiliser.
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prérequis
 Pour vous connecter à un serveur SQL Server local à partir d’un package s’exécutant sur Azure, vous devez satisfaire aux prérequis suivants :
 
 1.  Dans le Gestionnaire de Configuration SQL Server, activez le protocole TCP/IP.

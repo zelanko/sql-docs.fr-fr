@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de la fonctionnalité BYOK (préversion) pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 
 ### <a name="general-guidelines"></a>Règles générales
 - Vérifiez qu’Azure Key Vault et Azure SQL Database sont dans le même locataire.  Les interactions entre coffre de clés et serveur qui sont dans des locataires différents **ne sont pas prises en charge**.
-
 - Décidez des abonnements qui vont être utilisés pour les ressources requises. Si par la suite vous déplacez le serveur parmi les abonnements, vous devrez réinstaller TDE avec des clés BYOK.
-- Configurez Azure Key Vault dans un seul abonnement réservé aux protecteurs TDE SQL Database.  Toutes les bases de données associées à un serveur logique utilisent le même protecteur TDE, donc le regroupement de bases de données dans un serveur logique est à considérer. 
+- Lors de la configuration de TDE avec l’option BYOK, il est important de prendre en compte la charge placée sur le coffre de clés par les opérations répétées de type wrap/unwrap. Par exemple, étant donné que toutes les bases de données associées à un serveur logique utilisent le même protecteur TDE, un basculement de ce serveur déclenchera autant d’opérations de clé par rapport au coffre qu’il y a de bases de données sur le serveur. D’après notre expérience et les [limites de service de coffre de clés](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentées, nous vous recommandons d’associer au maximum 500 bases de données Standard ou 200 bases de données Premium avec un coffre de clés Azure dans un même abonnement, afin de garantir une disponibilité toujours aussi élevée lors de l’accès au protecteur TDE dans le coffre. 
 - Recommandé : Conservez une copie du protecteur TDE en local.  Pour ce faire, vous devez avoir un appareil HSM pour créer un protecteur TDE en local et un système de dépôt de clés pour stocker une copie locale du protecteur TDE.
 
 
@@ -86,7 +85,8 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 - Déposez la clé dans un système de dépôt de clés.  
 - Importez le fichier de clé de chiffrement (.pfx, .byok ou .backup) dans Azure Key Vault. 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >Pour des tests, il est possible de créer une clé avec Azure Key Vault. Toutefois, cette clé ne peut pas être déposée, car la clé privée ne peut jamais quitter le coffre de clés.  Sauvegardez et déposez toujours les clés utilisées pour chiffrer les données de production, car la perte de la clé (suppression accidentelle dans le coffre de clés, expiration, etc.) entraîne la perte définitive des données.
     >
     
@@ -148,3 +148,5 @@ Pour corriger cela, exécutez l’applet de commande [Get-AzureRmSqlServerKeyVau
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 Pour en savoir plus sur la récupération d’une sauvegarde pour SQL Database, consultez [Récupérer une base de données Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Pour en savoir plus sur la récupération d’une sauvegarde pour SQL Data Warehouse, consultez [Récupérer un entrepôt de données Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
+
+Considération supplémentaire relative aux fichiers journaux sauvegardés : Les fichiers journaux sauvegardés restent chiffrés avec le Chiffreur TDE d’origine, même si celui-ci a subi une permutation et que la base de données utilise maintenant un nouveau protecteur TDE.  Au moment de la restauration, les deux clés seront nécessaires pour restaurer la base de données.  Si le fichier journal utilise un protecteur TDE stocké dans Azure Key Vault, cette clé sera nécessaire au moment de la restauration, même si la base de données a entre temps été modifiée de façon à utiliser le chiffrement transparent des données géré par le service.   

@@ -1,32 +1,58 @@
 ---
 title: Journal des modifications de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Ce journal des modifications concerne [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Ce journal des modification est pour [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT pour Visual Studio 2017 (15.5.2)
+Numéro de build : 14.0.16156.0
+  
+### <a name="whats-new"></a>Nouveautés
+
+**SSIS**
+1.  Correction d’un problème qui entraînait l’échec de la migration des projets SSIS 2008 quand SSAS et SSIS étaient tous deux installés sur la même instance de Visual Studio 2017.
+2.  Correction d’un problème qui faisait que les projets Rdlc ne pouvaient pas être générés quand le Concepteur de rapports Rdlc et SSIS étaient installés sur la même instance de Visual Studio 2017.
+3.  Correction d’un problème empêchant la mise à jour de la couleur d’annotation.
+4.  Correction d’un problème qui faisait que certaines chaînes dans l’éditeur du gestionnaire de connexions Hadoop étaient tronquées dans d’autres langues.
+5.  Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans l’éditeur du gestionnaire de connexions OData.
+6.  Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans la fenêtre de l’Assistant Importation de projet d’Integration Services.
+7.  Correction d’un problème qui faisait que le titre dans la fenêtre d’informations de l’outil SSIS était tronqué.
+8.  Correction d’un problème qui faisait que certaines chaînes étaient tronquées dans la fenêtre de l’Assistant Déploiement d’Integration Services. 
+
+**Programme d’installation**
+- Correction d’un problème qui faisait que parfois, le téléchargement de charge utile échouait avec l’erreur « Le système ne trouve pas le fichier spécifié (0x80070002) »  
+
+### <a name="known-issues"></a>Problèmes connus
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT pour Visual Studio 2017 (15.5.1)
 Numéro de build : 14.0.16148.0
