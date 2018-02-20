@@ -1,17 +1,17 @@
 # [Vue d’ensemble](sql-server-database-engine-overview.md) 
 
-# [Nouveautés - SQL Server 2017](whats-new-in-sql-server-2017.md)  
-# [Nouveautés - SQL Server 2016](whats-new-in-sql-server-2016.md) 
+# [Nouveautés - SQL Server 2017](whats-new-in-sql-server-2017.md)
+# [Nouveautés - SQL Server 2016](whats-new-in-sql-server-2016.md)
 
 
 # Notes de publication
 ## [Compatibilité descendante](sql-server-database-engine-backward-compatibility.md)
-## [Fonctionnalités déconseillées dans SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)  
-## [Déconseillé dans SQL Server 2016](deprecated-database-engine-features-in-sql-server-2016.md)  
-## [Fonctionnalités supprimées dans SQL Server 2016](discontinued-database-engine-functionality-in-sql-server-2016.md)  
-## [Modifications avec rupture dans SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)  
-## [Modifications avec rupture dans SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-## [nouvelles articles et articles mises à jour](new-updated-database-engine.md)
+## [Déprécié dans SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
+## [Déprécié dans SQL Server 2016](deprecated-database-engine-features-in-sql-server-2016.md)
+## [Fonctionnalités supprimées dans SQL Server 2016](discontinued-database-engine-functionality-in-sql-server-2016.md)
+## [Modifications avec rupture dans SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+## [Modifications avec rupture dans SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
+## [Articles nouveaux et mis à jour](new-updated-database-engine.md)
 
 # [Installer](../database-engine/install-windows/installation-for-sql-server-2016.md)
 # [Configurer](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)

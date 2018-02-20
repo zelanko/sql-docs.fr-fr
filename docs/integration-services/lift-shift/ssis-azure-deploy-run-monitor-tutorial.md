@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Déployer, exécuter et surveiller un package SSIS sur Azure
 Ce didacticiel vous montre comment déployer un projet SQL Server Integration Services sur la base de données de catalogues SSISDB dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure SSIS et comment surveiller le package en cours d’exécution.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 
 Avant de commencer, vérifiez que vous avez la version 17.2 ou ultérieure de SQL Server Management Studio. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -89,7 +89,9 @@ Utilisez SQL Server Management Studio pour vous connecter au catalogue SSIS sur 
 
 ## <a name="deploy-a-project-with-powershell"></a>Déployer un projet avec PowerShell
 
-Pour déployer un projet avec PowerShell sur SSISDB sur Azure SQL Database, adaptez le script suivant à vos besoins :
+Pour déployer un projet avec PowerShell sur SSISDB sur Azure SQL Database, adaptez le script suivant à vos besoins. Le script énumère les dossiers enfants sous `$ProjectFilePath` et les projets de chaque dossier enfant, puis crée les mêmes dossiers dans SSISDB et déploie les projets dans ces dossiers.
+
+Ce script nécessite l’installation de SQL Server Data Tools version 17.x ou de SQL Server Management Studio sur l’ordinateur sur lequel vous exécutez le script.
 
 ```powershell
 # Variables
