@@ -25,21 +25,21 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article décrit les principales fonctionnalités et les services disponibles pour SQL Server 2017 est en cours d’exécution sur Linux.
+Cet article décrit les principales fonctionnalités et les services disponibles pour SQL Server 2017 s’exécutant sur Linux.
 
 > [!NOTE]
-> Outre ces fonctionnalités dans cet article, mises à jour cumulatives publiés à intervalles réguliers après la version GA. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version CU, consultez [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Pour les téléchargements de packages et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
+> Outre ces fonctionnalités dans cet article, les mises à jour cumulatives sont publiées à intervalles réguliers après la version GA. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version CU, consultez [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Pour les téléchargements de packages et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Moteur de base de données SQL Server
 
-- Activer les fonctionnalités principales de moteur de base de données SQL Server.
+- Fonctionnalités principales de moteur de base de données SQL Server activées.
 - Prise en charge des chemins d’accès de Linux natifs.
 - Prise en charge IPv6.
 - Prise en charge pour les fichiers de base de données sur NFS.
-- Activé [Transparent de sécurité de la couche](sql-server-linux-encrypted-connections.md) chiffrement (TLS).
-- Activé [l’authentification Active Directory](sql-server-linux-active-directory-authentication.md).
+- Chiffrement [Transparent Layer Security ](sql-server-linux-encrypted-connections.md) (TLS) activé.
+- [Authentification Active Directory](sql-server-linux-active-directory-authentication.md) activée.
 - [Fonctionnalité de groupes de disponibilité](sql-server-linux-availability-group-overview.md) pour la haute disponibilité.
-- [Recherche en texte intégral](sql-server-linux-setup-full-text-search.md) prend en charge.
+- Prise en charge de la [Recherche de texte intégral](sql-server-linux-setup-full-text-search.md)
 
 ## <a name="sql-server-agent"></a>Agent SQL Server
 
@@ -54,11 +54,11 @@ Cet article décrit les principales fonctionnalités et les services disponibles
 
 ## <a name="other-improvements"></a>Autres améliorations
 
-- Outil de configuration de ligne de commande, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
+- Outil de configuration en ligne de commande, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - Prise en charge de l’installation sans assistance avec [variables d’environnement](sql-server-linux-configure-environment-variables.md).
-- Inter-plateformes [extension mssql-server de Visual Studio Code](sql-server-linux-develop-use-vscode.md).
-- Générateur de script d’inter-plateformes, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
-- Moniteur de vue de gestion dynamique (DMV) inter-plateformes, [outil DBFS](https://github.com/Microsoft/dbfs).
+- [Extension mssql-server de Visual Studio Code](sql-server-linux-develop-use-vscode.md) multiplateforme.
+- Générateur de script multiplateforme, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
+- Moniteur de vue de gestion dynamique (DMV) multiplateforme, [outil DBFS](https://github.com/Microsoft/dbfs).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -70,7 +70,7 @@ Pour installer SQL Server sur Linux, utilisez un des didacticiels suivants :
 - [Exécutez sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-Pour d’autres informations concernant SQL Server sur Linux, consultez le [vue d’ensemble](sql-server-linux-overview.md). Pour les téléchargements de packages et la liste des fonctionnalités prises en charge et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
+Pour d’autres informations concernant SQL Server sur Linux, consultez le [vue d’ensemble](sql-server-linux-overview.md). Pour les téléchargements de packages et la liste des fonctionnalités prises en charge et les problèmes connus, consultez les [notes de publication](sql-server-linux-release-notes.md).
 
 Pour connaître les autres améliorations introduites dans SQL Server 2017, consultez [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
