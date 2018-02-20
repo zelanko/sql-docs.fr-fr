@@ -81,15 +81,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Ent
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **PATH** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **PATH** dans les **~/.bash_profile** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **chemin d’accès** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -126,15 +126,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **PATH** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **PATH** dans les **~/.bash_profile** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **chemin d’accès** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -165,15 +165,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux 
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **PATH** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **PATH** dans les **~/.bash_profile** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **chemin d’accès** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
