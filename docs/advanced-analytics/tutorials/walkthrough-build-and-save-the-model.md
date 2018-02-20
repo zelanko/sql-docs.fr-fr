@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Générer un modèle R et l’enregistrer dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ Le modèle que vous créez est un classifieur binaire qui prédit si le pilote t
 
      *Résultats*
 
-     *Résultats de la régression logistique pour : pourboires ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Données : featureDataSource (Source de données RxSqlServerData)*
+     *Résultats de la régression logistique pour : pourboires ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Données : featureDataSource (Source de données RxSqlServerData)*
      <br/>*Dependent variable(s) : incliné*
      <br/>*Nombre total de variables indépendantes : 5*
      <br/>*Nombre d’observations valides : 17068*
@@ -210,7 +208,7 @@ Dans cette section, vous découvrez comment conserver le modèle et comment l’
     L’enregistrement d’un modèle dans une table nécessite uniquement une instruction INSERT. Toutefois, il est plus facile lorsque encapsulée dans une procédure stockée, tel que _PersistModel_.
 
     > [!NOTE]
-    > Si vous obtenez une erreur tels que « l’autorisation EXECUTE a été refusée sur l’objet PersistModel », assurez-vous que votre nom d’utilisateur a l’autorisation. Vous pouvez accorder des autorisations explicites sur simplement la procédure stockée en exécutant une instruction T-SQL comme suit :`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > Si vous obtenez une erreur tels que « l’autorisation EXECUTE a été refusée sur l’objet PersistModel », assurez-vous que votre nom d’utilisateur a l’autorisation. Vous pouvez accorder des autorisations explicites sur simplement la procédure stockée en exécutant une instruction T-SQL comme suit : `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. Une fois que vous avez créé un modèle et enregistré dans une base de données, vous pouvez l’appeler directement à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] de code, à l’aide de la procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 

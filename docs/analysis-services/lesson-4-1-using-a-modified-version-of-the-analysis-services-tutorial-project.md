@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Leçon 4-1-à l’aide d’une Version modifiée du projet didacticiel Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ Avant de poursuivre votre apprentissage dans le didacticiel, vous devez téléch
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Téléchargement et extraction du fichier projet  
   
-1.  [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le téléchargement **Didacticiel Analysis Services SQL Server 2012** .  
+1.  [Cliquez ici](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le **adventure-works-multidimensionnel-didacticiel-projects.zip** télécharger.  
   
-2.  Cliquez sur **Didacticiel Analysis Services SQL Server 2012** pour télécharger le package qui contient les projets pour ce didacticiel.  
+2.  Cliquez sur **adventure-works-multidimensionnel-didacticiel-projects.zip** pour télécharger le package qui contient les projets de ce didacticiel.  
   
     Par défaut, le fichier .zip est enregistré dans le dossier Téléchargements. Vous devez déplacer le fichier .zip vers un emplacement dont le chemin d'accès est plus court (par exemple, créez un dossier C:\Tutorials pour stocker les fichiers).  Vous pouvez ensuite extraire les fichiers contenus dans le fichier .zip. Si vous essayez de décompresser les fichiers dans le dossier Téléchargements, dont le chemin d'accès est long, vous n'obtiendrez que la leçon 1.  
   
 3.  Créez un sous-dossier au niveau ou proche du lecteur racine, par exemple, C:\Tutorial.  
   
-4.  Déplacez le fichier **Analysis Services Tutorial SQL Server 2012.zip** dans le sous-dossier.  
+4.  Déplacer le **adventure-works-multidimensionnel-didacticiel-projects.zip** fichier dans le sous-dossier.  
   
 5.  Cliquez avec le bouton droit sur le fichier et sélectionnez **Extraire tout**.  
   

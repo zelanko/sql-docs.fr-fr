@@ -1,7 +1,7 @@
 ---
 title: "Installer les exemples de données et les projets | Documents Microsoft"
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -19,43 +19,45 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: af6002ed27aabacf1b9e9a08cf3e659559daf5f5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ab7162604cfd201a541f6ea3b053a7ed799e5e87
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installer les exemples de données et les projets multidimensionnels 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
-Utilisez les instructions et les liens fournis dans cette rubrique pour installer les fichiers de données et de projet utilisés dans le didacticiel Analysis Services.  Si vous effectuez le didacticiel multidimensionnel, vous devez uniquement installer les exemples de projets si vous souhaitez comparer un projet entièrement terminé avec celui que vous créez dans le didacticiel.
+Utilisez les instructions et les liens fournis dans cet article pour installer les fichiers de données et de projet utilisés dans le didacticiel Analysis Services. 
   
-## <a name="step-1-install-sql-server-software"></a>Étape 1 : installer SQL Server  
+## <a name="step-1-install-prerequisites"></a>Étape 1 : Conditions d’installation 
 Les leçons du didacticiel supposent que vous avez installé les logiciels suivants. Vous pouvez installer toutes les fonctionnalités sur un seul ordinateur. Pour installer ces fonctionnalités, exécutez le programme d'installation de SQL Server et sélectionnez-les dans la page Sélection de fonctionnalités.  
   
--   Moteur de base de données  
+-   Moteur de base de données SQL Server  
   
--   Analysis Services  
+-   SQL Server Analysis Services (SSAS) 
   
-    Analysis Services est disponible dans les éditions suivantes uniquement : Evaluation, Enterprise, Business Intelligence, Standard.  
+    Analysis Services est disponible dans les éditions suivantes uniquement : Evaluation, Enterprise, Business Intelligence, Standard. Les modèles multidimensionnels ne sont pas pris en charge dans Azure Analysis Services.
   
-    Par défaut, Analysis Services 2016 et versions ultérieures est installé comme instance tabulaire, vous pouvez remplacer en choisissant Mode serveur multidimensionnel dans le serveur de page de configuration de l’Assistant Installation. Si vous souhaitez exécuter les deux modes serveur, réexécutez le programme d'installation de SQL Server sur le même ordinateur pour installer une seconde instance d'Analysis Services dans l'autre mode.  
+    Par défaut, Analysis Services 2016 et versions ultérieures est installé comme instance tabulaire, vous pouvez remplacer en choisissant Mode serveur multidimensionnel dans le serveur de page de configuration de l’Assistant Installation.
   
--   [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Étape 2 : Télécharger et installer les développeurs et les outils de gestion
+SQL Server Data Tools (SSDT) pour Visual Studio est téléchargé et installé séparément à partir d’autres fonctionnalités SQL Server. Les concepteurs et les modèles de projet utilisés pour créer des rapports et modèles BI sont inclus dans SSDT pour Visual Studio 2015 ou en tant que [les packages Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) pour Visual Studio 2017.  
   
+[Téléchargez SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   
+
+SQL Server Management Studio (SSMS) est téléchargé et installé séparément à partir d’autres fonctionnalités SQL Server.  
+
+[Télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+
 Éventuellement, installez Excel pour parcourir vos données multidimensionnelles pendant que vous suivez le didacticiel. L’installation d’Excel active la fonctionnalité **Analyser dans Excel** qui démarre Excel à l’aide d’une liste de champs de tableau croisé dynamique qui est connectée au cube que vous créez. Il est recommandé d'utiliser Excel pour parcourir les données, car vous pouvez rapidement créer un rapport de tableau croisé dynamique qui vous permet d'interagir avec les données.  
   
 Sinon, vous pouvez parcourir les données à l'aide du concepteur de requêtes MDX intégré dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Le concepteur de requêtes retourne les mêmes données, sauf si les données sont présentées sous forme d'un ensemble de lignes à deux dimensions.  
   
-## <a name="step-2-download-sql-server-data-tools-for-visual-studio"></a>Étape 2 : Télécharger SQL Server Data Tools pour Visual Studio 
-Dans cette version, SQL Server Data Tools est téléchargé et installé séparément des autres fonctionnalités SQL Server. Les concepteurs et les modèles de projet utilisés pour créer des rapports et modèles BI sont inclus dans SSDT pour Visual Studio 2015 ou en tant que [les packages Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) pour Visual Studio 2017.  
+## <a name="step-3-install-databases"></a>Étape 3 : Installation de bases de données  
+Un modèle multidimensionnel Analysis Services utilise les données transactionnelles que vous importez d'un système de gestion de base de données relationnelle. Pour les besoins de ce didacticiel, vous utilisez la base de données relationnelle suivante comme source de données.  
   
--   [Téléchargez SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542). Le fichier est enregistré dans le dossier Téléchargements. Exécutez le programme d'installation pour installer l'outil.  
-  
-## <a name="step-3-install-databases"></a>Étape 3 : installer les bases de données  
-Un modèle multidimensionnel Analysis Services utilise les données transactionnelles que vous importez d'un système de gestion de base de données relationnelle. Pour les besoins de ce didacticiel, vous allez utiliser la base de données relationnelle suivante comme source de données.  
-  
--   **AdventureWorksDW 2012 ou version ultérieure** – il s’agit d’un entrepôt de données relationnelles qui s’exécute sur une instance du moteur de base de données. Il fournit les données d'origine qui seront utilisées par les bases de données Analysis Services et les projets que vous générez et déployez tout au long du didacticiel.  
+-   **AdventureWorksDW2012 ou version ultérieure** – il s’agit d’un entrepôt de données relationnelles qui s’exécute sur une instance du moteur de base de données. Il fournit les données d’origine utilisées par les bases de données Analysis Services et les projets que vous générez et déployez tout au long du didacticiel. Le didacticiel suppose que vous utilisez AdventureWorksDW2012, toutefois, les versions ultérieures fonctionnent.
   
     Vous pouvez utiliser cette base de données exemple avec [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et versions ultérieures. En général, vous devez utiliser la version de base de données exemple correspondant à votre version de moteur de base de données.
   
@@ -69,8 +71,8 @@ Pour installer la base de données, procédez comme suit :
   
 4.  Restaurez la base de données.  
   
-## <a name="step-4-grant-database-permissions"></a>Étape 4 : octroyer des autorisations relatives à la base de données  
-Les exemples de projets utilisent les paramètres d'emprunt d'identité de source de données qui spécifient le contexte de sécurité dans lequel les données sont importées ou traitées. Par défaut, les paramètres d'emprunt d'identité spécifient le compte de service Analysis Services pour accéder aux données. Pour utiliser ce paramètre par défaut, vous devez vous assurer que le compte de service sous lequel s’exécute Analysis Services dispose des autorisations de lecteur de données sur le **AdventureWorksDW2014** base de données.  
+## <a name="step-4-grant-database-permissions"></a>Étape 4 : Accorder des autorisations de base de données  
+Les exemples de projets utilisent les paramètres d'emprunt d'identité de source de données qui spécifient le contexte de sécurité dans lequel les données sont importées ou traitées. Par défaut, les paramètres d'emprunt d'identité spécifient le compte de service Analysis Services pour accéder aux données. Pour utiliser ce paramètre par défaut, vous devez vous assurer que le compte de service sous lequel s’exécute Analysis Services dispose des autorisations de lecteur de données sur le **AdventureWorksDW** base de données.  
   
 > [!NOTE]  
 > À des fins de formation, il est recommandé d'utiliser l'option d'emprunt d'identité du compte de service par défaut et d'accorder des autorisations de lecteur de données au compte de service dans SQL Server. Bien que d'autres options d'emprunt d'identité soient disponibles, toutes ne sont pas adaptées aux opérations de traitement. En particulier, l'option permettant d'utiliser les informations d'identification de l'utilisateur actuel n'est pas prise en charge pour le traitement.  
@@ -85,27 +87,27 @@ Les exemples de projets utilisent les paramètres d'emprunt d'identité de sourc
   
 5.  Cliquez sur **Mappage de l’utilisateur**.  
   
-6.  Activez la case à cocher en regard du **AdventureWorksDW2014** base de données. L’appartenance au rôle doit automatiquement inclure **db_datareader** et **public**. Cliquez sur **OK** pour accepter les valeurs par défaut.  
+6.  Activez la case à cocher en regard du **AdventureWorksDW** base de données. L’appartenance au rôle doit automatiquement inclure **db_datareader** et **public**. Cliquez sur **OK** pour accepter les valeurs par défaut.  
   
-## <a name="step-5-install-projects"></a>Étape 5 : installer les projets  
+## <a name="step-5-install-projects"></a>Étape 5 : Projets d’installation  
 
-Les exemples de projets ne sont nécessaires à comparer à ce que vous créez dans le didacticiel de modélisation multidimensionnelle. Ils ne sont pas nécessaires pour effectuer ce didacticiel.
+Le didacticiel inclut des exemples de projets afin de pouvoir comparer les résultats par rapport à un projet achevé, ou démarrer une leçon qui est plus loin dans la séquence.  
   
-1.  Téléchargez le [adventure-works-multidimensionnel-modèle-project.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) à partir de l’exemple Adventure Works pour la page des exemples Analysis Services sur GitHub.  
+1.  Téléchargez le [adventure-works-multidimensionnel-didacticiel-projects.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) à partir de l’exemple Adventure Works pour la page des exemples Analysis Services sur GitHub.  
   
-    Ce projet fonctionne pour SSAS 2014 et versions ultérieures.  
+    Les projets de didacticiel fonctionnent pour [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et versions ultérieures.  
   
 2.  Déplacez le fichier .zip vers un dossier immédiatement en dessous du lecteur racine (par exemple, C:\Didacticiel). Cette étape diminue la probabilité de survenue de l'erreur « Chemin d'accès trop long » qui se produit parfois si vous tentez de décompresser les fichiers dans le dossier Téléchargements.  
   
-3.  Décompressez les exemples de projets : cliquez avec le bouton droit sur le fichier et sélectionnez **Extraire tout**. 
+3.  Décompressez les exemples de projets : cliquez avec le bouton droit sur le fichier et sélectionnez **Extraire tout**. Après avoir extrait les fichiers, vous devez disposer des dossiers leçon 1, 2, 3, 5, 6, 7, 8, 9, 10 terminé et le début de la leçon 4. 
   
 4.  Supprimez les autorisations de lecture seule sur ces fichiers. Cliquez sur le dossier parent, sélectionnez **propriétés**et désactivez la case à cocher pour **en lecture seule**. Cliquez sur **OK**. Appliquez les modifications à ce dossier, ces sous-dossiers et fichiers.  
 
-5.  Ouvrez le fichier solution (.sln) dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+5.  Ouvrez le fichier solution (.sln) correspondant à la leçon que vous êtes dans. Par exemple, dans le dossier nommé « Leçon 1 Terminée », vous ouvririez le fichier Analysis Services Tutorial.sln.  
   
-6.  Déployez la solution pour vérifier que les autorisations relatives à la base de données et les informations d'emplacement du serveur sont configurées correctement.  
+6.  Déployer la solution pour vérifier que les autorisations de base de données et les informations d’emplacement de serveur sont configurés correctement.  
   
-    Si Analysis Services et le moteur de base de données sont installés comme instance par défaut (MSSQLServer) et que tous les logiciels s’exécutent sur le même ordinateur, cliquez sur **Déployer la solution** pour créer et déployer l’exemple de projet sur l’instance Analysis Services locale. Au cours du déploiement, donnée ne sera traitée (ou importées) à partir de la **AdventureWorksDW** base de données sur l’instance du moteur de base de données local. Une nouvelle base de données Analysis Services est créée sur l'instance Analysis Services qui contient les données récupérées du moteur de base de données.  
+    Si Analysis Services et le moteur de base de données sont installés comme instance par défaut (MSSQLServer) et que tous les logiciels s’exécutent sur le même ordinateur, cliquez sur **Déployer la solution** pour créer et déployer l’exemple de projet sur l’instance Analysis Services locale. Pendant le déploiement, données sont traitées (ou importées) à partir de la **AdventureWorksDW** base de données sur l’instance du moteur de base de données local. Une base de données Analysis Services est créé sur l’instance d’Analysis Services qui contient les données récupérées à partir du moteur de base de données.  
   
     Si vous rencontrez des erreurs, examinez les étapes précédentes relatives à la configuration des autorisations relatives à la base de données. En outre, vous devrez peut-être modifier les noms de serveurs. Le nom de serveur par défaut est localhost. Si vos serveurs sont installés sur des ordinateurs distants ou en tant qu'instances nommées, vous devez remplacer la valeur par défaut de façon à utiliser un nom de serveur qui est valide pour votre installation. En outre, si les serveurs se trouvent sur des ordinateurs distants, vous devrez peut-être configurer le Pare-feu Windows pour autoriser l'accès aux serveurs.  
   

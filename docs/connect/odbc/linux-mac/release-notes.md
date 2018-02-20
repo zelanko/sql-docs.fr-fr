@@ -16,28 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notes de publication pour le pilote Microsoft ODBC pour SQL Server sur Linux et Mac OS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Nouveautés le [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Linux et Mac OS
 
-SQL Azure géré Instance (Extended aperçu privé). Notez qu’il existe plusieurs différences lors de l’utilisation d’une Instance gérée :
--   FILESTREAM n’est pas pris en charge. 
--   Accès de système de fichiers local n’est pas pris en charge, mais nécessaires pour les opérations que tracefiles 
--   Créer des UDT à partir du chemin d’accès local non prise en charge. 
--   Authentification intégrée de Windows non prise en charge. 
--   Non pris en charge de DTC 
--   compte 'sa' n’est pas présent (compte par défaut est appelé « cloudSA »)
--   Erreur de jeton TDS (0xAA) renvoie le nom de serveur incorrect
--   Caractères spéciaux dans le nom de la base de données ne sont pas pris en charge. 
--   MODIFIER le nom de ALTER DATABASE [dbname1] = [dbname2] n’est pas pris en charge.
--   Les messages d’erreur sont toujours affichées en anglais, quel que soit le langage de paramètres (identique à Azure) 
+**Nouvelle prise en charge les distributions**: macOS High Sierra et Ubuntu 17.10 
+
+**Améliorations des performances**: supérieur à 10 x amélioration des performances lorsque le pilote convertit vers/depuis le format UTF-8/16.
+
+**Fonctionnalités ajoutées**:
+
+Always Encrypted prise en charge des API BCP
+
+Nouvel attribut de chaîne de connexion UseFMTOnly conduit le pilote à utiliser les métadonnées héritées dans les cas spéciaux exigeant des tables temporaires.
+
+Prise en charge pour l’Instance gérée de SQL Azure (version préliminaire privée étendu). 
+> [!NOTE]
+> Il existe plusieurs différences lors de l’utilisation d’une Instance gérée :
+> -   FILESTREAM n’est pas pris en charge. 
+> -   Accès de système de fichiers local n’est pas pris en charge, mais nécessaires pour les opérations que tracefiles 
+> -   Créer des UDT local chemin d’accès n’est pas pris en charge. 
+> -   L’authentification Windows intégrée n’est pas pris en charge. 
+> -   DTC n’est pas pris en charge. 
+> -   compte 'sa' n’est pas présent (compte par défaut est appelé « cloudSA »)
+> -   Erreur de jeton TDS (0xAA) renvoie le nom de serveur incorrect
+> -   Caractères spéciaux dans le nom de la base de données ne sont pas pris en charge. 
+> -   MODIFIER le nom de ALTER DATABASE [dbname1] = [dbname2] n’est pas pris en charge.
+> -   Les messages d’erreur sont toujours affichées en anglais, quel que soit le langage de paramètres (identique à Azure) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Nouveautés le [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Linux et Mac OS  
 

@@ -2,7 +2,7 @@
 title: "Notes de publication Microsoft SQL Studio Operations (version préliminaire) | Documents Microsoft"
 description: "Notes de publication Microsoft SQL Studio Operations (version préliminaire)"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL opérations Studio (version préliminaire)
 
-**[Télécharger la version préliminaire de janvier publique](download.md)**
+**[Télécharger la version préliminaire publique de février](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>Février 2018 (février version préliminaire publique)
+
+date de publication : le 15 février 2018  
+version : 0.26.7
+
+Le *Public Preview de février* inclut des suggestions de fonctionnalités et les correctifs de bogues de priorité élevée. Cette version inclut les améliorations suivantes :
+
+- Présentation d’Installation de la mise à jour automatique, qui fournit une notification lorsqu’une nouvelle version est disponible en téléchargement 
+- La boîte de dialogue de connexion 'Database' champ est désormais une liste déroulante remplie dynamiquement qui contient la liste des bases de données rempli à partir du serveur spécifié.
+- Corriger [émettre 6](https://github.com/Microsoft/sqlopsstudio/issues/6): conserver la connexion et la base de données sélectionnée lors de l’ouverture de nouveaux onglets de requête.
+- Corriger [numéro 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Nom_serveur' et 'Nom de la base de données' - peut ces zones de liste déroulante au lieu de zones de texte ?
+- Corriger [émettre 549](https://github.com/Microsoft/sqlopsstudio/issues/549): installation sans assistance en mode silencieux/très entraîne l’application qui ouvre après l’installation.
+- Corriger [émettre 481](https://github.com/Microsoft/sqlopsstudio/issues/481): ajouter l’option de « Vérifier les mises à jour ».
+- Éditeur SQL colorisation et la saisie semi-automatique des correctifs :
+   - Corriger [émettre 584](https://github.com/Microsoft/sqlopsstudio/issues/584): mot clé « Complet » pas mis en surbrillance par IntelliSense.
+   - Corriger [émettre 345](https://github.com/Microsoft/sqlopsstudio/issues/345): fonctions SQL de colorisation dans l’éditeur.
+   - Corriger [émettre 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] dernières «] » affiche la couleur verte.
+   - Corriger [émettre 225](https://github.com/Microsoft/sqlopsstudio/issues/225): incompatibilité de couleur de mot clé.
+   - Corriger [émettre 60](https://github.com/Microsoft/sqlopsstudio/issues/60): sql non valide couleur mise en évidence lors de l’utilisation d’une table temporaire dans la clause from.
+- Introduire des API d’extensibilité de connexion.
+- Intégration de 1.19 de l’éditeur de Code Visual Studio.
+- Mettre à jour les composants JustinPealing/html-plan de requête utilisent plusieurs améliorations de l’Observateur de Plan de requête.
+
 
 ## <a name="january-2018-january-public-preview"></a>Janvier 2018 (janvier version préliminaire publique)
 
