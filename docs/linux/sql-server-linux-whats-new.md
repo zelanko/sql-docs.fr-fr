@@ -17,18 +17,18 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
 ms.openlocfilehash: cc0b40ba2cac9c14d6d4259c7ed35769c7114dbe
 ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/13/2018
 ---
-# <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de 2017 du serveur SQL sur Linux
+# <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de 2017 du serveur SQL sous Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article décrit les principales fonctionnalités et les services disponibles pour SQL Server 2017 s’exécutant sur Linux.
 
 > [!NOTE]
-> Outre ces fonctionnalités dans cet article, les mises à jour cumulatives sont publiées à intervalles réguliers après la version GA. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version CU, consultez [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Pour les téléchargements de packages et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
+> Outre les fonctionnalités mentionnées dans cet article, les mises à jour cumulatives sont publiées à intervalles réguliers après la version GA. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version CU, consultez [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Pour les téléchargements de packages et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Moteur de base de données SQL Server
 
@@ -43,10 +43,10 @@ Cet article décrit les principales fonctionnalités et les services disponibles
 
 ## <a name="sql-server-agent"></a>Agent SQL Server
 
-- Activé [l’Agent SQL Server](sql-server-linux-setup-sql-agent.md) prend en charge pour les tâches suivantes :
+- [L’Agent SQL Server](sql-server-linux-setup-sql-agent.md) prend en charge les tâches suivantes :
   - [Transact-SQL jobs](sql-server-linux-run-sql-server-agent-job.md)
   - [Messagerie de base de données](sql-server-linux-db-mail-sql-agent.md)
-  - [Envoi de journaux](sql-server-linux-use-log-shipping.md)
+  - [Envoi des journaux de transaction](sql-server-linux-use-log-shipping.md)
 
 ## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
 
@@ -70,7 +70,7 @@ Pour installer SQL Server sur Linux, utilisez un des didacticiels suivants :
 - [Exécutez sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-Pour d’autres informations concernant SQL Server sur Linux, consultez le [vue d’ensemble](sql-server-linux-overview.md). Pour les téléchargements de packages et la liste des fonctionnalités prises en charge et les problèmes connus, consultez les [notes de publication](sql-server-linux-release-notes.md).
+Pour d’autres informations concernant SQL Server sur Linux, consultez la [vue d’ensemble](sql-server-linux-overview.md). Pour les téléchargements de packages et la liste des fonctionnalités prises en charge et les problèmes connus, consultez les [notes de publication](sql-server-linux-release-notes.md).
 
 Pour connaître les autres améliorations introduites dans SQL Server 2017, consultez [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
