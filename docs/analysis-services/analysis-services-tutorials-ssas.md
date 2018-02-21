@@ -1,6 +1,6 @@
 ---
-title: Analysis Services (SSAS) de didacticiels | Documents Microsoft
-ms.date: 03/17/2017
+title: Didacticiels sur Analysis Services | Documents Microsoft
+ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,33 +19,37 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="analysis-services-tutorials-ssas"></a>Didacticiels sur Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+# <a name="analysis-services-tutorials"></a>Didacticiels sur Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Cette section contient des didacticiels pour SQL Server Analysis Services.  
+[Modélisation tabulaire (niveau de compatibilité 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
+S’applique à Azure Analysis Services et SQL Server 2017 Analysis Services et versions ultérieures. Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire Analysis Services de base de la société fictive, Adventure Works, à l’aide de SQL Server Data Tools (SSDT). 
+
+[Modélisation tabulaire (niveau de compatibilité 1200)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+S’applique à Azure Analysis Services et SQL Server 2016 Analysis Services et versions ultérieures. Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire Analysis Services de base de la société fictive, Adventure Works, à l’aide de SQL Server Data Tools (SSDT).  
   
-[Modélisation tabulaire &#40;Didacticiel Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
-Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire Analysis Services de base de la société fictive, Adventure Works, à l’aide de SQL Server Data Tools (SSDT).  
-  
-[Modélisation multidimensionnelle &#40; Didacticiel Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-Il vous apprend les compétences fondamentales et les concepts de modélisation multidimensionnelle dans SSDT. Lorsque vous avez terminé, vous disposerez d’une base de données du cube en fonction des données Adventure Works auxquelles vous pouvez accéder à partir d’Excel, Reporting Services ou toute autre application cliente qui se connecte à Analysis Services.  
+[Modélisation multidimensionnelle](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+S’applique à SQL Server 2012 Analysis Services et versions ultérieures. Les modèles multidimensionnels ne sont pas pris en charge sur Azure Analysis Services. Ce didacticiel inclut des leçons pour l’apprentissage des compétences fondamentales et des concepts de modélisation multidimensionnelle dans SSDT. Lorsque vous avez terminé, vous disposerez d’une base de données du cube en fonction des données Adventure Works auxquelles vous pouvez accéder à partir d’Excel, Reporting Services ou toute autre application cliente qui se connecte à Analysis Services.  
   
 [Exploration de données](../analysis-services/data-mining-tutorials-analysis-services.md)  
-Cet ensemble de didacticiels décrit la création de solutions d’exploration de données à l’aide d’Assistants et de visualisations intégrées.  
+S’applique à SQL Server 2012 Analysis Services et versions ultérieures. Les modèles multidimensionnels avec l’exploration de données ne sont pas pris en charge sur Azure Analysis Services. Cet ensemble de didacticiels décrit la création de solutions d’exploration de données à l’aide d’Assistants et de visualisations intégrées.  
   
   
-## <a name="additional-resources"></a>Ressources supplémentaires  
-[Exemples de base de données AdventureWorks sur Codeplex](http://go.microsoft.com/fwlink/?linkID=335807)  
-Ce lien permet d’accéder à la page de téléchargement de codeplex qui a les bases de données AdventureWorks.  
-  
-[Exemple de code AMO (Analysis Management Objects) pour créer des modèles tabulaires par programme](http://go.microsoft.com/fwlink/?linkID=221036)  
-Ce lien permet d’accéder à une page de téléchargement de Codeplex qui comporte les exemples AMO.  
+## <a name="samples"></a>Exemples 
+### <a name="project-and-completed-model-database-samples"></a>Projet et des exemples de base de données de modèle terminé
+Les bases de données modèle terminé et les projets de modélisation de données exemple sont disponibles dans [Adventure Works pour Analysis Services sur GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services).
+
+### <a name="code-samples"></a>Exemples de code
+Ouvrez les exemples de code source et les projets de communautés disponibles à l’adresse [référentiel Analysis Services sur GitHub](https://github.com/Microsoft/Analysis-Services).
+
+### <a name="sql-server-database-and-sql-server-data-warehouse-samples"></a>Exemples de base de données SQL Server et SQL Server Data Warehouse  
+Les bases de données exemple Adventure Works et Wide World Importers sont disponibles à [dépôt d’exemples SQL Server sur GitHub](https://github.com/Microsoft/sql-server-samples).
   
   
   
