@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>Groupes de disponibilité indépendants du domaine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ La création d’un groupe de disponibilité indépendant du domaine n’est pas
 1. [En suivant les instructions indiquées par ce lien](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), déployez un cluster de groupe de travail composé de tous les serveurs inclus dans le groupe de disponibilité. Vérifiez que le suffixe DNS commun est déjà configuré avant de configurer le cluster de groupe de travail.
 2. [Activez la fonctionnalité Groupes de disponibilité Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) sur chaque instance membre du groupe de disponibilité. Un redémarrage de chaque instance SQL Server est alors nécessaire.
 3. Chaque instance qui héberge le réplica principal a besoin d’une clé principale de base de données. Si aucune clé principale n’existe déjà, exécutez la commande suivante :
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. Sur l’instance correspondant au réplica principal, créez le certificat qui sera utilisé à la fois pour les connexions entrantes sur les réplicas secondaires et pour sécuriser le point de terminaison sur le réplica principal.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Sauvegardez le certificat. Vous pouvez également le sécuriser davantage avec une clé privée si vous le souhaitez. Cet exemple n’utilise pas de clé privée.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Répétez les étapes 4 et 5 pour créer et sauvegarder des certificats pour chaque réplica secondaire, à l’aide de noms appropriés pour les certificats, comme InstanceB_Cert.
 7. Sur le réplica principal, vous devez créer une connexion pour chaque réplica secondaire du groupe de disponibilité. Cette connexion reçoit l’autorisation de se connecter au point de terminaison utilisé par le groupe de disponibilité indépendant du domaine. Par exemple, pour un réplica nommé InstanceB :
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. Sur chaque réplica secondaire, créez une connexion pour le réplica principal. Cette connexion reçoit l’autorisation de se connecter au point de terminaison. Par exemple, sur un réplica nommé InstanceB :
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. Sur toutes les instances, créez un utilisateur pour chaque connexion créée. Il sera utilisé lors de la restauration des certificats. Par exemple, pour créer un utilisateur pour le réplica principal :
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. Pour tout réplica pouvant être un réplica principal, créez une connexion et un utilisateur sur tous les réplicas secondaires pertinents.
 11. Sur chaque instance, restaurez les certificats pour les autres instances pour lesquelles une connexion et un utilisateur ont été créés. Sur le réplica principal, restaurez tous les certificats de réplica secondaire. Sur chaque réplica secondaire, restaurez le certificat du réplica principal, mais aussi sur tout autre réplica pouvant être un réplica principal. Exemple :
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Créez le point de terminaison qui sera utilisé par le groupe de disponibilité sur chaque instance qui sera un réplica. Pour les groupes de disponibilité, le point de terminaison doit être de type DATABASE_MIRRORING. Le point de terminaison utilise le certificat créé à l’étape 4 pour cette instance à des fins d’authentification. Un exemple de syntaxe est indiqué ci-dessous pour créer un point de terminaison à l’aide d’un certificat. Utilisez la méthode de chiffrement appropriée et d’autres options adaptées à votre environnement. Pour plus d’informations sur les options disponibles, consultez [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Affectez des droits à chaque utilisateur créé sur cette instance à l’étape 9 pour leur permettre de se connecter au point de terminaison. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. Une fois que les certificats sous-jacents et la sécurité du point de terminaison sont configurés, créez le groupe de disponibilité à l’aide de la méthode de votre choix. Il est recommandé de manuellement sauvegarder, copier et restaurer la sauvegarde utilisée pour initialiser le réplica secondaire. Vous pouvez aussi utiliser [l’amorçage automatique](automatically-initialize-always-on-availability-group.md). L’utilisation de l’Assistant pour initialiser les réplicas secondaires implique d’utiliser des fichiers Server Message Block (SMB), ce qui risque de ne pas fonctionner quand vous utilisez un cluster de groupe de travail non joint à un domaine.
 15. Si vous créez un écouteur, vérifiez que son nom et son adresse IP sont inscrits dans DNS.
 
