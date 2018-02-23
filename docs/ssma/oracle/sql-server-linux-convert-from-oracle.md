@@ -29,11 +29,11 @@ Ce didacticiel utilise SQL Server Migration Assistant (SSMA) pour Oracle sur Win
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-- Une instance d’Oracle 12C (12.2.0.1.0) avec le **HR** schéma installé
+- Une instance d’Oracle 12C (12.2.0.1.0) avec le schéma **HR** installé
 - Une instance de l’utilisation de SQL Server sur Linux
 
 > [!NOTE]
-> Les mêmes étapes peuvent être utilisés pour cibler SQL Server sur Windows, mais vous devez sélectionner Windows dans le **migrer vers** paramètre du projet.
+> Les mêmes étapes peuvent être utilisées pour cibler SQL Server sur Windows, mais vous devez sélectionner Windows dans le paramètre **Migrer vers** du projet.
 
 ## <a name="download-and-install-ssma-for-oracle"></a>Télécharger et installer SSMA pour Oracle
 
@@ -46,25 +46,25 @@ Il existe plusieurs éditions de SQL Server Migration Assistant disponibles, en 
 
 Utilisez les étapes suivantes pour créer un projet SSMA :
 
-1. Ouvrez SSMA pour Oracle et choisissez **nouveau projet** à partir de la **fichier** menu.
+1. Ouvrez SSMA pour Oracle et choisissez **Nouveau projet** à partir de la **Fichier** menu.
 
 1. Nommez le projet.
 
-1. Choisissez « SQL Server 2017 (Linux) - version préliminaire » dans le **migrer vers** champ.
+1. Choisissez « SQL Server 2017 (Linux) - version préliminaire » dans le champ **Migrer vers**.
 
-SSMA pour Oracle n’utilise pas les exemples de schémas Oracle par défaut. Pour activer le schéma de ressources humaines, procédez comme suit :
+SSMA pour Oracle n’utilise pas les exemples de schémas Oracle par défaut. Pour activer le schéma HR, procédez comme suit :
 
-1. Dans SSMA, sélectionnez le **outils** menu.
+1. Dans SSMA, sélectionnez le menu **Outils**.
 
-1. Sélectionnez **les paramètres de projet par défaut**, puis choisissez **le chargement des objets système**.
+1. Sélectionnez **Paramètres de projet par défaut**, puis choisissez **Chargement des objets système**.
 
 1. Assurez-vous que **HR** est activée, puis choisissez **OK**.
 
 ## <a name="connect-to-oracle"></a>Connexion à Oracle
 
-Ensuite, connectez-vous SSMA pour Oracle.
+Ensuite, connectez SSMA à Oracle.
 
-1. Dans la barre d’outils, cliquez sur **se connecter à Oracle**.
+1. Dans la barre d’outils, cliquez sur **Se connecter à Oracle**.
 
 1. Entrez le nom du serveur, un port, un SID Oracle, un nom d’utilisateur et un mot de passe.
 
@@ -82,7 +82,7 @@ Utilisez les étapes suivantes pour générer un rapport de migration.
 
    ![Explorateur de métadonnées Oracle créer des rapports](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
-1. Une nouvelle fenêtre de navigateur s’ouvre avec un rapport qui répertorie tous les avertissements et erreurs associées à la conversion.
+1. Une nouvelle fenêtre de navigateur s’ouvre avec un rapport qui répertorie tous les avertissements et erreurs associés à la conversion.
 
    > [!NOTE]
    > Vous n’avez rien à faire avec cette liste pour ce didacticiel. Si vous effectuez ces étapes pour votre propre base de données Oracle, vous devez examiner le rapport pour résoudre les problèmes de conversion important pour votre base de données.
@@ -91,7 +91,7 @@ Utilisez les étapes suivantes pour générer un rapport de migration.
 
 ## <a name="connect-to-sql-server"></a>Se connecter à SQL Server
 
-Ensuite, choisissez **se connecter à SQL Server** et entrez les informations de connexion appropriées.  Si vous utilisez un nom de base de données qui n’est pas encore exister, SSMA pour Oracle crée pour vous.
+Ensuite, choisissez **se connecter à SQL Server** et entrez les informations de connexion appropriées. Si vous utilisez un nom de base de données qui n’existe pas encore, SSMA pour Oracle le crée pour vous.
 
 ![Se connecter à SQL Server](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
 
@@ -105,9 +105,9 @@ Avec le bouton droit sur **HR** dans **Explorateur de métadonnées Oracle**et s
 
 Ensuite, synchronisez votre base de données.
 
-1. Une fois la conversion terminée, utilisez le **l’Explorateur de métadonnées SQL Server** pour accéder à la base de données que vous avez créé à l’étape précédente.
+1. Une fois la conversion terminée, utilisez l’**Explorateur de métadonnées SQL Server** pour accéder à la base de données que vous avez créé à l’étape précédente.
 
-1. Avec le bouton droit sur votre base de données, sélectionnez **synchroniser avec la base de données**, puis cliquez sur OK.
+1. Avec le bouton droit sur votre base de données, sélectionnez **Synchroniser avec la base de données**, puis cliquez sur OK.
 
    ![Synchroniser avec la base de données](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
 
@@ -115,7 +115,7 @@ Ensuite, synchronisez votre base de données.
 
 L’étape finale est à migrer vos données.
 
-1. Dans le **Explorateur de métadonnées Oracle**, avec le bouton droit sur **HR**, puis sélectionnez **migrer des données**.
+1. Dans le **Explorateur de métadonnées Oracle**, avec le bouton droit sur **HR**, puis sélectionnez **Migrer des données**.
 
 1. L’étape de migration de données nécessite que vous entrez à nouveau vos informations d’identification Oracle et SQL Server.
 
