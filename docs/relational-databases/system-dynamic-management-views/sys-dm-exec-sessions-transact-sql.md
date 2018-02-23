@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Autorisations  
 Tous les utilisateurs peuvent voir leurs propres informations de session.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requiert `VIEW SERVER STATE` autorisation sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pour voir toutes les sessions sur le serveur.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requiert `VIEW DATABASE STATE` pour voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE`ne peut pas être accordée que dans les `master` base de données. 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requiert `VIEW DATABASE STATE` pour voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE` ne peut pas être accordée que dans les `master` base de données. 
   
   
 ## <a name="remarks"></a>Notes  
@@ -114,7 +114,7 @@ Tous les utilisateurs peuvent voir leurs propres informations de session.
  Si cette option n'est pas activée, ces colonnes retournent des valeurs NULL. Pour plus d’informations sur la façon de définir ce serveur option de configuration, consultez [conformité des critères communs activée l’Option de Configuration de serveur](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Les connexions d’administration sur la base de données SQL Azure seront affiche une ligne par session authentifiée, tandis que les connexions non administrateur seront affiche uniquement les informations relatives à leurs sessions d’utilisateur de base de données. 
+ Les connexions d’administration sur la base de données SQL Azure seront affiche une ligne par session authentifiée. Les sessions de « sa » qui s’affichent dans le jeu de résultats, ont aucun impact sur le quota de l’utilisateur pour les sessions. Les connexions non administrateurs ne voient que les informations relatives à leurs sessions d’utilisateur de base de données.
  
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  

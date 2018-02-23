@@ -1,7 +1,7 @@
 ---
-title: Notes de publication | Documents Microsoft
+title: Notes de publication (le pilote ODBC pour SQL Server) | Documents Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,11 +17,11 @@ caps.latest.revision:
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 44c73c4d632fd434fcd296dc6fc2cc70af26086c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="release-notes"></a>Notes de publication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,6 +50,7 @@ Prise en charge pour l’Instance gérée de SQL Azure (version préliminaire pr
 > -   MODIFIER le nom de ALTER DATABASE [dbname1] = [dbname2] n’est pas pris en charge.
 > -   Les messages d’erreur sont toujours affichées en anglais, quel que soit le langage de paramètres (identique à Azure) 
   
+
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Quelles sont les nouveautés le [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows  
  ODBC Driver 13.1 pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ajoute la prise en charge de [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) et [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) lorsqu’il est utilisé conjointement avec Microsoft SQL Server 2016.  Connexion de mise en pool des mots clés et attributs sont décrits dans [pilote prenant en charge le regroupement de connexions dans le pilote ODBC pour SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 

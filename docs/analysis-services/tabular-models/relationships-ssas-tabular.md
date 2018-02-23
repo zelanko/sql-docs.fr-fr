@@ -1,5 +1,5 @@
 ---
-title: Relations (SSAS tabulaire) | Documents Microsoft
+title: Relations | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
+# <a name="relationships"></a>Relations 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
   
  Lors de l'utilisation de l'Assistant Importation de table pour effectuer une importation depuis la même source de données, les relations qui existent déjà dans les tables (à la source de données) que vous choisissez d'importer seront recréées dans le modèle. Vous pouvez afficher les relations détectées et recréées automatiquement à l'aide du générateur de modèles dans la vue de diagramme, ou en utilisant la boîte de dialogue Gérer les relations. Vous pouvez également créer des relations entre les tables manuellement à l'aide du générateur de modèles dans la vue de diagramme, ou en utilisant la boîte de dialogue Créer une relation ou Gérer les relations.  
   
@@ -37,34 +38,34 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="what"></a> Avantages  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
-|CustomerID|Nom   |EMail|DiscountRate|OrderID|OrderDate|Product|Quantité|  
+|CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Product|Quantité|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-| 1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-| 1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  Cette approche peut fonctionner, mais elle implique le stockage de nombreuses données redondantes, telles que l'adresse de messagerie du client pour chaque commande. Le stockage est bon marché, mais vous devez vous assurer de mettre à jour chaque ligne pour ce client si l'adresse de messagerie change. Une solution à ce problème consiste à fractionner les données en plusieurs tables et à définir des relations entre ces tables. C’est l’approche utilisée dans *bases de données relationnelles* que SQL Server. Par exemple, une base de données que vous importez dans un modèle peut représenter les données des commandes en utilisant trois tables associées :  
   
-### <a name="customers"></a>Customers  
+### <a name="customers"></a>Clients (Customers)  
   
-|[CustomerID]|Nom   |EMail|  
+|[CustomerID]|Nom|EMail|  
 |--------------------|----------|-----------|  
-| 1|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-| 1|.05|  
+|1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|Quantité|  
 |--------------------|-------------|---------------|-------------|--------------|  
-| 1|256|2010-01-07|Compact Digital|11|  
-| 1|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  Si vous importez ces tables à partir de la même base de données, l’Assistant Importation de table peut détecter les relations entre les tables en fonction des colonnes qui sont entre [crochets] et reproduire ces relations dans le générateur de modèles. Pour plus d'informations, consultez [« Détection automatique et inférence des relations »](#detection) dans cette rubrique. Si vous importez des tables provenant de plusieurs sources, vous pouvez créer manuellement des relations, comme décrit dans [créer une relation entre deux Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="single-active-relationship-between-tables"></a>Relation active unique entre des tables  
  Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
   
- \*Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<tableau 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
+ \* Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<tableau 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
   
  Si vous avez deux tables et plusieurs relations entre elles, vous devez importer plusieurs copies de la table qui contient la colonne de recherche et créer une relation entre chaque paire de tables.  
   
@@ -177,7 +178,7 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
 |[Créer une relation entre deux tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
 |[Supprimer des relations](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  

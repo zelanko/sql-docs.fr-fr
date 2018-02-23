@@ -1,7 +1,7 @@
 ---
-title: "Espace de travail de base de données (SSAS tabulaire) | Documents Microsoft"
+title: "Base de données de l’espace de travail | Documents Microsoft"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73cbfa40573fcf08774a576aaa7f09bb1ea21195
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="workspace-database-ssas-tabular"></a>Base de données d'espace de travail (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]La base de données espace de travail modèle tabulaire, utilisé pendant la création du modèle, est créé lorsque vous créez un nouveau projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+# <a name="workspace-database"></a>Base de données d’espace de travail 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+La base de données de l'espace de travail de modèles tabulaires, utilisée lors de la création d'un modèle, est créée lorsque vous créez un projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Spécification d’une instance d’espace de travail  
   Quand vous créez un projet de modèle tabulaire dans SSDT, vous pouvez spécifier une instance d’Analysis Services à utiliser lors de la création de votre projet. À partir de la version de septembre 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous disposez de deux modes pour spécifier une instance d’espace de travail quand vous créez un projet de modèle tabulaire. 
@@ -32,8 +33,6 @@ ms.lasthandoff: 01/08/2018
 **Espace de travail intégré** : utilise la propre instance d’Analysis Services interne de SSDT.
 
 **Serveur d’espace de travail** : une base de données d’espace de travail est créée sur une instance d’Analysis Services explicite, souvent sur le même ordinateur que SSDT ou un autre ordinateur du même réseau.
-
-
   
 ### <a name="integrated-workspace"></a>Espace de travail intégré
 Avec l’espace de travail intégré, une base de données de travail est créée en mémoire à l’aide de la propre instance d’Analysis Services implicite de SSDT. Le mode d’espace de travail intégré réduit considérablement la complexité de la création de projets tabulaires dans SSDT, car une installation distincte et explicite de SQL Server Analysis Services n’est pas nécessaire.
@@ -56,7 +55,7 @@ En utilisant les propriétés de base de données d’espace de travail et de se
   
  Après avoir ajouté des données à votre projet de modèle à l’aide de l’Assistant Importation de table ou des commandes Copier/Coller, quand vous affichez les tables, les colonnes et les données dans le Générateur de modèles, vous affichez la base de données d’espace de travail. Si vous ajoutez d’autres tables, colonnes, relations, etc., vous modifiez également la base de données de l’espace de travail.  
   
- Lorsque vous déployez un projet de modèle tabulaire, la base de données model déployée, qui est en fait une copie de la base de données de l'espace de travail, est créée sur l'instance de serveur Analysis Services spécifiée dans la propriété Serveur de déploiement. Pour plus d’informations sur la propriété Serveur de déploiement, consultez [Propriétés de projet &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
+ Lorsque vous déployez un projet de modèle tabulaire, la base de données model déployée, qui est en fait une copie de la base de données de l'espace de travail, est créée sur l'instance de serveur Analysis Services spécifiée dans la propriété Serveur de déploiement. Pour plus d’informations sur la propriété de serveur de déploiement, consultez [propriétés de projet](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
   
  La base de données model de l'espace de travail réside généralement sur localhost ou sur une instance nommée local d'un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez utiliser une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour héberger la base de données de l'espace de travail ; toutefois, cette configuration n'est pas recommandée en raison de la latence au cours des requêtes de données et d'autres restrictions. De façon optimale, l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui hébergera les bases de données de l'espace de travail se trouve sur le même ordinateur que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La création de projets de modèle sur le même ordinateur que l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui héberge la base de données de l'espace de travail peut améliorer les performances.  
   
@@ -82,12 +81,12 @@ En utilisant les propriétés de base de données d’espace de travail et de se
  Les propriétés de base de données d'espace de travail sont incluses dans les propriétés du modèle. Pour afficher les propriétés du modèle, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans l' **Explorateur de solutions**, cliquez sur le fichier **Model.bim** . Les propriétés de modèle peuvent être configurées à l'aide de la fenêtre **Propriétés** . Les propriétés spécifiques de la base de données de l'espace de travail sont les suivantes :  
   
 > [!NOTE]  
->  Les propriétés **Integrated Workspace Mode** (Mode d’espace de travail intégré),**Serveur d’espace de travail**, **Rétention de l’espace de travail** et **Sauvegarde des données** ont des paramètres par défaut qui sont appliqués quand vous créez un projet de modèle. Vous pouvez modifier les paramètres par défaut pour les nouveaux projets de modèle dans la page **Modélisation des données** dans les paramètres **Serveur d’analyse** de la boîte de dialogue Outils\Options. Ces propriétés, ainsi que d'autres, peuvent également être définies pour chaque projet de modèle dans la fenêtre **Propriétés** . La modification des paramètres par défaut ne s'applique pas aux projets de modèles déjà créés. Pour plus d’informations, consultez [Configurer les propriétés par défaut de modélisation des données et de déploiement &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Les propriétés **Integrated Workspace Mode** (Mode d’espace de travail intégré),**Serveur d’espace de travail**, **Rétention de l’espace de travail** et **Sauvegarde des données** ont des paramètres par défaut qui sont appliqués quand vous créez un projet de modèle. Vous pouvez modifier les paramètres par défaut pour les nouveaux projets de modèle dans la page **Modélisation des données** dans les paramètres **Serveur d’analyse** de la boîte de dialogue Outils\Options. Ces propriétés, ainsi que d'autres, peuvent également être définies pour chaque projet de modèle dans la fenêtre **Propriétés** . La modification des paramètres par défaut ne s'applique pas aux projets de modèles déjà créés. Pour plus d’informations, consultez [configurer les propriétés de déploiement et de modélisation de données par défaut](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Propriété|Paramètre par défaut|Description|  
+|Propriété|Paramètre par défaut| Description|  
 |--------------|---------------------|-----------------|  
 |**Integrated Workspace Mode**|True, False|Si le mode d’espace de travail intégré est activé pour la base de données d’espace de travail quand le projet est créé, cette propriété a la valeur True. Si le mode **Serveur d’espace de travail** est sélectionné quand le projet est créé, cette propriété a la valeur False. | 
-|**Base de données d’espace de travail**|Nom   |Nom de la base de données d’espace de travail. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
+|**Base de données d’espace de travail**|Nom|Nom de la base de données d’espace de travail. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
 |**Rétention de l'espace de travail**|Décharger de la mémoire|Spécifie comment une base de données d'espace de travail est conservée une fois que le projet de modèle a été fermé. Une base de données d'espace de travail inclut les métadonnées du modèle et des données importées. Dans certains cas, la base de données d'espace de travail peut être très volumineuse et consommer une grande quantité de mémoire. Par défaut, lorsque vous fermez un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la base de données de l'espace de travail est déchargée de la mémoire. Lors de la modification de ce paramètre, il est important de considérer vos ressources mémoire disponibles ainsi que la fréquence à laquelle vous projetez de travailler sur le projet de modèle. Ce paramètre de propriété a les options suivantes :<br /><br /> **Conserver en mémoire** - Indique de conserver la base de données de l’espace de travail en mémoire une fois un projet de modèle fermé. Cette option consomme davantage de mémoire ; toutefois, lors de l'ouverture d'un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], moins de ressources sont consommées et la base de données de l'espace de travail se charge plus rapidement.<br /><br /> **Décharger de la mémoire** - Indique de conserver la base de données de l’espace de travail sur le disque, mais plus en mémoire, une fois un projet de modèle fermé. Cette option consomme moins de mémoire ; toutefois, lors de l’ouverture d’un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la base de données de l’espace de travail doit être à nouveau attachée ; des ressources supplémentaires sont consommées et le projet de modèle se charge plus lentement que si la base de données de l’espace de travail est conservée en mémoire. Utilisez cette option lorsque les ressources en mémoire sont limitées ou lorsque vous travaillez sur une base de données d'espace de travail distante.<br /><br /> **Supprimer l’espace de travail** - Indique de supprimer la base de données de l’espace de travail de la mémoire et de ne pas la garder sur le disque une fois le projet de modèle fermé. Cette option consomme moins de mémoire et d’espace de stockage ; toutefois, lors de l’ouverture d’un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], des ressources supplémentaires sont consommées et le projet de modèle se charge plus lentement que si la base de données de l’espace de travail est conservée en mémoire ou sur le disque. Utilisez cette option uniquement si vous travaillez occasionnellement sur les projets de modèle.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié dans la page **Modélisation des données** dans les paramètres **Serveur d’analyse** de la boîte de dialogue Outils\Options. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
 |**Workspace Server**|localhost|Cette propriété indique le serveur par défaut qui sera utilisé pour héberger la base de données de l'espace de travail tandis que le projet de modèle est créé dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutes les instances disponibles d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui fonctionnent sur l'ordinateur local sont incluses dans la zone de liste.<br /><br /> Pour spécifier un autre serveur de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (s'exécutant en mode tabulaire), tapez le nom de ce serveur. L'utilisateur connecté doit être un administrateur sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Notez qu’il est recommandé de spécifier un serveur local [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme serveur d’espace de travail. Pour les bases de données d’espace de travail sur serveur distant, l’importation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’est pas prise en charge, les données ne peuvent pas être sauvegardées localement et l’interface utilisateur peut connaître une latence pendant les requêtes.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié dans la page Modélisation des données dans les paramètres [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la boîte de dialogue Outils\Options. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
   
@@ -95,6 +94,6 @@ En utilisant les propriétés de base de données d’espace de travail et de se
  Vous pouvez utiliser SQL Server Management Studio (SSMS) pour vous connecter à un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui héberge une base de données d’espace de travail. En général, aucune gestion de base de données de l'espace de travail n'est nécessaire ; le détachement ou la suppression d'une base de données de l'espace de travail constitue l'exception et cette opération doit être effectuée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. N'utilisez pas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer la base de données de l'espace de travail alors que le projet est ouvert dans le générateur de modèles. Vous risqueriez de perdre des données.
    
 ## <a name="see-also"></a>Voir aussi  
-[Propriétés de modèle &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Propriétés de modèle](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

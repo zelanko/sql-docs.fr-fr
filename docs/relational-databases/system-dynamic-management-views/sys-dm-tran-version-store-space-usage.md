@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store_space_usage (Transact-SQL) | Documents Microsoft
+title: sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,32 +17,34 @@ f1_keywords:
 - sys.dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Retourne une table qui affiche l’espace total dans tempdb utilisé par les enregistrements de magasin de version pour chaque base de données. **Sys.dm_tran_version_store_space_usage** est efficace et performant pour exécuter comme il ne naviguer dans la banque des versions individuelles enregistre et retourne un espace magasin version agrégée consommé dans tempdb par base de données.
+Retourne une table qui affiche l’espace total dans tempdb utilisé par les enregistrements de magasin de version pour chaque base de données. **Sys.dm_tran_version_store_space_usage** est efficace et pas coûteuses à exécuter, comme il ne pas parcourir les enregistrements de magasin de version individuelle et retourne agrégées magasin espace consommée dans tempdb par base de données.
   
-Chaque enregistrement avec contrôle de version est stocké sous forme de données binaires, avec des informations de suivi ou d'état. À l'instar des enregistrements des tables de la base de données, ceux de la banque des versions sont stockés dans des pages de 8 192 octets. Si un enregistrement excède ces 8 192 octets, il est réparti sur deux enregistrements.  
+Chaque enregistrement de version est stocké en tant que données binaires, ainsi que des informations de suivi ou d’état. À l'instar des enregistrements des tables de la base de données, ceux de la banque des versions sont stockés dans des pages de 8 192 octets. Si un enregistrement excède ces 8 192 octets, il est réparti sur deux enregistrements.  
   
 Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys.dm_tran_version_store_space_usage** à surveiller et planifier la taille de tempdb basée sur l’utilisation de l’espace de magasin de version des bases de données dans une instance de SQL Server.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de base de données de la base de données.|  
+|**database_id**|**int**|ID de base de données de la base de données.|  
 |**reserved_page_count**|**bigint**|Nombre total des pages réservées dans tempdb pour la version de stockage des enregistrements de la base de données.|  
 |**reserved_space_kb**|**bigint**|Espace total utilisé en kilo-octets dans tempdb pour la version de stockage des enregistrements de la base de données.|  
   
@@ -49,7 +52,7 @@ Comme l'enregistrement avec contrôle de version est stocké sous forme binaire,
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 
 ## <a name="examples"></a>Exemples  
- La requête suivante peut être utilisée pour déterminer l’espace utilisé dans tempdb par la banque des versions de chaque base de données dans une instance de SQL Server. 
+ La requête suivante peut être utilisée pour déterminer l’espace utilisé dans tempdb, par la banque des versions de chaque base de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
   
 ```sql  
 SELECT 

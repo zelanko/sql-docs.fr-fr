@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modélisation tabulaire (niveau de compatibilité 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire d’Analysis Services à le [niveau de compatibilité 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) à l’aide de [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)et déployer votre modèle à un serveur Analysis Services en local ou dans Azure.  
  
-Si vous utilisez SQL Server 2017 ou Azure Analysis Services, et que vous souhaitez créer votre modèle à la compatibilité 1400 niveau, utilisez le [Azure Analysis Services - didacticiel Adventure Works](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Cette version de mise à jour utilise la fonctionnalité obtenir des données de nouveau, moderne pour vous connecter et importer les données sources et utilise le langage de M pour configurer des partitions.
+Si vous utilisez SQL Server 2017 ou Azure Analysis Services, et que vous souhaitez créer votre modèle à la compatibilité 1400 niveau, utilisez le [(niveau de compatibilité 1400) de modélisation tabulaire](tutorial-tabular-1400/as-adventure-works-tutorial.md). Cette version de mise à jour utilise la fonctionnalité obtenir des données moderne pour vous connecter et importer les données sources, utilise le langage de M pour configurer des partitions et inclut des leçons supplémentaires supplémentaires.
+
+> [!IMPORTANT]
+> Vous devez créer vos modèles tabulaires au niveau de compatibilité plus récent prises en charge par votre serveur. Les modèles de niveau de compatibilité ultérieure fournissent de meilleures performances, des fonctionnalités supplémentaires et met à niveau vers les niveaux de compatibilité future plus transparente.
  
   
 ## <a name="what-you-learn"></a>Vous découvrez   
@@ -50,14 +53,14 @@ Si vous utilisez SQL Server 2017 ou Azure Analysis Services, et que vous souhait
   
 -   Comment créer et gérer des perspectives et des hiérarchies qui aident les utilisateurs à parcourir facilement les données de modèle en fournissant l’entreprise et les points de vue spécifiques à l’application.  
   
--   Créer des partitions qui divisent les données des tables en plus petites parties logiques pouvant être traitées indépendamment des autres partitions.  
+-   Comment créer des partitions diviser les données de table en parties logiques plus petites, qui peuvent être traités indépendamment des autres partitions.  
   
 -   Sécuriser les objets et les données du modèle en créant des rôles à l'aide des membres utilisateurs.  
   
 -   Comment déployer un modèle tabulaire à un serveur Analysis Services en local ou dans Azure.  
   
 ## <a name="scenario"></a>Scénario  
-Ce didacticiel est basé sur Adventure Works Cycles, une société fictive. Adventure Works est une société de fabrication multinationale volumineux qui produit et distribue des bicyclettes métalliques et pour les marchés d’Amérique du Nord, Europe et Asie. Avec son siège social à Bothell, Washington, la société emploie 500 employés. En outre, Adventure Works emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
+Ce didacticiel est basé sur Adventure Works Cycles, une société fictive. Adventure Works est une société de fabrication volumineuse, multinationale qui produit des bicyclettes, les parties et accessoires pour les marchés d’Amérique du Nord, Europe et Asie. Avec son siège social à Bothell, Washington, la société emploie 500 employés. En outre, Adventure Works emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
   
 Pour améliorer la prise en charge des besoins d'analyse des données des équipes de vente et marketing et des seniors du management, vous devez créer un modèle tabulaire pour que les utilisateurs analysent les données des ventes Internet dans la base de données AdventureWorksDW donnée en exemple.  
   

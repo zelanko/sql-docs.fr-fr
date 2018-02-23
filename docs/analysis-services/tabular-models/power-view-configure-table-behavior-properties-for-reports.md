@@ -1,5 +1,5 @@
 ---
-title: "Configurer les propriétés de comportement de Table pour les rapports Power View (SSAS tabulaire) | Documents Microsoft"
+title: "Configurer les propriétés de comportement de Table pour les rapports Power View | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - configurer les propriétés de comportement de Table pour les rapports
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diffère des autres applications de création de rapports en ceci qu'il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placées dans la liste des champs du rapport en fonction du format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Suppression des sous-totaux inutiles d'un rapport de matrice. Le regroupement par défaut au niveau du champ crée un sous-total pour chaque champ. Si vous souhaitez qu'un seul sous-total soit calculé au niveau de la ligne, la définition de l'identificateur de ligne produit ce résultat.  
   
- Vous ne pouvez pas définir d'identificateur de ligne pour les tables marquées comme tables de date. Pour les tables de date, l'identificateur de ligne est spécifié quand vous marquez la table. Pour plus d’informations, consultez [Boîte de dialogue Marquer en tant que table de dates &#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ Vous ne pouvez pas définir d'identificateur de ligne pour les tables marquées comme tables de date. Pour les tables de date, l'identificateur de ligne est spécifié quand vous marquez la table. Pour plus d’informations, consultez [marquer en tant que boîte de dialogue Table Date ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Définition de la propriété Conserver les lignes uniques  
  Cette propriété permet de spécifier les colonnes qui transmettent les informations d'identité (telles qu'un nom d'employé ou un code de produit) de manière à distinguer les lignes les unes des autres. Dans les cas où des lignes semblent identiques (par exemple, deux clients portant le même nom), les colonnes que vous spécifiez pour cette propriété sont répétées dans la table du rapport.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Graphique basé sur le regroupement d’ID de ligne](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "graphique basé sur le regroupement d’ID de ligne")  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Après avoir évalué les tables dans votre modèle et défini les propriétés de comportement de table sur celles contenant les lignes de détails qui doivent toujours apparaître comme des éléments individuels, vous pouvez optimiser le modèle à l'aide de propriétés ou de paramètres supplémentaires.  
   
   

@@ -1,7 +1,7 @@
 ---
-title: "Créer une Table calculée (SSAS tabulaire) | Documents Microsoft"
+title: "Créer une Table calculée | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8278b8af21faf65640451d2557b1de19916b3327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c34293f6fca5ebfb49ab4f19980e414f8bf056c0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-calculated-table-ssas-tabular"></a>Créer une table calculée (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *table calculée* est un objet calculé basé sur une requête DAX ou une expression, dérivé à partir de tout ou partie des autres tables dans le même modèle.  
+# <a name="create-a-calculated-table"></a>Créer une table calculée 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Un *table calculée* est un objet calculé basé sur une requête ou une expression DAX, dérivé de tout ou partie des autres tables dans le même modèle.  
   
  Un problème de conception courant que les tables calculées peuvent résoudre est la présentation d’une dimension de rôle actif dans un contexte spécifique pour vous permettre de l'exposer comme une structure de requête dans les applications clientes.  Vous vous souvenez peut-être qu'une dimension de rôle actif est une simple table présentée dans plusieurs contextes : un exemple classique est la table Date, représentée par OrderDate, ShipDate ou DueDate, en fonction de la relation de clé étrangère. En créant explicitement une table calculée pour ShipDate, vous obtenez une table autonome et disponible pour les requêtes, et totalement opérationnelle comme toute autre table.  
   
@@ -45,7 +46,7 @@ Il existe un élément CalculatedTableColumn pour chaque colonne renvoyée par l
   
 5.  Nommez la table.  
   
-6.  Créez des relations vers d'autres tables dans le modèle. Consultez [Créer une relation entre deux tables &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) si vous avez besoin d’aide pour cette étape.  
+6.  Créez des relations vers d'autres tables dans le modèle. Consultez [créer une relation entre deux Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) si vous avez besoin d’aide pour cette étape.  
   
 7.  Référencez la table dans les calculs ou expressions de votre modèle, ou utilisez **Analyser dans Excel** pour une exploration des données ad hoc.  
   
@@ -74,8 +75,8 @@ Il existe un élément CalculatedTableColumn pour chaque colonne renvoyée par l
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Niveau de compatibilité](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Expressions d’analyse de données &#40; DAX &#41; dans Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
- [Fonctionnement de DAX dans les modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
+ [Présentation de DAX dans les modèles tabulaires](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

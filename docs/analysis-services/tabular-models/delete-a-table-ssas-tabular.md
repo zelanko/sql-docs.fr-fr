@@ -1,7 +1,7 @@
 ---
-title: Supprimer une Table (SSAS tabulaire) | Documents Microsoft
+title: Supprimer une Table | Documents Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3d1ec8c0c56a7fd1fb83f2b0401907eb0c0302c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a4f9c2850798353cb6e16413f395aad1a370a69e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-table-ssas-tabular"></a>Supprimer une table (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans le Générateur de modèles, vous pouvez supprimer des tables dans votre base de données d’espace de travail modèle que vous n’avez plus besoin. La suppression d’une table n’affecte pas les données sources d’origine, mais uniquement les données que vous avez importées et que vous utilisiez. Vous ne pouvez pas annuler la suppression d'une table.  
+# <a name="delete-a-table"></a>Supprimer une table
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Dans le générateur de modèles, vous pouvez supprimer des tables dont vous n'avez plus besoin dans votre base de données model de l'espace de travail. La suppression d’une table n’affecte pas les données sources d’origine, mais uniquement les données que vous avez importées et que vous utilisiez. Vous ne pouvez pas annuler la suppression d'une table.  
   
 ### <a name="to-delete-a-table"></a>Pour supprimer une table  
   
@@ -39,6 +40,6 @@ ms.lasthandoff: 01/08/2018
 -   Si vous avez créé des colonnes calculées à l'aide de cette table, les colonnes de cette table sont également supprimées ; toutes les colonnes calculées dans d'autres tables qui utilisent les colonnes de la table supprimée affichent une erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tables et colonnes](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

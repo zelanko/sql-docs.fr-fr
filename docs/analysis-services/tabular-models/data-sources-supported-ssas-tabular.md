@@ -1,7 +1,7 @@
 ---
 title: "Les sources de données prises en charge dans les modèles tabulaires SQL Server Analysis Services | Documents Microsoft"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 945b4d774e67d327c4a067f3fc59837232b90263
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>Sources de données prises en charge dans les modèles tabulaires
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
-  Cette rubrique décrit les types de sources de données qui peuvent être utilisées avec les modèles tabulaires.  
+  Cet article décrit les types de sources de données qui peuvent être utilisés avec les modèles tabulaires.  
   
-##  <a name="bkmk_supported_ds"></a>Sources de données pris en charge pour les modèles tabulaires en mémoire  
+##  <a name="bkmk_supported_ds"></a> Sources de données pris en charge pour les modèles tabulaires en mémoire  
 Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le programme d'installation n'installe pas les fournisseurs répertoriés pour chaque source de données. Certains fournisseurs peuvent être installés avec d’autres applications sur votre ordinateur. Dans d’autres cas, vous devrez peut-être télécharger et installer le fournisseur.  
   
 |||||  
@@ -46,7 +47,7 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
 |Fichiers Microsoft Excel|Excel 2010 et versions ultérieures|.xlsx, xlsm, .xlsb, .xltx, .xltm|Fournisseur OLE DB ACE 14|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur|Microsoft SQL Server 2008 Analysis Services et versions ultérieures|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (utilisé uniquement avec les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publiés dans des batteries de serveurs SharePoint où [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé)|  
 |Cube Analysis Services|Microsoft SQL Server 2008 Analysis Services et versions ultérieures|(non applicable)|ASOLEDB 10|  
-|Flux de données<br /><br /> (utilisé pour importer des données à partir de rapports Reporting Services, de documents de service Atom, de Microsoft Azure Marketplace DataMarket et d'un flux de données unique)|Format Atom 1.0<br /><br /> Base de données ou document qui est exposé en tant que Windows Communication Foundation (WCF) Data Services (anciennement ADO.NET Data Services).|`.atomsvc`pour un document de service qui définit un ou plusieurs flux<br /><br /> .atom pour un document de flux Web Atom|Fournisseur de flux de données Microsoft pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Fournisseur de données de flux de données .NET Framework pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Flux de données<br /><br /> (utilisé pour importer des données à partir de rapports Reporting Services, de documents de service Atom, de Microsoft Azure Marketplace DataMarket et d'un flux de données unique)|Format Atom 1.0<br /><br /> Base de données ou document qui est exposé en tant que Windows Communication Foundation (WCF) Data Services (anciennement ADO.NET Data Services).|`.atomsvc` pour un document de service qui définit un ou plusieurs flux<br /><br /> .atom pour un document de flux Web Atom|Fournisseur de flux de données Microsoft pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Fournisseur de données de flux de données .NET Framework pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Fichiers de connexion de base de données Office||.odc||  
   
   
@@ -56,9 +57,9 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
 Source de données   |Versions  |Fournisseurs
 ---------|---------|---------
 Microsoft SQL Server    |  2008 et versions ultérieures      |       Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client  
-Base de données SQL Microsoft Azure    |   All      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client            
-Microsoft Azure SQL Data Warehouse     |   All     |  Fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   All      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
+Base de données SQL Microsoft Azure    |   Tous      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client            
+Microsoft Azure SQL Data Warehouse     |   Tous     |  Fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   Tous      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
 Bases de données relationnelles Oracle     |  Oracle 9i et versions ultérieures       |  Fournisseur OLE DB Oracle       
 Bases de données relationnelles Teradata    |  Teradata V2R6 et versions ultérieures     | Fournisseur de données .Net pour Teradata    
 

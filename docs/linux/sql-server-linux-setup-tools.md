@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 7a23c561b34668a46f86aaad006ff6faacb41f49
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installer les outils de ligne de commande SQL Server sqlcmd et bcp sur Linux
 
@@ -184,11 +184,14 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux 
 
 Un aperçu de **sqlcmd** et **bcp** est maintenant disponible sur macOS. Pour plus d’informations, consultez la [annonce](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
+*Installer [Homebrew](https://brew.sh) si vous ne l’avez déjà :*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 Pour installer les outils pour Mac El Capitan et Sierra, utilisez les commandes suivantes :
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 054902c076be5af595e0b9add93d500263f2acc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traductions dans les modèles tabulaires (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajoute la prise en charge des chaînes de traduction pour les modèles tabulaires. Un objet unique dans le modèle peut avoir plusieurs traductions de nom ou de description, ce qui permet de prendre en charge des versions multilingues dans la définition du modèle.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Ajoute la prise en charge des chaînes de traduction pour les modèles tabulaires. Un objet unique dans le modèle peut avoir plusieurs traductions de nom ou de description, ce qui permet de prendre en charge des versions multilingues dans la définition du modèle.  
   
  Les chaînes traduites sont destinées aux métadonnées d’objet uniquement (noms et descriptions des tables et colonnes) qui s’affichent dans un outil client tel qu’une liste de tableau croisé dynamique Excel.  Pour utiliser des chaînes traduites, la connexion cliente spécifie la culture. Dans la fonctionnalité **Analyse dans Excel** , vous pouvez choisir la langue dans la liste déroulante. Pour d’autres outils, vous devrez peut-être spécifier la culture dans la chaîne de connexion.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Cliquez sur **Exporter le fichier de langue**.  Indiquez un nom de fichier et un emplacement.  
   
- ![SSAS-tabulaire-traduire-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabulaire-traduire-export")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>Ajouter des traductions  
  Un fichier de traduction JSON vide inclut des métadonnées pour les traductions propres à une langue. Les espaces réservés aux traductions pour les noms d’objets et les descriptions sont spécifiés dans la section **Culture** à la fin de la définition du modèle. Des traductions peuvent être ajoutées pour les éléments suivants :  
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
   
  L’exemple suivant montre des légendes et une description traduites pour les tables **DimProduct** et **DimCustomer** .  
   
- ![SSAS-tabulaire-traduire-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabulaire-traduire-json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  Vous pouvez utiliser n’importe quel éditeur JSON pour ouvrir le fichier, mais nous vous recommandons d’utiliser l'éditeur JSON de Visual Studio. Vous pouvez ainsi également utiliser la commande Afficher le code dans l’Explorateur de solutions pour afficher la définition de modèle tabulaire dans SSDT. Pour obtenir l’éditeur JSON, vous avez besoin d’une [installation complète de Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). L’édition Community gratuite inclut l’éditeur JSON.  
@@ -111,13 +112,13 @@ ms.lasthandoff: 01/08/2018
   
 2.  Dans la boîte de dialogue Connexion Excel, choisissez la culture pour laquelle des traductions de chaîne existent dans votre modèle. Excel détecte les cultures définies dans le modèle et remplit la liste déroulante en conséquence.  
   
-     ![SSAS-tabulaire-traductions-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabulaire-traductions-excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      Lorsque vous créez un tableau croisé dynamique, vous devez voir le tableau et les noms de colonnes traduits.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Scénarios de globalisation pour Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Analyser dans Excel &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analyser dans Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

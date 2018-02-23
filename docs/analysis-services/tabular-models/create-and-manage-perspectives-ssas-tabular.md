@@ -1,7 +1,7 @@
 ---
-title: "Créer et gérer des Perspectives (SSAS tabulaire) | Documents Microsoft"
+title: "Créer et gérer des Perspectives | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,33 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.perspectivedb.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c414c0edae99923b8c8e3d370a1d998fe39ccef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-perspectives-ssas-tabular"></a>Créer et gérer des perspectives (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Les perspectives définissent des sous-ensembles visualisables d’un modèle qui fournissent des points de vue ayant le focus, spécifiques à l’entreprise ou spécifiques à l’application du modèle. Les tâches de cette rubrique décrivent comment créer et gérer des perspectives à l'aide de la boîte de dialogue **Perspectives** dans le générateur de modèles.  
-  
- Cette rubrique inclut les tâches suivantes :  
-  
--   [Pour ajouter une perspective](#bkmk_add)  
-  
--   [Pour modifier une perspective](#bkmk_edit)  
-  
--   [Pour renommer une perspective](#bkmk_rename)  
-  
--   [Pour supprimer une perspective](#bkmk_delete)  
-  
--   [Pour copier une perspective](#bkmk_copy)  
+# <a name="create-and-manage-perspectives"></a>Créer et gérer des perspectives 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les perspectives définissent des sous-ensembles visualisables d'un modèle et des points de vue du modèle focalisés sur un domaine d'activité ou sur une application. Les tâches de cette rubrique décrivent comment créer et gérer des perspectives à l'aide de la boîte de dialogue **Perspectives** dans le générateur de modèles.  
   
 ## <a name="tasks"></a>Tâches  
  Pour créer des perspectives, vous allez utiliser la boîte de dialogue **Perspectives** , dans laquelle vous pouvez ajouter, modifier, supprimer, copier et afficher des perspectives. Pour consulter la boîte de dialogue **Perspectives** , dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Modèle** , puis sur **Perspectives**.  
@@ -65,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 -   Lorsque vous pointez sur l'en-tête de colonne d'une perspective, le bouton **Copier** apparaît. Pour créer une copie de cette perspective, cliquez sur le bouton **Copier** . Une copie de la perspective sélectionnée est ajoutée en tant que nouvelle perspective à droite des perspectives existantes. La nouvelle perspective hérite du nom de la perspective copiée et une annotation *- Copier* est ajoutée à la fin du nom. Par exemple, si une copie de la perspective *Ventes* est créée, la nouvelle perspective est appelée *Ventes – Copie*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Perspectives &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Hiérarchies &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Hiérarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

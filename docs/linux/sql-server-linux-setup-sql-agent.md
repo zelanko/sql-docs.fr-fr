@@ -4,7 +4,7 @@ description: "Cet article décrit comment installer l’Agent SQL Server sur Lin
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,28 +15,46 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 7db50a59a4a6ce9ab7aa416e4ac8d597449541b7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: bec1837a2e4084d01858815346c5a7563199a220
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installer l’Agent SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les étapes suivantes installer l’Agent SQL Server (**mssql-server-agent**) sur Linux. Le [l’Agent SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) exécute les travaux planifiés de SQL Server. Pour plus d’informations sur les fonctionnalités prises en charge pour cette version de l’Agent SQL Server, consultez le [Release Notes](sql-server-linux-release-notes.md).
+ Le [l’Agent SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) exécute les travaux planifiés de SQL Server. À partir de SQL Server 2017 CU4, l’Agent SQL Server est inclus avec le **mssql-serveur** du package et est désactivée par défaut. Pour plus d’informations sur les fonctionnalités prises en charge pour cette version de l’Agent SQL Server, ainsi que des informations de version, consultez le [Release Notes](sql-server-linux-release-notes.md).
+
+ Installer/activer l’Agent SQL Server :
+- [Pour les Versions 2017 CU4 et versions ultérieures, activez l’Agent SQL Server](#EnableAgentAfterCU4)
+- [Pour les Versions 2017 CU3 et versions antérieures, installez l’Agent SQL Server](#InstallAgentBelowCU4)
+
+
+## <a name="EnableAgentAfterCU4">Pour les Versions 2017 CU4 et versions ultérieures, activez l’Agent SQL Server</a>
+
+ Pour activer l’Agent SQL Server, suivez les étapes ci-dessous.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+sudo systemctl restart mssql-server
+```
 
 > [!NOTE]
-> Avant d’installer l’Agent SQL Server, tout d’abord [installer SQL Server 2017](sql-server-linux-setup.md#platforms). Cela permet de configurer les clés et les référentiels que vous utilisez lorsque vous installez le **mssql-server-agent** package.
+> Si vous mettez à niveau à partir de 2017 CU3 ou ci-dessous avec l’Agent installé, l’Agent SQL Server sera automatiquement activé et précédent seront désinstallés packages d’Agent.  
+
+## <a name="InstallAgentBelowCU4">Pour les Versions 2017 CU3 et versions antérieures, installez l’Agent SQL Server</a>
+
+> [!NOTE]
+> Les instructions d’installation ci-dessous s’appliquent à SQL Server Versions 2017 CU3 et versions antérieures. Avant d’installer l’Agent SQL Server, tout d’abord [installer SQL Server 2017](sql-server-linux-setup.md#platforms). Cela permet de configurer les clés et les référentiels que vous utilisez lorsque vous installez le **mssql-server-agent** package.
 
 Installez l’Agent SQL Server pour votre plateforme :
-
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Installer sur RHEL</a>
+### <a name="RHEL">Installer sur RHEL</a>
 
 Utilisez les étapes suivantes pour installer le **mssql-server-agent** sur Red Hat Enterprise Linux. 
 
@@ -55,7 +73,7 @@ sudo systemctl restart mssql-server
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Installer sur Ubuntu</a>
+### <a name="ubuntu">Installer sur Ubuntu</a>
 
 Utilisez les étapes suivantes pour installer le **mssql-server-agent** sur Ubuntu. 
 
@@ -75,7 +93,7 @@ sudo systemctl restart mssql-server
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Installez SLES</a>
+### <a name="SLES">Installez SLES</a>
 
 Utilisez les étapes suivantes pour installer le **mssql-server-agent** sur SUSE Linux Enterprise Server. 
 

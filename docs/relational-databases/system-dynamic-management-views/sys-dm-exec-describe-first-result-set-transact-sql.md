@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee19d4df3deed6580a33be2620a6597ebd24f2ce
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/03/2018
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -53,9 +53,9 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
   
  *@params*  
- @paramsFournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, similaire à sp_executesql. Les paramètres peuvent être **nvarchar (n)** ou **nvarchar (max)**.  
+ @params Fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, similaire à sp_executesql. Les paramètres peuvent être **nvarchar (n)** ou **nvarchar (max)**.  
   
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n*est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans stmt doit être défini dans @params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot dans l’instruction ou l’instruction ne contient pas de paramètres, @params n’est pas obligatoire. NULL est la valeur par défaut pour ce paramètre.  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans stmt doit être défini dans @params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot dans l’instruction ou l’instruction ne contient pas de paramètres, @params n’est pas obligatoire. NULL est la valeur par défaut pour ce paramètre.  
   
  *@include_browse_information*  
  Lorsque la valeur 1 est définie, chaque requête est analysée comme si elle comportait une option FOR BROWSE sur la requête. Des colonnes clés supplémentaires et les informations de table source sont retournées.  

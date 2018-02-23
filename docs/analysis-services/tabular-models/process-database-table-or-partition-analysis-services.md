@@ -11,23 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
+f1_keywords:
+- sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 786ba3a5af73ab1f7b372daf41640ed5389a45da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>Processus de base de données, table ou partition (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Les tâches de cette rubrique décrivent comment traiter manuellement les partitions, table ou une base de données de modèle tabulaire à l’aide de la **processus \<objet >** boîte de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les tâches de cette rubrique décrivent comment traiter manuellement les partitions, table ou une base de données de modèle tabulaire à l’aide de la **processus \<objet >** boîte de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Pour plus d’informations sur le traitement des modèles tabulaires, consultez [Traiter les données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Pour plus d’informations sur le traitement du modèle tabulaire, consultez [traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_tasks"></a> Tâches  
   
@@ -74,14 +76,14 @@ ms.lasthandoff: 01/08/2018
     |----------|-----------------|  
     |**Traiter par défaut**|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites (recalculées).|  
     |**Traiter entièrement**|Traite un objet de partition et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est exécutée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est obligatoire lorsqu'une modification structurelle a été apportée à un objet.|  
-    |**Traiter des données**|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
+    |**Traiter les données**|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
     |**Traiter l'effacement**|Supprime toutes les données d'une partition.|  
     |**Traiter l'ajout**|Mise à jour incrémentielle de la partition avec de nouvelles données.|  
   
 4.  Dans la colonne de case à cocher **Traiter** , sélectionnez les partitions à traiter avec le mode sélectionné, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions de modèle tabulaire &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Partitions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [Créer et gérer des partitions de modèles tabulaires](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

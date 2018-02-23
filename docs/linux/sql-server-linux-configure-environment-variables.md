@@ -4,7 +4,7 @@ description: "Cet article décrit comment utiliser des variables d’environneme
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
@@ -39,7 +39,7 @@ Vous pouvez utiliser plusieurs variables d’environnement différent pour confi
 |-----|-----|
 | **ACCEPT_EULA** | Acceptez le contrat de licence de SQL Server lorsque la valeur n’importe quelle valeur (par exemple, « Y »). |
 | **MSSQL_SA_PASSWORD** | Configurer le mot de passe SA. |
-| **MSSQL_PID** | Définir la clé de produit ou d’édition de SQL Server. Les valeurs possibles sont : </br></br>**Evaluation**</br>**Développeur**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>Une clé de produit</br></br>Si vous spécifiez une clé de produit, il doit être sous la forme de ###-###-###-###-###, où « # » est un nombre ou une lettre.|
+| **MSSQL_PID** | Définir la clé de produit ou d’édition de SQL Server. Les valeurs possibles sont : </br></br>**Evaluation**</br>**Développeur**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Une clé de produit**</br></br>Si vous spécifiez une clé de produit, il doit être sous la forme de ###-###-###-###-###, où « # » est un nombre ou une lettre.|
 | **MSSQL_LCID** | Définit l’ID de langue à utiliser pour SQL Server. Par exemple, 1036 est Français. |
 | **MSSQL_COLLATION** | Définit le classement par défaut pour SQL Server. Cela remplace le mappage par défaut de l’id de langue (LCID) au classement. |
 | **MSSQL_MEMORY_LIMIT_MB** | Définit la quantité maximale de mémoire (en Mo) que SQL Server peut utiliser. Par défaut, elle est 80 % de la mémoire physique totale. |
@@ -49,7 +49,11 @@ Vous pouvez utiliser plusieurs variables d’environnement différent pour confi
 | **MSSQL_DATA_DIR** | Accédez au répertoire où sont créés les fichiers de données de base de données (.mdf) SQL Server nouvelle. |
 | **MSSQL_LOG_DIR** | Accédez au répertoire où sont créés les nouveaux fichiers de journal (.ldf) de base de données SQL Server. |
 | **MSSQL_DUMP_DIR** | Accédez au répertoire dans lequel SQL Server sera déposer les vidages de mémoire et d’autres fichiers de résolution des problèmes par défaut. |
-| **MSSQL_ENABLE_HADR** | Activer les groupes de disponibilité. |
+| **MSSQL_ENABLE_HADR** | Activer le groupe de disponibilité. Par exemple, '1' est activé, et '0' est désactivé |
+| **MSSQL_AGENT_ENABLED** | Activer l’Agent SQL Server. Par exemple, 'true' est activé et 'false' est désactivé. Par défaut, l’agent est désactivé.  |
+| **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de base de données master. |
+| **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier journal de la base de données master. |
+
 
 ## <a name="example-initial-setup"></a>Exemple : le programme d’installation initiale de
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> Le processus d’exécution des éditions de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production).
+> Le processus d’exécution des éditions de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [Exécuter des images conteneur de production](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

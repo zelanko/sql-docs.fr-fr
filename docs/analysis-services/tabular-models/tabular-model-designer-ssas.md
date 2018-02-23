@@ -11,28 +11,30 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>Générateur de modèles tabulaires (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le Générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], avec les modèles de type de projet supplémentaires spécifiquement pour le développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  
   
  Outres de nouveaux modèles et outils permettant de créer des solutions professionnelles de modèles multidimensionnels et tabulaires, l'environnement [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] fournit des fonctionnalités de débogage et de cycle de vie de projet qui vous permettent de créer des solutions décisionnelles les plus puissantes possibles pour votre organisation. Pour plus d'informations sur [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consultez [Mise en route de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Modèles de projet  
+##  <a name="bkmk_proj_temp"></a> Modèles de projet  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les modèles de projet de modèles tabulaires suivants sont ajoutés aux types de projets Business Intelligence :  
   
  **Projet tabulaire Analysis Services**  
@@ -90,13 +92,13 @@ ms.lasthandoff: 01/08/2018
   
 -   Model.bim  
   
--   Table de charge de travail  
+-   Table  
   
--   colonne  
+-   Colonne  
   
 -   Measure  
   
- Les propriétés d'un projet affichent uniquement le nom du projet et le dossier du projet dans la fenêtre Propriétés. Les projets contiennent également des paramètres Options de déploiement et Serveur de déploiement supplémentaires que vous pouvez définir à l'aide d'une boîte de dialogue de propriétés modales. Pour afficher ces propriétés, dans l' **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Propriétés**.  
+ Propriétés du projet affichent uniquement le nom du projet et le dossier de projet dans la fenêtre Propriétés. Les projets contiennent également des paramètres Options de déploiement et Serveur de déploiement supplémentaires que vous pouvez définir à l'aide d'une boîte de dialogue de propriétés modales. Pour afficher ces propriétés, dans l' **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Propriétés**.  
   
  Les champs de la fenêtre Propriétés comportent des contrôles intégrés qui s'ouvrent en cliquant dessus. Le type de contrôle d'édition varie selon la propriété. Ces contrôles comprennent des zones d'édition, des listes déroulantes et des liens vers des boîtes de dialogue personnalisées. Les propriétés qui apparaissent en grisé sont en lecture seule.  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="toolbar"></a>Barre d'outils  
  La barre d'outils Analysis Services fournit un accès rapide et aisé aux commandes de création de modèles utilisées les plus fréquemment.  
   
-##  <a name="bkmk_vsint"></a>Intégration de Visual Studio  
+##  <a name="bkmk_vsint"></a> Intégration de Visual Studio  
  **Contrôle de code source**  
  Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
   
@@ -137,7 +139,7 @@ ms.lasthandoff: 01/08/2018
  Les raccourcis clavier Analysis Services peuvent être configurés/remappés via la boîte de dialogue Outils->Options->Clavier. Certains raccourcis globaux de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , permettant notamment la génération, l'enregistrement, le débogage, la création d'un nouveau projet, etc. sont pris en charge dans le contexte du générateur de modèles tabulaires. D'autres raccourcis spécifiques du générateur de modèles tabulaires sont présents dans le contexte d'Analysis Services.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propriétés &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Projets de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Propriétés](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

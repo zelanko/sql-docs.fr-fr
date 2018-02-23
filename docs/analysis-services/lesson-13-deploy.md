@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 213a5cb740899114c13d84305858a499759a8712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>Leçon 13 : déployer
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ Dans cette leçon, vous allez configurer les propriétés de déploiement ; sp�
   
 Durée estimée pour effectuer cette leçon : **5 minutes**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Configuration requise  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 12 : analyser dans Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Déployer le modèle  
@@ -42,7 +43,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 2.  Dans le **Pages de propriétés de AW Internet Sales** boîte de dialogue **serveur de déploiement**, dans le **serveur** , tapez le nom d’un serveur Azure Analysis Services ou d’un serveur local de l’instance en cours d’exécution en mode tabulaire. Il s’agit de l’instance de serveur que à votre modèle sera déployé.  
 
-    ![agents-déployer-déploiement-server-propriété](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > Vous devez disposer des autorisations d’administrateur sur le distant Analysis Services instance afin de déployer sur celle-ci.  
@@ -63,20 +64,20 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
     La boîte de dialogue Déployer apparaît et affiche l'état de déploiement des métadonnées ainsi que de chaque table incluse dans le modèle.  
     
-    ![état déployer des agents](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. Une fois le déploiement correctement effectué, cliquez sur **Fermer**.  
   
 ## <a name="conclusion"></a>Conclusion  
 Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent également maintenant vous connecter à l’aide d’une application cliente de création de rapports tels que Microsoft Excel ou Power BI.  
 
-![en tant que-tabulaire-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Voir aussi  
-[Mode DirectQuery &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Configurer les propriétés par défaut de modélisation des données et de déploiement &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Bases de données model tabulaires #40;SSAS Tabulaire#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[Mode DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Configurer les propriétés de déploiement et de modélisation de données par défaut](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Bases de données Model tabulaire](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>Quelle est l’étape suivante ?

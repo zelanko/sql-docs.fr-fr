@@ -1,5 +1,5 @@
 ---
-title: "Rôles (SSAS tabulaire) | Documents Microsoft"
+title: "Rôles | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>Rôles
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne. 
   
  Pour SQL Server Analysis Services, rôles contiennent des membres d’un utilisateur par nom d’utilisateur Windows ou par groupe Windows et les autorisations (lecture, process, administrateur). Pour Azure Analysis Services, les utilisateurs doivent être dans votre Azure Active Directory et les noms d’utilisateurs et groupes spécifiés doivent être par adresse de messagerie professionnelle ou UPN. 
   
@@ -53,10 +54,10 @@ ms.lasthandoff: 01/08/2018
   
  Chaque rôle peut avoir l'une des autorisations suivantes définies :  
   
-|Autorisations|Description|Filtres de lignes à l'aide de DAX|  
+|Autorisations| Description|Filtres de lignes à l'aide de DAX|  
 |-----------------|-----------------|----------------------------|  
-|None|Les membres ne peuvent pas apporter de modifications au schéma de la base de données model et ne peuvent pas interroger les données.|Les filtres de lignes ne s'appliquent pas. Aucune donnée n'est visible par les utilisateurs de ce rôle|  
-|Lire|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne), mais ils ne peuvent pas modifier la base de données model dans SSMS, apporter des modifications au schéma de la base de données model et l'utilisateur ne peut pas traiter le modèle.|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes sont visibles par les utilisateurs.|  
+|Aucun|Les membres ne peuvent pas apporter de modifications au schéma de la base de données model et ne peuvent pas interroger les données.|Les filtres de lignes ne s'appliquent pas. Aucune donnée n'est visible par les utilisateurs de ce rôle|  
+|Lecture|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne), mais ils ne peuvent pas modifier la base de données model dans SSMS, apporter des modifications au schéma de la base de données model et l'utilisateur ne peut pas traiter le modèle.|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes sont visibles par les utilisateurs.|  
 |Lire et traiter|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne) et à exécuter des opérations de traitement à l'aide d'un script ou d'un package contenant une commande Traiter, mais ne peuvent pas apporter des modifications à la base de données. Impossible d’afficher la base de données model dans SSMS.|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes peuvent être interrogées.|  
 |Traiter|Les membres peuvent effectuer des opérations de traitement en exécutant un script ou un package qui contient une commande Traiter. Impossible de modifier le schéma de la base de données model. Ne peuvent pas interroger les données. Impossible d’interroger la base de données model dans SSMS.|Les filtres de lignes ne s'appliquent pas. Aucune donnée ne peut être interrogée dans ce rôle|  
 |Administrateur|Les membres peuvent apporter des modifications au schéma de modèle et peuvent interroger toutes les données dans le Générateur de modèles, création de rapports et du client SSMS.|Les filtres de lignes ne s'appliquent pas. Toutes les données peuvent être interrogées dans ce rôle.|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
  Les filtres de lignes s'appliquent aux lignes spécifiées ainsi qu'aux lignes connexes. Lorsqu'une table contient plusieurs relations, les filtres appliquent la sécurité de la relation qui est active. Les filtres de lignes se croisent avec d'autres filtres de ligne définis pour les tables associées, par exemple :  
   
-|Table de charge de travail|Expression DAX|  
+|Table|Expression DAX|  
 |-----------|--------------------|  
 |Région|=Region[Country]=”USA”|  
 |ProductCategory|=ProductCategory[Name]=”Bicycles”|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour implémenter la sécurité dynamique, vous pouvez utiliser les fonctions suivantes dans le cadre d'une formule DAX pour retourner le nom de l'utilisateur actuellement connecté, ou la propriété CustomData dans une chaîne de connexion :  
   
-|Fonction|Description|  
+|Fonction| Description|  
 |--------------|-----------------|  
 |[Fonction USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)|Retourne le domaine\nom d'utilisateur de l'utilisateur actuellement connecté.|  
 |[Fonction CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Retourne la propriété CustomData dans une chaîne de connexion.|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-| 1|Entreprise|  
+|1|Entreprise|  
 |2|Direction générale et administration|  
 |3|Gestion des stocks|  
 |4|Fabrication|  
@@ -124,7 +125,7 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
 |[Créer et gérer des rôles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|Les tâches de cette rubrique décrivent comment créer et gérer des rôles à l'aide de la boîte de dialogue **Gestionnaire de rôles** .|  
   
