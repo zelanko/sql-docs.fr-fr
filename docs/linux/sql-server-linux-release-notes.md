@@ -210,7 +210,7 @@ Les fonctionnalités qui impliquent des connexions TCP sortantes à partir du pr
 
 1. Le serveur cible est spécifié comme un nom d’hôte et non une adresse IP.
 
-1. L’instance source a IPv6 désactivée dans le noyau. Pour vérifier si votre système a IPv6 activé dans le noyau, les tests suivants doivent être validés :
+1. L’instance source a IPv6 désactivée dans le noyau. Pour vérifier si votre système a IPv6 activée dans le noyau, les tests suivants doivent être validés :
 
    - `cat /proc/cmdline`Imprime la ligne de commande de démarrage du noyau actuel. La sortie ne doit pas contenir `ipv6.disable=1`.
    - Le répertoire /proc/sys/net/ipv6/ doit exister.
@@ -261,7 +261,7 @@ Si vous utilisez les partages distants **Network File System (NFS)** en producti
   - Base de données du catalogue SSIS
   - Exécution de package planifié par l’Agent SQL
   - Authentification Windows
-  - Composants tiers
+  - Les composants tiers
   - Capture de données modifiées (CDC)
   - SSIS Scale Out
   - Azure Feature Pack pour SSIS
