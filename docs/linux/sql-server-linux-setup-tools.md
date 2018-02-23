@@ -25,10 +25,10 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Les étapes suivantes installer les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le **mssql-tools** package contient :
+Les étapes suivantes installent les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le package **mssql-tools** contient :
 
-- **SQLCMD**: utilitaire de ligne de commande de requête.
-- **bcp**: en bloc utilitaire d’importation / exportation.
+- **SQLCMD**: Utilitaire de requêtage en ligne de commande.
+- **bcp**: Utilitaire d’importation/exportation en bloc.
 
 Installer les outils pour votre plateforme :
 
@@ -44,7 +44,7 @@ Cette rubrique décrit comment installer les outils de ligne de commande. Si vou
 
 Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Enterprise Linux. 
 
-1. Activer le mode de super utilisateur.
+1. Activer le mode Super utilisateur.
 
    ```bash
    sudo su
@@ -81,15 +81,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Ent
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **chemin d’accès** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -126,15 +126,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans les **~/.bash_profile** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **chemin d’accès** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -145,7 +145,7 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu.
 
 Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux Enterprise Server. 
 
-1. Ajoutez le référentiel Microsoft SQL Server à Zypper.
+1. Ajouter le référentiel Microsoft SQL Server à Zypper.
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
@@ -165,15 +165,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux 
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans les **~/.bash_profile** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **chemin d’accès** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -224,9 +224,9 @@ Ces packages dépendent de **msodbcsql**, qui doit être installé en premier. L
 
 Pour installer manuellement ces packages, procédez comme suit :
 
-1. **Déplacer les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, un pour déplacer les packages à l’ordinateur Linux est la **scp** commande.
+1. **Déplacer les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, une façon de déplacer les packages à l’ordinateur Linux est la commande **scp**.
 
-1. **Installer les packages et**: installer le **mssql-tools** et **msodbc** packages. Si vous obtenez des erreurs de dépendance, les ignorer jusqu'à ce que l’étape suivante.
+1. **Installer les packages**: installer les packages **mssql-tools** et **msodbc**. Si vous obtenez des erreurs de dépendance, les ignorer jusqu'à l’étape suivante.
 
     | Plateforme | Commandes d’installation de package |
     |-----|-----|
@@ -243,7 +243,7 @@ Pour installer manuellement ces packages, procédez comme suit :
     rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
     ```
 
-    Pour les packages Debian, si vous avez accès à des référentiels approuvées contenant ces dépendances, la solution la plus simple consiste à utiliser le **apt-get** commande :
+    Pour les packages Debian, si vous avez accès à des référentiels approuvées contenant ces dépendances, la solution la plus simple consiste à utiliser la commande **apt-get**  :
 
     ```bash
     sudo apt-get -f install
@@ -261,7 +261,7 @@ Pour installer manuellement ces packages, procédez comme suit :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir un exemple montrant comment utiliser **sqlcmd** pour se connecter à SQL Server et créer une base de données, consultez une des suivant rapide démarrer didacticiels :
+Pour obtenir un exemple montrant comment utiliser **sqlcmd** pour se connecter à SQL Server et créer une base de données, consultez les didacticiels de démarrage rapide suivants :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
