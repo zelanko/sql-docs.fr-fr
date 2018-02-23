@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Exécutez le 2017 du serveur SQL dans le cloud
 
@@ -32,7 +33,7 @@ Dans ce didacticiel de démarrage rapide, vous allez installer SQL Server 2017 s
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Se connecter à l’AMI avec ssh
-1.  Suivez le démarrage rapide pour le distrbution de Linux que vous avez choisi : 
+1.  Suivez le démarrage rapide pour la distribution de Linux que vous avez choisi : 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -44,7 +45,7 @@ Dans ce didacticiel de démarrage rapide, vous allez installer SQL Server 2017 s
 
     
 ## <a name="digital-ocean"></a>Numérique océan
-1. Connexion à la [le panneau de configuration](https://cloud.digitalocean.com/login) et cliquez sur Créer un droplet
+1. Se connecter à la [le panneau de configuration](https://cloud.digitalocean.com/login) et cliquez sur Créer un droplet
 1. Choisissez un droplet Ubuntu 16.04 au moins 2 Go de mémoire
 1. Se connecter au droplet avec ssh
 1. Suivez les [démarrage rapide d’Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ Dans ce didacticiel de démarrage rapide, vous allez installer SQL Server 2017 s
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Se connecter à l’image avec ssh
-1.  Suivez le démarrage rapide pour le distrbution de Linux que vous avez choisi : 
+1.  Suivez le démarrage rapide pour la distribution de Linux que vous avez choisi : 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurer des connexions à distance : 
     * Accédez à la [des règles de pare-feu](https://console.cloud.google.com/networking/firewalls)
-    * Ajouter une règle de trafic entrant pour autoriser le trafic sur le port sur lequel SQL Server écoute (TCP : 1433 de la valeur par défaut)
+    * Ajouter une règle de trafic entrant pour autoriser le trafic sur le port sur lequel SQL Server écoute (par défaut tcp : 1433)

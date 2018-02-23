@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Prise en main l’envoi de journaux sur Linux
 
@@ -30,7 +30,7 @@ Envoi de journaux du serveur SQL est une configuration à haute disponibilité o
   ![Sauvegardes](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Comme indiqué dans l’image ci-dessus, une session d’envoi de journaux implique les étapes suivantes :
+Comme décrit dans cette image, une session de copie des journaux implique les étapes suivantes :
 
 - Sauvegarde du fichier journal des transactions sur l’instance principale de SQL Server
 - Copie le fichier de sauvegarde du journal des transactions sur le réseau à une ou plusieurs instances de SQL Server secondaire

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 3f3c33387db96da502a9890093d0a1b68dd61fd0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurer SQL Server groupe de disponibilité AlwaysOn sur Windows et Linux (multiplateforme)
 
@@ -47,7 +47,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    >[!TIP]
    >Si vous validez cette solution dans Azure, placez les deux serveurs dans le même groupe de disponibilité défini pour s’assurer qu’ils sont séparés dans le centre de données. 
 
-   **Activer les groupes de disponibilité**
+   Activer les groupes de disponibilité
 
    Pour obtenir des instructions, consultez [activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
