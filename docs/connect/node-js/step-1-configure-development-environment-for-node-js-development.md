@@ -8,11 +8,12 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
@@ -24,30 +25,30 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement de Node.js
-Vous devez configurer votre environnement de développement avec les composants requis pour développer une application à l’aide du pilote Node.js pour SQL Server.  La méthode la plus courante consiste à utiliser le Gestionnaire de package de nœud (npm) pour installer le module fastidieux, mais vous pouvez télécharger le module fastidieux directement au [Github](https://github.com/pekim/tedious) si vous préférez.  
+Vous devez configurer votre environnement de développement avec les composants requis pour développer une application à l’aide du pilote Node.js pour SQL Server.  La méthode la plus courante consiste à utiliser le Gestionnaire de package de Node (npm) pour installer le module tedious, mais vous pouvez télécharger le module tedious directement au [Github](https://github.com/pekim/tedious) si vous préférez.  
   
 Notez que le pilote Node.js utilise le protocole TDS, qui est activé par défaut dans SQL Server et la base de données SQL Azure.  Aucune configuration supplémentaire n’est requise.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Installer le Gestionnaire de package de runtime et npm Node.js**  
+1. **Installer le runtime Node.js et le gestionnaire de paquets npm**  
 a. Accédez à [Node.js](https://nodejs.org/en/download/)  
 b. Cliquez sur le lien de msi du programme d’installation Windows approprié.   
 c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js  
   
 2. **Ouvrez cmd.exe**  
   
-3. **Créer un répertoire de projet** pour y accéder.    
+3. **Créer un répertoire projet** pour y accéder.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
-4. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
+4. **Créez un projet de node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
 ```  
 > npm init  
 ```  
   
-5. **Installez le module fastidieux dans votre projet.**  Il s’agit de l’implémentation du protocole TDS, qui le pilote utilise pour communiquer avec SQL Server.  
+5. **Installez le module tedious dans votre projet.**  Il s’agit de l’implémentation du protocole TDS, qui le pilote utilise pour communiquer avec SQL Server.  
 ```  
 > npm install tedious  
 ```  
@@ -60,47 +61,47 @@ c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js
 ```  
 >sudo apt-get install node  
 ```  
-3. **Installez npm (Gestionnaire de package de nœud)**  
+3. **Installez npm (Gestionnaire de package de node)**  
 ```  
 > sudo apt-get install npm  
 ```  
-4. **Créer un répertoire de projet** pour y accéder.    
+4. **Créer un répertoire projet** pour y accéder.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-5. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
+5. **Créez un projet de node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
 ```  
 > sudo npm init  
 ```  
   
-6. **Installez le module fastidieux dans votre projet.**  Il s’agit de l’implémentation du protocole TDS, qui le pilote utilise pour communiquer avec SQL Server.  
+6. **Installez le module tedious dans votre projet.**  Il s’agit de l’implémentation du protocole TDS, qui le pilote utilise pour communiquer avec SQL Server.  
 ```  
 > sudo npm install tedious  
 ```  
   
 ## <a name="mac"></a>Mac  
   
-1. **Installer le Gestionnaire de package de runtime et npm Node.js**  
+1. **Installer le runtime Node.js et le gestionnaire de paquets npm**  
 a. Accédez à [Node.js](https://nodejs.org/en/download/)  
 b. Cliquez sur le lien du programme d’installation du système d’exploitation Mac approprié.  
 c. Une fois téléchargé, exécutez le dmg pour installer Node.js  
   
 2. **Ouvrez Terminal Server**  
   
-3. **Créer un répertoire de projet** pour y accéder.    
+3. **Créer un répertoire projet** pour y accéder.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-4. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
+4. **Créez un projet de node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
 ```  
 > npm init  
 ```  
   
-5. **Installez le module fastidieux dans votre projet.**  Il s’agit de l’implémentation du protocole TDS, qui le pilote utilise pour communiquer avec SQL Server.  
+5. **Installez le module tedious dans votre projet.**  Il s’agit de l’implémentation du protocole TDS, qui le pilote utilise pour communiquer avec SQL Server.  
 ```  
 > npm install tedious  
 ```  

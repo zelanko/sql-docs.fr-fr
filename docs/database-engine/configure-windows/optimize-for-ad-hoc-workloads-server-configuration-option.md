@@ -8,28 +8,30 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: optimize for ad hoc workloads option
+helpviewer_keywords:
+- optimize for ad hoc workloads option
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c02a8cc0852cc8e772bcf9a6f4d0c4084e8851bc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c2b8c7645880d3e6a1ff2ee9d48e2666d7659c68
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  L'option **optimize for ad hoc workloads** permet d'améliorer l'efficacité du cache du plan pour les charges de travail qui contiennent de nombreux lots ad hoc à usage unique. Lorsque cette option a la valeur 1, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stocke un petit stub du plan compilé dans le cache du plan lorsqu'un lot est compilé pour la première fois, au lieu du plan compilé complet. La mémoire est ainsi moins sollicitée car le cache du plan n'est pas saturé de plans compilés qui ne sont pas réutilisés.  
+  L'option **optimize for ad hoc workloads** permet d'améliorer l'efficacité du cache du plan pour les charges de travail qui contiennent de nombreux lots ad hoc à usage unique. Lorsque cette option a la valeur 1, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stocke un petit stub du plan compilé dans le cache du plan lorsqu'un lot est compilé pour la première fois, au lieu du plan compilé complet. La mémoire est ainsi moins sollicitée car le cache du plan n'est pas saturé de plans compilés qui ne sont pas réutilisés. 
   
- Le stub du plan compilé permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de reconnaître que ce lot ad hoc a déjà été compilé mais qu'il n'a stocké qu'un stub du plan compilé. Par conséquent, lorsque le lot est à nouveau appelé (compilé ou exécuté), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] compile le lot, supprime le stub du plan compilé du cache du plan et ajoute le plan compilé complet au cache du plan. 
+  Le stub du plan compilé permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de reconnaître que ce lot ad hoc a déjà été compilé mais qu'il n'a stocké qu'un stub du plan compilé. Par conséquent, lorsque le lot est à nouveau appelé (compilé ou exécuté), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] compile le lot, supprime le stub du plan compilé du cache du plan et ajoute le plan compilé complet au cache du plan. 
   
  Le stub du plan compilé est l'un des types d'objets cache contenus dans l'affichage catalogue sys.dm_exec_cached_plans. Il possède un handle SQL et un handle de plan qui sont uniques. Aucun plan d'exécution n'est associé au stub du plan compilé et interroger le handle du plan ne retourne pas de plan d'exécution de requêtes XML.  
   
@@ -39,6 +41,8 @@ ms.lasthandoff: 01/18/2018
 >  L'indicateur de trace 8 032 peut altérer les performances si des caches volumineux diminuent la mémoire disponible pour les autres consommateurs, tels que le pool de mémoires tampons.  
 
 ## <a name="recommendations"></a>Recommandations
+Évitez d’avoir un grand nombre de plans à usage unique dans le cache du plan. Une cause courante de ce problème apparaît lorsque les types de données des paramètres de requête ne sont pas définis de manière cohérente. Cela s’applique en particulier à la longueur des chaînes mais peut s’appliquer aussi à n’importe quel type de données ayant un maxlength, une précision ou une échelle. Par exemple, si un paramètre nommé @Greeting est passé comme nvarchar (10) sur un appel, et comme nvarchar (20) lors du prochain appel, des plans distincts sont créés pour chaque taille de paramètre. Si une requête contient plusieurs paramètres et qu’ils ne sont pas définis de façon cohérente lorsqu’elle est appelée, un grand nombre de plans de requête peut exister pour chaque requête. Les plans peuvent exister pour chaque combinaison de longueurs et de types de données de paramètre de requête qui a été utilisée.
+
 Si le nombre de plans d’usage unique prend une partie significative de la mémoire du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sur un serveur OLTP et que ces plans sont des plans Ad hoc, utilisez cette option de serveur pour réduire l’utilisation de la mémoire avec ces objets.
 Pour trouver le nombre de plans d’usage unique mis en cache, exécutez la requête suivante :
 
