@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2089ceaf95022e1bed0e7409d9ccbc4af3a64fba
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Sources de données prises en charge (SSAS - Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ Cette rubrique décrit les types de sources de données que vous pouvez utiliser
  ** Certaines fonctionnalités nécessitent une base de données relationnelle SQL Server qui s’exécute en local. Plus particulièrement, le stockage des données d’écriture différée et le stockage ROLAP requièrent une base de données relationnelle SQL Server comme la source de données sous-jacente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Sources de données prises en charge](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

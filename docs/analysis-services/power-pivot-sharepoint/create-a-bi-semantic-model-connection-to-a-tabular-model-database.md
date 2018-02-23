@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Créer une connexion de modèle sémantique BI à une base de données model tabulaire
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ Utilisez les informations de cette rubrique pour configurer une connexion de mod
 ##  <a name="bkmk_BISM"></a> Accorder les autorisations de lecture sur la base de données model tabulaire  
  Étant donné que la base de données s'exécute sur un serveur externe à la batterie, une partie de la configuration de vos connexions consiste à accorder aux utilisateurs de base de données des autorisations sur le serveur Analysis Services principal. Analysis Services utilise un modèle d'autorisation basé sur les rôles. Les utilisateurs qui se connectent aux bases de données model doivent avoir des autorisations de lecture ou supérieures, via un rôle qui accorde l'accès en lecture à ses membres.  
   
- Les rôles, et parfois l'appartenance au rôle, sont définis lorsque le modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous ne pouvez pas utiliser SQL Server Management Studio pour créer des rôles, mais vous pouvez l'utiliser pour ajouter des membres à un rôle qui est déjà défini. Pour plus d’informations sur la création de rôles, consultez [Créer et gérer des rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Les rôles, et parfois l'appartenance au rôle, sont définis lorsque le modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous ne pouvez pas utiliser SQL Server Management Studio pour créer des rôles, mais vous pouvez l'utiliser pour ajouter des membres à un rôle qui est déjà défini. Pour plus d’informations sur la création de rôles, consultez [créer et gérer les rôles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Assigner l'appartenance au rôle  
   

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurer Analysis Services pour la délégation contrainte Kerberos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ Quand vous configurez Analysis Services pour l'authentification Kerberos, vous c
 ##  <a name="bkmk_delegate"></a> Configurer Analysis Services pour une délégation approuvée  
  Configurer Analysis Services pour la délégation contrainte Kerberos permet au service d'emprunter l'identité d'un client sur un service de bas niveau, comme le moteur de base de données relationnelle, afin que les données puissent être interrogées comme si le client avait été connecté directement.  
   
- Les scénarios de délégation pour Analysis Services sont limités aux modèles tabulaires configurés pour le mode **DirectQuery** . Il s'agit du seul scénario dans lequel Analysis Services peut transmettre des informations d'identification déléguées à un autre service. Dans tous les autres scénarios, tels que les scénarios SharePoint mentionnés dans la section précédente, Analysis Services est à l'extrémité réceptrice de la chaîne de délégation. Pour plus d’informations sur DirectQuery, consultez [Mode DirectQuery &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ Les scénarios de délégation pour Analysis Services sont limités aux modèles tabulaires configurés pour le mode **DirectQuery** . Il s'agit du seul scénario dans lequel Analysis Services peut transmettre des informations d'identification déléguées à un autre service. Dans tous les autres scénarios, tels que les scénarios SharePoint mentionnés dans la section précédente, Analysis Services est à l'extrémité réceptrice de la chaîne de délégation. Pour plus d’informations sur DirectQuery, consultez [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 > [!NOTE]  
 >  On pense souvent à tort que le stockage ROLAP, les opérations de traitement ou l'accès aux partitions distantes exigent la délégation contrainte. Ce n'est pas le cas. Toutes ces opérations sont exécutées directement par le compte de service (également appelé compte de traitement), pour lui-même. La délégation n'est pas nécessaire pour ces opérations dans Analysis Services, étant donné que les autorisations pour ces opérations sont accordées directement au compte de service (par exemple, l'accord d'autorisations db_datareader sur la base de données relationnelle afin que le service puisse traiter des données). Pour plus d’informations sur les autorisations et les opérations serveur, consultez [Configurer les comptes de service &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  

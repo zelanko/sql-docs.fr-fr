@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Élément Hierarchy (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ L'élément Hierarchy est un conteneur logique des champs d'une table qui peuven
 |Niveau|Oui|Un ou plusieurs éléments Level qui définissent les colonnes utilisées dans la hiérarchie.<br /><br /> Consultez [Élément Level &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md).|  
   
 ## <a name="remarks"></a>Notes  
- Dans les modèles tabulaires, les hiérarchies sont créées en spécifiant des relations parent-enfant entre des colonnes de la même table. Pour plus d’informations, consultez [Hiérarchies &#40;SSAS Tabulaire&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+ Dans les modèles tabulaires, les hiérarchies sont créées en spécifiant des relations parent-enfant entre des colonnes de la même table. Pour plus d’informations, consultez [hiérarchies](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Exemple  
  **Sous forme de tableau**  

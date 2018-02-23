@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ Le traitement est une opération selon laquelle Analysis Services interroge les 
  Le traitement est une opération hautement configurable, contrôlée par un ensemble d'options de traitement qui déterminent si un traitement complet ou incrémentiel se produit au niveau de l'objet. Pour plus d’informations sur les options de traitement et sur le traitement des objets, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) et [Traitement des objets Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur les modèles tabulaires de traitement, consultez [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) et [Traiter les données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur le traitement des modèles tabulaires, consultez [processus de base de données, Table, ou Partition &#40; Analysis Services &#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) et [traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Objets de traitement dans SQL Server Management Studio  
   
