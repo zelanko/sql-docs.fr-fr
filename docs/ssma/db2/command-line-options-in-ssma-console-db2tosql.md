@@ -8,14 +8,15 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -162,21 +163,21 @@ Affiche le résumé de la syntaxe des options de la Console de SSMA :
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-Pour un affichage sous forme de tableau des options de ligne de commande de Console de SSMA, reportez-vous à [annexe - 1 & #40 ; DB2ToSQL & #41 ;](../../ssma/db2/appendix-1-db2tosql.md).  
+Pour un affichage sous forme de tableau des options de ligne de commande de Console de SSMA, reportez-vous à [annexe - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Option de l’aide de SecurePassword : – securepassword- ? /Help  
 Affiche le résumé de la syntaxe des options de la Console de SSMA :  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-Pour un affichage sous forme de tableau des options de ligne de commande de Console de SSMA, reportez-vous à [annexe - 1 & #40 ; DB2ToSQL & #41 ;](../../ssma/db2/appendix-1-db2tosql.md)  
+Pour un affichage sous forme de tableau des options de ligne de commande de Console de SSMA, reportez-vous à [annexe - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>Étape suivante  
 L’étape suivante varie selon les spécifications de votre projet :  
   
-1.  Pour spécifier un mot de passe ou d’exportation / importation des mots de passe, consultez [la gestion des mots de passe & #40 ; DB2ToSQL & #41 ;](../../ssma/db2/managing-passwords-db2tosql.md).  
+1.  Pour spécifier un mot de passe ou d’exportation / importation des mots de passe, consultez [la gestion des mots de passe &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
   
-2.  Pour la génération de rapports, consultez [génération de rapports & #40 ; DB2ToSQL & #41 ;](../../ssma/db2/generating-reports-db2tosql.md).  
+2.  Pour la génération de rapports, consultez [génération de rapports &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-3.  Pour résoudre les problèmes dans la console, consultez [dépannage & #40 ; DB2ToSQL & #41 ;](../../ssma/db2/troubleshooting-db2tosql.md).  
+3.  Pour résoudre les problèmes dans la console, consultez [dépannage &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   
