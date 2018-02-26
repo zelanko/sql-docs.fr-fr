@@ -8,7 +8,10 @@
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (outil de requête en ligne de commande)](mssql-cli.md)
+
 # [Gestionnaire de configuration](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Assistant Paramétrage du moteur de base de données (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
@@ -20,7 +23,7 @@
 ## [Utilitaire osql](osql-utility.md)  
 ## [Utilitaire profiler](profiler-utility.md)  
 ## [Application sqlagent90](sqlagent90-application.md)  
-## [Utilitaire sqlcmd](sqlcmd-utility.md)  
+## [sqlcmd Utility](sqlcmd-utility.md)  
 ## [Utilitaire SQLdiag](sqldiag-utility.md)  
 ## [Utilitaire sqlmaint](sqlmaint-utility.md)  
 ## [Application sqllogship](sqllogship-application.md)  
