@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +115,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 |Exécutez|Types CLR, scripts externes, procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR), fonctions scalaires et d’agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et synonymes|  
 |IMPERSONATE|Connexions et utilisateurs|  
 |INSERT|Synonymes, tables et colonnes, vues et colonnes. l’autorisation peut être accordée au niveau de la base de données, du schéma ou de l’objet.|  
-|RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] files d'attente|  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW et<br />XML SCHEMA COLLECTION|  
 |SELECT|Synonymes, tables et colonnes, vues et colonnes. l’autorisation peut être accordée au niveau de la base de données, du schéma ou de l’objet.|  
 |TAKE OWNERSHIP|Toutes les classes d’objets, à l’exception de DATABASE SCOPED CONFIGURATION, LOGIN, SERVER et USER.|  
@@ -421,7 +422,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
 7.  Succès de la vérification des autorisations si l' **autorisation requise** n'a pas été refusée et si l' **autorisation requise** contient une autorisation GRANT ou GRANT WITH GRANT directement ou implicitement accordée à l'une des identités dans le **contexte de sécurité** pour un objet contenu dans l' **espace d'autorisation**.  
 
-## <a name="secial-considerations-for-column-level-permissions"></a>Considérations spéciales relatives aux autorisations au niveau des colonnes
+## <a name="special-considerations-for-column-level-permissions"></a>Considérations spéciales relatives aux autorisations au niveau des colonnes
 
 Les autorisations au niveau des colonnes sont accordées avec la syntaxe *<nom_table>(\<nom_colonne>)*. Exemple :
 ```sql

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5195d0dd1449a86402263921930d7679fab036f2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 448f9f3f86dec25001be11f309718bd04a4d3f08
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Télécharger SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ SSDT 15.5.2 représente une expérience d’installation web autonome pour les 
 |||
 
 > [!IMPORTANT]
-> Avant d’installer SSDT pour Visual Studio 2017 (15.5.2), désinstallez les extensions « Projets Microsoft Analysis Services » et « Projets Microsoft Reporting Services» si elles sont déjà installées sur VS 2017, puis fermez toutes les instances de Visual Studio. 
+> Avant d’installer SSDT pour Visual Studio 2017 (15.5.2), désinstallez les extensions « Projets Microsoft Analysis Services » et « Projets Microsoft Reporting Services » si elles sont déjà installées sur VS 2017, et fermez toutes les instances de Visual Studio. 
 > 
 > Les versions non anglaises de SSDT pour Visual Studio 2017 15.5.x ne prenant pas en charge la mise à niveau à partir de la préversion 15.4.0 en anglais, vous devez désinstaller la préversion 15.4.0 en anglais avant d’installer 15.5.x dans d’autres langues. 
 

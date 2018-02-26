@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Journal des modifications (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -18,19 +18,95 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f125db75de84856b8754a305a1c6ce8be9d29868
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cet article fournit des détails sur les mises à jour, les améliorations et les correctifs de bogues des versions actuelles et précédentes de SSMS. Téléchargez les [versions précédentes de SSMS ci-dessous](#previous-ssms-releases).
 
 
-## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+Disponibilité générale | Numéro de build : 14.0.17224.0
+
+### <a name="whats-new"></a>Nouveautés
+
+**SSMS général**
+
+Découverte et classification des données :
+
+- Ajout d’une nouvelle fonctionnalité Découverte et classification des données SQL pour la découverte, la classification, l’étiquetage et la création de rapport concernant les données sensibles dans vos bases de données. 
+- La découverte et la classification automatiques de vos données les plus sensibles (professionnelles, financières, médicales, PII, etc.) peuvent jouer un rôle essentiel dans la protection des informations de votre organisation.
+- Découvrez plus d’informations sur la [Découverte et classification des données SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
+
+Éditeur de requête :
+
+- Ajout de la prise en charge de l’option SkipRows pour le format de fichier externe de texte délimité dans Azure SQL Data Warehouse. Cette fonctionnalité permet aux utilisateurs d’ignorer un nombre spécifié de lignes pendant le chargement de fichiers de texte délimité dans SQL DW. Ajout également de la prise en charge d’Intellisense/SMO correspondante pour le mot clé FIRST_ROW. 
+
+Plan d’exécution de requêtes :
+
+- Activation de l’affichage du bouton de plan estimé pour SQL Data Warehouse
+- Ajout d’un nouvel attribut de plan d’exécution de requêtes *EstimateRowsWithoutRowGoal* et ajout de nouveaux attributs de plan d’exécution de requêtes pour *QueryTimeStats* : *UdfCpuTime* et *UdfElapsedTime*. Pour plus d’informations, consultez [Informations sur l’objectif de lignes de l’optimiseur dans le plan d’exécution de requêtes ajouté dans SQL Server 2017 CU3](http://support.microsoft.com/help/4051361).
+
+
+
+### <a name="bug-fixes"></a>Correctifs de bogues
+
+**SSMS général**
+
+Plan d’exécution de requêtes :
+
+- Correction du temps écoulé des statistiques des requêtes actives, pour afficher la durée d’exécution du moteur plutôt que le temps écoulé de la connexion LQS.
+- Correction d’un problème où le plan d’exécution de requêtes ne pouvait pas reconnaître les opérateurs logiques Apply comme GbApply et InnerApply.
+- Correction d’un problème lié à ExchangeSpill.
+
+Éditeur de requête :
+
+- Correction d’un problème lié aux SPID où SSMS pouvait générer une erreur de type « Le format de la chaîne d’entrée est incorrect. (mscorlib) » à l’exécution d’une requête simple précédée de « SET SHOWPLAN_ALL ON ». 
+
+
+SMO :
+
+- Correction d’un problème où SMO ne pouvait pas récupérer les propriétés AvailabilityReplica quand le classement du serveur était sensible à la casse (par conséquent, SSMS pouvait afficher un message d’erreur de type « L’identificateur en plusieurs parties « a.delimited » ne peut pas être lié ».
+- Correction d’un problème dans la classe DatabaseScopedConfigurationCollection, où les classements n’étaient pas gérés correctement (par conséquent, un SSMS s’exécutant sur un ordinateur avec des paramètres régionaux turcs pouvait afficher une erreur de type « L’estimation de cardinalité héritée n’est pas une configuration délimitée valide » lors d’un clic droit sur une base de données s’exécutant sur un serveur avec un classement sensible à la casse).
+- Correction d’un problème dans la classe JobServer, où SMO ne pouvait pas récupérer les propriétés de SQL Agent sur un serveur SQL 2005 (par conséquent, SSMS générait une erreur de type « Impossible d’attribuer une valeur par défaut à une variable locale. La variable scalaire « @ServiceStartMode » doit être déclarée » et, finalement, n’affichait pas le nœud SQL Agent dans l’Explorateur d’objets).
+
+Modèles : 
+
+- « Messagerie de base de données » : correction de quelques fautes de frappe [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+
+Explorateur d'objets :
+- Correction d’un problème où la compression gérée échouait pour les index (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
+
+Audit :
+- Correction d’un problème avec la fonctionnalité *Fusionner les fichiers d’audit*.
+<br>
+
+### <a name="known-issues"></a>Problèmes connus
+
+Classification des données :
+- La suppression d’une classification, puis l’ajout manuel d’une nouvelle classification pour la même colonne entraînait l’attribution de l’ancien type d’informations et de l’ancienne étiquette de sensibilité à la colonne dans la vue principale.<br>
+*Solution de contournement* : Attribuez le nouveau type d’informations et la nouvelle étiquette de sensibilité après l’ajout de la classification à la vue principale et avant l’enregistrement.
+
+
+
+## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
+
+Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes.
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 Disponibilité générale | Numéro de build : 14.0.17213.0
+
+[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>Nouveautés
 
@@ -121,9 +197,6 @@ Magasin des requêtes :
 - Correction d’un problème dans SQL Profiler à cause duquel sélectionner l’authentification Windows à Azure Analysis Services invitait quand même à se connecter.
 
 
-## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
-
-Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Disponibilité générale | Numéro de build : 14.0.17199.0

@@ -26,16 +26,16 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 439eb6561409ab10072f35013126e42bb5df2a41
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-queries"></a>Requêtes PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cet article donne des exemples de requêtes qui utilisent la fonctionnalité [Guide PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (voir [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
+  Cet article donne des exemples de requêtes qui utilisent la fonctionnalité [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (voir [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
   
 ## <a name="queries"></a>Requêtes  
  Exécutez des instructions Transact-SQL sur les tables externes ou utilisez des outils d’aide à la décision pour interroger des tables externes.

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3a8947b1212aafe5fb3d233400900ab320a80f6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4fcb9a2ac92213a7e26a39012f8f113a858e7e9e
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Leçon 6-4 : Déploiement du package de la Leçon 6
 Pour déployer le package, vous devez l'ajouter au catalogue SSISDB dans Integration Services sur une instance de SQL Server. Dans cette leçon, vous allez ajouter le package de la leçon 6 au catalogue SSISDB, définir le paramètre, puis exécuter le package. Dans le cadre de cette leçon, vous utiliserez SQL Server Management Studio pour ajouter le package de la leçon 6 au catalogue SSISDB et déployer le package. Une fois le package déployé, vous modifierez le paramètre de façon à ce qu'il pointe vers un nouvel emplacement, puis vous exécuterez le package.  
@@ -39,7 +39,7 @@ Dans cette leçon, vous allez :
   
 -   exécuter le package dans SSMS.  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>Pour rechercher ou ajouter le catalogue SSISDB  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>Pour rechercher ou ajouter le catalogue SSISDB  
   
 1.  Cliquez sur Démarrer, pointez sur Tous les programmes, pointez sur Microsoft SQL Server 2012, puis cliquez sur SQL Management Studio.  
   

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6455a2881d11ccd10c7be65a437357b1d1431dda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation
 Découvrez la série des opérations de l’Assistant Importation et exportation SQL Server en suivant un scénario courant : l’importation de données à partir d’une feuille de calcul Excel dans une base de données SQL Server. Même si vous envisagez d’utiliser une source et une destination différentes, cette rubrique vous montre l’essentiel de ce que vous devez savoir sur l’exécution de l’Assistant.
@@ -118,7 +118,7 @@ Tandis que la boîte de dialogue **Mappage de colonnes** est ouverte, cliquez le
 Pour obtenir plus d’informations sur cette page de l’Assistant, consultez [Instruction SQL de création de table](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>Étape facultative 9 - Affichage d’un aperçu des données à copier
-Après avoir cliqué sur **OK** pour fermer la boîte de dialogue **Instruction SQL de création de table**, puis à nouveau sur **OK** pour fermer la boîte de dialogue **Mappage de colonnes**, vous êtes de retour à la page **Sélectionner les tables et les vues sources**. Le cas échéant, cliquez sur le bouton **Aperçu** pour afficher un échantillon des données que l’Assistant va copier. Dans cet exemple, tout est normal.
+Après avoir cliqué sur **OK** pour fermer la boîte de dialogue **Instruction SQL de création de table**, puis à nouveau sur **OK** pour fermer la boîte de dialogue **Mappage de colonnes**, vous êtes de retour à la page **Sélectionner les tables et les vues sources**. Si vous le voulez, vous pouvez cliquer sur le bouton **Aperçu** pour afficher un échantillon des données que l’Assistant va copier. Dans cet exemple, tout est normal.
 
 ![Affichage d’un aperçu des données à copier](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 

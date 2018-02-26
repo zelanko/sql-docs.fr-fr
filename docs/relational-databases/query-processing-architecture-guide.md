@@ -1,7 +1,7 @@
 ---
 title: "Guide d’architecture de traitement des requêtes | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] traite les requêt
 ## <a name="sql-statement-processing"></a>Traitement des instructions SQL
 
 Le traitement d'une instruction SQL unique est le cas le plus simple d'exécution par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les étapes de traitement d’une instruction `SELECT` unique qui ne fait référence qu’à des tables de base locales (et non à des vues ou à des tables distantes) illustrent le processus de base.
+
+#### <a name="logical-operator-precedence"></a>Priorité des opérateurs logiques
+
+Quand une instruction contient plusieurs opérateurs logiques, `NOT` est traité en premier, ensuite `AND` et enfin `OR`. Les opérateurs arithmétiques, et au niveau du bit, sont traités avant les opérateurs logiques. Pour plus d’informations, consultez [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+Dans l'exemple suivant, la condition de couleur est associée au modèle de produit 21 et non au modèle de produit 20, car `AND` est prioritaire sur `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Vous pouvez modifier la signification de la requête en forçant le traitement de `OR` en premier lieu à l'aide de parenthèses. La requête suivante recherche uniquement les produits rouges dans les modèles 20 et 21.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+L'utilisation de parenthèses, même quand elles ne sont pas nécessaires, peut améliorer la lisibilité des requêtes et limiter les risques d'erreurs dues à la priorité des opérateurs. L'utilisation de parenthèses ne diminue pas les performances du système. L'exemple suivant est plus lisible que le premier, bien qu'il soit identique sur le plan de la syntaxe.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>Optimisation des instructions SELECT
 
@@ -49,7 +83,6 @@ Une instruction `SELECT` ne définit que :
 * les tables contenant les données source. Ceci est spécifié dans la clause `FROM` .
 * la manière dont les tables sont reliées de façon logique pour les besoins de l’instruction `SELECT` . Elle est définie dans les spécifications de jointure, qui peuvent être présentes dans la clause `WHERE` ou dans une clause `ON` à la suite de `FROM`.
 * Les conditions auxquelles doivent répondre les lignes des tables sources afin de correspondre à l’instruction `SELECT` . Elles sont spécifiées dans les clauses `WHERE` et `HAVING` .
-
 
 Un plan d'exécution de requête permet de définir : 
 
@@ -1045,4 +1078,5 @@ GO
  [Événements étendus](../relational-databases/extended-events/extended-events.md)  
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)
+ [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)   
+ [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md)
