@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Emprunt d'identité 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette rubrique fournit des créateurs de modèles tabulaires une présentation d’informations d’identification d’ouverture de session utilisation par Analysis Services lors de la connexion à une source de données pour importer et traiter (Actualiser) des données.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article fournit les créateurs de modèles tabulaires une présentation d’informations d’identification d’ouverture de session utilisation par Analysis Services lors de la connexion à une source de données pour importer et traiter (Actualiser) des données.  
 
-##  <a name="bkmk_conf_imp_info"></a>Configuration de l’emprunt d’identité  
+##  <a name="bkmk_conf_imp_info"></a> Configuration de l’emprunt d’identité  
  Où et dans quel contexte existe un modèle détermine la façon dont les informations d’emprunt d’identité sont configurées. Lorsque vous créez un projet de modèle, l’emprunt d’identité est configuré dans SQL Server Data Tools (SSDT) lorsque vous vous connectez à une source de données pour importer des données. Une fois qu’un modèle est déployé, l’emprunt d’identité peut être configuré dans la propriété de chaîne de connexion de base de données de modèle à l’aide de SQL Server Management Studio (SSMS). Pour les modèles tabulaires dans Azure Analysis Services, vous pouvez utiliser SSMS ou **afficher sous la forme : Script** mode dans le concepteur basée sur navigateur pour modifier le fichier Model.bim dans JSON.
   
-##  <a name="bkmk_how_imper"></a>Utilisation de l’emprunt d’identité  
+##  <a name="bkmk_how_imper"></a> Utilisation de l’emprunt d’identité  
  L'*emprunt d'identité* est la capacité d'une application serveur, telle qu'Analysis Services, d'assumer l'identité d'une application cliente. Analysis Services s’exécute à l’aide d’un compte de service ; Toutefois, lorsque le serveur établit une connexion à une source de données, il utilise l’emprunt d’identité afin que les vérifications d’accès pour l’importation de données et le traitement peut être effectuée.  
   
  Informations d’identification utilisées pour l’emprunt d’identité sont différentes de celles que vous êtes actuellement connecté avec. L’utilisateur connecté sont utilisées pour certaines opérations côté client lors de la création d’un modèle.  
@@ -62,7 +63,7 @@ Lorsque les données sont importées ou traitées, les informations d’identifi
   
 **Modèles tabulaires 1400 et versions ultérieures**
  
-|Option|Description|  
+|Option| Description|  
 |------------|-----------------|  
 |**Emprunter l’identité du compte**|Spécifie le modèle utilise un compte d’utilisateur Windows pour importer ou traiter les données de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**.|  
 |**Emprunter l’identité d’utilisateur actuel**|Spécifie les données doivent être accessibles à partir de la source de données à l’aide de l’identité de l’utilisateur qui a envoyé la demande. Ce mode prend uniquement en mode requête directe.|  
@@ -73,7 +74,7 @@ Lorsque les données sont importées ou traitées, les informations d’identifi
 
 **Les modèles tabulaires 1200**
  
-|Option|Description|  
+|Option| Description|  
 |------------|-----------------|  
 |**Mot de passe et le nom d’utilisateur Windows spécifique**|Cette option spécifie le modèle utilise un compte d’utilisateur Windows pour importer ou traiter les données de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
 |**Compte de service**|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
@@ -89,6 +90,6 @@ Lorsque les données sont importées ou traitées, les informations d’identifi
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Sources de données](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Déploiement de solutions de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Déploiement d’une solution de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

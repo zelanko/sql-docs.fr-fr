@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
@@ -41,7 +41,7 @@ Pour obtenir des informations conceptuelles, consultez [basculement SQL Server C
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour le stockage. Étapes ci-dessous décrivent la configuration de ces serveurs.
+Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour le stockage. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
 ## <a name="set-up-and-configure-linux"></a>Installer et configurer Linux
 
@@ -63,7 +63,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
     > [!NOTE] 
     > Le temps de vue d’ensemble, une clé principale du serveur est généré pour l’instance de SQL Server et mis à `var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal à chaque nœud secondaire pour chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur. 
 
-1.  Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilisera ce compte pour vérifier le nœud qui exécute SQL Server. 
+1.  Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<FolderToMountNFSShare > est le dossier pour monter le disque (pour les bases de données système et l’emplacement par défaut, il serait /var/opt/mssql/data)
 
-     Vous trouverez ci-dessous un exemple :
+    Voici un exemple :
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

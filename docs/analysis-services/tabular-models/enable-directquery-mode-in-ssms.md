@@ -1,7 +1,7 @@
 ---
 title: Activer le mode DirectQuery dans SSMS | Documents Microsoft
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Activer le mode DirectQuery dans SSMS
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Vous pouvez modifier les propriétés d’accès aux données d’un modèle tabulaire qui a déjà été déployé, l’activation du mode DirectQuery, où les requêtes s’exécutent sur une source de données relationnelle principale plutôt que mises en cache de données résidant dans la mémoire.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Vous pouvez modifier les propriétés d’accès aux données d’un modèle tabulaire déjà déployé en activant le mode DirectQuery où des requêtes s’exécutent sur une source de données relationnelle principale plutôt que sur des données mises en cache résidant dans la mémoire.  
   
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les étapes de configuration de DirectQuery varient en fonction du niveau de compatibilité du modèle. Vous trouverez ci-dessous des étapes qui fonctionnent pour tous les niveaux de compatibilité.  
   
- Cette rubrique suppose que vous avez créé et validé un modèle tabulaire en mémoire au niveau de compatibilité 1200 ou supérieur et seul est nécessaire pour activer l’accès de DirectQuery et de mettre à jour les chaînes de connexion. Si vous démarrez à partir d’un niveau de compatibilité inférieur, vous devez commencer par mettre à niveau le modèle manuellement. Pour connaître la procédure à suivre, consultez [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ Cet article suppose que vous avez créé et validé un modèle tabulaire en mémoire au niveau de compatibilité 1200 ou supérieur et seul est nécessaire pour activer l’accès de DirectQuery et de mettre à jour les chaînes de connexion. Si vous démarrez à partir d’un niveau de compatibilité inférieur, vous devez commencer par mettre à niveau le modèle manuellement. Pour connaître la procédure à suivre, consultez [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons d’utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] au lieu de Management Studio pour basculer entre les modes de stockage de données. Lorsque vous utilisez  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour modifier le modèle, puis procédez au déploiement sur le serveur, le modèle et la base de données restent synchronisés. En outre, la modification des modes de stockage dans le modèle vous permet de consulter toutes les erreurs de validation qui se produisent. Lorsque vous utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de la manière décrite dans cet article, les erreurs de validation ne sont pas signalées.  
@@ -36,9 +37,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="requirements"></a>Spécifications  
  L’activation de l’utilisation du mode DirectQuery sur un modèle tabulaire est un processus en plusieurs étapes.  
   
--   Assurez-vous que le modèle n’a pas de fonctionnalités susceptibles de provoquer des erreurs de validation en mode DirectQuery, puis modifiez le mode de stockage des données sur le modèle de « en mémoire » en DirectQuery.  
+-   Assurez-vous que le modèle n’a pas de fonctionnalités susceptibles de provoquer des erreurs de validation en mode DirectQuery, puis modifiez le mode de stockage des données sur le modèle de « en mémoire » en DirectQuery.  
   
-     Pour la liste des restrictions des fonctionnalités, consultez [Mode DirectQuery &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     Une liste des restrictions des fonctionnalités est documentée dans [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Examinez la chaîne de connexion et les informations d’identification utilisées par la base de données déployée afin de récupérer des données à partir de la base de données externe principale. Assurez-vous qu’il y n’a qu’une seule connexion, et que ses paramètres sont appropriés pour l’exécution de la requête.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Lorsque le cache et la source de données relationnelle sont disponibles, vous pouvez définir la méthode de connexion recommandée par défaut, mais en fin de compte le client contrôle la source utilisée, à l'aide de la propriété de chaîne de connexion DirectQueryMode.  
   
--   Vous pouvez configurer des partitions du cache de telle façon que la partition principale utilisée pour le mode DirectQuery ne soit jamais traitée et doive toujours faire référence à la source relationnelle. Il existe plusieurs façons d'utiliser des partitions pour optimiser l'expérience de conception de modèle et de rapports. Pour plus d’informations, consultez [Définition de partitions dans les modèles DirectQuery &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
+-   Vous pouvez configurer des partitions du cache de telle façon que la partition principale utilisée pour le mode DirectQuery ne soit jamais traitée et doive toujours faire référence à la source relationnelle. Il existe plusieurs façons d'utiliser des partitions pour optimiser l'expérience de conception de modèle et de rapports. Pour plus d’informations, consultez [définir des partitions dans les modèles DirectQuery](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
 -   Une fois le modèle déployé, vous pouvez modifier la méthode de connexion par défaut. Par exemple, vous pouvez utiliser un mode hybride pour le test, et basculer le modèle en mode **DirectQuery uniquement** seulement après avoir testé complètement tous les rapports ou requêtes qui utilisent le modèle. Pour plus d’informations, consultez [Définir ou modifier la méthode de connexion par défaut pour DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  Dans l’Explorateur d’objets, développez **Connections** (Connexions), puis double-cliquez sur une connexion pour afficher ses propriétés.  
   
-     Pour les modèles DirectQuery, il ne peut y avoir qu’une seule connexion définie pour la base de données, la source de données doit être relationnelle et le type de la base de données doit être pris en charge. Pour connaître la procédure à suivre, consultez [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     Pour les modèles DirectQuery, il ne peut y avoir qu’une seule connexion définie pour la base de données, la source de données doit être relationnelle et le type de la base de données doit être pris en charge. Consultez [des Sources de données prises en charge](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  **Connection string** (Chaîne de connexion) doit spécifier le serveur, nom de la base de données et la méthode d’authentification utilisée dans les opérations DirectQuery. Si vous utilisez l’authentification SQL Server, vous pouvez spécifier ici la connexion de base de données.  
   
@@ -131,9 +132,9 @@ ms.lasthandoff: 01/08/2018
 3.  Dans la trace, vous devriez voir la preuve de l’exécution de la requête sur la base de données relationnelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Niveau de compatibilité](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Sources de données prises en charge](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
- [Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [Surveiller une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

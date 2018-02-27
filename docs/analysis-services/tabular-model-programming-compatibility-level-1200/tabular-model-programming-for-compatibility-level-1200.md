@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Programmation modèle tabulaire pour 1200 de niveau de compatibilité et versions ultérieures
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]À partir de niveau de compatibilité 1200, les métadonnées tabulaires sont utilisée pour décrire les constructions de modèle, en remplaçant historiques métadonnées multidimensionnelles comme descripteurs pour les objets de modèle tabulaire. Métadonnées des tables, colonnes et relations sont table, colonne et de relation, plutôt que les équivalents multidimensionnelles (dimension et attribut).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+À partir de niveau de compatibilité 1200, les métadonnées tabulaires sont utilisée pour décrire les constructions de modèle, en remplaçant historiques métadonnées multidimensionnelles comme descripteurs pour les objets de modèle tabulaire. Métadonnées des tables, colonnes et relations sont table, colonne et de relation, plutôt que les équivalents multidimensionnelles (dimension et attribut).  
   
 Vous pouvez créer de nouveaux modèles au niveau de compatibilité 1200 ou supérieur à l’aide de la APIs Microsoft.AnalysisServices.Tabular, la dernière version de SQL Server Data Tools (SSDT), ou en modifiant le **CompatibilityLevel** d’un modèle tabulaire existant vers un niveau (ce qui est également effectuée dans SSDT). Cela lie le modèle aux versions plus récentes du serveur, des outils et des interfaces de programmation.   
   
@@ -33,7 +34,7 @@ La mise à niveau une solution tabulaire existante est recommandé, mais pas obl
  Nouveaux modèles tabulaires nécessite un code différent et script, résumées ci-dessous.  
   
 ## <a name="object-model-definitions-as-tabular-metadata-constructs"></a>Définitions de modèle d’objet en tant que structures de métadonnées tabulaires  
- Le modèle d’objet tabulaire pour les modèles 1200 ou supérieur est exposé au format JSON via le [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) et via le langage de définition de données AMO via un espace de noms, [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
+ Le modèle d’objet tabulaire pour les modèles 1200 ou supérieur est exposé au format JSON via le [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) et via le langage de définition de données AMO via un espace de noms, [ Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
 
 ## <a name="script-for-tabular-models-and-databases"></a>Script pour bases de données et les modèles tabulaires  
  TMSL est un langage de script JSON pour les modèles tabulaires, avec prise en charge pour créer, lire, mettre à jour, un opérateur delete. Vous pouvez actualiser les données via TMSL et appeler des opérations de base de données pour l’attachement, detatch, sauvegarde, restauration et synchronisation.  
@@ -57,7 +58,7 @@ La mise à niveau une solution tabulaire existante est recommandé, mais pas obl
 ## <a name="see-also"></a>Voir aussi  
  [Documentation du développeur Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)   
  [Programmation de modèle tabulaire pour la compatibilité 1050 1103 via des niveaux](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Informations techniques de référence &#40; SSAS &#41; ](../../analysis-services/powershell/technical-reference-ssas.md) [Mise à niveau d’Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Informations techniques de référence ](../../analysis-services/powershell/technical-reference-ssas.md) [mise à niveau d’Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Niveaux de compatibilité des bases de données et les modèles tabulaires](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tables et colonnes (SSAS tabulaire) | Documents Microsoft
+title: Tables et colonnes | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91d370b9e71d843aa9a8ef8848b7cd63b38f0880
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 19f955231a5a68cc52ae9c867d0ea64f9c3daddf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tables-and-columns-ssas-tabular"></a>Tables et colonnes (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Une fois que vous avez ajouté des tables et des données dans un modèle à l’aide de l’Assistant Importation de Table, vous pouvez commencer à utiliser avec les tables en ajoutant de nouvelles colonnes de données, créer des relations entre les tables, la définition de calculs qui étendent les données, le filtrage et tri des données dans les tables pour faciliter l’affichage.  
+# <a name="tables-and-columns"></a>Tables et colonnes 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Après avoir ajouté des tables et des données dans un modèle à l'aide de l'Assistant Importation de table, vous pouvez commencer à utiliser les tables en ajoutant de nouvelles colonnes de données, en créant des relations entre les tables, en définissant des calculs qui étendent les données, et en filtrant et en triant des données dans les tables pour un affichage plus aisé.  
   
  Sections de cette rubrique :  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
  **Métadonnées de table**  
  Les relations, les mesures, les rôles, les perspectives et les données collées sont des métadonnées qui définissent des objets dans le contexte d'une table.  
   
- **Data**  
+ **Données**  
  Les données sont remplies dans les colonnes de table lorsque vous importez d'abord les tables à l'aide de l'Assistant Importation de table ou en créant de nouvelles données dans les colonnes calculées. Lorsque des données changent au niveau de la source, ou lorsqu'un modèle est supprimé de la mémoire, vous devez exécuter une opération de traitement pour remplir à nouveau les données dans les tables.  
   
 ##  <a name="bkmk_working"></a> Utilisation de tables et de colonnes  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Une combinaison de données relationnelles et de données tabulaires (HTML) copiées et collées dans la table.  
   
- Lorsque vous importez des données, chaque table, vue, feuille ou fichier de données est ajouté(e) en tant que table dans le générateur de modèles. Vous ajoutez en général des données de différentes sources dans des onglets distincts, mais vous pouvez combiner des données dans une table individuelle en utilisant **Coller** et **Coller par ajout**. Pour plus d’informations, consultez [Copier et coller des données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
+ Lorsque vous importez des données, chaque table, vue, feuille ou fichier de données est ajouté(e) en tant que table dans le générateur de modèles. Vous ajoutez en général des données de différentes sources dans des onglets distincts, mais vous pouvez combiner des données dans une table individuelle en utilisant **Coller** et **Coller par ajout**. Pour plus d’informations, consultez [copier et coller des données](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
  Après avoir ajouté les données dont vous avez besoin, vous pouvez créer des relations supplémentaires entre les tables, rechercher ou référencer des valeurs associées dans d'autres tables ou créer des valeurs dérivées en ajoutant de nouvelles colonnes calculées.  
   
@@ -63,18 +64,18 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Tâches associées  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
-|[Ajouter des colonnes à une table &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Décrit comment ajouter une colonne source à une définition de table.|  
-|[Supprimer une colonne &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Explique comment supprimer une colonne de table de modèle à l'aide du concepteur de modèles ou à l'aide de la boîte de dialogue Propriétés de la table.|  
-|[Changer des mappages de filtres de lignes, de tables ou de colonnes &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|Décrit comment modifier des mappages de filtres de lignes, de tables ou de colonnes à l'aide de l'aperçu de table ou de l'éditeur de requête SQL dans la boîte de dialogue Modifier les propriétés de la table.|  
-|[Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Explique comment utiliser la boîte de dialogue Marquer en tant que table de dates pour spécifier une table de dates et une colonne d'identificateur unique. La spécification d'une table de dates et d'un identificateur unique est nécessaire lorsqu'on utilise des fonctions Time Intelligence dans des formules DAX.|  
-|[Ajouter une table &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|Explique comment ajouter une table à partir d'une source de données à l'aide d'une connexion existante à la source de données.|  
-|[Supprimer une table &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Décrit comment supprimer des tables dans votre base de données model de l'espace de travail dont vous n'avez plus besoin.|  
-|[Renommer une table ou une colonne &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Décrit comment renommer une table ou une colonne pour la rendre plus identifiable dans votre modèle.|  
-|[Définir le type de données d’une colonne &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Décrit la manière de modifier le type de données d'une colonne. Le type de données définit comment les données de la colonne sont stockées et présentées.|  
-|[Masquer ou figer des colonnes &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Décrit comment masquer les colonnes que vous ne souhaitez pas afficher et comment conserver une zone d'un visible modèle pendant que vous faites défiler vers une autre zone du modèle en figeant (verrouillant) des colonnes spécifiques dans une région.|  
-|[Colonnes calculées &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Les rubriques de cette section décrivent comment utiliser les colonnes calculées pour ajouter des données agrégées à votre modèle.|  
-|[Filtrer et trier les données &#40;SSAS Tabulaire&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Les rubriques de cette section décrivent comment filtrer ou trier des données à l'aide de contrôles dans le générateur de modèles.|  
+|[Ajouter des colonnes à une table](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Décrit comment ajouter une colonne source à une définition de table.|  
+|[Supprimer une colonne](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Explique comment supprimer une colonne de table de modèle à l'aide du concepteur de modèles ou à l'aide de la boîte de dialogue Propriétés de la table.|  
+|[Changer des mappages de filtres de lignes, de tables ou de colonnes](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|Décrit comment modifier des mappages de filtres de lignes, de tables ou de colonnes à l'aide de l'aperçu de table ou de l'éditeur de requête SQL dans la boîte de dialogue Modifier les propriétés de la table.|  
+|[Spécifier la marque comme table de dates pour l'utiliser avec Time Intelligence](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Explique comment utiliser la boîte de dialogue Marquer en tant que table de dates pour spécifier une table de dates et une colonne d'identificateur unique. La spécification d'une table de dates et d'un identificateur unique est nécessaire lorsqu'on utilise des fonctions Time Intelligence dans des formules DAX.|  
+|[Ajouter une table](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|Explique comment ajouter une table à partir d'une source de données à l'aide d'une connexion existante à la source de données.|  
+|[Supprimer une table](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Décrit comment supprimer des tables dans votre base de données model de l'espace de travail dont vous n'avez plus besoin.|  
+|[Renommer une table ou une colonne](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Décrit comment renommer une table ou une colonne pour la rendre plus identifiable dans votre modèle.|  
+|[Définir le type de données d’une colonne](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Décrit la manière de modifier le type de données d'une colonne. Le type de données définit comment les données de la colonne sont stockées et présentées.|  
+|[Masquer ou figer des colonnes](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Décrit comment masquer les colonnes que vous ne souhaitez pas afficher et comment conserver une zone d'un visible modèle pendant que vous faites défiler vers une autre zone du modèle en figeant (verrouillant) des colonnes spécifiques dans une région.|  
+|[Colonnes calculées](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Les rubriques de cette section décrivent comment utiliser les colonnes calculées pour ajouter des données agrégées à votre modèle.|  
+|[Filtrer et trier des données](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Les rubriques de cette section décrivent comment filtrer ou trier des données à l'aide de contrôles dans le générateur de modèles.|  
   
   

@@ -1,6 +1,6 @@
 ---
 title: "Installer la recherche en texte intégral SQL Server sur Linux | Documents Microsoft"
-description: "Cette rubrique décrit comment installer la recherche en texte intégral de SQL Server sur Linux."
+description: "Cet article décrit comment installer la recherche en texte intégral de SQL Server sur Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Installer sur Ubuntu</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Installez SLES</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Langues prises en charge
 
@@ -148,7 +148,7 @@ Recherche en texte intégral utilise [des analyseurs lexicaux](../relational-dat
 | Ourdou | 1056 |
 | Vietnamien | 1066 |
 
-## <a id="filters"></a>Filtres
+## <a id="filters"></a> Filtres
 
 Recherche en texte intégral fonctionne également avec le texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est nécessaire pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [configurer et gérer des filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

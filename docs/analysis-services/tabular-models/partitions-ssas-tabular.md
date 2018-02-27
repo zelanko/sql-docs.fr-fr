@@ -1,5 +1,5 @@
 ---
-title: Partitions (SSAS tabulaire) | Documents Microsoft
+title: Partitions | Documents Microsoft
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d4d1ba933a5f927c86908f743d21093e9ded602
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2130a0e6a8b6f734ec77564e7a41e3057e15572
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="partitions"></a>Partitions
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Les partitions divisent une table en parties logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions créées à l’aide de la boîte de dialogue Partitions dans SSDT lors de la création du modèle s’appliquent à la base de données de l’espace de travail modèle. Lorsque le modèle est déployé, les partitions définies pour la base de données model de l'espace de travail sont dupliquées dans la base de données model déployée. Vous pouvez créer et gérer des partitions pour une base de données model déployée à l’aide de la boîte de dialogue Partitions dans SSMS.  Les informations fournies dans cette rubrique décrivent les partitions créées pendant la création du modèle à l’aide de la boîte de dialogue Gestionnaire de partitions dans SSDT. Pour plus d’informations sur la création et la gestion des partitions pour un modèle déployé, consultez [créer et gérer des Partitions de modèles tabulaires](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions créées à l’aide de la boîte de dialogue Partitions dans SSDT lors de la création du modèle s’appliquent à la base de données de l’espace de travail modèle. Lorsque le modèle est déployé, les partitions définies pour la base de données model de l'espace de travail sont dupliquées dans la base de données model déployée. Vous pouvez créer et gérer des partitions pour une base de données model déployée à l’aide de la boîte de dialogue Partitions dans SSMS.  Les informations fournies dans cette rubrique décrivent les partitions créées pendant la création du modèle à l’aide de la boîte de dialogue Gestionnaire de partitions dans SSDT. Pour plus d’informations sur la création et la gestion des partitions pour un modèle déployé, consultez [créer et gérer des Partitions de modèles tabulaires](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Les partitions, dans les modèles tabulaires, divisent une table en objets partition logiques. Chaque partition peut ensuite être traitée indépendamment d'autres partitions. Par exemple, une table peut comprendre certains ensembles de lignes qui contiennent des données qui changent rarement, alors que d'autres ensembles de lignes comportent des données qui changent souvent. Dans ces cas, il est inutile de traiter toutes les données lorsque vous pouvez vous contenter de traiter uniquement une partie des données. Les partitions permettent de diviser des parties de données devant être traitées fréquemment afin de les séparer des données qui peuvent être traitées moins souvent.  
@@ -46,13 +47,13 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
 |[Créer et gérer des partitions dans la base de données d’espace de travail](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Décrit comment créer et gérer des partitions dans la base de données de modèle espace de travail à l’aide du Gestionnaire de partitions dans SSDT.|  
 |[Traiter les Partitions dans la base de données d’espace de travail](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Explique comment traiter (actualiser) des partitions dans la base de données model de l'espace de travail.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Traiter des données](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
+ [Traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   

@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Installation sans assistance de Machine Learning Services (de-de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ Par une installation sans assistance, nous entendons ne pas utiliser les fonctio
 
 > [!IMPORTANT]
 > 
-> Étapes supplémentaires sont nécessaires une fois le programme d’installation est terminée pour activer la fonctionnalité. Ceux-ci incluent une reconfiguration et le redémarrage de l’instance. Bien sûr pour passer en revue tous les éléments dans la section [étapes de post-installation] (#bkmk_PostInstall) pour déterminer les actions nécessaires une fois le programme d’installation est terminée.
+> Étapes supplémentaires sont nécessaires une fois le programme d’installation est terminée pour activer la fonctionnalité. Ceux-ci incluent une reconfiguration et le redémarrage de l’instance. Veillez à consulter tous les éléments dans la section sur [étapes de post-installation](#bkmk_PostInstall) pour déterminer les actions nécessaires une fois le programme d’installation est terminée.
 
-## <a name="bkmk_NewInstall"></a>Installation de ligne de commande pour SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Installation de ligne de commande pour SQL Server 2017
 
 Les exemples suivants incluent les **minimale** fonctionnalités requises.
 
@@ -97,7 +97,7 @@ L’exemple suivant affiche les arguments requis pour exécuter en mode silencie
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Installation de ligne de commande pour SQL Server 2016
+## <a name="OldInstall"></a> Installation de ligne de commande pour SQL Server 2016
  
 L’exemple suivant affiche les arguments requis pour exécuter en mode silencieux, sans assistance d’installation de SQL Server 2016 avec le langage R ajouté.
 

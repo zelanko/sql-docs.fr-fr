@@ -1,6 +1,6 @@
 ---
 title: Installer SQL Server 2017 sur Linux | Documents Microsoft
-description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. Cette rubrique couvre les scénarios en ligne, hors connexion et sans assistance."
+description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,28 +9,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cette rubrique explique comment installer, mettre à jour et désinstaller 2017 du serveur SQL sur Linux. SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également disponible sous une image Docker qui peut s’exécuter sur le moteur Docker sur Linux ou Docker pour Windows/Mac.
+Cet article explique comment installer, mettre à jour et désinstaller 2017 du serveur SQL sur Linux. SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également disponible sous une image Docker qui peut s’exécuter sur le moteur Docker sur Linux ou Docker pour Windows/Mac.
 
 > [!TIP]
 > Pour démarrer rapidement, passez à un des Démarrages rapides pour [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), ou [Docker](quickstart-install-connect-docker.md).
 
-## <a id="supportedplatforms"></a>Plateformes prises en charge
+## <a id="supportedplatforms"></a> Plateformes prises en charge
 
 SQL Server 2017 est pris en charge sur les plateformes Linux suivantes :
 
@@ -45,7 +45,7 @@ Microsoft prend en charge le déploiement et la gestion des conteneurs de SQL Se
 
 Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a id="system"></a>Configuration système requise
+## <a id="system"></a> Configuration système requise
 
 SQL Server 2017 requise est la suivante pour Linux :
 
@@ -74,14 +74,14 @@ Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Po
 - [Exécutez sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="repositories"></a>Configurer des référentiels de code source
+## <a id="repositories"></a> Configurer des référentiels de code source
 
 Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server 2017 à partir de votre référentiel de Microsoft. Les Démarrages rapides utilisent le **mise à jour Cumulative (CU)** référentiel. Mais vous pouvez configurer à la place la **GDR** référentiel. Pour plus d’informations sur les référentiels et comment les configurer, consultez [configurer des référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
 > Si vous avez installé précédemment la version RC de SQL Server 2017 de CTP, vous devez supprimer le référentiel d’aperçu et inscrire une disponibilité générale un. Pour plus d’informations, consultez [configurer des référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
 
-## <a id="upgrade"></a>Mettre à jour de SQL Server
+## <a id="upgrade"></a> Mettre à jour de SQL Server
 
 Pour mettre à jour le **mssql-serveur** vers la dernière version du package, utilisez une des commandes suivantes en fonction de votre plateforme :
 
@@ -93,7 +93,7 @@ Pour mettre à jour le **mssql-serveur** vers la dernière version du package, u
 
 Ces commandes télécharger le package les plus récents et remplacer les fichiers binaires situés sous `/opt/mssql/`. Bases de données généré par l’utilisateur et les bases de données système ne sont pas affectés par cette opération.
 
-## <a id="rollback"></a>Restauration SQL Server
+## <a id="rollback"></a> Restauration SQL Server
 
 Pour restaurer ou rétrograder SQL Server vers une version précédente, procédez comme suit :
 
@@ -110,7 +110,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 > [!NOTE]
 > Il est uniquement pris en charge pour mettre à niveau vers une version au sein de la même version principale, telles que SQL Server 2017.
 
-## <a id="versioncheck"></a>Vérifiez la version installée de SQL Server
+## <a id="versioncheck"></a> Vérifiez la version installée de SQL Server
 
 Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
 
@@ -122,7 +122,7 @@ Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, u
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a>Désinstaller SQL Server
+## <a id="uninstall"></a> Désinstaller SQL Server
 
 Pour supprimer la **mssql-serveur** package sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
 
@@ -138,7 +138,7 @@ La suppression du package ne supprime pas les fichiers de base de données gén�
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a>Installation sans assistance
+## <a id="unattended"></a> Installation sans assistance
 
 Vous pouvez effectuer une installation sans assistance de la manière suivante :
 
@@ -159,12 +159,12 @@ Pour un exemple de script plus détaillée, consultez les exemples suivants :
 - [SUSE script d’installation sans assistance](sample-unattended-install-suse.md)
 - [Ubuntu script d’installation sans assistance](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a>Installation hors connexion
+## <a id="offline"></a> Installation hors connexion
 
 Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne utilisés dans le [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers du package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
-> Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement le package (s) ci-dessous. Cette section concerne uniquement le scénario hors connexion.
+> Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement l’ou les packages SQL Server. Cette section concerne uniquement le scénario hors connexion.
 
 1. **Télécharger le package de moteur de base de données pour votre plateforme**. Rechercher des liens de téléchargement de package dans la section des détails du package le [Notes de publication](sql-server-linux-release-notes.md).
 

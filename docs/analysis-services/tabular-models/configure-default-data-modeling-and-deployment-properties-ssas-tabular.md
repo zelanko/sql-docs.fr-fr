@@ -1,7 +1,7 @@
 ---
-title: "Configurer les propriétés de déploiement (SSAS tabulaire) et de la modélisation des données par défaut | Documents Microsoft"
+title: "Configurer les propriétés de déploiement et de modélisation de données par défaut | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -17,19 +17,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ac64c706d3f8583d614989214940423d19ce7ccb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurer les propriétés par défaut de modélisation des données et de déploiement (SSAS Tabulaire)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette rubrique décrit comment configurer le niveau de compatibilité par défaut, de déploiement et les paramètres de propriété espace de travail de base de données, qui peuvent être prédéfinis pour chaque nouveau modèle tabulaire de projet vous créent dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>Configurer les propriétés de déploiement et de modélisation de données par défaut 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article décrit comment configurer le niveau de compatibilité par défaut, de déploiement et les paramètres de propriété espace de travail de base de données, qui peuvent être prédéfinis pour chaque nouveau modèle tabulaire de projet vous créent dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Pour configurer le paramètre de propriété Niveau de compatibilité par défaut pour les nouveaux projets de modèle  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Configurez les paramètres de propriétés suivants :  
   
-    |Propriété|Paramètre par défaut|Description|  
+    |Propriété|Paramètre par défaut| Description|  
     |--------------|---------------------|-----------------|  
     |**Niveau de compatibilité par défaut pour les nouveaux projets**|SQL Server 2016 (1200)|Ce paramètre spécifie le niveau de compatibilité par défaut à utiliser pour créer un projet de modèle tabulaire. Vous pouvez choisir SQL Server 2012 (1100) si vous comptez effectuer le déploiement sur une instance Analysis Services sans avoir appliqué le SP1, ou SQL Server 2012 SP1 ou plus si le SP1 est appliqué sur votre instance de déploiement. Pour plus d’informations, consultez [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Options de niveau de compatibilité**|Toutes activées|Spécifie les options de niveau de compatibilité pour les nouveaux projets de modèles tabulaires et le déploiement vers une autre instance Analysis Services.|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Configurez les paramètres de propriétés suivants :  
   
-    |Propriété|Paramètre par défaut|Description|  
+    |Propriété|Paramètre par défaut| Description|  
     |--------------|---------------------|-----------------|  
     |**Serveur de déploiement par défaut**|localhost|Ce paramètre spécifie le serveur par défaut à utiliser lors du déploiement d'un modèle. Vous pouvez cliquer sur la flèche du bas pour rechercher des serveurs Analysis Services sur le réseau local ou vous pouvez taper le nom d'un serveur distant.|  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Configurez les paramètres de propriétés suivants :  
   
-    |Propriété|Paramètre par défaut|Description|  
+    |Propriété|Paramètre par défaut| Description|  
     |--------------|---------------------|-----------------|  
     |**Serveur d'espace de travail par défaut**|**localhost**|Cette propriété indique le serveur par défaut qui sera utilisé pour héberger la base de données de l'espace de travail tandis que le modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Toutes les instances disponibles d'Analysis Services qui fonctionnent sur l'ordinateur local sont incluses dans la zone de liste.<br /><br /> <br /><br /> Remarque : il est recommandé de toujours spécifier un serveur Analysis Services local en tant que serveur d’espace de travail. Pour les bases de données d’espace de travail sur serveur distant, l’importation de données depuis [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’est pas prise en charge ; les données ne peuvent pas être sauvegardées localement et l’interface utilisateur peut rencontrer une latence pendant les requêtes.|  
     |**Rétention de la base de données d'espace de travail une fois le modèle fermé**|**Garder des bases de données d'espace de travail sur le disque, mais décharger de la mémoire**|Spécifie comment une base de données d'espace de travail est conservée une fois que le modèle a été fermé. Une base de données d'espace de travail inclut les métadonnées du modèle, les données importées dans un modèle et les informations d'identification d'emprunt d'identité (chiffrées). Dans certains cas, la base de données d'espace de travail peut être très volumineuse et consommer une quantité significative de mémoire. Par défaut, les bases de données d'espace de travail sont supprimées de la mémoire. Lors de la modification de ce paramètre, il est important de considérer vos ressources mémoire disponibles ainsi que la fréquence à laquelle vous projetez de travailler sur le modèle. Ce paramètre de propriété a les options suivantes :<br /><br /> **Conserver les espaces de travail en mémoire** : indique de conserver les espaces de travail en mémoire une fois le modèle fermé. Cette option consommera plus de mémoire ; toutefois, lors de l'ouverture d'un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], moins de ressources sont consommées et l'espace de travail se charge plus vite.<br /><br /> **Conserver les bases de données d’espace de travail sur le disque, mais les décharger de la mémoire** : indique de garder la base de données d’espace de travail sur le disque, mais pas dans la mémoire, une fois le modèle fermé. Cette option consommera moins de mémoire ; toutefois, lors de l'ouverture d'un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], des ressources supplémentaires seront consommées et le modèle se chargera plus lentement que si la base de données de l'espace de travail est conservée en mémoire. Utilisez cette option lorsque les ressources en mémoire sont limitées ou lorsque vous travaillez sur une base de données d'espace de travail distante.<br /><br /> **Supprimer l’espace de travail** : indique de supprimer la base de données d’espace de travail de la mémoire et de ne pas la garder sur le disque une fois le modèle fermé. Cette option consommera moins de mémoire et d’espace de stockage. Toutefois, lors de l’ouverture d’un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], des ressources supplémentaires sont consommées et le modèle se charge plus lentement que si la base de données de l’espace de travail est conservée en mémoire ou sur le disque. Utilisez cette option uniquement si vous travaillez occasionnellement sur les modèles.|  
@@ -77,8 +78,8 @@ ms.lasthandoff: 01/08/2018
 >  Les modifications apportées aux propriétés de modèle par défaut n'affecteront pas les propriétés des modèles existants créés avant la modification.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de projet &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Propriétés de modèle &#40; SSAS tabulaire &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
- [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Propriétés du projet](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Propriétés de modèle](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Niveau de compatibilité](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
