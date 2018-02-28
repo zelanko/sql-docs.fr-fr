@@ -28,7 +28,7 @@ ms.lasthandoff: 11/20/2017
 Dans ce guide de démarrage rapide, vous installez d’abord SQL Server 2017 sur Red Hat Enterprise Linux (RHEL) 7.3 + puis vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
-> Ce didacticiel nécessite l’entrée d’utilisateur et une connexion internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
+> Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -52,7 +52,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
    ```
 
    > [!NOTE]
-   > Il s’agit du référentiel de mise à jour Cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-setup.md#repositories).
+   > Il s’agit du référentiel de mise à jour cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-setup.md#repositories).
 
 1. Exécutez les commandes suivantes pour installer SQL Server :
 
@@ -69,7 +69,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
    > Si vous testez SQL Server 2017 dans ce didacticiel, les éditions suivantes sont concédées librement sous licence : Evaluation, Developer et Express.
 
    > [!NOTE]
-   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (minimum longueur 8 caractères, incluant des majuscules et minuscules, chiffres et/ou des caractères spéciaux).
+   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimale de 8 caractères, incluant des majuscules et des minuscules, des chiffres et/ou des caractères spéciaux).
 
 1. Une fois la configuration terminée, vérifiez que le service est en cours d’exécution :
 
@@ -117,6 +117,6 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
    ```
 
 > [!TIP]
-> **SQLCMD** est un unique outil pour se connecter à SQL Server afin d'exécuter des requêtes et d'effectuer les tâches de gestion et de développement. D'autres outils incluent [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) et [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+> **SQLCMD** est un outil unique pour se connecter à SQL Server afin d'exécuter des requêtes et d'effectuer des tâches de gestion et de développement. D'autres outils incluent [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) et [Visual Studio Code](sql-server-linux-develop-use-vscode.md). 
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
