@@ -43,7 +43,7 @@ SQL Server 2017 est pris en charge sur les plateformes Linux suivantes :
 
 ## <a id="system"></a>Configuration système requise
 
-SQL Server 2017 a les pré-requis suivants pour Linux :
+SQL Server 2017 a les prérequis suivants pour Linux :
 
 |||
 |-----|-----|
@@ -97,7 +97,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> La mise à niveau est uniquement prise en charge vers une version avec la même version majeure, telles que SQL Server 2017.
+> Il est uniquement pris en charge de mettre à niveau vers une version avec la même version majeure, telle que SQL Server 2017.
 
 ## <a id="versioncheck"></a>Vérifiez la version installée de SQL Server
 
@@ -162,7 +162,7 @@ La fin de l’URL du référentiel confirme le type de référentiel :
 Pour configurer les référentiels CU ou GDR, procédez comme suit :
 
 > [!NOTE]
-> Le s[didacticiels de démarrage rapide](#platforms) configurent le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont pas nécessaires pour la modification de votre référentiel.
+Les [didacticiels de démarrage rapide](#platforms) configurent le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont pas nécessaires pour la modification de votre référentiel.
 
 1. Si nécessaire, supprimez l’espace de stockage configuré précédemment.
 
