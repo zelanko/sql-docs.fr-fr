@@ -96,7 +96,7 @@ destlen
 ## <a name="returns"></a>Valeur renvoyée  
  Longueur des données converties, en octets, si la conversion de type de données réussit. Quand **srv_convert** rencontre une demande de conversion qu’il ne prend pas en charge, il appelle le gestionnaire d’erreurs fourni par le développeur, le cas échéant, définit un numéro d’erreur global et retourne -1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction **srv_willconvert** détermine si une conversion particulière est autorisée.  
   
  La conversion vers le type de données numérique approximatif SRVFLT4 ou SRVFLT8 peut provoquer une certaine perte de précision. La conversion à partir du type de données numérique approximatif SRVFLT4 ou SRVFLT8 vers SRVCHAR ou SRVTEXT peut également provoquer une certaine perte de précision.  
@@ -120,7 +120,7 @@ destlen
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [srv_setutype &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   

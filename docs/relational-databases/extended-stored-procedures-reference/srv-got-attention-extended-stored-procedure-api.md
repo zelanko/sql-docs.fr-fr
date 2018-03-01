@@ -57,7 +57,7 @@ srvproc
 ## <a name="return-value"></a>Valeur retournée  
  TRUE si la connexion est arrêtée ou le lot supprimé. FALSE si la connexion ou le lot est actif.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une procédure stockée étendue dont l’exécution est longue doit contrôler l’attention du serveur en appelant périodiquement **srv_got_attention** afin que la procédure puisse se terminer si la connexion est arrêtée ou que le lot est abandonné.  
   
 > [!IMPORTANT]  

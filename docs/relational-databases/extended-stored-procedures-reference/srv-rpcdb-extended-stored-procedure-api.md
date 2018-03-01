@@ -59,7 +59,7 @@ SRV_PROC * srvproc,int *len );
 ## <a name="returns"></a>Valeur renvoyée  
  Pointeur DBCHAR vers la chaîne terminée par le caractère NULL pour la partie du nom de base de données de la procédure stockée distante actuelle. S’il n’y a pas de procédure stockée distante actuelle, NULL est retourné et le paramètre *len* prend la valeur -1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction retourne uniquement le composant de base de données du nom d'objet de la procédure stockée distante. Elle n'inclut pas les spécificateurs facultatifs pour le propriétaire, le nom de procédure stockée distante et le numéro de procédure stockée distante.  
   
 > [!IMPORTANT]  

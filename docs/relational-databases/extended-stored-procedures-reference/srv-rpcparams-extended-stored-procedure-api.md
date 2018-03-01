@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Valeur renvoyée  
  Nombre de paramètres dans la procédure stockée distante. S'il n'y a pas de paramètres dans la procédure stockée distante ou s'il n'y a pas de procédure stockée distante actuellement, -1 est retourné et une erreur liée aux informations se produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction retourne le nombre de paramètres dans la procédure stockée distante actuelle. Elle est généralement appelée à partir de la procédure stockée distante.  
   
  Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante a été effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Quand cette erreur se produit, le gestionnaire de procédures stockées distantes est appelé, mais il ne reçoit pas les paramètres et **srv_rpcparams** retourne 0.  

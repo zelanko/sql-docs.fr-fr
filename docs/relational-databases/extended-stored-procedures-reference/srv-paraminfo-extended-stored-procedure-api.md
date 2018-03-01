@@ -94,10 +94,10 @@ pfNull
 ## <a name="returns"></a>Valeur renvoyée  
  Si les informations sur le paramètre ont été obtenues avec succès, la valeur SUCCEED est retournée ; sinon, FAIL. La valeur FAIL est retournée en l’absence de procédure stockée distante active et en l’absence d’un *n*ième paramètre de procédure stockée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Guide de référence du programmeur sur les procédures stockées étendues](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
   
   

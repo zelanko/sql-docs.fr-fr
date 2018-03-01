@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
   
  Pour utiliser les types de données de l'API de procédure stockée étendue, incluez le fichier d'en-tête Srv.h dans votre programme.  
   
-|Type de données|Type de données SQL Server| Description|  
+|Type de données|Type de données SQL Server|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binaire**|Type de données **binary**, de longueur comprise entre 0 et 8000 octets.|  
 |SRVBIGCHAR|**char**|Type de données **character**, de longueur comprise entre 0 et 8000 octets.|  
@@ -56,11 +56,11 @@ ms.lasthandoff: 02/09/2018
 |SRVIMAGE|**image**|Type de données **image**|  
 |SRVINT1|**tinyint**|Type de données **tinyint** sur 1 octet.|  
 |SRVINT2|**smallint**|Type de données **smallint** sur 2 octets.|  
-|SRVINT4|**int**|Type de données **int** sur 4 octets|  
+|SRVINT4|**Int**|Type de données **int** sur 4 octets|  
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Type de données **tinyint**, **smallint** ou **int** autorisant les valeurs NULL.|  
 |SRVMONEY4|**smallmoney**|Type de données **smallmoney** sur 4 octets|  
 |SRVMONEY|**money**|Type de données **money** sur 8 octets|  
-|SRVMONEYN|**Money** &#124; **smallmoney null**|Type de données **smallmoney** ou **money** autorisant les valeurs NULL.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Type de données **smallmoney** ou **money** autorisant les valeurs NULL.|  
 |SRVNCHAR|**nchar**|Type de données **character** Unicode.|  
 |SRVNTEXT|**ntext**|Type de données **text** Unicode.|  
 |SRVNUMERIC|**numeric**|Type de données **numeric**|  

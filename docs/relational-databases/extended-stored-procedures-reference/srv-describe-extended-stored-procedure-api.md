@@ -108,7 +108,7 @@ srcdata
 ## <a name="returns"></a>Valeur renvoyée  
  Numéro de la colonne décrite. La première colonne est la colonne 1. Si une erreur se produit, retourne 0.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction **srv_describe** doit être appelée une fois pour chaque colonne dans la ligne avant le premier appel à **srv_sendrow**. Les colonnes d'une ligne peuvent être décrites dans n'importe quel ordre.  
   
  Pour changer l’emplacement et la longueur des données sources dans les lignes de colonnes avant d’envoyer le jeu de résultats complet, utilisez **srv_setcoldata** et **srv_setcollen**, respectivement.  
@@ -120,7 +120,7 @@ srcdata
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [srv_sendrow &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

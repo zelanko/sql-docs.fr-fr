@@ -86,7 +86,7 @@ fNull
   
 -   l’argument *cbLen* n’est pas valide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
   

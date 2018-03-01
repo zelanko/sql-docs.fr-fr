@@ -112,7 +112,7 @@ msglen
 ## <a name="returns"></a>Valeur renvoyée  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction envoie des messages d'erreur ou d'information au client. Elle est appelée une fois pour chaque message à envoyer.  
   
  Les messages peuvent être envoyés au client avec **srv_sendmsg** dans n’importe quel ordre avant ou après que toutes les lignes (le cas échéant) ont été envoyées avec **srv_sendrow**. Tous les messages, s’il en existe, doivent être envoyés au client avant que l’état d’achèvement soit envoyé avec **srv_senddone**.  

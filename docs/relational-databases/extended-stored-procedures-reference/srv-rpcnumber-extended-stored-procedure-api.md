@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Valeur renvoyée  
  Composant de numéro pour la procédure stockée distante actuelle. Si le client n'utilise pas de composant de numéro lors de l'exécution de la procédure stockée distante ou qu'il n'y a aucune procédure stockée distante en cours, il retourne - 1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction retourne uniquement le composant de numéro de la procédure stockée distante. Elle n'inclut pas les spécificateurs facultatifs pour le propriétaire, le nom de la procédure stockée distante et le nom de la base de données.  
   
 > [!IMPORTANT]  

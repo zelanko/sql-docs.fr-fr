@@ -61,7 +61,7 @@ len
  *field*  
  Spécifie le champ *srvproc* à retourner.  
   
-|Champ| Description|Type renvoyé|  
+|Champ|Description|Type renvoyé|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|LCID du message de la session active.|ULONG*|  
 |SRV_INSTANCENAME|Nom de l'instance (si elle est nommée) ; sinon, retourne NULL.|WCHAR*|  
@@ -75,7 +75,7 @@ len
 > [!IMPORTANT]  
 >  La mémoire tampon retournée à partir du serveur doit être en lecture seule. Dans le cas contraire, l'état du serveur peut être endommagé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
   
