@@ -25,7 +25,7 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Cette rubrique montre comment utiliser [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) pour se connecter à SQL Server 2017 sous Linux. SSMS est une application Windows, alors utilisez SSMS lorsque vous avez une machine Windows qui peut se connecter à une instance SQL Server distante sur Linux.
+Cette rubrique montre comment utiliser [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) pour se connecter à SQL Server 2017 sur Linux. SSMS étant une application Windows, utilisez SSMS quand vous avez un ordinateur Windows qui peut se connecter à une instance SQL Server distante sur Linux.
 
 Une fois la connexion établie, vous lancez une simple requête Transact-SQL (T-SQL) pour vérifier la communication avec la base de données.
 
@@ -37,19 +37,19 @@ Lorsque vous travaillez avec SQL Server, vous devez toujours utiliser la derniè
 
 Les étapes suivantes montrent comment se connecter à SQL Server 2017 sur Linux avec SSMS.
 
-1. Démarrez SSMS en tapant Microsoft SQL Server Management Studio dans la boîte de recherche Windows, puis cliquez sur l'application bureautique.
+1. Démarrez SSMS en tapant **Microsoft SQL Server Management Studio** dans la zone de recherche Windows, puis cliquez sur l'application de bureau.
 
     ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png)
 
-2. Dans la fenêtre **Connexion au serveur**, entrez les informations suivantes (si SSMS est déjà en cours d'exécution, cliquez sur **Connexion > Moteur de base de données** pour ouvrir la fenêtre **Connexion au serveur**) :
+2. Dans la fenêtre **Se connecter au serveur**, entrez les informations suivantes (si SSMS est déjà en cours d'exécution, cliquez sur **Connecter > Moteur de base de données** pour ouvrir la fenêtre **Se connecter au serveur**) :
 
    | Paramètre |  Description |
    |-----|-----|
    | **Type de serveur** | La valeur par défaut est le moteur de base de données ; ne modifiez pas cette valeur. |
-   | **Nom du serveur** | Entrez le nom de la machine cible Linux SQL Server ou son adresse IP. |
-   | **Authentification** | Pour SQL Server 2017 sous Linux, utilisez l'authentification **SQL Server Authentification**. |
-   | **Connexion** | Saisissez le nom d'un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **SA** par défaut créé lors de la configuration).. |
-   | **Mot de passe** | Saisissez le mot de passe pour l'utilisateur spécifié (pour le compte **SA**, vous l'avez créé lors de la configuration du serveur). |
+   | **Nom du serveur** | Entrez le nom de l’ordinateur Linux SQL Server cible ou son adresse IP. |
+   | **Authentification** | Pour SQL Server 2017 sur Linux, utilisez **Authentification SQL Server**. |
+   │ **Connexion** │ Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **AS** par défaut créé pendant la configuration). |
+   | **Mot de passe** | Saisissez le mot de passe pour l'utilisateur spécifié (pour le compte **AS** que vous avez créé pendant la configuration). |
 
     ![SQL Server Management Studio : Se connecter au serveur de base de données SQL](./media/sql-server-linux-develop-use-ssms/connect.png)
 
@@ -66,9 +66,9 @@ Les étapes suivantes montrent comment se connecter à SQL Server 2017 sur Linux
 
 Une fois que vous vous connectez à votre serveur, vous pouvez vous connecter à une base de données et exécuter un exemple de requête. Si vous ne connaissez pas l’écriture de requêtes, consultez [l’écriture des instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-1. Identifiez une base de données à utiliser pour exécuter une requête. Cela peut être une nouvelle base de données que vous avez créé dans le [didacticiel de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). Ou il peut s’agir du **AdventureWorks** exemple de base de données que vous avez [téléchargé et restauré](sql-server-linux-migrate-restore-database.md).
-2. Dans **l’Explorateur d’objets**, accédez à la base de données sur le serveur.
-3. Cliquez vec le bouton droit sur la base de données, puis sélectionnez **nouvelle requête**:
+1. Identifiez une base de données à utiliser pour exécuter une requête. Cela peut être une base de données que vous avez créée dans le [didacticiel de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) ou l'exemple de base de données **AdventureWorks** que vous avez [téléchargé et restauré](sql-server-linux-migrate-restore-database.md).
+2. Dans **l’Explorateur d’objets**, accédez à la base de données cible sur le serveur.
+3. Cliquez avec le bouton droit sur la base de données, puis sélectionnez **Nouvelle requête** :
 
     ![Nouvelle requête. Se connecter au serveur de base de données SQL : SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/new-query.png)
 
