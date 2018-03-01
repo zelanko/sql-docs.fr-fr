@@ -70,7 +70,7 @@ user_type
 ## <a name="returns"></a>Valeur renvoyée  
  SUCCEED ou FAIL. Retourne FAIL si la colonne n'existe pas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une colonne a deux types de données : son type de données réel et son type de données défini par l'utilisateur. Le type de données défini par l’utilisateur est utilisé par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker le type de données de la colonne défini par l’utilisateur (le cas échéant) et les informations de description de la colonne, telles que la possibilité de valeur NULL et la possibilité de mise à jour pour la colonne.  
   
  La fonction **srv_setutype** peut être appelée chaque fois que *column* a été défini avec **srv_describe** et avant que la dernière ligne n’ait été envoyée.  
@@ -78,7 +78,7 @@ user_type
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [srv_describe &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   
