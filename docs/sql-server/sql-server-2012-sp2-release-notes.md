@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 31f86cebfc5dc23aac8d56a1a9c75d140b744063
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>Notes de publication de SQL Server 2012 SP2
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Ces notes de publication décrivent des problèmes dont vous devez avoir connaissance avant d’installer ou de dépanner SQL Server 2012 Service Pack 2. Les notes de publication sont disponibles uniquement en ligne, et non sur un support d’installation. Elles sont mises à jour régulièrement à mesure que des problèmes sont identifiés. Pour plus d'informations, consultez [Bogues corrigés dans SQL Server 2012 Service Pack 2](http://support.microsoft.com/KB/2958429) .  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Ces notes de publication décrivent ce que vous devez savoir avant d'installer ou de dépanner SQL Server 2012 Service Pack 2. Les notes de publication sont disponibles uniquement en ligne, et non sur un support d’installation. Elles sont mises à jour régulièrement à mesure que des problèmes sont identifiés. Pour plus d'informations, consultez [Bogues corrigés dans SQL Server 2012 Service Pack 2](http://support.microsoft.com/KB/2958429) .  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Choisir le fichier approprié à télécharger et installer  
 Utilisez le tableau suivant pour identifier l'emplacement et le nom du fichier à télécharger en fonction de la version installée actuellement. Les pages de téléchargement indiquent la configuration système requise et contiennent des instructions d'installation de base.  
