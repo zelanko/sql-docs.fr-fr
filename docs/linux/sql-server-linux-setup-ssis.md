@@ -67,7 +67,7 @@ Pour installer le package `mssql-server-is` sur Ubuntu, procédez comme suit :
    ```
 
 ### <a name="update-ssis"></a>Mise à jour SSIS
-Si `mssql-server-is` est déjà installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
+Si vous avez déjà `mssql-server-is` installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
 
 ```bash
 sudo apt-get install mssql-server-is
@@ -101,14 +101,14 @@ Pour installer le package `mssql-server-is` sur RHEL, procédez comme suit :
    sudo /opt/ssis/bin/ssis-conf setup
    ```
 
-1. Une fois la configuration terminée, configurez le chemin d’accès.
+1. Une fois la configuration terminée, définissez le chemin d’accès.
 
    ```bash
    export PATH=/opt/ssis/bin:$PATH
    ```
 
 ### <a name="update-ssis"></a>Mise à jour SSIS
-Si `mssql-server-is` est déjà installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
+Si vous avez déjà `mssql-server-is` installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
 
 ```bash
 sudo yum update mssql-server-is
