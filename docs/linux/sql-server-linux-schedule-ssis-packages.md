@@ -23,13 +23,13 @@ ms.lasthandoff: 11/20/2017
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>L’exécution sur Linux avec cron du package de planification SQL Server Integration Services
 
-Lorsque vous exécutez SQL Server Integration Services (SSIS) et SQL Server sur Windows, vous pouvez automatiser l’exécution de packages SSIS à l’aide de l’Agent SQL Server. Lorsque vous exécutez SQL Server et SSIS sur Linux, toutefois, l’utilitaire SQL Server Agent n’est pas disponible pour planifier ces travaux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution du package.
+Quand vous exécutez SSIS (SQL Server Integration Services) et SQL Server sur Windows, vous pouvez automatiser l’exécution de packages SSIS à l’aide de SQL Server Agent. Toutefois, quand vous exécutez SQL Server et SSIS sur Linux, l’utilitaire SQL Server Agent n’est pas disponible pour planifier ces travaux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution de packages.
 
 Cet article fournit des exemples qui montrent comment automatiser l’exécution des packages SSIS. Les exemples sont écrits pour s’exécuter sur Red Hat Enterprise. Le code est identique pour les autres distributions Linux, telles que Ubuntu.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-Avant d’utiliser le service cron pour exécuter des tâches, vérifiez s'il est actif sur votre ordinateur.
+Avant d’utiliser le service cron pour exécuter des travaux, vérifiez s'il est en cours d'exécution sur votre ordinateur.
 
 Pour vérifier l’état du service cron, utilisez la commande suivante : `systemctl status crond.service`.
 
@@ -54,9 +54,9 @@ Voici un exemple d’un script shell simple pour l’exécution d’un package. 
 
 Après avoir défini vos tâches, vous pouvez planifier celles-ci pour qu'elles s’exécutent automatiquement à l’aide du service cron.
 
-Pour ajouter des jobs à cron, vous devez spécifier celles-ci dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur, où vous pouvez ajouter ou mettre à jour les jobs, utilisez la commande suivante : `crontab -e`.
+Pour ajouter un travail à cron pour qu’il l’exécute, ajoutez-le dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur, où vous pouvez ajouter ou mettre à jour les travaux, utilisez la commande suivante : `crontab -e`.
 
-Pour planifier les jobs décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
+Pour planifier le travail décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
 
 ```
 # run <SSIS package name> at 2:10 AM every day
