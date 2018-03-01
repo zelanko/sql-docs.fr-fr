@@ -262,7 +262,7 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Recherche sémantique
-[La recherche sémantique](../relational-databases/search/semantic-search-sql-server.md) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire indexer les *expressions clés* statistiquement pertinentes. Cela vous permet d’interroger la signification à l'intérieur des documents stockés dans votre base de données. Cela permet également d’identifier les documents similaires.
+[La recherche sémantique](../relational-databases/search/semantic-search-sql-server.md) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire et indexer les *expressions clés* statistiquement pertinentes. Cela vous permet d’interroger la signification à l'intérieur des documents stockés dans votre base de données. Cela permet également d’identifier les documents similaires.
 
 Pour pouvoir utiliser la recherche sémantique, vous devez d’abord restaurer la base de données de statistiques linguistiques de sémantique sur votre ordinateur.
 
