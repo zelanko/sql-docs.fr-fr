@@ -23,13 +23,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2c3a0745ab34f997bd614b091cb8d2c6a0b1aa80
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des schémas de base de données (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous enregistrez un schéma de base de données, vous pouvez enregistrer tous les changements que vous y avez apportés, notamment les changements effectués dans les tables, les colonnes et les autres objets de base de données.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Lorsque vous enregistrez un schéma de base de données, vous pouvez enregistrer toutes les modifications que vous y avez apportées, y compris les modifications effectuées dans les tables, les colonnes et les autres objets de base de données.  
   
 ### <a name="to-save-the-database-diagram"></a>Pour enregistrer le schéma de base de données  
   
