@@ -25,9 +25,9 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Découvrez notre [didacticiels de mise en route](http://aka.ms/sqldev) rapidement mise en route avec des langages tels que c#, Java, Node.js, PHP et Python de programmation et générer une application à l’aide de SQL Server sur Linux ou Windows ou Docker sur macOS.
+Consultez nos [Tutoriels de Démarrage](http://aka.ms/sqldev) pour démarrer rapidement avec des langages de programmation tels que C#, Java, Node. js, PHP et Python et de construire une application en utilisant SQL Server sur Linux ou Windows ou Docker sur MacOS.
 
-Le tableau ci-dessous répertorie les bibliothèques de connectivité ou *pilotes* que les applications clientes peuvent utiliser à partir d’une variété de langages de se connecter à et utiliser Microsoft SQL Server exécuté localement ou dans le cloud, sur Linux, Windows ou Docker et également à la base de données SQL Azure et Azure SQL Data Warehouse. 
+Le tableau ci-dessous répertorie les bibliothèques de connectivité ou les pilotes que les applications clientes peuvent utiliser à partir d'une variété de langues pour se connecter et utiliser Microsoft SQL Server fonctionnant sur site ou dans le cloud, sous Linux, Windows ou Docker, ainsi qu'Azure SQL Database et Azure SQL Data Warehouse.
 
 | Langage | Plateforme | Ressources supplémentaires | Télécharger | Découvrir |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ Le tableau ci-dessous répertorie les bibliothèques de connectivité ou *pilote
 | Ruby | Windows, Linux, macOS | [Pilote Ruby pour SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [Prise en main](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows, Linux, macOS | [Pilote Microsoft ODBC pour SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [Télécharger](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-Le tableau ci-dessous répertorie quelques exemples d’infrastructures de relationnelle mappage ORM (Object) et des infrastructures web qui permet aux applications de client avec Microsoft SQL Server exécuté localement ou dans le cloud, sur Linux, Windows ou Docker et également à la base de données SQL Azure et Azure SQL Data Warehouse. 
+Le tableau ci-dessous énumère quelques exemples de frameworks ORM (Object Relational Mapping) et de frameworks web que les applications clientes peuvent utiliser avec Microsoft SQL Server fonctionnant sur site ou dans le cloud, sous Linux, Windows ou Docker et aussi avec Azure SQL Database et Azure SQL Data Warehouse.
 
 | Langage | Plateforme | ORM(s) |
 | :-- | :-- | :-- |
