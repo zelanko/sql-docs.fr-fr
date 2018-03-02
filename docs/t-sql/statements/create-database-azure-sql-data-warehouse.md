@@ -65,11 +65,11 @@ Spécifie la couche de service de la base de données. Pour [!INCLUDE[ssSDW](../
 *MAXSIZE*  
 La valeur par défaut est 245 760 Go (240 To).  
 
-**S’applique à :** Niveau de performance Optimisé pour l’élasticité
+**S’applique à :** Niveau de performance Optimisé pour l’élasticité
 
 Taille maximale autorisée pour la base de données. La base de données ne peut pas croître au-delà de MAXSIZE. 
 
-**S’applique à :** Niveau de performance Optimisé pour le calcul
+**S’applique à :** Niveau de performance Optimisé pour le calcul
 
 Taille maximale autorisée pour les données rowstore dans la base de données. Les données stockées dans les tables rowstore, dans un deltastore d’index columnstore ou un index non cluster sur un index columnstore cluster ne peuvent pas croître au-delà de MAXSIZE.  Les données compressées au format columnstore n’ont pas de taille limite et ne sont pas restreintes par MAXSIZE.
   
@@ -81,7 +81,7 @@ Utilisez [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/datab
   
 Utilisez [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) pour changer la taille maximale ou les valeurs des objectifs de service par la suite.   
 
-SQL Data Warehouse est défini sur COMPATIBILITY_LEVEL 130 et ne peut pas être modifié. Pour plus d’informations, consultez [Meilleures performances des requêtes avec le niveau de compatibilité 130 dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+SQL Data Warehouse est défini sur COMPATIBILITY_LEVEL 130 et ne peut pas être modifié. Pour plus d’informations, consultez [Meilleures performances des requêtes avec le niveau de compatibilité 130 dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
 ## <a name="permissions"></a>Autorisations  
 Autorisations nécessaires :  
