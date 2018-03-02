@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -29,6 +29,8 @@ Cet article explique comment installer, mettre à jour et désinstaller 2017 du 
 
 > [!TIP]
 > Pour démarrer rapidement, passez à un des Démarrages rapides pour [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), ou [Docker](quickstart-install-connect-docker.md).
+
+Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Plateformes prises en charge
 
@@ -40,6 +42,9 @@ SQL Server 2017 est pris en charge sur les plateformes Linux suivantes :
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Obtenir SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Moteur docker** | 1.8+ | [Obtenir Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> Il est parfois possible d’installer et exécuter SQL Server sur d’autres plateformes Linux étroitement liées, mais SQL Server est uniquement testé et pris en charge sur les plateformes répertoriées dans le tableau précédent.
 
 Microsoft prend en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
 
@@ -71,7 +76,7 @@ Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Po
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Exécutez sur Docker](quickstart-install-connect-docker.md)
+- [Exécuter sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="repositories"></a> Configurer des référentiels de code source
@@ -211,4 +216,4 @@ Se connecter à votre instance de SQL Server pour commencer la création et la g
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Exécutez sur Docker](quickstart-install-connect-ubuntu.md)
+- [Exécuter sur Docker](quickstart-install-connect-ubuntu.md)

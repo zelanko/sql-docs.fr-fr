@@ -1,7 +1,7 @@
 ---
-title: "Activer ou désactiver la gestion des packages R pour SQL Server | Documents Microsoft"
+title: "Activer ou désactiver la gestion des packages à distance pour SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,39 +16,31 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 35bcae1e29e9b640d2e04b9adc788e382b18b6e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: feb30d37f9c22d6620a7c6a734172ef43c15e253
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="enable-or-disable-r-package-management-for-sql-server"></a>Activer ou désactiver la gestion des packages R pour SQL Server
+# <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Activer ou désactiver la gestion des packages à distance pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit une nouvelle fonctionnalité de gestion de package dans SQL Server 2017, conçu pour permettre à l’administrateur de base de données contrôler l’installation du package sur l’instance à l’aide de T-SQL plutôt que R.
-
-Lus tard que le frature de gestion de package est activé, vous pouvez également utiliser des commandes R pour installer des packages sur une base de données de frm un client distant.
+Cet article décrit comment activer la gestion de packages R à partir d’une instance distante du serveur de Machine Learning. Après avoir activé la fonctionnalité de gestion de package, vous pouvez utiliser les commandes de RevoScaleR pour installer des packages sur une base de données à partir d’un client distant.
 
 > [!NOTE]
-> Par défaut, la fonctionnalité de gestion de package externe pour SQL Server est désactivée, même si les fonctionnalités de machine learning ont été installées. 
+> Gestion des bibliothèques R est actuellement pris en charge ; Cette prise en charge de Python sur la feuille de route.
 
-## <a name="enable-package-management"></a>Activer la gestion des packages
+Par défaut, la fonctionnalité de gestion de package externe pour SQL Server est désactivée, même si les fonctionnalités de machine learning ont été installées. Vous devez exécuter un script distinct pour activer la fonctionnalité comme décrit dans la section suivante.
 
-Pour [activer](#bkmk_enable) cette fonctionnalité est un processus en deux étapes, en demandant à un administrateur de base de données :
-
-1.  Activer la gestion des packages sur l’instance de SQL Server (une fois par instance de SQL Server)
-
-2.  Activer la gestion des packages sur la base de données SQL (une fois par base de données SQL Server)
-
-Pour [désactiver](#bkmk_disable) la fonctionnalité de gestion de package, inverser le processus de suppression des packages au niveau de la base de données et les autorisations, puis supprimez les rôles du serveur :
-
-1.  Désactiver la gestion des packages sur chaque base de données (une fois par base de données)
-
-2.  Désactiver la gestion des packages sur l’instance de SQL Server (une fois par instance)
-
-## <a name="bkmk_enable"></a>Activer la gestion des packages
+## <a name="overview-of-process-and-tools"></a>Vue d’ensemble des processus et outils
 
 Pour activer ou désactiver la gestion des packages, utilisez l’utilitaire de ligne de commande **RegisterRExt.exe**, qui est inclus dans le **RevoScaleR** package.
+
+[L’activation de](#bkmk_enable) cette fonctionnalité est un processus en deux étapes, en demandant à un administrateur de base de données : vous activer la gestion de package sur l’instance de SQL Server (une fois par instance de SQL Server) et activer la gestion des packages sur la base de données SQL (une fois par SQL Server base de données).
+
+[La désactivation de](#bkmk_disable) la fonctionnalité de gestion de package requiert également multipel étapes : vous supprimez les packages au niveau de la base de données et les autorisations (une fois par base de données), puis supprimez les rôles du serveur (une fois par instance).
+
+## <a name="bkmk_enable"></a> Activer la gestion des packages
 
 1. Ouvrez une invite de commandes avec élévation de privilèges et accédez au dossier contenant l’utilitaire, RegisterRExt.exe. L’emplacement par défaut est `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -62,19 +54,19 @@ Pour activer ou désactiver la gestion des packages, utilisez l’utilitaire de 
 
     `REgisterRExt.exe /installpkgmgmt`
 
-2.  Pour ajouter la gestion des packages à une base de données spécifique, exécutez la commande suivante à partir d’une invite de commandes avec élévation de privilèges :
+3. Pour ajouter la gestion des packages à une base de données spécifique, exécutez la commande suivante à partir d’une invite de commandes avec élévation de privilèges :
 
     `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
     Cette commande crée certains artefacts de base de données, y compris les rôles de base de données suivants sont utilisés pour contrôler les autorisations d’utilisateur : `rpkgs-users`, `rpkgs-private`, et `rpkgs-shared`.
 
-    Par exemple, la commande suivante active la gestion des packages sur la base de données sur l’instance où RegisterRExt est exécutée. Si vous ne spécifiez pas un utilisateur, le contexte de sécurité actuel est utilisé. 
+    Par exemple, la commande suivante active la gestion des packages sur la base de données sur l’instance où RegisterRExt est exécutée. Si vous ne spécifiez pas un utilisateur, le contexte de sécurité actuel est utilisé.
 
     `RegisterRExt.exe /installpkgmgmt /database:TestDB`
 
-3. Répétez la commande pour chaque base de données où les packages doivent être installés.
+4. Répétez la commande pour chaque base de données où les packages doivent être installés.
 
-4.  Pour vérifier que les nouveaux rôles ont été créés avec succès, dans SQL Server Management Studio, cliquez sur la base de données, développez **sécurité**, développez **des rôles de base de données**.
+5. Pour vérifier que les nouveaux rôles ont été créés avec succès, dans SQL Server Management Studio, cliquez sur la base de données, développez **sécurité**, développez **des rôles de base de données**.
 
     Vous pouvez également exécuter une requête sur sys.database_principals tels que les éléments suivants :
 
@@ -91,17 +83,17 @@ Pour activer ou désactiver la gestion des packages, utilisez l’utilitaire de 
         ON o.schema_id = s.schema_id;
     ```
 
-4.  Une fois que la fonctionnalité a été activée, la connexion au serveur et installer ou synchroniser des packages à distance, à l’aide des commandes R. Pour obtenir un exemple de fonctionnement, consultez [installer des packages supplémentaires sur SQL Server](install-additional-r-packages-on-sql-server.md).
+Après avoir activé cette fonctionnalité, vous pouvez utiliser RevoScaleR fonction pour installer ou désinstaller des packages à partir d’un client distant de R.
 
-## <a name="bkmk_disable"></a>Désactiver la gestion des packages
+## <a name="bkmk_disable"></a> Désactiver la gestion des packages
 
-1.  À partir d’une invite de commandes avec élévation de privilèges, exécutez à nouveau l’utilitaire RegisterRExt et désactiver la gestion de package au niveau de la base de données :
+1. À partir d’une invite de commandes avec élévation de privilèges, exécutez à nouveau l’utilitaire RegisterRExt et désactiver la gestion de package au niveau de la base de données :
 
     `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
     Cette commande supprime les objets de base de données liées à la gestion de package à partir de la base de données spécifié. Elle supprime également tous les packages qui ont été installés à partir de l’emplacement du système de fichiers sécurisé sur l’ordinateur SQL Server.
 
-2. Exécutez cette commande une fois pour chaque base de données où la gestion des packages a été utilisée. 
+2. Répétez cette commande sur chaque base de données où la gestion des packages a été utilisée.
 
 3.  (Facultatif) Une fois que toutes les bases de données ont été effacées de packages à l’aide de l’étape précédente, exécutez la commande suivante à partir d’une invite de commandes avec élévation de privilèges :
 
@@ -109,6 +101,3 @@ Pour activer ou désactiver la gestion des packages, utilisez l’utilitaire de 
 
     Cette commande supprime la fonctionnalité de gestion de package à partir de l’instance. Vous devrez peut-être redémarrer manuellement le service Launchpad pour voir les modifications.
 
-## <a name="see-also"></a>Voir aussi
-
-[Gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md)

@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données Microsoft SQL
 
@@ -57,11 +57,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Langage | Téléchargez le pilote SQL |
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core,-Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, pour MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, pour Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Pilote Node.js, des instructions d’installation](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
 | PHP      | *Système d'exploitation :*<br /><br />[Pilote Windows PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Pilote Ubuntu ou MacOS PHP, à partir de Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
-| Python   | [pyodbc, des instructions d’installation](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Télécharger ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| Python   | [pyodbc, des instructions d’installation](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Télécharger ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Pilote Ruby, des instructions d’installation](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Page de téléchargement Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
@@ -90,9 +90,9 @@ Le tableau suivant répertorie des exemples d’infrastructures relationnelle ma
 ## <a name="build-an-app-webpages"></a>Pages Web d’une application de build
 
 
-[http://aka.ms/sqldev](http://aka.ms/sqldev) permet d’accéder à un ensemble de nos *-générer une application* des pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de programmation de langue, système d’exploitation et le pilote de connexion SQL. Parmi les informations fournies par les pages Web générer une application sont les éléments suivants :
+[http://aka.ms/sqldev](http://aka.ms/sqldev) permet d’accéder à un ensemble de *-générer une application* des pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de programmation de langue, système d’exploitation et le pilote de connexion SQL. Parmi les informations fournies par les pages Web générer une application sont les éléments suivants :
 
-- Plus d’informations sur la prise en main depuis le début, pour chaque combinaison de langue + opér sys + pilote.
+- Plus d’informations sur la prise en main depuis le début, pour chaque combinaison de langue, système d’exploitation + pilote.
     - Instructions pour installer les derniers pilotes de connexion SQL.
 - Exemples de code pour chacun des éléments suivants :
     - Exemples de code objet-relationnel.
