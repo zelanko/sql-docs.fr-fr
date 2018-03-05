@@ -66,7 +66,7 @@ ms.lasthandoff: 02/15/2018
   
  \<*chemin*>|\<*chemin*>  
   
- Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte du lecteur C, la valeur de la propriété **ConnectionString** peut être définie sur C:\\*.txt.  
+ Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte du lecteur C, la valeur de la propriété **ConnectionString** peut être définie sur C:\\\*.txt.  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
