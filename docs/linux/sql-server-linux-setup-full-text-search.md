@@ -98,7 +98,7 @@ Recherche en texte intégral utilise [des analyseurs lexicaux](../relational-dat
 | Arabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
-| Brésilien | 1046 |
+| Portugais (Brésil) | 1046 |
 | British English | 2057 |
 | Bulgare | 1026 |
 | Catalan | 1027 |
