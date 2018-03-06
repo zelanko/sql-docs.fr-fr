@@ -25,13 +25,14 @@ ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
 ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de basculement Windows Server avec SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un cluster *WSFC* (Windows Server Failover Cluster, cluster de basculement Windows Server) est un groupe de serveurs indépendants qui fonctionnent conjointement afin d’augmenter la disponibilité des applications et des services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tire parti des services et des fonctionnalités de WSFC afin de prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Un *cluster de basculement Windows Server* (WSFC, Windows Server Failover Cluster) est un groupe de serveurs indépendants qui fonctionnent conjointement afin d’augmenter la disponibilité des applications et des services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tire parti des services et des fonctionnalités de WSFC afin de prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
    
 ##  <a name="TermsAndDefs"></a> Termes et définitions  

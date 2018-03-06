@@ -1,5 +1,5 @@
 ---
-title: ISJSON (Transact-SQL) | Documents Microsoft
+title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - ISJSON function
 - JSON, validating
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0ecbcc4ced2b9503ec9161f7aa93a1a5266960ef
 ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/17/2017
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Teste si une chaîne contient un JSON valide.  
+  Teste si une chaîne contient des données JSON valides.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +48,17 @@ ISJSON ( expression )
  Chaîne à tester.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Retourne 1 si la chaîne contient un JSON valide ; Sinon, retourne 0. Retourne null si *expression* est null.  
+ Renvoie 1 si la chaîne contient des données JSON valides ; sinon, renvoie 0. Renvoie Null si *expression* est Null.  
   
- Ne retourne pas d’erreurs.  
+ Ne renvoie pas d’erreurs.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **ISJSON** ne vérifie pas l’unicité des clés au même niveau.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="example-1"></a>Exemple 1  
-L’exemple suivant exécute un bloc d’instructions de manière conditionnelle Si la valeur du paramètre `@param` contient un JSON valide.  
+L’exemple suivant exécute un bloc d’instructions de manière conditionnelle si la valeur de paramètre `@param` contient des données JSON valides.  
   
 ```sql  
 DECLARE @param <data type>
@@ -79,7 +80,7 @@ FROM tab1
 WHERE ISJSON(json_col) > 0 
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Données JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Données JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

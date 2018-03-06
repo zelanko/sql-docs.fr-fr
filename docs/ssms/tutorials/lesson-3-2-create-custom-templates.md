@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Leçon 3-2 - Créer des modèles personnalisés
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  Dans l'Éditeur de requête, tapez le script suivant pour créer une procédure stockée qui recherche les bons d'une pièce en particulier, dans le cas présent : blade (la lame en français). (Vous pouvez copier et coller le code à partir de la fenêtre du didacticiel.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,11 +73,11 @@ ms.lasthandoff: 01/17/2018
   
 8.  Appuyez sur F5 pour exécuter ce script et créer la procédure **WorkOrdersForBlade** .  
   
-9. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre serveur et choisissez **Nouvelle requête**. Une nouvelle fenêtre de l'Éditeur de requête s'ouvre.  
+9. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **AdventureWorks2012**, puis cliquez sur **Nouvelle requête**. Une nouvelle fenêtre de l'Éditeur de requête s'ouvre.  
   
 10. Dans l’Éditeur de requête, tapez **EXECUTE dbo.WorkOrdersForBlade**et appuyez sur F5 pour exécuter la requête. Vérifiez si le volet **Résultats** affiche la liste des bons de travaux pour les lames.  
   
-11. Modifiez le script du modèle (le script de l’étape 7) en remplaçant le nom du produit Blade par le paramètre ***\<*product_name**, **nvarchar(50)**, **name*>***, à quatre endroits.  
+11. Modifiez le script du modèle (le script de l’étape 7) en remplaçant le nom du produit Blade par le paramètre **\<product_name, nvarchar(50), name>**, à quatre endroits.  
   
     > [!NOTE]  
     > Les paramètres nécessitent trois éléments : le nom du paramètre à remplacer, le type de données du paramètre et une valeur par défaut pour le paramètre.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. Le script doit à présent ressembler à ce qui suit :  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

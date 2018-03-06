@@ -29,13 +29,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit aux administrateurs une connexion de diagnostic spéciale lorsque des connexions standard au serveur sont impossibles. Cette connexion de diagnostic permet aux administrateurs d'accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter des requêtes de diagnostic et résoudre des problèmes, même lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne répond pas à des demandes de connexion standard.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit aux administrateurs une connexion de diagnostic spéciale lorsque des connexions standard au serveur sont impossibles. Cette connexion de diagnostic permet aux administrateurs d'accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter des requêtes de diagnostic et résoudre des problèmes, même lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne répond pas à des demandes de connexion standard.  
   
  Cette connexion administrateur dédiée (DAC) prend en charge le chiffrement et d'autres fonctions de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle permet uniquement de changer de contexte utilisateur pour un autre administrateur.  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/18/2018
   
 -   Les commandes DBCC de base, comme [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) et [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Évitez d’exécuter des commandes consommant beaucoup de ressources, comme [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) ou [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
--   Commande [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>*. Selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la commande KILL risque de ne pas toujours aboutir ; dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Voici quelques directives générales :  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Commande KILL*\<spid>*. Selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la commande KILL risque de ne pas toujours aboutir ; dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Voici quelques directives générales :  
   
     -   Vérifiez que le SPID a été supprimé en interrogeant `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. S'il ne retourne aucune ligne, la session a été supprimée.  
   

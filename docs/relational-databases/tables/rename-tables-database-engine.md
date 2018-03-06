@@ -1,7 +1,7 @@
 ---
 title: "Renommer des tables (moteur de base de données) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - table names [SQL Server]
 - tables [SQL Server], Visual Database Tools
 - renaming tables
-ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66529f13e4eae406cb4e85d507a9da2d4629d895
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rename-tables-database-engine"></a>Renommer des tables (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Vous pouvez renommer une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Renommez une table dans SQL Server ou Azure SQL Database.
+
+Pour renommer une table dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction T-SQL [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md). 
   
 > [!CAUTION]  
 >  Ne renommez une table qu'après mûre réflexion. En effet, s'il existe des requêtes, des vues, des fonctions définies par l'utilisateur, des procédures stockées ou des programmes qui font référence à cette table, le changement de nom rend tous ces objets non valides.  
