@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe67d6afd28bef9b73700206cd618db1a3374580
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 190d8f1541fc13affddffa71859d37dbb4d4239b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="custom-index-master-data-services"></a>Index personnalisé (Master Data Services)
   Les index personnalisés créent un index non cluster sur un attribut spécifique (index unique) ou sur une liste d’attributs (index composite) dans une entité. En règle générale, les index améliorent les performances du processus d’exécution de requêtes. Pour plus d’informations sur les index SQL Server, consultez [Index](../relational-databases/indexes/indexes.md).  
