@@ -209,7 +209,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
    ```
 
    > [!TIP]
-   > Pendant que vous tapez, utilisez l'aide de l'IntelliSense T-SQL.
+   > En cours de frappe, utilisez l’aide de T-SQL IntelliSense.
    >   <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 500px;" />
 
 2. Appuyez sur **CTRL + MAJ + E** pour exécuter les commandes. Les deux ensembles de résultats s'affichent dans la fenêtre  **résultats**. 
