@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud
 Vous pouvez maintenant déplacer vos packages et charges de travail SQL Server Integration Services (SSIS) vers le cloud Azure.
@@ -54,7 +55,7 @@ Vous devez provisionner une seule fois le runtime d’intégration SSIS. Vous po
 
 Data Factory prend également en charge d’autres types de runtime d’intégration. Pour plus d’informations sur le runtime d’intégration SSIS et les autres types de runtime d’intégration, consultez la section [Runtime d’intégration dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 Les fonctionnalités décrites dans cet article ne nécessitent pas SQL Server 2017 ou SQL Server 2016.
 
 Ces fonctionnalités nécessitent les versions suivantes de SQL Server Data Tools (SSDT) :
@@ -62,9 +63,9 @@ Ces fonctionnalités nécessitent les versions suivantes de SQL Server Data Tool
 -   Pour Visual Studio 2015, version 17.2 ou version ultérieure.
 
 > [!NOTE]
-> Quand vous déployez des packages sur Azure, l’Assistant Déploiement de packages effectue toujours une mise à niveau des packages vers le dernier format de package.
+> Quand vous déployez des packages sur Azure, l’Assistant Déploiement de package met toujours à niveau les packages avec le format de package le plus récent.
 
-Pour plus d’informations sur les prérequis dans Azure, consultez [Effectuer un « lift-and-shift » des packages SSIS (SQL Server Integration Services) vers Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Pour plus d’informations sur les prérequis dans Azure, consultez [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="ssis-features-on-azure"></a>Fonctionnalités SSIS sur Azure
 
@@ -81,7 +82,7 @@ Pour plus d’informations sur la connexion aux **sources de données locales** 
 ## <a name="common-tasks"></a>Tâches courantes
 
 ### <a name="provision"></a>Approvisionner
-Avant de pouvoir déployer et exécuter des packages SSIS dans Azure, vous devez provisionner la base de données de catalogues SSISDB et le runtime d’intégration Azure SSIS. Suivez les étapes de provisionnement décrites dans cet article : [Effectuer un « lift-and-shift » des packages SSIS (SQL Server Integration Services) vers Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Avant de pouvoir déployer et exécuter des packages SSIS dans Azure, vous devez provisionner la base de données de catalogues SSISDB et le runtime d’intégration Azure SSIS. Suivez les étapes de provisionnement dans cet article : [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ### <a name="deploy-and-run-packages"></a>Déployer et exécuter des packages
 Pour déployer des projets et exécuter des packages sur SQL Database, vous pouvez utiliser plusieurs outils et options de script de votre choix :
@@ -105,5 +106,5 @@ Pour plus d’informations, consultez [Planifier l’exécution d’un package S
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour bien démarrer avec les charges de travail SSIS sur Azure, consultez les articles suivants :
--   [Effectuer un « lift-and-shift » des packages SSIS (SQL Server Integration Services) vers Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [Déployer, exécuter et surveiller un package SSIS sur Azure](ssis-azure-deploy-run-monitor-tutorial.md)

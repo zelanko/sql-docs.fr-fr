@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau
   Si vous configurez la montée en puissance parallèle du serveur de rapports en vue de son exécution sur un cluster avec équilibrage de la charge réseau (NLB, Network Load Balancing), vous devez effectuer les opérations suivantes :  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|Vérifiez que les serveurs sont accessibles via le nom d'hôte que vous avez spécifié.|[Vérifier l’accès au serveur de rapports](#Verify) dans cette rubrique.|  
   
 ##  <a name="ViewState"></a> Comment configurer la validation de l’état d’affichage  
- Pour exécuter un déploiement avec montée en puissance parallèle sur un cluster avec équilibrage de la charge réseau, vous devez configurer la validation de l'état d'affichage afin que les utilisateurs puissent consulter les rapports HTML interactifs. Vous devez accomplir ces tâches pour le serveur de rapports et pour le Gestionnaire de rapports.  
+ Pour exécuter un déploiement avec montée en puissance parallèle sur un cluster avec équilibrage de la charge réseau, vous devez configurer la validation de l'état d'affichage afin que les utilisateurs puissent consulter les rapports HTML interactifs.
   
  La validation de l'état d'affichage est contrôlée par ASP.NET. Par défaut, la validation de l'état d'affichage est activée et utilise l'identité du service Web pour effectuer la validation. Toutefois, dans un scénario de cluster avec équilibrage de la charge réseau, il existe plusieurs instances de services et plusieurs identités de services Web qui s'exécutent sur différents ordinateurs. L'identité de service étant différente pour chaque nœud, vous ne pouvez pas vous appuyer sur une seule identité de processus pour effectuer la validation.  
   
  Pour contourner ce problème, vous pouvez générer une clé de validation arbitraire pour prendre en charge la validation de l'état d'affichage, puis configurer manuellement chaque nœud de serveur de rapports de manière à ce qu'il utilise la même clé. Vous pouvez utiliser n'importe quelle séquence hexadécimale générée de façon aléatoire. L'algorithme de validation (tel que SHA1) détermine la longueur que doit avoir la séquence hexadécimale.  
+
+1.  Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une seule entrée \<**MachineKey**> que vous pouvez coller dans le fichier RSReportServer.config pour chaque instance du serveur de rapports dans le déploiement avec montée en puissance parallèle.
   
-1.  Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une entrée \<**machineKey**> unique que vous pouvez coller dans le fichier Web.config pour chaque instance du Gestionnaire de rapports dans le déploiement avec montée en puissance parallèle.  
-  
-     L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides.  
+     L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides. La casse correcte doit être utilisée pour le serveur de rapports.
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  Enregistrez le fichier.  
   
-2.  Ouvrez le fichier Web.config du Gestionnaire de rapports et, dans la section \<**system.web**>, collez l’élément \<**machineKey**> que vous avez généré. Par défaut, le fichier Web.config du Gestionnaire de rapports se trouve dans \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+3.  Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
   
-3.  Enregistrez le fichier.  
-  
-4.  Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
-  
-5.  Vérifiez que tous les fichiers Web.Config des dossiers\Reporting Services\Report Manager contiennent des éléments \<**machineKey**> identiques dans la section \<**system.web**>.  
+4.  Vérifiez que tous les fichiers RSReportServer.config des dossiers\Reporting Services\Report Manager contiennent des éléments \<**MachineKey**> identiques.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Comment configurer Hostname et UrlRoot  
  Pour configurer un déploiement avec montée en puissance parallèle du serveur de rapports sur un cluster avec équilibrage de la charge réseau, vous devez définir un seul nom de serveur virtuel qui fournit un point d'accès unique au cluster de serveurs. Puis, inscrivez le nom du serveur virtuel auprès du serveur de noms de domaine de votre environnement.  

@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Se connecter à la base de données de catalogues SSISDB sur Azure
 
@@ -27,7 +28,7 @@ Obtenez les informations de connexion dont vous avez besoin pour vous connecter 
 - informations de connexion 
 
 > [!IMPORTANT]
-> Vous ne pouvez pas créer la base de données de catalogues SSISDB sur Azure SQL Database à ce stade indépendamment de la création du runtime d’intégration Azure-SSIS dans Azure Data Factory version 2. C’est le runtime d’intégration Azure-SSIS qui exécute les packages SSIS sur Azure. Pour obtenir plus d’informations et un exemple de script PowerShell, consultez [Déployer des packages SQL Server Integration Services sur Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+> Vous ne pouvez pas créer la base de données de catalogues SSISDB sur Azure SQL Database à ce stade indépendamment de la création du runtime d’intégration Azure-SSIS dans Azure Data Factory version 2. C’est le runtime d’intégration Azure-SSIS qui exécute les packages SSIS sur Azure. Pour plus d’informations, consultez [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Avant de commencer, vérifiez que vous avez la version 17.2 ou ultérieure de SQL Server Management Studio. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

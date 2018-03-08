@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Déployer, exécuter et surveiller un package SSIS sur Azure
 Ce didacticiel vous montre comment déployer un projet SQL Server Integration Services sur la base de données de catalogues SSISDB dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure SSIS et comment surveiller le package en cours d’exécution.
@@ -27,7 +27,7 @@ Ce didacticiel vous montre comment déployer un projet SQL Server Integration Se
 
 Avant de commencer, vérifiez que vous avez la version 17.2 ou ultérieure de SQL Server Management Studio. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Vérifiez également que vous avez configuré la base de données SSISDB et que vous avez provisionné le runtime d’intégration Azure SSIS. Pour plus d’informations sur le provisionnement de SSIS sur Azure, consultez [Effectuer un « lift-and-shift » des packages SSIS (SQL Server Integration Services) vers Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Vérifiez également que vous avez configuré la base de données SSISDB et que vous avez provisionné le runtime d’intégration Azure SSIS. Pour plus d’informations sur la façon de provisionner SSIS sur Azure, consultez [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Se connecter à la base de données SSISDB
 

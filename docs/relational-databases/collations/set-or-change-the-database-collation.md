@@ -17,20 +17,23 @@ helpviewer_keywords:
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e39ed48b206151e6953ab2f49aa469a356162f87
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 025bfc5512c9e53569077749a852191a76e8b7dd
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
-  
+ 
+> [!NOTE]
+> Vous ne pouvez pas changer le classement pour une base de données Azure SQL Database après sa création.
+
  **Dans cette rubrique**  
   
 -   **Avant de commencer :**  
