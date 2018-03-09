@@ -26,27 +26,27 @@ ms.lasthandoff: 11/20/2017
 
 Cet article explique comment configurer le stockage NFS pour une instance de cluster de basculement (FCI) sur Linux. 
 
-NFS ou Network File Système (système de fichiers réseau), est une méthode courante pour le partage de disques dans le monde Linux, mais pas dans le monde Windows. Similaire à iSCSI, NFS peut être configuré sur un serveur ou certains appareils de stockage tant qu’il répond aux exigences du stockage SQL Server.
+NFS (Network File System) est une méthode couramment employée pour partager des disques dans le monde Linux, mais pas dans le monde Windows. Similaire à iSCSI, NFS peut être configuré sur un serveur ou certaines appliances ou unités de stockage à condition qu’il réponde aux exigences en matière de stockage de SQL Server.
 
 ## <a name="important-nfs-server-information"></a>Informations importantes du serveur NFS
 
-La source qui hébergement NFS (un serveur Linux ou autre) doit utiliser et être conforme à la version 4.2 ou ultérieure. Les versions antérieures ne fonctionneront pas avec SQL Server sur Linux.
+La source qui héberge NFS (serveur Linux ou autre) doit utiliser la version 4.2 ou ultérieure ou être conforme à celle-ci. Les versions antérieures ne fonctionnent pas avec SQL Server sur Linux.
 
-Lorsque vous configurez le ou les dossiers à partager sur le serveur NFS, assurez-vous qu’ils respectent ces options générales :
-- `rw`Pour vous assurer que le dossier peut être lue et écrite
-- `sync`Pour garantir des écritures garanties dans le dossier
-- N’utilisez pas `no_root_squash` en tant qu’option ; c'est considéré comme un risque de sécurité
-- Assurez-vous que le dossier dispose des droits d’accès complets (777)
+Quand vous configurez le ou les dossiers à partager sur le serveur NFS, vérifiez qu’ils respectent ces options générales :
+- `rw`pour que le dossier soit accessible en lecture et en écriture
+- `sync`pour assurer des écritures garanties dans le dossier
+- Ne pas utiliser `no_root_squash`comme option (celle-ci est considérée comme un risque pour la sécurité)
+- Vérifier que le dossier dispose de droits complets (777)
 
-Assurez-vous que vos normes de sécurité sont appliquées pour l'accès. Lorsque vous configurez le dossier, assurez-vous que seuls les serveurs participant à l’instance FCI peuvent voir le dossier NFS. Un exemple d’un /etc/exports modifié sur une solution NFS basées sur Linux est indiqué ci-dessous dans lequel l'accès au dossier est limité à FCIN1 et FCIN2.
+Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vous configurez le dossier, vérifiez que seuls les serveurs participant à l’instance l'instance de cluster de basculement peuvent voir le dossier NFS. L'exemple ci-dessous montre un dossier /etc/exports modifié sur une solution NFS basée sur Linux. L'accès à ce dossier est limité à FCIN1 et FCIN2.
 
 ![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 
-1. Choisissez un des serveurs participant à la configuration du FCI. Peu importe lequel. 
+1. Choisissez un des serveurs (peu importe lequel) qui participera à la configuration de l'instance de cluster de basculement. 
 
-2. Vérifiez que le serveur peut voir le montage(s) sur le serveur NFS.
+2. Vérifiez que le serveur peut voir le ou les montages sur le serveur NFS.
 
     ```bash
     sudo showmount -e <IPAddressOfNFSServer>
@@ -62,19 +62,19 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l'accès. Lorsqu
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-   * Basculez entièrement en super utilisateur. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Basculez entièrement en super utilisateur. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
     ```bash
     sudo -i
     ```
 
-   * Basculez vers l’utilisateur mssql. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Basculez vers l’utilisateur mssql. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
     ```bash
     su mssql
     ```
 
-   * Créez un répertoire temporaire pour stocker les données de SQL Server et les fichiers journaux. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Créez un répertoire temporaire pour stocker les données de SQL Server et les fichiers journaux. Vous ne recevrez pas d'accusé de réception en cas de réussite.
 
     ```bash
     mkdir <TempDir>
@@ -167,7 +167,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l'accès. Lorsqu
     sudo systemctl status mssql-server
     ```
     
-   * Créez une base de données pour tester que la sécurité est correctement configurée. L’exemple ci-dessous utilise Transact-SQL ; Il est possible via SSMS.
+   * Créez une base de données pour vérifier que la sécurité est correctement configurée. L’exemple ci-dessous utilise Transact-SQL, vous pouvez aussi utiliser SSMS.
  
     ![CreateTestdatabase][3]
 
@@ -178,7 +178,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l'accès. Lorsqu
     sudo systemctl status mssql-server
     ```
 
-   * Si vous ne créez aucun autre montage NFS, démontez le partage. Sinon, ne démontez pas.
+   * Si vous ne créez aucun autre montage NFS, démontez le partage. Sinon, ne le démontez pas.
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
@@ -190,9 +190,9 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l'accès. Lorsqu
 
     \<FolderMountedIn > est le dossier créé à l’étape précédente. 
 
-4. Pour les éléments autres que des bases de données système, telles que les bases de données utilisateur ou des sauvegardes, procédez comme suit. Si vous utilisez uniquement l’emplacement par défaut, passez à l’étape 5.
+4. Pour les éléments autres que les bases de données système, tels que les bases de données utilisateur ou les sauvegardes, suivez ces étapes. Si vous utilisez uniquement l’emplacement par défaut, passez à l’étape 5.
 
-   * Basculez en super utilisateur. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Basculez sur le super utilisateur. Vous ne recevrez pas de message de retour en cas de réussite.
 
     ```bash
     sudo -i
@@ -204,7 +204,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l'accès. Lorsqu
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifiés s'il n'est pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié s'il n'est pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
