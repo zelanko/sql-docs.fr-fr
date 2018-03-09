@@ -1,4 +1,4 @@
----
+﻿---
 title: "Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft"
 description: "Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux."
 author: annashres
@@ -46,13 +46,13 @@ Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL de 
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Une exception à cette technique relative aux machines virtuelles Azure. Pour les machines virtuelles Azure, [rechercher l’adresse IP publique de l’ordinateur virtuel dans le portail Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Une exception à cette technique concerne les machines virtuelles Azure. Pour les machines virtuelles Azure, [rechercher l’adresse IP publique de la machine virtuelle dans le portail Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Le cas échéant, vérifiez que vous avez ouvert le port SQL Server (1433 par défaut) sur le pare-feu.
 
 - Pour les machines virtuelles Azure, vérifiez que vous avez une [règle de groupe de sécurité réseau pour le port de SQL Server par défaut](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
-- Vérifiez que le nom d’utilisateur et un mot de passe ne contiennent pas de fautes de frappe ou espaces ni d’une casse incorrecte.
+- Vérifiez que le nom d’utilisateur et le mot de passe ne contiennent pas de fautes de frappe, ni d'espaces, ni une casse incorrecte.
 
 - Essayez de définir explicitement le numéro de port et de protocole avec le nom du serveur à l’exemple suivant : **tcp:servername, 1433**.
 
@@ -62,7 +62,7 @@ Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL de 
 
 Les sections suivantes montrent comment démarrer, arrêter, redémarrer et vérifier l’état du service SQL Server. 
 
-### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Gérer le service mssql-serveur Red Hat Enterprise Linux (RHEL) et Ubuntu 
+### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Gérer le service mssql-server sous Red Hat Enterprise Linux (RHEL) et Ubuntu 
 
 Vérifiez l’état du service SQL Server à l’aide de cette commande :
 
@@ -98,26 +98,26 @@ Vous pouvez arrêter ou redémarrer le service SQL Server en fonction des besoin
 
 ## <a name="access-the-log-files"></a>Accéder aux fichiers journaux
    
-Les journaux de moteur SQL Server dans le fichier /var/opt/mssql/log/errorlog dans les installations de Linux et de Docker. Vous devez être en mode de 'super utilisateur' pour parcourir ce répertoire.
+SQL Server stocke ses journaux dans le fichier /var/opt/mssql/log/errorlog dans les installations sous Linux et Docker. Vous devez être en mode de 'super utilisateur' pour parcourir ce répertoire.
 
-Le programme d’installation enregistre ici : / var/opt/mssql/le programme d’installation-< horodatage qui représente la durée d’installation > vous pouvez parcourir les fichiers du journal des erreurs avec n’importe quel outil compatible UTF-16 comme « vim » ou « cat » comme suit : 
+Le programme d’installation enregistre ici : /var/opt/mssql/setup-<horodatage qui représente l'heure d’installation> Vous pouvez parcourir les fichiers journaux des erreurs avec n’importe quel outil compatible UTF-16 tel que « vim » ou « cat » comme suit : 
 
    ```bash
    sudo cat errorlog
    ```
 
-Si vous préférez, vous pouvez également convertir les fichiers UTF-8 pour les lire avec « plus » ou « moins » avec la commande suivante :
+Si vous préférez, vous pouvez également convertir les fichiers vers UTF-8 pour les lire avec « more » ou « less » avec la commande suivante :
    
    ```bash
    sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>Événements étendus
 
-Événements étendus peuvent être interrogées via une commande SQL.  Plus d’informations sur les événements étendus sont accessibles [ici](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Les événements étendus peuvent être interrogées via une commande SQL. Plus d’informations sur les événements étendus accessibles [ici](https://technet.microsoft.com/en-us/library/bb630282.aspx):
 
 ## <a name="crash-dumps"></a>Vidages sur incident 
 
-Recherchez les vidages dans le répertoire de journal dans Linux. Vérifiez dans le répertoire /var/opt/mssql/log pour Linux Core dumps (. tar.gz2 extension) ou SQL minidumps (extension .mdmp)
+Recherchez les vidages dans le répertoire de journaux dans Linux. Recherchez dans le répertoire /var/opt/mssql/log les vidages Linux Core (extension .tar.gz2) ou les mini-vidages SQL (extension .mdmp)
 
 Pour les vidages 
    ```bash
@@ -139,7 +139,7 @@ Cette option est utile lorsqu'une valeur de configuration définie (espace mémo
    ```
 
 ### <a name="start-sql-server-in-single-user-mode"></a>Démarrage de SQL Server en Mode mono-utilisateur
-Dans certaines circonstances, vous devrez peut-être démarrer une instance de SQL Server en mode mono-utilisateur à l’aide de l’option de démarrage -m. Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données master ou une autre base de données système endommagées. Par exemple, vous souhaiterez modifier les options de configuration de serveur ou rétablir une base de données master endommagée ou une autre base de données système   
+Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données maître ou une autre base de données système endommagée. Par exemple, vous pouvez vouloir modifier les options de configuration du serveur ou récupérer une base de données maître endommagée ou une autre base de données système   
 
 Démarrage de SQL Server en Mode mono-utilisateur
    ```bash
@@ -154,7 +154,7 @@ Démarrage de SQL Server en Mode mono-utilisateur avec SQLCMD
 > [!WARNING]  
 >  Démarrez SQL Server sur Linux avec l’utilisateur « mssql » afin d’éviter les problèmes de démarrage futurs. Exemple « sudo -u mssql /opt/mssql/bin/sqlservr [OPTIONS DE DÉMARRAGE] » 
 
-Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vous devez modifier la propriété des fichiers de base de données SQL Server à l’utilisateur 'mssql' avant de démarrer SQL Server avec systemd. Par exemple, exécutez la commande suivante pour modifier la propriété de tous les fichiers de base de données sous /var/opt/mssql à l’utilisateur « mssql »,
+Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vous devez changer la propriété des fichiers de base de données SQL Server pour l'attribuer à l’utilisateur 'mssql' avant de démarrer SQL Server avec systemd. Par exemple, exécutez la commande suivante pour modifier la propriété de tous les fichiers de base de données sous /var/opt/mssql sur l’utilisateur « mssql »
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -166,9 +166,9 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
 
    Consultez la section Dépannage de l’article, [se connecter à SQL Server sur Linux](#connection).
 
-2. Erreur : Nom d’hôte doit être de 15 caractères ou moins.
+2. Erreur : Le nom d’hôte doit compter 15 caractères maximum.
 
-   Il s’agit d’un problème connu qui se produit chaque fois que le nom de l’ordinateur qui tente d’installer le package Debian SQL Server est supérieur à 15 caractères. Il n’existe actuellement aucune solution de contournement autre que la modification du nom de l’ordinateur. Une façon d’effectuer cette opération est en modifiant le fichier de nom d’hôte et de redémarrer l’ordinateur. Les éléments suivants [guide du site Web](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) Cela explique en détail.
+   Il s’agit d’un problème connu qui se produit chaque fois que le nom de l’ordinateur sur lequel on tente d’installer le package Debian SQL Server est supérieur à 15 caractères. Il n’existe actuellement aucune solution de contournement autre que la modification du nom de l’ordinateur. Une façon d’effectuer cette opération est de modifier le fichier de nom d’hôte et de redémarrer l’ordinateur. Les éléments suivants [guide Web](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explique cela en détail.
 
 3. La réinitialisation de mot de passe système (SA) d’administration.
 
@@ -184,7 +184,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-4. À l’aide de caractères spéciaux dans le mot de passe.
+4. Utiliser des caractères spéciaux dans le mot de passe.
 
    Si vous utilisez des caractères dans le mot de passe du compte de connexion SQL Server, vous devrez peut-être d’échappement lors de leur utilisation dans le terminal Linux. Vous devez isoler le $ à tout moment à l’aide de la barre oblique vous l’utilisez dans un script de shell de commande/Terminal Server :
 

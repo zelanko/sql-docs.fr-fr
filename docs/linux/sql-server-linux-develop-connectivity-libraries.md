@@ -1,5 +1,5 @@
----
-title: "Les bibliothèques de connectivité et des infrastructures | Documents Microsoft"
+﻿---
+title: "Bibliothèques de connectivité et frameworks | Documents Microsoft"
 description: "Répertorie les pilotes de connectivité que les applications clientes peuvent utiliser différentes langues pour se connecter à Microsoft SQL Server exécuté localement ou dans le cloud, sur Linux, Windows ou Docker et également à la base de données SQL Azure et Azure SQL Data Warehouse."
 author: rothja
 ms.author: jroth

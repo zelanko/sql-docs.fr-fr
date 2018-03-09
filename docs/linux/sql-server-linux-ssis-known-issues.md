@@ -1,4 +1,4 @@
----
+﻿---
 title: "Limitations et problèmes connus pour SSIS sur Linux | Documents Microsoft"
 description: "Cet article décrit les limitations et problèmes connus pour SQL Server Integration Services (SSIS) sur les ordinateurs Linux"
 author: leolimsft
@@ -30,12 +30,12 @@ Cet article décrit les problèmes connus et les limitations actuelles pour SQL 
 ## <a name="general-limitations-and-known-issues"></a>Limitations générales et les problèmes connus
 
 Les fonctionnalités suivantes ne sont pas pris en charge dans cette version de SSIS sur Linux :
-  - Base de données du catalogue SSIS
+  - Base de données catalogue de SSIS
   - Exécution du package planifiés par l’Agent SQL
   - Authentification Windows
   - Les composants tiers
   - Capture de données modifiées (CDC)
-  - Avec montée en puissance SSIS
+  - Integration Services (SSIS) Scale Out
   - Azure Feature Pack pour SSIS
   - Prise en charge de Hadoop et HDFS
   - Microsoft Connector pour SAP BW
@@ -44,9 +44,9 @@ Pour les autres limitations et problèmes connus avec SSIS sur Linux, consultez 
 
 ## <a name="components"></a> Composants pris en charge et non pris en charge
 
-Les composants Integration Services intégrés suivants sont pris en charge sous Linux. Certaines d'entre elles ont des limitations sur la plate-forme Linux, comme décrit dans les tableaux suivants.
+Les composants Integration Services suivants sont pris en charge sur Linux. Certaines d'entre elles proviennent de limitations de la plate-forme Linux, comme spécifié dans les tableaux suivants.
 
-Les composants intégrés qui ne sont pas répertoriés ici ne sont pas pris en charge sous Linux.
+Les composants de SSIS qui ne sont pas répertoriés ici ne sont pas pris en charge sous Linux.
 
 ### <a name="supported-control-flow-tasks"></a>Prise en charge des tâches de flux de contrôle
 - tâche d'insertion en bloc
@@ -56,7 +56,7 @@ Les composants intégrés qui ne sont pas répertoriés ici ne sont pas pris en 
 - Tâche Exécuter l'instruction T-SQL
 - Tâche d'expression
 - Tâche FTP
-- Tâche de service Web
+- Tâche service Web
 - XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle pris en charge avec les limitations

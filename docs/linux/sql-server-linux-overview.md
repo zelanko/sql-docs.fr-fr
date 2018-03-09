@@ -1,4 +1,4 @@
----
+﻿---
 title: "Vue d’ensemble de SQL Server sur Linux | Documents Microsoft"
 description: "Cet article décrit comment SQL Server s’exécute sur Linux et fournit des informations sur la façon d’en savoir plus."
 author: rothja
@@ -52,11 +52,12 @@ Après l’installation, connectez-vous à l’instance de SQL Server installée
 
 ## <a name="explore"></a>Explorer
 
-SQL Server 2017 a le même moteur de base de données sous-jacent sur toutes les plateformes prises en charge, y compris Linux. Beaucoup de fonctionnalités et de possibilités existent et fonctionnent de la même manière sur Linux ou Windows. Cette partie de la documentation expose certaines de ces fonctionnalités du point de vue Linux. Elle indique également les parties qui ont des exigences spécifiques à Linux.
+SQL Server 2017 a le même moteur de base de données sous-jacent sur toutes les plateformes prises en charge, y compris Linux. Beaucoup de fonctionnalités et de possibilités existent et fonctionnent de la même manière sur Linux ou Windows. Cette partie de la documentation expose certaines de ces fonctionnalités du point de vue Linux. Elle contient également les fonctionnalités qui réclament des exigences spécifiques à Linux.
 
-Si vous êtes déjà familiarisé avec SQL Server, passez en revue les [notes de publication](sql-server-linux-release-notes.md) pour des recommandations générales et les problèmes connus pour cette version. Observez [quelles sont les nouveautés de SQL Server sur Linux](sql-server-linux-whats-new.md) ainsi que les [Nouveautés globales à SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md). 
+Si vous êtes déjà familiarisé avec SQL Server, passez en revue les [notes de publication](sql-server-linux-release-notes.md) pour des recommandations générales et les problèmes connus pour cette version. Observez [quelles sont les nouveautés de SQL Server sur Linux](sql-server-linux-whats-new.md) ainsi que les [Nouveautés globales à SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 > [!TIP]
 > Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](sql-server-linux-faq.md).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+

@@ -1,4 +1,4 @@
----
+﻿---
 title: Installer les outils de ligne de commande de SQL Server sur Linux | Documents Microsoft
 description: "Cet article décrit comment installer les outils SQL Server sur Linux."
 author: rothja
@@ -25,10 +25,10 @@ ms.lasthandoff: 02/23/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les étapes suivantes installer les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le **mssql-tools** package contient :
+Les étapes suivantes installent les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le package **mssql-tools** contient :
 
-- **SQLCMD**: utilitaire de ligne de commande de requête.
-- **bcp**: en bloc utilitaire d’importation / exportation.
+- **SQLCMD**: Utilitaire de requêtage en ligne de commande.
+- **bcp**: Utilitaire d’importation/exportation en bloc.
 
 Installer les outils pour votre plateforme :
 
@@ -44,7 +44,7 @@ Cet article décrit comment installer les outils de ligne de commande. Si vous r
 
 Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Enterprise Linux. 
 
-1. Activer le mode de super utilisateur.
+1. Activer le mode Super utilisateur.
 
    ```bash
    sudo su
@@ -145,7 +145,7 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu.
 
 Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux Enterprise Server. 
 
-1. Ajoutez le référentiel Microsoft SQL Server à Zypper.
+1. Ajouter le référentiel Microsoft SQL Server à Zypper.
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
@@ -227,9 +227,9 @@ Ces packages dépendent de **msodbcsql**, qui doit être installé en premier. L
 
 Pour installer manuellement ces packages, procédez comme suit :
 
-1. **Déplacer les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, un pour déplacer les packages à l’ordinateur Linux est la **scp** commande.
+1. **Déplacer les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, une façon de déplacer les packages à l’ordinateur Linux est la commande **scp**.
 
-1. **Installer les packages et**: installer le **mssql-tools** et **msodbc** packages. Si vous obtenez des erreurs de dépendance, les ignorer jusqu'à ce que l’étape suivante.
+1. **Installer les packages**: installer les packages **mssql-tools** et **msodbc**. Si vous obtenez des erreurs de dépendance, les ignorer jusqu'à l’étape suivante.
 
     | Plateforme | Commandes d’installation de package |
     |-----|-----|
@@ -246,7 +246,7 @@ Pour installer manuellement ces packages, procédez comme suit :
     rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
     ```
 
-    Pour les packages Debian, si vous avez accès à des référentiels approuvées contenant ces dépendances, la solution la plus simple consiste à utiliser le **apt-get** commande :
+    Pour les packages Debian, si vous avez accès à des référentiels approuvées contenant ces dépendances, la solution la plus simple consiste à utiliser la commande **apt-get**  :
 
     ```bash
     sudo apt-get -f install

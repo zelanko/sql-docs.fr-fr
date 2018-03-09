@@ -1,4 +1,4 @@
----
+﻿---
 title: int, bigint, smallint et tinyint (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 9/8/2017
@@ -56,7 +56,7 @@ Types de données représentant des valeurs numériques exactes qui utilisent de
 ## <a name="remarks"></a>Notes  
 Le **int** (type de données) est le type de données integer principal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **bigint** (type de données) est destiné à être utilisé lorsque les valeurs entières peuvent dépasser la plage prise en charge par le **int** (type de données).
   
-**bigint** s’insère entre **smallmoney** et **int** dans le graphique de priorité de type de données.
+Un **bigint** s’insère entre un **smallmoney** et un **int** dans le graphique de priorité de type de données.
   
 Les Fonctions retournent **bigint** uniquement si l’expression du paramètre est un **bigint** (type de données). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne promeut pas automatiquement les autres types de données integer (**tinyint**, **smallint**, et **int**) à **bigint**.
   

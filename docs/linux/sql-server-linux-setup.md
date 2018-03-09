@@ -1,4 +1,4 @@
----
+﻿---
 title: Installer SQL Server 2017 sur Linux | Documents Microsoft
 description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance."
 author: rothja
@@ -52,7 +52,7 @@ Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez 
 
 ## <a id="system"></a> Configuration système requise
 
-SQL Server 2017 requise est la suivante pour Linux :
+SQL Server 2017 a les prérequis suivants pour Linux :
 
 |||
 |-----|-----|
@@ -63,10 +63,10 @@ SQL Server 2017 requise est la suivante pour Linux :
 | **Cœurs de processeur** | 2 cœurs |
 | **Type de processeur** | x64 compatibles uniquement |
 
-Si vous utilisez **système NFS (Network File)** partages distants en production, notez les exigences de prise en charge suivantes :
+Si vous utilisez les partages distants **Network File System (NFS)** en production, notez les exigences de prise en charge suivantes :
 
 - Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, commune aux systèmes de fichiers modernes.
-- Recherchez uniquement les **/var/opt/mssql** répertoires sur le montage NFS. Autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
+- Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
 - Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
 
 ## <a id="platforms"></a> Installation de SQL Server
@@ -88,7 +88,7 @@ Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la derni�
 
 ## <a id="upgrade"></a> Mettre à jour de SQL Server
 
-Pour mettre à jour le **mssql-serveur** vers la dernière version du package, utilisez une des commandes suivantes en fonction de votre plateforme :
+Pour mettre à jour le package **mssql-server** vers la dernière version, utilisez une des commandes suivantes en fonction de votre plateforme :
 
 | Plateforme | Commandes de mise à jour de package |
 |-----|-----|
@@ -96,7 +96,7 @@ Pour mettre à jour le **mssql-serveur** vers la dernière version du package, u
 | SLES | `sudo zypper update mssql-server` |
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
-Ces commandes télécharger le package les plus récents et remplacer les fichiers binaires situés sous `/opt/mssql/`. Bases de données généré par l’utilisateur et les bases de données système ne sont pas affectés par cette opération.
+Ces commandes téléchargent le package le plus récent et remplacent les fichiers binaires situés sous `/opt/mssql/`. Les bases de données généré par l’utilisateur et les bases de données système ne sont pas affectées par cette opération.
 
 ## <a id="rollback"></a> Restauration SQL Server
 
@@ -104,7 +104,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 
 1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de nombres de package, consultez la [notes de publication](sql-server-linux-release-notes.md).
 
-1. Passer à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
+1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
 
    | Plateforme | Commandes de mise à jour de package |
    |-----|-----|
@@ -113,13 +113,13 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> Il est uniquement pris en charge pour mettre à niveau vers une version au sein de la même version principale, telles que SQL Server 2017.
+> Il est uniquement pris en charge de mettre à niveau vers une version avec la même version majeure, telle que SQL Server 2017.
 
 ## <a id="versioncheck"></a> Vérifiez la version installée de SQL Server
 
 Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
 
-1. Si pas déjà installé, installez le [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
+1. Si pas encore installé, installez le [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
 
 1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL qui affiche la version de SQL Server et l’édition.
 
@@ -129,7 +129,7 @@ Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, u
 
 ## <a id="uninstall"></a> Désinstaller SQL Server
 
-Pour supprimer la **mssql-serveur** package sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
+Pour supprimer le package **mssql-server** sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
 
 | Plateforme | Commandes de suppression de package |
 |-----|-----|
@@ -150,7 +150,7 @@ Vous pouvez effectuer une installation sans assistance de la manière suivante 
 - Suivez les étapes initial dans le [Démarrages rapides](#platforms) pour inscrire les référentiels, installez SQL Server.
 - Lorsque vous exécutez `mssql-conf setup`, définissez [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utiliser le `-n` (sans invite) option.
 
-L’exemple suivant configure l’Édition Developer de SQL Server avec le **MSSQL_PID** variable d’environnement. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le `-n` paramètre effectue une installation exemple où les valeurs de configuration sont extraites les variables d’environnement.
+L’exemple suivant configure l’Édition Developer de SQL Server avec la variable d’environnement **MSSQL_PID**. Il accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n` effectue une installation par défaut où les valeurs de configuration sont extraites des variables d’environnement.
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
@@ -208,7 +208,7 @@ Après l’installation, vous pouvez également installer d’autres packages fa
 
 - [Outils de ligne de commande de SQL Server](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-- [Recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
+- [Recherche de texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
 Se connecter à votre instance de SQL Server pour commencer la création et la gestion des bases de données. Pour commencer, consultez les Démarrages rapides :
