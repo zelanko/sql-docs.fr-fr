@@ -2,7 +2,7 @@
 title: "Démarrage rapide : Se connecter et de requêtes SQL Server à l’aide des opérations de SQL Studio (version préliminaire) | Documents Microsoft"
 description: "Ce démarrage rapide montre comment utiliser les Studio des opérations SQL (aperçu) pour se connecter à SQL Server et d’exécuter une requête"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de SQL Server[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à SQL Server, puis utilisez les instructions Transact-SQL (T-SQL) pour créer le *TutorialDB* utilisé dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] didacticiels.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Pour effectuer ce démarrage rapide, vous devez [!INCLUDE[name-sos](../includes/name-sos-short.md)]et l’accès à un serveur SQL Server.
 
@@ -92,7 +92,10 @@ L’éditeur de requête est toujours connecté à la *master* base de données,
 
 
 
-1. Collez l’extrait de code suivant dans la fenêtre de requête :
+1. Collez l’extrait de code suivant dans la fenêtre de requête et cliquez sur **exécuter**:
+
+   > [!NOTE]
+   > Vous pouvez l’ajouter à ou remplacer la requête précédente dans l’éditeur. Notez qu’un clic sur **exécuter** exécute uniquement la requête sélectionnée. Si rien n’est sélectionné, cliquez sur **exécuter** exécute toutes les requêtes dans l’éditeur.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ Une fois la requête terminée, le nouveau **clients** table apparaît dans la l
 
 ## <a name="insert-rows"></a>Insérer des lignes
 
-1. Collez l’extrait de code suivant dans la fenêtre de requête :
+- Collez l’extrait de code suivant dans la fenêtre de requête et cliquez sur **exécuter**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ Une fois la requête terminée, le nouveau **clients** table apparaît dans la l
    GO
    ```
 
-1. Pour exécuter la requête, cliquez sur **exécuter**.
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Afficher les données retournées par une requête
-1. Collez l’extrait de code suivant dans la fenêtre de requête :
+1. Collez l’extrait de code suivant dans la fenêtre de requête et cliquez sur **exécuter**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Pour exécuter la requête, cliquez sur **exécuter**.
+1. Les résultats de la requête sont affichés :
 
    ![Sélectionnez les résultats](media/quickstart-sql-server/select-results.png)
 

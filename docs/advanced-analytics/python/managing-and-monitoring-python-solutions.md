@@ -1,7 +1,7 @@
 ---
-title: Surveillance | Documents Microsoft
+title: Analyse de Python dans SQL Server | Documents Microsoft
 ms.custom: 
-ms.date: 04/18/2017
+ms.date: 03/06/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -14,21 +14,18 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3abd3145f4de3d1e5d0fee4ff2adbc7d965d4d3b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 034d58a26ef111a89bc88aace8d49c89f1664278
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="monitoring"></a>Surveillance
+# <a name="monitoring-python-in-sql-server"></a>Analyse de Python dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-> [!NOTE]
-> Prise en charge de Python est une nouvelle fonctionnalité de SQL Server 2017 et dans la version préliminaire.
+Prise en charge de Python est une nouvelle fonctionnalité dans SQL Server, disponible à partir de SQL Server 2017.
 
-Prise en charge de Python est une nouvelle fonctionnalité dans SQL Server, disponible dans SQL Server 2017 CTP 2.0.
-
-Toutefois, l’infrastructure générale pour la sécurité de l’exécution et les données de script externe est identique à celui R. Vous pouvez analyser n’importe quel script externe, y compris un qui s’exécute de Python, à l’aide de la même infrastructure que celle qui a été fournie pour l’exécution du script R dans SQL Server 2016. Pour plus d’informations, consultez [Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md).
+L’infrastructure générale pour la sécurité de l’exécution et les données de script externe est identique à celui R. Vous pouvez analyser n’importe quel script externe, y compris un qui s’exécute de Python, à l’aide de la même infrastructure que celle qui a été fournie pour l’exécution du script R dans SQL Server 2016. Pour plus d’informations, consultez [Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md).
 
 Consultez les rubriques connexes pour plus d’informations :
 

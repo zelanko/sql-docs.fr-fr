@@ -1,7 +1,7 @@
 ---
-title: Publier et utiliser du code Python | Documents Microsoft
+title: Publier et utiliser du code Python - Machine Learning serveur de SQL Server (autonome) | Documents Microsoft
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 03/07/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,39 +12,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Publier et consommer des services web de Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Vous pouvez déployer une solution de Python de travail à un service web à l’aide de la fonctionnalité à l’Opérationnalisation dans Microsoft Machine Learning Server. Cette rubrique décrit les étapes pour publier, puis exécutez votre solution.
+Vous pouvez déployer une travail solution Python à un service web à l’aide de la fonctionnalité à l’Opérationnalisation sur un [Machine Learning Server (autonome) de SQL Server](../r/r-server-standalone.md) instance. Cet article décrit les étapes pour publier, puis exécutez votre solution.
 
-Le public cible de cet article est chercheurs de données qui souhaitent apprendre à publier du code Python ou des modèles en tant que services web hébergés dans Microsoft Machine Learning Server. Cet article explique comment les applications peuvent utiliser le code ou des modèles. Cet article suppose que vous maîtrisez Python.
+Le public visé est chercheurs de données qui souhaitent apprendre à publier le code Python ou des modèles à une Machine Learning Server et comment utiliser le code ou les modèles dans une application personnalisée. 
 
-> [!IMPORTANT]
->
-> Cet exemple a été développé pour la version de Python qui est inclus avec Machine Learning Server (autonome) et utilise des fonctionnalités dans la version du serveur d’apprentissage Machine **9.1.0**.
- > 
- > Cliquez sur le lien suivant pour afficher le même exemple, republié à l’aide des bibliothèques dans Machine Learning Server plus récente. Consultez [déployer et gérer des services web dans Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
-**S’applique à : Microsoft R Server (autonome)**
+Cet article suppose que vous maîtrisez Python. Vous devez également avoir un serveur autonome, ce qui est installé indépendamment des autres fonctionnalités SQL Server. Votre serveur doit être [configuré pour à l’Opérationnalisation](../operationalization-with-mrsdeploy.md) pour permettre l’hébergement de service web. 
 
 ## <a name="overview-of-workflow"></a>Vue d’ensemble du flux de travail
 
 Le flux de travail à partir de la publication à l’utilisation d’un service web de Python peut être résumé comme suit :
 
-1. Répondre à la [condition préalable](#prereq) de génération de la bibliothèque cliente de Python à partir du document d’API Swagger core.
-2. Ajouter une logique d’authentification et d’en-tête à votre script Python.
-3. Créer une session de Python, préparer l’environnement et créer une capture instantanée pour préserver l’environnement.
-4. Le service web de publication et incorporer cette capture instantanée.
-5. Tester le service web en temps dans votre session.
-6. Pour gérer ces services.
+1. Vérifiez que l’installation autonome de Machine Learning Server avec Python.
+2. Répondre à la [condition préalable](#prereq) de génération de la bibliothèque cliente de Python à partir du document d’API Swagger core.
+3. Ajouter une logique d’authentification et d’en-tête à votre script Python.
+4. Créer une session de Python, préparer l’environnement et créer une capture instantanée pour préserver l’environnement.
+5. Le service web de publication et incorporer cette capture instantanée.
+6. Tester le service web en temps dans votre session.
+7. Pour gérer ces services.
 
 ![Flux de travail swagger](./media/data-scientist-python-workflow.png)
 
@@ -52,9 +47,9 @@ Cet article décrit chaque étape du flux de travail et inclut des exemples de c
 
 ## <a name="sample-code"></a>Exemple de code
 
-Cet exemple de code suppose que vous avez rempli le [conditions préalables](#prereq) pour générer une bibliothèque cliente de Python à partir de ce Swagger fichier et que vous avez utilisé Autorest.
+Cet exemple de code suppose que vous avez [généré de la bibliothèque cliente de Python requise](#prereq) à partir de Swagger et que vous avez utilisé Autorest. Exécutez ce code sur une instance de SQL Server Machine Learning Server (autonome) qui a été configurée pour une Opérationnalisation rapides.
 
-Après le bloc de code, vous trouverez une démonstration détaillée avec des descriptions plus détaillées le processus complet.
+Pour Explorer ce code en profondeur, passez directement à la [procédure pas à pas](#walkthrough) pour plus d’informations de l’ensemble du processus.
 
 > [!IMPORTANT]
 > Cet exemple utilise le `admin` de compte pour l’authentification. Toutefois, vous devez remplacer par les informations d’identification et [méthode d’authentification](#python-auth) configuré par votre administrateur.
@@ -289,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>Procédure pas à pas
 
 Cette section décrit comment le code fonctionne plus en détail.
 
 
-### <a name="prereq"></a>Étape 1. Créer des bibliothèques de client requis
+### <a name="prereq"></a> Étape 1. Créer des bibliothèques de client requis
 
-Avant de commencer votre Python code et les modèles au moyen d’ordinateur Microsoft Learning le serveur de publication, vous devez générer une bibliothèque cliente à l’aide du document de Swagger fourni pour cette version.
+Avant de commencer votre code Python et les modèles de Machine Learning serveur de publication, vous devez générer une bibliothèque cliente à l’aide du document de Swagger fourni pour cette version.
 
 1. Installer un générateur de code Swagger sur votre ordinateur local et vous familiariser avec elle. Vous allez l’utiliser pour générer des bibliothèques API clientes de Python. Outils courants incluent [Azure AutoRest](https://github.com/Azure/autorest) (nécessite Node.js) et [Codegen de Swagger](https://github.com/swagger-api/swagger-codegen). 
 

@@ -1,9 +1,17 @@
 ---
 title: Didacticiels de SQL Server Python | Documents Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 09/19/2017
-vapplies_to:
+titleSuffix: SQL Server
+ms.custom: 
+ms.date: 03/06/2018
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
+ms.tgt_pltfrm: 
+ms.topic: tutorial
+applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
@@ -11,11 +19,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 42a9339f5983eeef28250db7a384f37efd4dad9d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="sql-server-python-tutorials"></a>Didacticiels de SQL Server Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,15 +46,15 @@ Pour plus d’informations sur le programme d’installation, consultez [conditi
 
 + [Créer un modèle dans Python à l’aide de revoscalepy d’apprentissage](use-python-revoscalepy-to-create-model.md)
 
-   Vous allez créer un modèle à l’aide de **rxLinMod**, à partir du nouveau **revoscalepy** bibliothèque. Vous allez lancer le code à partir d’un terminal de Python à distance, mais la modélisation aura lieu dans le contexte de calcul de SQL Server.
+   Cette leçon illustre l’exécution de code à partir d’un terminal de Python à distance, à l’aide du contexte de calcul de SQL Server. Vous devez être familiarisé avec les environnements et les outils Python. Exemple de code est fourni qui crée un modèle à l’aide de **rxLinMod**, à partir du nouveau **revoscalepy** bibliothèque. 
 
 + [Analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md)
 
-  NOUVEAU ! Générez une solution complète de Python à l’aide de procédures stockées T-SQL. Tout le code Python est inclus.
+    Cette procédure pas à pas de bout en bout illustre le processus de création d’une solution complète de Python à l’aide de procédures stockées T-SQL. Tout le code Python est inclus.
 
 + [Déployer et utiliser un modèle de Python](..\python\publish-consume-python-code.md)
 
-  Découvrez comment déployer un modèle de Python à l’aide de la dernière version du serveur de Microsoft Machine Learning.
+  Découvrez comment déployer un modèle de Python comme un service web, à l’aide de la dernière version du serveur de Microsoft Machine Learning.
 
 ## <a name="python-samples"></a>Exemples de Python
 
@@ -65,22 +73,26 @@ Ces exemples et les démonstrations fournies par l’équipe de développement S
 
 ## <a name="bkmk_Prerequisites"></a>Conditions préalables
 
-Pour utiliser ces didacticiels, vous devez avoir installé SQL Server 2017 Machine Learning Services (de-de base de données). SQL Server 2017 prend en charge R ou Python. Toutefois, vous devez installer l’infrastructure d’extensibilité qui prend en charge d’apprentissage et sélectionnez la langue à installer Python. Sur le même ordinateur, vous pouvez installer R et Python.
+Pour utiliser ces didacticiels, vous devez disposer de SQL Server 2017, et vous devez installer explicitement et puis activez la fonctionnalité, Machine Learning Services (de-de base de données). 
 
-> [!NOTE]
->
-> Prise en charge de Python est une nouvelle fonctionnalité dans SQL Server 2017 et requiert la version CTP 2.0 ou version ultérieure. Bien que la fonctionnalité est en version préliminaire et non pris en charge pour les environnements de production, nous vous invitons à essayer et envoyer vos commentaires.
+SQL Server 2017 prend en charge les langues de R et de Python, mais aucune n’est installé ou activé par défaut. L’exécution de Python requiert que l’infrastructure d’extensibilité soit activé et que vous sélectionnez Python comme la langue à installer. 
 
-**SQL Server 2017**
+### <a name="post-installation-configuration-tips"></a>Conseils de configuration après installation
 
-Après avoir exécuté le programme d’installation de SQL Server, n’oubliez pas ces étapes importantes :
+Après avoir exécuté le programme d’installation de SQL Server, vous devrez peut-être effectuer quelques étapes supplémentaires pour vous assurer que SQL Server et les Python communiquent :
 
 + Activez la fonctionnalité d’exécution de script externe en exécutant `sp_configure 'external scripts enabled', 1`.
-+ Redémarrez le serveur.
-+ Assurez-vous que le service qui appelle le runtime externe dispose des autorisations nécessaires.
++ Redémarrez le serveur. 
++ Ouvrez le **Services** Panneau de configuration pour vérifier si le Launchpad a démarré. 
++ Assurez-vous que le service qui appelle le runtime externe dispose des autorisations nécessaires. Pour plus d’informations, consultez [activer l’authentification implicite](../r/add-sqlrusergroup-to-database.md).
++ Ouvrir un port sur le pare-feu pour SQL Server et activer les protocoles réseau requis.
 + Assurez-vous que votre compte de connexion SQL ou un compte d’utilisateur Windows dispose des autorisations nécessaires pour se connecter au serveur, pour lire des données et à créer des objets de base de données requis par l’exemple.
 
-Si vous rencontrez des problèmes, consultez cet article pour certains problèmes courants : [dépannage Machine Learning Services](../machine-learning-troubleshooting-faq.md)
+Consultez cet article pour certains problèmes courants : [dépannage Machine Learning Services](../machine-learning-troubleshooting-faq.md)
+
+### <a name="resource-management"></a>Gestion des ressources
+
+Vous pouvez installer R et Python sur le même ordinateur, mais les deux en cours d’exécution peut nécessiter des ressources importantes. Si vous obtenez des erreurs « mémoire insuffisante », ou si les tâches d’apprentissage machine en cours d’exécution est que le principal de destination du serveur, vous pouvez réduire la quantité de mémoire allouée au moteur de base de données. Pour plus d’informations, consultez [Managing and monitoring Python dans SQL Server](../python/managing-and-monitoring-python-solutions.md).
 
 ## <a name="see-also"></a>Voir aussi
 

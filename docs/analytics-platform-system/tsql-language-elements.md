@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>Éléments de langage
 Éléments de langage Transact-SQL (T-SQL) pour un système de plateforme analyse (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="core-elements"></a>Éléments fondamentaux
 * [conventions de syntaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [règles d’affectation des noms d’objet](../relational-databases/databases/database-identifiers.md)
-* [mots clés réservés](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [classements](https://msdn.microsoft.com/library/ff848763.aspx)
-* [commentaires](../t-sql/language-elements/comment-transact-sql.md)
-* [constantes](../t-sql/data-types/constants-transact-sql.md)
-* [types de données](../t-sql/data-types/data-types-transact-sql.md)
+* [Mots clés réservés](../t-sql/language-elements/reserved-keywords-transact-sql.md)
+* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [Types de données](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 * [- (Négatif)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (Soustraire)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiplier)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Division)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
 * [Modulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Caractères génériques à comparer
@@ -76,10 +76,10 @@ ms.lasthandoff: 12/21/2017
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [EST [PAS](../t-sql/queries/is-null-transact-sql.md)
+* [N’EST PAS](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OU](../t-sql/language-elements/or-transact-sql.md)
+* [- ou -](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Opérateurs de bits
 * [& (AND au niveau du bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
