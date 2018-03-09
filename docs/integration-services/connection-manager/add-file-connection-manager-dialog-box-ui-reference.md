@@ -1,5 +1,5 @@
 ---
-title: "Ajouter la référence de l’interface utilisateur de la boîte de dialogue Gestionnaire de connexions File | Documents Microsoft"
+title: "Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d4f3ee30eb310bdf109914dbdfb7dd0b56fb94c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
   Utilisez la boîte de dialogue **Ajouter un gestionnaire de connexions de fichiers** pour définir une connexion à un groupe de fichiers ou dossiers.  
@@ -63,8 +62,7 @@ ms.lasthandoff: 08/03/2017
  **Boutons de direction**  
  Sélectionnez un fichier ou dossier, puis utilisez les boutons de direction pour le déplacer vers le haut ou vers le bas afin de spécifier l'ordre d'accès.  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

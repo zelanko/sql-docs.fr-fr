@@ -1,31 +1,34 @@
 ---
 title: "Modifier le pool de comptes d’utilisateur pour l’apprentissage de SQL Server | Documents Microsoft"
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1baa301134ea01aa5c13a579fdb1aac01b2dbcf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modifier le pool de comptes d’utilisateur pour l’apprentissage de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans le cadre du processus d’installation de [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], un *pool de comptes d’utilisateurs* Windows est créé pour prendre en charge l’exécution de tâches par le service [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]. L’objectif de ces comptes de travail est pour isoler l’exécution simultanée de scripts externes par différents utilisateurs SQL.
 
 Cet article décrit la configuration par défaut, la sécurité et la capacité pour les comptes de travail et comment modifier la configuration par défaut.
 
-**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>Comptes de travail utilisés pour l’exécution du script externe
 

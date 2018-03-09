@@ -1,5 +1,5 @@
 ---
-title: "Exemples de tâche de script | Documents Microsoft"
+title: "Exemples de tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5187a97eb3424813b94b03438a31c62f583ee852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task-examples"></a>Exemples de tâche de script
   La tâche de script est un outil polyvalent que vous pouvez utiliser dans un package pour remplir presque toutes les conditions requises qui ne sont pas satisfaites par les tâches incluses dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cette rubrique répertorie des exemples de code de tâche de script qui montrent quelques-unes des fonctionnalités disponibles.  
@@ -51,16 +49,16 @@ ms.lasthandoff: 09/26/2017
  Rassemble la liste des fichiers qui répondent aux critères spécifiés par l'utilisateur et renseigne une variable à des fins d'utilisation ultérieure par l'énumérateur Foreach à partir d'une variable.  
   
  [Interrogation d’Active Directory avec la tâche de script](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- Récupère les informations utilisateur à partir d’Active Directory en fonction de la valeur d’une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, à l’aide des classes dans l’espace de noms System.DirectoryServices.  
+ Extrait des informations utilisateur d’Active Directory en fonction de la valeur d’une variable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], en utilisant des classes de l’espace de noms System.DirectoryServices.  
   
  [Surveillance des compteurs de performances à l’aide de la tâche de script](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- Crée un compteur de performance personnalisé qui peut être utilisé pour suivre la progression de l’exécution d’une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, à l’aide des classes dans l’espace de noms System.Diagnostics.  
+ Crée un compteur de performances personnalisé qui peut être utilisé pour suivre la progression de l’exécution d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], en utilisant des classes de l’espace de noms System.Diagnostics.  
   
  [Utilisation d’images à l’aide de la tâche de script](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- Compresse des images au format JPEG et crée des images miniatures à partir de celles-ci, à l’aide des classes dans l’espace de noms System.Drawing.  
+ Compresse des images au format JPEG et crée des images miniatures à partir de celles-ci, en utilisant des classes de l’espace de noms System.Drawing.  
   
  [Recherche d’imprimantes installées à l’aide de la tâche de script](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- Localise des imprimantes installées qui prennent en charge une taille de papier spécifique, à l’aide des classes dans l’espace de noms System.Drawing.Printing.  
+ Localise des imprimantes installées qui prennent en charge un format de papier spécifique, en utilisant des classes de l’espace de noms System.Drawing.Printing.  
   
  [Envoi d’un message électronique HTML à l’aide de la tâche de script](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  Envoie un message électronique au format HTML plutôt qu'au format texte brut.  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/26/2017
  Enregistre le nombre d'éléments traités par la tâche dans les modules fournisseurs d'informations activés.  
   
   
-

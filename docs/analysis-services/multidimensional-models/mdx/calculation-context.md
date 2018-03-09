@@ -2,32 +2,30 @@
 title: Contexte de calcul | Documents Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 961f989f2b1973c162f08a89d083c947e56871de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fde665f7dea3efe26d61d6d183f8ca35834f732e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculation-context"></a>Contexte de calcul
-  Le contexte de calcul est le sous-espace connu du cube où une expression est évaluée et où toutes les coordonnées sont explicitement connues ou peuvent être dérivées de l'expression.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Le contexte de calcul est le sous-espace connu du cube où une expression est évaluée et où toutes les coordonnées sont explicitement connues ou peuvent être dérivées de l'expression.  
   
 ## <a name="determining-the-calculation-context"></a>Détermination du contexte de calcul  
  Chaque jeu, membre, tuple ou fonction numérique s'exécute dans le contexte de l'instruction ou de l'expression MDX à part entière. Lorsqu'un argument (par exemple, un tuple) est transmis à une fonction, seules certaines coordonnées dans l'espace du cube sont fournies de manière explicite. Les autres coordonnées sont obtenues sur la base du contexte de calcul actuel.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Cellules du cube ou du sous-cube sur chaque axe avec suppression des tuples vides sur l'axe et application de la clause HAVING.  
   
-6.  Pour plus d’informations, consultez [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  Pour plus d’informations, consultez [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
   
  Dans la requête qui suit, le contexte de calcul de l'axe des lignes est limité par les membres d'attribut Country et Calendar Year spécifiés dans la clause WHERE.  
   
@@ -79,8 +77,8 @@ WHERE (Customer.Country.France,
 >  Pour accroître les performances de la requête, pensez à éliminer les membres et les tuples le plus tôt possible au cours du processus de résolution. De cette manière, les calculs de temps des requêtes complexes dans le jeu de membres final peuvent cibler le plus petit nombre de cellules possible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [Définition d’un contexte de Cube dans une requête &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Concepts clés dans MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Concepts clés dans MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

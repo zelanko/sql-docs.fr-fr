@@ -2,32 +2,32 @@
 title: "Référence technique pour les Annotations BI CSDL | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d2f4c509035a2d806704757ddda6ed4610f048f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Guide de référence technique pour les annotations BI du langage CSDL
-  Cette section répertorie les éléments, l'attribut et les propriétés dans le CSDL qui sont utilisés pour représenter les modèles tabulaires [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Cette section répertorie les éléments, l'attribut et les propriétés dans le CSDL qui sont utilisés pour représenter les modèles tabulaires [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
   
  Pour une vue d’ensemble des modèles tabulaires et comment les entités, les relations et les formules sont représentées dans CSDL, consultez [Annotations CSDL pour Business Intelligence &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

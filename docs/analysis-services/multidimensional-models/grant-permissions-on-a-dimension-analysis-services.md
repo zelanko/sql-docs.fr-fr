@@ -2,16 +2,13 @@
 title: Accorder des autorisations sur une dimension (Analysis Services) | Documents Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensions.f1
@@ -26,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dba9778b626da43a404c773eaeb1745b3bcd3528
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Octroyer des autorisations sur une dimension (Analysis Services)
-  La sécurité de dimension sert à définir des autorisations sur un objet de dimension, et non sur ses données. En général, l'autorisation ou le refus de l'accès aux opérations de traitement est le principal objectif de la définition des autorisations sur une dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sécurité de dimension est utilisée pour définir les autorisations sur un objet de dimension, et non sur ses données. En général, l'autorisation ou le refus de l'accès aux opérations de traitement est le principal objectif de la définition des autorisations sur une dimension.  
   
  Mais peut-être votre objectif n'est-il pas de contrôler les opérations de traitement, mais plutôt l'accès aux données d'une dimension ou aux attributs et hiérarchies qu'elle contient. Par exemple, une société ayant des divisions de ventes régionales souhaitera peut-être interdire l'accès aux chiffres des ventes au personnel étranger à la division en question. Pour autoriser ou refuser l'accès à une partie des données de dimension pour différentes composants, vous pouvez définir des autorisations sur des attributs de dimension et des membres de dimension. Notez que vous ne pouvez pas refuser l'accès à un objet de dimension proprement dit, mais uniquement à ses données. Si votre objectif immédiat consiste à autoriser ou à refuser l’accès aux membres d’une dimension, notamment les droits d’accès à des hiérarchies d’attributs spécifiques, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) pour plus d’informations.  
   

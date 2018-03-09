@@ -1,5 +1,5 @@
 ---
-title: Enregistrer le Package SSIS (SQL Server Assistant Importation et exportation) | Documents Microsoft
+title: "Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -15,29 +15,28 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 64
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
-  Si vous avez spécifié sur le **enregistrer et exécuter le Package** page que vous souhaitez enregistrer vos paramètres dans un package SQL Server Integration Services (SSIS), le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] montre Assistant Importation et exportation **enregistrer le Package SSIS**. Dans cette page, vous spécifiez des options supplémentaires pour l’enregistrement du package créé par l’Assistant.  
+  Si vous avez indiqué dans la page **Enregistrer et exécuter le package** que vous souhaitiez enregistrer vos paramètres sous la forme d’un package SQL Server Integration Service (SSIS), l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche l’option **Enregistrer le package SSIS**. Cette page vous permet de spécifier d’autres options pour l’enregistrement du package créé par l’Assistant.  
 
 Les options proposées dans la page **Enregistrer le package SSIS** varient en fonction du choix que vous avez effectué préalablement dans la page **Enregistrer et exécuter le package** pour l’enregistrement du package : dans SQL Server ou dans le système de fichiers. Pour avoir un autre aperçu de la page **Enregistrer et exécuter le package** , consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
 **Qu’est-ce qu’un package ?** L’Assistant utilise SQL Server Integration Services (SSIS) pour copier les données. Dans SSIS, l’unité de base est le package. L’Assistant crée un package SSIS en mémoire à mesure que vous parcourez les pages de l’Assistant et spécifiez les options.
 
-## <a name="screen-shot---common-options"></a>Capture d’écran : - options courantes
-La capture d’écran suivante montre la première partie de la **enregistrer le Package SSIS** page de l’Assistant. Le reste de la page a un nombre variable d’options qui dépendent de la destination du package que vous avez choisi.
+## <a name="screen-shot---common-options"></a>Capture d’écran : options courantes
+La capture d’écran suivante montre la première partie de la page **Enregistrer le package SSIS** de l’Assistant. Le reste de la page présente un nombre variable d’options qui dépendent de la destination choisie du package.
 
-![Enregistrer le package - options courantes](../../integration-services/import-export-data/media/save-package-common-options.png)
+![Enregistrer le package : options courantes](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>Fournir un nom et une description pour le package  
  **Nom**  
@@ -51,14 +50,14 @@ La capture d’écran suivante montre la première partie de la **enregistrer le
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>Capture d’écran : Enregistrer le package dans SQL Server
 
- La suivant capture d’écran montre le **enregistrer le Package SSIS** page de l’Assistant si vous avez sélectionné le **SQL Server** option sur le **enregistrer et exécuter le Package** page. 
+ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de l’Assistant si vous avez sélectionné l’option **SQL Server** dans la page **Enregistrer et exécuter le package**. 
   
-![Enregistrez la page de l’Assistant Importation et exportation de Package SSIS](../../integration-services/import-export-data/media/save-package2.png "page Enregistrer le Package SSIS de l’Assistant Importation et exportation")  
+![Page Enregistrer le package SSIS de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/save-package2.png "Page Enregistrer le package SSIS de l’Assistant Importation et Exportation")  
 
-## <a name="options-to-specify-target--sql-server"></a>Options pour spécifier (cible = SQL Server) 
+## <a name="options-to-specify-target--sql-server"></a>Options à spécifier (Cible = SQL Server) 
 
  > [!NOTE]
- > L’Assistant enregistre le package dans le **msdb** de la base de données dans le **sysssispackages** table. Cette option ne **pas** enregistrer le package sur la base de données du catalogue SSIS (SSISDB).  
+ > L’Assistant enregistre le package dans la table **sysssispackages** de la base de données **msdb**. Cette option **n’enregistre pas** le package dans la base de données du catalogue SSIS (SSISDB).  
  
  **Nom du serveur**  
  Tapez ou sélectionnez le nom du serveur de destination.  
@@ -69,30 +68,30 @@ Connectez-vous au serveur à l’aide de l’authentification intégrée Windows
  **Utiliser l’authentification SQL Server**  
 Connectez-vous au serveur à l’aide de l’authentification SQL Server.  
   
- **Nom d'utilisateur**  
-Si vous avez spécifié l’authentification SQL Server, entrez le nom d’utilisateur.  
+ **User name**  
+Si vous avez choisi d’utiliser l’authentification SQL Server, entrez le nom d’utilisateur.  
   
  **Mot de passe**  
-Si vous avez spécifié l’authentification SQL Server, entrez le mot de passe.  
+Si vous avez choisi d’utiliser l’authentification SQL Server, entrez le mot de passe.  
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>Capture d’écran : Enregistrer le package dans le système de fichiers
  
-La suivant capture d’écran montre le **enregistrer le Package SSIS** page de l’Assistant si vous avez sélectionné le **système de fichiers** option sur le **enregistrer et exécuter le Package** page. 
+La capture d’écran suivante montre la page **Enregistrer le package SSIS** de l’Assistant si vous avez sélectionné l’option **Système de fichiers** dans la page **Enregistrer et exécuter le package**. 
   
-![Enregistrez la page de l’Assistant Importation et exportation de Package SSIS](../../integration-services/import-export-data/media/save-package1.png "page Enregistrer le Package SSIS de l’Assistant Importation et exportation")  
+![Page Enregistrer le package SSIS de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/save-package1.png "Page Enregistrer le package SSIS de l’Assistant Importation et Exportation")  
 
-## <a name="options-to-specify-target--file-system"></a>Options pour spécifier (cible = système de fichiers)
+## <a name="options-to-specify-target--file-system"></a>Options à spécifier (Cible = Système de fichiers)
 
  **Nom de fichier**  
- Entrez le chemin d’accès et le nom du fichier de destination, ou utilisez le **Parcourir** pour sélectionner une destination.  
+ Entrez le chemin et le nom de fichier du fichier de destination ou utilisez le bouton **Parcourir** pour sélectionner une destination.  
   
 > [!TIP]
-> Veillez à spécifier un dossier de destination, en le saisissant ou en parcourant. Si vous entrez uniquement le nom de fichier sans un chemin d’accès, vous ne connaissez pas où l’Assistant enregistre le package. Par ailleurs, il se peut que l’Assistant tente d’enregistrer le package à un emplacement auquel vous n’êtes pas autorisé à enregistrer un fichier, ce qui générera une erreur.  
+> Veillez à spécifier un dossier de destination, soit en le tapant, soit en le recherchant dans l’arborescence. Si vous entrez le nom de fichier sans le chemin, vous ne savez pas à quel emplacement l’Assistant enregistre le package. Par ailleurs, il se peut que l’Assistant tente d’enregistrer le package à un emplacement auquel vous n’êtes pas autorisé à enregistrer un fichier, ce qui générera une erreur.  
 >   
 >  Souvenez-vous de l’endroit où vous enregistrez le fichier du package.  
   
- **Parcourir**  
- Si vous le souhaitez, cliquez sur Parcourir pour sélectionner le chemin d’accès du fichier de destination dans le **enregistrer le Package** boîte de dialogue.  
+ **...**  
+ (Facultatif) Vous pouvez rechercher et sélectionner le chemin du fichier de destination dans la boîte de dialogue **Enregistrer le package**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Présentation des deux pages d’options pour l’enregistrement du package  
  La page **Enregistrer le package SSIS** est l’une des deux pages dans lesquelles vous choisissez les options d’enregistrement du package SSIS.  
@@ -115,13 +114,12 @@ La suivant capture d’écran montre le **enregistrer le Package SSIS** page de 
 ## <a name="customize-the-saved-package"></a>Personnaliser le package enregistré  
  Pour savoir comment personnaliser le package enregistré, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez spécifié les autres options d’enregistrement du package, la page suivante s’intitule **Terminer l’Assistant**. Cette page vous permet d’examiner les choix effectués dans l’Assistant et de lancer l’opération. Pour plus d’informations, consultez [Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Enregistrer des packages](../../integration-services/save-packages.md)  
 [Exécuter des packages Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
-

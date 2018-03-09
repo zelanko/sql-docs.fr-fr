@@ -1,39 +1,34 @@
 ---
 title: "Types de données pris en charge dans les modèles tabulaires Analysis Services | Documents Microsoft"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Types de données pris en charge dans les modèles tabulaires
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
 
   
-##  <a name="bkmk_data_types"></a>Types de données utilisés dans les modèles tabulaires  
+##  <a name="bkmk_data_types"></a> Types de données utilisés dans les modèles tabulaires  
 Lorsque vous importez des données ou utilisez une valeur dans une formule, même si la source de données d'origine contient un type de données différent, les données sont converties dans l'un des types de données suivants. Les valeurs issues des formules utilisent également ces types de données.  
   
  En règle générale, ces types de données sont implémentés pour permettre des calculs exacts dans les colonnes calculées, et les mêmes restrictions s'appliquent au reste des données dans les modèles à des fins de cohérence.  
@@ -51,7 +46,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
- \*Si vous essayez d’importer des données qui ont des valeurs numériques élevées, l’importation peut échouer avec l’erreur suivante :  
+ \* Si vous essayez d’importer des données qui ont des valeurs numériques élevées, l’importation peut échouer avec l’erreur suivante :  
   
  Erreur de base de données en mémoire : le '\<nom de la colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L’opération a été annulée.  
   
@@ -73,11 +68,11 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 ### <a name="table-data-type"></a>Type de données table  
  En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
-##  <a name="bkmk_implicit"></a>Conversion de type de données implicites et explicites dans les formules DAX
+##  <a name="bkmk_implicit"></a> Conversion de type de données implicites et explicites dans les formules DAX
   
  Chaque fonction DAX a des exigences spécifiques en ce qui concerne les types des données utilisés comme entrées et sorties. Par exemple, certaines fonctions requièrent des entiers pour certains arguments et des dates pour les autres ; d'autres fonctions requièrent du texte ou des tables.  
   
- Si les données dans la colonne que vous spécifiez en tant qu’argument sont incompatibles avec le type de données requis par la fonction, dans de nombreux cas DAX retourne une erreur. Toutefois, dans la mesure du possible DAX essaie implicitement convertir les données pour le type de données requis. Exemple :  
+ Si les données dans la colonne que vous spécifiez en tant qu’argument sont incompatibles avec le type de données requis par la fonction, dans de nombreux cas DAX retourne une erreur. Toutefois, dans la mesure du possible DAX essaie implicitement convertir les données pour le type de données requis. Par exemple :  
   
 -   Vous pouvez taper un nombre, par exemple « 123 », comme une chaîne. DAX analyse la chaîne et tentera pour la spécifier comme un type de données numérique.  
   
@@ -150,7 +145,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 #### <a name="comparison-operators"></a>Opérateurs de comparaison  
 Seul un jeu limité de combinaisons de type de données mixte pour les opérations de comparaison est pris en charge. Pour plus d’informations, consultez [Référence des opérateurs DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
   
-## <a name="bkmk_hand_blanks"></a>Gestion des espaces, des chaînes vides et des valeurs zéro  
+## <a name="bkmk_hand_blanks"></a> Gestion des espaces, des chaînes vides et des valeurs zéro  
  Le tableau suivant résume les différences entre DAX et Microsoft Excel, dans la façon dont les valeurs vides sont traitées :  
   
 ||||  
@@ -167,7 +162,7 @@ Seul un jeu limité de combinaisons de type de données mixte pour les opératio
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|Vide|Erreur|  
-|BLANK AND BLANK|Vide|Erreur|  
+|BLANK AND BLANK|BLANK|Erreur|  
   
  Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

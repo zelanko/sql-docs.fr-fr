@@ -2,15 +2,13 @@
 title: "Élément DimensionPermission (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DimensionPermission Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4846c4282b48ae4c0874cc3c2c3539a7cdbd6b24
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e15c2d5d155a14b71a08185123495bc9ba535f1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensionpermission-element-assl"></a>Élément DimensionPermission (ASSL)
-  Définit les autorisations qui appartiennent à un particulier [rôle](../../../analysis-services/scripting/objects/role-element-assl.md) élément pour une dimension de base de données spécifique ou de la dimension de cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit les autorisations qui appartiennent à un particulier [rôle](../../../analysis-services/scripting/objects/role-element-assl.md) élément pour une dimension de base de données spécifique ou de la dimension de cube.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Les éléments suivants sont Parent valide (ou un ancêtre commun) : paires de Type de données :<br /><br /> [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md):[DimensionPermission](../../../analysis-services/scripting/data-type/dimensionpermission-data-type-assl.md)<br /><br /> [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md):<br />                        [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md)|  
-|Valeur par défaut|Aucune|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif susceptible d'apparaître une fois ou plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -59,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |------------------|-------------|  
 |Élément parent|[DimensionPermissions](../../../analysis-services/scripting/collections/dimensionpermissions-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les éléments correspondants dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.DimensionPermission> et <xref:Microsoft.AnalysisServices.CubeDimensionPermission>.  
   
 ## <a name="see-also"></a>Voir aussi  

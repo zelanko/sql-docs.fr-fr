@@ -1,11 +1,11 @@
 ---
-title: "Leçon 6 : Utilisation de paramètres avec le modèle de déploiement de projet dans SSIS | Documents Microsoft"
+title: "Leçon 6 : Utilisation des paramètres avec le modèle de déploiement de projet dans SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 547da852d6a52393be8e0adf53b4aa18955a6cad
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 652e2eda22048dc665d56213b53b24c909abbd8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Leçon 6 : Utilisation des paramètres avec le modèle de déploiement de projet dans SSIS
 SQL Server 2012 introduit un nouveau modèle de déploiement qui permet de déployer vos projets sur le serveur Integration Services. Le serveur Integration Services vous permet de gérer et d'exécuter les packages, et de configurer leurs valeurs d'exécution.  
@@ -37,7 +36,7 @@ Dans cette leçon, vous allez modifier le package que vous avez créé dans [Le�
 Quand vous réexécutez le package, le service Integration Services utilise le paramètre pour donner sa valeur à la variable, qui à son tour met à jour la propriété Répertoire. Ainsi, le package itère dans les fichiers du nouveau dossier de données spécifié par la valeur du paramètre, et non du dossier défini dans le fichier de configuration du package.  
   
 > [!IMPORTANT]  
-> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d’informations sur l’installation et le déploiement de **AdventureWorksDW2012**, consultez [Considérations relatives à l’installation d’exemples de bases de données et d’exemples de code SQL Server](http://technet.microsoft.com/en-us/library/ms161556%28v=sql.105%29).  
+> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d’informations sur l’installation et le déploiement de **AdventureWorksDW2012**, consultez [Considérations relatives à l’installation d’exemples de bases de données et d’exemples de code SQL Server](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
@@ -53,4 +52,3 @@ Cette leçon contient les tâches suivantes :
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
 [Étape 1 : copie du package de la leçon 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c0991804db66f94aa8216353998035043ea8225
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4660fb6aaf21c418ecf19d9ef5953015eaa36e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Résoudre les problèmes de conception de rapports avec Reporting Services
 Des problèmes de conception de rapport peuvent se produire lorsque vous créez la mise en page de rapport en mode Conception dans une application de création de rapport. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.   
@@ -62,8 +60,8 @@ En général, un rapport s'élargit pour accommoder ses données et met de côt�
   
 Pour grouper plusieurs régions de données ou éléments de rapport, placez-les dans le même conteneur parent. Par exemple, placez un graphique et une table dans un conteneur rectangulaire et alignez leurs bords supérieurs pour les afficher côte par côte. Pour plus d’informations, voir [Comportement de rendu (Générateur de rapports et SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
-[Dépanner des problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+## <a name="see-also"></a> Voir aussi  
+[Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

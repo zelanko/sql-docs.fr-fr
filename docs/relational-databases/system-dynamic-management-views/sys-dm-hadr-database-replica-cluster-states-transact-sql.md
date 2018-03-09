@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Documents Microsoft
+title: sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_hadr_database_replica_cluster_states_TSQL
 - sys.dm_hadr_database_replica_cluster_states_TSQL
 - dm_hadr_database_replica_cluster_states
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 797a83b3f0493a2fb7d65e9c7c541a0e6b64e253
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 69737d323e06a7224334abbe89e0970e7f1e706e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,19 +56,19 @@ ms.lasthandoff: 11/17/2017
 |**is_failover_ready**|**bit**|Indique si la base de données secondaire est synchronisée avec la base de données primaire correspondante. une des :<br /><br /> 0 = la base de données n'est pas marquée comme étant synchronisée dans le cluster. La base de données n'est pas prête pour un basculement.<br /><br /> 1 = la base de données est marquée comme étant synchronisée dans le cluster. La base de données est prête pour un basculement.|  
 |**is_pending_secondary_suspend**|**bit**|Indique si, après un basculement forcé, la base de données est en attente de suspension. Peut prendre une des valeurs suivantes :<br /><br /> 0 = n'importe quel état, sauf HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = HADR_SYNCHRONIZED_ SUSPENDED. Lorsqu'un basculement forcé se termine, chacune des bases de données secondaires est définie à HADR_SYNCHONIZED_SUSPENDED et reste dans cet état jusqu'à ce que le nouveau réplica principal reçoive un accusé de réception de cette base de données secondaire au message SUSPEND.<br /><br /> NULL = inconnu (aucun quorum)|  
 |**is_database_joined**|**bit**|Indique si la base de données sur ce réplica de disponibilité a été attachée au groupe de disponibilité. Peut prendre une des valeurs suivantes :<br /><br /> 0 = la base de données n'est pas attachée au groupe de disponibilité sur ce réplica de disponibilité.<br /><br /> 1 = la base de données est attachée au groupe de disponibilité sur ce réplica de disponibilité.<br /><br /> NULL = inconnu (le réplica de disponibilité ne possède pas de quorum).|  
-|**recovery_lsn**|**NUMERIC(25,0)**|Sur le réplica principal, la fin du journal des transactions avant que le réplica n'écrive de nouveaux enregistrements de journal après la récupération ou le basculement. Sur le réplica principal, la ligne d'une base de données secondaire donnée aura la valeur avec laquelle le réplica principal nécessite que le réplica secondaire se synchronise (autrement dit, restaurer et réinitialiser).<br /><br /> Sur les réplicas secondaires cette valeur est NULL. Notez que chaque réplica secondaire aura la valeur maximale ou une valeur inférieure à laquelle le réplica principal a indiqué au réplica secondaire de revenir.|  
-|**truncation_lsn**|**NUMERIC(25,0)**|Valeur de troncation du journal [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], qui peut être supérieure au LSN de troncation en local si la troncation du journal en local est bloquée (notamment par une opération de sauvegarde).|  
+|**recovery_lsn**|**numeric(25,0)**|Sur le réplica principal, la fin du journal des transactions avant que le réplica n'écrive de nouveaux enregistrements de journal après la récupération ou le basculement. Sur le réplica principal, la ligne d'une base de données secondaire donnée aura la valeur avec laquelle le réplica principal nécessite que le réplica secondaire se synchronise (autrement dit, restaurer et réinitialiser).<br /><br /> Sur les réplicas secondaires cette valeur est NULL. Notez que chaque réplica secondaire aura la valeur maximale ou une valeur inférieure à laquelle le réplica principal a indiqué au réplica secondaire de revenir.|  
+|**truncation_lsn**|**numeric(25,0)**|Valeur de troncation du journal [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], qui peut être supérieure au LSN de troncation en local si la troncation du journal en local est bloquée (notamment par une opération de sauvegarde).|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues et fonctions de gestion dynamiques de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Affichages catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Surveiller les groupes de disponibilité &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [Sys.dm_hadr_database_replica_states &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

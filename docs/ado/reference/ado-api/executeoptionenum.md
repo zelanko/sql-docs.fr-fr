@@ -3,8 +3,9 @@ title: ExecuteOptionEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ExecuteOptionEnum
-helpviewer_keywords: ExecuteOptionEnum enumeration [ADO]
+f1_keywords:
+- ExecuteOptionEnum
+helpviewer_keywords:
+- ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8357988f5082498114c435f899e898552fca1707
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e4d901326e801d9c6724dfd05d7a14bb7acd8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Spécifie comment un fournisseur doit exécuter une commande.  
@@ -34,7 +37,7 @@ Spécifie comment un fournisseur doit exécuter une commande.
 |**adAsyncExecute**|0x10|Indique que la commande doit s’exécuter de façon asynchrone.<br /><br /> Cette valeur ne peut pas être combinée avec le [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeur **adCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Indique que les lignes restantes après la quantité spécifiée dans le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété doit être récupérée de façon asynchrone.|  
 |**adAsyncFetchNonBlocking**|0x40|Indique que le thread principal n’est jamais bloqué lors de la récupération. Si la ligne demandée n’a pas été récupérée, la ligne actuelle déplace automatiquement à la fin du fichier.<br /><br /> Si vous ouvrez un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d’un [flux](../../../ado/reference/ado-api/stream-object-ado.md) contenant un stockés de façon permanente **Recordset**, **adAsyncFetchNonBlocking** n’aura pas un effet ; l’opération sera synchrone et bloquante.<br /><br /> **adAsynchFetchNonBlocking** n’a aucun effet lorsque les [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) option permet d’ouvrir le **Recordset**.|  
-|**adExecuteStream**|0x80|Indique que le texte de commande est une commande ou une procédure stockée qui ne retourne pas de lignes (par exemple, une commande qui insère des données uniquement). Si toutes les lignes sont récupérées, elles sont ignorées et pas retournées.<br /><br /> **adExecuteStream** peut être passé comme paramètre facultatif pour la **commande** ou **connexion exécuter** (méthode).|  
+|**adExecuteNoRecords**|0x80|Indique que le texte de commande est une commande ou une procédure stockée qui ne retourne pas de lignes (par exemple, une commande qui insère des données uniquement). Si toutes les lignes sont récupérées, elles sont ignorées et pas retournées.<br /><br /> **adExecuteStream** peut être passé comme paramètre facultatif pour la **commande** ou **connexion exécuter** (méthode).|  
 |**adExecuteStream**|0x400|Indique que les résultats d’une exécution de commande doivent être renvoyés en tant que flux.<br /><br /> **adExecuteStream** peut être passé comme paramètre facultatif pour la **commande exécuter** (méthode).|  
 |**adExecuteRecord**||Indique que le **CommandText** est une commande ou une procédure stockée qui retourne une seule ligne qui doit être retournée comme un **enregistrement** objet.|  
 |**adOptionUnspecified**|-1|Indique que la commande n’est pas spécifiée.|  

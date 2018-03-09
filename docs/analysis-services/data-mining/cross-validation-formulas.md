@@ -2,31 +2,30 @@
 title: "Formules de Validation croisée | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cross-validation-formulas"></a>Formules de validation croisée
-  Lorsque vous créez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, selon le type du modèle d'exploration de données (autrement dit, l'algorithme utilisé pour créer le modèle), le type de données de l'attribut prédictible et la valeur de l'attribut prédictible, le cas échéant.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous créez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, selon le type du modèle d'exploration de données (autrement dit, l'algorithme utilisé pour créer le modèle), le type de données de l'attribut prédictible et la valeur de l'attribut prédictible, le cas échéant.  
   
  Cette section répertorie les mesures utilisées dans le rapport de validation croisée et décrit la méthode de calcul.  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |-------------|----------------|--------------------|  
 |**Vrai positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas contient la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Vrai négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas ne contient pas la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
-|**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
+|**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Faux négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle n'est pas égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
 |**Succès/échec**|Attribut discret, cible non spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Succès si l'état prédit avec la probabilité la plus élevée est identique à l'état d'entrée et la probabilité est supérieure à la valeur de **Seuil d'état**.<br /><br /> Sinon, Échec.|  
 |**Finesse**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|La vraisemblance logarithmique moyenne pour toutes les lignes avec des valeurs pour l’attribut cible, où la vraisemblance logarithmique de chaque cas est calculée par Log(ActualProbability/MarginalProbability). Pour calculer la moyenne, la somme des valeurs de la vraisemblance du journal est divisée par le nombre de lignes dans le dataset d'entrée, à l'exclusion des lignes avec les valeurs manquantes pour l'attribut cible.<br /><br /> La courbe d'élévation peut être une valeur négative ou positive. Une valeur positive signifie un modèle efficace qui devance l'estimation aléatoire.|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**Erreur-type**|Attribut discret, cible non spécifiée|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les cas avec des valeurs manquantes pour l'attribut cible.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [Test et Validation &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [La Validation croisée &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

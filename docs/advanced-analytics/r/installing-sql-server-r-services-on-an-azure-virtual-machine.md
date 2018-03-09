@@ -2,25 +2,28 @@
 title: "L’installation des fonctionnalités de formation l’ordinateur SQL Server sur une machine virtuelle Azure | Documents Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 08c3434ec120003de6d62bc61da3637e9177bb88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>L’installation de fonctionnalités sur une machine virtuelle Azure d’apprentissage automatique SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 Si vous déployez une machine virtuelle Azure qui inclut [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez maintenant sélectionner apprentissage en tant que fonctionnalité à ajouter à l’instance de la machine virtuelle est créée.
 
@@ -104,7 +107,7 @@ Pour plus d’informations, consultez [Configurer SQL Server R Services](../../a
 
 + Activer les canaux nommés
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise le protocole des canaux nommés pour les connexions entre les ordinateurs client et serveur, ainsi que pour certaines connexions internes. Si ce protocole n’est pas activé, vous devez l’installer et l’activer sur la machine virtuelle Azure et sur tous les clients de science des données susceptibles de se connecter au serveur.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise le protocole canaux nommés pour les connexions entre les ordinateurs client et serveur et pour certaines connexions internes. Si ce protocole n’est pas activé, vous devez l’installer et l’activer sur la machine virtuelle Azure et sur tous les clients de science des données susceptibles de se connecter au serveur.
   
 + Activer TCP/IP
 

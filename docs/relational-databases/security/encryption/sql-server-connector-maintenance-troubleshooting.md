@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      Importez la nouvelle clé asymétrique.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      Créez une connexion à associer à la nouvelle clé asymétrique (comme indiqué dans les instructions sur le chiffrement transparent des données).  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      Créez des informations d’identification à associer à la connexion.  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      Choisissez la base de données dont vous souhaitez chiffrer à nouveau la clé de chiffrement de base de données.  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      Rechiffrez la clé de chiffrement de base de données.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
   
 6.  Exécutez l’instruction suivante pour modifier le fournisseur EKM afin de commencer à utiliser la version la plus récente du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Assurez-vous que le chemin du fichier pointe vers l’emplacement où vous avez téléchargé la version la plus récente. Cette étape peut être ignorée si la nouvelle version est installée dans le même emplacement que la version d’origine. 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -149,7 +149,7 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
 ### <a name="key-backup-and-recovery"></a>Sauvegarde et récupération des clés  
 Le coffre de clés doit être sauvegardé régulièrement. Si une clé asymétrique dans le coffre est perdue, elle peut être restaurée à partir d’une sauvegarde. La clé doit être restaurée à l’aide du même nom qu’avant, ce que fera la commande PowerShell Restore (voir les étapes ci-dessous).  
 Si le coffre a été perdu, vous devez recréer un coffre et restaurer la clé asymétrique dans le coffre en utilisant le même nom qu’avant. Le nom du coffre peut être différent (ou le même qu’avant). En outre, vous devez définir les autorisations d’accès sur le nouveau coffre de manière à accorder au principal du service SQL Server l’accès nécessaire pour les scénarios de chiffrement SQL Server, puis paramétrer les informations d’identification SQL Server afin qu’elles reflètent le nom du nouveau coffre.  
-Voici un récapitulatif des étapes :  
+Voici un récapitulatif des étapes :  
   
 * Sauvegarder la clé de coffre (à l’aide de l’applet de commande PowerShell Backup-AzureKeyVaultKey).  
 * En cas de défaillance du coffre, créer un coffre dans la même région géographique*. L’utilisateur qui effectue cette création doit se trouver dans le même répertoire par défaut que le programme d’installation du principal du service pour SQL Server.  
@@ -210,7 +210,7 @@ Pour en savoir plus sur Active Directory, lisez [Association des abonnements Azu
 Code d'erreur  |Symbole  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | L'opération a réussi.    
-1 | scp_err_Failure | L’opération a échoué.    
+ 1 | scp_err_Failure | L’opération a échoué.    
 2 | scp_err_InsufficientBuffer | Cette erreur indique au moteur d’allouer davantage de mémoire pour la mémoire tampon.    
 3 | scp_err_NotSupported | L'opération n'est pas prise en charge. Par exemple, le type ou l’algorithme de clé spécifié n’est pas pris en charge par le fournisseur EKM.    
 4 | scp_err_NotFound | Le type ou l’algorithme de clé spécifié n’a pas pu être trouvé par le fournisseur EKM.    
@@ -298,7 +298,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 -   Informations de référence sur les [applets de commande Azure Key Vault](https://msdn.microsoft.com/library/dn868052.aspx) de PowerShell  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  

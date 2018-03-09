@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e8fce3d396a163c77b3b98bd7defd583f94d72b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d500b82566f2efaed147f7c7697bf0cf404e37b5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données)
   Dans un abonnement piloté par les données, les données d'abonnement dynamiques sont fournies par une requête ou une commande qui récupère les données à partir d'une source de données externe. Il est possible de récupérer les données d'abonnement à partir de n'importe quelle source de données gérée qui répond aux impératifs du traitement des abonnements pilotés par les données. La syntaxe de la requête ou de la commande doit être valide pour l'extension de traitement de données installée avec votre serveur de rapports.  
   
 ## <a name="data-processing-requirements"></a>Impératifs liés au traitement des données  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise les extensions pour le traitement des données afin de récupérer les données d’abonnement. Les types de sources de données recommandés sont les suivants :  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise les extensions pour le traitement des données afin de récupérer les données d’abonnement. Les types de sources de données recommandés sont les suivants :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données relationnelles  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
  Si vous procédez à des modifications de ce type, vous devez mettre à jour l'abonnement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer, modifier ou supprimer des abonnements pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  

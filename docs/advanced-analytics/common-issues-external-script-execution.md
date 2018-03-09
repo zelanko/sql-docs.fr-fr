@@ -1,25 +1,30 @@
 ---
 title: "Problèmes courants liés à l’exécution du script externe dans SQL Server | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9432ce24c94aab73862e8d1460f62e17bbc3f36c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article contient une liste des problèmes connus et les problèmes courants liés à l’exécution du code R ou Python dans SQL Server.
 
@@ -188,9 +193,9 @@ Si vous avez installé, puis apprentissage, mais que vous obtenez cette erreur l
 
 4. Le redémarrage du service généralement de résoudre le problème afin que d’exécuter des scripts d’apprentissage machine. Si le redémarrage ne résout pas le problème, notez le chemin d’accès et les arguments dans le **chemin d’accès binaire** propriété et procédez comme suit :
 
-    a. Vérifier le fichier .config de l’utilitaire de chargement et assurez-vous que le répertoire de travail est valide.
+    A. Vérifier le fichier .config de l’utilitaire de chargement et assurez-vous que le répertoire de travail est valide.
 
-    b. Vérifiez que le groupe Windows qui est utilisé par le Launchpad peut se connecter à l’instance de SQL Server, comme décrit dans la [section précédente](#bkmk_LaunchpadTS).
+    B. Vérifiez que le groupe Windows qui est utilisé par le Launchpad peut se connecter à l’instance de SQL Server, comme décrit dans la [section précédente](#bkmk_LaunchpadTS).
 
     c. Si vous modifiez les propriétés de service, redémarrez le service Launchpad.
 

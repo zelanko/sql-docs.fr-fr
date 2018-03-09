@@ -3,8 +3,11 @@ title: "Changer la connexion associée à une requête | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e9e34fcbb4dde3f61350653ac07a3abb2ca70c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d9c3781ae2d43b1b88c2a38ca8b98f16229a41a9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Modifier la connexion associée à une requête
-Une requête peut être exécutée sur plusieurs serveurs différents ou bases de données en modifiant la connexion utilisée par la requête.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une requête peut être exécutée sur plusieurs serveurs différents ou bases de données en changeant la connexion utilisée par la requête.  
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>Pour modifier la connexion associée à une requête  
   
@@ -34,7 +37,7 @@ Une requête peut être exécutée sur plusieurs serveurs différents ou bases d
   
 2.  Dans la boîte de dialogue **Se connecter au moteur de base de données** , fournissez les nouvelles informations de connexion, puis cliquez sur **Se connecter**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Associer une requête à une connexion dans un projet](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [Afficher ou modifier les propriétés d'une connexion dans un projet](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  

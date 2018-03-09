@@ -2,9 +2,12 @@
 title: "Définir et modifier un filtre de lignes statique | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - filters [SQL Server replication], static row
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c493832bd29563b7131a8724fe13d88401ef1a6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82fc6d8d7e7b96ea3b5b1960155d76f7672c58e9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="define-and-modify-a-static-row-filter"></a>Définir et modifier un filtre de lignes statique
-  Cette rubrique explique comment définir et modifier un filtre de lignes statique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+# <a name="define-and-modify-a-static-row-filter"></a>Définir et modifier un filtre de lignes statiques
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment définir et modifier un filtre de lignes statique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
@@ -73,19 +76,19 @@ ms.lasthandoff: 11/09/2017
   
     -   La zone de texte **Instruction de filtrage** comprend un texte par défaut, qui est de la forme suivante :  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   Le texte par défaut ne peut pas être modifié ; tapez la clause du filtre après le mot clé WHERE en utilisant la syntaxe SQL standard. La clause de filtrage complète ressemble à ceci :  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   Un filtre de lignes statiques peut inclure une fonction définie par l'utilisateur. La clause de filtrage complète pour un filtre de lignes statiques avec une fonction définie par l'utilisateur ressemble à ceci :  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Spécifiez le nom de l'article pour **@article**, le nom de la publication pour **@publication**, un nom pour le filtre pour **@filter_name**et la clause de filtre pour **@filter_clause** ( `WHERE`non compris).  
   
-3.  Si un filtre de colonne doit encore être défini, consultez [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Sinon, exécutez [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Spécifiez le nom de la publication pour **@publication**, le nom de l’article filtré pour **@article**et la clause de filtre spécifiée à l’étape 2 pour **@filter_clause**. Les objets de synchronisation pour l'article filtré sont alors créés.  
+3.  Si un filtre de colonne doit encore être défini, consultez [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Sinon, exécutez [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Spécifiez le nom de la publication pour **@publication**, le nom de l’article filtré pour **@article**et la clause de filtre spécifiée à l’étape 2 pour **@filter_clause**. Les objets de synchronisation pour l'article filtré sont alors créés.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Pour modifier un filtre de lignes statique pour une publication transactionnelle ou d'instantané  
   
@@ -136,7 +139,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Pour définir un filtre de lignes statique pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez la clause de filtre pour **@subset_filterclause** ( `WHERE`non compris). Pour plus d’informations, consultez [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez la clause de filtre pour **@subset_filterclause** ( `WHERE`non compris). Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Si un filtre de colonne doit encore être défini, consultez [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
@@ -157,9 +160,9 @@ ms.lasthandoff: 11/09/2017
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DDéfinir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrer des données publiées en vue de la réplication de fusion](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   

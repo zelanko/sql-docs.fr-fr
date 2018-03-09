@@ -1,4 +1,4 @@
----
+﻿---
 title: "Étape 1 : Configurer l’environnement de développement pour le développement de Node.js | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
@@ -8,11 +8,12 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
@@ -30,7 +31,7 @@ Notez que le pilote Node.js utilise le protocole TDS, qui est activé par défau
   
 ## <a name="windows"></a>Windows  
   
-1. **Installer le runtime Node.js et le gestionnaire de paquets npm **  
+1. **Installer le runtime Node.js et le gestionnaire de paquets npm**  
 a. Accédez à [Node.js](https://nodejs.org/en/download/)  
 b. Cliquez sur le lien de msi du programme d’installation Windows approprié.   
 c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js  
@@ -64,7 +65,7 @@ c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js
 ```  
 > sudo apt-get install npm  
 ```  
-4. **Créer un répertoire de projet** pour y accéder.    
+4. **Créer un répertoire projet** pour y accéder.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
@@ -82,7 +83,7 @@ c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js
   
 ## <a name="mac"></a>Mac  
   
-1. **Installer le Gestionnaire de package de runtime et npm Node.js**  
+1. **Installer le runtime Node.js et le gestionnaire de paquets npm**  
 a. Accédez à [Node.js](https://nodejs.org/en/download/)  
 b. Cliquez sur le lien du programme d’installation du système d’exploitation Mac approprié.  
 c. Une fois téléchargé, exécutez le dmg pour installer Node.js  
@@ -95,7 +96,7 @@ c. Une fois téléchargé, exécutez le dmg pour installer Node.js
 > cd HelloWorld  
 ```  
   
-4. **Créez un projet de nœud.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
+4. **Créez un projet de node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
 ```  
 > npm init  
 ```  

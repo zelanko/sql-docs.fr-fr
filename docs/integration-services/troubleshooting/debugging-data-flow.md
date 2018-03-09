@@ -1,5 +1,5 @@
 ---
-title: "Débogage de flux de données | Documents Microsoft"
+title: "Débogage d’un flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes des flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -176,7 +175,7 @@ order by source_component_name desc
   
 4.  Cliquez avec le bouton droit sur le composant dont vous voulez configurer les colonnes de sortie d’erreur et cliquez sur **Afficher l’éditeur avancé**.  
   
-5.  Cliquez sur le **propriétés d’entrée et sortie** onglet et développez  **\<nom du composant > sortie d’erreur** , puis **colonnes de sortie**.  
+5.  Cliquez sur l’onglet **Propriétés d’entrée et de sortie** et développez **Sortie d’erreur de \<nom du composant>**, puis **Colonnes de sortie**.  
   
 6.  Cliquez sur une colonne et mettez à jour ses propriétés.  
   
@@ -253,7 +252,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Le paramètre dataflow_path_id_string de la procédure stockée add_data_tap correspond à la propriété IdentificationString du chemin d'accès de flux de données auquel vous voulez ajouter un drainage de données. Pour obtenir dataflow_path_id_string, cliquez sur le chemin de flux de données (flèche entre les tâches du flux de données), et notez la valeur de la propriété **IdentificationString** dans la fenêtre Propriétés.  
   
- Lorsque vous exécutez le script, le fichier de sortie est stocké dans \<Program Files > \Microsoft SQL Server\110\DTS\DataDumps. S'il existe déjà un fichier du même nom, un nouveau fichier avec un suffixe (par exemple : output[1].txt) est créé.  
+ Quand vous exécutez le script, le fichier de sortie est stocké dans \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. S'il existe déjà un fichier du même nom, un nouveau fichier avec un suffixe (par exemple : output[1].txt) est créé.  
   
  Comme mentionné précédemment, vous pouvez également utiliser la procédure stockée [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)plutôt que add_data_tap. Cette procédure stockée accepte l'ID de tâche de flux de données comme paramètre au lieu de task_package_path. L'ID de tâche de flux de données est disponible dans la fenêtre Propriétés de Visual Studio.  
   
@@ -279,8 +278,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### <a name="video"></a>Vidéo  
  Cette [vidéo sur TechNet](http://technet.microsoft.com/sqlserver/dn600163) montre comment ajouter/utiliser des drainages de données dans le catalogue SQL Server 2012 SSISDB qui permettent de déboguer des packages par programmation et de capturer les résultats partiels au moment de l’exécution. Elle explique également comment répertorier/supprimer ces drainages de données et les meilleures pratiques pour l'utilisation des drainages de données dans des packages SSIS.  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

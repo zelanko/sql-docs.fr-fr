@@ -1,5 +1,5 @@
 ---
-title: "Extraire des données à l’aide de la Source OLE DB | Documents Microsoft"
+title: "Extraire des données à l’aide de la source OLE DB | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 06c12224a9117d26d10149698289508edc63567f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraire des données à l'aide de la source OLE DB
   Pour pouvoir ajouter et configurer une source OLE DB, le package doit inclure au moins une tâche de flux de données.  
@@ -72,11 +71,10 @@ ms.lasthandoff: 08/03/2017
   
 12. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

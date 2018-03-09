@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21f261147d5ba814721dc2cdb6de7ca4ef748a7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd862492513daceda364205d965b1d00e6cb649f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect (fonction)
 **Mise en conformité**  
@@ -66,7 +66,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>Diagnostics  
  Semblable à [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) pour tout d’entrée d’une erreur de validation, à ceci près que le Gestionnaire de pilotes utilise un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **gérer** de *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le Gestionnaire de pilotes garantit que le parent HENV gérer de *pas* et *hDbcInfoToken* sont les mêmes.  
   
  Contrairement aux [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), il est sans *DriverCompletion* argument pour inviter les utilisateurs à entrer des informations de connexion. Une boîte de dialogue invite n’est pas autorisée dans le scénario de regroupement.  

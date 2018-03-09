@@ -3,10 +3,10 @@ title: "Configuration réseau (système de plateforme Analytique)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
 caps.latest.revision: "27"
-ms.openlocfilehash: e24ed8e992591d08628ffeb14c30a47d7fa5b54a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-network-configuration"></a>Configuration réseau
 L’application SQL Server PDW est conçue et configurée avec un ensemble de correction des adresses IP dans l’ensemble de tous les serveurs et appareils applicables à partir de l’usine du fabricant de matériel. Lors de la livraison de l’application, l’adresse IP externe (Ethernet) traité doit être reconfiguré pour répondre aux besoins de centre de données du client spécifique.  

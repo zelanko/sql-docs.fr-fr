@@ -1,5 +1,5 @@
 ---
-title: '&amp;(AND au niveau du bit) (Expression SSIS) | Documents Microsoft'
+title: '&amp; (AND au niveau du bit) (expression SSIS) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6d5dad9457bbafe0218c1e71358d2c9c445f79a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 10d05b3fcf9187125bbac9a1f64acaf0ab748d79
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-ssis-expression"></a>&amp;(AND au niveau du bit) (Expression SSIS)
+# <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND au niveau du bit) (expression SSIS)
   Effectue une opération AND au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si les deux bits ont pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur 0.  
   
  Les deux conditions doivent être ou de type signed integer ou de type unsigned integer.  
@@ -44,12 +43,12 @@ integer_expression1 & integer_expression2
   
 ## <a name="arguments"></a>Arguments  
  *integer_expression1, integer_expression2*  
- Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si l'une des deux conditions est NULL, le résultat de l'expression est NULL.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
@@ -101,10 +100,9 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## <a name="see-also"></a>Voir aussi  
- [& & &#40; AND logique &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
- [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [&& &#40;ET logique&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Modifier le Concepteur de Capture de données pour Oracle par attunity : rubrique Guide | Documents Microsoft"
+title: "Guide pratique de Change Data Capture Designer pour Oracle d’Attunity | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,32 +13,30 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dee01cafcad2515e5fa80462dff67c14ff66f3ea
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2696a51ff9bb42a94ac315cda8d893e81f9d54da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Concepteur de capture de données modifiées pour Oracle par Attunity : rubrique Procédures
   Cette section explique comment effectuer des tâches dans le concepteur de capture de données modifiées pour Oracle par Attunity.  
   
 ## <a name="learn-how-to-use-the-oracle-cdc-designer-console"></a>Apprendre à utiliser la console du concepteur de capture de données modifiées Oracle  
   
--   [Comment gérer un Service de capture de données modifiées à partir de la Console du Concepteur de capture de données modifiées](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)  
+-   [Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)  
   
--   [La création de l’Instance de base de données modifiées SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
+-   [Guide pratique pour créer l’instance de base de données de modifications SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
--   [Comment gérer une Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)  
+-   [Guide pratique pour gérer une instance CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)  
   
--   [Comment modifier les propriétés d’Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
+-   [Guide pratique pour modifier les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
--   [Comment afficher les propriétés d’Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)  
+-   [Procédure : afficher les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)  
   
   
-

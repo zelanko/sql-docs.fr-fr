@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 57bc37f13bdd0757a1142fbec57cd499e0c35fd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: de538e4d272355c1d694d4a79fa0a66424062360
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme les nombres et les dates dans les régions de données en sélectionnant un format dans la page **Nombre** de la boîte de dialogue **Propriétés** de la région de données correspondante.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Si vous sélectionnez **Devise** sous **Catégorie** et si vous activez **Afficher les valeurs en**, vous pouvez sélectionner **Milliers**, **Millions**ou **Milliards** pour afficher les nombres au format financier. Par exemple, si la valeur du champ est 1 789 905 394, que vous sélectionnez **Milliards** et spécifiez 2 comme nombre de décimales, la valeur affichée dans le rapport est 1,78.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Mise en forme des lignes, des couleurs et des images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

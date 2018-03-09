@@ -16,20 +16,20 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: 20
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9941f7e1c8bda690114a626315c9fe5afb4a2da7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-t-sql-objects"></a>Objets T-SQL PolyBase
-  Pour utiliser PolyBase, vous devez créer des tables externes destinées à référencer vos données externes.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour utiliser PolyBase, vous devez créer des tables externes destinées à référencer vos données externes.  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]
 >  PolyBase dans SQL Server 2016 prend uniquement en charge les utilisateurs Windows. Si vous essayez d’utiliser un utilisateur SQL pour interroger une table externe PolyBase, la requête échoue.
 
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Prerequisites  
  Configurez PolyBase. Consultez [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Créer des tables externes pour Hadoop
@@ -299,9 +299,8 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour découvrir des exemples de requêtes, consultez [Requêtes PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

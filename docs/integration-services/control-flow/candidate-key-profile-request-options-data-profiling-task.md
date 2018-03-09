@@ -1,5 +1,5 @@
 ---
-title: "Options de demande de profil de clé candidate (tâche de profilage des données) | Documents Microsoft"
+title: "Options Demande de profil de clé candidate (tâche de profilage des données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de clé candidate** sélectionnée dans le volet Demandes. Un profil de clé candidate signale si une colonne ou un ensemble de colonnes est une clé, ou une clé approximative, pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données tels que des valeurs en double dans une colonne clé potentielle.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Les options décrites dans cette rubrique apparaissent sur la page **Demandes de profil** de l' **Éditeur de tâche de profilage de données**. Pour plus d’informations sur cette page de l’éditeur, consultez [Éditeur de tâche de profilage de données &#40;page Demandes de profil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Pour plus d’informations sur l’utilisation de la Visionneuse du profil des données pour analyser le résultat de la tâche de profilage de données, consultez [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md).  
+ Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Pour plus d’informations sur l’utilisation de la visionneuse du profil des données pour analyser le résultat de la tâche de profilage des données, consultez [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>Fonctionnement de la sélection des colonnes pour la propriété KeyColumns  
  Chaque **Demande de profil de clé candidate** calcule la puissance de clé d’un candidat de clé unique composé d’une colonne unique ou de plusieurs colonnes :  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Options de données  
  **ConnectionManager**  
- Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
+ Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour établir la connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
   
  **TableOrView**  
  Sélectionnez la table ou la vue existante à profiler.  
@@ -100,7 +99,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Quand vous utilisez un caractère générique **(\*)** pour **ColumnName**, l’option **CompareOptions** est en lecture seule et est définie sur le paramètre **Par défaut**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
@@ -108,7 +107,7 @@ ms.lasthandoff: 08/03/2017
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 08/03/2017
  **ThresholdSetting**  
  Cette propriété dispose des options répertoriées dans le tableau suivant. La valeur par défaut de cette propriété est **Spécifié**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n’est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
 |**Spécifié**|Un seuil est spécifié dans **KeyStrengthThreshold**. La puissance de clé est précisée uniquement si elle est supérieure au seuil.|  
@@ -135,9 +134,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  Spécifiez le nombre maximal de violations de clé candidate à signaler dans la sortie. La valeur par défaut de cette propriété est 100. Cette option est désactivée quand **Exact** est sélectionné en tant que valeur **KeyStrengthThresholdSetting**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche &#40; de profilage des données Page Général &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulaire de profil rapide de Table simple &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

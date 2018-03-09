@@ -2,32 +2,30 @@
 title: "Membres calculés dans les sous-sélections et les sous-cubes | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes
-  Un membre calculé est un membre de dimension dont la valeur est calculée à partir d’une expression au moment de l’exécution, et qui peut être utilisé dans les sous-sélections et les sous-cubes afin de définir plus précisément l’espace de cube d’une requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Un membre calculé est un membre de dimension dont la valeur est calculée à partir d’une expression au moment de l’exécution, et qui peut être utilisé dans les sous-sélections et les sous-cubes afin de définir plus précisément l’espace de cube d’une requête.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Activation des membres calculés dans le sous-espace  
  La propriété de chaîne de connexion **SubQueries** de la propriété <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROPMSMDSUBQUERIES** décrite dans [Propriétés XMLA prises en charge &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) définit le comportement ou l’autorisation des membres calculés ou des ensembles calculés dans les sous-sélections ou les sous-cubes. Dans le cadre de ce document, sauf indication contraire, la sous-sélection fait référence aux sous-sélections et aux sous-cubes.  
@@ -81,7 +79,7 @@ Where [Measures].[Reseller Sales Amount]
 |||||||  
 |-|-|-|-|-|-|  
 ||All Periods|CY 2011|CY 2012|CY 2013|CY 2014|  
-|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
+|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
  Comme expliqué plus haut, les ascendants de [Seattle Metro] n'existent pas dans le sous-espace retourné lorsque SubQueries=1, par conséquent [Géographie].[Géographie].allmembers contient seulement le membre calculé.  
   
@@ -124,7 +122,7 @@ Where [Measures].[Reseller Sales Amount]
 |Washington|$204,203.37|(Null)|(Null)|$114,345.85|$89,857.52|  
 |Spokane|$204,203.37|(Null)|(Null)|$114,345.85|$89,857.52|  
 |99202|$204,203.37|(Null)|(Null)|$114,345.85|$89,857.52|  
-|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
+|Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
  Dans les résultats ci-dessus, les valeurs d'agrégation pour [All Geographies], [United States], [Oregon] et [Washington] proviennent de l'agrégation sur les descendants de &[Portland]&[OR] et &[Spokane]&[WA]. Rien ne provient du membre calculé.  
   

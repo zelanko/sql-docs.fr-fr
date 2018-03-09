@@ -2,15 +2,13 @@
 title: "Prise en charge des propriétés XMLA (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,16 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b2e13193dc3742f23d78473a34667bbf0fa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>Élément PropertyList - prise en charge les propriétés XMLA
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge les propriétés répertoriées dans le tableau suivant. Vous utilisez ces propriétés dans le [propriétés](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) élément de la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) et [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) méthodes.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge les propriétés répertoriées dans le tableau suivant. Vous utilisez ces propriétés dans le [propriétés](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) élément de la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) et [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) méthodes.  
   
-|Nom| Description|Type|Valeurs|  
+|Nom   |Description|Type|Valeurs|  
 |----------|-----------------|----------|------------|  
 |AxisFormat|Détermine le format utilisé dans une [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) jeu de résultats pour décrire les axes du dataset multidimensionnel. Cette propriété peut adopter l'une des valeurs répertoriées dans le tableau suivant.<br /><br /> Cette propriété peut être utilisée avec la **Execute** (méthode).|Facultatif, en écriture seule **chaîne** propriété|*ClusterFormat*: le **MDDataSet** axe est constitué d’un ou plusieurs [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) éléments.<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]utilise le *TupleFormat* format de ce paramètre.<br /><br /> *TupleFormat* par défaut. Le **MDDataSet** axe contient un ou plusieurs [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) éléments.|  
 |BeginRange|Contient une valeur entière de base zéro correspond à un **CellOrdinal** valeur d’attribut. (Le **CellOrdinal** attribut fait partie de la [cellule](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md) élément dans le [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) section de **MDDataSet**.)<br /><br /> La valeur par défaut de cette propriété est -1.<br /><br /> Cette propriété peut être utilisée avec la **Execute** (méthode).<br /><br /> Utilisé conjointement avec la **EndRange** propriété, l’application cliente peut utilisent cette propriété pour restreindre un dataset OLAP retourné par une commande à une plage de cellules spécifique. Si -1 est spécifié, toutes les cellules jusqu'à la cellule spécifiée dans le **EndRange** propriété sont retournés.|Facultatif, en écriture seule **entier** propriété||  

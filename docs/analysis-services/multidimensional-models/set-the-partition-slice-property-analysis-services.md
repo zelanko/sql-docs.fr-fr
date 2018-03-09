@@ -2,35 +2,33 @@
 title: "Définir la propriété secteur de Partition (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 265163014794d57fd663472206798aa24f224e8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Définir la propriété Secteur de partition (Analysis Services)
-  Une tranche de données est une fonctionnalité d'optimisation importante qui permet de diriger les requêtes vers les données des partitions appropriées. Définir explicitement la propriété Slice peut améliorer les performances des requêtes en remplaçant les tranches par défaut générées pour les partitions MOLAP ou HOLAP. En outre, la propriété Slice permet un contrôle de validation supplémentaire lors du traitement de la partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une tranche de données est une fonctionnalité d'optimisation importante qui permet de diriger les requêtes vers les données des partitions appropriées. Définir explicitement la propriété Slice peut améliorer les performances des requêtes en remplaçant les tranches par défaut générées pour les partitions MOLAP ou HOLAP. En outre, la propriété Slice permet un contrôle de validation supplémentaire lors du traitement de la partition.  
   
  Vous pouvez spécifier une tranche de données après avoir créé une partition, mais avant son traitement, à l'aide de la propriété Slice. Sous l’onglet Partitions, développez un groupe de mesures, cliquez avec le bouton droit sur une partition, puis sélectionnez **Propriétés**.  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |-----------|--------------------------|  
 |[Date].[Calendar].[Calendar Year].&[2010]|Spécifiez cette tranche sur une partition contenant des faits de l'année 2010 (en partant du principe que le modèle inclut une dimension Date avec la hiérarchie Année civile, dont 2010 est un membre.) Bien que la table ou la clause WHERE de la source de partition soit peut-être déjà filtrée pour l'année 2010, spécifier la propriété Slice offre un contrôle supplémentaire au cours du traitement, ainsi que des analyses plus ciblées pendant l'exécution de la requête.|  
 |{ [Sales Territory].[Sales Territory Country].&[Australia], [Sales Territory].[Sales Territory Country].&[Canada] }|Spécifiez cette tranche sur une partition contenant des faits qui incluent des informations sur le secteur de vente. Une tranche peut être un jeu MDX constitué de deux membres ou plus.|  
-|[Measures].[Sales Amount Quota] > '5000'|Cette tranche représente une expression MDX.|  
+|[Measures].[Sales Amount Quota] > '5000'|Cette tranche représente une expression MDX.|  
   
  Une tranche de données d'une partition doit refléter, aussi fidèlement que possible, les données de la partition. Par exemple, si une partition est limitée aux données de l'année 2012, la tranche de données de la partition doit spécifier le membre 2012 de la dimension Time. Il n'est pas toujours possible de spécifier une tranche de données qui reflète le contenu exact d'une partition. Par exemple, si une partition contient des données uniquement pour janvier et février, alors que les niveaux de la dimension Time sont Year, Quarter et Month, l'Assistant Partition ne peut pas sélectionner à la fois les membres January et February. Dans de tels cas, sélectionnez le parent des membres qui reflètent le contenu de la partition. Dans cet exemple, sélectionnez Quarter 1.  
   
@@ -55,6 +53,6 @@ ms.lasthandoff: 11/17/2017
 >  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l’outil en ligne de commande ascmd ou la [tâche DDL d’exécution d’Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) dans Integration Services pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer une partition locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [Créer et gérer une Partition locale &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

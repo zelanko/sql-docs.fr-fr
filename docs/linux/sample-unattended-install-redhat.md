@@ -2,36 +2,36 @@
 title: Installation sans assistance de SQL Server sur Red Hat Enterprise Linux | Documents Microsoft
 description: Exemple de Script SQL Server - installation sans assistance sur Red Hat Enterprise Linux
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f8b30f6fcef4a0091871a5a1c4639143671197cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemple : Script d’installation sans assistance de SQL Server pour Red Hat Enterprise Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet exemple de script d’interpréteur de commandes installe SQL Server 2017 sur Red Hat Enterprise Linux (RHEL) sans entrée interactive. Il fournit des exemples d’installation du moteur de base de données, les outils de ligne de commande de SQL Server, l’Agent SQL Server et effectue les étapes de post-installation. Vous pouvez éventuellement installer la recherche en texte intégral et créer un utilisateur administratif.
 
 > [!TIP]
-> Si vous n’avez pas besoin d’un script d’installation sans assistance, le moyen le plus rapide pour installer SQL Server consiste à suivre le [didacticiel de démarrage rapide pour Red Hat](quickstart-install-connect-red-hat.md). Pour plus d’informations d’installation, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
+> Si vous n’avez pas besoin d’un script d’installation sans assistance, le moyen le plus rapide pour installer SQL Server consiste à suivre le [démarrage rapide pour Red Hat](quickstart-install-connect-red-hat.md). Pour plus d’informations d’installation, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
-- Vous devez au moins 3,25 Go de mémoire pour exécuter SQL Server sur Linux.
+- Vous devez au moins 2 Go de mémoire pour exécuter SQL Server sur Linux.
 - Le système de fichiers doit être **XFS** ou **EXT4**. Autres systèmes de fichiers, tel que **BTRFS**, non pris en charge.
 - Pour les autres exigences système, consultez [configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
 
@@ -39,7 +39,7 @@ Cet exemple de script d’interpréteur de commandes installe SQL Server 2017 su
 Enregistrez l’exemple de script dans un fichier et pour le personnaliser, remplacer les valeurs des variables dans le script. Vous pouvez également définir des variables de scripts en tant que variables d’environnement, tant que vous les supprimez à partir du fichier de script.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

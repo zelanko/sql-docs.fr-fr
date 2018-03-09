@@ -2,10 +2,14 @@
 title: "TSQL, catégorie d’événement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - TSQL event category [SQL Server]
 - event classes [SQL Server], TSQL event category
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f8e3374fe48236eee62fc1df2af39048055e9b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1de1805305ec04ef4ad7edfbc29adde231db1f0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tsql-event-category"></a>TSQL, catégorie d’événement
-  La catégorie d’événements **TSQL** contient des événements TSQL généraux.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La catégorie d’événements **TSQL** contient des événements TSQL généraux.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -41,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 |[Classe d'événements Unprepare SQL](../../relational-databases/event-classes/unprepare-sql-event-class.md)|Indique que SqlClient, ODBC, OLE DB ou la bibliothèque de bases de données a supprimé une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] préparées.|  
 |[Classe d'événements XQuery Static Type](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une expression XQuery.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

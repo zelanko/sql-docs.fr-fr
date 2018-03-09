@@ -2,15 +2,13 @@
 title: Ensemble de lignes MDSCHEMA_MEMBERS | Documents Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_MEMBERS
@@ -23,19 +21,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5ac98919c5ac10900eb69c9fe7319c6e8b22a75
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Ensemble de lignes MDSCHEMA_MEMBERS
-  Décrit les membres d'une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les membres d’une base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_MEMBERS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom de la base de données à laquelle ce membre appartient.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Nom du schéma auquel ce membre appartient.|  
@@ -69,17 +67,17 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|Ce paramètre est facultatif.|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|Ce paramètre est facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|Facultatif.|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Facultatif.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|Facultatif.|  
 |**TREE_OP**|**DBTYPE_I4**|(Facultatif) S'applique uniquement à un membre unique :<br /><br /> **MDTREEOP_ANCESTORS** (**0 x 20**) renvoie tous les ancêtres.<br /><br /> **MDTREEOP_CHILDREN** (**0 x 01**) retourne uniquement les enfants immédiats.<br /><br /> **MDTREEOP_SIBLINGS** (**0 x 02**) renvoie les membres du même niveau.<br /><br /> **MDTREEOP_PARENT** (**0 x 04**) retourne uniquement le parent immédiat.<br /><br /> **MDTREEOP_SELF** (**0 x 08**) se retourne lui-même dans la liste des lignes retournées.<br /><br /> **MDTREEOP_DESCENDANTS** (**0 x 10**) retourne tous les descendants.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
   

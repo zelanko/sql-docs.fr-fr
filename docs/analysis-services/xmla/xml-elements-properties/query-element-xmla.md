@@ -2,15 +2,13 @@
 title: "Query, élément (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Query Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8502824a41e2193a31e0e2b34b41e9ffb3515eaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 230141d3a6fd5d3b2e02c1dce8e397d3f9bdce3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="query-element-xmla"></a>Élément Query (XMLA)
-  Contient une requête dans le [requêtes](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) collection utilisée par le [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) commande pendant l’optimisation de l’utilisation.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une requête dans le [requêtes](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) collection utilisée par le [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) commande pendant l’optimisation de l’utilisation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,18 +50,18 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Chaîne|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|String|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Requêtes](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La commande **DesignAggregations** prend en charge l'optimisation basée sur l'utilisation en incluant un ou plusieurs éléments **Query** dans la collection **Queries** de la commande. Chaque élément **Query** représente une requête d'objectif que le processus de conception utilise pour définir des agrégations qui visent les requêtes utilisées le plus fréquemment. Vous pouvez spécifier vos propres requêtes d’objectif, ou vous pouvez utiliser les informations stockées par une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans le journal des requêtes pour récupérer les informations les plus fréquemment des requêtes utilisées.  
   
  Si vous concevez des agrégations itérative, il vous suffit de passer des requêtes d’objectif dans la première **DesignAggregations** commande car le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance stocke ces requêtes d’objectif et les utilise pendant les **DesignAggregations** commandes. Une fois les requêtes d'objectif passées dans la première commande **DesignAggregations** d'un procédé itératif, toute commande **DesignAggregations** suivante qui contient des requêtes d'objectif dans la propriété **Queries** génère une erreur.  

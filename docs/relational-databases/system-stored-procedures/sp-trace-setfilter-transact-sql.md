@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setfilter (Transact-SQL) | Documents Microsoft
+title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +53,16 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  ID de la trace sur laquelle le filtre est défini. *l’argument trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  ID de la colonne sur laquelle le filtre est appliqué *column_id* est **int**, sans valeur par défaut. Si *column_id* est NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efface tous les filtres de la trace spécifiée.  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  Spécifie si l’AND (**0**) ou OR (**1**) opérateur est appliqué. *logical_operator* est **int**, sans valeur par défaut.  
   
- [  **@comparison_operator=** ] *opérateur_de_comparaison*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  Spécifie le type de comparaison à effectuer. *opérateur_comparaison* est **int**, sans valeur par défaut. Le tableau contient les opérateurs de comparaison et leurs valeurs.  
   
 |Valeur|Opérateur de comparaison|  
@@ -73,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Ne correspond pas à|  
   
- [  **@value=** ] *valeur*  
+ [ **@value=** ] *value*  
  Indique la valeur sur laquelle appliquer le filtre. Type de données de *valeur* doit correspondre au type de données de la colonne à filtrer. Par exemple, si le filtre est défini sur une colonne d’ID d’objet qui est un **int** type de données, *valeur* doit être **int**. Si *valeur* est **nvarchar** ou **varbinary**, il peut avoir une longueur maximale de 8 000.  
   
  Lorsque l'opérateur de comparaison est LIKE ou NOT LIKE, l'opérateur logique peut inclure « % » ou tout autre filtre approprié pour l'opération LIKE.  
@@ -107,7 +110,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  Les paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont de type strict. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="examples"></a>Exemples  

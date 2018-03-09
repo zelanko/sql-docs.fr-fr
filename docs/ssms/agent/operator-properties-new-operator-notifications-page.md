@@ -3,8 +3,11 @@ title: "Propriétés de l’opérateur - Nouvel opérateur (page Notifications) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d96fbe6d79ff099c552ea95c764dfebd69f45489
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9602398493c0e24d23d56b603da0bbc0c02af1af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="operator-properties---new-operator-notifications-page"></a>Propriétés de l’opérateur - Nouvel opérateur (page Notifications)
-Utilisez cette page pour définir les alertes et les travaux qui notifient l'opérateur.  
+# <a name="operator-properties---new-operator-notifications-page"></a>Propriétés des opérateurs - Nouvel opérateur (page Notifications)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour définir les alertes et les travaux qui notifient l’opérateur.  
   
 ## <a name="options"></a>Options  
 **Alertes**  
@@ -48,6 +51,6 @@ Notifie cet opérateur en envoyant un courrier électronique à son adresse de r
 **Net send**  
 Notifie cet opérateur à l’aide de **net send**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
   

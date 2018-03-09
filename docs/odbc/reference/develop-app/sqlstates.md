@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c45bbcbf03c4377e8ff162c3cd28ddf7128810b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29bd2646172cebd69f9c5a9f7cc055378e18e377
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATE fournit des informations détaillées sur la cause d’un avertissement ou d’erreur. Le SQLSTATE dans ce guide est basées sur celles disponibles dans la spécification ISO/IEF CLI, bien que ces SQLSTATE qui commencent par messagerie instantanée est spécifiques à ODBC.  

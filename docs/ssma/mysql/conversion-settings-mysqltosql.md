@@ -1,10 +1,13 @@
 ---
 title: "Les paramètres de conversion (MySQLToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29e0343f6f4e254a8171cb1d44084201af34d7d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d19688f630a71ff111a755b6810379b06fd129d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversion-settings-mysqltosql"></a>Paramètres de conversion (MySQLToSQL)
 Le **'Paramètres'** onglet permet à l’utilisateur définir les paramètres de niveau de nœud. L’onglet est seront disponible sur les nœuds de la métabase suivants :  
@@ -73,7 +76,7 @@ Ces paramètres seront disponibles en fonction du type de nœud de la métabase.
   
         -   Oui  
   
-        -   Non  
+        -   non  
   
         -   Convertir en fonction des paramètres de projet  
   

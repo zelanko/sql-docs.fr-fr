@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions de fichiers plats multiples | Documents Microsoft
+title: Gestionnaire de connexions de fichiers plats multiples | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -25,17 +25,16 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: f9069538cef2a85ed3e23e9ae3505a9fbfef01ae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
   Un gestionnaire de connexions de fichiers plats multiples permet à un package d'accéder aux données de plusieurs fichiers plats. Par exemple, une source de fichier plat peut utiliser un gestionnaire de connexions de fichiers plats multiples lorsque la tâche de flux de données se trouve dans un conteneur de boucles (conteneur de boucles For, par exemple). Dans chaque boucle du conteneur, la source de fichier plat charge les données à partir du nom de fichier suivant fourni par le gestionnaire de connexions de fichiers plats multiples.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
  Si vous mettez à jour des longueurs de colonne dans le gestionnaire de connexions de fichiers plats multiples après avoir ajouté et configuré la source de fichier plat qui utilise le gestionnaire de connexions, vous n'avez pas à redimensionner manuellement les colonnes de sortie dans la source de fichier plat. Quand vous ouvrez la boîte de dialogue **Source du fichier plat** , la source du fichier plat offre la possibilité de synchroniser les métadonnées de la colonne.  
   
 ## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>Configuration du gestionnaire de connexions de fichiers plats multiples  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -90,7 +89,7 @@ ms.lasthandoff: 08/09/2017
  **Noms de fichiers**  
  Tapez le chemin d'accès et les noms de fichiers à utiliser dans la connexion de fichiers plats multiples. Vous pouvez spécifier plusieurs fichiers à la fois en utilisant des caractères génériques (par exemple, C:\\*.txt) ou en utilisant la barre verticale (|) pour séparer plusieurs noms de fichiers. Tous les fichiers doivent avoir le même format de données.  
   
- **Parcourir**  
+ **...**  
  Naviguez jusqu'aux noms de fichiers à utiliser dans la connexion de fichiers plats multiples. Vous pouvez sélectionner plusieurs fichiers. Tous les fichiers doivent avoir le même format de données.  
   
  **Paramètres régionaux**  
@@ -117,7 +116,7 @@ ms.lasthandoff: 08/09/2017
  **Séparateur de lignes d'en-tête**  
  Choisissez dans la liste des séparateurs de lignes d'en-tête ou entrez le texte de séparation.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La ligne d'en-tête est séparée par une combinaison retour chariot-saut de ligne.|  
 |**{CR}**|La ligne d'en-tête est séparée par des retours chariot.|  
@@ -242,18 +241,18 @@ ms.lasthandoff: 08/09/2017
 |--------------|-----------------|  
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Dans les fichiers en drapeau à droite, chaque colonne a une largeur fixe, sauf la dernière qui est arrêtée par le séparateur de lignes.|  
 |**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources.<br /><br /> Remarque : Dans le modèle objet, le nom de cette propriété est MaximumWidth.|  
-|**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indiquez si les données texte sont qualifiées à l’aide d’un caractère identificateur de texte :<br /><br /> **True**: les données texte du fichier plat sont qualifiées.<br /><br /> **False**: les données texte du fichier plat ne sont pas qualifiées.|  
 |**Nom**|Précisez un nom de colonne. La valeur par défaut est une liste numérotée de colonnes. Vous pouvez toutefois indiquer un nom descriptif unique de votre choix.|  
-|**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}** – Les colonnes sont délimitées par une combinaison retour chariot/saut de ligne<br /><br /> **{CR}** – Les colonnes sont séparées par un retour chariot<br /><br /> **{LF}** – Les colonnes sont séparées par un saut de ligne<br /><br /> **Point-virgule {;}** – Les colonnes sont délimitées par un point-virgule<br /><br /> **Deux-points {:}** – Les colonnes sont délimitées par un deux-points<br /><br /> **Virgule {,}** – Les colonnes sont délimitées par une virgule<br /><br /> **Tabulation {t}** – Les colonnes sont délimitées par une tabulation<br /><br /> **Barre verticale {&#124;}** – Les colonnes sont délimitées par une barre verticale|  
-|**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|  
   
  **Nouveau**  
- Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce bouton **** ajoute une nouvelle colonne à la fin de la liste. Il comporte également une liste déroulante avec les options disponibles suivantes :  
+ Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Il comporte également une liste déroulante avec les options disponibles suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Ajouter une colonne**|Ajoute une colonne à la fin de la liste.|  
 |**Insérer avant**|Insère une nouvelle colonne avant la colonne sélectionnée.|  
@@ -283,10 +282,9 @@ ms.lasthandoff: 08/09/2017
  **Aperçu des lignes**  
  Permet d'afficher les données d'exemple dans le premier fichier plat sélectionné, divisées en colonnes et en lignes à l'aide des options sélectionnées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Source du fichier plat](../../integration-services/data-flow/flat-file-source.md)   
  [Destination de fichier plat](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40; SSIS &#41; Connexions](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

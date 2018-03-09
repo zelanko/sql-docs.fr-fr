@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40c3ac24cc6be800fea8da1fab407569e4cdab87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>Utilisation de System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **System.Transactions** espace de noms fournit une infrastructure de transaction qui s’intègre entièrement à ADO.NET et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégration du common language runtime (CLR). La classe **System.Transactions.TransactionScope** crée un bloc de code transactionnel en inscrivant implicitement les connexions dans une transaction distribuée. Vous devez appeler la méthode **Complete** à la fin du bloc de code marqué par **TransactionScope**. La méthode **Dispose** est appelée lorsque l'exécution du programme laisse un bloc de code, ce qui provoque une interruption de la transaction si la méthode **Complete** n'est pas appelée. Si une exception a été levée qui provoque l'abandon de l'étendue par le code, la transaction est considérée comme supprimée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'espace de noms **System.Transactions** fournit une infrastructure de transaction qui s'intègre entièrement à ADO.NET et au CLR (Common Language Runtime) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La classe **System.Transactions.TransactionScope** crée un bloc de code transactionnel en inscrivant implicitement les connexions dans une transaction distribuée. Vous devez appeler la méthode **Complete** à la fin du bloc de code marqué par **TransactionScope**. La méthode **Dispose** est appelée lorsque l'exécution du programme laisse un bloc de code, ce qui provoque une interruption de la transaction si la méthode **Complete** n'est pas appelée. Si une exception a été levée qui provoque l'abandon de l'étendue par le code, la transaction est considérée comme supprimée.  
   
  Nous vous recommandons d'employer un bloc **using** pour garantir que la méthode **Dispose** est appelée sur l'objet **TransactionScope** à la sortie du bloc **using** . L'impossibilité de valider ou d'annuler les transactions en attente peut dégrader sérieusement les performances parce que le délai d'expiration par défaut de **TransactionScope** est une minute. Si vous n'utilisez pas une instruction **using** , vous devez effectuer tout le travail dans un bloc **Try** et appeler explicitement la méthode **Dispose** dans le bloc **Finally** .  
   
@@ -112,6 +113,6 @@ using (TransactionScope transScope = new TransactionScope())
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Intégration et transactions du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Transactions et l’intégration du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

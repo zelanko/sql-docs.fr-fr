@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
 - BufferWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: BefferWithTolerance method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  La distance maximale de la mémoire tampon ne peut pas dépasser 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* circonférence du 1/2 la) ou le globe complet.  
   
- *tolérance de panne*  
+ *tolerance*  
  Est un **float** expression qui spécifie la tolérance de la distance de tampon.  
   
  Le *la tolérance de panne* valeur fait référence à la variation maximale dans la distance de tampon idéale pour l’approximation linéaire retournée.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  La limite minimum est de 0,1 pour cent de la distance, plus toute tolérance inférieure à la valeur qui sera arrondie à la limite minimale.  
   
- *relatif*  
+ *relative*  
  Est un **bits** spécifiant si le *la tolérance de panne* valeur est relatif ou absolu. Si 'TRUE' ou 1, la tolérance est relative et est calculée comme étant le produit de la *la tolérance de panne* paramètre et l’étendue angulaire \* rayon équatorial de l’ellipsoïde. Si 'FALSE' ou 0, la tolérance est absolue et la *la tolérance de panne* valeur est la variation maximale absolue dans la distance de tampon idéale pour l’approximation linéaire retournée.  
   
 ## <a name="return-types"></a>Types de retour  

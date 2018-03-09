@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobschedule (Transact-SQL) | Documents Microsoft
+title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f111a04bfe27fad284157082ec1bbbeadfb92c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +50,21 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Numéro d’identification du travail. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  Nom du travail. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > **Remarque :** soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@schedule_name=** ] **'***nom_de_la_planification***'**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  Nom de l'élément de planification pour le travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@schedule_id=** ] *id_de_la_planification*  
+ [ **@schedule_id=** ] *schedule_id*  
  Numéro d'identification de l'élément de planification pour le travail. *id_de_la_planification*est **int**, avec NULL comme valeur par défaut.  
   
- [  **@include_description=** ] *include_description*  
+ [ **@include_description=** ] *include_description*  
  Spécifie s'il faut inclure la description de la planification dans le jeu de résultats. *include_description* est **bits**, avec une valeur par défaut **0**. Lorsque *include_description* est **0**, la description de la planification n’est pas incluse dans le jeu de résultats. Lorsque *include_description* est **1**, la description de la planification est incluse dans le jeu de résultats.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -71,9 +74,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**id_de_la_planification**|**int**|Numéro d'identificateur de la planification.|  
-|**nom_de_la_planification**|**sysname**|Nom de la planification.|  
-|**activé**|**int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
+|**schedule_id**|**int**|Numéro d'identificateur de la planification.|  
+|**schedule_name**|**sysname**|Nom de la planification.|  
+|**enabled**|**int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
 |**freq_type**|**int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = exécuter lorsque **SQLServerAgent** démarrage du service.|  
 |**freq_interval**|**int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unités de **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -82,9 +85,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**freq_recurrence_factor**|**int**|Nombre de mois devant s'écouler entre les exécutions planifiées du travail.|  
 |**active_start_date**|**int**|Date d'activation de la planification.|  
 |**active_end_date**|**int**|Date de fin de la planification.|  
-|**heure_de_début_active**|**int**|Heure de début de la planification.|  
-|**heure_fin_active**|**int**|Heure de fin de la planification.|  
-|**date_de_création**|**datetime**|Date de création de la planification.|  
+|**active_start_time**|**int**|Heure de début de la planification.|  
+|**active_end_time**|**int**|Heure de fin de la planification.|  
+|**date_created**|**datetime**|Date de création de la planification.|  
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification qui est dérivée des valeurs dans **msdb.dbo.sysschedules**. Lorsque *include_description* est **0**, cette colonne contienne un texte indiquant que la description n’a pas été demandée.|  
 |**next_run_date**|**int**|Date à laquelle la planification va lancer l'exécution du travail.|  
 |**next_run_time**|**int**|Heure à laquelle la planification va lancer l'exécution du travail.|  
@@ -96,7 +99,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  Les paramètres de **sp_help_jobschedule** peut être utilisé uniquement dans certaines combinaisons. Si *id_de_la_planification* est spécifié, ni *job_id* ni *job_name* peut être spécifié. Dans le cas contraire, le *job_id* ou *job_name* paramètres peuvent être utilisés avec *nom_de_la_planification*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** . Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -105,7 +108,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Membres de **SQLAgentUserRole** peuvent uniquement afficher les propriétés des planifications de travaux dont ils sont propriétaires.  
   
@@ -151,9 +154,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

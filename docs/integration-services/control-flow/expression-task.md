@@ -1,5 +1,5 @@
 ---
-title: "Tâche d’expression | Documents Microsoft"
+title: "Expression, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be307c3568b28ecf30e590d32e02748e494caf4e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a2040034f97bc9ffb1007ac2344654e42b112a97
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expression-task"></a>Tâche d'expression
   La tâche d'expression crée et évalue les expressions qui définissent les valeurs des variables au moment de l'exécution, à l'aide du Générateur d'expressions. Lorsque vous modifiez la tâche, le [Expression Builder](../../integration-services/expressions/expression-builder.md) est lancé.  
@@ -37,11 +36,10 @@ ms.lasthandoff: 08/03/2017
   
  Pour obtenir des exemples d'utilisation des expressions pour définir des propriétés, consultez la section **Exemples d'expressions de propriété** dans [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Utiliser une expression dans un composant de flux de données](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
   
-

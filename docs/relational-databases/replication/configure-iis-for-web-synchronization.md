@@ -2,9 +2,12 @@
 title: Configurer IIS pour la synchronisation web | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: "88"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="configure-iis-for-web-synchronization"></a>Configurer IIS pour la synchronisation web
-  Les procédures de cette rubrique constituent la deuxième étape de la configuration de la synchronisation Web pour la réplication de fusion. Cette étape est réalisée après l'activation d'une publication pour la synchronisation Web. Le processus de configuration est présenté dans [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md). Après avoir terminé les procédures de cette rubrique, poursuivez par la troisième étape, qui est la configuration d'un abonnement pour qu'il utilise la synchronisation Web. Cette troisième étape est décrite dans les rubriques suivantes :  
+# <a name="configure-iis-for-web-synchronization"></a>Configurer IIS pour la synchronisation Web
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les procédures de cette rubrique constituent la deuxième étape de la configuration de la synchronisation web pour la réplication de fusion. Cette étape est réalisée après l'activation d'une publication pour la synchronisation Web. Le processus de configuration est présenté dans [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md). Après avoir terminé les procédures de cette rubrique, poursuivez par la troisième étape, qui est la configuration d'un abonnement pour qu'il utilise la synchronisation Web. Cette troisième étape est décrite dans les rubriques suivantes :  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Guide pratique pour configurer un abonnement qui utilise la synchronisation web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
@@ -360,7 +363,7 @@ ms.lasthandoff: 11/09/2017
   
     2.  Connectez-vous au serveur en mode de diagnostic. Si le certificat est installé correctement, la boîte de dialogue **Alerte de sécurité** ne s'affiche pas. Si cette boîte de dialogue s'affiche, l'Agent de fusion échoue quand il tente de se connecter à l'ordinateur exécutant IIS. Vous devez vérifier que le certificat pour le serveur auquel vous accédez a été ajouté au magasin de certificats sur l'Abonné en tant que certificat approuvé. Pour plus d'informations sur l'exportation de certificats, consultez la documentation d'IIS.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md)  
   
   

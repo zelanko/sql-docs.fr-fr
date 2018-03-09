@@ -5,24 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1538ad973644dfa38fbed083327528a1973bcc4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Leçon 4-3 : Ajout de redirection de flux d’erreurs
 Comme nous l'avons démontré au cours de la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu'elle tente de traiter le fichier plat exemple endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
@@ -76,7 +78,7 @@ Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composa
   
     La sous-routine terminée doit se présenter comme le code ci-dessous.  
   
-    [Visual Basic]  
+    [Visual Basic]  
   
     ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -102,7 +104,7 @@ Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composa
   
 13. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de transformation de script** .  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 [Étape 4 : Ajout d'une destination de fichier plat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   

@@ -2,35 +2,40 @@
 title: "Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d6a9d104b6dccc05ca4f4a9c97118d252966a8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e9cd6be3119c4ab9a2332dda49e40a4cd558d844
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Le format natif Unicode est utile quand vous devez copier des informations d’une installation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre. L'utilisation du format natif pour les données qui ne sont pas de type caractère (char) permet de gagner du temps, puisque vous supprimez les conversions inutiles des types de données depuis et vers le format caractère. L'utilisation du format caractère Unicode pour toutes les données de type caractère évite la perte des caractères étendus lorsque vous transférez en bloc des données entre des serveurs utilisant des pages de codes différentes. Un fichier de données au format natif Unicode peut être lu par toutes les méthodes d'importation en bloc.  
   
  Le format natif Unicode est recommandé pour le transfert en bloc des données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un fichier de données qui contient des caractères étendus ou des caractères codés sur deux octets (DBCS). Pour les données qui ne sont pas de type caractère, le format natif Unicode utilise des types de données (bases de données) natifs. Pour les données de type caractère, comme [char](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [texte](../../t-sql/data-types/ntext-text-and-image-transact-sql.md), [varchar (max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nvarchar (max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)et [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md), le format natif Unicode utilise le format de données de type caractère Unicode.  
   
  Les données [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) qui sont stockées en tant que SQLVARIANT dans un fichier de données au format natif Unicode fonctionnent de la même manière que dans un fichier de données au format natif, sauf que les valeurs [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) et [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) sont converties en [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) et [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), ce qui double l’espace de stockage nécessaire pour les colonnes concernées. Les métadonnées d’origine sont conservées et les valeurs sont reconverties dans leur type de données d’origine ( [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) et [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) ) au moment où elles sont importées en bloc dans une colonne de table.  
  
- |Dans cette rubrique :|
+ |Dans cette rubrique :|
 |---|
 |[Options de commande pour le format natif Unicode](#command_options)|
 |[Exemples de conditions de test](#etc)<br />&emsp;&#9679;&emsp;[Exemple de table](#sample_table)<br />&emsp;&#9679;&emsp;[Exemple de fichier de format non XML](#nonxml_format_file)|
@@ -185,7 +190,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

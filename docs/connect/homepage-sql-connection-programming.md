@@ -2,7 +2,7 @@
 title: "Page d’accueil de la programmation du client SQL | Documents Microsoft"
 description: "Page Hub avec des liens annotés pour les téléchargements et la documentation de nombreuses combinaisons de langues et les systèmes d’exploitation, pour la connexion à SQL Server ou à la base de données SQL Azure."
 author: MightyPen
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -14,11 +14,11 @@ ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: dbbb2e06521b364de7d8de1b32869380fbc2772a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Page d’accueil de la programmation avec Microsoft SQL Server du client
 
@@ -57,7 +57,7 @@ Dans le tableau suivant, chaque image de la langue est un lien vers les détails
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp;[ ![Logo c#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework, du .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Logo Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![plus grand cpp][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp;[ ![Logo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -184,7 +184,7 @@ Le pilote de connexion Node.js pour SQL Server est implémenté dans JavaScript.
 
 ## <a name="odbc-for-c"></a>ODBC pour C++ 
 
-![Logo d’ODBC][image-ref-350-odbc]
+![Logo d’ODBC][image-ref-350-odbc] ![plus grand cpp][image-ref-322-cpp]
 
 Connectivité de base de données ouverte (ODBC) a été développée dans les années 1990, et elle est antérieure à .NET Framework. ODBC est conçu pour être indépendamment de tout système de base de données particulière et du système d’exploitation.
 
@@ -364,7 +364,6 @@ Cette section fournit des liens sur les autres options de développement. Ceux-c
 
 <!-- Image references. -->
 
-[image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an51.png
 [image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
 [image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
 [image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png

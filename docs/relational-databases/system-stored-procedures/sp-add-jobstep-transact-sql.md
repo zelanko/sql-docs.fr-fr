@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobstep (Transact-SQL) | Documents Microsoft
+title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
 - sp_add_jobstep
-dev_langs: TSQL
-helpviewer_keywords: sp_add_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-caps.latest.revision: "80"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0063371a17bc3386ee9c4867cb6480e47cddd7d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c757a3d30bae1e95a8bf7d862daf0e1f0cf6138b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,30 +66,30 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  Numéro d'identification du travail auquel ajouter l'étape. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  Nom du travail auquel ajouter l'étape. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@step_id =** ] *id_de_l*  
+ [ **@step_id =** ] *step_id*  
  Numéro d'identification de la séquence de l'étape de travail. Début de numéros d’identification à l’étape **1** et incrémentés sans intervalle. Si une étape est insérée dans une séquence existante, les numéros de cette séquence sont ajustés automatiquement. Une valeur est fournie si *id_de_l* n’est pas spécifié. *l’argument id_étape*est **int**, avec NULL comme valeur par défaut.  
   
- [  **@step_name =** ] **'***nom_de_l***'**  
+ [ **@step_name =** ] **'***step_name***'**  
  Nom de l'étape. *nom_de_l*est **sysname**, sans valeur par défaut.  
   
- [  **@subsystem =** ] **'***sous-système***'**  
+ [ **@subsystem =** ] **'***subsystem***'**  
  Sous-système utilisé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service de l’Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script actif<br /><br /> **\*\*Important \* \*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script actif<br /><br /> **\*\*Important\*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Commande du système d'exécution ou programme exécutable|  
 |'**DISTRIBUTION**'|Travail de l'Agent de distribution de réplication|  
-|'**INSTANTANÉ**'|Travail de l'Agent d'instantané de réplication|  
+|'**SNAPSHOT**'|Travail de l'Agent d'instantané de réplication|  
 |'**LOGREADER**'|Travail de l'Agent de lecture du journal de réplications|  
 |'**FUSION**'|Travail de l'Agent de fusion de réplication|  
 |'**QueueReader**'|Travail de l'Agent de lecture de la file d'attente de réplication|  
@@ -94,30 +97,30 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ANALYSISCOMMAND**'|Commande Analysis Services (XMLA).|  
 |'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Exécution du package|  
 |'**PowerShell**'|script PowerShell|  
-|'**TSQL**' (valeur par défaut)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
+|'**TSQL**' (valeur par défaut)|[!INCLUDE[tsql](../../includes/tsql-md.md)] instruction|  
   
- [  **@command=** ] **'***commande***'**  
+ [ **@command=** ] **'***command***'**  
  Les commandes à exécuter par **SQLServerAgent** via *sous-système*. *commande* est **nvarchar (max)**, avec NULL comme valeur par défaut. L'Agent SQL Server effectue une substitution de jetons qui offre la même souplesse que les variables lorsque vous écrivez des logiciels.  
   
 > [!IMPORTANT]  
->  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sans quoi les étapes de travail échoue. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
+>  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sans quoi les étapes de travail échoue. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Par exemple :  
 >   
 >  `$(ESCAPE_`*nom de la macro*`(DATE))`  
   
  Pour plus d’informations sur ces jetons et de mise à jour des étapes de travail pour utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](http://msdn.microsoft.com/library/105bbb66-0ade-4b46-b8e4-f849e5fc4d43).  
   
 > [!IMPORTANT]  
->  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**et **WMI(***propriété***)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
+>  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(***propriété***)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 >  Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
  [  **@additional_parameters=** ] **'***paramètres***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*paramètres* est **ntext**, avec NULL comme valeur par défaut.  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *paramètres* est **ntext**, avec NULL comme valeur par défaut.  
   
  [  **@cmdexec_success_code =** ] *code*  
  La valeur retournée par une **CmdExec** commande du sous-système pour indiquer que *commande* exécutée avec succès. *code*est **int**, avec une valeur par défaut **0**.  
   
- [  **@on_success_action=** ] *action_succès*  
+ [ **@on_success_action=** ] *success_action*  
  Action à effectuer si l'étape est exécutée correctement. *action_succès*est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description (action)|  
@@ -127,10 +130,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Passez à l'étape suivante|  
 |**4**|Passez à l’étape *id_étape_succès*|  
   
- [  **@on_success_step_id =** ] *id_étape_succès*  
+ [ **@on_success_step_id =** ] *success_step_id*  
  ID de l’étape du travail à exécuter si l’étape réussit et *action_succès*est **4**. *id_étape_succès*est **int**, avec une valeur par défaut **0**.  
   
- [  **@on_fail_action=** ] *action_échec*  
+ [ **@on_fail_action=** ] *fail_action*  
  L’action à exécuter si l’étape échoue. *action_échec*est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description (action)|  
@@ -140,28 +143,28 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Passez à l'étape suivante|  
 |**4**|Passez à l’étape *id_étape_échec*|  
   
- [  **@on_fail_step_id=** ] *id_étape_échec*  
+ [ **@on_fail_step_id=** ] *fail_step_id*  
  ID de l’étape du travail à exécuter si l’étape échoue et *action_échec*est **4**. *id_étape_échec*est **int**, avec une valeur par défaut **0**.  
   
- [  **@server =**] **'***server***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*server*est **nvarchar (30)**, avec NULL comme valeur par défaut.  
+ [ **@server =**] **'***server***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur*est **nvarchar (30)**, avec NULL comme valeur par défaut.  
   
  [  **@database_name=** ] **'***base de données***'**  
  Nom de la base de données dans laquelle l'étape [!INCLUDE[tsql](../../includes/tsql-md.md)] doit être exécutée. *base de données* est **sysname**, avec une valeur par défaut NULL, auquel cas la **master** base de données est utilisée. Les noms placés entre crochets ([ ]) ne sont pas autorisés. Pour une étape de travail ActiveX, la *base de données* est le nom de l’étape utilise le langage de script.  
   
- [  **@database_user_name=** ] **'***utilisateur***'**  
+ [ **@database_user_name=** ] **'***user***'**  
  Nom du compte d'utilisateur à utiliser lors de l'exécution d'une étape [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utilisateur* est **sysname**, avec NULL comme valeur par défaut. Lorsque *utilisateur* est NULL, l’étape est exécutée dans le contexte de l’utilisateur du propriétaire du travail sur *base de données*.  L'Agent SQL Server inclut ce paramètre uniquement si le propriétaire du travail est un sysadmin SQL Server. Dans ce cas, l'étape Transact-SQL donnée est exécutée dans le contexte du nom d'utilisateur SQL Server spécifié. Si le propriétaire du travail n’est pas un administrateur système SQL Server, puis l’étape Transact-SQL sera toujours être exécuté dans le contexte de la connexion qui possède ce travail, et le @database_user_name paramètre sera ignoré.  
   
- [  **@retry_attempts=** ] *retry_attempts*  
+ [ **@retry_attempts=** ] *retry_attempts*  
  Nombre de tentatives à effectuer si l'étape échoue. *retry_attempts*est **int**, avec une valeur par défaut **0**, indiquant aucune tentative de tentatives.  
   
- [  **@retry_interval=** ] *intervalle_entre_reprises*  
+ [ **@retry_interval=** ] *retry_interval*  
  Nombre de minutes s'écoulant entre chaque tentative de reprise. *intervalle_entre_reprises*est **int**, avec une valeur par défaut **0**, ce qui indique un **0**-intervalle minute.  
   
- [  **@os_run_priority =** ] *priorité_exécution*  
+ [ **@os_run_priority =** ] *run_priority*  
  Réservé.  
   
- [  **@output_file_name=** ] **'***nom_fichier***'**  
+ [ **@output_file_name=** ] **'***file_name***'**  
  Nom du fichier dans lequel est enregistré le résultat de l'étape. *file_name*est **nvarchar(200)**, avec NULL comme valeur par défaut. *file_name*peut inclure un ou plusieurs jetons répertoriés sous *commande*. Ce paramètre est valide uniquement avec les commandes en cours d’exécution le [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sous-systèmes.  
   
  [  **@flags=** ] *indicateurs*  
@@ -177,7 +180,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Écriture de toute la sortie dans l'historique des travaux|  
 |**64**|Création d'un événement Windows à utiliser comme signal pour l'étape de travail Cmd à abandonner|  
   
- [  **@proxy_id**  =] *proxy_id*  
+ [ **@proxy_id** = ] *proxy_id*  
  Numéro d’identification du proxy pour lequel l’étape de travail s’exécute en tant que. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *nom_utilisateur* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Agent.  
   
  [  **@proxy_name**  =] **'***proxy_name***'**  
@@ -187,7 +190,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_jobstep** doit être exécuté à partir de la **msdb** base de données.  
@@ -198,7 +201,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Un proxy peut être identifié par *proxy_name* ou *proxy_id*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -207,7 +210,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Le créateur de l'étape de travail doit disposer des droits d'accès au proxy pour cette étape. Membres de la **sysadmin** rôle de serveur fixe a accès à tous les serveurs proxy. Pour les autres utilisateurs, les droits d'accès à un proxy doivent être octroyés explicitement.  
   
@@ -233,11 +236,11 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Afficher ou modifier les travaux](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

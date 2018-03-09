@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
 - sysmail_add_profileaccount_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae8f7a99a01260eeee820fd85b4c3c7c61d6975
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7755f8285ad6a9afcab7a79ce1eecc777fd4e1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +54,13 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
  [  **@profile_name**  =] **'***profile_name***'**  
  Nom du profil auquel le compte est ajouté. *profile_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  Identificateur du compte à ajouter au profil. *account_id* est **int**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
   
  [  **@account_name**  =] **'***account_name***'**  
  Nom du compte à ajouter au profil. *account_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
   
- [  **@sequence_number**  =] *numéros de séquence*  
+ [ **@sequence_number** = ] *sequence_number*  
  Numéro de séquence du compte dans le profil. *numéros de séquence* est **int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -74,7 +77,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
  La procédure stockée **sysmail_add_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

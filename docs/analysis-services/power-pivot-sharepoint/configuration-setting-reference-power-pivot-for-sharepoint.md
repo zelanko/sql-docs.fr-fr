@@ -2,32 +2,30 @@
 title: "Paramètre de référence (PowerPivot pour SharePoint) de configuration | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Référence de paramètre de configuration (Power Pivot pour SharePoint)
-  Cette rubrique fournit une documentation de référence pour les paramètres de configuration utilisés par les applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une batterie de serveurs SharePoint. Si vous utilisez du script PowerShell pour configurer un serveur, ou si vous souhaitez rechercher des informations sur un paramètre spécifique, les informations de cette rubrique fournissent des descriptions détaillées.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique fournit une documentation de référence pour les paramètres de configuration utilisés par les applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une batterie de serveurs SharePoint. Si vous utilisez du script PowerShell pour configurer un serveur, ou si vous souhaitez rechercher des informations sur un paramètre spécifique, les informations de cette rubrique fournissent des descriptions détaillées.  
   
  Les paramètres de configuration sont définis pour chaque application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Dans une batterie de serveurs, vous pouvez créer plusieurs applications de service de façon à configurer des instances logiques indépendantes de la même instance de service physique. Les paramètres de configuration sont stockés dans la base de données d'application [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] créée pour chaque application de service que vous configurez.  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="LoadingData"></a> Délai d'attente du chargement de données  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont récupérées et chargées par les instances du serveur Analysis Services de la batterie. Selon le moment où le dernier accès aux données s'est produit et la façon dont il s'est produit, les données seront chargées à partir d'une bibliothèque de contenu ou d'un cache de fichiers local. Les données sont chargées en mémoire à chaque réception d'une requête ou d'une demande de traitement. Pour optimiser la disponibilité globale du serveur, vous pouvez définir une valeur de délai d'attente qui indique au serveur d'interrompre une demande de chargement de données si elle ne peut pas être exécutée dans le délai imparti.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides| Description|  
 |----------|-------------|------------------|-----------------|  
 |Délai d'attente du chargement de données|1800 (en secondes)|1 à 3600|Spécifie la durée pendant laquelle une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] attend une réponse d'une instance spécifique du serveur Analysis Services.<br /><br /> Par défaut, l'application de service attendra 30 minutes une charge utile de données en provenance de l'instance du service de moteur à laquelle elle a transféré une requête spécifique.<br /><br /> Si la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne peut pas être chargée dans ce laps de temps, le thread sera arrêté et un nouveau sera démarré.|  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  Chaque type de pool de connexions a des limites supérieures que vous pouvez configurer afin de garantir une utilisation optimale de la mémoire système pour la gestion des connexions.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides| Description|  
 |----------|-------------|------------------|-----------------|  
 |Délai d'attente du pool de connexions|1800 (en secondes)|1 à 3 600.|Ce paramètre s'applique aux pools de connexions de données.<br /><br /> Il spécifie la durée pendant laquelle une connexion inactive peut rester dans un pool de connexions avant d'être supprimée.<br /><br /> Par défaut, l'application de service supprime une connexion si celle-ci est inactive depuis plus de cinq minutes.|  
 |Taille maximale du pool de connexions utilisateur|1000|-1, 0 ou 1 à 10000.<br /><br /> -1 spécifie un nombre illimité de connexions inactives.<br /><br /> 0 signifie qu'aucune connexion inactive n'est conservée. Les nouvelles connexions à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doivent être créées à chaque fois.|Ce paramètre s'applique au nombre de connexions inactives dans tous les pools de connexions de données créés pour une instance spécifique d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Les pools de connexions individuels sont créés pour les combinaisons uniques d'un utilisateur SharePoint, de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et d'une instance du service. Si vous avez de nombreux utilisateurs qui accèdent à diverses sources de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , une augmentation de la taille du pool de connexions peut améliorer les performances du serveur.<br /><br /> S'il existe plus de 100 connexions inactives à une instance de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , les connexions devenues inactives le plus récemment sont déconnectées au lieu de rejoindre le pool.|  
@@ -74,14 +72,14 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="AllocationScheme"></a> Équilibrage de charge  
  L'une des fonctions qu'assure le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consiste à déterminer où les données Analysis Services seront chargées parmi les instances du service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] disponibles. Le paramètre **AllocationMethod** spécifie les critères selon lesquels une instance du service est sélectionnée.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides| Description|  
 |----------|-------------|------------------|-----------------|  
 |Méthode d'allocation|RoundRobin|Tourniquet (round robin)<br /><br /> Selon l'intégrité|Méthode d'allocation des requêtes de chargement parmi deux instances du serveur Analysis Services ou davantage.<br /><br /> Par défaut, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] alternera les demandes selon l'intégrité du serveur. La méthode selon l'intégrité alloue les requêtes au serveur où les ressources système disponibles sont les plus importantes, d'après la mémoire disponible et l'utilisation du processeur.<br /><br /> La méthode « tourniquet » (round robin) passe les demandes entre les serveurs disponibles dans un ordre séquentiel, indépendamment de la charge actuelle ou de l'intégrité du serveur.|  
   
 ##  <a name="DataRefresh"></a> Actualisation des données  
  Spécifiez la plage horaire qui définit la journée de travail normale ou classique dans votre organisation. Ces paramètres de configuration déterminent quand, après les heures d'ouverture, le traitement des données intervient pour les opérations d'actualisation des données. Le traitement après les heures d'ouverture peut commencer à l'heure où se termine la journée de travail. Le traitement après les heures d’ouverture est une option de planification pour les propriétaires de documents qui souhaitent actualiser une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avec les données transactionnelles qui ont été générées pendant les heures d’ouverture normales.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides| Description|  
 |----------|-------------|------------------|-----------------|  
 |Heure de début|4h00|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite inférieure d'une plage d'heures d'ouverture.|  
 |Heure de fin|08:00 PM|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite supérieure d'une plage d'heures d'ouverture.|  
@@ -92,11 +90,11 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="UsageData"></a> Collecte des données d'utilisation  
  Les rapports d’utilisation qui s’affichent dans le Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peuvent fournir des informations importantes à propos de l’utilisation des classeurs compatibles [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Les paramètres de configuration suivants contrôlent les aspects de la collecte des données d'utilisation pour les événements de serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] présentés par la suite dans des rapports d'utilisation ou d'activité.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides| Description|  
 |----------|-------------|------------------|-----------------|  
-|Intervalle de consignation des requêtes|300 (en secondes)|1 à n secondes, où n est un entier valide.|Pour faire en sorte que cette collecte des données d'utilisation ne consomme pas une part trop importante de la capacité de transfert de données de la batterie de serveurs, les statistiques sur les requêtes sont collectées sur chaque connexion et consignées dans les rapports comme un événement unique. L'intervalle de consignation des requêtes détermine la fréquence à laquelle un événement est signalé. Par défaut, les statistiques de requêtes font l'objet d'un rapport toutes les 5 minutes.<br /><br /> Parce que les connexions sont fermées immédiatement après l'envoi d'une requête, le système génère un grand nombre de connexions, même pour un seul utilisateur accédant à une seule source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . De ce fait, les pools de connexions sont créés pour chaque combinaison utilisateur/source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] afin qu'une connexion, une fois créée, puisse être réutilisée par le même utilisateur pour les mêmes données. Régulièrement, selon l'intervalle spécifié par le biais de ce paramètre de configuration, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée un rapport des données d'utilisation de chaque connexion du pool.<br /><br /> Plus la valeur de cet intervalle est élevée, moins le nombre d'événements journalisés est important. Toutefois, si vous choisissez une valeur trop élevée, vous risquez de perdre les données d'événement en cas de redémarrage du serveur ou de fermeture d'une connexion.<br /><br /> Abaisser cette valeur entraîne la journalisation d’un plus grand nombre d’événements, à une fréquence plus élevée, ce qui se traduit par l’ajout de davantage de données d’utilisation relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]au système de collecte de données de la base de données d’utilisation SharePoint.<br /><br /> Ainsi, nous vous recommandons généralement de ne pas modifier ce paramètre de configuration, hormis pour résoudre un problème spécifique (par exemple, si la base de données d’utilisation croît trop rapidement en raison des données d’utilisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ).|  
+|Intervalle de consignation des requêtes|300 (en secondes)|1 à n secondes, où n est un entier valide.|Pour faire en sorte que cette collecte des données d'utilisation ne consomme pas une part trop importante de la capacité de transfert de données de la batterie de serveurs, les statistiques sur les requêtes sont collectées sur chaque connexion et consignées dans les rapports comme un événement unique. L'intervalle de consignation des requêtes détermine la fréquence à laquelle un événement est signalé. Par défaut, les statistiques de requêtes font l'objet d'un rapport toutes les 5 minutes.<br /><br /> Parce que les connexions sont fermées immédiatement après l'envoi d'une requête, le système génère un grand nombre de connexions, même pour un seul utilisateur accédant à une seule source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . De ce fait, les pools de connexions sont créés pour chaque combinaison utilisateur/source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] afin qu'une connexion, une fois créée, puisse être réutilisée par le même utilisateur pour les mêmes données. Régulièrement, selon l'intervalle spécifié par le biais de ce paramètre de configuration, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée un rapport des données d'utilisation de chaque connexion du pool.<br /><br /> Plus la valeur de cet intervalle est élevée, moins le nombre d'événements journalisés est important. Toutefois, si vous choisissez une valeur trop élevée, vous risquez de perdre les données d'événement en cas de redémarrage du serveur ou de fermeture d'une connexion.<br /><br /> Abaisser cette valeur entraîne la journalisation d’un plus grand nombre d’événements, à une fréquence plus élevée, ce qui se traduit par l’ajout de davantage de données d’utilisation relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]au système de collecte de données de la base de données d’utilisation SharePoint.<br /><br /> Ainsi, nous vous recommandons généralement de ne pas modifier ce paramètre de configuration, hormis pour résoudre un problème spécifique (par exemple, si la base de données d’utilisation croît trop rapidement en raison des données d’utilisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ).|  
 |Historique des données d'utilisation|365 (en jours)|0 ou 1 à n jours, où n est un entier valide.<br /><br /> 0 signifie que l'historique est conservé indéfiniment, jamais supprimé.|Par défaut, les données d'utilisation sont conservées pendant un an dans la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Les enregistrements datant de plus d'un an sont supprimés de la base de données.<br /><br /> Un contrôle des données d'historique ayant expiré est effectué quotidiennement, lors de l'exécution du travail Traitement des données d'utilisation de Microsoft SharePoint Foundation. Le travail du minuteur lit ce paramètre et déclenche une commande de suppression des données de l'historique expiré dans la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|Limite supérieure de réponse triviale|500 (en millisecondes)|1 à n millisecondes, où n est un entier valide.|Par défaut, le seuil fixé pour les demandes triviales est d'une demi-seconde.<br /><br /> Les demandes triviales sont par exemple les tests Ping sur le serveur, les demandes qui concernent les métadonnées et les démarrages de sessions.|  
+|Limite supérieure de réponse triviale|500 (en millisecondes)|1 à n millisecondes, où n est un entier valide.|Par défaut, le seuil fixé pour les demandes triviales est d'une demi-seconde.<br /><br /> Les demandes triviales sont par exemple les tests Ping sur le serveur, les demandes qui concernent les métadonnées et les démarrages de sessions.|  
 |Limite supérieure de réponse rapide|1000 (en millisecondes)|1 à n millisecondes, où n est un entier valide.|Par défaut, le seuil fixé pour les demandes rapides est d'une seconde.<br /><br /> Les demandes rapides sont celles qui ont un très petit dataset ou qui concernent des métadonnées couvrant de grands jeux de membres.|  
 |Limite supérieure de réponse attendue|3000 (en millisecondes)|1 à n millisecondes, où n est un entier valide.|Par défaut, le seuil fixé pour les demandes attendues est de trois secondes.<br /><br /> Ce seuil définit la limite supérieure d'une durée de requête attendue.|  
 |Limite supérieure de réponse longue|10 000 (en millisecondes)|1 à n millisecondes, où n est un entier valide.|Par défaut, le seuil fixé pour les demandes longues est de dix secondes.<br /><br /> Ces demandes sont celles dont l'exécution dure plus longtemps que prévu, tout en restant dans une plage acceptable.|  

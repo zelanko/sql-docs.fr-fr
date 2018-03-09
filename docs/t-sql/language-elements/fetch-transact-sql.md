@@ -1,5 +1,5 @@
 ---
-title: FETCH (Transact-SQL) | Documents Microsoft
+title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FETCH
 - FETCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FETCH statement
 - cursors [SQL Server], fetching
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf0fc44e9be488c7c07cdb159270056bba0adc6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +72,7 @@ FETCH
  LAST  
  Renvoie la dernière ligne dans le curseur et la transforme en ligne courante.  
   
- ABSOLU {  *n* | @*nvar*}  
+ ABSOLUTE { *n*| @*nvar*}  
  Si  *n*  ou @*nvar* est un nombre positif, cela renvoie la ligne  *n*  depuis le début du curseur et transforme la ligne renvoyée à la nouvelle ligne actuelle. Si  *n*  ou @*nvar* est négatif, renvoie la ligne  *n*  avant la fin du curseur et transforme la ligne renvoyée de la nouvelle ligne actuelle. Si  *n*  ou @*nvar* est 0, aucune ligne n’est renvoyée. *n*doit être une constante entière et @*nvar* doit être **smallint**, **tinyint**, ou **int**.  
   
  RELATIF {  *n* | @*nvar*}  
@@ -79,13 +81,13 @@ FETCH
  GLOBAL  
  Spécifie que *cursor_name* fait référence à un curseur global.  
   
- *tous les autres cas*  
+ *cursor_name*  
  Nom du curseur ouvert grâce auquel s'effectue l'extraction. Si un global et un curseur local portent *cursor_name* comme leur nom, *cursor_name* au curseur global si GLOBAL est précisé et au curseur local si GLOBAL n’est pas spécifié.  
   
- @*nom_de_variable_de_curseur*  
+ @*cursor_variable_name*  
  Nom d'une variable de curseur qui fait référence au curseur ouvert à partir duquel l'extraction doit être effectuée.  
   
- INTO @*nom_variable*[ ,...*n*]  
+ INTO @*variable_name*[ ,...*n*]  
  Permet aux données issues des colonnes d'une extraction d'être placées dans des variables locales. Chaque variable de la liste (de gauche à droite) est associée à la colonne correspondante dans le jeu de résultats du curseur. Le type de données de chaque variable doit correspondre ou être une conversion implicite du type de données de la colonne du jeu de résultats correspondante. Le nombre de variables doit correspondre au nombre de colonnes dans la liste de sélection du curseur.  
   
 ## <a name="remarks"></a>Notes  
@@ -101,7 +103,7 @@ FETCH
   
  Le @@FETCH_STATUS fonction signale l’état de la dernière instruction FETCH. Les mêmes informations sont enregistrées dans la colonne fetch_status du curseur renvoyé par sp_describe_cursor. Ces informations d'état doivent être utilisées pour déterminer la validité des données renvoyées par une instruction FETCH avant de tenter toute opération sur ces données. Pour plus d’informations, consultez [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations FETCH reviennent par défaut à tous les utilisateurs valides.  
   
 ## <a name="examples"></a>Exemples  
@@ -213,9 +215,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fermer &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [DÉSALLOUER &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Ouvrir &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

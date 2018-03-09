@@ -2,15 +2,13 @@
 title: Ensemble de lignes MDSCHEMA_MEASURES | Documents Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_MEASURES
@@ -23,19 +21,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6e2e862d6ad09659a19ce60498e2f5f06810eb2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c48694e2ba54cd28612ce01418b4dd46f63b4a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemameasures-rowset"></a>Ensemble de lignes MDSCHEMA_MEASURES
-  Décrit chaque mesure dans un cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit chaque mesure dans un cube.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_MEASURES** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom du catalogue auquel appartient cette mesure. Valeur**NULL** si le fournisseur ne prend pas en charge les catalogues.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Nom du schéma auquel appartient cette mesure. **NULL** si le fournisseur ne prend pas en charge les schémas.|  
@@ -66,12 +64,12 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEASURE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEASURE_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**MEASURE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**MEASURE_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Facultatif.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**MEASURE_VISIBILITY**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 Visible<br /><br /> 2 Non visible|  
   

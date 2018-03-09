@@ -3,8 +3,11 @@ title: "Propriétés des catégories de travaux - Nouvelle catégorie de travaux
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26f1ff05b93b81aed61a7ee0ea0aa7beece47fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c4bbd74c2a547238305034ab9e4c9067762997c2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-categories-properties---new-job-category"></a>Propriétés des catégories de travaux - Nouvelle catégorie de travaux
-Affiche la liste des travaux contenus dans une catégorie de travaux ou dans l'ensemble des catégories de travaux, et vous permet d'ajouter une nouvelle catégorie de travaux.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Affiche la liste des travaux contenus dans une catégorie de travaux ou dans l’ensemble des catégories de travaux, et vous permet d’ajouter une nouvelle catégorie de travaux.  
   
 ## <a name="options"></a>Options  
 **Nom**  
@@ -40,6 +43,6 @@ Permet de changer la catégorie du travail en l'activant ou en la désactivant.
 **Travail**  
 Affiche le nom du travail.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des travaux](../../ssms/agent/create-jobs.md)  
   

@@ -2,9 +2,12 @@
 title: "Instantanés compressés | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f3bde8699bb77fd733604d81ddf65000cc55ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1cd65c06c8bc07a144f02cf0817302db1867b231
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="compressed-snapshots"></a>Instantanés compressés
-  Vous pouvez choisir de compresser des fichiers d'instantanés lorsque vous transférez des instantanés sur un réseau lent ou lorsque vous les enregistrez sur un support amovible et que l'instantané non compressé est trop volumineux pour le support. Dans ces cas-là, la compression est utile mais il faut savoir qu'elle augmente le temps nécessaire à la génération et à l'application de l'instantané.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez choisir de compresser des fichiers d’instantanés lorsque vous transférez des instantanés sur un réseau lent ou lorsque vous les enregistrez sur un support amovible et que l’instantané non compressé est trop volumineux pour le support. Dans ces cas-là, la compression est utile mais il faut savoir qu'elle augmente le temps nécessaire à la génération et à l'application de l'instantané.  
   
  Les fichiers d'instantanés compressés sont enregistrés dans le format de fichier CAB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , qui permet de compresser des fichiers de 2 Go au plus (si les fichiers d'instantanés ont une taille supérieure à 2 Go, leur compression est impossible). Pour compresser les fichiers, vous devez les écrire dans un autre dossier d'instantanés car les fichiers écrits dans le dossier d'instantanés par défaut ne peuvent pas être compressés. Pour plus d’informations sur les autres dossiers d’instantanés, consultez [Autres emplacements du dossier d’instantanés](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] de la réplication : [Configurer les propriétés d’instantané &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Initialiser un abonnement avec un instantané](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Options d’instantané](../../relational-databases/replication/snapshot-options.md)  
   

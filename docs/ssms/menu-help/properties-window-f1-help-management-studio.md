@@ -3,8 +3,11 @@ title: "Fenêtre Propriétés - Aide (F1) (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,16 +28,16 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12811563c7939e95294221a54546f09f36a9c10e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 868c16ecea52d24010ca2012756cfc00e7cdd15a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Fenêtre Propriétés - Aide (F1) (Management Studio)
-Utilisez la boîte de dialogue **Propriétés** pour afficher ou modifier les propriétés d’éléments sélectionnés. Vous pouvez également utiliser la fenêtre **Propriétés** pour afficher les propriétés d’un fichier, d’un projet et d’une solution. Pour accéder à la fenêtre **Propriétés** , dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Propriétés** pour afficher les propriétés d’éléments sélectionnés. Vous pouvez également utiliser la fenêtre **Propriétés** pour afficher les propriétés d’un fichier, d’un projet et d’une solution. Pour accéder à la fenêtre **Propriétés** , dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés** .  
   
 La fenêtre **Propriétés** affiche différents types de champs d’édition, en fonction des besoins d’une propriété particulière. Les propriétés affichées en gris sont en lecture seule.  
   
@@ -54,6 +57,6 @@ Affiche les propriétés d'un objet.
 **Volet Description**  
 Le volet Description apparaît dans la partie inférieure de la fenêtre **Propriétés** et affiche le type de la propriété ainsi qu’une description succincte de celle-ci. Vous pouvez activer et désactiver la description de la propriété via la commande **Description** située dans le menu contextuel.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Propriétés (fenêtre) dans SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
   

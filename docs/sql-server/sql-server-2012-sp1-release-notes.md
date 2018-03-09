@@ -1,26 +1,30 @@
 ---
 title: "Notes de publication de SQL Server 2012 SP1 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0e126678e921a47135ada143b1dba53a467df7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>Notes de publication de SQL Server 2012 SP1
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Ces notes de publication décrivent des problèmes connus que vous devez examiner avant d’installer ou de résoudre les problèmes de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. Ce document Notes de publication, uniquement disponible en ligne (absent du support d'installation), est régulièrement mis à jour.  
   
 ## <a name="bkmk_top"></a>Sommaire  
@@ -53,7 +57,7 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
   
 |Si la version actuellement installée est...|Vous souhaitez…|Téléchargez et installez...|  
 |-------------------------------------------|----------------------|---------------------------|  
-|**Installations 32 bits:**|||  
+|**Installations&32; bits :**|||  
 |Une version 32 bits de n’importe quelle édition de SQL Server 2012|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe à partir d’ [ici](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Une version 32 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe à partir d’ [ici](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Une version 32 bits de seulement le client et les outils de gestion pour SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe à partir d’ [ici](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -64,7 +68,7 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
 |Pas d’installation 32 bits de SQL Server 2012 Management Studio|Installer la version 32 bits de SQL Server 2012 Management Studio, y compris SP1|SQLManagementStudio_x86_ENU.exe à partir d’ [ici](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Pas de version 32 bits de SQL Server 2012 RTM Express|Install la version 32 bits de SQL Server 2012 Express, y compris SP1|SQLEXPR32_x86_ENU.exe à partir d' [ici](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Une installation 32 bits de **SQL Server 2008** ou de **SQL Server 2008 R2**|**Mise à niveau sur place** vers la version 32 bits de SQL Server 2012, y compris SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **et** SQLServer2012SP1-FullSlipstream-x86-ENU.box à partir d' [ici](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|**Installations 64 bits:**|||  
+|**Installations&64; bits :**|||  
 |Une version 64 bits d'une édition quelconque de SQL Server 2012|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe à partir d' [ici](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Version 64 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe à partir d' [ici](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Une version 64 bits uniquement du client et des outils de gestion de SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 64 bits de SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe à partir d' [ici](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -179,7 +183,7 @@ Précédemment, DACFx ne conservait pas l'état (WITH CHECK / NOCHECK) des contr
   
 **Mises à jour de SqlPackage.exe (outil de ligne de commande DACFx)**  
   
--   Extraire DACPAC avec les données - Crée un fichier d'instantanés de base de données (.dacpac) à partir d'une Base de données SQL Windows Azure ou SQL Server active qui contient les données des tables d'utilisateur en plus du schéma de la base de données. Ces packages peuvent être publiés sur une nouvelle ou existante Base de données SQL Windows Azure ou SQL Server avec l'action Publier SqlPackage.exe. Les données contenues dans le package remplacent les données existantes dans la base de données cible.  
+-   Extraire DACPAC avec les données - Crée un fichier d'instantanés de base de données (.dacpac) à partir d'une Base de données SQL Windows Azure ou SQL Server active qui contient les données des tables d'utilisateur en plus du schéma de la base de données. Ces packages peuvent être publiés sur une nouvelle ou existante Microsoft Azure SQL Database ou SQL Server avec l'action Publier SqlPackage.exe. Les données contenues dans le package remplacent les données existantes dans la base de données cible.  
   
 -   Exporter BACPAC - Crée un fichier de sauvegarde logique (.bacpac) à partir d'une Base de données SQL Windows Azure ou SQL Server active qui contient le schéma de la base de données et les données utilisateur qui peuvent être utilisés pour migrer une base de données de la Base de données SQL Server sur site à la Base de données SQL Windows Azure. Les bases de données compatibles avec Azure peuvent être exportées et importées entre les versions prises en charge de SQL Server.  
   
@@ -200,7 +204,7 @@ Pour obtenir la liste complète des bogues et problèmes connus corrigés dans c
   
 [Sommaire](#bkmk_top)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Comment déterminer la version et l'édition de SQL Server](http://support.microsoft.com/kb/321185)  
 [Fonctionnalités prises en charge par les éditions de SQL Server 2014](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   

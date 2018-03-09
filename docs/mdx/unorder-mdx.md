@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: UNORDER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 84bdcc8bff38451389dffc2b98f0f66ebdd50e70
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2593c6f22915cbe5615f8d104b718fd4b3a7d6a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="unorder-mdx"></a>Unorder (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,12 +42,12 @@ Unorder(Set_Expression)
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **Unorder** fonction supprime tout classement appliqué aux tuples contenus dans le jeu par toute autre fonction ou instruction, telles que la [ordre](../mdx/order-mdx.md) (fonction). L’ordre des tuples dans le jeu retourné par le **Unorder** fonction est indéterminée.  
   
  Le **Unorder** fonction est utilisée comme indicateur de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour l’optimisation des requêtes pour le traitement de la série. À l’aide de l’ordre des tuples dans un jeu est sans importance pour un calcul ou une requête, le **Unorder** fonction peut améliorer les performances dans de tels cas. Par exemple, le [NonEmpty (MDX)](../mdx/nonempty-mdx.md) fonction il fonctionnera mieux lorsque le jeu fourni pour cette fonction n’est pas ordonné que lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit préserver l’ordre, bien qu’avec [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], le processeur de requêtes tente d’appliquer cette fonction automatiquement pour de nombreuses fonctions, telles que **somme** et **d’agrégation**. L’avantage de l’utilisation de **Unorder** n’est plus susceptible d’être notable sur les très grands jeux de comprenant des millions de tuples.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Le pseudo-code suivant présente la syntaxe employée pour cette fonction.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: Plat de Destination de fichier | Documents Microsoft
+title: Destination de fichier plat | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: f793d3da885afc7a0b344e3f020cf455fee130a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-destination"></a>Destination de fichier plat
   La destination de fichier plat écrit des données dans un fichier texte. Le fichier texte peut se présenter dans un format délimité, à largeur fixe, à largeur fixe avec séparateur de ligne ou en drapeau à droite.  
@@ -50,15 +49,15 @@ ms.lasthandoff: 08/17/2017
  Cette destination possède une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
 ## <a name="configuration-of-the-flat-file-destination"></a>Configuration de la destination de fichier plat  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des fichiers plats](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d’informations sur la définition des propriétés d’un composant de flux de données, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="flat-file-destination-editor-connection-manager-page"></a>Éditeur de destination de fichier plat (page Gestionnaire de connexions)
@@ -95,14 +94,13 @@ ms.lasthandoff: 08/17/2017
  Affichez la liste des colonnes de destination disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes de destination disponibles aux colonnes d'entrée.  
   
  **Colonne d'entrée**  
- Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez  **\<ignorer >** pour exclure la colonne de la sortie.  
+ Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez **\<ignorer>** pour exclure la colonne de la sortie.  
   
  **Colonne de destination**  
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Source de fichier plat](../../integration-services/data-flow/flat-file-source.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
   
-

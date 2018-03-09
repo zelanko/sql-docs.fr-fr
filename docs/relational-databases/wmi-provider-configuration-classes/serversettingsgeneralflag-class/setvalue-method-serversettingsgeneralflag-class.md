@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetValue Method (ServerSettingsGeneralFlag Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetValue Method (ServerSettingsGeneralFlag Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetValue method
+helpviewer_keywords:
+- SetValue method
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f127a655400330cb2f01e4beb31164baeb0bfbc0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca4811fd144dc27ab244e42e75a30ff86f6cd1d7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>Méthode SetValue (classe ServerSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Définit toutes les valeurs de l’indicateur référencé.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Définit toutes les valeurs de l'indicateur référencé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +50,7 @@ object.SetValue(Value)
   
 |Paramètre| Description|  
 |---------------|-----------------|  
-|*Valeur*|Valeur booléenne qui spécifie la valeur de l'indicateur.|  
+|*Value*|Valeur booléenne qui spécifie la valeur de l'indicateur.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

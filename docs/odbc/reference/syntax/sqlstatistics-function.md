@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0e4b82221c78572d24c28717edb0f3209f29ea6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-function"></a>Fonction SQLStatistics
 **Mise en conformité**  
@@ -82,7 +82,7 @@ SQLRETURN SQLStatistics(
  *Unique*  
  [Entrée] Type d’index : SQL_INDEX_UNIQUE ou SQL_INDEX_ALL.  
   
- *Réservé*  
+ *Reserved*  
  [Entrée] Indique l’importance des colonnes cardinalité et des PAGES dans le jeu de résultats. Les options suivantes affectent le retour des cardinalité et des PAGES uniquement des colonnes ; informations d’index sont retournées même si la cardinalité et des PAGES ne sont pas retournés.  
   
  SQL_ENSURE demande que le pilote de récupérer les statistiques. (Les pilotes qui sont conformes uniquement à la norme Open Group et ne prennent pas en charge les extensions ODBC pas sera en mesure de prendre en charge SQL_ENSURE.)  
@@ -95,7 +95,7 @@ SQLRETURN SQLStatistics(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLStatistics** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLStatistics** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -140,7 +140,7 @@ SQLRETURN SQLStatistics(
   
 |Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC VERSION 1.0)|1|Varchar|Nom du catalogue de la table à laquelle l’index ou statistique s’applique ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, il retourne une chaîne vide (« ») pour les tables qui n’ont pas de catalogues.|  
+|TABLE_CAT (ODBC VERSION 1.0)| 1|Varchar|Nom du catalogue de la table à laquelle l’index ou statistique s’applique ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, il retourne une chaîne vide (« ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma de la table à laquelle l’index ou statistique s’applique ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, il retourne une chaîne vide (« ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Nom de la table de la table à laquelle s’applique l’index ou statistiques.|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|Indique si l’index n’autorise pas les valeurs en double :<br /><br /> SQL_TRUE si les valeurs d’index peuvent être non uniques.<br /><br /> SQL_FALSE si les valeurs d’index doivent être uniques.<br /><br /> Valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  

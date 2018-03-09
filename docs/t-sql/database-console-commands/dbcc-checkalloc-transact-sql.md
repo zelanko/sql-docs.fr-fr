@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKALLOC
 - DBCC_CHECKALLOC_TSQL
 - CHECKALLOC
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC CHECKALLOC statement
 - checking database space allocation
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09d190a3a27344d60fe3861b87443165f39ac352
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ Vérifie la cohérence des structures d'allocation de l'espace disque pour une b
   
 ## <a name="syntax"></a>Syntaxe  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -107,7 +109,7 @@ DBCC CHECKALLOC vérifie l'allocation de toutes les pages de la base de données
 Si NO_INFOMSGS n'est pas spécifié, DBCC CHECKALLOC collecte les informations d'utilisation de l'espace pour tous les objets de la base de données. Cette information est imprimée ainsi que toutes les erreurs qui sont trouvent.
   
 > [!NOTE]  
->La fonctionnalité DBCC CHECKALLOC est incluse dans [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) et [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Il n'est donc pas nécessaire d'exécuter DBCC CHECKALLOC indépendamment de ces instructions.   DBCC CHECKALLOC ne vérifie pas les données FILESTREAM. FILESTREAM stocke les objets BLOB dans le système de fichiers.  
+> La fonctionnalité DBCC CHECKALLOC est incluse dans [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) et [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Il n'est donc pas nécessaire d'exécuter DBCC CHECKALLOC indépendamment de ces instructions.   DBCC CHECKALLOC ne vérifie pas les données FILESTREAM. FILESTREAM stocke les objets BLOB dans le système de fichiers.  
   
 ## <a name="internal-database-snapshot"></a>Instantané de base de données interne  
 DBCC CHECKALLOC utilise un instantané interne de la base de données pour assurer la cohérence transactionnelle nécessaire pour l'exécution de ces vérifications. S'il n'est pas possible de créer un instantané, ou si TABLOCK est spécifié, DBCC CHECKALLOC tente d'acquérir un verrou exclusif sur la base de données pour obtenir la cohérence nécessaire.
@@ -160,7 +162,7 @@ DBCC CHECKALLOC fournit aussi un résumé de l'allocation pour chaque index et p
   
 DBCC CHECKALLOC renvoie le jeu de résultats suivant (les valeurs peuvent varier), sauf lorsque ESTIMATEONLY ou NO_INFOMSGS est spécifié.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +224,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Lorsque ESTIMATEONLY est spécifié, DBCC CHECKALLOC retourne le jeu de résultats suivant.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  
@@ -232,7 +234,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’appartenance au rôle de serveur fixé sysadmin ou du rôle de base de données fixé db_owner.
   
 ## <a name="examples"></a>Exemples  

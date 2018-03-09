@@ -2,15 +2,13 @@
 title: "Contenu pour les modèles d’arbre de décision du modèle d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
   
 ##  <a name="bkmk_Top"></a> Présentation de la structure d'un modèle d’arbre de décision  
  Un modèle d’arbre de décision comprend un nœud parent unique qui représente le modèle et ses métadonnées. Sous le nœud parent se trouvent des arbres indépendants qui représentent les attributs prédictibles sélectionnés. Par exemple, si vous installez votre modèle d'arbre de décision pour prédire si les clients achèteront un produit et pour fournir des entrées correspondant au genre et au revenu, le modèle créera une arborescence unique pour l'attribut d'achat, avec de nombreuses branches en fonction des conditions liées au genre et au revenu.  
@@ -53,9 +52,9 @@ ms.lasthandoff: 11/17/2017
  L'algorithme MDT (Microsoft Decision Trees) ne permet pas d’avoir des types de données continues en tant qu’entrées ; par conséquent, si les colonnes ont un type de données numériques continues, les valeurs sont discrétisées. L'algorithme effectue sa propre discrétisation à l’endroit du fractionnement pour tous les attributs continus.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]choisit automatiquement une méthode de création de compartiments des attributs continus ; Toutefois, vous pouvez contrôler comment les valeurs continues dans les entrées en définissant le type de contenu de la colonne de structure d’exploration de données à **Discretized** , puis en définissant le <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propriété.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] choisit automatiquement une méthode de création de compartiments des attributs continus ; Toutefois, vous pouvez contrôler comment les valeurs continues dans les entrées en définissant le type de contenu de la colonne de structure d’exploration de données à **Discretized** , puis en définissant le <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propriété.  
   
- [Haut](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> Contenu d’un modèle d'arbre de décision  
  Cette section fournit des informations et des exemples liés uniquement aux colonnes du contenu du modèle d'exploration de données se rapportant aux modèles d’arbre de décision. Pour plus d’informations sur les colonnes à caractère général de l’ensemble de lignes de schéma et pour obtenir des explications sur la terminologie relative aux modèles d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -82,7 +81,7 @@ ms.lasthandoff: 11/17/2017
  NODE_TYPE  
  Dans les modèles d'arbre de décision, les types de nœud suivants sont créés :  
   
-|Type de nœud|Description|  
+|Type de nœud| Description|  
 |---------------|-----------------|  
 |1 (Modèle)|Nœud racine pour le modèle.|  
 |2 (Arbre)|Nœud parent pour les arbres de classification dans le modèle. Étiqueté **Tout**.|  
@@ -174,7 +173,7 @@ ms.lasthandoff: 11/17/2017
   
  Consultez [Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)pour obtenir des exemples d’extraction de ces statistiques.  
   
- [Haut](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ## <a name="example-of-decision-tree-structure"></a>Exemple de structure d’arbre de décision  
  Pour comprendre le mode de fonctionnement d’un arbre de décision, prenons comme exemple un scénario d'acheteur de vélo AdventureWorks. En supposant que l'attribut prédictible est représenté par les achats des clients, l'algorithme d'arbres de décision essaie de trouver une colonne de données, parmi toutes les entrées fournies, qui détecte le plus efficacement les clients qui risquent d'acheter un vélo et ceux pour qui cet achat est improbable. Par exemple, le modèle peut trouver que l’âge est le meilleur indicateur du comportement d'achat. Plus particulièrement que les clients de plus de 30 ans ont de fortes chances d’acheter un vélo, et qu'il est improbable que les autres clients fassent un achat. Dans ce scénario, le modèle crée un *fractionnement* sur l'attribut Age. Cela signifie que l'arborescence se divise en deux branches : une contenant les clients de plus de 30 ans, et l’autre les clients plus jeunes. Les nouvelles branches sont représentées dans la structure du modèle sous la forme de deux nouvelles arborescences intérieures (NODE_TYPE = 3).  
@@ -196,7 +195,7 @@ ms.lasthandoff: 11/17/2017
   
  Si l'attribut prédictible est un nombre continu, l'algorithme essaie de créer une formule de régression qui modélise la relation entre l'attribut prédictible et les entrées.  
   
- [Haut](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="NodeCaption"></a> Légende et description du nœud  
  Dans un modèle d'arbre de décision, la légende et la description du nœud contiennent des informations similaires. Toutefois, la description du nœud est plus complète et contient plus d'informations à mesure que vous vous rapprochez des nœuds terminaux. La légende et la description du nœud sont des chaînes localisées.  
@@ -214,9 +213,9 @@ ms.lasthandoff: 11/17/2017
  L'attribut représenté par le fragment XML peut être simple ou complexe. Un attribut simple contient le nom de la colonne du modèle, ainsi que la valeur de l’attribut. Si la colonne du modèle contient une table imbriquée, l'attribut de table imbriquée est représenté sous la forme d’une concaténation du nom de la table, de la valeur de clé et de l'attribut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, ainsi que les extensions permettant l'utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, avec les extensions pour prendre en charge l’utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
   
- [Haut](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribution du nœud pour les attributs discrets  
  Dans un modèle d'arbre de décision, la table NODE_DISTRIBUTION contient des statistiques utiles. Toutefois, le type de statistiques varie selon que l'arborescence prédit un attribut discret ou continu. Cette section explique la signification des statistiques de distribution du nœud pour les attributs discrets.  
@@ -263,7 +262,7 @@ ms.lasthandoff: 11/17/2017
   
  Parmi les types de l’énumération <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , les types suivants sont utilisés dans les arbres de classification.  
   
-|Type de valeur|Description|  
+|Type de valeur| Description|  
 |----------------|-----------------|  
 |1 (Manquante)|Indique un nombre, une probabilité ou d’autres statistiques en rapport avec les valeurs manquantes.|  
 |4 (Discrète)|Indique un nombre, une probabilité ou d’autres statistiques en rapport avec une valeur discrète ou discrétisée.|  
@@ -284,7 +283,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Si vous créez un modèle d'arbre de décision ayant des attributs prédictibles continus et discrets, vous verrez des scores complètement différents dans les nœuds (Tout) qui représentent chaque type d'arborescence. Chaque modèle doit être considéré indépendamment, et les méthodes utilisées pour calculer le score de la régression sont complètement différentes de celles utilisées pour calculer le score de la classification. Les valeurs de score de nœud ne peuvent pas être comparées.  
   
- [Haut](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_RegressionNodes"></a> Nœuds de régression dans un modèle d'arbre de décision  
  Si un modèle d'arbre de décision contient un attribut prédictible avec des données numériques continues, l'algorithme MDT (Microsoft Decision Trees) s'efforce de trouver des zones dans les données où la relation entre l'état prédit et les variables d'entrée est linéaire. Si l'algorithme parvient à trouver une relation linéaire, il crée une arborescence spéciale (NODE_TYPE = 25) qui représente une régression linéaire. Ces nœuds d’arbre de régression sont plus complexes que les nœuds qui représentent des valeurs discrètes.  
@@ -302,9 +301,9 @@ ms.lasthandoff: 11/17/2017
  Pour plus d’informations sur les nœuds de régression, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

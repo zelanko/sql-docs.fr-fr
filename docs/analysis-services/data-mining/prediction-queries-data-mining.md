@@ -2,31 +2,30 @@
 title: "Requêtes de prédiction (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
-  Un projet d'exploration de données type a pour objectif d'utiliser le modèle d'exploration de données pour faire des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un projet d'exploration de données type a pour objectif d'utiliser le modèle d'exploration de données pour faire des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  
   
  Fonctionnellement, il existe différents types de requêtes de prédiction prises en charge dans SQL Server, selon le type d'entrée de la requête :  
   
@@ -156,7 +155,7 @@ FROM
  Si votre fournisseur ne peut pas gérer d'ensembles de lignes hiérarchiques, vous pouvez aplatir les résultats en utilisant le mot clé FLATTEN dans la requête de prédiction. Pour plus d’informations et des exemples d’ensembles de lignes aplatis, consultez [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Requêtes de définition des données &#40;Exploration de données&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Contenu des requêtes &#40; exploration de données &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Requêtes de définition de données &#40; exploration de données &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: log_shipping_monitor_error_detail (Transact-SQL) | Documents Microsoft
+title: log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_error_detail_TSQL
 - log_shipping_monitor_error_detail
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_monitor_error_detail system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7a2797659e6f20192a87662700632c399f72763
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3f30aafc0d201903fab4a5d42e55c38669b70c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**éléments agent_id**|**uniqueidentifier**|ID principal pour la sauvegarde ou ID secondaire pour la copie ou la restauration.|  
+|**agent_id**|**uniqueidentifier**|ID principal pour la sauvegarde ou ID secondaire pour la copie ou la restauration.|  
 |**agent_type**|**tinyint**|Type d'opération de copie des journaux de transaction.<br /><br /> 0 = Sauvegarde.<br /><br /> 1 = Copie.<br /><br /> 2 = Restauration.|  
 |**session_id**|**int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
 |**database_name**|**sysname**|Nom de la base de données associée à cet enregistrement d'erreur. Base de données primaire pour la sauvegarde, base de données secondaire pour la restauration ou vide pour la copie.|  
-|**numéros de séquence**|**int**|Numéro incrémentiel indiquant l'ordre correct des informations dans le cas d'erreurs qui s'étendent sur plusieurs enregistrements.|  
+|**sequence_number**|**int**|Numéro incrémentiel indiquant l'ordre correct des informations dans le cas d'erreurs qui s'étendent sur plusieurs enregistrements.|  
 |**log_time**|**datetime**|Date et heure de création de l'enregistrement.|  
 |**log_time_utc**|**datetime**|Date et heure de création de l'enregistrement, exprimée en heure UTC.|  
-|**Message**|**nvarchar**|Texte du message.|  
+|**message**|**nvarchar**|Texte du message.|  
 |**source**|**nvarchar**|Source du message d'erreur ou de l'événement.|  
 |**help_url**|**nvarchar**|URL, si elle est disponible, qui permet de consulter des informations complémentaires à propos de l'erreur.|  
   
@@ -56,12 +59,12 @@ ms.lasthandoff: 11/17/2017
  Pour identifier une session d’agent, utilisez les colonnes **agent_id**, **agent_type**, et **session_id**. Trier par **log_time** pour voir les erreurs dans l’ordre dans lequel elles ont été consignées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_monitor_history_detail &#40; Transact-SQL &#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [Tables système &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [À propos de journaux de transaction &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [log_shipping_monitor_history_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

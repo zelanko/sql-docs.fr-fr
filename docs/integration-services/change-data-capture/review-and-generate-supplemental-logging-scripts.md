@@ -1,5 +1,5 @@
 ---
-title: "Examiner et générer des Scripts de journalisation supplémentaires | Documents Microsoft"
+title: "Examiner et générer des scripts de journalisation supplémentaires | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e9b3f2ea4c6484544663cb00c15db662da56ee05
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Examiner et générer des scripts de journalisation supplémentaires
   L’onglet **Scripts** permet d’exécuter ou de réexécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Lorsque vous exécutez des scripts de journalisation supplémentaires, la boîte de dialogue des informations d'identification Oracle pour l'exécution de script s'ouvre et vous permet de spécifier un nom d'utilisateur et un mot de passe Oracle valides. Pour plus d'informations sur la façon de fournir les informations d'identification Oracle appropriées, consultez [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- Vous pouvez également exécuter les scripts manuellement à l'aide de SQL*PLUS, si nécessaire.  
+ Vous pouvez également exécuter les scripts manuellement à l’aide de SQL\*PLUS, si nécessaire.  
   
 ### <a name="to-run-the-scripts-manually"></a>Pour exécuter les script manuellement  
   
@@ -61,9 +60,8 @@ ms.lasthandoff: 08/03/2017
   
 2.  Donnez un nom au fichier, puis cliquez sur **Enregistrer** pour enregistrer le fichier.  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment modifier les propriétés d’Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Informations d’identification Oracle pour l’exécution de Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Informations d’identification Oracle pour l’exécution d’un script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

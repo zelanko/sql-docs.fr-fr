@@ -1,5 +1,5 @@
 ---
-title: "Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle | Documents Microsoft"
+title: "Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 648e58e6b8f86648d1e3bf1d80ff02916c4276be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
   Quand vous travaillez dans le concepteur de flux de contrôle, la boîte à outils du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] énumère les tâches proposées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer le flux de contrôle d’un package. Pour plus d’informations sur la boîte à outils, consultez [Boîte à outils SSIS](../../integration-services/ssis-toolbox.md).  
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/26/2017
   
  Les procédures ci-dessous décrivent comment ajouter ou supprimer une tâche ou un conteneur dans le flux de contrôle d'un package.  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Ajouter une tâche ou un conteneur pour un flux de contrôle  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>Ajouter une tâche ou un conteneur à un flux de contrôle  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Supprimer une tâche ou un conteneur à partir d’un flux de contrôle  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Supprimer une tâche ou un conteneur d’un flux de contrôle  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -69,12 +68,12 @@ ms.lasthandoff: 09/26/2017
   
 3.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="set-the-properties-of-a-task-or-container"></a>Définir les propriétés d’une tâche ou un conteneur
+## <a name="set-the-properties-of-a-task-or-container"></a>Définir les propriétés d’une tâche ou d’un conteneur
 Vous pouvez définir la plupart des propriétés des tâches et des conteneurs à l’aide de la fenêtre **Propriétés** . Les seules exceptions sont les propriétés des collections de tâches et les propriétés trop complexes à définir dans la fenêtre **Propriétés** . Par exemple, vous ne pouvez pas configurer l’énumérateur utilisé par le conteneur de boucles Foreach dans la fenêtre **Propriétés** . Vous devez utiliser un éditeur de tâche ou de conteneur pour définir ces propriétés complexes. La plupart des éditeurs de tâche et de conteneur possèdent plusieurs nœuds contenant chacun des propriétés connexes. Le nom du nœud indique l'objet des propriétés contenues dans le nœud.  
   
  Les procédures suivantes décrivent comment définir les propriétés d’une tâche ou d’un conteneur en utilisant les fenêtres **Propriétés** ou l’éditeur de tâche ou de conteneur correspondant.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Définir les propriétés d’une tâche ou un conteneur avec la fenêtre Propriétés  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Définir les propriétés d’une tâche ou d’un conteneur à l’aide de la fenêtre Propriétés  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -89,11 +88,11 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
     > [!NOTE]  
     >  Vous pouvez définir les propriétés en tapant une valeur directement dans la zone de texte ou en sélectionnant une valeur dans une liste. Néanmoins, certaines propriétés sont plus complexes et disposent d'un éditeur de propriétés personnalisées. Pour définir la propriété, cliquez dans la zone de texte, puis sur le bouton Générer **(…)** pour ouvrir l’éditeur personnalisé.  
   
-6.  Si vous le souhaitez, créez des expressions de propriété afin de mettre à jour de manière dynamique les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, créez des expressions de propriété afin de mettre à jour de manière dynamique les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
 7.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Définir les propriétés d’une tâche ou un conteneur avec l’éditeur de tâche ou un conteneur  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Définir les propriétés d’une tâche ou d’un conteneur à l’aide de l’éditeur de tâche ou de conteneur  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -112,16 +111,15 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
   
 5.  Si l'éditeur de tâche ou de conteneur comporte plusieurs nœuds, cliquez sur celui qui contient la propriété à définir.  
   
-6.  Si vous le souhaitez, cliquez sur **Expressions** , puis dans la page **Expressions** , créez des expressions de propriété afin de mettre à jour dynamiquement les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, cliquez sur **Expressions** , puis dans la page **Expressions** , créez des expressions de propriété afin de mettre à jour dynamiquement les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
 7.  Mettez à jour la valeur de la propriété.  
   
 8.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Conteneurs Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   
-

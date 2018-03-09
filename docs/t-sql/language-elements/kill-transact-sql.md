@@ -1,5 +1,5 @@
 ---
-title: KILL (Transact-SQL) | Documents Microsoft
+title: KILL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KILL_TSQL
 - KILL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - WITH STATUSONLY option
 - terminating distributed transactions
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c05f03abc5bb03da332ba2ec28294ea7af3f9d1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a96601a65e413d4990e9acb77f49c4724bf7b85c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +72,7 @@ KILL 'session_id'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ID de session*  
+ *session ID*  
  ID de session du processus à interrompre. *ID de session* est un entier unique (**int**) affecté à chaque connexion utilisateur lors de la connexion est établie. La valeur de l'ID de session est liée à la connexion pendant la durée de la connexion. Lorsque la connexion se termine, la valeur entière est libérée et peut être réaffectée à une nouvelle connexion.  
 La requête suivante peut vous aider à identifier le `session_id` que vous souhaitez supprimer :  
  ```sql  
@@ -124,7 +126,7 @@ Utilisez @@SPID pour afficher la valeur d’ID de session pour la session active
   
  Le rapport d’état peut être obtenu en répétant la même instruction KILL *ID de session*|*UOW* instruction sans l’aide de l’option WITH STATUSONLY ; Toutefois, nous ne recommandons pas cette opération. Répéter un KILL *ID de session* instruction peut mettre fin à un nouveau processus si la restauration a été achevée et l’ID de session a été réaffecté à une nouvelle tâche avant l’exécution de la nouvelle instruction KILL. Ceci peut être évité en spécifiant WITH STATUSONLY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Requiert l’autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Requiert l’autorisation de supprimer la connexion de base de données. La connexion du principal au niveau du serveur a la connexion de base de données KILL.  
@@ -160,15 +162,15 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 
   
 ## <a name="see-also"></a>Voir aussi  
- [KILL STATS JOB &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
+ [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [ARRÊT &#40; Transact-SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
+ [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)   
- [Sys.dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [Sys.dm_exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [Sys.dm_tran_locks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

@@ -3,8 +3,11 @@ title: "Afficher les volets du Concepteur de requêtes et de vues (Visual Databa
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c0030d21dc3e2c73702d708964b57cec4fa08a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4ed95b7a25ccf553de9e37d12cef8d7d65436fc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools)
-Le Concepteur de requêtes et de vues est composé de quatre volets distincts : le volet Schéma, le volet Critères, le volet SQL et le volet Résultats. En général, lorsque vous ouvrez une vue ou créez une nouvelle requête, les quatre fenêtres s'ouvrent, mais si vous devez ouvrir l'une d'elles, vous pouvez le faire aussi longtemps que le Concepteur de requêtes et de vues est ouvert.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le Concepteur de requêtes et de vues est composé de quatre volets distincts : le volet Schéma, le volet Critères, le volet SQL et le volet Résultats. En général, lorsque vous ouvrez une vue ou créez une nouvelle requête, les quatre fenêtres s'ouvrent, mais si vous devez ouvrir l'une d'elles, vous pouvez le faire aussi longtemps que le Concepteur de requêtes et de vues est ouvert.  
   
 ### <a name="to-display-query-and-view-designer-panes"></a>Pour afficher les volets du Concepteur de requêtes et de vues  
   
@@ -36,7 +39,7 @@ Le Concepteur de requêtes et de vues est composé de quatre volets distincts : 
   
 2.  Dans le menu **Concepteur de requêtes** , pointez sur **Volet** et cliquez sur le nom du volet à ouvrir.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ouvrir le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   

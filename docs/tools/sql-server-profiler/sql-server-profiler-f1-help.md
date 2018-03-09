@@ -2,9 +2,12 @@
 title: "Boîtes de dialogue SQL Server Profiler | Documents Microsoft"
 ms.custom: 
 ms.date: 07/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -41,18 +44,18 @@ helpviewer_keywords:
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Boîtes de dialogue SQL Server Profiler
-Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft est un outil qui capture les événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un serveur. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème. Voici les commandes et les paramètres disponibles dans les boîtes de dialogue de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est un outil qui capture [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] événements à partir d’un serveur. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème. Voici les commandes et les paramètres disponibles dans les boîtes de dialogue de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propriétés de la trace
 ### <a name="general-tab"></a>Onglet Général
 Utilisez l’onglet **Général** de la boîte de dialogue **Propriétés de la trace** pour consulter ou spécifier les propriétés d’une trace.  
@@ -96,7 +99,7 @@ Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modè
 |**Utiliser comme modèle par défaut pour le type de serveur sélectionné**|Utilisez ce modèle par défaut pour les traces créées pour ce type de serveur.  
 
 ### <a name="edit-general-tab"></a>Modifier (onglet Général)
- Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
+ Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  
 |Élément| Description
 |---|---
 |**Sélectionnez le type de serveur**|Indiquez le type de serveur sur lequel ce modèle va être utilisé.  
@@ -209,13 +212,13 @@ La boîte de dialogue **Table de destination** vous permet de spécifier la tabl
 ## <a name="replay-configuration"></a>Configuration de la relecture
 ### <a name="basic-replay-options"></a>Options de relecture de base
 Dans la boîte de dialogue **Configuration de la relecture** , utilisez la page **Options de relecture de base** pour spécifier la manière de relire un fichier ou une table de trace.  
-Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace ou une table qui contient les événements appropriés pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](../../tools/sql-server-profiler/replay-requirements.md). Lorsque le fichier ou la table de trace est ouvert, dans le menu **Relire** , cliquez sur **Début**, puis connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez relire la trace.  
+Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace ou une table qui contient les événements appropriés pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](../../tools/sql-server-profiler/replay-requirements.md). Lorsque le fichier ou la table de trace est ouvert, dans le menu **Relire**, cliquez sur **Début**, puis connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez relire la trace.  
 |Élément| Description
 |---|---
 |**Serveur de relecture**|Affiche l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle se connecter pour la relecture.  
 |**Modifier...**|Affiche la boîte de dialogue **Se connecter au serveur** pour se connecter à un autre serveur.  
-|**Enregistrer dans le fichier** |Permet d'enregistrer les résultats de relecture dans un fichier. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de fichier standard, qui vous permet de spécifier l’emplacement où enregistrer le fichier.  
-|**Enregistrer dans la table**|Permet d'enregistrer les résultats de relecture dans une table. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l’emplacement où enregistrer la table.  
+|**Enregistrer dans le fichier** |Permet d'enregistrer les résultats de relecture dans un fichier. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Affiche la boîte de dialogue de fichier standard, où vous pouvez spécifier l’emplacement où enregistrer le fichier.  
+|**Enregistrer dans la table**|Permet d'enregistrer les résultats de relecture dans une table. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l'emplacement où enregistrer la table.  
 |**Nombre de threads de relecture**|Spécifiez le nombre de threads de relecture à utiliser simultanément. Plus ce nombre est important, plus la relecture consomme de ressources, mais plus elle est rapide.  
 |**Relire les événements selon leur ordre de suivi**|Permet de relire les événements de manière séquentielle. Utilisez cette option pour relire une trace pour un débogage.  
 |**Relire les événements en utilisant plusieurs threads** |Permet de relire les événements de manière simultanée. Cette option est plus rapide que la relecture séquentielle des événements, mais elle désactive le débogage. Les événements sont ordonnés à l'aide de leurs identificateurs de processus système (SPID).  
@@ -237,11 +240,11 @@ Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../../include
 |**Délai d'attente du moniteur de processus bloqués (s)**|Configure la fréquence à laquelle le moniteur de processus recherche les processus bloqués ou les processus de blocage.  
 ## <a name="find-dialog-box"></a>Rechercher (boîte de dialogue)
 Utilisez la boîte de dialogue **Rechercher** pour rechercher une trace de caractères ou de mots spécifiques. Pour annuler une recherche en cours, appuyez sur ÉCHAP.  
- Dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Edition **, cliquez sur** Rechercher **pour ouvrir cette boîte de dialogue dans**.  
+ Dans le menu **Edition**, cliquez sur **Rechercher** pour ouvrir cette boîte de dialogue dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 |Élément| Description
 |---|---
 |**Rechercher**|Entrez le texte à rechercher. La recherche retourne toute chaîne contenant la chaîne spécifiée. Par exemple, si vous recherchez "Completed", la chaîne "SQL:BatchCompleted" est retournée. Les caractères génériques (*, ?, etc.) ne sont pas pris en charge.  
-|**Rechercher dans la colonne**|Cliquez sur une colonne de données pour rechercher, ou cliquez sur  **\<toutes les colonnes >** pour rechercher toutes les colonnes de données dans la trace.  
+|**Rechercher dans la colonne**|Cliquez sur une colonne de données pour rechercher, ou cliquez sur ** \<toutes les colonnes >** pour rechercher toutes les colonnes de données dans la trace.  
 |**Respecter la casse**|Recherche du texte présentant la même casse que celui spécifié dans la zone **Rechercher** . Désactivez cette case à cocher pour rechercher dans la trace des correspondances avec les caractères indiqués mais sans distinction entre les majuscules et les minuscules.  
 |**Mot entier**|Restreint la recherche à des mots entiers. Décochez la case **Mot entier** pour rechercher des caractères spécifiques au sein d’un mot.  
 |**Suivant**|Recherche la correspondance suivante avec les caractères spécifiés dans la zone **Rechercher** .  
@@ -276,6 +279,6 @@ Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélecti
 
 ## <a name="see-also"></a>Voir aussi 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
-[Analyse des performances et surveillance de l’activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+[Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

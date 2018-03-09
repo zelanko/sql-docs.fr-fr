@@ -2,29 +2,32 @@
 title: "Vérification des propriétés de la Dimension et de Cube | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73dea5a137a6ae685d36f06a4e4497e976133819
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0913972ef2ca0b1c40c0e23d3d189a6149809cf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>Leçon 2-4 - examen des propriétés de Cube et Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Après avoir défini un cube, vous pouvez examiner les résultats en utilisant le Concepteur de cube. Dans la tâche suivante, vous examinez la structure du cube dans le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>Pour vérifier les propriétés d'un cube et des dimensions dans le Concepteur de cube  
@@ -64,7 +67,7 @@ Après avoir défini un cube, vous pouvez examiner les résultats en utilisant l
 10. Fermez l'onglet du code XML.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Déploiement d'un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Déploiement d’un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Explorer les données d'une dimension dans le Concepteur de dimensions](../analysis-services/multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  

@@ -2,13 +2,13 @@
 title: Invoke-ProcessASDatabase | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72c96cddc1d505906164aa3d634871ba0ae30072
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Effectue l’opération **Process** sur un **Database** spécifié avec un **ProcessType** ou **RefreshType** spécifique, selon le type de métadonnées sous-jacentes.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Effectue le **processus** opération sur un **base de données** avec un spécifique **ProcessType** ou **RefreshType** en fonction de la type de métadonnées sous-jacentes.  
   
  Utilisez **ProcessType** pour la base de données avec des métadonnées multidimensionnelles (y compris les bases de données tabulaires au niveau de compatibilité 1050, 1100 ou 1103).  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="description"></a>Description  
  L’applet de commande **Invoke-ProcessASDatabase** traite une base de données au niveau que vous spécifiez. Par exemple, pour les bases de données tabulaires au niveau de compatibilité 1200, le réglage de **RefreshType** sur **Full** remplace les données existantes par des nouvelles.  
   
- Le type de traitement (multidimensionnel) ou le type d’actualisation (tabulaire) est nécessaire et peut être spécifié avant ou après les paramètres de la base de données et du serveur :  
+ Le type de traitement (multidimensionnel) ou le type d’actualisation (tabulaire) est nécessaire et peut être spécifié avant ou après les paramètres de la base de données et du serveur :  
   
 -   Pour le traitement multidimensionnel, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
@@ -80,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?| 1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
@@ -91,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?| 1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  

@@ -2,10 +2,14 @@
 title: Serveurs distants | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>Serveurs distants
-  Les serveurs distants sont pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement pour des raisons de compatibilité descendante. Il est préférable d'utiliser plutôt des serveurs liés dans les nouvelles applications. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Les serveurs distants sont pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement pour des raisons de compatibilité descendante. Il est préférable d'utiliser plutôt des serveurs liés dans les nouvelles applications. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Une configuration de serveur distant permet à un client connecté à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’exécuter une procédure stockée sur une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans qu’il soit nécessaire d’établir une connexion distincte. Le serveur auquel le client est connecté accepte donc la demande du client et l'envoie au serveur distant, pour le compte du client. Le serveur distant traite la demande et renvoie les résultats au serveur d'origine, qui à son tour transmet les résultats au client. Lors de l'élaboration d'une configuration de serveur distant, la mise en œuvre de la sécurité doit être étudiée avec soin.  
   
@@ -60,7 +65,7 @@ ms.lasthandoff: 11/09/2017
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
 ### <a name="remote-server-security-example"></a>Exemple de sécurité de serveur distant  
- Prenons les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes : **serverSend** et **serverReceive**. **serverReceive** est configuré pour un mappage entre une connexion d’accès entrant du serveur **serverSend**, appelée **Sales_Mary**, et une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**, appelée **Alice**. Une autre connexion d’accès entrant de **serverSend**appelée **Joe**est mappée sur une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive***,* appelée **Joe**.  
+ Prenons les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes : **serverSend** et **serverReceive**. **serverReceive** est configuré pour un mappage entre une connexion d’accès entrant du serveur **serverSend**, appelée **Sales_Mary**, et une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**, appelée **Alice**. Une autre connexion d’accès entrant de **serverSend**, appelée **Joe** est mappée à une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**** appelée **Joe**.  
   
  L’exemple de code Transact-SQL suivant illustre la configuration du serveur `serverSend` en vue de l’exécution de RPC sur le serveur `serverReceive`.  
   
@@ -98,10 +103,10 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>Affichage des propriétés des serveurs locaux ou distants  
  Vous pouvez utiliser la procédure stockée étendue **xp_msver** pour consulter les attributs des serveurs locaux ou distants. Ces attributs comprennent le numéro de version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nombre de processeurs de l'ordinateur et leur type, ainsi que la version du système d'exploitation. À partir du serveur local, vous pouvez afficher les bases de données, les fichiers, les connexions et les outils d'un serveur distant. Pour plus d’informations, consultez [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
  [Configurer l'option de configuration de serveur remote access](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)  

@@ -1,11 +1,11 @@
 ---
-title: "Étape 3 : Test des Packages déployés | Documents Microsoft"
+title: "Étape 3 : Test des packages déployés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e51a4fb96520cd5a887fe27fb5eddd62062f4eae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Leçon 3-3-test des Packages déployés
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>Leçon 3-3 : Test des packages déployés
 Dans cette tâche, vous allez tester les packages que vous avez déployés vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Dans d'autres didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous avez exécuté des packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'environnement de développement pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], à l'aide de l'option **Démarrer le débogage** du menu **Débogage** . Vous allez cette fois exécuter les packages différemment.  
@@ -52,7 +51,7 @@ Les dossiers de niveau supérieur dans le dossier Packages stockés représenten
     > [!IMPORTANT]  
     > Si vous ne pouvez pas vous connecter à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], il est probable que le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne soit pas en cours d'exécution. Pour connaître l'état du service, cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur **Microsoft SQL Server**, sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**. Dans le volet gauche, cliquez sur **Services SQL Server**. Dans le volet droit, recherchez le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Démarrez le service, il n'est pas déjà en cours d'exécution.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]s’ouvre. Par défaut, la fenêtre de l'Explorateur d'objets est ouverte et placée dans le coin supérieur droit du studio. Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets** .  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] s'ouvre. Par défaut, la fenêtre de l'Explorateur d'objets est ouverte et placée dans le coin supérieur droit du studio. Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets** .  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>Pour exécuter les packages à l'aide de l'utilitaire d'exécution de package  
   
@@ -113,9 +112,8 @@ Les dossiers de niveau supérieur dans le dossier Packages stockés représenten
   
     La requête retourne 21 lignes de données. Le résultat retourné comprend les lignes provenant du fichier de données XML, orders.xml. Chaque ligne est une synthèse par pays/région ; la ligne répertorie le nom d'un pays/d'une région, le nombre de commandes par pays/région, ainsi que les dates des commandes les plus récentes et les plus anciennes.  
   
-## <a name="see-also"></a>Voir aussi  
-[Utilitaire DTExec](../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a> Voir aussi  
+[Utilitaire dtexec](../integration-services/packages/dtexec-utility.md)  
   
   
   
-

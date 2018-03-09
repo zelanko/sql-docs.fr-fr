@@ -2,10 +2,14 @@
 title: "Fichiers de format XML (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a644a346778191ed0e9d748fbf0418ab9ca07d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit un schéma XML qui définit la syntaxe des *fichiers de format XML* à utiliser pour l'importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les fichiers de format XML doivent respecter ce schéma, qui est défini en langage XSDL (XML Schema Definition Language). Les fichiers de format XML ne sont pris en charge que si les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés conjointement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Vous pouvez utiliser un fichier de format XML avec une commande **bcp**, une instruction BULK INSERT ou une instruction INSERT... Instruction SELECT \* FROM OPENROWSET(BULK...). La commande **bcp** vous permet de générer automatiquement un fichier de format XML pour une table. Pour plus d’informations, voir [bcp Utility](../../tools/bcp-utility.md).  
@@ -44,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu associé](#RelatedContent)  
+-   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="BenefitsOfXmlFFs"></a> Avantages des fichiers de format XML  
   
@@ -74,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Le composant \<RECORD> décrit les données telles qu’elles sont stockées dans le fichier de données.  
   
-     Chaque élément \<RECORD> contient un ensemble d’un ou de plusieurs éléments \<FIELD>. Ces éléments correspondent aux champs du fichier de données. La syntaxe de base est la suivante :  
+     Chaque élément \<RECORD> contient un ensemble d’un ou de plusieurs éléments \<FIELD>. Ces éléments correspondent aux champs du fichier de données. La syntaxe de base est la suivante :  
   
      \<RECORD>  
   
@@ -88,7 +93,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Le composant \<ROW> explique comment créer des lignes de données à partir d’un fichier de données quand les données du fichier sont importées dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Un élément \<ROW> contient un ensemble d’éléments \<COLUMN>. Ces éléments correspondent à des colonnes de table. La syntaxe de base est la suivante :  
+     Un élément \<ROW> contient un ensemble d’éléments \<COLUMN>. Ces éléments correspondent à des colonnes de table. La syntaxe de base est la suivante :  
   
      \<ROW>  
   
@@ -192,7 +197,7 @@ ms.lasthandoff: 11/09/2017
   
  [ MAX_LENGTH **="***m***"** ]  
   
- [ COLLATION **="***collationName***"** ]  
+ [ COLLATION **="***nom_classement***"** ]  
   
  [ TERMINATOR **="***terminator***"** ]  
   
@@ -202,16 +207,16 @@ ms.lasthandoff: 11/09/2017
   
 |Attribut FIELD|Description|Facultatif /<br /><br /> Requis|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID**="***fieldID***"**/> est mappé à \<COLUMN SOURCE**="***fieldID***"**/>|Requis|  
+|ID **="***fieldID***"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID**="***ID_champ***"**/> est mappé à \<COLUMN SOURCE**="***ID_champ***"**/>|Requis|  
 |xsi:type **="***fieldType***"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de l'instance de l'élément. La valeur de *fieldType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.|Obligatoire (selon le type de données)|  
 |LENGTH **="***n***"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> La valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |PREFIX_LENGTH **="***p***"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |MAX_LENGTH **="***m***"**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Ce paramètre est facultatif|  
 |COLLATION **="***collationName***"**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Ce paramètre est facultatif|  
-|TERMINATOR **= "***terminator***"**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
+|TERMINATOR **= "***terminateur***"**|Cet attribut spécifie la marque de fin d'un champ de données. La marque de fin peut être n'importe quel caractère. La marque de fin doit être un caractère unique ne faisant pas partie des données.<br /><br /> Par défaut, la marque de fin de champ est le caractère tabulation (représenté par \t). Pour représenter une marque de paragraphe, utilisez \r\n.|Utilisé uniquement avec un xsi:type de données caractères, qui nécessite cet attribut|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valeurs Xsi:type de l’élément \<FIELD>  
- La valeur xsi:type est une construction XML (utilisée comme un attribut) qui identifie le type de données d'une instance d'un élément. Pour plus d'informations sur l'utilisation de cette valeur, consultez « Placement de la valeur xsi:type dans un ensemble de données », plus loin dans cette section.  
+ La valeur xsi:type est une construction XML (utilisée comme un attribut) qui identifie le type de données d'une instance d'un élément. Pour plus d'informations sur l'utilisation de cette valeur, consultez « Placement de la valeur xsi:type dans un ensemble de données », plus loin dans cette section.  
   
  La valeur xsi:type de l’élément \<FIELD> prend en charge les types de données suivants.  
   
@@ -255,7 +260,7 @@ ms.lasthandoff: 11/09/2017
   
 |Attribut COLUMN|Description|Facultatif /<br /><br /> Requis|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> est mappé à \<FIELD ID**="***fieldID***"**/>|Requis|  
+|SOURCE **="***fieldID***"**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> \<COLUMN SOURCE**="***ID_champ***"**/> est mappé à \<FIELD ID**="***ID_champ***"**/>|Requis|  
 |NAME = "*columnName*"|Spécifie le nom de la colonne dans l'ensemble de lignes représenté par le fichier de format. Ce nom de colonne est utilisé pour identifier la colonne dans le jeu de résultats, et il ne doit pas nécessairement correspondre au nom de colonne utilisé dans la table cible.|Requis|  
 |xsi**:**type **="***ColumnType***"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau relatif à l’élément \<COLUMN> dans la section [Valeurs Xsi:type de l’élément &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Ce paramètre est facultatif|  
 |LENGTH **="***n***"**|Définit la longueur d'une instance d'un type de données à longueur fixe. LENGTH est utilisé uniquement lorsque xsi:type est un type de données string.<br /><br /> La valeur de *n* doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données string)|  
@@ -264,7 +269,7 @@ ms.lasthandoff: 11/09/2017
 |NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|Indique si une colonne peut prendre des valeurs NULL. Cet attribut est complètement indépendant de FIELDS. Cependant, si une colonne n'est pas NULLABLE et si le champ spécifie NULL (en ne spécifiant pas de valeur), une erreur d'exécution en résulte.<br /><br /> L'attribut NULLABLE est utilisé uniquement si vous effectuez une instruction SELECT FROM OPENROWSET(BULK...) ordinaire.|Facultatif (disponible pour n'importe quel type de données)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Valeurs Xsi:type de l’élément \<COLUMN>  
- La valeur xsi:type est une construction XML (utilisée comme un attribut) qui identifie le type de données d'une instance d'un élément. Pour plus d'informations sur l'utilisation de cette valeur, consultez « Placement de la valeur xsi:type dans un ensemble de données », plus loin dans cette section.  
+ La valeur xsi:type est une construction XML (utilisée comme un attribut) qui identifie le type de données d'une instance d'un élément. Pour plus d'informations sur l'utilisation de cette valeur, consultez « Placement de la valeur xsi:type dans un ensemble de données », plus loin dans cette section.  
   
  L’élément \<COLUMN> prend en charge les types de données SQL natifs, comme suit :  
   
@@ -543,7 +548,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 ###  <a name="AdditionalExamples"></a> Autres exemples  
- Les rubriques suivantes contiennent des exemples supplémentaires de fichiers de format non XML et de fichiers de format XML :  
+ Les rubriques suivantes contiennent des exemples supplémentaires de fichiers de format non XML et de fichiers de format XML :  
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
@@ -566,7 +571,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   

@@ -2,10 +2,14 @@
 title: Utiliser les tables inserted et deleted | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-dml
+ms.suite: sql
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4b9d0889e9e42fc76e1293fe011edbb118be055c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
-  Les instructions de déclenchement DML utilisent deux tables spéciales : la table deleted et la table inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Ces tables temporaires résidant en mémoire servent à tester les effets de certaines modifications de données et à définir des conditions pour les actions de déclencheur DML. Vous ne pouvez pas modifier directement les données contenues dans les tables ou effectuer des opérations DDL (Data Definition Language) sur les tables, telles que CREATE INDEX.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Les instructions de déclenchement DML utilisent deux tables spéciales : la table deleted et la table inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Ces tables temporaires résidant en mémoire servent à tester les effets de certaines modifications de données et à définir des conditions pour les actions de déclencheur DML. Vous ne pouvez pas modifier directement les données contenues dans les tables ou effectuer des opérations DDL (Data Definition Language) sur les tables, telles que CREATE INDEX.  
   
  Dans les déclencheurs DML, les tables inserted et deleted sont principalement utilisées pour exécuter les opérations suivantes :  
   
@@ -77,7 +82,7 @@ ms.lasthandoff: 11/09/2017
   
  Lorsqu'une instruction INSERT, UPDATE ou DELETE fait référence à une vue possédant un déclencheur INSTEAD OF, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] appelle le déclencheur au lieu d'effectuer une opération directe sur une table. Le déclencheur doit utiliser les informations présentées dans les tables inserted et deleted pour élaborer toute instruction nécessaire à l'implémentation de l'action requise dans les tables de base, même si le format des informations contenues dans les tables inserted et deleted conçues pour la vue diffère de celui des données stockées dans les tables de base.  
   
- Le format des tables inserted et deleted passées à un déclencheur INSTEAD OF défini sur une vue correspond à la liste de sélection de l'instruction SELECT définie pour la vue. Par exemple :  
+ Le format des tables inserted et deleted passées à un déclencheur INSTEAD OF défini sur une vue correspond à la liste de sélection de l'instruction SELECT définie pour la vue. Exemple :  
   
 ```  
 USE AdventureWorks2012;  

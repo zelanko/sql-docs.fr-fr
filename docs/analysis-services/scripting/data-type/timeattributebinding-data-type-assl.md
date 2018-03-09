@@ -2,15 +2,13 @@
 title: "Type de données TimeAttributeBinding (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: TimeAttributeBinding Data Type
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 291187fb730a416dbc8d48cb4a90f0f94b7bf808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4abc1f178961303526ff75ac110178106da5da00
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="timeattributebinding-data-type-assl"></a>Type de données TimeAttributeBinding (ASSL)
-  Définit un type de données dérivé représentant une liaison d'espace réservé pour les éléments de données créés (par exemple, les colonnes clés d'un attribut) dans une dimension de temps du serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé qui représente un « espace réservé » de liaison pour les éléments de données générées, tels que les colonnes clés d’un attribut, dans une dimension de temps du serveur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,17 +46,17 @@ ms.lasthandoff: 11/17/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|[Liaison](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|Types de données dérivés|Aucune|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
-|Éléments enfants|Aucune|  
+|Éléments parents|None|  
+|Éléments enfants|None|  
 |Éléments dérivés|Consultez [de liaison](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour plus d’informations sur la **liaison** type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la **liaison** type et la hiérarchie d’héritage de **liaison** types, consultez [Type de liaison de données &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
   
  Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et liaisons &#40; SSAS multidimensionnel &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

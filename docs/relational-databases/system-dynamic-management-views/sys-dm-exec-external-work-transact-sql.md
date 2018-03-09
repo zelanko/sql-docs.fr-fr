@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_work (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_EXTERNAL_WORK
 - DM_EXEC_EXTERNAL_WORK_TSQL
 - SYS.DM_EXEC_EXTERNAL_WORK_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_exec_external_work management view
 - dm_exec_external_work management view
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3287e4ae13d7ea06ab00197067ba856e601b9c7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfa5093bdd49caa95b36a948c103e27bbae1065c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecexternalwork-transact-sql"></a>Sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Retourne des informations sur la charge de travail par le processus de travail, sur chaque nœud de calcul.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |step_index|**int**|La demande de que l’exécution de ce processus de travail.|Consultez *step_index* dans [sys.dm_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|**int**|L’étape dans le plan DMS ce processus de travail est en cours d’exécution.|Consultez [sys.dm_exec_dms_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
 |compute_node_id|**int**|Le nœud le processus de travail est en cours d’exécution.|Consultez [sys.dm_exec_compute_nodes &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|Type|**nvarchar (60)**|Le type de travail externe.|« Fractionnement de fichiers »|  
+|type|**nvarchar(60)**|Le type de travail externe.|« Fractionnement de fichiers »|  
 |work_id|**int**|ID de la division réelle.|Supérieur ou égal à 0.|  
 |input_name|**nvarchar(4000)**|Nom de l’entrée à lire|Nom de fichier lors de l’utilisation de Hadoop.|  
 |read_location|**bigint**|Décalage ou de lire l’emplacement.|Offset du fichier à lire.|  

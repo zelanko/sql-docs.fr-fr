@@ -2,10 +2,14 @@
 title: "Agent de lecture de la file d’attente de réplication | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a0c0fcae1a5f2a63a40da76bfb3e676f03d96fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
-  L'Agent de lecture de la file d'attente de réplication est un fichier exécutable qui lit les messages stockés dans une file d'attente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une file d'attente de messages [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , puis qui applique ces messages au serveur de publication. L'Agent de lecture de la file d'attente est utilisé avec les publications transactionnelles et les publications d'instantané qui autorisent la mise à jour en attente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'Agent de lecture de la file d'attente de réplication est un fichier exécutable qui lit les messages stockés dans une file d'attente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une file d'attente de messages [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , puis qui applique ces messages au serveur de publication. L'Agent de lecture de la file d'attente est utilisé avec les publications transactionnelles et les publications d'instantané qui autorisent la mise à jour en attente.  
   
 > [!NOTE]  
 >  Les paramètres peuvent être spécifiés dans n'importe quel ordre. Lorsque les paramètres optionnels ne sont pas spécifiés, les valeurs prédéfinies basées sur le profil d'agent par défaut sont utilisées.  
@@ -125,10 +130,10 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  Spécifie comment les conflits de mise à jour en attente sont résolus. La valeur **1** indique que le serveur de publication remporte le conflit. Dans ce cas, la transaction en file d'attente actuellement en conflit est restaurée sur le serveur de publication et sur l'Abonné de mise à jour d'origine ; le traitement des transactions en file d'attente suivantes continue. La valeur **2** indique que l'Abonné remporte le conflit, et la transaction en file d'attente remplace les valeurs sur le serveur de publication. La valeur **3** indique que tout conflit provoquera la réinitialisation de l'Abonné ; le serveur de publication remporte le conflit, le traitement des transactions en file d'attente suivantes est terminé, et l'abonnement est réinitialisé. Le paramètre par défaut est **1** pour les publications transactionnelles et **3** pour les publications d'instantané.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour démarrer l'Agent de lecture de la file d'attente, exécutez **qrdrsvc.exe** à l'invite de commandes. Pour plus d'informations, consultez [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

@@ -2,25 +2,28 @@
 title: "Différences de fonctionnalités de machine learning entre les éditions de SQL Server | Documents Microsoft"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bd59eae3617b81d3368703eba7c25a615e6a52f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f4fd73dd213b004916fb99dcb95146221116da8e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>Différences de fonctionnalités de machine learning entre les éditions de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  Prise en charge pour l’apprentissage est disponible dans SQL Server 2016 et SQL Server 2017. Cet article répertorie les éditions qui prennent en charge la fonctionnalité, décrit les limitations supplémentaires qui s’appliquent dans les éditions spécifiques et répertorie les fonctionnalités disponibles uniquement dans certaines éditions.
 
@@ -110,7 +113,7 @@ Express Edition est soumis aux mêmes limitations que Standard Edition.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, consultez :
 
 + [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 + [Éditions et composants de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)

@@ -1,7 +1,7 @@
 ---
 title: Sys.stats (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba477c2bc30fdeccee1af448e953043f3c5d9d92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0650931e6a9c450409cd40b366a5e9fb6bf08771
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,26 +37,26 @@ ms.lasthandoff: 11/21/2017
   
  La vue de catalogue [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) fournit des informations statistiques pour chaque colonne dans la base de données. Pour plus d’informations sur les statistiques, consultez [statistiques](../../relational-databases/statistics/statistics.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de l'objet auquel ces statistiques appartiennent.|  
+|**object_id**|**Int**|ID de l'objet auquel ces statistiques appartiennent.|  
 |**nom**|**sysname**|Nom des statistiques. Unique dans l'objet.|  
-|**stats_id**|**int**|ID des statistiques. Unique dans l'objet.|  
+|**stats_id**|**Int**|ID des statistiques. Unique dans l'objet.<br /><br />Si les statistiques correspondent à un index, le *stats_id* valeur est identique à la *index_id* valeur dans le [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.|  
 |**auto_created**|**bit**|Indique si les statistiques ont été créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Les statistiques n'ont pas été créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Les statistiques ont été créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**user_created**|**bit**|Indique si les statistiques ont été créées par un utilisateur.<br /><br /> 0 = Les statistiques n'ont pas été créées par un utilisateur.<br /><br /> 1 = Les statistiques ont été créées par un utilisateur.|  
 |**no_recompute**|**bit**|Indique si les statistiques ont été créées avec la **NORECOMPUTE** option.<br /><br /> 0 = les statistiques n’ont pas été créés avec le **NORECOMPUTE** option.<br /><br /> 1 = les statistiques ont été créées avec la **NORECOMPUTE** option.|  
 |**has_filter**|**bit**|0 = Les statistiques n'ont pas de filtre et sont calculées sur toutes les lignes.<br /><br /> 1 = Les statistiques ont un filtre et sont calculées uniquement sur les lignes qui satisfont la définition de filtre.|  
 |**filter_definition**|**nvarchar(max)**|Expression pour le sous-ensemble de lignes inclus dans les statistiques filtrées.<br /><br /> NULL = Statistiques non filtrées.|  
-|**is_temporary**|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indiquez si les statistiques sont temporaires. Les statistiques temporaires prennent en charge les bases de données secondaires [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] qui sont activés pour un accès en lecture seule.<br /><br /> 0 = Les statistiques ne sont pas temporaires.<br /><br /> 1 = Les statistiques sont temporaires.|  
-|**is_incremental**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indiquez si les statistiques sont créées comme statistiques incrémentielles.<br /><br /> 0 = Les statistiques ne sont pas incrémentielles.<br /><br /> 1 = Les statistiques sont incrémentielles.|  
+|**is_temporary**|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indiquez si les statistiques sont temporaires. Les statistiques temporaires prennent en charge les bases de données secondaires [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] qui sont activés pour un accès en lecture seule.<br /><br /> 0 = Les statistiques ne sont pas temporaires.<br /><br /> 1 = Les statistiques sont temporaires.|  
+|**is_incremental**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indiquez si les statistiques sont créées comme statistiques incrémentielles.<br /><br /> 0 = Les statistiques ne sont pas incrémentielles.<br /><br /> 1 = Les statistiques sont incrémentielles.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants retournent toutes les statistiques et les colonnes de statistiques de la table `HumanResources.Employee`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT s.name AS statistics_name  
@@ -68,12 +68,16 @@ INNER JOIN sys.stats_columns AS sc
 INNER JOIN sys.columns AS c   
     ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue d’objets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
-  
-  
+ [Interrogation des catalogues système SQL Server FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Statistiques](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [Sys.dm_db_stats_histogram &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [Sys.stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ 
+
+ 

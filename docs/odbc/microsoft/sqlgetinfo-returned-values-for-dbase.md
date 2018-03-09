@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a073881ff2e298276fe2c9213bbf593106697f57
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dab32294edbe982817a03cc81c33d6623ff973ab
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo les valeurs retournées pour dBASE
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes est retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant la liste en langage C# defines **SQLGetInfo** dans les *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez la *de référence du programmeur ODBC*.  
@@ -91,7 +92,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DATA_SOURCE_READ_ONLY|« N » (Cela dépend de la source de données.)|  
 |SQL_DATABASE_NAME|Répertoire de base de données en cours|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|« DBASE »|  
+|SQL_DBMS_NAME|"DBASE"|  
 |SQL_DBMS_VER|Valeurs multiples|  
 |SQL_DDL_INDEX|Valeurs multiples|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -100,7 +101,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DRIVER_HENV|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_HLIB|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_HSTMT|Gérée par le Gestionnaire de pilotes.|  
-|SQL_DRIVER_NAME|« OdbcJt32.dll »|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|« 4.00.*nnnn*» ( *nnnn*  spécifie la date de la build)|  
 |SQL_DROP_ASSERTION|0|  
@@ -147,7 +148,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Valeurs multiples|  
-|MISE EN CONFORMITÉ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|À partir du Gestionnaire de pilotes|  
 |SQL_OJ_CAPABILITIES|Valeurs multiples|  
@@ -155,13 +156,13 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_OUTER_JOINS|"Y"|  
 |SQL_PROCEDURE_TERM|""|  
 |SQL_PROCEDURES|"N"|  
-|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED EN|  
+|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
 |SQL_SCHEMA_TERM|""|  
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|« DBASE »|  
+|SQL_SERVER_NAME|"DBASE"|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  

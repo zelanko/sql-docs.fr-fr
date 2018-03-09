@@ -2,29 +2,30 @@
 title: "Colonnes de données des événements de traitement des requêtes | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ed86f526dddfa50587407a8f77b167d0fed207c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1ef8b812aa362d42d8facd7d4620146ed3f917a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="query-processing-events-data-columns"></a>Colonnes de données des événements de traitement des requêtes
-  La catégorie d'événement Événements de traitement de requête contient les classes d'événements suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La catégorie d'événement Événements de traitement de requête contient les classes d'événements suivantes :  
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
 |------------------|--------------------|---------------------------|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/17/2017
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|EventSubclass|1|1|La sous-classe d'événements fournit des informations supplémentaires sur chaque classe d'événements.<br /><br /> 1 : Serialize Axes<br /><br /> 2 : Serialize Cells<br /><br /> 3 : Serialize SQL Rowset<br /><br /> 4 : Serialize Flattened Rowset|  
+|EventSubclass|1|1|La sous-classe d'événements fournit des informations supplémentaires sur chaque classe d'événements.<br /><br /> 1 : Serialize Axes<br /><br /> 2 : Serialize Cells<br /><br /> 3 : Serialize SQL Rowset<br /><br /> 4 : Serialize Flattened Rowset|  
 |CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
@@ -548,6 +549,6 @@ ms.lasthandoff: 11/17/2017
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Catégorie d'événements de traitement de requête](../../analysis-services/trace-events/query-processing-events-category.md)  
+ [Catégorie d’événements de traitement de requête](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

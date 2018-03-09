@@ -2,10 +2,14 @@
 title: "Alimenter des index de recherche en texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +27,20 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c1d56c9d50735bb3a97bbfc150359ae06941dc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
-  La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
   
 ##  <a name="types"></a> Types d’alimentation  
 Un index de recherche en texte intégral prend en charge les types d’alimentation suivants :
@@ -55,7 +60,7 @@ Pour créer un index de recherche en texte intégral sans le remplir immédiatem
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Exemple - Créer un index de recherche en texte intégral sans exécuter une alimentation complète  
  L'exemple ci-après crée un index de recherche en texte intégral sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` . Cet exemple utilise `WITH CHANGE_TRACKING OFF, NO POPULATION` pour différer l’alimentation complète initiale.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -74,7 +79,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Exemple - Exécuter une alimentation complète sur une table  
  L'exemple ci-après exécute une alimentation complète sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -107,7 +112,7 @@ Il existe deux types de suivi des modifications :
     **Exemple - Modifier un index de recherche en texte intégral pour qu’il utilise le suivi des modifications automatique**  
     L'exemple ci-après modifie l'index de recherche en texte intégral de la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` pour qu'il utilise le suivi des modifications avec alimentation automatique.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -127,7 +132,7 @@ Il existe deux types de suivi des modifications :
     **Exemple - Créer un index de recherche en texte intégral avec le suivi des modifications manuel**  
     L'exemple ci-après crée un index de recherche en texte intégral qui utilisera le suivi des modifications avec alimentation manuelle sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -141,7 +146,7 @@ Il existe deux types de suivi des modifications :
     **Exemple - Exécuter une alimentation manuelle**  
     L'exemple ci-après exécute une alimentation manuelle sur l'index de recherche en texte intégral faisant l'objet d'un suivi des modifications, sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  
@@ -224,7 +229,7 @@ Les parties variables du nom de fichier du journal d’analyse sont les suivante
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Créer et gérer des index de recherche en texte intégral](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

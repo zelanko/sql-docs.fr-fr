@@ -8,7 +8,7 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,24 +16,26 @@ f1_keywords:
 - external_libraries_TSQL
 - sys.external_libraries
 - sys.external_libraries_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.external_libraries catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.external_libraries catalog view
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: bb229022bcccfb9cdc8c419844d30335337575d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: c1e65db4ccb43dde92188e462b6e99414ee05f52
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysexternallibraries-transact-sql"></a>Sys.external_libraries (Transact-SQL)  
+# <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
 Prend en charge la gestion des bibliothèques de package liés à des runtimes externes tels que R ou Python.
 
-## <a name="sysexternallibraries"></a>Sys.external_libraries
+## <a name="sysexternallibraries"></a>sys.external_libraries
 
 Le sys.external_libraries de vue de catalogue répertorie une ligne pour chaque bibliothèque externe qui a été téléchargé dans la base de données.
 

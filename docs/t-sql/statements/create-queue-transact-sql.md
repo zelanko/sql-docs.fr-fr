@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE QUEUE
 - QUEUE
 - CREATE_QUEUE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE QUEUE statement
 - internal activation [Service Broker]
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,10 +83,10 @@ CREATE QUEUE <object>
  *database_name* (objet)  
  Nom de la base de données dans laquelle la file d'attente doit être créée. *database_name* doit spécifier le nom de la base de données existante. Lorsque *nom_base_de_données* n’est pas fourni, la file d’attente est créée dans la base de données actuelle.  
   
- *schema_name* (objet)  
+ *schema_name* (object)  
  Nom du schéma auquel la nouvelle file d'attente appartient. Le schéma par défaut est le schéma par défaut de l'utilisateur exécutant l'instruction. Si l’instruction CREATE QUEUE est exécutée par un membre du rôle serveur fixe sysadmin ou membre db_dbowner ou db_ddladmin base de données fixe dans la base de données spécifiée par *nom_base_de_données*, *nom_schéma* peut spécifier un schéma autre que celui associé au nom de la connexion actuelle. Dans le cas contraire, *schema_name* doit être le schéma par défaut pour l’utilisateur qui exécute l’instruction.  
   
- *nom_file_attente*  
+ *queue_name*  
  Nom de la file d'attente à créer. Ce nom doit respecter les règles définies pour les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  STATUS (File d'attente)  
@@ -105,16 +107,16 @@ CREATE QUEUE <object>
  Nom_procédure = \<procédure >  
  Spécifie le nom de la procédure stockée à démarrer pour traiter les messages dans cette file d'attente. Cette valeur doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name*(procédure)  
+ *database_name*(procedure)  
  Nom de la base de données contenant la procédure stockée.  
   
- *schema_name*(procédure)  
+ *schema_name*(procedure)  
  Nom du schéma qui contient la procédure stockée.  
   
- *nom_procédure*  
+ *procedure_name*  
  Est le nom de la procédure stockée.  
   
- Valeur de MAX_QUEUE_READERS =*max_readers*  
+ MAX_QUEUE_READERS =*max_readers*  
  Spécifie le nombre maximal d'instances de la procédure stockée d'activation lancées simultanément par la file d'attente. La valeur de *max_readers* doit être un nombre compris entre **0** et **32767**.  
   
  EXECUTE AS  
@@ -123,7 +125,7 @@ CREATE QUEUE <object>
  SELF  
  Spécifie que la procédure stockée s'exécute en tant qu'utilisateur actuel. (Le principal de la base de données exécutant cette instruction CREATE QUEUE.)  
   
- '*nom_utilisateur*'  
+ '*user_name*'  
  Nom de l'utilisateur sous lequel la procédure stockée s'exécute. Le *nom_utilisateur* le paramètre doit être valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisateur spécifié comme un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur. L’utilisateur actuel doit avoir l’autorisation IMPERSONATE pour la *nom_utilisateur* spécifié.  
   
  OWNER  
@@ -162,17 +164,17 @@ CREATE QUEUE <object>
 |conversation_group_id|**uniqueidentifier**|Identificateur du groupe de conversations auquel ce message appartient.|  
 |conversation_handle|**uniqueidentifier**|Descripteur de conversation dont ce message fait partie.|  
 |message_sequence_number|**bigint**|Numéro de séquence du message dans la conversation.|  
-|SERVICE_NAME|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|  
+|service_name|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|  
 |service_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
 |service_contract_name|**nvarchar (256)**|Nom du contrat suivi par la conversation.|  
 |service_contract_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
 |message_type_name|**nvarchar (256)**|Nom du type de message décrivant le message.|  
 |message_type_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
-|Validation|**NCHAR(2)**|Validation utilisée pour le message.<br /><br /> E=Vide<br /><br /> N=Aucune<br /><br /> X=XML|  
+|Validation|**nchar(2)**|Validation utilisée pour le message.<br /><br /> E=Vide<br /><br /> N=Aucune<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|Contenu du message.|  
 |message_id|**uniqueidentifier**|Identificateur unique du message.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'autorisation de création d'une file d'attente est accordée aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
   
  L'autorisation REFERENCES pour une file d'attente est accordée par défaut au propriétaire de la file d'attente, aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
@@ -230,10 +232,10 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [SUPPRIMER la file d’attente &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [RÉCEPTION &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

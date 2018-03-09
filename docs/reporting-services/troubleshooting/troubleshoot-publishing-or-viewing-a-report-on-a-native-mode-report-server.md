@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dd4ff7051815aeac8f38cedab29e5b7127f24b8a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2e25f72eddf16b1cbb868f0e944a803df0f40340
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Résolution des problèmes liés à la publication ou à l’affichage d’un rapport sur un serveur de rapports en mode natif
   
@@ -46,7 +44,7 @@ Vérifiez que l’URL du serveur de rapports correspond à l’adresse du serveu
   
 \<nom du serveur de rapports> inclut un trait de soulignement (_)  
   
-Si un rapport s'exécute sans erreurs, mais que les éléments de bascule ne fonctionnent pas (par exemple, rien ne se produit lorsque vous cliquez sur une icône (+) de développement), vérifiez le nom de l'ordinateur qui héberge le serveur de rapports. Si le nom de l'ordinateur contient un caractère de soulignement, les éléments de bascule ne fonctionnent pas. Il s'agit d'un problème connu. Il n'existe aucune possibilité pour contourner ce problème.   
+Si un rapport s'exécute sans erreurs, mais que les éléments de bascule ne fonctionnent pas (par exemple, rien ne se produit lorsque vous cliquez sur une icône (+) de développement), vérifiez le nom de l'ordinateur qui héberge le serveur de rapports. Si le nom de l'ordinateur contient un caractère de soulignement, les éléments de bascule ne fonctionnent pas. Il s'agit d'un problème connu. Il n’existe aucune possibilité pour contourner ce problème.   
   
 Pour exécuter des rapports avec des éléments de bascule, vous devez utiliser un ordinateur dont le nom ne contient pas de caractère de soulignement.  
   
@@ -59,10 +57,10 @@ Dans certaines circonstances, lorsque vous utilisez le Gestionnaire de rapports 
   
 Vérifiez que vous êtes autorisé à accéder aux dossiers qui contiennent les fichiers mis en cache.   
     
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Dépanner des problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

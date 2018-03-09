@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-date-and-interval-functions"></a>Fonctions d'heure, de date et d'intervalle
 Le tableau suivant répertorie les fonctions de date et heure sont incluses dans l’ensemble de la fonction scalaire ODBC. Une application peut déterminer les fonctions de date et heure sont pris en charge par un pilote en appelant **SQLGetInfo** avec un *type d’information* de SQL_TIMEDATE_FUNCTIONS.  
@@ -41,7 +41,7 @@ Le tableau suivant répertorie les fonctions de date et heure sont incluses dans
   
  Les CURRENT_DATE, CURRENT_TIME et CURRENT_TIMESTAMP heureDATE fonctions scalaires ont été ajoutés dans ODBC 3.0 pour les aligner avec SQL-92.  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |**(DE) CURRENT_DATE** (ODBC 3.0)|Retourne la date actuelle.|  
 |**CURRENT_TIME [(** *précision de l’heure* **)]** (ODBC version 3.0)|Retourne l'heure locale actuelle. Le *précision de l’heure* argument détermine la précision en secondes de la valeur retournée.|  

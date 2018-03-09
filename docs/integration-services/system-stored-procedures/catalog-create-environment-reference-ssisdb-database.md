@@ -1,5 +1,5 @@
 ---
-title: "Catalog.create_environment_reference (base de données SSISDB) | Documents Microsoft"
+title: "catalog.create_environment_reference (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 496136e8a0073ba93f003d8dfa539afb48d2c5dc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 46224cbe85784c146ee9f4b6122ac70c51dcfc5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,38 +41,38 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
- Nom du dossier du projet qui référence l'environnement. Le *nom_dossier* est **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nom du dossier du projet qui référence l'environnement. *folder_name* est de type **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Nom du projet qui référence l'environnement. Le *project_name* est **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nom du projet qui référence l'environnement. *project_name* est de type **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Nom de l'environnement référencé. Le *environment_name* est **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ Nom de l'environnement référencé. *environment_name* est de type **nvarchar(128)**.  
   
- [ @reference_location =] *reference_location*  
- Indique si l'environnement peut se trouver dans le même dossier que le projet (référence relative) ou dans un dossier différent (référence absolue). Utilisez la valeur `R` pour indiquer une référence relative. Utilisez la valeur `A` pour indiquer une référence absolue. Le *reference_location* est **char (1)**.  
+ [ @reference_location = ] *reference_location*  
+ Indique si l'environnement peut se trouver dans le même dossier que le projet (référence relative) ou dans un dossier différent (référence absolue). Utilisez la valeur `R` pour indiquer une référence relative. Utilisez la valeur `A` pour indiquer une référence absolue. *reference_location* est de type **char(1)**.  
   
- [ @environment_folder_name =] *environment_folder_name*  
- Nom du dossier dans lequel l'environnement référencé se trouve. Cette valeur est obligatoire pour les références absolues. Le *environment_folder_name* est **nvarchar (128)**.  
+ [ @environment_folder_name = ] *environment_folder_name*  
+ Nom du dossier dans lequel l'environnement référencé se trouve. Cette valeur est obligatoire pour les références absolues. *environment_folder_name* est de type **nvarchar(128)**.  
   
- [ @reference_id =] *reference_id*  
- Retourne l'identificateur unique de la nouvelle référence. Ce paramètre est facultatif. Le *reference_id* est **bigint**.  
+ [ @reference_id = ] *reference_id*  
+ Retourne l'identificateur unique de la nouvelle référence. Ce paramètre est facultatif. *reference_id* est de type **bigint**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur le projet, et autorisation READ sur l'environnement  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
@@ -84,10 +83,9 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 -   L'utilisateur n'a pas les autorisations appropriées  
   
--   Une référence absolue est spécifiée à l’aide de la `A` dans les *reference_location* paramètre, mais le nom du dossier n’a pas été spécifié avec la *environment_folder_name* paramètre.  
+-   Une référence absolue est spécifiée en utilisant le caractère `A` dans le paramètre *reference_location*, mais le nom du dossier n’a pas été spécifié avec le paramètre *environment_folder_name*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent qu'il réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et par dossier et peuvent faire référence aux environnements qui résident dans un dossier différent que le projet. Un projet peut référencer plusieurs environnements.  
   
   
-

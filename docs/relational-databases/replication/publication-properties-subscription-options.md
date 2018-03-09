@@ -2,27 +2,30 @@
 title: "Propriétés de la publication, Options d’abonnement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5272dd5ecda16685468431245c91b1c03c7296da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
-  La page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** vous permet d'afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication** vous permet d’afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  
   
 -   Propriétés qui s'appliquent à toutes les publications.  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
  Détermine si les modifications de données de l'abonné peuvent être immédiatement répliquées sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, consultez [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Autoriser les abonnements mis à jour en attente**  
- Détermine si les modifications de données de l'abonné peuvent être mises en file d'attente et répliquées ultérieurement sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, consultez [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+ Détermine si les modifications de données de l'abonné peuvent être mises en file d'attente et répliquées ultérieurement sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Signaler les conflits de manière centrale**  
  Détermine s'il est nécessaire de signaler les conflits de modifications de données uniquement sur le serveur de publication ou à la fois sur le serveur de publication et à l'abonné (nécessite l'option **Autoriser les abonnements mis à jour en attente**). Cette option est en lecture seule. Par défaut, elle a la valeur **True** pour les publications créées à l'aide de l'Assistant Nouvelle publication et ne peut être modifiée une fois la publication créée. Lorsque cette option a la valeur **True** , les conflits sont uniquement signalés sur le serveur de publication. Vous pouvez uniquement voir les conflits lors de leur signalement.  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/09/2017
  **Nombre maximal de processus simultanés**  
  Nombre maximal d'Agents de fusion pouvant s'exécuter simultanément (nécessite l'option **Limiter les processus simultanés**). Si le nombre d'agents en cours de synchronisation dépasse la limite maximale, ils sont placés en file d'attente jusqu'à ce que leur nombre soit inférieur au maximum.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

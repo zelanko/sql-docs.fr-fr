@@ -3,8 +3,11 @@ title: Personnaliser (page Commandes) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adcb678da9ce46a261aa288085339e820137d616
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fca3838ebce7827c6f44fbffe21f3ed05d17d024
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-commands-page"></a>Personnaliser (page Commandes)
-Cette boîte de dialogue vous permet d'ajouter des commandes à des barres d'outils et à des menus et d'en supprimer, ainsi que de modifier les images utilisées pour représenter les boutons des barres d'outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue vous permet d’ajouter des commandes à des barres d’outils et à des menus et d’en supprimer, ainsi que de changer les images utilisées pour représenter les boutons des barres d’outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
 **Catégories**  
@@ -42,6 +45,6 @@ Affiche la boîte de dialogue **Réorganiser les commandes** qui vous permet de 
 **Clavier**  
 Affiche la page **Clavier** de la boîte de dialogue **Options** pour vous permettre de spécifier des combinaisons de touches de raccourci pour les commandes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Personnaliser des menus et des touches de raccourci](../../ssms/customize-menus-and-shortcut-keys.md)  
   

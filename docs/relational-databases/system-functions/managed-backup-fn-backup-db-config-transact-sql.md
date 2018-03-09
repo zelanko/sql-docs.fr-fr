@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (Transact-SQL) | Documents Microsoft
+title: managed_backup.fn_backup_db_config (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_backup_db_config_TSQL
 - fn_backup_db_config
 - fn_backup_db_config_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf55a19a71c6c6cbd84f82f4fbbfa39b3f77f70
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d18a24bdf8021fd27df0ec51e4937e80ae9c0516
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
 ```  
   
@@ -62,14 +64,14 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |credential_name|SYSNAME|Nom des informations d'identification SQL utilisées pour authentifier le compte de stockage. Une valeur NULL indique qu'aucune information d'identification SQL n'a été définie.|  
 |retention_days|INT|Période de rétention actuelle, en jours. Une valeur NULL indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] n'a jamais été configurée pour cette base de données.|  
 |is_smart_backup_enabled|INT|Indique si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée pour cette base de données. Une valeur 1 indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée, et une valeur 0 indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est désactivée pour cette base de données.|  
-|storage_url|NVARCHAR (1024)|URL du compte de stockage.|  
-|Encryption_algorithm|NCHAR (20)|Retourne l'algorithme de chiffrement actuel à utiliser lors du chiffrement de la sauvegarde.|  
+|storage_url|NVARCHAR(1024)|URL du compte de stockage.|  
+|Encryption_algorithm|NCHAR(20)|Retourne l'algorithme de chiffrement actuel à utiliser lors du chiffrement de la sauvegarde.|  
 |Encryptor_type|NCHAR(15)|Retourne le paramètre de chiffreur : certificat ou clé asymétrique.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|Nom du certificat ou de la clé asymétrique.|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **db_backupoperator** rôle de base de données avec **ALTER ANY CREDENTIAL** autorisations. L’utilisateur ne doit pas être refusé **VIEW ANY DEFINITION** autorisations.  
   
 ## <a name="examples"></a>Exemples  

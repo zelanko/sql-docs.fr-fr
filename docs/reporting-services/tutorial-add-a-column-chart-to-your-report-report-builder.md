@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f3fccc743eba7809d368771c5e5d942ea954f25
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
@@ -52,7 +52,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
 ### <a name="to-create-a-chart-report"></a>Pour créer un rapport de graphique  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -306,10 +306,10 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 -    [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 
 -    [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

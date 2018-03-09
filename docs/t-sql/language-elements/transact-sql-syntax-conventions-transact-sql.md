@@ -8,11 +8,14 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: sql13.TSQLExpandPortal.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.TSQLExpandPortal.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conventions [SQL Server]
 - Applies to section in Transact-SQL topics
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7c4eb67190b5123296fbcffb3fac3f09e9ec2000
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,27 +51,27 @@ ms.lasthandoff: 11/18/2017
 |MAJUSCULES|Mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*italique*|Paramètres de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fournis par l'utilisateur.|  
 |**gras**|Noms de bases de données, de tables, de colonnes, d'index, de procédures stockées, d'utilitaires, de types de données et de textes à taper tel qu'indiqués.|  
-|**soulignement**|Indique que l'instruction est omise par la valeur par défaut appliquée lorsque la clause contient la valeur soulignée.|  
+|**underline**|Indique que l'instruction est omise par la valeur par défaut appliquée lorsque la clause contient la valeur soulignée.|  
 |&#124; (barre verticale)|Sépare les éléments de syntaxe placés entre crochets ou entre accolades. Vous ne pouvez utiliser qu'un seul de ces éléments.|  
 |`[ ]` (crochets)|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |{} (accolades)|Éléments de syntaxe obligatoires. Ne tapez pas les accolades.|  
-|[**,**...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
-|[...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des espaces.|  
+|[**,**...*n*]|Indique l’élément précédent peut se répéter  *n*  nombre de fois. Les occurrences sont séparées par des virgules.|  
+|[...*n*]|Indique l’élément précédent peut se répéter  *n*  nombre de fois. Les occurrences sont séparées par des espaces.|  
 |;|Terminateur d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Bien que le point-virgule ne soit pas requis pour la plupart des instructions dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il sera requis dans une version à venir.|  
-|\<étiquette > :: =|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est signalé par une étiquette encadrée de chevrons : \<étiquette >.<br /><br /> Un jeu est une collection d’expressions, par exemple \<jeu de regroupement > ; une liste est une collection de jeux, par exemple \<liste d’éléments composites >.|  
+|\<label> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est signalé par une étiquette encadrée de chevrons : \<étiquette >.<br /><br /> Un jeu est une collection d’expressions, par exemple \<jeu de regroupement > ; une liste est une collection de jeux, par exemple \<liste d’éléments composites >.|  
   
 ## <a name="multipart-names"></a>Noms à plusieurs composantes  
  Sauf indication contraire, toutes les références [!INCLUDE[tsql](../../includes/tsql-md.md)] au nom d'un objet de base de données peuvent prendre la forme d'un nom à quatre composantes, comme suit :  
   
- *nom_serveur* **.** [*nom_base_de_données*]**.** [*nom_schéma*]**.** *nom_objet*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***.** [*nom_schéma*]**.** *nom_objet*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***.** *nom_objet*  
+ | *schema_name***.***object_name*  
   
- *| nom_objet*  
+ *| object_name*  
   
- *nom_serveur*  
+ *server_name*  
  Spécifie un nom de serveur lié ou un nom de serveur distant.  
   
  *database_name*  
@@ -89,13 +92,13 @@ ms.lasthandoff: 11/18/2017
   
 |Format de la référence d'objet| Description|  
 |-----------------------------|-----------------|  
-|*serveur* **.** *base de données* **.** *schéma* **.** *objet*|Nom à quatre composantes.|  
-|*serveur* **.** *base de données* **...** *objet*|Le nom du schéma est omis.|  
-|*serveur* **...** *schéma* **.** *objet*|Le nom de la base de données est omis.|  
-|*serveur* **...**  *objet*|Les noms de la base de données et du schéma sont omis.|  
-|*base de données* **.** *schéma* **.** *objet*|Le nom du serveur est omis.|  
+|*server* **.** *database* **.** *schema* **.** *objet*|Nom à quatre composantes.|  
+|*server* **.** *base de données* **...** *objet*|Le nom du schéma est omis.|  
+|*server* **..** *schema* **.** *objet*|Le nom de la base de données est omis.|  
+|*server* **...** *object*|Les noms de la base de données et du schéma sont omis.|  
+|*database* **.** *schema* **.** *objet*|Le nom du serveur est omis.|  
 |*base de données* **...** *objet*|Les noms du serveur et du schéma sont omis.|  
-|*schéma* **.** *objet*|Les noms du serveur et de la base de données sont omis.|  
+|*schema* **.** *objet*|Les noms du serveur et de la base de données sont omis.|  
 |*objet*|Les noms du serveur, de la base de données et du schéma sont omis.|  
   
 ## <a name="code-example-conventions"></a>Conventions des exemples de code  
@@ -117,10 +120,10 @@ ms.lasthandoff: 11/18/2017
   
  Les constantes de chaîne de caractères Unicode avec la lettre du préfixe de nombreux exemples de code **N**. Sans le **N** préfixe, la chaîne est convertie en page de codes par défaut de la base de données. Cette page risque de ne pas reconnaître certains caractères.  
   
-## <a name="applies-to-references"></a>Informations de référence de type « S'applique à »  
- Le [!INCLUDE[tsql](../../includes/tsql-md.md)] référence inclut des rubriques relatives aux [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. En haut de chaque rubrique se trouve une section indiquant les produits qui prennent en charge le sujet de la rubrique. Si un produit est omis, c'est que la fonctionnalité décrite par la rubrique n'est pas disponible dans ce produit. Par exemple, les groupes de disponibilité ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Le **CREATE AVAILABILTY GROUP** rubrique indique qu’il s’applique à **SQL Server (SQL Server 2012 jusqu'à la version actuelle)** , car il ne s’applique pas aux [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+## <a name="applies-to-references"></a>Informations de référence de type « S'applique à »  
+ Le [!INCLUDE[tsql](../../includes/tsql-md.md)] référence inclut des articles relatifs aux [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Au début de chaque article est une section indiquant les produits qui prennent en charge le sujet de l’article. Si un produit est omis, la fonctionnalité décrite par l’article n’est pas disponible dans ce produit. Par exemple, les groupes de disponibilité ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Le **créer un groupe de disponibilité** article indique qu’il s’applique à **SQL Server (SQL Server 2012 jusqu'à la version actuelle)** , car il ne s’applique pas aux [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Dans certains cas, le sujet général de la rubrique peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données à relation contenant-contenu ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Le **CREATE USER** instruction peut être utilisée dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit, mais la **avec mot de passe** syntaxe ne peut pas être utilisée avec les versions antérieures. Dans ce cas, des sections **S'applique à** supplémentaires sont insérées dans les descriptions des arguments appropriés dans le corps de la rubrique.  
+ Dans certains cas, le sujet général de l’article peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données à relation contenant-contenu ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Le **CREATE USER** instruction peut être utilisée dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit, mais la **avec mot de passe** syntaxe ne peut pas être utilisée avec les versions antérieures. Dans ce cas, supplémentaire **s’applique à** sections sont insérées dans les descriptions des arguments appropriés dans le corps de l’article.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

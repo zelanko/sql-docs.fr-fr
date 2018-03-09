@@ -2,9 +2,12 @@
 title: "Utiliser le volet Détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdfc53f0a3e497e95a4c987531ebdff9d3fcb236
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Utiliser le volet Détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité
-  Cette rubrique explique comment utiliser le volet **Détails de l’Explorateur d’objets** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour surveiller et gérer des groupes de disponibilité Always On existants, des réplicas de disponibilité et des bases de données de disponibilité.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment utiliser le volet **Détails de l’Explorateur d’objets** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour surveiller et gérer des groupes de disponibilité Always On existants, des réplicas de disponibilité et des bases de données de disponibilité.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation du volet Détails de l’Explorateur d’objets, consultez [Volet Détails de l’Explorateur d’objets](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Dans l'Explorateur d'objets, connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous voulez surveiller un groupe de disponibilité, puis cliquez sur le nom du serveur pour développer son arborescence.  
   
-3.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
+3.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
 4.  Le volet **Détails de l'Explorateur d'objets** affiche chaque groupe de disponibilité pour lequel l'instance de serveur connectée héberge un réplica. Pour chaque groupe de disponibilité, la colonne **Instance de serveur (principal)** affiche le nom de l’instance de serveur qui héberge actuellement le réplica principal.  Pour afficher plus d'informations sur un groupe de disponibilité donné, sélectionnez-le dans l'Explorateur d'objets.  
   
@@ -145,7 +148,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Pour plus d’informations sur les compteurs de performances pour les bases de données de disponibilité, consultez [SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Afficher les propriétés d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   

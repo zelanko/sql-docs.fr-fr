@@ -2,15 +2,13 @@
 title: Ensemble de lignes DMSCHEMA_MINING_SERVICE_PARAMETERS | Documents Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_SERVICE_PARAMETERS
@@ -23,19 +21,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c84d263a312318be40c65c37a168bf11fdc97cfc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 497396bf0679afbabbebe9936ba6c5f443942bec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_SERVICE_PARAMETERS
-  Décrit les paramètres des algorithmes sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les paramètres des algorithmes sur le serveur.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DMSCHEMA_MINING_SERVICE_PARAMETERS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|Nom de l'algorithme.|  
 |**NOM_PARAMÈTRE**|**DBTYPE_WSTR**|Nom du paramètre.|  
@@ -53,8 +51,8 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**NOM_PARAMÈTRE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_PARAMÈTRE**|**DBTYPE_WSTR**|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma d’exploration de données](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

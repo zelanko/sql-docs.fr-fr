@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - EXCEPT_TSQL
 - INTERSECT
 - EXCEPT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - EXCEPT operator [Transact-SQL]
 - queries [SQL Server], comparing
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 3b78bf6f0c70b3c522c18ada72cacdec8de8c099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Jeu d’opérateurs - sauf et INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
- \<*query_specification*> | ( \< *query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  Spécification ou expression de requête qui retourne les données à comparer avec les données d'une autre spécification ou expression de requête. Les définitions des colonnes faisant partie d'une opération EXCEPT ou INTERSECT ne doivent pas forcément être identiques, mais doivent néanmoins être comparables par le biais d'une conversion implicite. Lorsque les types de données diffèrent, le type qui est utilisé pour effectuer la comparaison et de retourner des résultats est déterminé selon les règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
  Si les types sont les mêmes mais diffèrent en terme de précision, d'échelle ou de longueur, le résultat se détermine d'après les mêmes règles de combinaison d'expressions. Pour plus d’informations, consultez [Précision, échelle et longueur &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  

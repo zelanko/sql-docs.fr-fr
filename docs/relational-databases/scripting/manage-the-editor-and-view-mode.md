@@ -2,10 +2,14 @@
 title: "Gérer l’Éditeur et le mode d’affichage | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,19 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 20b9724db826018521d68f44e42447112921027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bc33a7d686cd91cb502ac37c0c1ab4ef267ff872
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gérer l'Éditeur et le mode d'affichage
-  L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’Éditeur offre plusieurs moyens de contrôler l’affichage du code.  
   
 ## <a name="changing-the-view-mode"></a>Changement du mode d'affichage  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un mode d’affichage appelé **Documents avec onglet**, qui permet d’ouvrir plusieurs éditeurs et documents en même temps et d’y accéder au moyen des onglets situés dans la partie supérieure de l’Éditeur. Vous pouvez également ouvrir l'environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dans le mode MD, dans lequel il est possible d'attacher les fenêtres sans les onglets, de les organiser, de les réduire, etc.  

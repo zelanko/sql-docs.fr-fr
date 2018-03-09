@@ -2,9 +2,12 @@
 title: "Storageboundinmb, élément (DTA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab0965888661501f8a9a9b0f31a7edd6cb7e3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB, élément (Assistant Paramétrage de base de données)
-  Spécifie l'espace maximal, en mégaoctets, pouvant être consommé par la recommandation de paramétrage de l'Assistant Paramétrage du moteur de base de données (jeu d'index et de partitions).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie l’espace maximal (en mégaoctets) qui peut être consommé par la recommandation de paramétrage de l’Assistant Paramétrage du moteur de base de données (index et le partitionnement du jeu).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Élément parent**|[Tuningoptions, élément & #40 ; DTA & #41 ;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucune|  
   
 ## <a name="remarks"></a>Notes  

@@ -2,27 +2,30 @@
 title: "Générer des filtres | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2aa276ac1c58809cb97ef0ce002de76db32e1fa3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: caab625c0f783290f1206c832a3243d498eae349
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="generate-filters"></a>Générer des filtres
-  La boîte de dialogue **Générer des filtres** permet de définir un filtre de lignes à appliquer sur une table lors d'une opération de publication de fusion. La réplication étend ensuite automatiquement le filtre aux autres tables associées par le biais de relations de clé étrangère. Par exemple, si vous définissez un filtre portant sur une table contenant des données de clients pour ne garder que les données portant sur les clients français, la réplication étend donc ce filtre aux tables retraçant les informations propres aux commandes et à leurs détails en relation avec des clients français.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La boîte de dialogue **Générer des filtres** permet de définir un filtre de lignes à appliquer sur une table lors d’une opération de publication de fusion. La réplication étend ensuite automatiquement le filtre aux autres tables associées, par le biais de relations de clé étrangère. Par exemple, si vous définissez un filtre portant sur une table contenant des données de clients pour ne garder que les données portant sur les clients français, la réplication étend donc ce filtre aux tables retraçant les informations propres aux commandes et à leurs détails en relation avec des clients français.  
   
 ## <a name="options"></a>Options  
  Cette boîte de dialogue permet d'initier un processus en trois étapes afin de créer un filtre de lignes portant sur une table. Le filtre ainsi créé est ensuite étendu aux tables possédant une relation à la table filtrée à travers leur clé primaire et leurs relations de clé étrangère. Prenons pour exemple trois tables nommées **Customer**, **SalesOrderHeader**et **SalesOrderDetail**. Les tables **Customer** et **SalesOrderHeader**possèdent une relation entre elles et une autre existe entre **SalesOrderHeader** et **SalesOrderDetail**. Si nous appliquons un filtre de lignes à **Customer**, la réplication étend ainsi ce filtre à **SalesOrderHeader** et à **SalesOrderDetail**.  
@@ -50,11 +53,11 @@ ms.lasthandoff: 11/09/2017
   
  Après l'analyse de l'instruction, la réplication procède à la création des filtres de jointure nécessaires. Si vous n'avez pas encore configuré le serveur de distribution pour le serveur de publication pour lequel cet Assistant est censé s'exécuter, un message vous invite alors à le configurer.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtres de jointure](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

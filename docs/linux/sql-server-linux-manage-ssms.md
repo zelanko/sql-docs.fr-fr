@@ -1,31 +1,31 @@
 ---
 title: "Utilisez SSMS pour gérer SQL Server sur Linux | Documents Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 57c13b89e4bb8410f40e4a75ed93b08fa9812722
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilisez SQL Server Management Studio sur Windows pour gérer SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cette rubrique présente les [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) et présente quelques tâches courantes. SSMS est une application Windows, par conséquent, utilisez SSMS lorsque vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.
+Cet article présente [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) et présente quelques tâches courantes. SSMS est une application Windows, par conséquent, utilisez SSMS lorsque vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) fait partie d’une suite d’outils SQL des offres Microsoft gratuitement pour vos besoins de développement et de gestion. SSMS est un environnement intégré pour accéder à configurer, gérer, administrer et développer tous les composants de SQL Server exécuté localement ou dans le cloud, Linux, Windows ou Docker sur macOS et de la base de données SQL Azure et Azure SQL Data Warehouse. SSMS associe un groupe d’outils graphiques avec un nombre d’éditeurs de script performants pour permettre aux développeurs et aux administrateurs de tous les niveaux de compétence accès à SQL Server.
 
@@ -97,4 +97,4 @@ Lorsqu’un volet est développé, le moniteur d’activité interroge l’insta
 - [Exporter et importer une base de données avec SSMS](sql-server-linux-migrate-ssms.md)
 - [Didacticiel : SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [Didacticiel : écriture d'instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Analyse des performances et surveillance de l’activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)
+- [Analyse des performances et surveillance de l'activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)

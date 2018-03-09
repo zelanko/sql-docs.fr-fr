@@ -1,27 +1,33 @@
 ---
 title: "Leçon 8. Restaurer une base de données sous la forme d’une nouvelle base de données à partir de la sauvegarde de journal | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2fccaf04b123ec7ba354ffabef8d21ee6c35845
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Leçon 8. Restaurer une base de données en tant que nouvelle base de données à partir de la sauvegarde de journal
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Dans cette leçon, vous allez restaurer la base de données AdventureWorks2014 en tant que nouvelle base de données à partir d’une sauvegarde de journal des transactions d’instantanés de fichiers.  
   
 Dans ce scénario, vous effectuez une restauration vers une instance de SQL Server sur une machine virtuelle différente à des fins d’analyse des activités et de création de rapports. La restauration vers une autre instance sur une autre machine virtuelle permet de déplacer la charge de travail vers une machine virtuelle dédiée et dimensionnée à cet effet, et dont les besoins en ressources n’affectent pas le système transactionnel.  

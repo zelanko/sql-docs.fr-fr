@@ -1,37 +1,37 @@
----
+﻿---
 title: "Gérer SQL Server sur Linux avec SSMS | Documents Microsoft"
 description: "Ce didacticiel montre comment utiliser SQL Server Management Studio sur Windows pour se connecter à SQL Server en cours d’exécution sur Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 9f774a7fde6a67bd5be6cd1bd395131c3c6ee0ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Utilisez SQL Server Management Studio (SSMS) sur Windows pour gérer SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cette rubrique montre comment utiliser [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) pour se connecter à SQL Server 2017 sur Linux. SSMS étant une application Windows, utilisez SSMS quand vous avez un ordinateur Windows qui peut se connecter à une instance SQL Server distante sur Linux.
+Cet article explique comment utiliser [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) pour se connecter à SQL Server 2017 sur Linux. SSMS étant une application Windows, utilisez SSMS quand vous avez un ordinateur Windows qui peut se connecter à une instance SQL Server distante sur Linux sur Linux.
 
-Une fois la connexion établie, vous lancez une simple requête Transact-SQL (T-SQL) pour vérifier la communication avec la base de données.
+Après vous être connecté, vous exécutez une requête Transact-SQL (T-SQL) simple pour vérifier la communication avec la base de données.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>Installez la dernière version de SQL Server Management Studio
 
-Lorsque vous travaillez avec SQL Server, vous devez toujours utiliser la dernière version de SQL Server Management Studio (SSMS). La dernière version de SSMS est continuellement mise à jour et optimisée. Elle est actuellement compatible avec SQL Server 2017 sur Linux. Pour télécharger et installer la version la plus récente, consultez [télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour rester à jour, la dernière version de SSMS vous avertit lorsqu'une nouvelle version est disponible au téléchargement.
+Lorsque vous travaillez avec SQL Server, vous devez toujours utiliser la dernière version de SQL Server Management Studio (SSMS). La dernière version de SSMS est continuellement mis à jour et optimisées et est actuellement compatible avec SQL Server 2017 Linux on. Pour télécharger et installer la version la plus récente, consultez [télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour rester à jour, la dernière version de SSMS vous invite lorsqu’il existe une nouvelle version disponible en téléchargement. 
 
 ## <a name="connect-to-sql-server-on-linux"></a>Se connecter à SQL Server sur Linux
 

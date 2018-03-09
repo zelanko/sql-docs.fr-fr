@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53e3c9e5da3240ec81b4cf64cc89361f0ef67926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>Sécurité et protection (réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contribuez à protéger les scénarios de réplication que vous déployez dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contre les attaques malveillantes et améliorez la sécurité de vos données.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  [Plus…](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![Petite icône Dossier de fichiers](../../../analysis-services/media/filefolder-small.png "Petite icône Dossier de fichiers") **Développement sécurisé**  
- [Modèle de sécurité de l’Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ [Modèle de sécurité de l'Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  ![Petite icône Dossier de fichiers](../../../analysis-services/media/filefolder-small.png "Petite icône Dossier de fichiers") **Opération sécurisée**  
  [Gérer les comptes de connexion et les mots de passe dans la réplication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Références techniques &#40;réplication&#41;](../../../relational-databases/replication/technical-reference-replication.md)  
   
   

@@ -2,15 +2,13 @@
 title: "Élément IsDefaultImage (XML) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 57419279e470e9ae5e3bf22a1527e4a889ae79be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc1b7b5bc0105a3328d14a97695779219fe91964
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="isdefaultimage-element-xml"></a>Élément IsDefaultImage (XML)
-  Indique qu'il est possible d'obtenir l'image par défaut de cette entité en parcourant cette relation jusqu'à l'autre table et en extrayant le membre ayant l'attribut IsDefaultImage.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Indique qu’il est possible d’obtenir l’image par défaut pour cette entité en parcourant cette relation à l’autre table et extrayant le membre qui a l’attribut IsDefaultImage.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,9 +51,9 @@ ms.lasthandoff: 11/17/2017
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour **RelationshipEndVisualizationProperties** éléments, le **IsDefaultImage** élément indique que l’image par défaut pour cette entité peut être obtenu en accédant à l’autre extrémité de cette relation. La valeur par défaut **false** n’indique aucune image par défaut doit être obtenu.  
   
   

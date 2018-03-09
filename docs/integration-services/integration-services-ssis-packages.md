@@ -1,11 +1,11 @@
 ---
-title: Packages Integration Services (SSIS) | Documents Microsoft
+title: Packages Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54d83a301d72577eadd7e042977b572c7f8f1a57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
   Un package est une collection organisée de connexions, d'éléments de flux de contrôle, d'éléments de flux de données, de gestionnaires d'événements, de variables, de paramètres et de configurations que vous assemblez à l'aide des outils de conception graphiques de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou que vous créez via un programme.  Vous enregistrez le package terminé dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou le système de fichiers, ou vous pouvez déployer le projet ssISnoversion sur le serveur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Le package est l'unité de travail qui est extraite, exécutée et enregistrée.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  Le schéma suivant illustre un package simple contenant un flux de contrôle avec une tâche de flux de données, qui contient à son tour un flux de données.  
   
- ![Un package avec un flux de contrôle et un flux de données](../integration-services/media/ssis-package.gif "un package avec un flux de contrôle et un flux de données")  
+ ![Package avec un flux de contrôle et un flux de données](../integration-services/media/ssis-package.gif "Package avec un flux de contrôle et un flux de données")  
   
  Après avoir créé le package de base, vous pouvez l'enrichir en y ajoutant des fonctionnalités avancées telles que la journalisation et des variables. Pour plus d'informations, consultez la section relative aux objets qui étendent les fonctionnalités des packages.  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/03/2017
  La configuration est enregistrée puis déployée avec le package lorsque celui-ci est installé sur un autre ordinateur. Lorsque vous installez le package, vous pouvez mettre à jour les valeurs de la configuration afin qu'il puisse être pris en charge dans un autre environnement. Pour plus d’informations, consultez [Créer des configurations de package](../integration-services/packages/create-package-configurations.md).  
   
 ### <a name="logging-and-log-providers"></a>Journalisation et modules fournisseurs d'informations  
- Un journal est une collection d'informations relatives au package, qui sont rassemblées lorsque celui-ci s'exécute. Par exemple, un journal peut indiquer l'heure de début et de fin de l'exécution d'un package. Un module fournisseur d'informations définit le type de destination et le format que le package et ses conteneurs et ses tâches peuvent utiliser pour consigner les informations d'exécution. Les journaux sont associés à un package, mais les tâches et les conteneurs figurant dans le package peuvent consigner des informations dans n'importe quel journal de package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend une série de modules fournisseurs d’informations intégrés qui facilitent la journalisation. Par exemple, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des modules fournisseurs d'informations pour les fichiers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les fichiers texte. Vous pouvez également créer des modules fournisseurs d'informations personnalisés et les utiliser pour la journalisation. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
+ Un journal est une collection d'informations relatives au package, qui sont rassemblées lorsque celui-ci s'exécute. Par exemple, un journal peut indiquer l'heure de début et de fin de l'exécution d'un package. Un module fournisseur d'informations définit le type de destination et le format que le package et ses conteneurs et ses tâches peuvent utiliser pour consigner les informations d'exécution. Les journaux sont associés à un package, mais les tâches et les conteneurs figurant dans le package peuvent consigner des informations dans n'importe quel journal de package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend une série de modules fournisseurs d’informations intégrés qui facilitent la journalisation. Par exemple, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des modules fournisseurs d'informations pour les fichiers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les fichiers texte. Vous pouvez également créer des modules fournisseurs d'informations personnalisés et les utiliser pour la journalisation. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
 ### <a name="variables"></a>Variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge les variables système et les variables définies par l’utilisateur. Les variables système fournissent des informations utiles sur les objets de package lors de l'exécution, tandis que les variables définies par l'utilisateur prennent en charge des scénarios personnalisés dans les packages. Vous pouvez utiliser les deux types de variables dans les expressions, les scripts et les configurations.  
@@ -90,11 +89,11 @@ ms.lasthandoff: 08/03/2017
  La définition d'un attribut de transaction au package permet d'associer les tâches, les conteneurs et les connexions du package à la transaction. Grâce aux attributs de transaction, le package et ses éléments réussissent ou échouent en tant qu'unité. Les packages peuvent également exécuter d'autres packages et inscrire d'autres packages dans les transactions, ce qui vous permet d'exécuter plusieurs packages en tant qu'unité de travail unique. Pour plus d’informations, consultez [Transactions Integration Services](../integration-services/integration-services-transactions.md).  
   
 ## <a name="custom-log-entries-available-on-the-package"></a>Entrées de journal personnalisées disponibles dans le package  
- Le tableau suivant répertorie les entrées de journal personnalisées pour les packages. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées pour les packages. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|**PackageStart**|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
+|**PackageStart**|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
 |**PackageEnd**|Indique que le package est terminé.<br /><br /> Remarque : cette entrée de journal est automatiquement écrite dans le journal. Vous ne pouvez pas l'exclure.|  
 |**Diagnostic**|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.|  
   
@@ -112,14 +111,13 @@ ms.lasthandoff: 08/03/2017
   
  Pour modifier le GUID du package, vous régénérez un GUID dans la propriété **ID** de la fenêtre Propriétés dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour modifier le nom du package, vous pouvez mettre à jour la valeur de la propriété **Name** dans la fenêtre Propriétés. Vous pouvez également utiliser l’invite de commandes **dtutil** ou mettre à jour le GUID et le nom par programmation. Pour plus d’informations, consultez [Définir les propriétés d’un package](../integration-services/set-package-properties.md) et [Utilitaire dtutil](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , [!INCLUDE[ssIS](../includes/ssis-md.md)] met à votre disposition deux outils graphiques : le concepteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l'Assistant Importation et Exportation [!INCLUDE[ssIS](../includes/ssis-md.md)] . Consultez les rubriques suivantes pour plus de détails.  
   
--   [Importation et exportation de données avec SQL Server Assistant Importation et exportation](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [Créer des Packages dans SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   Consultez [génération de Packages par programme](../integration-services/building-packages-programmatically/building-packages-programmatically.md) dans le Guide du développeur. 
+-   Voir [Génération de packages par programme](../integration-services/building-packages-programmatically/building-packages-programmatically.md) dans le Guide du développeur. 
   
   
-

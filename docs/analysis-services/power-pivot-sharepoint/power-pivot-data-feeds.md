@@ -2,16 +2,13 @@
 title: "Flux de données de tableau croisé dynamique de l’alimentation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 - Atom data feeds
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97bc6142b19e453c2415653e899d6bbf832f4c1a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-feeds"></a>Flux de données Power Pivot
-  Un flux de données fournit un flux de données à la demande à partir d'une source de données en ligne à une application cliente. Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser des flux de données pour ajouter des données provenant d’un service ou d’une application web compatible Atom à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un classeur Excel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un flux de données fournit un flux de données à la demande à partir d'une source de données en ligne à une application cliente. Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser des flux de données pour ajouter des données provenant d’un service ou d’une application web compatible Atom à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un classeur Excel.  
   
  Cette section fournit des informations qui vous aideront à utiliser au mieux les flux de données pour obtenir dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] des données existantes d’entreprise ou de groupe de travail. Elle fournit également des informations sur le partage de flux de données avec d'autres personnes de votre organisation et explique comment sont créés et utilisés les flux de données pour vous permettre de résoudre les problèmes susceptibles de se présenter.  
   

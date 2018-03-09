@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ORDER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 37a8d5995737933b38b532899c46ec81787bea75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="order-mdx"></a>Order (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement à une expression MDX (Multidimensional Expressions) valide des coordonnées des cellules qui retournent un nombre exprimé sous forme de chaîne.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **ordre** fonction peut être hiérarchique (comme spécifié à l’aide de la **ASC** ou **DESC** indicateur) ou non hiérarchique (comme spécifié à l’aide de la **BASC** ou **BDESC** indicateur ; le **B** « hiérarchie »). Si **ASC** ou **DESC** est spécifié, le **commande** fonction réorganise d’abord les membres en fonction de leur position dans la hiérarchie et puis elle ordonne chaque niveau. Si **BASC** ou **BDESC** est spécifié, le **commande** fonction organise les membres du jeu, indépendamment de la hiérarchie. Aucun indicateur n’est spécifié, **ASC** est la valeur par défaut.  
   
  Si le **commande** fonction est utilisée avec un jeu où deux ou plusieurs hiérarchies sont joints entre eux et le **DESC** indicateur est utilisé, seuls les membres de la dernière hiérarchie dans le jeu sont triés. Il s'agit là d'une différence par rapport à Analysis Services 2000 où toutes les hiérarchies du jeu étaient triées.  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca2abbc8b7ebe6a123680c0ff59b8a162282cd7a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2c40fcf9fb82db4a56e8d2985fab67190df8b1f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-knowledge-base"></a>Construction d'une base de connaissances
   Une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité. Une base de connaissances comprend des domaines, chacun représentant les données dans un champ de données. La base de connaissances est utilisée par DQS pour effectuer le nettoyage et la duplication de données sur une base de données. Pour préparer la base de connaissances au nettoyage de données, vous pouvez exécuter une analyse assistée par ordinateur d'un exemple de données, et gérer de manière interactive les valeurs dans les domaines. DQS vous permet d'importer des connaissances, de créer des règles et des relations, de modifier directement les valeurs des données et d'exploiter une base de données par défaut.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |Ajouter des connaissances à une base de connaissances via la découverte des connaissances, la gestion des valeurs de domaine, l'ajout d'une stratégie de correspondance, l'importation de connaissances, de domaines ou de valeurs, ou l'utilisation de la base de connaissances par défaut, DQS Data.|[Ajout de connaissances à une base de connaissances](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analyser un exemple de données pour les critères de qualité des données.|[Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

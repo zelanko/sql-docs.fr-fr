@@ -1,35 +1,33 @@
 ---
-title: Analyser dans Excel (SSAS tabulaire) | Documents Microsoft
+title: Analyser dans Excel | Documents Microsoft
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd537debaa43c89c2d09295f12598a9bfe9927b3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analyze-in-excel"></a>Analyser dans Excel
-  La fonctionnalité analyser dans Excel, dans SSDT, fournit aux auteurs de modèle tabulaire permet d’analyser rapidement les projets de modèle au cours du développement. La fonctionnalité Analyser dans Excel ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données model de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Les objets de base de données de l'espace de travail (tables, colonnes et mesures) sont inclus en tant que champs dans la liste de champs du tableau croisé dynamique. Les objets et les données peuvent ensuite être affichés dans le contexte du rôle ou de l'utilisateur effectif et de la perspective.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+La fonctionnalité analyser dans Excel, dans SSDT, fournit aux auteurs de modèle tabulaire permet d’analyser rapidement les projets de modèle au cours du développement. La fonctionnalité Analyser dans Excel ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données model de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Les objets de base de données de l'espace de travail (tables, colonnes et mesures) sont inclus en tant que champs dans la liste de champs du tableau croisé dynamique. Les objets et les données peuvent ensuite être affichés dans le contexte du rôle ou de l'utilisateur effectif et de la perspective.  
   
- Cette rubrique part du principe que vous êtes familiarisé avec Microsoft Excel et savez déjà utiliser des tableaux croisés dynamiques et des graphiques croisés dynamiques. Pour en savoir plus sur l'utilisation d'Excel, consultez l'aide relative à cette application.  
+ Cet article suppose que vous êtes déjà familiarisé avec Microsoft Excel, des tableaux croisés dynamiques et graphiques croisés dynamiques. Pour en savoir plus sur l'utilisation d'Excel, consultez l'aide relative à cette application.  
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  La fonctionnalité Analyser dans Excel permet aux créateurs de modèles de tester l'efficacité d'un projet de modèle à l'aide de l'application courante d'analyse de données, Microsoft Excel. Pour pouvoir utiliser la fonctionnalité analyser dans Excel, vous devez disposer de Microsoft Office 2003 ou version ultérieure sur le même ordinateur en tant que SSDT.  
@@ -49,15 +47,15 @@ ms.lasthandoff: 11/17/2017
   
  En plus du rôle ou de l'utilisateur effectif, vous pouvez spécifier une perspective. Les perspectives permettent aux créateurs de modèles de définir des vues particulières de scénario d'entreprise des objets de modèle et des données. Par défaut, aucune perspective n'est utilisée. Pour utiliser une perspective avec la fonctionnalité analyser dans Excel, les perspectives doivent déjà être définies à l’aide de la boîte de dialogue Perspectives dans SSDT. Si une perspective est spécifiée, la liste de champs de tableau croisé dynamique contient uniquement les objets sélectionnés dans la perspective. Pour plus d’informations, consultez [créer et gérer des Perspectives](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tâches associées  
+##  <a name="bkmk_rt"></a> Related tasks  
   
 |**Rubrique**|**Description**|  
 |---------------|---------------------|  
-|[Analyser un modèle tabulaire dans Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Cette rubrique décrit comment utiliser la fonctionnalité Analyser dans Excel dans le concepteur de modèles afin d'ouvrir Excel, créer une connexion de source de données à la base de données model de l'espace de travail et ajouter un tableau croisé dynamique à la feuille de calcul.|  
+|[Analyser un modèle tabulaire dans Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Cet article décrit comment utiliser la fonctionnalité analyser dans Excel dans le Concepteur de modèle pour ouvrir Excel, créer une connexion de source de données à la base de données de modèle espace de travail et ajouter un tableau croisé dynamique à la feuille de calcul.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyser un modèle tabulaire dans Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [Rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

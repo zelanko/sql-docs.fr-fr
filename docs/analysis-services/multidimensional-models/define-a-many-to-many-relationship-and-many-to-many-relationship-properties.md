@@ -2,16 +2,13 @@
 title: "Définir une relation plusieurs-à-plusieurs et les propriétés de relation plusieurs-à-plusieurs | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: many-to-many relationships [Analysis Services]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5377557da99938446a0746e0183e2adcf321dab3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d'une relation plusieurs à plusieurs
-  Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, y compris quand les utiliser et comment les créer.  
   
 ## <a name="introduction"></a>Introduction  
  Analysis Services prend en charge les dimensions plusieurs-à-plusieurs pour des analyses plus complexes par rapport à un schéma en étoile classique. Dans un schéma en étoile classique, toutes les dimensions ont une relation un-à-plusieurs avec une table de faits. Chaque fait joint un seul membre de dimension et un seul membre de dimension peut être associé à plusieurs faits.  

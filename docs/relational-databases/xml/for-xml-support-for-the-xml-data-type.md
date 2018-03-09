@@ -2,29 +2,34 @@
 title: "Prise en charge de FOR XML pour le type de données XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47b118396533dc8152dc28a15c067d8ecebe7ea5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db0cb5f5484415cdac27c18bf177f3b06eed8509
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
-  Si une requête FOR XML spécifie une colonne de type **xml** dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Aucune déclaration XML dans la colonne de type **xml** n’est sérialisée.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Si une requête FOR XML spécifie une colonne de type **xml** dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Aucune déclaration XML dans la colonne de type **xml** n’est sérialisée.  
   
  Par exemple, la requête suivante récupère des informations de contact sur des clients, telles que les colonnes `BusinessEntityID`, `FirstName`et `LastName` , ainsi que les numéros de téléphone à partir de la colonne `AdditionalContactInfo` du type **xml** .  
   
@@ -206,7 +211,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge FOR XML des différents types de données SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xtp_system_memory_consumers (Transact-SQL) | Documents Microsoft
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_xtp_system_memory_consumers_TSQL
 - sys.dm_xtp_system_memory_consumers
 - dm_xtp_system_memory_consumers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_system_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ffede3b2aea0ff69c9dce9fc7abd2fe4bc4f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |memory_consumer_id|**bigint**|ID interne du consommateur de mémoire.|  
 |memory_consumer_type|**int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0 – Ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1 – LOOKASIDE : Effectue le suivi de la consommation de mémoire pour un système lookaside.<br /><br /> 2 - VARHEAP : Effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4 - pool de pages d’e/s : effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Description du type de consommateur de mémoire :<br /><br /> 0 – Ne doit pas être affiché.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />-OU-<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : Pour système d’e/s pools il sont trois pool de pages de 4 Ko de système de différentes tailles, pool de pages 64 Ko et pool de pages de 256 Ko.|  
+|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />-OU-<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : Pour système d’e/s pools il sont trois pool de pages de 4 Ko de système de différentes tailles, pool de pages 64 Ko et pool de pages de 256 Ko.|  
 |lookaside_id|**bigint**|ID du fournisseur de mémoire lookaside, ThreadLocal.|  
 |pagepool_id|**bigint**|ID du fournisseur de mémoire de pool de pages, ThreadLocal.|  
 |allocated_bytes|**bigint**|Nombre d'octets réservés pour ce consommateur.|  
@@ -59,7 +62,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|À usage interne uniquement|  
 |memory_consumer_address|**varbinary**|Adresse interne du consommateur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite des autorisations VIEW SERVER STATE sur le serveur.  
   
 ## <a name="user-scenario"></a>Scénario d'utilisateur  

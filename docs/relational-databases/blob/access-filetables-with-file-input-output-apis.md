@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
   
 ##  <a name="accessing"></a> Commencer à utiliser les API d'E/S de fichier avec des FileTables  
  Les FileTables sont principalement utilisés via le système de fichiers Windows et les API d'E/S de fichier. Les FileTables prennent en charge l'accès non transactionnel via le vaste ensemble d'API d'E/S de fichier disponibles.  
@@ -110,27 +113,27 @@ ms.lasthandoff: 11/17/2017
 |Fonctionnalité|Pris en charge|Commentaires|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
-|**Attributs étendus**|Non||  
-|**Points d'analyse**|Non||  
-|**ACL persistants**|Non||  
-|**Flux nommés**|Non||  
+|**Attributs étendus**|non||  
+|**Points d'analyse**|non||  
+|**ACL persistants**|non||  
+|**Flux nommés**|non||  
 |**Fichiers partiellement alloués**|Oui|Le caractère éparse ne peut être défini que sur les fichiers et affecte le stockage du flux de données. Dans la mesure où les données FILESTREAM sont stockées sur des volumes NTFS, la fonctionnalité FileTable prend en charge les fichiers partiellement alloués en envoyant les demandes au système de fichiers NTFS.|  
 |**Compression**|Oui||  
 |**Chiffrement**|Oui||  
-|**TxF**|Non||  
-|**ID de fichier**|Non||  
-|**ID d'objet**|Non||  
-|**Liens symboliques**|Non||  
-|**Liens physiques**|Non||  
-|**Noms courts**|Non||  
-|**Notifications de modification de répertoire**|Non||  
+|**TxF**|non||  
+|**ID de fichier**|non||  
+|**ID d'objet**|non||  
+|**Liens symboliques**|non||  
+|**Liens physiques**|non||  
+|**Noms courts**|non||  
+|**Notifications de modification de répertoire**|non||  
 |**Verrouillage de plage d'octets**|Oui|Les demandes de verrouillage de plage d'octets sont passées au système de fichiers NTFS.|  
-|**Fichiers mappés en mémoire**|Non||  
+|**Fichiers mappés en mémoire**|non||  
 |**Annulation d'entrées/sorties**|Oui||  
-|**Sécurité**|Non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
-|**Journal USN**|Non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
+|**Sécurité**|non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
+|**Journal USN**|non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   

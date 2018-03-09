@@ -1,10 +1,13 @@
 ---
 title: Installation des composants SSMA sur SQL Server (MySQLToSql) | Documents Microsoft
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190c3cfcb9d41af357bfffe2a247aa353e2676e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installation des composants SSMA sur SQL Server (MySQLToSql)
 Outre l’installation SSMA, vous devez également installer les composants sur l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ces composants incluent le Pack d’extension SSMA, qui prend en charge la migration des données et les fournisseurs de MySQL pour permettre la connectivité du serveur à serveur.  
@@ -32,7 +35,7 @@ Le Pack d’extension SSMA ajoute une base de données, **sysdb**, à l’instan
   
 En outre, lorsque vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des travaux de l’Agent, lorsque le moteur de migration de données côté serveur est utilisé pour migrer les données.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Avant d’installer SSMA pour les composants de serveur MySQL sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], assurez-vous que l’ordinateur répond aux exigences suivantes :  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 ou une version ultérieure.  

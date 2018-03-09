@@ -2,32 +2,30 @@
 title: Les compteurs de performance (SSAS) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performance-counters-ssas"></a>Compteurs de performance (SSAS)
-  L'Analyseur de performances vous permet d'analyser les performances d'une instance Microsoft SQL Server Analysis Services (SSAS) à l'aide de compteurs de performance.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'Analyseur de performances vous permet d'analyser les performances d'une instance Microsoft SQL Server Analysis Services (SSAS) à l'aide de compteurs de performance.  
   
  L'Analyseur de performances est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) qui assure le suivi de l'utilisation des ressources. Pour démarrer ce composant logiciel enfichable, tapez **PerfMon** à l’invite de commandes ou dans le Panneau de configuration, cliquez sur **Outils d’administration**, puis sur **Analyseur de performances**. L'Analyseur de performances vous permet d'assurer le suivi des performances et de l'activité du serveur et du traitement à l'aide d'objets et de compteurs prédéfinis et de surveiller les événements à l'aide de compteurs définis par l'utilisateur. L'Analyseur de performances collecte des comptes, et non des données, relatifs aux événements (par exemple, sur l'utilisation de la mémoire, le nombre de transactions actives ou l'activité de l'UC.) Vous pouvez également définir des seuils pour des compteurs spécifiques de manière à générer des alertes pour avertir les opérateurs.  
   

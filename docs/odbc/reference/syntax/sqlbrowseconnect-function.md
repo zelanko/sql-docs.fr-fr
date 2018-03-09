@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 839cf9ec1e802d0bce8da8cc0134bf89b0646bb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbrowseconnect-function"></a>Fonction SQLBrowseConnect
 **Mise en conformité**  
@@ -75,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLBrowseConnect** retourne SQL_NEED_DATA, une valeur SQLSTATE associée, SQL_SUCCESS_WITH_INFO ou SQL_ERROR peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer de handle de connexion*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLBrowseConnect** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|La mémoire tampon \* *OutConnectionString* n’est pas suffisamment grande pour retourner la chaîne de connexion résultats parcourir ensemble, donc la chaîne a été tronquée. La mémoire tampon **StringLength2Ptr* contient la longueur de la chaîne de connexion de résultat non tronqué Parcourir. (La fonction retourne SQL_NEED_DATA.)|  

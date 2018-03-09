@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLUPLEVEL
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 14a7dccbecdb3f33cfbecb9ddfee328c0f1e928d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ec561536a098e927731a3359edae3f2e35f3d481
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,14 +45,14 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **DrillupLevel** fonction retourne un jeu de membres organisé hiérarchiquement selon les membres inclus dans le jeu spécifié. L'ordre des membres dans le jeu spécifié est conservé.  
   
  Si une expression de niveau est spécifiée, la **DrillupLevel** fonction construit le jeu en récupérant uniquement les membres qui sont au-dessus du niveau spécifié. Si une expression de niveau est spécifiée, et il n’existe aucun membre du niveau représenté dans le jeu spécifié, le jeu spécifié est retourné.  
   
  Si aucune expression de niveau n'est spécifiée, la fonction construit le jeu en récupérant uniquement les membres situés un niveau au-dessus du niveau le plus bas de la première dimension référencée dans le jeu spécifié.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne l'ensemble des membres du premier jeu placés au-dessus du niveau Subcategory.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_category (Transact-SQL) | Documents Microsoft
+title: sp_delete_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cc7a85623daf6a21c65750b9e15a3d6886f67ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d2ce1cd0406cbb69b6dd280bc8c36fdbd31c5d2e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +52,8 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|**TÂCHE**|Supprime une catégorie de travaux.|  
-|**ALERTE**|Supprime une catégorie d'alertes.|  
+|**JOB**|Supprime une catégorie de travaux.|  
+|**ALERT**|Supprime une catégorie d'alertes.|  
 |**(OPÉRATEUR)**|Supprime une catégorie d'opérateurs.|  
   
  [  **@name =**] **'***nom***'**  
@@ -60,14 +63,14 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_delete_category** doit être exécuté à partir de la **msdb** base de données.  
   
  Lorsque vous supprimez une catégorie, tous ses travaux, alertes et opérateurs sont réaffectés à la catégorie par défaut de la classe.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -84,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

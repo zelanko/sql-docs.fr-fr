@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
 - semanticsimilaritydetailstable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritydetailstable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7ea0123e9d5c86bdd6b3983d0b6c20ceed59c0e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 69d13d3b16d1b58062cd93dc18e2f20f3fd01b42
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYDETAILSTABLE  
     (  
     table,  
@@ -77,7 +80,7 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 |Column_name|Type| Description|  
 |------------------|----------|-----------------|  
-|**expressions clés**|**NVARCHAR**|Expression clé qui contribue à la similarité entre le document source et le document correspondant.|  
+|**keyphrase**|**NVARCHAR**|Expression clé qui contribue à la similarité entre le document source et le document correspondant.|  
 |**score**|**RÉEL**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
@@ -92,13 +95,13 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT sur la table de base sur laquelle les index sémantiques et de recherche en texte intégral ont été créés.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant récupère les 5 expressions clés qui avaient le score de similarité le plus élevé parmi les candidats spécifiés dans **HumanResources.JobCandidate** table de la base de données AdventureWorks2012. Le @CandidateId et @MatchedID les variables représentent des valeurs de la colonne clé de l’index de recherche en texte intégral.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROMSEMANTICSIMILARITYDETAILSTABLE  
     (  

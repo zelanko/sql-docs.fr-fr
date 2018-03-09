@@ -2,27 +2,33 @@
 title: "Exemple : spécification de la directive ELEMENTXSINIL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ELEMENTXSINIL directive
+helpviewer_keywords:
+- ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc7da5b0e66592b6d7c8f2f7318cc79483188571
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 98f57d53534a0cd3ba1518066b157601ab0afeab
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Exemple : spécification de la directive ELEMENTXSINIL
-  Lorsque vous spécifiez la directive ELEMENT pour extraire un document XML centré sur l'élément et que la colonne possède une valeur NULL, l'élément correspondant n'est pas généré par le mode EXPLICIT. Vous pouvez éventuellement spécifier la directive ELEMENTXSINIL pour demander l'élément généré dans le cas des valeurs NULL dont l'attribut **xsi:nil** a pour valeur TRUE.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Lorsque vous spécifiez la directive ELEMENT pour extraire un document XML centré sur l'élément et que la colonne possède une valeur NULL, l'élément correspondant n'est pas généré par le mode EXPLICIT. Vous pouvez éventuellement spécifier la directive ELEMENTXSINIL pour demander l'élément généré dans le cas des valeurs NULL dont l'attribut **xsi:nil** a pour valeur TRUE.  
   
  La requête suivante construit un document XML qui comprend une adresse d'employé. Pour les colonnes `AddressLine2` et `City` , les noms de colonnes spécifient la directive `ELEMENTXSINIL` . Celle-ci génère l'élément pour les valeurs NULL des colonnes `AddressLine2` et `City` de l'ensemble de lignes.  
   
@@ -79,7 +85,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -8,21 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d74e5d7e56704515bb6f1c97e26e47802583279
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
@@ -663,7 +664,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 ![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Expressions &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

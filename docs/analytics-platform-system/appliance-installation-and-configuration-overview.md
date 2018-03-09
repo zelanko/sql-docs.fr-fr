@@ -3,10 +3,10 @@ title: "Installation du matériel et présentation de la Configuration (système
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: "23"
-ms.openlocfilehash: 34d66302d0ed114c32e0c6294dfe7789e32a9253
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 719447d2f6d9376ec9db35f35c7f38b50ef460fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-installation-and-configuration-overview"></a>Installation du matériel et présentation de la Configuration
 Guide à travers les étapes initiales pour configurer et commencer à utiliser votre nouveau matériel SQL Server PDW, les administrateurs de SQL Server PDW matériel.  

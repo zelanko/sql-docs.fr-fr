@@ -2,27 +2,32 @@
 title: "Mettre à niveau vers une autre édition de SQL Server 2016 (Installation) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 6dd36fb8359a26f887ccda3821cb8a1b93b8a4f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 976dc265c028061ee04d8188b8de4325ba335a69
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2016 (Installation)
-L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau d'édition entre les différentes éditions de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les chemins de mise à niveau d’édition pris en charge, consultez [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Avant d'initialiser la mise à niveau d'édition d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les rubriques suivantes :  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’installation prend en charge la mise à niveau d’édition entre les différentes éditions de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les chemins de mise à niveau d’édition pris en charge, consultez [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Avant de lancer la mise à niveau d’édition d’une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les articles suivants :  
 
 - [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
@@ -80,7 +85,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
   
 -   Les bases de données modèles demeurent sur l'ordinateur après la mise à niveau.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mettre à niveau SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilité descendante_supprimé](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

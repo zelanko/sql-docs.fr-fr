@@ -2,10 +2,14 @@
 title: "Entrepôt de données de gestion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f31923e866b45951e3758d3f1e35aa542117ad2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="management-data-warehouse"></a>Entrepôt de données de gestion
-  L'entrepôt de données de gestion est une base de données relationnelle qui contient les données collectées à partir d'un serveur faisant office de cible de collecte de données. Ces données permettent de générer les rapports pour les jeux d'éléments de collecte de données système ainsi que de créer des rapports personnalisés.  
+# <a name="management-data-warehouse"></a>entrepôt de données de gestion
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'entrepôt de données de gestion est une base de données relationnelle qui contient les données collectées à partir d'un serveur faisant office de cible de collecte de données. Ces données permettent de générer les rapports pour les jeux d'éléments de collecte de données système ainsi que de créer des rapports personnalisés.  
   
  L'infrastructure du collecteur de données définit les travaux et les plans de maintenance nécessaires pour implémenter les stratégies de rétention définies par l'administrateur de base de données.  
   
@@ -128,7 +133,7 @@ ms.lasthandoff: 11/09/2017
 |Ajout de la table core.performance_counter_report_group_items à la section « Schéma principal (Core) ».|  
 |Mise à jour de la liste de tables dans la section « Schéma des instantanés ». Ajout de snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory et snapshots.io_virtual_file_stats. Suppression de snapshots.os_process_memory et snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées de l’entrepôt de données de gestion &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   

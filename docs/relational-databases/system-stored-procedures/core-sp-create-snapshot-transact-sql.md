@@ -1,5 +1,5 @@
 ---
-title: Core.sp_create_snapshot (Transact-SQL) | Documents Microsoft
+title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +54,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_uid =] '*collection_set_uid*'  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  GUID du jeu d'éléments de collecte. *collection_set_uid* est **uniqueidentifier** sans valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collection_sets dans la base de données msdb.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  GUID d'un type de collecteur. *collector_type_uid* est **uniqueidentifier** sans valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collector_types dans la base de données msdb.  
   
  [ @machine_name=] '*Nom_Ordinateur*'  
@@ -64,10 +66,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @named_instance=] '*instance_nommée*'  
  Nom de l'instance pour le jeu d'éléments de collecte. *instance_nommée* est **sysname**, sans valeur par défaut.  
   
- [ @log_id =] *log_id*  
+ [ @log_id = ] *log_id*  
  Identificateur unique mappé au journal des événements de jeu d'éléments de collecte sur le serveur qui a collecté les données. *log_id* est **bigint** sans valeur par défaut. Pour obtenir la valeur de *log_id*, interrogez la vue dbo.syscollector_execution_log dans la base de données msdb.  
   
- [ @snapshot_id =] *snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  Identificateur unique pour une ligne est insérée dans la vue core.snapshots. *snapshot_id* est **int** et est retourné en tant que sortie.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -84,7 +86,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  Si l'une des vérifications précédentes échoue, la procédure échoue et retourne une erreur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **mdw_writer** (avec autorisation EXECUTE) rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: bcp_moretext | Documents Microsoft
+title: bcp_moretext | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a273980a28a31334653feec576fde85de007c38
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ RETCODE bcp_moretext (
   
 ## <a name="arguments"></a>Arguments  
  *pas*  
- Handle de connexion ODBC compatible avec la copie en bloc.  
+ Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *cbData*  
  Est le nombre d’octets de données sont copiées vers SQL Server à partir de données référencées par *pData*. Une valeur de SQL_NULL_DATA indique NULL.  
@@ -59,7 +59,7 @@ RETCODE bcp_moretext (
 ## <a name="remarks"></a>Notes  
  Cette fonction peut être utilisée conjointement avec [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copier long, les valeurs de données de longueur variable vers SQL Server dans un nombre de segments plus petits. **bcp_moretext** peut être utilisé avec des colonnes qui ont des types de données SQL Server suivants : **texte**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, type défini par l’utilisateur (UDT) et XML. **bcp_moretext** ne pas les conversions de données de prise en charge, les données fournies doivent correspondre au type de données de la colonne cible.  
   
- Si **bcp_bind** est appelée avec une valeur non null *pData* paramètre pour les types de données qui sont pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. If, toutefois, **bcp_bind** a une valeur NULL *pData* paramètre pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier les données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées avec des données présentes ont été traitées.  
+ Si **bcp_bind** est appelée avec une valeur non NULL *pData* paramètre pour les types de données qui sont pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. If, toutefois, **bcp_bind** a une valeur NULL *pData* paramètre pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier les données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées avec des données présentes ont été traitées.  
   
  Si vous utilisez **bcp_moretext** pour envoyer une colonne de type de données pris en charge dans une ligne, vous devez également l’utiliser pour envoyer toutes les autres colonnes de type de données pris en charge dans la ligne. Aucune colonne ne peut être ignorée. Les types de données pris en charge sont SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT et SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY et SQLVARBINARY appartiennent également à cette catégorie si la colonne est un varchar (max), nvarchar (max) ou varbinary (max), respectivement.  
   

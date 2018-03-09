@@ -3,10 +3,10 @@ title: "Type de données des règles de conversion de dwloader"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: "30"
-ms.openlocfilehash: 2ac1325b3765bafbe34dc61f65f7641431afdfa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>Type de données des règles de conversion de dwloader
 Cette rubrique décrit les formats de données d’entrée et les conversions de types de données implicites qui [dwloader de ligne de commande chargeur](dwloader.md) prend en charge lors du chargement des données dans PDW. Les conversions implicites de données se produisent lorsque les données d’entrée ne correspondent pas le type de données dans la table cible de SQL Server PDW. Utilisez ces informations lorsque vous concevez votre processus de chargement pour vous assurer de vos données sera chargé avec succès dans SQL Server PDW.  
@@ -91,7 +91,7 @@ Le tableau suivant définit le format par défaut et les règles pour le chargem
 ### <a name="DateFormats"></a>Formats de date/heure  
 Dwloader prend en charge les formats de données suivants pour les données d’entrée son chargement dans SQL Server PDW. Plus de détails sont répertoriés après le tableau.  
   
-|datetime|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|Date|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M [M]] M-[d] [aa] d-yy HH : mm : [.fff]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00]|[M [M]] M-[d] d-[aa] AA|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] zzz|  
 |[M [M]] M-[d] [aa] d-yy HH : mm : [.fff] [tt]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00] [tt]||[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] [tt]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] [tt] zzz|  

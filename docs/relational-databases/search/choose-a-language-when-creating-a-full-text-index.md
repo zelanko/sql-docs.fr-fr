@@ -4,8 +4,11 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +21,21 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier une langue au niveau de la colonne pour la colonne indexée. L’ [analyseur lexical et les générateurs de formes dérivées](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) de la langue spécifiée seront utilisés par les requêtes de texte intégral sur la colonne. Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral.  
   
 > [!NOTE]  
@@ -44,7 +50,7 @@ ms.lasthandoff: 12/01/2017
 > [!NOTE]  
 >  Le Microsoft Natural Language Group (MS NLG) a implémenté et prend en charge ces nouveaux composants linguistiques.  
   
- Les avantages de ces nouveaux analyseurs lexicaux sont les suivants :  
+ Les avantages de ces nouveaux analyseurs lexicaux sont les suivants :  
   
 -   Robustesse  
   
@@ -75,7 +81,7 @@ ms.lasthandoff: 12/01/2017
   
   
 ##  <a name="breaking"></a> Analyse lexicale  
- Un analyseur lexical crée des jetons dans le texte indexé à partir des limites des mots, qui sont spécifiques aux langues. Par conséquent, le comportement d'analyse lexicale diffère d'une langue à l'autre. Si vous utilisez une langue x indexer plusieurs langues {x, y et z}, une partie du comportement peut donner lieu à des résultats inattendus. Par exemple, un tiret (-) ou une virgule (,) peut être un élément d'analyseur lexical pouvant être rejeté dans une langue mais pas dans un autre. Un comportement de génération de formes dérivées rarement inattendu peut également se produire parce qu'un mot donné peut être dérivé différemment dans une autre langue. Par exemple, en anglais, les limites des mots sont généralement fixées par des espaces blancs ou un signe de ponctuation. Dans d'autres langues, par exemple l'allemand, les mots ou les caractères peuvent être accolés. Par conséquent, le choix de la langue d'une colonne doit être représentatif de la langue destinée à être stockée dans les lignes de cette colonne.  
+ Un analyseur lexical crée des jetons dans le texte indexé à partir des limites des mots, qui sont spécifiques aux langues. Par conséquent, le comportement d'analyse lexicale diffère d'une langue à l'autre. Si vous utilisez une langue x pour indexer plusieurs langues {x, y et z}, une partie du comportement peut donner lieu à des résultats inattendus. Par exemple, un tiret (-) ou une virgule (,) peut être un élément d'analyseur lexical pouvant être rejeté dans une langue mais pas dans un autre. Un comportement de génération de formes dérivées rarement inattendu peut également se produire parce qu'un mot donné peut être dérivé différemment dans une autre langue. Par exemple, en anglais, les limites des mots sont généralement fixées par des espaces blancs ou un signe de ponctuation. Dans d'autres langues, par exemple l'allemand, les mots ou les caractères peuvent être accolés. Par conséquent, le choix de la langue d'une colonne doit être représentatif de la langue destinée à être stockée dans les lignes de cette colonne.  
   
 ### <a name="western-languages"></a>Langues occidentales  
  Pour la famille des langues occidentales, si vous êtes incertain quant aux langues qui seront stockées dans une colonne ou si vous pensez en stocker plusieurs, la solution de contournement générale est d'utiliser l'analyseur lexical pour la langue la plus complexe pouvant être stockée dans la colonne. Par exemple, vous pouvez vous attendre à stocker du contenu en anglais, en espagnol et en allemand dans une colonne unique. Ces trois langues occidentales possèdent des modes d'analyse lexicale très semblables, les modes allemands étant les plus complexes. Par conséquent, un bon choix dans ce cas serait d'utiliser l'analyseur lexical allemand, qui doit être en mesure de traiter le texte anglais et espagnol correctement. Par contre, il se peut que l'analyseur lexical anglais ne puisse pas traiter parfaitement le texte allemand à cause des mots composés allemands.  
@@ -116,7 +122,7 @@ ms.lasthandoff: 12/01/2017
  Par défaut, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la recherche en texte intégral analyse les termes de la requête en utilisant la langue spécifiée pour chaque colonne incluse dans la clause de texte intégral. Pour remplacer ce comportement, spécifiez une langue autre que par défaut au moment de la requête. Pour les langues prises en charge dont les ressources sont installées, la clause LANGUAGE *language_term* d’une requête [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) est utilisée pour spécifier la langue utilisée pour l’analyse lexicale, la recherche de radical, le dictionnaire des synonymes et le traitement des mots vides des termes de la requête.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

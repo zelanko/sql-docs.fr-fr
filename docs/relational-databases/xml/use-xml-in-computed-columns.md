@@ -2,29 +2,34 @@
 title: "Utiliser des données XML dans les colonnes calculées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 671b016c1610589c14a10fa7200092330006d59d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eb0cca121576000f3f7c5ba42eb4161c7d38f207
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>Utiliser des données XML dans les colonnes calculées
-  Une instance XML peut faire office de source ou de type de colonne calculée. Les exemples dans cette rubrique indiquent comment utiliser des données XML avec des colonnes calculées.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Une instance XML peut faire office de source ou de type de colonne calculée. Les exemples dans cette rubrique indiquent comment utiliser des données XML avec des colonnes calculées.  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>Création de colonnes calculées à partir de colonnes XML  
  Dans l'instruction `CREATE TABLE` suivante, une colonne de type `xml` (`col2`) est calculée à partir de `col1`:  

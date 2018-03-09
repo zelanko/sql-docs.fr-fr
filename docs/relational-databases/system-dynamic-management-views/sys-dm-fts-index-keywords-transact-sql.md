@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords (Transact-SQL) | Documents Microsoft
+title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_fts_index_keywords
 - sys.dm_fts_index_keywords_TSQL
 - dm_fts_index_keywords_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_fts_index_keywords dynamic management function
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903c8f459242fc7f470f71207afd2d5ea3bee23e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 687a81711efdaf98f142a0d314db94a53cc74371
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +53,17 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- DB_ID ('*nom_base_de_données*')  
+ db_id('*database_name*')  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de la base de données, ce qui **sys.dm_fts_index_keywords** utilise pour rechercher la base de données spécifié. Si *nom_base_de_données* est omis, l’ID de base de données actuel est retourné.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**mot clé**|**nvarchar(4000)**|La représentation hexadécimale du mot clé stocké à l’intérieur de l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
+|**keyword**|**nvarchar(4000)**|La représentation hexadécimale du mot clé stocké à l’intérieur de l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
 |**display_term**|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format hexadécimal.<br /><br /> Remarque : Le **display_term** valeur de OxFF est « Fin de fichier ».|  
 |**column_id**|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |**document_count**|**int**|Nombre de documents ou de lignes contenant le terme actuel.|  
@@ -82,7 +84,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 > [!NOTE]  
 >  Le **document_count** retourné par **sys.dm_fts_index_keywords** peut être moins précis pour un document spécifique que le nombre retourné par **sys.dm_fts_index_keywords_by_document** ou un **CONTAINS** requête. Cette imprécision éventuelle est estimée inférieure à 1 %. Cette peut se produire un **document_id** risquent d’être comptées deux fois si elle se poursuit à travers plusieurs lignes dans le fragment d’index, ou lorsqu’il apparaît plusieurs fois dans la même ligne. Pour obtenir un nombre plus précis pour un document spécifique, utilisez **sys.dm_fts_index_keywords_by_document** ou un **CONTAINS** requête.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

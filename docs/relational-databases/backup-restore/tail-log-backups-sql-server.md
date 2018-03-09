@@ -2,9 +2,12 @@
 title: "Sauvegardes de la fin du journal (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 697a6b7db5513165db073bf70954499dc95503e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 06e3604fcd70a4ce7948d704d923c84cbc5acf2a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
-  Cette rubrique s'applique uniquement à la sauvegarde et la restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique s’applique uniquement à la sauvegarde et la restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
   
  Une *sauvegarde de la fin du journal* capture tous les enregistrements de journal qui n’ont pas encore été sauvegardés (la *fin du journal*) pour empêcher toute perte de travail et préserver la continuité de la séquence de journaux de transactions consécutifs. Avant de pouvoir récupérer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux date et heure les plus récentes, vous devez sauvegarder la fin de son journal des transactions. La sauvegarde de la fin du journal est la dernière sauvegarde intéressante dans le plan de récupération de la base de données.  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
 |Option BACKUP LOG|Commentaires|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal. Le journal sera tronqué sauf si l’option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **\*\* Important \*\*** Évitez d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
+|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal. Le journal sera tronqué sauf si l’option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **Important :**  Évitez d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
 |CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Si vous sauvegardez la fin du journal sur une base de données endommagée, certaines métadonnées capturées normalement dans des sauvegardes de journaux sont parfois indisponibles. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), dans cette rubrique.|  
   
 ##  <a name="IncompleteMetadata"></a> Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  
@@ -60,13 +63,9 @@ ms.lasthandoff: 11/09/2017
  Si les métadonnées d’une sauvegarde de la fin du journal sont incomplètes, la plupart des informations relatives aux groupes de fichiers sont absentes de la table [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) au moment de la sauvegarde de la fin du journal. La plupart des colonnes de la table **backupfilegroup** ont la valeur NULL ; seules les colonnes suivantes ont une signification :  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **type**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
@@ -74,12 +73,12 @@ ms.lasthandoff: 11/09/2017
   
  Pour restaurer une sauvegarde du journal des transactions, consultez [Restaurer une sauvegarde du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
     
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegardes de type copie seule &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

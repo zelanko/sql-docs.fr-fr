@@ -22,20 +22,20 @@ helpviewer_keywords:
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4b004cbaba4cab6d83680ce0d7b827366c3e8a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Les sections suivantes documentent les fonctionnalités de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les opérations associées.  
   
-  ## <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
+  ## <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
  Pour consulter des données dans le tableau de bord de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez le nœud supérieur dans l’arborescence de l’Explorateur de l’utilitaire - étiqueté « Utility<nom_UCP\\\(NomOrdinateur\UCP) ». Le tableau de bord inclut les données de synthèse et les données détaillées de toutes les instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de toutes les applications de couche Données dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour actualiser les données du tableau de bord, cliquez avec le bouton droit sur le nœud supérieur de l’arborescence de l’Explorateur de l’utilitaire et sélectionnez **Actualiser**.  
   
  Pour plus d’informations sur la création d’un point de contrôle d’utilitaire, consultez [Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Pour plus d’informations sur l’ajout d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Inscrire une instance de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 -   utilisation du processeur par l'ordinateur ;  
   
--   L'état de chaque paramètre est divisé en trois catégories :  
+-   L'état de chaque paramètre est divisé en trois catégories :  
   
 -   bien utilisé : nombre d'instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne violent pas les stratégies d'utilisation des ressources ;  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
  Les options d'intervalle de création de rapport sont les suivants :  
   
--   1 jour, affiché par intervalles de 15 minutes ;  
+-   1 jour, affiché par intervalles de 15 minutes ;  
   
 -   1 semaine, affiché par intervalles de 1 jour ;  
   
@@ -320,7 +320,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Respecter la casse : (True ou False)  
   
--   Langue :  
+-   Langue :  
   
 -   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
   
@@ -514,8 +514,8 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Résolution des problèmes liés à l'utilitaire SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Résolution des problèmes liés à l’utilitaire SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

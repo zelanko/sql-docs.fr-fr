@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: NAMETOSET
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: adf905695fd42a64f4f4705222fcf52f624f509a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f7b9f52f494665d00f7a75811b839d543c3da5ea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ NameToSet(Member_Name)
  *Member_Name*  
  Expression de chaîne valide qui représente le nom d'un membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si le nom du membre spécifié existe, le **NameToSet** fonction retourne un jeu contenant ce membre. Sinon, elle retourne un jeu vide.  
   
 > [!NOTE]  
 >  Le nom de membre spécifié doit uniquement être un nom de membre ; il ne peut s'agir d'une expression de membre. Pour utiliser une expression de membre, consultez [StrToSet &#40; MDX &#41; ](../mdx/strtoset-mdx.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne la valeur de mesure par défaut du nom de membre spécifié.  
   
 ```  

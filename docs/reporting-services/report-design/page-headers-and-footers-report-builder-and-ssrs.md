@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>En-têtes et pieds de page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page. Ces informations sont situées respectivement le long des bords supérieur et inférieur de chaque page. Les en-têtes et pieds de page peuvent contenir du texte statique, des images, des rectangles, des bordures, une couleur d'arrière-plan, des images d'arrière-plan et des expressions. Les expressions contiennent des références de champs de dataset pour des rapports qui utilisent un seul dataset, ainsi que des appels de fonction d'agrégation qui intègrent le dataset sous forme d'étendue.  
@@ -65,12 +63,12 @@ ms.lasthandoff: 12/05/2017
   
 |Pris en charge par l'expression|Agrégats ReportItems|Agrégats du dataset (le nom du dataset doit correspondre à l'étendue)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Zones de texte apparaissant dans le corps du rapport|Oui|Non|  
-|&PageNumber|Oui|Non|  
-|&TotalPages|Oui|Non|  
-|Fonction d'agrégation|Oui. Par exemple :<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Oui. Par exemple :<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|Collection de champs pour les éléments figurant sur les pages|Indirectement. Par exemple :<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Oui. Par exemple :<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Image liée aux données|Indirectement. Par exemple : `=ReportItems!TXT_Photo.Value`|Oui. Par exemple :<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Zones de texte apparaissant dans le corps du rapport|Oui|non|  
+|&PageNumber|Oui|non|  
+|&TotalPages|Oui|non|  
+|Fonction d'agrégation|Oui. Par exemple,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Oui. Par exemple,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|Collection de champs pour les éléments figurant sur les pages|Indirectement. Par exemple,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Oui. Par exemple,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|Image liée aux données|Indirectement. Par exemple : `=ReportItems!TXT_Photo.Value`|Oui. Par exemple,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Les sections suivantes de cette rubrique illustrent des expressions prêtes à l'emploi permettant d'obtenir les données variables utilisées couramment dans les en-têtes et pieds de page. Une section explique également le mode de traitement de l'extension de rendu Excel pour les en-têtes et les pieds de page. Pour plus d’informations sur les expressions, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’informations, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

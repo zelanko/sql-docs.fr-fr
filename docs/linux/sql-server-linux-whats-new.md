@@ -1,29 +1,29 @@
----
+﻿---
 title: "Nouveautés de SQL Server 2017 sur Linux | Documents Microsoft"
-description: "Cette rubrique présente les nouveautés de 2017 du serveur SQL sur Linux."
+description: "Cet article souligne les nouveautés de 2017 du serveur SQL sur Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 11/28/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: cdc32cffd67c794f5ec2d04ac7410892475f4f7f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de 2017 du serveur SQL sous Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article décrit les principales fonctionnalités et les services disponibles pour SQL Server 2017 s’exécutant sur Linux.
 
@@ -39,12 +39,12 @@ Cet article décrit les principales fonctionnalités et les services disponibles
 - Chiffrement [Transparent Layer Security ](sql-server-linux-encrypted-connections.md) (TLS) activé.
 - [Authentification Active Directory](sql-server-linux-active-directory-authentication.md) activée.
 - [Fonctionnalité de groupes de disponibilité](sql-server-linux-availability-group-overview.md) pour la haute disponibilité.
-- Prise en charge de la [Recherche de texte intégral](sql-server-linux-setup-full-text-search.md).
+- Prise en charge de la [Recherche de texte intégral](sql-server-linux-setup-full-text-search.md)
 
-## <a name="sql-server-agent"></a>SQL Server Agent
+## <a name="sql-server-agent"></a>Agent SQL Server
 
--  [L’Agent SQL Server](sql-server-linux-setup-sql-agent.md) prend en charge les tâches suivantes :
-  - [Travaux Transact-SQL](sql-server-linux-run-sql-server-agent-job.md)
+- [L’Agent SQL Server](sql-server-linux-setup-sql-agent.md) prend en charge les tâches suivantes :
+  - [Transact-SQL jobs](sql-server-linux-run-sql-server-agent-job.md)
   - [Messagerie de base de données](sql-server-linux-db-mail-sql-agent.md)
   - [Envoi des journaux de transaction](sql-server-linux-use-log-shipping.md)
 
@@ -67,11 +67,12 @@ Pour installer SQL Server sur Linux, utilisez un des didacticiels suivants :
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Exécutez sur Docker](quickstart-install-connect-docker.md)
+- [Exécuter sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-Pour d’autres informations concernant SQL Server sur Linux, consultez la [vue d’ensemble](sql-server-linux-overview.md). Pour les téléchargements de packages et la liste des fonctionnalités prises en charge et les problèmes connus, consultez les [notes de publication](sql-server-linux-release-notes.md).
-
 Pour connaître les autres améliorations introduites dans SQL Server 2017, consultez [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
+
+> [!TIP]
+> Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](sql-server-linux-faq.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

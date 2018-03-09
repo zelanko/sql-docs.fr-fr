@@ -2,32 +2,30 @@
 title: Applet de commande New-RestoreLocation | Documents Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11b5d0bd210d80698706751a3734f2e96810187e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>Applet de commande New-RestoreLocation
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Spécifie les informations utilisées pour restaurer une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Spécifie les informations utilisées pour restaurer une base de données.  
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -39,12 +37,12 @@ ms.lasthandoff: 11/17/2017
   
  Les paramètres communs, tels que –Verbose et -Debug, ainsi que les paramètres d'erreur et d'avertissement, -Whatif et –Confirm, sont décrits dans la référence Windows PowerShell. Pour plus d’informations, consultez [about_CommonParameters](http://technet.microsoft.com/library/dd315352.aspx).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  L'applet de commande New-RestoreLocation contient les informations utilisées pour restaurer une base de données, y compris la chaîne de connexion du serveur et de la base de données, des propriétés de la source de données, des fichiers et dossiers associés à la base de données qui est restaurée.  
   
 ## <a name="parameters"></a>Paramètres  
   
-### <a name="-file-string"></a>-Fichier \<chaîne >  
+### <a name="-file-string"></a>-File \<string>  
  Spécifie le nom du fichier de sauvegarde que vous restaurez.  
   
 |||  
@@ -55,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-datasourceid-string"></a>-DataSourceId \<chaîne >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<chaîne >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  Spécifie la chaîne de connexion d'une instance Analysis Services distante.  
   
 |||  
@@ -76,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<As. RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  Spécifie si la source de données est distante ou locale, selon l'emplacement de la partition.  
   
 |||  
@@ -87,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="-folders-asrestorefolder"></a>-Dossiers \<As. RestoreFolder >  
+### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
  Spécifie des dossiers de partitions sur l'instance locale ou distante.  
   
 |||  

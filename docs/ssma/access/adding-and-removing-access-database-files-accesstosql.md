@@ -1,10 +1,13 @@
 ---
 title: "Ajout et suppression de l’accès de fichiers (AccessToSQL) base de données | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,11 +39,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 64e1bc5dd6b78df1f24ee03b65cfdf6b796c0e39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Ajout et suppression de fichiers de base de données Access (AccessToSQL)
 Pour migrer des données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez ajouter une ou plusieurs bases de données Access vers le projet SSMA. Ces bases de données doivent être Access 97 ou version ultérieure. Si vous avez des bases de données à partir d’une version antérieure de l’accès, vous devez convertir les bases de données vers une version plus récente. Pour cela, en ouvrant et en enregistrant les bases de données dans Access 97 ou une version ultérieure avant de les ajouter à SSMA.  

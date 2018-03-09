@@ -2,13 +2,13 @@
 title: "Propriétés du journal | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -55,19 +55,20 @@ helpviewer_keywords:
 - CreateAndSendCrashReports property
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 773aa4d93c8c6621184f8288964bd80d5efd826c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8add9f86817ba2a4a6ae32b0b3151b7f488966e1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-properties"></a>Propriétés du journal
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur de journal répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur de journal répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ## <a name="general"></a>Général  
  **Fichier**  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/17/2017
  Propriété utilisée comme valeur par défaut durant une opération de traitement effectuée par le serveur.  
   
  **ErrorLog\KeyErrorAction**  
- Spécifie l’action entreprise par le serveur quand une erreur **KeyNotFound** se produit. Les réponses valides à cette erreur sont :  
+ Spécifie l’action entreprise par le serveur quand une erreur **KeyNotFound** se produit. Les réponses valides à cette erreur sont :  
   
 -   **ConvertToUnknown** indique au serveur d'allouer la valeur de clé d'erreur au membre inconnu.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/17/2017
 -   **StopLogging** indique au serveur d'arrêter l'enregistrement des erreurs lorsque le nombre maximal d'erreurs est atteint, mais d'autoriser la poursuite du traitement.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Spécifie l’action entreprise par le serveur quand une erreur **KeyNotFound** se produit. Les réponses valides à cette erreur sont :  
+ Spécifie l’action entreprise par le serveur quand une erreur **KeyNotFound** se produit. Les réponses valides à cette erreur sont :  
   
 -   **IgnoreError** indique au serveur de poursuivre le traitement sans enregistrer l'erreur ou la compter dans le nombre maximal d'erreurs de clé. Lorsque vous ignorez l'erreur, vous permettez au traitement de continuer sans ajouter l'erreur au nombre d'erreurs ou l'enregistrer à l'écran ou dans le fichier journal. L'enregistrement en question rencontre un problème d'intégrité des données et ne peut pas être ajouté à la base de données. L'enregistrement sera ignoré ou agrégé dans le membre inconnu, tel que le détermine la propriété **KeyErrorAction** .  
   
@@ -239,6 +240,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

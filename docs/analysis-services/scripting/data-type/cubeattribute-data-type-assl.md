@@ -2,15 +2,13 @@
 title: "Type de données CubeAttribute (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CubeAttribute Data Type
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 004ae803e654a8267b89bf5b5ab813052f7b3eda
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 84899c5d82286fbcc49404f854ff38c0243a655e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cubeattribute-data-type-assl"></a>Type de données CubeAttribute (ASSL)
-  Définit un type de données primitif qui représente un attribut associé avec un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif qui représente un attribut associé avec un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,18 +50,18 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|Aucune|  
-|Types de données dérivés|Aucune|  
+|Types de données de base|None|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[AggregationUsage](../../../analysis-services/scripting/properties/aggregationusage-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [AttributeHierarchyEnabled](../../../analysis-services/scripting/properties/attributehierarchyenabled-element-assl.md), [AttributeHierarchyOptimizedState](../../../analysis-services/scripting/properties/attributehierarchyoptimizedstate-element-assl.md), [AttributeHierarchyVisible](../../../analysis-services/scripting/properties/attributehierarchyvisible-element-assl.md), [AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md)|  
 |Éléments dérivés|[Attribut](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([attributs](../../../analysis-services/scripting/collections/attributes-element-assl.md) collection de [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le *AttributeHierarchyOptimizedState* élément n’est pas pris en charge lors de l’exécution du service dans les valeurs de propriété de configuration DeploymentMode de 1 ou 2 (modes SharePoint ou tabulaire, utilisés pour exécuter [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et bases de données model tabulaire).  
   
  Un attribut ne peut pas être ajouté en tant que niveau d’une hiérarchie lorsque la propriété *AtttributeHierarchyEnabled*, est définie sur FALSE et l’instance est sous DeploymentMode 1 ou 2 (mode de serveur SharePoint ou tabulaire).  

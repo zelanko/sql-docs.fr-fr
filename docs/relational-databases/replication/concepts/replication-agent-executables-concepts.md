@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 911c44b3cbacf3fa9a59ed8b78c77acf8532bd6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13d16f3c7cee8e344917238bf8637cfef202432a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-executables-concepts"></a>Concepts des exécutables de l'agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ ms.lasthandoff: 11/17/2017
   
 -   [Agent de lecture de la file d’attente de réplication](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
--   [Agent d’instantané de réplication](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
- Lorsque vous appelez des agents de réplication, vous pouvez utiliser des profils de performances pour transmettre automatiquement un jeu défini de paramètres au fichier exécutable de l'agent. Pour plus d’informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Lorsque vous appelez des agents de réplication, vous pouvez utiliser des profils de performances pour transmettre automatiquement un jeu défini de paramètres au fichier exécutable de l'agent. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants décrivent comment appeler les agents de réplication à partir de l'invite de commandes. Il est également possible d'appeler les agents de réplication au moyen de Replication Management Objects. Pour plus d’informations, consultez [Synchroniser des abonnements &#40;réplication&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md).  

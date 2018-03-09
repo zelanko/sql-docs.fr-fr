@@ -3,13 +3,19 @@ title: "Instruction FLWOR et itération (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - return clause
 - FLWOR statement
@@ -22,19 +28,19 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a329436ac7ded9f64f0ad0ad4683569ec6f71c9a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc15902b85eb44c0341fc29389699d2eed43e875
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Instruction et itération FLWOR (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery définit la syntaxe d'itération FLWOR. FLWOR est l'acronyme de `for`, `let`, `where`, `order by` et `return`.  
   
@@ -76,7 +82,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
@@ -95,7 +101,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   `$Step` est la variable d'itération.  
   
@@ -188,7 +194,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   L'instruction FLWOR récupère une séquence d'éléments <`Location`> pour un produit spécifique.  
   
@@ -247,13 +253,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Notez les points suivants par rapport à la requête ci-dessus :  
+ Notez les points suivants par rapport à la requête ci-dessus :  
   
 -   Le `where` (mot clé) utilise le **count()** fonction pour compter le nombre de <`step`> emplacement du centre des éléments enfants dans chaque travail.  
   
 -   L'expression `return` construit le code XML qu'il vous faut d'après les résultats de l'itération.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="30"/>   
@@ -294,7 +300,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le `for` expression définit `$Loc` et $`FirstStep` variables.  
   
@@ -304,7 +310,7 @@ SELECT @x.query('
   
 -   `$Loc` est spécifié dans l'expression associée à la variable `$FirstStep`.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 Manu step 1 at Loc 1   
@@ -327,7 +333,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants par rapport à la requête ci-dessus :  
+ Notez les points suivants par rapport à la requête ci-dessus :  
   
 -   La clause `for` définit deux variables, `$WC` et `$S`. L'expression associée à `$WC` génère une séquence de postes de travail impliqués dans la fabrication d'une bicyclette (modèle de produit). L'expression de chemin affectée à la variable `$S` génère une séquence d'étapes pour chaque séquence de postes de travail de `$WC`.  
   
@@ -382,7 +388,7 @@ WHERE BusinessEntityID=291;
 order by data($a/act:number[1]) descending  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -426,7 +432,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -451,13 +457,13 @@ FROM Production.ProductModel
 where ProductModelID=19;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   L'expression `/p1:ProductDescription/p1:Specifications/*` renvoie les enfants de <`Specifications`>.  
   
 -   L'expression `order by (local-name($a))` trie la séquence par la partie locale du nom d'élément.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Color>Available in most colors</Color>  
@@ -484,7 +490,7 @@ select @x.query('
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Person />  
@@ -513,7 +519,7 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Employee ID="8" Title="Administrator" Gender="M" />  

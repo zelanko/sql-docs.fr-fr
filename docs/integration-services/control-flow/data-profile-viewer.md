@@ -1,5 +1,5 @@
 ---
-title: "Visionneuse du profil des données | Documents Microsoft"
+title: "Visionneuse du profil des données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>Visionneuse du profil des données
   L'affichage et l'analyse des profils des données sont les étapes suivantes du processus de profilage des données. Pour afficher ces profils, vous devez avoir exécuté la tâche de profilage des données dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et avoir calculé les profils des données. Pour plus d’informations sur la configuration et l’exécution des tâches de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Cliquez avec le bouton droit sur la tâche de **profilage des données** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puis cliquez sur **Modifier**. Cliquez sur **Ouvrir la visionneuse de profil** dans la page **Général** de **l’Éditeur de tâche de profilage de données**.  
   
--   Dans le dossier,  *\<lecteur >*: \Program Files (x86) | Programme Files\Microsoft SQL Server\110\DTS\Binn, exécutez DataProfileViewer.exe.  
+-   Dans le dossier *\<lecteur>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn, exécutez DataProfileViewer.exe.  
   
  La visionneuse utilise plusieurs volets pour afficher les profils demandés et les résultats calculés avec, en option, des détails et une fonction d'exploration vers le bas :  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Type de profil = Profil de distribution de longueurs de colonne  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Profil de Distribution de longueurs de colonne - \<colonne > volet  
+##### <a name="column-length-distribution-profile---column-pane"></a>Profil de distribution de longueurs de colonne - volet \<colonne>  
  **Longueur minimale**  
  Affiche la longueur minimale des valeurs de cette colonne.  
   
@@ -124,9 +123,9 @@ ms.lasthandoff: 08/11/2017
  **Pourcentage**  
  Affiche le pourcentage de lignes dans lesquelles la valeur de la colonne profilée a la longueur affichée dans la colonne **Longueur** .  
   
-#### <a name="profile-type--column-null-ratio-profile"></a>Type de profil = Profil de ratio de colonne Null  
+#### <a name="profile-type--column-null-ratio-profile"></a>Type de profil = Profil de ratio de colonne Null  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Profil de Ratio de colonne Null - \<colonne > volet  
+##### <a name="column-null-ratio-profile---column-pane"></a>Profil de ratio de colonne Null - volet \<colonne>  
  **Nombre null**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée possède une valeur NULL.  
   
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>Type de profil = Profil de modèle de colonne  
   
-##### <a name="column-pattern-profile---column-pane"></a>Profil de modèle de colonne - \<colonne > volet  
+##### <a name="column-pattern-profile---column-pane"></a>Profil de modèle de colonne - volet \<colonne>  
  **Nombre de lignes**  
  Affiche le nombre de lignes présentes dans la table ou la vue.  
   
@@ -151,7 +150,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>Type de profil = Profil de statistiques de colonnes  
   
-##### <a name="column-statistics-profile---column-pane"></a>Profil de statistiques de colonne - \<colonne > volet  
+##### <a name="column-statistics-profile---column-pane"></a>Profil de statistiques de colonnes - volet \<colonne>  
  **Minimum**  
  Affiche la valeur minimale trouvée dans la colonne profilée.  
   
@@ -166,7 +165,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Type de profil = Profil de distribution de valeurs de colonne  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Profil de Distribution de valeurs de colonne - \<colonne > volet  
+##### <a name="column-value-distribution-profile---column-pane"></a>Profil de distribution de valeurs de colonne - volet \<colonne>  
  **Nombre de valeurs distinctes**  
  Affiche le nombre de valeurs distinctes trouvées dans la colonne profilée.  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 08/11/2017
  **Value**  
  Affiche les valeurs distinctes trouvées dans la colonne profilée.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
  **Pourcentage**  
@@ -185,7 +184,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>Type de profil = Profil de clé candidate  
   
-##### <a name="candidate-key-profile---table-pane"></a>Profil de clé candidate - \<table > volet  
+##### <a name="candidate-key-profile---table-pane"></a>Profil de clé candidate - volet \<table>  
  **Colonnes clés**  
  Affiche les colonnes sélectionnées pour le profilage en tant que clé candidate.  
   
@@ -193,10 +192,10 @@ ms.lasthandoff: 08/11/2017
  Affiche la puissance (sous forme de pourcentage) de la colonne ou de la combinaison de colonnes clés candidates. Une puissance de clé inférieure à 100 % indique qu'il existe des valeurs dupliquées.  
   
 ##### <a name="key-violations-pane"></a>Volet Violations de clé  
- **\<Colonne1 >, \<Colonne2 >, etc..**  
+ **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs dupliquées qui ont été détectées dans la colonne profilée.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Type de profil = Profil de dépendance fonctionnelle  
@@ -216,17 +215,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Un pourcentage élevé de valeurs erronées dans les données peut générer des résultats inattendus d'un profil de dépendance fonctionnelle. Par exemple, 90 % des lignes ont une valeur État de « WI » pour une valeur Code postal de « 98052 ». Le profil signale les lignes qui contiennent la valeur d'état correcte de « WA » en tant que violations.  
   
- **\<nom de colonne déterminante >**  
+ **\<nom de colonne déterminante>**  
  Affiche la valeur de la colonne déterminante ou de la combinaison de colonnes dans cette instance d'une violation de dépendance fonctionnelle.  
   
- **\<nom de colonne dépendante >**  
+ **\<nom de colonne dépendante>**  
  Affiche la valeur de la colonne dépendante dans cette instance d'une violation de dépendance fonctionnelle.  
   
  **Nombre de supports**  
  Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante détermine la colonne dépendante.  
   
  **Nombre de violations**  
- Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante ne détermine pas la colonne dépendante. (Ce sont les lignes où la valeur dépendante est la valeur affichée dans le  **\<nom de colonne dépendante >** colonne.)  
+ Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante ne détermine pas la colonne dépendante. (Il s’agit des lignes dans lesquelles la valeur dépendante est la valeur affichée dans la colonne **\<nom de colonne dépendante**.)  
   
  **Pourcentage de supports**  
  Affiche le pourcentage de lignes dans lesquelles la colonne déterminante détermine la colonne dépendante.  
@@ -244,10 +243,9 @@ ms.lasthandoff: 08/11/2017
  Affiche la puissance (sous forme de pourcentage) du chevauchement entre les colonnes. Une puissance de clé inférieure à 100 % indique que dans certains cas, la valeur du sous-ensemble est introuvable parmi les valeurs du sur-ensemble.  
   
 ##### <a name="inclusion-violations-pane"></a>Volet des violations d'inclusion  
- **\<Colonne1 >, \<Colonne2 >, etc..**  
+ **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs de la colonne ou des colonnes du sous-ensemble qui étaient introuvables dans la colonne ou les colonnes du sur-ensemble.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
-

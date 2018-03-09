@@ -2,40 +2,35 @@
 title: "L’emprunt d’identité dans les modèles tabulaires Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Emprunt d'identité 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article fournit les créateurs de modèles tabulaires une présentation d’informations d’identification d’ouverture de session utilisation par Analysis Services lors de la connexion à une source de données pour importer et traiter (Actualiser) des données.  
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Cette rubrique fournit des créateurs de modèles tabulaires une présentation d’informations d’identification d’ouverture de session utilisation par Analysis Services lors de la connexion à une source de données pour importer et traiter (Actualiser) des données.  
-
-##  <a name="bkmk_conf_imp_info"></a>Configuration de l’emprunt d’identité  
+##  <a name="bkmk_conf_imp_info"></a> Configuration de l’emprunt d’identité  
  Où et dans quel contexte existe un modèle détermine la façon dont les informations d’emprunt d’identité sont configurées. Lorsque vous créez un projet de modèle, l’emprunt d’identité est configuré dans SQL Server Data Tools (SSDT) lorsque vous vous connectez à une source de données pour importer des données. Une fois qu’un modèle est déployé, l’emprunt d’identité peut être configuré dans la propriété de chaîne de connexion de base de données de modèle à l’aide de SQL Server Management Studio (SSMS). Pour les modèles tabulaires dans Azure Analysis Services, vous pouvez utiliser SSMS ou **afficher sous la forme : Script** mode dans le concepteur basée sur navigateur pour modifier le fichier Model.bim dans JSON.
   
-##  <a name="bkmk_how_imper"></a>Utilisation de l’emprunt d’identité  
+##  <a name="bkmk_how_imper"></a> Utilisation de l’emprunt d’identité  
  L'*emprunt d'identité* est la capacité d'une application serveur, telle qu'Analysis Services, d'assumer l'identité d'une application cliente. Analysis Services s’exécute à l’aide d’un compte de service ; Toutefois, lorsque le serveur établit une connexion à une source de données, il utilise l’emprunt d’identité afin que les vérifications d’accès pour l’importation de données et le traitement peut être effectuée.  
   
  Informations d’identification utilisées pour l’emprunt d’identité sont différentes de celles que vous êtes actuellement connecté avec. L’utilisateur connecté sont utilisées pour certaines opérations côté client lors de la création d’un modèle.  
@@ -95,6 +90,6 @@ Lorsque les données sont importées ou traitées, les informations d’identifi
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Sources de données](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Déploiement de solutions de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Déploiement d’une solution de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

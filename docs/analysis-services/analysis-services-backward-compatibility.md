@@ -2,13 +2,13 @@
 title: "Compatibilité descendante de SQL Server 2016 Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b7c58d201f40123ab206d02a4b32948c3d976c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilité descendante de Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -70,7 +70,7 @@ Les fonctionnalités suivantes ont été déconseillées dans une version antér
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
 |[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
 |Indicateur d’optimiseur de requête NON_EMPTY_BEHAVIOR|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
-|Assemblys COM|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
+|Assemblys COM|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
 |Propriété intrinsèque de cellule CELL_EVALUATION_LIST|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
   
 > [!NOTE]  

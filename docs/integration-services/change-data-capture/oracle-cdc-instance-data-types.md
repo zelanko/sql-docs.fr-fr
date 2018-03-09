@@ -1,5 +1,5 @@
 ---
-title: "Types de données d’Instance Oracle CDC | Documents Microsoft"
+title: "Types de données d’instance Oracle CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce8e5f7622c520f819b65000729b7d3c750764fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d259e5b3c54db6856cc62b301889036faee6e10
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Types de données d'instance Oracle CDC
   L'instance Oracle CDC prend en charge la plupart des types de données Oracle. Les sections suivantes décrivent les types de données pris en charge et les types de données non pris en charge.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 |Type de données de base de données Oracle|Type de données de SQL Server|  
 |-------------------------------|--------------------------|  
-|BINARY_FLOAT|REAL|  
+|BINARY_FLOAT|real|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
 |DATE|DATETIME|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/03/2017
 |NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|REAL|FLOAT|  
+|real|FLOAT|  
 |TIMESTAMP|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
@@ -80,9 +79,8 @@ ms.lasthandoff: 08/03/2017
   
 -   VARRAY  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepteur de Capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [L’Instance Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Instance CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

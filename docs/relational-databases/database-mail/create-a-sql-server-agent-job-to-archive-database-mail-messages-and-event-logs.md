@@ -2,10 +2,14 @@
 title: "Créer un travail de SQL Server Agent pour archiver les messages et les journaux d’événements de la messagerie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,34 +18,35 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cace8601462fd2469d7cdbfb4cce168111d42d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
-  Des copies des messages de la messagerie de base de données et de leurs pièces jointes sont conservées dans les tables **msdb** avec le journal d'événements de la messagerie de base de données. Il peut être utile d'archiver périodiquement les messages et les événements dont vous n'avez plus besoin afin de réduire la taille des tables. Les procédures suivantes permettent de créer un travail de l'Agent SQL Server pour automatiser le processus.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Des copies des messages de la messagerie de base de données et de leurs pièces jointes sont conservées dans les tables **msdb** avec le journal d'événements de la messagerie de base de données. Il peut être utile d'archiver périodiquement les messages et les événements dont vous n'avez plus besoin afin de réduire la taille des tables. Les procédures suivantes permettent de créer un travail de l'Agent SQL Server pour automatiser le processus.  
   
 -   **Avant de commencer :**  , [Conditions préalables](#Prerequisites), [Recommandations](#Recommendations), [Autorisations](#Permissions)  
   
--   **Pour archiver les messages et les journaux de la messagerie de base de données à l'aide de :**  [Agent SQL Server](#Process_Overview)  
+-   **Pour archiver les messages et les journaux de la messagerie de base de données à l'aide de :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Les nouvelles tables de stockage des données d'archive peuvent se trouver dans une base de données d'archive spéciale. Vous pouvez également exporter les lignes vers un fichier texte.  
    
 ###  <a name="Recommendations"></a> Recommandations  
  Dans votre environnement de production, vous pouvez ajouter des fonctionnalités supplémentaires de vérification des erreurs et faire envoyer un message électronique aux opérateurs en cas d'échec du travail.  
   
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  Vous devez être membre du rôle serveur fixe **sysadmin** pour pouvoir exécuter les procédures stockées décrites dans cette rubrique.  
   
   
@@ -62,7 +67,7 @@ ms.lasthandoff: 11/09/2017
 -   Planifiez une exécution périodique du travail.  
   
   
-## <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
+## <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
 1.  Dans l’Explorateur d’objets, développez l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez avec le bouton droit sur **Travaux**, puis cliquez sur **Nouveau travail**.  
   
@@ -88,7 +93,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Dans la zone **Commande** , tapez l'instruction suivante pour créer une table nommée d'après le mois précédent, contenant les lignes antérieures au début du mois actuel :  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -100,7 +105,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Pour créer une étape permettant d'archiver les pièces jointes de la messagerie de base de données  
   
@@ -114,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Dans la zone **Commande** , tapez l'instruction suivante pour créer une table de pièces jointes nommée d'après le mois précédent, contenant les pièces jointes qui correspondent aux messages transférés à l'étape précédente :  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -127,7 +132,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Pour créer une étape permettant d'archiver le journal de la messagerie de base de données  
   
@@ -141,7 +146,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Dans la zone **Commande** , tapez l'instruction suivante pour créer une table de journal nommée d'après le mois précédent, contenant les entrées de journal qui correspondent aux messages transférés à l'étape antérieure :  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -154,7 +159,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Pour créer une étape permettant de supprimer les lignes archivées du journal de la messagerie de base de données  
   
@@ -168,7 +173,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Dans la zone **Commande** , tapez l'instruction suivante pour supprimer des tables de la messagerie de base de données les lignes antérieures au mois actuel :  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -176,7 +181,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Pour créer une étape permettant de supprimer les éléments archivés du journal des événements de la messagerie de base de données  
   
@@ -188,7 +193,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Dans la zone **Commande** , tapez l'instruction suivante pour supprimer du journal des événements de la messagerie de base de données les lignes antérieures au mois actuel :  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  
@@ -196,7 +201,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-schedule-the-job-to-run-periodically"></a>Pour planifier une exécution périodique du travail  
   
@@ -216,6 +221,6 @@ ms.lasthandoff: 11/09/2017
   
 8.  Cliquez sur **OK** pour enregistrer le travail.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
   

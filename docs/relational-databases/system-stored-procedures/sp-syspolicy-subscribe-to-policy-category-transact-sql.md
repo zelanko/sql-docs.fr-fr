@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_subscribe_to_policy_category (Transact-SQL) | Documents Microsoft
+title: sp_syspolicy_subscribe_to_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_subscribe_to_policy_category
 - sp_syspolicy_subscribe_to_policy_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_subscribe_to_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_subscribe_to_policy_category
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d3ae8b6f35b5135066d9ab7164524406e165219
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1504031c9487e1d217d94d18e1cd10973dd16f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@policy_category=** ] **'***policy_category***'**  
+ [ **@policy_category=** ] **'***policy_category***'**  
  Nom de la catégorie de stratégie à laquelle vous voulez que la base de données s'abonne. *policy_category* est **sysname**et est requis.  
   
  Pour obtenir les valeurs de *policy_category*, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  
@@ -54,7 +57,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_subscribe_to_policy_category dans le contexte de la base de données à laquelle vous voulez ajouter un abonnement aux catégories de stratégies.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -70,6 +73,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion basée sur la stratégie stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_unsubscribe_from_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

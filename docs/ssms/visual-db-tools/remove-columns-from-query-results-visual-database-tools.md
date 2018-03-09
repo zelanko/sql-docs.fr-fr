@@ -3,8 +3,11 @@ title: "Supprimer des colonnes des résultats d’une requête (Visual Database 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a70cc40a6645cb0341568fc7c2dec702323f3b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 80bc4b357c8abbe7fc34d36c82203d4568fc5c6e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Supprimer des colonnes des résultats d'une requête (Visual Database Tools)
-Si vous utilisez une colonne dans la requête Select mais que vous ne souhaitez pas l'afficher dans le jeu de résultats (autrement dit, si vous ne souhaitez pas que la colonne figure dans la liste de sélection de la requête), vous pouvez la supprimer du résultat. Une fois la colonne supprimée du résultat de la requête, vous pouvez continuer à l'utiliser dans des critères de recherche ou en tant que champ de tri.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si vous utilisez une colonne dans la requête Select mais que vous ne souhaitez pas l’afficher dans le jeu de résultats (autrement dit, si vous ne souhaitez pas que la colonne figure dans la liste de sélection de la requête), vous pouvez la supprimer du résultat. Une fois la colonne supprimée du résultat de la requête, vous pouvez continuer à l'utiliser dans des critères de recherche ou en tant que champ de tri.  
   
 > [!NOTE]  
 > Si vous souhaitez supprimer complètement une colonne de la requête, consultez [Supprimer des colonnes des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md).  
@@ -37,11 +40,11 @@ Si vous utilisez une colonne dans la requête Select mais que vous ne souhaitez 
   
 -   Dans le **volet Critères**, décochez la case située dans la colonne **Sortie** et correspondant à la colonne de données que vous souhaitez supprimer. (Si vous souhaitez réintégrer la colonne au résultat de la requête, il vous suffit de réactiver la colonne **Sortie** .)  
   
-    - ou -  
+    -ou-  
   
 -   Supprimez la colonne de la liste de résultats dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Ajouter des colonnes à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
 [Supprimer des colonnes des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

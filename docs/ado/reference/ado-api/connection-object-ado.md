@@ -3,8 +3,9 @@ title: Objet de connexion (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection
-helpviewer_keywords: Connection object [ADO]
+f1_keywords:
+- Connection
+helpviewer_keywords:
+- Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9911597512c0172931b940fe463fab90391c2d7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-object-ado"></a>Objet de connexion (ADO)
 Représente une connexion ouverte à une source de données.  
@@ -67,7 +70,7 @@ Représente une connexion ouverte à une source de données.
 >  N’utilisez pas cette fonctionnalité (appelant une procédure stockée ou une commande nommée comme s’il s’agissait d’une méthode native sur le **connexion** objet) dans une application Microsoft® .NET Framework, car l’implémentation sous-jacente de conflits de fonctionnalité avec la façon dont le .NET Framework interagit avec COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Exécuter une commande comme une méthode native d’un objet de connexion  
- Pour exécuter une commande, donnez-lui un nom à l’aide de la **commande** objet [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété. Définir le **ActiveConnection** propriété de la **commande** objet à la connexion. Ensuite vous émettez une instruction où le nom de commande est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres et un **Recordset** de l’objet si toutes les lignes sont retournées. Définir le **Recordset** propriétés pour personnaliser résultant **Recordset**. Exemple :  
+ Pour exécuter une commande, donnez-lui un nom à l’aide de la **commande** objet [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété. Définir le **ActiveConnection** propriété de la **commande** objet à la connexion. Ensuite vous émettez une instruction où le nom de commande est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres et un **Recordset** de l’objet si toutes les lignes sont retournées. Définir le **Recordset** propriétés pour personnaliser résultant **Recordset**. Par exemple :  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -83,7 +86,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Exécuter une procédure stockée comme une méthode native d’un objet de connexion  
- Pour exécuter une procédure stockée, émettez une instruction où le nom de la procédure stockée est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres. ADO effectuera une « estimation » des types de paramètres. Exemple :  
+ Pour exécuter une procédure stockée, émettez une instruction où le nom de la procédure stockée est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres. ADO effectuera une « estimation » des types de paramètres. Par exemple :  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -102,5 +105,5 @@ cnn. "parameter"
  [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

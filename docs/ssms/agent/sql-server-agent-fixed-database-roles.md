@@ -3,8 +3,11 @@ title: "Rôles de base de données fixes de SQL Server Agent | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,16 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a8b2d1ccf779150f478702870689c359af4b0182
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02a76ac743e89269296cdb04e9eb27ec5faca66f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Rôles de base de données fixes de SQL Server Agent
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] possède les rôles fixes de base de données **msdb** suivants, qui permettent aux administrateurs de contrôler plus précisément l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Les rôles sont classés ci-après selon leurs privilèges d'accès, du moins privilégié au plus privilégié :  
   
 -   **SQLAgentUserRole**  
@@ -53,13 +57,13 @@ Le tableau suivant récapitule les autorisations de **SQLAgentUserRole** sur les
   
 |Action|Opérateurs|Travaux locaux<br /><br />(travaux lui appartenant uniquement)|Calendriers de travaux<br /><br />(planifications lui appartenant uniquement)|Proxys|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|Créer/modifier/supprimer|Non|Oui<br /><br />Ne peut pas modifier l’appartenance des travaux.|Oui|Non|  
+|Créer/modifier/supprimer|non|Oui<br /><br />Ne peut pas modifier l’appartenance des travaux.|Oui|non|  
 |Afficher la liste (énumérer)|Oui<br /><br />Peut obtenir la liste des opérateurs disponibles à utiliser dans **sp_notify_operator** et dans la boîte de dialogue **Propriétés du travail** de Management Studio.|Oui|Oui|Oui<br /><br />Liste de proxys uniquement disponibles dans la boîte de dialogue **Propriétés de l’étape du travail** de Management Studio.|  
-|Activer/désactiver|Non|Oui|Oui|Non applicable|  
-|Afficher les propriétés|Non|Oui|Oui|Non|  
+|Activer/désactiver|non|Oui|Oui|Non applicable|  
+|Afficher les propriétés|non|Oui|Oui|non|  
 |Exécuter/arrêter/démarrer|Non applicable|Oui|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentUserRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentUserRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Oui|Non applicable|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>Autorisations du rôle SQLAgentReaderRole  
@@ -72,14 +76,14 @@ Le tableau suivant récapitule les autorisations de **SQLAgentReaderRole** sur l
   
 |Action|Opérateurs|Travaux locaux|Travaux multiserveur|Calendriers de travaux|Proxys|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Créer/modifier/supprimer|Non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|Non|Oui (planifications lui appartenant uniquement)|Non|  
+|Créer/modifier/supprimer|non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|non|Oui (planifications lui appartenant uniquement)|non|  
 |Afficher la liste (énumérer)|Oui<br /><br />Peut obtenir la liste des opérateurs disponibles à utiliser dans **sp_notify_operator** et dans la boîte de dialogue **Propriétés du travail** de Management Studio.|Oui|Oui|Oui|Oui<br /><br />Liste de proxys uniquement disponibles dans la boîte de dialogue **Propriétés de l’étape du travail** de Management Studio.|  
-|Activer/désactiver|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non applicable|  
-|Afficher les propriétés|Non|Oui|Oui|Oui|Non|  
-|Modifier les propriétés|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
-|Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|Non|Non applicable|Non applicable|  
+|Activer/désactiver|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|Non applicable|  
+|Afficher les propriétés|non|Oui|Oui|Oui|non|  
+|Modifier les propriétés|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
+|Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentReaderRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|Non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentReaderRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>Autorisations du rôle SQLAgentOperatorRole  
@@ -96,20 +100,20 @@ Le tableau suivant récapitule les autorisations de **SQLAgentOperatorRole** sur
   
 |Action|Alertes|Opérateurs|Travaux locaux|Travaux multiserveur|Calendriers de travaux|Proxys|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Créer/modifier/supprimer|Non|Non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|Non|Oui (planifications lui appartenant uniquement)|Non|  
+|Créer/modifier/supprimer|non|non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|non|Oui (planifications lui appartenant uniquement)|non|  
 |Afficher la liste (énumérer)|Oui|Oui<br /><br />Peut obtenir la liste des opérateurs disponibles à utiliser dans **sp_notify_operator** et dans la boîte de dialogue **Propriétés du travail** de Management Studio.|Oui|Oui|Oui|Oui|  
-|Activer/désactiver|Non|Non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_job** et en attribuant des valeurs aux paramètres **@enabled** et **@job_id** (ou **@job_name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|Non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les planifications qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_schedule** et en attribuant des valeurs aux paramètres **@enabled** et **@schedule_id** (ou **@name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|Non applicable|  
+|Activer/désactiver|non|non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_job** et en attribuant des valeurs aux paramètres **@enabled** et **@job_id** (ou **@job_name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les planifications qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_schedule** et en attribuant des valeurs aux paramètres **@enabled** et **@schedule_id** (ou **@name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|Non applicable|  
 |Afficher les propriétés|Oui|Oui|Oui|Oui|Oui|Oui|  
-|Modifier les propriétés|Non|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
-|Exécuter/arrêter/démarrer|Non applicable|Non applicable|Oui|Non|Non applicable|Non applicable|  
+|Modifier les propriétés|non|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
+|Exécuter/arrêter/démarrer|Non applicable|Non applicable|Oui|non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Non applicable|Oui|Non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non applicable|Oui|non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
 ## <a name="assigning-users-multiple-roles"></a>Assignation de plusieurs rôles aux utilisateurs  
 Les membres du rôle serveur fixe **sysadmin** ont accès à toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Si un utilisateur n’est pas membre du rôle **sysadmin** , mais qu’il est membre de plusieurs rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, il est important de prendre en compte le modèle concentrique des autorisations de ces rôles. Étant donné que les rôles plus privilégiés contiennent toujours toutes les autorisations des rôles moins privilégiés, un utilisateur qui est membre de plusieurs rôles a automatiquement les autorisations associées au rôle le plus privilégié dont il est membre.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
 [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623)  
 [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/97b3119b-e43e-447a-bbfb-0b5499e2fefe)  

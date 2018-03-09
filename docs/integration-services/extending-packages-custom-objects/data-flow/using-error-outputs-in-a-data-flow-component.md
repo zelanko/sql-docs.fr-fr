@@ -1,5 +1,5 @@
 ---
-title: "À l’aide de sorties d’erreur dans un composant de flux de données | Documents Microsoft"
+title: "Utilisation de sorties d’erreur dans un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -28,25 +27,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f51b9d3dfcfab48a18536be0d15ff28ef7833b03
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilisation de sorties d'erreur dans un composant de flux de données
   Il est possible d'ajouter des objets <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> spéciaux appelés sorties d'erreur à des composants afin de permettre à un composant de rediriger les lignes qu'il ne parvient pas à traiter pendant l'exécution. Les problèmes qu'un composant peut rencontrer sont en général classés en tant qu'erreurs ou troncations et sont propres à chaque composant. Les composants qui fournissent des sorties d'erreur offrent à leurs utilisateurs la flexibilité de gérer les conditions d'erreur en filtrant les lignes d'erreur du jeu de résultats, en provoquant l'échec du composant lorsqu'un problème se produit ou en ignorant des erreurs afin de continuer.  
   
- Pour implémenter et prendre en charge les sorties d’erreur dans un composant, vous devez d’abord définir le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> propriété du composant à **true**. Ensuite, vous devez ajouter une sortie au composant qui a son <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> propriété **true**. Enfin, le composant doit contenir un code qui redirige les lignes vers la sortie d'erreur lorsque des erreurs ou troncations se produisent. Cette rubrique couvre ces trois étapes et explique les différences entre les sorties d'erreur synchrones et asynchrones.  
+ Pour implémenter et prendre en charge les sorties d’erreur dans un composant, vous devez commencer par définir la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> du composant sur **true**. Ensuite, vous devez ajouter une sortie au composant dont la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> a la valeur **true**. Enfin, le composant doit contenir un code qui redirige les lignes vers la sortie d'erreur lorsque des erreurs ou troncations se produisent. Cette rubrique couvre ces trois étapes et explique les différences entre les sorties d'erreur synchrones et asynchrones.  
   
 ## <a name="creating-an-error-output"></a>Création d'une sortie d'erreur  
- Vous créez une sortie d’erreur en appelant le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> méthode de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>, puis en définissant le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> propriété de la nouvelle sortie à **true**. Si la sortie est asynchrone, vous n'avez rien d'autre à lui faire. Si la sortie est synchrone, et qu'il existe une autre sortie synchrone avec la même entrée, vous devez également définir les propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Ces deux propriétés doivent avoir les mêmes valeurs que l'autre sortie synchrone avec la même entrée. Si ces propriétés ne sont pas définies sur une valeur différente de zéro, les lignes fournies par l'entrée sont envoyées aux deux sorties synchrones avec l'entrée.  
+ Vous créez une sortie d’erreur en appelant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>, puis en définissant la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> de la nouvelle sortie sur **true**. Si la sortie est asynchrone, vous n'avez rien d'autre à lui faire. Si la sortie est synchrone, et qu'il existe une autre sortie synchrone avec la même entrée, vous devez également définir les propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Ces deux propriétés doivent avoir les mêmes valeurs que l'autre sortie synchrone avec la même entrée. Si ces propriétés ne sont pas définies sur une valeur différente de zéro, les lignes fournies par l'entrée sont envoyées aux deux sorties synchrones avec l'entrée.  
   
  Lorsqu'un composant rencontre une erreur ou troncation pendant l'exécution, il continue selon les paramètres des propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> de l'entrée ou la sortie, ou de l'entrée ou la colonne de sortie, dans laquelle l'erreur s'est produite. La valeur de ces propriétés doit être définie par défaut sur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>. Lorsque la sortie d'erreur du composant est connectée à un composant en aval, cette propriété est définie par l'utilisateur du composant et permet à l'utilisateur de contrôler la manière dont le composant gère l'erreur ou la troncation.  
   
@@ -283,7 +281,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>Redirection d'une ligne avec des sorties asynchrones  
- Au lieu de diriger des lignes vers une sortie, comme cela est fait avec des sorties d'erreur synchrones, les composants avec des sorties asynchrones envoient une ligne vers une sortie d'erreur en ajoutant explicitement une ligne à la sortie <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. L'implémentation d'un composant qui utilise des sorties d'erreur asynchrones implique d'ajouter à la sortie d'erreur des colonnes fournies aux composants en aval et de mettre en cache le tampon de sortie pour la sortie d'erreur fournie au composant pendant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Les détails d’implémentation d’un composant à sorties asynchrones sont traitées en détail dans la rubrique [développement d’un composant de Transformation personnalisé avec les sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Si les colonnes ne sont pas ajoutées explicitement à la sortie d'erreur, la ligne du tampon ajoutée au tampon de sortie contient uniquement les deux colonnes d'erreur.  
+ Au lieu de diriger des lignes vers une sortie, comme cela est fait avec des sorties d'erreur synchrones, les composants avec des sorties asynchrones envoient une ligne vers une sortie d'erreur en ajoutant explicitement une ligne à la sortie <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. L'implémentation d'un composant qui utilise des sorties d'erreur asynchrones implique d'ajouter à la sortie d'erreur des colonnes fournies aux composants en aval et de mettre en cache le tampon de sortie pour la sortie d'erreur fournie au composant pendant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. L’implémentation d’un composant à sorties asynchrones est décrite en détail dans la rubrique [Développement d’un composant de transformation personnalisé à sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Si les colonnes ne sont pas ajoutées explicitement à la sortie d'erreur, la ligne du tampon ajoutée au tampon de sortie contient uniquement les deux colonnes d'erreur.  
   
  Pour envoyer une ligne vers une sortie d'erreur asynchrone, vous devez ajouter une ligne au tampon de sortie d'erreur. Parfois, une ligne peut avoir déjà été ajoutée au tampon de sortie sans erreur et vous devez la supprimer en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A>. Ensuite, vous définissez les valeurs des colonnes du tampon de sortie, et enfin, vous appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A> pour fournir le code d'erreur propre au composant et la valeur de la colonne d'erreur.  
   
@@ -440,9 +438,8 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion des erreurs dans les données](../../../integration-services/data-flow/error-handling-in-data.md)   
- [À l’aide de sorties d’erreur](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Utilisation de sorties d’erreur](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
-

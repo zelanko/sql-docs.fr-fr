@@ -1,26 +1,24 @@
 ---
 title: Didacticiels de SQL Server Python | Documents Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
-dev_langs: Python
-caps.latest.revision: "1"
+vapplies_to:
+- SQL Server 2017
+dev_langs:
+- Python
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 42a9339f5983eeef28250db7a384f37efd4dad9d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-python-tutorials"></a>Didacticiels de SQL Server Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fournit une liste des didacticiels et des exemples qui illustrent l’utilisation de Python avec SQL Server 2017. Grâce à ces exemples et les démonstrations, vous allez apprendre :
 

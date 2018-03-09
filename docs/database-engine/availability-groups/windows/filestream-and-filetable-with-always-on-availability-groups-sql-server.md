@@ -19,13 +19,13 @@ ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 363b496524c8b4a919a6163a382d4589cd8a41f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5319d8caeb5e8cfe2b77ae027e4de5fa34a28494
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM et FileTable avec groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Vous ajoutez une base de données qui contient des données FILESTREAM à un groupe de disponibilité Always On sur le réplica primaire. Dans ce cas, le partage `\\<computer_name>\<filestream_share_name>` existe déjà. Le partage `\\<VNN>\<filestream_share_name>` est créé.  
   
--   Vous activez FILESTREAM pour l'accès en continu des E/S de fichier sur un réplica primaire qui possède des groupes de disponibilité. Les partages suivants sont créés :  
+-   Vous activez FILESTREAM pour l'accès en continu des E/S de fichier sur un réplica primaire qui possède des groupes de disponibilité. Les partages suivants sont créés :  
   
     1.  `\\<computer_name>\<filestream_share_name>`  
   
@@ -89,10 +89,10 @@ ms.lasthandoff: 11/20/2017
   
 -   [Activer les conditions préalables pour les FileTables](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

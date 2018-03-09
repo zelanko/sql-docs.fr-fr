@@ -3,8 +3,9 @@ title: "La méthode Update | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::Update
-helpviewer_keywords: Update method [ADO]
+f1_keywords:
+- Recordset15::Update
+helpviewer_keywords:
+- Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cf6ded5026c89caa6e8656cf9160ab192650484
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-method"></a>Update (méthode)
 Enregistre les modifications apportées à la ligne actuelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  
@@ -38,7 +41,7 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Champs*  
+ *Fields*  
  Ce paramètre est facultatif. A **Variant** qui représente un nom unique, ou un **Variant** tableau qui représente les noms ou les positions ordinales des champs que vous souhaitez modifier.  
   
  *Valeurs*  

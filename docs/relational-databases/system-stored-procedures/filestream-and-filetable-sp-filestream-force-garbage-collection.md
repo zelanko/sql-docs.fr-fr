@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection (Transact-SQL) | Documents Microsoft
+title: sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/22/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>FileStream et FileTable - sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ sp_filestream_force_garbage_collection
 > [!NOTE]  
 >  *dbname* est **sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
   
- **@filename** = *nom_fichier_logique*  
+ **@filename** = *logical_file_name*  
  Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. **@filename**est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -68,7 +70,7 @@ sp_filestream_force_garbage_collection
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|*nom_fichier*|Indique le nom de conteneur FILESTREAM|  
+|*file_name*|Indique le nom de conteneur FILESTREAM|  
 |*num_collected_items*|Indique le nombre d'éléments FILESTREAM (fichiers/répertoires) qui ont été récupérés par le garbage collector (supprimés) dans ce conteneur.|  
 |*num_marked_for_collection_items*|Indique le nombre d'éléments FILESTREAM (fichiers/répertoires) qui ont été marqués pour le garbage collection dans ce conteneur. Ces éléments n’ont pas encore été supprimés, mais peuvent être éligibles pour la suppression après la phase de garbage collection.|  
 |*num_unprocessed_items*|Indique le nombre d'éléments FILESTREAM éligibles (fichiers ou répertoires) qui n'ont pas été traités pour le garbage collection dans ce conteneur FILESTREAM. Les éléments peuvent être inexploités pour différentes raisons, notamment :<br /><br /> Fichiers qui doivent être épinglés car la sauvegarde de journal ou le point de contrôle n'a pas été accepté.<br /><br /> Fichiers en mode de récupération FULL ou BULK_LOGGED.<br /><br /> Il existe une transaction active de longue durée.<br /><br /> Le travail du lecteur de journal de réplication n’a pas été exécuté. Consultez le livre blanc [du stockage FILESTREAM dans SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) pour plus d’informations.|  
@@ -87,7 +89,7 @@ En raison d’opérations de la phase 2, la procédure stockée doit être exéc
 Le Garbage Collection (GC) s’appuie sur la troncation du journal. Par conséquent, si des fichiers ont été supprimés récemment sur une base de données à l’aide du mode de récupération complète, elles sont GC-ed uniquement après une sauvegarde de journal de ces parties du journal des transactions est effectuée et la partie du journal est marqué comme inactive. Sur une base de données à l’aide du mode de récupération Simple, une troncation de journal se produit après un `CHECKPOINT` a été émis par rapport à la base de données.  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données db_owner.  
   
 ## <a name="examples"></a>Exemples  

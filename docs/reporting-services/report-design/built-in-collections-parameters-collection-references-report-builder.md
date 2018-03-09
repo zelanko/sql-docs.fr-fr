@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Collections intégrées - Références à la collection Parameters (Générateur de rapports et SSRS)
   Les paramètres de rapport font partie des collections intégrées que vous pouvez référencer à partir d'une expression. En incluant des paramètres dans une expression, vous pouvez personnaliser les données et l'apparence d'un rapport en fonction des choix faits par un utilisateur. Des expressions peuvent être utilisées pour toutes les propriétés des éléments de rapport ou propriétés des zones de texte qui comportent l’option (*Fx*) ou \<**Expression**>. Les expressions sont également utilisées pour contrôler différemment le contenu et l'apparence d'un rapport. Pour plus d’informations, consultez [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
@@ -38,13 +36,13 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Single"></a> Utilisation d'un paramètre à valeur unique dans une expression  
  Le tableau suivant présente des exemples de la syntaxe à utiliser lorsque vous incluez une référence à un paramètre à valeur unique de n'importe quel type de données dans une expression.  
   
-|Exemple| Description|  
+| Exemple|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Nom_paramètre>* `.IsMultiValue`|Retourne **False**.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si **True**, le paramètre est à valeurs multiples et il s’agit d’une collection d’objets. Si **False**, le paramètre est à valeur unique et il s’agit d’un seul objet.|  
 |`=Parameters!` *\<Nom_paramètre>* `.Count`|Retourne la valeur entière 1. Pour un paramètre à valeur unique, le nombre est toujours 1.|  
 |`=Parameters!` *\<Nom_paramètre>* `.Label`|Retourne l'étiquette du paramètre, qui est souvent utilisée comme nom complet dans une liste déroulante de valeurs disponibles.|  
 |`=Parameters!` *\<Nom_paramètre>* `.Value`|Retourne la valeur du paramètre. Si la propriété Libellé n’a pas été définie, cette valeur apparaît dans la liste déroulante des valeurs disponibles.|  
-|`=CStr(Parameters!` *\<Nom_paramètre>* `.Value)`|Retourne la valeur du paramètre sous forme de chaîne.|  
+|`=CStr(Parameters!`  *\<Nom_paramètre>* `.Value)`|Retourne la valeur du paramètre sous forme de chaîne.|  
 |`=Fields(Parameters!` *\<Nom_paramètre>* `.Value).Value`|Retourne la valeur du champ qui possède le même nom que le paramètre.|  
   
  Pour plus d’informations sur l’utilisation de paramètres dans un filtre, consultez [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Multi"></a> Utilisation d'un paramètre à valeurs multiples dans une expression  
  Le tableau suivant présente des exemples de la syntaxe à utiliser lorsque vous incluez une référence à un paramètre à valeurs multiples de n'importe quel type de données dans une expression.  
   
-|Exemple| Description|  
+| Exemple|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.IsMultiValue`|Retourne **True** ou **False**.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si **True**, le paramètre est à valeurs multiples et il s’agit d’une collection d’objets. Si **False**, le paramètre est à valeur unique et il s’agit d’un seul objet.|  
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Count`|Retourne une valeur entière.<br /><br /> Fait référence au nombre de valeurs. Pour un paramètre à valeur unique, le nombre est toujours 1. Pour un paramètre à valeurs multiples, le nombre est 0 ou plus.|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’informations sur l’utilisation de paramètres dans un filtre, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   

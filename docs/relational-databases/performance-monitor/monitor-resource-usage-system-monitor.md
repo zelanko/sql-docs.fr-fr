@@ -2,9 +2,12 @@
 title: "Analyser l’utilisation des ressources (Moniteur système) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,18 +28,18 @@ helpviewer_keywords:
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5039ba1303b5840566be3dfd6efab2e83a467b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e30f2d0f47d856cdb3c8732d6f4ab553b43d6393
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Analyser l'utilisation des ressources (Moniteur système)
-  Si vous utilisez le système d'exploitation Microsoft Windows Server, faites appel à l'outil graphique Moniteur système pour mesurer les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez afficher les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les compteurs de performance ainsi que le comportement d’autres objets, tels que les processeurs, la mémoire, le cache, les threads et les processus. Chacun de ces objets dispose d'un jeu de compteurs qui mesurent l'utilisation du dispositif, la longueur des files d'attente, les temporisations et d'autres indicateurs de débit et de congestion interne.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si vous utilisez le système d’exploitation Microsoft Windows Server, faites appel à l’outil graphique Moniteur système pour mesurer les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez afficher les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les compteurs de performance ainsi que le comportement d’autres objets, tels que les processeurs, la mémoire, le cache, les threads et les processus. Chacun de ces objets dispose d'un jeu de compteurs qui mesurent l'utilisation du dispositif, la longueur des files d'attente, les temporisations et d'autres indicateurs de débit et de congestion interne.  
   
 > [!NOTE]  
 >  Le Moniteur système a remplacé l'Analyseur de performances après Windows NT 4.0.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
 -   d'exécuter un programme prédéfini la première fois ou chaque fois que la valeur d'un compteur est supérieure ou inférieure à une valeur définie par l'utilisateur ;  
   
--   de créer des fichiers journaux contenant des données relatives à différents objets provenant de différents ordinateurs ;  
+-   de créer des fichiers journaux contenant des données relatives à différents objets provenant de différents ordinateurs ;  
   
 -   d'ajouter à un fichier sélectionné des sections d'autres fichiers journaux afin de créer un fichier d'archive à long terme ;  
   

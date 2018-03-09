@@ -2,9 +2,12 @@
 title: "Améliorer les performances de réplication de fusion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6589d1fc212f1169fa645fdb9c02ac9627597ef7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
-  Après avoir considéré les conseils en matière de performances qui sont décrits dans la rubrique [Amélioration des performances générales de la réplication](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), considérez ces autres aspects spécifiques à la réplication de fusion.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Après avoir tenu compte des conseils de performances qui sont décrits dans la rubrique [Amélioration des performances générales de la réplication](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), envisagez ces autres aspects spécifiques à la réplication de fusion.  
   
 ## <a name="database-design"></a>Création de bases de données  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Utilisez des partitions qui ne se chevauchent pas si les données sont filtrées mais pas partagées entre les utilisateurs.  
   
-     La réplication peut optimiser les performances pour les données qui ne sont pas partagées entre des partitions ou des abonnements. Pour plus d’informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     La réplication peut optimiser les performances pour les données qui ne sont pas partagées entre des partitions ou des abonnements. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Ne créez pas de hiérarchies de filtres de jointure complexes.  
   
@@ -111,7 +114,7 @@ ms.lasthandoff: 11/09/2017
   
     -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Concepts des exécutables de l’agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Envisagez d’augmenter la valeur du paramètre **-MakeGenerationInterval** , surtout si la synchronisation implique plus de téléchargements en provenance des Abonnés que vers les Abonnés.  
   
@@ -131,13 +134,13 @@ ms.lasthandoff: 11/09/2017
   
     -   Une valeur par défaut NEWSEQUENTIALID() ou NEWID(). NEWSEQUENTIALID() est recommandée car elle peut améliorer les performances lorsque des modifications sont effectuées et suivies.  
   
-    -   La propriété ROWGUIDCOL définie.  
+    -   La propriété ROWGUIDCOL définie.  
   
     -   un index unique sur la colonne.  
   
 -   Prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent.  
   
-     Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Considérations sur la maintenance et sur l'analyse  
   

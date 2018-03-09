@@ -1,10 +1,11 @@
 ---
-title: FilterGroupEnum | Documents Microsoft
+title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FilterGroupEnum
-helpviewer_keywords: FilterGroupEnum enumeration [ADO]
+f1_keywords:
+- FilterGroupEnum
+helpviewer_keywords:
+- FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 080b0149fcfe0df39e1efbe44a87fe6243424468
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64a9701680876231d0051789aec0fc43be4c0ad3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Spécifie le groupe d’enregistrements à filtrer à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

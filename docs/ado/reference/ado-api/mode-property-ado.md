@@ -3,8 +3,9 @@ title: "Mode, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::Mode
 - _Stream::Mode
 - _Record::Mode
-helpviewer_keywords: Mode property [ADO]
+helpviewer_keywords:
+- Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71b8bbcaa20e10791f8e3d684655b47e3dd1441a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 032780415e0869c5994b4630546131b4ad51e8c4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mode-property-ado"></a>Mode, propriété (ADO)
 Indique les autorisations disponibles pour la modification des données dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  

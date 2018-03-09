@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3bfc3eb927d6e9764349281ea48ef94e7873675b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---if"></a>Écriture de scripts MDX - IF
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ IF expression THEN assignment END IF
  *affectation*  
  Expression MDX assignant une valeur à un sous-cube ou à une propriété calculée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez l’instruction IF pour le flux de contrôle, à la différence du [IIf &#40; MDX &#41; ](../mdx/iif-mdx.md) (fonction) et le [instruction CASE &#40; MDX &#41; ](../mdx/case-statement-mdx.md) qui peut uniquement être utilisé pour retourner des valeurs ou des objets.  
   
 ## <a name="examples"></a>Exemples  

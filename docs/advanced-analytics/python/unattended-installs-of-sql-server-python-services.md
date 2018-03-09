@@ -2,32 +2,35 @@
 title: "Installation sans assistance de Python Machine Learning Services (de-de base de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6d7cba7c74eaef9e627b75972d3b6dd34ee5a6f1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Installation sans assistance de Python Machine Learning Services (de-de base de données)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit comment utiliser les arguments de ligne de commande dans le programme d’installation de SQL Server 2017 pour installer le moteur de base de données SQL Server avec les Services de Machine Learning et Python, à l’aide du mode silencieux.
 
 > [!NOTE]
 > N’oubliez pas d’inclure les arguments de ligne de commande pour les contrats de licence, un pour Python et pour SQL Server.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de lancer le processus d’installation, prenez connaissance des conditions requises suivantes :
 

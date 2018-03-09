@@ -1,5 +1,5 @@
 ---
-title: "Créer et modifier un Service de capture de données modifiées Oracle | Documents Microsoft"
+title: "Créer et modifier un service Oracle CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -15,30 +15,29 @@ ms.topic: article
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Créer et modifier un service de capture de données modifiées Oracle
   Vous créez et modifiez un service Windows de capture de données modifiées Oracle dans la console de configuration du service de capture de données modifiées.  
   
  Pour créer un service Windows de capture de données modifiées Oracle, sélectionnez **Services de capture de données modifiées locaux** et cliquez sur **Nouveau service** dans le volet **Actions** . Vous pouvez également cliquer avec le bouton droit sur **Services de capture de données modifiées locaux** et sélectionner **Nouveau service**. La boîte de dialogue Nouveau service Windows de capture de données modifiées Oracle s'ouvre.  
   
- **- ou -**  
+ **OR**  
   
  Pour modifier les propriétés du service de capture de données modifiées, sélectionnez le service pour lequel vous souhaitez modifier les propriétés et cliquez sur **Propriétés** dans le volet **Actions** . Vous pouvez également cliquer avec le bouton droit sur le service que vous utilisez et sélectionner **Propriétés**. La boîte de dialogue de propriétés du service CDC s'ouvre.  
   
  Entrez les informations suivantes dans la boîte de dialogue Nouveau service Windows de capture de données modifiées Oracle ou dans la boîte de dialogue de propriétés du service de capture de données modifiées.  
   
-** Nom de Service **  
+** Nom du service**  
  Entrez le nom du nouveau service Windows de capture de données modifiées Oracle. Vous ne devez pas utiliser des noms longs, si possible. Les caractères / et \ ne peuvent pas être utilisés dans le nom du service.  
   
 > [!NOTE]  
@@ -64,7 +63,7 @@ ms.lasthandoff: 09/26/2017
   
      Vous pouvez utiliser un compte Windows local ou de domaine pour le compte de service. Dans ce cas, vous devez entrer le **Mot de passe** pour ce compte. Ce compte peut correspondre à l'hôte local ou à un compte de domaine. Veillez à mettre à jour le mot de passe lorsqu'il est modifié à l'aide du composant Services locaux dans le Panneau de configuration Windows.  
   
- **Nom du serveur**: sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance pour se connecter à (par exemple,  **\\ \\< nom_ordinateur >\\< nom_instance >**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
+ **Nom du serveur** : sélectionnez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à laquelle vous connecter (par exemple, **\\\\<nom_ordinateur>\\<nom_instance>**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
  **Authentification**  
  Sélectionnez l'une des options suivantes :  
@@ -95,8 +94,7 @@ ms.lasthandoff: 09/26/2017
   
  Le même mot de passe principal doit également être utilisé lorsque d'autres instances du même service sont configurées sur d'autres nœuds sur un cluster dans une configuration haute disponibilité. Si vous perdez ou modifiez le mot de passe principal, tous les mots de passe d'exploration de données de journaux stockés dans des bases de données d'instance Oracle CDC doivent être entrés de nouveau via la console du concepteur CDC.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : créer et modifier un service de capture de données modifiées](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

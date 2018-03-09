@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4772f212c075cec7b0acd239833604bd2213d3c0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a6b5a1a987662fbe4ec0bcab4241ac0d6ff3109
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="instr-mdx"></a>InStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,12 +61,12 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 est introuvable|zéro (0)|  
 |start est supérieur à Len(String2)|zéro (0)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!WARNING]  
 >  **InStr** effectue toujours une comparaison respectant la casse.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant illustre l’utilisation de la **Instr** fonction et affiche différents scénarios de résultat.  
   
 ```  
@@ -110,7 +110,7 @@ from [Adventure Works]
 |majuscules trouvées dans la chaîne en minuscules|16|  
 |la chaîne de recherche est vide|0|  
 |la chaîne de recherche est Null|Non défini|  
-|chaîne de recherche est vide|1|  
+|chaîne de recherche est vide| 1|  
 |la chaîne de recherche est start 10 vide|10|  
 |chaîne de recherche a la valeur null|Non défini|  
 |trouvé à partir de start 10|16|  

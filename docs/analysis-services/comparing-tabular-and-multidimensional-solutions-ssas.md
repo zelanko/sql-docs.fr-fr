@@ -2,31 +2,30 @@
 title: Comparaison des Solutions multidimensionnelles et tabulaires (SSAS) | Documents Microsoft
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparaison des solutions multidimensionnelles et tabulaires
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
   SQL Server Analysis Services offre plusieurs approches pour la création d’un modèle sémantique business intelligence : tabulaire, multidimensionnel et PowerPivot pour SharePoint.
   
  Le fait d’avoir plusieurs approches offre une expérience de modélisation adaptée aux différents besoins des entreprises et des utilisateurs. Le modèle multidimensionnel est une technologie rodée reposant sur des normes ouvertes, adoptée par de nombreux éditeurs de logiciels d’aide à la décision (Business Intelligence ou BI), mais il peut être difficile à maîtriser. Le modèle tabulaire propose une approche de modélisation relationnelle que de nombreux développeurs jugent plus intuitive. Le modèle PowerPivot est encore plus simple, car il offre une modélisation visuelle des données dans Excel, avec prise en charge des serveurs fournie via SharePoint.  
@@ -60,23 +59,23 @@ ms.lasthandoff: 11/17/2017
 |||| 
 |-|-|-|
 ||(Multidimensionnel)|Tabulaire|
-|Actions|Oui|Non|
-|Aggregations|Oui|Non|
-|Colonne calculée|Non|Oui|  
+|Actions|Oui|non|
+|Aggregations|Oui|non|
+|Colonne calculée|non|Oui|  
 |Mesures calculées|Oui|Oui| 
-|Tables calculées|Non|Oui<sup>1</sup>|  
-|Assemblys personnalisés|Oui|Non|
-|Cumuls personnalisés|Oui|Non| 
-|Membre par défaut|Oui|Non|  
+|Tables calculées|non|Oui<sup>1</sup>|  
+|Assemblys personnalisés|Oui|non|
+|Cumuls personnalisés|Oui|non| 
+|Membre par défaut|Oui|non|  
 |Dossiers d’affichage|Oui|Oui<sup>1</sup>|  
 |Distinct Count|Oui|Oui (via DAX)|
-|Extraction|Oui|Oui (dépend de l’application cliente)|
+|extraction|Oui|Oui (dépend de l’application cliente)|
 |Hierarchies|Oui|Oui|
 |Indicateurs de performance clés|Oui|Oui| 
 |Objets liés|Oui|Oui (tables liées)|
-|Expressions de M|Non|Oui<sup>1</sup>|
+|Expressions de M|non|Oui<sup>1</sup>|
 |Relations plusieurs-à-plusieurs|Oui|Non (mais il est [bidirectionnelles entre les filtres](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) niveaux de compatibilité 1200 et versions ultérieures)| 
-|Les jeux nommés|Oui|Non| 
+|Les jeux nommés|Oui|non| 
 |Hiérarchies déséquilibrées|Oui|Oui<sup>1</sup>|  
 |Hiérarchies parent-enfant|Oui|Oui (via DAX)|
 |Partitions|Oui|Oui| 
@@ -84,9 +83,9 @@ ms.lasthandoff: 11/17/2017
 |Sécurité de niveau ligne|Oui|Oui| 
 |Sécurité au niveau de l’objet|Oui|Oui<sup>1</sup>|
 |Mesures semi-additives|Oui|Oui| 
-|Translations|[Oui](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Oui| 
+|Traductions|[Oui](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Oui| 
 |Hiérarchies définies par l'utilisateur|Oui|Oui|
-|Écriture différée|Oui|Non| 
+|Écriture différée|Oui|non| 
   
  <sup>1</sup> consultez [Compatibility Level for Tabular models dans Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) pour plus d’informations sur les différences fonctionnelles entre les niveaux de compatibilité.  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour afficher la liste des sources de données externes que vous pouvez importer dans chaque modèle, consultez les rubriques suivantes :  
   
--   [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+-   [Sources de données prises en charge](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
 -   [Sources de données prises en charge &#40;SSAS - Multidimensionnel&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
@@ -152,16 +151,16 @@ ms.lasthandoff: 11/17/2017
   
 -   Bases de données model multidimensionnelles peuvent utiliser dimension et sécurité au niveau des cellules, à l’aide d’autorisations basées sur le rôle.  
 
--   Les classeurs[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sont sécurisés au niveau des fichiers à l’aide d’autorisations SharePoint.  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] sont sécurisés au niveau des fichiers à l’aide d’autorisations SharePoint.  
   
- Les classeurs[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] peuvent être restaurés sur un serveur en mode tabulaire. Une fois que le fichier est restauré, il est découplé de SharePoint, ce qui vous permet d’utiliser toutes les fonctionnalités de modélisation tabulaire, y compris la sécurité de niveau ligne.  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] peuvent être restaurés sur un serveur en mode tabulaire. Une fois que le fichier est restauré, il est découplé de SharePoint, ce qui vous permet d’utiliser toutes les fonctionnalités de modélisation tabulaire, y compris la sécurité de niveau ligne.  
   
 ##  <a name="bkmk_designer"></a> Outils de conception  
  Les compétences et l'expertise technique concernant la modélisation des données peuvent varier considérablement suivant les utilisateurs qui sont chargés de créer des modèles analytiques. Si la connaissance des outils ou le savoir-faire des utilisateurs constituent un facteur important, comparez les expériences suivantes pour la création de modèles.  
   
 |Outil de modélisation|Mode d'utilisation|  
 |-------------------|--------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Permet de créer tabulaire, multidimensionnel et les solutions d’exploration de données. Cet environnement de création utilise le shell Visual Studio pour fournir des espaces de travail, des volets de propriétés et la navigation entre les objets. Les utilisateurs techniques qui utilisent déjà Visual Studio préfèreront très probablement cet outil pour créer des applications décisionnelles.|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Permet de créer tabulaire, multidimensionnel et les solutions d’exploration de données. Cet environnement de création utilise le shell Visual Studio pour fournir des espaces de travail, des volets de propriétés et la navigation entre les objets. Les utilisateurs techniques qui utilisent déjà Visual Studio préféreront très probablement cet outil pour créer des applications décisionnelles.|  
 |[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pour Excel|À utiliser pour créer un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] que vous déployez ultérieurement sur une batterie de serveurs SharePoint disposant d’une installation de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pour Excel offre un espace de travail d’application séparé qui s’ouvre sur Excel. Il utilise les mêmes métaphores visuelles (pages à onglets, disposition sous forme de grille et barre de formule) qu'Excel. Les utilisateurs qui maîtrisent parfaitement Excel préféreront cet outil sur [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].|  
   
 ##  <a name="bkmk_client"></a> Prise en charge des applications clientes  
@@ -169,7 +168,7 @@ ms.lasthandoff: 11/17/2017
  
  Si vous utilisez Reporting Services, la disponibilité des fonctionnalités de rapport varie en fonction des éditions et des modes de serveur. Par conséquent, le type de rapport que vous voulez créer peut influencer le mode de serveur que vous choisissez d'installer.  
   
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], le nouvel outil de conception de rapports Reporting Services qui s’exécute dans SharePoint, est disponible sur un serveur de rapports qui est déployé dans une batterie de serveurs SharePoint 2010. Le seul type de source de données utilisable avec ce rapport est une base de données de modèle tabulaire Analysis Services ou un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] . Cela signifie que vous devez avoir un serveur en mode tabulaire ou un serveur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pour SharePoint pour héberger la source de données utilisée par ce type de rapport. Vous ne pouvez pas utiliser un modèle multidimensionnel comme source de données pour un rapport [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Vous devez créer une connexion du modèle sémantique BI [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ou d’une source de données partagée Reporting Services à utiliser comme source de données pour un rapport [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] .  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], le nouvel outil de conception de rapports Reporting Services qui s'exécute dans SharePoint, est disponible sur un serveur de rapports qui est déployé dans une batterie de serveurs SharePoint 2010. Le seul type de source de données utilisable avec ce rapport est une base de données de modèle tabulaire Analysis Services ou un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] . Cela signifie que vous devez avoir un serveur en mode tabulaire ou un serveur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pour SharePoint pour héberger la source de données utilisée par ce type de rapport. Vous ne pouvez pas utiliser un modèle multidimensionnel comme source de données pour un rapport [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Vous devez créer une connexion du modèle sémantique BI [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ou d’une source de données partagée Reporting Services à utiliser comme source de données pour un rapport [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] .  
   
  Le Générateur de rapports et le Concepteur de rapports peuvent utiliser toute base de données Analysis Services, dont des classeurs [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] hébergés sur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pour SharePoint.  
   

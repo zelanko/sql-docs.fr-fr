@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8419aeccf298788898fa6b764682faa0cff73e54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-wise-binding"></a>Liaison selon les colonnes
 Lorsque vous utilisez la liaison, une application lie une ou deux, dans certains cas trois, tableaux ou à chaque colonne pour laquelle les données sont à retourner. Le premier tableau conserve les valeurs de données, et le deuxième tableau conserve les mémoires tampons de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockés dans les mémoires tampon distincte en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR à des valeurs différentes ; Si cette opération est effectuée, un troisième tableau est lié. Chaque tableau contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  

@@ -2,9 +2,12 @@
 title: "Service SQL Server Browser (moteur de base de données et SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283dca7666370d5c56455e55ff73b5869ab17f83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf94cff3e764a7079eb5166a6a204453fd217ce3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Service SQL Server Browser (moteur de base de données et SSAS)
-  Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contribue aux actions suivantes :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s’exécute en tant que service Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est à l'écoute des demandes entrantes pour les ressources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contribue aux actions suivantes :  
   
 -   Affichage de la liste des serveurs disponibles  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 -   lors de la mise à niveau d'une installation ;  
   
--   lors d'une installation sur un cluster ;  
+-   lors d'une installation sur un cluster ;  
   
 -   lors de l’installation d’une instance nommée de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , notamment toutes les instances de SQL Server Express ;  
   
@@ -130,7 +133,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="using-a-firewall"></a>Utilisation d'un pare-feu  
  Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d'informations sur l'utilisation d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   

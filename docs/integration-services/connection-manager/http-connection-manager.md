@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions HTTP | Documents Microsoft
+title: Gestionnaire de connexions HTTP | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 7dbd165b8d94247365697fe3b9e0cbb372becd8c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c9efb5b8d8a972cfc60ccb078363bcba055eea01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="http-connection-manager"></a>Gestionnaire de connexions HTTP
   Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers. La tâche de service Web incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
 -   Utilisez un serveur proxy. Le serveur Proxy peut également être configuré pour utiliser les informations d'identification et pour ignorer le serveur proxy et utiliser à la place des adresses locales.  
   
 ## <a name="configuration-of-the-http-connection-manager"></a>Configuration du gestionnaire de connexions HTTP  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 08/09/2017
  **Utiliser les informations d'identification**  
  Spécifiez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité de l'utilisateur pour l'authentification.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Mot de passe**  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
  **Utiliser les informations d'identification**  
  Indiquez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité pour le serveur proxy.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Mot de passe**  
@@ -136,9 +135,8 @@ ms.lasthandoff: 08/09/2017
  **Supprimer**  
  Sélectionnez une adresse, puis supprimez-la en cliquant sur **Supprimer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche de service Web](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40; SSIS &#41; Connexions](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

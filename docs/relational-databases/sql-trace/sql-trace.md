@@ -2,26 +2,29 @@
 title: Trace SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66334fc6134a84c8d9a8e707f48e14f32a0034d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-trace"></a>Trace SQL
-  Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans Trace SQL, les événements sont collectés si ce sont des instances de classes d’événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="use-data-columns-to-describe-returned-events"></a>Utiliser des colonnes de données pour décrire les événements renvoyés  
  La trace SQL utilise les colonnes de données du résultat de la trace pour décrire les événements qui sont renvoyés lors de son exécution. Le tableau suivant décrit les colonnes de données de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , qui sont les mêmes que celles utilisées par la trace SQL, et indique les colonnes sélectionnées par défaut.  
   
-|Colonne de données|Numéro de colonne| Description|  
+|Colonne de données|Numéro de colonne|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie des valeurs transmises par l'application et non pas du nom du programme.|  
 |**BigintData1**|52|Valeur (type de données**bigint** ), qui dépend de la classe d’événements spécifiée dans la trace.|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
 |**OwnerID**|58|Pour les événements de verrou uniquement. Type de l'objet qui possède un verrou.|  
 |**OwnerName**|37|Nom d'utilisateur de base de données du propriétaire de l'objet.|  
 |**ParentName**|59|Nom du schéma qui contient l'objet.|  
-|**Autorisations**|19|Valeur entière représentant le type d'autorisations vérifiées. Valeurs possibles :<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (procédures uniquement)<br /><br /> **4096** = SELECT ANY (au moins une colonne)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**Autorisations**|19|Valeur entière représentant le type d'autorisations vérifiées. Valeurs possibles :<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (procédures uniquement)<br /><br /> **4096** = SELECT ANY (au moins une colonne)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Nom du fournisseur OLE DB.|  
 |**Reads**|16|Nombre d'opérations de lecture sur le disque logique effectuées par le serveur pour l'événement. Ces opérations de lecture comprennent toutes les lectures des tables et des tampons pendant l'exécution de l'instruction.|  
 |**RequestID**|49|ID de la demande qui contient l'instruction.|  
@@ -163,7 +166,7 @@ ms.lasthandoff: 11/09/2017
 |Explique comment réduire la quantité de données collectées par la trace.|[Limiter les tailles de fichier et de table de trace](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Décrit les deux façons de planifier le traçage dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Planifier les traces](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guide de programmation SQL Server Management Objects &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

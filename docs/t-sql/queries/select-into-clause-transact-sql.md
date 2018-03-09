@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - INTO
 - INTO clause
 - INTO_clause_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - copying data [SQL Server], into a new table
 - INTO clause
@@ -29,19 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>-Clause SELECT INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT…INTO crée une table dans le groupe de fichiers par défaut et y insère les lignes résultant de la requête. Pour afficher la syntaxe SELECT complète, consultez [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -55,10 +57,10 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nouvelle_table*  
+ *new_table*  
  Spécifie le nom d'une table à créer en fonction des colonnes de la liste de sélection et des lignes choisies à partir de la source de données.  
  
-  *groupe de fichiers*
+  *filegroup*
  
  Spécifie le nom du groupe de fichiers dans lequel la nouvelle table sera créée. Le groupe de fichiers spécifié doit exister sur la base de données reste le moteur SQL Server lève une erreur. Cette option est uniquement prise en charge avec [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
@@ -99,9 +101,9 @@ Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribu
  Lorsqu'une colonne calculée est comprise dans la liste de sélection, la colonne correspondante de la nouvelle table n'est pas une colonne calculée. Les valeurs de la nouvelle colonne sont les valeurs calculées au moment de l'exécution de l'instruction SELECT … INTO.  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
- L'importance de la journalisation pour SELECT INTO dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, à l’aide de l’instruction SELECT... DANS l’instruction peut être plus efficace que la création d’une table puis en remplissant la table avec une instruction INSERT. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ L'importance de la journalisation pour SELECT INTO dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, à l’aide de l’instruction SELECT... DANS l’instruction peut être plus efficace que la création d’une table puis en remplissant la table avec une instruction INSERT. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE TABLE dans la base de données de destination.  
   
 ## <a name="examples"></a>Exemples  
@@ -109,7 +111,7 @@ Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribu
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Création d'une table en spécifiant des colonnes provenant de plusieurs sources  
  L'exemple suivant crée la table `dbo.EmployeeAddresses` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en sélectionnant sept colonnes de diverses tables liées aux salariés et aux adresses.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertion de lignes en utilisant une journalisation minimale  
  L'exemple suivant crée la table `dbo.NewProducts` et insère des lignes provenant de la table `Production.Product`. L'exemple suppose que le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur FULL. Pour garantir une journalisation minimale, le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur BULK_LOGGED avant l'insertion des lignes ; il reprend ensuite la valeur FULL après l'utilisation de l'instruction SELECT...INTO. Ce processus permet de garantir que l'instruction SELECT...INTO utilise un espace minimal dans le journal des transactions et qu'elle s'exécute de manière efficace.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Création d'une colonne d'identité à l'aide de la fonction IDENTITY  
  L'exemple suivant utilise la fonction IDENTITY pour créer une colonne d'identité dans la nouvelle table `Person.USAddress` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Cela est nécessaire, car l'instruction SELECT qui définit la table contient une jointure qui empêche le transfert de la propriété IDENTITY vers la nouvelle table. Notez que la valeur initiale et la valeur d'incrément spécifiées dans la fonction IDENTITY sont différentes de celles de la colonne `AddressID` dans la table source `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +175,7 @@ WHERE name = 'AddressID';
   
  **S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +218,7 @@ GO
   
  **S’applique à :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -230,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Création d’une table en tant que copie d’une autre table et de son chargement un groupe de fichiers spécifié
-L’exemple suivant demostrates création d’une table en tant que copie d’une autre table et de son chargement dans un groupe de fichiers spécifié diffère dans le groupe de fichiers par défaut de l’utilisateur.
+L’exemple suivant illustre la création d’une table en tant que copie d’une autre table et de son chargement dans un groupe de fichiers spécifié diffère dans le groupe de fichiers par défaut de l’utilisateur.
 
  **S’applique à :**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -249,8 +251,8 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Exemples SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITÉ &#40; Fonction &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

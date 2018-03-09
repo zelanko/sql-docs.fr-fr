@@ -5,10 +5,11 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f91073a3fd6ad665f793860efdb2ca7b9c0ce976
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb7ca2297f9f896cbe11103b611fa5461ee7a1ab
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Hiérarchies explicites (services de données de référence)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une hiérarchie explicite organise les membres d'une seule entité comme vous le souhaitez. La structure peut être déséquilibrée et contrairement aux hiérarchies dérivées, les hiérarchies explicites ne sont pas basées sur des relations d'attributs basés sur un domaine.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
  Les membres consolidés peuvent être utilisés pour regrouper des membres à tout niveau, et les membres feuille et consolidés sont triés dans l'ordre que vous déterminez.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/20/2017
 |Supprimer une hiérarchie explicite existante.|[Supprimer une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   

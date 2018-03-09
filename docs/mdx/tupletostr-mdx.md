@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TUPLETOSTR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 13b1548435e826c0ca71fcdfe98d5c654bd63038
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0c777583e5ae027ab3f2ada53b4b168431e3390a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un tuple.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction permet de transférer une représentation de chaîne d'un tuple vers une fonction externe à des fins d'analyse. La chaîne qui est retournée apparaît entre accolades {} et chaque membre (si plusieurs membres sont expressément définis dans le tuple) est séparé par une virgule.  
   
 ## <a name="examples"></a>Exemples  

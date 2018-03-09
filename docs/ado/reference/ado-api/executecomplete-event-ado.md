@@ -3,8 +3,9 @@ title: "ExecuteComplete, événement (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: ExecuteComplete event [ADO]
+helpviewer_keywords:
+- ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327eee8b19a0d1b9ad4d67c45c90ccd2c632622a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bda38ed41e57c84d629ff6f301575e963d893f5e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete, événement (ADO)
 Le **ExecuteComplete** événement est appelé après l’exécution d’une commande est terminée.  
@@ -45,7 +47,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pError*  
  Un [erreur](../../../ado/reference/ado-api/error-object.md) objet. Elle décrit l’erreur qui s’est produite si la valeur de **ne** est **contraire**; sinon, elle n’est pas définie.  
   
- *N'*  
+ *adStatus*  
  Un [il ne](../../../ado/reference/ado-api/eventstatusenum.md) valeur d’état. Lorsque cet événement est appelé, ce paramètre est défini **adStatusOK** si l’opération qui a provoqué l’événement a réussi, ou pour **contraire** si l’opération a échoué.  
   
  Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour éviter toute notification.  
@@ -53,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pCommand*  
  Le [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui a été exécutée. Contient un **commande** même lors de l’appel de l’objet **Connection.Execute** ou **Recordset.Open** sans créer explicitement un **commande** , dans quels cas la **commande** objet est créé en interne par ADO.  
   
- *Connection*  
+ *pRecordset*  
  A [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet qui est le résultat de la commande exécutée. Cela **Recordset** peut être vide. Vous ne devez jamais détruire cet objet Recordset à partir de ce gestionnaire d’événements. Cela entraîne une Violation d’accès ADO tente d’accéder à un objet qui n’existe plus.  
   
  *pConnection*  

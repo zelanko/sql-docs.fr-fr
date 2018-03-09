@@ -2,10 +2,14 @@
 title: "Objets de configuration de la messagerie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,19 +35,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac7e0e7080ac55f1c871499b7c43b8e0a3d0d3d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5cb2f1d2c6a21ddcc6b36c4c357da8cc380348cc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-configuration-objects"></a>Objets de configuration de la messagerie de base de données
-  La messagerie de base de données fournit deux objets de configuration : les objets de configuration de base de données vous permettent de configurer les paramètres que la messagerie de base de données doit utiliser lors de l'envoi d'un message électronique à partir de votre application de base de données ou Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La messagerie de base de données fournit deux objets de configuration : les objets de configuration de base de données vous permettent de configurer les paramètres que la messagerie de base de données doit utiliser lors de l'envoi d'un message électronique à partir de votre application de base de données ou Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Comptes de messagerie de base de données  
   
@@ -130,14 +135,14 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="database-mail-settings"></a>Paramètres de messagerie de base de données  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Modifie les paramètres de configuration de la messagerie de base de données.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Affiche les paramètres de configuration pour la messagerie de base de données.|  
   
 ### <a name="accounts-and-profiles"></a>Comptes et profils  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Ajoute un compte de messagerie dans un profil de messagerie de base de données.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Supprime un compte de messagerie de base de données.|  
@@ -152,7 +157,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="security"></a>Sécurité  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Autorise un principal de la base de données à utiliser un profil de messagerie de base de données.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Supprime l'autorisation d'utiliser un profil de messagerie de base de données public ou privé accordée à un utilisateur de base de données.|  
@@ -161,7 +166,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="system-state"></a>État du système  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Démarre le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Arrête le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  

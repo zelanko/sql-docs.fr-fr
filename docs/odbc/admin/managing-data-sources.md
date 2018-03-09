@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-data-sources"></a>Gestion des Sources de données
 Après avoir installé un pilote ODBC programme du pilote d’installation, vous pouvez définir une ou plusieurs sources de données pour celui-ci. Le nom de source de données (DSN) doit fournir une description unique des données ; par exemple, *paie* ou *paies*. Les sources de données utilisateur et système qui sont définies pour tous les pilotes actuellement installés sont répertoriés dans le **DSN utilisateur** ou **DSN système** onglets de la **administrateur de sources de données ODBC** boîte de dialogue. Les sources de données de fichier dans un répertoire donné sont répertoriées dans le **DSN de fichier** onglet ; le répertoire à afficher est entré dans le **Regarder dans** zone le **DSN de fichier** onglet.  
@@ -45,7 +45,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Une source de données associe les données que vous souhaitez accéder via le pilote à un pilote ODBC spécifique. Par exemple, vous pouvez créer une source de données pour utiliser le pilote dBASE ODBC pour accéder à un ou plusieurs fichiers dBASE dans un répertoire spécifique sur votre disque dur ou un lecteur réseau. À l’aide de l’administrateur de Source de données ODBC, vous pouvez ajouter, modifier et supprimer des sources de données, comme indiqué dans le tableau suivant.  
   
-|Action| Description|  
+|Action|Description|  
 |------------|-----------------|  
 |Ajout de sources de données|Il est possible d’ajouter plusieurs sources de données, chacune d’elles association d’un pilote avec des données que vous souhaitez accéder à l’aide de ce pilote. Donnez un nom qui identifie de façon unique cette source de données à chaque source de données. Par exemple, si vous créez une source de données pour un ensemble de fichiers dBASE qui contiennent des informations sur le client, vous pouvez nommer la source de données « Customers ». Applications affichent généralement aux utilisateurs de choisir à partir des noms de sources de données.<br /><br /> Ajout d’une source de données de fichier est légèrement différente de l’ajout d’utilisateur ou des sources de données système. Pour plus d’informations, consultez l’administrateur de Source de données ODBC à l’aide de fichiers.|  
 |Modification de sources de données|Selon vos besoins, vous pouvez s’avérer nécessaire de reconfigurer les sources de données. Vous pouvez réinitialiser les options en cliquant sur **configurer** dans toute boîte de dialogue de configuration de pilote.|  

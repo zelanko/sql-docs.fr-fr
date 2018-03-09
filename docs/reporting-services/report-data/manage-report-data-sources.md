@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c38232b3e2f201cc392d39cde0b5ffcb31ddf0db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 443b1f6a2249fd836555bb7cb6822d3dbbae199d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-report-data-sources"></a>Gérer des sources de données de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les rapports, les modèles de rapports et les abonnements pilotés par les données récupèrent les données qui proviennent de sources de données externes. Pour se connecter à une source de données externe, un serveur de rapports utilise les informations de connexion de la source de données qui sont définies dans le rapport, le modèle ou l'abonnement, ou qui sont référencées à partir de ceux-ci. Les propriétés de connexion à la source de données sont toujours définies avec le rapport ou le modèle que vous créez, mais vous pouvez les gérer de manière indépendante après avoir publié le rapport ou le modèle sur un serveur de rapports.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  La gestion des connexions aux sources de données d'un rapport diffère de la gestion de la connexion d'un serveur de rapports à sa base de données. Pour plus d’informations sur la connexion d’un serveur de rapports à sa banque de données interne, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Stocker des informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)   

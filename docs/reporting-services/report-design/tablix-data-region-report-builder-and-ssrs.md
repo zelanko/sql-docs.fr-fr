@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 90f52e1c600c0f866eb6a2754c486d0c4e5af08a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b3e08fe0bcf2fd5c2285eea6c0c43e494e8a0f50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Région de données de tableau matriciel (Générateur de rapports et SSRS)
   Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], une région de données de tableau matriciel est un élément de rapport à disposition généralisée qui affiche les données d’un rapport paginé dans des cellules organisées en lignes et colonnes. Les données du rapport peuvent être des données de détail récupérées à partir de la source de données ou des données de détail agrégées organisées en groupes de votre invention. Chaque cellule de tableau matriciel peut contenir un élément de rapport, par exemple une zone de texte ou une image, ou une autre région de données telle qu'une région de tableau matriciel, un graphique ou une jauge. Pour ajouter plusieurs éléments de rapport à une cellule, commencez par ajouter un rectangle pour servir de conteneur. Ajoutez ensuite les éléments de rapport au rectangle.  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
  La fonction Ajouter un total crée automatiquement une ligne à l'extérieur du groupe actuel dans laquelle afficher les valeurs dont la portée est étendue au groupe. Vous pouvez également ajouter manuellement des lignes statiques et dynamiques. Des indicateurs visuels vous aident à comprendre quelles lignes sont statiques et quelles lignes sont dynamiques. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   

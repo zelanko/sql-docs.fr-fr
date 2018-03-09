@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 751e6e715cc660cadb66c927d24b63d01361f581
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7645b04a492c182283c79c814be0c59baa23fbc6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installer côte à côte Reporting Services et Internet Information Services
 
@@ -47,7 +47,7 @@ Vous pouvez installer et exécuter SQL Server Reporting Services (SSRS) et Inter
   
  Les exemples suivants illustrent une plage de réservations d'URL, de la plus explicite à la moins explicite :  
   
-|Exemple|Demande|  
+| Exemple|Demande|  
 |-------------|-------------|  
 |`http://123.234.345.456:80/reports`|Reçoit toutes les requêtes envoyées à `http://123.234.345.456/reports` ou `http://\<computername>/reports` si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
 |`http://+:80/reports`|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  

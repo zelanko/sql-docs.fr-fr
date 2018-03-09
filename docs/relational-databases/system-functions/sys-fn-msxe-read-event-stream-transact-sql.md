@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_MSxe_read_event_stream (Transact-SQL) | Documents Microsoft
+title: sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_MSxe_read_event_stream_TSQL
 - sys.fn_MSxe_read_event_stream
 - fn_MSxe_read_event_stream
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_MSxe_read_event_stream
 - fn_MSxe_read_event_stream
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a4bc667c539c6184e0b2c7867ebcd9957e97924
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8af9aee0b125ac55a7df79ba6fd047308778b342
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,15 +56,15 @@ sys.fn_MSxe_read_event_stream ( session_name)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Nom_session*  
+ *Session_name*  
  Nom d'une session qui s'exécute sur le serveur.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|Type|**Entier (4)**|Le type d'événement. N'accepte pas la valeur NULL.|  
-|data|**Image (16)**|Données d'image d'événement. Autorise la valeur NULL.|  
+|type|**Entier (4)**|Le type d'événement. N'accepte pas la valeur NULL.|  
+|données|**Image (16)**|Données d'image d'événement. Autorise la valeur NULL.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de gestion dynamique des Événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   

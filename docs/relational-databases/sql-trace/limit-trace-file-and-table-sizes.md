@@ -2,9 +2,12 @@
 title: "Limiter les tailles de fichier et de table de trace | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0a450e9f52065238bb2b3a91b5c52f4c4d8fba50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limiter les tailles de fichier et de table de trace
-  Les résultats de Trace SQL ont des tailles variables selon les classes d’événements incluses dans la trace et leur mode d’utilisation par [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si vous tracez des classes d'événements qui se produisent fréquemment, vous pouvez minimiser la quantité de données collectées par la trace en définissant la taille de fichier maximale ou le nombre maximal de lignes. La spécification d'une taille de fichier maximale et/ou d'un nombre maximal de lignes empêche le fichier de trace ou la table de trace de croître au-delà de la limite spécifiée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les résultats de Trace SQL ont des tailles variables selon les classes d’événements incluses dans la trace et leur mode d’utilisation par [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si vous tracez des classes d'événements qui se produisent fréquemment, vous pouvez minimiser la quantité de données collectées par la trace en définissant la taille de fichier maximale ou le nombre maximal de lignes. La spécification d'une taille de fichier maximale et/ou d'un nombre maximal de lignes empêche le fichier de trace ou la table de trace de croître au-delà de la limite spécifiée.  
   
 > [!NOTE]  
 >  Si vous enregistrez les données de trace dans un fichier existant, vous pouvez ajouter les données au fichier ou écraser le fichier. Si vous choisissez l'ajout au fichier et que la taille du fichier de trace est déjà supérieure ou égale à la taille de fichier maximale spécifiée, vous en êtes averti et pouvez alors augmenter la taille maximale du fichier ou indiquer un autre fichier. Il en est de même pour les tables de trace.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
  [Définir la taille maximale d’une table de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   

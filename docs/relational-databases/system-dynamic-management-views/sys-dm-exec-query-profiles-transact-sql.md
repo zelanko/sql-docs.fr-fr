@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_profiles (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_profiles_TSQL
 - dm_exec_query_profiles
 - sys.dm_exec_query_profiles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_profiles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13b3c49133a4e1c26ab879fb0e51e9832de62e97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
 |node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
 |thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
-|task_address|**varbinary (8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
+|task_address|**varbinary(8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
 |row_count|**bigint**|Nombre de lignes retournées par l'opérateur jusqu'à présent.|  
 |rewind_count|**bigint**|Nombre de rembobinages jusqu'à présent.|  
 |rebind_count|**bigint**|Nombre de reliaisons jusqu'à présent.|  
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 
  SET STATISTICS XML ON et SET STATISTICS PROFILE ON toujours utiliser les statistiques d’exécution de requête hérité infrastructure de profilage.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  

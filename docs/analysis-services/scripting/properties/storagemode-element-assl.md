@@ -2,15 +2,13 @@
 title: "Élément StorageMode (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StorageMode Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1cb05e28a6deb1158ecd41f50041b2d63738af53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c166d27a9047a0cf5e5aabb9b7f1b0f21713df0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="storagemode-element-assl"></a>Élément StorageMode (ASSL)
-  Détermine le mode de stockage de l'élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Détermine le mode de stockage pour l’élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,19 +49,19 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*MOLAP*|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Élément cube &#40; ASSL &#41; ](../../../analysis-services/scripting/objects/cube-element-assl.md), [De dimension, élément &#40; ASSL &#41; ](../../../analysis-services/scripting/objects/dimension-element-assl.md), [Élément MeasureGroup &#40; ASSL &#41; ](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [De partition, élément &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*MOLAP*|Le parent utilise le mode OLAP multidimensionnel (MOLAP).|  
 |*ROLAP*|Le parent utilise le mode OLAP relationnel (ROLAP).|  

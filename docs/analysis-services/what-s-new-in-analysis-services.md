@@ -2,28 +2,30 @@
 title: "Quel &#39; nouveauté dans Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Quel &#39; nouveauté dans Analysis Services
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
 SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations de fournir des performances améliorées, solution plus facile de création, de gestion automatisée de la base de données améliorée des relations avec bidirectionnelles entre le filtrage, le traitement des partitions parallèles et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
@@ -68,14 +70,14 @@ Avec cette version, vous n’avez plus besoin de deux versions de SSDT pour cré
 Les dossiers d’affichage sont désormais disponibles pour les modèles 1200 tabulaires. Définis dans SQL Server Data Tools et affichés dans les applications clientes comme Excel ou Power BI Desktop, les dossiers d’affichage vous permettent d’organiser facilement des mesures en grand nombre dans des dossiers individuels. De cette façon, les mesures sont présentées de façon hiérarchique, ce qui simplifie la navigation dans les listes de champs.
 ### <a name="bi-directional-cross-filtering"></a>Filtrage croisé bidirectionnel
 L’une des nouveautés de cette version est son approche intégrée d’activation des filtres croisés bidirectionnels dans les modèles tabulaires. Grâce à elle, plus besoin de concevoir manuellement des solutions de contournement DAX pour propager un contexte de filtre dans les relations de table. Les filtres sont créés automatiquement uniquement si la direction des filtres peut être établie avec un haut degré de certitude. S’il existe une ambiguïté en ce qui concerne le format de plusieurs chemins de requête sur les relations de table, les filtres ne sont pas créés automatiquement. Pour plus d’informations, consultez [Filtres croisés bidirectionnels pour modèles tabulaires dans SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .
- ### <a name="translations"></a>Translations    
+ ### <a name="translations"></a>Traductions    
  Vous pouvez désormais stocker des métadonnées traduites dans un modèle 1200 tabulaire. Les métadonnées du modèle incluent des champs pour la **Culture**, les légendes traduites et les descriptions traduites. Pour ajouter des traductions, utilisez la commande **Modèle** > **Traductions** dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).    
  ### <a name="pasted-tables"></a>Tables collées    
  Si vous utilisez un modèle tabulaire 1100 ou 1103 qui contient des tables collées, vous pouvez désormais le mettre à niveau vers un modèle 1200. Nous vous recommandons d’utiliser [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Dans SSDT, définissez **CompatibilityLevel** à la valeur 1200 et effectuez le déploiement sur une instance [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
  ### <a name="calculated-tables-in-ssdt"></a>Tables calculées dans SSDT    
 Une *table calculée* est une construction de modèle uniquement qui est basée sur une expression ou requête DAX dans SSDT. Quand une table calculée est déployée dans une base de données, elle ne se distingue pas des tables standard.    
 
- Les tables calculées ont plusieurs utilisations, notamment la création de tables pour exposer une table existante dans un rôle spécifique. L’exemple type est une table de dates qui s’utilise dans plusieurs contextes (date de commande, date d’expédition, etc.). En créant une table calculée pour un rôle donné, vous pouvez désormais établir une relation de table pour faciliter les requêtes ou les interactions de données avec cette table calculée. Une autre utilisation possible des tables calculées est de combiner certains éléments de tables existantes dans une toute nouvelle table qui existe uniquement dans le modèle.  Pour en savoir plus, consultez [Créer une table calculée &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md).    
+ Les tables calculées ont plusieurs utilisations, notamment la création de tables pour exposer une table existante dans un rôle spécifique. L’exemple type est une table de dates qui s’utilise dans plusieurs contextes (date de commande, date d’expédition, etc.). En créant une table calculée pour un rôle donné, vous pouvez désormais établir une relation de table pour faciliter les requêtes ou les interactions de données avec cette table calculée. Une autre utilisation possible des tables calculées est de combiner certains éléments de tables existantes dans une toute nouvelle table qui existe uniquement dans le modèle.  Consultez [créer une Table calculée](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) pour en savoir plus.    
  ### <a name="formula-fixup"></a>Correction de formule    
  Avec la correction de formule sur un modèle tabulaire 1200, SSDT met automatiquement à jour les mesures qui font référence à une colonne ou table ayant été renommée.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Prise en charge du Gestionnaire de configuration Visual Studio    
@@ -85,9 +87,9 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administration de modèles 1200 tabulaires dans SSMS    
  Dans cette version, une instance d’Analysis Services en mode serveur tabulaire peut exécuter les modèles tabulaires à tous les niveaux de compatibilité (1100, 1103, 1200). La dernière version de [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) a été mise à jour pour afficher les propriétés et permettre l’administration de modèles de base de données pour les modèles tabulaires au niveau de compatibilité 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Traitement en parallèle de plusieurs partitions de tables dans les modèles tabulaires    
- Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et le traitement des tables, consultez [Partitions de modèle tabulaire &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et de traiter les tables, consultez [des Partitions de modèles tabulaires](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Ajout de comptes d’ordinateur en tant qu’administrateurs dans SSMS    
- Les administrateurs de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe d’administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe Administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC pour Analysis Services    
  DBCC (Database Consistency Checker) s’exécute en interne pour détecter la présence potentielle de données endommagées au chargement d’une base de données, mais il peut aussi être exécuté à la demande si vous soupçonnez des problèmes dans vos données ou un modèle. DBCC exécute des vérifications différentes selon que le modèle est tabulaire ou multidimensionnel. Pour plus de détails, consultez [DBCC &#40;Database Consistency Checker&#41; pour les bases de données multidimensionnelles et tabulaires Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Mises à jour des événements étendus    
@@ -204,7 +206,7 @@ Cette version comporte des améliorations significatives dans DirectQuery pour l
 ### <a name="new-data-sources-for-directquery-mode"></a>Nouvelles sources de données pour le mode DirectQuery    
  Sources de données pris en charge pour les modèles tabulaires 1200 dans le mode DirectQuery maintenant incluent Oracle, Teradata et Microsoft Analytique Platform (anciennement Parallel Data Warehouse).    
     
-Pour en savoir plus, consultez [Mode DirectQuery &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+Pour plus d’informations, consultez [DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## <a name="see-also"></a>Voir aussi
 [Blog de l’équipe Analysis Services](http://blogs.msdn.microsoft.com/analysisservices/)    

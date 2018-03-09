@@ -5,10 +5,11 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - database [Master Data Services], logins
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90de17c77982bd2eb15575f9eb80dba48969dbf2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c22d739812318cf6c29559164df18fc4c07fe834
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Connexions, utilisateurs et rôles de base de données (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] comprend des connexions, des utilisateurs et des rôles installés automatiquement sur l'instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui héberge la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ces connexions, utilisateurs et rôles ne doivent pas être modifiés.  
@@ -57,19 +58,19 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="master-data-services-database-role"></a>Rôle de base de données Master Data Services  
   
-|Rôle|Description|Permissions|  
+|Role|Description|Autorisations|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Ce rôle contient le compte que vous désignez dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] lorsque vous créez une application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] et désignez un compte pour le pool d'applications.|L'autorisation EXECUTE sur tous les schémas.<br /><br /> <br /><br /> Les autorisations ALTER, INSERT et SELECT sur ces tables :<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> L'autorisation SELECT sur ces tables :<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> L'autorisation SELECT sur ces vues :<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Schémas  
   
-|Rôle|Description|  
+|Role|Description|  
 |----------|-----------------|  
 |**mdm**|Contient tous les objets de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] et Service Broker autres que les fonctions contenues dans le schéma mdq.|  
 |**mdq**|Contient les fonctions de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relatives aux résultats du filtrage de membres selon des expressions régulières ou des ressemblances, et pour la mise en forme de courriers électroniques de notification.|  
 |**stg.**|Contient des tables de base de données, des procédures stockées et des vues [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] liées au processus de site. Ne supprimez pas l'un de ces objets. Pour plus d’informations sur le processus de mise en lots, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécurité de l’objet de base de données &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

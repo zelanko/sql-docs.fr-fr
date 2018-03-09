@@ -8,24 +8,22 @@ ms.service:
 ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
 helpviewer_keywords: SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f55bb21b4daed242809bb9064e582cfa91c27cd6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d77de099eca482d012ab6925e709d719c950e84
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="soapexception-errors-table"></a>Table d'erreurs SoapException
   Le serveur de rapports génère des erreurs et des messages d'erreur dans l'exception SOAP en fonction des erreurs qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Le tableau suivant indique les erreurs qui sont accessibles à partir de méthodes par le biais d’un **SoapException** dans le service web Report Server. Il est organisé en fonction de la méthode ou des méthodes qui lèvent l'exception.  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)   
  [SoapException, classe Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   

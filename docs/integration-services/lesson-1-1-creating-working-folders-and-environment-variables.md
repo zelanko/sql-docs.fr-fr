@@ -1,11 +1,11 @@
 ---
-title: "Étape 1 : Création des dossiers et des Variables d’environnement de travail | Documents Microsoft"
+title: "Étape 1 : Création des variables d’environnement et des dossiers de travail | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: de69cfa9d63daa6cd5638774aba2540fd2ffdbaa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 06b762b3411f13eff291746467d9217487e94655
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Leçon 1-1-Création de dossiers et des Variables d’environnement de travail
+# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Leçon 1-1 : Création des variables d’environnement et des dossiers de travail
 Dans cette tâche, vous allez créer le dossier de travail (C:\DeploymentTutorial) et les nouvelles variables d'environnement système (`DataTransfer` et `LoadXMLData`) que vous utiliserez dans les tâches de didacticiel ultérieures.  
   
 Le dossier de travail se trouve à la racine du lecteur C. Vous pouvez utiliser un lecteur ou un emplacement différent si vous le souhaitez. Cependant, vous devez prendre note de cet emplacement et vous en servir lorsque le didacticiel vous renvoie à l'emplacement du dossier de travail DeploymentTutorial.  
@@ -97,4 +96,3 @@ Si vous envisagez de déployer les packages sur un autre ordinateur, vous devez 
   
   
   
-

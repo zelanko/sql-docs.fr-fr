@@ -2,15 +2,13 @@
 title: "Tables imbriquées (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tables imbriquées (Analysis Services - Exploration de données)
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Fournit une méthode unique pour gérer de tels cas, à l’aide de *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
   
  ![Deux tables combinées à l’aide d’une table imbriquée](../../analysis-services/data-mining/media/nested-tables.gif "deux tables combinées à l’aide d’une table imbriquée")  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  Par exemple, si la table imbriquée contient les colonnes **Product**, **ProductQuantity**et **ProductPrice**, vous pouvez choisir **Product** comme clé de table imbriquée et ajouter **ProductQuantity** à la structure d’exploration de données pour une utilisation comme entrée.  
   
 ## <a name="filtering-nested-table-data"></a>Filtrage de données de table imbriquée  
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer des filtres sur les données utilisées pour effectuer l'apprentissage d'un modèle d'exploration de données ou le tester. Vous pouvez utiliser un filtre pour affecter la composition du modèle ou pour tester le modèle sur un sous-ensemble de cas. Des filtres peuvent également être appliqués aux tables imbriquées. Toutefois, la syntaxe pouvant être utilisée avec les tables imbriquées présente certaines limites.  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer des filtres sur les données utilisées pour effectuer l'apprentissage d'un modèle d'exploration de données ou le tester. Un filtre peut être utilisé pour affecter la composition du modèle, ou pour tester le modèle sur un sous-ensemble de cas. Des filtres peuvent également être appliqués aux tables imbriquées. Toutefois, la syntaxe pouvant être utilisée avec les tables imbriquées présente certaines limites.  
   
  Souvent, lorsque vous appliquez un filtre à une table imbriquée, vous testez l'existence ou la non-existence d'un attribut. Par exemple, vous pouvez appliquer un filtre qui restreint les cas utilisés dans le modèle à ceux ayant une valeur spécifiée dans la table imbriquée. Ou, vous pouvez restreindre les cas utilisés dans le modèle aux clients qui n'ont pas acheté un article particulier.  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  Pour plus d’informations sur la création et l’utilisation de filtres de modèle, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Les Structures d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

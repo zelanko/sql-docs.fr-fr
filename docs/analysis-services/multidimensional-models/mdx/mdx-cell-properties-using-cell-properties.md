@@ -2,16 +2,13 @@
 title: "À l’aide des propriétés de cellule (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52ef98613eceec0356317f1cd578ac63506d6815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e6094d7b88ef2c8da50ced24b49c89dc9658885
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propriétés de la cellule MDX - à l’aide des propriétés de cellule
-  Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
   
  La syntaxe MDX prend en charge le mot clé CELL PROPERTIES dans une instruction MDX SELECT pour l'extraction des propriétés de cellule intrinsèques. Ces propriétés sont principalement utilisées pour définir l'affichage des données des cellules.  
   
@@ -56,17 +54,17 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Propriétés de cellule intrinsèques prises en charge  
  Le tableau suivant dresse la liste des propriétés de cellule intrinsèques prises en charge utilisées dans la valeur `<property>` .  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : les actions d’extraction des requêtes dont la clause Where contient un jeu ne sont pas comprises.|  
-|**BACK_COLOR**|Couleur d’arrière-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE** . Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
+|**BACK_COLOR**|Couleur d’arrière-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE**. Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|Numéro ordinal de la cellule dans le jeu de données.|  
 |**FONT_FLAGS**|Masque de bits détaillant les effets sur la police. La valeur de cette propriété est le résultat d'une opération OU au niveau du bit sur une ou plusieurs des constantes suivantes :<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Par exemple, la valeur 5 représente la combinaison des effets gras (**MDFF_BOLD**) et souligné (**MDFF_UNDERLINE**).|  
 |**FONT_NAME**|Police à utiliser pour afficher la propriété **VALUE** ou **FORMATTED_VALUE** .|  
 |**FONT_SIZE**|Taille de police à utiliser pour afficher la propriété **VALUE** ou **FORMATTED_VALUE** .|  
-|**FORE_COLOR**|Couleur d’avant-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE** . Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
+|**FORE_COLOR**|Couleur d’avant-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE**. Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**FORMAT**|Identique à **FORMAT_STRING**.|  
-|**FORMAT_STRING**|Chaîne de format utilisée pour créer la valeur de la propriété **FORMATTED_VALUE** . Pour plus d’informations, consultez [Contenu de FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).|  
+|**FORMAT_STRING**|Chaîne de format utilisée pour créer la valeur de la propriété **FORMATTED_VALUE**. Pour plus d’informations, consultez [Contenu de FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).|  
 |**FORMATTED_VALUE**|Chaîne de caractères représentant un affichage avec mise en forme de la propriété **VALUE** .|  
 |**LANGUAGE**|Paramètre régional auquel **FORMAT_STRING** sera appliqué. **LANGUAGE** est généralement utilisé pour la conversion de devises.|  
 |**UPDATEABLE**|Valeur indiquant si la cellule peut être mise à jour. Cette propriété peut prendre les valeurs suivantes :|  
@@ -115,6 +113,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

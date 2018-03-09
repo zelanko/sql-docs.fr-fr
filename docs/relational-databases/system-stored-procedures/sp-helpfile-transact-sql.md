@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa55f12c6e68df15f1ee9497c28133d4be3470aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f17fa70885b833fcaeabaa221382c738a5885eb6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,18 +57,18 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**fileid**|**smallint**|Identificateur numérique du fichier. N’est pas renvoyée si *nom* est spécifié*.*|  
 |**nom de fichier**|**NCHAR(260)**|Nom de fichier physique.|  
 |**groupe de fichiers**|**sysname**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Le fichier est un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
-|**taille**|**nvarchar (15)**|Taille du fichier en kilo-octets.|  
+|**size**|**nvarchar (15)**|Taille du fichier en kilo-octets.|  
 |**MaxSize**|**nvarchar (15)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**croissance**|**nvarchar (15)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois qu’un nouvel espace est requis.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
 |**utilisation**|**varchar (9)**|Fichier de données, la valeur est **'données uniquement'** et du fichier journal de la valeur est **journal uniquement**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne des informations sur les fichiers de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfile;  

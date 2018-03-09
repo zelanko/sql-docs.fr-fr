@@ -3,27 +3,27 @@ title: "Fonctionner Red Hat Enterprise Linux partagé du cluster pour SQL Server
 description: "Implémenter la haute disponibilité en configurant des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: ed87490e0aedfd0953c8c77715ddc7e843aefd2c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document décrit comment effectuer les tâches suivantes pour SQL Server sur un cluster de basculement de disque partagé avec Red Hat Enterprise Linux.
 
@@ -73,7 +73,7 @@ Afficher l’état dynamique de cluster et de ressources :
 sudo crm_mon 
 ```
 
-Afficher les journaux de l’agent de ressources dans`/var/log/cluster/corosync.log`
+Afficher les journaux de l’agent de ressources dans `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Ajouter un nœud à un cluster
 
@@ -105,7 +105,7 @@ Afficher les journaux de l’agent de ressources dans`/var/log/cluster/corosync.
 
 1. Suivez les instructions pour monter le répertoire du fichier de base de données à l’emplacement partagé :
 
-   À partir du serveur NFS, installer`nfs-utils`
+   À partir du serveur NFS, installer `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -184,7 +184,7 @@ Afficher les journaux de l’agent de ressources dans`/var/log/cluster/corosync.
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    Les publicités exemple suivant, un nœud nommé **vm3** au cluster.
+    L’exemple suivant ajoute un nœud nommé **vm3** au cluster.
 
     ```bash
     sudo pcs    cluster auth  
@@ -224,7 +224,7 @@ PCSD doit être en cours d’exécution pour pouvoir utiliser `pcs` outils.
 
 ### <a name="current-cluster-status"></a>État actuel de cluster 
 
-`sudo pcs status`Retourne des informations de base sur l’état pour chaque nœud de cluster, les quorum, les nœuds, les ressources et le démon. 
+`sudo pcs status` Retourne des informations de base sur l’état pour chaque nœud de cluster, les quorum, les nœuds, les ressources et le démon. 
 
 Un exemple d’une sortie de quorum sain STIMULATEUR serait :
 
@@ -253,15 +253,15 @@ pacemaker: active/enabled
 
 Dans l’exemple, `partition with quorum` signifie qu’un quorum de la majorité des nœuds est en ligne. Si le cluster perd le quorum majoritaire de nœuds, `pcs status` retournera `partition WITHOUT quorum` et toutes les ressources va être arrêtés. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Retourne le nom de tous les nœuds participant dans le cluster. Si tous les nœuds ne font pas partie, `pcs status` retourne `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Retourne le nom de tous les nœuds participant dans le cluster. Si tous les nœuds ne font pas partie, `pcs status` retourne `OFFLINE: [<nodename>]`.
 
-`PCSD Status`Affiche l’état du cluster pour chaque nœud.
+`PCSD Status` Affiche l’état du cluster pour chaque nœud.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Raisons pour lesquelles un nœud peut être en mode hors connexion
 
 Vérifiez les éléments suivants lorsqu’un nœud est hors connexion.
 
-- **Pare-feu**
+- **Firewall**
 
     Les ports suivants doivent être ouverts sur tous les nœuds pour STIMULATEUR être en mesure de communiquer.
     

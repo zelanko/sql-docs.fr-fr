@@ -1,10 +1,13 @@
 ---
 title: "Résolution des problèmes (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 3bc3cbce34b9de8d5120a363d923c9470dbf8de0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1de94f5935d6e117484d6e911631577116b01fab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-oracletosql"></a>Résolution des problèmes (OracleToSQL)
 Il n’est pas rare de rencontrer à mi-chemin de problèmes de migration l’exécution de scripts de la console ou des commandes.  

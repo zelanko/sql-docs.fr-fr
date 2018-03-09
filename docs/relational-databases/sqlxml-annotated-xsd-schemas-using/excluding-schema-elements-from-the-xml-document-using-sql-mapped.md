@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Exclusion d’éléments de schéma du Document XML en utilisant sql : mappé
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Chaque élément et attribut dans le schéma XSD est mappé à une table ou de vue de base de données et une colonne en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui ne correspondent pas à une table de base de données (vue) ou une colonne, et qui n’apparaît pas dans le code XML, vous pouvez spécifier le **sql : mappé** annotation.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Chaque élément et chaque attribut du schéma XSD sont mappés à une vue/table et à une colonne de base de données en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui ne correspondent pas à une table de base de données (vue) ou une colonne, et qui n’apparaît pas dans le code XML, vous pouvez spécifier le **sql : mappé** annotation.  
   
  Le **sql : mappé** annotation s’avère particulièrement utile si le schéma ne peut pas être modifié ou si le schéma est utilisé pour valider le XML à partir d’autres sources et qu’il contient encore des données qui ne sont pas stockées dans votre base de données. Le **sql : mappé** diffère de l’annotation **sql : constante est** dans la mesure où les éléments non mappés et les attributs n’apparaissent pas dans le document XML.  
   

@@ -3,8 +3,11 @@ title: "Sélectionner les colonnes, boîte de dialogue (Visual Database Tools) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dc761c177b2845c88a197034228eed073e811d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4e13dc3712d55ec542cdb783ec3482127c527638
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Boîte de dialogue Sélectionner les colonnes (Visual Database Tools)
-Vous permet de modifier la vue personnalisée des tables dans le schéma de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous permet de changer la vue personnalisée des tables dans le schéma de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  
   
 Cette boîte de dialogue apparaît quand vous cliquez avec le bouton droit sur une table, puis choisissez **Modifier la vue personnalisée** dans le menu contextuel.  
   
@@ -51,7 +54,7 @@ Enregistre la vue personnalisée.
 **Annuler**  
 Annule la modification de la vue personnalisée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   

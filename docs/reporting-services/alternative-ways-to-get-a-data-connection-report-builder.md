@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a64a3cfa445d2f79560245a674352209dc0a9624
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 82eb2c26504cee7920e0c0d67fb6faa00af70b26
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Autres manières d'obtenir une connexion de données (Générateur de rapports)
 Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En règle générale, vous obtenez les informations de connexion et le type d'informations d'identification à utiliser auprès du propriétaire de la source de données.  
@@ -42,7 +42,7 @@ Pour utiliser une source de données partagée, accédez à un serveur de rappor
   
 2.  Dans la liste des sources de données, sélectionnez une source de données pour laquelle vous disposez d'autorisations d'accès.  
   
-3.  Pour vérifier vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**. Le message « La connexion a été correctement créée » s'affiche. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**. Le message « La connexion a été correctement créée » s'affiche. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Cliquez sur **Suivant**.  
   
@@ -78,7 +78,7 @@ Pour utiliser une source de données partagée, accédez à un serveur de rappor
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Datasets de rapport &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 
   

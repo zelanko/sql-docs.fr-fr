@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: UNIQUENAME
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1371b4e28fb7380f250fb1eab9630c5c24b52c87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c68a32d649cf9042e173dc3fa79b73a5c820b98
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,10 +61,10 @@ Member_Expression.UniqueName
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **UniqueName** fonction retourne le nom unique de l’objet, pas le nom retourné par la [nom](../mdx/name-mdx.md) (fonction). Le nom retourné n'inclut pas le nom du cube. Les résultats retournés dépendent des paramètres côté serveur ou de la propriété de chaîne de connexion UniqueNameStyle MDX.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne la valeur de nom unique de la dimension Product, de la hiérarchie Product Categories, du niveau Subcategory et du membre Bike Racks dans le cube Adventure Works.  
   
 ```  

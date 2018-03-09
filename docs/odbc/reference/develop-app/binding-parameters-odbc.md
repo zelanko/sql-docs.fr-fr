@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-odbc"></a>Liaison de paramètres ODBC
 Chaque paramètre dans une instruction SQL doit être associé, ou *lié,* à une variable dans l’application avant que l’instruction est exécutée. Lorsque l’application lie une variable à un paramètre, il décrit cette variable, adresse, type de données C et ainsi de suite, pour le pilote. Elle décrit également le paramètre lui-même : données SQL type, précision et ainsi de suite. Le pilote stocke ces informations dans la structure, il tient à jour pour cette instruction et utilise les informations pour récupérer la valeur de la variable lorsque l’instruction est exécutée.  

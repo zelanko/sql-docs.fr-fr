@@ -2,28 +2,35 @@
 title: "Synonymes (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: synonyms
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86fb16833f248731becb9e40f7525281a8b52e94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>Synonymes (moteur de base de données)
-  Un synonyme est un objet de base de données utilisé aux fins suivantes :  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un synonyme est un objet de base de données utilisé aux fins suivantes :  
   
 -   Il fournit un nom de remplacement pour un autre objet de base de données, appelé « objet de base », qui peut exister sur un serveur local ou distant.  
   
@@ -65,8 +72,8 @@ ms.lasthandoff: 11/09/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
+|CONTROL|Suppression|  
+|Exécutez|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -76,8 +83,8 @@ ms.lasthandoff: 11/09/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|Sub-selects|  
+|UPDATE|Suppression|  
+|Exécutez|Sub-selects|  
   
  Si vous travaillez avec des synonymes dans les contextes précédemment cités, l'objet de base est affecté. Par exemple, si un synonyme référence un objet de base qui est une table et que vous insérez une ligne dans le synonyme, vous insérez en fait une ligne dans la table référencée.  
   
@@ -143,7 +150,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('MyRemoteEmployee'), 'BaseType') AS BaseType;
 GO  
 ```  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Créer des synonymes](../../relational-databases/synonyms/create-synonyms.md)  
   
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)  

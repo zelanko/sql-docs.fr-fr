@@ -3,8 +3,9 @@ title: "Propriété de gestionnaire (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Handler property [ADO]
+helpviewer_keywords:
+- Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa363b9fa9761eb764a7bf2aa7b9d4eb992ec65b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handler-property-rds"></a>Propriété de gestionnaire (RDS)
 Indique le nom d’un programme de personnalisation côté serveur (gestionnaire) qui étend les fonctionnalités de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)et tous les paramètres utilisés par le *gestionnaire*.  
@@ -54,7 +56,7 @@ DataControl.Handler = String
   
  Le nom du gestionnaire par défaut est **MSDFMAP. Gestionnaire**, et son paramètre par défaut est un fichier de personnalisation appelé **MSDFMAP. INI**. Cette propriété permet d’appeler d’autres fichiers de personnalisation créés par votre administrateur de serveur.  
   
- L’alternative à la définition la **gestionnaire** propriété consiste à spécifier un gestionnaire et des paramètres dans le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété ; autrement dit, «**gestionnaire =***handlerName, paramètre1, paramètre2,... ;* ".  
+ L’alternative à la définition la **gestionnaire** propriété consiste à spécifier un gestionnaire et des paramètres dans le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété ; autrement dit, « **Gestionnaire = *** handlerName, paramètre1, parameter2,... ;* ".  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

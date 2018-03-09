@@ -2,45 +2,45 @@
 title: "Spécifications de capacité maximale (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39c69ad1c26b30eda9244d192e6199903249ff40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Spécifications de capacité maximale (Analysis Services)
-  Les tableaux suivants spécifient les tailles maximales et les nombres des différents objets définis dans les composants [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] selon des modes de déploiement de serveur différents.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Les tableaux suivants spécifient les tailles maximales et les nombres des différents objets définis dans les composants [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] selon des modes de déploiement de serveur différents.  
   
  Cette rubrique contient les sections suivantes :  
   
  [Multidimensionnel et exploration de données (DeploymentMode = 0)](#bkmk_OLAP)  
   
- [SharePoint (DeploymentMode = 1)](#bkmk_sharepoint)  
+ [SharePoint (DeploymentMode=1)](#bkmk_sharepoint)  
   
- [Tabulaire (DeploymentMode = 2)](#bkmk_vertipaq)  
+ [Tabular (DeploymentMode=2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Multidimensionnel et exploration de données (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">Multidimensionnel et exploration de données (DeploymentMode = 0)</a>  
  Le mode de stockage MOLAP, qui stocke des données et des métadonnées, a des limites physiques supplémentaires concernant les tailles de fichier. Les fichiers du magasin de chaînes ont par défaut une taille maximale de 4 Go. Si vous avez besoin de fichiers de plus grande taille pour les magasins de chaînes, vous pouvez spécifier une architecture de stockage de chaînes différente. Pour plus d’informations, consultez [configurer le stockage des chaînes pour les Partitions et Dimensions](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Objet|Tailles maximales/nombres maximaux|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d’informations sur les limites de source de données pour le traitement analytique en ligne (OLAP) et d’exploration de données, consultez [pris en charge les Sources de données &#40; SSAS - multidimensionnel &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Pris en charge des Sources de données &#40; SSAS - multidimensionnel &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), et [objets ASSL et caractéristiques des objets](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode=1)  
   
 |Objet|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |Taille d'enregistrement de la requête source|64 Ko|  
 |Longueur des noms d’objet|100 caractères|  
   
-##  <a name="bkmk_vertipaq"></a>Tabulaire (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq"></a> Tabulaire (DeploymentMode = 2)  
 Limite théorique sont les suivantes. Performances seront diminuée sur les nombres inférieurs.   
 
 |Objet|Tailles maximales/nombres maximaux|  

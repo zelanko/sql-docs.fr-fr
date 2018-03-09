@@ -1,5 +1,5 @@
 ---
-title: "À partir de (Transact-SQL) | Documents Microsoft"
+title: FROM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - CROSS_APPLY_TSQL
 - APPLY_TSQL
 - CROSS_JOIN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OUTER APPLY operator
 - hints [SQL Server], FROM clause
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +163,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<table_source >  
+\<table_source>  
  Spécifie une table, une vue, une variable de table ou une source de table dérivée, avec ou sans alias, à utiliser dans l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez utiliser jusqu'à 256 sources de table dans une instruction, bien que cette limite varie en fonction de la mémoire disponible et de la complexité des autres expressions constituant la requête. Les requêtes individuelles peuvent ne pas prendre en charge 256 sources de table.  
   
 > [!NOTE]  
@@ -169,7 +171,7 @@ FROM { <table_source> [ ,...n ] }
   
  L'ordre des sources de table après le mot clé FROM n'a aucune incidence sur le jeu de résultats retourné. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des erreurs lorsque des noms dupliqués apparaissent dans la clause FROM.  
   
- *nom_table_ou_vue*  
+ *table_or_view_name*  
  Nom d'une table ou d'une vue.  
   
  Si la table ou la vue existe dans une autre base de données sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez un nom complet sous la forme *base de données*. *schéma*. *nom_objet*.  
@@ -184,7 +186,7 @@ FROM { <table_source> [ ,...n ] }
  AVEC (\<indicateur de table >)  
  Spécifie que l'optimiseur de requête utilise une stratégie d'optimisation ou de verrouillage avec cette table et pour cette instruction. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- *fonction_ensemble_de_lignes*  
+ *rowset_function*  
 
 **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -206,14 +208,14 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Spécifie une fonction table.  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Fournit une vue de l'ensemble de lignes d'un document XML. Pour plus d’informations, consultez [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md).  
   
- *table_dérivée*  
+ *derived_table*  
  Sous-requête qui récupère les lignes de la base de données. *table_dérivée* est utilisé en tant qu’entrée à la requête externe.  
   
  *dérivés* *_table* pouvez utiliser la [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionnalité de constructeur de valeur de table pour spécifier plusieurs lignes. Par exemple, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Pour plus d’informations, consultez [constructeur de valeurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
@@ -221,14 +223,14 @@ FROM { <table_source> [ ,...n ] }
  *column_alias*  
  Alias facultatif qui peut remplacer un nom de colonne dans le jeu de résultats de la table dérivée. Utilisez un alias de colonne pour chaque colonne de la liste de sélection et placez l'intégralité de la liste d'alias de colonnes entre parenthèses.  
   
- *nom_table_ou_vue* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Spécifie qu’une version spécifique de données est retournée à partir de la table temporelle spécifiée et sa table d’historique avec version système lié  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT, UPDATE ou DELETE. TABLESAMPLE ne peut pas être spécifié avec des vues.  
   
 > [!NOTE]  
@@ -252,13 +254,13 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Expression d'un entier de type constante utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer un nombre aléatoire. *repeat_seed* est **bigint**. Si *repeat_seed* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte une valeur aléatoire. Pour un spécifique *repeat_seed* valeur, le résultat de l’échantillonnage est toujours le même si aucune modification n’ont été appliquées à la table. Le *repeat_seed* expression doit correspondre à un entier supérieur à zéro.  
   
- \<joined_table >  
+ \<joined_table>  
  Jeu de résultats correspondant au produit de deux ou plusieurs tables. Pour plusieurs jointures, utilisez des parenthèses afin de modifier l'ordre naturel des jointures.  
   
-\<join_type >  
+\<join_type>  
  Spécifie le type d'opération de jointure.  
   
- **INTERNE**  
+ **INNER**  
  Spécifie que toutes les paires correspondantes de lignes sont retournées. Supprime les lignes n'ayant pas de correspondance dans les deux tables. Lorsqu'aucun type de jointure n'est spécifié, cet argument est la valeur par défaut.  
   
  FULL [ OUTER ]  
@@ -270,7 +272,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Spécifie que toutes les lignes de la table de droite qui ne respectent pas la condition de jointure sont incluses dans le jeu de résultats et que les colonnes de sortie qui correspondent à l'autre table ont des valeurs NULL en plus de toutes les lignes retournées par la jointure interne.  
   
-\<indicateurs join_hint >  
+\<join_hint>  
  Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], qui spécifie le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requête optimiseur utilise un indicateur de jointure ou un algorithme d’exécution par jointure spécifiée dans la clause FROM de la requête. Pour plus d’informations, consultez [indicateurs de jointure &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], ces indicateurs de jointure s’appliquent aux jointures INNER sur deux colonnes incompatibles de distribution. Ils peuvent améliorer les performances en limitant la quantité de déplacement des données qui se produit pendant le traitement des requêtes. Indicateurs de la jointure autorisée pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sont les suivantes :  
@@ -287,10 +289,10 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  Indique que l'opération de jointure spécifiée doit avoir lieu entre les sources de table ou les vues spécifiées.  
   
- ON \<search_condition >  
+ ON \<search_condition>  
  Spécifie la condition sur laquelle se base la jointure. Celle-ci peut spécifier n'importe quel prédicat, bien que les colonnes et les opérateurs de comparaison soient souvent utilisés, par exemple :  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -322,7 +324,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Source de table, telle qu'elle est définie dans l'argument précédent. Pour plus d'informations, consultez la section Notes.  
   
- *table_source* PIVOT \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  Spécifie que le *table_source* est croisé dynamiquement sur la *pivot_column*. *table_source* est une table ou une expression de table. La sortie est une table qui contient toutes les colonnes de la *table_source* , sauf le *pivot_column* et *value_column*. Les colonnes de la *table_source*, sauf le *pivot_column* et *value_column*, sont appelées colonnes de regroupement de l’opérateur pivot. Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, consultez [à l’aide de PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT opère un regroupement sur la table d'entrée par rapport aux colonnes de regroupement et retourne une ligne par groupe. En outre, la sortie contient une colonne pour chaque valeur spécifiée dans le *column_list* qui s’affiche dans le *pivot_column* de la *input_table*.  
@@ -337,7 +339,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  Colonne de valeur de l'opérateur PIVOT. Lorsqu’il est utilisé avec UNPIVOT, *value_column* ne peut pas être le nom d’une colonne existante dans l’entrée *table_source*.  
   
- POUR *pivot_column*  
+ FOR *pivot_column*  
  Colonne de tableau croisé dynamique de l'opérateur PIVOT. *pivot_column* doit être d’un type implicitement ou explicitement convertible en **nvarchar()**. Cette colonne ne peut pas être **image** ou **rowversion**.  
   
  Lorsque l’opérateur UNPIVOT est utilisé, *pivot_column* est le nom de la colonne de sortie qui est réduite à partir de la *table_source*. Il ne peut pas être une colonne existante de *table_source* portant ce nom.  
@@ -347,20 +349,20 @@ ON (p.ProductID = v.ProductID);
   
  Dans la clause UNPIVOT, répertorie les colonnes de *table_source* qui doivent être réduites à une seule *pivot_column*.  
   
- *alias_de_table*  
+ *table_alias*  
  Nom d'alias de la table de sortie. *pivot_table_alias* doit être spécifié.  
   
  UNPIVOT \< unpivot_clause >  
  Spécifie que la table d’entrée est réduite de plusieurs colonnes dans *column_list* en une seule colonne appelée *pivot_column*. Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, consultez [à l’aide de PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- En tant que de \<date_heure >  
+ AS OF \<date_time>  
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique et les résultats sont filtrés pour renvoyer les valeurs de la ligne qui était valide au point dans le temps spécifié par le  *\<date_heure >* paramètre. La valeur d’une ligne est considérée comme valide si le *system_start_time_column_name* la valeur est inférieure ou égale à la  *\<date_heure >* la valeur du paramètre et le *system_end_time_column_name* valeur est supérieure à la  *\<date_heure >* la valeur du paramètre.   
   
- À partir de \<start_date_time > TO \<end_date_time >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
@@ -373,7 +375,7 @@ ON (p.ProductID = v.ProductID);
   
  Identique à celle ci-dessus dans le **FROM \<start_date_time > à \<end_date_time >** description, mais il inclut des lignes qui sont devenues actives sur la limite supérieure définie par le \<end_date_time > point de terminaison.  
   
- CONTAINED IN (\<start_date_time >, \<end_date_time >)  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
 **S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -427,7 +429,7 @@ ON (p.ProductID = v.ProductID);
   
  Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, y compris des exemples, consultez [à l’aide de PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations appropriées pour l'instruction DELETE, SELECT ou UPDATE.  
   
 ## <a name="examples"></a>Exemples  
@@ -435,7 +437,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. Utilisation d'une clause FROM simple  
  L'exemple suivant récupère les colonnes `TerritoryID` et `Name` à partir de la table `SalesTerritory` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +464,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Utilisation des indicateurs d'optimiseur TABLOCK et HOLDLOCK  
  La transaction partielle suivante illustre le mode de placement d'un verrou de table partagé explicite sur `Employee` et le mode de lecture de l'index. Le verrou est conservé pendant toute la transaction.  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +483,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. Utilisation de la syntaxe SQL-92 FULL OUTER JOIN  
  L'exemple suivant retourne le nom de produit et les commandes correspondantes dans la table `SalesOrderDetail` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Il retourne également les commandes dont les produits ne sont pas répertoriés dans la table `Product`, ainsi que tous les produits dont la commande est différente de celle répertoriée dans la table `Product`.  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +495,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. Utilisation de la syntaxe SQL-92 LEFT OUTER JOIN  
  L'exemple suivant joint deux tables sur `ProductID` et conserve les lignes sans correspondance de la table de gauche. La table `Product` correspond à la table `SalesOrderDetail` sur les colonnes `ProductID` de chaque table. Tous les produits, qu'ils soient commandés ou non, apparaissent dans le jeu de résultats.  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +506,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. Utilisation de la syntaxe SQL-92 INNER JOIN  
  L'exemple suivant retourne tous les noms de produits et tous les ID de commandes.  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +519,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. Utilisation de la syntaxe SQL-92 RIGHT OUTER JOIN  
  L'exemple suivant joint deux tables sur `TerritoryID` et conserve les lignes sans correspondance de la table de droite. La table `SalesTerritory` correspond à la table `SalesPerson` sur la colonne `TerritoryID` de chaque table. Tous les vendeurs apparaissent dans le jeu de résultats, qu'un secteur leur ait été attribué ou non.  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +532,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  Lorsqu'un indicateur de jointure est spécifié, le mot clé INNER n'est plus facultatif et doit être déclaré de manière explicite pour l'exécution d'une jointure INNER JOIN.  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +545,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>I. Utilisation d'une table dérivée  
  L'exemple suivant se sert d'une table dérivée, d'une instruction `SELECT` après la clause `FROM`, pour retourner les prénoms et noms de tous les employés ainsi que leur ville de résidence.  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +561,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. Utilisation de TABLESAMPLE pour lire des données à partir d'un exemple de lignes dans une table  
  L'exemple suivant utilise `TABLESAMPLE` dans la clause `FROM` pour retourner environ `10` % de toutes les lignes de la table `Customer`.  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +579,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  L'exemple utilise `APPLY` pour retourner tous les services et tous les employés qui en font partie. Si un service particulier est dépourvu d'employés, aucune ligne n'est retournée pour celui-ci.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  Si vous souhaitez que la requête génère des lignes pour ces services sans employés, ce qui produira des valeurs NULL pour les colonnes `EmpID`, `EmpLastName` et `EmpSalary`, utilisez `OUTER APPLY` à la place.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +594,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>L. Utilisation de l'opérateur CROSS APPLY  
  L'exemple suivant récupère un instantané de tous les plans de requête résidant dans la mémoire cache des plans, en interrogeant la vue de gestion dynamique `sys.dm_exec_cached_plans` pour récupérer les descripteurs de plan de tous les plans de requête dans le cache. L'opérateur `CROSS APPLY` est spécifié pour transmettre les descripteurs de plan à `sys.dm_exec_query_plan`. La sortie du plan d'exécution de requêtes XML pour chaque plan actuellement dans la mémoire cache des plans se trouve dans la colonne `query_plan` de la table retournée.  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +609,7 @@ GO
   
  L’exemple suivant utilise l’argument de date_time_literal_or_variable FOR SYSTEM_TIME AS OF pour retourner les lignes de la table qui étaient réelles (actuelles) à compter du 1er janvier 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +621,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise le FOR SYSTEM_TIME FROM date_time_literal_or_variable date_time_literal_or_variable argument TO renvoie toutes les lignes qui étaient actives pendant la période définie en tant qu’à compter du 1er janvier 2013 et se terminant par le 1er janvier 2014, à l’exclusion de la limite supérieure.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +633,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise le date_time_literal_or_variable pour SYSTEM_TIME entre et argument date_time_literal_or_variable pour retourner toutes les lignes qui étaient actives pendant la période définie en tant qu’à compter du 1er janvier 2013 et en terminant par le 1er janvier 2014, qui inclut la limite supérieure.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +645,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise le pour argument SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable, date_time_literal_or_variable) pour retourner toutes les lignes qui ont été ouvertes et fermées pendant la période définie en tant qu’à compter du 1er janvier 2013 et se terminant par le 1er janvier 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +657,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise une variable, plutôt qu’un littéral pour fournir les valeurs limites de date pour la requête.  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +675,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>N. À l’aide de la syntaxe INNER JOIN  
  L’exemple suivant retourne le `SalesOrderNumber`, `ProductKey`, et `EnglishProductName` colonnes à partir de la `FactInternetSales` et `DimProduct` tables où la clé de jointure, `ProductKey`, correspond à dans les deux tables. Le `SalesOrderNumber` et `EnglishProductName` colonnes chaque existent dans une des tables uniquement, donc il n’est pas nécessaire de spécifier l’alias de table avec ces colonnes, comme le montre ; ces alias sont inclus pour une meilleure lisibilité. Le mot **AS** avant un alias de nom n’est pas obligatoire, mais est recommandé pour une meilleure lisibilité et pour se conformer à la norme ANSI.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +686,7 @@ INNER JOIN DimProduct AS dp
   
  Étant donné que le `INNER` mot clé n’est pas requis pour les jointures internes, cette même requête peut être écrite en tant que :  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +697,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  A `WHERE` clause peut également être utilisée avec cette requête pour limiter les résultats. Cet exemple limite les résultats aux `SalesOrderNumber` valeurs supérieures à 'SO5000' :  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +711,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. À l’aide de la syntaxe LEFT OUTER JOIN et RIGHT OUTER JOIN  
  L’exemple suivant joint le `FactInternetSales` et `DimProduct` des tables sur la `ProductKey` colonnes. La syntaxe de jointure externe gauche conserve les lignes sans correspondance à partir de la gauche (`FactInternetSales`) table. Étant donné que la `FactInternetSales` table ne contient pas de `ProductKey` les valeurs qui ne correspondent pas à la `DimProduct` table, cette requête renvoie les mêmes lignes que le premier exemple de jointure interne ci-dessus.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +724,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  Dans les jointures externes droites, les lignes sans correspondance à partir de la table de droite sont conservés. L’exemple suivant retourne les mêmes lignes que l’exemple de jointure externe gauche ci-dessus.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +735,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  La requête suivante utilise le `DimSalesTerritory` table en tant que la table de gauche dans une jointure externe gauche. Il récupère le `SalesOrderNumber` les valeurs à partir de la `FactInternetSales` table. Si aucune commande pour un particulier `SalesTerritoryKey`, la requête retournera une valeur NULL pour le `SalesOrderNumber` pour cette ligne. Cette requête est triée par la `SalesOrderNumber` colonne, afin que les valeurs NULL dans cette colonne s’affiche en haut des résultats.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +747,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Cette requête peut être réécrit avec une jointure externe droite pour extraire les mêmes résultats :  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +760,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. À l’aide de la syntaxe FULL OUTER JOIN  
  L’exemple suivant montre une jointure externe complète, qui retourne toutes les lignes des deux tables jointes, mais retourne la valeur NULL pour les valeurs qui ne correspondent pas à partir de l’autre table.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +772,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Cette requête peut aussi être écrite sans la `OUTER` (mot clé).  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +785,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>Q. À l’aide de la syntaxe CROSS JOIN  
  L’exemple suivant retourne le produit croisé de la `FactInternetSales` et `DimSalesTerritory` tables. Une liste de toutes les combinaisons possibles des `SalesOrderNumber` et `SalesTerritoryKey` sont retournées. Notez l’absence de la `ON` clause dans la requête de jointure croisée.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +797,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>R. Utilisation d'une table dérivée  
  L’exemple suivant utilise une table dérivée (un `SELECT` instruction après le `FROM` clause) pour retourner le `CustomerKey` et `LastName` colonnes de tous les clients dans le `DimCustomer` table avec `BirthDate` valeurs au plus tard le 1er janvier 1970 et le dernier nom de « Smith ».  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +811,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S. RÉDUIRE l’exemple d’indicateur de jointure  
  L’exemple suivant utilise le `REDUCE` indicateur de jointure à modifier le traitement de la table dérivée dans la requête. Lorsque vous utilisez la `REDUCE` indicateur de jointure dans cette requête, le `fis.ProductKey` est projetée, répliquées et apportées distinctes, puis attachées à `DimProduct` lors de la lecture aléatoire de `DimProduct` sur `ProductKey`. La table dérivée qui en résulte est distribuée sur `fis.ProductKey`.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +827,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T. Exemple d’indicateur de jointure de réplication  
  L’exemple suivant montre la même requête que l’exemple précédent, à ceci près qu’un `REPLICATE` indicateur de jointure est utilisée au lieu du `REDUCE` indicateur de jointure. Utiliser le `REPLICATE` indicateur entraîne les valeurs dans le `ProductKey` colonne (jointure) à partir de la `FactInternetSales` table être répliquée vers tous les nœuds. Le `DimProduct` table est jointe à la version dupliquée de ces valeurs.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +845,7 @@ ORDER BY SalesOrderNumber;
   
  Dans l’exemple suivant, l’indicateur REDISTRIBUTE force un déplacement aléatoire sur la table FactInternetSales car ProductKey est la colonne de distribution pour DimProduct et n’est pas la colonne de distribution pour FactInternetSales.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  
@@ -857,9 +859,9 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

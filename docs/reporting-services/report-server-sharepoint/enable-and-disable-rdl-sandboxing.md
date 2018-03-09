@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee561435c401a1b0e3299216172bf4e25e146137
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Activer et désactiver le sandboxing RDL pour Reporting Services en mode intégré SharePoint
 
@@ -48,7 +46,7 @@ La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de d�
   
 -   Paramètres nommés dans les expressions  
   
- Cette rubrique décrit chaque élément de l’élément \<**RDLSandboxing**> dans le fichier RSReportServer.Config. Pour plus d’informations sur la modification de ce fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un journal des traces de serveur enregistre l'activité liée à la fonctionnalité Sandboxing RDL. Pour plus d’informations sur les fichiers des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).  
+ Cette rubrique décrit chaque élément de l’élément \<**RDLSandboxing**> dans le fichier RSReportServer.Config. Pour plus d’informations sur la modification de ce fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un journal des traces de serveur enregistre l'activité liée à la fonctionnalité Sandboxing RDL. Pour plus d’informations sur les journaux des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Exemple de configuration
  L’exemple suivant montre les paramètres et des exemples de valeurs pour l’élément \<**RDLSandboxing**> dans le fichier RSReportServer.Config.  
@@ -84,7 +82,7 @@ La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de d�
 |**Allow**|Type ou jeu de types à autoriser dans les expressions RDL.|  
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  
 |**AllowNew**|Attribut booléen pour **Allow** qui contrôle si la création de nouvelles instances du type est autorisée dans les expressions RDL ou dans un élément **\<Class>** RDL.<br /><br /> Quand **RDLSandboxing** est activé, de nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, indépendamment de la valeur de **AllowNew**.|  
-|**Valeur**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
+|**Value**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
 |**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>**, la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
 |**Refuser**|Nom d'un membre qui n'est pas autorisé dans les expressions RDL. Cette propriété n'est pas sensible à la casse.<br /><br /> Lorsque **Deny** est spécifié pour un membre, tous les membres avec ce nom pour tous les types ne sont pas autorisés.|  
   

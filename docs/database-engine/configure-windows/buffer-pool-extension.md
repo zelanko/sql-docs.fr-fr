@@ -2,26 +2,29 @@
 title: "Extension du pool de mémoires tampons | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bd32bd87a5cc458e1054555b8616db78957e27f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="buffer-pool-extension"></a>Extension du pool de mémoires tampons
-  Introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'extension du pool de mémoires tampons permet l'intégration transparente d'une extension de mémoire vive non volatile (c'est-à-dire d'un disque SSD) dans le pool de mémoires tampons [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour améliorer le débit d'E/S de façon significative. L'extension du pool de mémoires tampons n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+# <a name="buffer-pool-extension"></a>Buffer Pool Extension
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l’extension du pool de mémoires tampons permet l’intégration transparente d’une extension de mémoire vive non volatile (c’est-à-dire d’un disque SSD) dans le pool de mémoires tampons [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour améliorer le débit d’E/S de façon significative. L'extension du pool de mémoires tampons n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Avantages de l'extension du pool de mémoires tampons  
  L'objectif principal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de stocker et de récupérer les données, l'utilisation intensive d'E/S sur disque est donc une caractéristique centrale du moteur de base de données. Étant donné que les opérations d'E/S sur disque peuvent consommer beaucoup de ressources et durer relativement longtemps, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'attache à rendre ces opérations efficaces. Le pool de mémoires tampons fait office de source principale d'allocation mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestion des tampons joue un rôle essentiel pour parvenir à cette efficacité. Le composant de gestion des tampons comprend deux mécanismes : le gestionnaire de tampons qui permet d'accéder et mettre à jour les pages de la base de données, et le pool de mémoires tampons, qui permet de réduire les opérations d'E/S du fichier de la base de données.  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
  Une fois activée, l'extension du pool de mémoires tampons spécifie la taille et le chemin d'accès du fichier de mise en cache du pool de mémoires tampons sur le disque SSD. Ce fichier est une extension contiguë du stockage sur le disque SSD, et est configuré statiquement au démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La modification des paramètres de configuration des fichiers est uniquement possible lorsque la fonctionnalité d'extension du pool de mémoires tampons est désactivée. Dans ce cas, tous les paramètres de configuration associés sont supprimés du Registre. Le fichier d'extension du pool de mémoires tampons est supprimé en cas d'arrêt de l'instance de SQL Server.  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Nous vous recommandons d'appliquer ces bonnes pratiques.  
   
 -   Après avoir activé l’extension du pool de mémoires tampons pour la première fois, il est recommandé de redémarrer l’instance SQL Server pour obtenir des performances optimales.  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/09/2017
 |sqlserver.buffer_pool_extension_pages_evicted|Se déclenche lorsqu'une page est supprimée du fichier d'extension du pool de mémoires tampons.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|Se déclenche lorsque le seuil d'éviction est calculé.|*warm_threshold*<br /><br /> *cold_threshold*<br /><br /> *pages_bypassed_eviction*<br /><br /> *eviction_bypass_reason*<br /><br /> *eviction_bypass_reason_description*|  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

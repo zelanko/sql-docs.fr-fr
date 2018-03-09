@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Initialiser automatiquement le groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2016 propose un amorçage automatique des groupes de disponibilité.
 
 Pour plus d’informations, consultez [Amorçage automatique pour les réplicas secondaires](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Dans SQL Server 2016, l’amorçage automatique exige que le chemin des fichiers de données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe de disponibilité. Dans SQL Server 2017, vous pouvez utiliser différents chemins, mais Microsoft recommande d’utiliser les mêmes chemins quand tous les réplicas sont hébergés sur la même plateforme (par exemple Windows ou Linux). Les groupes de disponibilité multiplateformes ont des chemins différents pour les réplicas. Pour plus d’informations, consultez [Disposition des disques](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -150,7 +150,7 @@ Les vues système suivantes indiquent l’état de l’amorçage automatique SQL
 
 **sys.dm_hadr_automatic_seeding** 
 
-Sur le réplica principal, interrogez `sys.dm_hadr_automatic_seeding` pour vérifier l’état du processus d’amorçage automatique. La vue retourne une seule ligne pour chaque processus d’amorçage. Exemple :
+Sur le réplica principal, interrogez `sys.dm_hadr_automatic_seeding` pour vérifier l’état du processus d’amorçage automatique. La vue retourne une seule ligne pour chaque processus d’amorçage. Exemple :
 
 ```sql
 SELECT start_time, 
@@ -215,7 +215,7 @@ GO
 
 Le tableau suivant répertorie les événements étendus liés à l’amorçage automatique : 
 
-| Nom | Description|
+| Nom    | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Message de demande d’amorçage.
 |hadr_physical_seeding_backup_state_change |    Modification d’état côté sauvegarde d’amorçage physique.
@@ -236,7 +236,7 @@ Le tableau suivant répertorie les événements étendus liés à l’amorçage 
 
 **Surveillance lors de l’amorçage automatique**
 
-Interrogez `sys.dm_hadr_physical_seeding_stats` pour connaître les processus d’amorçage automatique en cours d’exécution. La vue retourne une seule ligne pour chaque base de données. Exemple :
+Interrogez `sys.dm_hadr_physical_seeding_stats` pour connaître les processus d’amorçage automatique en cours d’exécution. La vue retourne une seule ligne pour chaque base de données. Exemple :
 
 ```sql
 SELECT local_database_name, 

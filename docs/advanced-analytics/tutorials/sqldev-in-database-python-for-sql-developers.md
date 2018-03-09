@@ -2,28 +2,32 @@
 title: "Dans base de données analytique de Python pour les développeurs SQL | Documents Microsoft"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 725d69f4c0799cf5911cb8764aa7d0f3b6cbc48d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analytique Python de la base de données pour les développeurs SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’objectif de cette procédure pas à pas est de fournir des programmeurs SQL avec une expérience pratique de créer une solution à l’aide de Python qui s’exécute dans SQL Server d’apprentissage. Dans cette procédure pas à pas, vous allez apprendre à ajouter le code Python aux procédures stockées et exécuter des procédures stockées pour générer et de prédire à partir de modèles.
 
@@ -43,7 +47,7 @@ Le processus de création d’une solution d’apprentissage est complexe qui pe
 
 Les données sont dans le jeu de données NYC Taxi bien connu. Pour effectuer cette procédure pas à pas simple et rapide, les données sont échantillonnées. Vous allez créer un modèle de classification binaire qui prédit si un voyage particulier est susceptible d’obtenir un Conseil ou non, en fonction des colonnes, telles que l’heure du jour, distance et l’emplacement d’extraction.
 
-Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées dans l’environnement familier de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées dans l’environnement familier de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Étape 1 : Télécharger les exemples de données](sqldev-py1-download-the-sample-data.md)
 
@@ -74,7 +78,7 @@ Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../i
 
 ## <a name="requirements"></a>Spécifications
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Configuration requise
 
 + Installez une instance de SQL Server 2017 avec Machine Learning Services et Python activée. Pour plus d’informations, consultez [configurer SQL Server Machine Learning Services avec Python](../python/setup-python-machine-learning-services.md).
 + La connexion que vous utilisez pour cette procédure pas à pas doit avoir les autorisations pour créer des bases de données et autres objets, pour charger des données, sélectionner des données et exécuter des procédures stockées.

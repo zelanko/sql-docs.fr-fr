@@ -17,15 +17,15 @@ helpviewer_keywords:
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e4cea178658fb20104ea813162aa6baf679b08d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 575436714273ffc0611fda557381099418e70531
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **AFFINITY**  
   
-     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
+     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
   
 -   **MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME**  
   
@@ -65,8 +65,8 @@ Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau p
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
 |par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
+|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
 Les formules suivantes calculent le pourcentage MAX (% MAX) effectif et le pourcentage (%) partagé dans la table ci-dessus :  
   
 -   Min(X,Y) représente la valeur plus petite de X et Y.  
@@ -129,7 +129,7 @@ Les pools de ressources définis par l'utilisateur sont ceux que vous créez pou
 |Décrit comment modifier les paramètres du pool de ressources.|[Modifier les paramètres de pool de ressources](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Décrit comment supprimer un pool de ressources.|[Supprimer un pool de ressources](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)   
  [Groupe de charge de travail du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Fonction classifieur du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   

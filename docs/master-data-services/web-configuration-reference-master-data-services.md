@@ -5,24 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: web configuration file [Master Data Services]
+helpviewer_keywords:
+- web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 986bad8757aca39e8bdaa67c11c29dad21bbb430
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 434237e79ae0a1a0c958155ce63ebb8dc0061bce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Référence de la configuration Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] utilise un fichier Web.config pour contenir les paramètres de configuration qui permettent à Internet Information Services (IIS) d’héberger l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] et le service web. Ce fichier Web.config se trouve dans le dossier WebApplication du chemin d'installation de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations sur le chemin et les autorisations, consultez [Autorisations d’accès aux dossiers et aux fichiers &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 |**connectionName**|Attribut. Spécifie le nom de la connexion à utiliser. Correspond à l’attribut **name** de l’élément **\<add>** sous l’élément **\<connectionStrings>** dans Web.config.|  
 |**serviceName**|Attribut. Spécifie le nom du service Web. Correspond à l’attribut **name** de l’élément **\<service>** sous l’élément **\<services>** dans Web.config.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L'exemple suivant présente un service nommé MDS1 sur le site Contoso et le chemin d'accès /MDS, utilisant une chaîne de connexion spécifiée par MDSDB.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: '|| (Ou logique) (Expression SSIS) | Documents Microsoft'
+title: '|| (OR logique) (expression SSIS) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c369d66dbfdfefa0249ef0e479266bf17cf8f7d6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4e350e41fa5a53b421b89d8fd2432cbd11c1532d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OU logique) (expression SSIS)
   Effectue une opération OR logique. L'expression renvoie la valeur TRUE si au moins une des deux conditions s'évalue à TRUE.  
@@ -46,10 +45,10 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant indique le résultat de l'opérateur « || »  
   
-|Résultat|Expression|Expression|  
+|Résultats|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|TRUE|FALSE|  
@@ -71,11 +70,10 @@ StandardCost < 300 || ListPrice > 500
 StandardCost < @SPrice || ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [&#124; &#40; Opérateur de bits OR inclusif &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
- [^ &#40; Opérateur de bits OR exclusif &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
- [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [&#124; &#40;opération OR inclusive au niveau du bit&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
+ [^ &#40;OR exclusif au niveau du bit&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

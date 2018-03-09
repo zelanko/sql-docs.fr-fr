@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage (Transact-SQL) | Documents Microsoft
+title: sp_addmessage (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_addmessage
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efb582779e55287699cd60f642b50a88205ee992
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +49,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@msgnum*** =** ] *msg_id*  
+ [ **@msgnum****=** ] *msg_id*  
  ID du message. *msg_id* est **int** avec NULL comme valeur par défaut. *msg_id* d’erreur définis par l’utilisateur, messages peuvent être un entier compris entre 50 001 et 2 147 483 647. La combinaison de *msg_id* et *langage* doit être unique ; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
   
- [  **@severity =** ]*gravité*  
+ [ **@severity =** ]*severity*  
  Est le niveau de gravité de l’erreur. *gravité* est **smallint** avec NULL comme valeur par défaut. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **'***msg***'**  
+ [ **@msgtext =** ] **'***msg***'**  
  Est le texte du message d’erreur. *Msg* est **nvarchar (255)** avec NULL comme valeur par défaut.  
   
  [  **@lang =** ] **'***langage***'**  
@@ -71,7 +74,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Pour les versions non anglaises de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la version anglaise d'un message doit exister préalablement à l'ajout d'un message dans une autre langue. Le degré de gravité des deux versions du message doit correspondre.  
@@ -84,7 +87,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  La syntaxe pouvant différer d'une langue à l'autre, il se peut que les numéros de paramètres apparaissent dans un ordre différent par rapport au message d'origine.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance dans le **sysadmin** ou **serveradmin** rôles serveur fixes.  
   
 ## <a name="examples"></a>Exemples  
@@ -168,8 +171,8 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>Voir aussi  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea0f897f2445ba48649dd74d01b4fc67a1527280
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cross-database-queries"></a>Requêtes de bases de données croisées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,12 +31,12 @@ ms.lasthandoff: 11/17/2017
   
  Les variables de table ne sont pas transactionnelles. Par conséquent, les variables des tables mémoire optimisées peuvent être utilisées dans des requêtes de bases de données croisées, et peuvent donc faciliter le déplacement des données d'une base de données dans des tables mémoire optimisées dans une autre base de données. Vous pouvez utiliser deux transactions. Dans la première transaction, insérez les données de la table distante dans la variable. Dans la seconde transaction, insérez les données dans la table mémoire optimisée locale depuis la variable.  Pour plus d’informations sur les variables de table mémoire optimisée, consultez [Table temporaire et variable de table plus rapides à l’aide de l’optimisation de la mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Cet exemple illustre une méthode pour transférer des données d’une base de données à une table optimisée en mémoire dans une autre base de données.
 
 1. Créez des objets de test.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -87,7 +88,7 @@ Cet exemple illustre une méthode pour transférer des données d’une base de 
 
 2.  Essayez les requêtes de bases de données croisées. Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -98,7 +99,7 @@ Cet exemple illustre une méthode pour transférer des données d’une base de 
 
 3.  Créer un type de table optimisée en mémoire.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -114,7 +115,7 @@ Cet exemple illustre une méthode pour transférer des données d’une base de 
     ```
 
 4.  Réessayez la requête de bases de données croisées.  Cette fois, les données source seront tout d’abord transférées à une variable de table optimisée en mémoire.  Ensuite, les données à partir de la variable de table seront transférées vers la table optimisée en mémoire.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -126,7 +127,7 @@ Cet exemple illustre une méthode pour transférer des données d’une base de 
     GO 
     ```
    
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

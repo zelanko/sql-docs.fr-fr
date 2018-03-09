@@ -1,4 +1,4 @@
----
+﻿---
 title: "Limitations et problèmes connus pour SSIS sur Linux | Documents Microsoft"
 description: "Cet article décrit les limitations et problèmes connus pour SQL Server Integration Services (SSIS) sur les ordinateurs Linux"
 author: leolimsft
@@ -10,20 +10,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitations et problèmes connus pour SSIS sur Linux
 
-Cette rubrique décrit les problèmes connus et les limitations actuelles pour SQL Server Integration Services (SSIS) sur Linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Cet article décrit les problèmes connus et les limitations actuelles pour SQL Server Integration Services (SSIS) sur Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Limitations générales et les problèmes connus
 
@@ -40,7 +42,7 @@ Les fonctionnalités suivantes ne sont pas pris en charge dans cette version de 
 
 Pour les autres limitations et problèmes connus avec SSIS sur Linux, consultez le [Notes de publication](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Composants pris en charge et non pris en charge
+## <a name="components"></a> Composants pris en charge et non pris en charge
 
 Les composants Integration Services suivants sont pris en charge sur Linux. Certaines d'entre elles proviennent de limitations de la plate-forme Linux, comme spécifié dans les tableaux suivants.
 
@@ -50,12 +52,12 @@ Les composants de SSIS qui ne sont pas répertoriés ici ne sont pas pris en cha
 - tâche d'insertion en bloc
 - tâche de flux de données
 - Tâche de profilage des données
-- Tache d'exécution de requêtes SQL
+- Tâche d’exécution de requêtes SQL
 - Tâche Exécuter l'instruction T-SQL
 - Tâche d'expression
 - Tâche FTP
 - Tâche service Web
-- Tâche XML
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle pris en charge avec les limitations
 
@@ -84,7 +86,7 @@ Les composants de SSIS qui ne sont pas répertoriés ici ne sont pas pris en cha
 | ADO.NET source et destination | Prennent uniquement en charge le fournisseur de données SQLClient. |
 | Source de fichier plat et de destination | Prend en charge uniquement les chemins de fichier Windows de style, auquel la règle de mappage du chemin d’accès par défaut est appliquée. Par exemple `D:\home\ssis\travel.csv` devient `/home/ssis/travel.csv`. |
 | Source OData | Prend uniquement en charge l’authentification de base. |
-| ODBC source et destination | Prend en charge des pilotes ODBC Unicode de 64 bits sur Linux. Varie selon le Gestionnaire de pilotes UnixODBC sur Linux. |
+| Source et destination ODBC | Prend en charge des pilotes ODBC Unicode de 64 bits sur Linux. Varie selon le Gestionnaire de pilotes UnixODBC sur Linux. |
 | OLE DB source et destination | Prennent uniquement en charge SQL Server Native Client 11.0 et le fournisseur Microsoft OLE DB pour SQL Server. |
 | | |
 
@@ -130,3 +132,8 @@ Les fournisseurs de journal SSIS pour SQL Server Profiler pour les fichiers text
 -   Si vous ne fournissez pas un chemin d’accès, le fournisseur de journaux est écrit dans le répertoire actuel de l’hôte. Si l’utilisateur actuel n’est pas autorisé à écrire dans le répertoire actuel de l’hôte, le fournisseur de journaux génère une erreur.
 -   Vous ne pouvez pas utiliser une variable d’environnement dans un chemin d’accès de fichier. Si vous spécifiez une variable d’environnement, le texte littéral que vous spécifiez s’affiche dans le chemin d’accès de fichier. Par exemple, si vous spécifiez `%TMP%/log.txt`, le fournisseur de journaux ajoute le texte littéral `/%TMP%/log.txt` vers le répertoire actuel de l’hôte.
 
+## <a name="related-content-about-ssis-on-linux"></a>Contenu associé sur SSIS sur Linux
+-   [Extraire, transformer et charger des données sur Linux avec SSIS](sql-server-linux-migrate-ssis.md)
+-   [Installer SQL Server Integration Services (SSIS) sur Linux](sql-server-linux-setup-ssis.md)
+-   [Configurer SQL Server Integration Services sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md)
+-   [L’exécution sur Linux avec cron du package de planification SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

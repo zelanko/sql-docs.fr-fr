@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da9c9153c30e45eaa821c367f5a8b627078f7a9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b02ccdea2128211fbac5390da436f165a193fe07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifications de copie en bloc pour une meilleure Types Date et heure (OLE DB et ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="format-files"></a>Fichiers de format  
  Lors de la génération interactive de fichiers de format, le tableau ci-dessous décrit l'entrée utilisée pour spécifier des types date/heure et les noms de type de données de fichier hôte correspondants.  
   
-|Type de stockage de fichier|Type de données du fichier hôte|Réponse à l’invite : « tapez le type de stockage du champ < nom_champ > [\<par défaut >] : »|  
+|type de stockage de fichier|Type de données du fichier hôte|Réponse à l’invite : « tapez le type de stockage du champ < nom_champ > [\<par défaut >] : »|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  

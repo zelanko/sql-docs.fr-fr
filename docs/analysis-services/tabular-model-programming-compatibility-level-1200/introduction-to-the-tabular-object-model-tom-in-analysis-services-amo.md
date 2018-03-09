@@ -2,34 +2,30 @@
 title: "Présentation du modèle d’objet tabulaire (TOM) dans Analysis Services AMO | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Présentation du modèle d’objet tabulaire (TOM) dans Analysis Services AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Le modèle d’objet tabulaire (TOM) est une extension de la bibliothèque cliente objet AMO (Analysis Services Management Objects), créée pour prendre en charge des scénarios de programmation pour les modèles tabulaires créés au niveau de compatibilité 1200 et supérieur. Comme avec AMO, TOM fournit un moyen par programmation pour gérer les fonctions d’administration telles que la création de modèles, l’importation et l’actualisation des données et attribution des rôles et autorisations.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le modèle d’objet tabulaire (TOM) est une extension de la bibliothèque cliente objet AMO (Analysis Services Management Objects), créée pour prendre en charge des scénarios de programmation pour les modèles tabulaires créés au niveau de compatibilité 1200 et supérieur. Comme avec AMO, TOM fournit un moyen par programmation pour gérer les fonctions d’administration telles que la création de modèles, l’importation et l’actualisation des données et attribution des rôles et autorisations.  
   
 TOM expose des métadonnées tabulaires native, tel que **modèle**, **tables**, **colonnes**, et **relations** objets.  Une vue d’ensemble de l’arborescence du modèle objet, vous trouverez ci-dessous, illustre la façon dont les éléments sont liés.  
   
@@ -39,7 +35,7 @@ Consultez [installer, de distribuer et de faire référence à l’objet de mod�
  Actuellement, l’API est disponible uniquement pour le code managé via le .NET framework. Pour consulter la liste complète des options, y compris le script et requête prise en charge, de programmation voir [programmation de modèle tabulaire pour 1200 de niveau de compatibilité](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md).  
   
 ## <a name="tabular-object-model-hierarchy"></a>Hiérarchie du modèle objet tabulaire  
- À partir d’un point de vue logique, tous les objets tabulaires forment une arborescence, dont la racine est un **modèle**, d’une base de données. **Serveur** et **base de données** sont considérés comme « tableau », car ces objets peuvent également représenter une base de données multidimensionnelle hébergé sur un serveur en cours d’exécution en mode multidimensionnel ou un modèle tabulaire au niveau de compatibilité inférieur de niveau qui n’utilise pas les métadonnées tabulaires pour les définitions d’objet. 
+ À partir d’un point de vue logique, tous les objets tabulaires forment une arborescence, dont la racine est un **modèle**, d’une base de données. **Serveur** et **base de données** ne sont pas considérés comme « tableau », car ces objets peuvent également représenter une base de données multidimensionnelle hébergé sur un serveur s’exécutant en mode multidimensionnel ou d’un modèle tabulaire au niveau de compatibilité inférieur niveau qui n’utilise pas les métadonnées tabulaires pour les définitions d’objet. 
   
  À l’exception de **AttributeHierarchy**, **KPI**, et **LinguisticMetadata**, chaque objet enfant peut être un membre d’une collection. Par exemple, le **modèle** objet contient une collection de **Table** objets (via la **Tables** propriété), avec chaque **Table** objet contenant une collection de **colonne** objets et ainsi de suite.  
   
@@ -58,7 +54,7 @@ En revanche, lorsque vous gérez des objets qui font partie des métadonnées ta
 
 ### <a name="tom-and-xmla"></a>TOM et XMLA
 
-Sur le câble, TOM utilise le protocole XMLA pour communiquer avec le serveur Analysis Services et de gérer des objets. Lors de la gestion des objets non tabulaires, TOM utilise [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), l’extension d’Analysis Services Scripting Language de XMLA. Lors de la gestion des objets tabulaires, TOM utilise le protocole tabulaire SSAS, également une extension de XMLA. Consultez [tabulaires SSAS-T-MS SQL Server Analysis Services documentation du protocole](https://msdn.microsoft.com/library/mt719260.aspx) pour plus d’informations.
+Sur le câble, TOM utilise le protocole XMLA pour communiquer avec le serveur Analysis Services et de gérer des objets. Lors de la gestion des objets non tabulaires, TOM utilise [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), l’extension d’Analysis Services Scripting Language de XMLA. Lors de la gestion des objets tabulaires, TOM utilise un protocole tabulaire MS-SSAS, également une extension du XMLA. Consultez [tabulaires SSAS-T-MS SQL Server Analysis Services documentation du protocole](https://msdn.microsoft.com/library/mt719260.aspx) pour plus d’informations.
 
 ### <a name="tom-and-json"></a>TOM et JSON
 

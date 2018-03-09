@@ -3,8 +3,11 @@ title: "Propriétés de l’étape du travail - Nouvelle étape du travail (page
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ad17a4381de9bac0443cd0bc65ebfbfbd1f9a2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99d0e4a39d2a4c2e1bdada89142f1fee9b7cb78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propriétés de l'étape du travail - Nouvelle étape du travail (page Avancé)
-Utilisez cette page pour afficher et modifier les propriétés d'une étape de travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher et changer les propriétés d’une étape de travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="options"></a>Options  
 **Action en cas de succès**  
@@ -44,7 +47,7 @@ Définit le fichier à utiliser comme sortie avec l'étape de travail. Cette opt
 **...**  
 Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
-**Affichage**  
+**Afficher**  
 Dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
 **Ajouter la sortie au fichier existant**  
@@ -53,7 +56,7 @@ Ajoute la sortie au contenu existant du fichier. Sinon, le contenu précédent d
 **Enregistrer un journal dans la table**  
 Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
-**Affichage**  
+**Afficher**  
 Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
 **Ajouter la sortie à l'entrée existante dans la table**  
@@ -72,7 +75,7 @@ Définit le fichier à utiliser comme sortie avec l'étape de travail.
 **...**  
 Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
-**Affichage**  
+**Afficher**  
 Dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
 **Ajouter la sortie au fichier existant**  
@@ -81,7 +84,7 @@ Ajoute la sortie de l'étape de travail au contenu précédent du fichier à cha
 **Enregistrer un journal dans la table**  
 Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
-**Affichage**  
+**Afficher**  
 Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
 **Ajouter la sortie à l'entrée existante dans la table**  
@@ -97,7 +100,7 @@ Définit le fichier à utiliser comme sortie avec l'étape de travail.
 **...**  
 Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
-**Affichage**  
+**Afficher**  
 Dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
 **Ajouter la sortie au fichier existant**  
@@ -106,7 +109,7 @@ Ajoute la sortie de l'étape de travail au contenu précédent du fichier à cha
 **Enregistrer un journal dans la table**  
 Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
-**Affichage**  
+**Afficher**  
 Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
 **Ajouter la sortie à l'entrée existante dans la table**  
@@ -119,7 +122,7 @@ Sélectionnez cette option pour inclure la sortie de l'étape de travail dans l'
 **Server**  
 Définit le serveur à utiliser pour l'étape de travail de l'Agent de lecture de file d'attente de la réplication.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
 Définit la base de données à utiliser pour l'étape de travail de l'Agent de lecture de file d'attente de la réplication.  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>Options des étapes de travail de SQL Server Analysis Services  
@@ -129,7 +132,7 @@ Définit le fichier à utiliser comme sortie avec l'étape de travail. Cette opt
 **...**  
 Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
-**Affichage**  
+**Afficher**  
 Dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
 **Ajouter la sortie au fichier existant**  
@@ -138,7 +141,7 @@ Ajoute la sortie au contenu existant du fichier. Sinon, le contenu précédent d
 **Enregistrer un journal dans la table**  
 Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
-**Affichage**  
+**Afficher**  
 Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
 **Ajouter la sortie à l'entrée existante dans la table**  
@@ -147,6 +150,6 @@ Ajoute la sortie au contenu existant de la table. Sinon, le contenu précédent 
 **Inclure la sortie de l'étape dans l'historique**  
 Sélectionnez cette option pour inclure la sortie de l'étape de travail dans l'historique des travaux.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)  
   

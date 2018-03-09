@@ -2,9 +2,12 @@
 title: Afficher et analyser des Traces avec SQL Server Profiler | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 961e3ea99f4c6f8d801528ab20b3c9ed99465e81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Afficher et analyser des traces avec SQL Server Profiler
-  Utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour afficher les données d'événement capturées dans une trace. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche les données selon les propriétés de trace définies. L’une des façons d'analyser les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à les copier dans un autre programme, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier de trace qui contient des événements de traitement SQL et d’appels de procédures distantes si la colonne de données **Text** est présente dans la trace. Pour vous assurer que les colonnes et les événements nécessaires sont bien présents pour être utilisés avec l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilisez le modèle de paramétrage prédéfini fourni avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour afficher les données d’événement capturées dans une trace. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche les données selon les propriétés de trace définies. L’une des façons d'analyser les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à les copier dans un autre programme, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier de trace qui contient des événements de traitement SQL et d’appels de procédures distantes si la colonne de données **Text** est présente dans la trace. Pour vous assurer que les colonnes et les événements nécessaires sont bien présents pour être utilisés avec l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilisez le modèle de paramétrage prédéfini fourni avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Si vous ouvrez une trace en utilisant le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], il n'est pas nécessaire que le fichier de trace porte l'extension .trc si le fichier a été créé par le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou des procédures stockées du système de trace SQL.  
   

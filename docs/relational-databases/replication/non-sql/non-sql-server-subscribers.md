@@ -23,17 +23,17 @@ helpviewer_keywords:
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70ba5c5a367d32436aeb2a3dabdb57ded2bd08f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104940bffe513813414dff15b2e0bec6343ed2e9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="non-sql-server-subscribers"></a>Abonnés non-SQL Server  
+# <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivants peuvent s'abonner aux publications d'instantané et transactionnelle à l'aide d'abonnements par envoi de données (push). Les abonnements sont pris en charge pour les deux versions les plus récentes de chaque base de données listée, à l'aide de la version la plus récente du fournisseur OLE DB listé.  
@@ -46,7 +46,7 @@ Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su
 |Base de données|Système d'exploitation|Fournisseur|  
 |--------------|----------------------|--------------|  
 |Oracle|Toute plateforme prenant en charge Oracle|Fournisseur OLE DB Oracle (fourni par Oracle)|  
-|IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
+|IBM DB2|MVS, AS400, Unix, Linux, Windows sauf 9.x|Fournisseur OLE DB du serveur HIS Microsoft (Host Integration Server)|  
 
 Informations sur la version Oracle :  
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les scénarios divers suivants pour la réplication transactionnelle et d'instantané :  
@@ -117,8 +117,8 @@ Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, co
   
 -   Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peuvent pas être initialisés automatiquement à partir d'une sauvegarde.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Réplication de base de données hétérogène](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

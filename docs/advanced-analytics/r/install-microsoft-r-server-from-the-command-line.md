@@ -2,27 +2,28 @@
 title: "Installer Machine Learning Server (autonome) ou Microsoft R Server (autonome) à partir de la ligne de commande | Documents Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installer Machine Learning Server (autonome) ou Microsoft R Server (autonome) à partir de la ligne de commande
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit comment utiliser des arguments de ligne de commande de SQL Server pour installer les fonctionnalités suivantes de SQL Server à l’aide de la ligne de commande :
 
@@ -33,7 +34,7 @@ Un **sans assistance** installation nécessite que vous spécifiez l’emplaceme
 
 Pour une installation **silencieuse** , fournissez les mêmes arguments et ajoutez le commutateur **/q** . Aucune invite n’est fournis et aucune intervention est nécessaire. Toutefois, le programme d’installation échoue si tous les arguments requis sont omis.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Vous devez savoir comment effectuer une installation de ligne de commande de SQL Server et de vous familiariser avec ses arguments de scripts.
 

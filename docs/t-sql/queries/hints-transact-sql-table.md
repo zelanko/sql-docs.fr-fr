@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs de Table (Transact-SQL) :
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +135,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
+ Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Par exemple :  
   
 ```  
 FROM t (TABLOCK)  
@@ -153,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d'informations, consultez la section Notes.  
   
- INDEX **(***index_value* [**,**... *n* ] ) | INDEX = ( *index_value***)**  
+ INDEX  **(*** index_value* [**,**... *n* ] ) | INDEX = ( *index_value ***)**  
  La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
   
  S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que INDEX(1) en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, INDEX(0) force l'analyse d'une table et INDEX(1) est interprété comme une erreur.  
@@ -184,7 +186,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... Sélectionnez * à partir de l’instruction d’OPENROWSET, consultez [conserver les valeurs NULL ou utiliser par défaut les valeurs pendant une importation en bloc &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***index_value***(*** index_column_name* [ **,**... *n* ] **))** ]  
  Indique que l'optimiseur de requête doit utiliser uniquement une opération de recherche d'index comme chemin d'accès aux données dans la table ou la vue. À partir de SQL Server 2008 R2 SP1, les paramètres d'index peuvent également être spécifiés. Dans ce cas, l'optimiseur de requête considère uniquement les opérations de recherche d'index par le biais de l'index spécifié utilisant au moins les colonnes d'index spécifiées.  
   
  *index_value*  
@@ -345,7 +347,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Équivalent à HOLDLOCK. Étend les restrictions associées aux verrous partagés en les maintenant jusqu'à l'achèvement de la transaction, au lieu de les relâcher dès que la table ou la page de données n'est plus utilisée, que la transaction soit achevée ou non. Effectue une recherche avec la même sémantique de verrouillage qu'une transaction à un niveau d'isolation SERIALIZABLE. Pour plus d’informations sur les niveaux d’isolation, consultez [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  SNAPSHOT  
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  La table optimisée en mémoire est accédée selon l'isolement SNAPSHOT. SNAPSHOT peut être utilisé uniquement avec les tables optimisées en mémoire (et non avec les tables sur disque). Pour plus d’informations, consultez [Introduction aux Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -357,7 +359,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie le nombre maximal de cellules à utiliser pour le pavage d'un objet géométrique ou géographique. *nombre* est une valeur comprise entre 1 et 8192.  
   
@@ -442,7 +444,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilisation d'un indicateur de table comme indicateur de requête  
  *Indicateurs de table* peut également être spécifié comme un indicateur de requête à l’aide de la clause OPTION (TABLE HINT). Nous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md). Pour les requêtes ad hoc, spécifiez ces indicateurs uniquement comme indicateurs de table. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les indicateurs KEEPIDENTITY, IGNORE_CONSTRAINTS et IGNORE_TRIGGERS requièrent des autorisations ALTER sur la table.  
   
 ## <a name="examples"></a>Exemples  
@@ -450,7 +452,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Utilisation de l'indicateur TABLOCK pour spécifier une méthode de verrouillage  
  L'exemple suivant spécifie qu'un verrou partagé est établi sur la table `Production.Product` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et maintenu jusqu'à la fin de l'instruction UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +476,7 @@ GO
   
  L'exemple ci-dessous utilise l'indicateur FORCESEEK avec un index pour forcer l'optimiseur de requête à effectuer une opération de recherche d'index sur l'index et la colonne d'index spécifiés.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +491,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. Utilisation de l'indicateur FORCESCAN pour spécifier une opération d'analyse d'index  
  L'exemple ci-dessous utilise l'indicateur FORCESCAN pour forcer l'optimiseur de requête à effectuer une opération d'analyse sur la table `Sales.SalesOrderDetail` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -501,7 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Voir aussi  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Indicateurs de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

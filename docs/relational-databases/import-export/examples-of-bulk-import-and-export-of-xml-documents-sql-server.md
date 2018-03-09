@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], data formats
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ead52966c2c827140d05877596f4275dea9bde4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbb5caa7623b0571ec724eea74f139ef7387d538
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Notes  
+#### <a name="remarks"></a>Notes   
  En utilisant SINGLE_BLOB dans ce cas, vous évitez toute discordance entre l'encodage du document XML (tel qu'il est spécifié par la déclaration d'encodage XML) et la page de codes de type chaîne inhérente au serveur.  
   
  Si vous utilisez les types de données NCLOB ou CLOB et que vous rencontrez un conflit de pages de codes ou d'encodage, effectuez l'une des opérations suivantes :  
@@ -268,7 +269,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'enregistre pas l'encodage XML lorsque les données XML sont conservées dans la base de données. Par conséquent, l'encodage original des champs XML n'est pas disponible lorsque les données XML sont exportées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l’encodage UTF-16 durant l’exportation de données XML.  
   
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Clause SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   

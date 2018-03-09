@@ -2,22 +2,26 @@
 title: Calcul de score native | Documents Microsoft
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="native-scoring"></a>Calcul de score en natif
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit les fonctionnalités de SQL Server 2017 permettant de calculer les scores sur les modèles d’apprentissage automatique en temps quasi réel.
 

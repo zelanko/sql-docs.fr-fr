@@ -1,10 +1,13 @@
 ---
 title: "Paramètres globaux (journalisation) (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d1e9cd8ed1c7014ccaaee5ee477f40d81c66a631
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging-oracletosql"></a>Paramètres globaux (journalisation) (OracleToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, il faudrait modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -29,7 +32,7 @@ Pour accéder à cette boîte de dialogue, dans le **outils** menu, sélectionne
 **Au niveau des messages**  
 Les options suivantes sont disponibles sous **au niveau des Messages**:  
   
-|Option| Description|  
+|Option|Description|  
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
 |**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  

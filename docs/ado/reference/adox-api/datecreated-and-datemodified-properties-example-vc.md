@@ -3,29 +3,31 @@ title: "DateCreated et DateModified, propriétés-exemple (VC ++) | Documents Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - DateCreated property [ADOX], VC++ example
 - DateModified property [ADOX], VC++ example
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 697fd4039241a6a1c55deaf596ebfba759ce28df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5dcbb96b9c3d640bd338e22671437b88787987e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated et DateModified, propriétés-exemple (VC ++)
 Cet exemple illustre la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriétés en ajoutant un nouvel [colonne](../../../ado/reference/adox-api/column-object-adox.md) à un [Table](../../../ado/reference/adox-api/table-object-adox.md) et en créant un **Table**. La procédure DateOutput est requise pour exécuter cet exemple.  

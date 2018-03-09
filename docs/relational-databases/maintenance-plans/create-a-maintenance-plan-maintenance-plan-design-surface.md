@@ -2,27 +2,33 @@
 title: "Créer un plan de maintenance (aire de conception de plan de maintenance) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 039e306af582e2bc56559557eea3a5d6d57ec819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
-  Cette rubrique explique comment créer un plan de maintenance de serveur unique ou multiserveur à l'aide de l'aire de conception de plan de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L' **Assistant Plan de maintenance** est conseillé pour créer des plans de maintenance de base, tandis que l'aire de conception permet d'utiliser un flux de travail optimisé.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment créer un plan de maintenance de serveur unique ou multiserveur à l'aide de l'aire de conception de plan de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L' **Assistant Plan de maintenance** est conseillé pour créer des plans de maintenance de base, tandis que l'aire de conception permet d'utiliser un flux de travail optimisé.  
   
  **Dans cette rubrique**  
   
@@ -44,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Pour créer ou gérer des plans de maintenance, vous devez être membre du rôle serveur fixe **sysadmin** . L'Explorateur d'objets affiche uniquement le nœud **Plans de maintenance** pour les utilisateurs membres du rôle serveur fixe **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'aire de conception de plan de maintenance  
@@ -173,7 +179,7 @@ ms.lasthandoff: 11/09/2017
          **Expression**  
          Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression. L'expression doit prendre une valeur de type Boolean.  
   
-         **Test**  
+         **Tester**  
          Validez l'expression.  
   
          **Contraintes multiples**  
@@ -217,7 +223,7 @@ ms.lasthandoff: 11/09/2017
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur le bouton de sélection **(…)** , puis sélectionner le chemin d’accès au dossier ou le nom de fichier dans les boîtes de dialogue **Localiser le dossier –***nom_serveur* ou **Rechercher les fichiers de base de données –***nom_serveur* .  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur le bouton de sélection **(…)**, puis sélectionner le chemin d’accès au dossier ou le nom de fichier dans les boîtes de dialogue **Localiser le dossier –***nom_serveur* ou **Rechercher les fichiers de base de données –***nom_serveur*.  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -232,7 +238,7 @@ ms.lasthandoff: 11/09/2017
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur* .  
+     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur*.  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

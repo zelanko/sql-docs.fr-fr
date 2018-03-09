@@ -2,16 +2,13 @@
 title: Renommer une Instance Analysis Services | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45ccdebbfaa2ca30bd6d5cd6c02bb7f869aa6496
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renommer une instance d'Analysis Services
-  Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de l’utilitaire **Modification du nom d’instance** , installé avec Management Studio (installation web).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de l’utilitaire **Modification du nom d’instance** , installé avec Management Studio (installation web).  
   
 > [!IMPORTANT]  
 >  Pendant que l’instance est renommée, l’utilitaire Modification du nom d’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécute avec des privilèges élevés et met à jour le nom de service Windows, les comptes de sécurité et les entrées de Registre associées à cette instance. Pour vous assurer que ces actions sont effectuées, veillez à exécuter cet outil en tant qu'administrateur système local.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
      La mise à jour d'une connexion à une base de données ou des autorisations de fichiers est nécessaire si vous avez utilisé un compte virtuel pour configurer le service. Les comptes virtuels sont basés sur le nom de l'instance, donc si vous renommez l'instance, le compte virtuel est également mis à jour. Cela signifie que toutes les connexions ou autorisations précédentes créées pour l'instance antérieure ne sont plus valides.  
   
-     L'exemple suivant en est l'illustration. Supposons que vous avez installé un serveur en mode tabulaire en tant qu'instance nommée « tabular » à l'aide du compte virtuel par défaut, ce qui entraîne la configuration suivante :  
+     L'exemple suivant en est l'illustration. Supposons que vous avez installé un serveur en mode tabulaire en tant qu'instance nommée « tabular » à l'aide du compte virtuel par défaut, ce qui entraîne la configuration suivante :  
   
     1.  Nom de l’instance = \<serveur > \TABULAR  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  Compte virtuel = NT Service\ MSOLAP$TABULAR  
   
-     Supposons à présent que vous renommez l'instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
+     Supposons à présent que vous renommez l'instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
   
     1.  Nom de l’instance = \<serveur > \TAB2  
   

@@ -1,5 +1,5 @@
 ---
-title: "Visionneuse de données | Documents Microsoft"
+title: "Visionneuse de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f9541c6d49a6fc4f7a0dea8becdb4022ff53e3f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-viewer"></a>Visionneuse de données
   Si un chemin d'accès est configuré pour utiliser une visionneuse de données, la visionneuse affiche les données tampon par tampon à mesure qu'elles se déplacent entre deux composants de flux de données.  
@@ -49,8 +48,7 @@ ms.lasthandoff: 08/03/2017
  **Copier les données**  
  Copiez les données du tampon actuel dans le Presse-papiers.  
   
-## <a name="see-also"></a>Voir aussi  
- [Débogage de flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   
-

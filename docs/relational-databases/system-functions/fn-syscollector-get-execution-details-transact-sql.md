@@ -1,5 +1,5 @@
 ---
-title: fn_syscollector_get_execution_details (Transact-SQL) | Documents Microsoft
+title: fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
 - fn_syscollector_get_execution_details
-dev_langs: TSQL
-helpviewer_keywords: fn_syscollector_get_execution_details function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd44ed098f4dbf15e529df6cbe4026d065dfa2a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98d6fd075e060b9c25863137eccdd1cd86b4c45e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificateur unique de l'entrée d'enregistrement.|  
 |événement|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
@@ -63,7 +66,7 @@ fn_syscollector_get_execution_details ( log_id )
 |databytes|**image**|Tableau d'octets qui identifie une valeur de retour.|  
 |message|**nvarchar**|Description de l'événement et des informations associées à l'événement.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation SELECT pour **dc_operator**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -2,27 +2,30 @@
 title: "Référence des propriétés (réplication) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3177d3ff20f9b35b17044a1d8144ba17b7013a9c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f9f95a8dc9bf49d315ee857ae08c1e29efc8ce72
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="properties-reference-replication"></a>Référence des propriétés (réplication)
-  Cette section de la documentation fournit des informations sur les boîtes de dialogue et les Assistants relatifs à la réplication :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section de la documentation fournit des informations sur les boîtes de dialogue et les Assistants relatifs à la réplication :  
   
 -   [Assistant Configuration de la distribution](../../relational-databases/replication/configure-distribution-wizard.md)  
   

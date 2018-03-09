@@ -1,10 +1,13 @@
 ---
 title: "Connectez-vous à DB2 (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ecdb36c546d04421f30573bd4b34ae60467e7f64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>Connectez-vous à DB2 (DB2ToSQL)
 Utilisez le **se connecter à DB2** boîte de dialogue se connecter à la base de données DB2 que vous souhaitez migrer.  
@@ -62,7 +65,7 @@ Entrez le SID de la base de données. Le SID est un identificateur qui le distin
   
 Il s’agit d’une option de mode Standard.  
   
-**Nom d'utilisateur**  
+**User name**  
 Entrez le nom d’utilisateur SSMA utilisera pour se connecter à la base de données DB2.  
   
 **Mot de passe**  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d641ec2dacd6f0296199e9f547bce6baa1c0cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34becf7210dd08dbf663d99e6cf5cd1b7f57c190
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
   Le contrôle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** permet une impression côté client des rapports affichés dans la Visionneuse HTML. À partir de la boîte de dialogue **Imprimer** de ce contrôle, un utilisateur peut démarrer un travail d’impression, afficher l’aperçu d’un rapport, spécifier les pages à imprimer et modifier les marges. Lors d'une impression côté client, le serveur de rapports génère le rendu du rapport dans l'extension de rendu (EMF) d'image, puis utilise les fonctionnalités d'impression du système d'exploitation afin de créer le travail d'impression et de l'envoyer à une imprimante.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="rsclientprint-properties"></a>Propriétés de RSClientPrint  
   
-|Propriété|Type|L/E|Valeur par défaut| Description|  
+|Propriété|Type|L/E|Valeur par défaut|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|L/E|paramètre du rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
 |MarginRight|Double|L/E|paramètre du rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |PageWidth|Double|L/E|paramètre du rapport|Obtient ou définit la largeur de page. La valeur par défaut, si elle n’est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 215,9 millimètres.|  
 |PageHeight|Double|L/E|paramètre du rapport|Obtient ou définit la hauteur de page. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 279,4 millimètres.|  
 |Culture|Int32|L/E|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape **3**, la valeur est mesurée en millimètres quand la langue est le français, ou en pouces quand la langue est l’anglais des États-Unis. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|Chaîne|L/E|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue d'impression est disponible dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen, et espagnol. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|L/E|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue d'impression est disponible dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen, et espagnol. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Booléen|L/E|False|Spécifie si le contrôle émet une commande GET destinée au serveur de rapports pour établir une connexion pour l'impression hors session.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quand définir la propriété Authenticate  
@@ -111,13 +109,13 @@ ms.lasthandoff: 12/05/2017
 ### <a name="rsprintclient-support-for-the-print-method"></a>Prise en charge de RSPrintClient pour la méthode d'impression  
  L’objet **RSClientPrint** prend en charge la méthode **Print** qui est utilisée pour lancer la boîte de dialogue Imprimer. La méthode **Print** dispose des arguments suivants.  
   
-|Argument|E/S|Type| Description|  
+|Argument|E/S|Type|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|Dans|Chaîne|Spécifie le répertoire virtuel du serveur de rapports (par exemple, `https://adventure-works/reportserver`).|  
-|ReportPathParameters|Dans|Chaîne|Spécifie le nom complet du rapport, ainsi que les paramètres, dans l'espace de noms de dossier du serveur de rapports. Les rapports sont extraits via une URL. Par exemple : "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|Dans|Chaîne|Nom court du rapport (dans l'exemple ci-dessus, le nom court est Employee Sales Summary). Il s'affiche dans la boîte de dialogue Imprimer ainsi que dans la file d'attente à l'impression.|  
+|ServerPath|Dans|String|Spécifie le répertoire virtuel du serveur de rapports (par exemple, `https://adventure-works/reportserver`).|  
+|ReportPathParameters|Dans|String|Spécifie le nom complet du rapport, ainsi que les paramètres, dans l'espace de noms de dossier du serveur de rapports. Les rapports sont extraits via une URL. Par exemple : "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|Dans|String|Nom court du rapport (dans l'exemple ci-dessus, le nom court est Employee Sales Summary). Il s'affiche dans la boîte de dialogue Imprimer ainsi que dans la file d'attente à l'impression.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L’exemple HTML suivant montre comment spécifier le fichier .cab, la méthode **Print** et les propriétés dans JavaScript :  
   
  `<BODY onload="Print()">`  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
  `</BODY>`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Paramètres d’informations de périphérique pour l’image](../../../reporting-services/image-device-information-settings.md)  

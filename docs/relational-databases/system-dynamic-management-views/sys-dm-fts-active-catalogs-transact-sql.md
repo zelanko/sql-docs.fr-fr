@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_active_catalogs (Transact-SQL) | Documents Microsoft
+title: sys.dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID de la base de données contenant le catalogue de texte intégral actif.|  
 |**catalog_id**|**int**|ID du catalogue de texte intégral actif.|  
-|**memory_address**|**varbinary (8)**|Adresse des mémoires tampons allouées pour l'activité de remplissage liée à ce catalogue de texte intégral.|  
-|**nom**|**nvarchar (128)**|Nom du catalogue de texte intégral actif.|  
+|**memory_address**|**varbinary(8)**|Adresse des mémoires tampons allouées pour l'activité de remplissage liée à ce catalogue de texte intégral.|  
+|**nom**|**nvarchar(128)**|Nom du catalogue de texte intégral actif.|  
 |**is_paused**|**bit**|Indique si le remplissage du catalogue de texte intégral actif a été suspendu.|  
 |**status**|**int**|État actuel du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause <br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
 |**status_description**|**nvarchar(120)**|Description de l'état actuel du catalogue de texte intégral actif.|  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Notes  
  La colonne is_importing est nouvelle dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
   
@@ -70,7 +73,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|Pour|Relation|  
+|From|Pour|Relation|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Un à un|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Un à un|  

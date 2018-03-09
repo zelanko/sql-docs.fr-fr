@@ -1,10 +1,13 @@
 ---
 title: "Mappage des schémas d’Oracle aux schémas SQL Server (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 8ab69b6f55033e8d6687c0bc0b5e6cf9bfdf1417
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mappage des schémas d’Oracle aux schémas SQL Server (OracleToSQL)
 Dans Oracle, chaque base de données a un ou plusieurs schémas. Par défaut, SSMA migre tous les objets dans un schéma Oracle pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nommé pour le schéma de base de données. Toutefois, vous pouvez personnaliser le mappage entre les schémas Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de données.  
@@ -62,7 +65,7 @@ Si vous personnalisez le mappage entre un schéma Oracle et un [!INCLUDE[ssNoVer
   
 1.  Sous l’onglet mappage de schéma, sélectionnez n’importe quelle ligne, puis cliquez sur **rétablir par défaut** pour rétablir la base de données par défaut et le schéma.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Si vous souhaitez analyser la conversion des objets Oracle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des objets, vous pouvez [créer un rapport de conversion](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). Dans le cas contraire, vous pouvez [convertir les définitions d’objets de base de données Oracle](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] définitions d’objets.  
   
 ## <a name="see-also"></a>Voir aussi  

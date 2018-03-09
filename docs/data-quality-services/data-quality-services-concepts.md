@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ba02d945babd10cca11d07f6aa9e6ac01545661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51b4813c67c7f7346bea533764b13fceef06db12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  **Reference Data Services**  
   
- Vous pouvez utiliser des données de référence pour valider, corriger et enrichir vos données, en exploitant les services de sociétés qui garantissent la qualité de leurs données de référence. Vous pouvez utiliser les services de Windows Azure Marketplace pour vous connecter à des fournisseurs de données de référence, ou vous pouvez prendre directement contact avec un fournisseur. Pour plus d’informations, consultez [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+ Vous pouvez utiliser des données de référence pour valider, corriger et enrichir vos données, en exploitant les services de sociétés qui garantissent la qualité de leurs données de référence. Vous pouvez utiliser les services de la Place de marché Microsoft Azure pour vous connecter à des fournisseurs de données de référence, ou vous pouvez prendre directement contact avec un fournisseur. Pour plus d’informations, consultez [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
  Pour plus d'informations sur la gestion des connaissances dans DQS, consultez [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d'informations sur l'administration DQS, consultez [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

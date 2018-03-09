@@ -1,5 +1,5 @@
 ---
-title: Mode de Cache complet de Transformation de recherche - Gestionnaire de connexions OLE DB | Documents Microsoft
+title: Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -15,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e038db8132d3c57a16af2a68ba9e6b57e890a444
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Mode de Cache complet de Transformation de recherche - Gestionnaire de connexions OLE DB
+# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions OLE DB. Dans le mode Cache complet, le dataset de référence est chargé dans le cache avant l’exécution de la transformation de recherche.  
   
  La transformation de recherche effectue des recherches en joignant les données des colonnes d'entrée d'une source de données connectée aux colonnes d'un dataset de référence. Pour plus d’informations, voir [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/03/2017
     >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
   
     > [!NOTE]  
-    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 11. Incluez des colonnes de recherche dans la sortie en exécutant les tâches suivantes :  
   
@@ -89,10 +88,9 @@ ms.lasthandoff: 08/03/2017
   
 13. Cliquez sur **OK** pour enregistrer les modifications apportées à la transformation de recherche, puis exécutez le package.  
   
-## <a name="see-also"></a>Voir aussi  
- [Implémenter une Transformation de recherche en Mode Cache complet à l’aide du Gestionnaire de connexions du Cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implémenter une recherche en Mode aucun Cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

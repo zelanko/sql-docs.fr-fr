@@ -2,29 +2,34 @@
 title: "Exemple : spécification de la directive ELEMENT et de l’encodage d’entité | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a386d65bc4a0c6b807f8e8b072bc48b1c50bd689
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ffd9bd6df20bef46bdc4e5f96d6e9f525abd171
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemple : spécification de la directive ELEMENT et de l'encodage d'entité
-  Cet exemple illustre la différence entre les directives **ELEMENT** et **XML** . La directive **ELEMENT** décompose les données en entités, contrairement à la directive **XML** . L’élément \<Summary> reçoit des données XML, `<Summary>This is summary description</Summary>`, dans la requête.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cet exemple illustre la différence entre les directives **ELEMENT** et **XML** . La directive **ELEMENT** décompose les données en entités, contrairement à la directive **XML** . L’élément \<Summary> reçoit des données XML, `<Summary>This is summary description</Summary>`, dans la requête.  
   
  Prenons par exemple la requête suivante :  
   
@@ -95,7 +100,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

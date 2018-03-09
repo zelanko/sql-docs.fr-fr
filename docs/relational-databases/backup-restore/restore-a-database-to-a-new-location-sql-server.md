@@ -2,10 +2,14 @@
 title: "Restaurer une base de données à un nouvel emplacement (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d66683d848709cb100454909ee2e99e755315f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurer une base de données à un nouvel emplacement (SQL Server)
-  Cette rubrique explique comment restaurer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un nouvel emplacement, et éventuellement renommer la base de données, dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de SQL Server Management Studio(SSMS) ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez déplacer une base de données vers un nouveau chemin d'accès au répertoire ou créer une copie d'une base de données sur la même instance de serveur ou sur une instance différente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment restaurer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un nouvel emplacement, et éventuellement renommer la base de données, dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de SQL Server Management Studio(SSMS) ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez déplacer une base de données vers un nouveau chemin d'accès au répertoire ou créer une copie d'une base de données sur la même instance de serveur ou sur une instance différente.  
     
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Que vous soyez en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, pour pouvoir restaurer une base de données, vous devez d'abord sauvegarder le journal des transactions actif. Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
 
--   Pour restaurer une base de données chiffrée, **vous devez avoir accès au certificat ou à la clé asymétrique utilisé(e) pour chiffrer la base de données.** Sans ce certificat ou cette clé asymétrique, vous ne pouvez pas restaurer la base de données. Vous devez conserver le certificat utilisé pour chiffrer la clé de chiffrement de base de données tant que vous en avez besoin pour la sauvegarde. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+-   Pour restaurer une base de données chiffrée, **vous devez avoir accès au certificat ou à la clé asymétrique utilisé(e) pour chiffrer la base de données.** Sans ce certificat ou cette clé asymétrique, vous ne pouvez pas restaurer la base de données. Vous devez conserver le certificat utilisé pour chiffrer la clé de chiffrement de base de données tant que vous en avez besoin pour la sauvegarde. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Recommendations"></a> Recommandations  
   
@@ -53,10 +58,10 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="Security"></a> Sécurité  
  Pour des raisons de sécurité, nous vous recommandons de ne pas attacher ni restaurer des bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données.  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
   
 ## <a name="restore-a-database-to-a-new-location-optionally-rename-the-database-using-ssms"></a>Restaurer une base de données à un nouvel emplacement et renommer éventuellement la base de données à l’aide de SSMS 
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l'une des options suivantes :  
   
-    -   **Base de données**  
+    -   **Sauvegarde de la base de données**  
   
          Sélectionnez la base de données à restaurer dans la liste déroulante. La liste contient uniquement les bases de données qui ont été sauvegardées selon l'historique de sauvegarde **msdb** .  
   
@@ -90,7 +95,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Dans la grille **Jeux de sauvegarde à restaurer** , sélectionnez les sauvegardes à restaurer. Cette grille affiche les sauvegardes disponibles pour l'emplacement spécifié. Par défaut, un plan de récupération est suggéré. Pour ignorer le plan de récupération suggéré, vous pouvez modifier les sélections dans la grille. Les sauvegardes qui dépendent de la restauration d'une sauvegarde antérieure sont automatiquement désélectionnées dès lors que la sauvegarde antérieure est désélectionnée.  
   
-     Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer**, consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer** , consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
 7.  Pour spécifier le nouvel emplacement des fichiers de base de données, sélectionnez la page **Fichiers** , puis cliquez sur **Déplacer tous les fichiers dans le dossier**. Fournissez un nouvel emplacement pour les dossiers **Fichier de données** et **Fichier journal**. Pour plus d’informations sur cette grille, consultez [Restaurer la base de données &#40;page Fichiers&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).  
   
@@ -129,7 +134,7 @@ ms.lasthandoff: 11/09/2017
   
      ;  
   
-    > **REMARQUE** Lorsque vous préparez le déplacement d'une base de données vers un autre disque, vous devez vérifier que l'espace y est suffisant et identifier les collisions potentielles avec des fichiers existants. Cela suppose d'utiliser une instruction [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) spécifiant les mêmes paramètres MOVE que ceux que vous envisagez d'utiliser dans votre instruction RESTORE DATABASE.  
+    > **REMARQUE !** Lorsque vous préparez le déplacement d'une base de données vers un autre disque, vous devez vérifier que l'espace y est suffisant et identifier les collisions potentielles avec des fichiers existants. Cela suppose d'utiliser une instruction [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) spécifiant les mêmes paramètres MOVE que ceux que vous envisagez d'utiliser dans votre instruction RESTORE DATABASE.  
   
      Le tableau suivant décrit les arguments de cette instruction RESTORE en termes de restauration d'une base de données à un nouvel emplacement. Pour plus d’informations sur ces arguments, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
@@ -139,9 +144,9 @@ ms.lasthandoff: 11/09/2017
     >**REMARQUE :** Si vous restaurez la base de données vers une autre instance de serveur, vous pouvez conserver son nom d’origine au lieu d’en utiliser un nouveau.  
   
      *unité_sauvegarde* [ **,**...*n* ]  
-     Spécifie une liste séparée par des virgules de 1 à 64 unités de sauvegarde à partir desquelles la sauvegarde de la base de données sera restaurée. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :  
+     Spécifie une liste séparée par des virgules de 1 à 64 unités de sauvegarde à partir desquelles la sauvegarde de la base de données sera restaurée. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :  
   
-     {DISQUE | TAPE} **=***nom_unité_sauvegarde_physique*  
+     { DISK | TAPE } **=***physical_backup_device_name*  
   
      Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -157,7 +162,7 @@ ms.lasthandoff: 11/09/2017
   
      Pour plus d’informations, consultez « Spécification d’un jeu de sauvegarde » dans [RESTORE, arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **’***nom_fichier_logique_dans_sauvegarde***’** TO **’***nom_fichier_système_d’exploitation***’** [ **,**...*n* ]  
+     MOVE **'***nom_fichier_logique_dans_sauvegarde***'** TO **'***nom_fichier_système_exploitation***'** [ **,**...*n* ]  
      Spécifie que le fichier de données ou le fichier journal spécifié par *nom_fichier_logique_dans_sauvegarde* doit être restauré à l’emplacement spécifié par *nom_fichier_système_d’exploitation*. Spécifiez une instruction MOVE pour chaque fichier logique du jeu de sauvegarde que vous voulez restaurer à un nouvel emplacement.  
   
     |Option|Description|  
@@ -171,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
 > **REMARQUE :**Les exemples de sauvegarde et de restauration du journal des transactions, notamment les restaurations dans le temps, utilisent la base de données `MyAdvWorks_FullRM` qui est créée à partir de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], comme dans l’exemple `MyAdvWorks` suivant. Toutefois, la base de données `MyAdvWorks_FullRM` ainsi obtenue doit être modifiée pour utiliser le mode de récupération complète à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante : ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

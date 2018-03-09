@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
 - ALTER ROUTE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER ROUTE statement
 - dropping routes
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 221fcf4d801d062d491935c8380abd4f75b83285
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +83,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- Durée de vie  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, la durée de vie de l'itinéraire reste la même.  
   
- ADRESSE **='***next_hop_address'*  
+ ADDRESS **='***next_hop_address'*  
  Spécifie l'adresse réseau pour cet itinéraire. Le *next_hop_address* spécifie une adresse TCP/IP dans le format suivant :  
   
- **TCP : / /** { *nom_DNS* | *nom_netbios* |*adresse_IP* } **:** *numéro_port*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  Spécifié *numéro_port* doit correspondre au numéro de port pour le [!INCLUDE[ssSB](../../includes/sssb-md.md)] point de terminaison d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -111,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Spécifie l’adresse réseau pour le serveur miroir d’une paire mise en miroir dont le serveur principal est à le *next_hop_address*. Le *next_hop_mirror_address* spécifie une adresse TCP/IP dans le format suivant :  
   
- **TCP : / /**{ *nom_DNS* | *nom_netbios* | *adresse_IP* } **:** *numéro_port*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Spécifié *numéro_port* doit correspondre au numéro de port pour le [!INCLUDE[ssSB](../../includes/sssb-md.md)] point de terminaison d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -139,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  L'instruction ALTER AUTHORIZATION permet de modifier l'AUTORISATION pour un service.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation de modification d’un itinéraire par défaut au propriétaire de l’itinéraire, aux membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -183,7 +185,7 @@ ALTER ROUTE ExpenseRoute
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

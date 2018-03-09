@@ -2,27 +2,33 @@
 title: "Moniteur de mise en miroir de bases de données (Page État) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.status.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58634269a34ed091c99954435d93df892fa4d7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Moniteur de mise en miroir de bases de données (Page État)
-  Cette page accessible en lecture seule affiche le dernier état de mise en miroir pour les instances de serveur miroir et de principal de la base de données actuellement sélectionnée dans l'arborescence de navigation. Si les informations d'une instance ne sont pas actuellement disponibles, certaines des cellules de la grille **État** correspondant à cette instance sont grisées et affichent le texte **Inconnu**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette page accessible en lecture seule affiche le dernier état de mise en miroir pour les instances de serveur miroir et de principal de la base de données actuellement sélectionnée dans l'arborescence de navigation. Si les informations d'une instance ne sont pas actuellement disponibles, certaines des cellules de la grille **État** correspondant à cette instance sont grisées et affichent le texte **Inconnu**.  
   
  **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
   
@@ -42,7 +48,7 @@ ms.lasthandoff: 11/09/2017
 |-----------------|-----------------|  
 |**Instance de serveur**|Nom de l'instance de serveur dont l'état est affiché dans la ligne **État** .|  
 |**Rôle actuel**|Rôle actuel de l'instance de serveur : **Principal** ou **Miroir**.|  
-|**État de la mise en miroir**|État de la mise en miroir reportée par l'instance de serveur et icône indiquant la gravité de l'état. Les états possibles et les icônes associées sont les suivants :<br /><br /> Icône : —, état **Inconnu**. Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.<br /><br /> Icône : icône d’avertissement, état **Synchronisation**. Le contenu de la base de données miroir accuse un retard par rapport au contenu de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression. Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.<br /><br /> Icône : cylindre de base de données standard, état **Synchronisé**. Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal envoie des modifications au serveur miroir et que le serveur miroir applique les modifications à la base de données miroir.  En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données.  En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .<br /><br /> Icône : icône d’avertissement, état **Suspendu**. <br />                            La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.<br /><br /> Icône : icône d’erreur, état **Déconnecté**. L'instance de serveur ne peut pas se connecter à son partenaire.|  
+|**État de la mise en miroir**|État de la mise en miroir reportée par l'instance de serveur et icône indiquant la gravité de l'état. Les états possibles et les icônes associées sont les suivants :<br /><br /> Icône : —, état **Inconnu**. Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.<br /><br /> Icône : icône d’avertissement, état **Synchronisation**. Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression. Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.<br /><br /> Icône : cylindre de base de données standard, état **Synchronisé**. Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal envoie des modifications au serveur miroir et que le serveur miroir applique les modifications à la base de données miroir.  En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données.  En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .<br /><br /> Icône : icône d’avertissement, état **Suspendu**. <br />                            La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.<br /><br /> Icône : icône d’erreur, état **Déconnecté**. L'instance de serveur ne peut pas se connecter à son partenaire.|  
 |**Connexion témoin**|État de la connexion du témoin, précédé d'une icône d'état **Inconnu**, **Connecté**ou **Déconnecté**.|  
 |**Historique**|Cliquez sur cette colonne pour afficher l'historique de mise en miroir sur l'instance de serveur. La boîte de dialogue **Historique de la mise en miroir de bases de données** s'ouvre, ce qui affiche l'historique d'état de la mise en miroir ainsi que des statistiques pour une base de données mise en miroir sur une instance de serveur donnée.<br /><br /> Le bouton **Historique** est grisé si le moniteur n'est pas connecté à l'instance de serveur.|  
   
@@ -94,12 +100,12 @@ ms.lasthandoff: 11/09/2017
   
 -   **Haute sécurité avec basculement automatique (synchrone)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Ils dépendent du **Travail du moniteur de mise en miroir de bases de données**pour la mise à jour de la table d’état à intervalles réguliers. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (***\<heure>***)** et **Journal miroir (***\<heure>***)**.  
   
  Si ce travail n'existe pas ou que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient rapidement obsolète et risque de ne plus refléter la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

@@ -2,15 +2,13 @@
 title: "Type de données DegenerateMeasureGroupDimension (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DegenerateMeasureGroupDimension Data Type
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97075971104b9f277d17aaaf8f8944e3fd0d8d82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de05e60a72b203ee5dd5be24c55508df96b44210
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>Type de données DegenerateMeasureGroupDimension (ASSL)
-  Définit un type de données dérivé représentant la relation entre une dimension dégénérée (soit, en définitif, une dimension) et un groupe de mesures.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé qui représente la relation entre une dimension dégénérée (autrement dit, une dimension de fait) et un groupe de mesures.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,17 +46,17 @@ ms.lasthandoff: 11/17/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|[RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|  
-|Types de données dérivés|Aucune|  
+|Types de données dérivés|None|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
-|Éléments enfants|Aucune|  
-|Éléments dérivés|Aucune|  
+|Éléments parents|None|  
+|Éléments enfants|None|  
+|Éléments dérivés|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour plus d’informations sur les dimensions de fait, consultez [relations de Dimension](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>.  

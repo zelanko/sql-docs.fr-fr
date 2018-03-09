@@ -1,11 +1,11 @@
 ---
-title: "Étape 2 : Exécution de l’Assistant Installation de Package | Documents Microsoft"
+title: "Étape 2 : Exécution de l’Assistant Installation de package | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : exécution de l’Assistant Installation de Package
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
 Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
   
 L'Assistant Installation de package va vous guider tout au long de l'installation et de la configuration des packages. Vous allez installer les packages dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur de destination (ordinateur où vous avez copié l'application de déploiement). Vous allez aussi créer un dossier, C:\DeploymentTutorialInstall, où l'Assistant va installer les fichiers non-package.  
@@ -75,14 +74,14 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
 16. Dans la liste **Fichier de configuration** , cliquez sur **datatransferconfig.dtsconfig**, développez Property dans la colonne **Path** de la zone **Configurations** , et mettez à jour la colonne **Value** avec les valeurs suivantes :  
   
-    |Propriété|Value|Valeur mise à jour|  
+    |Propriété|Valeur|Valeur mise à jour|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Dans la liste **Fichier de configuration** , cliquez sur loadxmldataconfig.dtsconfig, développez Property dans la colonne **Path** de la zone **Configurations** et mettez à jour la colonne **Value** avec les valeurs suivantes :  
   
-    |Propriété|Value|Valeur mise à jour|  
+    |Propriété|Valeur|Valeur mise à jour|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -111,6 +110,5 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Service Integration Services &#40;Service SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-

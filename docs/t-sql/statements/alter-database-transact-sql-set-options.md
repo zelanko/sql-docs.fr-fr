@@ -2,17 +2,19 @@
 title: "MODIFIER les Options SET de base de données (Transact-SQL) | Documents Microsoft"
 description: "En savoir plus sur la définition des options de base de données telles que le chiffrement de paramétrage, automatique, le magasin de requêtes dans un SQL Server et la base de données SQL Azure"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - online database state [SQL Server]
 - database options [SQL Server]
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: "159"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
-ms.translationtype: MT
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +250,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -384,11 +386,11 @@ SET
  Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatiquement force le dernier plan correct connu sur le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] où nouveau plan SQL provoque des régressions des performances des requêtes. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] en permanence analyse des performances des requêtes de la [!INCLUDE[tsql_md](../../includes/tsql_md.md)] requête avec le plan forcé. S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] va continuer à utiliser dernier plan correct connu. Si les gains de performances ne sont pas détectés, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] génère un nouveau plan SQL. L’instruction échoue si le magasin de requêtes n’est pas activé ou si elle n’est pas dans *en lecture-écriture* mode.   
 
  OFF  
- Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] potentielle régressions des performances de requête provoquées par un changement de plan SQL dans des rapports [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut surveiller les recommandations et résoudre identifié les problèmes en appliquant [!INCLUDE[tsql_md](../../includes/tsql_md.md)] des scripts qui sont affichés dans la vue. Ceci est la valeur par défaut.
+ Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] potentielle régressions des performances de requête provoquées par un changement de plan SQL dans des rapports [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut surveiller les recommandations et résoudre identifié les problèmes en appliquant [!INCLUDE[tsql_md](../../includes/tsql_md.md)] des scripts qui sont affichés dans la vue. Il s'agit de la valeur par défaut.
 
  **\<change_tracking_option > :: =**  
   
- **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Pour consulter des exemples, reportez-vous à la section Exemples plus loin dans cette rubrique.  
   
@@ -414,7 +416,7 @@ SET
   
  **\<containment_option > :: =**  
   
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Contrôle des options de la relation contenant-contenu de la base de données.  
   
@@ -612,7 +614,7 @@ MULTI_USER
  Vous pouvez déterminer l'état de cette option en consultant la colonne is_trustworthy_on de l'affichage catalogue sys.databases.  
   
  DEFAULT_FULLTEXT_LANGUAGE  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la valeur de langue par défaut pour les colonnes indexées de texte intégral.  
   
@@ -620,28 +622,28 @@ MULTI_USER
 >  Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.  
   
  DEFAULT_LANGUAGE  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la langue par défaut de toutes les nouvelles connexions. La langue peut être spécifiée en fournissant son ID local (lcid), son nom ou son alias. Pour obtenir la liste des noms de langue acceptables et les alias, consultez [sys.syslanguages &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.  
   
  NESTED_TRIGGERS  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie si un déclencheur AFTER peut s'exécuter en cascade et, par conséquent, réaliser une action qui initialise un autre déclencheur, lequel initialise un autre déclencheur, etc. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.  
   
  TRANSFORM_NOISE_WORDS  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Utilisé pour supprimer un message d'erreur si des mots parasites ou des mots vides provoquent l'échec d'une opération booléenne sur une requête de texte intégral. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.  
   
  TWO_DIGIT_YEAR_CUTOFF  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie un entier compris entre 1 753 et 9 999 qui représente l'année de coupure permettant d'interpréter les années à deux chiffres comme des années à quatre chiffres. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.  
   
  **\<FILESTREAM_option > :: =**  
   
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Contrôle les paramètres des FileTables.  
   
@@ -671,7 +673,7 @@ MULTI_USER
  MIXED_PAGE_ALLOCATION {OFF | SUR les contrôles} si la base de données peut créer des pages initiales à l’aide d’une extension mixte pour les huit premières pages d’une table ou un index.  
   
  OFF  
- La base de données crée toujours les pages initiales à l’aide des extensions uniformes. Ceci est la valeur par défaut.  
+ La base de données crée toujours les pages initiales à l’aide des extensions uniformes. Il s'agit de la valeur par défaut.  
   
  ON  
  La base de données peut créer des pages initiales à l’aide d’extensions mixtes.  
@@ -693,7 +695,7 @@ MULTI_USER
   
  **\<query_store_options > :: =**  
   
- **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Contrôle si le magasin de requête est activé dans la base de données, ainsi que la suppression du contenu du magasin de requête.  
@@ -702,7 +704,7 @@ ON
  Active le magasin de requête.  
   
 OFF  
- Désactive le magasin de requêtes.  Ceci est la valeur par défaut.   
+ Désactive le magasin de requêtes.  Il s'agit de la valeur par défaut.   
   
 CLEAR  
  Supprimez le contenu du magasin de requête.  
@@ -816,7 +818,7 @@ OPERATION_MODE
   
 **\<remote_data_archive_option > :: =**  
   
- **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Active ou désactive la base de données Stretch pour la base de données. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -1018,12 +1020,12 @@ FEDERATED_SERVICE_ACCOUNT = ON | DÉSACTIVÉ
   
  Vous pouvez déterminer l'état de cette option en consultant la colonne is_arithabort_on de l'affichage catalogue sys.databases ou la propriété IsArithmeticAbortEnabled de la fonction DATABASEPROPERTYEX.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
  ON  
- Le résultat d'une concaténation est NULL lorsque l'un des deux opérandes est NULL. Par exemple, la concaténation de la chaîne de caractères « Ceci est » et NULL donne la valeur NULL et non la valeur « Ceci est ».  
+ Le résultat d'une concaténation est NULL lorsque l'un des deux opérandes est NULL. Par exemple, la concaténation de la chaîne de caractères « Ceci est » et NULL donne la valeur NULL et non la valeur « Ceci est ».  
   
  OFF  
  La valeur Null est considérée comme une chaîne de caractères vide.  
@@ -1079,7 +1081,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | DÉSACTIVÉ
   
  **\<target_recovery_time_option > :: =**  
   
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Non disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] la valeur par défaut pour les nouvelles bases de données est de 1 minute, ce qui indique la base de données utilisera les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)]vous recommande de 1 minute pour la plupart des systèmes.  
   
@@ -1123,21 +1125,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | DÉSACTIVÉ
 |\<db_user_access_option >|Oui|Oui|  
 |\<db_update_option >|Oui|Oui|  
 |\<delayed_durability_option >|Oui|Oui|  
-|\<external_access_option >|Oui|Non|  
-|\<cursor_option >|Oui|Non|  
-|\<auto_option >|Oui|Non|  
-|\<sql_option >|Oui|Non|  
-|\<recovery_option >|Oui|Non|  
-|\<target_recovery_time_option >|Non|Oui|  
-|\<database_mirroring_option >|Non|Non|  
-|ALLOW_SNAPSHOT_ISOLATION|Non|Non|  
-|READ_COMMITTED_SNAPSHOT|Non|Oui|  
+|\<external_access_option >|Oui|non|  
+|\<cursor_option >|Oui|non|  
+|\<auto_option >|Oui|non|  
+|\<sql_option >|Oui|non|  
+|\<recovery_option >|Oui|non|  
+|\<target_recovery_time_option >|non|Oui|  
+|\<database_mirroring_option >|non|non|  
+|ALLOW_SNAPSHOT_ISOLATION|non|non|  
+|READ_COMMITTED_SNAPSHOT|non|Oui|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|  
-|\<service_broker_option >|Oui|Non|  
+|\<service_broker_option >|Oui|non|  
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|  
 |\<parameterization_option >|Oui|Oui|  
 |\<change_tracking_option >|Oui|Oui|  
-|\<db_encryption >|Oui|Non|  
+|\<db_encryption >|Oui|non|  
   
  Le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est effacé par la configuration d'une des options suivantes :  
   
@@ -1223,9 +1225,9 @@ GO
   
  Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est activée.  
   
- |name |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
- |AdventureWorks2012   |1                        | ON |  
+ |AdventureWorks2012   | 1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>D. Activation, modification et désactivation du suivi des modifications  
  L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
@@ -1251,7 +1253,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Activation du magasin de requête  
- **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  L'exemple suivant active le magasin de requête et configure les paramètres de stockage des requêtes.  
   

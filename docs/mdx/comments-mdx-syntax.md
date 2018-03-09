@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 249a9628375c2cfadd079253d28d3f16015e3c63
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9430eeb2613b77ce1f34918382cd57e4958ac512
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comments-mdx-syntax"></a>Commentaires (syntaxe MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/27/2017
  /* ... \*/ (barre oblique-astérisque paires de caractères)  
  Ces caractères de commentaire peuvent être utilisés directement dans une ligne de code devant être exécuté, en début de ligne ou même dans du code exécutable. Tout depuis le commentaire ouvrant (/\*) pour le commentaire fermant (\*/) est considéré comme étant le commentaire. Pour un commentaire de plusieurs lignes, la paire de caractères de commentaire (/\*) doit commencer le commentaire et la paire de caractères de commentaire (\*/) doit se terminer le commentaire. Aucun autre caractère de commentaire ne peut apparaître dans les lignes de commentaire. Pour plus d’informations, consultez [/ *... \*/ (Comment)](../mdx/comment-mdx.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La requête suivante offre des exemples des trois types de commentaire :  
   
  `//An example of a comment using the double-forward slash`  

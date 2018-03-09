@@ -2,15 +2,13 @@
 title: "Élément FoldingParameters (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d6565a5898f5f41898d82a1d70d3748f8b2883c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="foldingparameters-element-assl"></a>Élément FoldingParameters (ASSL)
-  Spécifie les paramètres utilisés par le serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lorsqu'il effectue une validation croisée de modèles d'exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spécifie les paramètres utilisés par le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur lorsqu’il effectue la validation croisée de modèles d’exploration de données.  
   
 > [!NOTE]  
 >  Ces paramètres sont réservés à un usage interne uniquement. Les présentes informations sont fournies à titre de référence uniquement.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
-|Caractéristique| Description|  
+|Caractéristique|Description|  
 |--------------------|-----------------|  
 |*FoldIndex*|Entier qui indique la position de départ de la partition qui est utilisée pour la validation croisée.|  
 |*FoldCount*|Entier qui indique le nombre de partitions dans le modèle après la validation croisée.|  
@@ -71,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |Élément parent|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |Éléments enfants|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Ces propriétés sont réservées à un usage interne uniquement, et ne sont pas prises en charge pour une utilisation dans les instructions DDL.  
   
  Pour plus d’informations sur l’utilisation de la validation croisée dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], consultez [mesures dans le rapport de Validation croisée](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  

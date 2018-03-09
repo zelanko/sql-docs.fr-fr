@@ -1,36 +1,36 @@
 ---
 title: Description des index cluster et non-cluster | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Description des index cluster et non-cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Description des index cluster et non-cluster](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
 
   Un index est une structure sur disque associée à une table ou une vue qui accélère l'extraction des lignes de la table ou de la vue. Il contient des clés créées à partir d'une ou plusieurs colonnes de la table ou de la vue. Ces clés sont stockées dans une structure (B-tree) qui permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de trouver rapidement et efficacement la ou les lignes associées aux valeurs de clé.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="indexes-and-constraints"></a>Index et contraintes  
  Des index sont automatiquement créés lorsque les contraintes PRIMARY KEY et UNIQUE sont définies sur les colonnes de la table. Par exemple, lorsque vous créez une table et déterminez une colonne particulière qui sera la clé primaire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée automatiquement une contrainte PRIMARY KEY et un index sur cette colonne. Pour plus d’informations, consultez [Supprimer des clés primaires](../../relational-databases/tables/create-primary-keys.md) et [Créer des clés primaires](../../relational-databases/tables/create-unique-constraints.md).  
   
-## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Utilisation des index par l'optimiseur de requête  
+## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Utilisation des index par l’optimiseur de requête  
  Les index bien conçus peuvent réduire les opérations d'E/S disque et consommer moins de ressources système, améliorant ainsi les performances des requêtes. Les index peuvent être utiles pour diverses requêtes qui contiennent les instructions SELECT, UPDATE, DELETE ou MERGE. Supposons la requête `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Lorsque cette requête est exécutée, l'optimiseur de requête évalue chaque méthode disponible d'extraction des données et opte pour la plus efficace d'entre elles. La méthode peut être une analyse de table ou l'analyse d'un ou plusieurs index s'ils existent.  
   
  Lors d'une analyse de table, l'optimiseur de requête lit toutes les lignes de la table et extrait celles qui répondent aux critères de la requête. Une analyse de table génère de nombreuses opérations d'E/S disque et peut consommer une grande quantité de ressources. Toutefois, l'analyse d'une table peut être la méthode la plus efficace si par exemple le jeu des résultats de la requête représente un pourcentage élevé de lignes de la table.  
@@ -68,9 +68,12 @@ ms.lasthandoff: 11/17/2017
   
  L'optimiseur de requête sélectionne en général la méthode la plus efficace lors de l'exécution des requêtes. Toutefois, si aucun index n'est disponible, l'optimiseur de requête doit utiliser une analyse de table. Votre tâche consiste à concevoir et à créer les index les mieux adaptés à votre environnement, de sorte que l'optimiseur de requête possède une sélection d'index garantissant un choix efficace. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient [l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md) , qui facilite l’analyse de l’environnement de votre base de données et la sélection des index appropriés.  
   
-## <a name="related-tasks"></a>Tâches associées  
+> [!IMPORTANT] 
+> Pour plus d’informations sur les règles de conception d’index et les éléments internes, consultez le [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
+## <a name="related-content"></a>Contenu connexe  
+ [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

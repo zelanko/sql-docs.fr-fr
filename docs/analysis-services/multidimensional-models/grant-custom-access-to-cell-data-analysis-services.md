@@ -2,16 +2,13 @@
 title: "Octroyer un accès personnalisé à des données de cellule (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
@@ -28,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Octroyer un accès personnalisé à des données de cellule (Analysis Services)
-  La sécurité de cellule permet d'accorder ou de refuser l'accès à des données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La sécurité de cellule est utilisée pour autoriser ou refuser l’accès aux données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
   
  ![Tableau croisé dynamique montrant autorisé et refusé les cellules](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "tableau croisé dynamique montrant autorisé et refusé les cellules")  
   
@@ -43,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour masquer complètement la cellule, vous devez limiter les membres (dimensions, attributs de dimension et membres d'attributs de dimension) qui sont visibles. Pour plus d’informations, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
   
- En tant qu'administrateur, vous pouvez spécifier si les membres d'un rôle disposent d'autorisations de lecture, de lecture du contingent ou de lecture/écriture sur les cellules d'un cube. Définir des autorisations sur une cellule est le niveau de sécurité le plus bas autorisé. Avant de commencer à appliquer des autorisations à ce niveau, vous devez par conséquent tenir compte des facteurs suivants :  
+ En tant qu'administrateur, vous pouvez spécifier si les membres d'un rôle disposent d'autorisations de lecture, de lecture du contingent ou de lecture/écriture sur les cellules d'un cube. Définir des autorisations sur une cellule est le niveau de sécurité le plus bas autorisé. Avant de commencer à appliquer des autorisations à ce niveau, vous devez par conséquent tenir compte des facteurs suivants :  
   
 -   La sécurité au niveau de la cellule ne peut pas étendre des droits qui ont été restreints à un niveau supérieur. Exemple : si un rôle refuse l’accès à des données de dimension, la sécurité au niveau de la cellule ne peut pas remplacer le jeu refusé. Autre exemple : imaginez un rôle disposant de l’autorisation **Lecture** sur un cube et de l’autorisation **Lecture/Écriture** sur une cellule. L’autorisation sur les données de la cellule ne sera pas **Lecture/Écriture**, mais **Lecture**.  
   

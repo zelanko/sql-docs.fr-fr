@@ -2,16 +2,13 @@
 title: Contenu de FORMAT_STRING (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriétés de cellule MDX - contenu de FORMAT_STRING
-  La propriété de cellule **FORMAT_STRING** met en forme la propriété de cellule **VALUE** , en créant la valeur pour la propriété de cellule **FORMATTED_VALUE** . La propriété de cellule **FORMAT_STRING** traite les valeurs brutes de types chaîne et numérique en appliquant une expression de format à la valeur pour retourner une valeur mise en forme pour la propriété de cellule **FORMATTED_VALUE** . Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La propriété de cellule **FORMAT_STRING** met en forme la propriété de cellule **VALUE** , en créant la valeur pour la propriété de cellule **FORMATTED_VALUE** . La propriété de cellule **FORMAT_STRING** traite les valeurs brutes de types chaîne et numérique en appliquant une expression de format à la valeur pour retourner une valeur mise en forme pour la propriété de cellule **FORMATTED_VALUE** . Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
   
 ## <a name="string-values"></a>Valeurs de type chaîne  
  Une expression de format pour une chaîne peut posséder une section, ou deux sections séparées par un point-virgule (;).  
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  Les caractères décrits dans le tableau suivant peuvent apparaître dans la chaîne de format des chaînes de caractères.  
   
-|Caractère|Description|  
+|Caractère| Description|  
 |---------------|-----------------|  
 |@|Représente un espace réservé de caractère qui affiche un caractère ou un espace. Si la chaîne possède un caractère à l'endroit où figure le signe « a » commercial (@) dans la chaîne de format, elle affiche ce caractère. Sinon, un espace est affiché à la place. Les espaces réservés se remplissent de la droite vers la gauche sauf si un point d'exclamation (!) est présent dans la chaîne de format.|  
 |&|Représente un espace réservé de caractère qui affiche un caractère ou rien. Si la chaîne possède un caractère à l'endroit où figure le signe « et » commercial (&), la chaîne mise en forme affiche ce caractère. Sinon, rien n'est affiché. Les espaces réservés se remplissent de la droite vers la gauche sauf si un point d'exclamation (!) est présent dans la chaîne de format.|  
@@ -77,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
  Le tableau suivant décrit les caractères qui peuvent figurer dans la chaîne de format des nombres.  
   
-|Caractère|Description|  
+|Caractère| Description|  
 |---------------|-----------------|  
 |Aucun|Affiche le nombre sans mise en forme.|  
 |**0**|Représente un espace réservé de chiffre qui affiche un chiffre ou zéro (0).<br /><br /> Si le nombre possède un chiffre là où figure le zéro dans la chaîne de format, la valeur mise en forme affiche ce chiffre. Sinon, zéro est affiché à la place.<br /><br /> Si le nombre contient moins de chiffres que de zéros (de part et d'autre du séparateur décimal) dans l'expression de format, la valeur mise en forme affiche des zéros non significatifs ou à droite.<br /><br /> Si le nombre contient davantage de chiffres à droite du séparateur décimal qu'il n'y a de zéros à droite du séparateur décimal dans l'expression de format, la valeur mise en forme arrondit le nombre à autant de positions décimales qu'il y a de zéros.<br /><br /> Si le nombre comporte davantage de chiffres à gauche du séparateur décimal qu'il n'y a de zéros à gauche du séparateur décimal dans l'expression de format, la valeur mise en forme affiche les chiffres supplémentaires sans modification.|  
@@ -95,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="named-numeric-formats"></a>Formats numériques nommés  
  Le tableau suivant identifie les noms de formats numériques prédéfinis :  
   
-|Nom de format|Description|  
+|Nom de format| Description|  
 |-----------------|-----------------|  
 |`General Number`|Affiche le nombre sans séparateur de milliers.|  
 |`Currency`|Affiche le nombre avec un séparateur de milliers, le cas échéant. Affiche deux chiffres situés à droite du séparateur décimal. Le résultat dépend des paramètres régionaux système.|  
@@ -110,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="date-values"></a>Valeurs de date  
  Le tableau suivant décrit les caractères qui peuvent figurer dans les chaînes de format de date et d'heure.  
   
-|Caractère|Description|  
+|Caractère| Description|  
 |---------------|-----------------|  
 |**:**|Représente un séparateur horaire qui sépare les heures, les minutes et les secondes lors de la mise en forme de valeurs horaires.<br /><br /> Le caractère réel utilisé comme séparateur d'heure dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : dans certains paramètres régionaux, d’autres caractères peuvent être utilisés comme séparateurs d’heure.|  
 |**/**|Représente un séparateur de date qui sépare le jour, le mois et l'année lorsque les valeurs de date sont mises en forme.<br /><br /> Le caractère réel utilisé comme séparateur de date dans le résultat mis en forme est déterminé par les paramètres système de votre ordinateur.<br /><br /> Remarque : dans certains paramètres régionaux, d’autres caractères peuvent être utilisés pour représenter le séparateur de date.|  
@@ -147,7 +145,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="named-date-formats"></a>Formats de date nommés  
  Le tableau suivant identifie les noms de formats de date et d'heure prédéfinis :  
   
-|Nom de format|Description|  
+|Nom de format| Description|  
 |-----------------|-----------------|  
 |`General Date`|Affiche une date et/ou une heure. Pour les nombres réels, affiche une date et une heure, par exemple, 4/3/93 17:34. En l'absence de partie fractionnaire, affiche uniquement une date, par exemple, 4/3/93. En l'absence de partie entière, affiche uniquement une heure, par exemple, 17:34. Le format de l'affichage de la date est déterminé par vos paramètres système.|  
 |`Long Date`|Affiche une date en fonction du format de date longue de votre système.|  
@@ -161,6 +159,6 @@ ms.lasthandoff: 11/17/2017
  [LANGUAGE et FORMAT_STRING sur FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [À l’aide des propriétés de cellule &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Création et utilisation des valeurs de propriété &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base de requête MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -2,33 +2,36 @@
 title: "Instances du moteur de base de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
-  Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de l’exécutable **sqlservr.exe** qui s’exécute en tant que service du système d’exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de l’exécutable **sqlservr.exe** qui s’exécute en tant que service du système d’exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  
   
 ## <a name="instances"></a>Instances  
  Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] s'exécute en tant que service, celui-ci gérant toutes les demandes des applications concernant l'utilisation des données dans les bases de données gérées par cette instance. Il s'agit de la cible des demandes de connexion émanant des applications. La connexion passe par une connexion réseau si l'application et l'instance se trouvent sur des ordinateurs différents. Si l'application et l'instance se trouvent sur le même ordinateur, la connexion SQL Server peut s'exécuter en tant que connexion réseau ou en tant que connexion en mémoire. Une fois qu'une connexion est établie, une application envoie des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur la connexion à l'instance. L'instance résout les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] en opérations sur les données et les objets dans les bases de données. Si les autorisations requises ont été accordées aux informations d'identification de la connexion, l'instance effectue le travail. Toutes les données récupérées sont retournées à l'application, de même que les éventuels messages (notamment les erreurs).  
   
  Vous pouvez exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un même ordinateur. Une instance peut être l'instance par défaut. L'instance par défaut n'a pas de nom. Si une demande de connexion spécifie uniquement le nom de l'ordinateur, la connexion est établie à l'instance par défaut. Une instance nommée se caractérise par la spécification d'un nom d'instance au moment de son installation. Une demande de connexion doit spécifier le nom de l'ordinateur et le nom de l'instance pour pouvoir se connecter à l'instance. L'installation d'une instance par défaut n'est soumise à aucune condition particulière ; toutes les instances s'exécutant sur un ordinateur peuvent être des instances nommées.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
 |Décrit les fonctionnalités de Service Broker pour les applications de messagerie et de file d'attente et fournit des pointeurs vers la documentation de Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Décrit comment utiliser l'extension du pool de mémoires tampons pour permettre l'intégration transparente du stockage d'accès aléatoire non volatile (disques SSD) au pool de mémoires tampons du moteur de base de données de façon à améliorer considérablement le débit d'E/S.|[Fichier d'extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Application sqlservr](../../tools/sqlservr-application.md)   
  [Fonctionnalités de base de données](../../relational-databases/database-features.md)   
  [Fonctionnalités entre les instances du moteur de base de données](../../relational-databases/database-engine-cross-instance-features.md)  

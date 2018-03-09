@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ALTER_RESOURCE_GOVERNOR_TSQL
 - ALTER RESOURCE GOVERNOR RECONFIGURE
 - ALTER_RESOURCE_GOVERNOR_RECONFIGURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1ac429e7876212a7f6f0e4da3c38498b0e1f550
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +94,14 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  L'instruction ALTER RESOURCE GOVERNOR RECONFIGURE doit être exécutée pour que les modifications de configuration soient appliquées.  
   
- CLASSIFIER_FUNCTION = { *nom_schéma***.** *nom_fonction* | NULL}  
+ CLASSIFIER_FUNCTION = { *nom_schéma***.*** nom_fonction* | NULL}  
  Enregistre la fonction de classification spécifiée par *nom_schéma.nom_fonction*. Cette fonction classifie chaque nouvelle session et assigne les demandes et requêtes de session à un groupe de charges de travail. Lorsque la valeur NULL est utilisée, les nouvelles sessions sont assignées automatiquement au groupe de charges de travail par défaut.  
   
  RESET STATISTICS  
  Réinitialise les statistiques sur tous les groupes de charges de travail et pools de ressources. Pour plus d’informations, consultez [sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) et [sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *valeur*  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Définit les opérations d'E/S maximales en file d'attente par volume disque. Ces opérations d'E/S en peuvent être des lectures ou des écritures de toute taille.  La valeur maximale pour MAX_OUTSTANDING_IO_PER_VOLUME est 100. Ce n'est pas un pourcentage. Ce paramètre est conçu pour adapter la gouvernance des ressources d'E/S aux spécifications d'E/S d'un volume disque. Nous vous recommandons d’expérimentez avec différentes valeurs et que vous envisagez d’utiliser un outil d’étalonnage comme IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), ou SQLIO (déconseillé) pour identifier la valeur maximale pour le sous-système de stockage. Ce paramètre offre une vérification de la sécurité au niveau du système qui permet à SQL Server d'obtenir le minimum d'E/S par seconde pour les pools de ressources même si d'autres pools sont définis avec le paramètre MAX_IOPS_PER_VOLUME illimité. Pour plus d’informations sur MAX_IOPS_PER_VOLUME, consultez [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
@@ -110,7 +112,7 @@ ALTER RESOURCE GOVERNOR
   
  Nous vous recommandons de connaître les états du gouverneur de ressources avant d'exécuter des instructions DDL. Pour plus d’informations, consultez [du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -197,12 +199,12 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [MODIFIER le POOL de ressources externes &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
- [Sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [Sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   

@@ -1,10 +1,15 @@
 ---
 title: "Bien démarrer avec la recherche en texte intégral | Microsoft Docs"
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.custom: 
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +18,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e87ac827013d4aa9abff8a0fb66ac3c8fc9bce62
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Par défaut, les bases de données SQL Server prennent en charge le texte intégral. Cependant, avant de pouvoir exécuter des requêtes de texte intégral, vous devez créer un catalogue en texte intégral, puis créer un index en texte intégral sur les tables ou les vues indexées dans lesquelles vous souhaitez effectuer votre recherche.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>Configurer la recherche en texte intégral en deux étapes
@@ -46,7 +52,7 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
   
 1.  Pour créer un catalogue de texte intégral nommé `AdvWksDocFTCat`, l’exemple utilise une instruction [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) :  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -55,13 +61,13 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
  
 2.  Avant de créer un index de recherche en texte intégral sur la table Document, assurez-vous que la table dispose d'un index unique qui n'accepte pas les valeurs NULL et ne comporte qu'une seule colonne. L’instruction [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) suivante crée un index unique, `ui_ukDoc`, sur la colonne DocumentID de la table Document :  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  Une fois que vous avez une clé unique, vous pouvez créer un index de recherche en texte intégral sur la table `Document` en utilisant l’instruction [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -97,21 +103,21 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
 -   Prenez en compte la quantité de modifications apparaissant dans les tables soumises à l’indexation de texte intégral ainsi que le nombre total de lignes concernées dans ces tables. Si le nombre total de lignes modifiées, auquel s’ajoute le nombre de lignes de table présentes au cours du dernier remplissage de texte intégral, s’élève à plusieurs millions, affectez la table à un catalogue de texte intégral qui lui est propre.  
 
 ### <a name="associate-a-unique-index"></a>Associer un index unique
-Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral Il s'agira idéalement d'un index de quatre octets, basé sur des entiers. Cela réduit considérablement la quantité de ressources requise par la service Recherche de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le système de fichiers. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
+Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral Il s'agira idéalement d'un index de quatre octets, basé sur des entiers. Cela réduit considérablement la quantité de ressources requise par la service Recherche de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le système de fichiers. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
  
 ### <a name="associate-a-stoplist"></a>Associer une liste de mots vides   
   Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Vous pouvez créer et utiliser votre propre liste de mots vides.   
   
  Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante crée une liste de mots vides de texte intégral nommée myStoplist en copiant la liste de mots vides système :  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  L’instruction [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] suivante modifie une liste de mots vides nommée myStoplist en ajoutant le mot « en » (d’abord pour l’espagnol, puis pour le français) :  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

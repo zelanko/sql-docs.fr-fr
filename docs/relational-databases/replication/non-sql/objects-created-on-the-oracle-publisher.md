@@ -2,41 +2,44 @@
 title: "Objets créés sur le serveur de publication Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 308ed6419bdda59b9b97ae0093634646d5972a7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 18040967f55457a2c5d1f43dd9e84a56720daf74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objets créés sur le serveur de publication Oracle
-  La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe des objets de base de données sur le serveur de publication Oracle pour permettre le suivi et la transmission des modifications ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'installe aucun fichier binaire sur le serveur de publication Oracle). Le tableau suivant donne la liste des objets qui sont créés sur le serveur de publication Oracle quand il est identifié en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les descriptions des objets sont données seulement à titre d'information. Il est recommandé de ne pas modifier ces objets.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe des objets de base de données sur le serveur de publication Oracle pour permettre le suivi et la transmission des modifications ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’installe aucun fichier binaire sur le serveur de publication Oracle). Le tableau suivant donne la liste des objets qui sont créés sur le serveur de publication Oracle quand il est identifié en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les descriptions des objets sont données seulement à titre d'information. Il est recommandé de ne pas modifier ces objets.  
   
-|Nom de l'objet|Type d'objet|Description|  
+|Nom de l’objet|Type d'objet|Description|  
 |-----------------|-----------------|-----------------|  
-|HREPL_ArticleNlog_V|Table|Table de suivi des modifications utilisée pour stocker les informations quand des modifications sont apportées à la table publiée. Une table de suivi des modifications est créée pour chaque table publiée.|  
-|HREPL_Changes|Table|Table utilisée en interne par le travail Xactset pour déterminer le nombre de modifications en attente d'affectation à un ensemble de transactions. Pour plus d’informations sur ce travail, consultez [Réglage des performances pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
-|HREPL_Distributor|Table|Table d'état du serveur de distribution utilisée pour gérer les informations sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle.|  
-|HREPL_Event|Table|Table d'événements utilisée pour la synchronisation entre les instantanés et les demandes de comptage de lignes.|  
-|HREPL_Mutex|Table|Table utilisée pour garantir que la procédure du package Oracle PopulatePollTable n'est pas exécutée simultanément par l'Agent de lecture du journal et le travail de la base de données.|  
-|HREPL_Poll|Table|Table utilisée pour identifier les entrées de table de journal associées avec des ensembles de modifications apportées aux tables publiées.|  
-|HREPL_PublishedTables|Table|Table contenant une entrée pour chaque article d'une publication transactionnelle.|  
-|HREPL_Publisher|Table|Table d'état du serveur de publication utilisée pour la gestion d'informations spécifiques au serveur de publication.|  
-|HREPL_SchemaFilter|Table|Table contenant des schémas qui ne sont pas affichés lors de la publication via l'Assistant Nouvelle Publication.|  
-|HREPL_XactsetCreateTimes|Table|Table identifiant la date/heure de création associée avec chaque ensemble de transactions.|  
-|HREPL_XactsetJob|Table|Table avec les valeurs des paramètres en cours pour le travail Xactset.|  
+|HREPL_ArticleNlog_V|Table de charge de travail|Table de suivi des modifications utilisée pour stocker les informations quand des modifications sont apportées à la table publiée. Une table de suivi des modifications est créée pour chaque table publiée.|  
+|HREPL_Changes|Table de charge de travail|Table utilisée en interne par le travail Xactset pour déterminer le nombre de modifications en attente d'affectation à un ensemble de transactions. Pour plus d’informations sur ce travail, consultez [Réglage des performances pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Distributor|Table de charge de travail|Table d'état du serveur de distribution utilisée pour gérer les informations sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle.|  
+|HREPL_Event|Table de charge de travail|Table d'événements utilisée pour la synchronisation entre les instantanés et les demandes de comptage de lignes.|  
+|HREPL_Mutex|Table de charge de travail|Table utilisée pour garantir que la procédure du package Oracle PopulatePollTable n'est pas exécutée simultanément par l'Agent de lecture du journal et le travail de la base de données.|  
+|HREPL_Poll|Table de charge de travail|Table utilisée pour identifier les entrées de table de journal associées avec des ensembles de modifications apportées aux tables publiées.|  
+|HREPL_PublishedTables|Table de charge de travail|Table contenant une entrée pour chaque article d'une publication transactionnelle.|  
+|HREPL_Publisher|Table de charge de travail|Table d'état du serveur de publication utilisée pour la gestion d'informations spécifiques au serveur de publication.|  
+|HREPL_SchemaFilter|Table de charge de travail|Table contenant des schémas qui ne sont pas affichés lors de la publication via l'Assistant Nouvelle Publication.|  
+|HREPL_XactsetCreateTimes|Table de charge de travail|Table identifiant la date/heure de création associée avec chaque ensemble de transactions.|  
+|HREPL_XactsetJob|Table de charge de travail|Table avec les valeurs des paramètres en cours pour le travail Xactset.|  
 |HREPL_Pollid|Séquence|Séquence utilisée pour générer des ID d'interrogation.|  
 |HREPL_Seq|Séquence|Séquence utilisée pour trier des commandes de modification.|  
 |HREPL_Stmt|Séquence|Séquence utilisée pour générer des ID d'instruction.|  
@@ -50,9 +53,9 @@ ms.lasthandoff: 11/09/2017
 |HREPL_Article_I_J|Affichage|Vue créée pour chaque table publiée, utilisée pour des requêtes sur la table publiée.|  
 |HREPL_Log_I_J_K|Affichage|Vue créée pour chaque table publiée, utilisée pour des requêtes sur la table de suivi des modifications.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossaire des termes de la publication Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

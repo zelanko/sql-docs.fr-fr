@@ -1,5 +1,5 @@
 ---
-title: "Mise à niveau des Services d’intégration | Documents Microsoft"
+title: "Mettre à niveau Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -18,24 +18,23 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 53
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: ac549895dbe211f38529f657caa58fc766f911f0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
   Si [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] (ou une version ultérieure) est installé sur votre ordinateur, vous pouvez effectuer une mise à niveau vers [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  Lorsque vous mettez à niveau vers [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] sur un ordinateur sur lequel une de ces versions antérieures d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installée, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] est installé côte à côte avec une version antérieure.  
   
- Avec cette installation côte à côte, plusieurs versions de l'utilitaire dtexec sont installés. Pour vous assurer que vous exécutez la version appropriée de l’utilitaire, à l’invite exécuter l’utilitaire en entrant le chemin d’accès complet (\<lecteur > : \Program Files\Microsoft SQL Server\\< version\>\DTS\Binn). Pour plus d'informations dtexec, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Avec cette installation côte à côte, plusieurs versions de l'utilitaire dtexec sont installés. Pour être certain d’exécuter la version appropriée de l’utilitaire, à l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet (\<lecteur>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn). Pour plus d'informations dtexec, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
 >  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par défaut, lorsque vous installiez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tous les utilisateurs du groupe Utilisateurs avaient accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Lorsque vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les utilisateurs n'ont pas accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service est sécurisé par défaut. Une fois [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installé, l'administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit exécuter l'outil de configuration DCOM (Dcomcnfg.exe) pour accorder à des utilisateurs spécifiques l'accès au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
@@ -73,7 +72,7 @@ ms.lasthandoff: 09/26/2017
  Lors d’une mise à niveau, vous pouvez mettre à niveau à la fois [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous pouvez également choisir de mettre à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou uniquement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si vous mettez à niveau uniquement [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] (ou une version ultérieure) reste fonctionnel, mais sans les fonctionnalités de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si vous mettez uniquement à niveau [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] sera totalement fonctionnel, mais uniquement en mesure de stocker des packages dans le système de fichiers, à moins qu'une instance du [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] ne soit disponible sur un autre ordinateur.  
   
 ## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Mise à niveau d'Integration Services et du moteur de base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
+ Cette section décrit les conséquences liées à l'exécution d'une mise à niveau qui obéit aux critères suivants :  
   
 -   Mise à niveau de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et d’une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -155,4 +154,3 @@ ms.lasthandoff: 09/26/2017
  Entrée de blog [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
   
   
-

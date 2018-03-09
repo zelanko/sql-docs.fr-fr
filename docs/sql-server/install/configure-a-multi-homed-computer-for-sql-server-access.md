@@ -2,10 +2,14 @@
 title: "Configurer un ordinateur multirésident pour l’accès à SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 153525785a354d9a730bee4fff48d0562a2e48e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
-  Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cet article explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
   
 > [!NOTE]  
 >  Un ordinateur multirésident a plusieurs cartes réseau ou a été configuré afin d'utiliser plusieurs adresses IP pour une carte réseau unique. Un ordinateur à deux interfaces réseau a deux cartes réseau ou a été configuré afin d'utiliser deux adresses IP pour une carte réseau unique.  
   
- Avant d’aller plus loin dans cette rubrique, vous devez vous familiariser avec les informations fournies dans la rubrique [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Cette rubrique contient des informations de base sur le fonctionnement des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le pare-feu.  
+ Avant d’aller plus loin dans cet article, vous devez vous familiariser avec les informations fournies dans l’article [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Cet article contient des informations de base sur le fonctionnement des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le pare-feu.  
   
  **Hypothèses pour cet exemple :**  
   
@@ -41,7 +47,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Les adresses IPv4 sont une série de quatre nombres appelés octets. Chaque nombre est inférieur à 255 et est séparé des autres nombres par un point, par exemple 127.0.0.1. Les adresses IPv6 sont une série de huit nombres hexadécimaux séparés par des signes deux-points, par exemple fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Les règles de pare-feu peuvent autoriser l'accès via un port spécifique, par exemple le port 1433. Toutefois, les règles de pare-feu peuvent également autoriser l'accès au programme du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Aucune méthode n'est meilleure que l'autre. Dans la mesure où un serveur situé dans un réseau de périmètre est plus vulnérable aux attaques que des serveurs situés sur un intranet, cette rubrique suppose que vous souhaitez disposer d'un contrôle plus précis et que vous voulez sélectionner individuellement les ports que vous ouvrez. C'est la raison pour laquelle cette rubrique part de l'hypothèse que vous configurez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sorte qu'il soit à l'écoute sur un port fixe. Pour plus d’informations sur les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Les règles de pare-feu peuvent autoriser l'accès via un port spécifique, par exemple le port 1433. Toutefois, les règles de pare-feu peuvent également autoriser l'accès au programme du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Aucune méthode n'est meilleure que l'autre. Dans la mesure où un serveur situé dans un réseau de périmètre est plus vulnérable aux attaques que des serveurs situés sur un intranet, cet article part du principe que vous souhaitez disposer d’un contrôle plus précis et que vous voulez sélectionner individuellement les ports que vous ouvrez. C’est la raison pour laquelle cet article part de l’hypothèse que vous configurez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sorte qu’il soit à l’écoute sur un port fixe. Pour plus d’informations sur les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   Cet exemple configure l’accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide du port TCP 1433. Les autres ports qui correspondent à l'utilisation de composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] différents peuvent être configurés à l'aide des mêmes étapes générales.  
   
@@ -141,7 +147,7 @@ ms.lasthandoff: 11/09/2017
   
 9. Pour configurer les autres adresses IP sur un ordinateur multirésident, répétez cette procédure en utilisant une autre adresse IP et une autre règle.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Se connecter à SQL Server par le biais d’un serveur proxy &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

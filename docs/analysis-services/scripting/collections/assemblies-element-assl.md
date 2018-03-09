@@ -2,15 +2,13 @@
 title: "Élément Assemblies (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Assemblies Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 907d4a6e8375e69ef3360a2b20611f5780856690
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ac91c9fdec23334538c4464fad2bfe736e1b708
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assemblies-element-assl"></a>Élément Assemblies (ASSL)
-  Contient la collection de [Assembly](../../../analysis-services/scripting/objects/assembly-element-assl.md) éléments associés à un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) ou [base de données](../../../analysis-services/scripting/objects/database-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [Assembly](../../../analysis-services/scripting/objects/assembly-element-assl.md) éléments associés à un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) ou [base de données](../../../analysis-services/scripting/objects/database-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,9 +50,9 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |Éléments parents|[Database](../../../analysis-services/scripting/objects/database-element-assl.md), [Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Éléments enfants|[Assembly](../../../analysis-services/scripting/objects/assembly-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.AssemblyCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  

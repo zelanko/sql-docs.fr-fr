@@ -2,28 +2,34 @@
 title: "Modifier un emplacement de point d’arrêt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.breakpt.location.file
-helpviewer_keywords: Transact-SQL debugger, breakpoint location
+f1_keywords:
+- vs.debug.breakpt.location.file
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
-caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66fbf306c95331693b9042d782f7e2371efa986e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 17e1810114e209c8012792b1e67502c3638afa3a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifier un emplacement de point d'arrêt
-  L'emplacement du point d'arrêt spécifie la ligne et le caractère où réside ce point d'arrêt dans un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez modifier cet emplacement pour déplacer le point d'arrêt vers un autre emplacement du script ou vers un script différent.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’emplacement du point d’arrêt spécifie la ligne et le caractère où réside ce point d’arrêt dans un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez modifier cet emplacement pour déplacer le point d'arrêt vers un autre emplacement du script ou vers un script différent.  
   
 ## <a name="editing-a-location"></a>Modification d'un emplacement  
  Lorsque vous modifiez l'emplacement d'un point d'arrêt, ce point d'arrêt se déplace jusqu'à son nouvel emplacement et conserve toutes ses propriétés existantes, telles que le nombre d'accès ou la condition.  
@@ -32,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Emplacement** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Emplacement** dans le menu contextuel.  
   
@@ -40,10 +46,10 @@ ms.lasthandoff: 11/09/2017
   
      L’option **Permettre que le code source soit différent de la version d’origine** n’a aucun effet lors du débogage de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)   
  [Spécifier une action de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md)   
  [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Spécifier un filtre de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-filter.md)  
+ [Pour spécifier un filtre de point d’arrêt](../../relational-databases/scripting/specify-a-breakpoint-filter.md)  
   
   

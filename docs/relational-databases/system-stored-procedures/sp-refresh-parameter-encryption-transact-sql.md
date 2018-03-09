@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Classe du module spécifié. Lorsque *nom_module* est un déclencheur DDL, `<cla
 0 (réussite) ou un nombre différent de zéro (échec)
 
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Les métadonnées de chiffrement pour les paramètres d’un module peuvent devenir obsolète, si :   
 * Propriétés de chiffrement d’une colonne dans une table de références de module, ont été mis à jour. Par exemple, une colonne a été supprimée et une nouvelle colonne portant le même nom, mais un type de chiffrement, clé de chiffrement ou un algorithme de chiffrement a été ajoutée.  
@@ -77,7 +77,7 @@ Pour actualiser un déclencheur DDL au niveau du serveur, exécutez cette procé
 >  [!NOTE]   
 >  Les signatures qui sont associés à l’objet sont supprimées lorsque vous exécutez `sp_refresh_parameter_encryption`.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Requiert `ALTER` l’autorisation sur le module et `REFERENCES` autorisation sur les types CLR définis par l’utilisateur et les collections de schémas XML qui sont référencées par l’objet.   
 
@@ -92,7 +92,7 @@ Pour les modules qui sont définies avec la `EXECUTE AS` clause, `IMPERSONATE` a
 L’exemple suivant crée une table et une procédure qui référencent la table, configure Always Encrypted, puis illustre la modification de la table et en cours d’exécution le `sp_refresh_parameter_encryption` procédure.  
 
 Tout d’abord créer la table initiale et une procédure stockée faisant référence à la table.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 Définissez ensuite les clés Always Encrypted.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 Enfin, nous remplaçons la colonne SSN avec la colonne chiffrée, puis exécute le `sp_refresh_parameter_encryption` procédure pour mettre à jour les composants Always Encrypted.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

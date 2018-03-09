@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,13 +32,13 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0dc0625927c55b22e02a5456e8b8639d7e464e6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0bb98e926d7c06a216ef5230af9fd9a113d451dc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
   Une carte est un ensemble de couches. Quand vous ajoutez une carte à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous définissez la première couche. Vous pouvez créer des couches supplémentaires à l'aide de l'Assistant Couche.  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="AddLayer"></a> Pour ajouter une couche à partir de l’Assistant Couche  
   
--   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte**, puis sur **Carte Wizard.** L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
+-   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte**, puis sur **Carte Wizard**. L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
   
      Pour plus d’informations, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -206,7 +204,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Cliquez sur **Visibilité**.  
   
-4.  Dans **Options de transparence**, tapez une valeur qui représente le pourcentage de transparence, par exemple **40**. Un facteur de transparence de zéro (0 %) signifie que la couche est opaque. Un facteur de transparence de 100 % signifie que vous ne verrez pas la couche dans le rapport.  
+4.  Dans **Options de transparence**, tapez une valeur qui représente le pourcentage de transparence, par exemple **40**. Un facteur de transparence de zéro (0 %) signifie que la couche est opaque. Un facteur de transparence de 100 % signifie que vous ne verrez pas la couche dans le rapport.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -254,11 +252,11 @@ ms.lasthandoff: 12/05/2017
   
     -   Entrez les valeurs de zoom maximale et minimale pour l'affichage de la couche.  
   
-    -   Ce paramètre est facultatif. Entrez une valeur pour la transparence.  
+    -   Facultatif. Entrez une valeur pour la transparence.  
   
      Vous pouvez également masquer la couche de manière conditionnelle. Pour plus d’informations, consultez [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

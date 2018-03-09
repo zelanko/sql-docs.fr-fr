@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: "67"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 367562c82bd9ed041dbd12e2fa195f75fcf99f05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  L'activation de bases de données à relation contenant-contenu partielle transfère le contrôle de l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux propriétaires de la base de données. Pour plus d’informations, voir [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automatique  
+## <a name="automatic"></a>Automatic  
  **Fermeture automatique**  
  Spécifiez si la base de données doit être fermée proprement et doit libérer des ressources lorsque le dernier utilisateur ferme sa session. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, la base de données est fermée proprement et ses ressources sont libérées à la fermeture de session du dernier utilisateur.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  L'attribution de la valeur **True** à cette option n'a aucun effet, sauf si l'option **Mise à jour automatique des statistiques** a également la valeur **True**.  
   
-## <a name="containment"></a>Relation contenant-contenu  
+## <a name="containment"></a>Containment  
  Dans une base de données à relation contenant-contenu, certains paramètres généralement configurés au niveau serveur peuvent l’être au niveau de la base de données.  
   
  **LCID de la langue de texte intégral par défaut**  
@@ -239,7 +239,7 @@ Identificateur en lecture seule.
   
 
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

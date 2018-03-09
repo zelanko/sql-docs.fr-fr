@@ -1,5 +1,5 @@
 ---
-title: sp_help_job (Transact-SQL) | Documents Microsoft
+title: sp_help_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
-dev_langs: TSQL
-helpviewer_keywords: sp_help_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0dc39a2fe09d6dd4441f378d225a0f4e6ddf67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,42 +59,42 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Numéro d’identification du travail. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@job_aspect =**] **'***aspect_du_travail***'**  
+ [ **@job_aspect =**] **'***job_aspect***'**  
  Attribut du travail à afficher. *aspect_du_travail* est **varchar (9)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
 |**ALL**|Informations sur l'aspect du travail.|  
-|**TÂCHE**|Informations sur le travail.|  
-|**PLANIFICATIONS**|Informations sur la planification.|  
-|**ÉTAPES**|Informations sur l'étape du travail|  
-|**CIBLES**|Informations sur la cible|  
+|**JOB**|Informations sur le travail.|  
+|**SCHEDULES**|Informations sur la planification.|  
+|**STEPS**|Informations sur l'étape du travail|  
+|**TARGETS**|Informations sur la cible|  
   
- [  **@job_type =**] **'***type_du_travail***'**  
+ [ **@job_type =**] **'***job_type***'**  
  Type des travaux à inclure dans le rapport. *type_du_travail* est **varchar(12)**, avec NULL comme valeur par défaut. *type_du_travail* peut être **LOCAL** ou **multiserveur**.  
   
- [  **@owner_login_name =**] **'***login_name***'**  
+ [ **@owner_login_name =**] **'***login_name***'**  
  Nom de la connexion du propriétaire du travail. *login_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@subsystem =**] **'***sous-système***'**  
+ [ **@subsystem =**] **'***subsystem***'**  
  Nom du sous-système. *sous-système* est **nvarchar (40)**, avec NULL comme valeur par défaut.  
   
- [  **@category_name =**] **'***catégorie***'**  
+ [ **@category_name =**] **'***category***'**  
  Le nom de la catégorie. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@enabled =**] *activé*  
  Nombre qui indique si les informations sont affichées pour les travaux activés ou les travaux désactivés. *activé* est **tinyint**, avec NULL comme valeur par défaut. **1** indique les travaux sont activés et **0** indique les travaux sont désactivés.  
   
- [  **@execution_status =**] *état*  
+ [ **@execution_status =**] *status*  
  État de l'exécution des travaux. *état* est **int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -104,16 +107,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendu.|  
 |**7**|Effectue le travail.|  
   
- [  **@date_comparator =**] **'***comparateur_de_dates***'**  
+ [ **@date_comparator =**] **'***date_comparison***'**  
  L’opérateur de comparaison à utiliser dans les comparaisons de *date_created* et *date_de_modification*. *comparateur_de_dates* est **char (1)**et peut être =, \<, ou >.  
   
- [  **@date_created =**] *date_created*  
+ [ **@date_created =**] *date_created*  
  Date de création du travail. *date_de_création*est **datetime**, avec NULL comme valeur par défaut.  
   
- [  **@date_last_modified =**] *date_de_modification*  
+ [ **@date_last_modified =**] *date_modified*  
  Date de la dernière modification du travail. *date_de_modification* est **datetime**, avec NULL comme valeur par défaut.  
   
- [  **@description =**] **'***description***'**  
+ [ **@description =**] **'***description_pattern***'**  
  Description du travail. *Description* est **nvarchar (512)**, avec NULL comme valeur par défaut. *Description* peut inclure les caractères génériques de SQL Server pour les critères spéciaux.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -125,12 +128,12 @@ sp_help_job { [ @job_id = ] job_id
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID unique du travail.|  
-|**originating_server**|**nvarchar (30)**|Nom du serveur d'origine du travail|  
+|**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
 |**nom**|**sysname**|Nom du travail.|  
-|**activé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**Description**|**nvarchar(512)**|Description de la tâche.|  
+|**enabled**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
+|**description**|**nvarchar(512)**|Description de la tâche.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
-|**catégorie**|**sysname**|Catégorie de travail.|  
+|**category**|**sysname**|Catégorie de travail.|  
 |**propriétaire**|**sysname**|Propriétaire du travail.|  
 |**notify_level_eventlog**|**int**|**Masque de bits** qui indique dans quelles circonstances un événement de notification doit être enregistré dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = en cas de succès du travail<br /><br /> **2** = lors de l’échec du travail<br /><br /> **3** = chaque fois que le travail est terminé (quel que soit le résultat du travail)|  
 |**notify_level_email**|**int**|**Masque de bits** qui indique dans quelles circonstances un courrier électronique doit être envoyé lorsqu’une tâche est terminée. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
@@ -139,10 +142,10 @@ sp_help_job { [ @job_id = ] job_id
 |**notify_email_operator**|**sysname**|Nom d'adresse électronique de l'opérateur à avertir.|  
 |**notify_netsend_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer les messages sur le réseau.|  
 |**notify_page_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer une page.|  
-|**niveau_suppression**|**int**|**Masque de bits** qui indique dans quelles circonstances le travail doit être supprimé lorsqu’une tâche est terminée. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
-|**date_de_création**|**datetime**|Date de que création du travail.|  
-|**date_de_modification**|**datetime**|Date de dernière modification du travail.|  
-|**numéro_version**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
+|**delete_level**|**int**|**Masque de bits** qui indique dans quelles circonstances le travail doit être supprimé lorsqu’une tâche est terminée. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
+|**date_created**|**datetime**|Date de que création du travail.|  
+|**date_modified**|**datetime**|Date de dernière modification du travail.|  
+|**version_number**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
 |**last_run_date**|**int**|Date du début de la dernière exécution du travail.|  
 |**last_run_time**|**int**|Heure du début de la dernière exécution du travail.|  
 |**last_run_outcome**|**int**|Résultat du travail lors de sa dernière exécution :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
@@ -163,23 +166,23 @@ sp_help_job { [ @job_id = ] job_id
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**argument id_étape**|**int**|Identificateur unique de cette étape (pour ce travail).|  
-|**nom_de_l**|**sysname**|Nom de l'étape|  
-|**sous-système**|**nvarchar (40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
+|**step_id**|**int**|Identificateur unique de cette étape (pour ce travail).|  
+|**step_name**|**sysname**|Nom de l'étape|  
+|**subsystem**|**nvarchar(40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
 |**commande**|**nvarchar(3200)**|Commande à exécuter.|  
-|**indicateurs**|**nvarchar(4000)**|**Masque de bits** des valeurs qui contrôlent le comportement de l’étape.|  
+|**flags**|**nvarchar(4000)**|**Masque de bits** des valeurs qui contrôlent le comportement de l’étape.|  
 |**cmdexec_success_code**|**int**|Pour un **CmdExec** étape, c’est le code de sortie de processus d’une commande réussie.|  
 |**on_success_action**|**nvarchar(4000)**|Que faire si l'étape est exécutée correctement :<br /><br /> **1** = sortie avec succès.<br /><br /> **2** = sortie avec échec.<br /><br /> **3** = passer à l’étape suivante.<br /><br /> **4** = passer à l’étape.|  
-|**id_étape_succès**|**int**|Si **on_success_action** est **4**, cela indique l’étape suivante à exécuter.|  
+|**on_success_step_id**|**int**|Si **on_success_action** est **4**, cela indique l’étape suivante à exécuter.|  
 |**on_fail_action**|**nvarchar(4000)**|Action à exécuter si l'exécution de l'étape échoue. Les valeurs sont les mêmes que pour **on_success_action**.|  
-|**id_étape_échec**|**int**|Si **on_fail_action** est **4**, cela indique l’étape suivante à exécuter.|  
+|**on_fail_step_id**|**int**|Si **on_fail_action** est **4**, cela indique l’étape suivante à exécuter.|  
 |**server**|**sysname**|Réservé.|  
 |**database_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est la base de données dans laquelle la commande sera exécutée.|  
-|**nom_utilisateur_base_de_données**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est le contexte de l'utilisateur de la base de données dans lequel la commande est exécutée.|  
+|**database_user_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est le contexte de l'utilisateur de la base de données dans lequel la commande est exécutée.|  
 |**retry_attempts**|**int**|Nombre de tentatives maximum de la commande (si elle échoue) avant que l'étape soit considérée comme un échec.|  
-|**intervalle_entre_reprises**|**int**|Intervalle (en minutes) entre chaque tentative.|  
-|**os_run_priority**|**varchar (4000)**|Réservé.|  
-|**nom_fichier_sortie**|**varchar(200)**|Fichier de commande de sortie doit être écrite ([!INCLUDE[tsql](../../includes/tsql-md.md)] et **CmdExec** étapes uniquement).|  
+|**retry_interval**|**int**|Intervalle (en minutes) entre chaque tentative.|  
+|**os_run_priority**|**varchar(4000)**|Réservé.|  
+|**output_file_name**|**varchar(200)**|Fichier de commande de sortie doit être écrite ([!INCLUDE[tsql](../../includes/tsql-md.md)] et **CmdExec** étapes uniquement).|  
 |**last_run_outcome**|**int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**int**|Durée (en secondes) de l'étape lors de sa dernière exécution.|  
 |**last_run_retries**|**int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
@@ -191,9 +194,9 @@ sp_help_job { [ @job_id = ] job_id
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**id_de_la_planification**|**int**|Identificateur de la planification (unique pour tous les travaux).|  
-|**nom_de_la_planification**|**sysname**|Nom de la planification (unique pour ce travail).|  
-|**activé**|**int**|Indique si la planification est active (**1**) ou non (**0**).|  
+|**schedule_id**|**int**|Identificateur de la planification (unique pour tous les travaux).|  
+|**schedule_name**|**sysname**|Nom de la planification (unique pour ce travail).|  
+|**enabled**|**int**|Indique si la planification est active (**1**) ou non (**0**).|  
 |**freq_type**|**int**|Valeur indiquant la fréquence d'exécution du travail.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = exécuter lorsque **SQLServerAgent** démarrage du service.|  
 |**freq_interval**|**int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Unités de **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -202,9 +205,9 @@ sp_help_job { [ @job_id = ] job_id
 |**freq_recurrence_factor**|**int**|Nombre de mois devant s'écouler entre les exécutions planifiées du travail.|  
 |**active_start_date**|**int**|Date de démarrage de l'exécution du travail.|  
 |**active_end_date**|**int**|Date de fin d’exécution du travail.|  
-|**heure_de_début_active**|**int**|Heure de début de l’exécution du travail sur **active_start_date.**|  
-|**heure_fin_active**|**int**|Heure de fin d’exécution de la tâche sur **active_end_date**.|  
-|**date_de_création**|**datetime**|Date de création de la planification.|  
+|**active_start_time**|**int**|Heure de début de l’exécution du travail sur **active_start_date.**|  
+|**active_end_time**|**int**|Heure de fin d’exécution de la tâche sur **active_end_date**.|  
+|**date_created**|**datetime**|Date de création de la planification.|  
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification (sur demande).|  
 |**next_run_date**|**int**|Date à laquelle la planification va lancer l'exécution du travail.|  
 |**next_run_time**|**int**|Heure à laquelle la planification va lancer l'exécution du travail.|  
@@ -216,16 +219,16 @@ sp_help_job { [ @job_id = ] job_id
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Identificateur du serveur cible.|  
-|**nom_serveur**|**nvarchar (30)**|Nom de l'ordinateur du serveur cible.|  
+|**server_name**|**nvarchar(30)**|Nom de l'ordinateur du serveur cible.|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur cible sur le serveur maître.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
 |**last_run_date**|**int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
 |**last_run_time**|**int**|Heure du début de la dernière exécution du travail sur ce serveur cible.|  
 |**last_run_duration**|**int**|Durée du travail lors de sa dernière exécution sur ce serveur cible.|  
 |**last_run_outcome**|**tinyint**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
-|**last_outcome_message**|**nvarchar (1024)**|Message indiquant le résultat du travail lors de sa dernière exécution sur ce serveur cible.|  
+|**last_outcome_message**|**nvarchar(1024)**|Message indiquant le résultat du travail lors de sa dernière exécution sur ce serveur cible.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -234,7 +237,7 @@ sp_help_job { [ @job_id = ] job_id
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Membres de **SQLAgentUserRole** peut afficher uniquement les travaux dont ils sont propriétaires. Membres de **sysadmin**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** peut afficher tous les travaux locaux et multiserveurs.  
   
@@ -281,8 +284,8 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

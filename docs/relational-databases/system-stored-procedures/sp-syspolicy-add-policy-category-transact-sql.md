@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (Transact-SQL) | Documents Microsoft
+title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category
 - sp_syspolicy_add_policy_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4335d14562eaa6abbc6854cf9916c51b74779c0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 90e8fdea1ed8f177526574c5911e69fd1bc01bff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  [  **@name=** ] **'***nom***'**  
  Est le nom de la catégorie de stratégie. *nom* est **sysname**et est requis. *nom* ne peut pas être une chaîne NULL ou vide.  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
+ [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
  Détermine si l'abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est un **bits** valeur par défaut est 1 (activé).  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  Est l’identificateur de la catégorie de stratégie. *policy_category_id* est **int**et est retourné en tant que sortie.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -60,7 +63,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_add_policy_category dans le contexte de la base de données système msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
@@ -82,7 +85,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion basée sur la stratégie stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

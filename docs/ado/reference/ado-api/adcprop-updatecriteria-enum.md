@@ -3,8 +3,9 @@ title: ADCPROP_UPDATECRITERIA_ENUM | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADCPROP_UPDATECRITERIA_ENUM
-helpviewer_keywords: ADCPROP_UPDATECRITERIA_ENUM [ADO]
+f1_keywords:
+- ADCPROP_UPDATECRITERIA_ENUM
+helpviewer_keywords:
+- ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dd5edb408cb5356069b9d5d5f39d5452df52aec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf0c00fb7f353171686f57405879b3beb544aa1d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Spécifie les champs qui peuvent être utilisés pour détecter les conflits pendant une mise à jour optimiste d’une ligne de la source de données avec un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  

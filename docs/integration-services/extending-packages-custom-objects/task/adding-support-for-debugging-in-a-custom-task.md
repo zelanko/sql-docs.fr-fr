@@ -1,5 +1,5 @@
 ---
-title: "Ajout d’un Support pour le débogage dans une tâche personnalisée | Documents Microsoft"
+title: "Ajout de la prise en charge du débogage dans une tâche personnalisée | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,33 +25,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0f8aa78d097e2e0810c62d45189ca6959b194504
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Ajout de la prise en charge du débogage dans une tâche personnalisée
   Le moteur d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet aux packages, tâches et autres types de conteneurs d'être suspendus pendant l'exécution à l'aide de points d'arrêt. L'utilisation de points d'arrêt vous permet d'examiner et de corriger les erreurs qui empêchent votre application ou vos tâches de s'exécuter correctement. L'architecture de point d'arrêt permet au client d'évaluer la valeur d'exécution des objets contenus dans le package aux points d'exécution définis pendant la suspension du traitement de la tâche.  
   
  Les développeurs de tâches personnalisées peuvent utiliser cette architecture pour créer des cibles de points d'arrêt personnalisées en utilisant l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> et son interface parente <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> définit l'interaction entre le moteur d'exécution et la tâche pour créer et gérer des sites ou des cibles de points d'arrêt personnalisés. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> fournit des méthodes et propriétés appelées par le moteur d'exécution pour notifier la tâche de suspendre ou reprendre son exécution.  
   
- Un site ou une cible de point d'arrêt est un point dans l'exécution de la tâche où le traitement peut être suspendu. Sélectionnent des utilisateurs à partir de sites de points d’arrêt disponibles dans le **définir des points d’arrêt** boîte de dialogue. Par exemple, outre les options de point d'arrêt par défaut, le conteneur de boucle Foreach propose l'option « Arrêter au début de chaque itération de la boucle ».  
+ Un site ou une cible de point d'arrêt est un point dans l'exécution de la tâche où le traitement peut être suspendu. Les utilisateurs sélectionnent un site de point d’arrêt parmi les sites disponibles dans la boîte de dialogue **Définir des points d’arrêt**. Par exemple, outre les options de point d'arrêt par défaut, le conteneur de boucle Foreach propose l'option « Arrêter au début de chaque itération de la boucle ».  
   
- Lorsqu'une tâche atteint une cible de point d'arrêt pendant l'exécution, elle évalue cette cible de point d'arrêt pour déterminer si un point d'arrêt est activé. Celui-ci indique que l'utilisateur souhaite que l'exécution s'arrête à ce point d'arrêt. Si le point d'arrêt est activé, la tâche déclenche l'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> pour le moteur d'exécution. Le moteur d’exécution répond à l’événement en appelant le **Suspend** méthode de chaque tâche en cours d’exécution dans le package. Exécution de la tâche reprend lorsque le runtime appelle le **ResumeExecution** (méthode) de la tâche suspendue.  
+ Lorsqu'une tâche atteint une cible de point d'arrêt pendant l'exécution, elle évalue cette cible de point d'arrêt pour déterminer si un point d'arrêt est activé. Celui-ci indique que l'utilisateur souhaite que l'exécution s'arrête à ce point d'arrêt. Si le point d'arrêt est activé, la tâche déclenche l'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> pour le moteur d'exécution. Le moteur d’exécution répond à l’événement en appelant la méthode **Suspend** de chaque tâche qui est en cours d’exécution dans le package. L’exécution de la tâche reprend lorsque le runtime appelle la méthode **ResumeExecution** de la tâche suspendue.  
   
  Les tâches qui n'utilisent pas de points d'arrêt doivent encore implémenter les interfaces <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> et <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Cette implémentation garantit que la tâche est correctement suspendue lorsque d'autres objets contenus dans le package déclenchent des événements <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>Interface IDTSBreakpointSite et BreakpointManager  
- Les tâches créent des cibles de points d'arrêt en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, ce qui permet de fournir un ID entier et une description de chaîne comme paramètres. Lorsque la tâche atteint le point dans son code qui contient une cible de point d'arrêt, elle évalue la cible de point d'arrêt en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> pour déterminer si ce point d'arrêt est activé. Si **true**, la tâche notifie le moteur d’exécution en déclenchant le <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> événement.  
+ Les tâches créent des cibles de points d'arrêt en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, ce qui permet de fournir un ID entier et une description de chaîne comme paramètres. Lorsque la tâche atteint le point dans son code qui contient une cible de point d'arrêt, elle évalue la cible de point d'arrêt en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> pour déterminer si ce point d'arrêt est activé. Si la valeur est **true**, la tâche avertit le moteur d’exécution en déclenchant l’événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
- L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> définit une méthode unique, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, appelée par le moteur d'exécution pendant la création de la tâche. Cette méthode fournit comme paramètre l'objet <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, utilisé ensuite par la tâche pour créer et gérer ses points d'arrêt. Tâches doivent stocker le <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> localement pour une utilisation pendant le **Validate** et **Execute** méthodes.  
+ L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> définit une méthode unique, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, appelée par le moteur d'exécution pendant la création de la tâche. Cette méthode fournit comme paramètre l'objet <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, utilisé ensuite par la tâche pour créer et gérer ses points d'arrêt. Les tâches doivent stocker l’objet <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> localement pour pouvoir l’utiliser pendant les méthodes **Validate** et **Execute**.  
   
  L'exemple de code suivant montre comment créer une cible de point d'arrêt en utilisant l'objet <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>. L'exemple permet d'appeler la méthode <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> pour déclencher l'événement.  
   
@@ -97,11 +95,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>Interface IDTSSuspend  
- L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> définit les méthodes appelées par le moteur d'exécution lorsqu'il suspend ou reprend l'exécution d'une tâche. Le <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> interface est implémentée par le <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> interface et son **Suspend** et **ResumeExecution** méthodes sont généralement remplacées par la tâche personnalisée. Lorsque le moteur d’exécution reçoit un **OnBreakpointHit** événement à partir d’une tâche, il appelle la **Suspend** méthode de chaque tâche en cours d’exécution, en notifiant les tâches en pause. Lorsque le client reprend l’exécution, le moteur d’exécution appelle la **ResumeExecution** méthode des tâches qui sont suspendus.  
+ L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> définit les méthodes appelées par le moteur d'exécution lorsqu'il suspend ou reprend l'exécution d'une tâche. L’interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> est implémentée par l’interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>. Ses méthodes **Suspend** et **ResumeExecution** sont généralement remplacées par la tâche personnalisée. Lorsque le moteur d’exécution reçoit un événement **OnBreakpointHit** d’une tâche, il appelle la méthode **Suspend** de chaque tâche en cours d’exécution pour leur indiquer qu’elles doivent se mettre en pause. Lorsque le client reprend l’exécution, le moteur d’exécution appelle la méthode **ResumeExecution** des tâches suspendues.  
   
- La suspension et la reprise de l'exécution d'une tâche impliquent l'interruption et la reprise du thread d'exécution de la tâche. Dans le code managé, vous le faire à l’aide de la **ManualResetEvent** classe dans **System.Threading** espace de noms du .NET Framework.  
+ La suspension et la reprise de l'exécution d'une tâche impliquent l'interruption et la reprise du thread d'exécution de la tâche. Dans le code managé, vous devez pour cela utiliser la classe **ManualResetEvent** de l’espace de noms **System.Threading** du .NET Framework.  
   
- L'exemple de code suivant montre la suspension et la reprise de l'exécution d'une tâche. Notez que la **Execute** méthode est passée de l’exemple de code précédent, et le thread d’exécution est interrompu lors du déclenchement du point d’arrêt.  
+ L'exemple de code suivant montre la suspension et la reprise de l'exécution d'une tâche. Remarquez que la méthode **Execute** a changé par rapport à l’exemple de code précédent et que le thread d’exécution est mis en pause lors du déclenchement du point d’arrêt.  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -350,8 +348,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Débogage de flux de contrôle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Débogage du flux de contrôle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

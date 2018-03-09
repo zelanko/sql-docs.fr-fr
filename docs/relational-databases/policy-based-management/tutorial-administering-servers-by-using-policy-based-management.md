@@ -2,9 +2,12 @@
 title: "Didacticiel : Administration de serveurs à l’aide de la gestion basée sur des stratégies | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a58c12e4a33510f2fc9242f0d762dfb877b84750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Didacticiel : Administration de serveurs à l’aide de la gestion basée sur des stratégies
-Bienvenue au didacticiel Administration de serveurs à l'aide de stratégies de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne connaissant pas la Gestion basée sur des stratégies.  
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Didacticiel : Administration de serveurs à l'aide de la Gestion basée sur des stratégies
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bienvenue au didacticiel Administration de serveurs à l’aide de stratégies de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne connaissant pas la Gestion basée sur des stratégies.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 Ce didacticiel crée une stratégie permettant d'administrer votre serveur et une stratégie qui s'appliquent à une base de données unique. Une stratégie est exécutée sur demande pour tester la conformité. L'autre stratégie applique la conformité future.  
@@ -35,7 +38,7 @@ Ce didacticiel est divisé en deux leçons :
 [Leçon 1 : créer et appliquer une stratégie Désactivé par défaut](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
 Cette leçon crée une stratégie qui spécifie que la Messagerie de base de données n'est pas activée sur le serveur. Ensuite, il vérifie si votre serveur est conforme à la stratégie et configure le serveur en désactivant la Messagerie de base de données.  
   
-[Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Leçon 2 : créer et appliquer une stratégie de normes d’affectation de noms](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
 Cette leçon crée une stratégie qui définit et applique une norme d'affectation de noms pour les tables.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -46,7 +49,7 @@ L'utilisation de ce didacticiel nécessite l'installation de [!INCLUDE[ssManStud
 ## <a name="start-the-tutorial"></a>Démarrer le didacticiel  
 [Leçon 1 : créer et appliquer une stratégie Désactivé par défaut](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

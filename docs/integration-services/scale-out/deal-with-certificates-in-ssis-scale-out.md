@@ -1,7 +1,7 @@
 ---
-title: Les certificats dans Sql Server Integration Services monter en charge | Documents Microsoft
-ms.custom: 
-ms.date: 07/18/2017
+title: "Gérer les certificats dans SQL Server Integration Services Scale Out | Microsoft Docs"
+ms.custom: This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers.
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -12,116 +12,138 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2970b2b2cc7cf30c18a203ebbb92b5418bfc9be5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cda61336badec20e15cf0d0142e592ef63431254
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="deal-with-certificates-in-sql-server-integration-services-scale-out"></a>Les certificats dans SQL Server Integration Services monter en charge
+# <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gérer les certificats dans SQL Server Integration Services Scale Out
 
-Pour sécuriser la communication entre l’échelle des principales et de montée en puissance des processus de travail, deux certificats sont utilisés dans monter en charge, par exemple, certificat de mise à l’échelle des Master et montée en puissance des processus de travail. 
+Pour sécuriser la communication entre Scale Out Master et les Scale Out Workers, SSIS Scale Out utilise deux certificats : un pour le Master et un pour les Workers. 
 
-## <a name="scale-out-master-certificate"></a>Certificat de mise à l’échelle des principale
+## <a name="scale-out-master-certificate"></a>Certificat Scale Out Master
 
-Dans la plupart des cas, certificat de mise à l’échelle des principale est configuré pendant l’installation de la mise à l’échelle des Master.
+Dans la plupart des cas, le certificat Scale Out Master est configuré pendant l’installation de Scale Out Master.
 
-Dans le **Configuration Integration Services échelle Out - nœud maître** page de l’Assistant d’Installation de SQL Server, vous pouvez soit créer un nouveau certificat SSL auto-signé ou utiliser un certificat SSL existant.
+Dans la page **Configuration d’Integration Services Scale Out - Nœud Master** de l’Assistant Installation de SQL Server, vous pouvez créer un certificat SSL auto-signé ou utiliser un certificat SSL existant.
 
-![Configuration de master](media/master-config.PNG)
+![Configuration de Master](media/master-config.PNG)
 
-Si vous n’avez des spécifications spéciales sur les certificats, vous pouvez choisir de créer un nouveau certificat SSL auto-signé. Vous pouvez également spécifier les noms communs du certificat. Assurez-vous que le nom d’hôte du point de terminaison maître utilisée ultérieurement par montée en puissance des processus de travail est inclus dans les noms communs. Par défaut, le nom de l’ordinateur et l’adresse ip du nœud principal sont inclus. 
+**Nouveau certificat**. Si vous n’avez pas d’exigences particulières pour les certificats, vous pouvez choisir de créer un certificat SSL auto-signé. Vous pouvez ensuite spécifier les noms communs dans le certificat. Vérifiez que le nom d’hôte du point de terminaison maître utilisé plus tard par les Scale Out Workers est inclus dans les noms communs. Par défaut, le nom de l’ordinateur et l’adresse IP du nœud Master sont inclus. 
 
-Si vous choisissez d’utiliser un certificat existant, cliquez sur « Parcourir … » pour sélectionner un certificat SSL à partir de **racine** magasin de certificats de l’ordinateur local.
+**Certificat existant**. Si vous choisissez d’utiliser un certificat existant, cliquez sur **Parcourir** pour sélectionner un certificat SSL à partir du magasin de certificats **racine** de l’ordinateur local.
 
-### <a name="change-scale-out-master-certificate"></a>Modifier le certificat de l’échelle des principales
+### <a name="change-the-scale-out-master-certificate"></a>Changer le certificat Scale Out Master
 
-Voulez-vous modifier votre certificat de mise à l’échelle des Master en raison de l’expiration du certificat ou d’autres raisons. Suivez les étapes ci-dessous :
+Vous pouvez changer votre certificat Scale Out Master s’il expire ou pour d’autres raisons. Pour changer le certificat Scale Out Master, effectuez les opérations suivantes :
 
-#### <a name="1-create-a-ssl-certificate"></a>1. Créer un certificat SSL.
-Créer et installer un certificat SSL sur Master nœud avec la commande suivante :
+#### <a name="1-create-an-ssl-certificate"></a>1. Créer un certificat SSL.
+Créez et installez un certificat SSL sur le nœud Master à l’aide de la commande suivante :
+
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
 ```
-Exemple :
+Exemple :
+
 ```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
 ```
 
-#### <a name="2-bind-the-certificate-to-master-port"></a>2. Lier le certificat Master port
-Vérifiez la liaison d’origine avec la commande suivante :
+#### <a name="2-bind-the-certificate-to-the-master-port"></a>2. Lier le certificat au port Master
+Vérifiez la liaison d’origine à l’aide de la commande suivante :
+
 ```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
-Exemple :
+
+Exemple :
+
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
 ```
-Supprimer la liaison d’origine et configurer la nouvelle liaison avec les commandes suivantes :
+
+Supprimez la liaison d’origine et configurez la nouvelle liaison à l’aide des commandes suivantes :
+
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
-Exemple :
+
+Exemple :
+
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
 netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe6ce328f77d53 certstorename=Root appid={a1f96506-93e0-4c91-9171-05a2f6739e13}
 ```
-#### <a name="3-update-scale-out-master-service-configuration-file"></a>3. Mettre à jour le fichier de configuration de service de mise à l’échelle des principale
-Fichier de configuration de service de mise à l’échelle des principale de mise à jour, \<pilote\>: \Program Files\Microsoft Server\140\DTS\Binn\MasterSettings.config SQL, sur contrôleur de nœud. Mise à jour **SSLCertThumbprint** l’empreinte numérique du nouveau certificat SSL.
 
-#### <a name="4-restart-scale-out-master-service"></a>4. Redémarrez le service de mise à l’échelle des principales
+#### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Mettre à jour le fichier de configuration du service Scale Out Master
+Mettez à jour le fichier de configuration du service Scale Out Master, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, sur le nœud Master. Mettez à jour **SSLCertThumbprint** vers l’empreinte du nouveau certificat SSL.
 
-#### <a name="5-reconnect-scale-out-worker-to-scale-out-master"></a>5. Reconnectez la montée en charge de travail pour la montée en puissance parallèle principale
-Pour chaque mise à l’échelle des processus de travail, soit supprimer le processus de travail et ajoutez-le de nouveau avec [échelle Out Manager](integration-services-ssis-scale-out-manager.md) ou suivez les étapes 5.1 à 5.3 :
+#### <a name="4-restart-the-scale-out-master-service"></a>4. Redémarrer le service Scale Out Master
 
-5.1 installer le certificat SSL client dans le magasin racine de l’ordinateur local sur le nœud de travail
+#### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Reconnecter les Scale Out Workers au Scale Out Master
+Pour chaque Scale Out Worker, supprimez le Worker et rajoutez-le avec [Scale Out Manager](integration-services-ssis-scale-out-manager.md) ou effectuez les opérations suivantes :
 
-5.2 mise à jour de l’échelle Out Worker service fichier montée en puissance de mise à jour des Worker service configuration fichier de configuration, \<pilote\>: \Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config, sur le nœud de travail. Mise à jour **MasterHttpsCertThumbprint** l’empreinte numérique du nouveau certificat SSL.
+A.  Installez le certificat SSL client dans le magasin racine de l’ordinateur local sur le nœud Worker.
 
-5.3 redémarrer la mise à l’échelle service de travail
+B.  Mettez à jour le fichier de configuration du service Scale Out Worker.
 
+    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
 
-## <a name="scale-out-worker-certificate"></a>Certificat de la montée en puissance des processus de travail
+c.  Redémarrez le service Scale Out Worker.
 
-Certificat de la montée en puissance des processus de travail est généré automatiquement lors de l’installation de mise à l’échelle des processus de travail. 
+## <a name="scale-out-worker-certificate"></a>Certificat Scale Out Worker
 
-### <a name="change-scale-out-worker-certificate"></a>Modifier le certificat de montée en puissance des processus de travail
+Le certificat Scale Out Worker est généré automatiquement durant l’installation de Scale Out Worker. 
 
-Dans les cas à modifier le certificat de la montée en puissance des processus de travail, suivez les étapes ci-dessous.
+### <a name="change-the-scale-out-worker-certificate"></a>Changer le certificat Scale Out Worker
+
+Si vous souhaitez changer le certificat Scale Out Worker, effectuez les opérations suivantes :
 
 #### <a name="1-create-a-certificate"></a>1. Créer un certificat
-Créer et installer un certificat avec la commande suivante :
+Créez et installez un certificat à l’aide de la commande suivante :
+
 ```dos
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
-Exemple :
+
+Exemple :
+
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
-#### <a name="2-install-the-client-certificate-to-the-root-store-of-local-machine-on-worker-node"></a>2. Installez le certificat de client dans le magasin racine de l’ordinateur local sur le nœud de travail
 
-#### <a name="3-give-service-access-to-the-certificate"></a>3. Donner accès au service pour le certificat
-Supprimez l’ancien certificat et donner accès au service de mise à l’échelle des processus de travail vers le nouveau certificat avec la commande :
+#### <a name="2-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-worker-node"></a>2. Installer le certificat client dans le magasin racine de l’ordinateur local sur le nœud Worker
+
+#### <a name="3-grant-service-access-to-the-certificate"></a>3. Donner au service l’accès au certificat
+Supprimez l’ancien certificat et donnez au service Scale Out Worker l’accès au nouveau certificat à l’aide de la commande suivante :
+
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
-Exemple :
+
+Exemple :
+
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker140
 ```
-#### <a name="4-update-scale-out-worker-configuration-file"></a>4. Mettre à jour le fichier de configuration de montée en puissance des processus de travail
-Fichier de configuration de service de mise à l’échelle des processus de travail de mise à jour, \<pilote\>: \Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config, sur le nœud de travail. Mise à jour **WorkerHttpsCertThumbprint** l’empreinte numérique du nouveau certificat.
 
-#### <a name="5-install-the-client-certificate-to-the-root-store-of-local-machine-on-master-node"></a>5. Installez le certificat de client dans le magasin racine de l’ordinateur local sur Master nœud
+#### <a name="4-update-the-scale-out-worker-service-configuration-file"></a>4. Mettre à jour le fichier de configuration du service Scale Out Worker
+Mettez à jour le fichier de configuration du service Scale Out Worker, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, sur le nœud Worker. Mettez à jour **WorkerHttpsCertThumbprint** vers l’empreinte du nouveau certificat.
 
-#### <a name="6-restart-scale-out-worker-service"></a>6. Redémarrez le service de mise à l’échelle des processus de travail
+#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-worker-node"></a>5. Installer le certificat client dans le magasin racine de l’ordinateur local sur le nœud Worker
 
+#### <a name="6-restart-the-scale-out-worker-service"></a>6. Redémarrer le service Scale Out Worker
+
+## <a name="next-steps"></a>Étapes suivantes
+Pour plus d’informations, consultez les articles suivants :
+-   [SSIS (SQL Server Integration Services) Scale Out Master](integration-services-ssis-scale-out-master.md)
+-   [SSIS (SQL Server Integration Services) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

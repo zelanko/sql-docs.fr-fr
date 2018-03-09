@@ -2,15 +2,13 @@
 title: Ensemble de lignes DISCOVER_COMMAND_OBJECTS | Documents Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,21 +19,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 130ebbaa5453b61e0c473edea40c97eb0b65b0f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f97592e50485bdd26c55eb62fb9b4649acb545b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercommandobjects-rowset"></a>Ensemble de lignes DISCOVER_COMMAND_OBJECTS
-  Fournit des informations sur l'activité et l'utilisation des ressources des objets actuellement utilisés par la commande référencée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations d’activité et de l’utilisation des ressources sur les objets en cours d’utilisation par la commande référencée.  
   
  **S'applique à :** modèles tabulaires, modèles multidimensionnels  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_COMMAND_OBJECTS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Restriction| Description|  
+|Nom de colonne|Indicateur de type|Restriction|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**SESSION_SPID**|**DBTYPE_I4**|Oui|ID de session.|  
 |**SESSION_ID**|**DBTYPE_WSTR**|Oui|Identificateur unique de session, tel qu'un GUID.|  

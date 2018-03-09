@@ -1,5 +1,5 @@
 ---
-title: "Démarrez SQL Server, Assistant Importation et exportation | Documents Microsoft"
+title: "Démarrer l’Assistant Importation et Exportation SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
@@ -18,26 +18,25 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 130
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4fd91a36594a8d0d50e3f4eb8490497d6fe0e172
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Démarrer l’Assistant Importation et Exportation SQL Server
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [exécuter le SQL Server Assistant Importation et exportation](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > Pour accéder au contenu associé aux versions précédentes de SQL Server, consultez [Exécuter l’Assistant Importation et Exportation SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
-Démarrer le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation de l’une des méthodes décrites dans cette rubrique pour importer les données et exporter des données vers n’importe quelle source de données pris en charge.
+Démarrez l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’une des méthodes décrites dans cette rubrique pour exporter et importer des données de n’importe quelle source de données prise en charge.
 
 > [!IMPORTANT]
-> Cette rubrique explique seulement comment **démarrer** l’Assistant. Si vous avez besoin d’un autre élément, consultez [les tâches et contenu](#related).
+> Cette rubrique explique seulement comment **démarrer** l’Assistant. Si ce n’est pas ce que vous recherchez, consultez [Tâches et contenus connexes](#related).
 
 Vous pouvez démarrer l’Assistant :
 -   À partir du [menu Démarrer](#startStart).
@@ -45,15 +44,15 @@ Vous pouvez démarrer l’Assistant :
 -   À partir de [SQL Server Management Studio (SSMS)](#startSSMS).
 -   À partir de [Visual Studio avec SQL Server Data Tools (SSDT)](#startVS).
 
-## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Condition préalable - correspond à l’Assistant installé sur votre ordinateur ?
+## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prérequis - l’Assistant est-il installé sur votre ordinateur ?
 Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 > [!NOTE]
-> Pour utiliser la version 64 bits du SQL Server Assistant Importation et exportation, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits et installent uniquement les fichiers de 32 bits, y compris la version 32 bits de l’Assistant.
+> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
 
 ## <a name="startStart"></a> menu Démarrer  
-### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>Démarrer le SQL Server Assistant Importation et exportation à partir du menu Démarrer
-1.  Sur le **Démarrer** menu, recherchez et développez **Microsoft SQL Server 2016**.
+### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>Démarrage de l’Assistant Importation et Exportation SQL Server à partir du menu Démarrer
+1.  Dans le menu **Démarrer**, recherchez et développez **Microsoft SQL Server 2016**.
 3.  Cliquez sur l’une des options suivantes :
   
     -   **Importer-exporter des données SQL Server 2016 (64 bits)**
@@ -65,7 +64,7 @@ Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includ
     ![Démarrer l’Assistant (Démarrer)](../../integration-services/import-export-data/media/start-wizard-start.jpg)
   
 ## <a name="startCmd"></a> Command prompt
-### <a name="start-the-sql-server-import-and-export-wizard-from-the-command-prompt"></a>Démarrer le SQL Server Assistant Importation et exportation à partir de l’invite de commandes  
+### <a name="start-the-sql-server-import-and-export-wizard-from-the-command-prompt"></a>Démarrage de l’Assistant Importation et Exportation SQL Server à partir de l’invite de commandes  
 Dans une fenêtre d’invite de commandes, exécutez **DTSWizard.exe** à partir d’un des emplacements suivants :  
   
 -   **C:\Program Files\Microsoft SQL Server\130\DTS\Binn** pour la version 64 bits.  
@@ -77,7 +76,7 @@ Exécutez la version 64 bits de l’Assistant, sauf si vous savez que votre sour
 ![Démarrer l’Assistant (cmd)](../../integration-services/import-export-data/media/start-wizard-cmd.jpg)  
   
 ## <a name="startSSMS"></a> SQL Server Management Studio (SSMS)
-### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>Démarrer le SQL Server Assistant Importation et exportation à partir de SQL Server Management Studio (SSMS)    
+### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>Démarrage de l’Assistant Importation et Exportation SQL Server à partir de SQL Server Management Studio (SSMS)    
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
     
 2.  Développez **Bases de données**.
@@ -93,8 +92,8 @@ Exécutez la version 64 bits de l’Assistant, sauf si vous savez que votre sour
 
 Si vous n’avez pas installé SQL Server, ou que vous avez installé SQL Server mais pas SQL Server Management Studio, consultez [Télécharger SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
-## <a name="startVS"></a>Visual Studio
-### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>Démarrer le SQL Server Assistant Importation et exportation à partir de Visual Studio avec SQL Server Data Tools (SSDT) 
+## <a name="startVS"></a> Visual Studio
+### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>Démarrage de l’Assistant Importation et Exportation SQL Server à partir de Visual Studio avec SQL Server Data Tools (SSDT) 
  Dans Visual Studio avec [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], après avoir ouvert un projet Integration Services, effectuez l’une des opérations suivantes. 
   
 -   Dans le menu **Projet** , cliquez sur **Assistant d’importation et d’exportation SSIS**. 
@@ -109,31 +108,30 @@ Si vous n’avez pas installé SQL Server, ou que vous avez installé SQL Server
 
 Si vous n’avez pas installé Visual Studio, ou que vous avez installé Visual Studio mais pas SQL Server Data Tools, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
-## <a name="get-the-wizard"></a>Obtenir de l’Assistant
+## <a name="get-the-wizard"></a>Se procurer l’Assistant
 Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="get-help-while-the-wizard-is-running"></a>Obtenir de l’aide pendant l’exécution de l’Assistant
 > [!TIP]
 > Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.   
 
- ## <a name="whats-next"></a>Étape suivante  
+ ## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Quand vous démarrez l’Assistant, la première page est **Assistant Importation et Exportation SQL Server**. Vous n’avez aucune action à effectuer dans cette page. Pour plus d’informations, consultez [Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-## <a name="related"></a>Contenu et des tâches connexes  
- Voici quelques autres tâches de base.
--   **Voir un exemple rapide du fonctionne de l’Assistant.**
+## <a name="related"></a> Tâches et contenus connexes  
+ Voici d’autres tâches élémentaires.
+-   **Consulter un exemple rapide sur le fonctionnement de l’Assistant.**
 
-    -   **Si vous préférez afficher les captures d’écran.** Examinez cet exemple de bout en bout simple sur une seule page - [prise en main avec cet exemple simple de l’Assistant Importation et exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+    -   **Si vous préférez afficher des captures d’écran.** Jetez un œil à cet exemple simple et complet qui tient sur une seule page : [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Si vous préférez regarder une vidéo.** Regardez cette vidéo de quatre minutes à partir de YouTube qui montre l’Assistant et explique clairement et simplement comment exporter des données vers Excel - [à l’aide du SQL Server Assistant Importation et exportation pour l’exportation vers Excel](https://go.microsoft.com/fwlink/?linkid=829049).
+    -   **Si vous préférez regarder une vidéo.** Regardez cette vidéo de quatre minutes sur YouTube qui décrit l’Assistant et explique à l’aide d’instructions claires et simples comment exporter des données vers Excel : [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 
--   **En savoir plus sur le fonctionne de l’Assistant.**
+-   **Approfondir ses connaissances sur le fonctionnement de l’Assistant.**
 
-    -   **En savoir plus sur l’Assistant.** Si vous recherchez une vue d’ensemble de l’Assistant, consultez [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+    -   **Découvrez-en plus sur l’Assistant.** Si vous recherchez une vue d’ensemble de l’Assistant, consultez [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-    -   **En savoir plus sur les étapes de l’Assistant.** Si vous recherchez des informations sur les étapes de l’Assistant, consultez [les étapes dans le SQL Server Assistant Importation et exportation](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Il existe également une page distincte de la documentation pour chaque page de l’Assistant.
+    -   **Découvrez-en plus sur les étapes de l’Assistant.** Si vous avez besoin d’informations sur les étapes de l’Assistant, consultez [Étapes de l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Il existe aussi une page de documentation propre à chaque page de l’Assistant.
 
-    -   **Découvrez comment se connecter à des destinations et des sources de données.** Si vous recherchez des informations sur la façon de se connecter à vos données, sélectionnez la page à partir de la liste ici - [se connecter aux sources de données avec le SQL Server Assistant Importation et exportation](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Il existe une page distincte de la documentation pour chacun de plusieurs sources de données couramment utilisées.
-
+    -   **Découvrez comment se connecter à des sources et des destinations de données.** Si vous avez besoin d’informations sur la façon de vous connecter à vos données, sélectionnez la page qui vous intéresse à partir de la liste ici : [Se connecter à des sources de données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Il existe une page de documentation propre à chacune des différentes sources de données couramment utilisées.
 
 

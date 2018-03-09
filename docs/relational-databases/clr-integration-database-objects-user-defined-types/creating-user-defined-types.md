@@ -8,27 +8,29 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f669f8a9b9e031d21bd95958b12ad4f111b72b89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9b8c9781e445e55b1b59d60db5d8e054da0d060
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types"></a>Création de Types définis par l’utilisateur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Pour créer un type défini par l’utilisateur (UDT) peut être installée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez d’abord créer une classe dans un des langages de programmation, tels que Visual c# ou Visual Basic, qui est conforme aux spécifications pour la création d’UDT pris en charge .NET Framework. La classe peut ensuite être compilée en tant que bibliothèque de liens dynamiques (DLL), qui peut être chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également créer et déployer des types définis par l'utilisateur à l'aide de Visual Studio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour créer un type défini par l'utilisateur capable d'être installé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer tout d'abord une classe dans l'un des langages de programmation .NET Framework pris en charge, tels que Visual C# ou Visual Basic, conforme aux spécifications de création de types définis par l'utilisateur. La classe peut ensuite être compilée en tant que bibliothèque de liens dynamiques (DLL), qui peut être chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également créer et déployer des types définis par l'utilisateur à l'aide de Visual Studio.  
   
  La fonctionnalité d'exécution du code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le CLR peut être activé à l’aide de la **sp_configure** système de procédure stockée, comme indiqué dans l’exemple suivant [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions :  
   

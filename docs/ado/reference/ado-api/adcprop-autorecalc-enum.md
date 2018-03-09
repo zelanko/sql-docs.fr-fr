@@ -3,8 +3,9 @@ title: ADCPROP_AUTORECALC_ENUM | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADCPROP_AUTORECALC_ENUM
-helpviewer_keywords: ADCPROP_AUTORECALC_ENUM [ADO]
+f1_keywords:
+- ADCPROP_AUTORECALC_ENUM
+helpviewer_keywords:
+- ADCPROP_AUTORECALC_ENUM [ADO]
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2388e467e4224480fef339b7b3e407458964a692
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: febcd58f0ae5fb96f40708712520ea8d0bcd7d0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 Spécifie à quel moment le [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) fournisseur recalcule les colonnes regroupées et calculées dans un objet Recordset hiérarchique.  

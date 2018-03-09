@@ -1,37 +1,43 @@
 ---
 title: "Nouveautés de SQL Server 2016"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "nouveautés dans SQL Server"
+keywords:
+- "nouveautés dans SQL Server"
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: "224"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
  Avec SQL Server 2016, vous pouvez créer des applications stratégiques intelligentes à l’aide d’une plateforme de base de données hybride évolutive où tout est intégré, depuis les performances en mémoire et la sécurité avancée jusqu’à l’analytique en base de données. La version SQL Server 2016 ajoute de nouveaux composants de sécurité, des fonctionnalités d’interrogation, l’intégration de Hadoop et du cloud, l’analytique R et plus encore, ainsi que de nombreuses améliorations et de nombreux perfectionnements. 
 
 Cette page offre une synthèse ainsi que des liens vers des informations plus détaillées sur les nouveautés de SQL Server 2016 pour chaque composant SQL Server. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **Essayez SQL Server aujourd’hui !** 
 - Téléchargez **gratuitement** [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).

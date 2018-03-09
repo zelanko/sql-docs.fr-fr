@@ -2,9 +2,12 @@
 title: "Améliorer les performances de la réplication transactionnelle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bbb3a620616514a91b96d96178dc969b2431ea9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
-  Après avoir tenu compte des conseils de performances générales décrites dans [Amélioration des performances générales de la réplication](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), envisagez ces domaines supplémentaires spécifiques à la réplication transactionnelle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Après avoir tenu compte des conseils de performances générales décrites dans [Amélioration des performances générales de la réplication](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), envisagez ces autres aspects spécifiques à la réplication transactionnelle.  
   
 ## <a name="database-design"></a>Création de bases de données  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Configurez le serveur de distribution sur un serveur dédié.  
   
-     Vous pouvez réduire la charge de traitement sur le serveur de publication en configurant un serveur de distribution distant. Pour plus d’informations, consultez [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md).  
+     Vous pouvez réduire la charge de traitement sur le serveur de publication en configurant un serveur de distribution distant. Pour plus d'informations, voir [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
   
 -   Dimensionnez correctement la base de données de distribution.  
   
@@ -103,6 +106,6 @@ ms.lasthandoff: 11/09/2017
   
 -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Concepts des exécutables de l’agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

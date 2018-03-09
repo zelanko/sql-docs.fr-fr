@@ -5,23 +5,24 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f37057354b9b4565b4c455f14b46abb846c23a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a32a4640de0d668ad12c5ac2ba403076037a45d7
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Assistant Mise à niveau de base de données (Gestionnaire de configuration Master Data Services)
   Utilisez **l’Assistant mise à niveau de base de données** pour mettre à niveau une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="progress-and-finish"></a>État d'avancement et fin  
  Affiche l'état d'avancement du processus de mise à niveau. Une fois la base de données mise à niveau, cliquez sur le lien vers le fichier journal pour afficher des informations détaillées sur la mise à niveau ou cliquez sur **Terminer** pour fermer l’Assistant Base de données et revenir à la page **Bases de données** . La base de données mise à niveau est sélectionnée et vous pouvez afficher et modifier ses paramètres système.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Installation et configuration de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Mettre à niveau Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c8de922f602a743fb0c2cdf6a247355f3794ef01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
@@ -47,7 +47,7 @@ Créez un rapport de matrice, une source de données et un dataset.
   
 ### <a name="to-create-a-new-matrix-report"></a>Pour créer un rapport de matrice  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -505,10 +505,10 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 Le rapport est enregistré sur le serveur de rapports. Le serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Ceci conclut la procédure pas à pas décrivant comment ajouter un paramètre à votre rapport. Pour en savoir plus sur les paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 * [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)
 * [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Fonction Lookup](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

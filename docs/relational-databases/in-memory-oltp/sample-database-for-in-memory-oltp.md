@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Utilisation de la mémoire et de l’espace disque dans l’exemple](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Configuration requise  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
 -   *Colonnes calculées[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
 
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.
 
   
@@ -219,13 +220,13 @@ ms.lasthandoff: 11/17/2017
   
  Sales.SpecialOfferProduct_inmem n'est pas référencé dans la charge de travail de démonstration, et il n'est donc pas nécessaire d'utiliser les index de hachage de cette table pour optimiser la charge de travail ; les index sur (SpecialOfferID, ProductID) et (ProductID) sont non cluster.  
   
- Notez que ci-dessus, certains bucket_counts sont surdimensionnés, mais pas les bucket_counts des index sur SalesOrderHeader_inmem et SalesOrderDetail_inmem qui sont dimensionnés uniquement à 10 millions de commandes. Cela a pour but de permettre l'installation de l'exemple sur des systèmes avec une faible disponibilité de mémoire ; cependant dans ces cas, la charge de travail de démonstration échoue pour conditions de mémoire insuffisante. Si vous voulez dimensionner au-delà de 10 millions de commandes, augmentez le nombre de compartiments en conséquence.  
+ Notez que ci-dessus, certains bucket_counts sont surdimensionnés, mais pas les bucket_counts des index sur SalesOrderHeader_inmem et SalesOrderDetail_inmem qui sont dimensionnés uniquement à 10 millions de commandes. Cela a pour but de permettre l'installation de l'exemple sur des systèmes avec une faible disponibilité de mémoire ; cependant dans ces cas, la charge de travail de démonstration échoue pour conditions de mémoire insuffisante. Si vous voulez dimensionner au-delà de 10 millions de commandes, augmentez le nombre de compartiments en conséquence.  
   
 #### <a name="considerations-for-memory-utilization"></a>Observations sur l'utilisation de la mémoire  
  L'utilisation de la mémoire dans la base de données d'exemple, avant et après l'exécution de la charge de travail de démonstration, est décrite dans la section [Utilisation de la mémoire pour les tables optimisées en mémoire](#Memoryutilizationforthememory-optimizedtables).  
   
 ### <a name="stored-procedures-added-by-the-sample"></a>Procédures stockées ajoutées par l'exemple  
- Les deux procédures stockées clés d'insertion des commandes et de mise à jour des informations d'expédition sont les suivantes :  
+ Les deux procédures stockées clés d'insertion des commandes et de mise à jour des informations d'expédition sont les suivantes :  
   
 -   Sales.usp_InsertSalesOrder_inmem  
   
@@ -322,11 +323,11 @@ ms.lasthandoff: 11/17/2017
 2.  Si une boîte de dialogue indique que certains fichiers sont en cours d'utilisation, cliquez sur « Continuer ».  
   
 ### <a name="running-ostress"></a>Exécution d'Ostress  
- Ostress s'exécute à partir de l'invite de ligne de commande. Il est plus pratique d'exécuter l'outil à partir de l'« invite de commandes RML », qui est installé avec les Utilitaires RML.  
+ Ostress s'exécute à partir de l'invite de ligne de commande. Il est plus pratique d'exécuter l'outil à partir de l'« invite de commandes RML », qui est installé avec les Utilitaires RML.  
   
- Pour ouvrir l'invite de commandes RML exécutez l'instruction suivante :  
+ Pour ouvrir l'invite de commandes RML exécutez l'instruction suivante :  
   
- Dans Windows Server 2012 R2 et dans Windows 8 et 8.1, ouvrez le menu de démarrage en cliquant sur la touche Windows, et tapez « rml ». Cliquez sur l'« invite de commandes RML », qui apparaît dans la liste de résultats de la recherche.  
+ Dans Windows Server 2012 R2 et dans Windows 8 et 8.1, ouvrez le menu de démarrage en cliquant sur la touche Windows, et tapez « rml ». Cliquez sur l'« invite de commandes RML », qui apparaît dans la liste de résultats de la recherche.  
   
  Vérifiez que l'invite de commandes se trouve dans le dossier d'installation des utilitaires RML.  
   
@@ -384,7 +385,7 @@ END
  Nous utiliserons l'outil Ostress pour exécuter des scripts utilisant plusieurs connexions simultanées. Nous utiliserons le paramètre « - n » pour contrôler le nombre de connexions, et le paramètre « r » pour contrôler le nombre de fois où le script est exécuté sur chaque connexion.  
   
 #### <a name="running-the-workload"></a>Exécution de la charge de travail  
- Pour tester à l'échelle, nous insérons 10 millions de commandes, à l'aide de 100 connexions. Ce test peut être exécuté aisément sur un serveur de taille moyenne (par exemple, 8 noyaux physiques, et 16 noyaux logiques), et un stockage SSD de base pour le journal. Si le test ne fonctionne pas correctement sur votre matériel, consultez la section [Dépannage des tests lents](#Troubleshootingslow-runningtests). Si vous voulez réduire le niveau d’extraction pour le test, réduisez le nombre de connexions en modifiant le paramètre « -n ». Par exemple, pour réduire le nombre de connexions à 40, remplacez le paramètre « -n100 » par « -n40 ».  
+ Pour tester à l'échelle, nous insérons 10 millions de commandes, à l'aide de 100 connexions. Ce test peut être exécuté aisément sur un serveur de taille moyenne (par exemple, 8 noyaux physiques, et 16 noyaux logiques), et un stockage SSD de base pour le journal. Si le test ne fonctionne pas correctement sur votre matériel, consultez la section [Dépannage des tests lents](#Troubleshootingslow-runningtests). Si vous voulez réduire le niveau d’extraction pour le test, réduisez le nombre de connexions en modifiant le paramètre « -n ». Par exemple, pour réduire le nombre de connexions à 40, remplacez le paramètre « -n100 » par « -n40 ».  
   
  Comme mesure de performances pour la charge de travail, nous utilisons le temps écoulé tel qu'indiqué par ostress.exe après avoir exécuté la charge de travail.  
   
@@ -420,7 +421,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  La raison principale de la différence de performances entre les tables optimisées en mémoire et les tables sur disque pendant ce test, est que quand vous utilisez des tables sur disque, SQL Server n’utilise pas entièrement l’UC. Cela est dû à une contention de verrou : les transactions simultanées tentent d'écrire dans la même page de données ; les verrous sont utilisés pour garantir qu'une seule transaction à la fois écrit sur une page. Le moteur d’OLTP en mémoire n’a pas de verrous, et les lignes de données ne sont pas organisées en pages. Ainsi, les transactions simultanées ne bloquent pas les insertions réciproques, ce qui permet à SQL Server d’utiliser pleinement l’UC.  
   
- Observez l'utilisation de l'UC pendant que la charge de travail est exécutée, par exemple via le Gestionnaire des tâches. Vous verrez qu'avec les tables sur disque, l'utilisation de l'UC est loin d'être de 100 %. Dans une configuration de test avec 16 processeurs logiques, l'utilisation serait d'environ 24 %.  
+ Observez l'utilisation de l'UC pendant que la charge de travail est exécutée, par exemple via le Gestionnaire des tâches. Vous verrez qu'avec les tables sur disque, l'utilisation de l'UC est loin d'être de 100 %. Dans une configuration de test avec 16 processeurs logiques, l'utilisation serait d'environ 24 %.  
   
  Éventuellement, vous pouvez afficher le nombre d'attentes de verrous par seconde à l'aide de l'analyseur de performances, avec le compteur de performance « \SQL Server:Latches\Latch Waits/sec ».  
   
@@ -570,7 +571,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  C'est le comportement attendu : la mémoire est récupérée lorsque la charge de travail transactionnelle s'exécute.  
   
- Si vous démarrez une deuxième exécution de la charge de travail de démonstration, vous verrez que l'utilisation de la mémoire diminue au début, au fur et à mesure que les lignes précédemment supprimées sont nettoyées. À un certain moment, la taille de la mémoire augmentera de nouveau, jusqu'à ce que la charge de travail soit terminée. Une fois que les 10 millions de lignes ont été insérées après la réinitialisation de la démonstration, l'utilisation de la mémoire sera très similaire à l'utilisation après la première exécution. Par exemple :  
+ Si vous démarrez une deuxième exécution de la charge de travail de démonstration, vous verrez que l'utilisation de la mémoire diminue au début, au fur et à mesure que les lignes précédemment supprimées sont nettoyées. À un certain moment, la taille de la mémoire augmentera de nouveau, jusqu'à ce que la charge de travail soit terminée. Une fois que les 10 millions de lignes ont été insérées après la réinitialisation de la démonstration, l'utilisation de la mémoire sera très similaire à l'utilisation après la première exécution. Exemple :  
   
 ```  
 SELECT type  
@@ -641,8 +642,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA| 1|128|  
+|UNDER CONSTRUCTION|DELTA| 1|8|  
   
  Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. SQL Server créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
   
@@ -687,8 +688,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA| 1|128|  
+|UNDER CONSTRUCTION|DELTA| 1|8|  
   
  Nous avons toujours 16 paires de fichiers précréés, prêtes au fur et à mesure que les points de contrôle se ferment.  
   
@@ -744,7 +745,7 @@ ORDER BY state, file_type
   
  Après une deuxième exécution de la charge de travail de démonstration, et l'insertion de 10 millions de commandes client après la réinitialisation de la démonstration, vous constaterez que les fichiers construits lors de la première exécution de la charge de travail ont été nettoyés. Si vous exécutez la requête ci-dessus plusieurs fois pendant que la charge de travail s'exécute, vous verrez les fichiers de point de contrôle passer à travers les différentes étapes.  
   
- Après la deuxième exécution de la charge de travail et l'insertion de 10 millions de commandes, vous verrez que l'utilisation du disque est très similaire, mais pas nécessairement identique, à celle constatée après la première exécution, car le système est dynamique par nature. Par exemple :  
+ Après la deuxième exécution de la charge de travail et l'insertion de 10 millions de commandes, vous verrez que l'utilisation du disque est très similaire, mais pas nécessairement identique, à celle constatée après la première exécution, car le système est dynamique par nature. Exemple :  
   
 ```  
 SELECT state_desc  
@@ -773,7 +774,7 @@ ORDER BY state, file_type
   
  Dans ce cas, il existe deux paires de fichiers de point de contrôle avec l'état « under construction », signifiant que plusieurs paires de fichiers ont été déplacées à l'état « under construction », probablement en raison d'un haut niveau de concurrence dans la charge de travail. Plusieurs threads simultanés ont nécessité une nouvelle paire de fichiers en même temps, par conséquent une paire est passée de l'état « precreated » à l'état « under construction ».  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

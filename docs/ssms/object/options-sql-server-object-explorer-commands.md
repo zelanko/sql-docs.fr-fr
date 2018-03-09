@@ -3,8 +3,11 @@ title: "Options (Explorateur d’objets SQL Server - Commandes) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e32d7fe35d1a6322e902e07c866d952cdccb1411
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ce2864c359c33efe354de4f85fd347f51047874
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Options (Explorateur d’objets SQL Server - Commandes)
-Lorsque vous cliquez avec le bouton droit sur une table ou une vue dans l'Explorateur d'objets, les deux options suivantes relatives à l'affichage des lignes dans la table s'affichent :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous cliquez avec le bouton droit sur une table ou une vue dans l’Explorateur d’objets, les deux options suivantes relatives à l’affichage des lignes dans la table s’affichent :  
   
 -   **Sélectionner les 1000 lignes du haut**  
   
@@ -44,6 +47,6 @@ Spécifie le nombre de lignes à retourner lorsque vous modifiez des lignes dans
 **Valeur de la commande Sélectionner les <n> premières lignes**  
 Spécifie le nombre de lignes à retourner qui est spécifié dans le script de l'éditeur de requête créé. La valeur par défaut est 1000 lignes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [SQL Server Audit (moteur de base de données)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

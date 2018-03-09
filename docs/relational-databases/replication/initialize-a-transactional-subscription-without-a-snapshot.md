@@ -2,9 +2,12 @@
 title: "Initialiser un abonnement transactionnel sans instantané | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 471ff7f62145dd3e6593ab449545f5ddb49612eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
-  Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l'Agent d'instantané et appliqué par l'Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l’Agent d’instantané et appliqué par l’Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  
   
 -   Spécifier une sauvegarde. Restaurez la sauvegarde sur l'Abonné, l'Agent de distribution copie ensuite toutes les métadonnées de réplication et procédures système requises. L'initialisation avec une sauvegarde est le moyen le plus rapide pour remettre les données sur l'Abonné, c'est également un moyen pratique, car vous pouvez utiliser n'importe quelle sauvegarde récente si celle-ci a été effectuée après que la publication ait été activée pour l'initialisation avec une sauvegarde.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour initialiser un abonnement avec une méthode de remplacement, consultez [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

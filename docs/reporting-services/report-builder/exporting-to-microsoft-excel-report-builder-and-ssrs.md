@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
   L’extension de rendu Excel de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restitue un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au format [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Avec l'extension de rendu Excel, la largeur des colonnes dans Excel correspond plus précisément à la largeur des colonnes dans les rapports.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
  Pour plus d’informations sur l’exportation vers Excel, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
->  Lorsque vous définissez un paramètre de type **String**, la zone de texte qui apparaît vous permet d'entrer n'importe quelle valeur. Si un paramètre de rapport n'est pas directement lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, un utilisateur de rapport peut taper une syntaxe d'expression, un script ou une URL dans la valeur de paramètre et effectuer le rendu du rapport dans Excel. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
+>  Quand vous définissez un paramètre de type **Chaîne**, la zone de texte qui apparaît vous permet d’entrer n’importe quelle valeur. Si un paramètre de rapport n'est pas directement lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, un utilisateur de rapport peut taper une syntaxe d'expression, un script ou une URL dans la valeur de paramètre et effectuer le rendu du rapport dans Excel. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
 >   
 >  Pour réduire le risque d'exécution accidentelle de scripts malveillants, ouvrez les rapports rendus uniquement à partir de sources approuvées. Pour plus d’informations sur la sécurisation des rapports, consultez [Sécurisation des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
   
@@ -180,8 +178,8 @@ ms.lasthandoff: 12/05/2017
 |--------------|----------------|-------------------|  
 |Nombre maximal de colonnes par feuille de travail|256|16,384|  
 |Nombre maximal de lignes par feuille de travail|65,536|1,048,576|  
-|Nombre de couleurs autorisé dans une feuille de travail|56 (palette)<br /><br /> Si plus de 56 couleurs sont utilisées dans le rapport, l'extension de rendu fait correspondre la couleur requise à l'une des 56 couleurs déjà disponibles dans la palette personnalisée.|Approximativement 16 millions (couleurs 24 bits)|  
-|Fichiers compressés ZIP|Aucun|Compression ZIP|  
+|Nombre de couleurs autorisé dans une feuille de travail|56 (palette)<br /><br /> Si plus de 56 couleurs sont utilisées dans le rapport, l'extension de rendu fait correspondre la couleur requise à l'une des 56 couleurs déjà disponibles dans la palette personnalisée.|Approximativement 16 millions (couleurs 24 bits)|  
+|Fichiers compressés ZIP|None|Compression ZIP|  
 |Famille de polices par défaut|Arial|Calibri|  
 |Taille de police par défaut|10pt|11pt|  
 |Hauteur de ligne par défaut|12,75 pt|15 pt|  
@@ -217,7 +215,7 @@ ms.lasthandoff: 12/05/2017
 |Propriétés des éléments de rapport|Description|  
 |-------------------------------|-----------------|  
 |Créé le|Date et heure d'exécution du rapport sous la forme d'une valeur de date/d'heure ISO.|  
-|Auteur|Report.Author|  
+|Author|Report.Author|  
 |Description|Report.Description|  
 |LastSaved|Date et heure d'exécution du rapport sous la forme d'une valeur de date/d'heure ISO.|  
   
@@ -241,7 +239,7 @@ ms.lasthandoff: 12/05/2017
  Certains éléments interactifs sont pris en charge dans Excel. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
 ### <a name="show-and-hide"></a>Afficher et masquer  
- [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Les groupes, lignes et colonnes qui contiennent des éléments de rapport qui peuvent être affichés/masqués sont rendus sous forme de plans Excel. Excel crée des plans qui affichent ou masquent des lignes et des colonnes entières, ce qui peut provoquer le masquage d'éléments de rapport qui ne doivent pas l'être. De plus, les symboles de plan Excel peuvent encombrer des plans qui se chevauchent. Pour résoudre ces problèmes, les règles suivantes relatives au plan sont appliquées lors de l'utilisation de l'extension de rendu Excel :  
+ [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Les groupes, lignes et colonnes qui contiennent des éléments de rapport qui peuvent être affichés/masqués sont rendus sous forme de plans Excel. Excel crée des plans qui affichent ou masquent des lignes et des colonnes entières, ce qui peut provoquer le masquage d'éléments de rapport qui ne doivent pas l'être. De plus, les symboles de plan Excel peuvent encombrer des plans qui se chevauchent. Pour résoudre ces problèmes, les règles suivantes relatives au plan sont appliquées lors de l'utilisation de l'extension de rendu Excel :  
   
 -   L'élément de rapport dans l'angle supérieur gauche qui peut être affiché/masqué peut continuer à être affiché/masqué dans Excel. Les éléments de rapport qui peuvent être affichés/masqués et qui partagent un espace vertical ou horizontal avec l'élément de rapport qui peut être affiché/masqué dans l'angle supérieur gauche ne peuvent pas être affichés/masqués dans Excel.  
   
@@ -275,7 +273,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="ConditionalFormat"></a> Modification des rapports au moment de l'exécution  
  Si un rapport doit être restitué dans plusieurs formats et qu'il n'est pas possible de créer une mise en page de rapport qui restitue le rapport comme vous le souhaitez dans tous les formats requis, envisagez peut-être d'utiliser la valeur de la fonction globale intégrée RenderFormat pour modifier l'apparence du rapport de manière conditionnelle au moment de l'exécution. De cette façon, vous pouvez masquer ou afficher des éléments de rapport en fonction du convertisseur utilisé afin d'obtenir un résultat optimal dans chaque format. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

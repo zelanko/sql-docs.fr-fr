@@ -1,5 +1,5 @@
 ---
-title: "Référence de l’interface utilisateur de la colonne Types boîte de dialogue suggérer | Documents Microsoft"
+title: "Référence de l’interface utilisateur de la boîte de dialogue Suggérer les types de colonnes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6e015362f115e85bb24a4a4d4603690ea892068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Suggérer les types de colonnes
   Utilisez la boîte de dialogue **Suggérer les types de colonnes** pour identifier le type de données et la longueur des colonnes dans un gestionnaire de connexions de fichiers plats en se basant sur un échantillonnage du contenu du fichier.  
@@ -51,9 +50,8 @@ ms.lasthandoff: 08/03/2017
  **Pourcentage de remplissage**  
  Tapez ou sélectionnez le pourcentage des longueurs de colonnes à ajouter à la longueur des colonnes pour les données de type character. Ce pourcentage doit être un nombre entier.  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
- [Gestionnaire de connexions de fichier plat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Gestionnaire de connexions de fichiers plats](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
-

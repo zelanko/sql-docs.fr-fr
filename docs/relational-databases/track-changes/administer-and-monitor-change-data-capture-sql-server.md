@@ -2,10 +2,14 @@
 title: "Administrer et surveiller la capture de données modifiées (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
-  Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
   
 ##  <a name="Capture"></a> Travail de capture  
  Le travail de capture est démarré par l’exécution de la procédure stockée sans paramètre **sp_MScdc_capture_job**. Cette procédure stockée commence par extraire les valeurs configurées pour *maxtrans*, *maxscans*, *continuous*, et *pollinginterval* pour le travail de capture de msdb.dbo.cdc_jobs. Ces valeurs configurées sont ensuite transférées comme paramètres à la procédure stockée **sp_cdc_scan**. Cela permet d’appeler **sp_replcmds** pour effectuer l’analyse du journal.  
@@ -89,13 +94,13 @@ ms.lasthandoff: 11/09/2017
  `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
   
 ### <a name="determine-latency"></a>Déterminer la latence  
- La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
+ La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
   
  `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
   
  Vous pouvez utiliser des données de latence pour déterminer si le processus de capture traite les transactions rapidement ou lentement. Ces données sont très utiles lorsque le processus de capture s'exécute continuellement. Si le processus de capture s'exécute selon une planification, la latence peut être élevée à cause du décalage entre les transactions qui sont validées sur la table source et le processus de capture qui s'exécute à l'heure planifiée.  
   
- Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
+ Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
   
  `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
   
@@ -108,7 +113,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Exécutez le code suivant pour créer un collecteur personnalisé destiné à la capture de données modifiées.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -156,7 +161,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

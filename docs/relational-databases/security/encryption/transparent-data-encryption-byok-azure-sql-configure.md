@@ -2,33 +2,34 @@
 title: "PowerShell : Activer TDE à l’aide de votre propre clé Azure Key Vault | Microsoft Docs"
 description: "Découvrez comment configurer Azure SQL Database et Data Warehouse pour commencer à utiliser Transparent Data Encryption (TDE) pour le chiffrement au repos à l’aide de PowerShell."
 keywords: 
-services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.author: aliceku
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell : Activer Transparent Data Encryption à l’aide de votre propre clé Azure Key Vault
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell : Activer Transparent Data Encryption à l’aide de votre propre clé Azure Key Vault (préversion)
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fonctionnalité Transparent Data Encryption (TDE) pour SQL Database ou Data Warehouse. Pour en savoir plus sur TDE avec prise en charge de Bring Your Own Key (BYOK), consultez [Transparent Data Encryption (TDE) avec prise en charge de Bring Your Own Key pour Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
+Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fonctionnalité Transparent Data Encryption (TDE) (préversion) pour SQL Database ou Data Warehouse. Pour en savoir plus sur TDE avec prise en charge de Bring Your Own Key (BYOK) (préversion), consultez [Transparent Data Encryption (TDE) avec prise en charge de Bring Your Own Key pour Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 - Vous devez avoir un abonnement Azure et être administrateur de cet abonnement.
 - [Recommandé mais facultatif] Vous devez avoir un module de sécurité matériel (HSM) ou un magasin de clés local à utiliser pour la création d’une copie locale des éléments de clé du protecteur TDE.
@@ -66,7 +67,7 @@ Si vous utilisez un nouveau serveur, utilisez l’applet de commande [New-AzureR
 
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Étape 2. Accorder des autorisations Key Vault à votre serveur
 
-Utilisez l’applet de commande [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) pour autoriser votre serveur à accéder à Key Vault et à utiliser une clé de ce conteneur pour TDE.
+Utilisez l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) pour autoriser votre serveur à accéder au coffre de clés et à utiliser une clé de ce coffre pour TDE.
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
@@ -190,6 +191,5 @@ En cas de problème, vérifiez les points suivants :
 
 - Découvrez comment effectuer une rotation du protecteur TDE d’un serveur conformément aux exigences de sécurité : [Effectuer une rotation du protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - En cas de risque pour la sécurité, découvrez comment supprimer un protecteur TDE potentiellement compromis : [Supprimer une clé potentiellement compromise](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
-
 
 

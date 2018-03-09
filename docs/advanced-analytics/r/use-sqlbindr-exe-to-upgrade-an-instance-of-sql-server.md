@@ -2,28 +2,30 @@
 title: "Mettre à niveau les composants de la machine learning dans une instance de SQL Server | Documents Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Mettre à niveau les composants de la machine learning dans une instance de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article explique le processus de _liaison_, que vous pouvez utiliser pour mettre à niveau les composants utilisés dans SQL Server d’apprentissage automatique. Le processus de liaison verrouille le serveur dans une cadence de mise à jour selon les versions du serveur de Machine Learning, au lieu d’utiliser le serveur SQL Server de version et mettre à jour de la planification.
 
@@ -38,7 +40,7 @@ Si à tout moment vous souhaitez arrêter la mise à niveau sur la planification
 
 Le processus de mise à niveau les composants d’apprentissage automatique est appelé **liaison**, car il modifie le modèle de prise en charge pour les composants de formation ordinateur SQL Server à utiliser la nouvelle stratégie de cycle de vie de logiciel moderne. 
 
-En règle générale, le basculement vers le nouveau modèle de licence garantit que les chercheurs de données peuvent utiliser toujours la dernière version de R ou Python. Pour plus d’informations sur les conditions de la stratégie de cycle de vie moderne, consultez [chronologie de prise en charge de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+En règle générale, le basculement vers le nouveau modèle de service garantit que les chercheurs de données peuvent utiliser toujours la dernière version de R ou Python. Pour plus d’informations sur les conditions de la stratégie de cycle de vie moderne, consultez [chronologie de prise en charge de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > La mise à niveau ne modifie pas le modèle de prise en charge pour la base de données SQL Server et ne change pas la version de SQL Server.
@@ -189,7 +191,7 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 
 ### <a name="parameters"></a>Paramètres
 
-|Nom|Description|
+|Nom| Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|

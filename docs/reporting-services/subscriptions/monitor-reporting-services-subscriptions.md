@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +21,13 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 642ad2cf385ce5d880e5f62d58694ce1f79d34fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4ba511d35e7358093839df3daa415d767fd2c550
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="native-mode-log-files"></a>Fichiers journaux en mode natif  
  Si une erreur se produit au cours de la remise, une entrée est inscrite dans le journal de trace du serveur de rapports.  
   
- Les administrateurs de serveur de rapports peuvent passer en revue les fichiers **reportserverservice_\*.log**pour déterminer l’état de remise des abonnements. Pour la remise par messagerie électronique, les fichiers journaux du serveur de rapports contiennent un enregistrement du traitement et des remises effectuées sur les comptes de messagerie spécifiques. Voici l'emplacement par défaut des fichiers journaux :  
+ Les administrateurs de serveur de rapports peuvent passer en revue les fichiers **reportserverservice_\*.log**pour déterminer l’état de remise des abonnements. Pour la remise par messagerie électronique, les fichiers journaux du serveur de rapports contiennent un enregistrement du traitement et des remises effectuées sur les comptes de messagerie spécifiques. Voici l'emplacement par défaut des fichiers journaux :  
   
  `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Traiter|Domaine|Catégorie|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  
  Pour obtenir des exemples de scripts PowerShell permettant de vérifier l'état des abonnements en mode natif ou SharePoint, voir [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
@@ -127,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
  Lorsque certaines conditions entraînent l'inactivité de l'abonnement, celui-ci manifeste son état lorsque le serveur de rapports exécute l'abonnement. Si un abonnement doit remettre un rapport chaque vendredi à 02:00 et que l'extension de remise qu'il utilise a été désinstallée le lundi à 09:00, l'abonnement ne manifestera pas son état d'inactivité avant le vendredi à 02:00.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   

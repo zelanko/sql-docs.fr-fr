@@ -2,15 +2,13 @@
 title: "Modifier les propriétés d’une Structure d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: mining structures [Analysis Services], properties
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bd35f96e4748f2e453930e74621edfbcb3aaee4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f97c94a1c594a341c1e03326c975a080d9033cf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>Modifier les propriétés d'une structure d'exploration de données
-  Il existe deux types de propriétés sur une structure d'exploration de données, qui peuvent être modifiées :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il existe deux types de propriétés sur une structure d’exploration de données, qui peuvent être modifiées :  
   
 -   Propriétés de la structure d'exploration de données qui affectent la structure entière  
   
@@ -48,6 +46,6 @@ ms.lasthandoff: 11/17/2017
      La nouvelle valeur est appliquée lorsque vous sélectionnez un élément différent dans le concepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la structure d'exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tâches et procédures relatives aux structures d’exploration de données](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

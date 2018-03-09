@@ -2,29 +2,34 @@
 title: "Gérer et surveiller la recherche sémantique | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d3fd6231c0067f6536d9ff2c06b4a62a8bd3bd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4a2a8b7d3dff23fe580da64ec083815b897b947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gérer et surveiller la recherche sémantique
-  Décrit le processus d'indexation sémantique et les tâches associées à la gestion et au contrôle des index.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit le processus d'indexation sémantique et les tâches associées à la gestion et au contrôle des index.  
   
 ##  <a name="HowToMonitorStatus"></a> Vérifier l’état de l’indexation sémantique  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>La première phase de l'indexation sémantique est-elle achevée ?
@@ -32,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
  La première phase de l'indexation inclut l'alimentation de l'index de mots clés de recherche en texte intégral et de l'index d'expressions clés sémantiques, ainsi que l'extraction de données de ressemblance de document.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -59,7 +64,7 @@ GO
   
  La taille logique est affichée en nombre de pages d'index.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -70,7 +75,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Quelle est la taille totale des index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
  Interrogez la propriété **IndexSize** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -78,7 +83,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Combien d'éléments sont indexés dans les index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
  Interrogez la propriété **ItemCount** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -106,7 +111,7 @@ GO
   
  Lorsque l'indexation sémantique est désactivée et suspendue, les requêtes sur les données sémantiques continuent de s'exécuter avec succès et retournent des données indexées précédemment. Ce comportement n'est pas cohérent avec le comportement de la recherche en texte intégral.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

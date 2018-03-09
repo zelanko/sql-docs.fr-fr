@@ -2,26 +2,31 @@
 title: "Procédure pas à pas de données de bout en bout science pour R et SQL Server | Documents Microsoft"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Procédure pas à pas de données de bout en bout science pour R et SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans cette procédure pas à pas, vous développez une solution de bout en bout pour la modélisation prédictive basée sur Microsoft R avec SQL Server 2016 ou SQL Server 2017.
 
@@ -55,7 +60,7 @@ Cette procédure pas à pas est destinée aux développeurs R ou SQL. Elle prés
 + Tous les scripts SQL et R sont inclus.
 + Vous devrez peut-être modifier les chaînes dans les scripts à exécuter dans votre environnement. Cela avec n’importe quel éditeur de code, tel que [Visual Studio Code](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Configuration requise
 
 + Vous devez avoir accès à une instance de SQL Server 2016, ou une version d’évaluation de SQL Server 2017.
 + [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] doit être installé sur au moins une instance sur l’ordinateur SQL Server.

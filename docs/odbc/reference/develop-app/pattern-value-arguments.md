@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, accepte les modèles de recherche. Ces arguments accepte les modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils représentent les arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  
@@ -40,7 +40,7 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
   
  Le caractère d’échappement est récupéré avec l’option SQL_SEARCH_PATTERN_ESCAPE dans **SQLGetInfo**. Il doit précéder n’importe quel trait de soulignement, un signe de pourcentage ou un caractère d’échappement dans un argument qui accepte les modèles de recherche pour inclure ce caractère en tant que littéral. Exemples sont présentés dans le tableau suivant.  
   
-|Modèle de recherche| Description|  
+|Modèle de recherche|Description|  
 |--------------------|-----------------|  
 |% DE %A|Tous les identificateurs contenant la lettre A|  
 |ABC_|Tous les identificateurs de quatre caractères commençant par ABC|  

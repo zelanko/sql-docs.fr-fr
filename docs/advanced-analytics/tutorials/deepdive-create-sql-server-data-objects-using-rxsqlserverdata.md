@@ -1,50 +1,58 @@
 ---
-title: "Créer des objets de données SQL Server à l’aide de RxSqlServerData | Microsoft Docs"
+title: "Créer des objets de données SQL Server à l’aide de RxSqlServerData (SQL et R approfondie) | Documents Microsoft"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 7eecfb2ce8a6cfe525b07aa8c6636c7dd77b0d30
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4690f7bd66b17643d7d58b10663debd4becbdac7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-sql-server-data-objects-using-rxsqlserverdata"></a>Créer des objets de données SQL Server à l’aide de RxSqlServerData
+# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>Créer des objets de données SQL Server à l’aide de RxSqlServerData (SQL et R approfondie)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Maintenant que vous avez créé la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous disposez des autorisations nécessaires pour utiliser les données, vous allez créer des objets en code R pour pouvoir utiliser les données sur le serveur et sur votre station de travail.
+Cet article fait partie du didacticiel de présentation approfondie de science des données, sur l’utilisation de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+
+Maintenant que vous avez créé le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données et disposer des autorisations nécessaires pour travailler avec les données. Dans cette étape, vous créez certains objets dans R qui vous permettent de travailler avec les données.
 
 ## <a name="create-the-sql-server-data-objects"></a>Créer les objets de données SQL Server
 
-Dans cette étape, vous allez créer et remplir deux tables. Les deux tables contiennent des données simulées de fraude de carte de crédit. Une table est utilisée pour former les modèles et l’autre pour le calcul de score.
+Dans cette étape, vous utilisez des fonctions à partir de la **RevoScaleR** package pour créer et remplir les deux tables. Une table est utilisée pour former les modèles et l’autre pour le calcul de score. Les deux tables contiennent des données simulées de fraude de carte de crédit.
 
-Pour créer des tables sur l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distant, vous utilisez la fonction **RxSqlServerData** fournie dans le package **RevoScaleR** .
+Pour créer des tables sur l’instance distante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordinateur, appelez le **RxSqlServerData** (fonction).
 
 > [!TIP]
 > Si vous utilisez les outils R pour Visual Studio, sélectionnez **Outils R** dans la barre d’outils, puis cliquez sur **Windows** pour afficher les options pour le débogage et l’affichage des variables R.
 
 ### <a name="create-the-training-data-table"></a>Créer la table de données d’apprentissage
 
-1. Fournissez votre chaîne de connexion de base de données dans une variable R. Nous vous proposons deux exemples de chaînes de connexion ODBC valides pour SQL Server : une qui utilise une connexion SQL et une pour l’authentification intégrée de Windows (recommandée).
+1. Enregistrer la chaîne de connexion de base de données dans une variable de R. Voici deux exemples de chaînes de connexion ODBC valides pour SQL Server : une à l’aide d’une connexion SQL et une pour l’authentification intégrée de Windows.
 
-    **Utilisation d’une connexion SQL**
+    **Connexion SQL**
     ```R
     sqlConnString <- "Driver=SQL Server;Server=instance_name; Database=DeepDive;Uid=user_name;Pwd=password"
     ```
 
-    **Avec l’authentification Windows**
+    **Authentification Windows**
     ```R
     sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=DeepDive;Trusted_Connection=True"
     ```
@@ -65,11 +73,11 @@ Pour créer des tables sur l’ordinateur [!INCLUDE[ssNoVersion](../../includes/
     sqlRowsPerRead = 5000
     ```
   
-    Bien que ce paramètre soit facultatif, il est important pour gérer l’utilisation de la mémoire et pour l’efficacité des calculs.  La plupart des fonctions analytiques améliorées dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] traitent les données en segments et cumulent les résultats intermédiaires. Elles retournent les calculs finaux une fois que toutes les données ont été lues.
+    Bien que ce paramètre soit facultatif, il est important pour gérer l’utilisation de la mémoire et pour l’efficacité des calculs.  La plupart des fonctions analytiques améliorées dans [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] traitent les données dans des segments et de stocker des résultats intermédiaires, en retournant les calculs finales une fois toutes les données a été lu.
   
-    Si la valeur de ce paramètre est trop grande, l’accès aux données peut être lent, car vous n’avez pas suffisamment de mémoire pour traiter efficacement un segment de données aussi volumineux.  Sur certains systèmes, si la valeur de *rowsPerRead* est trop basse, les performances peuvent être ralenties.
+    Si la valeur de ce paramètre est trop grande, l’accès aux données peut être lent, car vous n’avez pas suffisamment de mémoire pour traiter efficacement un si grand segment de données.  Sur certains systèmes, si la valeur de *rowsPerRead* est trop basse, les performances peuvent être ralenties. Par conséquent, nous vous recommandons d’expérimenter avec ce paramètre sur votre système lorsque vous travaillez avec un jeu de données volumineux.
   
-    Dans cette procédure pas à pas, vous utilisez la taille du processus de traitement par lots définie par l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour contrôler le nombre de lignes dans chaque segment, puis vous enregistrez cette valeur dans la variable *sqlRowsPerRead*.  Nous vous recommandons de tester ce paramètre sur votre système quand vous utilisez un dataset volumineux.
+    Pour cette procédure pas à pas, utilisez la taille de processus de traitement par défaut définie par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance pour contrôler le nombre de lignes dans chaque segment. Enregistrer cette valeur dans la variable `sqlRowsPerRead`.
   
 4.  Enfin, définissez une variable pour le nouvel objet de source de données et passez les arguments définis précédemment au constructeur RxSqlServerData. Notez que cette opération ne fait que créer l’objet de source de données, elle ne le remplit pas.
   
@@ -81,7 +89,7 @@ Pour créer des tables sur l’ordinateur [!INCLUDE[ssNoVersion](../../includes/
 
 #### <a name="to-create-the-scoring-data-table"></a>Pour créer la table de données de calcul de score
 
-Vous allez créer la table qui contient les données de calcul de score de la même façon.
+À l’aide de la même procédure, créez la table qui contient les données de calcul de score à l’aide du même processus.
 
 1. Créez une variable R, *sqlScoreTable*, pour stocker le nom de la table utilisée pour le calcul de score.
   
@@ -96,18 +104,19 @@ Vous allez créer la table qui contient les données de calcul de score de la m�
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-Dans la mesure où vous avez déjà défini la chaîne de connexion et d’autres paramètres comme variables dans l’espace de travail R, il est facile de créer des sources de données pour différentes tables, vues ou requêtes. Il suffit de spécifier un autre nom de table.
+Étant donné que vous avez déjà défini la chaîne de connexion et d’autres paramètres en tant que variables dans l’espace de travail R, il est facile de créer des sources de données pour les différentes tables, des vues ou des requêtes.
 
-Plus loin dans ce didacticiel, vous allez apprendre à créer un objet de source de données basé sur une requête SQL.
+> [!NOTE]
+> La fonction utilise des arguments différents pour la définition d’une source de données basée sur une table entière que pour une source de données basée sur une requête. Il s’agit, car le moteur de base de données SQL Server doit préparer les requêtes différemment. Plus loin dans ce didacticiel, vous allez apprendre à créer un objet de source de données basé sur une requête SQL.
 
 ## <a name="load-data-into-sql-tables-using-r"></a>Charger des données dans des tables SQL à l’aide de R
 
 Maintenant que vous avez créé les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez y charger des données à l’aide de la fonction **Rx** appropriée.
 
-Le **RevoScaleR** package contient des fonctions qui prennent en charge de différentes sources de données : pour les données texte, vous allez utiliser RxTextData pour générer l’objet de source de données. Il existe des fonctions supplémentaires pour créer des objets de source de données à partir des données Hadoop, des données ODBC et ainsi de suite.
+Le **RevoScaleR** package contient des fonctions qui prennent en charge de différentes sources de données : pour les données de texte, utilisez [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) pour générer l’objet de source de données. Il existe des fonctions supplémentaires pour créer des objets de source de données à partir des données Hadoop, des données ODBC et ainsi de suite.
 
 > [!NOTE]
-> Pour cette section, vous devez disposer des autorisations d’exécution de DDL sur la base de données.
+> Dans cette section, vous devez avoir **DDL d’exécution** autorisations sur la base de données.
 
 ### <a name="load-data-into-the-training-table"></a>Charger des données dans la table de formation
 
@@ -117,9 +126,11 @@ Le **RevoScaleR** package contient des fonctions qui prennent en charge de diff�
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    Notez la fonction utilitaire **rxGetOption**. Cette fonction est fournie dans le package **RevoScaleR** pour vous aider à définir et gérer les options relatives aux contextes de calcul locaux et distants, tels que le répertoire partagé par défaut, le nombre de processeurs (noyaux) à utiliser dans les calculs, etc.  Cet appel est utile, car il obtient les exemples à partir de la bibliothèque appropriée, quelle que soit l’où vous exécutez votre code. Par exemple, essayez d’exécuter la fonction sur SQL Server et sur votre ordinateur de développement, et voyez comment les chemins diffèrent.
+    Notez l’appel à **rxGetOption**, qui est la méthode GET associée [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) dans **RevoScaleR**. Cet utilitaire permet de définir et répertorient les options relatives aux contextes de calcul locaux et distants, tels que le répertoire partagé par défaut, ou le nombre de processeurs (cœurs) à utiliser dans les calculs.
+    
+    Cet appel particulier Obtient les exemples à partir de la bibliothèque appropriée, quelle que soit l’où vous exécutez votre code. Par exemple, essayez d’exécuter la fonction sur SQL Server et sur votre ordinateur de développement, et voyez comment les chemins diffèrent.
   
-2. Définir une variable pour stocker les nouvelles données et utiliser la fonction RxTextData pour spécifier la source de données de texte.
+2. Définissez une variable pour stocker les nouvelles données et utilisez la fonction **RxTextData** pour spécifier la source de données texte.
   
     ```R
     inTextData <- RxTextData(file = ccFraudCsv,      colClasses = c(
@@ -134,9 +145,9 @@ Le **RevoScaleR** package contient des fonctions qui prennent en charge de diff�
   
 3. À ce stade, vous souhaiterez peut-être suspendre un moment et d’afficher votre base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Actualisez la liste de tables dans la base de données.
   
-    Vous constatez que même si les objets de données R ont été créés dans votre espace de travail local, les tables n’ont pas encore été créées dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En outre, aucune donnée n’a été chargée à partir du fichier texte dans la variable de R.
+    Vous pouvez voir que, bien que les objets de données R ont été créés dans votre espace de travail local, les tables n'ont pas été créées dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. En outre, aucune donnée n’a été chargée à partir du fichier texte dans la variable de R.
   
-4. À présent, appelez la fonction **rxDataStep** pour insérer les données dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+4. À présent, appelez la fonction [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) pour insérer les données dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -152,7 +163,7 @@ Le **RevoScaleR** package contient des fonctions qui prennent en charge de diff�
 
 ### <a name="load-data-into-the-scoring-table"></a>Charger des données dans la table calcul de score
 
-1. Vous suivez la même procédure pour charger dans la base de données le jeu de données utilisé pour le calcul de score.
+1. Répétez les étapes pour charger le jeu de données utilisé pour calculer les scores dans la base de données.
   
     Commencez par fournir le chemin du fichier source.
   
@@ -160,7 +171,7 @@ Le **RevoScaleR** package contient des fonctions qui prennent en charge de diff�
     ccScoreCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudScoreSmall.csv")
     ```
   
-2. Utilisez la fonction de RxTextData pour obtenir les données et l’enregistrer dans la variable, *inTextData*.
+2. Utilisez la fonction **RxTextData** pour obtenir les données et les enregistrer dans la variable *inTextData*.
   
     ```R
     inTextData <- RxTextData(file = ccScoreCsv,      colClasses = c(
@@ -170,7 +181,7 @@ Le **RevoScaleR** package contient des fonctions qui prennent en charge de diff�
         "numIntlTrans" = "integer", "creditLine" = "integer"))
     ```
   
-3.  Appelez la fonction rxDataStep pour remplacer la table actuelle avec le nouveau schéma et les données.
+3.  Appelez la fonction **rxDataStep** pour remplacer la table actuelle par le nouveau schéma et les nouvelles données.
   
     ```R
     rxDataStep(inData = inTextData, sqlScoreDS, overwrite = TRUE)
@@ -180,7 +191,7 @@ Le **RevoScaleR** package contient des fonctions qui prennent en charge de diff�
   
     - L’argument *outFile* spécifie la table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle vous voulez enregistrer les données.
   
-    - Si la table existe déjà et que vous n’utilisez pas l’option *remplacer* , les résultats sont insérés sans troncation.
+    - Si la table existe déjà et que vous n’utilisez pas le *remplacer* option, résultats sont insérés sans les tronquer.
   
 Là encore, si la connexion a réussi, vous devez voir un message indiquant l’achèvement et le temps qui a été nécessaire à l’écriture des données dans la table :
 
@@ -190,15 +201,14 @@ Là encore, si la connexion a réussi, vous devez voir un message indiquant l’
 
 ## <a name="more-about-rxdatastep"></a>En savoir plus sur rxDataStep
 
-Le **rxDataStep** est une fonction puissante qui peut effectuer plusieurs transformations sur une trame de données R, pour convertir les données dans la représentation sous forme de requis par la destination. Dans ce cas, la destination est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) est une fonction puissante qui peut effectuer plusieurs transformations sur une trame de données R. Vous pouvez également utiliser rxDataStep pour convertir la représentation sous forme de requis par la destination des données : dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Vous pouvez également spécifier des transformations sur les données, à l’aide des fonctions R dans les arguments de rxDataStep. Vous verrez des exemples de ces opérations plus tard.
+Si vous le souhaitez, vous pouvez spécifier des transformations sur les données, à l’aide des fonctions R dans les arguments de **rxDataStep**. Exemples de ces opérations sont fournis plus loin dans ce didacticiel.
 
 ## <a name="next-step"></a>Étape suivante
 
-[Interroger et modifier les données du serveur SQL](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
+[Interroger et modifier les données SQL Server](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Travailler avec des données SQL Server à l’aide de R](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
-
+[Travailler avec des données de SQL Server à l’aide de R](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)

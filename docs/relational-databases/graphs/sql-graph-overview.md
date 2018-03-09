@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graphique de traitement avec SQL Server et la base de données SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre des fonctionnalités de base de données de graphique pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées dans [!INCLUDE[tsql-md](../../includes/tsql-md.md)] et recevoir les avantages de l’utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que le système de gestion de base de la base de données.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre des fonctionnalités de base de données de graphique pour modéliser des relations plusieurs-à-plusieurs. Les relations de graphique sont intégrées dans [!INCLUDE[tsql-md](../../includes/tsql-md.md)] et recevoir les avantages de l’utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que le système de gestion de base de la base de données.
 
 
 ## <a name="what-is-a-graph-database"></a>Qu’est une base de données de graphique ?  
@@ -46,12 +47,12 @@ Rien n’est qu'une base de données du graphique peut atteindre, qui ne peut pa
 -   Votre application a des relations plusieurs-à-plusieurs complexes ; évolution de l’application, des relations sont ajoutées.
 -   Vous devez analyser les relations et interconnectés.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Fonctionnalités de graphique introduites dans[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Fonctionnalités de graphique introduites dans [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Nous avons commencé à ajouter des extensions de graphique à SQL Server, afin de faciliter le stockage et interrogation des données de graphique. Les fonctionnalités suivantes sont introduites dans la première version. 
 
 
 ### <a name="create-graph-objects"></a>Créer des objets de graphique
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]extensions permettra aux utilisateurs de créer des tableaux de bord ou de nœud. Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Depuis, nœuds et bords sont stockées en tant que tables, toutes les opérations qui sont pris en charge sur les tables relationnelles sont pris en charge sur le tableau de bord ou le nœud. Par exemple :  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions permettra aux utilisateurs de créer des tableaux de bord ou de nœud. Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Depuis, nœuds et bords sont stockées en tant que tables, toutes les opérations qui sont pris en charge sur les tables relationnelles sont pris en charge sur le tableau de bord ou le nœud. Par exemple :  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -62,7 +63,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Nœuds et bords sont stockés sous forme de tables  
 
 ### <a name="query-language-extensions"></a>Extensions de langage de requête  
-Nouvelle `MATCH` clause est introduite pour prendre en charge la recherche de correspondance et de navigation cascade via le graphique. Le `MATCH` fonction utilise la syntaxe de style pointe ASCII pour les critères spéciaux. Exemple :  
+Nouvelle `MATCH` clause est introduite pour prendre en charge la recherche de correspondance et de navigation cascade via le graphique. Le `MATCH` fonction utilise la syntaxe de style pointe ASCII pour les critères spéciaux. Par exemple :  
 
 ```   
 -- Find friends of John
@@ -73,7 +74,7 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Entièrement intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur 
-Extensions de graphique sont entièrement intégrées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Nous utilisons le même moteur de stockage, les métadonnées, processeur de requêtes, etc. pour stocker et interroger des données de graphique. Cela permet aux utilisateurs d’interroger les leurs graphique et les données relationnelles dans une requête unique. Les utilisateurs peuvent également bénéficier de combinaison de fonctionnalités de graphique avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que columnstore, haute disponibilité, R services, etc.. Base de données du graphique SQL prend également en charge toutes les sécurité et conformité fonctionnalités disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Extensions de graphique sont entièrement intégrées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Nous utilisons le même moteur de stockage, les métadonnées, processeur de requêtes, etc. pour stocker et interroger des données de graphique. Cela permet aux utilisateurs d’interroger les leurs graphique et les données relationnelles dans une requête unique. Les utilisateurs peuvent également bénéficier de combinaison de fonctionnalités de graphique avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que columnstore, haute disponibilité, R services, etc. Base de données du graphique SQL prend également en charge toutes les sécurité et conformité fonctionnalités disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 ### <a name="tooling-and-ecosystem"></a>Outils et l’écosystème  
 Les utilisateurs bénéficient d’outils existants et l’écosystème qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Outils de sauvegarde et de restauration, importer et exporter, fonctionnement BCP prêtes à l’emploi. Autres outils ou des services, comme SSIS, SSRS ou Power BI fonctionnera avec les tables de graphique, la façon de travailler avec des tables relationnelles.

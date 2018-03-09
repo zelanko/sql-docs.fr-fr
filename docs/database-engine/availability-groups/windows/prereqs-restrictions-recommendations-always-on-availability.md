@@ -24,13 +24,13 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: "151"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d54b7d77cb265f2ba8ee79ce993ce30ce8fdf441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Prérequis, restrictions et recommandations - Groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/20/2017
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Activez la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de serveur qui hébergera un réplica de disponibilité pour un groupe de disponibilité. Sur un ordinateur donné, vous pouvez activer autant d'instances de serveur que vous le souhaitez pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , dans la limite du nombre pris en charge par votre installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> **\*\* Important \*\*** Si vous supprimez et recréez un cluster WSFC, vous devez désactiver puis réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de serveur qui était activée pour les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur le cluster d’origine.|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque instance de serveur nécessite un point de terminaison de mise en miroir de bases de données. Notez que ce point de terminaison est partagé par tous les réplicas de disponibilité, ainsi que par tous les serveurs partenaires et témoins de mise en miroir de bases de données sur l'instance de serveur.<br /><br /> Si une instance de serveur que vous sélectionnez pour héberger un réplica de disponibilité s’exécute sous un compte d’utilisateur de domaine et n’a pas encore de point de terminaison de mise en miroir de bases de données, l’ [Assistant Nouveau groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (ou l’ [Assistant Ajouter un réplica au groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) peut créer le point de terminaison et accorder l’autorisation CONNECT au compte de service de l’instance de serveur. Toutefois, si le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute en tant que compte intégré, tel que Système local, Service local ou Service réseau, ou comme compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification du point de terminaison, et l'Assistant ne peut pas créer un point de terminaison de mise en miroir de bases de données sur l'instance de serveur. Dans ce cas, nous recommandons de créer les points de terminaison de mise en miroir de bases de données manuellement avant de lancer l'Assistant.<br /><br /> <br /><br /> **\*\* Note de sécurité \*\*** La sécurité du transport pour les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est la même que pour la mise en miroir de bases de données.|[Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si des bases de données utilisant FILESTREAM doivent être ajoutées à un groupe de disponibilité, vérifiez que FILESTREAM est activé sur chaque instance de serveur qui hébergera un réplica de disponibilité pour le groupe de disponibilité.|[Activer et configurer FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si des bases de données à relation contenant-continu doivent être ajoutées à un groupe de disponibilité, vérifiez que l'option de serveur **contained database authentication** a la valeur **1** sur chaque instance de serveur qui hébergera un réplica de disponibilité pour le groupe de disponibilité.|[Authentification de la base de données à relation contenant-contenu (option de configuration de serveur)](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Options de configuration de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
+|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si des bases de données à relation contenant-continu doivent être ajoutées à un groupe de disponibilité, vérifiez que l'option de serveur **contained database authentication** a la valeur **1** sur chaque instance de serveur qui hébergera un réplica de disponibilité pour le groupe de disponibilité.|[contained database authentication (option de configuration de serveur)](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Options de configuration de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="ThreadUsage"></a> Utilisation de threads par les groupes de disponibilité  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pose les conditions suivantes pour les threads de travail :  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/20/2017
   
      Les threads sont partagés à la demande, comme suit :  
   
-    -   En général, il existe 3 à 10 threads partagés, mais ce nombre peut augmenter en fonction de la charge de travail du réplica principal.  
+    -   En général, il existe 3 à 10 threads partagés, mais ce nombre peut augmenter en fonction de la charge de travail du réplica principal.  
   
     -   Si un thread donné est inactif pendant un certain temps, il est remis à disposition dans le pool de threads [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à usage général. Normalement, un thread inactif est libéré après environ 15 secondes d'inactivité. Toutefois, selon la dernière activité, un thread inactif peut être conservé plus longtemps.  
 
@@ -245,7 +245,7 @@ ms.lasthandoff: 11/20/2017
   
 |Tâche|Rubrique|  
 |----------|-----------|  
-|Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Maintenance de votre cluster de basculement SQL Server existant|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
@@ -281,7 +281,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **N'utilisez pas le gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité :**  
   
-     Par exemple :  
+     Exemple :  
   
     -   Ne modifiez pas les propriétés du groupe de disponibilité, telles que les propriétaires possibles.  
   
@@ -290,7 +290,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="RequirementsAG"></a> Conditions préalables requises (groupes de disponibilité)  
  Lors de la création ou de la reconfiguration d'un groupe de disponibilité, veillez à respecter les conditions préalables requises suivantes.  
   
-||Condition préalable| Description|  
+||Condition préalable|Description|  
 |-|------------------|-----------------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous envisagez d'utiliser une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un réplica de disponibilité, assurez-vous de comprendre les restrictions relatives à l'instance de cluster de basculement et de respecter les conditions préalables requises pour cette dernière.|[Conditions préalables requises et restrictions pour l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité](#FciArLimitations) (plus haut dans cette rubrique)|  
   
@@ -354,7 +354,7 @@ ms.lasthandoff: 11/20/2017
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|ne doit pas utiliser AUTO_CLOSE ;|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_auto_close_on** = 0)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Utilisez le mode de récupération complète (également appelé modèle de récupération complète).|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**recovery_model** = 1)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Possédez au moins une sauvegarde complète de base de données.<br /><br /> Remarque : une fois que vous avez défini une base de données en mode de récupération complète, une sauvegarde complète est requise pour initialiser la séquence de journaux de récupération complète.|[Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|ne doit pas appartenir à un groupe de disponibilité existant ;|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
+|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|ne doit pas appartenir à un groupe de disponibilité existant ;|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|ne doit pas être configurée pour la mise en miroir de base de données.|[sys.database_mirroring](../../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) (Si la base de données ne participe pas à la mise en miroir, toutes les colonnes qui utilisent le préfixe « mirroring » ont la valeur NULL.)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Avant d'ajouter une base de données qui utilise FILESTREAM à un groupe de disponibilité, vérifiez que FILESTREAM est activé sur chaque instance de serveur qui héberge ou hébergera un réplica de disponibilité pour le groupe de disponibilité.|[Activer et configurer FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Avant d'ajouter une base de données à relation contenant-continu à un groupe de disponibilité, vérifiez que l'option de serveur **contained database authentication** a la valeur **1** sur chaque instance de serveur qui héberge ou hébergera un réplica de disponibilité pour le groupe de disponibilité.|[contained database authentication (option de configuration de serveur)](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Options de configuration de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
@@ -391,7 +391,7 @@ ms.lasthandoff: 11/20/2017
 |Jointure d'une base de données secondaire à un groupe de disponibilité (manuellement)|[Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |Modification du nombre de bases de données de disponibilité|[Ajouter une base de données à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [Supprimer une base de données primaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -399,7 +399,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  

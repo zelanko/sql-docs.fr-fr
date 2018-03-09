@@ -3,32 +3,38 @@ title: "Valeur booléenne effective (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - effective Boolean value [XQuery]
 - Boolean values
 - XQuery, effective Boolean values
 - EBV
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 939bd936f5f0451f4b15d095fa0172f7eb16c115
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 93c3ecaf4a4ded90a4b65aed08c6112fd9b670f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="effective-boolean-value-xquery"></a>Valeur booléenne effective (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Voici les valeurs booléennes effectives :  
   
@@ -46,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Expressions conditionnelles](../xquery/conditional-expressions-xquery.md)  
   
--   [Expressions quantifiées](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  Voici un exemple de valeur booléenne effective. Lorsque le **si** expression est traitée, la valeur booléenne effective de la condition est déterminée. Puisque l'expression `/a[1]` renvoie une séquence vide, la valeur booléenne effective est false. Le résultat est renvoyé au format XML avec un nœud de texte (false).  
   

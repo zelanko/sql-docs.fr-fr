@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +16,17 @@ helpviewer_keywords:
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2924bd13417cbe3b9ce114516b998871abb0c89d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="url-access-parameter-reference"></a>Référence de paramètre d'accès URL
+# <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
   Vous pouvez utiliser les paramètres suivants dans une URL afin de configurer l’apparence de vos rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
  Les commandes de serveur de rapports sont précédées de *rs:* et sont utilisées pour cibler le serveur de rapports :  
   
 -   *Command*:  
-                  Exécute une action sur un élément de catalogue, selon son type d'élément. La valeur par défaut est déterminée par le type de l'élément de catalogue référencé dans la chaîne d'accès URL. Les valeurs valides sont :  
+                  Exécute une action sur un élément de catalogue, selon son type d'élément. La valeur par défaut est déterminée par le type de l'élément de catalogue référencé dans la chaîne d'accès URL. Les valeurs valides sont :  
   
     -   **ListChildren** et **GetChildren** affichent le contenu d'un dossier. Les éléments du dossier sont affichés dans une page générique de navigation des éléments.  
   
@@ -320,7 +318,7 @@ ms.lasthandoff: 12/05/2017
   
 -   *AsyncRender*: spécifie si un rapport doit être ou non généré de façon asynchrone. La valeur par défaut est **true**; cette valeur indique un rendu de rapport asynchrone. La valeur doit être une valeur booléenne **true** ou **false**.  
   
--   *ParamMode*: contrôle la manière dont est affichée la zone de message de paramètre du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
+-   *ParamMode*: contrôle la manière dont est affichée la zone de message de paramètre du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
   
     -   **Full**: afficher la zone de message du paramètre.  
   
@@ -334,7 +332,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: contrôle la manière dont est affichée la zone de l’explorateur de documents du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
+-   *DocMapMode*: contrôle la manière dont est affichée la zone de l’explorateur de documents du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
   
     -   **Full**: afficher la zone d'explorateur de documents.  
   
@@ -350,7 +348,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: détermine les éléments de la barre d’outils à afficher. Il s'agit d'une valeur d'énumération de bits. Pour inclure un élément de la barre d'outils, ajoutez la valeur de l'élément à la valeur totale. Par exemple : pour aucun menu Actions, utilisez rv : ToolBarItemsDisplayMode=63 (ou 0x3F), qui est 1+2+4+8+16+32 ; pour les éléments du menu Actions uniquement, utilisez rv : ToolBarItemsDisplayMode=960 (ou 0x3C0). La valeur par défaut, qui inclut tous les éléments de la barre d’outils, est **-1**. Les valeurs valides sont :  
+-   *ToolBarItemsDisplayMode*: détermine les éléments de la barre d’outils à afficher. Il s'agit d'une valeur d'énumération de bits. Pour inclure un élément de la barre d'outils, ajoutez la valeur de l'élément à la valeur totale. Par exemple : pour aucun menu Actions, utilisez rv : ToolBarItemsDisplayMode=63 (ou 0x3F), qui est 1+2+4+8+16+32 ; pour les éléments du menu Actions uniquement, utilisez rv : ToolBarItemsDisplayMode=960 (ou 0x3C0). La valeur par défaut, qui inclut tous les éléments de la barre d’outils, est **-1**. Les valeurs valides sont :  
   
     -   1 (0x1) : le bouton **Retour**  
   
@@ -380,7 +378,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Accès URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Exporter un rapport à l’aide de l’accès URL](../reporting-services/export-a-report-using-url-access.md)  
   

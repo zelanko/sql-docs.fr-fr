@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,19 +44,20 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: "83"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lors de la création d'une publication, choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
   
 |Objet de base de données|Réplication d'instantané et réplication transactionnelle|Réplication de fusion|  
 |---------------------|--------------------------------------------------------|-----------------------|  
@@ -95,9 +97,9 @@ ms.lasthandoff: 11/17/2017
   
  Pour plus d'informations sur la manière de travailler avec des publications, consultez les rubriques suivantes :  
   
--   [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Définir un article](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
@@ -125,13 +127,13 @@ ms.lasthandoff: 11/17/2017
   
  Pour spécifier des options de schéma, consultez [Spécifier des options de schéma](../../../relational-databases/replication/publish/specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Tables et index partitionnés  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  La réplication prend en charge la publication de tables et d'index partitionnés. Le niveau de prise en charge dépend du type de réplication utilisé, ainsi que des options que vous spécifiez pour la publication et les articles associés aux tables partitionnées. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Publication de procédures stockées  
- Tous les types de réplication vous permettent de répliquer des définitions de procédure stockée : l'instruction CREATE PROCEDURE est copiée sur chaque Abonné. Dans le cas de procédures stockées CLR (Common Language Runtime), l'assembly associé est également copié. Les modifications des procédures sont répliquées vers les Abonnés ; les modifications des assemblys associés ne le sont pas.  
+ Tous les types de réplication vous permettent de répliquer des définitions de procédure stockée : l'instruction CREATE PROCEDURE est copiée sur chaque Abonné. Dans le cas de procédures stockées CLR (Common Language Runtime), l'assembly associé est également copié. Les modifications des procédures sont répliquées vers les Abonnés ; les modifications des assemblys associés ne le sont pas.  
   
- En plus de répliquer la définition d'une procédure stockée, la réplication transactionnelle vous permet de répliquer l'exécution des procédures stockées. Ceci est particulièrement utile lors de la réplication des résultats de procédures stockées de maintenance qui affectent de gros volumes de données. Pour plus d’informations, voir [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ En plus de répliquer la définition d'une procédure stockée, la réplication transactionnelle vous permet de répliquer l'exécution des procédures stockées. Ceci est particulièrement utile lors de la réplication des résultats de procédures stockées de maintenance qui affectent de gros volumes de données. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="publishing-views"></a>Publication de vues  
  Tous les types de réplication vous permettent de répliquer des vues. La vue (et l'index qui l'accompagne s'il s'agit d'une vue indexée) peut être copiée vers l'Abonné, mais la table de base doit aussi être répliquée.  
@@ -193,7 +195,7 @@ ms.lasthandoff: 11/17/2017
 -   Les fonctions contenant l'indicateur **NOEXPAND** sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur **NOEXPAND** sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et exécutez-les à l'aide du paramètre *@post_snapshot_script* de **sp_addpublication**.  
   
 ### <a name="schemas-and-object-ownership"></a>Schémas et propriété des objets  
- La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
+ La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
   
 -   Pour les articles de publications de fusion d'un niveau de compatibilité de 90 ou supérieur, les publications d'instantané et les publications transactionnelles : par défaut, le propriétaire de l'objet sur l'Abonné est le même que le propriétaire de l'objet correspondant sur le serveur de publication. Si les schémas propriétaires des objets n'existent pas sur l'Abonné, ils sont créés automatiquement.  
   
@@ -203,7 +205,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publication de données sur les Abonnés exécutant des versions antérieures de SQL Server  
   
@@ -255,12 +257,12 @@ ms.lasthandoff: 11/17/2017
   
 -   La réplication transactionnelle et la réplication de fusion non filtrée prennent en charge la publication d'une table dans plusieurs publications, puis les abonnements dans une table unique de la base de données d'abonnement (communément appelée un scénario de cumul (roll up)). Le cumul est souvent utilisé pour agréger en une seule table des sous-ensembles de données provenant de plusieurs emplacements sur un Abonné central. Les publications de fusion filtrées ne prennent pas en charge le scénario avec un Abonné central. Pour la réplication de fusion, le cumul est généralement mis en œuvre via une seule publication avec des filtres de lignes personnalisés. Pour plus d'informations, voir [Filtres de ligne paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)   
  [Initialiser un abonnement](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Création de scripts de réplication](../../../relational-databases/replication/scripting-replication.md)   
  [Sécuriser le serveur de publication](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -2,16 +2,13 @@
 title: Traitement par lots (Analysis Services) | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: batches [Analysis Services]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d9ed1a3c1c832a1ceb34d96f0df44030da2e33cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-processing-analysis-services"></a>Traitement par lots (Analysis Services)
-  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser la commande batch pour envoyer plusieurs commandes de traitement au serveur dans une demande unique. Le traitement par lots vous offre une méthode pour contrôler les objets qui doivent être traités, et dans quel ordre. De plus, un traitement par lots peut s'exécuter en tant que série de travaux autonomes ou en tant que transaction dans laquelle l'échec d'un processus entraîne une annulation de l'ensemble du traitement par lots.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser la commande Batch pour envoyer plusieurs commandes de traitement sur le serveur dans une demande unique. Le traitement par lots vous offre une méthode pour contrôler les objets qui doivent être traités, et dans quel ordre. De plus, un traitement par lots peut s'exécuter en tant que série de travaux autonomes ou en tant que transaction dans laquelle l'échec d'un processus entraîne une annulation de l'ensemble du traitement par lots.  
   
  Le traitement par lots optimise la disponibilité des données en consolidant et en réduisant la durée nécessaire à la validation des modifications. Lorsque vous traitez entièrement une dimension, toute partition qui utilise cette dimension est marquée comme non traitée. En conséquence, les cubes qui contiennent les partitions non traitées sont indisponibles pour l'exploration. Vous pouvez résoudre ce problème à l'aide d'un travail de traitement par lots en traitant les dimensions avec les partitions affectées. L'exécution du travail de traitement par lots en tant que transaction permet de s'assurer que tous les objets inclus dans la transaction demeurent disponibles pour les requêtes jusqu'à ce que tout le traitement soit terminé. Lorsque la transaction valide les modifications, des verrous sont placés sur les objets affectés, ce qui les rend temporairement indisponibles, mais globalement, la durée nécessaire pour valider les modifications est moindre que si vous traitiez des objets individuellement.  
   

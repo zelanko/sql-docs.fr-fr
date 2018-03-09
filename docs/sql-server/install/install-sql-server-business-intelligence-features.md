@@ -1,31 +1,36 @@
 ---
 title: "Installer les fonctionnalités Business Intelligence de SQL Server 2016 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 78f608debbe1d5dd20d593957289765924399b51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c63c70bdd99e31466aa94f72d765e50e0db78779
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Installer les fonctionnalités Business Intelligence de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Les fonctionnalités SQL Server qui font partie de la plateforme Business Intelligence de Microsoft sont notamment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que plusieurs applications clientes servant à créer ou utiliser des données analytiques. Cette section de la documentation du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explique comment installer ces fonctionnalités.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés comme serveurs autonomes, dans les configurations avec montée en puissance parallèle, ou comme applications de service partagé dans une batterie de serveurs SharePoint. L’installation des services dans une batterie permet d’activer les fonctionnalités BI disponibles seulement dans SharePoint, notamment [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], le concepteur de rapports interactifs ad hoc [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui s’exécute sur des bases de données du modèle tabulaire [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] .  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés comme serveurs autonomes, dans les configurations avec montée en puissance parallèle, ou comme applications de service partagé dans une batterie de serveurs SharePoint. L’installation des services dans une batterie permet d’activer les fonctionnalités BI disponibles seulement dans SharePoint, notamment [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], le concepteur de rapports interactifs ad hoc [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui s’exécute sur des bases de données du modèle tabulaire [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="sql-server-bi-features"></a>Fonctionnalités BI de SQL Server  
  Toutes les fonctionnalités de SQL Server sont installées par le programme d’installation de SQL Server, notamment les composants BI. Les liens suivants fournissent des informations supplémentaires spécifiques à chaque fonctionnalité BI.  
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]
 > SQL Server Data Tools (SSDT) n’est pas inclus avec SQL Server 2016. [Téléchargez SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Nouveautés de Reporting Services &#40;SSRS&#41;](http://msdn.microsoft.com/en-us/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
  [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Nouveautés d’Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   

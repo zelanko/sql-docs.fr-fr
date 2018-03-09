@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_delete_collector_type (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9aff09b2400158d36f590422c2ec7883bc24d99
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14bfab3376da20b677414106e293ad21103e52dc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et doit avoir une valeur si *nom* est NULL.  
   
  [  **@name =** ] **'***nom***'**  
@@ -60,7 +62,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
  Cette procédure lèvera une erreur si les éléments de ce type de collection existent.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **dc_admin** (avec autorisation EXECUTE) rôle de base de données fixe pour exécuter cette procédure.  
   
 ## <a name="example"></a>Exemple  

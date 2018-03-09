@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LAG
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 22d3e6c8abe087c6af7bbcca29ebb2ee9d8bedc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a219e0b8455ff3a66d20a8c670bb8675481498e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Member_Expression.Lag(Index)
  *Index*  
  Expression numérique valide qui spécifie le nombre de positions de membres à décaler.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les positions des membres dans un niveau sont déterminées en fonction de l'ordre naturel de la hiérarchie d'attribut. La numérotation des positions commence à zéro.  
   
  Si le décalage spécifié est égal à zéro, le **Lag** fonction retourne le membre spécifié lui-même.  
@@ -56,7 +56,7 @@ Member_Expression.Lag(Index)
   
  Le **Lag** fonction est similaire à la [entraîner](../mdx/lead-mdx.md) de fonction, à ceci près que le **entraîner** fonction recherche dans la direction opposée à la **Lag** (fonction). Ce qui signifie que `Lag(n)` est équivalent à `Lead(-n)`.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-après retourne la valeur du mois de décembre 2001 :  
   
 ```  

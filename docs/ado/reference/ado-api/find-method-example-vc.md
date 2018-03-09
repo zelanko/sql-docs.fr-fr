@@ -3,27 +3,30 @@ title: "Rechercher l’exemple de méthode (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Find method [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4476fd0c8a0657d1b72176e68aae0f9184a9c3f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 587289df9a029732fade5c761b07037126c4877e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-vc"></a>Rechercher l’exemple de méthode (VC ++)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [trouver](../../../ado/reference/ado-api/find-method-ado.md) méthode pour rechercher et le nombre de titres de fonctions dans le **Pubs** base de données. L’exemple suppose que le fournisseur sous-jacent ne prend pas en charge des fonctionnalités similaires.  

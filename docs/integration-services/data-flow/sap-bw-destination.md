@@ -1,5 +1,5 @@
 ---
-title: Destination SAP BW | Documents Microsoft
+title: Destination SAP BW | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47b31595b327e762f4710ffbfd85f1c3ccf894c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination"></a>Destination SAP BW
   La destination SAP BW est le composant de destination de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la destination SAP BW charge les données du flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans un système SAP Netweaver BW version 7.  
@@ -96,34 +95,33 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Utilisation du concepteur SSIS pour configurer la destination  
  Pour plus d'informations sur les propriétés de la destination SAP BW que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de Destination SAP BW &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination SAP BW &#40; Page mappages &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Mappages&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination SAP BW &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Éditeur de Destination SAP BW &#40; Page avancé &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Éditeur de destination SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  Lorsque vous configurez la destination SAP BW, vous pouvez également utiliser différentes boîtes de dialogue pour rechercher ou pour créer des objets SAP Netweaver BW. Pour plus d'informations sur ces boîtes de dialogue, cliquez sur l'une des rubriques suivantes :  
   
--   [Rechercher un Infopackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [Rechercher un InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [Créer un nouvel InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
--   [Créer un InfoCube pour les données de Transaction](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
+-   [Créer un InfoCube pour les données de transaction](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [Rechercher un infoObject](../../integration-services/data-flow/look-up-infoobject.md)  
+-   [Rechercher un InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [Créer un InfoSource](../../integration-services/data-flow/create-infosource.md)  
   
--   [Créer un InfoSource pour les données de Transaction](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
+-   [Créer un InfoSource pour les données de transaction](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
 -   [Créer un InfoSource pour les données maîtres](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [Créer un InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

@@ -2,27 +2,33 @@
 title: "Révoquer des autorisations sur une collection de schémas XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: revoking permissions [SQL Server]
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db10bb0d69106c3263c01a6762a0685a3cd721d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dc855ac7206e483b4a024d2fa31876a73ffa80b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Révoquer des autorisations sur une collection de schémas XML
-  Il est possible de retirer l'autorisation de créer une collection de schémas XML de l'une des façons suivantes :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Il est possible de retirer l'autorisation de créer une collection de schémas XML de l'une des façons suivantes :  
   
 -   Retrait de l'autorisation ALTER pour le schéma relationnel. Ainsi, le principal ne peut pas créer de collection de schémas XML dans le schéma relationnel. Toutefois, le principal reste en mesure de le faire dans d'autres schémas relationnels de la même base de données.  
   
@@ -143,7 +149,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

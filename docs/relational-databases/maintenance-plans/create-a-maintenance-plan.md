@@ -2,27 +2,30 @@
 title: "Créer un plan de maintenance | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1a70635f7c2918de6dd2a9f2c3f1c85a26ab569
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f8341a2d598b8fe7077412e509ca441867c4955
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-maintenance-plan"></a>Créer un plan de maintenance
-  Cette rubrique explique comment créer un plan de serveur ou de maintenance multiserveur unique dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez créer ces plans de maintenance de deux manières : avec l'Assistant Plan de maintenance ou au moyen de l'aire de conception. L'Assistant est conseillé pour créer des plans de maintenance de base, tandis que la zone de conception permet d'utiliser un flux de travail optimisé.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer un plan de maintenance à un ou plusieurs serveurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez créer ces plans de maintenance de deux manières : avec l'Assistant Plan de maintenance ou au moyen de l'aire de conception. L'Assistant est conseillé pour créer des plans de maintenance de base, tandis que la zone de conception permet d'utiliser un flux de travail optimisé.  
   
  **Dans cette rubrique**  
   
@@ -50,7 +53,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Pour créer ou gérer des plans de maintenance, vous devez être membre du rôle serveur fixe **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -79,7 +82,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
 #### <a name="to-create-a-maintenance-plan"></a>Pour créer un plan de maintenance  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

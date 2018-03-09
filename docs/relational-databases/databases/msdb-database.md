@@ -18,15 +18,15 @@ helpviewer_keywords:
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4f6256d3c0b3be70f32b246ef24b996d7545fc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>Base de données msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
@@ -66,20 +66,20 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|Oui|  
 |AUTO_UPDATE_STATISTICS|ON|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|Non|  
+|CHANGE_TRACKING|OFF|non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Oui<br /><br /> Oui|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|non<br /><br /> Oui<br /><br /> Oui|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
 |DB_CHAINING|ON|Oui|  
-|ENCRYPTION|OFF|Non|  
-|MIXED_PAGE_ALLOCATION|ON|Non|  
+|ENCRYPTION|OFF|non|  
+|MIXED_PAGE_ALLOCATION|ON|non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|Non|  
+|READ_COMMITTED_SNAPSHOT|OFF|non|  
 |RECOVERY|SIMPLE|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
 |Options de Service Broker|ENABLE_BROKER|Oui|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Affectation de la valeur READ_ONLY au groupe de fichiers primaire.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

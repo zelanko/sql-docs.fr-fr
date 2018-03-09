@@ -3,29 +3,31 @@ title: Visual Basic pour Applications functions | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic pour Applications functions
 Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les expressions de calcul de la mise en forme des données :  
@@ -39,7 +41,7 @@ Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les
 |DiffDate|PartDate|SérieDate|ValDate|Jour|DDB|  
 |Erreur|Error$|Exp|Fix|Format|Format$|  
 |VC|Hex|Hex$|Heure|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Minuscule|Minuscule$|Gauche|  
 |LeftB|Gauche$|LeftB$|NbCar|Journal|SupprGauche|  
 |SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Mois|  

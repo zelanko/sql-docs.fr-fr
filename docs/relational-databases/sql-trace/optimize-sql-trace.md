@@ -2,9 +2,12 @@
 title: Optimiser Trace SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 385a5a642b5554f42d4d40bea712bfd6181ee18b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>Optimiser Trace SQL
-  Même si l'utilisation de la fonctionnalité de trace SQL représente un coût en termes de performances, du fait de l'utilisation de ressources système lors de la collecte de données, il existe plusieurs moyens de le minimiser. Pour limiter la baisse de performances induite par une trace, essayez les méthodes suivantes :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Même si l’utilisation de Trace SQL implique des coûts de performances, du fait de l’utilisation de ressources système lors de la collecte de données, il existe plusieurs moyens de les minimiser. Pour limiter la baisse de performances induite par une trace, essayez les méthodes suivantes :  
   
 -   Considérez l'utilisation de l'invite de commandes pour exécuter les traces. L'utilisation d'une interface utilisateur graphique entraîne une dégradation des performances. Pour plus d’informations, consultez [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Limitez le nombre d'événements renvoyés. Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de limiter le nombre d'événements renvoyés en enregistrant la trace dans une table et en définissant le nombre de lignes maximal. Les résultats de la trace sont toujours renvoyés à l'écran du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] après que le nombre de lignes maximal a été atteint, mais le coût d'enregistrement des résultats dans une table est éliminé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

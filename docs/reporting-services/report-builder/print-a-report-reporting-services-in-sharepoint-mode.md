@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0d6ee23c5cb0518b532d851bc259b6d2b2e9d60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69ce18de1901a873a4eaf0f39854af2512122e72
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimer un rapport (Reporting Services en mode SharePoint)
   Pour un serveur de rapports qui s'exécute en mode SharePoint, il existe trois manières d'imprimer un rapport à partir d'une application Web SharePoint :  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
      Pour afficher le rapport avant de l’imprimer, cliquez sur le bouton **Aperçu** . Cela entraîne l’ouverture de la première page du rapport dans une fenêtre d’aperçu distincte. Les pages supplémentaires sont disponibles lors du rendu du rapport sur le serveur de rapports. L'aperçu d'un rapport est rendu au format EMF. Vous pouvez accéder aux pages précédentes ou suivantes tant que la dernière page n'est pas atteinte et que le bouton **Suivant** n'est pas désactivé. Pour modifier les marges d’impression de la page d’aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue **Marges** s’affiche. Configurez les marges supérieure, inférieure, gauche et droite selon vos besoins, puis cliquez sur **OK**. La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Activer et désactiver l'impression côté client pour Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

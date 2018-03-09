@@ -2,26 +2,31 @@
 title: "Considérations relatives à l’installation de SQL Server à l’aide de SysPrep | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f10952679464999ae78fbb00432d3a8b8a7dc5ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: e1089089d6e0eb1a3085dad9306a6e598535b739
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considérations relatives à l'installation de SQL Server à l'aide de SysPrep
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep vous permet de préparer une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur et de terminer la configuration ultérieurement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep implique un processus en deux étapes pour arriver à une instance autonome configurée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces étapes sont les suivantes :  
   
 - [Préparer l'image](#BKMK_PrepareImage)  
@@ -96,5 +101,5 @@ Vous pouvez finaliser les instances préparées de [!INCLUDE[ssNoVersion](../../
   
 - Accédez à l’étape **Finalisation d’image d’une instance autonome préparée de SQL Server** dans la page **Avancé** du **Centre d’installation**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

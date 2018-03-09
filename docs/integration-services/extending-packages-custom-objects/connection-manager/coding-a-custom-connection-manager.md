@@ -1,5 +1,5 @@
 ---
-title: "Codage d’un gestionnaire de connexions personnalisé | Documents Microsoft"
+title: "Codage d’un gestionnaire de connexions personnalisé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,22 +16,21 @@ applies_to:
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe3f9823cfb1b84c0ea3d80a5f2917632b2829f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codage d'un gestionnaire de connexions personnalisé
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
   
- Pour obtenir des exemples de gestionnaires de connexions personnalisés, consultez [développer une Interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Les exemples de code présentés dans cette rubrique sont tirés de l'exemple de gestionnaire de connexions personnalisé SQL Server.  
+ Pour obtenir des exemples de gestionnaires de connexions personnalisés, consultez [Développement d’une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Les exemples de code présentés dans cette rubrique sont tirés de l'exemple de gestionnaire de connexions personnalisé SQL Server.  
   
 > [!NOTE]  
 >  Une grande partie des tâches, sources et destinations intégrées à [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilisent uniquement des types spécifiques de gestionnaires de connexions intégrés. Par conséquent, ces exemples ne peuvent pas être testés avec les tâches et composants intégrés.  
@@ -196,13 +194,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>Persistance du gestionnaire de connexions  
- En général, vous n'avez pas à implémenter de persistance personnalisée pour un gestionnaire de connexions. Une persistance personnalisée est uniquement requise lorsque les propriétés d'un objet utilisent des types de données complexes. Pour plus d’informations, consultez [développement des objets personnalisés pour Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ En général, vous n'avez pas à implémenter de persistance personnalisée pour un gestionnaire de connexions. Une persistance personnalisée est uniquement requise lorsque les propriétés d'un objet utilisent des types de données complexes. Pour plus d’informations, consultez [Développement d’objets personnalisés pour Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="working-with-the-external-data-source"></a>Utilisation de la source de données externe  
  Les méthodes qui prennent en charge la connexion à une source de données externe sont les méthodes les plus importantes d'un gestionnaire de connexions personnalisé. Les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> sont appelées à différents instants à la fois au moment de la conception et au moment de l'exécution.  
   
 ### <a name="acquiring-the-connection"></a>Acquisition de la connexion  
- Vous devez déterminer quel type d'objet il convient que la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> renvoie à partir de votre gestionnaire de connexions personnalisé. Par exemple, un gestionnaire de connexions de fichiers renvoie uniquement une chaîne qui contient un chemin d'accès et un nom de fichier, alors qu'un gestionnaire de connexions ADO.NET renvoie un objet de connexion managée qui est déjà ouvert. Un gestionnaire de connexions OLE DB renvoie un objet de connexion OLE DB natif qui ne peut pas être utilisé à partir de code managé. Le Gestionnaire de connexions personnalisé SQL Server, à partir duquel les extraits de code dans cette rubrique proviennent, renvoie open **SqlConnection** objet.  
+ Vous devez déterminer quel type d'objet il convient que la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> renvoie à partir de votre gestionnaire de connexions personnalisé. Par exemple, un gestionnaire de connexions de fichiers renvoie uniquement une chaîne qui contient un chemin d'accès et un nom de fichier, alors qu'un gestionnaire de connexions ADO.NET renvoie un objet de connexion managée qui est déjà ouvert. Un gestionnaire de connexions OLE DB renvoie un objet de connexion OLE DB natif qui ne peut pas être utilisé à partir de code managé. Le gestionnaire de connexions SQL Server personnalisé, duquel proviennent les extraits de code de cette rubrique, renvoie un objet **SqlConnection** ouvert.  
   
  Les utilisateurs de votre gestionnaire de connexions ont besoin de savoir à l'avance quel type d'objet attendre, afin de pouvoir convertir l'objet retourné en type approprié et d'accéder à ses méthodes et propriétés.  
   
@@ -268,9 +266,8 @@ public override void ReleaseConnection(object connection)
 }  
 ```  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [Développement d’une Interface utilisateur pour un gestionnaire de connexions personnalisé.](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [Développement d’une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

@@ -1,14 +1,15 @@
 ---
 title: "MODIFIER la CONFIGURATION inclus dans l’étendue de base de données (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,35 +24,31 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>MODIFIER la CONFIGURATION inclus dans l’étendue de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Cette instruction permet plusieurs paramètres de configuration de base de données à la **base de données individuelle** niveau. Cette instruction n’est disponible dans les deux [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Ces paramètres sont :  
+  Cette instruction permet plusieurs paramètres de configuration de base de données à la **base de données individuelle** niveau. Cette instruction est disponible dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Ces paramètres sont :  
   
 - Effacer le cache de procédures.  
-  
-- Affecter au paramètre MAXDOP une valeur arbitraire (1, 2, etc.) adaptée à la base de données primaire et affecter une autre valeur (par exemple, 0) à toutes les bases de données secondaires utilisées (par exemple, pour les requêtes de rapport).  
-  
+- Affectez au paramètre MAXDOP une valeur arbitraire (1,2,...) de la base de données primaire selon ce qui convient le mieux à cette base de données spécifique et une autre valeur (par exemple, 0) pour toutes les base de données secondaire utilisé (par exemple, que pour les requêtes de rapports).  
 - Définir le modèle d’estimation de la cardinalité de l’optimiseur de requête indépendant de la base de données au niveau de compatibilité.  
-  
 - Activer ou désactiver la détection de paramètres au niveau de la base de données.
-  
 - Activer ou désactiver les correctifs d’optimisation des requêtes au niveau de la base de données.
-
 - Activer ou désactiver le cache d’identité au niveau de la base de données.
+- Activer ou désactiver un stub du plan compilé à stocker dans un cache lorsqu’un lot est compilé pour la première fois.    
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icône de lien](../../database-engine/configure-windows/media/topic-link.gif "icône de lien") [Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,6 +68,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -81,11 +79,11 @@ BASE DE DONNÉES SECONDAIRE
 Spécifie les paramètres pour les bases de données secondaires (toutes les bases de données secondaire doivent avoir des valeurs identiques).  
   
 MAXDOP  **=**  {\<valeur > | PRINCIPAL}  
-**\<valeur >**  
+**\<value>**  
   
 Spécifie la valeur par défaut MAXDOP qui doit être utilisé pour les instructions. 0 est la valeur par défaut et indique que la configuration du serveur doit être utilisée à la place. Se substitue à la MAXDOP dans l’étendue de la base de données (sauf si elle est définie sur 0) la **degré maximal de parallélisme** définie au niveau du serveur par sp_configure. Indicateurs de requête peuvent tout de même remplacer la base de données étendue MAXDOP afin de paramétrer des requêtes spécifiques qui nécessitent des paramètres différents. Tous ces paramètres sont limitées par le MAXDOP définie pour le groupe de charges de travail.   
 
-Vous pouvez utiliser l'option max degree of parallelism pour limiter le nombre de processeurs à utiliser lors de l'exécution des plans parallèles. SQL Server considère que les plans d’exécution parallèle pour les requêtes, les opérations d’index data definition language (DDL), insertion parallèle, la colonne collectiion de statistiques parallèle et remplissage des curseurs statiques et pilotés par la modification en ligne.
+Vous pouvez utiliser l'option max degree of parallelism pour limiter le nombre de processeurs à utiliser lors de l'exécution des plans parallèles. SQL Server considère que les plans d’exécution parallèle pour les requêtes, les opérations d’index data definition language (DDL), insertion parallèle, la colonne, la collection de statistiques parallèle et remplissage des curseurs statiques et pilotés par la modification en ligne.
  
 Pour définir cette option au niveau de l’instance, consultez [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
 
@@ -94,7 +92,7 @@ Pour définir cette option au niveau de l’instance, consultez [configurer le d
   
 PRIMARY  
   
-Peut être défini que pour les bases de données secondaires, lors de la base de données sur le serveur principal et indique que la configuration est celui défini pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires sera modifiée en conséquence sans avoir besoin de définir les éléments secondaires de valeur explicitement. **PRINCIPAL** est le paramètre par défaut pour les bases de données secondaires.  
+Peut être défini que pour les bases de données secondaires, lors de la base de données sur le serveur principal et indique que la configuration est celui défini pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires sera modifiée en conséquence sans avoir besoin de définir les éléments secondaires valeur explicitement. **PRINCIPAL** est le paramètre par défaut pour les bases de données secondaires.  
   
 LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRINCIPAL}  
 
@@ -116,7 +114,7 @@ Active ou désactive [la détection des paramètres](../../relational-databases/
   
 PRIMARY  
   
-Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration sur le serveur principal pour l’utilisation de [la détection des paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) change, la valeur sur les bases de données secondaires change en conséquence, sans avoir besoin de définir les éléments secondaires valeur explicitement. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
+Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration sur le serveur principal pour l’utilisation de [la détection des paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) change, la valeur sur les bases de données secondaires change en conséquence sans avoir besoin de définir les éléments secondaires valeur explicitement. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRINCIPAL}  
 
@@ -127,7 +125,7 @@ Active ou désactive les correctifs logiciels de l’optimisation de requête, q
   
 PRIMARY  
   
-Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires sera modifiée en conséquence sans avoir besoin de définir les éléments secondaires de valeur explicitement. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
+Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que la valeur pour ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires est modifiée en conséquence sans avoir besoin de définir les éléments secondaires valeur explicitement. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
   
 DÉSACTIVEZ PROCEDURE_CACHE  
 
@@ -142,18 +140,26 @@ Active ou désactive le cache d’identité au niveau de la base de données. La
 > [!NOTE] 
 > Cette option peut uniquement être définie pour le serveur principal. Pour plus d’informations, consultez [les colonnes d’identité](create-table-transact-sql-identity-property.md).  
 
+OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }  
+
+**S’applique à** : [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+Active ou désactive un stub du plan compilé à stocker dans un cache lorsqu’un lot est compilé pour la première fois. La valeur par défaut est OFF. Une fois la configuration de base de données applique OPTIMIZE_FOR_AD_HOC_WORKLOADS est activée pour une base de données, un stub du plan compilé est stockée dans le cache lorsqu’un lot est compilée pour la première fois. Les stubs de plan ont un encombrement mémoire par rapport à la taille du plan compilé complet.  Si un lot est compilé ou exécuté à nouveau, le stub du plan compilé est supprimée et remplacée par un plan compilé complet.
+
 ##  <a name="Permissions"></a> Autorisations  
  Requiert ALTER toute CONFIGURATION de l’étendue de base de données   
 sur la base de données. Cette autorisation peut être accordée par un utilisateur avec l’autorisation CONTROL sur une base de données.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Vous pouvez configurer des bases de données secondaires pour tous les paramètres de configuration d’étendues différentes de leur principal, toutes les bases de données secondaire utilisera la même configuration. Impossible de configurer des paramètres différents pour des bases de données secondaires.  
+ Vous pouvez configurer des bases de données secondaires pour tous les paramètres de configuration d’étendues différentes de leur principal, toutes les bases de données secondaires utilisent la même configuration. Impossible de configurer des paramètres différents pour des bases de données secondaires.  
   
- L’exécution de cette instruction supprime le cache de procédure dans la base de données en cours, ce qui signifie que toutes les requêtes doivent recompiler.  
+ L’exécution de cette instruction efface le cache de procédure dans la base de données en cours, ce qui signifie que toutes les requêtes ont à recompiler.  
   
- Pour les requêtes de nom en 3 parties, les paramètres pour la connexion de base de données actuelle pour la requête seront pris en compte, autres que pour les modules SQL (par exemple, les procédures, fonctions et déclencheurs) qui sont compilés dans le contexte actuel de la base de données et par conséquent, utilisez les options de la base de données dans lesquels ils résident.  
+ Pour les requêtes de nom en 3 parties, les paramètres pour la connexion de base de données en cours pour la requête est honorés, autres que pour les modules SQL (par exemple, les procédures, fonctions et déclencheurs) qui sont compilés dans le contexte actuel de la base de données et par conséquent utilise les options de la base de données dans lesquels ils résident.  
   
  L’événement ALTER_DATABASE_SCOPED_CONFIGURATION est ajouté comme un événement DDL qui peut être utilisé pour activer un déclencheur DDL. Il s’agit d’un enfant du groupe de déclencheur ALTER_DATABASE_EVENTS.  
+ 
+ Paramètres seront reportés avec la base de données de configuration d’une étendue de base de données. Cela signifie que lorsqu’une base de données est restaurée ou attachée, les paramètres de configuration existants restent.
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
 **MAXDOP**  
@@ -176,11 +182,11 @@ sur la base de données. Cette autorisation peut être accordée par un utilisat
   
 **GeoDR**  
   
- Lisibles secondaire bases de données, par exemple, les groupes de disponibilité AlwaysOn et géo-réplication du, utilisent la valeur secondaire en vérifiant l’état de la base de données. Bien que nous ne pas recompiler lors du basculement et techniquement le nouveau réplica principal avec des requêtes qui utilisent les paramètres secondaires, l’idée est que le paramètre entre les principaux et secondaires uniquement varient lorsque la charge de travail est différent et par conséquent, les requêtes mises en cache sont à l’aide des paramètres optimaux, tandis que les nouvelles requêtes récupérera les nouveaux paramètres qui sont appropriés pour eux.  
+ Lisibles secondaire bases de données, par exemple, les groupes de disponibilité AlwaysOn et géo-réplication du, utilisent la valeur secondaire en vérifiant l’état de la base de données. Bien que recompilation ne se produit pas lors du basculement et techniquement le nouveau réplica principal avec des requêtes qui utilisent les paramètres secondaires, l’idée est que le paramètre entre les principaux et secondaires varient uniquement lorsque la charge de travail est différent et par conséquent, les requêtes mises en cache sont à l’aide des paramètres optimaux, tandis que les nouvelles requêtes choisir les nouveaux paramètres sont appropriés pour eux.  
   
 **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION étant une nouvelle fonctionnalité de base de données SQL Azure et SQL Server 2016 qui affecte le schéma de base de données, les exportations du schéma (avec ou sans données) ne sera pas peuvent être importés dans une version antérieure de SQL Server, par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Par exemple, une exportation vers un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) ou un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) à partir d’un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] utilisé cette nouvelle fonctionnalité de base de données ne peut pas être importé dans un serveur de bas niveau.  
+ Étant donné que ALTER DATABASE SCOPED CONFIGURATION est une nouvelle fonctionnalité de base de données SQL Azure et SQL Server à compter de SQL Server 2016 qu’affecte le schéma de base de données, l’exportation du schéma (avec ou sans données) ne sont pas pouvoir être importé dans une version antérieure de SQL Server par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Par exemple, une exportation vers un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) ou un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) à partir d’un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] utilisé cette nouvelle fonctionnalité de base de données ne peut pas être importé dans un serveur de bas niveau.  
   
 ## <a name="metadata"></a>Métadonnées  
 
@@ -194,7 +200,7 @@ Ces exemples illustrent l’utilisation de ALTER DATABASE SCOPED CONFIGURATION
 Cet exemple montre comment accorder l’autorisation nécessaire à l’exécution de ALTER DATABASE SCOPED CONFIGURATION     
 à l’utilisateur [Joe].  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +208,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 Cet exemple définit MAXDOP = 1 pour une base de données primaire et le MAXDOP = 4 pour la base de données secondaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 Cet exemple définit MAXDOP pour une base de données secondaire pour être la même qu’il est défini pour sa base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +223,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 Cet exemple affecte LEGACY_CARDINALITY_ESTIMATION à une base de données secondaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 Cet exemple définit LEGACY_CARDINALITY_ESTIMATION pour une base de données secondaire, car il s’agit de sa base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,29 +237,27 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 Cet exemple définit PARAMETER_SNIFFING Off pour une base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 Cet exemple définit PARAMETER_SNIFFING Off pour une base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-Cet exemple définit PARAMETER_SNIFFING pour la base de données secondaire, car il est sur la base de données primaire   
-dans un scénario de géo-réplication.  
+Cet exemple définit PARAMETER_SNIFFING pour la base de données secondaire, car il s’agit de la base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Jeu QUERY_OPTIMIZER_HOTFIXES  
 
-La valeur QUERY_OPTIMIZER_HOTFIXES ON pour la base de données primaire   
-dans un scénario de géo-réplication.  
+QUERY_OPTIMIZER_HOTFIXES la valeur ON pour la base de données primaire dans un scénario de géo-réplication.  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +265,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 Cet exemple efface le cache de procédure (possible uniquement pour une base de données primaire).  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,8 +275,18 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 Cet exemple désactive le cache d’identité.
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
+```
+
+### <a name="h-set-optimizeforadhocworkloads"></a>H. Jeu OPTIMIZE_FOR_AD_HOC_WORKLOADS
+
+**S’applique à** : [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+Cet exemple active un stub du plan compilé à stocker dans un cache lorsqu’un lot est compilé pour la première fois.
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
@@ -290,13 +304,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [« Il y a un paramètre ! »](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Ressources QUERY_OPTIMIZER_HOTFIXES    
-* [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+* [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server modèle optimiseur de requête correctif trace indicateur 4199 maintenance](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Informations complémentaires  
- [Sys.database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Affichages catalogue de bases de données et de fichiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Les Options de Configuration de serveur &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
-  
-  
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [Bases de données et les vues de catalogue de fichiers](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Options de Configuration de serveur](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ 

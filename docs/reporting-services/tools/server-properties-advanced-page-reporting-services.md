@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b993a3e2c45709e1095bfeb54919f5261bf6a12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8c6a475c37a953394fa51023dccdd9d80e5cb32
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
 
@@ -78,7 +76,7 @@ Détermine la période pendant laquelle un fichier image externe doit être réc
 **SnapshotCompression**  
 Définit le mode de compression des instantanés. La valeur par défaut est **SQL**. Les valeurs valides sont les suivantes :
 
-|Valeurs| Description|
+|Valeurs|Description|
 |---------|---------|
 |**SQL**|Les instantanés sont compressés quand ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.|
 |**Aucun**|Les instantanés ne sont pas compressés.|
@@ -93,7 +91,7 @@ Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides son
 **EnableIntegratedSecurity**  
 Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est **True**. Les valeurs valides sont les suivantes :
 
-|Valeurs| Description|
+|Valeurs|Description|
 |---------|---------|
 |**True**|La sécurité intégrée de Windows est activée.|
 |**False**|La sécurité intégrée de Windows n’est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée de Windows ne seront pas exécutées.|
@@ -142,7 +140,7 @@ Indique si la réponse à la requête du client peut être exposée quand l’in
 
 **AccessControlMaxAge** Spécifie le nombre de secondes pendant lesquelles les résultats de la requête préliminaire peuvent être mis en cache. La valeur par défaut est 600 (10 minutes).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

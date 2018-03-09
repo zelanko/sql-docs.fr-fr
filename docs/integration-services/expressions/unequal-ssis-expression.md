@@ -1,5 +1,5 @@
 ---
-title: "! = (Différent de) (Expression SSIS) | Documents Microsoft"
+title: "!= (Différent de) (expression SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cf4ece7722dfe827632adede28ad969b21a527f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Différent de) (expression SSIS)
   Effectue une comparaison pour déterminer si deux expressions de types de données compatibles sont différentes. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  
@@ -48,7 +47,7 @@ expression1 != expression2
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si l'une des expressions de la comparaison est NULL, le résultat de la comparaison est NULL. Si les deux expressions sont NULL, le résultat est NULL.  
   
  Le jeu d’expressions, *expression1* et *expression2*, doit suivre une des règles suivantes :  
@@ -106,16 +105,15 @@ expression1 != expression2
 ListPrice != 500  
 ```  
   
- L’exemple suivant utilise la variable **LPrice**. Il s’évalue à TRUE si la valeur de la variable **LPrice** n’est pas 500. Le type de données de la variable doit être numérique pour permettre l’analyse de l’expression.  
+ Cet exemple utilise la variable **LPrice**. Il s’évalue à TRUE si la valeur de la variable **LPrice** n’est pas 500. Le type de données de la variable doit être numérique pour permettre l’analyse de l’expression.  
   
 ```  
 @LPrice != 500  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [== &#40; Égal &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [== &#40;Égal&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

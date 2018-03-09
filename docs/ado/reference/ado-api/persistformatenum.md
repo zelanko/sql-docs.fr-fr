@@ -3,8 +3,9 @@ title: PersistFormatEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: PersistFormatEnum
-helpviewer_keywords: PersistFormatEnum enumeration [ADO]
+f1_keywords:
+- PersistFormatEnum
+helpviewer_keywords:
+- PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2695db14fdbdf05aba5b0a1b14b063ff6672a928
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d63a918e63739c59f5fe2d0c7d9e3d7bf694449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Spécifie le format dans lequel enregistrer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

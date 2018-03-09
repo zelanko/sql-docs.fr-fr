@@ -1,5 +1,5 @@
 ---
-title: DBCC DBREINDEX (Transact-SQL) | Documents Microsoft
+title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - DBREINDEX_TSQL
 - DBREINDEX
 - DBCC_DBREINDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index rebuilding [SQL Server]
 - rebuilding indexes
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Reconstruit un ou plusieurs index pour une table dans la base de données spécifié.
@@ -62,7 +64,7 @@ DBCC DBREINDEX
  *index_name*  
  Nom de l'index à reconstruire. Les noms d'index doivent respecter les règles applicables aux identificateurs. Si *index_name* est spécifié, *table_name* doit être spécifié. Si *index_name* n’est pas spécifié ou est « », tous les index de la table sont reconstruits.  
   
- *facteur de remplissage*  
+ *fillfactor*  
  Pourcentage d'espace à utiliser sur chaque page d'index pour le stockage des données lors de la création ou de la reconstruction de l'index. *facteur de remplissage* remplace le facteur de remplissage lors de la création de l’index, devenant la nouvelle valeur par défaut pour l’index et pour tout autre index non-cluster reconstruit suite à la reconstruction d’un index cluster.  
  Lorsque *fillfactor* est 0, DBCC DBREINDEX utilise la valeur de facteur de remplissage dernière spécifiée pour l’index. Cette valeur est stockée dans le **sys.indexes** vue de catalogue.   
  Si *fillfactor* est spécifié, *table_name* et *index_name* doit être spécifié. Si *fillfactor* n’est pas spécifié, le facteur de remplissage par défaut, 100, est utilisé. Pour plus d’informations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -92,7 +94,7 @@ DBCC DBREINDEX n'est pas pris en charge pour une utilisation sur les objets suiv
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’appelant doit posséder la table ou être membre du **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou **db_ddladmin** rôle de base de données fixe.
   
 ## <a name="examples"></a>Exemples  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 4a6f721715d867a59d3d551be68bddfc46b9cffd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d85d4f4fcf4a62ff152268c01a9fe3686278653
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
 Découvrez les extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les rapports paginés, grâce auxquelles vous pouvez donner à votre rapport l’aspect souhaité, notamment en ce qui concerne la disposition, les sauts de page et le format de papier. 
@@ -121,7 +119,7 @@ Un rapport peut également contenir des sous-rapports.
  [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Présente des informations sur l'utilisation de sauts de page.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

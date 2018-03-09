@@ -8,22 +8,22 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: native-client|applications
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 145d1ff520240283d01bb0dce7f85ba3c0faeb8b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d52109ed61ad125deadb35dacf7a0426601951c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connecting-to-a-windows-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données Microsoft Azure SQL Database à l'aide de SQL Server Native Client
+# <a name="connecting-to-a-windows-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données SQL Windows Azure à l'aide de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -39,6 +39,6 @@ ms.lasthandoff: 11/18/2017
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d’Applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -3,8 +3,9 @@ title: "ParentCatalog, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -39,18 +40,19 @@ f1_keywords:
 - _User::PutRefParentCatalog
 - _Group::GetParentCatalog
 - _Group::PutRefParentCatalog
-helpviewer_keywords: ParentCatalog property [ADOX]
+helpviewer_keywords:
+- ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c255beddbc240f30f51642a0e8fe4fd785cf88bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog, propriété (ADOX)
 Spécifie le catalogue parent d’un objet Table, un utilisateur ou colonne pour accéder aux propriétés spécifiques au fournisseur.  

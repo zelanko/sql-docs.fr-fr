@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - FREEPROCCACHE
 - DBCC_FREEPROCCACHE_TSQL
 - DBCC FREEPROCCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - freeing procedure cache
 - removing procedure cache elements
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae416ab23f27a7f71951ac05a6c69d0abb00a90d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: b5fd65fa2a764d87d2c5481a7c20560551ca3311
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -62,7 +64,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ({ *plan_handle* | *sql_handle* | *pool_name* })  
+ ( { *plan_handle* | *sql_handle* | *pool_name* } )  
 *plan_handle* identifie de façon unique un plan de requête pour un lot exécuté et dont le plan réside dans le cache du plan. *plan_handle* est **varbinary(64)** et peut être obtenu à partir des objets de gestion dynamique suivants :  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
@@ -118,7 +120,7 @@ Les opérations de reconfiguration suivantes effacent également le cache de pro
 ## <a name="result-sets"></a>Jeux de résultats  
 Lorsque la clause WITH NO_INFOMSGS n’est pas spécifiée, DBCC FREEPROCCACHE retourne le message : « exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 S’applique à : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Nécessite l'autorisation ALTER SERVER STATE sur le serveur.  
 
@@ -221,6 +223,6 @@ GO
 ## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
-[MODIFIER la CONFIGURATION inclus dans l’étendue de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   

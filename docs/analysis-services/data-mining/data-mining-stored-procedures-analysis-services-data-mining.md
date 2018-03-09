@@ -2,13 +2,13 @@
 title: "Procédures stockées d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: stored procedures [Analysis Services], data mining
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d73a02535eb55e16de7058fa9f24dc335763f45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf4b9b0fb2fe19d084c47d78d215f0001309af20
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>Procédures stockées d'exploration de données (Analysis Services - Exploration de données)
-  Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge des procédures stockées qui peuvent être écrites dans tout langage managé. Les langages managés pris en charge incluent .NET [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , C# et C++ managé. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez appeler directement les procédures stockées à l’aide de l’instruction **CALL** ou dans le cadre d’une requête DMX (Data Mining Extensions).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les procédures stockées qui peuvent être écrits dans n’importe quel langage managé. Les langages managés pris en charge incluent .NET [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , C# et C++ managé. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez appeler directement les procédures stockées à l’aide de l’instruction **CALL** ou dans le cadre d’une requête DMX (Data Mining Extensions).  
   
  Pour plus d’informations sur l’appel de procédures stockées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Appel des procédures stockées](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md).  
   

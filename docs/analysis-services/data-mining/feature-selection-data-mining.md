@@ -2,15 +2,13 @@
 title: "Fonctionnalité de sélection (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
-  La*sélection des fonctionnalités* est une partie importante de l’apprentissage automatique. Elle désigne le processus visant à réduire les entrées à traiter et à analyser, ou à identifier les entrées les plus pertinentes. Le terme connexe *ingénierie des fonctionnalités* (ou *extraction des fonctionnalités*) désigne le processus visant à extraire des informations ou des fonctionnalités utiles à partir de données existantes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La *sélection des fonctionnalités* est une partie importante de l’apprentissage automatique. Elle désigne le processus visant à réduire les entrées à traiter et à analyser, ou à identifier les entrées les plus pertinentes. Le terme connexe *ingénierie des fonctionnalités* (ou *extraction des fonctionnalités*) désigne le processus visant à extraire des informations ou des fonctionnalités utiles à partir de données existantes.  
   
 ## <a name="why-do-feature-selection"></a>Pourquoi utiliser la sélection des fonctionnalités ?  
  La sélection des fonctionnalités est essentielle à la création d’un modèle performant pour plusieurs raisons. La première raison est que la sélection des fonctionnalités implique une certaine *réduction de cardinalité*pour imposer une limite du nombre d’attributs pouvant être pris en compte lors de la création d’un modèle. Les données contiennent presque toujours plus d’informations que nécessaire pour générer le modèle ou elles contiennent un type d’informations inapproprié. Par exemple, vous pouvez avoir un dataset de 500 colonnes qui décrivent les caractéristiques des clients. Toutefois, si certaines colonnes contiennent des données éparses, cela n’est pas très utile de les ajouter au modèle et, si certaines colonnes sont en double, leur utilisation peut rendre le modèle inexact.  

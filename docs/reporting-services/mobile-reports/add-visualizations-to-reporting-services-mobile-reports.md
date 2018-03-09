@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c068430c44eaad1df894fc5c67849ff438ffcbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Ajouter des visualisations aux rapports mobiles Reporting Services
 Les graphiques sont une partie essentielle de la visualisation des données. Découvrez les graphiques que vous pouvez utiliser dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour couvrir un large éventail de scénarios. 
@@ -124,7 +124,7 @@ Dans les graphiques de comparaison, vous pouvez choisir d’avoir les mêmes cou
 ## <a name="pie-and-funnel-charts"></a>Graphiques en secteurs et graphiques en entonnoir  
   
 Les graphiques en secteurs et les graphiques en entonnoir font partie des visualisations les plus simples. Vous pouvez structurer les données par lignes ou par colonnes. 
-* Les**graphiques en secteurs** dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total dans les rapports mobiles the center. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
+* Les **graphiques en secteurs** dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] peuvent être des secteurs, des anneaux ou des anneaux avec un total au centre. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
 * Les**graphiques en entonnoir** sont souvent utilisés pour afficher les étapes d’un processus, tel que les ventes.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
@@ -196,7 +196,7 @@ Les graphiques en cascade constituent un bon choix :
    Les mois avec gain, comme septembre, octobre et novembre, sont indiqués en vert. 
 
 ## <a name="see-also"></a>Voir aussi 
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Cartes dans les rapports pour mobiles Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navigateurs dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Grilles de données dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Jauges dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)

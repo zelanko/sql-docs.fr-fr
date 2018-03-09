@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a3807bf2d542792e93c73687984a6425907edc5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b7578539a178e76796018d2da307381318414cb0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="getting-the-driver-version"></a>Obtention de la version du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,17 +33,17 @@ ms.lasthandoff: 11/18/2017
   
 -   La version est affichée dans le fichier lisezmoi.txt de la distribution de produit.  
   
- En outre, le nom du pilote JDBC peut être retourné à partir de la [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) appel de méthode sur la classe SQLServerDatabaseMetaData. Par exemple, cet appel retourne « Microsoft JDBC Driver 4.0 for SQL Server ».  
+ En outre, le nom du pilote JDBC peut être retourné à partir de la [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) appel de méthode sur la classe SQLServerDatabaseMetaData. Elle retourne, par exemple, « Microsoft JDBC Driver 6.4 pour SQL Server ».  
   
  Voici un exemple de la sortie des appels aux méthodes de la classe SQLServerDatabaseMetaData :  
   
- `getDriverName = Microsoft JDBC Driver 4.0 for SQL Server`  
+ `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   
- `getDriverMajorVersion = 4`  
+ `getDriverMajorVersion = 6`  
   
- `getDriverMinorVersion = 0`  
+ `getDriverMinorVersion = 4`  
   
- `getDriverVersion = 4.0.`*xxx.x*  
+ `getDriverVersion = 6.4.` *xxx.x*  
   
  Où « xxx.x » est le numéro de version finale.  
   

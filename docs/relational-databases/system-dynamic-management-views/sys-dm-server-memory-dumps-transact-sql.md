@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_server_memory_dumps (Transact-SQL) | Documents Microsoft
+title: sys.dm_server_memory_dumps (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_server_memory_dumps_TSQL
 - dm_server_memory_dumps
 - sys.dm_server_memory_dumps
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_memory_dumps dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_memory_dumps dynamic management view
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd4af6e42415814c6fc0771346f94a5283a41730
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7db1d81b38cea74eb61c38f29218fb68a6a1b1fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmservermemorydumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +40,8 @@ ms.lasthandoff: 11/17/2017
  
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**nom de fichier**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
-|**creation_time**|**DateTimeOffset(7)**|Date et heure de création du fichier. Ne peut pas avoir la valeur null.|  
+|**filename**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
+|**creation_time**|**datetimeoffset(7)**|Date et heure de création du fichier. Ne peut pas avoir la valeur null.|  
 |**size_in_bytes**|**bigint**|Taille (en octets) du fichier. Autorise la valeur NULL.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="security"></a>Sécurité  
  Les fichiers de vidage peuvent contenir des informations sensibles. Pour protéger les informations sensibles, vous pouvez utiliser une liste de contrôle d'accès (ACL) afin de restreindre l'accès aux fichiers ou copier les fichiers dans un dossier avec accès limité. Par exemple, avant d’envoyer que vos fichiers de débogage à Microsoft les services de support technique, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE.  
   
   

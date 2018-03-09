@@ -3,8 +3,9 @@ title: "CopyTo (méthode) (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_CopyTo
 - _Stream::CopyTo
-helpviewer_keywords: CopyTo method [ADO]
+helpviewer_keywords:
+- CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e929ff331d1bc99aac75018fa28e0da200f7f529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyto-method-ado"></a>CopyTo (méthode) (ADO)
 Copie le nombre spécifié de caractères ou d’octets (en fonction de [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) dans le [flux](../../../ado/reference/ado-api/stream-object-ado.md) vers un autre **flux** objet.  

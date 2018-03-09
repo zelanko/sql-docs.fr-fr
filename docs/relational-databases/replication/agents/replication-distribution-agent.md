@@ -2,10 +2,14 @@
 title: "Agent de distribution de réplication | Microsoft Docs"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
-  L'Agent de distribution de réplication est un fichier exécutable qui déplace l'instantané (pour la réplication d'instantané et la réplication transactionnelle) et les transactions contenues dans les tables de base de données de distribution (pour la réplication transactionnelle) vers les tables de destination au niveau des Abonnés.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'Agent de distribution de réplication est un fichier exécutable qui déplace l'instantané (pour la réplication d'instantané et la réplication transactionnelle) et les transactions contenues dans les tables de base de données de distribution (pour la réplication transactionnelle) vers les tables de destination au niveau des Abonnés.  
   
 > [!NOTE]  
 >  Les paramètres peuvent être spécifiés dans n'importe quel ordre. Lorsque les paramètres optionnels ne sont pas spécifiés, les valeurs des paramètres du Registre prédéfinis sur l'ordinateur local sont utilisées.  
@@ -274,7 +279,7 @@ distrib [-?]
  Spécifie le type d'abonnement pour la distribution. La valeur **0** indique un abonnement par émission de données, la valeur **1** un abonnement par extraction et la valeur **2** un abonnement anonyme.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. Voir le paramètre **–MessageInterval**décrit précédemment.  
+ Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Doit être spécifié en tant que paramètre pour une publication qui autorise la transformation de données.  
@@ -285,7 +290,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  S'il est spécifié, active la liaison des données des objets blob sous la forme d'un flux. Utilisez **-OledbStreamThreshold** pour spécifier la taille, en octets, au-dessus de laquelle un flux sera utilisé. **UseOledbStreaming** est activé par défaut. **UseOledbStreaming** écrit dans le dossier **C:\Program Files\Microsoft SQL Server\\<version\>\COM**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si vous avez installé l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour s'exécuter sous un compte système local plutôt que sous un compte d'utilisateur de domaine (paramètre par défaut), le service peut uniquement accéder à l'ordinateur local. Si l'Agent de distribution qui s'exécute sous l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré pour utiliser le mode d'authentification Windows lorsqu'il se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'Agent de distribution échoue. Le paramètre par défaut est l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur la modification des comptes de sécurité, consultez [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -298,7 +303,7 @@ distrib [-?]
 |---------------------|  
 |Ajout du paramètre **ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

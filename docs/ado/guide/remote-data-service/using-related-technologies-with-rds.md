@@ -3,26 +3,28 @@ title: "À l’aide des Technologies connexes avec des services Bureau à distan
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS related technologies [ADO]
+helpviewer_keywords:
+- RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6424d2634e923f4f384f7fbe958ebbc27e4b492
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57452cdc7cd0542bd81308f223c559118391204c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>À l’aide des Technologies connexes avec des services Bureau à distance
 Cette section contient les rubriques suivantes.  

@@ -3,8 +3,11 @@ title: SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,16 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cebf731c4a429ea738b1031da3d4f9445af3096b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 67b44d5e9057cc9ede6cdece28b23ae3ab8bf037
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent est un service Microsoft Windows qui exécute des tâches administratives planifiées appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
   
 **Dans cette rubrique**  
@@ -100,7 +104,7 @@ Un *opérateur* est une personne responsable de la maintenance d'une ou plusieur
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] peut notifier les opérateurs à propos d’alertes par :  
   
--   E-mail  
+-   Messagerie électronique  
   
 -   Radiomessagerie (via e-mail)  
   
@@ -151,7 +155,7 @@ Un sous-système est un objet prédéfini qui représente la fonctionnalité dis
   
 Chaque proxy correspond à des informations d'identification de sécurité. Chaque proxy peut être associé à un ensemble de sous-systèmes et de connexions. Le proxy peut être utilisé uniquement pour les étapes de travail qui utilisent un sous-système associé au proxy. Pour créer une étape de travail qui utilise un proxy spécifique, le propriétaire du travail doit utiliser une connexion associée à ce proxy ou être membre d'un rôle sans restriction d'accès aux proxys. Les membres du rôle de serveur fixe **sysadmin** disposent d'un accès sans restriction aux proxys. Les membres des rôles **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** peuvent utiliser uniquement les proxys pour lesquels un accès spécifique leur a été accordé. Chaque utilisateur membre de l'un des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent doit disposer d'un accès à des proxys spécifiques de façon à pouvoir créer les étapes de travail qui les utilisent.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
 Utilisez les étapes suivantes pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent de manière à automatiser l'administration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
   
 1.  Identifiez les tâches administratives et les événements de serveur se produisant régulièrement et déterminez si ces tâches ou ces événements peuvent être administrés par programme. Une tâche convient à l'automatisation si elle implique une séquence d'étapes prévisibles et se produit à un moment spécifique ou en réponse à un événement particulier.  
@@ -175,8 +179,8 @@ Utilisez les tâches suivantes pour démarrer [!INCLUDE[ssNoVersion](../../inclu
 |Explique comment utiliser le journal des erreurs de SQL Server Agent.|[Journal des erreurs de SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Explique comment utiliser des objets de performances.|[Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)|  
 |Décrit l'Assistant Plan de maintenance qui est un utilitaire permettant de créer des travaux, des alertes et des opérateurs en vue d'automatiser l'administration d'une instance de SQL Server.|[Utiliser l'Assistant Plan de maintenance](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
-|Explique comment automatiser des tâches administratives à l'aide de SQL Server Agent.|[Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
+|Explique comment automatiser des tâches administratives à l'aide de l'Agent SQL Server.|[Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Configuration de la surface d'exposition](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

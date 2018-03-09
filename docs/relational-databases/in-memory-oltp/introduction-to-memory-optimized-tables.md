@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea5a719b09f55de405593a29445824ba01902a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ Les tables optimisées en mémoire sont plus efficacement accessibles à partir 
 |Fonctionnalité|Accès à l'aide d'une procédure stockée compilée en mode natif|Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété|Accès CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Table mémoire optimisée|Oui|Oui|Non*|  
-|Type de table mémoire optimisée|Oui|Oui|Non|  
+|Type de table mémoire optimisée|Oui|Oui|non|  
 |Procédure stockée compilée en mode natif|L’imbrication de procédures stockées compilées en mode natif est désormais prise en charge. Vous pouvez utiliser la syntaxe EXECUTE à l’intérieur des procédures stockées, à condition que la procédure référencée soit également compilée en mode natif.|Oui|Non*|  
   
  *Vous ne pouvez pas accéder à une table optimisée en mémoire ou à une procédure stockée compilée en mode natif à partir de la connexion contextuelle (connexion à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moment de l’exécution d’un module CLR). Cependant, vous pouvez créer et ouvrir une autre connexion à partir de laquelle vous accédez aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif.  
@@ -93,7 +94,7 @@ Le tableau suivant répertorie les problèmes de performance et d'extensibilité
   
 |Problème|Impact sur l'OLTP en mémoire|  
 |-----------|----------------------------|  
-|Performance<br /><br /> Utilisation importante des ressources (UC, E/S, réseau ou mémoire).|Unité centrale<br /> Les procédures stockées compilées en mode natif peuvent réduire de façon significative l'utilisation de l'UC, car elles nécessitent moins d'instructions pour exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que les procédures stockées interprétées.<br /><br /> L'OLTP en mémoire peut vous aider à réduire l'investissement en matériel dans des charges de travail avec montée en puissance parallèle, car un serveur peut assurer à lui seul le débit de cinq à dix serveurs.<br /><br /> E/S<br /> Si vous observez un goulot d'étranglement des E/S à partir du traitement des données ou des pages d'index, l'OLTP en mémoire peut l'atténuer. En outre, les points de contrôle des objets OLTP en mémoire sont continus et n'entraînent pas une hausse soudaine des opérations d'E/S. Toutefois, si la plage de travail des tables critiques pour les performances ne tient pas en mémoire, l'OLTP en mémoire n'améliore pas les performances, car il nécessite que les données résident en mémoire. Si vous observez un goulot d'étranglement des E/S lors de la journalisation, l'OLTP en mémoire l'atténue, car il nécessite moins d'opérations de journalisation. Si une ou plusieurs tables optimisées en mémoire sont configurées en tant que tables non durables, supprimez la journalisation des données.<br /><br /> Mémoire<br /> L'OLTP en mémoire ne procure aucun gain de performance. Il peut en effet solliciter davantage la mémoire, car les objets doivent résider en mémoire.<br /><br /> Réseau<br /> L'OLTP en mémoire ne procure aucun gain de performance. Les données doivent être communiquées de la couche Données à la couche Application.|  
+|Performances<br /><br /> Utilisation importante des ressources (UC, E/S, réseau ou mémoire).|Unité centrale<br /> Les procédures stockées compilées en mode natif peuvent réduire de façon significative l'utilisation de l'UC, car elles nécessitent moins d'instructions pour exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que les procédures stockées interprétées.<br /><br /> L'OLTP en mémoire peut vous aider à réduire l'investissement en matériel dans des charges de travail avec montée en puissance parallèle, car un serveur peut assurer à lui seul le débit de cinq à dix serveurs.<br /><br /> E/S<br /> Si vous observez un goulot d'étranglement des E/S à partir du traitement des données ou des pages d'index, l'OLTP en mémoire peut l'atténuer. En outre, les points de contrôle des objets OLTP en mémoire sont continus et n'entraînent pas une hausse soudaine des opérations d'E/S. Toutefois, si la plage de travail des tables critiques pour les performances ne tient pas en mémoire, l'OLTP en mémoire n'améliore pas les performances, car il nécessite que les données résident en mémoire. Si vous observez un goulot d'étranglement des E/S lors de la journalisation, l'OLTP en mémoire l'atténue, car il nécessite moins d'opérations de journalisation. Si une ou plusieurs tables optimisées en mémoire sont configurées en tant que tables non durables, supprimez la journalisation des données.<br /><br /> Mémoire<br /> L'OLTP en mémoire ne procure aucun gain de performance. Il peut en effet solliciter davantage la mémoire, car les objets doivent résider en mémoire.<br /><br /> Réseau<br /> L'OLTP en mémoire ne procure aucun gain de performance. Les données doivent être communiquées de la couche Données à la couche Application.|  
 |Extensibilité<br /><br /> La plupart des problèmes de mise à l'échelle dans les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont dus à des problèmes d'accès concurrentiel tels que la contention dans les verrous, les verrous internes et les verrouillages tournants.|Contention de verrous internes<br /> Un scénario typique est la contention dans la dernière page d'un index lors de l'insertion simultanée de lignes dans l'ordre des clés. Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrous internes.<br /><br /> Contention de verrouillage tournant<br /> Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrouillage tournant.<br /><br /> Contention liée au verrouillage<br /> Si votre application de base de données rencontre des problèmes de blocage entre les opérations de lecture et d'écriture, l'OLTP en mémoire les supprime, car il utilise une nouvelle forme de contrôle d'accès concurrentiel optimiste pour implémenter tous les niveaux d'isolation des transactions. L'OLTP en mémoire n'utilise pas TempDB pour stocker les versions de ligne.<br /><br /> Si le problème de mise à l'échelle est provoqué par un conflit entre deux opérations d'écriture, telles que deux transactions simultanées tentant de mettre à jour la même ligne, l'OLTP en mémoire laisse une transaction aboutir et fait échouer l'autre. La transaction en échec doit être retentée par un nouvel envoi explicite ou implicite. Dans les deux cas, vous devez apporter des modifications à l'application.<br /><br /> Si votre application crée des conflits fréquents entre deux opérations d'écriture, la valeur du verrouillage optimiste est diminuée. L'application ne convient pas pour l'OLTP en mémoire. La plupart des applications OLTP ne connaissent pas de conflits d'écriture à moins que le conflit ne soit induit par une escalade de verrous.|  
   
 ##  <a name="rls"></a> Sécurité de niveau ligne dans les tables optimisées en mémoire  
@@ -109,7 +110,7 @@ EXECUTE AS CALLER n’entraîne qu’une faible baisse de performances (de l’o
 
 Pour découvrir une brève description des scénarios types dans lesquels [!INCLUDE[hek_1](../../includes/hek-1-md.md)] peut contribuer à améliorer les performances, voir [OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_sql_referenced_entities (Transact-SQL) | Documents Microsoft
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Fonctions de partition  
   
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,12 +71,12 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ *nom_schéma*. ] *referencing_entity_name*  
+ [ *schema_name*. ] *referencing_entity_name*  
  Nom de l'entité de référence. *schema_name* est requis lorsque la classe de référence est OBJECT.  
   
  *schema_name.referencing_entity_name* est **nvarchar (517)**.  
   
- *< Referencing_class >* :: = {objet | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  Classe de l'entité de référence spécifiée. Une seule classe peut être spécifiée par instruction.  
   
  *< referencing_class >* est **nvarchar (60)**.  
@@ -91,14 +94,14 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|ID de l'entité référencée. Lorsque referenced_minor_id n'est pas égal à 0, referenced_id est l'entité dans laquelle la colonne est définie.<br /><br /> Toujours NULL pour les références entre serveurs.<br /><br /> NULL pour les références des bases de données croisées lorsque l'ID ne peut pas être déterminé, car la base de données est hors connexion ou l'entité ne peut pas être liée.<br /><br /> NULL pour les références dans la base de données si l'ID ne peut pas être déterminé. Pour les références non liées au schéma, l’ID ne peut pas être résolu lorsque l’entité référencée n’existe pas dans la base de données ou lors de la résolution de noms est dépend de l’appelant.  Dans ce cas, is_caller_dependent a la valeur 1.<br /><br /> Jamais NULL pour les références liées au schéma.|  
 |referenced_minor_id|**int**|ID de colonne lorsque l'entité référencée est une colonne ; sinon 0. Par exemple, referenced_minor_name est 0 dans la ligne qui répertorie l'entité référencée elle-même.<br /><br /> Pour les références non liées au schéma, les dépendances de colonnes sont signalées uniquement lorsque toutes les entités référencées peuvent être liées. Si une entité référencée ne peut pas être liée, aucune dépendance au niveau des colonnes n'est signalée et referenced_minor_id est égal à 0. Voir l'exemple D.|  
 |referenced_class|**tinyint**|Classe de l'entité référencée.<br /><br /> 1 = Objet ou colonne<br /><br /> 6 = Type<br /><br /> 10 = Collection du schéma XML<br /><br /> 21 = Fonction de partition|  
-|referenced_class_desc|**nvarchar (60)**|Description de la classe de l'entité référencée.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Description de la classe de l'entité référencée.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indique que la liaison de schéma pour l'entité référencée se produit au moment de l'exécution ; par conséquent, la résolution de l'ID d'entité dépend du schéma de l'appelant. Cela se produit lorsque l'entité référencée est une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur appelée dans une instruction EXECUTE.<br /><br /> 1 = l'entité référencée dépend de l'appelant et est résolue au moment de l'exécution. Dans ce cas, referenced_id a la valeur NULL.<br /><br /> 0 = l'ID de l'entité référencée ne dépend pas de l'appelant. Toujours 0 pour les références liées au schéma et pour les références des bases de données croisées et entre serveurs qui spécifient explicitement un nom de schéma. Par exemple, une référence à une entité au format `EXEC MyDatabase.MySchema.MyProc` ne dépend pas de l'appelant. Toutefois, une référence au format `EXEC MyDatabase..MyProc` dépend de l'appelant.|  
 |is_ambiguous|**bit**|Indique la référence est ambiguë et peut être convertie au moment de l’exécution pour une fonction définie par l’utilisateur, un type défini par l’utilisateur (UDT) ou une référence xquery à une colonne de type **xml**. Par exemple, supposons que l’instruction `SELECT Sales.GetOrder() FROM Sales.MySales` est défini dans une procédure stockée. Jusqu'à ce que la procédure stockée soit exécutée, il n'est pas possible de savoir si `Sales.GetOrder()` est une fonction définie par l'utilisateur dans le schéma `Sales` ou une colonne nommée `Sales` de type défini par l'utilisateur avec une méthode nommée `GetOrder()`.<br /><br /> 1 = la référence à une fonction définie par l'utilisateur ou méthode de type défini par l'utilisateur de colonne est ambiguë.<br /><br /> 0 = la référence n'est pas équivoque ou l'entité peut être liée avec succès lorsque la fonction est appelée.<br /><br /> Toujours 0 pour les références liées au schéma.|  
-|is_selected|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet ou la colonne est sélectionné.|  
-|is_updated|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet ou la colonne est modifié.|  
-|is_select_all|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet est utilisé dans une clause SELECT * (au niveau de l'objet uniquement).|  
-|is_all_columns_found|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Toutes les dépendances de colonne pour l'objet ont été trouvées.<br /><br /> 0 = Les dépendances de colonne pour l'objet n'ont pas été trouvées.|
-|is_insert_all|**bit**|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l’objet est utilisé dans une instruction INSERT sans liste de colonnes (au niveau objet uniquement).|  
+|is_selected|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet ou la colonne est sélectionné.|  
+|is_updated|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet ou la colonne est modifié.|  
+|is_select_all|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet est utilisé dans une clause SELECT * (au niveau de l'objet uniquement).|  
+|is_all_columns_found|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Toutes les dépendances de colonne pour l'objet ont été trouvées.<br /><br /> 0 = Les dépendances de colonne pour l'objet n'ont pas été trouvées.|
+|is_insert_all|**bit**|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l’objet est utilisé dans une instruction INSERT sans liste de colonnes (au niveau objet uniquement).|  
 |is_incomplete|**bit**|**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l’objet ou de la colonne a une erreur de liaison et est incomplet.|
   
 ## <a name="exceptions"></a>Exceptions  
@@ -125,26 +128,26 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|Oui*|Oui|  
 |Affichage|Oui|Oui|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
-|Procédure stockée CLR|Non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
-|Fonction CLR définie par l'utilisateur|Non|Oui|  
-|Déclencheur CLR (DML et DDL)|Non|Non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Procédures stockées étendues|Non|Oui|  
-|File d'attente|Non|Oui|  
-|Synonyme|Non|Oui|  
-|Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
-|Collection de schémas XML|Non|Oui|  
-|Fonction de partition|Non|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée **|Oui|Oui|  
+|Procédure stockée CLR|non|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] fonction définie par l'utilisateur|Oui|Oui|  
+|Fonction CLR définie par l'utilisateur|non|Oui|  
+|Déclencheur CLR (DML et DDL)|non|non|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML|Oui|non|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DDL au niveau de la base de données|Oui|non|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DDL au niveau du serveur|Oui|non|  
+|Procédures stockées étendues|non|Oui|  
+|File d'attente|non|Oui|  
+|Synonyme|non|Oui|  
+|Type (alias et type CLR défini par l'utilisateur)|non|Oui|  
+|Collection de schémas XML|non|Oui|  
+|Fonction de partition|non|Oui|  
   
  \*Une table est suivie comme entité de référence uniquement lorsqu’il fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, type défini par l’utilisateur ou collection de schémas XML dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut.  
   
  ** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur sys.dm_sql_referenced_entities et l'autorisation VIEW DEFINITION sur l'entité de référence. Par défaut, l'autorisation SELECT est accordée à public. Requiert l'autorisation VIEW DEFINITION sur la base de données ou l'autorisation ALTER DATABASE DDL TRIGGER sur la base de données lorsque l'entité de référence est un déclencheur DDL au niveau de la base de données. Requiert l'autorisation VIEW ANY DEFINITION sur le serveur lorsque l'entité de référence est un déclencheur DDL au niveau du serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -152,7 +155,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Retour d'entités qui sont référencées par un déclencheur DDL au niveau de la base de données  
  L'exemple suivant retourne les entités (tables et colonnes) qui sont référencées par le déclencheur DDL au niveau de la base de données `ddlDatabaseTriggerLog`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +167,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Retour d'entités qui sont référencées par un objet  
  L'exemple suivant retourne les entités qui sont référencées par la fonction définie par l'utilisateur `dbo.ufnGetContactInformation`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +179,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. Retour de dépendances de colonnes  
  L'exemple suivant crée la table `Table1` avec la colonne calculée `c` définie comme étant la somme des colonnes `a` et `b`. La vue `sys.dm_sql_referenced_entities` est ensuite appelée. La vue retourne deux lignes, une pour chaque colonne définie dans la colonne calculée.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +208,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Retour de dépendances de colonnes non liées au schéma  
  L'exemple suivant supprime `Table1`, puis crée `Table2` et la procédure stockée `Proc1`. La procédure référence `Table2` et la table `Table1` inexistante. La vue `sys.dm_sql_referenced_entities` est exécutée avec la procédure stockée spécifiée comme entité de référence. Le jeu de résultats montre une ligne pour `Table1` et 3 lignes pour `Table2`. Étant donné que `Table1` n'existe pas, les dépendances de colonnes ne peuvent pas être résolues et l'erreur 2020 est retournée. La colonne `is_all_columns_found` retourne 0 pour `Table1` indiquant qu'il y a des colonnes qui ne peuvent pas être découvertes.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +242,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. Illustration de la maintenance de dépendance dynamique  
  L'exemple suivant étend l'exemple D pour montrer que les dépendances sont maintenues dynamiquement. L'exemple recrée d'abord `Table1`, qui a été supprimé dans l'exemple D. Par la suite, `sys.dm_sql_referenced_entities` est à nouveau exécuté avec la procédure stockée spécifiée comme entité de référence. Le jeu de résultats indique que les tables et leurs colonnes respectives définies dans la procédure stockée sont retournées. En outre, la colonne `is_all_columns_found` retourne 1 pour tous les objets et colonnes.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -270,9 +273,9 @@ GO
 ### <a name="f-returning-object-or-column-usage"></a>F. Obtenir l'utilisation de l'objet ou de la colonne  
  L'exemple suivant permet d'obtenir les dépendances d'objet et de colonne de la procédure stockée `HumanResources.uspUpdateEmployeePersonalInfo`. Cette procédure met à jour les colonnes `NationalIDNumber`, `BirthDate,``MaritalStatus`, et `Gender` de la `Employee` table selon un `BusinessEntityID` valeur. Une autre procédure stockée, `upsLogError` est définie dans un bloc TRY… CATCH pour capturer les erreurs d'exécution. Les colonnes `is_selected`, `is_updated` et `is_select_all` retournent des informations sur la façon dont ces objets et colonnes sont utilisés dans l'objet de référence. La table et les colonnes qui sont modifiées sont indiquées par un 1 dans la colonne is_updated. Seule la colonne `BusinessEntityID` est sélectionnée et la procédure stockée `uspLogError` n'est ni sélectionnée ni modifiée.  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

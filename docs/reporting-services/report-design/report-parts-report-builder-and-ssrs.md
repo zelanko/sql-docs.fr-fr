@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10543"
@@ -18,13 +16,13 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 13d641b01073882faa4b8a19b8c9af0e370d507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 327e9c590d635c0910f5dd12f43db9dbb199871c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -138,7 +136,7 @@ ms.lasthandoff: 12/05/2017
   
   
 ##  <a name="RptPartsRptDesigner"></a> Utilisation de parties de rapports dans le Concepteur de rapports  
- Les parties de rapports fonctionnent un peu différemment dans le Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dans le Concepteur de rapports, la publication est unidirectionnelle : vous pouvez publier une partie de rapport à partir du Concepteur de rapports, mais vous ne pouvez pas réutiliser une partie de rapport existante à partir de ce même Concepteur. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+ Les parties de rapports fonctionnent un peu différemment dans le Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dans le Concepteur de rapports, la publication est unidirectionnelle : vous pouvez publier une partie de rapport à partir du Concepteur de rapports, mais vous ne pouvez pas réutiliser une partie de rapport existante à partir de ce même Concepteur. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
  [Publier et republier des parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/05/2017
   
  [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  

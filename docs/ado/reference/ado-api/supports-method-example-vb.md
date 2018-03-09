@@ -3,27 +3,30 @@ title: "Prend en charge de l’exemple de méthode (VB) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Supports method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09f47061d9b99569b13ee3d5c57c713c4d0f56a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f078404d2f524b0ae98cf875724a744f8b0d034e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method-example-vb"></a>Exemple de méthode prend en charge (VB)
 Cet exemple utilise le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La procédure DisplaySupport est requise pour exécuter cette procédure.  
@@ -166,5 +169,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)

@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
 - DISTINCT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parentheses [SQL Server]
 - identity columns [SQL Server], SELECT clause
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>Clause SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +90,7 @@ SELECT [ ALL | DISTINCT ]
  *nom_table* | *view_name* | *table*_*alias*. *  
  Limite l’étendue de la \* à la table ou vue spécifiée.  
   
- *nom_colonne*  
+ *column_name*  
  Nom d'une colonne à renvoyer. Qualifier *column_name* pour éviter une référence ambiguë, ce qui se produit lorsque deux tables dans la clause FROM possèdent des colonnes avec des noms dupliqués. Par exemple, les tables SalesOrderHeader et SalesOrderDetail de le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données à la fois possèdent une colonne nommée ModifiedDate. Si les deux tables sont associées dans une requête, la date de modification des entrées SalesOrderDetail peut être spécifiée dans la liste de sélection en tant que SalesOrderDetail.ModifiedDate.  
   
  *expression*  
@@ -116,10 +118,10 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  Est une propriété publique de *udt_column_name*.  
   
- *nom_champ*  
+ *field_name*  
  Est un membre de données public *udt_column_name*.  
   
- *nom_méthode*  
+ *method_name*  
  Est une méthode publique de *udt_column_name* qui accepte un ou plusieurs arguments. *nom_méthode* ne peut pas être une méthode mutateur.  
   
  L'exemple ci-dessous sélectionne les valeurs pour la colonne `Location`, défini comme étant de type `point`, à partir de la table `Cities`, en invoquant une méthode du type appelé `Distance` :  
@@ -136,7 +138,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- *alias de column_*  
+ *column_ alias*  
  Nom utilisé pour remplacer le nom de colonne dans le jeu de résultats de la requête. Par exemple, vous pouvez spécifier un alias tel que Quantité, Quantité à la date du jour ou Qté pour une colonne appelée quantité.  
   
  Les alias sont également utilisés pour spécifier les noms des résultats d'expressions, par exemple :  
@@ -162,8 +164,8 @@ FROM Cities;
  Une erreur se produit si aucun nom de colonne n'est attribué à une colonne créée par une instruction SELECT INTO ou CREATE VIEW.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

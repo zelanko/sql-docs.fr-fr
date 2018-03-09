@@ -2,32 +2,32 @@
 title: "Élément EntitySet (CSDLBI) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93f05510fefc720e074db3fbc26e2347b660031e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entityset-element-csdlbi"></a>Élément EntitySet (CSDLBI)
-  L'élément EntitySet définit une collection d'entités d'un type spécifique dans un modèle de données CSDLBI.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'élément EntitySet définit une collection d'entités d'un type spécifique dans un modèle de données CSDLBI.  
   
  L'EntitySet doit spécifier chaque type d'entité inclus dans le modèle de données. Des informations sur ces entités de modèle sont spécifiées en répertoriant les entités enfants du type, élément Entity. Pour plus d’informations, consultez [Élément EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |Caché|Non|Indique si l'entité est masquée. Par défaut, les entités ne sont pas masquées.|  
   
 ## <a name="example"></a>Exemple  
- **Tabulaire**  
+ **Sous forme de tableau**  
   
  L'exemple suivant, en CSDLBI version 1.1, affiche les définitions des tables Date et Geography, du modèle tabulaire AdventureWorks.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="example"></a>Exemple  
- **(Multidimensionnel)**  
+ **Multidimensionnel**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre plusieurs éléments EntitySet du cube Contoso Retail Operations.  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Informations techniques de référence pour les Annotations BI au langage CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

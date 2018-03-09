@@ -3,8 +3,11 @@ title: "Boîte de dialogue Création de table (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c7c6efce5afa21a2caa06d3fb9edf6922e7c2db4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Boîte de dialogue Création de table (Visual Database Tools)
-Permet de nommer une table créée dans laquelle vous copiez des lignes. Cette boîte de dialogue s'affiche lorsque vous modifiez le type d'une requête pour la transformer en une requête MAKE TABLE. Pour modifier le type d'une requête, dans le menu **Concepteur de requêtes** , pointez sur **Modifier le type**, puis cliquez sur **Créer une table**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permet de nommer une table créée dans laquelle vous copiez des lignes. Cette boîte de dialogue s'affiche lorsque vous modifiez le type d'une requête pour la transformer en une requête MAKE TABLE. Pour modifier le type d'une requête, dans le menu **Concepteur de requêtes** , pointez sur **Modifier le type**, puis cliquez sur **Créer une table**.  
   
 ## <a name="options"></a>Options  
 **Nom de la table**  
@@ -35,7 +38,7 @@ Pour créer une table de destination dans une autre base de données, spécifiez
 > [!NOTE]  
 > Avant d'exécuter la requête, vous pouvez modifier les propriétés de la table à créer dans la fenêtre **Propriétés** . Pour plus d’informations, consultez [Propriétés de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes Make Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

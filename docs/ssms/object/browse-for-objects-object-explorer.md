@@ -3,8 +3,11 @@ title: "Rechercher des objets (Explorateur d’objets) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e6e65cd3b8a6f9120f2e20872eacb8fd40f2b7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2011789bbecd15c199049e1a50335b77885c9efb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="browse-for-objects-object-explorer"></a>Rechercher des objets (Explorateur d'objets)
-Permet d'afficher la liste des objets du type sélectionné. Sélectionnez un ou plusieurs objets de cette liste en activant les cases à cocher correspondantes. La zone **Rechercher des objets** n'affiche que les éléments appropriés pour l'action et les éléments que vous êtes autorisé à afficher.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permet d’afficher la liste des objets du type sélectionné. Sélectionnez un ou plusieurs objets de cette liste en activant les cases à cocher correspondantes. La zone **Rechercher des objets** n'affiche que les éléments appropriés pour l'action et les éléments que vous êtes autorisé à afficher.  
   
 ## <a name="options"></a>Options  
 **Case à cocher**  

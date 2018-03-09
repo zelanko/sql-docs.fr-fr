@@ -3,8 +3,11 @@ title: "Nouvelle planification du travail - Propriétés de la planification du 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43a5ca3c9fa4ed16f87071f0c811bf9a98fee3ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b4ddf72c55ea9dcc3561ea6903f024dc9a071569
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nouvelle planification du travail - Propriétés de la planification du travail
-Cette page vous permet d'afficher et de modifier les propriétés de la planification.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet d’afficher et de changer les propriétés de la planification.  
   
 ## <a name="options"></a>Options  
 **Nom**  
@@ -98,7 +101,7 @@ Sélectionnez la date d'exécution du travail.
 **Time**  
 Sélectionnez l'heure d'exécution du travail.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des planifications et les attacher à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Planifier un travail](../../ssms/agent/schedule-a-job.md)  
   

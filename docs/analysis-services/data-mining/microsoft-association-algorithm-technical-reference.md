@@ -2,15 +2,13 @@
 title: "Référence technique d’algorithme Microsoft Association | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme Microsoft Association
-  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L'algorithme MAR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  
   
  Vous pouvez utiliser les algorithmes MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) et MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) pour analyser des associations, mais les règles identifiées par chaque algorithme peuvent différer. Dans un modèle d'arbres de décision, les divisions qui aboutissent à des règles spécifiques sont basées sur un gain d'informations, tandis que dans un modèle d'association, les règles sont entièrement basées sur la confiance. Par conséquent, dans un modèle d'association, une règle forte ou avec un niveau de confiance élevé n'est pas forcément intéressante car elle ne fournit pas de nouvelles informations.  
   
@@ -172,6 +171,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles d’Association &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

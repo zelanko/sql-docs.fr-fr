@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,20 @@ helpviewer_keywords:
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80eb1df239768a6af53722977d2047c4f65cb9a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f64bb51a733898d89f4c1cd67c2615fce6266a69
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configuration de SQL Server dans SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Information> objet, le <xref:Microsoft.SqlServer.Management.Smo.Settings> objet, le <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objet et le <xref:Microsoft.SqlServer.Management.Smo.Configuration> contiennent les paramètres et les informations de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Information> objet, le <xref:Microsoft.SqlServer.Management.Smo.Settings> objet, le <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objet et le <xref:Microsoft.SqlServer.Management.Smo.Configuration> contiennent les paramètres et les informations de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possède de nombreuses propriétés qui décrivent le comportement de l'instance installée. Les propriétés décrivent les options de démarrage, les valeurs par défaut du serveur, les fichiers et répertoires, les informations sur le processeur et le système, le produit et les versions, les informations sur la connexion, les options de mémoire, les sélections de langue et de classement et le mode d'authentification.  
   

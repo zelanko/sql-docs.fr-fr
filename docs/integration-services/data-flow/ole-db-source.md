@@ -1,5 +1,5 @@
 ---
-title: Source OLE DB | Documents Microsoft
+title: Source OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>Source OLE DB
   La source OLE DB extrait des données d'une série de bases de données relationnelles compatibles OLE DB à l'aide d'une table de base de données, d'une vue ou d'une commande SQL. Par exemple, la source OLE DB peut extraire des données de tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -102,13 +101,13 @@ ms.lasthandoff: 08/17/2017
 ## <a name="configuring-the-ole-db-source"></a>Configuration de la source OLE DB  
  Vous pouvez définir les propriétés par programmation ou par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programme. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Extraire des données à l'aide de la source OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -118,11 +117,11 @@ ms.lasthandoff: 08/17/2017
   
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Article Wiki, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
   
 ## <a name="ole-db-source-editor-connection-manager-page"></a>Éditeur de source OLE DB (page Gestionnaire de connexions)
-  La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
+  La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
   
 > [!NOTE]  
 >  Pour charger des données à partir d’une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, utilisez une source OLE DB. Vous ne pouvez pas utiliser une source Excel pour charger des données à partir d'une source de données Excel 2007. Pour plus d’informations, consultez [Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
@@ -132,7 +131,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  La propriété **CommandTimeout** de la source OLE DB n’est pas disponible dans **l’Éditeur de source OLE DB**, mais peut être définie à l’aide de **l’Éditeur avancé**. Pour plus d’informations sur cette propriété, consultez la section sur la source Excel dans [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Ouvrez l’éditeur de Source OLE DB (Page Gestionnaire de connexions)  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Ouvrir l’Éditeur de source OLE DB (page Gestionnaire de connexions)  
   
 1.  Ajoutez la source OLE DB au package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 08/17/2017
   
 ### <a name="static-options"></a>Options statiques  
  **Gestionnaire de connexions OLE DB**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
@@ -161,7 +160,7 @@ ms.lasthandoff: 08/17/2017
  Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
   
 > [!NOTE]  
->  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. À la place les valeurs \<valeur trop grande pour être affichée > ou System.Byte [] s’affichent. La première s’affiche lorsque le fournisseur SQL OLE DB accède à la source de données, la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+>  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. Les valeurs \<valeur trop grande pour être affichée> ou System.Byte[] s’affichent à la place. La première s’affiche lorsque le fournisseur SQL OLE DB accède à la source de données, la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 08/17/2017
   
 #### <a name="data-access-mode--sql-command"></a>Mode d'accès aux données = Commande SQL  
  **Texte de la commande SQL**  
- Entrez le texte d'une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
+ Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
  **Paramètres**  
  Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
@@ -183,8 +182,8 @@ ms.lasthandoff: 08/17/2017
  **Build query**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
- **Parcourir**  
- Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+ **...**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
  **Analyser la requête**  
  Vérifiez la syntaxe du texte de la requête.  
@@ -233,10 +232,9 @@ ms.lasthandoff: 08/17/2017
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40; SSIS &#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
+ [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
   
-

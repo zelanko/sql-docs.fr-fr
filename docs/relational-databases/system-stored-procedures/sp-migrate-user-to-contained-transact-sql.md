@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **sp_migrate_user_to_contained** crée l’utilisateur de base de données de relation contenant-contenu avec mot de passe, quel que soit les propriétés ou les autorisations du compte de connexion. Par exemple, la procédure peut réussir si la connexion est désactivée ou si l’utilisateur se voit refuser le **CONNECT** autorisé à la base de données.  
   
  **sp_migrate_user_to_contained** présente les restrictions suivantes.  
@@ -77,7 +77,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
  Si le **BUILTIN\Administrateurs** connexion n’est présente, les administrateurs peuvent se connecter en démarrant leur application à l’aide de la **exécuter en tant qu’administrateur** option.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l’autorisation **CONTROL SERVER** .  
   
 ## <a name="examples"></a>Exemples  
@@ -85,7 +85,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### <a name="a-migrating-a-single-user"></a>A. Migration d'un seul utilisateur  
  L'exemple suivant migre un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `Barry`, vers un utilisateur de base de données à relation contenant-contenu avec mot de passe. L'exemple ne modifie pas le nom d'utilisateur et conserve le compte de connexion actif.  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -96,7 +96,7 @@ sp_migrate_user_to_contained
 ### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. Migration de tous les utilisateurs de la base de données avec des comptes de connexion vers des utilisateurs de base de données à relation contenant-contenu sans comptes de connexion  
  L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données à relation contenant-contenu avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données à relation contenant-contenu.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

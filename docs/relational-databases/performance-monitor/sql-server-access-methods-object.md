@@ -2,9 +2,12 @@
 title: SQL Server - Objet Access Methods | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1b594d608fc266567c0a5c86a24f8130c3b6c4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server - Objet Access Methods
-  L'objet **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs permettant de surveiller l'accès aux données logiques de la base de données. Les compteurs **Gestionnaire de tampons** permettent de surveiller l'accès physique aux pages de bases de données sur le disque. La surveillance des méthodes d'accès aux données de la base de données permet de déterminer s'il est possible d'améliorer les performances des requêtes en ajoutant ou en modifiant des index, en ajoutant ou en déplaçant des partitions, en ajoutant des fichiers ou des groupes de fichiers, en défragmentant des index ou en réécrivant des requêtes. Il est également possible d'utiliser les compteurs **Méthodes d'accès** pour surveiller le volume des données, les index ou l'espace libre dans la base de données. Ils indiquent ainsi le volume des données et leur fragmentation pour chaque instance du serveur. Une fragmentation excessive des index peut nuire aux performances.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs permettant de surveiller l’accès aux données logiques de la base de données. Les compteurs **Gestionnaire de tampons** permettent de surveiller l'accès physique aux pages de bases de données sur le disque. La surveillance des méthodes d'accès aux données de la base de données permet de déterminer s'il est possible d'améliorer les performances des requêtes en ajoutant ou en modifiant des index, en ajoutant ou en déplaçant des partitions, en ajoutant des fichiers ou des groupes de fichiers, en défragmentant des index ou en réécrivant des requêtes. Il est également possible d'utiliser les compteurs **Méthodes d'accès** pour surveiller le volume des données, les index ou l'espace libre dans la base de données. Ils indiquent ainsi le volume des données et leur fragmentation pour chaque instance du serveur. Une fragmentation excessive des index peut nuire aux performances.  
   
  Pour des informations détaillées sur le volume, la fragmentation et l'utilisation des données, utilisez les vues de gestion dynamique suivantes :  
   
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/09/2017
 |**Tables de travail à partir du cache de base**|À usage interne uniquement|  
 |**Taux de tables de travail à partir du cache**|Pourcentage de tables de travail créées lorsque les deux premières pages de la table de travail n'étaient pas allouées mais étaient immédiatement disponibles dans la mémoire cache de la table de travail. (Lorsqu'une table de travail est supprimée, deux pages peuvent rester allouées : elles sont placées dans la mémoire cache de la table de travail pour augmenter les performances).|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

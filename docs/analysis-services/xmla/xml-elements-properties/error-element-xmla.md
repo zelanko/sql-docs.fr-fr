@@ -2,15 +2,13 @@
 title: "Élément Error (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Error Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8071fdade167282df64330bce680c44b73a2c533
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0d513dc324fe6f1efc857a03bf231d06481c10c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-element-xmla"></a>Élément Error (XMLA)
-  Contient des informations sur une erreur retournée par une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient des informations sur une erreur retournée par une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,33 +65,33 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|  
+|Éléments parents|[Boîte de](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|  
 |Éléments enfants|Consultez le tableau ci-dessous.|  
   
 |Ancêtre|Éléments enfants|  
 |--------------|--------------------|  
-|[Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|Aucune|  
+|[Boîte de](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|None|  
 |[Cellule](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [ligne](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[Description](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |ErrorCode|Requis **UnsignedInt** attribut (uniquement lorsque **Message** est l’élément parent.) Contient le code de retour numérique de l'erreur.|  
 |Severity|Facultatif **chaîne** attribut (uniquement lorsque **Message** est l’élément parent.) Affiche la gravité de l'erreur.|  
-| Description|Facultatif **chaîne** attribut (uniquement lorsque **Message** est l’élément parent.) Contient le texte descriptif de l'erreur.|  
+|Description|Facultatif **chaîne** attribut (uniquement lorsque **Message** est l’élément parent.) Contient le texte descriptif de l'erreur.|  
 |Source|Facultatif **chaîne** attribut (uniquement lorsque **Message** est l’élément parent.) Contient le nom du composant qui a déclenché l'erreur.|  
 |HelpFile|Facultatif **chaîne** attribut (uniquement lorsque **Message** est l’élément parent.) Contient le chemin d'accès ou l'URL menant au fichier ou à la rubrique d'aide qui décrit l'erreur.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément Warning &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)   

@@ -1,35 +1,34 @@
 ---
 title: "Programmation des objets d’exploration de données AMO | Documents Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmation d'objets d'exploration de données AMO
   La programmation d'objets d'exploration de données à l'aide d'AMO est simple et directe. La première étape consiste à créer le modèle de structure de données pour prendre en charge le projet d'exploration de données. Vous devez ensuite créer le modèle d'exploration de données qui prend en charge l'algorithme d'exploration de données que vous souhaitez utiliser pour prédire ou rechercher les relations invisibles sur lesquelles reposent vos données. Dès lors que le projet d'exploration de données est créé (y compris la structure et les algorithmes), vous pouvez traiter les modèles d'exploration de données pour obtenir les modèles ayant fait l'objet d'un apprentissage que vous utiliserez par la suite lors des interrogations et des prédictions réalisées à partir de l'application cliente.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Objets MiningModel](#MiningModel)  
   
-##  <a name="MiningStructure"></a>Objets MiningStructure  
+##  <a name="MiningStructure">Objets MiningStructure</a>  
  Une structure d'exploration de données correspond à la définition de la structure de données utilisée pour créer tous les modèles d'exploration de données. Une structure d'exploration de données contient une liaison à une vue de source de données définie dans la base de données et contient des définitions pour toutes les colonnes participant aux modèles d'exploration de données. Une structure d’exploration de données peut avoir plusieurs modèles d’exploration de données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.MiningStructure> passe par les étapes suivantes :  
@@ -95,7 +94,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel"></a>Objets MiningModel  
+##  <a name="MiningModel">Objets MiningModel</a>  
  Un modèle d'exploration de données est une base de données de référentiel pour toutes les colonnes et définitions de colonne vouées à être utilisées dans un algorithme d'exploration de données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.MiningModel> passe par les étapes suivantes :  

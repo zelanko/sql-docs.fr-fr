@@ -8,24 +8,26 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7aa156a850239fca208cab71b5748d79f0594cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 015a01acc3316e4eccc1c4b93ec77388d0b057ab
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Création, modification et suppression de clés étrangères
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), les clés étrangères sont représentées par la <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les clés étrangères sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
  Pour créer une clé étrangère dans SMO, vous devez spécifier la table sur laquelle la clé étrangère est définie dans le constructeur de la <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objet. Dans la table, vous devez sélectionner au moins une colonne comme clé étrangère. Pour ce faire, créez une variable objet <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> et spécifiez le nom de la colonne qui est la clé étrangère. Ensuite, spécifiez la table et la colonne référencées. Utilisez le <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> méthode pour ajouter la colonne à la **colonnes** propriété d’objet.  
   
@@ -226,7 +228,7 @@ public class A {
 }  
 ```  
   
- Version Visual Basic de cet exemple :  
+ Version Visual Basic de cet exemple :  
   
 ```  
 ' compile with:   

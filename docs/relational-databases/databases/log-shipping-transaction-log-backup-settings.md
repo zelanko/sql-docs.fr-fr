@@ -2,27 +2,30 @@
 title: "Paramètres de sauvegarde des journaux de transaction | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1d6d243bad0d7c6e7fe79983b4e46864f13df6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 01a15e3ebf54cae459aad00052e009774d125c56
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Paramètres de sauvegarde des journaux de transactions
-  Utilisez cette boîte de dialogue pour configurer et modifier les paramètres de sauvegarde des journaux de transactions pour une configuration spécifique de la copie des journaux de transactions.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour configurer et modifier les paramètres de sauvegarde des journaux de transactions pour une configuration spécifique de la copie des journaux de transactions.  
   
  Pour obtenir des explications sur les concepts de copie des journaux de transaction, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
  **Nom du travail**  
  Affiche le nom du travail de l'Agent SQL Server servant à créer les sauvegardes des journaux de transactions pour la copie des journaux de transactions. Lors de la création du travail, vous pouvez modifier son nom en tapant un nouveau nom dans cette zone.  
   
- **Planifier**  
+ **Planification**  
  Affiche la planification actuelle pour la sauvegarde des journaux de transactions de la base de données principale. Avant la création du travail de sauvegarde, vous pouvez modifier cette planification en cliquant sur **Planification...**. Une fois que le travail a été créé, vous pouvez modifier cette planification en cliquant sur **Modifier le travail...**.  
   
 ### <a name="backup-job"></a>Travail de sauvegarde  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
 |**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Par conséquent, il peut être préférable, dans une session où l’utilisation de l’UC est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer un utilisateur de manière à créer et à gérer des travaux de l'Agent SQL Server](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
  [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

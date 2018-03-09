@@ -2,10 +2,14 @@
 title: "Utiliser des requêtes FOR XML imbriquées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53864aece4894c0aa72bf886f087ef76d5b4f9c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 53640114803f1dc03a10a0ed79edaaf09e08f638
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-nested-for-xml-queries"></a>Utiliser des requêtes FOR XML imbriquées
-  Le type de données **xml** et la [directive TYPE dans les requêtes FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes FOR XML d’être traité sur le serveur et sur le client.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Le type de données **xml** et la [directive TYPE dans les requêtes FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes FOR XML d’être traité sur le serveur et sur le client.  
   
 ## <a name="processing-with-xml-type-variables"></a>Traitement avec des variables de type xml  
  Vous pouvez affecter le résultat de la requête FOR XML à une variable de type **xml** ou bien utiliser XQuery pour interroger le résultat et affecter celui-ci à une variable de type **xml** en vue d’un traitement supplémentaire.  
@@ -86,7 +91,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Renvoi de résultats de requêtes FOR XML internes à des requêtes externes en tant qu'instances de type xml  
- Vous pouvez écrire des requêtes `FOR XML` imbriquées où le résultat de la requête interne est retourné en tant que type **xml** à la requête externe. Par exemple :  
+ Vous pouvez écrire des requêtes `FOR XML` imbriquées où le résultat de la requête interne est retourné en tant que type **xml** à la requête externe. Exemple :  
   
 ```  
 SELECT Col1,   

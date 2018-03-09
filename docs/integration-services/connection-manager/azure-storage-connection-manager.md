@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions Azure Storage | Documents Microsoft
+title: Gestionnaire de connexions du Stockage Azure | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,22 +16,21 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 848b0f0e3e639d31fa739e8d744fc4b80839a5fd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 09368733d9df6a7750c9b782ba45ae129b204b8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions Azure Storage
   Le **Gestionnaire de connexions Azure Storage** permet à un package SSIS (SQL Server Integration Services) de se connecter à un compte Azure Storage en utilisant les valeurs que vous spécifiez pour les propriétés Nom du compte de stockage et Clé de compte.  
    
- Le **Gestionnaire de connexions Azure Storage** est un composant de la [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
+ Le **gestionnaire de connexions du stockage Azure** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
 1.  Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez **AzureStorage**, puis cliquez sur **Ajouter**.  
   
@@ -48,4 +47,3 @@ ms.lasthandoff: 08/03/2017
 5.  Les propriétés du gestionnaire de connexions que vous avez créées apparaissent dans la fenêtre **Propriétés** .  
   
   
-

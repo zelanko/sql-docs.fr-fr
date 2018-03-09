@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENROWSET function
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +134,7 @@ OPENROWSET
 > [!NOTE]  
 >  Nous vous recommandons de spécifier un nom de classement pour chaque colonne dans un fichier de format, sauf lorsque vous souhaitez que l’option 65001 soit ont la priorité sur la spécification de page de codes/classement.  
   
-|Valeur CODEPAGE| Description|  
+|Valeur CODEPAGE|Description|  
 |--------------------|-----------------|  
 |ACP|Convertit les colonnes de **char**, **varchar**, ou **texte** type de données à partir de l’ANSI /[!INCLUDE[msCoName](../../includes/msconame-md.md)] page de codes Windows (ISO 1252) à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page de codes.|  
 |OEM (valeur par défaut)|Convertit les colonnes de **char**, **varchar**, ou **texte** type de données à partir de la page de codes OEM du système pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page de codes.|  
@@ -171,7 +173,7 @@ Une source de données externe nommé pointe vers l’emplacement de stockage d�
   
  Par défaut, ROWS_PER_BATCH est inconnu. Si vous spécifiez ROWS_PER_BATCH = 0, le résultat est le même que si vous omettez ROWS_PER_BATCH.  
   
- COMMANDE ({ *colonne* [ASC | DESC]} [ ,...  *n*  ] [UNIQUE])  
+ COMMANDE ({ *colonne* [ASC | DESC]} [,... *n*  ] [UNIQUE])  
  Indicateur facultatif qui spécifie la manière dont sont triées les données dans le fichier de données. Par défaut, le processus de chargement en masse considère que le fichier de données n'est pas trié. Il est possible que les performances soient améliorées si l'optimiseur de requête peut exploiter l'ordre spécifié pour générer un plan de requête plus efficace. Voici quelques exemples de situations dans lesquelles il peut être intéressant de spécifier un tri :  
   
 -   Insertion de lignes dans une table qui a un index cluster, où les données d'un ensemble de lignes sont triées sur la clé d'index cluster.  
@@ -221,7 +223,7 @@ FIELDQUOTE  **=**  'field_quote'
 Spécifie un caractère qui sera utilisé comme le caractère de guillemet dans le fichier CSV. Si non spécifié, le caractère guillemet (") servira en tant que le caractère guillemet tel que défini dans le [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  `OPENROWSET`peut être utilisé pour accéder aux données distantes OLE DB à partir de sources de données uniquement lorsque le **DisallowAdhocAccess** option de Registre est définie sur 0 pour le fournisseur spécifié, et les requêtes distribuées Ad Hoc option de configuration avancée est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
   
  Lors de l'accès à des sources de données OLE DB distantes, l'identité des connexions approuvées n'est pas automatiquement déléguée du serveur auquel le client est connecté au serveur qui est interrogé. Il est nécessaire de configurer la délégation de l'authentification.  
@@ -273,7 +275,7 @@ Spécifie un caractère qui sera utilisé comme le caractère de guillemet dans 
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode.|  
 |SQLBINARY ou SQLVARYBIN|Les données sont envoyées sans être converties.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  `OPENROWSET`les autorisations sont déterminées par les autorisations sur le nom d’utilisateur qui est passé au fournisseur OLE DB. Pour utiliser le `BULK` nécessite l’option `ADMINISTER BULK OPERATIONS` autorisation.  
   
 ## <a name="examples"></a>Exemples  
@@ -281,7 +283,7 @@ Spécifie un caractère qui sera utilisé comme le caractère de guillemet dans 
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Utilisation de OPENROWSET avec SELECT et le fournisseur SQL Server Native Client OLE DB  
  L’exemple suivant utilise le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client pour accéder à la `HumanResources.Department` de table dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données sur le serveur distant `Seattle1`. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Une instruction `SELECT` définit l'ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -295,7 +297,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  L'exécution de ce code exemple suppose que Microsoft Access est installé. Pour exécuter ce code exemple, vous devez installer la base de données Northwind.  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -309,7 +311,7 @@ GO
 > [!NOTE]  
 >  L'exécution de ce code exemple suppose que Microsoft Access est installé. Pour exécuter ce code exemple, vous devez installer la base de données Northwind.  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -324,7 +326,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Utilisation de OPENROWSET pour insérer en bloc un fichier de données dans une colonne de type varbinary(max)  
  Le code exemple suivant crée une petite table aux fins de démonstration et insère dans une colonne `Text1.txt` les données du fichier `C:` situé dans le répertoire racine `varbinary(max)`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -341,7 +343,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Utilisation du fournisseur OPENROWSET BULK avec un fichier de format pour récupérer des lignes dans un fichier texte  
  Le code exemple suivant utilise un fichier de format pour extraire des lignes d'un fichier texte dont les données sont délimitées par des tabulations, `values.txt`, qui contient les données suivantes :  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -349,7 +351,7 @@ GO
   
  Le fichier de format, `values.fmt`, décrit les colonnes du fichier `values.txt` :  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -358,7 +360,7 @@ GO
   
  Voici la requête qui récupère ces données :  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -366,14 +368,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Spécification d’une page format de fichier et le code  
  L’exemple suivant montre comment utiliser à la fois les fichiers et code page options de format en même temps.  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. L’accès aux données à partir d’un fichier CSV avec un fichier de format  
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -383,7 +385,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. L’accès aux données à partir d’un fichier CSV sans fichier de format
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -393,7 +395,7 @@ SELECT * FROM OPENROWSET(
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 L’exemple suivant utilise une source de données externe qui pointe vers un conteneur dans un compte de stockage Azure et les informations d’identification d’une étendue de la base de données créé pour la signature d’accès partagé.     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -418,7 +420,7 @@ Pour terminer `OPENROWSET` des exemples, y compris la configuration de source de
   
 -   [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   

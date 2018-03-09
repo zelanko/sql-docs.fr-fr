@@ -2,15 +2,13 @@
 title: "Élément DeleteWithDescendants (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DeleteWithDescendants Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7420b12875dd521186741726b084fc99131fa5cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d740654a701ebc4a81e1bf9e2b5084f706dfbbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deletewithdescendants-element-xmla"></a>Élément DeleteWithDescendants (XMLA)
-  Indique si les descendants des membres d'attribut sont également supprimés par la commande [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) parente.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Indique si les descendants des membres d’attribut sont également supprimés par le parent [supprimer](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,16 +52,16 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Type de données et longueur|Booléen|  
 |Valeur par défaut|False|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[DROP](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'élément **DeleteWithDescendants** détermine si la commande **Drop** doit supprimer les membres d'attribut identifiés par l'élément [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) élément mais également que les descendants de ces membres d'attribut doivent eux aussi être supprimés.  
   
 > [!NOTE]  

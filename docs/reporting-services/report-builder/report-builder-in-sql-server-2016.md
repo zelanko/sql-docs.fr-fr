@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords: "10428"
@@ -21,13 +19,13 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c84b428355b76b69e15aa14fad713c5fdd9b575e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5009b0c7ebe8fae67fe51a885dd9f5bf92dc69f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Générateur de rapports dans SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome plutôt que d’utiliser le Concepteur de rapports dans Visual Studio.  Lorsque vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie l’emplacement des données à obtenir, leur nature et leur mode d’affichage. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] et le publier sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint, pour permettre à d’autres utilisateurs de l’exécuter.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Les rapports publiés sont gérés sur un serveur de rapports ou un serveur de rapports en mode intégré SharePoint par un administrateur de serveur de rapports. Les administrateurs de serveur de rapports peuvent choisir le mode de sécurité, définir des propriétés et planifier des opérations, telles que l'historique de rapport et la remise des rapports par courrier électronique. Ils peuvent créer des planifications partagées et des sources de données partagées afin d'en permettre une utilisation générale. Les administrateurs peuvent également gérer tous les dossiers du serveur de rapports. La possibilité de réaliser des tâches de gestion dépend des autorisations délivrées aux utilisateurs.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
   [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Installer le générateur de rapports](../../reporting-services/install-windows/install-report-builder.md)

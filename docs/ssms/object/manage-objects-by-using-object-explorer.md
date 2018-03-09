@@ -3,8 +3,11 @@ title: "Gérer les objets à l’aide de l’Explorateur d’objets | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1deb4bbc2566d2c59bf24caddde565265594f2a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gérer les objets à l'aide de l'Explorateur d'objets
-Vous pouvez utiliser l'Explorateur d'objets pour gérer des objets tels que les bases de données, les tables et les procédures stockées.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez utiliser l’Explorateur d’objets pour gérer des objets tels que les bases de données, les tables et les procédures stockées.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Affichage des objets dans l'Explorateur d'objets  
 L'Explorateur utilise une arborescence pour regrouper les informations dans des dossiers. Pour développer un dossier, cliquez sur le signe plus (+) ou double-cliquez sur un dossier. Développez les dossiers pour afficher plus d'informations détaillées. Cliquez avec le bouton droit sur les dossiers ou les objets pour réaliser des tâches courantes. Double-cliquez sur les objets pour réaliser les tâches les plus courantes.  
@@ -55,10 +58,10 @@ Lorsque l'Explorateur d'objets est connecté à un serveur, vous pouvez ouvrir u
 ### <a name="start-powershell"></a>Démarrer PowerShell  
 Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell pour laquelle la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell est activée, et dont le chemin est défini sur l’objet sur lequel vous avez cliqué avec le bouton droit dans l’Explorateur d’objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour en savoir plus, consultez [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Voir aussi  
-[Explorateur d'objets](../../ssms/object/object-explorer.md)  
-[Ouvrir et configurer l'Explorateur d'objets](../../ssms/object/open-and-configure-object-explorer.md)  
-[Se connecter à une instance de l'Explorateur d'objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
+## <a name="see-also"></a> Voir aussi  
+[l’Explorateur d’objets](../../ssms/object/object-explorer.md)  
+[Ouvrir et configurer l’Explorateur d’objets](../../ssms/object/open-and-configure-object-explorer.md)  
+[Se connecter à une instance à partir de l’Explorateur d’objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Volet Détails de l'Explorateur d'objets](../../ssms/object/object-explorer-details-pane.md)  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

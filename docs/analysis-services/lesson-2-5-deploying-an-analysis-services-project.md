@@ -2,30 +2,33 @@
 title: "Déploiement d’une analyse des Services de projet | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Leçon 2-5-déploiement d’un projet Analysis Services
-Pour afficher les données du cube et de dimension pour les objets du cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous devez déployer le projet sur une instance spécifiée d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis traiter le cube et ses dimensions. Le *déploiement* d'un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entraîne la création des objets définis dans une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le*traitement* des objets dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copie les données à partir des sources de données sous-jacentes dans les objets du cube. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) et [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Pour afficher les données du cube et de dimension pour les objets du cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez déployer le projet sur une instance spécifiée d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puis traiter le cube et ses dimensions. Le *déploiement* d'un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entraîne la création des objets définis dans une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le*traitement* des objets dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copie les données à partir des sources de données sous-jacentes dans les objets du cube. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) et [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 À ce stade du processus de développement, vous déployez généralement le cube sur une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur un serveur de développement. À la fin du développement de votre projet Business Intelligence, vous utiliserez généralement l'Assistant Déploiement d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour le déployer à partir du serveur de développement sur un serveur de production. Pour plus d’informations, consultez [Déploiement d’une solution de modèle multidimensionnel](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) et [Déployer des solutions de modèles à l’aide de l’assistant Déploiement](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -42,7 +45,7 @@ Au cours de la tâche suivante, vous allez vérifier les propriétés de déploi
     Vérifiez les propriétés de déploiement du projet. Par défaut, le modèle de projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configure un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour déployer de façon incrémentielle tous les projets sur l'instance par défaut d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur l'ordinateur local, pour créer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avec le même nom que le projet, et pour traiter les objets après le déploiement en utilisant l'option de traitement par défaut. Pour plus d’informations, consultez [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Si vous souhaitez déployer le projet dans une instance nommée de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur l’ordinateur local, ou à une instance sur un serveur distant, modifiez le **Server** nom de la propriété à l’instance appropriée, tel que \< *nom_serveur**>\\<**InstanceName**>*.  
+    > Si vous souhaitez déployer le projet dans une instance nommée de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur l’ordinateur local, ou à une instance sur un serveur distant, modifiez le **Server** nom de la propriété à l’instance appropriée, tel que \<  *Nom_serveur**>\\<**InstanceName ** >*.  
   
 3.  Cliquez sur **OK**.  
   
@@ -64,10 +67,10 @@ Au cours de la tâche suivante, vous allez vérifier les propriétés de déploi
 Vous avez correctement déployé le cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur votre instance locale d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puis traité le cube déployé.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Exploration du cube](../analysis-services/lesson-2-6-browsing-the-cube.md)  
+[Exploration du Cube](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Déployer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+[Déployer des projets Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

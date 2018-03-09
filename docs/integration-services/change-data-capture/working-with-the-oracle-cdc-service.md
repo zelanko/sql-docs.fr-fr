@@ -1,5 +1,5 @@
 ---
-title: "Utilisation du Service de capture de données modifiées Oracle | Documents Microsoft"
+title: "Utilisation d’Oracle CDC Service| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69eb7087530b82c7ba75a9d8ff87fd8fff815f16
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
   Cette section décrit des concepts importants du service de capture de données modifiées Oracle. Les concepts inclus dans cette section sont les suivants :  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/03/2017
   
  **Voir aussi :**  
   
- [Procédure : préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [Guide pratique pour préparer SQL Server pour CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
 ### <a name="the-msxdbcdc-database-tables"></a>Tables de la base de données MSXDBCDC  
  Cette section décrit les tables suivantes dans la base de données MSXDBCDC.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/03/2017
   
 |Élément|Description|  
 |----------|-----------------|  
-|timestamp|Horodateur UTC exact de l'enregistrement de trace.|  
+|TIMESTAMP|Horodateur UTC exact de l'enregistrement de trace.|  
 |type|Contient l'une des valeurs suivantes :<br /><br /> erreur<br /><br /> INFO<br /><br /> trace|  
 |node|Nom du nœud sur lequel l'enregistrement a été écrit.|  
 |status|Code d'état utilisé par la table d'état.|  
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/03/2017
   
 |Élément|Description|  
 |----------|-----------------|  
-|name|Nom de la base de données Oracle dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|NAME|Nom de la base de données Oracle dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Horodateur (UTC) pour la dernière modification de la table **xdbcdc_config** de base de données CDC correspondante ou horodateur (UTC) pour la ligne actuelle dans cette table.<br /><br /> Le déclencheur UPDATE applique la valeur GETUTCDATE() pour cet élément. **config_version** permet au service de capture de données modifiées d’identifier l’instance de capture de données modifiées qui doit être examinée pour la modification de configuration ou pour l’activation/désactivation.|  
 |cdc_service_name|Cet élément détermine le service de capture de données modifiées Oracle qui gère la base de données Oracle sélectionnée.|  
 |activé|Indique si l'instance Oracle CDC est activée (1) ou désactivée (0). Lorsque le service de capture de données modifiées Oracle démarre, seules les instances marquées comme étant activées (1) sont démarrées.<br /><br /> **Remarque**: Une instance Oracle CDC peut être désactivée en raison d’une erreur qui n’est pas renouvelable. Dans ce cas, l'instance doit être redémarrée manuellement une fois l'erreur corrigée.|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 08/03/2017
 |ref_count|Cet élément compte le nombre d'ordinateurs où le même service de capture de données modifiées Oracle est installé. Il est augmenté à chaque ajout de service de capture de données modifiées Oracle portant le même nom, et il est réduit lorsque ce service est supprimé. Lorsque le compteur atteint zéro, cette ligne est supprimée.|  
 |active_service_node|Nom du nœud Windows qui gère actuellement le service de capture de données modifiées. Lorsque le service est arrêté correctement, cette colonne a la valeur Null, ce qui indique qu'il ne s'agit plus d'un service actif.|  
 |active_service_heartbeat|Cet élément suit le service de capture de données modifiées actuel pour déterminer s'il est encore actif.<br /><br /> Cet élément est mis à jour avec l'horodateur UTC de la base de données active du service de capture de données modifiées actif à intervalles réguliers. L'intervalle par défaut est de 30 secondes ; cependant, vous pouvez le configurer.<br /><br /> Lorsqu'un service de capture de données modifiées en attente détecte que la pulsation n'a pas été mise à jour après que l'intervalle configuré est passé, le service en attente tente d'assumer le rôle de service de capture de données modifiées actif.|  
-|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]**. La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> Les valeurs possibles de trace sont les suivantes :<br /><br /> **true**<br /><br /> **actif**<br /><br /> **false**<br /><br /> **inactif**<br /><br /> **\<nom de classe > [, nom de la classe >]**<br /><br /> <br /><br /> La valeur par défaut est **false**.<br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
+|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]**. La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> Les valeurs possibles de trace sont les suivantes :<br /><br /> **true**<br /><br /> **actif**<br /><br /> **false**<br /><br /> **inactif**<br /><br /> **\<nom_classe>[,nom_classe>]**<br /><br /> <br /><br /> La valeur par défaut est **false**.<br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Procédures stockées de base de données MSXDBCDC  
@@ -165,7 +164,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service (svcname,sqlusr)  
  La procédure **dbo.xcbcdc_add_service** ajoute une entrée à la table **MSXDBCDC.xdbcdc_services** et ajoute un incrément de un à la colonne ref_count pour le nom du service dans la table **MSXDBCDC.xdbcdc_services** . Quand **ref_count** a la valeur 0, elle supprime la ligne.  
   
- À utiliser le **dbo.xcbcdc_add_service\<nom de service, le nom d’utilisateur >** procédure, l’utilisateur doit être membre du **db_owner** rôle de base de données pour la base de données CDC instance nommée ou un membre de la **sysadmin** ou **serveradmin** rôle serveur fixe.  
+ Pour utiliser la procédure **dbo.xcbcdc_add_service\<nom_service, nom_utilisateur>**, l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données d’instanceCDC nommée ou membre du rôle serveur fixe **sysadmin** ou **serveradmin**.  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  La procédure **dbo.xdbcdc_start** envoie une demande de démarrage au service de capture de données modifiées qui gère l’instance de capture de données modifiées sélectionnée pour démarrer le traitement des modifications.  
@@ -189,7 +188,7 @@ ms.lasthandoff: 08/03/2017
   
  **Voir aussi**  
   
- [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
+ [Guide pratique pour utiliser l’interface de ligne de commande du service CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
 ### <a name="service-program-commands"></a>Commandes du programme de service  
  Cette section décrit les commandes suivantes utilisées pour configurer le service CDC.  
@@ -268,9 +267,8 @@ ms.lasthandoff: 08/03/2017
   
  **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
- [Comment préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [Guide pratique pour préparer SQL Server pour CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
   
-

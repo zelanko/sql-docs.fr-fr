@@ -1,5 +1,5 @@
 ---
-title: bcp_init | Documents Microsoft
+title: bcp_init | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae86d774a168a3e68ca4cb0bbcec1f3a741f801b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 619c1c5b150d31f8fd283ef365c476674fb8b427
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,14 +47,14 @@ RETCODE bcp_init (
   
 ## <a name="arguments"></a>Arguments  
  *pas*  
- Handle de connexion ODBC compatible avec la copie en bloc.  
+ Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *szTable*  
  Nom de la table de base de données depuis ou vers laquelle s'effectue la copie. Ce nom peut aussi inclure le nom de la base de données ou le nom du propriétaire. Par exemple, **pubs.gracie.titles**, **pubs... titres**, **gracie.titles**, et **titres** sont tous des noms de tables.  
   
  Si *eDirection* est DB_OUT, *szTable* peut également être le nom d’une vue de base de données.  
   
- Si *eDirection* est DB_OUT et qu’une instruction SELECT est spécifiée à l’aide de [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) avant [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) est appelée, **bcp_init***szTable* doit avoir la valeur NULL.  
+ Si *eDirection* est DB_OUT et qu’une instruction SELECT est spécifiée à l’aide de [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) avant [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) est appelée, **bcp_init** *szTable* doit avoir la valeur NULL.  
   
  *szDataFile*  
  Nom du fichier utilisateur depuis ou vers lequel s'effectue la copie. Si données sont copiées directement à partir de variables à l’aide de [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), définissez *szDataFile* avec la valeur NULL.  
@@ -91,7 +91,7 @@ RETCODE bcp_init (
   
  Les copies en bloc vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être optimisées pour les tables qui ne contiennent pas d'index en définissant le mode de récupération de base de données avec la valeur SIMPLE ou BULK_LOGGED. Pour plus d’informations, consultez [conditions préalables pour la journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) et [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Si aucun fichier de données n’est utilisé, vous devez appeler [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour spécifier le format et l’emplacement en mémoire des données chaque colonne, puis copiez les lignes de données à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Si aucun fichier de données n’est utilisé, vous devez appeler [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour spécifier le format et l’emplacement en mémoire des données pour chaque colonne, puis copiez les lignes de données à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser la fonction ODBC bcp_init avec un fichier de format.  

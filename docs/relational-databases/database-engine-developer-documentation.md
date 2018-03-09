@@ -2,29 +2,33 @@
 title: "Documentation développeur du moteur de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a00f76db34b27e6bb13f7b7ddc5422774746adb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 23d61cdb9d6f82ddd2e35e7e4e8999cd814557b7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Documentation développeur du moteur de base de données
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un riche ensemble d'outils pour développer, administrer, et contrôler les applications de base de données.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un riche ensemble d’outils pour développer, administrer et contrôler les applications de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/09/2017
  [Programmation de boîte de message d’exception](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Décrit comment utiliser l'interface de programmation des messages d'exception dans vos applications pour contrôler les messages de manière beaucoup plus rigoureuse et pour donner à vos utilisateurs la possibilité d'enregistrer le contenu des messages d'erreur afin de pouvoir obtenir une assistance ultérieure.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Programmation de l’exploration de données](../analysis-services/data-mining-programming.md)   
  [Documentation du développeur Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
  [Documentation du développeur Integration Services](../integration-services/integration-services-developer-documentation.md)   

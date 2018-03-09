@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Présentation des codes de mise à jour (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Vous pouvez modifier (insérer, mettre à jour ou supprimer) une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’un XML existant de document à l’aide d’une mise à jour ou OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] (fonction).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Vous pouvez modifier (insérer, mettre à jour ou supprimer) une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’un XML existant de document à l’aide d’une mise à jour ou OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] (fonction).  
   
  La fonction OPENXML modifie une base de données en fragmentant le document XML existant et en fournissant un ensemble de lignes qui peut être passé à une instruction INSERT, UPDATE ou DELETE. Avec OPENXML, les opérations sont effectuées directement sur les tables de base de données. Par conséquent, OPENXML est particulièrement approprié partout où les fournisseurs d'ensembles de lignes, tels qu'une table, peuvent apparaître comme source.  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  Les définitions ci-dessous décrivent le rôle de chacun de ces blocs :  
   
- **\<avant de >**  
+ **\<before>**  
  Identifie l'état existant (également appelé « état before ») de l'instance de l'enregistrement.  
   
- **\<une fois >**  
+ **\<after>**  
  Identifie le nouvel état qu'auront les données après modification.  
   
- **\<synchronisation >**  
+ **\<sync>**  
  Contient le  **\<avant >** et  **\<après >** blocs. A  **\<synchronisation >** bloc peut contenir plusieurs jeux de  **\<avant >** et  **\<après >** blocs. S’il existe plusieurs jeux de  **\<avant >** et  **\<après >** blocs, ces blocs (même si elles sont vides) doit être spécifié en tant que paires. En outre, une mise à jour peut avoir plusieurs  **\<synchronisation >** bloc. Chaque  **\<synchronisation >** bloc est une unité de transaction (ce qui signifie que, soit tout dans le  **\<synchronisation >** bloc est effectué ou rien ne se produit). Si vous spécifiez plusieurs  **\<synchronisation >** blocs dans une mise à jour, l’échec d’un  **\<synchronisation >** bloc n’affecte pas l’autre  **\<synchronisation >** blocs.  
   
  Indique si une mise à jour supprime, insère ou met à jour une instance d’enregistrement varie selon le contenu de la  **\<avant >** et  **\<après >** blocs :  

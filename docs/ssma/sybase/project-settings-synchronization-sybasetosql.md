@@ -3,8 +3,11 @@ title: "Paramètres (synchronisation) (SybaseToSQL) du projet | Documents Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c27c5db00165b0664e9d3d42fbfe104264cde147
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 23b91803d96e77e171bb32e4af7d42dc45872b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Paramètres du projet (synchronisation) (SybaseToSQL)
 La page de synchronisation de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA charge des objets de base de données, telles que les tables et procédures stockées, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  

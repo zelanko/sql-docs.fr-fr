@@ -3,10 +3,10 @@ title: "Dispositif d’analyse avec System Center Operations Manager (APS)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
 caps.latest.revision: "14"
-ms.openlocfilehash: 115d32ab8f633752dacfaf245017803bcdbfb8d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a89b19a93d99bb3e63925b012bb53d169fdf0d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Surveiller l’application à l’aide de System Center Operations Manager
 Cette section décrit comment utiliser System Center Operations Manager pour surveiller SQL Server PDW et HDInsight.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  System Center Operations Manager 2007 R2, 2012 ou 2012 SP1 doit être installé et en cours d’exécution.  
   

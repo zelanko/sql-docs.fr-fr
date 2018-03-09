@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_continuous_copy_status_TSQL
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4556ca83115890372c53c28c1ee15adfb0d5d835
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>Sys.dm_continuous_copy_status (base de données de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ Si vous utilisez une base de données SQL V12, vous devez utiliser [sys.dm_geo_r
 |Nom de la colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|ID unique de la base de données réplica.|  
-|**serveur_partenaire**|**sysname**|Nom du serveur SQL Database lié.|  
+|**partner_server**|**sysname**|Nom du serveur SQL Database lié.|  
 |**partner_database**|**sysname**|Nom de la base de données liée sur le serveur SQL Database lié.|  
 |**last_replication**|**datetimeoffset**|Horodateur de la dernière transaction dupliquée appliquée.|  
 |**replication_lag_sec**|**int**|Décalage horaire en secondes entre l'heure actuelle et l'horodateur de la dernière transaction validée dans la base de données primaire qui n'a pas été acceptée par la base de données secondaire active.|  
@@ -53,7 +55,7 @@ Si vous utilisez une base de données SQL V12, vous devez utiliser [sys.dm_geo_r
 |**is_target_role**|**bit**|0 = Source de la relation de copie<br /><br /> 1 = Cible de la relation de copie|  
 |**is_interlink_connected**|**bit**|1 = L'interlien est connecté.<br /><br /> 0 = L'interlien est déconnecté.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour récupérer des données, nécessite l’appartenance dans le **db_owner** rôle de base de données. L’utilisateur dbo, les membres de la **dbmanager** rôle de base de données et la connexion sa peuvent interroger cette vue ainsi.  
   
 ## <a name="remarks"></a>Notes  

@@ -2,25 +2,30 @@
 title: "Prise en charge d’OLTP en mémoire par SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bb364c19ff1f601792527bb89436f725d07d35f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 420c0a1dfd43a55dfda4c2e6dc612c2e49538e93
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils permettant de configurer, de surveiller et d’administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
  Les tâches de cette rubrique décrivent comment utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les tables mémoire optimisées ; les index sur les tables mémoire optimisées ; les procédures stockées compilées en mode natif ; et les types de tables mémoire optimisées, définis par l'utilisateur.  
@@ -92,7 +97,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour la base de données, la table, la procédure stockée, le type de table défini par l'utilisateur ou les objets Index, les fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suivantes ont été mises à jour ou étendues pour prendre en charge OLTP en mémoire.  
   
--   Explorateur d’objets  
+-   Explorateur d'objets  
   
     -   Menu contextuels  
   
@@ -131,7 +136,7 @@ ms.lasthandoff: 11/09/2017
   
              Dans l’**Assistant Générer et publier des scripts**, la valeur par défaut de l’option de script **Vérifier l’existence de l’objet** est FALSE. Si la valeur de l’option de script **Vérifier l’existence de l’objet** est TRUE dans l’écran **Définir les options de script** de l’Assistant, le script généré contient « CREATE PROCEDURE <nom_procédure> AS » et « ALTER PROCEDURE <nom_procédure> <définition_procédure> ». Lorsqu'il est exécuté, le script généré retourne une erreur, car ALTER PROCEDURE n'est pas pris en charge sur les procédures stockées compilées en mode natif.  
   
-             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
+             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
   
             1.  Dans « CREATE PROCEDURE <nom_procédure> AS », remplacez « AS » par « <définition_procédure> ».  
   
@@ -158,7 +163,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour plus d’informations sur les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prises en charge, consultez [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

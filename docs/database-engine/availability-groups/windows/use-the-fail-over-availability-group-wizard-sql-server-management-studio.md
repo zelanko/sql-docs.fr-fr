@@ -2,10 +2,14 @@
 title: "Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb382c0fa58fe682e703701833bb8d99f8ef26d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8d7a9a047bb1f60ea5e9c1d91d823af30ca35ff
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
-  Cette rubrique explique comment effectuer un basculement manuel planifié ou forcé (basculement forcé) sur un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Si vous basculez vers un réplica secondaire à l'état SYNCHRONIZED, l'Assistant exécute un basculement manuel planifié (sans perte de données). Si vous basculez vers un réplica secondaire à l’état UNSYNCHRONIZED ou NOT SYNCHRONIZING, l’Assistant effectue un basculement manuel forcé, également appelé *basculement forcé* (avec perte de données possible). Les deux formes de basculement manuel transfèrent le réplica secondaire auquel vous êtes connecté au rôle principal. Un basculement manuel planifié transfère actuellement l'ancien réplica principal sur le rôle secondaire. Après un basculement forcé, lorsque l'ancien réplica principal passe en ligne, il est transféré au rôle secondaire.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment effectuer un basculement manuel planifié ou forcé (basculement forcé) sur un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Si vous basculez vers un réplica secondaire à l'état SYNCHRONIZED, l'Assistant exécute un basculement manuel planifié (sans perte de données). Si vous basculez vers un réplica secondaire à l’état UNSYNCHRONIZED ou NOT SYNCHRONIZING, l’Assistant effectue un basculement manuel forcé, également appelé *basculement forcé* (avec perte de données possible). Les deux formes de basculement manuel transfèrent le réplica secondaire auquel vous êtes connecté au rôle principal. Un basculement manuel planifié transfère actuellement l'ancien réplica principal sur le rôle secondaire. Après un basculement forcé, lorsque l'ancien réplica principal passe en ligne, il est transféré au rôle secondaire.  
 
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Avant votre premier basculement manuel planifié, consultez la section « Avant de commencer » dans [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
@@ -48,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -56,13 +61,13 @@ ms.lasthandoff: 11/09/2017
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge un réplica secondaire du groupe de disponibilité devant être basculé et développez l'arborescence du serveur.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
+2.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
 3.  Pour lancer l’Assistant Basculer le groupe de disponibilité, cliquez avec le bouton droit sur le groupe de disponibilité que vous allez basculer, puis sélectionnez **Basculement**.  
   
 4.  Les informations présentées dans la page d' **Introduction** varient selon qu'un réplica secondaire est éligible ou non à un basculement planifié. Si cette page indique «**Effectuer un basculement planifié pour ce groupe de disponibilité**», vous pouvez basculer le groupe de disponibilité sans perte de données.  
   
-5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Pour un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera «**Perte de données, avertissements (***#***)**» où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d'une cible données de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
+5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Pour un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera « **Perte de données, avertissements (***#***)** », où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d'une cible données de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
   
      Pour plus d'informations, consultez la [page Sélectionner le nouveau réplica principal](#SelectNewPrimaryReplica), plus loin dans cette rubrique.  
   
@@ -190,10 +195,10 @@ ms.lasthandoff: 11/09/2017
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Se connecter au réplica** , l'annulation de l'Assistant provoque sa fermeture sans effectuer aucune action.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
- [Basculement et modes de basculement &#40;Groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
  [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  

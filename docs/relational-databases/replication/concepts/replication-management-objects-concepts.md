@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c39d933b13d2ab43432d850c0233c2d0e8916142
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad05dda9ba5ae8ac81416c87b6538525fa53352e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  [Créer, modifier et supprimer des publications et des articles &#40;réplication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour créer, supprimer et modifier des publications et des articles.  
   
- [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour créer, supprimer et modifier des abonnements.  
   
  [Sécuriser une topologie de réplication](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
@@ -192,13 +192,13 @@ ms.lasthandoff: 11/17/2017
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Activation de la prise en charge de TLS 1.2 pour les composants RMO 
  Vous pouvez activer la prise en charge de TLS 1.2 pour les composants RMO sur Windows 2012 et versions antérieures en installant la mise à jour [KB 3140245](http://support.microsoft.com/help/3140245) et en créant des clés de Registre, comme indiqué dans l’article. Sur Windows 2012 R2 et versions ultérieures, seules doivent être créées les clés de Registre telles qu’indiquées dans l’article ci-dessus.
  
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple illustre la mise en cache des modifications de propriété. Les modifications apportées aux attributs d'une publication transactionnelle sont mises en cache tant qu'elles n'ont pas été envoyées explicitement au serveur.  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Concepts de programmation en matière de réplication](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

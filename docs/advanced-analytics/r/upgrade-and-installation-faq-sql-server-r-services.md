@@ -1,25 +1,28 @@
 ---
 title: "FAQ d’installation et de mise à niveau pour l’apprentissage de SQL Server | Documents Microsoft"
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 3c4fb79f04daeff6d98856b521fa1602a2334cdd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3e259fcc1332d614cf1e3427f6a927613493bd31
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>FAQ d’installation et de mise à niveau pour l’apprentissage de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique fournit des réponses aux questions courantes sur l’installation de l’apprentissage des fonctionnalités de SQL Server. Elle traite également des questions courantes sur les mises à niveau.
 
@@ -146,7 +149,7 @@ Comme les correctifs logiciels ou des améliorations apportées à SQL Server so
 
 À compter de 2016 de décembre, vous pouvez mettre à niveau les composants learning d’ordinateur à un rythme plus rapide que le cycle de publication SQL Server. Pour ce faire, *liaison* une instance de SQL Server à la stratégie de cycle de vie des logiciels modernes. Chaque fois qu’une nouvelle version des outils d’apprentissage est publiée par l’équipe de développement d’apprentissage, vous pouvez télécharger la dernière version et l’appliquer à une instance de SQL Server qui est utilisée pour l’apprentissage.
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, consultez :
 
 + [Chronologie de prise en charge de Microsoft R Server et serveur de Machine Learning](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)
 + [Permet de mettre à niveau une instance de SQL Server SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).

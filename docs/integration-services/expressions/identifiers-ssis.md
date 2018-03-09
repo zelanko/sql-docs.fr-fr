@@ -1,5 +1,5 @@
 ---
-title: Identificateurs (SSIS) | Documents Microsoft
+title: Identificateurs (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e012e6c3c6b20c2a7f07b29c85b94dc127019d37
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  La dénomination des identificateurs standard doit suivre les règles suivantes :  
   
--   Le premier caractère du nom doit être une lettre, comme défini dans le standard Unicode 2.0, ou un trait de soulignement « _ ».  
+-   Le premier caractère du nom doit être une lettre, comme défini dans le standard Unicode 2.0, ou un trait de soulignement « _ ».  
   
 -   Les caractères suivants peuvent être des lettres ou des nombres, comme défini dans le standard Unicode 2.0, le trait de soulignement « _ » et les caractères « @ », « $ » et « # ».  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/03/2017
 >  Si les deux éléments en notation ponctuée figurent dans une paire de crochets, l'évaluateur d'expression interprète celle-ci comme un identificateur unique, et non pas comme une combinaison de colonnes source.  
   
 ## <a name="variables-in-expressions"></a>Variables dans des expressions  
- Les variables référencées dans les expressions doivent comprendre le préfixe « @ ». Par exemple, le **compteur** variable est référencée à l’aide de @Counter. Le caractère « @ » ne fait pas partie du nom de la variable ; il permet simplement à l'évaluateur d'expression d'identifier la variable. Si vous créez des expressions à l'aide des boîtes de dialogue du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , le caractère « @ » est automatiquement ajouté au nom de la variable. Vous ne pouvez pas insérer des espaces entre le caractère « @ » et le nom de la variable.  
+ Les variables référencées dans les expressions doivent comprendre le préfixe « @ ». Par exemple, la variable **Counter** est référencée sous la forme @Counter. Le caractère « @ » ne fait pas partie du nom de la variable ; il permet simplement à l'évaluateur d'expression d'identifier la variable. Si vous créez des expressions à l'aide des boîtes de dialogue du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , le caractère « @ » est automatiquement ajouté au nom de la variable. Vous ne pouvez pas insérer des espaces entre le caractère « @ » et le nom de la variable.  
   
  Les noms de variable suivent les mêmes règles que ceux des autres identificateurs standard :  
   
@@ -128,8 +127,7 @@ ms.lasthandoff: 08/03/2017
 @Count > @Count  
 ```  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
   
-

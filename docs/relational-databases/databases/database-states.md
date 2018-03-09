@@ -2,9 +2,12 @@
 title: "États d’une base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,18 +28,18 @@ helpviewer_keywords:
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 997df06a840d50669a643dd4d662d00ec896eaa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6acde3a545115bc189da2cfdad0297789fea6a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-states"></a>États d'une base de données
-  Une base de données est toujours dans un état spécifique. Par exemple, elle peut être dans l'état ONLINE, OFFLINE ou SUSPECT. Pour vérifier l’état actuel d’une base de données, sélectionnez la colonne **state_desc** de la vue du catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété **Status** de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une base de données est toujours dans un état spécifique. Par exemple, elle peut être dans l'état ONLINE, OFFLINE ou SUSPECT. Pour vérifier l’état actuel d’une base de données, sélectionnez la colonne **state_desc** de la vue du catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété **Status** de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
   
 ## <a name="database-state-definitions"></a>Définition des états d'une base de données  
  Le tableau ci-dessous définit les états de la base de données.  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
 |SUSPECT|Le groupe de fichiers primaire au moins est suspect et peut être endommagé. La base de données ne peut pas être récupérée au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de données n'est pas disponible. Une action de l'utilisateur est nécessaire pour résoudre le problème.|  
 |EMERGENCY|L'utilisateur a modifié la base de données et défini son état sur EMERGENCY. La base de données est en mode mono-utilisateur et peut être réparée ou restaurée. La base de données est marquée READ_ONLY, la journalisation est désactivée et l’accès est restreint aux membres du rôle serveur fixe **sysadmin** . EMERGENCY est principalement utilisé à des fins de dépannage. Par exemple, une base de données marquée SUSPECT peut être définie sur l'état EMERGENCY. Ceci peut permettre à l'administrateur système d'accéder en lecture seule à la base de données. Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir l’état EMERGENCY pour une base de données.|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
  [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  

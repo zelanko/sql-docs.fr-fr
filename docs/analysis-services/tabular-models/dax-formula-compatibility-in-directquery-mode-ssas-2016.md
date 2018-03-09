@@ -1,33 +1,30 @@
 ---
-title: "Compatibilité des formules DAX dans le Mode DirectQuery (SSAS 2016) | Documents Microsoft"
+title: "Compatibilité des formules DAX en mode DirectQuery | Documents Microsoft"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ab540d2806d6afb75eab3890fdad605a7b34a71c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilité des formules DAX en mode DirectQuery 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 Pour les modèles tabulaires 1200 et les versions ultérieures en mode DirectQuery, plusieurs limitations fonctionnelles dans les versions antérieures ne s’appliquent plus. Pour les formules DAX en particulier :
 
 - DirectQuery génère maintenant des requêtes plus simples, offrant des performances améliorées.
@@ -332,7 +329,7 @@ EXEMPLE : `SUBSTITUTE([Title],”Doctor”,”Dr.”)`
   
 EXEMPLE : `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
   
-En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonction qui a trois (3) paramètres : une référence à une colonne, l'ancien texte et le nouveau texte. Si vous utilisez la deuxième formule, une erreur est générée.  
+En mode DirectQuery, vous pouvez utiliser uniquement la version de cette fonction qui a trois (3) paramètres : une référence à une colonne, l'ancien texte et le nouveau texte. Si vous utilisez la deuxième formule, une erreur est générée.  
   
 Dans les modèles en mémoire, vous pouvez utiliser un quatrième paramètre facultatif pour spécifier le nombre d'instances de la chaîne à remplacer. Par exemple, vous pouvez remplacer uniquement la deuxième instance, etc.  
   
@@ -352,7 +349,7 @@ Dans un modèle en mémoire, le résultat se termine au dernier caractère de ch
 
 
 ## <a name="see-also"></a>Voir aussi  
-[Mode DirectQuery (SSAS Tabulaire)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Mode DirectQuery](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

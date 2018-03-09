@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f8429c48fb398f1d1a9e3f20741c7eecfd0810b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 063b94b4229221c998c42691a1c8832ac42be819
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Présentation de l'instruction DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  Vous pouvez inclure une navigation ou de prévision **sélectionnez** instructions dans le **FROM** et **où** clauses d’une jointure de prédiction **sélectionnez** instruction.  
   
-|Type de requête| Description|  
+|Type de requête|Description|  
 |----------------|-----------------|  
 |SELECT FROM [NATURAL] PREDICTION JOIN|Retourne une prévision qui est créée en joignant les colonnes du modèle d'exploration de données aux colonnes d'une source de données interne.<br /><br /> Le domaine de ce type de requête sont les colonnes prédictibles du modèle et les colonnes de la source de données d'entrée.<br /><br /> [SELECT FROM &#60; modèle &#62; JOINTURE de prédiction &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Requêtes de prédiction &#40; exploration de données &#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
 |SELECT FROM  *\<modèle >*|Retourne l'état le plus probable de la colonne prédictible, uniquement sur la base du modèle d'exploration de données. Ce type de requête est un raccourci pour créer une prévision avec une jointure de prévision vide.<br /><br /> Le domaine de ce type de requête sont les colonnes prédictibles du modèle.<br /><br /> [SELECT FROM &#60; modèle &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Requêtes de prédiction &#40; exploration de données &#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Browsing"></a>Navigation  
  Vous pouvez naviguer dans le contenu d'un modèle d'exploration de données en utilisant les types de requêtes suivants.  
   
-|Type de requête| Description|  
+|Type de requête|Description|  
 |----------------|-----------------|  
 |SELECT DISTINCT FROM  *\<modèle >*|Retourne toutes les valeurs d'état provenant du modèle d'exploration de données pour la colonne spécifiée.<br /><br /> Le domaine de données pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT DISTINCT FROM &#60; modèle &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Contenu des requêtes &#40; exploration de données &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modèle >*. CONTENU|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [SELECT FROM &#60; modèle &#62;. CONTENU &#40; DMX &#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Contenu des requêtes &#40; exploration de données &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
@@ -102,7 +100,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Copying"></a>Copie  
  Vous pouvez copier un modèle d'exploration de données et sa structure d'exploration de données associée dans un nouveau modèle, puis renommer le modèle dans l'instruction.  
   
-|Type de requête| Description|  
+|Type de requête|Description|  
 |----------------|-----------------|  
 |SELECT INTO  *\<nouveau modèle >*|Crée une copie du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md)|  
   
@@ -111,7 +109,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Drillthrough"></a>Extraction  
  Vous pouvez naviguer dans les cas, ou dans une représentation des cas, qui ont servi à l'apprentissage du modèle, en utilisant les types de requêtes suivants.  
   
-|Type de requête| Description|  
+|Type de requête|Description|  
 |----------------|-----------------|  
 |SELECT FROM  *\<modèle >*. CAS|Retourne les cas utilisés pour l'apprentissage du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT FROM &#60; modèle &#62;. CAS &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Créer des requêtes d’extraction à l’aide de DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<modèle >*. SAMPLE_CASES|Retourne un exemple de cas, qui représente les cas utilisés pour l'apprentissage du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT FROM &#60; modèle &#62;. SAMPLE_CASES &#40; DMX &#41;](../dmx/select-from-model-sample-cases-dmx.md)|  

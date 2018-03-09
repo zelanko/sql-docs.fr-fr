@@ -2,10 +2,14 @@
 title: "Créer un profil de messagerie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a006eb212a0d53a726397e8591ac99a7c6395a51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a30265b02ca821a3d787162b60847e71e7260fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
-  Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données. Pour plus d’informations sur les profils de messagerie, consultez [Profil de messagerie de base de données](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données. Pour plus d’informations sur les profils de messagerie, consultez [Profil de messagerie de base de données](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
 -   **Avant de commencer :** [Configuration requise](#Prerequisites), [Sécurité](#Security)  
   
@@ -41,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="Security"></a> Sécurité  
  Un profil public permet à tout utilisateur ayant accès à la base de données **msdb** d’envoyer des e-mails à l’aide de ce profil. Un profil privé peut être utilisé par un utilisateur ou par un rôle. Accorder l'accès de rôles aux profils permet de créer une architecture plus facile à maintenir. Pour envoyer du courrier, vous devez être membre du rôle **DatabaseMailUserRole** de la base de données **msdb** et disposer d'au moins un accès à un profil de messagerie de base de données.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  L'utilisateur qui crée les comptes de profils et exécute des procédures stockées doit être membre du rôle serveur fixe sysadmin.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'Assistant Configuration de la messagerie de base de données  
@@ -109,7 +114,7 @@ ms.lasthandoff: 11/09/2017
   
      *@account_name* = '*nom_de_compte*'  
   
-     *@sequence_number* = '*numéro_de_séquence_du_compte_dans_le_profil* '  
+     *@sequence_number* = '*numéro_de_séquence_du_compte_dans_le_profil* »  
   
      où *@profile_name* est le nom du profil, et *@account_name* est le nom du compte à ajouter au profil, et *@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
   
@@ -177,7 +182,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@account_name* = '*nom_de_compte*'  
   
-     *@sequence_number* = '*numéro_de_séquence_du_compte_dans_le_profil* '  
+     *@sequence_number* = '*numéro_de_séquence_du_compte_dans_le_profil* »  
   
      où *@profile_name* est le nom du profil, et *@account_name* est le nom du compte à ajouter au profil, et *@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
   

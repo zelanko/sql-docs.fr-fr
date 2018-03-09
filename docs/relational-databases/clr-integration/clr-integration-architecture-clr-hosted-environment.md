@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +29,20 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture d’intégration CLR - environnement hébergé CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’intégration avec le common language runtime (CLR) du .NET Framework permet aux programmeurs de base de données d’utiliser des langages tels que Visual c#, Visual Basic .NET et Visual C++. Les fonctions, procédures stockées, déclencheurs, types de données et agrégats sont parmi les types de logique métier que les programmeurs peuvent écrire avec ces langages.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'intégration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le Common Language Runtime (CLR) .NET Framework permet aux programmeurs de base de données d'utiliser des langages tels que Visual C#, Visual Basic .NET et Visual C++. Les fonctions, procédures stockées, déclencheurs, types de données et agrégats sont parmi les types de logique métier que les programmeurs peuvent écrire avec ces langages.  
   
   Le CLR propose une mémoire récupérée par le garbage collector, un threading préemptif, des services de métadonnées (réflexion de type), la vérifiabilité du code et la sécurité d'accès du code. Le CLR utilise les métadonnées pour rechercher et charger des classes, placer des instances en mémoire, résoudre des appels de méthode, générer un code natif, appliquer la sécurité et définir les limites du contexte d'exécution.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  Le code utilisateur ne doit pas être autorisé à effectuer des opérations qui compromettent l'intégrité du processus du moteur de base de données, telles que l'affichage d'une boîte de message demandant une réponse de l'utilisateur ou la sortie du processus. Le code utilisateur ne doit pas être en mesure de remplacer les mémoires tampons ou les structures de données internes du moteur de base de données.  
   
 ###### <a name="scalability"></a>Extensibilité  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR ont des modèles internes différents de planification et de gestion de la mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un modèle de thread coopératif et non préemptif, dans lequel les threads suspendent volontairement leur exécution périodiquement, ou lorsqu'ils attendent des verrous ou des E/S. Le CLR prend en charge un modèle de thread préemptif. Si le code utilisateur qui s'exécute au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler directement les primitives de thread du système d'exploitation, il ne s'intègre pas correctement dans le planificateur de tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut dégrader l'évolutivité du système. Le CLR ne distingue pas la mémoire virtuelle de la mémoire physique, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère directement la mémoire physique et doit utiliser la mémoire physique dans une limite configurable.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR ont des modèles internes différents pour la gestion de la planification et de la mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un modèle de thread coopératif et non préemptif, dans lequel les threads suspendent volontairement leur exécution périodiquement, ou lorsqu'ils attendent des verrous ou des E/S. Le CLR prend en charge un modèle de thread préemptif. Si le code utilisateur qui s'exécute au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appeler directement les primitives de thread du système d'exploitation, il ne s'intègre pas correctement dans le planificateur de tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut dégrader l'évolutivité du système. Le CLR ne distingue pas la mémoire virtuelle de la mémoire physique, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère directement la mémoire physique et doit utiliser la mémoire physique dans une limite configurable.  
   
  Les modèles différents de threading, de planification et de gestion de la mémoire présentent une difficulté d'intégration pour un système de gestion de base de données relationnelle (SGBDR) qui évolue pour prendre en charge des milliers de sessions utilisateur simultanées. L'architecture doit garantir que l'évolutivité du système n'est pas compromise lorsque le code d'utilisateur appelle des interfaces de programmation d'applications (API) directement pour des primitives de thread, de mémoire et de synchronisation.  
   
@@ -125,15 +126,15 @@ ms.lasthandoff: 11/17/2017
  En cas d'hébergement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de tels abandons de thread sont gérés comme suit : le CLR détecte tout état partagé dans le domaine d'application dans lequel l'abandon de thread se produit. Le CLR accomplit cela en vérifiant la présence d'objets de synchronisation. S'il existe un état partagé dans le domaine d'application, le domaine d'application lui-même est déchargé. Le déchargement du domaine d'application arrête les transactions de base de données qui sont actuellement en cours d'exécution dans ce domaine d'application. Comme la présence d'un état partagé peut élargir l'impact de telles exceptions critiques aux sessions utilisateur autres que celle qui déclenche l'exception, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR ont pris des mesures pour réduire la probabilité d'un état partagé. Pour plus d'informations, consultez la documentation sur le .NET Framework.  
   
 ###### <a name="security-permission-sets"></a>Sécurité : jeux d'autorisations  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de fiabilité et de sécurité du code déployé dans la base de données. Lorsque les assemblys sont téléchargés dans la base de données, l'auteur de l'assembly peut spécifier trois jeux d'autorisations au choix pour cet assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de sécurité et de fiabilité du code déployé dans la base de données. Lorsque les assemblys sont téléchargés dans la base de données, l'auteur de l'assembly peut spécifier trois jeux d'autorisations au choix pour cet assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
   
 |||||  
 |-|-|-|-|  
 |Jeu d'autorisations|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sécurité d’accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Illimité|  
 |Restrictions du modèle de programmation|Oui|Oui|Aucune restriction|  
-|Vérifiabilité requise|Oui|Oui|Non|  
-|Possibilité d'appeler du code natif|Non|Non|Oui|  
+|Vérifiabilité requise|Oui|Oui|non|  
+|Possibilité d'appeler du code natif|non|Non|Oui|  
   
  SAFE est le mode le plus fiable et sécurisé avec des restrictions associées quant au modèle de programmation autorisé. Les assemblys SAFE bénéficient d'autorisations suffisantes pour s'exécuter, effectuer des calculs et avoir accès à la base de données locale. Les assemblys SAFE doivent être de type sécurisé vérifié et ne sont pas autorisés à appeler du code non managé.  
   
@@ -141,14 +142,14 @@ ms.lasthandoff: 11/17/2017
   
  EXTERNAL_ACCESS fournit une option de sécurité intermédiaire. Il permet au code d'accéder à des ressources externes à la base de données, mais possède néanmoins les garanties de fiabilité de SAFE.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la couche de stratégie de sécurité d'accès du code de niveau hôte pour définir une stratégie hôte qui accorde l'un des trois jeux d'autorisations en fonction du jeu d'autorisations stocké dans les catalogues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le code managé qui s'exécute au sein de la base de données obtient toujours l'un de ces jeux d'autorisations d'accès du code.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la couche de stratégie au niveau hôte des autorités de certification pour définir une stratégie hôte qui accorde l’un des trois jeux d’autorisations en fonction de l’autorisation la valeur stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catalogues. Le code managé qui s'exécute au sein de la base de données obtient toujours l'un de ces jeux d'autorisations d'accès du code.  
   
 ### <a name="programming-model-restrictions"></a>Restrictions du modèle de programmation  
  Le modèle de programmation du code managé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implique l'écriture de fonctions, de procédures et de types qui ne nécessitent généralement pas l'utilisation d'un état maintenu d'un appel à un autre ni le partage de l'état sur plusieurs sessions utilisateur. Par ailleurs, comme décrit précédemment, la présence d'un état partagé peut provoquer des exceptions critiques qui affectent l'évolutivité et la fiabilité de l'application.  
   
  Dans de telles considérations, nous déconseillons d'utiliser des variables statiques et des membres de données statiques de classes utilisées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour les assemblys SAFE et EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examine les métadonnées de l'assembly au moment de la création de l'assembly et échoue dans la création de tels assemblys s'il détecte l'utilisation de membres de données et de variables statiques.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]rejette également les appels aux API .NET Framework qui sont annotés avec les **SharedState**, **synchronisation** et **ExternalProcessMgmt** les attributs de protection de l’hôte. Cela empêche les assemblys SAFE et EXTERNAL_ACCESS d'appeler des API qui activent l'état de partage, d'effectuer une synchronisation et d'affecter l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Restrictions du modèle de programmation CLR Integration](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette également les appels aux API .NET Framework qui sont annotés avec les **SharedState**, **synchronisation** et **ExternalProcessMgmt** les attributs de protection de l’hôte. Cela empêche les assemblys SAFE et EXTERNAL_ACCESS d'appeler des API qui activent l'état de partage, d'effectuer une synchronisation et d'affecter l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Restrictions du modèle de programmation CLR Integration](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité d’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7ae2972cdb62c24ed9299b18d3b44de30e17caa8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b1777520453efb9a38b687825249705bf66fd81
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookup-function"></a>Fonctions du Générateur de rapports - Lookup
   Retourne la première valeur correspondante pour le nom spécifié d'un dataset contenant des paires nom/valeur.  
@@ -54,7 +52,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Return  
  Retourne une valeur **Variant**, ou **Nothing** si aucune correspondance n'est trouvée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez **Lookup** pour récupérer la valeur du dataset spécifié pour une paire nom/valeur où il y a une relation un-à-un. Par exemple, pour un champ d’ID dans une table, vous pouvez utiliser **Lookup** pour récupérer le champ Nom correspondant d’un dataset qui n’est pas lié à la région de données.  
   
  La fonction**Lookup** effectue les actions suivantes :  
@@ -95,7 +93,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans l'exemple suivant, supposez qu'une table est liée à un dataset qui inclut un champ pour l'identificateur de produit ProductID. Un dataset distinct nommé « Product » contient l'identificateur de produit correspondant ID et le nom de produit Name.  
   
  Dans l’expression suivante, **Lookup** compare la valeur de ProductID à ID sur chaque ligne du dataset nommé « Product » et, quand une correspondance est trouvée, retourne la valeur du champ Name pour cette ligne.  
@@ -104,7 +102,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

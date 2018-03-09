@@ -2,9 +2,12 @@
 title: "Détection et résolution des conflits de réplication de fusion avancée | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50605b8e66ddf484aae391d7dedaf66b6dcd7c0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Réplication de fusion avancée - Détection et résolution des conflits
-  Lorsqu'un serveur de publication et un Abonné sont connectés et que la synchronisation se produit, l'Agent de fusion détecte la présence d'éventuels conflits. Si tel est le cas, l'Agent de fusion utilise un programme de résolution de conflits (spécifié lorsqu'un article est ajouté à une publication) pour déterminer les données qui doivent être acceptées et propagées aux autres sites.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lorsqu’un serveur de publication et un Abonné sont connectés et que la synchronisation se produit, l’Agent de fusion détecte la présence d’éventuels conflits. Si tel est le cas, l'Agent de fusion utilise un programme de résolution de conflits (spécifié lorsqu'un article est ajouté à une publication) pour déterminer les données qui doivent être acceptées et propagées aux autres sites.  
   
 > [!NOTE]  
 >  Bien qu'un Abonné se synchronise avec le serveur de publication, des conflits surviennent généralement entre les mises à jour effectuées par différents Abonnés plutôt qu'entre les mises à jour effectuées par l'Abonné et le serveur de publication.  
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [ Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [créer un abonnement de Pull](../../../relational-databases/replication/create-a-pull-subscription.md) et [créer un abonnement de Push](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) et [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Programme de résolution interactif  
  La réplication fournit une interface utilisateur du programme de résolution interactif, exploitable en association avec le programme de résolution de conflits par défaut basé sur les priorités ou avec un programme de résolution d'articles. Lors d'une synchronisation à la demande via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, le programme de résolution interactif affiche les données conflictuelles durant l'exécution et vous permet de choisir le moyen de résoudre les conflits. Pour plus d'informations sur la manière d'activer la résolution interactive et de démarrer le programme de résolution interactif, consultez [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -134,7 +137,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Synchronisez les données](../../../relational-databases/replication/synchronize-data.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)  
   
   

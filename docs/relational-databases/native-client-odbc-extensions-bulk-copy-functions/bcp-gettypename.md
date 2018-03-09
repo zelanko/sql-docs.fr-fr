@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename | Documents Microsoft
+title: bcp_gettypename | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *jeton*  
+ *token*  
  Valeur indiquant un jeton de type BCP.  
   
- *champ*  
+ *field*  
  Indique si le jeton demandé possède le type max.  
   
 ## <a name="returns"></a>Valeur renvoyée  
@@ -62,38 +62,38 @@ RETCODE bcp_gettypename (
 |**SQLDECIMAL**|Avant ou après|**decimal**|  
 |**SQLNUMERIC**|Avant ou après|**numeric**|  
 |**SQLINT1**|Avant ou après|**tinyint**|  
-|**SQLINT2 PROPRE À**|Avant ou après|**smallint**|  
+|**SQLINT2**|Avant ou après|**smallint**|  
 |**SQLINT4**|Avant ou après|**int**|  
 |**SQLMONEY**|Avant ou après|**money**|  
 |**SQLFLT8**|Avant ou après|**float**|  
 |**SQLDATETIME**|Avant ou après|**datetime**|  
-|**SQLBITN**|Avant ou après|**bits null**|  
+|**SQLBITN**|Avant ou après|**bit-null**|  
 |**SQLBIT**|Avant ou après|**bit**|  
-|**SQLBIGCHAR**|Non|**char**|  
-|**SQLCHARACTER**|Non|**char**|  
-|**SQLBIGVARCHAR**|Non|**varchar**|  
-|**SQLVARCHAR**|Non|**varchar**|  
-|**SQLTEXT**|Avant ou après|**text**|  
-|**SQLBIGBINARY**|Non|**binaire**|  
-|**SQLBINARY**|Non|**Binaire**|  
-|**SQLBIGVARBINARY**|Non|**Varbinary**|  
-|**SQLVARBINARY**|Non|**Varbinary**|  
+|**SQLBIGCHAR**|non|**char**|  
+|**SQLCHARACTER**|non|**char**|  
+|**SQLBIGVARCHAR**|non|**varchar**|  
+|**SQLVARCHAR**|non|**varchar**|  
+|**SQLTEXT**|Avant ou après|**texte**|  
+|**SQLBIGBINARY**|non|**binaire**|  
+|**SQLBINARY**|non|**Binaire**|  
+|**SQLBIGVARBINARY**|non|**Varbinary**|  
+|**SQLVARBINARY**|non|**Varbinary**|  
 |**SQLIMAGE**|Avant ou après|**Image**|  
-|**SQLINTN**|Avant ou après|**int null**|  
-|**SQLDATETIMN**|Avant ou après|**DateTime null**|  
-|**SQLMONEYN**|Avant ou après|**Money null**|  
-|**SQLFLTN**|Avant ou après|**float null**|  
+|**SQLINTN**|Avant ou après|**int-null**|  
+|**SQLDATETIMN**|Avant ou après|**datetime-null**|  
+|**SQLMONEYN**|Avant ou après|**money-null**|  
+|**SQLFLTN**|Avant ou après|**float-null**|  
 |**SQLAOPSUM**|Avant ou après|**Sum**|  
 |**SQLAOPAVG**|Avant ou après|**Avg**|  
-|**SQLAOPCNT**|Avant ou après|**Count**|  
+|**SQLAOPCNT**|Avant ou après|**Compter**|  
 |**SQLAOPMIN**|Avant ou après|**Min**|  
 |**SQLAOPMAX**|Avant ou après|**Max**|  
 |**SQLDATETIM4**|Avant ou après|**smalldatetime**|  
 |**SQLMONEY4**|Avant ou après|**Smallmoney**|  
 |**SQLFLT4**|Avant ou après|**Réel**|  
 |**SQLUNIQUEID**|Avant ou après|**uniqueidentifier**|  
-|**SQLNCHAR**|Non|**NCHAR**|  
-|**SQLNVARCHAR**|Non|**Nvarchar**|  
+|**SQLNCHAR**|non|**Nchar**|  
+|**SQLNVARCHAR**|non|**Nvarchar**|  
 |**SQLNTEXT**|Avant ou après|**Ntext**|  
 |**SQLVARIANT**|Avant ou après|**sql_variant**|  
 |**SQLINT8**|Avant ou après|**Bigint**|  
@@ -108,10 +108,10 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Oui|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Oui|**nvarchar(max)**|  
 |**SQLXML**|Oui|**Xml**|  
-|**SQLUDT**|Avant ou après|**UDT**|  
+|**SQLUDT**|Avant ou après|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
- Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour améliorées de Date et heure Types &#40; OLE DB et ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
+ Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour améliorées de Date et heure Types &#40; OLE DB et ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
   
  Pour plus d’informations, consultez [Date et heure améliorations &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

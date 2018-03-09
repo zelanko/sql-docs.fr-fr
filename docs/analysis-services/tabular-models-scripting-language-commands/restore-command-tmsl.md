@@ -2,15 +2,13 @@
 title: Restaurer des commandes (TMSL) | Documents Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 85ea749ca2cd2b4fdcbcbc0ec2e07f01820e377f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>Restaurer des commandes (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Restaure une base de données Analysis Services à partir d'un fichier de sauvegarde.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Restaure une base de données Analysis Services à partir d’un fichier de sauvegarde.  
   
 ## <a name="request"></a>Demande  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |**Propriété**|**Default**|**Description**|  
-|database|[Obligatoire]|Le nom de l’objet de base de données à restaurer.|  
+|base de données|[Obligatoire]|Le nom de l’objet de base de données à restaurer.|  
 |fichier|[Obligatoire]|Le fichier de sauvegarde nom/chemin d’accès.|  
 |password|Vide|Le mot de passe à utiliser pour déchiffrer le fichier de sauvegarde.|  
 |allowOverwrite|False|Valeur booléenne qui, si true, indique qu’un fichier de sauvegarde qui existe déjà sera écrasée ; Sinon, false.|  
@@ -77,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="response"></a>Réponse  
  Retourne un résultat vide lorsque la commande aboutit. Sinon, une exception XMLA est retournée.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  **Exemple 1** -restaurer une base de données à partir d’un dossier local.  
   
 ```  

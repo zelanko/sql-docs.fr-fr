@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf871f0b6353d569106768deeeb5cc3e6d65b12d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -215,11 +216,11 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 |||||  
 |-|-|-|-|  
-||**Serveur de publication**|**Serveur de distribution***\*|**Abonné**|  
-|**Transactionnelle**|Oui<br /><br /> Remarque : n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Non|Oui|  
-|**P2P**|Non|Non|Non|  
-|**Fusion**|Oui|Non|Oui*|  
-|**Snapshot**|Oui|Non|Oui*|  
+||**Serveur de publication**|**Distributor***\*|**Abonné**|  
+|**Transactionnelle**|Oui<br /><br /> Remarque : n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|non|Oui|  
+|**P2P**|non|non|non|  
+|**Fusion**|Oui|non|Oui*|  
+|**Snapshot**|Oui|non|Oui*|  
   
  *Le basculement vers la base de données de réplica est une procédure manuelle. Le basculement automatique n'est pas fourni.  
   
@@ -258,11 +259,11 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 -   [Utiliser le suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Abonnés de réplication et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [À propos du suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

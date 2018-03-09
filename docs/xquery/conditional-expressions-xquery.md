@@ -3,12 +3,17 @@ title: Expressions conditionnelles (XQuery) | Documents Microsoft
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, conditional expressions
 - expressions [XQuery], conditional
@@ -17,19 +22,19 @@ helpviewer_keywords:
 - conditional expressions [XQuery]
 - EBV
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7dd1bb1d387d9d7b4d8985742d9cdb638a10f261
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0cbb30299416a5c56412976fcf628ce47beecee0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="conditional-expressions-xquery"></a>Expressions conditionnelles (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery prend en charge l’attribut conditional suivant **if-then-else** instruction :  
   
@@ -41,7 +46,7 @@ else
   <expression3>  
 ```  
   
- Suivant la valeur booléenne effective de `expression1`, `expression2` ou `expression3` est évaluée. Exemple :  
+ Suivant la valeur booléenne effective de `expression1`, `expression2` ou `expression3` est évaluée. Par exemple :  
   
 -   Si l'expression de test, `expression1`, aboutit à une séquence vide, le résultat est False.  
   
@@ -76,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <FirstName>fname</FirstName>  
@@ -108,7 +113,7 @@ WHERE ProductModelID = 19
   
  Dans la requête précédente, la condition dans la **si** expression vérifie s’il existe plus de deux éléments enfants <`Features`>. Si tel est le cas, elle renvoie l'élément `\<there-is-more/>` dans le résultat.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -143,7 +148,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <WorkCenterLocation LocationID="30" />  

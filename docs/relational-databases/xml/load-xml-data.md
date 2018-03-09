@@ -2,29 +2,34 @@
 title: "Charger des données XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8df65cb6701c6f05e86cc9f3e16dfd834ddd35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 441a0e2050acc61575ecf7386302b731d31090b8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="load-xml-data"></a>Charger des données XML
-  Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Par exemple :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Exemple :  
   
 -   Si vos données figurent dans une colonne de type [n]text ou image, dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez importer la table par le biais de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modifiez ensuite le type de colonne en XML à l'aide de l'instruction ALTER TABLE.  
   
@@ -47,7 +52,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>Encodage de texte  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données XML au format Unicode (UTF-16). Les données XML extraites du serveur se présentent au format UTF-16. Si vous souhaitez un encodage différent, vous devez convertir les données extraites au format voulu. Il arrive que les données XML soient encodées différemment. Si tel est le cas, vous devez prêter une attention particulière au chargement des données. Par exemple :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données XML au format Unicode (UTF-16). Les données XML extraites du serveur se présentent au format UTF-16. Si vous souhaitez un encodage différent, vous devez convertir les données extraites au format voulu. Il arrive que les données XML soient encodées différemment. Si tel est le cas, vous devez prêter une attention particulière au chargement des données. Exemple :  
   
 -   Si votre texte XML est en Unicode (UCS-2, UTF-16), vous pouvez l'affecter à une colonne, une variable ou un paramètre XML sans aucun problème.  
   
@@ -65,14 +70,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Incompatibilités d'encodage de chaîne  
- Si vous copiez et collez du code XML sous forme de littéral chaîne dans la fenêtre d'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous risquez de rencontrer des incompatibilités d'encodage de la chaîne [N]VARCHAR. Tout dépendra de l'encodage de votre instance XML. Dans bien des cas, vous serez amené à supprimer la déclaration XML. Par exemple :  
+ Si vous copiez et collez du code XML sous forme de littéral chaîne dans la fenêtre d'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous risquez de rencontrer des incompatibilités d'encodage de la chaîne [N]VARCHAR. Tout dépendra de l'encodage de votre instance XML. Dans bien des cas, vous serez amené à supprimer la déclaration XML. Exemple :  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema …  
 ```  
   
- Vous devez ensuite inclure un N pour transformer l'instance XML en une instance Unicode. Par exemple :  
+ Vous devez ensuite inclure un N pour transformer l'instance XML en une instance Unicode. Exemple :  
   
 ```  
 -- Assign XML instance to a variable.  
@@ -84,7 +89,7 @@ INSERT INTO T VALUES (N'…')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

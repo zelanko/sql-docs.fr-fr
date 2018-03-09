@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48f7a518f02cd37d1f41a539fc70750c834a3a57
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-access-data-types"></a>Types de données Microsoft Access
 Le tableau suivant montre les types de données Microsoft Access, les types de données utilisés pour créer des tables et les types de données ODBC SQL.  
@@ -66,7 +66,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
   
  Le tableau suivant présente des limitations sur les types de données Microsoft Access.  
   
-|Type de données| Description|  
+|Type de données|Description|  
 |---------------|-----------------|  
 |BINARY, VARBINARY et VARCHAR|Création d’une colonne BINARY, VARBINARY ou VARCHAR de zéro ou de longueur non spécifiée retourne en fait une colonne 510 octets.|  
 |BYTE|Même si un champ de numéro d’accès Microsoft avec une taille égale à octets n’est pas signé, un nombre négatif peut être inséré dans le champ lorsque vous utilisez le pilote Microsoft Access.|  

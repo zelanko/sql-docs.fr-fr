@@ -3,8 +3,11 @@ title: "Propriétés de l’étape du travail - Nouvelle étape du travail (page
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6821abbd0c69929350a95c004033e730e6ff769
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ccb7a7e5a01257dac0449d351d7a4a56a1f7f200
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriétés de l’étape du travail - Nouvelle étape du travail (page Général)
-Utilisez cette page pour afficher et modifier les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou pour définir une nouvelle étape de travail.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher et changer les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou pour définir une nouvelle étape de travail.  
   
 Pour naviguer vers cette page, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , développez [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, cliquez avec le bouton droit sur **Travaux**, cliquez sur **Nouvelles tâches**, sélectionnez la page **Étapes** et cliquez sur **Nouveau**. Vous pouvez également accéder à cette page en cliquant avec le bouton droit sur un travail dans l’Explorateur d’objets, en cliquant sur **Propriétés**, en sélectionnant la page **Étapes** et en cliquant sur **Nouveau**, **Insérer**ou **Modifier**.  
   
@@ -36,7 +39,7 @@ Définissez le sous-système utilisé par l'étape du travail. En fonction du so
 **Exécuter en tant que**  
 Définissez le compte proxy pour l'étape du travail. Les membres du rôle serveur fixe sysadmin peuvent également spécifier le **Compte de service SQL Server Agent**.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
 Définissez la base de données où est exécutée l'étape du travail. Cette option est disponible pour tous les types d'étapes de travail.  
   
 **Command**  
@@ -134,7 +137,7 @@ Copie le texte sélectionné.
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Options des étapes de travail de l'Agent de lecture de file d'attente de la réplication  
-**Base de données**  
+**Sauvegarde de la base de données**  
 Base de données à utiliser pour l'étape du travail.  
   
 **Tout sélectionner**  
@@ -368,7 +371,7 @@ Spécifiez les options dans la fenêtre de ligne de commande.
 **Ligne de commande**  
 Tapez les options de ligne de commande à utiliser pour ce package.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)  
 [Travaux de SQL Server Agent pour les packages](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [Administration des agents de réplication](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  

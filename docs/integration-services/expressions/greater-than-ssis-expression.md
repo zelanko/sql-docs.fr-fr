@@ -1,5 +1,5 @@
 ---
-title: "&gt;(Supérieur à) (Expression SSIS) | Documents Microsoft"
+title: "&gt; (Supérieur à) (expression SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,19 +16,18 @@ helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d985349cfbb950e5eab2c32c40a5ef71c173
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ee6069abd1363d255bd7d46b80dc38bf412ce96c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="gt-greater-than-ssis-expression"></a>&gt;(Supérieur à) (Expression SSIS)
+# <a name="gt-greater-than-ssis-expression"></a>&gt; (Supérieur à) (expression SSIS)
   Effectue une comparaison pour déterminer si la première expression est supérieure à la deuxième. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  
   
 > [!NOTE]  
@@ -51,7 +50,7 @@ expression1 > expression2
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si l'une des expressions de la comparaison est NULL, le résultat de la comparaison est NULL. Si les deux expressions sont NULL, le résultat est NULL.  
   
  Le jeu d’expressions, *expression1* et *expression2*, doit suivre une des règles suivantes :  
@@ -107,13 +106,12 @@ ListPrice > 500
 @LPrice > 500  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [&#60; &#40; Inférieur à &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62; = &#40; Supérieur ou égal à &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60; = &#40; Inférieur ou égal à &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [== &#40; Égal &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [&#60; &#40;Inférieur à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#62;= &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#60;= &#40;Inférieur ou égal à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [== &#40;Égal&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

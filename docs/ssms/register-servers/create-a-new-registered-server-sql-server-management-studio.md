@@ -2,9 +2,12 @@
 title: "Créer un serveur inscrit (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8b4f08d99f573511750b56c3b8bc0f684b29f7b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un nouveau serveur inscrit (SQL Server Management Studio)
-  Cette rubrique explique comment enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment en inscrivant ceux-ci dans le composant Serveurs inscrits de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un serveur peut être inscrit avant la connexion ou lors de la connexion depuis l'Explorateur d'objets. Il existe une option de menu qui permet d'inscrire les instances de serveur sur l'ordinateur local.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment en inscrivant ceux-ci dans le composant Serveurs inscrits de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un serveur peut être inscrit avant la connexion ou lors de la connexion depuis l'Explorateur d'objets. Il existe une option de menu qui permet d'inscrire les instances de serveur sur l'ordinateur local.  
   
  Il existe deux types de serveurs inscrits :  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Pour plus d’informations, consultez [Choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **Nom d'utilisateur**  
+     **User name**  
      Spécifie le nom d'utilisateur actuel avec lequel vous vous connectez. Cette option en lecture seule est disponible uniquement si vous avez choisi de vous connecter via l'authentification Windows. Pour modifier les **Noms d'utilisateurs**, ouvrez une session sur l'ordinateur en tant qu'utilisateur différent.  
   
      **Connexion**  
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour exécuter des requêtes sur tous les serveurs inscrits auprès d’un serveur de gestion centralisée, développez le serveur de gestion centralisée, cliquez avec le bouton droit sur le groupe de serveurs, pointez sur **Se connecter**, puis cliquez sur **Nouvelle requête**. Lorsque les requêtes sont exécutées dans la nouvelle fenêtre Éditeur de requête, elles s'exécutent contre tous les serveurs du groupe de serveurs, à l'aide des informations de connexion stockées et du contexte d'authentification Windows de l'utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Masquer les objets système dans l'Explorateur d'objets](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
  [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  

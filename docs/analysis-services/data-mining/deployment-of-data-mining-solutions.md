@@ -2,15 +2,13 @@
 title: "Déploiement de Solutions d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e40b686c7aa60b023600e17170c33e2ba7b776be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Déploiement de solutions d'exploration de données
-  La dernière étape du processus d'exploration de données consiste à déployer les modèles dans un environnement de production. Le déploiement est important car il met les modèles à la disposition des utilisateurs afin de vous permettre d'effectuer n'importe laquelle des tâches suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La dernière étape du processus d'exploration de données consiste à déployer les modèles dans un environnement de production. Le déploiement est important car il met les modèles à la disposition des utilisateurs afin de vous permettre d'effectuer n'importe laquelle des tâches suivantes :  
   
 -   Utiliser les modèles pour créer des prédictions et prendre des décisions d'entreprise. Pour plus d’informations sur les outils que vous pouvez utiliser pour créer des requêtes, consultez [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -51,9 +50,9 @@ ms.lasthandoff: 11/17/2017
  [Ressources connexes](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Déployer une solution d'exploration de données sur des versions antérieures de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Déployer une Solution d’exploration de données pour les Versions précédentes de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [Exporter et importer des objets d'exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Exporter et importer des objets d’exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> Conditions requises pour le déploiement de solutions d'exploration de données  
  L’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle vous déployez la solution doit s’exécuter dans un mode qui prend en charge les objets multidimensionnels et les objets d’exploration de données ; autrement dit, vous ne pouvez pas déployer des objets d’exploration de données dans une instance qui héberge des modèles tabulaires ou des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -77,7 +76,7 @@ ms.lasthandoff: 11/17/2017
  En général, les objets d'exploration de données utilisent également les mêmes sources de données et vues de sources de données que celles utilisées pour le cube. Toutefois, vous pouvez ajouter des sources de données et des vues de sources de données qui sont spécifiquement destinées à l'exploration de données. Par exemple, un cube ne contient généralement pas de données sur les clients potentiels, ou sur les données externes non utilisées dans les objets multidimensionnels.  
   
 ##  <a name="bkmk_Resources"></a> Ressources connexes  
- [Déplacement d'objets d'exploration de données](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Déplacement d’objets d’exploration de données](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  Si votre modèle est basé uniquement sur des données relationnelles, l'exportation et l'importation d'objets à l'aide de DMX est la façon la plus simple de déplacer des modèles.  
   
@@ -85,13 +84,13 @@ ms.lasthandoff: 11/17/2017
   
  Lorsque des modèles utilisent un cube comme source de données, reportez-vous à cette rubrique pour plus d'informations sur le déplacement de modèles et de leurs données de cube de prise en charge.  
   
- [Déployer des projets Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Déployer des projets Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Fournit des informations générales sur le déploiement de projets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , et décrit les propriétés que vous pouvez définir dans le cadre de la configuration du projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Outils de requête d'exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Le traitement de la configuration requise et considérations relatives à la &#40; exploration de données &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

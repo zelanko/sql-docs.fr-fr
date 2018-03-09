@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: OR
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 02c668382e80e240f7728639105a5beeac836707
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ff5d2351d7641c16c739efeea42b126a0c4e1b2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +48,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valeur retournée  
  Valeur booléenne qui retourne TRUE si l'un ou l'autre ou les deux arguments donnent comme résultat la valeur TRUE ; dans le cas contraire, elle retourne FALSE.   
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les deux arguments sont considérés comme valeurs booléennes (0 correspond à la valeur FALSE ; sinon TRUE) avant que l'opérateur effectue la disjonction logique. Si l'un ou l'autre ou les deux arguments donnent comme résultat la valeur TRUE, l'opérateur retourne TRUE. Si *Expression1* a la valeur TRUE et *Expression2* a la valeur FALSE, l’opérateur retourne TRUE.  
   
  Le tableau ci-dessous explique comment s'effectue la disjonction logique.  

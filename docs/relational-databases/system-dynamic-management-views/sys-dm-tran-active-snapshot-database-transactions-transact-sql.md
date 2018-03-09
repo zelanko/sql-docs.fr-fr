@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Documents Microsoft
+title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_tran_active_snapshot_database_transactions
 - sys.dm_tran_active_snapshot_database_transactions
 - dm_tran_active_snapshot_database_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_active_snapshot_database_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58cd17e6d7a5a71ae2e922a492d6e52598954140
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cd3b38057150bbc8768169c362ec643b13a30c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +66,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**Identificateur transaction_id :**|**bigint**|Numéro d'identification unique assigné pour la transaction. L'ID de transaction permet principalement d'identifier la transaction dans les opérations de verrouillage.|  
+|**transaction_id**|**bigint**|Numéro d'identification unique assigné pour la transaction. L'ID de transaction permet principalement d'identifier la transaction dans les opérations de verrouillage.|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence de la transaction. Il s'agit d'un numéro de séquence unique qui est attribué à une transaction lorsqu'elle démarre. Les transactions qui ne produisent pas d'enregistrements de version et n'utilisent pas d'analyses d'instantané ne recevront pas de numéro de séquence.|  
 |**commit_sequence_num**|**bigint**|Numéro de séquence qui indique quand la transaction se termine (validée ou arrêtée). Pour les transactions actives, la valeur est NULL.|  
 |**is_snapshot**|**int**|0 = n'est pas une transaction d'isolement d'instantané.<br /><br /> 1 = est une transaction d'isolement d'instantané.|  
@@ -72,9 +75,9 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|Longueur maximale de la chaîne de versions traversée pour trouver la version cohérente d'un point de vue transactionnel.|  
 |**average_version_chain_traversed**|**real**|Nombre moyen de versions de ligne dans les chaînes de versions traversées.|  
 |**elapsed_time_seconds**|**bigint**|Temps écoulé depuis que la transaction a obtenu son numéro de séquence.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  

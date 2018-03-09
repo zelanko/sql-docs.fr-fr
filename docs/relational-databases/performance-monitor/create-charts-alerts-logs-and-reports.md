@@ -2,9 +2,12 @@
 title: "Créer des graphiques, des alertes, des journaux et des rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e449b64d959cd6f877b27871f329b231038955
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Créer des graphiques, des alertes, des journaux et des rapports
-  Le Moniteur système vous permet de créer des graphiques, des alertes, des journaux et des rapports pour surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le Moniteur système vous permet de créer des graphiques, des alertes, des journaux et des rapports pour surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="charts"></a>Graphiques  
  Les graphiques permettent de surveiller les performances en cours des objets et des compteurs sélectionnés (par exemple l'utilisation de l'UC ou les E/S du disque). Il est possible d'ajouter à un graphique diverses combinaisons d'objets et de compteurs du Moniteur système. Vous pouvez également ajouter des objets et compteurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows à un graphique.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour plus d'informations sur la création des graphiques, alertes, journaux et rapports, ou encore sur les objets et compteurs de Windows, consultez la documentation de Windows.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

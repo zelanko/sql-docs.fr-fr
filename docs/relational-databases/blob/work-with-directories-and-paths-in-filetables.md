@@ -2,27 +2,33 @@
 title: "Travailler avec des répertoires et des chemins d’accès dans FileTables | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], directories
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb6e4560f35f1b251ee34f703be9824182bd2909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fc785c40fae67d160fd8dff1947e964a58c78d67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Travailler avec des répertoires et des chemins d'accès dans FileTables
-  Décrit la structure de répertoires dans laquelle les fichiers sont stockés dans FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit la structure de répertoires dans laquelle les fichiers sont stockés dans FileTables.  
   
 ##  <a name="HowToDirectories"></a> Procédure : travailler avec des répertoires et des chemins d'accès dans FileTables  
  Vous pouvez utiliser les trois fonctions suivantes pour travailler avec des répertoires FileTable dans [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
@@ -36,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="BestPracticeRelativePaths"></a> Procédure : utiliser des chemins d'accès relatifs pour du code portable  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant les fonctions [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) et [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  
@@ -58,7 +64,7 @@ GO
   
 ###  <a name="fqnlength"></a> Longueur du nom du chemin d'accès complet  
   
-> **IMPORTANT** Le système de fichiers NTFS prend en charge les noms de chemin d'accès qui sont beaucoup plus longs que la limite de 260 caractères imposée par le shell Windows et de la plupart des API Windows. Par conséquent, il est possible de créer des fichiers dans la hiérarchie des fichiers d'un FileTable à l'aide de Transact-SQL que vous ne pouvez pas afficher ou ouvrir avec l'Explorateur Windows ou de nombreuses autres applications Windows, car le chemin d'accès complet dépasse 260 caractères. Toutefois vous pouvez continuer à accéder à ces fichiers à l'aide de Transact-SQL.  
+> **IMPORTANT** Le système de fichiers NTFS prend en charge les noms de chemin d'accès qui sont beaucoup plus longs que la limite de 260 caractères imposée par le shell Windows et de la plupart des API Windows. Par conséquent, il est possible de créer des fichiers dans la hiérarchie des fichiers d'un FileTable à l'aide de Transact-SQL que vous ne pouvez pas afficher ou ouvrir avec l'Explorateur Windows ou de nombreuses autres applications Windows, car le chemin d'accès complet dépasse 260 caractères. Toutefois vous pouvez continuer à accéder à ces fichiers à l'aide de Transact-SQL.  
   
 ##  <a name="fullpath"></a> Chemin complet à un élément stocké dans un FileTable  
  Le chemin d'accès complet à un fichier ou un répertoire stocké dans un FileTable commence par les éléments suivants :  
@@ -108,7 +114,7 @@ GO
   
 -   Tous les accès à FILESTREAM ou aux données FileTable via les API du système de fichiers doivent utiliser des VNN à la place des noms d'ordinateur. Pour plus d’informations, consultez [FILESTREAM et FileTable avec groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Activer les conditions préalables pour les FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Créer, modifier et supprimer des FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   

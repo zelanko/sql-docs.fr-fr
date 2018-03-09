@@ -2,27 +2,30 @@
 title: "Informations sur le serveur de publication, Agents | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3188e98c17446fcd5cd0272075d5aa2d814009e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: da6c5ffe47ed35e4389fef6fe5924d1b0ec1ae25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
-  L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
   
 -   Agent d'instantané, affiché pour toutes les publications  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Erreur  
+-   Error  
   
 -   Réessayer  
   
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/09/2017
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Erreur  
+-   Error  
   
 -   Réessayer  
   
@@ -137,7 +140,7 @@ ms.lasthandoff: 11/09/2017
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Erreur  
+-   Error  
   
 -   Réessayer  
   
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/09/2017
  **État**  
  État de chaque travail. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Erreur  
+-   Error  
   
 -   Réessayer  
   
@@ -196,8 +199,8 @@ ms.lasthandoff: 11/09/2017
  **Dernière action**  
  Dernière action effectuée lors de la dernière exécution du travail.  
   
-## <a name="see-also"></a>Voir aussi  
- [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  

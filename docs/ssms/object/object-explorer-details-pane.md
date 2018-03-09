@@ -3,8 +3,11 @@ title: "Volet Détails de l’Explorateur d’objets | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
-Détails de l'Explorateur d'objets, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fournit une vue tabulaire de tous les objets se trouvant dans le serveur ainsi qu'une interface utilisateur pour les gérer. Les fonctionnalités de l’Explorateur d’objets varient légèrement en fonction du type de serveur. Il contient toutefois des fonctionnalités de développement pour les bases de données et des fonctionnalités de gestion pour tous les types de serveurs.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Détails de l’Explorateur d’objets, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fournit une vue tabulaire de tous les objets se trouvant dans le serveur ainsi qu’une interface utilisateur pour les gérer. Les fonctionnalités de l’Explorateur d’objets varient légèrement en fonction du type de serveur. Il contient toutefois des fonctionnalités de développement pour les bases de données et des fonctionnalités de gestion pour tous les types de serveurs.  
   
 Le volet Détails de l’Explorateur d’objets est visible dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] par défaut. Si tel n’est pas le cas, dans le menu **Affichage** , cliquez sur **Détails de l’Explorateur d’objets** ou appuyez sur **F7**.  
   
@@ -47,7 +50,7 @@ Détails de l'Explorateur d'objets comprend une barre d'outils contenant les ic�
 |**Suivant**|Passe à l’écran suivant après une opération **Précédent** .|  
 |**Monter**|Passe à l'objet ou au dossier parent.|  
 |**Synchroniser**|Définit l'objet sélectionné dans Détails de l'Explorateur d'objets comme focus de l'Explorateur d'objets.|  
-|**Filtre**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
+|**Filter**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
 |**Actualiser**|Actualise l'affichage dans Détails de l'Explorateur d'objets.|  
 |**Recherche**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
   
@@ -100,6 +103,6 @@ Jeux volumineux
   
 -   Les recherches portant sur des jeux d'objets volumineux peut prendre du temps et nuire aux performances du serveur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur d'objets](../../ssms/object/object-explorer.md)  
   

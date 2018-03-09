@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 760625b44f96422eabb6f753dab02c47da4f0750
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>Installer des mises à jour de maintenance de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique fournit des informations sur l'installation des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Cette section aborde les sujets suivants :  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Cet article fournit des informations sur l’installation des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Cette section aborde les sujets suivants :
   
 - Installation des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] pendant une nouvelle installation  
   
@@ -53,10 +57,10 @@ Sur une instance installée de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion
   
 Les mises à jour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont disponibles via [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), Windows Server Update Services (WSUS) et le Centre de téléchargement Microsoft. Les mises à jour de sécurité et les mises à jour critiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont disponibles via [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, et pour pouvoir consulter ces mises à jour, vous devez choisir MU par l'applet Windows Update dans le panneau de configuration.  
   
-Lorsque vous recevez une mise à jour par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, il met à jour toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la version la plus récente en mode sans assistance. Si vous avez besoin de plus de souplesse ou n'avez pas de connexion Internet ni d'accès de WSUS, vous devez vous procurer les mises à jour sur le Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+Lorsque vous recevez une mise à jour par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, il met à jour toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la version la plus récente en mode sans assistance. Si vous avez besoin de plus de souplesse ou n’avez pas de connexion Internet ni d’accès à WSUS, vous devez vous procurer les mises à jour à partir du Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
-[Installer SQL Server à partir de l'Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
-[Ajouter des fonctionnalités à une instance de SQL Server &#40;programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
-[Réparer une installation défectueuse de SQL Server](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
+## <a name="see-also"></a> Voir aussi  
+[Installer SQL Server à partir de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[Ajouter des fonctionnalités à une instance de SQL Server &#40;programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+[Réparer une installation de SQL Server qui a échoué](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

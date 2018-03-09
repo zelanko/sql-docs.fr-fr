@@ -1,5 +1,5 @@
 ---
-title: "Catalog.effective_object_permissions (base de données SSISDB) | Documents Microsoft"
+title: "catalog.effective_object_permissions (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -16,30 +16,29 @@ helpviewer_keywords:
 - catalog.effective_object_permissions views [Integration Services]
 - effective_object_permissions view [Integration Services]
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3f836aa3e13623a42a3f2e8fe0d3907b45bde850
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 204c346d67879bba4db0b6b2820b867bc82d7b5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche les autorisations efficaces pour l'entité actuelle pour tous les objets dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Type d'objet sécurisable. Les types d'objets sécurisables incluent le dossier (`1`), le projet (`2`), l'environnement (`3`) et l'opération (`4`).|  
 |object_id|**bigint**|Identificateur unique (ID) ou clé primaire de l'objet.|  
 |permission_type|**smallint**|Type de l'autorisation.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche les types d'autorisation répertoriés dans le tableau suivant :  
   
 |Valeur permission_type|Nom de l'autorisation|Description de l'autorisation|Types d'objet applicables|  
@@ -64,8 +63,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Appartenance du principal dans les groupes  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les utilisateurs peuvent consulter uniquement des autorisations efficaces pour eux-mêmes et pour les rôles dont ils sont membres.  
   
   
-

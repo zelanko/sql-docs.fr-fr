@@ -1,5 +1,5 @@
 ---
-title: Journalisation dans le composant de Script | Documents Microsoft
+title: Journalisation dans le composant Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,20 +16,19 @@ applies_to:
 helpviewer_keywords:
 - Script component [Integration Services], logging
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 410a2472399574753d67a44b93437b1698c8b086
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b8673343ce198cdf61f7726888694045d4fff4df
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="logging-in-the-script-component"></a>Journalisation dans le composant Script
-  La journalisation dans des packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vous permet d'enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Le composant Script peut utiliser le <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> méthode de la **ScriptMain** classe pour enregistrer les données définies par l’utilisateur. Si la journalisation est activée et le **ScriptComponentLogEntry** événement est sélectionné pour la journalisation le **détails** onglet de la **configurer les journaux SSIS** boîte de dialogue, un seul appel à la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> méthode stocke les informations sur les événements de tous les modules fournisseurs d’informations qui ont été configurés pour la tâche de flux de données.  
+  La journalisation dans des packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vous permet d'enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Le composant Script peut utiliser la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la classe **ScriptMain** pour enregistrer des données définies par l’utilisateur. Si la journalisation est activée et que l’événement **ScriptComponentLogEntry** est sélectionné pour la journalisation sous l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS**, un seul appel à la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> stocke les informations sur l’événement dans tous les modules fournisseurs d’informations configurés pour la tâche de flux de données.  
   
  Voici un exemple simple de journalisation :  
   
@@ -45,10 +43,9 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Bien qu'il soit possible d'exécuter la journalisation directement à partir du composant Script, il peut être préférable d'implémenter des événements plutôt que la journalisation. L'utilisation d'événements vous permet non seulement d'activer la journalisation des messages d'événements, mais également de répondre à un événement à l'aide de gestionnaires d'événements par défaut ou définis par l'utilisateur.  
   
- Pour plus d’informations sur la journalisation, consultez [Integration Services &#40; SSIS &#41; Journalisation](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Pour plus d’informations sur la journalisation, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40; SSIS &#41; Journalisation](../../../integration-services/performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

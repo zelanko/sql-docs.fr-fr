@@ -1,5 +1,5 @@
 ---
-title: "Connexion aux Sources de données dans la tâche de Script | Documents Microsoft"
+title: "Connexion aux sources de données dans la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,89 +28,75 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 825ff059476614085a338dd9c568031885bed64b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ec2177e6db706cff5b3ea63ea23c20023fd4dec9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Connexion à des sources de données dans la tâche de script
   Les gestionnaires de connexions fournissent un accès à des sources de données qui ont été configurées dans le package. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- La tâche de Script peut accéder à ces gestionnaires de connexions via la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> propriété de la **Dts** objet. Chaque gestionnaire de connexions compris dans la collection <xref:Microsoft.SqlServer.Dts.Runtime.Connections> stocke des informations sur la manière d'établir une connexion à la source de données sous-jacente.  
+ La tâche de script peut accéder à ces gestionnaires de connexions via la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> de l’objet**Dts**. Chaque gestionnaire de connexions compris dans la collection <xref:Microsoft.SqlServer.Dts.Runtime.Connections> stocke des informations sur la manière d'établir une connexion à la source de données sous-jacente.  
   
  Lorsque vous appelez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> d'un gestionnaire de connexions, le gestionnaire de connexions se connecte à la source de données, s'il n'est pas déjà connecté, puis renvoie la connexion ou les informations de connexion appropriées que vous devez utiliser dans le code de votre tâche de script.  
   
 > [!NOTE]  
->  Vous devez connaître le type de connexion renvoyé par le Gestionnaire de connexions avant d’appeler **AcquireConnection**. Étant donné que la tâche de Script a **Option Strict** activé, vous devez caster la connexion, ce qui est retournée en tant que type **objet**, pour le type de connexion approprié avant que vous puissiez l’utiliser.  
+>  Vous devez connaître le type de connexion renvoyé par le gestionnaire de connexions avant d’appeler **AcquireConnection**. Dans la mesure où **Option Strict** est activé pour la tâche de script, vous devez caster la connexion (retournée en tant que type **Object**) en type de connexion approprié avant de pouvoir l’utiliser.  
   
  Vous pouvez utiliser la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> de la collection <xref:Microsoft.SqlServer.Dts.Runtime.Connections> renvoyée par la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> pour rechercher une connexion existante avant d'utiliser la connexion dans votre code.  
   
 > [!IMPORTANT]  
->  Vous ne pouvez pas appeler la méthode AcquireConnection des gestionnaires de connexions qui retournent des objets non managés, tels que le Gestionnaire de connexions OLE DB et le Gestionnaire de connexions Excel, dans le code managé d’une tâche de Script. Toutefois, vous pouvez lire la propriété ConnectionString de ces gestionnaires de connexions et vous connecter à la source de données directement dans votre code à l’aide de la chaîne de connexion avec un **OledbConnection** à partir de la **System.Data.OleDb** espace de noms.  
+>  Vous ne pouvez pas appeler la méthode AcquireConnection des gestionnaires de connexions qui renvoient des objets non managés, tels que le gestionnaire de connexions OLE DB et le gestionnaire de connexions Excel, dans le code managé d’une tâche de script. Toutefois, vous pouvez lire la propriété ConnectionString de ces gestionnaires de connexions et vous connecter directement à la source de données dans votre code en utilisant la chaîne de connexion spécifiant un **OledbConnection** de l’espace de noms **System.Data.OleDb**.  
 >   
->  Si vous devez appeler la méthode AcquireConnection d’une connexion de gestionnaire qui retourne un objet non managé, utilisez un [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Gestionnaire de connexions. Lorsque vous configurez le gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] afin d'utiliser un fournisseur OLE DB, il se connecte en utilisant le fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour OLE DB. Dans ce cas, la méthode AcquireConnection retourne un **System.Data.OleDb.OleDbConnection** au lieu d’un objet non managé. Pour configurer un [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Gestionnaire de connexions pour une utilisation avec une source de données Excel, sélectionnez le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fournisseur OLE DB pour Jet, spécifiez un fichier Excel, puis entrez `Excel 8.0` (pour Excel 97 et versions ultérieures) comme valeur de **propriétés étendues** sur la **tous les** page de la **Gestionnaire de connexions** boîte de dialogue.  
+>  Si vous devez appeler la méthode AcquireConnection d’un gestionnaire de connexions qui retourne un objet non managé, utilisez un gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Lorsque vous configurez le gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] afin d'utiliser un fournisseur OLE DB, il se connecte en utilisant le fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour OLE DB. Dans ce cas, la méthode AcquireConnection retourne un **System.Data.OleDb.OleDbConnection** à la place d’un objet non managé. Pour configurer un gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] en vue de son utilisation avec une source de données Excel, sélectionnez le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB pour Jet, spécifiez un fichier Excel, puis entrez `Excel 8.0` (pour Excel 97 et versions ultérieures) comme valeur **Propriétés étendues** dans la page **Tout** de la boîte de dialogue **Gestionnaire de connexions**.  
   
 ## <a name="connections-example"></a>Exemple de connexions  
- L'exemple suivant montre comment accéder aux gestionnaires de connexions à partir de la tâche de script. L’exemple part du principe que vous avez créé et configuré un [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Gestionnaire de connexions nommé **connexion ADO.NET Test** et un gestionnaire de connexions de fichier plat nommé **connexion de fichiers plats Test**. Notez que la [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Gestionnaire de connexions renvoie un **SqlConnection** objet que vous pouvez utiliser immédiatement pour se connecter à la source de données. Le gestionnaire de connexions de fichiers plats, en revanche, retourne uniquement une chaîne qui contient le chemin d'accès et le nom du fichier. Vous devez utiliser les méthodes de la **System.IO** espace de noms pour l’ouvrir et travailler avec le fichier plat.  
+ L'exemple suivant montre comment accéder aux gestionnaires de connexions à partir de la tâche de script. Il est supposé dans l’exemple que vous avez créé et configuré un gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] nommé **Connexion ADO.NET test** et un gestionnaire de connexions de fichiers plats nommé **Connexion de fichiers plats test**. Notez que le gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] retourne un objet **SqlConnection** que vous pouvez utiliser immédiatement pour vous connecter à la source de données. Le gestionnaire de connexions de fichiers plats, en revanche, retourne uniquement une chaîne qui contient le chemin d'accès et le nom du fichier. Vous devez utiliser les méthodes de l’espace de noms **System.IO** pour ouvrir et utiliser le fichier plat.  
   
 ```vb  
-Public Sub Main()  
-  
-    Dim myADONETConnection As SqlClient.SqlConnection  
-    myADONETConnection = _  
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction), _  
-        SqlClient.SqlConnection)  
-    MsgBox(myADONETConnection.ConnectionString, _  
-        MsgBoxStyle.Information, "ADO.NET Connection")  
-  
-    Dim myFlatFileConnection As String  
-    myFlatFileConnection = _  
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _  
-        String)  
-    MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")  
-  
-    Dts.TaskResult = ScriptResults.Success  
-  
-End Sub  
+    Public Sub Main()
+
+        Dim myADONETConnection As SqlClient.SqlConnection =
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
+        MsgBox(myADONETConnection.ConnectionString,
+            MsgBoxStyle.Information, "ADO.NET Connection")
+
+        Dim myFlatFileConnection As String =
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
+        MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
+
+        Dts.TaskResult = ScriptResults.Success
+
+    End Sub
 ```  
   
 ```csharp  
-using System;  
-using System.Data.SqlClient;  
-using Microsoft.SqlServer.Dts.Runtime;  
-using System.Windows.Forms;  
-  
-public class ScriptMain  
-{  
-  
-        public void Main()  
-        {  
-            SqlConnection myADONETConnection = new SqlConnection();  
-            myADONETConnection = (SqlConnection)(Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)as SqlConnection);  
-            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");  
-  
-            string myFlatFileConnection;  
-            myFlatFileConnection = (string)(Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);  
-            MessageBox.Show(myFlatFileConnection, "Flat File Connection");  
-  
-            Dts.TaskResult = (int)ScriptResults.Success;  
-  
-        }  
-  
-}  
-  
+        public void Main()
+        {
+            SqlConnection myADONETConnection = 
+                Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)
+                as SqlConnection;
+            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");
+
+            string myFlatFileConnection = 
+                Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) 
+                as string;
+            MessageBox.Show(myFlatFileConnection, "Flat File Connection");
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40; SSIS &#41; Connexions](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

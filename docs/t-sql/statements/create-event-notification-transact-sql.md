@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,22 +19,23 @@ f1_keywords:
 - NOTIFICATION
 - CREATE EVENT NOTIFICATION
 - EVENT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE EVENT NOTIFICATION statement
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +107,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] intègre un type de message et un contrat spécialement conçus pour les notifications d'événements. Par conséquent, il n'est pas nécessaire de créer un service d'initialisation Service Broker car il en existe déjà un qui spécifie le nom de contrat suivant :`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  Le service cible qui reçoit les notifications d'événements doit respecter ce contrat préexistant.  
@@ -121,7 +123,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Les échecs d'envoi de notification d'événement sont consignés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer une notification d'événement dont l'étendue correspond à la base de données (ON DATABASE), vous devez disposer de l'autorisation CREATE DATABASE DDL EVENT NOTIFICATION sur la base de données.  
   
  Pour créer une notification d'événement sur une instruction DDL dont l'étendue correspond au serveur (ON SERVER), vous devez disposer de l'autorisation CREATE DDL EVENT NOTIFICATION sur le serveur.  
@@ -140,7 +142,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Création d'une notification d'événement dont l'étendue correspond au serveur  
  L'exemple suivant crée les objets nécessaires pour configurer un service cible à l'aide de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Le service cible fait référence au type de message et de contrat du service à l'origine de l'initialisation spécifique aux notifications d'événements La notification d'événement est ensuite créée sur le service cible qui envoie une notification chaque fois qu'un événement de trace `Object_Created` se produit sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +169,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. Création d'une notification d'événement dont l'étendue correspond à une base de données  
  L'exemple suivant crée une notification d'événement sur le même service cible que l'exemple précédent. La notification d'événement se déclenche après l'occurrence d'un événement `ALTER_TABLE` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +188,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. Obtention d'informations sur une notification d'événement dont l'étendue correspond à une base de données  
  L'exemple suivant interroge l'affichage catalogue `sys.event_notifications` pour obtenir des métadonnées sur la notification d'événement `Notify_ALTER_T1` créée avec une étendue de base de données.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

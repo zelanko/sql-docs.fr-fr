@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ffe2ac1e6fbfa7020ae231a13316f0f8fd5e6a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ff6b6ee59cfab574f8d94c54a73ba937e200909f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Ajouter et modifier une ligne (Générateur de rapports et SSRS)
   Vous pouvez ajouter une ligne à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quand vous souhaitez qu’un élément graphique sépare des sections du rapport. Vous pouvez personnaliser l'apparence de la ligne en modifiant des propriétés telles que la couleur ou le style. Par exemple, vous pouvez incorporer les couleurs de la société dans le rapport.    
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]    
     >  Si vous affectez au style de ligne la valeur **Double** et que la largeur de ligne est de 1½ pt ou plus étroite, il est possible que la ligne n’apparaisse pas en double quand vous exécutez le rapport dans le Générateur de rapports, le Concepteur de rapports ou un portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Elle apparaît en double quand vous exportez le rapport sous d’autres formats, tels que Microsoft Word et Acrobat PDF.    
     
-## <a name="see-also"></a>Voir aussi    
+## <a name="see-also"></a> Voir aussi    
  [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   

@@ -2,25 +2,28 @@
 title: Configuration de SQL Server (R Services) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article est le deuxième d’une série qui décrit l’optimisation des performances pour R Services basé sur deux études de cas.  Cet article fournit des conseils sur la configuration matérielle et réseau de l’ordinateur qui est utilisé pour exécuter SQL Server R Services. Il contient également des informations sur les façons de configurer l’instance SQL Server, base de données ou les tables utilisées dans une solution. Étant donné que l’utilisation de NUMA dans SQL Server flou sur la ligne entre les optimisations de matériel et de la base de données, une troisième section traite de processeur affinage et gouvernance des ressources en détail.
 
@@ -70,7 +73,7 @@ Le système d’exploitation Windows utilise un fichier de pagination pour gére
 
 La rapidité du disque sur lequel est stocké le fichier d’échange peut aussi affecter les performances. En stockant le fichier d’échange sur un disque SSD ou en utilisant plusieurs fichiers d’échange sur plusieurs disques SSD, il est possible d’améliorer les performances.
 
-Pour plus d’informations sur le fichier d’échange de dimensionnement, consultez [comment déterminer la taille de fichier de page appropriée pour les versions 64 bits de Windows](https://support.microsoft.com/en-us/kb/2860880).
+Pour plus d’informations sur le fichier d’échange de dimensionnement, consultez [comment déterminer la taille de fichier de page appropriée pour les versions 64 bits de Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Optimisations au niveau instance ou base de données
 
@@ -167,7 +170,7 @@ Pour plus d’informations, y compris les exemples de code, consultez ce didacti
 
 **Autres ressources :**
 
-+ [Soft-NUMA dans SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA dans SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Comment mapper des nœuds soft-NUMA aux UC
 

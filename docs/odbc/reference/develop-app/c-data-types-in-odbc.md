@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types-in-odbc"></a>Types de données C dans ODBC
 ODBC définit les types de données C qui sont utilisés par les variables d’application et de leurs identificateurs de type correspondant. Ils sont utilisés par les mémoires tampons qui sont liées aux colonnes du jeu de résultats et les paramètres de l’instruction. Par exemple, qu'une application veut récupérer des données d’une colonne de jeu de résultats au format caractère. Elle déclare une variable avec le SQLCHAR * type de données et lie cette variable à la colonne du jeu de résultats avec l’identificateur type SQL_C_CHAR. Pour obtenir une liste complète des types de données C et des identificateurs de type, consultez [annexe d : les Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_io_backup_tapes_TSQL
 - sys.dm_io_backup_tapes_TSQL
 - dm_io_backup_tapes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_backup_tapes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d2a6365411d66238512fddf23e7f71848acf5de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_time**|**datetime**|Heure de la demande de montage. NULL si aucun montage n’est en attente (**état ! = 2**). Autorise la valeur NULL.|  
 |**mount_expiration_time**|**datetime**|Heure d'expiration de la demande de montage (dépassement de délai). NULL si aucun montage n’est en attente (**état ! = 2**). Autorise la valeur NULL.|  
 |**database_name**|**nvarchar (256)**|Base de données à sauvegarder sur ce périphérique. Autorise la valeur NULL.|  
-|**SPID**|**int**|ID de la session. Il identifie l'utilisateur de la bande. Autorise la valeur NULL.|  
+|**spid**|**int**|ID de la session. Il identifie l'utilisateur de la bande. Autorise la valeur NULL.|  
 |**commande**|**int**|Commande qui effectue la sauvegarde. Autorise la valeur NULL.|  
 |**command_desc**|**nvarchar(120)**|Description de la commande. Autorise la valeur NULL.|  
 |**media_family_id**|**int**|Index de la famille de supports (1... *n* ),  *n*  est le nombre de familles de supports dans le jeu de supports. Autorise la valeur NULL.|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_type**|**int**|Type de la demande de montage :<br /><br /> 1 = Bande spécifique. La bande identifiée par le **media_\***  champs est requis.<br /><br /> 2 = Famille de supports suivante. Demande la famille de supports non encore restaurée suivante. S'utilise lorsque la restauration s'effectue à partir d'un nombre de périphériques inférieur au nombre de familles de supports.<br /><br /> 3 = Bandes magnétiques de sauvegarde consécutives. La famille de supports est étendue et il faut ajouter une bande consécutive.<br /><br /> Autorise la valeur NULL.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Type de la demande de montage :<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

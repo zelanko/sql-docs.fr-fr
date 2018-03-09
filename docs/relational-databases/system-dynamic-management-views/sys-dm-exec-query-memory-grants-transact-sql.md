@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_memory_grants
 - sys.dm_exec_query_memory_grants_TSQL
 - dm_exec_query_memory_grants
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_memory_grants dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e10e979e962c7f0e2f98a8fbabff47995dc7e86
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92b11100a0a037374871dc38844fecc8b69b0c72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |**session_id**|**smallint**|ID (SPID) de la session dans laquelle cette requête est en cours d'exécution.|  
 |**request_id**|**int**|ID de la demande. Unique dans le contexte de la session.|  
 |**scheduler_id**|**int**|ID du planificateur qui planifie cette requête.|  
-|**degré de parallélisme**|**smallint**|Degré de parallélisme de cette requête.|  
+|**dop**|**smallint**|Degré de parallélisme de cette requête.|  
 |**request_time**|**datetime**|Date et heure auxquelles cette requête a demandé l'allocation de mémoire.|  
 |**grant_time**|**datetime**|Date et heure auxquelles la mémoire a été allouée pour cette requête. NULL si la mémoire n'a pas encore été allouée.|  
 |**requested_memory_kb**|**bigint**|Quantité totale de mémoire demandée, en kilo-octets.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**max_used_memory_kb**|**bigint**|Mémoire physique maximale utilisée jusqu'à ce moment, en kilo-octets.|  
 |**query_cost**|**float**|Coût estimé de la requête.|  
 |**timeout_sec**|**int**|Délai d'expiration, en secondes, avant que cette requête abandonne la demande d'allocation de la mémoire.|  
-|**resource_semaphore_id n'**|**smallint**|ID non unique du sémaphore de ressource sur lequel attend cette requête.<br /><br /> **Remarque :** cet ID est unique dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
+|**resource_semaphore_id**|**smallint**|ID non unique du sémaphore de ressource sur lequel attend cette requête.<br /><br /> **Remarque :** cet ID est unique dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
 |**queue_id**|**smallint**|ID de la file d'attente dans laquelle cette requête attend l'allocation de mémoire. NULL si la mémoire est déjà allouée.|  
 |**wait_order**|**int**|Ordre séquentiel des requêtes en attente dans le texte spécifié **queue_id**. Cette valeur peut changer pour une requête donnée si d'autres requêtes bénéficient d'une allocation mémoire ou d'un délai d'attente. NULL si la mémoire est déjà allouée.|  
 |**is_next_candidate**|**bit**|Candidat pour l'allocation mémoire suivante.<br /><br /> 1 = Oui<br /><br /> 0 = Non<br /><br /> NULL = La mémoire est déjà allouée.|  
@@ -66,9 +69,9 @@ ms.lasthandoff: 11/17/2017
 |**pool_id**|**int**|ID du pool de ressources auquel appartient ce groupe de charge de travail.|  
 |**is_small**|**tinyint**|Si la valeur est définie sur 1, cette allocation utilise le sémaphore de ressource le plus petit. Si la valeur est définie sur 0, c'est que le sémaphore de ressource ordinaire est utilisé.|  
 |**ideal_memory_kb**|**bigint**|Taille de l'allocation mémoire, en kilo-octets (Ko) pour l'ajuster à la mémoire physique. Elle est basée sur l'estimation de la cardinalité.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
   
@@ -117,7 +120,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite
  La fonctionnalité Gouverneur de ressources permet à un administrateur de base de données de répartir des ressources serveur entre plusieurs pools de ressources (64 pools au maximum). À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], chaque pool se comporte comme une instance de petit serveur indépendante et requiert 2 sémaphores. Le nombre de lignes qui sont retournées à partir de **sys.dm_exec_query_resource_semaphores** peut être jusqu'à 20 fois plus de lignes qui sont retournées dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.dm_exec_query_resource_semaphores &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
  [Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

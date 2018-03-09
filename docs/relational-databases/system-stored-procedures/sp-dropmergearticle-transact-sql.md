@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a7820a1592d8d7f2b600e8d53f59faf625d60bd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902a28f31abdc9dd501c6352acd4b2bee4042fd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,17 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **sp_dropmergearticle** est utilisé dans la réplication de fusion. Pour plus d’informations sur la suppression des articles, consultez [ajouter et supprimer des Articles de Publications existantes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  L’exécution de **sp_dropmergearticle** pour supprimer un article d’une publication ne supprime pas l’objet à partir de la base de données de publication ou de l’objet correspondant de la base de données d’abonnement. Utilisez `DROP <object>` pour supprimer manuellement ces objets le cas échéant.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_dropmergearticle**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @article1 AS sysname;  
 DECLARE @article2 AS sysname;  
@@ -111,7 +111,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @table1 AS sysname;  
 DECLARE @table2 AS sysname;  

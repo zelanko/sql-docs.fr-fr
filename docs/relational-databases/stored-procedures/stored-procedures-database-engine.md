@@ -2,33 +2,38 @@
 title: "Procédures stockées (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44d4e3c81bdf4e6bfb7f4dea74047dba6e9f4efd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedures-database-engine"></a>Procédures stockées (moteur de base de données)
-  Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
   
 -   accepter des paramètres d'entrée et retourner plusieurs valeurs sous la forme de paramètres de sortie au programme appelant ;  
   
--   contenir des instructions de programmation qui effectuent des opérations dans la base de données. Cela inclut l'appel d'autres procédures ;  
+-   contenir des instructions de programmation qui effectuent des opérations dans la base de données. Cela inclut l'appel d'autres procédures ;  
   
 -   retourner une valeur d'état à un programme appelant pour indiquer une réussite ou un échec (et la raison de l'échec).  
   
@@ -70,7 +75,7 @@ ms.lasthandoff: 11/09/2017
  Système  
  Les procédures système sont incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont stockées physiquement dans la base de données **Resource** interne et masquée, mais elles apparaissent logiquement dans le schéma **sys** de chaque base de données définie par le système et définie par l’utilisateur. En outre, la base de données **msdb** contient également les procédures stockées système dans le schéma **dbo** , utilisées pour planifier les alertes et les travaux. Compte tenu du fait que les procédures système commencent par le préfixe **sp_**, nous vous recommandons de ne pas utiliser ce préfixe quand vous nommez des procédures définies par l’utilisateur. Pour obtenir la liste complète des procédures système, consultez [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures système qui assurent l’interface entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les programmes externes pour diverses activités de maintenance. Ces procédures étendues utilisent le préfixe xp_. Pour obtenir la liste complète des procédures étendues, consultez [Procédures stockées étendues générales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures système qui assurent l'interface entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les programmes externes pour diverses activités de maintenance. Ces procédures étendues utilisent le préfixe xp_. Pour obtenir la liste complète des procédures étendues, consultez [Procédures stockées étendues générales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
  Étendue définie par l'utilisateur  
  Les procédures étendues vous permettent de créer des routines externes dans un langage de programmation comme le langage C. Ce sont des DLL qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut charger et exécuter dynamiquement.  
@@ -78,7 +83,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Les procédures stockées étendues seront supprimées dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement cette fonctionnalité. Créez des procédures CLR à la place. Cette méthode offre une alternative plus robuste et plus sûre à l'écriture des procédures étendues.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -95,7 +100,7 @@ ms.lasthandoff: 11/09/2017
 |Explique comment consulter les dépendances d'une procédure stockée.|[Afficher les dépendances d’une procédure stockée](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)|  
 |Décrit la façon dont les paramètres sont utilisés dans une procédure stockée.|[Paramètres](../../relational-databases/stored-procedures/parameters.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Procédures stockées du CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_repl_schemas (Transact-SQL) | Documents Microsoft
+title: sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_schemas
 - sys.dm_repl_schemas_TSQL
 - sys.dm_repl_schemas
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_schemas dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fef5dd298e56cb1560562db1003e255244ca8fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e4ed91b38fc7175b6e3eff96f1e65415022834d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +41,9 @@ ms.lasthandoff: 11/17/2017
  
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_schema_address**|**varbinary (8)**|Adresse en mémoire de la structure de schéma du cache pour l'article de table publié.|  
+|**artcache_schema_address**|**varbinary(8)**|Adresse en mémoire de la structure de schéma du cache pour l'article de table publié.|  
 |**tabid**|**bigint**|ID de la table répliquée.|  
-|**IndexId**|**smallint**|ID d'un index cluster sur la table publiée.|  
+|**indexid**|**smallint**|ID d'un index cluster sur la table publiée.|  
 |**idSch**|**bigint**|ID du schéma de la table.|  
 |**tabschema**|**nvarchar(510)**|Nom du schéma de la table.|  
 |**ccTabschema**|**smallint**|Longueur en caractères du schéma de la table.|  
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |**se_computed**|**smallint**|Indique si la colonne est une colonne calculée.|  
 |**se_nullBitInLeafRows**|**int**|Indique si la valeur de la colonne est NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation VIEW DATABASE STATE sur la base de données de publication pour appeler **dm_repl_schemas**.  
   
 ## <a name="remarks"></a>Notes  

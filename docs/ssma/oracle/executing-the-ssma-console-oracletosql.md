@@ -1,10 +1,13 @@
 ---
 title: "L’exécution de la Console SSMA (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 16f646303766e8e249e2bd76a336bc5c3ee59049
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>L’exécution de la Console SSMA (OracleToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA. L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
@@ -164,7 +167,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <force-load>  
@@ -277,7 +280,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -351,7 +354,7 @@ convertir le schéma
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -419,7 +422,7 @@ Migre les données source à la cible.
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -508,7 +511,7 @@ synchroniser la cible
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -517,7 +520,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -573,7 +576,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -582,7 +585,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -632,7 +635,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  
@@ -708,7 +711,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 </convert-sql-statement>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  
@@ -731,7 +734,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  

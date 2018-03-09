@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : Publier un Package SSIS sous la forme d’une vue SQL | Documents Microsoft"
+title: "Procédure pas à pas : publier un package SSIS en tant que vue SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,25 +15,24 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
   Cette procédure pas à pas fournit des étapes détaillées sur la publication d’un package SSIS en tant que vue SQL dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour pouvoir effectuer cette procédure pas à pas, vous devez disposer des logiciels suivants installés sur votre ordinateur.  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ou version ultérieure avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou version ultérieure avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 09/27/2017
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |1|John|Doe|  
+        | 1|John|Doe|  
         |2|Jane|Doe|  
   
     4.  Faites glisser le composant **Source OLE DB** de la **Boîte à outils SSIS** vers le **Concepteur de flux de données**.  
@@ -100,17 +99,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  Cliquez sur **Suivant** dans la page **Introduction** .  
   
-     ![Assistant - Page d’Introduction de publication de flux de données](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Assistant - Page d’Introduction de publication de flux de données")  
+     ![Assistant Publication du flux de données - Page Introduction](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Assistant Publication du flux de données - Page Introduction")  
   
 3.  Dans la page **Paramètres du package** , effectuez les tâches suivantes :  
   
     1.  Tapez le **nom** de l’instance SQL Server qui contient le catalogue SSIS, ou cliquez sur **Parcourir** pour sélectionner le serveur.  
   
-         ![Assistant - page Paramètres de Package de publication du flux de données](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistant - page Paramètres de Package de publication du flux de données")  
+         ![Assistant Publication du flux de données - Page Paramètres de package](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistant Publication du flux de données - Page Paramètres de package")  
   
     2.  Cliquez sur **Parcourir** en regard du champ Chemin, parcourez le catalogue SSIS, sélectionnez le package SSIS à publier (par exemple : **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), puis cliquez sur **OK**.  
   
-         ![Assistant - rechercher le Package de publication du flux de données](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Assistant - rechercher le Package de publication du flux de données")  
+         ![Assistant Publication du flux de données - Rechercher le package](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Assistant Publication du flux de données - Rechercher le package")  
   
     3.  À l’aide des onglets Paramètres du package, Paramètres du projet et Gestionnaires de connexions situés au bas de la page, entrez les valeurs appropriées pour les paramètres de package, les paramètres de projet ou les paramètres de gestionnaires de connexions du package. Vous pouvez également indiquer une référence d’environnement à utiliser pour l’exécution du package, et lier les paramètres de package/projet aux variables d’environnement.  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  Sélectionnez la **base de données** correspondant à la vue à créer.  
   
-         ![Données Assistant Publication de flux - page Paramètres de publication](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "flux de données de publication Assistant - page Paramètres de publication")  
+         ![Assistant Publication du flux de données - Page Paramètres de publication](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Assistant Publication du flux de données - Page Paramètres de publication")  
   
     2.  Tapez un **nom** pour la **vue**. Vous pouvez également sélectionner une vue existante dans la liste déroulante.  
   
@@ -144,7 +143,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  Dans la page **Validation** , passez en revue les résultats de la validation des valeurs pour tous les paramètres. Dans l’exemple suivant, vous voyez un **avertissement** concernant l’existence d’un serveur lié, car celui-ci n’existe pas sur l’instance SQL Server sélectionnée. Si vous voyez **Erreur** pour **Résultat**, pointez sur **Erreur** pour voir les détails de l’erreur. Par exemple, si vous n’avez pas activé l’option Autoriser inprocess pour le fournisseur SSISOLEDB, vous obtenez une erreur pour l’action de configuration du serveur lié.  
   
-     ![Assistant - Page de Validation de publication du flux de données](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Assistant - Page de Validation de publication du flux de données")  
+     ![Assistant Publication du flux de données - Page Validation](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Assistant Publication du flux de données - Page Validation")  
   
 6.  Pour enregistrer ce rapport en tant que fichier XML, cliquez sur Enregistrer le rapport.  
   
@@ -152,7 +151,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  Vérifiez votre sélection dans la page **Résumé** , puis cliquez sur **Publier** pour démarrer le processus de publication. Celui-ci permet de créer le serveur lié, s’il n’existe pas déjà, puis de créer la vue à l’aide du serveur lié.  
   
-     ![Assistant - Page Résumé de publication du flux de données](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Assistant - Page Résumé de publication du flux de données")  
+     ![Assistant Publication du flux de données - Page Résumé](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Assistant Publication du flux de données - Page Résumé")  
   
      Vous pouvez désormais interroger les données de sortie du package en exécutant l’instruction SQL suivante sur la base de données TestDB : SELECT * FROM [SSISPackageView].  
   
@@ -168,9 +167,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  Lancez SQL Server Management Studio.  
   
-2.  Développez \< **nom de l’ordinateur**>, **bases de données**, \< **base de données que vous avez sélectionné dans l’Assistant**>, et **vues**.  
+2.  Développez \<**nom machine**>, **Bases de données**, \<**base de données sélectionnée dans l’Assistant**> et **Vues**.  
   
-3.  Cliquez sur le \< **vue créée par l’Assistant**> créé par l’Assistant et cliquez sur **sélectionner les 1000 lignes**.  
+3.  Cliquez avec le bouton droit sur la \<**vue créée par l’Assistant**>, puis cliquez sur **Sélectionner les 1000 premières lignes**.  
   
 4.  Vérifiez que vous voyez bien les résultats du package SSIS.  
   
@@ -255,7 +254,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Les paramètres Folder, Project et Package sont obligatoires. Use32BitRuntime, Timeout et Parameters sont facultatifs.  
   
- Use32BitRuntime peut avoir la valeur 0, 1, true ou false. Il indique si le package doit être exécuté avec le runtime 32 bits (1 ou true) quand la plateforme de SQL Server est de type 64 bits.  
+ Use32BitRuntime peut avoir la valeur 0, 1, true ou false. Il indique si le package doit être exécuté avec le runtime 32 bits (1 ou true) quand la plateforme de SQL Server est de type 64 bits.  
   
  Timeout indique le délai d’attente en secondes du fournisseur OLE DB pour SSIS avant l’arrivée de nouvelles données en provenance du package SSIS. Par défaut, le délai d’expiration est de 60 secondes. Vous pouvez spécifier une valeur entière pour indiquer un délai d’attente compris entre 20 et 32 000.  
   
@@ -273,9 +272,8 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Barre oblique (\\) – Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
  [Configurer Data Streaming Destination](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

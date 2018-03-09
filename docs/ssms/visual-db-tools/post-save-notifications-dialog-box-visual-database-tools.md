@@ -3,8 +3,11 @@ title: "Notifications post-enregistrement, boîte de dialogue (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25036c1b2e6ffef3108fe409128d38f4552528a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5669c143e5e8c0f8da376b59d8e17a77a42a54dd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Notifications post-enregistrement, boîte de dialogue (Visual Database Tools)
-Cette boîte de dialogue apparaît en cas d'erreurs lors d'une tentative d'enregistrement des modifications apportées à une table. Cette boîte de dialogue énumère les objets qui ont été enregistrés dans la base de données avec succès, les objets qui n'ont pas été enregistrés et les erreurs rencontrées.  
+# <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Boîte de dialogue Notifications post-enregistrement (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue apparaît en cas d’erreurs lors d’une tentative d’enregistrement des changements apportés à une table. Cette boîte de dialogue énumère les objets qui ont été enregistrés dans la base de données avec succès, les objets qui n'ont pas été enregistrés et les erreurs rencontrées.  
   
 ## <a name="options"></a>Options  
 **Enregistrer comme fichier texte**  

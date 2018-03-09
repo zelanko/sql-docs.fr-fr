@@ -2,16 +2,13 @@
 title: "Sources de données et liaisons (SSAS multidimensionnel) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -38,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64aee5ba79973ea7ceca7020a4ee7dda04a12637
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
-  Les cubes, les dimensions et autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les cubes, les dimensions et autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
   
 -   Source de données relationnelle.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="analysis-services-data-types"></a>Types de données Analysis Services  
  Les types de données utilisés dans les liaisons doivent correspondre aux types de données pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les types de données suivants sont définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Type de données Analysis Services|Description|  
+|Type de données Analysis Services| Description|  
 |---------------------------------|-----------------|  
 |BigInt|Entier signé de 64 bits. Ce type de données est mappé au type de données Int64 dans Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I8 dans OLE DB.|  
 |Bool|Valeur booléenne. Ce type de données est mappé au type de données Boolean dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_BOOL dans OLE DB.|  
@@ -75,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |Entier|Entier signé de 32 bits. Ce type de données est mappé sur le type de données Int32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_I4 dans OLE DB.|  
 |Unique|Nombre à virgule flottante simple précision compris entre -3.40E +38 et 3.40E +38. Ce type de données est mappé sur le type de données Single dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_R4 dans OLE DB.|  
 |SmallInt|Entier signé 16 bits. Ce type de données est mappé au type de données Int16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I2 dans OLE DB.|  
-|TinyInt|Entier signé 8 bits. Ce type de données est mappé au type de données SByte dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I1 dans OLE DB.<br /><br /> Remarque : si une source de données contient des champs de type tinyint et que la propriété Auto-incrément est définie sur True, ils seront convertis en entiers dans la vue de source de données.|  
+|TinyInt|Entier signé 8 bits. Ce type de données est mappé au type de données SByte dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I1 dans OLE DB.<br /><br /> Remarque : si une source de données contient des champs de type tinyint et que la propriété Auto-incrément est définie sur True, ils seront convertis en entiers dans la vue de source de données.|  
 |UnsignedBigInt|Entier non signé 64 bits. Ce type de données est mappé sur le type de données UInt64 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_UI8 dans OLE DB.|  
 |UnsignedInt|Entier non signé 32 bits. Ce type de données est mappé sur le type de données UInt32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_UI4 dans OLE DB.|  
 |UnsignedSmallInt|Entier non signé 16 bits. Ce type de données est mappé au type de données UInt16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_UI2 dans OLE DB.|  
@@ -177,9 +175,9 @@ ms.lasthandoff: 11/17/2017
   
  Les liaisons hors ligne sont spécifiées en incluant l’objet de collection **Bindings** facultatif avec la commande de traitement. La collection **Bindings** facultative contient les éléments suivants.  
   
-|Propriété|Cardinalité|Type|Description|  
+|Propriété|Cardinalité|Type| Description|  
 |--------------|-----------------|----------|-----------------|  
-|**Binding**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
+|**Liaison**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
 |**DataSource**|0-1|**DataSource**|Remplace l'élément **DataSource** du serveur qui aurait été utilisé.|  
 |**DataSourceView**|0-1|**DataSourceView**|Remplace l'élément **DataSourceView** du<br /><br /> serveur qui aurait été utilisé.|  
   

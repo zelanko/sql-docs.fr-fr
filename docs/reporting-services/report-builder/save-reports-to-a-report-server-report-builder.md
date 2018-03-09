@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2758f8a1305e6460f03e9ff31bb4b46bb6f4301b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b92ace95ff7d250fda16b1e021fddf61379cdb19
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Enregistrer des rapports sur un serveur de rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer une définition de rapport sur un serveur de rapports (on parle également de publier un rapport). Le fait d'enregistrer un rapport sur un serveur de rapports permet aux autres utilisateurs de le consulter. Chaque fois que vous exécutez le rapport publié, vous récupérez les données les plus récentes. Pour enregistrer une copie statique d'un rapport rendu, exportez le rapport sous un format de fichier différent et enregistrez-le ou utilisez la fonctionnalité d'historique de rapport pour enregistrer des versions de rapports rendus.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Pour enregistrer un rapport sur un serveur de rapports  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous***\<élément de rapport>* s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous****\<élément de rapport>* s’affiche.  
   
     > [!NOTE]  
     >  Si vous réenregistrez un rapport, il est automatiquement stocké à son emplacement précédent. Utilisez l'option Enregistrer sous pour modifier l'emplacement.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Pour enregistrer un rapport sous un nom différent  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous***\<élément de rapport>* s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous****\<élément de rapport>* s’affiche.  
   
 2.  Naviguez jusqu'à l'emplacement du serveur de rapports ou jusqu'au partage de fichiers où vous souhaitez enregistrer le rapport.  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Dans **Éléments de type**, sélectionnez le type d’élément de rapport à enregistrer. Le type des rapports est Rapports (*.rdl).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   

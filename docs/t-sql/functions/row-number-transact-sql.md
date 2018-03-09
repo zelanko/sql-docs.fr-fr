@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROW_NUMBER
 - ROW_NUMBER_TSQL
 - ROW_NUMBER()_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ROW_NUMBER function
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 284c184a7e77842ec798dbff6d32c193ce9055f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 6ddb3472f19ce2fda8bc368cd07f7ea602d74a02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +81,7 @@ ROW_NUMBER ( )
 
 La requête suivante retourne les tables quatre système dans l’ordre alphabétique.
 
-```t-sql
+```sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -89,7 +91,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|name    |recovery_model_desc |  
+|NAME    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -98,7 +100,7 @@ ORDER BY name ASC;
 
 Pour ajouter une colonne de numéro de ligne devant chaque ligne, ajouter une colonne avec le `ROW_NUMBER` fonction, appelée dans ce cas `Row#`. Vous devez déplacer la `ORDER BY` clause jusqu'à la `OVER` clause.
 
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -108,16 +110,16 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Ligne # |name    |recovery_model_desc |  
+|Ligne # |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
+| 1 |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
 Ajout d’un `PARTITION BY` dans la clause de la `recovery_model_desc` colonne, redémarre la numérotation lorsque le `recovery_model_desc` valeur modifiée. 
  
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -127,10 +129,10 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Ligne # |name    |recovery_model_desc |  
+|Ligne # |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |model |FULL |
-|1 |master |SIMPLE |
+| 1 |model |FULL |
+| 1 |master |SIMPLE |
 |2 |msdb |SIMPLE |
 |3 |tempdb |SIMPLE |
 
@@ -138,7 +140,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. Retour du nombre de lignes pour les vendeurs  
  L'exemple suivant calcule un numéro de ligne pour les vendeurs de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] en fonction de leur classement de ventes de l'année.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -172,7 +174,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>C. Retour d'un sous-ensemble de lignes  
  L'exemple suivant calcule les numéros de ligne pour toutes les lignes de la table de `SalesOrderHeader` dans l'ordre d'`OrderDate` et retourne uniquement les lignes `50` à `60` inclus.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -189,7 +191,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>D. Utilisation de Using ROW_NUMBER() avec PARTITION  
  L'exemple suivant utilise l'argument `PARTITION BY` pour partitionner le jeu de résultats d'une requête par la colonne `TerritoryName`. La clause `ORDER BY` spécifiée dans la clause `OVER` classe les lignes de chaque partition par la colonne `SalesYTD`. La clause `ORDER BY` dans l'instruction `SELECT` détermine l'ordre du jeu de résultats de la requête entier par `TerritoryName`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -227,7 +229,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Retour du nombre de lignes pour les vendeurs  
  L’exemple suivant retourne le `ROW_NUMBER` de ventes des représentants en fonction de leur quota de ventes affecté.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -256,7 +258,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>F. Utilisation de Using ROW_NUMBER() avec PARTITION  
  L'exemple suivant illustre l'utilisation de la fonction `ROW_NUMBER` avec l'argument `PARTITION BY`. Cela entraîne le `ROW_NUMBER` fonction pour numéroter les lignes dans chaque partition.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 

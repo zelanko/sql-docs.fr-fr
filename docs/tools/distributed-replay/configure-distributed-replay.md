@@ -2,26 +2,29 @@
 title: Configurer Distributed Replay | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81f5ad59e6f8201fd89d948fef293fddf01f2870
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a2ded636f3ded5a8821b6675ef5d18c21a31b968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="configure-distributed-replay"></a>Configurer Distributed Replay
-  Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l'emplacement où l'outil d'administration est installé. Il s'agit des fichiers suivants :  
+# <a name="configure-distributed-replay"></a>Configure Distributed Replay
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les détails de configuration de Distributed Replay sont spécifiés dans des fichiers XML sur le contrôleur de Distributed Replay, les clients, et où l’outil d’administration est installé. Il s'agit des fichiers suivants :  
   
 -   [Fichier de configuration du contrôleur](#DReplayController)  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
  Le niveau de journalisation spécifié par le fichier de configuration du contrôleur inclut les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML| Description|Valeurs autorisées|Requis|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Niveau de journalisation|`<LoggingLevel>`|Spécifie le niveau de journalisation pour le service contrôleur.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Non. Par défaut, la valeur est `CRITICAL`.|  
   
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
  Les paramètres spécifiés par le fichier de configuration client incluent les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML| Description|Valeurs autorisées|Requis|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Contrôleur|`<Controller>`|Spécifie le nom de l'ordinateur du contrôleur. Le client tentera de s'inscrire auprès de l'environnement Distributed Replay en contactant le contrôleur.|Vous pouvez utiliser «`localhost`» ou «`.`» pour désigner l'ordinateur local.|Non. Par défaut, le client tente de s'inscrire auprès de l'instance du contrôleur qui s'exécute localement («`.`»), s'il existe.|  
 |Répertoire de travail du client|`<WorkingDirectory>`|Correspond au chemin d'accès local sur le client où les fichiers de distribution sont enregistrés.<br /><br /> Les fichiers de ce répertoire sont écrasés lors de la prochaine relecture.|Nom du répertoire complet, en commençant par une lettre de lecteur.|Non. Si aucune valeur n'est spécifiée, les fichiers de distribution seront enregistrés dans le même emplacement que le fichier de configuration client par défaut. Si une valeur est spécifiée et que ce dossier n'existe pas sur le client, le service client ne démarrera pas.|  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/09/2017
   
  Les paramètres de configuration de prétraitement sont spécifiés dans les éléments XML qui sont enfants de l'élément `<PreprocessModifiers>` dans le fichier de configuration de prétraitement. Ces paramètres sont les suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML| Description|Valeurs autorisées|Requis|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Inclure les activités de session système|`<IncSystemSession>`|Indique si les activités de session système lors de la capture seront incluses lors de la relecture.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `No`.|  
 |Durée d'inactivité maximale|`<MaxIdleTime>`|Limite la durée d'inactivité à un nombre absolu (en secondes).|Entier qui est >= -1.<br /><br /> `-1` n'indique aucune modification de la valeur d'origine dans le fichier de trace d'origine.<br /><br /> `0` indique qu'une activité continue à un instant donné dans le temps.|Non. Par défaut, la valeur est `-1`.|  
@@ -122,22 +125,22 @@ ms.lasthandoff: 11/09/2017
 ### <a name="replayoptions-element"></a>\<ReplayOptions > élément  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<ReplayOptions>` incluent les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML| Description|Valeurs autorisées|Requis|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (serveur de test)|`<Server>`|Spécifie le nom du serveur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auxquels la connexion doit être établie.|*nom_serveur*[\\*nom_instance*]<br /><br /> Vous ne pouvez pas utiliser «`localhost`» ou «`.`» pour représenter l'hôte local.|Non, si le nom du serveur est déjà spécifié à l’aide du paramètre **-s***serveur cible* avec l’option **replay** de l’outil d’administration.|  
+|Instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (serveur de test)|`<Server>`|Spécifie le nom du serveur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auxquels la connexion doit être établie.|*nom_serveur*[\\*nom_instance*]<br /><br /> Vous ne pouvez pas utiliser «`localhost`» ou «`.`» pour représenter l'hôte local.|Non, si le nom du serveur est déjà spécifié en utilisant le **-s *** serveur cible* paramètre avec le **relire** option de l’outil d’administration.|  
 |Mode de séquencement|`<SequencingMode>`|Spécifie le mode utilisé pour la planification d'événement.|`synchronization` &#124; `stress`|Non. Par défaut, la valeur est `stress`.|  
 |Granularité de l'échelle du mode simultané (stress)|`<StressScaleGranularity>`|Indique si toutes les connexions sur l'ID du profil de service (SPID) doivent être mises à l'échelle ensemble (SPID) ou indépendamment (connexion) en mode simultané (stress).|SPID &#124; Connexion|Oui. Par défaut, la valeur est `SPID`.|  
 |Échelle de délai de connexion|`<ConnectTimeScale>`|Utilisée pour mettre à l'échelle le délai de connexion en mode simultané (stress).|Entier compris entre `1` et `100`.|Non. Par défaut, la valeur est `100`.|  
 |Échelle de temps de réflexion|`<ThinkTimeScale>`|Est utilisé pour mettre à l'échelle le temps de réflexion en mode simultané (stress).|Entier compris entre `0` et `100`.|Non. Par défaut, la valeur est `100`.|  
 |Utiliser le regroupement de connexions|`<UseConnectionPooling>`|Spécifie si le regroupement de connexions est activé sur chaque client Distributed Replay.|Oui &#124; Non|Oui. Par défaut, la valeur est `Yes`.|  
 |Délai du moniteur d'intégrité|`<HealthmonInterval>`|Indique à quelle fréquence exécuter le moniteur d'intégrité (en secondes).<br /><br /> Cette valeur est utilisée uniquement en mode de synchronisation.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `60`.|  
-|Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
+|Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
 |Threads par client|`<ThreadsPerClient>`|Spécifie le nombre de threads de relecture à utiliser pour chaque client de relecture.|Entier compris entre `1` et `512`.|Non. Si non spécifié, Distributed Replay utilise une valeur de `255`.|  
   
 ### <a name="outputoptions-element"></a>\<OutputOptions > élément  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<OutputOptions>` incluent les éléments suivants :  
   
-|Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
+|Paramètre|Élément XML| Description|Valeurs autorisées|Requis|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nombre de lignes d'enregistrement|`<RecordRowCount>`|Indique si le nombre de lignes doit être enregistré pour chaque jeu de résultats.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `Yes`.|  
 |Jeu de résultats d'enregistrement|`<RecordResultSet>`|Indique si le contenu de tous les jeux de résultats doit être enregistré.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `No`.|  
@@ -170,7 +173,7 @@ ms.lasthandoff: 11/09/2017
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Forum de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Utilisation de Distributed Replay pour charger le Test de SQL Server – partie 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Utilisation de Distributed Replay pour charger le Test de votre serveur SQL Server - partie 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Utilisation de Distributed Replay pour le test de charge de SQL Server – Deuxième partie](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Utilisation de Distributed Replay pour le test de charge de SQL Server – Première partie](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

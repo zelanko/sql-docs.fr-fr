@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7d9bab36c41db09d8b442fb44a495a6e0e2ff960
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c80a041cc0dadf7ab95005379424a65e216dda9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-access-ssrs"></a>Accès URL (SSRS)
   L'accès URL du serveur de rapports dans SQL Server Reporting Services (SSRS) vous permet d'envoyer des commandes à un serveur de rapports par la biais d'une demande d'URL. Par exemple, vous pouvez personnaliser le rendu d'un rapport sur un serveur de rapports en mode natif ou dans une bibliothèque SharePoint. Vous avez peut-être affiché le rapport à l'aide d'un ensemble de valeurs de paramètre de rapport, ou vous avez peut-être consulté une page spécifique digne d'intérêt dans le rapport. Vous pouvez encapsuler ces informations dans l'URL à l'aide de paramètres d'accès URL prédéfinis. Vous pouvez personnaliser davantage la façon dont le serveur de rapports traite le rapport en incorporant des paramètres pour les formats de rendu ou pour l'apparence de la visionneuse de rapports. Vous pouvez ensuite coller cette URL directement dans un courrier électronique ou une page Web pour permettre à d'autres utilisateurs d'accéder à votre rapport de la même manière dans le navigateur.  
@@ -66,14 +64,14 @@ reportpath
   
 ### <a name="syntax-description"></a>Description de la syntaxe  
  *rswebserviceurl*  
- URL du service web du serveurs de rapports. Pour le mode natif, il s’agit de l’URL du service web de l’instance du serveur de rapports configurée dans le Gestionnaire de configuration de Reporting Services (consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Exemple :  
+ URL du service web du serveurs de rapports. Pour le mode natif, il s’agit de l’URL du service web de l’instance du serveur de rapports configurée dans le Gestionnaire de configuration de Reporting Services (consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Exemple :  
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- Pour le mode intégré SharePoint, il s’agit de l’URL du proxy [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur un site SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Par exemple :  
+ Pour le mode intégré SharePoint, il s’agit de l’URL du proxy [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur un site SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Exemple :  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -85,13 +83,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Chemin relatif de l’élément dans la base de données du serveur de rapports en mode natif, ou URL complète de l’élément dans un catalogue SharePoint.  
   
- Chemin de l’élément du catalogue. Pour le mode natif, il s’agit du chemin relatif de l’élément dans la base de données du serveur de rapports, commençant par une barre oblique (**/**). Par exemple :  
+ Chemin de l’élément du catalogue. Pour le mode natif, il s’agit du chemin relatif de l’élément dans la base de données du serveur de rapports, commençant par une barre oblique (**/**). Exemple :  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- Pour le mode intégré SharePoint, il s'agit de l'URL complète de l'élément dans la bibliothèque SharePoint, y compris l'extension d'élément. Par exemple :  
+ Pour le mode intégré SharePoint, il s'agit de l'URL complète de l'élément dans la bibliothèque SharePoint, y compris l'extension d'élément. Exemple :  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -101,7 +99,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  Utilisé pour séparer les paires nom/valeur des paramètres d'accès URL.  
   
  **prefix**  
- Ce paramètre est facultatif. Préfixe de paramètre d’accès URL (par exemple, `rs:` ou `rc:`) qui permet d’accéder à un processus spécifique exécuté sur le serveur de rapports.  
+ Facultatif. Préfixe de paramètre d’accès URL (par exemple, `rs:` ou `rc:`) qui permet d’accéder à un processus spécifique exécuté sur le serveur de rapports.  
   
 > [!NOTE]  
 >  Si aucun préfixe n'est spécifié pour un paramètre d'accès URL, ce dernier est traité par le serveur de rapports comme un paramètre de rapport. Les paramètres de rapport n'utilisent pas de préfixe de paramètre et respectent la casse.  
@@ -114,7 +112,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
  **Remarque :** Pour obtenir la liste des paramètres d’accès URL disponibles, consultez [Référence de paramètre d’accès URL](../reporting-services/url-access-parameter-reference.md). Pour obtenir des exemples où des paramètres de rapport sont passés sur l’URL, consultez [Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descriptions de tâche|Liens|  
 |-----------------------|-----------|  
@@ -126,7 +124,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Ouvrir un rapport et accéder directement à l'emplacement d'une chaîne.|[Rechercher un rapport à l'aide de l'accès URL](../reporting-services/search-a-report-using-url-access.md)|  
 |Effectuer le rendu d'un instantané d'historique de rapport.|[Rendre un instantané d'historique de rapport à l'aide de l'accès URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [Référence de paramètres d’accès URL](../reporting-services/url-access-parameter-reference.md)   
  [Intégration de Reporting Services à l’aide de l’accès URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   

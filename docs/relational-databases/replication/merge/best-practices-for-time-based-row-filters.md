@@ -2,27 +2,30 @@
 title: "Bonnes pratiques en matière de filtres de lignes basés sur le temps | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f52f422d5804a14dc3fbac86ac40a2d3a143ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="best-practices-for-time-based-row-filters"></a>Bonnes pratiques en matière de filtres de lignes basés sur le temps
-  Les utilisateurs d'applications ont souvent besoin d'un sous-ensemble de données d'une table basé sur le temps. Par exemple, un vendeur peut avoir besoin des données sur les commandes passées au cours de la dernière semaine tandis qu'un planificateur d'événements peut avoir besoin des données sur les événements qui auront lieu au cours de la semaine à venir. Dans de nombreux cas, pour accomplir cette tâche, les applications utilisent des requêtes qui contiennent la fonction **GETDATE()** . Considérons l'instruction de filtre de lignes suivante :  
+# <a name="best-practices-for-time-based-row-filters"></a>Meilleures pratiques pour les filtres de lignes basés sur le temps
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les utilisateurs d’applications ont souvent besoin d’un sous-ensemble de données d’une table basé sur le temps. Par exemple, un vendeur peut avoir besoin des données sur les commandes passées au cours de la dernière semaine tandis qu'un planificateur d'événements peut avoir besoin des données sur les événements qui auront lieu au cours de la semaine à venir. Dans de nombreux cas, pour accomplir cette tâche, les applications utilisent des requêtes qui contiennent la fonction **GETDATE()** . Considérons l'instruction de filtre de lignes suivante :  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
@@ -61,7 +64,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|Réception|112|2006-10-04|1|  
+| 1|Réception|112|2006-10-04| 1|  
 |2|Dîner|112|2006-10-10|0|  
 |3|Soirée|112|2006-10-11|0|  
 |4|Mariage|112|2006-10-12|0|  
@@ -85,14 +88,14 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|Réception|112|2006-10-04|0|  
-|2|Dîner|112|2006-10-10|1|  
-|3|Soirée|112|2006-10-11|1|  
-|4|Mariage|112|2006-10-12|1|  
+| 1|Réception|112|2006-10-04|0|  
+|2|Dîner|112|2006-10-10| 1|  
+|3|Soirée|112|2006-10-11| 1|  
+|4|Mariage|112|2006-10-12| 1|  
   
  Les événements relatifs à la semaine à venir sont désormais signalés comme étant prêts à être répliqués. La prochaine fois que l'Agent de fusion s'exécutera pour l'abonnement utilisé par le coordinateur d'événements 112, les lignes 2, 3 et 4 seront téléchargées vers l'Abonné tandis que la ligne 1 sera supprimée de celui-ci.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implémenter des travaux](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  

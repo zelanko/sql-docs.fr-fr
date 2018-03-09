@@ -3,8 +3,11 @@ title: "À propos de, boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 168e3d0313a2bd94538f06d1fdca7fd95758bb51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2bccb8658d5894e20b2a55432093d36b33b40388
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="about-dialog-box"></a>Boîte de dialogue À propos de
-La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d'accéder à d'autres informations relatives à l'ordinateur où s'exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  
+# <a name="about-dialog-box"></a>À propos de (boîte de dialogue)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d’accéder à d’autres informations relatives à l’ordinateur où s’exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  
   
 ## <a name="options"></a>Options  
 **Nom du composant**  
@@ -36,6 +39,6 @@ Répertorie la version de chaque composant installé.
 **Copier les informations**  
 Copie les noms et les versions des composants dans le Presse-papiers [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows.  
   
-## <a name="see-also"></a>Voir aussi  
-[Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
+## <a name="see-also"></a> Voir aussi  
+[Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

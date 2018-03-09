@@ -3,29 +3,31 @@ title: Programmation ADO Visual C++ | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8decc959840898d0b82c86c0d955b29a7affddde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
 La référence de l’API ADO décrit les fonctionnalités de l’ADO application programming interface (API) à l’aide d’une syntaxe semblable à Microsoft Visual Basic. Bien que le public visé est tous les utilisateurs, les programmeurs ADO utilisent divers langages comme Visual Basic, Visual C++ (avec et sans le **#import** directive) et Visual J ++ (avec le package de classes ADO/WFC).  
@@ -44,7 +46,7 @@ La référence de l’API ADO décrit les fonctionnalités de l’ADO applicatio
   
  Pour chaque opération dans une classe (autrement dit, un appel de méthode ou propriété), il existe une déclaration d’appeler directement l’opération (autrement dit, la forme « brute » de l’opération) et une déclaration qui appelle l’opération brute et lève une exception COM si l’opération échoue à exécuter succ essfully. Si l’opération est une propriété, il existe généralement une directive de compilateur qui crée une autre syntaxe pour l’opération qui a une syntaxe similaire Visual Basic.  
   
- Opérations de récupération de la valeur d’une propriété ont des noms de l’écran, **obtenir***propriété*. Les opérations qui définissent la valeur d’une propriété ont un nom de l’écran, **Put***propriété*. Les opérations qui définissent la valeur d’une propriété avec un pointeur vers un objet ADO ont des noms de l’écran, **PutRef***propriété*.  
+ Opérations de récupération de la valeur d’une propriété ont des noms de l’écran, **obtenir *** propriété*. Les opérations qui définissent la valeur d’une propriété ont un nom de l’écran, **Put *** propriété*. Les opérations qui définissent la valeur d’une propriété avec un pointeur vers un objet ADO ont des noms de l’écran, **PutRef *** propriété*.  
   
  Vous pouvez obtenir ou définir une propriété avec des appels des formes suivantes :  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- Le compilateur générera approprié **obtenir***-*, **Put**-, ou **PutRef***propriété* appel en fonction de la syntaxe alternative est déclaré et si la propriété est en cours de lecture ou d’écriture.  
+ Le compilateur générera approprié **Get ***-*, **Put**-, ou **PutRef *** propriété* appel en fonction de la syntaxe alternative est déclaré et que la propriété lus ou écrits.  
   
  Le **__declspec(property...)**  directive de compilateur peut déclarer uniquement **obtenir**, **put**, ou **obtenir** et **put** autre syntaxe pour une fonction. Les opérations en lecture seule ne peuvent avoir un **obtenir** déclaration ; les opérations en écriture seule ont uniquement un **put** déclaration ; les opérations qui sont à la fois en lecture et en écriture posséder à la fois **obtenir** et **put** déclarations.  
   
- Seules deux déclarations sont possibles avec cette directive ; Toutefois, chaque propriété peut avoir trois fonctions de propriété : **obtenir***propriété*, **Put***propriété*, et **PutRef**  *Propriété*. Dans ce cas, seuls deux formes de la propriété possèdent une syntaxe alternative.  
+ Seules deux déclarations sont possibles avec cette directive ; Toutefois, chaque propriété peut avoir trois fonctions de propriété : **obtenir *** propriété*, **Put *** propriété*, et **PutRef *** propriété*. Dans ce cas, seuls deux formes de la propriété possèdent une syntaxe alternative.  
   
- Par exemple, le **commande** objet **ActiveConnection** propriété est déclarée avec une syntaxe alternative pour **obtenir***ActiveConnection*et **PutRef***ActiveConnection*. Le **PutRef**-syntaxe est un bon choix, car dans la pratique, vous pouvez placer open **connexion** objet (autrement dit, un **connexion** pointeur d’objet) dans cette propriété. En revanche, le **Recordset** objet a **obtenir**-, **Put**-, et **PutRef***ActiveConnection*opérations, mais pas de syntaxe alternative.  
+ Par exemple, le **commande** objet **ActiveConnection** propriété est déclarée avec une syntaxe alternative pour **obtenir *** ActiveConnection* et **PutRef * ** ActiveConnection*. Le **PutRef**-syntaxe est un bon choix, car dans la pratique, vous pouvez placer open **connexion** objet (autrement dit, un **connexion** pointeur d’objet) dans cette propriété. En revanche, le **Recordset** objet a **obtenir**-, **Put**-, et **PutRef *** ActiveConnection* opérations, mais aucune autre syntaxe.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Collections, méthode GetItem et la propriété d’élément  
  ADO définit plusieurs collections, notamment **champs**, **paramètres**, **propriétés**, et **erreurs**. Dans Visual C++, le **GetItem (***index***)** méthode retourne un membre de la collection. *Index* est un **Variant**, dont la valeur est soit un index numérique du membre dans la collection, soit une chaîne contenant le nom du membre.  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- Cet exemple Visual C++ illustre les **obtenir**/**Put**/**PutRef***propriété*.  
+ Cet exemple Visual C++ illustre les **obtenir**/**Put**/**PutRef *** propriété*.  
   
 #### <a name="notes"></a>Remarques  
  Les remarques suivantes correspondent aux sections commentées dans l’exemple de code.  

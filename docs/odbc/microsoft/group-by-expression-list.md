@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4b332d0fc4b858a2db42b8f475df339e56e83ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3522ed4ba81bcc667683142097269e65cac7be7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="group-by-expression-list"></a>Regrouper par liste d’expressions
 GROUP BY la prend en charge une liste d’expressions ainsi que d’un nom de colonne. La liste de sélection d’une instruction SELECT qui contient une clause GROUP BY peut uniquement inclure des expressions de la clause GROUP BY ou fonctions de jeu.

@@ -1,5 +1,5 @@
 ---
-title: Transformation de recherche floue | Documents Microsoft
+title: Recherche floue, transformation | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,17 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
   La transformation de recherche floue effectue des tâches de nettoyage des données telles que la standardisation des données, la correction des données et la fourniture de données manquantes.  
@@ -115,7 +114,7 @@ ms.lasthandoff: 08/19/2017
  La commande SQL TRUNCATE TABLE n'appelle pas de déclencheurs DELETE. Si la commande TRUNCATE TABLE est utilisée sur la table de référence, celle-ci ne sera plus synchronisée avec l'index de correspondances et la transformation de recherche floue échouera. Lorsque les déclencheurs qui gèrent la table d'index de correspondances sont installés sur la table de référence, vous devez utiliser la commande SQL DELETE au lieu de TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Lorsque vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées managées pour maintenir l’index. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Dans la mesure où l’option **Conserver l’index stocké** requiert l’intégration du CLR, cette fonctionnalité n’est effective que lorsque vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
@@ -133,7 +132,7 @@ ms.lasthandoff: 08/19/2017
  Les performances de cette transformation peuvent s'améliorer si les tables et les index qu'elle utilise sont situés sur l'ordinateur local. Si la table de référence que la transformation de recherche floue utilise se trouve sur le serveur de production, vous devez envisager de copier la table sur un serveur qui ne soit pas un serveur production et de configurer la transformation de recherche floue pour accéder à la copie. Ce faisant, vous pouvez empêcher les requêtes de recherche de consommer des ressources sur le serveur de production. En outre, si la transformation de recherche floue gère l’index de correspondances (c’est-à-dire si MatchIndexOptionsis a pour valeur **GenerateAndMaintainNewIndex**), la transformation peut verrouiller la table de référence durant l’opération de nettoyage des données et empêcher les autres utilisateurs et applications d’accéder à la table.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configuration de la transformation de recherche floue  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d’informations sur la définition des propriétés d’un composant de flux de données, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche floue (onglet Table de référence)
@@ -176,7 +175,7 @@ ms.lasthandoff: 08/19/2017
  Si vous avez décidé d'enregistrer le nouvel index de recherche, indiquez si vous voulez également que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve l'index.  
   
 > [!NOTE]  
->  Quand vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées gérées pour tenir l’index à jour. Ces procédures stockées managées utilisent la fonctionnalité d’intégration du Common Language Runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>  Quand vous sélectionnez **Conserver l’index stocké** sous l’onglet **Table de référence** de **l’Éditeur de transformation de recherche floue**, la transformation utilise des procédures stockées gérées pour tenir l’index à jour. Ces procédures stockées managées utilisent la fonctionnalité de l’intégration du common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par défaut, l'intégration CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est désactivée. Pour utiliser la fonctionnalité **Conserver l’index stocké** , vous devez activer l’intégration du CLR. Pour plus d’informations, consultez [Activation de l’intégration du CLR](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  L’option **Conserver l’index stocké** nécessitant l’intégration du CLR, cette fonctionnalité n’est effective que quand vous sélectionnez une table de référence dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour laquelle l’intégration du CLR est activée.  
   
@@ -221,10 +220,9 @@ ms.lasthandoff: 08/19/2017
  **Séparateurs de jetons**  
  Indiquez les séparateurs utilisés par la transformation pour marquer les valeurs de colonne.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformation de recherche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformation de regroupement probable](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

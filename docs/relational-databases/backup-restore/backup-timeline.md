@@ -2,9 +2,12 @@
 title: Chronologie de sauvegarde | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ f1_keywords:
 helpviewer_keywords: Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4d67a3f93d492888ee5e42318d7c352abe9c17c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d3a58978a14d96a772675db69ab2fe425608987e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-timeline"></a>Chronologie de sauvegarde
-  Utilisez la boîte de dialogue **Chronologie de sauvegarde** pour rechercher et spécifier des sauvegardes afin de restaurer une base de données jusqu’à une date et heure. La boîte de dialogue **Chronologie de sauvegarde** est accessible en cliquant sur **Chronologie** dans le volet **Restaurer la base de données (page Général)** . Cette boîte de dialogue vous permet de consulter une chronologie des opérations de restauration effectuées sur la base de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Chronologie de sauvegarde** pour rechercher et spécifier des sauvegardes afin de restaurer une base de données jusqu’à une date et heure. La boîte de dialogue **Chronologie de sauvegarde** est accessible en cliquant sur **Chronologie** dans le volet **Restaurer la base de données (page Général)** . Cette boîte de dialogue vous permet de consulter une chronologie des opérations de restauration effectuées sur la base de données.  
   
  L'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration à cette limite dans le temps sont sélectionnées. Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre opération de restauration. Vous devez utiliser uniquement les sauvegardes sélectionnées. Pour plus d’informations sur l’Assistant de récupération de base de données, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
  Ligne rouge  
  Peut être positionnée uniquement le long de la chronologie où la restauration est possible. En déplaçant la ligne rouge le long de la chronologie, vous pouvez régler les date et heure affichées dans les zones **Date** et **Heure** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

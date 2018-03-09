@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b18d5969cc2586fec45320af4a754a12276663d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Types de données Microsoft Excel
 Le tableau suivant montre comment les types de données du pilote Microsoft Excel sont mappées aux types de données ODBC SQL. Le pilote Microsoft Excel affecte ces types de données aux colonnes de tables Microsoft Excel basés sur les données dans la colonne.  
@@ -46,7 +46,7 @@ Le tableau suivant montre comment les types de données du pilote Microsoft Exce
   
  Le tableau suivant présente des limitations sur les types de données Microsoft Excel.  
   
-|Type de données| Description|  
+|Type de données|Description|  
 |---------------|-----------------|  
 |Données chiffrées|Le pilote Microsoft Excel ne peut pas lire les données chiffrées.|  
 |Chaînes d’erreur|Le pilote Microsoft Excel ne peut pas retourner une chaîne de caractères pour les valeurs d’erreur Microsoft Excel (# n/a !, #VALUE !, #REF !, #DIV/0 !, #NUM !, #NAME ? et #NULL !), mais retourne une valeur NULL à la place.|  

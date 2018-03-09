@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: OR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: eb87411a86aad46ed3fcd00737f8ae46b99f5999
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3816be8be6945e21d3e6863292d4ed718a2352a2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="or-mdx"></a>OR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valeur retournée  
  Valeur booléenne qui retourne **true** si les deux arguments donnent comme résultat **true**; sinon, **false**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **ou** opérateur traite les deux arguments comme des valeurs booléennes (zéro, 0, comme **false**; sinon, **true**) avant que l’opérateur effectue la disjonction logique. Le tableau suivant illustre comment la **ou** opérateur effectue la disjonction logique.  
   
 |*Expression1*|*Expression2*|Valeur retournée|  
@@ -58,7 +58,7 @@ Expression1 OR Expression2
 |**false**|**true**|**true**|  
 |**false**|**false**|**false**|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La requête suivante contient une mesure calculée qui retourne la chaîne « MARRIED OR MALE » si le membre actuel sur la hiérarchie Gender de la dimension Client est Male ou le membre actuel sur la hiérarchie Marital Status de la dimension Client est Married ; sinon, elle retourne la chaîne « UNMARRIED OR FEMALE ».  
   
 ```  

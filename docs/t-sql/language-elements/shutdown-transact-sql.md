@@ -1,5 +1,5 @@
 ---
-title: SHUTDOWN (Transact-SQL) | Documents Microsoft
+title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SHUTDOWN_TSQL
 - SHUTDOWN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SQL Server, stopping
 - shutting down SQL Server
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 10a6b2c5bf093eaee3eacf183f98ecb644d2fc68
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: df8ef0a3cfe0ac4adb6f45bddb0bef650fea6ff3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;  
   
--   En exécutant **net stop mssqlserver** à partir d’une invite de commandes pour une instance par défaut, ou en exécutant **net stop mssql$***instancename* à partir d’une invite de commandes pour une instance nommée.  
+-   En exécutant **net stop mssqlserver** à partir d’une invite de commandes pour une instance par défaut, ou en exécutant **net stop mssql$ *** instancename* à partir d’une invite de commandes pour une instance nommée.  
   
 -   à l'aide des Services du Panneau de configuration ;  
   
@@ -78,13 +80,13 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  Quelle que soit la méthode utilisée pour arrêter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le message `SERVICE_CONTROL_STOP` est envoyé à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations SHUTDOWN sont attribuées aux membres de la **sysadmin** et **serveradmin** rôles serveur fixes et ils ne sont pas transférables.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [Point de contrôle &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Application sqlservr](../../tools/sqlservr-application.md)   
  [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

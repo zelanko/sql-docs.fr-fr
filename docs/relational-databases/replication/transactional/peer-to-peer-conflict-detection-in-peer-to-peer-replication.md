@@ -2,9 +2,12 @@
 title: "Détection de conflit dans la réplication d’égal à égal | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a2c2b23d8fd86531e7a29707f1b0930b3c794f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Égal à égal - Détection de conflit dans la réplication d’égal à égal
-  La réplication transactionnelle d'égal à égal vous permet d'insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication transactionnelle d’égal à égal vous permet d’insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
   
  Dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et les versions ultérieures, la réplication d'égal à égal propose une option permettant d'activer la détection des conflits dans une topologie d'égal à égal. Cette option permet d'éviter les problèmes causés par des conflits non détectés, notamment le comportement incohérent des applications et la perte d'une mise à jour. Lorsque cette option est activée, par défaut, une modification en conflit est traitée comme une erreur critique qui provoque l'échec de l'Agent de distribution. En cas de conflit, la topologie reste dans un état incohérent jusqu'à la résolution du conflit et jusqu'au rétablissement de la cohérence des données dans la topologie.  
   
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
   
     5.  Exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) : spécifiez 'p2p_continue_onconflict' pour le paramètre @property et **false** pour le paramètre @value.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

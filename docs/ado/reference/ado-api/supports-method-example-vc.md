@@ -3,27 +3,30 @@ title: "Prend en charge de l’exemple de méthode (VC ++) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Supports method [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc6fd5a18070a92669d2db00cabbabc01f106e05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6013186a6c58cf7be43e8c126b86ffa7fed3d8c2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method-example-vc"></a>Exemple de méthode prend en charge (VC ++)
 Cet exemple utilise le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La fonction DisplaySupport est requise pour exécuter cet exemple.  
@@ -230,5 +233,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)

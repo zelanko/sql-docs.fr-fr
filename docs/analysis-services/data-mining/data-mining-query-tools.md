@@ -2,15 +2,13 @@
 title: "Outils de requête d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-query-tools"></a>Outils de requête d'exploration de données
-  Toutes les requêtes d’exploration de données utilisent le langage DMX (Data Mining Extensions). Vous pouvez utiliser DMX pour créer des modèles pour tous les types de tâches d’apprentissage automatique, notamment la classification, l’évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également écrire des requêtes DMX pour obtenir des informations sur les modèles et les statistiques générés quand vous avez traité le modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Toutes les requêtes d’exploration de données utilisent le langage DMX (Data Mining Extensions). Vous pouvez utiliser DMX pour créer des modèles pour tous les types de tâches d’apprentissage automatique, notamment la classification, l’évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également écrire des requêtes DMX pour obtenir des informations sur les modèles et les statistiques générés quand vous avez traité le modèle.  
   
  Vous pouvez écrire votre propre requête DMX, ou vous pouvez générer une requête DMX de base à l’aide d’un outil tel que le **Générateur de requêtes de prédiction** , puis la modifier. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent des outils qui vous permettent de générer des requêtes de prédiction DMX. Cette rubrique explique comment créer et exécuter des requêtes d’exploration de données à l’aide de ces outils.  
   
@@ -84,9 +83,9 @@ ms.lasthandoff: 11/17/2017
 -   Pour récupérer le **modèle de contenu** et les **métadonnées de modèle**, telles que le nombre de clusters, les attributs utilisés dans les arbres de décision, la date à laquelle le modèle a été traité pour la dernière fois et les paramètres d’algorithme utilisés pendant la création du modèle, vous pouvez utiliser la [méthode Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) et spécifier l’un des ensembles de lignes de schéma d’exploration de données dans l’en-tête de [l’élément RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Pour limiter la portée de la requête, entrez les critères en tant que restrictions dans [l’élément RestrictionList &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Présentation de l'instruction DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Présentation de l’instruction DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Créer une requête DMX dans SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  

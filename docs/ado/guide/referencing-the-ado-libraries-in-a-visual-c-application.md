@@ -7,26 +7,27 @@ ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b25081133a9af071fbd0dfb2ee98344c60d3d35a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a554ff290c1ea3fa8ef5382e45fafbae5b1110d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Référencer les bibliothèques ADO dans une Application Visual C++
 Pour utiliser la dernière version de l’objet ADO dans une application Visual C++, utilisez ce qui suit `#import` directive :  
@@ -43,7 +44,7 @@ Pour utiliser la dernière version de l’objet ADO dans une application Visual 
   
 -   *msado27.tlb*, bibliothèque de types 2.7 ADO  
   
--   *msado26.tlb*, bibliothèque de types 2.6 ADO  
+-   *msado26.tlb*, ADO 2.6 Type Library  
   
 -   *Msado25.tlb*, bibliothèque de types 2,5 ADO  
   

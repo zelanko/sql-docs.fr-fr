@@ -2,9 +2,12 @@
 title: "Synchronisation Web pour la réplication de fusion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f84d20d62fc33f25203cf947423951954d9ca13
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95942267f871946f402f2261d4a5dc0cd1873256
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
-  La synchronisation Web pour la réplication de fusion permet de répliquer des données à l'aide du protocole HTTPS ; elle est utile dans les scénarios suivants :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La synchronisation web pour la réplication de fusion permet de répliquer des données à l’aide du protocole HTTPS. Elle est utile dans les scénarios suivants :  
   
 -   Synchronisation de données d'utilisateurs mobiles via Internet.  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 >  La synchronisation Web est conçue pour synchroniser des données avec des ordinateurs portables, des périphériques de poche et d'autres clients. Elle n'est pas conçue pour des applications de serveur à serveur pour des volumes élevés.  
   
 ## <a name="overview-of-how-web-synchronization-works"></a>Aperçu du fonctionnement de la synchronisation Web  
- Lorsque la synchronisation Web est utilisée, les mises à jour sur l'Abonné sont empaquetées et envoyées sous forme de message XML sur l'ordinateur exécutant IIS via le protocole HTTPS. L'ordinateur exécutant IIS envoie ensuite les commandes au serveur de publication sous un format binaire, généralement à l'aide de TCP/IP. Les mises à jour sur l'Abonné sont envoyées à l'ordinateur exécutant IIS, puis empaquetées sous forme de message XML pour la remise à l'Abonné.  
+ Lorsque la synchronisation Web est utilisée, les mises à jour sur l'Abonné sont empaquetées et envoyées sous forme de message XML sur l'ordinateur exécutant IIS via le protocole HTTPS. L'ordinateur exécutant IIS envoie ensuite les commandes au serveur de publication sous un format binaire, généralement à l'aide de TCP/IP. Les mises à jour sur l'Abonné sont envoyées à l'ordinateur exécutant IIS, puis empaquetées sous forme de message XML pour la remise à l'Abonné.  
   
  L'illustration suivante montre certains des composants concernés par la synchronisation Web pour la réplication de fusion.  
   
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  L'Agent de fusion sur l'Abonné accepte ensuite la réponse HTTPS et applique les modifications téléchargées à la base de données d'abonnement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   

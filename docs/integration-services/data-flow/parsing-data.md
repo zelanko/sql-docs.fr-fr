@@ -1,5 +1,5 @@
 ---
-title: "L’analyse des données | Documents Microsoft"
+title: "Analyse de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 48579e225f90fe074aaaffa22f6424f1fe90dddd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parsing-data"></a>Analyse de données
   Les flux de données des packages extraient et chargent des données à partir de banques de données hétérogènes qui peuvent utiliser différents types de données standard et personnalisés. Dans un flux de données, les sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont chargées d’extraire les données, d’analyser les données de type string et de les convertir en données de type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les transformations effectuées par la suite peuvent analyser les données afin de les convertir en un type distinct ou créer des copies de colonnes avec d'autres types de données. Les expressions utilisées dans les composants peuvent également convertir les arguments et opérandes en d'autres types de données. Enfin, lorsque les données sont chargées dans une banque de données, la destination peut analyser les données afin de les convertir en un type de données utilisé par la destination. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="fast-parse"></a>Analyse rapide
 L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. Ces routines ne tiennent pas compte des paramètres régionaux et prennent en charge uniquement un sous-ensemble de formats de date, d'heure et d'entier.  
   
-### <a name="requirements-and-limitations"></a>Configuration requise et restrictions  
+### <a name="requirements-and-limitations"></a>Exigences et limitations  
  En implémentant l'analyse rapide, un package perd sa capacité d'interpréter les données de type date, heure et nombre dans des formats régionaux et dans de nombreux formats de base et étendus ISO 9601 couramment utilisés, mais il améliore ses performances. Par exemple, l'analyse rapide prend uniquement en charge les formats de date les plus courants, tels que AAAAMMJJ et AAAA-MM-JJ, n'effectue aucune analyse des spécificités régionales, ne reconnaît pas les caractères spéciaux dans les devises et ne peut pas convertir les représentations hexadécimales ou scientifiques des entiers.  
   
  L'analyse rapide est disponible uniquement lorsque vous utilisez la source de fichier plat ou la transformation de conversion de données. L'amélioration des performances pouvant être significative, pensez à utiliser si possible l'analyse rapide dans ces composants de flux de données.  
@@ -52,11 +51,11 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
   
  L'analyse rapide est spécifiée au niveau de la colonne. Dans la source de fichier plat et la transformation de conversion de données, vous pouvez spécifier l'analyse rapide sur les colonnes de sortie. Les entrées et les sorties peuvent inclure des colonnes respectant des spécificités régionales et des colonnes n'en respectant pas.  
  
-## <a name="numeric-data-formats-fast-parse"></a>Formats de données numériques (analyse rapide)
+## <a name="numeric-data-formats-fast-parse"></a>Formats de données numériques (Analyse rapide)
 L'analyse rapide fournit un ensemble de routines simple, rapide et insensible aux paramètres régionaux pour l'analyse des données. Elle prend en charge uniquement un ensemble limité de formats pour les types de données integer.  
   
-### <a name="integer-data-type"></a>Type de données Integer
- Les types de données integer fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 et DT_UI8. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+### <a name="integer-data-type"></a>Type de données integer
+ Les types de données integer fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 et DT_UI8. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'analyse rapide prend en charge les formats suivants pour les types de données integer :  
   
@@ -84,7 +83,7 @@ L'analyse rapide fournit un ensemble de routines simple, rapide et insensible au
   
 -   Un ou plusieurs chiffres hindou-arabe (0-9).  
 
-## <a name="date-and-time-formats-fast-parse"></a>Formats de date et d’heure (analyse rapide)
+## <a name="date-and-time-formats-fast-parse"></a>Formats de date et d’heure (Analyse rapide)
 L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. L'analyse rapide prend en charge les formats suivants de types de données de date et d'heure.  
   
 ### <a name="date-data-type"></a>Type de données Date 
@@ -142,7 +141,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
     |-HH|Format tronqué qui indique le nombre d'heures soustraites du temps universel coordonné (UTC) pour obtenir l'heure locale.|  
     |Z|Valeur 0 qui indique que l'heure est représentée au format UTC.|  
   
-     Les formats de toutes les données d'heure et de date/heure peuvent inclure un élément de fuseau horaire. Toutefois, le système ignore la valeur de fuseau horaire, sauf lorsque les données sont de type DT_DBTIMESTAMPOFFSET. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+     Les formats de toutes les données d'heure et de date/heure peuvent inclure un élément de fuseau horaire. Toutefois, le système ignore la valeur de fuseau horaire, sauf lorsque les données sont de type DT_DBTIMESTAMPOFFSET. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
      Dans les formats qui incluent un élément de fuseau horaire, aucun espace ne figure entre l'élément d'heure et l'élément de fuseau horaire, comme le montre l'exemple suivant :  
   
@@ -171,7 +170,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
   
  Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="datetime-data-type"></a>Type de données date/heure  
+### <a name="datetime-data-type"></a>Type de données de date/heure  
  L'analyse rapide prend en charge les formats de chaîne suivants pour les données de date/heure :  
   
 -   Formats qui incluent des espaces de début. Par exemple, la valeur « 2003-01-10T203910» est valide.  
@@ -210,4 +209,3 @@ L'analyse standard est un ensemble de routines d'analyse spécifique à un pays 
   
  L'analyse standard assure la prise en charge de la conversion de type de données pour les données internationales et doit être utilisée si le format de données n'est pas pris en charge par l'analyse rapide. Pour plus d'informations sur l'API de conversion de type de données Automation, consultez « API de conversion de type de données » dans [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
-

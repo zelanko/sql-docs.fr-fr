@@ -3,8 +3,11 @@ title: "Réorganiser les colonnes de sortie (Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d8dd69fc1b112e9dc3261d0b52c2ad740de3a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 71ffb0ab16e76744574fef6df256f3c9e2c4d685
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Réorganiser les colonnes de sortie (Visual Database Tools)
-L'ordre dans lequel vous ajoutez des colonnes de données à une requête Select détermine l'ordre d'affichage de ces colonnes dans les résultats. La première colonne que vous ajoutez à la requête s'affiche à l'extrême gauche des résultats, la deuxième colonne à côté et ainsi de suite.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’ordre dans lequel vous ajoutez des colonnes de données à une requête Select détermine l’ordre d’affichage de ces colonnes dans les résultats. La première colonne que vous ajoutez à la requête s'affiche à l'extrême gauche des résultats, la deuxième colonne à côté et ainsi de suite.  
   
 En cas de création de requêtes Update ou Insert, l'ordre dans lequel vous ajoutez des colonnes affecte l'ordre de traitement des données.  
   
@@ -43,7 +46,7 @@ Pour maîtriser l'affichage d'une colonne de données dans le jeu de résultats 
 > [!TIP]  
 > Vous pouvez ajouter une ligne de données à un emplacement spécifique du volet Critères, en insérant une ligne vierge dans ce volet Critères, puis en spécifiant la colonne de données à ajouter. Pour plus d’informations, consultez [Ajouter des colonnes à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

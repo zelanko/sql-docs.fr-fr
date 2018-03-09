@@ -2,9 +2,12 @@
 title: "Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server)
-Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Des problèmes physiques, de système d’exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
   
 > [!IMPORTANT]  
 >  Les défaillances dans les bases de données autres que la base de données primaire ne sont pas détectables. En outre, il est peu vraisemblable qu'une défaillance du disque de données soit détectée, sauf si la base de données est redémarrée en raison de la défaillance d'un disque de données.  
@@ -60,7 +63,7 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
   
 -   le DNS ne fonctionne pas ;  
   
--   les câbles sont débranchés ;  
+-   les câbles sont débranchés ;  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   
@@ -68,7 +71,7 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
   
 -   un serveur Windows a été renommé ;  
   
--   un serveur Windows a été redémarré ;  
+-   un serveur Windows a été redémarré ;  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  
@@ -94,7 +97,7 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
 ## <a name="responding-to-an-error"></a>Réponse à une erreur  
  Quel que soit le type d'erreur, une instance de serveur qui détecte une erreur réagit comme il se doit en fonction du rôle de l'instance, du mode de disponibilité de la session et de l'état des autres connexions de la session. Pour plus d’informations sur les conséquences de la perte d’un partenaire, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  **Pour modifier la valeur du délai d'expiration (mode de disponibilité avec validation synchrone uniquement)**  
   
 -   [Modifier le délai d’expiration de session pour un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -103,7 +106,7 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
   
 -   Interroger **session_timeout** dans [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

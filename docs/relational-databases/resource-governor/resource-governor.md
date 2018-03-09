@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 631b9668bbea31db5b38a0f20eef099f470815b3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="resource-governor"></a>Resource Governor
+# <a name="resource-governor"></a>gouverneur de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor vous permet de spécifier des limites sur l'utilisation de la quantité d'UC, d'E/S physiques et de mémoire par les demandes d'application entrantes.  
   
 ## <a name="benefits-of-resource-governor"></a>Avantages de Resource Governor  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |Décrit comment configurer Resource Governor à l'aide d'un modèle.|[Configurer Resource Governor à l’aide d’un modèle](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |Décrit comment afficher les propriétés de Resource Governor.|[Afficher les propriétés de Resource Governor](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instances du moteur de base de données &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

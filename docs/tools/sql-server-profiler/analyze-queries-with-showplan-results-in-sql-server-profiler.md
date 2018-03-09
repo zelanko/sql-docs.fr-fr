@@ -2,9 +2,12 @@
 title: "Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler
-  Vous pouvez ajouter des classes d'événements Showplan à une définition de trace afin que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rassemble et affiche les informations de plan de requête dans la trace. Vous pouvez également extraire les événements Showplan des autres événements collectés dans la trace et les enregistrer dans un fichier XML distinct.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vous pouvez ajouter des classes d’événements Showplan à une définition de trace afin que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rassemble et affiche des informations de plan de requête dans la trace. Vous pouvez également extraire les événements Showplan des autres événements collectés dans la trace et les enregistrer dans un fichier XML distinct.  
   
  Chacune des procédures suivantes permet d'extraire les événements Showplan de la trace :  
   
@@ -51,6 +54,6 @@ ms.lasthandoff: 11/09/2017
 |**Showplan XML Statistics Profile**|Affiche le plan de requête avec le détail complet des informations d'exécution au format XML. Par exemple, cette classe d'événements capture le nombre de lignes traitées par chaque opérateur de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutée. Pour plus d’informations, consultez [Classe d’événements Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Catégorie d'événements Performance](../../relational-databases/event-classes/performance-event-category.md)  
+ [Performance, catégorie d’événement](../../relational-databases/event-classes/performance-event-category.md)  
   
   

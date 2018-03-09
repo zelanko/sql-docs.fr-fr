@@ -2,29 +2,32 @@
 title: "Leçon 4 : Définition avancées des attributs et des propriétés de Dimension | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a649addc2a2ab676856076fa64ed352f48cf4e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des attributs avancés et des propriétés de dimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Au cours de cette leçon, vous allez apprendre à utiliser certaines propriétés avancées des attributs, hiérarchies d'attributs et propriétés de dimensions.  
   
 > [!NOTE]  
@@ -41,7 +44,7 @@ Au cours de cette tâche, vous allez définir des noms de niveaux dans une dimen
 [Regroupement automatique des membres d'attribut](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
 Au cours de cette tâche, vous allez créer automatiquement des groupements de membres d'attributs en fonction de la distribution des membres dans la hiérarchie d'attributs. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-[Masquage et désactivation des hiérarchies d'attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[Masquage et désactivation des hiérarchies d’attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
 Au cours de cette tâche, vous allez apprendre à désactiver ou à masquer les hiérarchies d'attributs et à quel moment le faire.  
   
 [Tri des membres d'attribut sur la base d'un attribut secondaire](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4752ac55673b7c208a2d051da928fee1404693f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0dd47857407e353a3b6208554625f29126615da7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Mettre en forme du texte dans une zone de texte (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme indépendamment toute partie du texte dans une zone de texte, et mélanger le texte de l'espace réservé à du texte statique dans une zone de texte. Cette possibilité de mélanger les formats et d'ajouter le texte d'espace réservé vous permet de créer des publipostages ou des modèles de texte dans votre rapport. Toute expression peut être définie et mise en forme séparément à l'aide d'un espace réservé.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  La liste se répète une fois pour chaque valeur du champ, et l’espace réservé *NomChamp* est automatiquement remplacé par la valeur de ce champ dans le dataset.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

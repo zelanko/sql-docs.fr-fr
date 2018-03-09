@@ -1,5 +1,5 @@
 ---
-title: "Connecter des composants dans un flux de données | Documents Microsoft"
+title: "Connecter des composants dans un flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 676aa85a4a8b5fcf39f198fe1b70b5b1b9f7fbfe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-components-in-a-data-flow"></a>Connecter des composants dans un flux de données
   Cette procédure décrit comment connecter la sortie de composants d'un flux de données à d'autres composants du même flux de données.  
@@ -57,9 +56,8 @@ Le flux de données d’un package est construit sur la surface de conception de
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajouter ou supprimer un composant dans un flux de données](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Débogage de flux de données](../../integration-services/troubleshooting/debugging-data-flow.md) [flux de données](../../integration-services/data-flow/data-flow.md)  
+ [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md) [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
   
-

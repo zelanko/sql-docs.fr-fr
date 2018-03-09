@@ -1,10 +1,13 @@
 ---
-title: "Integration Services (SSIS) de déployer les projets et Packages | Documents Microsoft"
+title: "Déployer des projets et des packages SSIS (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: e69567c814248b48a7be9ce72c1e13b28a56f6c0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge deux modèles de déploiement : le modèle de déploiement de projet et le modèle de déploiement de package hérité. Le modèle de déploiement de projet vous permet de déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +38,7 @@ ms.lasthandoff: 09/27/2017
 Pour plus d’informations sur le modèle de déploiement de package hérité, consultez [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si vous utilisez ce modèle, vous ne pouvez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. La fonctionnalité de déploiement incrémentiel de packages présentée pour la première fois dans [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.  
+>  Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si vous utilisez ce modèle, vous ne pouvez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. La fonctionnalité de déploiement incrémentiel de packages présentée pour la première fois dans [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Comparer le modèle de déploiement de projet et le modèle de déploiement de package hérité  
  Le type de modèle de déploiement que vous choisissez pour un projet détermine les options de développement et d'administration qui sont disponibles pour ce projet. Le tableau suivant présente les différences et les ressemblances entre l'utilisation du modèle de déploiement de projet et l'utilisation du modèle de déploiement de package.  
@@ -46,16 +48,16 @@ Pour plus d’informations sur le modèle de déploiement de package hérité, c
 |Un projet est l'unité de déploiement.|Un package est l'unité de déploiement.|  
 |Des paramètres sont utilisés pour affecter des valeurs aux propriétés du package.|Des configurations sont utilisées pour affecter des valeurs aux propriétés du package.|  
 |Un projet, contenant des packages et des paramètres, est généré dans un fichier de déploiement de projet (extension .ispac).|Les packages (extension .dtsx) et les configurations (extension .dtsConfig) sont enregistrés individuellement dans le système de fichiers.|  
-|Un projet, contenant des packages et des paramètres, est déployé dans le catalogue SSISDB sur une instance de SQL Server.|Les packages et les configurations sont copiés dans le système de fichiers sur un autre ordinateur. Les packages peuvent également être enregistrés dans la base de données MSDB sur une instance de SQL Server.|  
+|Un projet, contenant des packages et des paramètres, est déployé dans le catalogue SSISDB sur une instance de SQL Server.|Les packages et les configurations sont copiés dans le système de fichiers sur un autre ordinateur. Les packages peuvent également être enregistrés dans la base de données MSDB sur une instance de SQL Server.|  
 |L'intégration du CLR est requise sur le moteur de base de données.|L'intégration du CLR n'est pas requise sur le moteur de base de données.|  
 |Les valeurs des paramètres spécifiques à l'environnement sont stockées dans des variables d'environnement.|Les valeurs de la configuration spécifique à l'environnement sont stockées dans des fichiers de configuration.|  
 |Les projets et les packages contenus dans le catalogue peuvent être validés sur le serveur avant l'exécution. Vous pouvez effectuer la validation à l'aide de SQL Server Management Studio, de procédures stockées ou de code managé.|Les packages sont validés juste avant l'exécution. Vous pouvez également valider un package avec dtExec ou du code managé.|  
 |Les packages sont exécutés en démarrant une exécution sur le moteur de base de données. Un identificateur de projet, des valeurs de paramètre explicites (facultatif) et des références environnementales (facultatif) sont affectés à une exécution avant son démarrage.<br /><br /> Vous pouvez également exécuter des packages à l'aide de **dtExec**.|Les packages sont exécutés à l'aide des utilitaires d'exécution **dtExec** et **DTExecUI** . Les configurations applicables sont identifiées par des arguments d'invite de commandes (facultatif).|  
 |Pendant l'exécution, les événements qui sont produits par le package sont automatiquement capturés et sont enregistrés dans le catalogue. Vous pouvez interroger ces événements avec des vues Transact-SQL.|Pendant l'exécution, les événements qui sont produits par un package ne sont pas automatiquement capturés. Un module fournisseur d'informations doit être ajouté au package pour capture les événements.|  
 |Les packages sont exécutés dans un processus Windows distinct.|Les packages sont exécutés dans un processus Windows distinct.|  
-|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|  
+|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|  
   
- Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si vous utilisez ce modèle, vous ne pouvez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. La fonctionnalité de déploiement incrémentiel de packages présentée pour la première fois dans [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.   
+ Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si vous utilisez ce modèle, vous ne pouvez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. La fonctionnalité de déploiement incrémentiel de packages présentée pour la première fois dans [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.   
   
 ## <a name="features-of-project-deployment-model"></a>Fonctionnalités du modèle de déploiement de projet  
  Le tableau suivant répertorie les fonctionnalités disponibles pour les projets développés uniquement pour le modèle de déploiement de projet.  
@@ -71,25 +73,25 @@ Pour plus d’informations sur le modèle de déploiement de package hérité, c
 ## <a name="project-deployment"></a>Déploiement de projet  
  Au centre du modèle de déploiement de projet se trouve le fichier de déploiement de projet (extension .ispac). Le fichier de déploiement de projet est une unité de déploiement autonome qui inclut uniquement les informations essentielles relatives aux packages et aux paramètres du projet. Le fichier de déploiement de projet ne capture pas toutes les informations contenues dans le fichier projet Integration Services (extension .dtproj). Par exemple, les fichiers texte supplémentaires que vous utilisez pour l'écriture de commentaires ne sont pas stockés dans le fichier de déploiement de projet, et ne sont donc pas déployés dans le catalogue.  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Autorisations nécessaires au déploiement SSIS projets et Packages
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Autorisations nécessaires pour déployer des projets et des packages SSIS
 
-Si vous modifiez le compte de service SSIS à partir de la valeur par défaut, vous devrez peut-être accorder des autorisations supplémentaires au compte de service de celle par défaut avant de pouvoir déployer des packages correctement. Si le compte de service de celle par défaut n’a pas les autorisations requises, vous voyez le message d’erreur suivant.
+Si vous utilisez un autre compte de service SSIS que le compte par défaut, vous devrez peut-être accorder des autorisations supplémentaires à ce compte de service pour pouvoir déployer correctement les packages. Si le compte de service qui n’est pas le compte par défaut n’a pas les autorisations appropriées, le message d’erreur suivant peut s’afficher.
 
-*Une erreur .NET Framework s’est produite lors de l’exécution de la routine de défini par l’utilisateur ou d’agrégation « deploy_project_internal » : System.ComponentModel.Win32Exception : un privilège requis n’est pas détenu par le client.*
+*Une erreur .NET Framework s’est produite au cours de l’exécution de la routine ou de la fonction d’agrégation définie par l’utilisateur "deploy_project_internal" : System.ComponentModel.Win32Exception : le client ne dispose pas d’un privilège nécessaire.*
 
-Cette erreur est généralement le résultat de l’absence d’autorisations DCOM. Pour corriger cette erreur, procédez comme suit.
+Cette erreur est généralement le résultat d’autorisations DCOM manquantes. Pour corriger l’erreur, effectuez les actions suivantes.
 
-1.  Ouvrez le **Services de composants** console (ou exécutez Dcomcnfg.exe).
-2.  Dans le **Services de composants** de la console, développez **Services de composants** > **ordinateurs** > **poste** > **DCOM Config**.
-3.  Dans la liste, recherchez **xx.0 de Microsoft SQL Server Integration Services** pour la version de SQL Server que vous utilisez. Par exemple, SQL Server 2016 est la version 13.
-4.  Avec le bouton droit et sélectionnez **propriétés**.
-5.  Dans le **propriétés de Microsoft SQL Server Integration Services 13.0** boîte de dialogue, sélectionnez le **sécurité** onglet.
-6.  Pour chacun des trois jeux d’autorisations - lancement et l’Activation, l’accès et la Configuration - sélectionnent **personnaliser**, puis sélectionnez **modifier** pour ouvrir le **autorisation** boîte de dialogue.
-7.  Dans le **autorisation** boîte de dialogue zone, ajoutez le compte de service non-par défaut et accordez **autoriser** autorisations en fonction des besoins. En règle générale, un compte a **exécution locale** et **Activation locale** autorisations.
-8.  Cliquez sur **OK** à deux reprises, puis fermez le **Services de composants** console.
+1.  Ouvrez la console **Services de composants** (ou exécutez Dcomcnfg.exe).
+2.  Dans la console **Services de composants**, développez **Services de composants** > **Ordinateurs** > **Poste de travail** > **Configuration DCOM**.
+3.  Dans la liste, recherchez **Microsoft SQL Server Integration Services xx.0** pour la version de SQL Server que vous utilisez. Par exemple, SQL Server 2016 correspond à la version 13.
+4.  Cliquez avec le bouton droit, puis sélectionnez **Propriétés**.
+5.  Dans la boîte de dialogue **Propriétés de Microsoft SQL Server Integration Services 13.0**, sélectionnez l’onglet **Sécurité**.
+6.  Pour chacun des trois ensembles d’autorisations (Lancement et Activation, Accès et Configuration), sélectionnez **Personnaliser**, puis sélectionnez **Modifier** pour ouvrir la boîte de dialogue **Autorisation**.
+7.  Dans la boîte de dialogue **Autorisation**, ajoutez le compte de service qui n’est pas le compte par défaut, puis accordez les autorisations **Autoriser** appropriées. En règle générale, un compte a les autorisations **Exécution locale** et **Activation locale**.
+8.  Cliquez sur **OK** à deux reprises, puis fermez la console **Services de composants**.
 
-Pour plus d’informations sur l’erreur décrite dans cette section et sur les autorisations requises par le compte du service SSIS, consultez le blog suivant.  
-[System.ComponentModel.Win32Exception : Un privilège requis n’est pas détenu par le client pendant le déploiement d’un projet SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Pour plus d’informations sur l’erreur décrite dans cette section et sur les autorisations nécessaires au compte de service SSIS, consultez le billet de blog suivant.  
+[System.ComponentModel.Win32Exception : il manque un privilège obligatoire au client pendant le déploiement d’un projet SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Déployer des projets sur le serveur Integration Services
   Dans la version actuelle d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet de gérer les packages, d'exécuter les packages et de configurer les valeurs d'exécution des packages à l'aide d'environnements.  
@@ -99,11 +101,11 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
  Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], effectuez les tâches suivantes :  
   
-1.  Créez un catalogue SSISDB, si vous ne l'avez pas encore fait. Pour plus d’informations, consultez [catalogue SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Créez un catalogue SSISDB, si vous ne l'avez pas encore fait. Pour plus d’informations, consultez [Catalogue SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet en modèle de déploiement de projet](#convert).  
   
-    -   Si vous avez créé le projet dans [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], par défaut, le projet utilise le modèle de déploiement de projet.  
+    -   Si vous avez créé le projet dans [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] ou une version ultérieure, le projet utilise par défaut le modèle de déploiement de projet.  
   
     -   Si vous avez créé le projet dans une version précédente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], après avoir ouvert le fichier projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convertissez le projet en modèle de déploiement de projet.  
   
@@ -157,7 +159,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
 3.  Terminez l'Assistant. 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Déployer des packages sur le serveur Integration Services
-  La fonctionnalité Déploiement incrémentiel de packages introduite dans  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] vous permet de déployer un ou plusieurs packages dans un projet existant ou nouveau sans déployer la totalité du projet.  
+  La fonctionnalité Déploiement incrémentiel de packages introduite dans  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] vous permet de déployer un ou plusieurs packages dans un projet existant ou nouveau sans déployer la totalité du projet.  
   
 ###  <a name="DeployWizard"></a> Déployer des packages à l’aide de l’Assistant Déploiement d’Integration Services  
   
@@ -290,7 +292,7 @@ Lancer l’Assistant en :
 
  - En tapant **« Assistant déploiement SQL Server »** dans Windows Search 
 
-**- ou -**
+**OR**
 
  - En recherchant le fichier exécutable **ISDeploymentWizard.exe** sous le dossier d’installation de SQL Server, par exemple : « C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn». 
  
@@ -310,7 +312,7 @@ Lancer l’Assistant en :
  La page vous permet de vérifier les paramètres que vous avez sélectionnés. Vous pouvez modifier vos sélections en cliquant sur **Précédent**ou en cliquant sur l'une des étapes dans le volet gauche. Cliquez sur **Déployer** pour démarrer le processus de déploiement.  
   
 #### <a name="results"></a>Résultats  
- Une fois le processus de déploiement terminé, la page **Résultats** doit s’afficher. Cette page indique la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **enregistrer le rapport...**  pour enregistrer les résultats dans un fichier XML ou un clic **fermer** pour quitter l’Assistant.
+ Une fois le processus de déploiement terminé, la page **Résultats** doit s’afficher. Cette page indique la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **Enregistrer le rapport** pour enregistrer les résultats dans un fichier XML, ou cliquez sur **Fermer** pour quitter l’Assistant.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -340,7 +342,7 @@ Lancer l’Assistant en :
 > [!IMPORTANT]  
 >  Pour une exécution données, un package peut s'exécuter uniquement avec les valeurs contenues dans un seul environnement.  
   
- Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Pour créer et utiliser un environnement serveur  
   
@@ -360,13 +362,13 @@ Lancer l’Assistant en :
   
     3.  Entrez la **Valeur** de la variable d'environnement.  
   
-         Pour plus d'informations sur les règles énoncées pour les noms de variable d'environnement, consultez la section **Variable d'environnement** dans [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Pour plus d'informations sur les règles énoncées pour les noms de variable d'environnement, consultez la section **Variable d'environnement** dans [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Indiquez si la variable contient une valeur sensible, en activant ou désactivant la case à cocher **Sensible** .  
   
          Si vous sélectionnez **Sensible**, la valeur de la variable ne s'affiche pas dans le champ **Valeur** .  
   
-         Les valeurs sensibles sont chiffrées dans le catalogue SSISDB. Pour plus d'informations sur le chiffrement, consultez [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Les valeurs sensibles sont chiffrées dans le catalogue SSISDB. Pour plus d'informations sur le chiffrement, consultez [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  Dans la page **Autorisations** , accordez ou refusez des autorisations pour les rôles et les utilisateurs sélectionnés en procédant comme suit.  
   
@@ -576,7 +578,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Utiliser l'authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifie la connexion en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Spécifiez un nom d'utilisateur lorsque vous utilisez l'authentification SQL Server.  
   
  **Mot de passe**  
@@ -592,7 +594,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **État**  
  Indique si un package est prêt à être converti en modèle de déploiement de projet.  
   
- **Boîte de**  
+ **Message**  
  Affiche un message associé au package.  
   
  **Mot de passe**  
@@ -729,4 +731,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Enregistrer le rapport**  
  Cliquez pour enregistrer un résumé de la conversion du projet dans un fichier .xml.  
-

@@ -3,10 +3,10 @@ title: "Désinstaller les mises à jour Microsoft (système de plateforme Analyt
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: "19"
-ms.openlocfilehash: c801918cbac5d0762384a0cd3adcca9ddf8f346a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52bd212a753f4bb69c79d8b8e274664d2100cbee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-microsoft-updates"></a>Désinstaller les mises à jour Microsoft
 Cette rubrique décrit comment désinstaller une mise à jour Microsoft installé sur le matériel de système de plateforme Analytique.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Pour effectuer ces étapes, vous devez :  
   
 -   Une connexion de système de plateforme Analytique avec des autorisations pour accéder à la Console d’administration pour contrôler le matériel.  

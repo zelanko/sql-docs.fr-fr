@@ -3,8 +3,9 @@ title: "MarshalOptions, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::MarshalOptions
-helpviewer_keywords: MarshalOptions property [ADO]
+f1_keywords:
+- Recordset15::MarshalOptions
+helpviewer_keywords:
+- MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48c9e36d9f20f1b9885526471d429a60be0f05bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a39b5ee4f229548c2719e12fed7023256ad6ea5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions, propriété (ADO)
 Indique les enregistrements de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) doivent être marshalées vers le serveur.  

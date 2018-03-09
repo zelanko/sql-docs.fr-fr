@@ -2,9 +2,12 @@
 title: "Bonnes pratiques en matière d’administration de la réplication| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51964c5ce8e4753147724bcd97a8c0a53a8f0c0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1aade2a55ca0af319c84ddff35ced1f22b675839
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="best-practices-for-replication-administration"></a>Bonnes pratiques en matière d’administration de la réplication
-  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les bonnes pratiques dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les bonnes pratiques présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+# <a name="best-practices-for-replication-administration"></a>Méthodes conseillées pour l'administration de la réplication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Après avoir configuré la réplication, il est important de comprendre en quoi consiste l’administration d’une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les bonnes pratiques présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Les indications sur les bonnes pratiques sont scindées en deux domaines :  
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/09/2017
  Les bases de données répliquées nécessitent une attention toute particulière en ce qui concerne la sauvegarde et la restauration de données. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Créer un script de la topologie de réplication  
- Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système [!INCLUDE[tsql](../../../includes/tsql-md.md)] nécessaires à l'implémentation du ou des composants faisant l'objet d'un script, comme une publication ou un abonnement. Il est possible de créer des scripts à l'aide d'un Assistant (comme l'Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée. Pour plus d’informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+ Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système [!INCLUDE[tsql](../../../includes/tsql-md.md)] nécessaires à l'implémentation du ou des composants faisant l'objet d'un script, comme une publication ou un abonnement. Il est possible de créer des scripts à l'aide d'un Assistant (comme l'Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée. Pour plus d’informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
  Le script doit être exécuté à nouveau sur un composant si des modifications de propriétés sont apportées. Si vous utilisez des procédures stockées personnalisées avec la réplication transactionnelle, une copie de chaque procédure doit être stockée avec les scripts ; la copie doit être mise à jour si la procédure change (les procédures sont généralement mises à jour suite à des modifications de schéma ou à des modifications des conditions requises par l'application). Pour plus d’informations sur les procédures personnalisées, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -127,7 +130,7 @@ ms.lasthandoff: 11/09/2017
  Il est recommandé d'effectuer la validation en fonction de la planification de sauvegarde de la base de données de publication. Par exemple, si la base de données de publication est sauvegardée intégralement une fois par semaine, la validation peut être exécutée une fois par semaine quand la sauvegarde est terminée. Pour plus d’informations, consultez [Valider des données répliquées](../../../relational-databases/replication/validate-replicated-data.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utiliser les profils de l'Agent pour modifier les paramètres de l'Agent si nécessaire  
- Les profils de l'Agent représentent une méthode pratique de configuration des paramètres de l'Agent de réplication. Les paramètres peuvent également être spécifiés sur la ligne de commande de l'Agent, mais il est généralement plus judicieux d'utiliser un profil de l'Agent prédéfini ou de créer un nouveau profil si vous devez modifier la valeur d'un paramètre. Par exemple, si vous utilisez la réplication de fusion et qu'un abonné passe d'une connexion haut débit à une connexion d'accès à distance, envisagez d'utiliser le profil de **liaison lente** pour l'Agent de fusion ; l'ensemble des paramètres de ce profil est mieux adapté à la liaison de communications lentes. Pour plus d’informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Les profils de l'Agent représentent une méthode pratique de configuration des paramètres de l'Agent de réplication. Les paramètres peuvent également être spécifiés sur la ligne de commande de l'Agent, mais il est généralement plus judicieux d'utiliser un profil de l'Agent prédéfini ou de créer un nouveau profil si vous devez modifier la valeur d'un paramètre. Par exemple, si vous utilisez la réplication de fusion et qu'un abonné passe d'une connexion haut débit à une connexion d'accès à distance, envisagez d'utiliser le profil de **liaison lente** pour l'Agent de fusion ; l'ensemble des paramètres de ce profil est mieux adapté à la liaison de communications lentes. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>Ajuster les périodes de rétention de publication et de distribution si nécessaire  
  La réplication transactionnelle et la réplication de fusion se servent de périodes de rétention pour déterminer, respectivement, la durée de stockage des transactions dans la base de données de distribution, et la fréquence de synchronisation d'un abonnement. Il est recommandé d'utiliser d'abord les paramètres par défaut, mais pour analyser votre topologie, un réglage des paramètres est nécessaire. Par exemple, dans le cas de la réplication de fusion, la période de rétention de la publication (qui est de 14 jours par défaut) détermine la durée de stockage des métadonnées dans les tables système. Si les abonnements synchronisent toujours tous les cinq jours, envisagez d'ajuster le paramètre à un nombre de jours moins élevé ce qui permettra de réduire les métadonnées et d'offrir de meilleures performances. Pour plus d’informations, voir [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
@@ -150,7 +153,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
   

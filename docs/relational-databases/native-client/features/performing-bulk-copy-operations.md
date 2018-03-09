@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client, bulk copy operations
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b33c136dabeb499e0e007cc5c667f81ed4b885e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea17b70786b4b059417c8cf0f8b514fc6a6208e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **ISupportErrorInfo**  
   
- Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le *rgProperties* membre d’un *rgPropertySets***IOpenRowset**membre de paramètre.  
+ Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le *rgProperties* membre d’un * rgPropertySets ***IOpenRowset**membre de paramètre.  
   
 |ID de propriété| Description|  
 |-----------------|-----------------|  
@@ -119,9 +119,9 @@ ms.lasthandoff: 11/17/2017
  Le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client maintient la même prise en charge pour les opérations de copie en bloc qui faisaient partie des versions précédentes du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les opérations de copie en bloc à l’aide de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, consultez [effectuant des opérations de copie en bloc &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Fonctionnalités SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propriétés de Source de données &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
- [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Importation et exportation de données &#40; en bloc SQL Server &#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Optimisation des performances de l’importation en bloc](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  

@@ -2,26 +2,32 @@
 title: "Créer la stratégie Nom financier | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-query-tuning
+ms.suite: sql
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58802e5d1cbd82a802156abc1365d2a585f5acbf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 260f0934e69d1db1ffd8f2af4cb71b0b96f64c84
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-1---create-the-finance-name-policy"></a>Leçon 2-1 : Créer la stratégie Nom financier
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Dans cette tâche, vous allez créer une base de données nommée Finance, puis créer une condition qui exige que toutes les tables commencent par les lettres **fintbl**. Ensuite, vous allez créer une stratégie et une catégorie de stratégies afin d'appliquer une norme d'affectation de noms pour les tables dans la base de données Finance.  
   
 ### <a name="to-create-the-finance-database"></a>Pour créer la base de données Finance  

@@ -2,44 +2,47 @@
 title: "À l’aide d’une Version modifiée de l’analyse des Services de projet du didacticiel | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Leçon 4-1-à l’aide d’une Version modifiée du projet didacticiel Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
   
 Avant de poursuivre votre apprentissage dans le didacticiel, vous devez télécharger, extraire, charger et traiter la version améliorée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Suivez les instructions de cette leçon pour vous assurer d'effectuer toutes les étapes.  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Téléchargement et extraction du fichier projet  
   
-1.  [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le téléchargement **Didacticiel Analysis Services SQL Server 2012** .  
+1.  [Cliquez ici](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le **adventure-works-multidimensionnel-didacticiel-projects.zip** télécharger.  
   
-2.  Cliquez sur **Didacticiel Analysis Services SQL Server 2012** pour télécharger le package qui contient les projets pour ce didacticiel.  
+2.  Cliquez sur **adventure-works-multidimensionnel-didacticiel-projects.zip** pour télécharger le package qui contient les projets de ce didacticiel.  
   
     Par défaut, le fichier .zip est enregistré dans le dossier Téléchargements. Vous devez déplacer le fichier .zip vers un emplacement dont le chemin d'accès est plus court (par exemple, créez un dossier C:\Tutorials pour stocker les fichiers).  Vous pouvez ensuite extraire les fichiers contenus dans le fichier .zip. Si vous essayez de décompresser les fichiers dans le dossier Téléchargements, dont le chemin d'accès est long, vous n'obtiendrez que la leçon 1.  
   
 3.  Créez un sous-dossier au niveau ou proche du lecteur racine, par exemple, C:\Tutorial.  
   
-4.  Déplacez le fichier **Analysis Services Tutorial SQL Server 2012.zip** dans le sous-dossier.  
+4.  Déplacer le **adventure-works-multidimensionnel-didacticiel-projects.zip** fichier dans le sous-dossier.  
   
 5.  Cliquez avec le bouton droit sur le fichier et sélectionnez **Extraire tout**.  
   
@@ -49,7 +52,7 @@ Avant de poursuivre votre apprentissage dans le didacticiel, vous devez téléch
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Fichier** , cliquez sur **Fermer la solution** pour fermer les fichiers que vous n’utiliserez pas.  
   
-2.  Dans le menu **Fichier** , pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
+2.  Dans le menu **Fichier**, pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
   
 3.  Accédez à l'emplacement dans lequel vous avez extrait les fichiers de projet du didacticiel.  
   
@@ -124,5 +127,5 @@ Le cube **Analysis Services Tutorial** contient maintenant deux groupes de mesur
 [Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Déploiement d'un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+[Déploiement d’un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

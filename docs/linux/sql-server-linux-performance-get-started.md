@@ -1,27 +1,29 @@
 ---
 title: "Prise en main des fonctionnalités de performances de SQL Server sur Linux | Documents Microsoft"
-description: "Cette rubrique fournit une présentation des fonctionnalités de performances de SQL Server pour les utilisateurs de Linux qui sont Nouveautés dans SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux."
+description: "Cet article fournit une présentation des fonctionnalités de performances de SQL Server pour Linux aux nouveaux utilisateurs à SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 07e274f33decd59287571017d8103961334f9df4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de performances de SQL Server sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les tâches suivantes vous guident certaines des fonctionnalités de performances. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais elle permet de vous donner une idée des zones pour approfondir vos recherches. Dans chaque exemple, un lien est fourni à la documentation de profondeur pour cette zone.
 
@@ -31,7 +33,7 @@ Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les t
 ## <a name="create-a-columnstore-index"></a>Créer un Index Columnstore
 Un index columnstore est une technologie pour le stockage et l’interrogation de grands magasins de données dans un format de données en colonnes, appelé columnstore.  
 
-1. Ajouter un index Columnstore à la table SalesOrderDetail en exécutant l’instruction T-SQL ci-dessous :
+1. Ajouter un index Columnstore à la table SalesOrderDetail en exécutant les commandes Transact-SQL suivantes :
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
    GO
    ```
 
-2. Exécutez la requête suivante qui utilisera le Columnstore Index pour analyser la table :
+2. Exécutez la requête suivante qui utilise le Columnstore Index pour analyser la table :
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -66,7 +68,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
 SQL Server fournit les fonctionnalités OLTP en mémoire qui peuvent améliorer considérablement les performances des systèmes d’applications.  Cette section du Guide d’évaluation vous guidera tout au long des étapes de création d’une table mémoire optimisée est stockée dans la mémoire et une procédure stockée compilée en mode natif qui peut accéder à la table sans avoir besoin d’être compilées ou interprétées.
 
 ### <a name="configure-database-for-in-memory-oltp"></a>Configurer la base de données pour OLTP en mémoire
-1. Il est recommandé de définir la base de données à un niveau de compatibilité d’au moins 130 pour utiliser OLTP en mémoire.  Utilisez la requête ci-dessous pour vérifier le niveau de compatibilité actuel d’AdventureWorks :  
+1. Il est recommandé de définir la base de données à un niveau de compatibilité d’au moins 130 pour utiliser OLTP en mémoire.  Utilisez la requête suivante pour vérifier le niveau de compatibilité actuel d’AdventureWorks :  
 
    ```sql
    USE AdventureWorks

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.sp_backup_on_demand_TSQL
 - sp_backup_on_demand_TSQL
 - sp_backup_on_demand
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f57ab46aee2ab6784179fa495d96afb45c3751d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db602abb8706f94c90b0b583f2468b7a02a251d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_backup_on_demand   
 [@database_name  =]  'database name',[@type = ] { 'Database' | 'Log' }  
   
@@ -60,12 +62,12 @@ EXEC managed_backup.sp_backup_on_demand
  @type  
  Type de sauvegarde à effectuer : base de données ou journal. Le @type paramètre est **NVARCHAR(32)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au **db_backupoperator** de la base de données de rôle, avec **ALTER ANY CREDENTIAL** autorisations, et **EXECUTE** autorisations sur **sp_delete_backuphistory**procédure stockée.  
   
 ## <a name="examples"></a>Exemples  

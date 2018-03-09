@@ -1,29 +1,29 @@
 ---
 title: "Configurer les paramètres de SQL Server avec les variables d’environnement | Documents Microsoft"
-description: "Cette rubrique décrit comment utiliser des variables d’environnement pour configurer les paramètres spécifiques de SQL Server 2017 sur Linux."
+description: "Cet article décrit comment utiliser des variables d’environnement pour configurer les paramètres spécifiques de SQL Server 2017 sur Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: a599b0857ecad6d68aad77861e5ad29a71d8162c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Vous pouvez utiliser plusieurs variables d’environnement différent pour configurer SQL Server 2017 sur Linux. Ces variables sont utilisées dans deux scénarios :
 
@@ -49,7 +49,11 @@ Vous pouvez utiliser plusieurs variables d’environnement différent pour confi
 | **MSSQL_DATA_DIR** | Accédez au répertoire où sont créés les fichiers de données de base de données (.mdf) SQL Server nouvelle. |
 | **MSSQL_LOG_DIR** | Accédez au répertoire où sont créés les nouveaux fichiers de journal (.ldf) de base de données SQL Server. |
 | **MSSQL_DUMP_DIR** | Accédez au répertoire dans lequel SQL Server sera déposer les vidages de mémoire et d’autres fichiers de résolution des problèmes par défaut. |
-| **MSSQL_ENABLE_HADR** | Activer les groupes de disponibilité. |
+| **MSSQL_ENABLE_HADR** | Activer le groupe de disponibilité. Par exemple, '1' est activé, et '0' est désactivé |
+| **MSSQL_AGENT_ENABLED** | Activer l’Agent SQL Server. Par exemple, 'true' est activé et 'false' est désactivé. Par défaut, l’agent est désactivé.  |
+| **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de base de données master. |
+| **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier journal de la base de données master. |
+
 
 ## <a name="example-initial-setup"></a>Exemple : le programme d’installation initiale de
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> Le processus d’exécution des éditions de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production).
+> Le processus d’exécution des éditions de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [Exécuter des images conteneur de production](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

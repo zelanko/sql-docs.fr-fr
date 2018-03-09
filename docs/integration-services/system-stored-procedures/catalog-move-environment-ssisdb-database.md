@@ -1,5 +1,5 @@
 ---
-title: "Catalog.move_environment (base de données SSISDB) | Documents Microsoft"
+title: "catalog.move_environment (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e08328e0baccaa9098d8647b50c6133de2504912
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd8598e526761f51e361fcc7c3330bbe3c9a470f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,29 +38,29 @@ catalog.move_environment [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @source_folder =] *source_folder*  
- Nom du dossier source, où l'environnement réside avant le déplacement. Le *source_folder* est **nvarchar (128)**.  
+ [ @source_folder = ] *source_folder*  
+ Nom du dossier source, où l'environnement réside avant le déplacement. *source_folder* est de type **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Nom de l'environnement qui sera supprimé. Le *environment_name* est **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ Nom de l'environnement qui sera supprimé. *environment_name* est de type **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- Nom du dossier de destination, où l'environnement réside après le déplacement. Le *destination_folder* est **nvarchar (128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ Nom du dossier de destination, où l'environnement réside après le déplacement. *destination_folder* est de type **nvarchar(128)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'environnement  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
@@ -70,13 +69,12 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   Le dossier de destination a déjà un environnement avec le même nom  
   
--   L’utilisateur ne dispose pas des autorisations appropriées  
+-   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les références environnementales des projets ne suivent pas l'environnement pendant le déplacement. Les références environnementales doivent être mises à jour en conséquence. Cette procédure stockée réussira même si les références environnementales sont arrêtées en déplaçant un environnement. Les références environnementales doivent être mises à jour après que cette procédure stockée s'est achevée.  
   
 > [!NOTE]  
 >  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent que l'environnement réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et dossier, et aux environnements qui résident dans un dossier différent de celui du projet.  
   
   
-

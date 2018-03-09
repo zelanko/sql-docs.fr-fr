@@ -1,24 +1,28 @@
 ---
 title: "Utiliser Python avec revoscalepy pour créer un modèle | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+mms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: "4"
+ms.topic: tutorial
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 1ced0d05a74f43c6b80be6717826ab288ee25374
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Utiliser Python avec revoscalepy pour créer un modèle
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet exemple montre comment vous pouvez créer un modèle de régression linéaire dans SQL Server, à l’aide d’un algorithme à partir de la **revoscalepy** package.
 
@@ -26,7 +30,7 @@ Le **revoscalepy** le package pour Python contient des objets, des transformatio
 
 Pour plus d’informations, consultez [What ' s revoscalepy ?](../python/what-is-revoscalepy.md) et [référence de fonction Python](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 > [!IMPORTANT]
 > Pour exécuter le code Python dans SQL Server, vous devez avoir installé SQL Server 2017 CTP 2.0 ou version ultérieur, et vous devez installer et activer la fonctionnalité, **Machine Learning Services** avec Python. Autres versions de SQL Server ne prennent pas en charge intégration de Python.

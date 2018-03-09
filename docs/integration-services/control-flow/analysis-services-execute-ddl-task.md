@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services tâche DDL d’exécution | Documents Microsoft"
+title: "DDL d’exécution de SQL Server Analysis Services, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: aba320cac8593357039ed9ab4977dbb5fda091cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services
   La tâche DDL d'exécution de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécute des instructions DDL (Data Definition Language) qui peuvent créer, supprimer ou modifier des modèles d'exploration de données et des objets multidimensionnels tels que des cubes et des dimensions. Par exemple, une instruction DDL peut créer une partition dans le cube **Adventure Works** ou supprimer une dimension dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], l’exemple de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/11/2017
   
  Pour plus d'informations sur les tâches Business Intelligence associées, cliquez sur l'une des rubriques suivantes :  
   
--   [Tâche de traitement d'Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tâche de requête d'exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -224,7 +223,7 @@ ms.lasthandoff: 08/11/2017
 ```  
   
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Configuration de la tâche DDL d'exécution d'Analysis Services  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -235,7 +234,7 @@ ms.lasthandoff: 08/11/2017
 -   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Configuration par programmation de la tâche DDL d'exécution d'Analysis Services  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
@@ -257,7 +256,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Options statiques  
  **Connexion**  
- Sélectionnez un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet ou un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gestionnaire de connexions dans la liste, ou cliquez sur \< **nouvelle connexion...** > et utilisez le **ajouter le Gestionnaire de connexions Analysis Services** boîte de dialogue pour créer une nouvelle connexion.  
+ Sélectionnez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la liste, ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** pour créer une connexion.  
   
  **Rubriques connexes :** [Référence de l'interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -278,14 +277,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="sourcetype--file-connection"></a>SourceType = Connexion de fichiers  
  **Source**  
- Sélectionnez une connexion de fichier dans la liste, ou cliquez sur \< **nouvelle connexion...** > et utilisez le **Gestionnaire de connexions File** boîte de dialogue pour créer une nouvelle connexion.  
+ Sélectionnez une connexion de fichiers dans la liste ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Gestionnaire de connexions** de fichiers pour créer une connexion.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Source**  
- Sélectionnez une variable dans la liste, ou cliquez sur \< **nouvelle variable...** > et utilisez le **ajouter une Variable** boîte de dialogue pour créer une nouvelle variable.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable**> et utilisez la boîte de dialogue **Ajouter une variable** pour créer une variable.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
-

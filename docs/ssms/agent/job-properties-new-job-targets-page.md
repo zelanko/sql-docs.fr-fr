@@ -3,8 +3,11 @@ title: "Propriétés du travail - Nouveau travail (page Cibles) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9da28ac141cf9295bcbe92709e9b5c9846f2821e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c0c7fec12ff0c2a41c53bb76f32131989fb59750
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propriétés du travail - Nouveau travail (page Cibles)
-Cette page vous permet de gérer les serveurs cibles pour le travail.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet de gérer les serveurs cibles pour le travail.  
   
 ## <a name="options"></a>Options  
 **Serveur local cible**  
@@ -31,6 +34,6 @@ Permet d'exécuter le travail sur le serveur local. Si aucun serveur cible n'est
 **Plusieurs serveurs cibles**  
 Permet d'exécuter le travail sur un ou plusieurs serveurs cibles. Une fois cette option sélectionnée, choisissez les serveurs sur lesquels exécuter le travail. Les serveurs cibles disponibles sont répertoriés. Cliquez sur un serveur cible pour le sélectionner.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
   

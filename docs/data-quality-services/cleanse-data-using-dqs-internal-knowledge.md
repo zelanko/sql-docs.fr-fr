@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
   Cette rubrique explique comment nettoyer vos données en utilisant un projet de qualité des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le nettoyage des données est effectué sur vos données sources à l'aide d'une base de connaissances générée dans DQS sur un ensemble de données de haute qualité. Pour plus d’informations, consultez [Construction d’une base de connaissances](../data-quality-services/building-a-knowledge-base.md).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
 ##  <a name="Create"></a> Créer un projet de qualité des données pour le nettoyage  

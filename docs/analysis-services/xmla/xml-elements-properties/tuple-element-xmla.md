@@ -2,15 +2,13 @@
 title: "Élément de tuple (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Tuple Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 976d47573aa44ffe73878475e5ece552639428bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72e7e976397ad2d7566b9e0efd7daa4102289768
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tuple-element-xmla"></a>Élément Tuple (XMLA)
-  Contient une collection d’éléments [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) figurant dans l’élément [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) parent.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) éléments contenus par le parent [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,8 +51,8 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -64,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |Éléments parents|[Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
 |Éléments enfants|[Membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Quand une application cliente définit la propriété **AxisFormat** avec la valeur *TupleFormat*, un axe est représenté comme un ensemble de tuples. Chaque élément **Axis** contient un élément **Tuples** qui représente l’ensemble de tuples sur l’axe en question. Chaque tuple est représenté à l’aide d’un élément **Tuple** qui contient des éléments **Member** de chaque hiérarchie sur l’axe.  
   
 ## <a name="example"></a> Exemple  

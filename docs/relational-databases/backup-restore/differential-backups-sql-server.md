@@ -2,9 +2,12 @@
 title: "Sauvegardes différentielles (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65c3f103ad65c9726be098dde183b1302b4e5645
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="differential-backups-sql-server"></a>Sauvegardes différentielles (SQL Server)
-  Cette rubrique relative à la sauvegarde et à la restauration concerne toutes les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique relative à la sauvegarde et à la restauration concerne toutes les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Une sauvegarde différentielle est basée sur la sauvegarde complète des données précédente la plus récente. Une sauvegarde différentielle enregistre uniquement les modifications effectuées depuis la toute dernière sauvegarde complète. La sauvegarde complète sur laquelle une sauvegarde différentielle est basée s'appelle la *base* de la différentielle. Les sauvegardes complètes, à l'exception des sauvegardes de copie uniquement, peuvent servir de base à une série de sauvegardes différentielles, y compris les sauvegardes de base de données, partielles et de fichiers. La sauvegarde de base d'une sauvegarde différentielle de fichiers peut faire partie d'une sauvegarde complète, d'une sauvegarde de fichiers ou d'une sauvegarde partielle.  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
 -   [Restaurer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

@@ -2,9 +2,12 @@
 title: "Améliorer les performances générales de la réplication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23abb406368b5a5a038af7542f36ae9f2a2f8c42
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 72c807961694b90e0a987385c5a0fad4a38bd184
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
-  Vous pouvez améliorer les performances globales de tous les types de réplication de votre application et de votre réseau à l'aide des indications décrites dans cette rubrique :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez améliorer les performances globales de tous les types de réplication de votre application et de votre réseau à l’aide des indications décrites dans cette rubrique.  
   
 ## <a name="server-and-network"></a>Serveur et réseau  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/09/2017
   
      Les modifications peuvent être partitionnées en publiant des sous-ensembles de données sur chaque abonné, ou en utilisant une application qui dirige les modifications d'une ligne donnée sur un nœud donné :  
   
-    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d’informations, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La réplication transactionnelle prend en charge la publication de sous-ensembles de données à l'aide de filtres statiques avec plusieurs publications. Pour plus d’informations, consultez [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/09/2017
   
      Lorsque des quantités importantes de modifications doivent être envoyées aux abonnés, la réinitialisation de ces derniers à partir d'un nouvel instantané peut s'avérer plus rapide que l'utilisation de la réplication pour déplacer chaque modification. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;Moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur l'onglet **Commandes non distribuées** sur : le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné ; et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="snapshot-considerations"></a>Considérations sur les instantanés  
   

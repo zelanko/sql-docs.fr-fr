@@ -3,8 +3,11 @@ title: Solutions (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>Solutions (SQL Server Management Studio)
-Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] est une collection d'un ou plusieurs projets connexes. Les projets sont des conteneurs que les développeurs utilisent pour organiser des fichiers associés, tels que des ensembles de scripts d'administration couramment utilisés.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] est une collection d’un ou plusieurs projets connexes. Les projets sont des conteneurs que les développeurs utilisent pour organiser des fichiers associés, tels que des ensembles de scripts d'administration couramment utilisés.  
   
 ## <a name="solution-overview"></a>Vue d'ensemble de la solution  
 Vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] en tant que plateforme de développement de scripts pour le [!INCLUDE[ssDE](../../includes/ssde_md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Utilisez les éditeurs de code de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] pour développer des scripts et des requêtes pour les bases de données relationnelles et multidimensionnelles, et collectez des scripts associés et les requêtes ensemble dans les projets.  
@@ -50,12 +53,12 @@ Les solutions et projets peuvent être intégrés dans une base de données [!IN
 |Décrit comment ouvrir une solution existante dans l'Explorateur de solutions.|[Ouvrir une solution existante](../../ssms/solution/open-an-existing-solution.md)|  
 |Décrit comment fermer une solution.|[Fermer une solution](../../ssms/solution/close-a-solution.md)|  
 |Décrit comment supprimer une solution.|[Supprimer une solution](../../ssms/solution/delete-a-solution.md)|  
-|Décrit comment copier des éléments entre des projets.|[Copier des éléments d'une solution](../../ssms/solution/copy-items-in-a-solution.md)|  
+|Décrit comment copier des éléments entre des projets.|[Copier des éléments d’une solution](../../ssms/solution/copy-items-in-a-solution.md)|  
 |Décrit comment supprimer des éléments dans un projet ou un projet complet.|[Enlever ou supprimer un élément ou un projet](../../ssms/solution/remove-or-delete-an-item-or-project.md)|  
 |Décrit comment déplacer des éléments entre des projets dans une solution.|[Déplacer des éléments dans une solution](../../ssms/solution/move-items-in-a-solution.md)|  
 |Décrit comment renommer une solution ou les éléments de la solution.|[Renommer des solutions et des éléments de projet](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  

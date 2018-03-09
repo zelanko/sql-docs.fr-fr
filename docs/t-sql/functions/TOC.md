@@ -209,7 +209,7 @@
 ## [RANK](rank-transact-sql.md)  
 ## [ROW_NUMBER](row-number-transact-sql.md)  
 
-# Réplication
+# REPLICATION
 ## [PUBLISHINGSERVERNAME](replication-functions-publishingservername.md)  
 
 # [Ensemble de lignes](rowset-functions-transact-sql.md)  

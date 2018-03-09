@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importer et exporter des données dans SQL Server et Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Plusieurs méthodes sont possibles pour importer et exporter des données dans SQL Server et Azure SQL Database. Vous pouvez notamment utiliser des instructions Transact-SQL, des outils en ligne de commande et des Assistants.
@@ -55,7 +55,7 @@ Si vous souhaitez concevoir une importation de données personnalisée, utilisez
 Vous pouvez importer et exporter des données de ou vers des fichiers plats ou divers autres formats de fichiers, bases de données relationnelles et services cloud. Pour en savoir plus sur ces options disponibles pour les outils spécifiques, consultez les rubriques suivantes :
 -   Pour l’Assistant Importation et Exportation SQL Server, consultez [Se connecter aux sources de données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Pour SQL Server Integration Services, consultez [Connexions Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Pour Azure Data Factory, consultez [Connecteurs Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Pour Azure Data Factory, consultez [Connecteurs Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Formats de données courants
 

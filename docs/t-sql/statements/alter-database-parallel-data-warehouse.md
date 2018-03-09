@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>MODIFIER la base de données (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,13 +64,13 @@ ALTER DATABASE database_name
  DISTRIBUTED_SIZE = *taille* [Go]  
  Spécifie les nouveau gigaoctets maximales par base de données pour le stockage de toutes les tables distribuées dans la base de données qui est modifiée. La taille est répartie sur tous les nœuds de calcul dans l’appliance.  
   
- LOG_SIZE = *taille* [Go]  
+ LOG_SIZE = *size* [GB]  
  Spécifie les nouveau gigaoctets maximales par base de données pour le stockage de tous les journaux des transactions dans la base de données qui est modifiée. La taille est répartie sur tous les nœuds de calcul dans l’appliance.  
   
  CHIFFREMENT {ON | {OFF}  
  Spécifie si la base de données doit être chiffrée (ON) ou non chiffrée (OFF). Le chiffrement peut être configuré que pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] lorsque [sp_pdw_database_encryption pour](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) a été défini sur **1**. Une clé de chiffrement de base de données doit être créée avant de pouvoir configurer le chiffrement transparent des données. Pour plus d’informations sur le chiffrement de base de données, consultez [Transparent Data Encryption &#40; Chiffrement transparent des données &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation ALTER sur la base de données.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  

@@ -1,5 +1,5 @@
 ---
-title: "Tâche de base de données de sauvegarde | Documents Microsoft"
+title: "Sauvegarder la base de données, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a71821c8fc7710d86d819d65ef35878a2594f997
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>Tâche Sauvegarder la base de données
   La tâche Sauvegarder la base de données effectue différents types de sauvegardes de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -41,10 +40,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="supported-recover-models-and-backup-types"></a>Modes de récupération et types de sauvegarde pris en charge  
  Le tableau suivant décrit les modes de récupération et les types de sauvegarde pris en charge par la tâche Sauvegarder la base de données.  
   
-|Mode de récupération|Base de données|Base de données différentielle|Journal des transactions|Fichier ou différentielle de fichiers|  
+|mode de récupération|Base de données|Base de données différentielle|Journal des transactions|Fichier ou différentielle de fichiers|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
 |Simple|Requis|Ce paramètre est facultatif|Non pris en charge|Non pris en charge|  
-|Complet|Requis|Ce paramètre est facultatif|Requis|Ce paramètre est facultatif|  
+|Complète|Requis|Ce paramètre est facultatif|Requis|Ce paramètre est facultatif|  
 |Bulk-logged|Requis|Ce paramètre est facultatif|Requis|Ce paramètre est facultatif|  
   
  La tâche Sauvegarder la base de données encapsule une instruction Transact-SQL BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -61,4 +60,3 @@ ms.lasthandoff: 08/03/2017
 -   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
-

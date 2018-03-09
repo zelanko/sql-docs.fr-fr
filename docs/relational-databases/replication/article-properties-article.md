@@ -2,9 +2,12 @@
 title: "Propriétés de l’article - &lt;Article&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
-  La boîte de dialogue **Propriétés de l'article** est accessible depuis l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La boîte de dialogue **Propriétés de l’article** est accessible depuis l’Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication**. Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
   
 > [!NOTE]  
 >  Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -173,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Pour certains types, vous pouvez sélectionner plus d'un type. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser le mappage par défaut si l'application ne nécessite pas un mappage différent. Pour plus d’informations, voir [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Créer et appliquer l’instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

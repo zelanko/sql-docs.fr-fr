@@ -1,25 +1,29 @@
 ---
 title: Quel &#39; est nouvelle dans Machine Learning Services | Documents Microsoft
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 01/08/2018
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b7c0ee478e6b585e1b645533461ab8d3d81faee9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Quelles sont les nouveautés dans Machine Learning Services dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans SQL Server 2016, Microsoft a introduit une fonctionnalité qui prend en charge la science des données de l’échelle de l’entreprise, en intégrant le langage R avec le moteur de base de données SQL Server de SQL Server R Services.
 
@@ -31,9 +35,11 @@ Intercepter la dernière annonce ici ! [Python dans SQL Server 2017 : amélior
 
 Machine Learning serveur dans SQL Server fournit une prise en charge complète pour créer et déployer des solutions d’apprentissage machine dans R ou Python. Voici les principales fonctionnalités de cette version :
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Nouveautés à jour Cumulative 1 pour SQL Server 2017
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>Nouveautés à jour Cumulative 3 pour SQL Server 2017
 
-Vous pouvez maintenant mettre à niveau vos composants de Python et R au serveur d’apprentissage Machine 9.2.1.24. Cette version propose de nombreuses améliorations **revoscalepy** et **RevoScaleR**, y compris les améliorations des performances.
+Cette version contient les mises à jour des composants de Python et R. 
+
++ Prise en charge pour la sérialisation du modèle Python dans revoscalepy, à l’aide de la fonction rx_serialize_model
 
 ### <a name="in-database-python-integration"></a>Intégration de Python dans base de données
 
@@ -55,7 +61,7 @@ Python en cours d’exécution dans la base de données n’est pas seulement un
 
 + Prise en charge de Python dans Microsoft Machine Learning Server (autonome)
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]inclut la possibilité d’installer une version autonome du serveur Microsoft Machine Learning. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] inclut la possibilité d’installer une version autonome du serveur Microsoft Machine Learning. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
 
 ### <a name="linux-support"></a>Support Linux
 

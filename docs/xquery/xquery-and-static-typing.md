@@ -3,32 +3,38 @@ title: XQuery et statique en tapant | Documents Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, static typing
 - static typing
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 473b3e2fc020778b1d91f75935a46f50f0e886de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery et le typage statique
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un langage typé statiquement. Autrement dit, il génère des erreurs de type lors de la compilation des requêtes dès qu'une expression renvoie une valeur dotée d'un type ou d'une cardinalité qu'une fonction ou un opérateur spécifique n'accepte pas. De plus, la vérification des types statiques peut également déceler si une expression de chemin d'accès faisant référence à un document XML typé a été mal typée. Le compilateur XQuery commence par une phase de normalisation au cours de laquelle s'ajoutent les opérations implicites (atomisation, par exemple), puis effectue l'inférence de type statique et la vérification des types statiques.  
   

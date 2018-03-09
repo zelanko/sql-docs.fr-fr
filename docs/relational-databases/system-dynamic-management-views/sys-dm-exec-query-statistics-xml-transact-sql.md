@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_statistics_xml (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml
-helpviewer_keywords: sys.dm_exec_query_statistics_xml management view
+helpviewer_keywords:
+- sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
+# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Plan d’exécution pour les demandes en cours de requête retourne. Utilisez cette vue de gestion dynamique pour récupérer de showplan XML avec des statistiques temporaires. 
@@ -80,7 +82,7 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
 > [!IMPORTANT]
 > Dans TPC-C comme tests de charge de travail, l’activation de l’infrastructure de profilage de statistiques léger ajoute une surcharge de 1,5 à 2 pour cent. En revanche, l’infrastructure de profilage de statistiques standard pouvez ajouter jusqu'à 90 % de temps pour le même scénario de charge de travail.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
 
 ## <a name="examples"></a>Exemples  
@@ -88,14 +90,14 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Examinez les statistiques de plan et de l’exécution de requêtes actives pour un lot en cours d’exécution  
  L’exemple suivant interroge **sys.dm_exec_requests** pour rechercher la requête vous intéresse et copier son `session_id` à partir de la sortie.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  Ensuite, pour obtenir les statistiques de plan et de l’exécution de requêtes actives, utilisez copié `session_id` avec la fonction système **sys.dm_exec_query_statistics_xml**.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +105,7 @@ GO
 
  Ou combiné pour toutes les demandes en cours d’exécution.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

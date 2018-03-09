@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
 Ce didacticiel vous montre comment créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués. 
@@ -361,14 +361,14 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 Le nom du secteur est écrit verticalement, de bas en haut. La hauteur du groupe de lignes Territory varie en fonction de la longueur du nom du secteur.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d’informations sur les matrices, consultez : 
 -    [Tables, matrices et listes](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Créer une matrice](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Zones de région de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Cellules, lignes et colonnes de région de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

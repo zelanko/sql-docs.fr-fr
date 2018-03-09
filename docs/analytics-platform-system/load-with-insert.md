@@ -3,10 +3,10 @@ title: "Charger les données avec INSERT"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>Charger les données avec INSERT
 
@@ -129,8 +129,8 @@ Le tableau suivant définit les formats acceptés et les règles pour insérer d
   
 |Type littéral|Format|Règles de conversion|  
 |------------|------|----------------|
-|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnnnn'<br /><br />Exemple : '321312313123'| Aucune |  
-|Littéral d’entier|nnnnnnnnnnnnnn<br /><br />Exemple : 321312313123| Aucune|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnnnn'<br /><br />Exemple : '321312313123'| None |  
+|Littéral d’entier|nnnnnnnnnnnnnn<br /><br />Exemple : 321312313123| None|  
 |Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|Les valeurs à droite du séparateur décimal sont tronquées.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>types de données Money et smallmoney  
@@ -153,10 +153,10 @@ Le tableau suivant définit les formats acceptés et les règles pour insérer d
   
 |Type littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne|Format : « chaîne de caractères'<br /><br />Exemple : 'abc'| Aucune|  
-|Littéral de chaîne Unicode|Format : Chaîne N'character'<br /><br />Exemple : N’ABC »|  Aucune |  
-|Littéral d’entier|Format : nnnnnnnnnnn<br /><br />Exemple : 321312313123| Aucune |  
-|Littéral décimal|Format : nnnnnn.nnnnnnn<br /><br />Exemple : 12344.34455| Aucune |  
+|Littéral de chaîne|Format : « chaîne de caractères'<br /><br />Exemple : 'abc'| None|  
+|Littéral de chaîne Unicode|Format : Chaîne N'character'<br /><br />Exemple : N’ABC »|  None |  
+|Littéral d’entier|Format : nnnnnnnnnnn<br /><br />Exemple : 321312313123| None |  
+|Littéral décimal|Format : nnnnnn.nnnnnnn<br /><br />Exemple : 12344.34455| None |  
 |Money littéral|Format : $nnnnnn.nnnnn<br /><br />Exemple : $123456.99|Le symbole de devise n’est pas inséré avec la valeur. Pour insérer le symbole de devise, insérez la valeur comme un littéral de chaîne. Cela fera correspondre le format de la **dwloader** outil qui traite chaque littéral comme un littéral de chaîne.<br /><br />Des virgules ne sont pas autorisés.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 2, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123.946789 est insérée en tant que 123.95.<br /><br />Seul le style par défaut 0 (pas de virgule et 2 chiffres après la virgule décimale) est autorisé lors de l’utilisation de la fonction CONVERT pour insérer des littéraux de l’argent.|  
 
   

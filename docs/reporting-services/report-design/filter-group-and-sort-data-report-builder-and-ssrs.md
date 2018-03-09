@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Tri interactif** Pour permettre à un utilisateur de trier ou d'inverser l'ordre de tri d'une colonne, vous pouvez ajouter un bouton de tri interactif à une cellule d'en-tête de colonne ou d'en-tête de groupe dans un tableau ou une matrice.  
   
- Pour aider vos utilisateurs à personnaliser les expressions de filtre, de groupe ou de tri, vous pouvez modifier une expression afin d'ajouter une référence à un paramètre de rapport. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Pour aider vos utilisateurs à personnaliser les expressions de filtre, de groupe ou de tri, vous pouvez modifier une expression afin d'ajouter une référence à un paramètre de rapport. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
  Pour plus d'informations et pour obtenir des exemples, consultez les rubriques suivantes :  
   
@@ -214,7 +212,7 @@ FROM Production.Product
   
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

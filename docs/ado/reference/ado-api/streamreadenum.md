@@ -1,10 +1,11 @@
 ---
-title: StreamReadEnum | Documents Microsoft
+title: StreamReadEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: StreamReadEnum
-helpviewer_keywords: StreamReadEnum enumeration [ADO]
+f1_keywords:
+- StreamReadEnum
+helpviewer_keywords:
+- StreamReadEnum enumeration [ADO]
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 875ac187957358e10737b9036ff0feb70da09c54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bd88a62a46bae523904b308d011ebe956e02497
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Spécifie si l’ensemble du flux ou la ligne suivante doit être lue à partir d’un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  

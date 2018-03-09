@@ -2,29 +2,32 @@
 title: "Vue de Source de définition de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Leçon 1-3-définition d’une vue de Source de données
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 L'étape qui suit la définition des sources de données que vous utiliserez dans un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consiste généralement à définir une vue de source de données pour le projet. Une vue de source de données est une vue unique et unifiée des métadonnées des tables et des vues spécifiées que la source de données définit dans le projet. Le stockage des métadonnées dans la vue de source de données permet d'utiliser ces métadonnées au cours de la phase de développement sans avoir besoin de disposer d'une connexion ouverte à une source de données sous-jacente. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 Au cours de la tâche suivante, vous définissez une vue de source de données qui contient cinq tables de la source de données **AdventureWorksDW2012** .  
@@ -38,7 +41,7 @@ Au cours de la tâche suivante, vous définissez une vue de source de données q
 3.  Sous **Sources de données relationnelles**, la source de données **Adventure Works DW 2012** est sélectionnée. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
-    > Pour créer une vue de source de données basée sur plusieurs sources de données, vous devez d’abord définir une vue de source de données basée sur une seule source de données. Cette source de données est alors appelée la source de données principale. Vous pouvez ensuite ajouter des tables et des vues à partir d'une source de données secondaire. Quand vous concevez des dimensions qui contiennent des attributs basés sur des tables associées dans plusieurs sources de données, vous pouvez avoir besoin de définir une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comme source de données principale pour utiliser ses fonctionnalités de moteur de requête distribuée.  
+    > Pour créer une vue de source de données basée sur plusieurs sources de données, vous devez d’abord définir une vue de source de données basée sur une seule source de données. Cette source de données est alors appelée la source de données principale. Vous pouvez ensuite ajouter des tables et des vues à partir d'une source de données secondaire. Lors de la conception des dimensions qui contiennent des attributs basés sur des tables associées dans plusieurs sources de données, vous devrez peut-être définir un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source de données en tant que source de données principale à utiliser ses fonctions de moteur de requête distribuée.  
   
 4.  Dans la page **Sélectionner des tables et des vues** , sélectionnez des tables et des vues dans la liste des objets disponibles de la source de données sélectionnée. Vous pouvez filtrer cette liste pour sélectionner plus facilement les tables et les vues.  
   
@@ -73,7 +76,7 @@ Au cours de la tâche suivante, vous définissez une vue de source de données q
   
     -   Une barre d'outils qui est spécifique au Concepteur de vues de source de données.  
   
-8.  Cliquez sur le bouton [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] development environment, click the **Maximize** button.  
+8.  Cliquez sur le bouton [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour agrandir l’environnement de **développement** .  
   
 9. Pour afficher à 50 % les tables dans le volet **Diagramme** , cliquez sur l’icône **Zoom** de la barre d’outils du Concepteur de vues de sources de données. Cela permet de masquer les détails des colonnes de chaque table.  
   
@@ -84,7 +87,7 @@ Au cours de la tâche suivante, vous définissez une vue de source de données q
     Vous pouvez maintenant consulter toutes les tables et leurs relations dans le volet **Diagramme** . Notez qu'il existe trois relations entre la table FactInternetSales et la table DimDate. Chaque vente est associée à trois dates : une date de commande, une date d'échéance et une date de livraison. Pour afficher les détails d’une relation, double-cliquez sur la flèche de la relation dans le volet **Diagramme** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Modification des noms de tables par défaut](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
+[Modification des noms de Table par défaut](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Vues de sources de données dans les modèles multidimensionnels](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

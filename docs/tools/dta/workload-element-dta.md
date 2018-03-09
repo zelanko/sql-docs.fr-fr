@@ -2,9 +2,12 @@
 title: "Workload, élément (DTA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a2ff19d6a4044a6a3e29cb59592cdd7dd653e79
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Workload, élément (Assistant Paramétrage de base de données)
-  Spécifie la charge de travail à utiliser pour une session de paramétrage.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie la charge de travail à utiliser pour une session de paramétrage.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Éléments enfants**|[Élément File &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Élément Database &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Élément EventString &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**Éléments enfants**|[Élément de fichier &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Élément de base de données pour la charge de travail &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Eventstring, élément &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
  Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. L'Assistant Paramétrage du moteur de base de données peut utiliser des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fichiers de trace et des tables de trace en tant que charges de travail.  

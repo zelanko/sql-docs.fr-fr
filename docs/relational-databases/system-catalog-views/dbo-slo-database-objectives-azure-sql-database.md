@@ -1,14 +1,14 @@
 ---
 title: "dbo.slo_database_objectives (de base de données SQL Azure) | Documents Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +16,24 @@ f1_keywords:
 - dbo.slo_database_objectives_TSQL
 - slo_database_objectives_TSQL
 - slo_database_objectives
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - slo_database_objectives
 - dbo.slo_database_objectives
 ms.assetid: a522569d-8cfc-4643-a170-1cd291e61eee
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8add6a50bfe0d6e8058b5894309b6cc3b783d86f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 10227990cb6c5928fcc403ee35a978cbf93ad6ca
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/16/2018
 ---
-# <a name="dboslodatabaseobjectives-azure-sql-database"></a>dbo.slo_database_objectives (de base de données SQL Azure)
+# <a name="dboslodatabaseobjectives-azure-sql-database"></a>dbo.slo_database_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 |target_slo|**sysname**|Objectif de niveau de service cible de la base de données tel que spécifié dans la demande de modification de SLO.|  
 |state_desc|**nvarchar**|État de la demande de modification de SLO : terminée ou en attente.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur disposant des autorisations pour se connecter à virtuel **master** base de données.  
   
 ## <a name="examples"></a>Exemples  

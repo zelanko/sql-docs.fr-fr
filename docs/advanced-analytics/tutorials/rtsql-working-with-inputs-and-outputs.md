@@ -2,28 +2,31 @@
 title: "Utilisation des entrées et sorties (R dans démarrage rapide de SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: cb651d6541bbba7be03b74265ffae5dccdbdf9c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Utilisation des entrées et sorties (R dans démarrage rapide de SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Lorsque vous souhaitez exécuter le code R dans SQL Server, vous devez encapsuler le script R dans une procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Cette procédure stockée est utilisée pour démarrer le runtime R dans le contexte de SQL Server, lequel transmet les données à R, gère les sessions utilisateur R en toute sécurité et retourne les résultats au client.
 

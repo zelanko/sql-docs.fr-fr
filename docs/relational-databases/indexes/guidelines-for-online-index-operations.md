@@ -16,19 +16,19 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,20 +95,18 @@ Pour plus d’informations, consultez [Disk Space Requirements for Index DDL Ope
 ## <a name="resumable-index-rebuild-considerations"></a>Considérations relatives à la regénération d’index pouvant être reprise
 
 > [!NOTE]
-> Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> L’option d’index pouvant être repris s’applique à SQL Server (à compter de SQL Server 2017) et à SQL Database. Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 Quand vous effectuez une regénération d’index en ligne pouvant être reprise, les recommandations suivantes s’appliquent :
 -   Gestion, planification et extension des fenêtres de maintenance d’index. Vous pouvez suspendre et redémarrer une opération de regénération d’index à plusieurs reprises en fonction de vos fenêtres de maintenance.
 - Récupération après des échecs de regénération d’index (par exemple les basculements de bases de données ou le manque d’espace disque).
 - Quand une opération d’index est en pause, l’index d’origine et celui qui vient d’être créé nécessitent de l’espace disque et doivent être mis à jour durant les opérations DML.
 
-- Active les journaux de troncation durant une opération de regénération d’index (cette opération ne peut pas être effectuée pour une opération d’index en ligne classique).
+- Active la troncation des journaux des transactions durant une opération de régénération d’index (cette opération ne peut pas être effectuée pour une opération d’index en ligne classique).
 - L’option SORT_IN_TEMPDB=ON n’est pas prise en charge
 
 > [!IMPORTANT]
-> Avec la regénération pouvant être reprise, vous n’êtes pas obligé de maintenir une troncation de longue durée ouverte, ce qui permet la troncation des journaux au cours de cette opération et une meilleure gestion de l’espace des journaux. Avec la nouvelle conception, nous avons réussi à conserver les données nécessaires dans une base de données, ainsi que toutes les références indispensables au redémarrage de l’opération pouvant être reprise.
->
+> Dans la mesure où la régénération peut être reprise, il n’est pas nécessaire de maintenir ouverte une transaction de longue durée, ce qui permet la troncation des journaux au cours de cette opération et une meilleure gestion de l’espace des journaux. Avec la nouvelle conception, nous avons réussi à conserver les données nécessaires dans une base de données, ainsi que toutes les références indispensables au redémarrage de l’opération pouvant être reprise.
 
 En règle générale, il n’existe aucune différence de performances entre la regénération d’index en ligne avec reprise et sans reprise. Quand vous mettez à jour un index pouvant être repris alors qu’une opération de regénération d’index est en pause :
 - Pour les charges de travail de lecture principalement, l’impact sur les performances est insignifiant. 

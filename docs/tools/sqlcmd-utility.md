@@ -1,11 +1,15 @@
----
+﻿---
 title: Utilitaire SQLCMD | Documents Microsoft
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlcmd
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,39 +29,42 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3fd1d53f4fb89ac74e6f2b271107a271f95d0de1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Pour SQL Server 2014 et inférieur, consultez [utilitaire sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > Pour l’utilisation de sqlcmd sur Linux, consultez [installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
 
   Le **sqlcmd** utilitaire vous permet d’entrer des instructions Transact-SQL, des procédures système et des fichiers de script à l’invite de commandes, dans **l’éditeur de requête** en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un travail de l’Agent SQL Server. Cet utilitaire utilise ODBC pour exécuter des lots Transact-SQL. 
   
 > [!NOTE]
 > Les versions plus récentes de l’utilitaire sqlcmd sont disponibles en version web à partir du [Centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=825643). Vous avez besoin d’une version 13.1 ou une version ultérieure pour prendre en charge le chiffrement intégral (`-g`) et l’authentification Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
 
+Vous pouvez essayer de l’utilitaire sqlcmd à partir de l’interpréteur de commandes Azure Cloud telle qu’elle est déjà installée par défaut : [ ![lancer un Shell Cloud](https://shell.azure.com/images/launchcloudshell.png "lancer un environnement Cloud")](https://shell.azure.com)
+
   Pour exécuter des instructions sqlcmd dans SSMS, sélectionnez le Mode SQLCMD à partir de la liste déroulante du menu Requête.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) utilise Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient pour l’exécution dans Normal et le mode SQLCMD dans **l’éditeur de requête**. Lorsque **sqlcmd** est exécuté à partir de la ligne de commande, **sqlcmd** utilise le pilote ODBC. Dans la mesure où différentes options par défaut peuvent s’appliquer, vous pouvez constater un comportement différent lorsque vous exécutez la même requête dans [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] en mode SQLCMD et dans l’utilitaire **sqlcmd** .  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) utilise Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient pour l’exécution dans Normal et le mode SQLCMD dans **l’éditeur de requête**. Lorsque **sqlcmd** est exécuté à partir de la ligne de commande, **sqlcmd** utilise le pilote ODBC. Dans la mesure où différentes options par défaut peuvent s’appliquer, vous pouvez constater un comportement différent lorsque vous exécutez la même requête dans [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] en mode SQLCMD et dans l’utilitaire **sqlcmd** .  
 >   
   
  Actuellement, **sqlcmd** ne requiert pas d’espace entre l’option de ligne de commande et la valeur. Toutefois, dans une version ultérieure, un espace peut être requis entre l'option de ligne de commande et la valeur.  
  
  Autres rubriques :
 - [Démarrer l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Utiliser l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Utiliser l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -211,14 +218,14 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-S** [*protocole*:]*serveur*[**\\***nom_instance*][**,***port*]  
+ **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  Spécifie l’instance de SQL Server à laquelle se connecter. Cette option définit la variable de script **sqlcmd** SQLCMDSERVER.  
   
- Spécifiez *nom_serveur* pour se connecter à l’instance par défaut de SQL Server sur ce serveur. Spécifiez *nom_serveur* [  **\\**  *nom_instance* ] pour vous connecter à une instance nommée de SQL Server sur ce serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
+ Spécifiez *nom_serveur* pour se connecter à l’instance par défaut de SQL Server sur ce serveur. Spécifiez *nom_serveur* [**\\*** nom_instance* ] pour vous connecter à une instance nommée de SQL Server sur ce serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
   
  Le*protocole* peut avoir la valeur **tcp** (TCP/IP), **lpc** (mémoire partagée) ou **np** (canaux nommés).  
   
- Si vous ne spécifiez pas un *nom_serveur* [  **\\**  *nom_instance* ] lorsque vous démarrez **sqlcmd**, SQL Server recherche et qu’il utilise la variable d’environnement SQLCMDSERVER.  
+ Si vous ne spécifiez pas un *nom_serveur* [**\\*** nom_instance* ] lorsque vous démarrez **sqlcmd**, SQL Server recherche et utilise l’environnement SQLCMDSERVER variable.  
   
 > [!NOTE]  
 >  La variable d'environnement OSQLSERVER a été conservée pour assurer une compatibilité descendante. La variable d’environnement SQLCMDSERVER est prioritaire par rapport à la variable d’environnement OSQLSERVER ; **sqlcmd** et **osql** peuvent donc être utilisés l’un à côté de l’autre sans interférence et les anciens scripts continuent à fonctionner.  
@@ -233,18 +240,18 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Si l’option **-U** est utilisée avec l’option **-E** (décrite plus loin dans cette rubrique), un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-z** *nouveau_mot_de_passe*  
+ **-z** *new_password*  
  Modifier le mot de passe :  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *nouveau_mot_de_passe*  
+ **-Z** *new_password*  
  Modifier le mot de passe et quitter :  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Options d’entrée/sortie**  
-  **-f** *page_de_codes* | **i:***page_de_codes*[**,o:***page_de_codes*] | **o:***page_de_codes*[**,i:***page_de_codes*]  
+  **-f** *page de codes* | **faire : ***page de codes*[**, o:***page de codes *] | **o: ***page de codes*[**, i***page de codes *]  
  Spécifie les pages de codes d'entrée et de sortie. Le numéro de pages de codes est une valeur numérique spécifiant une page de codes Windows installée.  
   
  Règles de conversion des pages de code :  
@@ -259,7 +266,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Entrez **chcp** à l’invite de commandes pour vérifier la page de codes de Cmd.exe.  
   
- **-i** *fichier_entrée*[**,***fichier_entrée2*...]  
+ **-i** *input_file*[**,***input_file2*...]  
  Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. Plusieurs fichiers peuvent être spécifiés, ils sont lus et traités dans l'ordre. N'utilisez pas d'espace entre les noms de fichiers. **sqlcmd** vérifie d’abord que tous les fichiers spécifiés existent. Si un ou plusieurs fichiers n’existent pas, **sqlcmd** se termine. Les options -i et -Q/-q s'excluent mutuellement.  
   
  Exemples de chemins :  
@@ -272,7 +279,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Les chemins d'accès aux fichiers comportant des espaces doivent être placés entre guillemets.  
   
- Cette option peut être utilisée plusieurs fois : **-i***fichier_entrée* **-I***I fichier_entrée.*  
+ Cette option peut être utilisée plusieurs fois : **-i *** input_file* **-I *** j’input_file.*  
   
  **-o** *output_file*  
  Identifie le fichier recevant une sortie de **sqlcmd**.  
@@ -316,7 +323,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 > [!IMPORTANT]  
 >  N'utilisez pas le terminateur GO dans la requête.  
   
- Si l’option **-b** est spécifiée avec cette option, **sqlcmd** se termine avec une erreur. L’option**-b** est traitée ultérieurement dans cette rubrique.  
+ Si l’option **-b** est spécifiée avec cette option, **sqlcmd** se termine avec une erreur. L’option **-b** est traitée ultérieurement dans cette rubrique.  
   
  **-Q"** *requête cmdline* **"**  
  Exécute une requête quand **sqlcmd** démarre, puis quitte immédiatement **sqlcmd**. Il est possible d'exécuter des requêtes séparées par plusieurs points-virgules.  
@@ -335,13 +342,13 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Si l’option **-b** est spécifiée avec cette option, **sqlcmd** se termine avec une erreur. L’option**-b** est traitée ultérieurement dans cette rubrique.  
   
  **-t** *délai_expiration_requête*  
- Spécifie le nombre de secondes accordées pour l'exécution d'une commande (ou une instruction SQL). Cette option définit la variable de script **sqlcmd** SQLCMDSTATTIMEOUT. Si une valeur *délai_expiration_requête* n’est pas spécifiée, la commande n’a pas de délai d’expiration. La valeur *délai_**expiration_requête* doit être un nombre compris entre 1 et 65534. Si la valeur fournie n’est pas numérique ou n’est pas comprise dans cette plage, **sqlcmd** génère un message d’erreur.  
+ Spécifie le nombre de secondes accordées pour l'exécution d'une commande (ou une instruction SQL). Cette option définit la variable de script **sqlcmd** SQLCMDSTATTIMEOUT. Si une valeur *délai_expiration_requête* n’est pas spécifiée, la commande n’a pas de délai d’expiration. Le *requête ** délai_attente* doit être un nombre compris entre 1 et 65534. Si la valeur fournie n’est pas numérique ou n’est pas comprise dans cette plage, **sqlcmd** génère un message d’erreur.  
   
 > [!NOTE]  
 >  La valeur de délai d’expiration réelle peut différer de quelques secondes de la valeur *délai_expiration* .  
   
  **-vvar =**  *valeur*[ **var =** *valeur*...]  
- Crée une variable de script **sqlcmd**qui peut être utilisée dans un script **sqlcmd** . Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs valeurs ***var***=**"***valeurs***"** . Si l’une des valeurs spécifiées comporte des erreurs, **sqlcmd** génère un message d’erreur et se termine.  
+ Crée une variable de script **sqlcmd**qui peut être utilisée dans un script **sqlcmd** . Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs ***var***=**»***valeurs***»** valeurs. Si l’une des valeurs spécifiées comporte des erreurs, **sqlcmd** génère un message d’erreur et se termine.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -358,7 +365,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Supprime de la sortie tous les caractères de contrôle, par exemple les tabulations et les caractères de nouvelle ligne. Cela préserve la mise en forme des colonnes lorsque des données sont retournées. Si 1 est spécifié, chaque caractère de contrôle est remplacé par un espace. Si 2 est spécifié, les caractères de contrôle consécutifs sont remplacés par un espace. **-k** est identique à **-k1**.  
   
  **-s** *col_separator*  
- Spécifie le caractère de séparation des colonnes. Le caractère espace est utilisé par défaut. Cette option définit la variable de script **sqlcmd** SQLCMDCOLSEP. Pour utiliser des caractères ayant une signification spéciale pour le système d'exploitation, tels que le « et » commercial (&) ou le point-virgule (;), placez ce caractère entre guillemets ("). Le séparateur des colonnes peut être n'importe quel caractère 8 bits.  
+ Spécifie le caractère de séparation des colonnes. Le caractère espace est utilisé par défaut. Cette option définit la variable de script **sqlcmd** SQLCMDCOLSEP. Pour utiliser des caractères ayant une signification spéciale pour le système d'exploitation, tels que le « et » commercial (&) ou le point-virgule (;), placez ce caractère entre guillemets ("). Le séparateur des colonnes peut être n'importe quel caractère 8 bits.  
   
  **-w** *column_width*  
  Spécifie la largeur d'écran pour la sortie. Cette option définit la variable de script **sqlcmd** SQLCMDWIDTH. La largeur de colonne doit être un nombre supérieur à 8 et inférieur à 65536. Si la largeur de colonne spécifiée n’est pas comprise dans cette plage, **sqlcmd** génère un message d’erreur. La largeur par défaut est de 80 caractères. Lorsque la longueur d'une ligne de sortie est supérieure à la largeur de colonne spécifiée, elle revient à la ligne suivante.  
@@ -395,15 +402,15 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  **-Y** *largeur_affichage_type_longueur_fixe*  
  Définit la variable de script **sqlcmd** `SQLCMDMAXFIXEDTYPEWIDTH`. La valeur par défaut est 0 (illimitée). Limite le nombre de caractères retournés pour les types de données suivants :  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **char (**  *n*  **)**, où 1 < = n < = 8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **NCHAR (n**  *n*  **)**, où 1 < = n < = 4000  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **varchar (n**  *n*  **)**, où 1 < = n < = 8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**, où 1 < = n < = 4000  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **varbinary (n**  *n*  **)**, où 1 < = n\<= 4000  
   
 -   **variant**  
   
@@ -447,7 +454,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Où :  
   
- `x`= Nombre de transactions qui sont traitées par SQL Server.  
+ `x` = Nombre de transactions qui sont traitées par SQL Server.  
   
  `t1` = Durée totale de toutes les transactions.  
   
@@ -683,8 +690,8 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  GO indique la fin d’un lot et mis en cache de l’exécution des instructions Transact-SQL. Le lot est exécuté plusieurs fois en tant que lots distincts ; Vous ne pouvez pas déclarer une variable plusieurs fois dans un lot unique.
   
  **Commandes diverses**  
-  **:r \<** *filename***>**  
- Analyse des instructions Transact-SQL supplémentaires et **sqlcmd** commandes à partir du fichier spécifié par  **\<**  *nom de fichier***>**dans le cache d’instruction.  
+  **: r \<**  *nom de fichier* **>**  
+ Analyse des instructions Transact-SQL supplémentaires et **sqlcmd** commandes à partir du fichier spécifié par  **\< ***nom de fichier***>**dans l’instruction cache.  
   
  Si le fichier contient des instructions Transact-SQL qui ne sont pas suivies par **accédez**, vous devez entrer **accédez** sur la ligne qui suit **: r**.  
   
@@ -699,7 +706,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  **:Serverlist**  
  Répertorie tous les serveurs configurés localement et les noms des serveurs émettant sur le réseau.  
   
- **:Connect**  *nom_serveur*[**\\***nom_instance*] [-l *délai_expiration*] [-U *nom_utilisateur* [-P *password*]]  
+ **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Se connecte à une instance de SQL Server. Ferme également la connexion actuelle.  
   
  Options de délai :  
@@ -742,7 +749,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 ### <a name="sqlcmd-file-names"></a>Noms de fichiers sqlcmd  
  Les fichiers d’entrée**sqlcmd** peuvent être spécifiés avec l’option **-i** ou la commande **:r** . Les fichiers de sortie peuvent être spécifiés avec l’option **-o** ou les commandes **:Error**, **:Out** et **:Perftrace** . Voici quelques consignes relatives à l'utilisation de ces fichiers :  
   
--   **:Error**, **:Out** et **:Perftrace** doivent utiliser une valeur **\<***nom_fichier***>**distincte. Si la même valeur **\<***nom_fichier***>** est utilisée, les entrées des commandes peuvent être mélangées.  
+-   **: Erreur**, **: Out** et **: Perftrace** doit utiliser distinct  **\< ***nom de fichier***>**. Si le même  **\< ***nom de fichier*** >**  est utilisé, entrées des commandes peuvent être mélangées.  
   
 -   Si un fichier d’entrée situé sur un serveur distant est appelé à partir de **sqlcmd** sur un ordinateur local et qu’il contient un chemin de fichier sur un lecteur tel que :out c:\OutputFile.txt, ce fichier de sortie sera créé sur l'ordinateur local et non sur le serveur distant.  
   

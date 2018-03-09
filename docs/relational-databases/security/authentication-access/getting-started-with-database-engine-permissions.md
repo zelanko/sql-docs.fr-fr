@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>Liste d’autorisations  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] a 230 autorisations. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] a 219 autorisations. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] a 214 autorisations. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] a 195 autorisations. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]et [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] ont moins d’autorisations, car ils exposent uniquement une partie du moteur de base de données, bien que chacun ait des autorisations qui ne s’appliquent pas à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le graphique suivant illustre les autorisations et leurs relations. Certaines des autorisations de niveau supérieur (telles que `CONTROL SERVER`) figurent plusieurs fois. Dans cette rubrique, le poster est trop petit pour être lu correctement. Cliquez sur l’image pour télécharger le **Poster des autorisations du moteur de base de données** au format pdf.  
   
-[![Autorisations de moteur de base de données](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Autorisations des moteurs de base de données](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
  
  Pour obtenir un graphique montrant les relations entre les principaux [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et les objets serveur et de base de données, consultez [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
@@ -193,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  Pour retourner les autorisations explicites accordées ou refusées dans une base de données ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), exécutez l’instruction suivante dans la base de données.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -208,7 +208,7 @@ JOIN sys.objects AS obj
   
  Pour retourner les membres des rôles serveur ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uniquement), exécutez l’instruction suivante.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -220,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  Pour retourner les membres des rôles de base de données ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), exécutez l’instruction suivante.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -229,7 +229,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  Les rubriques suivantes vous aideront à démarrer :  
   
 -   [Didacticiel : Mise en route du moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Création d’une base de données &#40;didacticiel&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
@@ -238,7 +238,7 @@ JOIN sys.database_principals AS dRole
   
 -   [Didacticiel : écriture d'instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   

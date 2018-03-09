@@ -2,9 +2,12 @@
 title: "Script d’information du serveur de distribution et du serveur de publication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 247af1132f3b2df3a6b393967e1f9bef73df4705
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 875ed870e28e1a3ff0822a677905282f1fbd87ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script d'information du serveur de distribution et du serveur de publication
-  Le script utilise les tables système et les procédures stockées de réplication pour répondre aux questions les plus courantes sur les objets posées sur le serveur de distribution et sur le serveur de publication. Le script peut être utilisé « tel quel » et peut également servir de base pour des scripts personnalisés. Le script peut nécessiter deux modifications afin qu'il fonctionne dans votre environnement :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le script utilise les tables système et les procédures stockées de réplication pour répondre aux questions les plus courantes sur les objets posées sur le serveur de distribution et sur le serveur de publication. Le script peut être utilisé « tel quel » et peut également servir de base pour des scripts personnalisés. Le script peut nécessiter deux modifications afin qu'il fonctionne dans votre environnement :  
   
 -   Modifiez la ligne `use AdventureWorks2012` afin d'utiliser le nom de votre base de données de publication.  
   
@@ -98,7 +101,7 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Questions fréquentes (FAQ) pour les administrateurs de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [sp_get_distributor &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

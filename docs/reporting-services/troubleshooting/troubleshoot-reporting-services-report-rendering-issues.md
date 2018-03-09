@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 caps.latest.revision: "4"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6c047dd94d6ed56ccb3fb108107695b72bb9e52
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e95e444172974de41cfea15bc651ddfae9a5cabb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Résoudre les problèmes de rendu des rapports Reporting Services
 Une fois les données et les informations de mise en page du rapport combinées, le rapport compilé est envoyé à un convertisseur de rapport. Par exemple, lorsque vous affichez l'aperçu d'un rapport localement, vous utilisez le convertisseur HTML pour afficher le rapport compilé. Utilisez cette rubrique pour vous aider à résoudre les problèmes spécifiques au rendu de rapport.   
@@ -72,9 +70,9 @@ Lorsque la source de données est configurée pour un type de connexion de liste
   
 **Ce problème s’applique à :** navigateurs configurés pour demander les informations d’identification.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Dépanner des problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

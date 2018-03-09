@@ -3,8 +3,9 @@ title: Champ (ADO - syntaxe WFC) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Field collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb583ec535744dc394f700279dd104f3be6a810d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Champ (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
@@ -73,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implémente la **valeur** propriété avec le **getValue** (méthode), qui retourne un objet de type VARIANT ; et le **setValue** méthode qui prend une variante en tant qu’argument. Les variantes sont très efficaces dans certains langages, tels que Microsoft Visual Basic.  
   
- Outre la **valeur** ADO/WFC fournit des propriétés, *accesseur* les méthodes qui utilisent des types de données Java pour obtenir et définir le contenu de **champ** objets. La plupart de ces méthodes ont des noms au format **obtenir***DataType* ou **définir***type de données*.  
+ Outre la **valeur** ADO/WFC fournit des propriétés, *accesseur* les méthodes qui utilisent des types de données Java pour obtenir et définir le contenu de **champ** objets. La plupart de ces méthodes ont des noms de la forme **obtenir *** DataType* ou **Définir *** DataType*.  
   
  Il existe deux exceptions à cela : parmi les **getObject** méthodes retourne un objet converti en une classe spécifiée. Il est sans **getNull** propriété ; au lieu de cela, il existe un **isNull** propriété qui retourne une valeur booléenne qui indique si le champ est null.  
   

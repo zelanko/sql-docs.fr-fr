@@ -2,27 +2,30 @@
 title: "Propriétés de la base de données (page Magasin de requêtes) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1049e37ab25fc7b76856a94c9c3ac091ab4403d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-query-store-page"></a>Propriétés de la base de données (page Magasin de requêtes)
-  Accédez à cette page depuis la base de données principale et utilisez-la pour configurer et modifier les propriétés du magasin de requêtes de la base de données. Ces options peuvent également être configurées à l'aide des [options ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Pour plus d'informations sur le magasin de requêtes, consultez [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Accédez à cette page à partir de la base de données principale et utilisez-la pour configurer et modifier les propriétés du magasin de requêtes de la base de données. Ces options peuvent également être configurées à l'aide des [options ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Pour plus d'informations sur le magasin de requêtes, consultez [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  
 |-|  
@@ -65,10 +68,10 @@ ms.lasthandoff: 11/09/2017
   
  Le graphique de droite montre la partie du quota de magasin de requêtes actuellement utilisé. Notez que le quota n'est pas affiché dans le graphique de gauche. Le quota peut dépasser la taille actuelle de la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes peut être configuré à l'aide de la page de propriétés de la base de données du magasin de requêtes ou de l’option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . Le magasin de requêtes présente les informations via la boîte de dialogue [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Pour plus d'informations sur le magasin de requêtes, consultez [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   

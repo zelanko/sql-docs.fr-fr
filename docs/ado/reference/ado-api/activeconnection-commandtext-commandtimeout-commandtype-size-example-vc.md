@@ -3,15 +3,17 @@ title: "Stockées procédure-exemple (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CommandTimeout property [ADO], VC++ example
 - CommandText property [ADO], VC++ example
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - Direction property [ADO], VC++ example
 - ActiveConnection property [ADO], VC++ example
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9eb20f62248456248aad4a12468ad6e48575170
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8766ba23e2765c46003af51311b07e5d4045782a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VC ++)
 Cet exemple utilise le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Direction](../../../ado/reference/ado-api/direction-property.md) propriétés pour exécuter une procédure stockée.  

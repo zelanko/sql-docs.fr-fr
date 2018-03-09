@@ -1,25 +1,28 @@
 ---
 title: "Installer des modèles d’apprentissage automatique préformé sur SQL Server | Documents Microsoft"
 ms.date: 11/16/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ed5616b66ffdad10f0e2794eb5ab0109a0979d2e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installer préformé d’apprentissage des modèles sur SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit comment ajouter modèles préformés à une instance de SQL Server qui a déjà des Services de R ou Machine Learning Services est installé.
 
@@ -40,7 +43,7 @@ Actuellement, les modèles qui sont disponibles sont des modèles de réseau neu
 La configuration de chaque réseau était basée sur les implémentations de référence suivantes :
 
 + ResNet-18
-+ ResNet à 50.
++ ResNet-50
 + ResNet-101
 + AlexNet
 
@@ -124,7 +127,7 @@ Pour plus d’informations sur les réseaux de formation approfondie et leur imp
 
     - AlexNet\_Updated.model
     - ImageNet1K\_mean.xml
-    - pretrained.Model
+    - pretrained.model
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model

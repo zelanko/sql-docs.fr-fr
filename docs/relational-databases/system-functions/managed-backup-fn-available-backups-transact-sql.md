@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_available_backups_TSQL
 - fn_available_backups_TSQL
 - fn_available_backups
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_available_backups
 - smart_admin.fn_available_backups
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e5b69caf7cde64cae7454c7132e1ee739898fff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1db926d3539587c411056a59135fb028899566de
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
@@ -70,12 +72,12 @@ S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une r
 |fork_point_lsn|NUMERIC(25, 0)|Si first_recovery_fork_id n'équivaut pas à last_recovery_fork_id, il s'agit du numéro séquentiel dans le journal du point du branchement. Dans les autres cas, cette valeur est NULL.|  
 |availability_group_guid|UNIQUEIDENTIFIER|Si une base de données est une base de données Always On, c’est le GUID du groupe de disponibilité. Sinon, cette valeur est NULL.|  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès) ou 1 (échec).  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **sélectionnez** autorisations sur cette fonction.  
   
 ## <a name="examples"></a>Exemples  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Fonctions du Générateur de rapports - Multilookup
   Retourne le jeu de valeurs de première correspondance pour le jeu de noms spécifié d'un dataset contenant des paires nom/valeur.  
@@ -49,12 +47,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!Name.Value`.  
   
  *dataset*  
- Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
+ Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
   
 ## <a name="return"></a>Return  
  Retourne une valeur **VariantArray**, ou **Nothing** si aucune correspondance n'est trouvée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez **Multilookup** pour récupérer un ensemble de valeurs d’un dataset pour les paires nom-valeur, lorsqu’il existe une relation un-à-un pour chaque paire. **MultiLookup** équivaut à appeler **Lookup** pour un ensemble de noms ou de clés. Par exemple, pour un paramètre à valeurs multiples basé sur des identificateurs de clé primaire,vous pouvez utiliser **Multilookup** dans une expression d'une zone de texte d'une table pour récupérer des valeurs associées d'un dataset qui n'est pas lié au paramètre ou à la table.  
   
  La fonction**Multilookup** effectue les actions suivantes :  
@@ -93,14 +91,14 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Supposons qu'un dataset nommé « Category » comprend le champ CategoryList, qui contient une liste séparée par des virgules d'identificateurs de catégorie, par exemple « 2, 4, 2, 1 ».  
   
  Le dataset CategoryNames contient l'identificateur et le nom de catégorie, comme indiqué dans le tableau ci-dessous.  
   
-|ID|Nom|  
+|ID|Nom   |  
 |--------|----------|  
-|1|Accessories|  
+| 1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
 |4|Components|  
@@ -115,12 +113,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Supposons qu' un dataset CouleursProduits contient un champ d'identificateur de couleur IDCouleur et un champ de valeur de couleur Couleur, comme indiqué dans le tableau ci-dessous.  
   
-|ColorID|Color|  
+|ColorID|Couleur|  
 |-------------|-----------|  
-|1|Rouge|  
+| 1|Rouge|  
 |2|Bleu|  
 |3|Vert|  
   
@@ -130,7 +128,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

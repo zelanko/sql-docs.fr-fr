@@ -1,5 +1,5 @@
 ---
-title: "Le chargement et l’exécution d’un Package Local par programme | Documents Microsoft"
+title: "Chargement et exécution d’un package local par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,28 +24,27 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 604c25de1d6ca478612bd3a83f79e35b969e5d8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Chargement et exécution d'un package local par programme
-  Vous pouvez exécuter [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages selon vos besoins ou à des moments prédéterminés à l’aide des méthodes décrites dans [en cours d’exécution de Packages](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Toutefois, quelques lignes de code vous suffisent pour exécuter également un package à partir d'une application personnalisée, telle qu'une application Windows Forms, une application console, un ASP.NET Web Form, un service Web ASP.NET ou un service Windows.  
+  Vous pouvez exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] selon les besoins ou à des moments prédéterminés à l’aide des méthodes décrites dans [Exécution de packages](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Toutefois, quelques lignes de code vous suffisent pour exécuter également un package à partir d'une application personnalisée, telle qu'une application Windows Forms, une application console, un ASP.NET Web Form, un service Web ASP.NET ou un service Windows.  
   
  Cette rubrique traite des points suivants :  
   
--   Chargement d’un package par programme  
+-   Chargement d’un package par programmation  
   
 -   Exécution d'un package par programme  
   
- Toutes les méthodes utilisées dans cette rubrique pour charger et exécuter des packages requièrent une référence à la **Microsoft.SqlServer.ManagedDTS** assembly. Après avoir ajouté la référence d’un nouveau projet, importez le <xref:Microsoft.SqlServer.Dts.Runtime> espace de noms avec un **à l’aide de** ou **importations** instruction.  
+ Toutes les méthodes utilisées dans cette rubrique pour charger et exécuter des packages nécessitent une référence à l’assembly **Microsoft.SqlServer.ManagedDTS**. Après avoir ajouté la référence dans un nouveau projet, importez l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> à l’aide d’une instruction **using** ou **Imports**.  
   
 ## <a name="loading-a-package-programmatically"></a>Chargement d'un package par programme  
  Pour charger par programme un package sur l'ordinateur local, que le package soit stocké localement ou à distance, appelez l'une des méthodes suivantes :  
@@ -60,23 +58,23 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  Les méthodes de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> qui permettent d'utiliser le magasin de packages SSIS prennent uniquement en charge « . », localhost ou le nom du serveur local. Vous ne pouvez pas utiliser « (local) ».  
   
-## <a name="running-a-package-programmatically"></a>Exécution d’un Package par programme  
+## <a name="running-a-package-programmatically"></a>Exécution d’un package par programmation  
  Le développement d'une application personnalisée dans du code managé qui exécute un package sur l'ordinateur local requiert la procédure suivante. Les étapes résumées ci-dessous sont présentées dans l'exemple d'application console qui suit.  
   
 #### <a name="to-run-a-package-on-the-local-computer-programmatically"></a>Pour exécuter par programme un package sur l'ordinateur local  
   
 1.  Démarrez l'environnement de développement Visual Studio et créez une application dans votre langage de développement par défaut. Cet exemple utilise une application console. Cependant, vous pouvez également exécuter un package à partir d'une application Windows Forms, un ASP.NET Web Form, un service Web ASP.NET ou un service Windows.  
   
-2.  Sur le **projet** menu, cliquez sur **ajouter une référence** et ajouter une référence à **Microsoft.SqlServer.ManagedDTS.dll**. Cliquez sur **OK**.  
+2.  Dans le menu **Projet**, cliquez sur **Ajouter une référence**, puis ajoutez une référence à **Microsoft.SqlServer.ManagedDTS.dll**. Cliquez sur **OK**.  
   
-3.  Utilisez Visual Basic **importations** instruction ou C# **à l’aide de** statement pour importer le **Microsoft.SqlServer.Dts.Runtime** espace de noms.  
+3.  Utilisez l’instruction Visual Basic **Imports** ou l’instruction C# **using** pour importer l’espace de noms **Microsoft.SqlServer.Dts.Runtime**.  
   
 4.  Ajoutez le code suivant dans la routine principale. L'application console terminée doit ressembler à l'exemple suivant.  
   
     > [!NOTE]  
     >  L'exemple de code montre le chargement du package à partir du système de fichiers à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>. Toutefois, vous pouvez également charger le package à partir de la base de données MSDB en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A>, ou à partir du magasin de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>.  
   
-5.  Exécutez le projet. L’exemple de code exécute l’exemple de package CalculatedColumns installé avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exemples. Le résultat de l'exécution du package est affiché dans la fenêtre de la console.  
+5.  Exécutez le projet. L’exemple de code exécute l’exemple de package CalculatedColumns installé avec les exemples [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le résultat de l'exécution du package est affiché dans la fenêtre de la console.  
   
 ### <a name="sample-code"></a>Exemple de code  
   
@@ -144,7 +142,7 @@ namespace RunFromClientAppCS
   
 2.  Ajoutez le code suivant dans la routine principale. L'application console terminée doit ressembler à l'exemple suivant.  
   
-3.  Exécutez le projet. L’exemple de code exécute l’exemple de package CalculatedColumns installé avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exemples. Le résultat de l'exécution du package est affiché dans la fenêtre de la console, avec toutes les erreurs qui se sont éventuellement produites.  
+3.  Exécutez le projet. L’exemple de code exécute l’exemple de package CalculatedColumns installé avec les exemples [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le résultat de l'exécution du package est affiché dans la fenêtre de la console, avec toutes les erreurs qui se sont éventuellement produites.  
   
 ### <a name="sample-code"></a>Exemple de code  
   
@@ -233,10 +231,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Présentation des différences entre l’exécution locale et à distance](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Le chargement et l’exécution d’un Package distant par programme](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
- [Chargement de la sortie d’un Package Local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Chargement et exécution d’un package distant par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+ [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

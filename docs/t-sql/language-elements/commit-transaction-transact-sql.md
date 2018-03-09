@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - COMMIT TRANSACTION
 - COMMIT_TSQL
 - COMMIT_TRANSACTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ending transactions [SQL Server]
 - user-defined transactions [SQL Server]
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b2f6bffa6a19007fc98796daa9ff34bda729bd4d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a716ab7298d1ea678d6a23944849dccdebebd118
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -65,7 +67,7 @@ COMMIT [ TRAN | TRANSACTION ]
  
   
 ## <a name="arguments"></a>Arguments  
- *argument*  
+ *transaction_name*  
  **S’applique à :** SQL Server et la base de données SQL Azure
  
  Ignoré par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *argument* spécifie un nom de transaction attribué par une instruction BEGIN TRANSACTION antérieure. *argument*doit être conforme aux règles des identificateurs, mais ne peut pas dépasser 32 caractères. *argument* peut servir de faciliter la lecture en indiquant aux programmeurs imbriqués BEGIN TRANSACTION, COMMIT TRANSACTION est associée.  
@@ -93,7 +95,7 @@ Nom d'une variable définie par l'utilisateur et contenant un nom de transaction
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] incrémente le nombre de transactions pour une instruction d'une unité seulement lorsque ce nombre est égal à 0 au début de l'instruction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -170,9 +172,9 @@ PRINT N'Transaction count after COMMIT OuterTran = '
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [VALIDER le travail &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [TRAVAIL de restauration &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   

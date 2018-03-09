@@ -3,30 +3,32 @@ title: "CopyRecord, CopyTo et SaveToFile, méthodes-exemple (VB) | Documents Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - CopyRecord method [ADO], Visual Basic example
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cd9135930d2cd4f3cfaf60bb6fcaf7548ba0a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 624484f7783449fa0793ee934217a3ae76dba865
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo et SaveToFile, méthodes-exemple (VB)
 Cet exemple montre comment créer des copies d’un fichier en utilisant [flux](../../../ado/reference/ado-api/stream-object-ado.md) ou [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objets. Une copie est effectuée dans un dossier Web pour la publication Internet. Incluent d’autres propriétés et méthodes indiqués [Type de flux](../../../ado/reference/ado-api/type-property-ado-stream.md), **ouvrir**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), et [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
@@ -137,5 +139,5 @@ End Sub
  [Open (méthode) (flux ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Objet d’enregistrement (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile, méthode](../../../ado/reference/ado-api/savetofile-method.md)   
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

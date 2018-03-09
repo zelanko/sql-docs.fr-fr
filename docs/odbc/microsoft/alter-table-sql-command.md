@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79fbb4e4f6c143d693e1b41cc1660938bc61cde1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - commande SQL
 Par programme modifie la structure d’une table.  
@@ -185,7 +185,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Spécifie que Visual FoxPro autorise les modifications à apporter à la structure de la table ; ces modifications peuvent violer l’intégrité des données dans la table. Par défaut, Visual FoxPro empêche l’apport de modifications qui enfreignent l’intégrité des données dans la table de ALTER TABLE. Inclure NOVALIDATE pour remplacer ce comportement par défaut.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  ALTER TABLE peut être utilisée pour modifier la structure d’une table qui n’a pas été ajoutée à une base de données. Toutefois, Visual FoxPro génère une erreur si vous incluez par défaut, FOREIGN KEY, PRIMARY KEY, les références, ou de clauses SET lors de la modification d’une table indépendante.  
   
  ALTER TABLE peut reconstruire la table par la création d’un nouvel en-tête de table et ajout d’enregistrements à l’en-tête du tableau. Par exemple, la modification d’un champ de type ou de largeur peut entraîner la table à reconstruire.  

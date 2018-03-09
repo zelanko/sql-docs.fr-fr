@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2250158376315b0eb05dc0b95bc7cd78a333aec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -88,7 +88,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
     -   une légende contenant un titre et une liste d'éléments de 1 à 5 ;  
   
-    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
+    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
   
     -   une échelle des distances qui affiche les kilomètres (km) et les miles (mi).  
     
@@ -545,12 +545,12 @@ Si vous l’enregistrez sur un serveur de rapports, vous pouvez le voir ici.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Ceci conclut la procédure pas à pas décrivant comment ajouter une carte à votre rapport.  
   
 Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

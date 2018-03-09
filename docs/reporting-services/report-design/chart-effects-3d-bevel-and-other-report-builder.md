@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10156"
@@ -18,13 +16,13 @@ ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eb1182dfe11c9750d765d626d89fbc4b9d0d9d17
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ecb0a252a500086bf3b802d4c63085472543745c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effets de graphique - 3D, biseau et autres (Générateur de rapports)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l’impact visuel des graphiques de vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="highlighting-3d-effects"></a>Mise en surbrillance des effets 3D  
  Vous pouvez ajouter des styles de mise en surbrillance à un graphique 3D via la propriété **Ombrage** qui apparaît sous Area3DStyle dans le volet Propriétés quand la zone de graphique est sélectionnée. Un style d'éclairage simple applique la même teinte aux éléments de zone de graphique. Un style réaliste modifie les teintes des éléments de zone de graphique selon un angle d'éclairage spécifié.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Ajouter des effets 3D à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  

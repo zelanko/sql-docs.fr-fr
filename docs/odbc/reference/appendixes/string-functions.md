@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>Fonctions de chaîne
 Le tableau suivant répertorie les fonctions de manipulation de chaîne. Une application peut déterminer les fonctions de chaîne sont pris en charge par un pilote en appelant **SQLGetInfo** avec un *type d’information* de SQL_STRING_FUNCTIONS.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Arguments notée *exp_chaîne* peut être le nom d’une colonne, une *littéral de chaîne de caractères*, ou le résultat d’une autre fonction scalaire, où le type de données sous-jacent peut être représenté en tant que SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR.  
   
  Arguments notée *exp_caractère* sont une chaîne de caractères de longueur variable.  
@@ -40,7 +40,7 @@ Le tableau suivant répertorie les fonctions de manipulation de chaîne. Une app
   
  Les fonctions scalaires chaîne BIT_LENGTH, CHAR_LENGTH, CHARACTER_LENGTH, OCTET_LENGTH et POSITION ont été ajoutées dans ODBC 3.0 pour les aligner avec SQL-92.  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |**ASCII (** *exp_chaîne* **)** (ODBC version 1.0)|Retourne la valeur du code ASCII du caractère à l’extrême gauche de *exp_chaîne* en tant qu’entier.|  
 |**BIT_LENGTH (** *exp_chaîne* **)** (ODBC version 3.0)|Retourne la longueur en bits de l'expression de chaîne.<br /><br /> Ne fonctionne pas uniquement pour les types de données string, par conséquent, ne sont pas implicitement convert *exp_chaîne* en chaîne mais retournera la taille (interne) de tout type de données est fourni.|  

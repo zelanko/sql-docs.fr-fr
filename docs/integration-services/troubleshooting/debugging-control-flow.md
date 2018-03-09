@@ -1,10 +1,13 @@
 ---
-title: "Débogage de flux de contrôle | Documents Microsoft"
+title: "Débogage du flux de contrôle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -89,7 +92,7 @@ ms.lasthandoff: 08/03/2017
   
  Le tableau suivant indique les couleurs utilisées pour décrire l'état de l'exécution.  
   
-|Color|État de l'exécution|  
+|Couleur|État de l'exécution|  
 |-----------|----------------------|  
 |Gris|En attente d'exécution|  
 |Jaune|Exécution en cours|  
@@ -103,7 +106,7 @@ ms.lasthandoff: 08/03/2017
   
  Le diagramme qui suit représente l’onglet **Progression** .  
   
- ![Onglet progression du concepteur SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "onglet progression du concepteur SSIS")  
+ ![Onglet Progression du Concepteur SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Onglet Progression du Concepteur SSIS")  
   
 ## <a name="debug-windows"></a>Fenêtres de débogage  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] propose de nombreuses fenêtres que vous pouvez utiliser pour travailler avec les points d’arrêt et déboguer les packages qui contiennent des points d’arrêt. Pour en savoir plus sur chacune des fenêtres, ouvrez-les et appuyez sur F1 pour afficher l'aide.  
@@ -114,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
 |Fenêtre|Description|  
 |------------|-----------------|  
-|Points d'arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
+|Points d’arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
 |Sortie|Affiche les messages d’état relatifs aux fonctionnalités de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immédiat|Utilisée pour déboguer et évaluer des expressions, et imprimer des valeurs variables.|  
 
@@ -133,15 +136,15 @@ ms.lasthandoff: 08/03/2017
   
     -   Pour définir des points d’arrêt dans un flux de contrôle de package, cliquez sur l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
   
-    -   Pour définir des points d’arrêt dans un gestionnaire d’événements, cliquez sur l’onglet **Gestionnaire d’événements**, cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
+    -   Pour définir des points d’arrêt dans un gestionnaire d’événements, cliquez sur l’onglet **Gestionnaire d’événements** , cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
   
-4.  Dans le **définir des points d’arrêt \<nom de conteneur >** boîte de dialogue, sélectionnez les points d’arrêt à activer.  
+4.  Dans la boîte de dialogue **Définir les points d’arrêt de \<nom_conteneur>**, sélectionnez les points d’arrêt à activer.  
   
 5.  Vous pouvez également modifier le type du nombre d'accès et la valeur du nombre d'accès pour chaque point d'arrêt.  
   
 6.  Pour enregistrer le package, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="set-breakpoints"></a>Définir des points d'arrêt
+## <a name="set-breakpoints"></a>Définir des points d’arrêt
   Utilisez la boîte de dialogue **Définir des points d'arrêt** pour spécifier les événements pour lesquels activer des points d'arrêt et pour gérer le contrôle du point d'arrêt.  
   
 ### <a name="options"></a>Options  
@@ -154,7 +157,7 @@ ms.lasthandoff: 08/03/2017
  **Type du nombre d'accès**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Always**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
@@ -164,7 +167,6 @@ ms.lasthandoff: 08/03/2017
  **Nombre d'accès**  
  Spécifiez le nombre d'accès à partir duquel déclencher un arrêt. Cette option n'est pas disponible si le point d'arrêt est constamment en vigueur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
- [Déboguer un script en définissant des points d'arrêt dans une tâche de script et un composant de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-
+ [Déboguer un script en définissant des points d’arrêt dans une tâche de script et un composant de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

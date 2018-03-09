@@ -1,5 +1,5 @@
 ---
-title: LN (Expression SSIS) | Documents Microsoft
+title: LN (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6d34eb7a3087f30709a55912f1c60b97569fb209
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f13cbf798c6063ea9bd0400ebab8491acc502beb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ln-ssis-expression"></a>LN (expression SSIS)
   Renvoie le logarithme népérien d'une expression numérique.  
@@ -45,7 +44,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'expression numérique est convertie vers le type de données DT_R8 avant le calcul du logarithme. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Si l’argument *numeric_expression* donne une valeur inférieure ou égale à zéro, le résultat obtenu est NULL.  
@@ -69,9 +68,8 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [JOURNAL &#40; Expression SSIS &#41;](../../integration-services/expressions/log-ssis-expression.md)   
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [LOG &#40;expression SSIS&#41;](../../integration-services/expressions/log-ssis-expression.md)   
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Les bases de données Oracle CDC | Documents Microsoft"
+title: "Bases de données Oracle CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/03/2017
  Lorsqu'une base de données CDC est créée et des tables Oracle de source CDC sont installées, le propriétaire de la base de données CDC peut accorder l'autorisation SELECT des tables miroir et définir des rôles de régulation SQL Server CDC pour contrôler l'accès aux données modifiées.  
   
 ## <a name="mirror-tables"></a>Tables miroir  
- Pour chaque table capturée, \<nom de schéma >.\< nom de la table >, dans la base de données source Oracle, une table vide similaire est créée dans la base de données de capture de données modifiées, portant le même nom de schéma et une table. Les tables sources Oracle avec le nom de schéma `cdc` (ne respectant pas la casse) ne peuvent pas être capturées, car le schéma `cdc` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est réservé pour SQL Server CDC.  
+ Pour chaque table capturée, \<schema-name>.\<table-name>, dans la base de données source Oracle, une table vide similaire est créée dans la base de données CDC, avec les mêmes noms de schéma et de table. Les tables sources Oracle avec le nom de schéma `cdc` (ne respectant pas la casse) ne peuvent pas être capturées, car le schéma `cdc` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est réservé pour SQL Server CDC.  
   
  Les tables miroir sont vides ; aucune donnée n'est stockée dans ces dernières. Elles servent à activer l'infrastructure standard SQL Server CDC utilisée par l'instance Oracle CDC. Pour empêcher l'insertion ou la mise à jour des données dans les tables miroir, toutes les opérations UPDATE, DELETE et INSERT sont refusées pour le rôle PUBLIC. Cela garantit qu'elles ne peuvent pas être modifiées.  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_Change_Tables_CT"></a> Tables de modifications (_CT)  
  Les tables de modifications sont créées à partir des tables miroir. Elles contiennent les données modifiées qui sont capturées dans la base de données Oracle. Les tables sont nommées en fonction de la convention suivante :  
   
- **[cdc]. [\<instance de capture > _CT]**  
+ **[cdc]. [\<instance_de_capture >_CT]**  
   
  Lorsque la capture est initialement activée pour la table `<schema-name>.<table-name>`, le nom par défaut de l'instance de capture est `<schema-name>_<table-name>`. Par exemple, le nom par défaut de l'instance de capture pour la table Oracle HR.EMPLOYEES est HR_EMPLOYEES et la table de modifications associée est [cdc]. [HR_EMPLOYEES_CT].  
   
@@ -115,27 +114,27 @@ ms.lasthandoff: 08/03/2017
   
  Le tableau suivant décrit les options disponibles.  
   
-|Nom|Par défaut|Min|Max|Statique|Description|  
+|Nom   |Valeur par défaut|Min|Max|Statique|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|Les valeurs disponibles sont :<br /><br /> True<br /><br /> False<br /><br /> actif<br /><br /> inactif|  
-|cdc_update_state_interval|10|1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
-|target_max_batched_transactions|100|1|1000|True|Nombre maximal de transactions Oracle qui peuvent être traitées comme une transaction avec mise à jour de tables SQL Server CT.|  
-|target_idle_lsn_update_interval|10|0|1|False|Intervalle (en secondes) de mise à jour de la table **lsn_time_mapping** quand les tables capturées n’ont aucune activité.|  
-|trace_retention_period|24|1|24*31|False|Durée (en heures pour conserver les messages dans la table de trace).|  
+|cdc_update_state_interval|10| 1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
+|target_max_batched_transactions|100| 1|1000|True|Nombre maximal de transactions Oracle qui peuvent être traitées comme une transaction avec mise à jour de tables SQL Server CT.|  
+|target_idle_lsn_update_interval|10|0| 1|False|Intervalle (en secondes) de mise à jour de la table **lsn_time_mapping** quand les tables capturées n’ont aucune activité.|  
+|trace_retention_period|24| 1|24*31|False|Durée (en heures pour conserver les messages dans la table de trace).|  
 |sql_reconnect_interval|2|2|3600|False|Délai (en secondes) qui doit s'écouler avant la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet intervalle est utilisé en plus du délai d'attente de connexion du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |sql_reconnect_limit|-1|-1|-1|False|Nombre maximal de reconnexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut -1 signifie que le processus tente de se reconnecter jusqu'à ce qu'il s'arrête.|  
 |cdc_restart_limit|6|-1|3600|False|Dans la plupart des cas, le service de capture de données modifiées redémarre automatiquement une instance CDC qui s'est terminée de façon anormale. Cette propriété définit après combien d'échecs par heure le service cesse de redémarrer l'instance. La valeur -1 signifie que l'instance doit toujours être redémarrée.<br /><br /> Le service retourne pour redémarrer l'instance après toute mise à jour de la table de configuration.|  
 |cdc_memory_report|0|0|1000|False|Si la valeur du paramètre a été modifiée, l'instance CDC imprime son rapport mémoire sur la table de trace.|  
-|target_command_timeout|600|1|3600|False|Délai d'attente de commande utilisé avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|target_command_timeout|600| 1|3600|False|Délai d'attente de commande utilisé avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |source_character_set|-|-|-|True|Peut être défini sur un encodage Oracle spécifique pour être utilisé à la place de la page de codes de la base de données Oracle. Cela peut être utile lorsque l'encodage réel que les données caractères utilisent est différent de celui exprimé par la page de codes de la base de données Oracle.|  
-|source_error_retry_interval|30|1|3600|False|Utilisé avant reprise en cas de plusieurs erreurs, telles qu'une erreur de connexion ou un échec temporaire de synchronisation entre les tables système.|  
-|source_prefetch_size|100|1|10000|True|Taille du lot de prérécupération.|  
-|source_max_tables_in_query|100|1|10000|True|Nombre maximal de tables dans la clause WHERE avant le basculement vers la lecture du journal Oracle sans filtrage de table.|  
-|source_read_retry_interval|2|1|3600|False|Durée pendant laquelle la source attend avant d'essayer de lire les journaux des transactions Oracle sur EOF.|  
-|source_reconnect_interval|30|1|3600|False|Durée d'attente (en secondes) avant une nouvelle tentative de connexion à la base de données source.|  
+|source_error_retry_interval|30| 1|3600|False|Utilisé avant reprise en cas de plusieurs erreurs, telles qu'une erreur de connexion ou un échec temporaire de synchronisation entre les tables système.|  
+|source_prefetch_size|100| 1|10000|True|Taille du lot de prérécupération.|  
+|source_max_tables_in_query|100| 1|10000|True|Nombre maximal de tables dans la clause WHERE avant le basculement vers la lecture du journal Oracle sans filtrage de table.|  
+|source_read_retry_interval|2| 1|3600|False|Durée pendant laquelle la source attend avant d'essayer de lire les journaux des transactions Oracle sur EOF.|  
+|source_reconnect_interval|30| 1|3600|False|Durée d'attente (en secondes) avant une nouvelle tentative de connexion à la base de données source.|  
 |source_reconnect_limit|-1|-1||False|Nombre maximal de reconnexions à la base de données source. La valeur par défaut -1 signifie que le processus tente de se reconnecter jusqu’à ce qu’il soit arrêté.|  
-|source_command_timeout|30|1|3600|False|Délai de connexion utilisé avec Oracle.|  
-|source_connection_timeout|30|1|3600|False|Délai de connexion utilisé avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|source_command_timeout|30| 1|3600|False|Délai de connexion utilisé avec Oracle.|  
+|source_connection_timeout|30| 1|3600|False|Délai de connexion utilisé avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |trace_data_errors|True|-|-|False|Propriété booléenne. **True** indique l’enregistrement des erreurs de conversion de données et de troncation.|  
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Propriété booléenne. **True** indique l’arrêt quand une modification avec rupture du schéma est détectée.<br /><br /> **False** indique la suppression de la table miroir et de l’instance de capture.|  
 |source_oracle_home||-|-|False|Peut être défini sur un chemin racine Oracle spécifique ou un nom de dossier racine Oracle que l'instance de capture de données modifiées utilisera pour se connecter à Oracle.|  
@@ -152,7 +151,7 @@ ms.lasthandoff: 08/03/2017
 |active|Valeur booléenne qui peut être :<br /><br /> **0**: le processus d’instance Oracle CDC n’est pas actif.<br /><br /> **1**: le processus d’instance Oracle CDC est actif.|  
 |erreur|Valeur booléenne qui peut être :<br /><br /> **0**: le processus d’instance Oracle CDC n’est pas dans un état d’erreur.<br /><br /> **1**: l’instance Oracle CDC est dans un état d’erreur.|  
 |status_message|Chaîne qui fournit une description de l'erreur ou de l'état.|  
-|timestamp|Horodateur avec l'heure (UTC) à laquelle l'état de capture a été mis à jour pour la dernière fois.|  
+|TIMESTAMP|Horodateur avec l'heure (UTC) à laquelle l'état de capture a été mis à jour pour la dernière fois.|  
 |active_capture_node|Nom de l'hôte (l'hôte peut être un nœud dans un cluster) qui exécute actuellement le service de capture de données modifiées Oracle et l'instance Oracle CDC (qui traite les journaux des transactions Oracle).|  
 |last_transaction_timestamp|Horodateur avec l'heure (UTC) à laquelle la dernière transaction a été écrite dans les tables de modifications.|  
 |last_change_timestamp|Horodateur avec l'heure (UTC) à laquelle l'enregistrement de modification le plus récent a été lu dans le journal des transactions Oracle source. Cet horodateur aide à identifier la latence actuelle du processus de capture de données modifiées.|  
@@ -172,7 +171,7 @@ ms.lasthandoff: 08/03/2017
   
 |Élément|Description|  
 |----------|-----------------|  
-|timestamp|Horodateur UTC exact de l'enregistrement de trace.|  
+|TIMESTAMP|Horodateur UTC exact de l'enregistrement de trace.|  
 |type|Contient l'une des valeurs suivantes :<br /><br /> erreur<br /><br /> INFO<br /><br /> trace|  
 |node|Nom du nœud sur lequel l'enregistrement a été écrit.|  
 |status|Code d'état utilisé par la table d'état.|  
@@ -193,8 +192,7 @@ ms.lasthandoff: 08/03/2017
 |data_end_cn|Numéro de modification (CN) pour la dernière modification des données de cette ligne.|  
 |données|Modifications intermédiaires pour la transaction sous forme d'un objet BLOB.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   
-

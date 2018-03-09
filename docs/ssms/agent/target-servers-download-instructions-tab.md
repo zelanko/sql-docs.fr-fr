@@ -3,8 +3,11 @@ title: "Serveurs cibles (onglet Instructions de téléchargement) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0970096232b11b1a63fa3a5bee8a9fae846c9d5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efcff48660ec1ac7e29954e85ebd01408956b7cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="target-servers-download-instructions-tab"></a>Serveurs cibles (onglet Instructions de téléchargement)
-Utilisez cette page pour afficher et mettre à jour les instructions de téléchargement pour un ou plusieurs serveurs cibles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher et mettre à jour les instructions de téléchargement pour un ou plusieurs serveurs cibles.  
   
 ## <a name="options"></a>Options  
 **Serveur cible**  
@@ -49,12 +52,12 @@ Affiche la date et l'heure locales auxquelles le serveur cible a téléchargé l
 **État du téléchargement des instructions**  
 Affiche le dernier état de l'instruction de téléchargement sélectionnée.  
   
-**Delete**  
+**Supprimer**  
 Supprime l'instruction de téléchargement sélectionnée.  
   
 **Désactiver**  
 Désactive l'état de l'instruction de téléchargement sélectionnée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

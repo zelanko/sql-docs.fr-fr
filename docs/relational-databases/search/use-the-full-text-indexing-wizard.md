@@ -2,10 +2,14 @@
 title: "Utiliser l’Assistant Indexation de texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
-  L’Assistant Indexation de texte intégral de SSMS vous guide tout au long d’une série d’étapes destinées à vous aider à créer un index de texte intégral.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+L’Assistant Indexation de texte intégral de SSMS vous guide tout au long d’une série d’étapes destinées à vous aider à créer un index de texte intégral.  
   
 ## <a name="create-a--full-text-index"></a>Créer un index de recherche en texte intégral 
 
@@ -81,15 +86,15 @@ ms.lasthandoff: 11/09/2017
 
      **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
   
-  ou
+  - ou -
   
  10. **Créer un nouveau catalogue**
  - Sélectionnez un catalogue de recherche en texte intégral.  
   
-    a. **Nom**  
+    A. **Nom**  
      Entrez le nom de votre nouveau catalogue de texte intégral.  
   
-     b. **Définir en tant que catalogue par défaut**  
+     B. **Définir en tant que catalogue par défaut**  
      Sélectionnez cette option afin que le catalogue devienne la valeur par défaut pour cette base de données.  
   
      c. **Respect des accents**  

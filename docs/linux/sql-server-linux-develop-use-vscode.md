@@ -1,31 +1,31 @@
----
+﻿---
 title: "Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft"
 description: "Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: 41bfb66db6f16d9e7ca8829568798a2aa57316da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez Visual Studio Code pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cette rubrique montre comment utiliser l'extension **mssql** pour Visual Studio Code (VS Code) pour développer des bases de données SQL Server.
+Cet article explique comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
 
 Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [L'extension **mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer une requête avec Transact-SQL (T-SQL) et d'afficher les résultats.
 
@@ -80,7 +80,7 @@ L'extension **mssql** active les commandes mssql et l'IntelliSense T-SQL dans l'
 
 Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual Studio Code.
 
-1. Dans le Visual Studio Code, appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes.
+1. Dans VS Code, appuyez sur **Ctrl+Maj+P** (ou **F1**) pour ouvrir la palette de commandes.
 
 2. Ecrivez **sql** pour afficher les commandes mssql.
 
@@ -91,7 +91,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 4. Sélectionnez **créer le profil de connexion**. Cette opération crée un profil de connexion pour votre instance de SQL Server.
 
-5. Suivez les invites pour spécifier les propriétés de connexion du nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **entrée** pour continuer.
+5. Suivez les invites afin de spécifier les propriétés de connexion pour le nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **Entrée** pour continuer. 
 
    Le tableau suivant décrit les propriétés de profil de connexion.
 
@@ -107,7 +107,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
    > [!Tip] 
    > Vous pouvez créer et modifier des profils de connexion dans le fichier de paramètres utilisateur (settings.json). Ouvrez le fichier de paramètres en sélectionnant **préférences** , puis **paramètres utilisateur** dans le menu Visual Studio Code. Pour plus d’informations, consultez [gérer les profils de connexion].
 
-6. Appuyez sur la touche **ÉCHAP** pour fermer le message d’information qui vous informe que le profil est créé et connecté.
+6. Appuyez sur la touche **Échap** pour fermer le message d’information qui vous signale que le profil a été créé et connecté.
 
    > [!TIP]
    > Si vous obtenez un échec de connexion, essayez d'abord de diagnostiquer le problème à partir du message d'erreur dans le panneau Output du VS Code (sélectionnez **Sortie** dans le menu **Vue**). Passez ensuite en revue les [recommandations de dépannage des connexions].

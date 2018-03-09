@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 84f078c722c0c8902e70a1064be0107ac0287ac0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>Guide de référence des instructions MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|Contient des informations sur les instructions de script MDX qui gèrent le contexte de la requête, l'étendue et le contrôle de flux au sein des scripts MDX.|  
 |[Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contient des informations sur les instructions de définition de données MDX qui créent, suppriment et manipulent des objets multidimensionnels.|  

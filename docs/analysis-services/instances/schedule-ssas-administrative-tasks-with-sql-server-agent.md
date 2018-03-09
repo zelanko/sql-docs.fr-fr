@@ -2,32 +2,30 @@
 title: "Planifier des tâches administratives SSAS avec SQL Server Agent | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
-  Le service SQL Server Agent vous permet de planifier des tâches administratives [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à exécuter dans l’ordre et au moment que vous précisez. Les tâches planifiées vous aident à automatiser les processus qui s’exécutent selon des cycles réguliers ou prévisibles. Vous pouvez planifier l'exécution de tâches administratives, telles que le traitement de cubes, durant les périodes de faible activité. Vous pouvez également déterminer l'ordre dans lequel les tâches s'exécutent en créant des étapes de travail au sein d'un travail de l'Agent SQL Server. Par exemple, vous pouvez traiter un cube, puis effectuer une sauvegarde de ce cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Le service SQL Server Agent vous permet de planifier des tâches administratives [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à exécuter dans l’ordre et au moment que vous précisez. Les tâches planifiées vous aident à automatiser les processus qui s’exécutent selon des cycles réguliers ou prévisibles. Vous pouvez planifier l'exécution de tâches administratives, telles que le traitement de cubes, durant les périodes de faible activité. Vous pouvez également déterminer l'ordre dans lequel les tâches s'exécutent en créant des étapes de travail au sein d'un travail de l'Agent SQL Server. Par exemple, vous pouvez traiter un cube, puis effectuer une sauvegarde de ce cube.  
   
  Les étapes de travail vous permettent de contrôler le flux d'exécution. Si un travail échoue, vous pouvez configurer l'Agent SQL Server de sorte qu'il continue d'exécuter les tâches restantes ou qu'il arrête l'exécution. Vous pouvez également configurer SQL Server Agent de sorte qu'il envoie des notifications concernant le succès ou l'échec de l'exécution d'un travail.  
   
@@ -36,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="prerequisites"></a>Conditions préalables  
  Le service Agent SQL Server doit être installé.  
   
- Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le compte par défaut de SQL Server Agent est NT Service\SQLAgent$\<nom_instance >. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Par défaut, les travaux s'exécutent sous le compte de service. Le compte par défaut de SQL Server Agent est NT Service\SQLAgent$\<nom_instance >. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   

@@ -2,9 +2,12 @@
 title: SQL Server, objet Batch Resp Statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,21 +16,21 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e7dd5d90f7e7b59e6d685f1e2dd4e4c1cdb319e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95ca0cdfcfe13e5176e205b6168a6e5117b35c09
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, objet Batch Resp Statistics
-L’objet de performance **SQLServer:Batch Resp Statistics** fournit des compteurs pour suivre les temps de réponse de lot SQL Server.
+# <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Objet Batch Resp Statistics
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet de performance **SQLServer:Batch Resp Statistics** fournit des compteurs pour suivre les temps de réponse des lots SQL Server.
 
 Le tableau suivant décrit les objets de performance **Batch Resp Statistics** SQL Server.
 
 
-|**Compteurs Batch Resp Statistics SQL Server**| Description|  
+|**Compteurs Batch Resp Statistics SQL Server**|Description|  
 |-------------|-----------------|  
 |**Lots >=000000ms & \<000001ms**|Nombre de lots SQL dont le temps de réponse est supérieur ou égal à 0 ms mais inférieur à 1 ms|
 |**Lots >=000001ms & \<000002ms**|Nombre de lots SQL dont le temps de réponse est supérieur ou égal à 1 ms mais inférieur à 2 ms|
@@ -56,6 +59,6 @@ Chaque compteur de l'objet contient les instances suivantes :
 |**Temps écoulé:Demandes**|Le temps écoulé de la demande.|  
 |**Temps écoulé:Total(ms)**|Le temps écoulé du lot.|  
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Analyser l'utilisation des ressources (Moniteur système)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

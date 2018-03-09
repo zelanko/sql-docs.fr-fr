@@ -1,11 +1,11 @@
 ---
-title: "Étape 1 : Copie du Package de la leçon 4 | Documents Microsoft"
+title: "Étape 1 : Copie du package de la leçon 4 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54328f5769560ca6710ed7df6ebe8de9509b8316
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9977afd1f47c9ea6b6747bac0ddc81348942ce65
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Leçon 5-1-copier le Package leçon 4
+# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Leçon 5-1 : Copie du package de la leçon 4
 Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez créé à la leçon 4. Vous pouvez également ajouter au projet le package final de la leçon 4 inclus avec le didacticiel, puis le copier. Vous allez utiliser cette nouvelle copie tout au long de la leçon 5.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>Pour copier le package de la leçon 4  
@@ -73,4 +72,3 @@ Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez 
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 2 : activation et configuration des configurations de package](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
-

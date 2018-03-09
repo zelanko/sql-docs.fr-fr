@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Type de connexion Hyperion Essbase (SSRS)
   Pour inclure les données d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Ce type de source de données intégré est basé sur l’extension de données pour [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], ce qui vous permet de récupérer les données multidimensionnelles d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -68,7 +66,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 ##  <a name="Parameters"></a> Pour inclure les paramètres de requête, créez un filtre dans la zone de filtre du concepteur de requêtes et marquez le filtre en tant que paramètre. Pour chaque filtre, un dataset est créé automatiquement afin de fournir les valeurs disponibles. Par défaut, ces datasets n'apparaissent pas dans le volet Données du rapport. Pour plus d’informations, consultez [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
- Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Extended"></a> Propriétés de champ étendues  
@@ -91,10 +89,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objet**|Précise la valeur de données du champ.<br /><br /> Pour une propriété de dimension, celle-ci est mappée à MEMBER_CAPTION. Pour une mesure, elle est mappée à la valeur de données.|  
 |**IsMissing**|**Booléen**|Indique si le champ figure dans le dataset obtenu.|  
-|**FormattedValue**|**Chaîne**|Retourne la valeur mise en forme d'un élément clé.<br /><br /> Mappé à partir de FORMATTED_VALUE dans l'expression MDX.|  
-|**BackgroundColor**|**Chaîne**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.<br /><br /> Mappé à partir de BACK_COLOR dans l'expression MDX.|  
-|**Color**|**Chaîne**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.<br /><br /> Mappé à partir de FORE_COLOR dans l'expression MDX.|  
-|**UniqueName**|**Chaîne**|Retourne le nom complet d'un niveau.<br /><br /> Mappé à partir de MEMBER_UNIQUE_NAME dans l'expression MDX.|  
+|**FormattedValue**|**String**|Retourne la valeur mise en forme d'un élément clé.<br /><br /> Mappé à partir de FORMATTED_VALUE dans l'expression MDX.|  
+|**BackgroundColor**|**String**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.<br /><br /> Mappé à partir de BACK_COLOR dans l'expression MDX.|  
+|**Color**|**String**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.<br /><br /> Mappé à partir de FORE_COLOR dans l'expression MDX.|  
+|**UniqueName**|**String**|Retourne le nom complet d'un niveau.<br /><br /> Mappé à partir de MEMBER_UNIQUE_NAME dans l'expression MDX.|  
   
  Pour plus d’informations sur l’utilisation de champs et de propriétés de champ dans une expression, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -110,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Propriété**|**Type**|**Description ou valeur attendue**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**Chaîne**|Défini sur une mesure, **FormattedValue** qui est disponible en tant que type chaîne.|  
+|**FORMAT_STRING**|**String**|Défini sur une mesure, **FormattedValue** qui est disponible en tant que type chaîne.|  
   
   
 ##  <a name="Remarks"></a> Notes  
@@ -151,7 +149,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Fournit des informations détaillées sur l'utilisation de cette extension de données.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

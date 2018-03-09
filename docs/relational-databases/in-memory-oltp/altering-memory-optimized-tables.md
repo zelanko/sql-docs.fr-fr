@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c51763f25d86402e2728c3639a1958cbfec13ac6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89709d63c40233091fe01688e655ff5b53145711
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ L’opération monothread dans ce cas consigne dans le journal des transactions 
 ## <a name="examples"></a>Exemples  
  L’exemple ci-après modifie le nombre de compartiments d’un index de hachage existant. Cette opération régénère l’index de hachage avec le nouveau nombre de compartiments, tandis que les autres propriétés de l’index de hachage restent identiques.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem   
        ALTER INDEX imPK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID  
               REBUILD WITH (BUCKET_COUNT=67108864);  
@@ -117,7 +118,7 @@ GO
   
  L’exemple ci-après ajoute une colonne avec une contrainte NOT NULL et une définition DEFAULT, et utilise WITH VALUES afin de spécifier des valeurs pour chaque ligne existante de la table. Si l'option WITH VALUES n'est pas utilisée, chaque ligne a la valeur NULL dans la nouvelle colonne.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD Comment NVARCHAR(100) NOT NULL DEFAULT N'' WITH VALUES;  
 GO
@@ -125,7 +126,7 @@ GO
   
  L’exemple ci-après ajoute une contrainte de clé primaire à une colonne existante.  
   
-```tsql
+```sql
 CREATE TABLE dbo.UserSession (   
    SessionId int not null,   
    UserId int not null,   
@@ -143,7 +144,7 @@ GO
   
  L’exemple suivant supprime un index.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        DROP INDEX ix_ModifiedDate;  
 GO
@@ -151,7 +152,7 @@ GO
   
  L’exemple suivant ajoute un index.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD INDEX ix_ModifiedDate (ModifiedDate);  
 GO  
@@ -159,7 +160,7 @@ GO
   
  L’exemple suivant ajoute plusieurs colonnes, avec un index et des contraintes.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD    CustomerID int NOT NULL DEFAULT -1 WITH VALUES,  
               ShipMethodID int NOT NULL DEFAULT -1 WITH VALUES,  
@@ -171,7 +172,7 @@ GO
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 
 [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

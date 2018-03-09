@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,17 +20,17 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6a2b3f080997ecfe554c713757d94764c582785
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 05b06d0069440691f32f89e89536fa53ad9400b8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="reporting-services-extensions"></a>Extensions Reporting Services
+# <a name="reporting-services-extensions"></a>Extensions Reporting Services
   L'architecture modulaire de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est conçue à des fins d'extensibilité. Une API de code managé est disponible afin de vous permettre de développer, installer et gérer facilement des extensions consommées par de nombreux composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez créer des assemblys privés ou partagés à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis ajouter de nouvelles fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour répondre aux besoins en constante évolution de votre entreprise.  
   
  L'architecture d'extensibilité unique de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permet aux développeurs d'étendre des fonctionnalités spécifiques du produit et de ses composants. Il existe actuellement une prise en charge générale pour étendre les fonctions de traitement de données de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'API de traitement de données comprend des constructions et des conventions du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] couramment utilisées, qui permettent aux développeurs d'ajouter des fonctions de traitement de données supplémentaires à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ces extensions pour le traitement des données ajoutent des fonctionnalités au serveur de rapports et au Concepteur de rapports, ce qui se traduit par une intégration transparente des données personnalisées aux rapports.  

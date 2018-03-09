@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_exec_requests (Transact-SQL) | Documents Microsoft
+title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c342ad591c790e4c0d8167ab78f73436e81610b0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 49511281ee8ce420186ad72b112a319dff8a55ce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwexecrequests-transact-sql"></a>Sys.dm_pdw_exec_requests (Transact-SQL)
+# <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur toutes les demandes actives actuellement ou récemment dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il répertorie une ligne par/requête de la demande.  
@@ -43,11 +45,11 @@ ms.lasthandoff: 11/17/2017
 |error_id|**nvarchar(36)**|Id unique de l’erreur associée à la demande, le cas échéant.|Consultez [sys.dm_pdw_errors &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); la valeur NULL si aucune erreur ne s’est produite.|  
 |database_id|**int**|Identificateur de la base de données utilisée par le contexte explicite (par exemple, utilisez DB_X).|Consultez le code dans [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |commande|**nvarchar(4000)**|Contient le texte intégral de la demande et soumis par l’utilisateur.|Tout texte de requête ou de demande valid. Requêtes de plus de 4 000 octets sont tronqués.|  
-|resource_class|**nvarchar (20)**|La classe de ressource pour cette demande. Voir liée **concurrency_slots_used** dans [sys.dm_pdw_resource_waits &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|resource_class|**nvarchar(20)**|La classe de ressource pour cette demande. Voir liée **concurrency_slots_used** dans [sys.dm_pdw_resource_waits &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez « Minimum et Maximum valeurs » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="security"></a>Sécurité  

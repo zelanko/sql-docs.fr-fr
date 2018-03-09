@@ -2,10 +2,14 @@
 title: "Afficher les fonctions définies par l’utilisateur | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-udf
+ms.suite: sql
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], viewing
 - status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2efd88ad0a4b88d24a929b0e79e0e53333b2c1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ee41a96246e6808d214b4d421401bd2dff6c6718
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="view-user-defined-functions"></a>Afficher les fonctions définies par l'utilisateur
-  Vous pouvez obtenir des informations sur la définition ou les propriétés d'une fonction définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la fonction pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la fonction.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Vous pouvez obtenir des informations sur la définition ou les propriétés d'une fonction définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la fonction pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la fonction.  
   
 > [!IMPORTANT]  
 >  Si vous modifiez le nom d'un objet auquel une fonction fait référence, vous devez modifier la fonction pour que son texte reflète le nouveau nom de l'objet. Par conséquent, avant de renommer un objet, affichez les dépendances de l'objet pour savoir si des fonctions peuvent être concernées par la modification projetée.  
@@ -50,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  L’utilisation de **sys.sql_expression_dependencies** pour rechercher toutes les dépendances sur une fonction nécessite l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Les définitions d'objets système, telles que celles retournées dans OBJECT_DEFINITION, sont visibles publiquement.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -73,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
      Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction –** *nom_fonction* .  
   
-     **Base de données**  
+     **Sauvegarde de la base de données**  
      Nom de la base de données contenant cette fonction.  
   
      **Server**  
@@ -116,7 +121,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Pour obtenir la définition et les propriétés d'une fonction  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -157,7 +162,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>Pour obtenir les dépendances d'une fonction  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 479cf6630c2ea2b208c30a4a582e30c55b7c9616
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eaee62d06fd3ab67d10b64cb44282377ace28914
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des pointeurs sur une jauge (Générateur de rapports et SSRS)
  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , le pointeur de jauge indique la valeur actuelle de la jauge.   
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
  Si l'image du pointeur a une forme irrégulière, vous devez définir la couleur comme transparente afin de masquer les zones de votre image qui ne doivent pas apparaître sur la jauge. Lorsque vous définissez une couleur transparente, la jauge transpose l'image sur votre pointeur existant et rogne l'image afin que seule la forme du pointeur apparaisse. La jauge recadre l'image en fonction de la taille de votre pointeur. Lorsque vous spécifiez une image comme pointeur, tout pointeur ajouté ultérieurement sur la jauge est dessiné sous l'image. C'est pourquoi il est préférable de ne pas spécifier d'image pour le pointeur s'il y a plusieurs pointeurs sur la jauge. Pour plus d’informations, consultez [Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

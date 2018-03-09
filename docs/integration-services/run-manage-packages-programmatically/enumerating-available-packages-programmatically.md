@@ -1,5 +1,5 @@
 ---
-title: "Énumération des Packages disponibles par programme | Documents Microsoft"
+title: "Énumération des packages disponibles par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,22 +18,21 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e2498be2192787418c87d5fd8f7983c4d2fa216e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Énumération des packages disponibles par programme
-  <a name="top"></a>Lorsque vous travaillez par programme avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, vous souhaiterez peut-être que pour déterminer si un package ou dossier spécifique existe, ou pour énumérer les packages enregistrés qui sont disponibles pour charger et exécuter. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
+  <a name="top"></a> Quand vous travaillez par programmation avec des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez avoir besoin de déterminer si un package ou un dossier individuel existe, ou d’énumérer les packages enregistrés qui peuvent être chargés et exécutés. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
     
-##  <a name="exists"></a>Déterminer si un Package ou un dossier existe    
+##  <a name="exists"></a> Détermination de l’existence d’un package ou dossier    
  Pour déterminer par programme si un package enregistré existe, appelez l'une des méthodes suivantes avant de tenter de le charger et l'exécuter :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -51,7 +49,7 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-##  <a name="listing"></a>Énumération des Packages disponibles    
+##  <a name="listing"></a> Énumération des packages disponibles    
  Pour obtenir par programme une liste des packages enregistrés, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -61,7 +59,7 @@ ms.lasthandoff: 09/26/2017
     
  Les exemples suivants sont des applications console qui illustrent l'utilisation de ces méthodes.    
     
-###  <a name="listing_store"></a>Exemple (magasin de packages SSIS)    
+###  <a name="listing_store"></a> Exemple (magasin de packages SSIS)    
  Utilisez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> pour répertorier les packages stockés dans le magasin de packages SSIS. File System et MSDB sont les emplacements de stockage par défaut gérés par le magasin de packages SSIS. Vous pouvez créer des dossiers logiques supplémentaires dans ces emplacements.    
     
 ```vb    
@@ -167,7 +165,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Retour au début](#top)    
     
-###  <a name="listing_sql"></a>Exemple (SQL Server)    
+###  <a name="listing_sql"></a> Exemple (SQL Server)    
  Utilisez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> pour répertorier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stockés dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    
@@ -248,8 +246,7 @@ namespace EnumeratePackagesSql_CS
     
  [Retour au début](#top)    
    
-## <a name="see-also"></a>Voir aussi    
+## <a name="see-also"></a> Voir aussi    
  [Gestion de packages &#40;Service SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
-

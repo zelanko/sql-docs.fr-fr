@@ -3,25 +3,29 @@ title: "Spécifier un facteur de remplissage pour un index | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - fill factor [SQL Server]
 - page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3145ece1536701b112f5ffddc55c12a6f0d5369c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 4f22e84a17cb2401dec70f4855c5afd3cff1c319
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Spécifier un facteur de remplissage pour un index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +67,7 @@ ms.lasthandoff: 12/01/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -84,7 +88,7 @@ ms.lasthandoff: 12/01/2017
   
 7.  Cliquez sur **Fermer**.  
   
-8.  Dans le menu **Fichier** , sélectionnez **Enregistrer***nom_table*.  
+8.  Dans le menu **Fichier**, sélectionnez **Enregistrer***nom_table*.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Pour spécifier un facteur de remplissage dans un index à l'aide de l'Explorateur d'objets  
   
@@ -108,7 +112,7 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Pour spécifier un taux de remplissage dans un index existant  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -127,7 +131,7 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Autre méthode permettant de spécifier un facteur de remplissage dans un index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

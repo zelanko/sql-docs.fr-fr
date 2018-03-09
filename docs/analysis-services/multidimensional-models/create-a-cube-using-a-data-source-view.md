@@ -2,32 +2,30 @@
 title: "Créer un Cube à l’aide d’une vue de Source de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
-  Utilisez cette méthode de génération d'un nouveau cube si vous envisagez d'utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilisez cette méthode de génération d'un nouveau cube si vous envisagez d'utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  
   
  Pour créer un cube avec une source de données, dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Cubes** et sélectionnez **Nouveau cube**. L'Assistant Cube s'ouvre.  
   

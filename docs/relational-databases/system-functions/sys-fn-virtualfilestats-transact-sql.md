@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualfilestats (Transact-SQL) | Documents Microsoft
+title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/16/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
 - fn_virtualfilestats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - I/O [SQL Server], statistics
 - fn_virtualfilestats function
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19ef497fad4032f1e0bdb0b40c2f2a850ad40cdf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_id* | VALEUR NULL  
+ *database_id* | NULL  
  Est l’ID de la base de données. *database_id* est **int**, sans valeur par défaut. Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *FILE_ID* | VALEUR NULL  
+ *file_id* | NULL  
  Identificateur du fichier. *FILE_ID* est **int**, sans valeur par défaut. Spécifiez NULL pour retourner les informations de tous les fichiers de la base de données.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -59,7 +61,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID de la base de données.|  
 |**FileId**|**smallint**|ID de fichier.|  
-|**Horodateur**|**bigint**|Horodateur de prélèvement des données de base de données **int** dans les versions antérieures [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**TimeStamp**|**bigint**|Horodateur de prélèvement des données de base de données **int** dans les versions antérieures [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |**NumberReads**|**bigint**|Nombre de lectures effectuées sur le fichier.|  
 |**BytesRead**|**bigint**|Nombre d'octets lus sur le fichier|  
 |**IoStallReadMS**|**bigint**|Durée totale (en millisecondes) d'exécution des E/S de lecture sur le fichier|  
@@ -73,7 +75,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="remarks"></a>Notes  
  **fn_virtualfilestats** est un système de fonction table qui fournit des informations statistiques, telles que le nombre total d’e/s effectuée dans un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -81,7 +83,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. Affichage des informations statistiques d'une base de données  
  L'exemple suivant affiche les informations statistiques de l'ID de fichier 1 de la base de données dont l'ID est `1`.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +92,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Affichage des informations statistiques d'une base de données et d'un fichier nommés  
  L'exemple suivant affiche les informations statistiques du fichier journal de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La fonction système `DB_ID` est utilisé pour spécifier le *database_id* paramètre.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,15 +101,15 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. Affichage des informations statistiques de la totalité des bases de données et des fichiers  
  L'exemple suivant affiche les informations statistiques de tous les fichiers de toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

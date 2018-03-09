@@ -2,38 +2,43 @@
 title: Rechercher et remplacer | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords: Find and Replace dialog box
+helpviewer_keywords:
+- Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
-  Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et éventuellement le remplacer. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et éventuellement le remplacer. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  
   
  Vous pouvez également ouvrir la boîte de dialogue **Rechercher et remplacer** à l’aide de boutons de la barre d’outils et de touches de raccourci.  
   
 ## <a name="find-what"></a>Rechercher  
  Ces contrôles vous permettent de spécifier la chaîne de caractères ou l'expression à rechercher.  
   
- **Find what**  
+ **Rechercher**  
  Tapez le texte à rechercher. La boîte de dialogue tente de fournir le texte recherché, à l'aide du texte sélectionné avec le curseur avant l'ouverture de la boîte de dialogue, d'un texte proche ou d'un texte qui a fait l'objet d'une recherche antérieure. Vous pouvez réutiliser une des 20 dernières chaînes de recherche en la sélectionnant dans cette liste déroulante.  
   
  **[chaînes contenant des caractères génériques]**  
@@ -126,7 +131,7 @@ ms.lasthandoff: 11/09/2017
  **Remplacer dans les fichiers**  
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Remplacer dans les fichiers** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

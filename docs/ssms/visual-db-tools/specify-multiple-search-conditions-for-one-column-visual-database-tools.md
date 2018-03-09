@@ -3,8 +3,11 @@ title: "Spécifier plusieurs conditions de recherche pour une colonne (Visual Da
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a98f6dac943e9383be789a82e9e6e1e656f03a2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cd90bbb2b7a07ae4cf2c8224a8b299cec7774593
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Spécifier plusieurs conditions de recherche pour une colonne (Visual Database Tools)
-Dans certains cas, vous pouvez souhaiter appliquer plusieurs conditions de recherche à une même colonne de données. Vous pouvez, par exemple, souhaiter effectuer les opérations suivantes :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans certains cas, vous pouvez souhaiter appliquer plusieurs conditions de recherche à une même colonne de données. Vous pouvez, par exemple, souhaiter effectuer les opérations suivantes :  
   
 -   Rechercher plusieurs noms différents dans une table `employee` ou des employés compris dans différentes fourchettes salariales. Ce type de recherche nécessite une condition OR.  
   
@@ -85,7 +88,7 @@ WHERE (title LIKE '%Cook%') AND
   (title LIKE '%Recipe%')  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Conventions pour la combinaison de conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

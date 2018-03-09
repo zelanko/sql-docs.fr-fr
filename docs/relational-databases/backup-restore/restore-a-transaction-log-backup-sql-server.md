@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 076c1c9a78441473fccd0435980ecfc4e735803c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8c2e5f024b878cb0f110bb1f5220702bc87ee65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -106,10 +106,10 @@ ms.lasthandoff: 11/17/2017
   
     |En-tête|Valeur|  
     |------------|-----------|  
-    |**Restaurer**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
+    |**Restore**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegardes.|  
     |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou \<vide> (pour les journaux des transactions).|  
-    |**Base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
+    |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Date de début**|Date et heure de début de la sauvegarde, d'après les paramètres régionaux du client.|  
     |**Date de fin**|Date et heure de fin de la sauvegarde, d'après les paramètres régionaux du client.|  
     |**Premier NSE**|Numéro séquentiel dans le journal correspondant à la première transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.|  
@@ -245,14 +245,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Par défaut, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilise le mode de récupération simple. Les exemples suivants nécessitent la modification de la base de données pour utiliser le mode de restauration complète, comme suit :  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. Application d'une sauvegarde unique du journal des transactions  
  Dans cet exemple, nous commençons par restaurer la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l'aide d'une sauvegarde complète de base de données qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_1`. Nous appliquons ensuite la première sauvegarde du journal des transactions qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_log`. Enfin, nous récupérons la base de données.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -270,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. Application de plusieurs sauvegardes du journal des transactions  
  Dans cet exemple, nous commençons par restaurer la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l'aide d'une sauvegarde complète de base de données qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_1`. Nous appliquons ensuite, successivement, les premières sauvegardes du journal des transactions qui résident sur une unité de sauvegarde nommée `AdventureWorks2012_log`. Enfin, nous récupérons la base de données.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -307,7 +307,7 @@ GO
   
 -   [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   

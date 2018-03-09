@@ -3,8 +3,11 @@ title: "Exécuter des travaux | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7771bf3c44f4f4c583ce3f2277cc547ea69b6bf7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 711efe65cf519b1552612b489077173d9956bf42
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-jobs"></a>Exécuter des travaux
-Pour gérer des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], des procédures stockées [!INCLUDE[tsql](../../includes/tsql_md.md)] ou des Objets de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour gérer des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], des procédures stockées [!INCLUDE[tsql](../../includes/tsql_md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -37,6 +40,6 @@ Pour gérer des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnover
 |Explique comment arrêter un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Stop a Job](../../ssms/agent/stop-a-job.md)|  
 |Explique comment désactiver ou activer un travail [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Activer ou désactiver un travail](../../ssms/agent/disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sysdownloadlist](http://msdn.microsoft.com/en-us/71087a4c-e829-488e-aa7d-a9476e2b4779)  
   

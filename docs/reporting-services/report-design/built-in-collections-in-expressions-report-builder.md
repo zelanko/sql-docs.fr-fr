@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b92f8a42033da33b867393b67b26efaaaf9899af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2b77e6760178fd0c1073a9a6cd9ef9e7b0d1034
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Collections intégrées dans les expressions (Générateur de rapports)
   Dans une expression d'un rapport, vous avez la possibilité d'inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables, ainsi que des champs prédéfinis pour les informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Collections"></a> Fonctionnement des collections intégrées  
  Le tableau suivant répertorie les collections intégrées disponibles lorsque vous écrivez une expression. Chaque ligne inclut le nom de programmation, sensible à la casse, de la collection, indique si vous pouvez utiliser la boîte de dialogue Expression pour ajouter une référence à la collection de manière interactive, propose un exemple et précise quand les valeurs de la collection sont initialisées et peuvent être utilisées.  
   
-|Collection intégrée|Catégorie dans la boîte de dialogue Expression|Exemple|Description|  
+|Collection intégrée|Catégorie dans la boîte de dialogue Expression| Exemple|Description|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globals**|Champs prédéfinis|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Représente les variables globales utilisables pour des rapports, par exemple le nom du rapport ou le numéro de page. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Utilisateur**|Champs prédéfinis|`=User.UserID`<br /><br /> - ou -<br /><br /> `=User.Language`|Représente une collection de données sur l'utilisateur exécutant le rapport, par exemple le paramètre de langue ou l'ID utilisateur. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Syntax"></a> Utilisation de la syntaxe de collection dans une expression  
  Pour faire référence à une collection à partir d’une expression, utilisez la syntaxe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] standard pour un élément au sein d’une collection. Le tableau ci-après propose des exemples de syntaxe de collection.  
   
-|Syntaxe|Exemple|  
+|Syntaxe| Exemple|  
 |------------|-------------|  
 |*Collection!NomObjet.Propriété*|`=Fields!Sales.Value`|  
 |*Collection!NomObjet("Propriété")*|`=Fields!Sales("Value")`|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 |*Collection("Membre")*|`=User("Language")`|  
 |*Collection.Membre*|`=User.Language`|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

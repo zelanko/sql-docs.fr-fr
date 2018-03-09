@@ -5,28 +5,29 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af2dc85c24e3cf610c09e796cc91d75c65f32e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bde6984b4f3d2be8660e4b8b80c956dacca5ea98
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Modifier et supprimer une relation de synchronisation d’entités (Master Data Services)
   La synchronisation d’entités est une synchronisation unidirectionnelle et reproductible entre des versions d'entités. Elle fournit un moyen de partager des données d’entités entre différents modèles. Vous pouvez modifier et supprimer une relation de synchronisation que vous avez créée.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Conditions préalables à la modification d’une relation de synchronisation d’entités.  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Les membres supprimés de façon réversible ne seront pas copiés.  
   
--   La synchronisation ne génère pas de transactions/historiques de l’entité cible.  
+-   La synchronisation ne génère pas de transactions/historiques de l'entité cible.  
   
  **Pour modifier une relation de synchronisation d’entités**  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer et exécuter une relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [Relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

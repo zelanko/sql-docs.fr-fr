@@ -3,8 +3,11 @@ title: "Représentation des jointures dans le Concepteur de requêtes et de vues
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2231538d858cf69c6275c00458ebfa97561bd303
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9392dee21a72846a2659c68d9804369127fe8235
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools)
-Dans le cas de tables jointes, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) représente la jointure graphiquement dans le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et il utilise la syntaxe SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans le cas de tables jointes, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) représente la jointure graphiquement dans le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et il utilise la syntaxe SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="diagram-pane"></a>volet Schéma  
+## <a name="diagram-pane"></a>Volet Schéma  
 Dans le volet Schéma, le Concepteur de requêtes et de vues affiche une ligne de jointure entre les colonnes de données impliquées. Il affiche une ligne de jointure par condition de jointure. Par exemple, l'illustration suivante montre une ligne de jointure entre deux tables jointes :  
   
 ![La ligne de jointure illustre la relation entre deux tables](../../ssms/visual-db-tools/media/dv3wbig.gif "La ligne de jointure illustre la relation entre deux tables")  
@@ -83,7 +86,7 @@ Pour spécifier une jointure de tables, vous disposez de plusieurs options de sy
     WHERE publishers.pub_id = pub_info.pub_id  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Boîte de dialogue Joindre &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   

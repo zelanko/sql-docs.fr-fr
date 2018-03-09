@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 27cbba801cfa54e30dc69534f6835b3c2d381dfc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b68330e1d9297462462888e1138e57649d03efa7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes graphique
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Pour plus d’informations sur l’utilisation de types de sources de données spécifiques, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 |Schéma|Affiche des représentations graphiques des tables de la requête. Ce volet permet de sélectionner des champs et de définir des relations entre les tables.|  
 |Grille|Affiche une liste des champs retournés par la requête. Ce volet permet de définir des alias, un ordre de tri, des filtres, des groupes et des paramètres.|  
 |SQL|Affiche la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] représentée par les volets Schéma et Grille. Ce volet permet d’écrire ou de mettre à jour une requête à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
+|Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
  Lorsque vous modifiez des informations dans un des trois premiers volets, ces modifications sont reflétées dans les autres volets. Par exemple, si vous ajoutez une table au volet Schéma, cette table est automatiquement ajoutée à la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le volet SQL. L'ajout d'un champ à la requête dans le volet SQL entraîne l'insertion du champ dans la liste du volet Grille et la mise à jour de la table dans le volet Diagramme.  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
 |![Utiliser Regrouper par pour le champ sélectionné](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Utiliser Regrouper par pour le champ sélectionné")|Affiche ou masque la colonne **Regrouper par** dans le volet Grille. Quand le bouton bascule **Regrouper par** est activé, une colonne supplémentaire intitulée **Regrouper par** s’affiche dans le volet Grille et chaque valeur pour les colonnes sélectionnées dans la requête prend par défaut la valeur **Regrouper par**, ce qui a pour effet d’inclure la colonne sélectionnée dans une clause GROUP BY dans le texte SQL. Utilisez le bouton Regrouper par pour ajouter automatiquement une clause GROUP BY qui inclut toutes les colonnes dans la clause SELECT. Si votre clause SELECT inclut des appels de fonction d'agrégation (par exemple, SUM(ColumnName)), vous devez inclure chaque colonne de non agrégation dans la clause GROUP BY si vous souhaitez qu'elle s'affiche dans le jeu de résultats.<br /><br /> Pour qu'elle s'affiche dans le volet Résultat, chaque colonne de la requête doit avoir une fonction d'agrégation définie pour être utilisée dans le calcul de la valeur à afficher dans le volet Résultat, ou alors la colonne de la requête doit être spécifiée dans la clause GROUP BY de la requête SQL.|  
 |![Ajouter une table au volet Diagramme](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Ajouter une table au volet Diagramme")|Ajoute une nouvelle table à partir de la source de données dans le volet Diagramme.<br /><br /> **Remarque** Quand vous ajoutez une nouvelle table, le concepteur de requêtes tente de faire correspondre des relations de clé étrangère depuis la source de données. Après avoir ajouté la table, confirmez que les relations de clé étrangère représentées par des liaisons entre les tables sont correctes.|  
   
-#### <a name="example"></a>Exemple  
+#### <a name="example"></a> Exemple  
  La requête suivante retourne la liste des noms depuis la table [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Person **de la base de données** :  
   
 ```  
@@ -116,7 +114,7 @@ EXEC uspGetEmployeeManagers '1';
 |Volet|Fonction|  
 |----------|--------------|  
 |Liste déroulante Table|Répertorie toutes les tables disponibles dans la source de données. Sélectionnez-en une dans la liste pour l'activer.|  
-|Résultat|Affiche toutes les colonnes de la table sélectionnée. Pour exécuter la requête de table, cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
+|Résultats|Affiche toutes les colonnes de la table sélectionnée. Pour exécuter la requête de table, cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>Boutons de la barre d'outils pour le type de commande TableDirect  
  Le concepteur de requêtes graphique fournit une liste déroulante de tables dans la source de données. Le tableau suivant répertorie chaque bouton et décrit sa fonction.  
@@ -134,7 +132,7 @@ EXEC uspGetEmployeeManagers '1';
 |Volet|Fonction|  
 |----------|--------------|  
 |Liste déroulante Procédure stockée|Répertorie toutes les procédures stockées disponibles dans la source de données. Sélectionnez-en une dans la liste pour l'activer.|  
-|Résultat|Affiche les résultats de l'exécution de la procédure stockée. Pour exécuter la procédure stockée sélectionnée, cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
+|Résultats|Affiche les résultats de l'exécution de la procédure stockée. Pour exécuter la procédure stockée sélectionnée, cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>Boutons de la barre d'outils pour le type de commande StoredProcedure  
  La barre d'outils du concepteur de requêtes graphique fournit une liste déroulante de procédures stockées dans la source de données. Le tableau suivant répertorie chaque bouton et décrit sa fonction.  
@@ -146,12 +144,12 @@ EXEC uspGetEmployeeManagers '1';
 |![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la procédure stockée sélectionnée.|  
 |Liste déroulante Procédure stockée|Cliquez sur la flèche vers le bas pour afficher une liste des procédures stockées disponibles dans la source de données. Cliquez sur une procédure stockée de la liste pour la sélectionner.|  
   
-#### <a name="example"></a>Exemple  
+#### <a name="example"></a> Exemple  
  La procédure stockée suivante appelle une liste de ligne hiérarchique de responsables à partir de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cette procédure stockée accepte *BusinessEntityID* en tant que paramètre. Vous pouvez spécifier un entier plus petit.  
   
  `uspGetEmployeeManagers '1';`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Type de connexion SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   

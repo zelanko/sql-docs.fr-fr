@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10444"
@@ -18,13 +16,13 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 638baa68c3d0d00e57c88782eaafdcde223d3108
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd313455388e0447f3ddf0acba5203110086090c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
  [Définir les paramètres régionaux d’un rapport ou d’une zone de texte &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Explique comment modifier le paramètre pour les formats d'affichage de données qui diffèrent par langue et zone, telle que la date, la devise et les valeurs du nombre.  
   
-## <a name="see-also"></a>Voir aussi  
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Mise en forme d’un graphique (Générateur de rapports et SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

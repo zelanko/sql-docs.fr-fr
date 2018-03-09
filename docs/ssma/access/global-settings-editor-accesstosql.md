@@ -1,10 +1,13 @@
 ---
 title: "Paramètres globaux (éditeur) (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 690c8378ca53ac96e143647125d779c46054feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4d592f48fa0694ca640e9c3caffb1b268c501ae3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-accesstosql"></a>Paramètres globaux (éditeur) (AccessToSQL)
 Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour spécifier les paramètres pour les fenêtres de l’éditeur de code.  

@@ -8,24 +8,26 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dadb7fe14a03bfd94350ea280cca94494e3c163b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>Assemblys - mise en œuvre
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique fournit des informations sur les domaines suivants pour vous aider à implémenter et utiliser des assemblys dans la base de données :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique fournit des informations sur les concepts suivants, afin de vous aider à implémenter et à utiliser les assemblys dans vos bases de données :  
   
 -   Création d'assemblys  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  Seuls les membres de la **db_owner** et **db_ddlowner** rôle de base de données fixe peut exécuter ALTER ASSEMBLY à l’aide de la clause WITH UNCHECKED DATA.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publie un message dans le journal des événements des applications Windows indiquant que l'assembly a été modifié avec les données non vérifiées des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque ensuite les tables contenant les données dépendant de l'assembly comme comportant des données non vérifiées. Le **has_unchecked_assembly_data** colonne de la **sys.tables** affichage catalogue contient la valeur 1 pour les tables qui contiennent des données non vérifiées et 0 pour les tables sans les données non vérifiées.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publie un message dans le journal des événements Windows que l’assembly a été modifié avec des données non vérifiées dans les tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque ensuite les tables contenant les données dépendant de l'assembly comme comportant des données non vérifiées. Le **has_unchecked_assembly_data** colonne de la **sys.tables** affichage catalogue contient la valeur 1 pour les tables qui contiennent des données non vérifiées et 0 pour les tables sans les données non vérifiées.  
   
  Pour résoudre l’intégrité des données est désactivées, exécutez DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS sur chaque table qui comporte des données est désactivées. Si DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS échoue, vous devez supprimer les lignes de table qui ne sont pas valides ou modifier le code de l’assembly à résoudre les problèmes et ensuite, émettez les instructions ALTER ASSEMBLY supplémentaires.  
   

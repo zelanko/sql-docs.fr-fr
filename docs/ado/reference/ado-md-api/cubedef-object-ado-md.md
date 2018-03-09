@@ -3,8 +3,9 @@ title: CubeDef, objet (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CubeDef
-helpviewer_keywords: CubeDef object [ADO MD]
+f1_keywords:
+- CubeDef
+helpviewer_keywords:
+- CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea97010f67e571ddf9ddfb1dcc1cf36e38769710
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
 Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.  
@@ -45,7 +48,7 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
 |Nom| Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
-|Créé à|Date et heure de création du cube.|  
+|CreatedOn|Date et heure de création du cube.|  
 |CubeGUID|GUID du cube.|  
 |CubeName|Nom du cube.|  
 |CubeType|Type du cube.|  

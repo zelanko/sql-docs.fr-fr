@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - RESTORE_LABELONLY_TSQL
 - LABELONLY_TSQL
 - RESTORE LABELONLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 972a51eca37afca09042608b3bfcc767ec6ece27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTAURER les instructions - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +85,7 @@ FROM <backup_device>
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**MediaName**|**nvarchar (128)**|Nom du support de sauvegarde.|  
+|**MediaName**|**nvarchar(128)**|Nom du support de sauvegarde.|  
 |**MediaSetId**|**uniqueidentifier**|Numéro d'identification unique du jeu de supports.|  
 |**FamilyCount**|**int**|Nombre de familles de supports dans le support de sauvegarde.|  
 |**FamilySequenceNumber**|**int**|Numéro de séquence de la famille.|  
@@ -91,7 +93,7 @@ FROM <backup_device>
 |**MediaSequenceNumber**|**int**|Numéro de séquence de ce support dans la famille de supports.|  
 |**MediaLabelPresent**|**tinyint**|Indique si la description du support contient :<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] format de bande<br /><br /> **0** = description du support|  
 |**MediaDescription**|**nvarchar(255)**|Description du support, au format libre, ou étiqueté au format de bande.|  
-|**SoftwareName**|**nvarchar (128)**|Nom du logiciel de sauvegarde qui a permis l'écriture de l'étiquette du support de sauvegarde.|  
+|**SoftwareName**|**nvarchar(128)**|Nom du logiciel de sauvegarde qui a permis l'écriture de l'étiquette du support de sauvegarde.|  
 |**SoftwareVendorId**|**int**|Numéro d'identification du fournisseur du logiciel qui a permis l'écriture de la sauvegarde.|  
 |**MediaDate**|**datetime**|Date et heure de que l’étiquette.|  
 |**Mirror_Count**|**int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : Les étiquettes créées pour différents miroirs d’un jeu sont identiques.|  
@@ -109,7 +111,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  La protection assurée par ce mot de passe est plutôt faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La meilleure pratique pour la protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sécurisé ou à sauvegarder les fichiers de disque qui sont protégés par des listes de contrôle d’accès adéquates (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, l'obtention d'informations relatives à un jeu de sauvegarde ou une unité de sauvegarde requiert l'autorisation CREATE DATABASE. Pour plus d’informations, consultez [GRANT – octroi d’autorisations de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  

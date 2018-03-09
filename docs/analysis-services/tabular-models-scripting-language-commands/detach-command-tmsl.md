@@ -2,15 +2,13 @@
 title: Detach, commande (TMSL) | Documents Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 413b49cb-ea8f-415c-a059-ce692b7771a1
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a379c50635dce40c90efebbeaae662ee778b964c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7930a6c70b7bf9ac1b4802b9014fba9ebf27bca8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="detach-command-tmsl"></a>Detach, commande (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Détache une base de données Analysis Services à partir d’un serveur.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Détache une base de données Analysis Services à partir d’un serveur.  
   
 ## <a name="request"></a>Demande  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |**Propriété**|**Default**|**Description**|  
-|database|[Obligatoire]|Le nom de l’objet de base de données à détacher.|  
+|base de données|[Obligatoire]|Le nom de l’objet de base de données à détacher.|  
 |password|Vide|Le mot de passe à utiliser pour chiffrer les clés secrètes dans la base de données détachée.|  
   
 ## <a name="response"></a>Réponse  

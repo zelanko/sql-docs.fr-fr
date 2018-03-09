@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30af309db029d4d969fe39eb87e15503b590dfae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfe0115ca0e641ca0b6397cd624d093f7d94acff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +56,7 @@ sysmail_help_profileaccount_sp
  [  **@profile_name**  =] **'***profile_name***'**  
  Nom du profil à répertorier. *profile_name* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID du compte à répertorier. *account_id* est **int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
   
  [  **@account_name**  =] **'***account_name***'**  
@@ -72,14 +75,14 @@ sysmail_help_profileaccount_sp
 |**profile_name**|**sysname**|Nom du profil|  
 |**account_id**|**int**|ID du compte.|  
 |**account_name**|**sysname**|Nom du compte|  
-|**numéros de séquence**|**int**|Numéro de séquence du compte dans le profil.|  
+|**sequence_number**|**int**|Numéro de séquence du compte dans le profil.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsqu’aucun *profile_id* ou *profile_name* est spécifié, cette procédure stockée retourne des informations pour tous les profils dans l’instance.  
   
  La procédure stockée **sysmail_help_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

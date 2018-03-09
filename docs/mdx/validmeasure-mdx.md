@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: VALIDMEASURE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9309b0b62994e6d3199a7aa565d9edd2e88c5f73
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 343ebe6da0613d273dc16bd1b76826910179db2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un tuple.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **ValidMeasure** fonction renvoie la valeur d’un tuple, en ignorant les attributs qui n’ont aucune relation avec le groupe de mesures de la mesure dont la valeur du tuple. Un attribut peut être sans relation avec une mesure pour deux raisons :  
   
 -   La dimension de l'attribut n'a aucune relation avec le groupe de mesures de la mesure dans le tuple.  
@@ -59,7 +59,7 @@ ValidMeasure(Tuple_Expression)
   
 -   Les attributs non associés sont déplacés vers le membre All (en fonction de la mesure).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  La requête suivante montre comment la fonction ValidMeasure peut être utilisée pour remplacer le comportement de la propriété IgnoreUnrelatedDimensions. Dans le cube Adventure Works, le jeu IgnoreUnrelatedDimensions du groupe de mesures Cibles de ventes est défini sur False ; puisque la dimension Date est jointe à ce groupe de mesures à la granularité Trimestre calendrier, cela signifie que la mesure Sales Quota, par défaut, retourne null sous Trimestre calendrier (bien qu'il y ait également un calcul dans le Script MDX qui alloue aussi des valeurs au niveau Mois). L'utilisation de la fonction ValidMeasure dans une mesure calculée peut permettre de faire en sorte que la mesure Sales Quota se comporte comme si IgnoreUnrelatedDimensions avait été défini sur True et de forcer Sales Quota à afficher la valeur du Trimestre calendrier actuel.  
   
 ```  

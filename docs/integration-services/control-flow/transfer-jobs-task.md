@@ -1,5 +1,5 @@
 ---
-title: "Tâches de transfert | Documents Microsoft"
+title: "Transfert de travaux, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8b14cdb7e26c103104e0e98725f00905f75630af
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
   La tâche de transfert de travaux transfère un ou plusieurs travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/11/2017
  Pour transférer des travaux, l'utilisateur doit être un membre du rôle serveur fixe sysadmin ou de l'un des rôles de base de données fixes de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur la base de données msdb à la fois sur les instances source et destination de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="configuration-of-the-transfer-jobs-task"></a>Configuration de la tâche de transfert de travaux  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -78,10 +77,10 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask>  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-jobs-task-editor-general-page"></a>Éditeur de tâche de transfert de travaux (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour donner un nom et une description à la tâche de transfert de travaux.  
@@ -107,15 +106,15 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Options  
  **SourceConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur  **\<nouvelle connexion... >** pour créer une nouvelle connexion au serveur source.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur source.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur  **\<nouvelle connexion... >** pour créer une nouvelle connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur de destination.  
   
  **TransferAllJobs**  
  Déterminez si la tâche doit copier du serveur source au serveur de destination tous les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou seulement ceux spécifiés.  
   
- Cette propriété dispose des options répertoriées dans le tableau suivant :  
+ Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -151,9 +150,8 @@ ms.lasthandoff: 08/11/2017
 |**True**|Active les travaux sur le serveur de destination.|  
 |**False**|Désactive les travaux sur le serveur de destination.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   
-

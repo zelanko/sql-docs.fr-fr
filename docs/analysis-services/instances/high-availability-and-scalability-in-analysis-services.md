@@ -2,36 +2,37 @@
 title: "Haute disponibilité et extensibilité dans Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Haute disponibilité et extensibilité dans Analysis Services
-  Cet article décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cet article décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
   
  L’inverse n’est cependant pas toujours vrai. La haute disponibilité, sans mise à l’échelle, peut être le seul objectif lorsque des contrats SLA stricts sont établis pour des charges de travail de requête critiques mais modérées.  
   
  Les techniques permettant de rendre Analysis Services hautement disponible et évolutif sont sensiblement les mêmes pour tous les modes de serveur (multidimensionnel, tabulaire et mode intégré SharePoint). Sauf indication contraire, partez du principe que les informations présentes dans cet article s’appliquent à tous les modes.  
   
 ## <a name="key-points"></a>Points clés  
- Les techniques associées à la disponibilité et la mise à l’échelle étant différentes de celles du moteur de base de données relationnelle, un bref résumé des points clés permet de présenter clairement les techniques utilisées avec Analysis Services :  
+ Les techniques associées à la disponibilité et la mise à l’échelle étant différentes de celles du moteur de base de données relationnelle, un bref résumé des points clés permet de présenter clairement les techniques utilisées avec Analysis Services :  
   
 -   Analysis Services utilise les mécanismes de haute disponibilité et d’extensibilité intégrés dans la plateforme serveur Windows : équilibrage de la charge réseau (NLB), clustering de basculement Windows Server (WSFC), ou les deux.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  Bien que les instructions données dans l’article [Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (Montée en charge des requêtes pour Analysis Services à l’aide de bases de données en lecture seule) datent de 2008, elles sont toujours valables. Les systèmes d’exploitation et le matériel des serveurs ont évolué, et les références à certaines plateformes et limites de processeur sont obsolètes, mais la technique de base d’utilisation des bases de données en lecture seule et en lecture-écriture pour de grands volumes de requêtes est inchangée.  
   
- L’approche peut être résumée comme suit :  
+ L’approche peut être résumée comme suit :  
   
 -   Utilisez un matériel et des instances d’Analysis Services dédiés pour traiter la base de données. Définissez la base de données sur lecture seule une fois le traitement terminé. Pour obtenir des instructions, consultez [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) .  
   

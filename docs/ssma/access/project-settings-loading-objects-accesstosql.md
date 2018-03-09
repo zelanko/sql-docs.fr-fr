@@ -1,10 +1,13 @@
 ---
 title: "Paramètres (chargement d’objets) du projet (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8330ed3cc913042b7cf9f6e6b92a8318f78a3765
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Paramètres (chargement d’objets) du projet (AccessToSQL)
 Les paramètres du projet du chargement des objets vous permettent de configurer le mode de synchronisation des objets de base de données Access avec des objets de base de données SQL Server.  

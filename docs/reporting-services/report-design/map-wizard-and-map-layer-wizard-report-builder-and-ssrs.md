@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d810c44d790b73cb9bd8050370487e25ea6870eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
  Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
@@ -138,7 +136,7 @@ ms.lasthandoff: 12/05/2017
  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ajoutez le fichier .shp et le fichier .dbf au projet de rapport, puis spécifiez le nom du fichier .shp comme source de données spatiales.  
   
 ###  <a name="GetShapefiles"></a> Où puis-je obtenir des fichiers de forme ESRI ?  
- Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Find ESRI Shapefiles for a SQL Server 2008 R2 Reporting Services Map (SSRS)](http://go.microsoft.com/fwlink/?linkid=178814)(Rechercher des fichiers de forme ESRI pour une carte SQL Server 2008 R2 Reporting Services).  
+ Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](http://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> Qu'est-ce qu'une requête spatiale SQL Server ?  
  Une requête spatiale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une requête de dataset qui spécifie des données de type SQLGeometry ou SQLGeography d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -257,7 +255,7 @@ ms.lasthandoff: 12/05/2017
   
  Le processeur de rapports applique les règles que vous définissez et détermine automatiquement la liste d'éléments à afficher dans une légende. Par défaut, les résultats de toutes les règles pour toutes les couches sont affichés dans la première légende. Vous pouvez modifier ce paramètre après avoir terminé l'Assistant. Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

@@ -2,9 +2,12 @@
 title: "Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,21 +26,21 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39ab370ba08f99d15e43ad88429e1cb72946562b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7422aabdffd7985332c669964f0eb518a210ec07
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vous donne la possibilité de récupérer une base de données en dépit des erreurs détectées. Un nouveau et important mécanisme de détection d'erreur est la création facultative d'une somme de contrôle de sauvegarde qui peut être créée par une opération de sauvegarde et validée par une opération de restauration. Vous pouvez déterminer si une opération recherche la présence d'erreurs et si elle s'arrête ou si elle continue en présence d'une erreur. Si une sauvegarde contient une somme de contrôle de sauvegarde, les instructions RESTORE et RESTORE VERIFYONLY peuvent rechercher la présence d'erreurs.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vous donne la possibilité de récupérer une base de données en dépit des erreurs détectées. Un nouveau et important mécanisme de détection d'erreur est la création facultative d'une somme de contrôle de sauvegarde qui peut être créée par une opération de sauvegarde et validée par une opération de restauration. Vous pouvez déterminer si une opération recherche la présence d'erreurs et si elle s'arrête ou si elle continue en présence d'une erreur. Si une sauvegarde contient une somme de contrôle de sauvegarde, les instructions RESTORE et RESTORE VERIFYONLY peuvent rechercher la présence d'erreurs.  
   
 > [!NOTE]  
->  Les sauvegardes en miroir offrent jusqu'à quatre copies (miroirs) d'un support de sauvegarde, auxquelles vous pouvez recourir pour effectuer une récupération à partir d'erreurs causées par un support endommagé. Pour plus d’informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+>  Les sauvegardes en miroir offrent jusqu'à quatre copies (miroirs) d'un support de sauvegarde, auxquelles vous pouvez recourir pour effectuer une récupération à partir d'erreurs causées par un support endommagé. Pour plus d'informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
   
 ##  <a name="BckChecksums"></a> Sommes de contrôle de sauvegarde  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
  L'instruction BACKUP ne modifie jamais la page source sur le disque, ni le contenu d'une page.  
   
- Lorsque les sommes de contrôle de sauvegarde sont activées, une opération de sauvegarde effectue les étapes suivantes :  
+ Lorsque les sommes de contrôle de sauvegarde sont activées, une opération de sauvegarde effectue les étapes suivantes :  
   
 1.  Avant d'écrire une page sur le support de sauvegarde, l'opération de sauvegarde vérifie les informations de niveau page : somme de contrôle de page ou détection de page endommagée, si elles existent. En l'absence d'informations, la sauvegarde ne peut pas vérifier la page. Non vérifiées, les pages sont incluses en l'état, et leur contenu est ajouté à la somme de contrôle de sauvegarde globale.  
   
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Spécifier si une opération de sauvegarde ou de restauration continue ou s’arrête après la survenue d’une erreur &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

@@ -3,8 +3,11 @@ title: "Nom introuvable, boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0739f7cecd65a4cfec914c0531af070535582829
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 912601c36425e6d351d99621db029f086d8856b5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="name-not-found-dialog-box"></a>Nom introuvable, boîte de dialogue
-Le ou les noms d'objets répertoriés dans la boîte de dialogue sont introuvables. Sélectionnez une option pour continuer.  
+# <a name="name-not-found-dialog-box"></a>Nom introuvable (boîte de dialogue)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le ou les noms d’objets répertoriés dans la boîte de dialogue sont introuvables. Sélectionnez une option pour continuer.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
 **Corriger ces informations et effectuer une nouvelle recherche**  

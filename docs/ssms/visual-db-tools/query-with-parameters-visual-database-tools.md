@@ -3,8 +3,11 @@ title: "Requête avec des paramètres (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3deb83bf9fdaafd3598080e5889999b2630aaf22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e0db1311d470614c5ab30b960bbfe05d1bf86e5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Requête avec des paramètres (Visual Database Tools)
-Il est parfois intéressant de créer une requête qu'il est possible de réutiliser à de nombreuses reprises dans vos applications avec chaque fois des entrées différentes. Cette section présente des informations sur la création de requêtes avec paramètres à des fins générales.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il est parfois intéressant de créer une requête qu’il est possible de réutiliser à de nombreuses reprises dans vos applications avec chaque fois des entrées différentes. Cette section présente des informations sur la création de requêtes avec paramètres à des fins générales.  
   
 ## <a name="in-this-section"></a>Dans cette section  
 [Requêtes avec paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  

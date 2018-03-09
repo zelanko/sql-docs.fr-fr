@@ -2,9 +2,12 @@
 title: Configurer la distribution | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d918c562b15d6b6ed75f3f87d5b43fcdac7a81aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dfc635f07a64fdb9c4055e402407b7a70bf3329d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distribution"></a>Configurer la distribution
-  Le serveur de distribution contient la base de données de distribution, laquelle stocke les métadonnées, les données d'historique pour tous les types de réplication et les transactions pour la réplication transactionnelle. Pour définir la réplication, vous devez configurer un serveur de distribution. Chaque serveur de publication ne peut être affecté qu'à une seule instance de serveur de distribution mais plusieurs serveurs de publication peuvent partager un serveur de distribution. Le serveur de distribution utilise les ressources supplémentaires suivantes sur le serveur sur lequel il se trouve :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le serveur de distribution contient la base de données de distribution, laquelle stocke les métadonnées, les données d’historique pour tous les types de réplication et les transactions pour la réplication transactionnelle. Pour définir la réplication, vous devez configurer un serveur de distribution. Chaque serveur de publication ne peut être affecté qu'à une seule instance de serveur de distribution mais plusieurs serveurs de publication peuvent partager un serveur de distribution. Le serveur de distribution utilise les ressources supplémentaires suivantes sur le serveur sur lequel il se trouve :  
   
 -   Espace disque supplémentaire si les fichiers d'instantanés de la publication sont stockés sur le serveur de distribution, ce qui est généralement le cas  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour modifier les propriétés d'un serveur de distribution ou d'un serveur de publication, consultez [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Sécuriser le serveur de distribution](../../relational-databases/replication/security/secure-the-distributor.md)  
   

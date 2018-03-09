@@ -2,26 +2,29 @@
 title: "Modifier une fonction de partition | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-function"></a>Modifier une fonction de partition
-  Vous pouvez modifier le partitionnement d'une table ou d'un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en ajoutant ou supprimant le nombre de partitions spécifié (par incréments de 1) dans la fonction de partition de la table ou de l'index à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque vous ajoutez une partition, vous fractionnez une partition existante en deux partitions dont vous redéfinissez les limites. Lorsque vous supprimez une partition, vous fusionnez les limites de deux partitions pour n'en définir qu'une. Cette action a pour effet de remplir à nouveau une partition et de laisser l'autre non affectée.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Vous pouvez modifier le partitionnement d’une table ou d’un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en ajoutant ou supprimant le nombre de partitions spécifié (par incréments de 1) dans la fonction de partition de la table ou de l’index à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque vous ajoutez une partition, vous fractionnez une partition existante en deux partitions dont vous redéfinissez les limites. Lorsque vous supprimez une partition, vous fusionnez les limites de deux partitions pour n'en définir qu'une. Cette action a pour effet de remplir à nouveau une partition et de laisser l'autre non affectée.  
   
 > [!CAUTION]  
 >  Une même fonction de partition peut être utilisée par plusieurs tables ou index. Lorsque vous modifiez une fonction de partition, vous affectez toutes les fonctions dans une transaction unique. Vérifiez les dépendances de la fonction de partition avant de la modifier.  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisations suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Pour fractionner une partition unique en deux partitions  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>Pour fusionner deux partitions dans une partition  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

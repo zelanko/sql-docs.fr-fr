@@ -1,5 +1,5 @@
 ---
-title: PATINDEX (Transact-SQL) | Documents Microsoft
+title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PATINDEX
 - PATINDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - first occurrence of pattern [SQL Server]
 - searches [SQL Server], pattern starting position
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd0df5a4dba946748dc39c245fcd54d50f1e97e5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +49,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *modèle*  
+ *pattern*  
  Expression de caractères qui contient la séquence à rechercher. Caractères génériques peuvent être utilisés ; Toutefois, le caractère % doit précéder et suivre *modèle* (sauf lorsque vous recherchez des premiers ou derniers caractères). *modèle* est une expression de la catégorie de type données de chaîne de caractères. *modèle* est limité à 8 000 caractères.  
   
  *expression*  
@@ -62,7 +64,7 @@ PATINDEX ( '%pattern%' , expression )
  PATINDEX exécute ses comparaisons en se basant sur le classement de l'entrée. Pour exécuter une comparaison selon un classement spécifié, vous pouvez utiliser COLLATE pour appliquer à l'entrée un classement explicite.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
- Lors de l’utilisation de classements SC, la valeur de retour compte toutes les paires de substitution UTF-16 les *expression* paramètre comme un caractère unique. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Lors de l’utilisation de classements SC, la valeur de retour compte toutes les paires de substitution UTF-16 les *expression* paramètre comme un caractère unique. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  0 x 0000 (**char(0)**) est un caractère indéfini dans les classements Windows et ne peut pas être inclus dans PATINDEX.  
   
@@ -147,11 +149,13 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>Voir aussi  
+ [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40; Caractère générique - caractères &#40; s &#41; Correspondance &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#40; Caractère générique - caractères &#40; s &#41; Pas de correspondance &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40; Caractère générique - représente un caractère &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
  [Caractère de pourcentage &#40; Caractère générique - caractères &#40; s &#41; Correspondance &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   

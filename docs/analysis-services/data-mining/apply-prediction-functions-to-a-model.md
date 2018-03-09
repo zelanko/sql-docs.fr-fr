@@ -2,15 +2,13 @@
 title: "Appliquer des fonctions de prédiction à un modèle | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
-  Pour créer une requête de prédiction dans l’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez préalablement sélectionner le modèle d’exploration de données sur lequel la requête est basée. Vous pouvez sélectionner n'importe quel modèle d'exploration de données existant du projet actuel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Pour créer une requête de prédiction dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exploration de données, vous devez d’abord sélectionner le modèle d’exploration de données sur laquelle la requête doit être basée. Vous pouvez sélectionner n'importe quel modèle d'exploration de données existant du projet actuel.  
   
  Après avoir sélectionné un modèle, ajoutez une *fonction de prédiction* à la requête. Une fonction de prédiction peut être utilisée pour obtenir une prédiction, mais vous pouvez également ajouter des fonctions de prédiction qui retournent des statistiques connexes, comme la probabilité de la valeur prédite, ou des informations qui ont été utilisées pour générer la prédiction.  
   
@@ -127,7 +125,7 @@ ms.lasthandoff: 11/17/2017
   
     |Bike Buyer|$Cluster|Support|CEILING|  
     |----------------|--------------|-------------|-------------|  
-    |0|Cluster 8|954|953.948638926372|  
+    |0|Cluster 8|954|953.948638926372|  
   
  Si vous voulez ajouter d'autres clauses ailleurs dans l'instruction (par exemple, si vous voulez ajouter une clause WHERE), vous ne pouvez pas l'ajouter à l'aide de la grille ; vous devez d'abord basculer vers la vue DMX.  
   

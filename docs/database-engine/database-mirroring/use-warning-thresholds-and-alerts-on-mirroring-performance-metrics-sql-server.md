@@ -2,9 +2,12 @@
 title: "Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e808e50a091e9442068271275cf08b812d5a83b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
-  Cette rubrique contient des informations sur les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lesquels des seuils d'avertissement peuvent être configurés et gérés pour la mise en miroir de bases de données. Vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**et **sp_dbmmonitordropalert** . Cette rubrique contient également des informations sur la configuration d'alertes sur des événements de mise en miroir de bases de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique contient des informations sur les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lesquels des seuils d’avertissement peuvent être configurés et gérés pour la mise en miroir de bases de données. Vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**et **sp_dbmmonitordropalert** . Cette rubrique contient également des informations sur la configuration d'alertes sur des événements de mise en miroir de bases de données.  
   
  Une fois l'analyse établie pour une base de données en miroir, un administrateur système peut configurer des seuils d'avertissements sur plusieurs métriques de performances clés. Il est également possible de configurer des alertes sur ces événements de mise en miroir de bases de données et sur d'autres événements.  
   
@@ -142,7 +145,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

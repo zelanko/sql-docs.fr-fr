@@ -2,35 +2,40 @@
 title: "Récupérer et interroger des données XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb30ffa685c5e45a3ead69169300e45aad71e42d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fb75d37756c398d52db27a6fce7dd1d79feec44e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="retrieve-and-query-xml-data"></a>Récupérer et interroger des données XML
-  Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
   
 ##  <a name="features"></a> Fonctionnalités d'une instance XML qui ne sont pas conservées  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le contenu de l’instance XML, mais ne conserve pas les aspects de l’instance XML qui ne sont pas considérés significatifs dans le modèle de données XML. Cela signifie qu'une instance XML extraite peut ne pas être identique à l'instance stockée sur le serveur, mais contiendra les mêmes informations.  
   
 ### <a name="xml-declaration"></a>Déclaration XML  
- La déclaration XML d'une instance n'est pas conservée lors du stockage de l'instance dans la base de données. Exemple :  
+ La déclaration XML d'une instance n'est pas conservée lors du stockage de l'instance dans la base de données. Exemple :  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -82,7 +87,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Le préfixe d'espace de noms peut avoir une valeur différente dans le résultat. Exemple :  
+ Le préfixe d'espace de noms peut avoir une valeur différente dans le résultat. Exemple :  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -105,7 +110,7 @@ GO
  Si les options ne sont pas définies comme indiqué, les requêtes et les modifications portant sur les méthodes de type de données **xml** sont vouées à l’échec.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
   

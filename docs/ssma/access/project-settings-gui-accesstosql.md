@@ -1,10 +1,13 @@
 ---
 title: "Paramètres (GUI) (AccessToSQL) du projet | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c7a5fcb384b354166220cd5bdc6462952c3b620
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb8a538b22a1623b2b54bec8cf339ba8be365fc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-accesstosql"></a>Paramètres du projet (GUI) (AccessToSQL)
 Les paramètres de projet d’interface graphique utilisateur vous permettent de configurer l’affichage des données sur le **données** onglet et s’il faut inclure des rapports de données avec les rapports d’évaluation.  

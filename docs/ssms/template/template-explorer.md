@@ -3,8 +3,11 @@ title: "Explorateur de modèles | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-templates
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,16 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfeeaf35898135099c1fb92553bf20f83fd587f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 567be902918060203407ec70229aa66c01ae6baa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="template-explorer"></a>Explorateur de modèles
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] propose divers modèles. Les modèles sont des fichiers réutilisables contenant des scripts SQL qui peuvent vous aider à créer des objets dans une base de données. À la première ouverture de l’Explorateur de modèles, une copie des modèles est placée dans le dossier de l’utilisateur dans C:\Utilisateur, sous AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 Vous pouvez parcourir les modèles disponibles dans l'Explorateur de modèles, puis ouvrir un modèle pour incorporer code dans une fenêtre d'éditeur de code. Vous pouvez également créer des modèles personnalisés.  
@@ -43,7 +47,7 @@ Créez des modèles personnalisés pour les tâches que vous effectuez fréquemm
   
 L'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde_md.md)] prend également en charge les extraits de code, que vous pouvez insérer à des emplacements spécifiques dans un script en cliquant avec le bouton droit à cet emplacement.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
 Utiliser les rubriques suivantes pour commencer à utiliser les modèles  
   
 |**Description**|**Rubrique**|  

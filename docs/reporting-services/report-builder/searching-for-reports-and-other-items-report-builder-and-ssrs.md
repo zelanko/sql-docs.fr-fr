@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46825c7f0b93267a216444a91c5d7da0bef3879f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 163cce974197bba99b31f1de97f8868653ffa015
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Recherche de rapports et d’autres éléments (Générateur de rapports et SSRS)
   Vous pouvez utiliser le Gestionnaire de rapports pour rechercher sur un serveur de rapports des éléments spécifiques en fonction de leur nom ou de leur description. Vous pouvez rechercher des rapports publiés, des modèles de rapports, des dossiers, des sources de données partagées et des ressources. Il est impossible de rechercher des planifications, des propriétaires, des attributions de rôles, des instantanés d'historique de rapport spécifiques ou des abonnements. La recherche est effectuée dans la base de données du serveur de rapports dans laquelle les éléments sont stockés.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
  [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

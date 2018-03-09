@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3bfa37e7f645148daa38f8e79b8c51aaf1613c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 854714fbe12db7e32dc0989a442abbdd23695ef9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, objet de magasin de requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**_Total**|Informations relatives au magasin de requêtes pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<nom_base_de_données>|Informations relatives au magasin de requête pour cette base de données.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; [Procédures stockées du magasin de requêtes &#40;Transact-SQL&#41;]](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Query Store Catalog Views &#40;Transact-SQL&#41; [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;]](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

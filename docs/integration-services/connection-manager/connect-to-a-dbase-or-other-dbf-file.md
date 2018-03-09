@@ -1,5 +1,5 @@
 ---
-title: "Se connecter à un fichier dBASE ou d’un autre fichier DBF | Documents Microsoft"
+title: "Se connecter à un fichier dBASE ou à un autre fichier DBF | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a840093c5501dc7d7f91ea3aa0a7b04ed4a42339
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>Se connecter à un fichier dBASE ou à un autre fichier DBF
-  Vous pouvez vous connecter à un fichier dBASE ou à un autre fichier de base de données .DBF dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en utilisant un gestionnaire de connexions OLE DB et en sélectionnant le fournisseur Microsoft OLE DB pour Jet 4.0.  
+  Vous pouvez vous connecter à un fichier dBASE ou à un autre fichier de base de données .DBF dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en utilisant un gestionnaire de connexions OLE DB et en sélectionnant le fournisseur Microsoft OLE DB pour Jet 4.0.  
   
 > [!NOTE]  
 >  L'Assistant Importation et Exportation SQL Server disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l'importation à partir des fichiers dBASE ou d'autres fichiers DBF, ni l'exportation vers ces derniers. Vous pouvez faire appel à Microsoft Access ou Microsoft Excel pour importer les données de fichiers DBF dans une base de données Access ou des feuilles de calcul Excel, puis utiliser l'Assistant Importation et Exportation SQL Server.  
@@ -51,8 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Pour utiliser le gestionnaire de connexions dans le flux de données du package, sélectionnez une source ou une destination OLE DB et configurez-la pour vous servir du gestionnaire de connexions que vous avez créé au cours des étapes précédentes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   
-

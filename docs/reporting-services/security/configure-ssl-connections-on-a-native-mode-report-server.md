@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 8012c0fd281c34e199deb6bd4daa206d113508ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurer des connexions SSL sur un serveur de rapports en mode natif
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode natif utilise le service HTTP SSL (Secure Sockets Layer) pour définir des connexions chiffrées à un serveur de rapports. Si le fichier de certificat (.cer) est installé dans un magasin de certificats local sur le serveur de rapports, vous pouvez lier le certificat à une réservation d’URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour prendre en charge des connexions de serveur de rapports sur un canal chiffré.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
   
  Si vous supprimez des liaisons SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration Reporting Services, il se peut que SSL ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le Gestionnaire de configuration supprime la clé de Registre suivante. Lorsque cette clé de Registre est supprimée, la liaison SSL pour IIS l'est également. Sans cette liaison, SSL n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire des services IIS ou l'utilitaire en ligne de commande HTTPCFG.exe. Pour résoudre le problème, restaurez la liaison SSL pour vos sites Web en utilisant le Gestionnaire des services IIS. Pour éviter ce problème dans le futur, utilisez le Gestionnaire des services IIS pour restaurer la liaison pour les sites Web souhaités. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

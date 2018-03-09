@@ -1,5 +1,5 @@
 ---
-title: sp_detach_db (Transact-SQL) | Documents Microsoft
+title: sp_detach_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/30/2015
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname =** ] **'***nom_base_de_données***'**  
+ [ **@dbname =** ] **'***database_name***'**  
  Nom de la base de données à détacher. *database_name* est un **sysname** valeur, avec NULL comme valeur par défaut.  
   
  [  **@skipchecks =** ] **'***skipchecks***'**  
@@ -58,7 +60,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
  Par défaut, UPDATE STATISTICS est exécuté pour mettre à jour les informations relatives aux données des tables et des index. L'exécution de UPDATE STATISTICS est utile pour les bases de données qui doivent être placées sur des supports en lecture seule.  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
+ [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Spécifie que le fichier d'index de texte intégral associé à la base de données à détacher ne sera pas supprimé pendant l'opération de détachement de la base de données. *KeepFulltextIndexFile* est un **nvarchar (10)** valeur par défaut de **true**. Si *KeepFulltextIndexFile* est **false**, tous les fichiers d’index de texte intégral associé à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si NULL ou **true**, liée au texte intégral les métadonnées sont conservées.  
   
 > [!IMPORTANT]  
@@ -68,7 +70,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Lorsqu'une base de données est détachée, toutes ses métadonnées sont supprimées. Si la base de données a été la base de données par défaut de tous les comptes de connexion **master** devient leur base de données par défaut.  
@@ -123,7 +125,7 @@ GO
 ## <a name="reattaching-a-database"></a>Rattachement d'une base de données  
  Les fichiers détachés restent et peuvent être rattachés à l'aide de CREATE DATABASE (avec l'option FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Vous pouvez les déplacer sur un autre serveur et les y attacher.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au **sysadmin** rôle serveur fixe ou l’appartenance à la **db_owner** rôle de la base de données.  
   
 ## <a name="examples"></a>Exemples  

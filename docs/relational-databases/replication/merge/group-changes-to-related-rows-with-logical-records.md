@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Regrouper les modifications apportées à des lignes connexes à l'aide d'enregistrements logiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Vous ne pouvez pas utiliser de filtres paramétrés qui ne se chevauchent pas. Pour plus d'informations, consultez la section « Définition des options de partition » de [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
--   Si la publication utilise des filtres de jointure, la propriété **join unique key** doit avoir la valeur **true** pour tous les filtres de jointure intervenant dans des relations d'enregistrement logique. Pour plus d’informations, consultez [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+-   Si la publication utilise des filtres de jointure, la propriété **join unique key** doit avoir la valeur **true** pour tous les filtres de jointure intervenant dans des relations d'enregistrement logique. Pour plus d’informations, voir [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
 ### <a name="relationships-between-tables"></a>Relations entre tables  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  Si vous utilisez des enregistrements logiques, l'Agent de fusion doit traiter les modifications de tout l'enregistrement logique ensemble. Le temps nécessaire à l'Agent de fusion pour répliquer les lignes est alors plus long. En outre, comme l'Agent ouvre une transaction distincte pour chaque enregistrement logique, le verrouillage requis est plus important.  
   
-## <a name="see-also"></a>Voir aussi  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Options d’articles pour la réplication de fusion](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

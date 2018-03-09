@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) requêtes | Documents Microsoft"
+title: "Requêtes Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -20,27 +20,26 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8f44c8ab71ecdd432364d6f7609d440fcddf015a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-queries"></a>Requêtes Integration Services (SSIS)
   La tâche Exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche peuvent utiliser des requêtes SQL. Dans la tâche d'exécution SQL, les instructions SQL peuvent créer, mettre à jour et supprimer des données et des objets de base de données, exécuter des procédures stockées et des instructions SELECT. Dans la source OLE DB et la transformation de recherche, les instructions SQL sont généralement des instructions SELECT ou EXEC. Cette dernière exécute le plus souvent des procédures stockées qui retournent des jeux de résultats.  
   
  Un requête peut être analysée pour déterminer si elle est valide. Pendant l’analyse d’une requête utilisant une connexion vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la requête est analysée, exécutée et le résultat de l’exécution (succès ou échec) est affecté au résultat de l’analyse. Si la requête utilise une connexion à des données qui ne sont pas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'instruction est seulement analysée.  
   
-Vous pouvez fournir à l’instruction SQL de plusieurs manières :
-1.   Entrer directement dans le concepteur.
-2.   Spécifiez qu'une connexion à un fichier qui contient l’instruction.
-3.   Spécifier une variable qui contient l’instruction.  
+Vous pouvez fournir l’instruction SQL de plusieurs manières :
+1.   En l’entrant directement dans le concepteur
+2.   En spécifiant une connexion à un fichier qui contient l’instruction
+3.   En spécifiant une variable qui contient l’instruction  
   
 ## <a name="direct-input-sql"></a>SQL à entrée directe  
  Le Générateur de requêtes est disponible dans l'interface utilisateur pour la tâche d'exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche. Le générateur de requêtes présente les avantages suivants :  
@@ -98,19 +97,19 @@ Utilisez la boîte de dialogue **Générateur de requêtes** pour créer une req
  **Barre d'outils**  
  Utilisez la barre d'outils pour gérer les datasets, sélectionner les volets à afficher et contrôler les fonctions de requête.  
   
-|Value| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Afficher/masquer le volet Diagramme**|Affiche ou masque le volet **Diagramme** .|  
-|**Afficher/masquer le volet Grille**|Affiche ou masque le volet **Grille** .|  
-|**Afficher/masquer le volet SQL**|Affiche ou masque le volet **SQL** .|  
-|**Afficher/masquer le volet de résultats**|Affiche ou masque le volet **Résultats** .|  
+|**Afficher/Masquer le volet Diagramme**|Affiche ou masque le volet **Diagramme** .|  
+|**Afficher/Masquer le volet Grille**|Affiche ou masque le volet **Grille** .|  
+|**Afficher/Masquer le volet SQL**|Affiche ou masque le volet **SQL** .|  
+|**Afficher/Masquer le volet Résultats**|Affiche ou masque le volet **Résultats** .|  
 |**Exécuter**|Exécute la requête. Les résultats s'affichent dans le volet Résultats.|  
 |**Vérifier SQL**|Vérifie que l'instruction SQL est valide.|  
 |**Tri croissant**|Trie dans l'ordre croissant les lignes de sortie sur la colonne sélectionnée du volet de la grille.|  
 |**Tri décroissant**|Trie dans l'ordre décroissant les lignes de sortie sur la colonne sélectionnée du volet de la grille.|  
 |**Supprimer le filtre**|Sélectionnez le nom d'une colonne dans le volet de la grille, puis choisissez **Supprimer le filtre** pour supprimer les critères de tri de la colonne.|  
-|**Utiliser Group By**|Ajoute la fonctionnalité GROUP BY à la requête.|  
-|**Ajouter une Table**|Ajoute une table à la requête.|  
+|**Utiliser GROUP BY**|Ajoute la fonctionnalité GROUP BY à la requête.|  
+|**Ajouter une table**|Ajoute une table à la requête.|  
   
  **Définition de la requête**  
  La définition de la requête fournit une barre d'outils et des volets dans lesquels définir et tester la requête.  
@@ -123,4 +122,3 @@ Utilisez la boîte de dialogue **Générateur de requêtes** pour créer une req
 |Volet**Résultats** |Affiche les résultats de la requête lorsque vous cliquez sur **Exécuter** dans la barre d'outils.| 
 
   
-

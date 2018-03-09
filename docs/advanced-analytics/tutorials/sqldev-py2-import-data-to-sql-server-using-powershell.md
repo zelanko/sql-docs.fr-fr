@@ -2,28 +2,32 @@
 title: "Étape 2 : Importer des données vers SQL Server à l’aide de PowerShell | Documents Microsoft"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Étape 2 : Importer des données vers SQL Server à l’aide de PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -54,7 +58,7 @@ Si vous rencontrez des problèmes, vous pouvez utiliser le script en tant que r�
     - Le nom ou l’adresse d’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance où la Machine Learning Services avec Python a été installé.
     - Les nom d’utilisateur et mot de passe d’un compte sur l’instance. Le compte que vous utilisez doit avoir la possibilité de créer des bases de données, créer des tables et des procédures stockées et en bloc des données de charge pour les tables. 
     - Si vous ne fournissez pas de nom d’utilisateur et mot de passe, votre identité de Windows est utilisée pour se connecter à SQL Server, et vous sont promus pour entrer un mot de passe.
-    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple, `C:\temp\pysql\nyctaxi1pct.csv`
+    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple : `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Pour charger les données correctement, le fichier xmlrw.dll bibliothèque doit être dans le même dossier que bcp.exe.

@@ -1,5 +1,5 @@
 ---
-title: '&amp;&amp;(Et logique) (Expression SSIS) | Documents Microsoft'
+title: '&amp;&amp; (AND logique) (expression SSIS) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a52d1a0bf10aba48b1e628a9253c7f2361f58506
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 762ba60573bfcaf08fb9d2c38f1a8ec2e5a08cfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;(Et logique) (Expression SSIS)
+# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND logique) (expression SSIS)
   Effectue une opération AND logique. L'expression renvoie la valeur TRUE si toutes les conditions s'évaluent à TRUE.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -46,10 +45,10 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant indique le résultat de l'opérateur &&.  
   
-|Résultat|Expression|Expression|  
+|Résultats|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |FALSE|TRUE|FALSE|  
@@ -71,10 +70,9 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [& &#40; Opération de bits AND &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
- [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [& &#40;AND au niveau du bit&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

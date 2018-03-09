@@ -1,10 +1,13 @@
 ---
 title: "Génération de rapports (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84298ed11ae25bf533b5916711d3634bddec1b98
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e8af206d514c49676cde2c2d26b9cbb01575803
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-accesstosql"></a>Génération de rapports (AccessToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -35,7 +38,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande**|**Titre de rapport**|  
-    |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
+    | 1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convertir le schéma|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
     |4|synchroniser la cible|TargetSynchronizationReport&lt;n&gt;. XML|  
@@ -51,7 +54,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
+    | 1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
     |2|verbose = « true »|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
   
     > [!NOTE]  
@@ -62,7 +65,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    | 1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
     |2|signaler les erreurs = « true »|Erreur détaillée / avertissement / messages d’informations.|  
   
     > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: "Fusionner des données à l’aide de l’Union All Transformation | Documents Microsoft"
+title: "Fusionner des données à l’aide de la transformation d’union totale | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e171fc263daa72d8cea4c9e21b05c1ad452817e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Fusionner des données à l'aide de la transformation d'union totale
   Pour pouvoir ajouter et configurer une transformation d'union totale, le package doit inclure au moins une tâche de flux de données et deux sources de données.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Double-cliquez sur la transformation d'union totale.  
   
-5.  Dans **l’Éditeur de transformation d’union totale**, mappez une colonne d’une entrée à une colonne de la liste **Nom de colonne de sortie** en cliquant sur une ligne, puis en sélectionnant une colonne dans la liste d’entrée. Sélectionnez  **\<ignorer >** dans la liste d’entrée à ignorer le mappage de la colonne.  
+5.  Dans **l’Éditeur de transformation d’union totale**, mappez une colonne d’une entrée à une colonne de la liste **Nom de colonne de sortie** en cliquant sur une ligne, puis en sélectionnant une colonne dans la liste d’entrée. Sélectionnez **\<ignorer>** dans la liste d’entrée pour ignorer le mappage de la colonne.  
   
     > [!NOTE]  
     >  Vous ne pouvez mapper deux colonnes que si leurs métadonnées correspondent.  
@@ -62,11 +61,10 @@ ms.lasthandoff: 08/03/2017
   
 9. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

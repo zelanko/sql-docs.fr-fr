@@ -1,32 +1,22 @@
 ---
-title: "Mise à jour - Integration Services pour les documents de SQL Server | Documents Microsoft"
-description: "Extraits de l’affichage de contenu mis à jour pour obtenir une documentation récemment modifié, pour les Services d’intégration pour Microsoft SQL Server."
-services: na
-documentationcenter: 
+title: "Mise à jour - Documentation d’Integration Services pour SQL Server | Microsoft Docs"
+description: "Affichez des extraits de contenu mis à jour récemment dans la documentation d’Integration Services pour Microsoft SQL Server."
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: 
-ms.component: integration-services
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: 
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: integration-services
 ms.author: genemi
-ms.workload: integration-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3c5da14b7a65f8a3eb1eb253d685a146d813868a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssis
+ms.date: 02/03/2018
+ms.openlocfilehash: 8bfcdc3fb1033620d351ecaee2c79910c475dd94
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Nouveaux et mis à jour récemment : Integration Services pour SQL Server
+# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Nouveau et mis à jour récemment : Integration Services pour SQL Server
 
 
 
@@ -38,8 +28,8 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Plage de dates de mises à jour :* &nbsp; **2017-09-11** &nbsp; - à - &nbsp; **2017-09-27**
-- *Zone de sujet :* &nbsp; **Integration Services pour SQL Server**.
+- *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
+- *Domaine :* &nbsp; **Integration Services pour SQL Server**.
 
 
 
@@ -51,23 +41,18 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-1. [Se connecter à la base de données de catalogue SSISDB sur Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-2. [Se connecter aux sources de données locale avec l’authentification Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
-3. [Déployer, exécuter et surveiller un package SSIS sur Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-4. [Déplacer des charges de travail de SQL Server Integration Services vers le cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-5. [Planifier l’exécution d’un package SSIS sur Azure](lift-shift/ssis-azure-schedule-packages.md)
-6. [Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe](ssis-quickstart-deploy-cmdline.md)
-7. [Déployer un projet SSIS avec le code c# dans une application .NET](ssis-quickstart-deploy-dotnet.md)
-8. [Déployer un projet SSIS avec PowerShell](ssis-quickstart-deploy-powershell.md)
-9. [Déployer un projet SSIS avec SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md)
-10. [Déployer un projet SSIS à partir de SSMS avec Transact-SQL](ssis-quickstart-deploy-tsql-ssms.md)
-11. [Déployer un projet SSIS à partir de Code de Visual Studio avec Transact-SQL](ssis-quickstart-deploy-tsql-vscode.md)
-12. [Exécutez un package SSIS à partir de l’invite de commandes avec DTExec.exe](ssis-quickstart-run-cmdline.md)
-13. [Exécutez un package SSIS avec le code c# dans une application .NET](ssis-quickstart-run-dotnet.md)
-14. [Exécuter un package SSIS avec PowerShell](ssis-quickstart-run-powershell.md)
-15. [Exécutez un package SSIS avec SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
-16. [Exécutez un package SSIS à partir de SSMS avec Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
-17. [Exécutez un package SSIS à partir de Code de Visual Studio avec Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
+1. [Parcourir tous les principaux, boîte de dialogue](catalog/browse-all-principals-dialog-box.md)
+2. [Boîte de dialogue Configurer](catalog/configure-dialog-box.md)
+3. [Propriétés du dossier, boîte de dialogue](catalog/folder-properties-dialog-box.md)
+4. [Référence de Transact-SQL catalogue Integration Services (SSIS)](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
+5. [Serveur et catalogue Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md)
+6. [Propriétés du package, boîte de dialogue](catalog/package-properties-dialog-box.md)
+7. [Propriétés du projet, boîte de dialogue](catalog/project-properties-dialog-box.md)
+8. [Boîte de dialogue de versions du projet](catalog/project-versions-dialog-box.md)
+9. [Boîte de dialogue Définir la valeur du paramètre](catalog/set-parameter-value-dialog-box.md)
+10. [Catalogue SSIS](catalog/ssis-catalog.md)
+11. [Boîte de dialogue Valider](catalog/validate-dialog-box.md)
+12. [Afficher la liste des packages sur le serveur Integration Services](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
 
 
 
@@ -93,56 +78,110 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
+1. [Planifier l’exécution d’un package SSIS sur Azure](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***Aucun article dans ce domaine n’a été mis à jour récemment.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### <a name="1-nbsp-schedule-the-execution-of-an-ssis-package-on-azurelift-shiftssis-azure-schedule-packagesmd"></a>1. &nbsp; [Planifier l’exécution d’un package SSIS sur Azure](lift-shift/ssis-azure-schedule-packages.md)
+
+*Mise à jour : 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 28.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
+
+
+
+Avant de pouvoir utiliser SQL Server Agent localement pour planifier l’exécution des packages stockés sur un serveur Azure SQL Database, vous devez ajouter le serveur SQL Database à votre serveur SQL Server local en tant que serveur lié.
+
+1.  **Configurer le serveur lié**
+
+    ```
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location='',
+        @provstr='',
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **Configurer les informations d’identification du serveur lié**
+
+    ```
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **Configurer les options du serveur lié**
+
+    ```
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+Pour plus d’informations, consultez [Créer des serveurs liés](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) et [Serveurs liés](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 
 
 
 
 
-## <a name="similar-articles"></a>Articles similaires
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articles similaires sur les articles nouveaux ou mis à jour
 
 Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveau + mis à jour (0 + 1) : **avancées d’Analytique pour SQL** documents](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveau + mis à jour (0 + 1) : **Analysis Services pour SQL** documents](../analysis-services/new-updated-analysis-services.md)
-- [Nouveau + mis à jour (4 + 1) : **moteur de base de données pour SQL** documents](../database-engine/new-updated-database-engine.md)
-- [Nouveau + mis à jour (17 + 0) : **Integration Services pour SQL** documents](../integration-services/new-updated-integration-services.md)
-- [Nouveau + mis à jour (3 + 0) : **Linux pour SQL** documents](../linux/new-updated-linux.md)
-- [Nouveau + mis à jour (1 + 1) : **des bases de données relationnelles pour SQL** documents](../relational-databases/new-updated-relational-databases.md)
-- [Nouveau + mis à jour (2 + 0) : **Reporting Services pour SQL** documents](../reporting-services/new-updated-reporting-services.md)
-- [Nouveau + mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** documents](../ssms/new-updated-ssms.md)
-- [Nouveau + mis à jour (0 + 1) : **Transact-SQL** documents](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Domaines *avec* des articles nouveaux ou mis à jour récemment
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
 
+- [Nouveaux + Mis à jour (1 + 3) :&nbsp; **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
+- [Nouveaux + Mis à jour (12 + 1) :**Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (6 + 2) :&nbsp; **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
+- [Nouveaux + Mis à jour (15 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
+- [Nouveaux + Mis à jour (2 + 9) :&nbsp; **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
+- [Nouveaux + Mis à jour (1 + 0) :&nbsp; **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
+- [Nouveaux + Mis à jour (1 + 1) :&nbsp; **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nouveaux + Mis à jour (1 + 1) :&nbsp; **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
+- [Nouveaux + Mis à jour (0 + 1) :&nbsp; **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
+- [Nouveaux + Mis à jour (1 + 2) :&nbsp; **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
+- [Nouveaux + Mis à jour (0 + 2) :&nbsp; **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Domaines *sans* article nouveau ou mis à jour récemment
+
+
+- [Nouveaux + Mis à jour (0 + 0) : **Data Migration Assistant (DMA) pour SQL** (documentation)](../dma/new-updated-dma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
-- [Nouveau + mis à jour (0 0 +) : **se connecter à SQL** documents](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
-- [Nouveau + mis à jour (0 0 +) : **Microsoft SQL Server** documents](../sql-server/new-updated-sql-server.md)
-- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
 - [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
-- [Nouveau + mis à jour (0 0 +) : **Tools pour SQL** documents](../tools/new-updated-tools.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
-
 
 

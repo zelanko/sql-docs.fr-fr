@@ -1,11 +1,11 @@
 ---
-title: "Boîte à outils SSIS | Documents Microsoft"
+title: "Boîte à outils SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -17,33 +17,32 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb28ac1cac4480cef59424bbcd13643abb5a995c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5448bb11e593817f6b4bdc578d813e82fc9b317b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
-  Tous les composants installés automatiquement sur l’ordinateur local s’affichent dans le **boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
+  Tous les composants installés sur l’ordinateur local apparaissent automatiquement dans la **Boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
  
- Lorsque vous créez un projet SSIS ou ouvrez un projet existant, le **boîte à outils SSIS** s’affiche automatiquement. Vous pouvez également ouvrir la boîte à outils en cliquant sur le bouton de la boîte à outils qui se trouve dans le coin supérieur droit de l’aire de conception du package, ou en cliquant sur Affichage -> autres fenêtres -> boîte à outils SSIS.
+ Quand vous créez un projet SSIS ou ouvrez un projet existant, la **Boîte à outils SSIS** est automatiquement affichée. Vous pouvez également ouvrir la boîte à outils en cliquant sur le bouton de la boîte à outils en haut à droite de l’aire de conception du package, ou en cliquant sur Affichage -> Autres fenêtres -> Boîte à outils SSIS.
  
  > [!NOTE]
-> Si vous ne voyez pas la boîte à outils, cliquez sur Affichage -> autres fenêtres -> boîte à outils SSIS.
+> Si vous ne voyez pas la boîte à outils, cliquez sur Affichage -> Autres fenêtres -> Boîte à outils SSIS.
  
-Pour obtenir plus d’informations sur un composant dans la boîte à outils en cliquant sur le composant pour afficher sa description au bas de la boîte à outils. Pour certains composants, vous pouvez également accéder exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
+Vous pouvez obtenir des informations supplémentaires sur un composant de la boîte à outils en cliquant sur le composant pour afficher sa description en bas de la boîte à outils. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
   
 > [!NOTE]
-> Vous ne pouvez pas *supprimer* installé les composants à partir de la boîte à outils.  
+> Vous ne pouvez pas *supprimer* les composants installés à partir de la boîte à outils.  
 
-## <a name="toolbox-categories"></a>Catégories de boîte à outils
- Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories et réorganiser des composants.  Restaurer l’organisation par défaut en cliquant à l’intérieur de la boîte à outils, puis cliquez sur **restaurer les valeurs par défaut de boîte à outils**.  
+## <a name="toolbox-categories"></a>Catégories de la boîte à outils
+ Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories, et réorganiser des composants.  Restaurez l’organisation par défaut en cliquant avec le bouton droit dans la boîte à outils, puis en cliquant sur **Restaurer les valeurs par défaut de la boîte à outils**.  
   
  Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
 
@@ -56,18 +55,17 @@ Pour obtenir plus d’informations sur un composant dans la boîte à outils en 
   
     -   **Déplacer vers Favoris**  
   
-    -   **Déplacer vers courant**  
+    -   **Déplacer vers Courant**  
   
-    -   **Déplacer vers autres Sources**  
+    -   **Déplacer vers Autres sources**  
   
-    -   **Déplacer vers autres Destinations**  
+    -   **Déplacer vers Autres destinations**  
   
-    -   **Déplacer vers autres transformations**  
+    -   **Déplacer vers Autres transformations**  
   
-    -   **Déplacer vers autres tâches**  
+    -   **Déplacer vers Autres tâches**  
   
 ## <a name="refresh-the-ssis-toolbox"></a>Actualiser la boîte à outils SSIS  
   
 1.  Cliquez avec le bouton droit dans la boîte à outils SSIS, puis cliquez sur **Actualiser boîte à outils**.  
-
 

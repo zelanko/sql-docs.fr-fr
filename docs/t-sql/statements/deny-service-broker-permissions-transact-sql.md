@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - denying permissions [Service Broker]
 - routes [Service Broker], permissions
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>Autorisations DENY dans Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,25 +61,25 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être refusée sur un élément sécurisable [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CONTRAT **::***nom_contract*  
+ CONTRAT **:: *** nom_contract*  
  Spécifie le contrat sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
   
- TYPE DE MESSAGE **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Spécifie le type de message sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Spécifie la liaison de service distant sur laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
   
- ITINÉRAIRE **::***route_name*  
+ ITINÉRAIRE **:: *** route_name*  
  Spécifie l'itinéraire sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
   
  SERVICE **::***message_type_name*  
  Spécifie le service sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
   
 -   Utilisateur de base de données  
@@ -159,7 +161,7 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation CONTROL sur la [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrat, type de message, liaison de service distant, itinéraire ou service. Si vous utilisez la clause AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel les autorisations sont refusées.  
   
 ## <a name="see-also"></a>Voir aussi  

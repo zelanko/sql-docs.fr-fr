@@ -1,39 +1,38 @@
 ---
-title: "Propriétés de la colonne (SSAS tabulaire) | Documents Microsoft"
+title: "Propriétés des colonnes | Documents Microsoft"
 ms.custom: 
-ms.date: 05/23/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.columnprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 909733f4c7c9973d4812c8d3bc2f46f81e2788d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
-  Cette rubrique décrit les propriétés de colonne de modèle tabulaire.  
+# <a name="column-properties"></a>Propriétés des colonnes 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article décrit les propriétés de colonne de modèle tabulaire.  
   
 >  [!NOTE]  
 >  Certaines propriétés ne sont pas pris en charge dans tous les niveaux de compatibilité.    
   
-##  <a name="bkmk_properties"></a> Propriétés de colonne  
+##  <a name="bkmk_properties"></a> Propriétés des colonnes  
 **Avancé**  
   
 |Propriété|Paramètre par défaut| Description|  
@@ -42,24 +41,24 @@ ms.lasthandoff: 11/17/2017
 
 **Basic**  
   
-|Propriété|Paramètre par défaut|Description|  
+|Propriété|Paramètre par défaut| Description|  
 |--------------|---------------------|-----------------|  
 |**Nom de la colonne**||Le nom de la colonne tel qu'il est stocké dans le modèle et tel qu'il est affiché dans une liste de champs de client de création de rapports.|  
 |**Format de données**|Déterminé automatiquement pendant l'importation.|Spécifie le format d'affichage à utiliser pour les données de cette colonne. Cette propriété propose les options suivantes :<br /><br /> **Général**<br /><br /> **Nombre décimal**<br /><br /> **Nombre entier**<br /><br /> **Monétaire (Currency)**<br /><br /> **Pourcentage**<br /><br /> **Scientifique**<br /><br /> Après avoir défini un format de données, vous pouvez définir les propriétés spécifiques à chaque format. Par exemple, si vous choisissez le format **Devise** , vous pouvez définir le nombre de décimales visibles, choisir le séparateur des milliers, ainsi que le symbole monétaire.<br /><br /> <br /><br /> Si les valeurs de colonnes contiennent des images, consultez **Image représentative**.|  
 |**Type de données**|Déterminé automatiquement pendant l'importation.|Spécifie le type de données pour toutes les valeurs de la colonne.|  
 |**Description**||Description textuelle de la colonne.<br /><br /> Dans certains clients de création de rapports, si un utilisateur place le curseur sur cette colonne dans la liste des champs, la description apparaît sous la forme d'une info-bulle.|  
-|**Caché**|False|Spécifie si la colonne est masquée dans les listes de champs de client de création de rapports.<br /><br /> Définissez cette propriété avec la valeur **True** pour masquer cette colonne dans l'affichage. Par exemple, les colonnes qui contiennent des identificateurs ou des clés ne sont généralement pas utiles à l'utilisateur final.<br /><br /> Si vous masquez une colonne dans le client de création de rapports, le champ n'est pas supprimé dans les données de modèle. Le champ est toujours visible si vous créez une requête sur le modèle. Une colonne masquée peut encore être utilisée pour le regroupement ou le tri.<br /><br /> La propriété **Masqué** ne fournit aucune forme de sécurité des données. Pour sécuriser les données, utilisez des filtres de ligne dans les rôles. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
+|**Caché**|False|Spécifie si la colonne est masquée dans les listes de champs de client de création de rapports.<br /><br /> Définissez cette propriété avec la valeur **True** pour masquer cette colonne dans l'affichage. Par exemple, les colonnes qui contiennent des identificateurs ou des clés ne sont généralement pas utiles à l'utilisateur final.<br /><br /> Si vous masquez une colonne dans le client de création de rapports, le champ n'est pas supprimé dans les données de modèle. Le champ est toujours visible si vous créez une requête sur le modèle. Une colonne masquée peut encore être utilisée pour le regroupement ou le tri.<br /><br /> La propriété **Masqué** ne fournit aucune forme de sécurité des données. Pour sécuriser les données, utilisez des filtres de ligne dans les rôles. Pour plus d’informations, consultez [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Trier par colonne**||Spécifie une autre colonne pour trier les valeurs de cette colonne. Une relation doit exister entre les deux colonnes.<br /><br /> Cette valeur doit correspondre au nom d'une colonne existante. Vous ne pouvez pas spécifier de formule ou de mesure.|  
 
- **Divers**  
+ **Misc.**  
   
 |Propriété|Paramètre par défaut| Description|  
 |--------------|---------------------|-----------------|  
-|**Indications de codage**|Valeur par défaut|Spécifie l’encodage pour optimiser le traitement. Encodage de valeur peut améliorer les performances des requêtes pour les colonnes numériques généralement utilisées dans les agrégations. Encodage du hachage est de colonnes group by (souvent des valeurs de table de dimension) et les clés étrangères. Colonnes de type chaîne sont toujours encodée de hachage.|  
+|**Indications de codage**|Par défaut|Spécifie l’encodage pour optimiser le traitement. Encodage de valeur peut améliorer les performances des requêtes pour les colonnes numériques généralement utilisées dans les agrégations. Encodage du hachage est de colonnes group by (souvent des valeurs de table de dimension) et les clés étrangères. Colonnes de type chaîne sont toujours encodée de hachage.|  
 
  **Propriétés de la création de rapports**  
   
-|Propriété|Paramètre par défaut|Description|  
+|Propriété|Paramètre par défaut| Description|  
 |--------------|---------------------|-----------------|  
 |Image par défaut|False|Spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, une pièce d'identité avec photo dans un enregistrement d'employé).|  
 |Étiquette par défaut|False|Spécifie la colonne qui fournit un nom d'affichage pour représenter les données de ligne (par exemple, nom de l'employé dans un enregistrement d'employé).|  
@@ -76,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 2.  Dans la fenêtre **Propriétés** , cliquez sur une propriété, puis tapez une valeur ou cliquez sur la flèche Bas pour sélectionner une option de paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de rapport Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
+ [Afficher les propriétés de création de rapports de l’alimentation](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
  [Masquer ou figer des colonnes](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
  [Ajouter des colonnes à une table](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   

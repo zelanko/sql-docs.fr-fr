@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact-SQL) | Documents Microsoft
+title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 - smart_admin.sp_set_parameter_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3fb501b9fedb7b9e9fd55d571b44d1dcc702b5f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7c8469b7ddb66198889604af7b0d512166429a0b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_set_parameter   
     [@parameter_name = ] {'SSMBackup2WANotificationEmailIds' | 'SSMBackup2WAEnableUserDefinedPolicy' | 'SSMBackup2WADebugXevent' | 'FileRetentionDebugXevent' | 'StorageOperationDebugXevent'}  
     ,[@parameter_value = ] 'parameter_value'  
@@ -59,15 +61,15 @@ EXEC managed_backup.sp_set_parameter
   
 -   @parameter_name= 'SSMBackup2WANotificationEmailIds' : @parameter_value = 'email'  
   
--   @parameter_name= 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value = {'true' | 'false'}  
+-   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = { 'true' | 'false' }  
   
 -   @parameter_name= 'SSMBackup2WADebugXevent' : @parameter_value = {'true' | 'false'}  
   
 -   @parameter_name= 'FileRetentionDebugXevent' : @parameter_value = {'true' | 'false'}  
   
--   @parameter_name= 'StorageOperationDebugXevent' = {'true' | 'false'}  
+-   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
@@ -75,7 +77,7 @@ EXEC managed_backup.sp_set_parameter
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **EXECUTE** autorisations sur **managed_backup.sp_set_parameter** procédure stockée.  
   
 ## <a name="examples"></a>Exemples  

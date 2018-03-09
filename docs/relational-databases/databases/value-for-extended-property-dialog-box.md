@@ -2,9 +2,12 @@
 title: "Valeur de la propriété étendue, boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ f1_keywords:
 helpviewer_keywords: Value for Extended Property dialog box
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cc8d5eed225dd80f1dab07b542e649959723f8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe5c8d996b80021758a9a29f207a5c3bdb9eac2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valeur de la propriété étendue (boîte de dialogue)
-  Utilisez la boîte de dialogue **Valeur de**  *\<nom de propriété* pour entrer ou afficher une valeur. Il s'agit d'une boîte de dialogue commune qui peut être ouverte à partir de plusieurs emplacements.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Valeur de** *\<nom_propriété>* pour entrer ou afficher une valeur. Il s'agit d'une boîte de dialogue commune qui peut être ouverte à partir de plusieurs emplacements.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Nom de la propriété étendue**  

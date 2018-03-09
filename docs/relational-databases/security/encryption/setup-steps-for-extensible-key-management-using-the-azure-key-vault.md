@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     ```  
  
     > [!IMPORTANT]  
-    > L'importation de la clé asymétrique est fortement recommandée dans les scénarios de production, car elle permet à l'administrateur de déposer la clé dans un système de dépôt de clés (Key escrow). Si la clé asymétrique est créée dans le coffre, elle ne peut pas être déposée, car la clé privée ne peut jamais sortir du coffre. Les clés utilisées pour protéger les données critiques doivent être déposées. Si une clé asymétrique est perdue, les données sont définitivement irrécupérables.  
+    > L'importation de la clé asymétrique est fortement recommandée dans les scénarios de production, car elle permet à l'administrateur de déposer la clé dans un système de dépôt de clés (Key escrow). Si la clé asymétrique est créée dans le coffre, elle ne peut pas être déposée, car la clé privée ne peut jamais sortir du coffre. Les clés utilisées pour protéger les données critiques doivent être déposées. La perte d'une clé asymétrique rend une partie des données définitivement irrécupérable.  
 
     ### <a name="create-a-new-key"></a>Créer une clé
 
@@ -273,7 +273,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
      Exécutez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant pour configurer le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] afin d’utiliser un fournisseur EKM.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
      -- Créez un fournisseur de services de chiffrement à l’aide du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , qui est un fournisseur EKM pour le coffre Azure Key Vault.    
     L’exemple suivant utilise le nom `AzureKeyVault_EKM_Prov`.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -326,7 +326,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
     -   Complétez la deuxième partie de l’argument `SECRET` avec la **clé secrète client** mentionnée dans la Partie I. Dans cet exemple, la **clé secrète client** de la Partie I est `Replace-With-AAD-Client-Secret`. La chaîne finale pour l’argument `SECRET` est une longue séquence de lettres et de chiffres, *sans tirets*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
     -   Remplacez `ContosoRSAKey0` par le nom de votre clé dans Azure Key Vault.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
@@ -361,7 +361,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 Maintenant que vous avez terminé la configuration de base, découvrez comment [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion de clés extensible à l'aide d'Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   

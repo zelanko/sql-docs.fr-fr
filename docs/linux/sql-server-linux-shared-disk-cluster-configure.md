@@ -3,27 +3,27 @@ title: "Configurer l’instance de cluster de basculement - SQL Server sur Linux
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: 66c3fe5f03ab597826c8ba0101aaa1cd0b54d2b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Une instance de cluster de basculement de disque partagé de deux nœuds SQL Server fournit la redondance au niveau du serveur pour la haute disponibilité. Dans ce didacticiel, vous allez apprendre à créer une instance de cluster de basculement à deux nœuds de SQL Server sur Linux. Vous allez effectuer les étapes spécifiques sont les suivantes :
 
@@ -39,9 +39,9 @@ Cet article explique comment créer une instance de cluster de basculement (FCI)
 
 Pour obtenir des informations conceptuelles, consultez [basculement SQL Server Cluster Instance () sur Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
-Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour le stockage. Étapes ci-dessous décrivent la configuration de ces serveurs.
+Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour le stockage. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
 ## <a name="set-up-and-configure-linux"></a>Installer et configurer Linux
 
@@ -63,7 +63,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
     > [!NOTE] 
     > Le temps de vue d’ensemble, une clé principale du serveur est généré pour l’instance de SQL Server et mis à `var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal à chaque nœud secondaire pour chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur. 
 
-1.  Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilisera ce compte pour vérifier le nœud qui exécute SQL Server. 
+1.  Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<FolderToMountNFSShare > est le dossier pour monter le disque (pour les bases de données système et l’emplacement par défaut, il serait /var/opt/mssql/data)
 
-     Vous trouverez ci-dessous un exemple :
+    Voici un exemple :
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

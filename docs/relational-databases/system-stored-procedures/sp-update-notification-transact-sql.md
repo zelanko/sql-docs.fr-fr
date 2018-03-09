@@ -1,5 +1,5 @@
 ---
-title: sp_update_notification (Transact-SQL) | Documents Microsoft
+title: sp_update_notification (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_updatenotification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44b2755dca0a8d3cd2dae7d11e12cc16a708fe1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9574169f49b8ae2c0736a99d657fd7ef5d17cc48
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +53,16 @@ sp_update_notification
  [  **@alert_name =**] **'***alerte***'**  
  Nom de l'alerte associée à cette notification. *alerte* est **sysname**, sans valeur par défaut.  
   
- [  **@operator_name =**] **'***opérateur***'**  
+ [ **@operator_name =**]  **'***operator***'**  
  Opérateur qui sera notifié au déclenchement de l'alerte. *opérateur* est **sysname**, sans valeur par défaut.  
   
- [  **@notification_method =**] *notification*  
+ [ **@notification_method =**] *notification*  
  Méthode utilisée pour avertir l'opérateur. *notification*est **tinyint**, sans valeur par défaut et peut prendre une ou plusieurs des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**1**|E-mail|  
-|**2**|Récepteur de radiomessagerie|  
+|**1**|Messagerie électronique|  
+|**2**|Radiomessagerie|  
 |**4**|**net send**|  
 |**7**|Toutes les méthodes|  
   
@@ -71,7 +74,7 @@ sp_update_notification
   
  Vous pouvez mettre à jour une notification destinée à un opérateur qui ne dispose pas d’informations d’adresse nécessaires à l’aide de la *méthode_de_notification*. En cas d'échec de l'envoi d'une notification par courrier électronique ou par radiomessagerie, l'échec est consigné dans le journal des erreurs de l'Agent Microsoft SQL Server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,9 +92,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

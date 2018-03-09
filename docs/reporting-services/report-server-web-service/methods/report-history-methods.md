@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4d8aa87caef231997dce1ca2657b033cd1fa87
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b20369d1e5064531c61bafa7c527a796becfed20
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-history-methods"></a>Méthodes d'historique de rapport
   Vous pouvez utiliser ces méthodes pour créer et gérer des instantanés d'historique d'éléments.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Spécifie le nombre d’instantanés d’un élément conservés par le serveur de rapports.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Définit des options d'historique d'élément qui spécifient à quel moment un instantané d'historique d'élément est créé pour un élément de catalogue spécifié.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

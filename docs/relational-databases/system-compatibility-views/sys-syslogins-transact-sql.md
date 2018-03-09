@@ -1,5 +1,5 @@
 ---
-title: Sys.syslogins (Transact-SQL) | Documents Microsoft
+title: sys.syslogins (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - syslogins
 - sys.syslogins
 - sys.syslogins_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea9ceaa622c6ad7b39bed9c3e3d2439e56a57210
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +42,24 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary(85)**|Identificateur de sécurité.|  
+|**sid**|**varbinary(85)**|Identificateur de sécurité.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**CREATEDATE**|**datetime**|Date d'ajout de la connexion.|  
+|**createdate**|**datetime**|Date d'ajout de la connexion.|  
 |**updatedate**|**datetime**|Date de mise à jour de la connexion.|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**TimeLimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**resultlimit au-delà de laquelle**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**nom**|**sysname**|Nom de connexion de l’utilisateur.|  
 |**dbname**|**sysname**|Nom de la base de données par défaut de l'utilisateur lorsqu'une connexion est établie.|  
-|**mot de passe**|**nvarchar (128)**|Renvoie NULL.|  
-|**langage**|**sysname**|Langue par défaut de l'utilisateur.|  
+|**password**|**nvarchar(128)**|Renvoie NULL.|  
+|**language**|**sysname**|Langue par défaut de l'utilisateur.|  
 |**denylogin**|**int**|1 = La connexion concerne un utilisateur ou un groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et l'accès a été refusé.|  
 |**hasaccess**|**int**|1 = La connexion possède les droits d'accès au serveur.|  
 |**isntname**|**int**|1 = La connexion est un utilisateur ou un groupe Windows.<br /><br /> 0 = Il s'agit d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**diskadmin**|**int**|1 = connexion concerne un membre de la **diskadmin** rôle serveur fixe.|  
 |**dbcreator**|**int**|1 = connexion concerne un membre de la **dbcreator** rôle serveur fixe.|  
 |**bulkadmin**|**int**|1 = connexion concerne un membre de la **bulkadmin** rôle serveur fixe.|  
-|**LoginName**|**nvarchar (128)**|Nom de connexion de l’utilisateur. Fourni pour la compatibilité ascendante.|  
+|**loginname**|**nvarchar(128)**|Nom de connexion de l’utilisateur. Fourni pour la compatibilité ascendante.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Tables système pour les vues système &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -1,9 +1,13 @@
 ---
 title: "Afficher la taille du fichier partiellement alloué d’un instantané de base de données (Transact-SQL) | Microsoft Docs"
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +21,18 @@ helpviewer_keywords:
 - space [SQL Server], database snapshots
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cac0600812b80cfab87ca61d78592611427cb14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1696e51f0f523a98f3bc3acdbb36bd97b9cf0f22
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
-  Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu'un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu’un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Pendant la création d'un instantané de base de données, ces fichiers partiellement alloués sont créés et nommés par l'instruction CREATE DATABASE. Ces noms de fichiers sont stockés dans **sys.master_files** dans la colonne **physical_name** . Dans **sys.database_files** (dans la base de données source ou dans l’instantané), la colonne **physical_name** contient toujours les noms des fichiers de la base de données source.  
@@ -67,10 +71,10 @@ ms.lasthandoff: 11/09/2017
   
      ( *nombre_de_pages* * 8192)  
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Le script suivant indique la taille du disque en kilooctets, pour chaque fichier partiellement alloué.  Le script affiche également la taille maximale en mégaoctets que peut atteindre un fichier partiellement alloué.  Exécutez le script Transact-SQL en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```tsql
+```sql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
         sd.name AS [Snapshot],
         mf.name AS [Filename], 
@@ -88,7 +92,7 @@ AND mf2.is_sparse = 0
 ORDER BY 1;
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

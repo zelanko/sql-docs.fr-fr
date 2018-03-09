@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_io_virtual_file_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: deec9ee56fe129b77e130276c22b24c415ddc473
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +61,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 ## <a name="arguments"></a>Arguments  
 
 
- *database_id* | VALEUR NULL
+ *database_id* | NULL
 
  **S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
 
@@ -66,7 +69,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
  La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifié.  
   
-*FILE_ID* | VALEUR NULL
+*file_id* | NULL
 
 **S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
  
@@ -80,8 +83,8 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit de celui de la base de données stocké sur le nœud identifié par pdw_node_id. Chaque nœud dispose d’une base de données tempdb qui comporte des 13 fichiers. Chaque nœud a également une base de données par la distribution, et chaque base de données de distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats indiquent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de base de données.|  
-|**FILE_ID**|**smallint**|ID du fichier.|  
-|**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**file_id**|**smallint**|ID du fichier.|  
+|**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Nombre de lectures effectuées sur le fichier.|  
 |**num_of_bytes_read**|**bigint**|Nombre total d'octets lus sur ce fichier.|  
 |**io_stall_read_ms**|**bigint**|Durée totale (en millisecondes) d'attente des utilisateurs pour les lectures effectuées sur le fichier.|  
@@ -93,10 +96,10 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
 |**file_handle**|**varbinary**|Descripteur de fichier Windows pour ce fichier.|  
 |**io_stall_queued_read_ms**|**bigint**|**Ne s’applique pas aux :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les lectures. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Ne s’applique pas aux :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
-|**pdw_node_id**|**int**|**S’applique à :**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
+|**pdw_node_id**|**int**|**S’applique à :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE. Pour plus d’informations, consultez [les fonctions et vues de gestion dynamique &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -107,7 +110,7 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
 
  Le code exemple suivant retourne les statistiques pour le fichier journal de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
 ```  
@@ -116,7 +119,7 @@ GO
 
 **S’applique à :** entrepôt de données SQL Azure
 
-```tsql
+```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
 WHERE database_name = ‘tempdb’ AND file_id = 2;
 

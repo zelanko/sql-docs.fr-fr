@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -32,13 +30,13 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: "101"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 860bf17283de6fc522c956ed0c9f4ee26497be8b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4a5573c8b8b01b567aa5fff65d74bd7ece4632d7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
 Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour en contrôler le contenu et l’apparence. Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], et peuvent utiliser des fonctions intégrées, du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -193,7 +191,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
   
 -   Les expressions suivantes affichent plusieurs dates basées sur une valeur de paramètre de date sélectionnée par l'utilisateur.  
   
-|Description de l'exemple|Exemple|  
+|Description de l'exemple| Exemple|  
 |-------------------------|-------------|  
 |hier|`=DateSerial(Year(Parameters!TodaysDate.Value),Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value)-1)`|  
 |Il y a deux jours|`=DateSerial(Year(Parameters!TodaysDate.Value),Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value)-2)`|  
@@ -561,7 +559,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
   
      Cela permet d'éviter les exceptions d'exécution. Vous pouvez maintenant utiliser une expression comme `=IIF(Me.Value < 0, "red", "black")` dans la propriété **Color** de la zone de texte pour afficher de manière conditionnelle un texte selon que les valeurs sont supérieures ou inférieures à 0.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

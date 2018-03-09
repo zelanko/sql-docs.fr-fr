@@ -2,29 +2,34 @@
 title: "Utiliser la recherche en texte intégral avec des colonnes XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5564331e341498a5c63550e08e466db859f5762b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ab09c2313d7a14e1d9068d065cc62a7c55eb1e4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
-  Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
   
 -   Contenu des éléments XML.  
   
@@ -65,7 +70,7 @@ WHERE  CONTAINS(xCol,'run')
   
  Lorsque le code XML est décomposé, à l'aide de AXSD, dans des colonnes relationnelles indexées en texte intégral, les requêtes XPath qui portent sur la vue XML ne lancent pas une recherche en texte intégral sur les tables sous-jacentes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

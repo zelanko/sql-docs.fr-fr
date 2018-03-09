@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f74bae865a6d2fe3ec5fbd86c77b24af2284ff7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9546aaea0b177552fa83095c342a24a2e0f954e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Résoudre les problèmes avec les rapports Reporting Services
 Cette rubrique vous fournit des conseils pour résoudre les problèmes associés à la conception de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , l’affichage de l’aperçu d’un rapport, la publication d’un rapport sur un serveur de rapports en mode natif ou en mode SharePoint, l’affichage d’un rapport sur le serveur de rapports ou l’exportation d’un rapport dans un format de fichier différent.  
@@ -63,7 +61,7 @@ Pour contrôler si [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull
 ```  
 Tant que la valeur est 1, seules les données de rapport mises en cache sont utilisées. Veillez à supprimer cette section lorsque vous avez terminé de déboguer le rapport.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

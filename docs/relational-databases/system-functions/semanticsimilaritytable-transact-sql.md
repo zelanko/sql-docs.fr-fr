@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 236debd7c90389d054de4b06caff9418b15366d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYTABLE  
     (  
     table,  
@@ -54,7 +57,7 @@ SEMANTICSIMILARITYTABLE
   
  Ce nom peut être en une à quatre parties, mais un nom de serveur distant n'est pas autorisé.  
   
- **colonne**  
+ **column**  
  Nom de la colonne indexée pour laquelle les résultats doivent être retournés L'indexation sémantique doit être activée pour la colonne.  
   
  **column_list**  
@@ -95,7 +98,7 @@ SEMANTICSIMILARITYTABLE
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT sur la table de base sur laquelle les index sémantiques et de recherche en texte intégral ont été créés.  
   
 ## <a name="examples"></a>Exemples  

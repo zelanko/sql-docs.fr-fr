@@ -2,23 +2,27 @@
 title: "Déployer et de consommer analytique à l’aide de mrsdeploy | Documents Microsoft"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b0bd3095fbb41beeb5d31d8c64dc5969acfdb3c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Déployer et de consommer analytique à l’aide de mrsdeploy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft R Server inclut une fonctionnalité à l’Opérationnalisation, **mrsdeploy**, qui prend en charge ces tâches :
 

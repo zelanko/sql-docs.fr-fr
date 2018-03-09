@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - routes [Service Broker], permissions
 - Service Broker, permissions
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077fe296f48de1658a56d0c3e7403904652603bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>Autorisations REVOKE dans Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,25 +66,25 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  Si le principal possède l'autorisation spécifiée sans l'option GRANT, l'autorisation elle-même sera révoquée.  
   
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être révoquée sur un élément sécurisable [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour obtenir la liste de ces autorisations, consultez la section Remarques plus loin dans cette rubrique.  
   
- CONTRAT **::***nom_contract*  
+ CONTRAT **:: *** nom_contract*  
  Spécifie le contrat sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
   
- TYPE DE MESSAGE **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Spécifie le type de message sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Spécifie la liaison de service distant sur laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
   
- ITINÉRAIRE **::***route_name*  
+ ITINÉRAIRE **:: *** route_name*  
  Spécifie l'itinéraire sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
   
  SERVICE **::***message_type_name*  
  Spécifie le service sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal pour lequel l'autorisation est révoquée. *principal_base_de_données* peut prendre l’une des opérations suivantes :  
   
 -   Utilisateur de base de données  
@@ -107,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- En tant que *revoking_principal*  
+ AS *revoking_principal*  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. *revoking_principal* peut prendre l’une des opérations suivantes :  
   
 -   Utilisateur de base de données  
@@ -181,7 +183,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite des autorisations CONTROL sur le contrat, le type de message, la liaison de service distant, l'itinéraire ou le service [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  

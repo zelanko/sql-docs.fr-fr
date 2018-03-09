@@ -1,10 +1,13 @@
 ---
 title: "Se connecter à MySQL (MySQLToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5c5dba74939ac94e9ce87477ec0952e56c4439c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Se connecter à MySQL (MySQLToSQL)
 Utilisez le **se connecter à MySQL** boîte de dialogue se connecter à la base de données MySQL que vous souhaitez migrer.  
@@ -45,7 +48,7 @@ Entrez le nom du serveur MySQL. Il s’agit d’une option de mode Standard.
   
 Entrez le port du serveur. Le port du serveur par défaut est 3306. Il s’agit d’une option de mode Standard.  
   
-**Nom d'utilisateur**  
+**User name**  
   
 Entrez le nom d’utilisateur SSMA utilisera pour se connecter à la base de données MySQL.  
   

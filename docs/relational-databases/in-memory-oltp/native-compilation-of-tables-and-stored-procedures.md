@@ -2,26 +2,30 @@
 title: "Compilation en mode natif de tables et de procédures stockées | Microsoft Docs"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.
 
 La compilation en mode natif des types de table optimisée en mémoire est également prise en charge. Pour plus d’informations, consultez [Table temporaire et variable de table plus rapides à l’aide de l’optimisation de la mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
@@ -35,9 +39,9 @@ L'OLTP en mémoire compile les tables optimisées en mémoire quand elles sont c
 
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>Maintenance des DLL de l'OLTP en mémoire
 
-La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :
+La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -61,7 +65,7 @@ La création d’une table optimisée en mémoire à l’aide de l’instruction
 
 Consultez l'exemple de script suivant, qui crée une base de données et une table optimisée en mémoire :
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -154,7 +158,7 @@ Pour plus d'informations sur les procédures stockées compilées en mode natif,
 
 Prenons l'exemple de procédure stockée suivant, qui insère des lignes dans la table t1 de l'exemple précédent :
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -211,7 +215,7 @@ Les fichiers créés lorsqu'une table ou une procédure stockée est compilée s
 
 Aucune intervention de l'utilisateur n'est nécessaire pour gérer ces fichiers. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et supprime les fichiers, le cas échéant.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

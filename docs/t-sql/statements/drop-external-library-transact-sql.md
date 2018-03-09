@@ -8,22 +8,24 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP EXTERNAL LIBRARY
 - DROP_EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: DROP EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DROP EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: c157270e83ccfd3277356863b26c49222691e9e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>SUPPRIMER la bibliothèque externe (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ DROP EXTERNAL LIBRARY library_name
 
 ### <a name="arguments"></a>Arguments
 
-**nom_librairie**
+**library_name**
 
 Spécifie le nom d’une bibliothèque de package existante.
 
@@ -75,8 +77,8 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[CRÉER la bibliothèque externe (Transact-SQL)](create-external-library-transact-sql.md)  
-[ALTER bibliothèque externe (Transact-SQL)](alter-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
 

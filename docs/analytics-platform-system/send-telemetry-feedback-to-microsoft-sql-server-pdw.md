@@ -3,10 +3,10 @@ title: "Envoyer des commentaires de télémétrie à Microsoft (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
 caps.latest.revision: "18"
-ms.openlocfilehash: f2c928c8f61a98af3eb1e5f05881683dbcaedf1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Envoyer des commentaires de télémétrie à Microsoft
 Système de plateforme Analytique possède une fonctionnalité de télémétrie facultatif qui envoie des données de la Console d’administration à Microsoft. Nous vous encourageons à activer cette option pour nous aider à améliorer le produit.  

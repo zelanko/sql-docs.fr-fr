@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ef86f150b0fdbc1184ed4e54752bcd50af584fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 ### <a name="to-create-a-blank-report"></a>Pour créer un rapport vierge  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou depuis le mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -344,7 +344,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par un nom de votre choix.
 
@@ -362,7 +362,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Next Steps
 
 Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. Le [didacticiel : création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
 

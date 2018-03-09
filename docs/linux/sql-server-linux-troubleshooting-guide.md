@@ -1,34 +1,37 @@
----
+﻿---
 title: "Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft"
 description: "Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document décrit comment résoudre les problèmes de Microsoft SQL Server s'exécutant sur Linux ou dans un conteneur Docker. Lors du dépannage de SQL Server sur Linux, n’oubliez pas de consulter les fonctionnalités prises en charge et les limitations connues dans les [notes de publication de SQL Server sur Linux](sql-server-linux-release-notes.md).
 
-## <a id="connection"></a>Résoudre les échecs de connexion
-Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL Server sous Linux, il existe quelques éléments à vérifier. 
+> [!TIP]
+> Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](sql-server-linux-faq.md).
+
+## <a id="connection"></a> Résoudre les échecs de connexion
+Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL de Linux, il existe quelques éléments à vérifier. 
 
 - Vérifiez que le nom du serveur ou l’adresse IP est accessible à partir de votre ordinateur client.
 
@@ -51,7 +54,7 @@ Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL Ser
 
 - Vérifiez que le nom d’utilisateur et le mot de passe ne contiennent pas de fautes de frappe, ni d'espaces, ni une casse incorrecte.
 
-- Essayez de définir explicitement le numéro de port et de protocole avec le nom du serveur comme suit : **tcp:servername, 1433**.
+- Essayez de définir explicitement le numéro de port et de protocole avec le nom du serveur à l’exemple suivant : **tcp:servername, 1433**.
 
 - Des problèmes de connectivité réseau peuvent également entraîner des délais d’attente et des erreurs de connexion. Après avoir vérifié vos informations de connexion et la connectivité réseau, recommencez l’opération.
 
@@ -61,7 +64,7 @@ Les sections suivantes montrent comment démarrer, arrêter, redémarrer et vér
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Gérer le service mssql-server sous Red Hat Enterprise Linux (RHEL) et Ubuntu 
 
-Vérifiez l’état de l’état du service SQL Server à l’aide de cette commande :
+Vérifiez l’état du service SQL Server à l’aide de cette commande :
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +80,7 @@ Vous pouvez arrêter, démarrer ou redémarrer le service SQL Server en fonction
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Gérer l’exécution du conteneur Docker mssql
 
-Vous pouvez obtenir l’ID de conteneur et l’état du dernier conteneur Docker de serveur SQL créé en exécutant la commande suivante (l’ID sera sous la colonne « ID de conteneur ») :
+Vous pouvez obtenir l’ID de conteneur et d’état du dernier conteneur Docker de serveur SQL créé en exécutant la commande suivante (l’ID est sous le **ID de conteneur** colonne) :
 
    ```bash
    sudo docker ps -l
@@ -149,7 +152,7 @@ Démarrage de SQL Server en Mode mono-utilisateur avec SQLCMD
    ```
   
 > [!WARNING]  
->  Démarrez SQL Server sous Linux avec l’utilisateur « mssql » afin d’éviter les problèmes de démarrage à l'avenir. Exemple « sudo -u mssql /opt/mssql/bin/sqlservr [OPTIONS de démarrage] » 
+>  Démarrez SQL Server sur Linux avec l’utilisateur « mssql » afin d’éviter les problèmes de démarrage futurs. Exemple « sudo -u mssql /opt/mssql/bin/sqlservr [OPTIONS DE DÉMARRAGE] » 
 
 Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vous devez changer la propriété des fichiers de base de données SQL Server pour l'attribuer à l’utilisateur 'mssql' avant de démarrer SQL Server avec systemd. Par exemple, exécutez la commande suivante pour modifier la propriété de tous les fichiers de base de données sous /var/opt/mssql sur l’utilisateur « mssql »
 
@@ -159,9 +162,9 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
 
 ## <a name="common-issues"></a>Problèmes courants
 
-1. Vous ne pouvez pas vous connecter à votre instance de SQL Server à distance.
+1. Impossible de se connecter à votre instance de SQL Server à distance.
 
-   Consultez la section Dépannage de la rubrique, [se connecter à SQL Server sur Linux](#connection).
+   Consultez la section Dépannage de l’article, [se connecter à SQL Server sur Linux](#connection).
 
 2. Erreur : Le nom d’hôte doit compter 15 caractères maximum.
 
@@ -172,9 +175,9 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
    Si vous avez oublié le mot de passe d’administrateur système ou que vous devez le réinitialiser pour une raison quelconque, procédez comme suit.
 
    > [!NOTE]
-   > Procédez comme suit pour arrêter temporairement le service SQL Server.
+   > Les étapes suivantes arrêter le service SQL Server temporairement.
 
-   Connectez vous au terminal de l’ordinateur hôte, exécutez les commandes suivantes, suivez les invites pour réinitialiser le mot de passe SA :
+   Se connecter dans le terminal de l’ordinateur hôte, exécutez les commandes suivantes, suivez les invites pour réinitialiser le mot de passe SA :
 
    ```bash
    sudo systemctl stop mssql-server
@@ -183,7 +186,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
 
 4. Utiliser des caractères spéciaux dans le mot de passe.
 
-   Si vous utilisez certains caractères dans le mot de passe de connexion à SQL Server, vous devrez peut-être utiliser un caractère d’échappement lors de l'utilisation de ces caractères sur le terminal Linux. Vous devez utiliser un caractère d’échappement pour $ à l’aide de la barre oblique inverse à chaque fois que vous l'utilisez dans une commande de terminal/un script de shell
+   Si vous utilisez des caractères dans le mot de passe du compte de connexion SQL Server, vous devrez peut-être d’échappement lors de leur utilisation dans le terminal Linux. Vous devez isoler le $ à tout moment à l’aide de la barre oblique vous l’utilisez dans un script de shell de commande/Terminal Server :
 
    Ne fonctionne pas :
 
@@ -191,7 +194,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
    sudo sqlcmd -S myserver -U sa -P Test$$
    ```
 
-   Fonctionne :
+   Fonctionne :
 
    ```bash
    sqlcmd -S myserver -U sa -P Test\$\$
@@ -200,12 +203,4 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
    Ressources : [des caractères spéciaux](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>Support technique
-
-Le support est disponible via la Communauté et surveillé par l’équipe d’ingénierie. Pour des questions spécifiques, utilisez les ressources suivantes :
-
-- [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server): Poser des questions sur l’administration de base de données
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Poser des questions sur le développement
-- [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Poser des questions techniques
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Signaler des bogues et des demandes de fonctionnalité
-- [Reddit](https://www.reddit.com/r/SQLServer/): Discuter de SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

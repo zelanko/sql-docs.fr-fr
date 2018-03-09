@@ -15,17 +15,17 @@ f1_keywords: sql13.swb.rg.properties.f1
 helpviewer_keywords: Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 907bdce1b77273c8c5c5a4c93a407d14d6355e2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247d759d0ab40ce50383cf44f5af82566052c41b
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="view-resource-governor-properties"></a>Afficher les propriétés de Resource Governor
+# <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  Vous pouvez déterminer s’il existe une configuration en attente en interrogeant la vue de gestion dynamique [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) pour obtenir l’état en cours d’is_configuration_pending.  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  L'affichage des propriétés de Resource Governor nécessite l'autorisation VIEW SERVER STATER. Les tâches de configuration de Resource Governor nécessitent l'autorisation CONTROL SERVER.  
   
 ##  <a name="ViewRGProp"></a> Page Propriétés de Resource Governor  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
  Spécifiez la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention de l'UC. La plage est comprise entre 0 et 100.  
   
  **% processeur maximal**  
- Spécifiez la bande passante de l'UC moyenne maximale que toutes les demandes dans ce pool de ressources recevront en cas de contention de l'UC. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
+ Spécifiez la bande passante de l'UC moyenne maximale que toutes les demandes dans ce pool de ressources recevront en cas de contention de l'UC. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
   
  **% mémoire minimal**  
  Spécifiez la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. La plage est comprise entre 0 et 100.  

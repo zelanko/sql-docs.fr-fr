@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0aad2b5602026908e165fa2b74b032ba09e6da7d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5be1119a1c6796c864bce4d0ea5ca3358894f8ba
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
   Cette rubrique explique comment configurer [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) afin d'utiliser des données de référence pour le nettoyage de vos données. Vous pouvez utiliser des données de référence provenant de Windows Azure Marketplace ou de fournisseurs de données de référence tiers en ligne directs.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres du service de données de référence dans DQS.  
   
 ##  <a name="Marketplace"></a> Configurer DQS pour utiliser des données de référence de Marketplace  

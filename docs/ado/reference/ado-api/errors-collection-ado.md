@@ -3,8 +3,9 @@ title: "Collection d’erreurs (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::Errors
 - Connection15::get_Errors
 - Connection15::GetErrors
-helpviewer_keywords: Errors collection [ADO]
+helpviewer_keywords:
+- Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3fffa48412387178006c66a97a0cbd6a9f3a93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 011d5956b7d2f9d752f15028ce0b09e3a35a0c71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="errors-collection-ado"></a>Collection d’erreurs (ADO)
 Contient tous les [erreur](../../../ado/reference/ado-api/error-object.md) objets créés en réponse à une erreur liée au fournisseur.  

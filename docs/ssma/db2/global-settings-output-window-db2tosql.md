@@ -1,10 +1,13 @@
 ---
 title: "Paramètres globaux (fenêtre de sortie) (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f90a33f6d023b99f2bc655962d1ae58d58d6bcc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 71cd07bb7a2e249193dfd0337d3d0aa055493e04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window-db2tosql"></a>Paramètres globaux (fenêtre de sortie) (DB2ToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de SSMA.  

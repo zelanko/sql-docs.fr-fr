@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce02d45295537bf9eef80816f7099a4697ddfd1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domaines d'application des applications du serveur de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le serveur de rapports est implémenté comme un service unique qui contient le service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan. Chaque application s'exécute dans son propre domaine d'application au sein du processus unique du serveur de rapports. Pour la plupart, les domaines d'application sont créés, configurés et gérés de façon interne. Toutefois, il peut s'avérer utile de savoir comment les opérations de recyclage se produisent pour les domaines d'application du serveur de rapports, si vous cherchez à résoudre des problèmes de performances ou de mémoire, ou si vous dépannez des interruptions de service.  
@@ -87,8 +85,8 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , aucune d'entre elles ne répond au recyclage de domaine d'application planifié qui peut être spécifié dans machine.config pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] hébergées dans les services IIS (Internet Information Services).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a> Voir aussi  
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   

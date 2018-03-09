@@ -1,5 +1,5 @@
 ---
-title: Destination OLE DB | Documents Microsoft
+title: Destination OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
   La destination OLE DB charge des données dans différentes bases de données compatibles OLE DB à l'aide d'une table ou d'une vue de base de données ou d'une commande SQL. Par exemple, la source OLE DB peut charger des données dans des tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/17/2017
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Indique la taille à insérer en kilo-octets. L’option a la forme **KILOBYTES_PER_BATCH** = \<valeur entière positive**>**.|  
 |FIRE_TRIGGERS|Spécifie si des déclencheurs sont activés sur la table d'insertion. L’option a la forme **FIRE_TRIGGERS**. La présence de l'option indique que des déclencheurs sont activés.|  
-|ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ordre \<nom de colonne > ASC &#124; DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : les performances peuvent être améliorées si vous utilisez l’option ORDER pour trier les données d’entrée selon l’index cluster de la table.|  
+|ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ORDER \<nom de colonne> ASC&#124;DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : les performances peuvent être améliorées si vous utilisez l’option ORDER pour trier les données d’entrée selon l’index cluster de la table.|  
   
  Les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] sont traditionnellement tapés en majuscules, mais ils ne tiennent pas compte de la casse.  
   
@@ -111,9 +110,9 @@ ms.lasthandoff: 08/17/2017
  Vous pouvez consigner les appels que la destination OLE DB effectue vers des fournisseurs de données externes. Cette fonctionnalité de journalisation permet de résoudre des problèmes liés à l'enregistrement de données vers des sources de données externes que réalise la destination OLE DB. Pour consigner les appels que la destination OLE DB effectue vers des fournisseurs de données externes, activez la journalisation de package et sélectionnez l'événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="configuring-the-ole-db-destination"></a>Configuration de la destination OLE DB  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Charger des données à l'aide de la destination OLE DB](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
   
--   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d'un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="ole-db-destination-editor-connection-manager-page"></a>Éditeur de destination OLE DB (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination OLE DB** pour sélectionner la connexion OLE DB de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -136,7 +135,7 @@ ms.lasthandoff: 08/17/2017
   
 ### <a name="static-options"></a>Options statiques  
  **Gestionnaire de connexions OLE DB**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
@@ -252,11 +251,11 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, consultez [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Build query**  
+ **Construire une requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
- **Parcourir**  
- Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+ **...**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
  **Analyser la requête**  
  Vérifiez la syntaxe du texte de la requête.  
@@ -272,7 +271,7 @@ ms.lasthandoff: 08/17/2017
  Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
   
  **Colonne d'entrée**  
- Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant **\<ignorer>** de manière à exclure des colonnes de la sortie.  
   
  **Colonne de destination**  
  Indique chaque colonne de destination disponible, qu'elle soit mappée ou non.  
@@ -304,7 +303,7 @@ ms.lasthandoff: 08/17/2017
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)  
   
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
@@ -312,4 +311,3 @@ ms.lasthandoff: 08/17/2017
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "Créer des requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>Créer des requêtes (Visual Database Tools)
-Les requêtes vous permettent de récupérer des données des tables et vues contenues dans votre base de données. Vous pouvez créer et utiliser des requêtes dans le **Concepteur de requêtes et de vues**, qui se compose de quatre volets : le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)et le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les requêtes vous permettent de récupérer des données des tables et vues contenues dans votre base de données. Vous pouvez créer et utiliser des requêtes dans le **Concepteur de requêtes et de vues**, qui se compose de quatre volets : le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)et le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>Pour créer une requête  
   
@@ -45,7 +48,7 @@ Les requêtes vous permettent de récupérer des données des tables et vues con
   
 Pour affiner davantage votre requête, vous pouvez modifier le code SQL dans le **Volet SQL** ou choisir des options telles que l’ordre de tri et les alias de colonne dans le **Volet Critères**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Enregistrer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

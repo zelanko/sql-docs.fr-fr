@@ -2,22 +2,25 @@
 title: "Présentation de revoscalepy | Documents Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="introducing-revoscalepy"></a>Présentation de revoscalepy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy** une nouvelle bibliothèque n’est fourni par Microsoft pour prendre en charge l’informatique distribuée, de calcul distant contextes et des algorithmes de hautes performances pour Python.
 
@@ -89,7 +92,7 @@ Les algorithmes d’apprentissage automatique suivants et les fonctions de synth
 |`rx_predict` | Générer des prédictions à partir d’un modèle formé|`rx_predict_ex`dans CTP 2.0|
 |`rx_summary` | Générer un résumé du modèle||
 
-Nouveaux algorithmes d’apprentissage automatique sont également fournies par la version Python de [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+Nouveaux algorithmes d’apprentissage automatique sont également fournies par la version Python de [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | Fonction|  Description|
 | ------ | ------ |

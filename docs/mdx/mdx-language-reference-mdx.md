@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1bae9b4caca24e385f632e66040c7ed8b2a56934
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e5cf88778cdd78c7119d94754d246dbba3709adb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-language-reference-mdx"></a>Guide de référence du langage MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Conventions de syntaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-conventions-mdx.md)|Décrit brièvement les conventions de syntaxe utilisées dans le guide de référence du langage MDX.|  
 |[Référence des instructions MDX &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)|Décrit les instructions de script, de définition de données et de manipulation de données disponibles dans le langage MDX.|  

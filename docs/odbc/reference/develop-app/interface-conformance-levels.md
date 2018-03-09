@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2af6dc705ad13c12a28203f6dd114afa10f3a31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface-conformance-levels"></a>Niveaux de conformité de l’interface
 L’objectif de l’audit est d’informer l’application quelles fonctionnalités sont disponibles à ce dernier à partir du pilote. Un schéma d’audit basé sur des fonctions ne pas suffisamment à atteindre cet objectif. Dans ODBC 3. *x*, pilotes sont classées selon les fonctionnalités qu’ils possèdent. La fonctionnalité de prise en charge peut inclure la prise en charge de la fonction ; Il peut également inclure un champ de descripteur, un attribut d’instruction, une valeur « Y » de prise en charge pour un type d’informations retourné par **SQLGetInfo**, et ainsi de suite.  

@@ -3,29 +3,31 @@ title: "Groupe de propriétés de l’objet, méthodes et événements | Documen
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: group object [ADOX], members
+helpviewer_keywords:
+- group object [ADOX], members
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82e7effde8a48983577c2b6d292b7c587bb1a300
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ddac2e0dfe6d592fb247ffe11734361ab72cbab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="group-object-properties-methods-and-events"></a>Propriétés de l’objet groupe, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+## <a name="propertiescollections"></a>Properties/Collections  
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  

@@ -3,8 +3,11 @@ title: "Ouvrir des requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b9780d3afacfb73a9eabe244206117311029ff9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e7ce3fbbc5a81cadd403c2afcf3c447d08557472
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-queries-visual-database-tools"></a>Ouvrir des requêtes (Visual Database Tools)
-Vous pouvez ouvrir une requête existante dans le Concepteur de requêtes et de vues en utilisant la commande **Ouvrir** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ouvrir une requête existante dans le Concepteur de requêtes et de vues en utilisant la commande **Ouvrir**.  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Pour ouvrir une requête dans tous les volets  
   
@@ -37,7 +40,7 @@ Vous pouvez ouvrir une requête existante dans le Concepteur de requêtes et de 
 > [!NOTE]  
 > Par défaut, le Concepteur de requêtes et de vues ouvre tous ses volets (SQL, Critères, Schéma et Résultats), mais cette valeur par défaut peut être modifiée dans la boîte de dialogue **Options** . Pour ouvrir ces volets s’ils sont fermés, dans le menu **Concepteur de requêtes** , pointez sur **Volet**, puis cliquez sur le volet que vous souhaitez ouvrir.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Enregistrer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

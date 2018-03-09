@@ -2,16 +2,13 @@
 title: "Propriétés de membre intrinsèques (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: intrinsic member properties [MDX]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Propriétés de membre MDX - propriétés de membre intrinsèques
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expose les propriétés intrinsèques sur les membres de dimension que vous pouvez inclure dans une requête afin de retourner des informations supplémentaires ou des métadonnées à utiliser dans une application personnalisée, ou pour faciliter l’analyse ou la construction d’un modèle. Si vous utilisez les outils clients SQL Server, vous pouvez voir les propriétés intrinsèques dans SQL Server Management Studio (SSMS).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expose les propriétés intrinsèques sur les membres de dimension que vous pouvez inclure dans une requête pour retourner des données supplémentaires ou des métadonnées pour une utilisation dans une application personnalisée, ou pour vous aider dans l’analyse du modèle ou la construction. Si vous utilisez les outils clients SQL Server, vous pouvez voir les propriétés intrinsèques dans SQL Server Management Studio (SSMS).  
   
  Les propriétés intrinsèques sont **ID**, **KEY**, **KEYx**et **NAME**, lesquelles sont des propriétés exposées par chaque membre, à tout niveau. Vous pouvez également retourner les informations de position, telles que **LEVEL_NUMBER** ou **PARENT_UNIQUE_NAME**, entre autres choses.  
   
@@ -77,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>Syntaxe PROPERTIES pour les propriétés sensibles au contexte  
  Vous utilisez ces propriétés de membre dans le contexte d’une dimension ou d’un niveau spécifique, et fournissez les valeurs de chaque membre de la dimension ou du niveau en question.  
   
- Pour les propriétés de membre de dimension, vous devez faire précéder le nom de la propriété du nom de la dimension à laquelle elle s'applique. L'exemple suivant illustre la syntaxe appropriée :  
+ Pour les propriétés de membre de dimension, vous devez faire précéder le nom de la propriété du nom de la dimension à laquelle elle s'applique. L'exemple suivant illustre la syntaxe appropriée :  
   
  `DIMENSION PROPERTIES Dimension.Property_name`  
   
@@ -138,7 +135,7 @@ ms.lasthandoff: 11/17/2017
   
  Cette instruction retourne la description de chaque membre de la dimension de l'axe. Si vous avez tenté de qualifier la propriété avec une dimension ou un niveau, comme dans *Dimension*`.DESCRIPTION` ou dans *Level*`.DESCRIPTION`, l’instruction n’est pas validée.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Les exemples suivants montrent des requêtes MDX qui retournent les propriétés intrinsèques.  
   
  **Exemple 1 : utiliser les propriétés intrinsèques contextuelles dans une requête**  

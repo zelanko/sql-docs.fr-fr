@@ -2,10 +2,14 @@
 title: "Afficher ou modifier des planifications de jeu d’éléments de collecte (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ce50a767b5d704a889de0aaf96a74c0196f1587
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
-  Vous pouvez afficher ou modifier des planifications de jeu d'éléments de collecte à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vous pouvez afficher ou modifier des planifications de jeu d'éléments de collecte à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Le mode de collecte, avec ou sans mise en cache, détermine la manière dont vous pouvez apporter des modifications à une planification. Le mode avec mise en cache utilise des planifications distinctes pour la collecte et le téléchargement. Le mode sans mise en cache utilise la même planification pour la collecte et le téléchargement. Le type de mode de collecte pour chacun des jeux d’éléments de collecte de données système est comme suit :  
   
@@ -52,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode avec mise en cache, tel que **Statistiques sur les requêtes**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet) .  
   
-3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour cela, procédez comme suit :  
+3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour cela, procédez comme suit :  
   
     1.  Dans le volet d’informations, double-cliquez sur le nombre qui s’affiche pour la colonne **Fréquence de collecte (s)** de la table **Éléments de collecte** .  
   
@@ -164,7 +169,7 @@ ms.lasthandoff: 11/09/2017
   
  Utilisez cette page pour consulter une description du jeu d'éléments de collecte auquel cette page de propriétés fait référence.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   

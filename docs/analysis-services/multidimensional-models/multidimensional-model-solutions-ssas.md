@@ -2,40 +2,38 @@
 title: "Solutions de modèles multidimensionnels (SSAS) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - objects [Analysis Services], defining objects
 - multidimensional data [Analysis Services], designing objects
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 070aa1079f02bd53330daacb2fd55408975dc236
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24573a4c5e830bfb7258f74450e74c4c4ab5243a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Solutions de modèles multidimensionnels (SSAS)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
     
 ## <a name="in-this-section"></a>Dans cette section  
- Les rubriques suivantes fournissent des instructions sur la conception d’objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ Les rubriques suivantes fournissent des instructions sur la conception d’objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
- Décrit comment définir une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ [Bases de données de modèle multidimensionnel ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ Décrit comment définir une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  [Sources de données prises en charge &#40;SSAS – Multidimensionnel&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
  Décrit comment définir des objets de source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -47,12 +45,12 @@ ms.lasthandoff: 11/17/2017
  Décrit comment concevoir des objets de dimension [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Cubes dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
- Décrit comment concevoir des objets de cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ Décrit comment concevoir des objets de cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- [Assistant Génération de schéma &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [Assistant génération de schéma &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
  Explique comment concevoir des objets multidimensionnels de base de données sans schéma relationnel existant.  
   
- [Extensions de personnalisation Analysis Services](../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
+ [Extensions de personnalisation de Analysis Services](../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
  Décrit comment concevoir des extensions de personnalisation pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
   

@@ -2,16 +2,13 @@
 title: "Ajouter l’Intelligence des dimensions à une Dimension | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Assistant BI - ajouter l’Intelligence des dimensions à une Dimension
-  Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
   
  Pour ajouter l’intelligence des dimensions, utilisez l’Assistant Business Intelligence, puis sélectionnez l’option **Définir l’intelligence des dimensions** dans la page **Choisir des améliorations** . Cet Assistant vous guide tout au long des étapes de sélection d'une dimension à laquelle vous souhaitez appliquer l'intelligence des dimensions et d'identification des attributs pour la dimension sélectionnée.  
   
@@ -50,6 +48,6 @@ ms.lasthandoff: 11/17/2017
  Par exemple, vous souhaitez ajouter l'intelligence des dimensions à une dimension Comptes. Dans **Type de dimension**, vous sélectionnez **Comptes**. Ensuite, si la dimension a les attributs **Type de compte** et **Description du compte** , dans la colonne **Inclure** , cochez les cases pour les types de comptes **Nom du compte** et **Type de compte** . Dans la colonne **Attribut de dimension** , vous associez ensuite ces types de comptes aux attributs **Description du compte** et **Type de compte** , respectivement, dans la dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [Définir des calculs Time Intelligence à l’aide de l’Assistant Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

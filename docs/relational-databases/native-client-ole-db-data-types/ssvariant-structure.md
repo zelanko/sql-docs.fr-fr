@@ -15,15 +15,15 @@ f1_keywords: SSVARIANT
 helpviewer_keywords: SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b8c1bc781701f4991db80ac68a99dc6940ec7e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0f5df988e6f0a12fa5b5c2cebd9f5ce7b937104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssvariant-structure"></a>Structure SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,8 +62,8 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Membre|Indicateur de type OLE DB|Type de données OLE DB C|Valeur vt|Commentaires|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |VT|SSVARTYPE|||Spécifie le type de la valeur contenue dans le **SSVARIANT** struct.|  
-|bTinyIntVal|DBTYPE_UI1|**OCTETS**|**VT_SS_UI1**|Prend en charge la **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
-|sShortIntVal|DBTYPE_I2|**COURTE**|**VT_SS_I2**|Prend en charge la **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Prend en charge la **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Prend en charge la **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Prend en charge la **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Prend en charge la **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Prend en charge la **réel** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  

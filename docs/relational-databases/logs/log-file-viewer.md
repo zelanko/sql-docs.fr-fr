@@ -2,27 +2,33 @@
 title: "Visionneuse du fichier journal | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Viewer
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dfd00aef3ab0c91f2acd55c6cb8e1596a70d1df0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d196f3e6964f310610bf336f6311eb9f3b33a2f1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-viewer"></a>Visionneuse du fichier journal
-  La Visionneuse du fichier journal dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet d'accéder aux informations sur les erreurs et événements capturés dans les fichiers journaux.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La Visionneuse du fichier journal dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet d'accéder aux informations sur les erreurs et événements capturés dans les fichiers journaux.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Avantages liés à l'utilisation de la Visionneuse du fichier journal  
  Vous pouvez consulter des fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une instance locale ou distante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance cible est hors connexion ou ne peut pas démarrer. Vous pouvez accéder aux fichiers journaux hors connexion à partir des serveurs inscrits, ou par programmation via des requêtes WMI et WQL (WMI Query Language). Pour plus d’informations, consultez [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md). Voici les types de fichiers journaux auxquels vous pouvez accéder à l'aide de la Visionneuse du fichier journal :  
@@ -53,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 |Explique comment afficher des fichiers journaux hors ligne par le biais de serveurs inscrits et comment vérifier les autorisations WMI.|[Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)|  
 |Fournit l'aide (accessible à l'aide de la touche F1) relative à la Visionneuse du fichier journal.|[Visionneuse du fichier journal - Aide (F1)](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Journal des erreurs de l'Agent SQL Server](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
   

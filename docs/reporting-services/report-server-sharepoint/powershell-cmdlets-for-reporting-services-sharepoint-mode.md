@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96e9ea12df36219b11fe74e3328e6817b03471e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
 
@@ -69,7 +67,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
   
 3.  Cliquez sur **SharePoint Management Shell**.  
   
- Pour consulter l'aide sur la ligne de commande pour une applet de commande utilisez la commande « GET-HELP » de PowerShell à l'invite de commandes de PowerShell. Exemple :  
+ Pour consulter l'aide sur la ligne de commande pour une applet de commande utilisez la commande « GET-HELP » de PowerShell à l'invite de commandes de PowerShell. Exemple :  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -91,7 +89,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 |Applet de commande|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Obtient un ou plusieurs objets d’application de service Reporting Services.|  
-|New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : spécifie si le serveur de rapports utilise le compte de pool d'applications SSRS ou un compte de connexion SQL Server pour accéder à la base de données du serveur de rapports. Les valeurs valides sont :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2. Compte du pool d'applications (valeur par défaut)|  
+|New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : spécifie si le serveur de rapports utilise le compte de pool d'applications SSRS ou un compte de connexion SQL Server pour accéder à la base de données du serveur de rapports. Les valeurs valides sont :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2. Compte du pool d'applications (valeur par défaut)|  
 |Remove-SPRSServiceApplication|Supprime l'application de service Reporting Services spécifiée. Cela supprimera également les bases de données associées.|  
 |Set-SPRSServiceApplication|Modifie les propriétés d'une base de données d'application de service Reporting Services existante.|  
 |New-SPRSServiceApplicationProxy|Crée un nouveau proxy d'application de service Reporting Services.|  
@@ -117,8 +115,8 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 |New-SPRSExtension|Enregistre une nouvelle extension avec une application de service Reporting Services.|  
 |Set-SPRSExtension|Définit les propriétés d'une extension Reporting Services existante.|  
 |Remove-SPRSExtension|Supprime une extension d'une application de service Reporting Services.|  
-|Get-SPRSExtension|Obtient une ou plusieurs extensions Reporting Services pour une application de service Reporting Services.<br /><br /> Les valeurs valides sont :<br /><br /> <br /><br /> Remise<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Données<br /><br /> Sécurité<br /><br /> Authentification<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Concepteur<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
-|Get-SPRSSite|Obtient les sites SharePoint en fonction de l'activation de la fonction « ReportingService ». Par défaut, les sites qui activent la fonction « ReportingService » sont retournés.|  
+|Get-SPRSExtension|Obtient une ou plusieurs extensions Reporting Services pour une application de service Reporting Services.<br /><br /> Les valeurs valides sont :<br /><br /> <br /><br /> Remise<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Sécurité<br /><br /> Authentification<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Concepteur<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSSite|Obtient les sites SharePoint en fonction de l'activation de la fonction « ReportingService ». Par défaut, les sites qui activent la fonction « ReportingService » sont retournés.|  
   
 ## <a name="basic-samples"></a>Exemples de base
 
@@ -201,7 +199,7 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- Dans l'exemple ci-dessus, si vous ne connaissiez pas le nom exact de l'application de service, vous pouvez réécrire la première instruction pour obtenir l'application de service en fonction d'une recherche portant sur son nom partiel. Par exemple :  
+ Dans l'exemple ci-dessus, si vous ne connaissiez pas le nom exact de l'application de service, vous pouvez réécrire la première instruction pour obtenir l'application de service en fonction d'une recherche portant sur son nom partiel. Exemple :  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  

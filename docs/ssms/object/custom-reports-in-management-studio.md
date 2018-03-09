@@ -3,8 +3,11 @@ title: "Rapports personnalisés dans Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
-Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], un grand nombre de nœuds de l’Explorateur d’objets proposent un ensemble de rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Ces rapports fournissent généralement les informations serveur demandées. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, les administrateurs peuvent exécuter des rapports personnalisés qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], un grand nombre de nœuds de l’Explorateur d’objets proposent un ensemble de rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Ces rapports fournissent généralement les informations serveur demandées. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, les administrateurs peuvent exécuter des rapports personnalisés qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 ## <a name="implementation"></a>Implémentation  
 Les rapports personnalisés sont stockés sous la forme de fichiers de définition de rapport (.rdl) et créés à l'aide du langage RDL (Report Definition Language). Le langage RDL dévoile les informations d'extraction de données et de disposition d'un rapport au format XML. Le langage RDL est un schéma ouvert Les développeurs peuvent l'étendre au moyen d'attributs et d'éléments supplémentaires. Les rapports peuvent exécuter toutes les instructions [!INCLUDE[tsql](../../includes/tsql_md.md)] valides au sein du rapport.  
@@ -61,7 +64,7 @@ Lorsque vous travaillez avec des rapports personnalisés, tenez compte des contr
 ## <a name="managing-custom-reports"></a>Gestion des rapports personnalisés  
 Nous recommandons aux utilisateurs qui possèdent un grand nombre de rapports personnalisés de les organiser à l'aide de dossiers de système de fichiers dotés des autorisations du système de fichiers NTFS appropriées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Les rapports personnalisés sont exécutés avec les autorisations de l'utilisateur actuel. Pour empêcher tout utilisateur malveillant de modifier les requêtes exécutées par le rapport, les autorisations définies dans le dossier de système de fichiers contenant les fichiers de rapports doivent l'être avec un accès restreint.  
   
 L'utilisateur tout comme le compte utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] doivent bénéficier d'un accès en lecture au dossier de système de fichiers contenant les fichiers de rapports.  
@@ -73,8 +76,8 @@ Toutes les commandes [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] v
   
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Ajouter un rapport personnalisé à Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

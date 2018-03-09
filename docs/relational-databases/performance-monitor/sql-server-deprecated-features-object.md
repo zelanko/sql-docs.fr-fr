@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
 |TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
 |TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
-|TIMESTAMP|Nombre total des fois où le type de données **timestamp** déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données **rowversion** .|  
+|timestamp|Nombre total des fois où le type de données **timestamp** déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données **rowversion** .|  
 |UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  
@@ -284,7 +284,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |xp_loginconfig|La procédure xp_loginconfig a été rencontrée. Utilisez à la place l'argument IsIntegratedSecurityOnly de SERVERPROPERTY. Se produit une fois par requête.|  
 |xp_revokelogin|La procédure xp_revokelogin a été rencontrée. Utilisez à la place ALTER LOGIN DISABLE ou DROP LOGIN. Se produit une fois par compilation.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe d'événements Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

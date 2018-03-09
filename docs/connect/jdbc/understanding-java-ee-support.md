@@ -1,27 +1,28 @@
 ---
 title: "Présentation de prise en charge de Java EE | Documents Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>Fonctionnement de la prise en charge Java EE
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
  En premier lieu, assurez-vous que votre environnement Java (JDK, JRE) inclut le package javax.sql. Il s'agit d'un package requis pour toute application JDBC qui utilise l'API facultative. JDK 1.5 et versions ultérieures contiennent déjà ce package ; il est donc inutile de l'installer séparément.  
   
 ## <a name="driver-name"></a>Nom du pilote  
- Le nom de classe du pilote est **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Pour les pilotes JDBC 4.0, 4.1, 4.2 et 6.0, le pilote est contenu dans le fichier sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar. Pour 6.2 du pilote JDBC, le pilote est contenu dans mssql-jdbc-6.2.1.jre7.jar ou mssql-jdbc-6.2.1.jre8.jar.
+ Le nom de classe du pilote est **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Pour les pilotes de JDBC 4.1, 4.2 et 6.0, le pilote est contenu dans le fichier sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar. Pour 6.2 du pilote JDBC, le pilote est contenu dans mssql-jdbc-6.2.1.jre7.jar ou mssql-jdbc-6.2.1.jre8.jar. Pour 6.4 du pilote JDBC, le pilote est contenu dans mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar ou mssql-jdbc-6.4.0.jre9.jar.
   
  Le nom de classe est utilisé chaque fois que vous chargez le pilote avec la classe DriverManager de JDBC. Il est également utilisé lorsque vous devez spécifier le nom de classe du pilote dans une configuration de pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut exiger que vous entriez le nom de classe du pilote.  
   

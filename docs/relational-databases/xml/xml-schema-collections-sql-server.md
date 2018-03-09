@@ -2,10 +2,14 @@
 title: "Collections de schémas XML (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +24,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90af09f6d1ce768405c824e76e9ad746624b2245
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c8c7a11c64d487aa6f08d616d6bae70b24a742dc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
-  Comme l’explique la rubrique [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), SQL Server assure un stockage natif des données XML par le biais du type de données **xml**. Vous pouvez éventuellement associer des schémas XSD à une variable ou à une colonne de type **xml** à l'aide d'une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Comme l’explique la rubrique [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), SQL Server assure un stockage natif des données XML par le biais du type de données **xml**. Vous pouvez éventuellement associer des schémas XSD à une variable ou à une colonne de type **xml** à l'aide d'une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
   
 -   valider des instances XML ;  
   
@@ -114,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 -   MODELGROUP  
   
- Exemple :  
+ Exemple :  
   
 -   **SomeAttribute** est un composant ATTRIBUTE.  
   
@@ -166,7 +171,7 @@ ms.lasthandoff: 11/09/2017
   
  La fonction intégrée **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, produit une instance de type de données **xml** . Cette instance contient des fragments de schéma XML pour les schémas qui sont contenus dans une collection de schémas XML, à l'exception des schémas XML prédéfinis.  
   
- Pour répertorier le contenu d'une collection de schémas XML, vous pouvez au choix :  
+ Pour répertorier le contenu d'une collection de schémas XML, vous pouvez au choix :  
   
 -   écrire des requêtes Transact-SQL sur les affichages catalogue appropriés pour les collections de schémas XML ;  
   
@@ -202,13 +207,13 @@ N'http://www.microsoft.com/books')
 ```  
   
 ### <a name="querying-xml-schemas"></a>Interrogation des schémas XML  
- Vous pouvez interroger les schémas XML que vous avez chargés dans les collections de schémas XML en procédant ainsi :  
+ Vous pouvez interroger les schémas XML que vous avez chargés dans les collections de schémas XML en procédant ainsi :  
   
 -   Écrivez des requêtes Transact-SQL sur les affichages catalogue appropriés pour les espaces de noms de schémas XML.  
   
 -   Créez une table qui contient une colonne de type **xml** pour stocker vos schémas XML et aussi les charger dans le système de type XML. Vous pouvez interroger la colonne XML à l'aide des méthodes de type de données **xml** . Vous pouvez aussi placer un index XML sur cette colonne. Toutefois, dans ce cas, l'application doit assurer la cohérence entre les schémas XML stockés dans la colonne XML et le système de type XML. Par exemple, si vous supprimez l'espace de noms du schéma XML du système de type XML, vous devez aussi le supprimer de la table pour garantir la cohérence.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Afficher une collection de schémas XML stockée](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Prétraiter un schéma pour fusionner des schémas inclus](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

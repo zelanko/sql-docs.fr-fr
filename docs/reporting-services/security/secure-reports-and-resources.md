@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 27a166e56c39fcaef49913838e44e32506a11d49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d759eccca2ea7d1c7b0803f3a44cb258ffb981
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
   Vous pouvez définir la sécurité pour des rapports et des ressources individuels afin de contrôler le degré d'accès dont disposent les utilisateurs à ces éléments. Par défaut, seuls les utilisateurs qui sont membres du groupe intégré **Administrateurs** peuvent exécuter les rapports, afficher les ressources, modifier les propriétés et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un rapport ou une ressource.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
  Pour limiter le risque d'insertion de liens dans un rapport qui, par inadvertance, exécuterait des scripts malveillants, n'associez des liens hypertexte qu'avec des données de sources fiables. Vérifiez que les données issues des résultats de la requête et des expressions qui lient des données aux liens hypertexte ne créent pas de liens susceptibles d'être utilisés frauduleusement. Ainsi, ne fondez pas un lien hypertexte sur une expression qui concatène des données à partir de plusieurs champs de dataset. Si nécessaire, accédez au rapport et utilisez la commande « Afficher la source » pour rechercher la présence éventuelle d'URL et de scripts suspects.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Limitation des attaques par injection SQL dans un rapport paramétré  
- Dans un rapport qui inclut un paramètre de type **String**, veillez à utiliser une liste de valeurs disponibles (également appelée liste de valeurs valides) et vérifiez que l’utilisateur qui exécute le rapport dispose uniquement des autorisations nécessaires à l’affichage des données du rapport. Lorsque vous définissez un paramètre de type **String**, la zone de texte qui apparaît vous permet d'entrer n'importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de requête et vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur de rapports au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
+ Dans un rapport qui inclut un paramètre de type **String**, veillez à utiliser une liste de valeurs disponibles (également appelée liste de valeurs valides) et vérifiez que l’utilisateur qui exécute le rapport dispose uniquement des autorisations nécessaires à l’affichage des données du rapport. Quand vous définissez un paramètre de type **Chaîne**, la zone de texte qui apparaît vous permet d’entrer n’importe quelle valeur. Une liste de valeurs disponibles limite les valeurs susceptibles d'être entrées. Si le paramètre de rapport est lié à un paramètre de requête et vous n'utilisez pas une liste de valeurs disponibles, l'utilisateur d'un rapport peut taper la syntaxe SQL dans la zone de texte, ce qui peut exposer le rapport et votre serveur de rapports au risque d'une attaque par injection SQL. Si l'utilisateur dispose d'autorisations suffisantes pour exécuter la nouvelle instruction SQL, cela risque de générer des résultats indésirables sur le serveur.  
   
  Si un paramètre de rapport n'est pas lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, l'utilisateur d'un rapport peut taper la syntaxe de l'expression ou une URL dans la valeur de paramètre et rendre le rapport au format Excel ou HTML. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="securing-confidential-reports"></a>Sécurisation des rapports confidentiels  
  Les rapports qui contiennent des informations confidentielles doivent être sécurisés au niveau de l'accès aux données, en exigeant des utilisateurs qu'ils s'identifient pour accéder à des données sensibles. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Vous pouvez également sécuriser un dossier pour le rendre inaccessible aux utilisateurs non autorisés. Pour plus d’informations, consultez [Dossiers sécurisés](../../reporting-services/security/secure-folders.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Configurer l'accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   

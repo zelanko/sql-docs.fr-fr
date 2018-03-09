@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
-|Propriété|Valeurs| Description|  
+|Propriété|Valeurs|Description|  
 |--------------|------------|-----------------|  
 |**creation_script**||Chemin d'accès et nom d'un script de schéma d'article utilisé pour créer des tables cibles. La valeur par défaut est NULL.|  
 |**del_cmd**||Instruction DELETE à exécuter ; à défaut, elle sera élaborée à partir du journal.|  
@@ -178,7 +178,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **sp_changearticle** est utilisé dans la réplication de capture instantanée et la réplication transactionnelle.  
   
  Lorsqu’un article appartient à une publication qui prend en charge la réplication transactionnelle d’égal à égal, vous ne pouvez modifier le **description**, **ins_cmd**, **upd_cmd**, et **del_cmd** propriétés.  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Dans une publication existante, vous pouvez utiliser **sp_changearticle** pour modifier un article sans devoir supprimer et recréer la publication entière.  
   
 > [!NOTE]  
->  Lorsque vous modifiez la valeur de *schema_option*, le système n’effectue pas une mise à jour au niveau du bit. Cela signifie que lorsque vous définissez *schema_option* à l’aide de **sp_changearticle**existante les paramètres bits peuvent être désactivés. Pour conserver les paramètres existants, vous devez effectuer [& (Bitwise AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md) entre la valeur que vous définissez et la valeur actuelle de *schema_option*, qui peut être déterminée en exécutant [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  Lorsque vous modifiez la valeur de *schema_option*, le système n’effectue pas une mise à jour au niveau du bit. Cela signifie que lorsque vous définissez *schema_option* à l’aide de **sp_changearticle**existante les paramètres bits peuvent être désactivés. Pour conserver les paramètres existants, vous devez effectuer [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) entre la valeur que vous définissez et la valeur actuelle de *schema_option*, qui peut être déterminée en exécutant [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Options de schéma valides  
  Le tableau suivant décrit les valeurs autorisées de *schema_option* basé sur le type de réplication (du haut) et le type d’article (la première colonne).  
@@ -243,15 +243,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
 > [!NOTE]  
 >  Pour les publications avec mise à jour en file d’attente, le *schema_option* valeur **0 x 80** doit être activée. La prise en charge *schema_option* des valeurs non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications sont : **0 x 01**, **0 x 02**, **0 x 10**, **0 x 40**, **0 x 80**, **0 x 1000** et **0 x 4000**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_changearticle**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés de l’Article](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

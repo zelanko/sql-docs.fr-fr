@@ -1,11 +1,11 @@
 ---
-title: Variables Integration Services (SSIS) | Documents Microsoft
+title: Variables Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 141b245a49e1d2fa6f83b886c70c159ab089c2fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -103,7 +102,7 @@ ms.lasthandoff: 08/03/2017
  Spécifie le nom de la variable.  
   
  **Espace de noms**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fournit deux espaces de noms, **utilisateur** et **système**. Par défaut, les variables personnalisées se trouvent dans l’espace de noms **User** et les variables système se trouvent dans l’espace de noms **System** . Vous pouvez créer des espaces de noms supplémentaires pour les variables définies par l’utilisateur et changer le nom de l’espace de noms **User** , mais vous ne pouvez pas modifier le nom de l’espace de noms **System** , ajouter des variables à l’espace de noms **System** , ni affecter des variables système à un autre espace de noms.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit deux espaces de noms, **User** et **System**. Par défaut, les variables personnalisées se trouvent dans l’espace de noms **User** et les variables système se trouvent dans l’espace de noms **System** . Vous pouvez créer des espaces de noms supplémentaires pour les variables définies par l’utilisateur et changer le nom de l’espace de noms **User** , mais vous ne pouvez pas modifier le nom de l’espace de noms **System** , ajouter des variables à l’espace de noms **System** , ni affecter des variables système à un autre espace de noms.  
   
 **RaiseChangedEvent**  
  Quand la propriété a la valeur **True**, l’événement **OnVariableValueChanged** est déclenché en cas de changement de la valeur de la variable.  
@@ -135,7 +134,17 @@ ms.lasthandoff: 08/03/2017
  Lorsque le système réinitialise l'option **IncludeInDebugDump** à **false**, cela peut remplacer la valeur sélectionnée par l'utilisateur.  
   
 **Value**    
- La valeur d'une variable définie par l'utilisateur peut être un littéral ou une expression. Une variable inclut des options permettant de définir la valeur de la variable et le type de données de la valeur. Les deux propriétés doivent être compatibles : par exemple, l'utilisation d'une valeur de chaîne avec un type de données Integer n'est pas valide.  
+La valeur d'une variable définie par l'utilisateur peut être un littéral ou une expression. La valeur d’une variable ne peut pas être Null. Les variables ont les valeurs par défaut suivantes :
+
+| Type de données | Valeur par défaut |
+|---|---|
+| Booléen | False |
+| Types de données numérique et binaire | 0 (zéro) |
+| Types de données de caractère et de chaîne | (chaîne vide) |
+| Object | System.Object |
+| | |
+
+Une variable a des options permettant de définir la valeur de la variable et le type de données de la valeur. Les deux propriétés doivent être compatibles : par exemple, l'utilisation d'une valeur de chaîne avec un type de données Integer n'est pas valide.  
   
  Si la variable est configurée de façon à correspondre à une expression, vous devez fournir une expression. Au moment de l'exécution, l'expression est évaluée et le résultat de l'évaluation est affecté comme valeur de la variable. Par exemple, si une variable utilise l'expression `DATEPART("month", GETDATE())` , la valeur de la variable est l'équivalent numérique du mois de la date actuelle. L'expression doit être une expression valide qui utilise la syntaxe de grammaire d'expression [!INCLUDE[ssIS](../includes/ssis-md.md)] . Lorsqu'une expression est utilisée avec des variables, elle peut utiliser des littéraux et les opérateurs et fonctions fournis par la grammaire d'expression, mais elle ne peut pas faire référence aux colonnes d'un flux de données du package. La longueur maximale d'une expression est limitée à 4 000 caractères. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -154,7 +163,7 @@ ms.lasthandoff: 08/03/2017
   
  **Expressions de contrainte de précédence** : elles fournissent les valeurs à utiliser dans des contraintes de précédence pour déterminer si un exécutable contraint s’exécute. Les expressions peuvent être utilisées avec un résultat d'exécution (succès, échec, achèvement de l'opération) ou à la place d'un résultat d'exécution. Par exemple, si l’expression `@varMax > @varMin`est évalué à **true**, l’exécutable s’exécute. Pour plus d’informations, consultez [Ajouter des expressions aux contraintes de précédence](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Paramètres et codes de retour** : ils fournissent des valeurs aux paramètres d’entrée ou stockent les valeurs des paramètres de sortie et des codes de retour. Cette opération s'effectue en mappant les variables aux paramètres et aux valeurs de retour. Par exemple, si vous affectez à la variable `varProductId` la valeur 23 et que vous exécutez l’instruction SQL `SELECT * from Production.Product WHERE ProductID = ?`, la requête récupère le produit associé à la valeur `ProductID` 23. Pour plus d’informations, consultez [Tâche d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Paramètres et codes de retour** : ils fournissent des valeurs aux paramètres d’entrée ou stockent les valeurs des paramètres de sortie et des codes de retour. Cette opération s'effectue en mappant les variables aux paramètres et aux valeurs de retour. Par exemple, si vous affectez à la variable `varProductId` la valeur 23 et que vous exécutez l’instruction SQL `SELECT * from Production.Product WHERE ProductID = ?`, la requête récupère le produit associé à la valeur `ProductID` 23. Pour plus d’informations, consultez [Tache d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
  **Expressions de boucle For** : elles fournissent les valeurs à utiliser dans les expressions d’initialisation, d’évaluation et d’assignation de la boucle For. Par exemple, si la variable `varCount` a la valeur 2 et la variable `varMaxCount` la valeur 10 et que l’expression d’initialisation est `@varCount`, l’expression d’évaluation  `@varCount < @varMaxCount`et l’expression d’assignation `@varCount =@varCount +1`, la boucle se répète 8 fois. Pour plus d’informations, consultez [Conteneur de boucles For](../integration-services/control-flow/for-loop-container.md).  
   
@@ -202,7 +211,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
  **Type de valeur**  
  Sélectionnez un type de données.  
   
- **Valeur**  
+ **Value**  
  Tapez une valeur. La valeur doit être compatible avec le type de données spécifié dans l'option **Type de valeur** .  
   
  **Lecture seule**  
@@ -248,9 +257,9 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
 -   Fenêtre Propriétés. La fenêtre **Propriétés** répertorie les propriétés pour la configuration des variables qui ne sont pas disponibles dans la fenêtre **Variables** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType et IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fournit également un ensemble de variables système dont les propriétés ne peuvent pas être mis à jour, à l’exception de la propriété RaiseChangedEvent.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit également un ensemble de variables système dont les propriétés ne peuvent pas être mises à jour, à l’exception de la propriété RaiseChangedEvent.  
   
-### <a name="set-expressions-on-variables"></a>Expressions de jeu de variables  
+### <a name="set-expressions-on-variables"></a>Définir des expressions dans des variables  
   
  Quand vous utilisez la fenêtre **Propriétés** pour définir des expressions sur une variable définie par l’utilisateur :  
   
@@ -270,11 +279,11 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
   
  Dans les fenêtres **Variables** et **Propriétés**, si vous affectez une expression à la variable et que **EvaluateAsExpression** est défini sur **True**, vous ne pouvez pas changer le type de données de la variable.  
   
-### <a name="set-the-namespace-and-name-properties"></a>Définissez les propriétés Namespace et nom
+### <a name="set-the-namespace-and-name-properties"></a>Définir les propriétés Espace de noms et Nom
   
  La valeur des propriétés **Nom** et **Espace de noms** doit commencer par une lettre de l’alphabet, conformément à la convention Unicode Standard 2.0, ou par un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>Définir les propriétés de la Variable dans la fenêtre Variables   
+### <a name="set-variable-properties-in-the-variables-window"></a>Définir les propriétés de la variable dans la fenêtre Variables   
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -292,7 +301,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
   
 7.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>Définir les propriétés de la Variable dans la fenêtre Propriétés  
+### <a name="set-variable-properties-in-the-properties-window"></a>Définir les propriétés de la variable dans la fenêtre Propriétés  
 
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -308,15 +317,14 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
   
 7.  Dans la fenêtre **Propriétés** , mettez à jour les propriétés en lecture/écriture de la variable. Certaines propriétés sont en lecture/lecture uniquement pour les variables définies par l'utilisateur.  
   
-     Pour plus d’informations sur les propriétés, consultez [Integration Services &#40; SSIS &#41; Variables](../integration-services/integration-services-ssis-variables.md).  
+     Pour plus d’informations sur les propriétés, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>Mise à jour d’une variable dynamique avec des configurations  
+## <a name="update-a-variable-dynamically-with-configurations"></a>Mettre à jour une variable de manière dynamique avec des configurations  
  Pour mettre à jour dynamiquement des variables, vous pouvez créer des configurations pour les variables, déployer les configurations dans le package, puis mettre à jour les valeurs de variable dans un fichier de configuration lorsque vous déployez les packages. À l'exécution, le package utilise les valeurs de variable mises à jour. Pour plus d’informations, consultez [Créer des configurations de package](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Utiliser les valeurs des variables et des paramètres dans un package enfant](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Mapper des paramètres de requête à des variables dans un composant de flux de données](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

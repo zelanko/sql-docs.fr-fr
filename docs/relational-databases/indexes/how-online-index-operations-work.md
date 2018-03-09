@@ -16,19 +16,19 @@ helpviewer_keywords:
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 3a06dc9f01b2cf889605770beb57940b7f10558b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/28/2017
 |-----------|---------------------|------------------|  
 |Préparation|Un nouvel index est créé et défini en écriture seule.|IS|  
 |Build|Les données sont insérées à partir de la source.<br /><br /> Les modifications des utilisateurs (insertions, mises à jour, suppressions) apportées à la source sont appliquées.<br /><br /> Cette activité est transparente pour l'utilisateur.|IS|  
-|Finale|Les métadonnées de l'index sont mises à jour.<br /><br /> L'index est défini en lecture/écriture.|S<br /><br /> ou<br /><br /> SCH-M|  
+|Finale|Les métadonnées de l'index sont mises à jour.<br /><br /> L'index est défini en lecture/écriture.|S<br /><br /> ou Gestionnaire de configuration<br /><br /> SCH-M|  
   
  Les instructions SELECT émises par l'utilisateur n'accèdent pas à la cible aussi longtemps que l'opération d'index n'est pas terminée.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/28/2017
   
  La durée de vie d'un curseur déclaré sur une table impliquée dans une opération d'index en ligne est limitée par les phases de l'index en ligne. Les curseurs de mise à jour sont invalidés à chaque phase. Les curseurs en lecture seule ne sont invalidés qu'après la phase finale.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [Instructions pour les opérations d'index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  

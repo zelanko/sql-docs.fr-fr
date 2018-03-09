@@ -16,26 +16,26 @@ helpviewer_keywords:
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30ba1f01b556fcbb58007b771bb648847ecae8a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 058ea2dfad2c308bf5cd9b197babebb208c34d3c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tables"></a>Tables
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Les tables sont des objets de base de données qui contiennent toutes les données d'une base de données. Dans les tables, les données sont logiquement organisées en lignes et en colonnes, à la manière d'un tableur. Chaque ligne représente un enregistrement unique et chaque colonne représente un champ dans l'enregistrement. Par exemple, une table qui contient les données relatives aux employés d'une société peut contenir une ligne pour chaque employé et des colonnes représentant des informations sur l'employé, telles que son numéro, son nom, son adresse, sa fonction et son numéro de téléphone privé.  
+  Les tables sont des objets de base de données qui contiennent toutes les données d'une base de données. Dans les tables, les données sont logiquement organisées en lignes et en colonnes, à la manière d'un tableur. Chaque ligne représente un enregistrement unique et chaque colonne représente un champ dans l'enregistrement. Par exemple, une table qui contient les données relatives aux employés d'une société peut contenir une ligne pour chaque employé et des colonnes représentant des informations sur l'employé, telles que son numéro, son nom, son adresse, son poste et son numéro de téléphone privé.  
   
 -   Le nombre de tables dans une base de données n'est limité que par le nombre d'objets autorisés dans une base de données (2 147 483 647). Une table standard définie par l'utilisateur peut comporter jusqu'à 1 024 colonnes. Le nombre de lignes dans la table n'est limité que par la capacité de stockage du serveur.  
   
 -   Vous pouvez affecter des propriétés à la table et à chaque colonne de la table pour contrôler les données qui sont autorisées et d'autres propriétés. Par exemple, vous pouvez créer des contraintes sur une colonne pour interdire les valeurs NULL ou fournir une valeur par défaut si aucune valeur n'est spécifiée, ou vous pouvez affecter une contrainte de clé sur la table qui applique l'unicité ou définit une relation entre les tables.  
   
--   Les données de la table peuvent être compressées par ligne ou par page. La compression des données peut permettre de stocker plus de lignes sur une page. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   Les données de la table peuvent être compressées par ligne ou par page. La compression des données peut permettre de stocker plus de lignes sur une page. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="types-of-tables"></a>Types de tables  
  Outre le rôle standard des tables de base définies par l'utilisateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à votre disposition les types de tables suivants, qui remplissent une fonction particulière dans une base de données.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |Explique comment créer une colonne calculée dans une table.|[Spécifier les colonnes calculées dans une table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Explique comment spécifier une valeur par défaut pour une colonne. Cette valeur est utilisée si une autre valeur n'est pas fournie.|[Spécifier des valeurs par défaut pour les colonnes](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Contraintes de clé primaire et de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

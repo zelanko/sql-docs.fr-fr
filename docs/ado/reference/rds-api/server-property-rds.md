@@ -1,27 +1,32 @@
 ---
 title: "Propriété du serveur (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RDS::IBindMgr21::Server
-helpviewer_keywords: Server property [RDS]
+f1_keywords:
+- RDS::IBindMgr21::Server
+helpviewer_keywords:
+- Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="server-property-rds"></a>Propriété du serveur (RDS)
 Indique le protocole de nom et la communication Internet Information Services (IIS).  
@@ -90,7 +95,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **Dans le processus**  
+ **In-process**  
   
  Syntaxe d’au moment du design  
   

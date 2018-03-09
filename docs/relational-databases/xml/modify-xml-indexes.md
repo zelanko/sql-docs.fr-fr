@@ -2,29 +2,34 @@
 title: Modifier les index XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc7c43b45d06cd1ad56abb040db671a76549fcf3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 34e1087b5a9588c9e6ff608ed1e0919a6910aa43
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="modify-xml-indexes"></a>Modifier les index XML
-  L’instruction DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) permet de modifier des index XML et non XML existants. Les options ALTER INDEX ne sont cependant pas toutes disponibles aux index XML. Les options suivantes ne sont pas valides si vous modifiez des index XML :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+L’instruction DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) permet de modifier des index XML et non XML existants. Les options ALTER INDEX ne sont cependant pas toutes disponibles aux index XML. Les options suivantes ne sont pas valides si vous modifiez des index XML :  
   
 -   L'option de reconstruction et de définition de valeur IGNORE_DUP_KEY n'est pas valide dans le cas d'utilisation d'index XML. L'option de reconstruction ONLINE doit toujours être définie sur OFF dans le cas d'index XML secondaires. L'option DROP_EXISTING n'est pas autorisée dans l'instruction ALTER INDEX.  
   
@@ -73,7 +78,7 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD
 Go  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

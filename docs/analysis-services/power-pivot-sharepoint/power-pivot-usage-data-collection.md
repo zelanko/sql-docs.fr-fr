@@ -2,38 +2,36 @@
 title: "Collecte de données de tableau croisé dynamique d’utilisation de l’alimentation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Collecte des données d’utilisation Power Pivot
-  La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint utilise et étend ce système pour fournir des rapports dans le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui détaillent le mode d’utilisation des données et services [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie de serveurs doit activer la journalisation pour créer les données d’utilisation qui s’affichent dans le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint utilise et étend ce système pour fournir des rapports dans le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui détaillent le mode d’utilisation des données et services [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie de serveurs doit activer la journalisation pour créer les données d’utilisation qui s’affichent dans le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
  Pour plus d’informations sur les données d’utilisation figurant dans le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , consultez [Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
   
 ##  <a name="usagearch"></a> Collecte de données d'utilisation et architecture de la création de rapports  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]les données d’utilisation sont collectées, stockées et gérées à l’aide d’une combinaison de fonctionnalités à partir de l’infrastructure SharePoint et les composants du serveur Power Pivot. L'infrastructure SharePoint fournit un service d'utilisation centralisé et des travaux de minuteur intégrés. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint ajoute un stockage à plus long terme des données d’utilisation [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] et des rapports que vous affichez dans l’Administration centrale SharePoint.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] les données d’utilisation sont collectées, stockées et gérées à l’aide d’une combinaison de fonctionnalités à partir de l’infrastructure SharePoint et les composants du serveur Power Pivot. L'infrastructure SharePoint fournit un service d'utilisation centralisé et des travaux de minuteur intégrés. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint ajoute un stockage à plus long terme des données d’utilisation [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] et des rapports que vous affichez dans l’Administration centrale SharePoint.  
   
  Dans le système de collecte des données d'utilisation, les informations d'événement sont intégrées au système de collecte des données d'utilisation sur le serveur d'applications ou le serveur Web frontal. Les données d'utilisation se déplacent dans le système en réponse aux travaux du minuteur : les données des fichiers de données temporaires sur le serveur physique sont déplacées vers un emplacement de stockage permanent sur un serveur de base de données. Le tableau suivant présente les composants et les traitements qui déplacent les données d'utilisation au sein du système de collecte des données et de création de rapports.  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  ![Composants et processus de collecte des données d’utilisation. ] (../../analysis-services/power-pivot-sharepoint/media/gmni-usagedata.gif "Composants et les processus de collecte des données d’utilisation.")  
   
-|Phase|Description|  
+|Phase| Description|  
 |-----------|-----------------|  
 |1|La collecte des données d’utilisation est déclenchée par des événements générés par les composants [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] et les fournisseurs de données [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] dans les déploiements SharePoint. Les événements configurables susceptibles d’être activés ou désactivés sont les suivants : demandes de connexion, demandes de chargement et de déchargement, et événements de temps de réponse aux requêtes qui sont supervisés par le service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sur le serveur d’applications. Vous ne pouvez pas désactiver les autres événements qui sont gérés exclusivement par le serveur, tels que les événements d'actualisation des données et d'intégrité des serveurs.<br /><br /> Les données d'utilisation sont tout d'abord collectées et stockées dans les fichiers journaux locaux à l'aide des fonctionnalités de collecte des données du système SharePoint. Les fichiers et leur emplacement font partie du système standard de collecte des données d'utilisation de SharePoint. L'emplacement des fichiers est le même sur chaque serveur de la batterie. Pour afficher ou modifier l'emplacement du répertoire de journalisation, accédez à **Analyse** dans l'Administration centrale de SharePoint, puis cliquez sur **Configurer la collection des données d'utilisation et d'intégrité**.|  
 |2|À intervalles planifiés (par défaut, toutes les heures), le travail du minuteur Importation des données d’utilisation de Microsoft SharePoint Foundation déplace les données d’utilisation des fichiers locaux vers la base de données d’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Si vous disposez de plusieurs applications de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dans une batterie de serveurs, chacune d’elle est dotée de sa propre base de données. Les événements incluent des informations internes qui identifient l’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui a produit l’événement. Les identificateurs d'application vérifient que les données d'utilisation sont liées à l'application qui les a créées.|  
@@ -52,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="sources"></a> Sources des données d'utilisation  
  Lorsque la collecte des données d'utilisation est activée, des données sont générées pour les événements serveur suivants.  
   
-|Événement|Description|Configurable|  
+|Événement| Description|Configurable|  
 |-----------|-----------------|------------------|  
 |Connexions|Il s’agit des connexions au serveur établies pour le compte d’un utilisateur qui interroge des données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dans un classeur Excel. Les événements de connexion identifient la personne ayant établi une connexion à un classeur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Dans les rapports, ces informations permettent d’identifier les utilisateurs les plus fréquents, les sources de données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui sont utilisées par les mêmes utilisateurs, ainsi que les tendances des connexions dans le temps.|Vous pouvez activer et désactiver [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Temps de réponse aux requêtes|Il s'agit des statistiques de réponse aux requêtes qui classent les requêtes en fonction de leur durée d'exécution. Ces statistiques révèlent des modèles en termes de temps de réponse aux requêtes par le serveur.|Vous pouvez activer et désactiver [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="servicesjobs"></a> Services et travaux du minuteur  
  Le tableau suivant décrit les services et les emplacements de stockage de la collecte des données dans le système de collecte des données d'utilisation. Pour obtenir des instructions sur la façon de remplacer les planifications du travail du minuteur forcer une actualisation des données d’intégrité et d’utilisation des données du serveur dans [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] rapports tableau de bord de gestion, consultez [Entrez la description du lien ici](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md). Vous pouvez afficher les travaux du minuteur dans l'Administration centrale de SharePoint. Accédez à **Analyse**, puis cliquez sur **Vérifier l’état du travail**. Cliquez sur **Examiner les définitions de travail**.  
   
-|Composant|Planification par défaut|Description|  
+|Composant|Planification par défaut| Description|  
 |---------------|----------------------|-----------------|  
 |Service du minuteur SharePoint (SPTimerV4)||Ce service Windows s'exécute localement sur chaque ordinateur membre de la batterie de serveurs et traite tous les travaux du minuteur définis au niveau de la batterie.|  
 |Importation des données d'utilisation de Microsoft SharePoint Foundation|Toutes les 30 minutes dans SharePoint 2010. Toutes les 5 minutes dans SharePoint 2013.|Ce travail du minuteur est configuré globalement au niveau de la batterie de serveurs. Il déplace les données d'utilisation des fichiers journaux d'utilisation locaux vers la base de données centrale de collecte des données d'utilisation. Vous pouvez exécuter ce travail du minuteur manuellement pour forcer une opération d'importation des données.|  

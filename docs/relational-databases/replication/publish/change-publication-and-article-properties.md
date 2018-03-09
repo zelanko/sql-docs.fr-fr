@@ -2,9 +2,12 @@
 title: "Modifier les propriétés des publications et des articles | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5afcb14260648ba416360d26e94466e730b13c64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
-  Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l'instantané soit régénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l’instantané soit regénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propriétés de la publication pour la réplication d'instantané et transactionnelle  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/09/2017
 |Activer ou désactiver les abonnements en téléchargement seul (changer d'autres options de chargement ne nécessite pas d'actions particulières).|**sp_changemergearticle**|Changer la valeur ou pour la valeur **2** pour **subscriber_upload_options**|Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination.|**sp_changemergearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Créer et appliquer un instantané](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   

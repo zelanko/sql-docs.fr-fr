@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle, fonction
 **Mise en conformité**  
@@ -87,7 +87,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLAllocHandle** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** le *HandleType* et *gérer* la valeur de *InputHandle*. SQL_SUCCESS_WITH_INFO (mais pas SQL_ERROR) peut être retourné pour le *OutputHandle* argument. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLAllocHandle** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08003|Connexion non ouverte|(DM) le *HandleType* argument SQL_HANDLE_STMT ou SQL_HANDLE_DESC était, mais la connexion spécifiée par la *InputHandle* argument n’était pas ouvert. Le processus de connexion doit être effectué (et la connexion doit être ouverte) pour le pilote à allouer une instruction ou un descripteur de handle.|  

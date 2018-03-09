@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c1553db5a161b8ca4fb69694340f55d8d818ff5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ Quand il existe une charge de travail active, il faut plus de mémoire pour pren
 
 Prenons le schéma de table mémoire optimisée suivant :
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -116,21 +117,21 @@ Chaque index de hachage est un tableau de hachage de pointeurs d'adresse 8 octet
   
 Les index de hachage exécutent des recherches d'égalité rapides, notamment :  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Les index non cluster sont plus rapides pour les recherches de plage suivantes :  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 Si vous migrez une table basée sur disque, utilisez les éléments suivants pour déterminer le nombre de valeurs uniques de l'index t1c2_index.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -166,7 +167,7 @@ La mémoire nécessaire pour les index non cluster peut être calculée comme su
   
  Les index non en cluster sont préférables lorsqu'ils sont utilisés pour les recherches de plage, comme l'illustre la requête suivante :  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  
@@ -197,7 +198,7 @@ Les variables de table définies dans un grand lot SQL, par opposition à une é
 
 Les calculs ci-dessus estiment les besoins en mémoire de la table, telle qu'elle existe actuellement. Outre cette mémoire, vous devez évaluer la croissance de la table et fournir suffisamment de mémoire pour gérer cette croissance.  Par exemple, si vous anticipez une croissance de 10 %, vous devez multiplier le résultat ci-dessus par 1,1 pour obtenir la mémoire totale nécessaire pour votre table.  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

@@ -2,9 +2,12 @@
 title: "Modifier le schéma dans les bases de données de publication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,22 +20,24 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b3ba5fca89b73eaff7ec444d3a9eeec2398f1656
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
-  La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION ne doit pas être utilisé si la réplication de modification de schéma est activée et qu'une topologie inclut des Abonnés [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] : ALTER VIEW.  
+-   ALTER TABLE SET LOCK ESCALATION ne doit pas être utilisé si la réplication de modification de schéma est activée et qu’une topologie inclut des abonnés [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)].
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   
@@ -94,7 +99,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
   
-     Pour plus d’informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
+     Pour plus d'informations, voir [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
   
 -   L'ajout d'une colonne d'identité à une table publiée n'est pas pris en charge, car la nouvelle colonne peut entraîner une non-convergence quand la colonne est répliquée vers l'Abonné. Les valeurs de la colonne d'identité sur l'Abonné dépendent de l'ordre dans lequel les lignes sont physiquement stockées dans la table affectée. Les lignes sont susceptibles d'être stockées différemment sur l'Abonné ; la valeur de la colonne d'identité peut donc être différente pour les mêmes lignes.  
   
@@ -108,7 +113,7 @@ ms.lasthandoff: 11/09/2017
   
 -   La colonne à supprimer ne peut pas être utilisée dans les clauses de filtrage d'un article quelconque d'une publication de la base de données.  
   
--   La suppression d'une colonne d'un article publié nécessite la prise en compte des éventuels contraintes, index ou propriétés de la colonne susceptibles d'affecter la base de données. Exemple :  
+-   La suppression d'une colonne d'un article publié nécessite la prise en compte des éventuels contraintes, index ou propriétés de la colonne susceptibles d'affecter la base de données. Exemple :  
   
     -   Vous ne pouvez pas supprimer les colonnes utilisées dans une clé primaire d'articles de publications transactionnelles car elles sont utilisées par la réplication.  
   
@@ -159,7 +164,7 @@ ms.lasthandoff: 11/09/2017
   
 -   La réplication de fusion fournit des procédures stockées qui permettent d'ignorer les modifications de schéma pendant le dépannage. Pour plus d’informations, consultez [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) et [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

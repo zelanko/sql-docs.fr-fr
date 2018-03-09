@@ -19,6 +19,7 @@
 ## [Recherche d’informations supplémentaires sur le pilote JDBC](finding-additional-jdbc-driver-information.md)
 ## [Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Questions fréquentes (FAQ) sur le pilote JDBC](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Sécurisation des applications de pilote JDBC](securing-jdbc-driver-applications.md)
 ## [Sécurisation de chaînes de connexion](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [Utilisation des instructions et des jeux de résultats](working-with-statements-and-result-sets.md)
 ## [Utilisation de la mise en mémoire tampon adaptative](using-adaptive-buffering.md)
 ## [Colonnes éparses](sparse-columns.md)
+## [Mise en cache des métadonnées d’instruction préparée pour le pilote JDBC](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [Diagnostic des problèmes avec le pilote JDBC](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Gestion des erreurs](handling-errors.md)
@@ -63,6 +65,7 @@
 # [Conformité et aspects juridiques pour le pilote JDBC SQL](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [Conformité à JDBC 4.1 pour le pilote JDBC](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [Conformité à JDBC 4.2 pour le pilote JDBC](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [Conformité à JDBC 4.3 pour le pilote JDBC](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [Guide de programmation pour le pilote JDBC SQL](programming-guide-for-jdbc-sql-driver.md)
 ## [Connexion à SQL Server avec le pilote JDBC](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [Configuration du mode d’envoi des valeurs java.sql.Time au serveur](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [Utilisation de séquences d’échappement SQL](using-sql-escape-sequences.md)
 ### [Utilisation d’instructions avec des procédures stockées](using-statements-with-stored-procedures.md)
+### [Exemple de version Azure Key Vault 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Exemple de version Azure Key Vault 6.2.2](azure-key-vault-sample-version-6.2.2.md)

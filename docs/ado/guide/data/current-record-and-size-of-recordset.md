@@ -3,8 +3,9 @@ title: "Enregistrement en cours et la taille du jeu d’enregistrements | Docume
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e1da6abaf639a691c647168f51dfa6130da12f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cc6f4bbded2e78203d95820cc590f6c69380fcd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="current-record-and-size-of-recordset"></a>Enregistrement en cours et la taille du jeu d’enregistrements
 Cette section décrit comment localiser la position actuelle du curseur dans l’exemple **Recordset** dans [exemple de Code JScript pour retourner un jeu d’enregistrements](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

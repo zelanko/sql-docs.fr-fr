@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROLLBACK
 - ROLLBACK_TSQL
 - ROLLBACK_TRANSACTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - ROLLBACK TRANSACTION statement
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -54,16 +56,16 @@ ROLLBACK { TRAN | TRANSACTION }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *argument*  
+ *transaction_name*  
  Nom attribué à la transaction dans BEGIN TRANSACTION *argument* doit être conforme aux règles des identificateurs, mais seuls les 32 premiers caractères du nom de transaction sont utilisés. En cas d’imbrication des transactions, *argument* doit être le nom de l’instruction BEGIN TRANSACTION la plus extérieure. *argument* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
   
- **@***variable_nom_transaction*  
+ **@** *tran_name_variable*  
  Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données.  
   
  *savepoint_name*  
  Est *savepoint_name* à partir d’une instruction SAVE TRANSACTION. *savepoint_name* doit être conforme aux règles des identificateurs. Utilisez *savepoint_name* quand une opération d’annulation conditionnelle doit affecter qu’une partie de la transaction.  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  Nom d'une variable définie par l'utilisateur et contenant un nom de point d'enregistrement valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
@@ -104,7 +106,7 @@ Les effets d'une instruction ROLLBACK sur les curseurs sont définis par les tro
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
  Une instruction ROLLBACK TRANSACTION spécifiant un *savepoint_name* libère tous les verrous acquis au-delà du point d’enregistrement, à l’exception des promotions et des conversions. Ces verrous ne sont pas libérés et ne sont pas reconvertis dans leur ancien mode de verrouillage.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -141,8 +143,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [VALIDER le travail &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [TRAVAIL de restauration &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

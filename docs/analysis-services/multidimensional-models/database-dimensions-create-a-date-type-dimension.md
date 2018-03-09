@@ -2,16 +2,13 @@
 title: "Créer une Dimension de type Date | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Dimensions de base de données : création d’une Dimension de type Date
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de temps est un type de dimension dont les attributs représentent des périodes, telles que des années, des semestres, des trimestres, des mois et des jours. Les périodes d'une dimension de temps fournissent des niveaux de granularité de temps pour l'analyse et les rapports. Les attributs sont organisés en hiérarchies, la granularité de la dimension de temps est largement déterminée par les besoins commerciaux et les besoins en rapports pour les données historiques. Par exemple, la majorité des données financières et de vente dans les applications décisionnelles utilisent la granularité mensuelle ou trimestrielle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de temps est un type de dimension dont les attributs représentent des périodes, telles que des années, des semestres, des trimestres, des mois et des jours. Les périodes d'une dimension de temps fournissent des niveaux de granularité de temps pour l'analyse et les rapports. Les attributs sont organisés en hiérarchies, la granularité de la dimension de temps est largement déterminée par les besoins commerciaux et les besoins en rapports pour les données historiques. Par exemple, la majorité des données financières et de vente dans les applications décisionnelles utilisent la granularité mensuelle ou trimestrielle.  
   
  En règle générale, les cubes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiennent une dimension de temps sous une forme ou une autre. Un cube peut contenir plusieurs dimensions de temps ou plusieurs hiérarchies d'une même dimension de temps, selon la granularité des données et les besoins en rapports. Toutefois, les cubes ne nécessitent pas tous une dimension de temps. Certaines applications OLAP, telles que le calcul des coûts basés sur les activités, ne nécessitent pas une dimension de temps, car le calcul des coûts dans une dimension basée sur l'activité repose sur l'activité, et non sur le temps.  
   
@@ -60,11 +58,11 @@ ms.lasthandoff: 11/17/2017
   
  Vous pouvez créer ces calendriers manuellement dans le Concepteur de dimensions. Toutefois, l'Assistant Dimension fournit des modèles de hiérarchies que vous pouvez utiliser pour générer automatiquement plusieurs types de calendriers lorsque vous créez une dimension de temps ou une dimension de temps du serveur. Le tableau suivant décrit les divers calendriers créés par l'Assistant Dimension.  
   
-|Calendrier|Description|  
+|Calendrier| Description|  
 |--------------|-----------------|  
 |Calendrier standard|Calendrier grégorien de 12 mois qui commence le 1er janvier et se termine le 31 décembre.<br /><br /> Que vous utilisiez l'Assistant Dimension pour créer une dimension de temps ou une dimension de temps du serveur, l'Assistant génère une hiérarchie pour un calendrier standard lorsque vous définissez les attributs qui représentent les périodes de la dimension. Si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur, vous pouvez faire démarrer le calendrier standard à partir d'un jour autre que le 1er janvier.|  
-|Calendrier fiscal|Calendrier fiscal de 12 mois. Lorsque vous sélectionnez ce calendrier, définissez le jour et le mois de début de l'exercice utilisé par l'organisation.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
-|Calendrier de rapports (calendrier marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines répétés sur un modèle de trois mois (trimestre). Lorsque vous définissez ce calendrier, définissez le jour et le mois de départ et le modèle de trois mois de 4–4–5, 4–5–4 ou 5–4–4 semaines, où chaque chiffre correspond au nombre de semaines du mois.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
+|Calendrier fiscal|Calendrier fiscal de 12 mois. Lorsque vous sélectionnez ce calendrier, définissez le jour et le mois de début de l'exercice utilisé par l'organisation.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
+|Calendrier de rapports (calendrier marketing)|Calendrier de rapports de 12 mois qui contient deux mois de quatre semaines et un mois de cinq semaines répétés sur un modèle de trois mois (trimestre). Lorsque vous définissez ce calendrier, définissez le jour et le mois de départ et le modèle de trois mois de 4–4–5, 4–5–4 ou 5–4–4 semaines, où chaque chiffre correspond au nombre de semaines du mois.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
 |Calendrier de fabrication|Calendrier qui utilise 13 périodes de quatre semaines, divisé en trois trimestres de trois périodes et un trimestre de quatre périodes. Lorsque vous sélectionnez ce calendrier, vous définissez la semaine de début (entre 1 et 4) et le mois de l'année de fabrication utilisée par l'organisation, et vous définissez le trimestre qui contient quatre périodes.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
 |Calendrier ISO 8601|Calendrier standard de représentation de dates et d'heure ISO (International Organization for Standardization) (8601). Ce calendrier a un nombre intégral de semaines de sept jours. La nouvelle année peut démarrer plusieurs jours avant ou après le début de la nouvelle année du calendrier grégorien. La première semaine de ce calendrier est déterminée par la première semaine du calendrier grégorien qui contient un jeudi. Par conséquent, le premier jour de cette semaine, dimanche, peut tomber l'année précédente.<br /><br /> Remarque : ce calendrier n’est disponible que si vous utilisez l’Assistant Dimension pour créer une dimension de temps du serveur.|  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 >  Vous ne pouvez pas utiliser l'Assistant Business Intelligence pour ajouter des éléments en fonction du temps à des dimensions de temps du serveur. L'Assistant Business Intelligence ajoute une hiérarchie pour prendre en charge les éléments en fonction du temps, et cette hiérarchie doit se trouver dans une colonne de la table de la dimension de temps. Les dimensions de temps du serveur n'ont pas de table de dimension de temps correspondante et ne peuvent donc pas prendre en charge cette hiérarchie supplémentaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Créer une Dimension de temps en générant une Table de temps](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Aide F1 l’Assistant Business Intelligence](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [Types de dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   

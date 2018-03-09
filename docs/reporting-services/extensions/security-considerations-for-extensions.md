@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: "30"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e794dde4202bbd680f82a8c8cbe1f9af30711fc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 03fcc6acbfb855a42a91ef139a2ccff0d7b62ac2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-considerations-for-extensions"></a>Considérations sur la sécurité pour les extensions
   Toute application qui cible le CLR (Common Language Runtime) doit interagir avec le système de sécurité du CLR. Lorsqu'une application de ce type est exécutée, elle est automatiquement évaluée et reçoit un jeu d'autorisations de la part du CLR. En fonction des autorisations reçues par l'application, elle continue de s'exécuter ou génère une exception de sécurité. Les paramètres et stratégies de sécurité locale définis dans les fichiers de configuration de stratégie de sécurité pour un serveur de rapports particulier définissent les autorisations de code reçues par un assembly.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="initialization-of-extension-assemblies"></a>Initialisation des assemblys d'extension  
  Lorsque des extensions commencent à être chargées dans la mémoire par le serveur de rapports, elles utilisent les informations d'identification de compte de service car certains assemblys d'extension requièrent des autorisations spécifiques pour accéder aux ressources système, lire des fichiers de configuration et charger d'autres assemblys dépendants. Toutefois, une fois un assembly chargé et initialisé, tous les appels suivants aux assemblys d'extension utilisent les informations d'identification du compte d'utilisateur sous lequel la session a été ouverte.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Extensions Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Bibliothèque d'extensions Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  
   

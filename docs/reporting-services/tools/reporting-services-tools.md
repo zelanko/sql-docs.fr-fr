@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,19 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: "80"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cc8974ff85c595e97de7fc795a8a7908c983300
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement géré. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement managé. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Pour rechercher un outil immédiatement, consultez [Didacticiel : comment localiser et démarrer les outils Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 |----------|-----------------|-------------------|  
 |Gestionnaire de configuration de Reporting Services|Utilisez cet outil pour configurer une installation de services de rapports. Les tâches disponibles sont les suivantes :<br /><br /> configuration des instances de serveur de rapports locales et distantes<br /><br /> configuration du compte de service Report Server<br /><br /> création et configuration d'une ou plusieurs URL de service Web.<br /><br /> configuration de l'URL du Gestionnaire de rapports<br /><br /> création et configuration de la base de données du serveur de rapports.<br /><br /> configuration d'un déploiement avec montée en puissance parallèle.<br /><br /> sauvegarde, restauration ou remplacement de la clé symétrique utilisée pour chiffrer des chaînes de connexion stockées et des informations d'identification.<br /><br /> configuration du compte d'exécution sans assistance.<br /><br /> configuration d'un serveur SMTP pour la remise du courrier électronique.<br /><br /> <br /><br /> Remarque : le Gestionnaire de configuration de Reporting Services ne vous permet pas de gérer le contenu du serveur de rapports, d’activer des fonctionnalités supplémentaires ou d’accorder l’accès au serveur.<br /><br /> Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Menu Démarrer|  
 |SQL Server Management Studio|Utilisez cet outil pour gérer une ou plusieurs instances de serveurs de rapports dans un environnement unique, y compris :<br /><br /> la gestion des instances de serveur de rapports locales et distantes<br /><br /> la définition des propriétés du serveur de rapports<br /><br /> la modification des définitions de rôles<br /><br /> la désactivation des fonctionnalités du serveur que vous n'utilisez pas<br /><br /> la gestion des travaux<br /><br /> la gestion des planifications partagées|Menu Démarrer|  
-|Gestionnaire de configuration SQL Server|Utilisez cet outil pour :<br /><br /> installer et démarrer les services Windows de services de rapport<br /><br /> configurer la création de rapports pour les commentaires client, l'emplacement du répertoire de vidage et le rapport d'erreurs<br /><br /> <br /><br /> **\*\* Avertissement \*\***N’utilisez pas cet outil pour configurer un compte de service. Utilisez plutôt l'outil Configuration de Reporting Services.<br /><br /> Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menu Démarrer|  
+|Gestionnaire de configuration SQL Server|Utilisez cet outil pour :<br /><br /> installer et démarrer les services Windows de services de rapport<br /><br /> configurer la création de rapports pour les commentaires client, l'emplacement du répertoire de vidage et le rapport d'erreurs<br /><br /> <br /><br /> **\*\* Avertissement \*\***N’utilisez pas cet outil pour configurer un compte de service. Utilisez plutôt l'outil Configuration de Reporting Services.<br /><br /> Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menu Démarrer|  
 |Utilitaire rsconfig|Utilisez cet outil pour configurer et gérer la connexion du serveur de rapports à la base de données du serveur de rapports. mais aussi à définir un compte d'utilisateur pour le traitement des rapports autonomes.<br /><br /> Pour plus d’informations, consultez [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Ligne de commande|  
 |Utilitaire Rskeymgmt|Utilisez cet outil pour :<br /><br /> extraire, restaurer, créer et supprimer la clé symétrique utilisée pour chiffrer les données de serveur de rapports<br /><br /> joindre des instances de serveurs de rapports dans un déploiement avec montée en puissance parallèle<br /><br /> <br /><br /> Pour plus d’informations, consultez [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Ligne de commande|  
 |Classes WMI (Windows Management Instrumentation)|Utilisez ces classes pour automatiser les tâches de configuration dans le gestionnaire de configuration des services de rapports sans qu'il soit nécessaire d'utiliser l'interface utilisateur graphique.<br /><br /> Pour plus d'informations, consultez [Accessing the WMI Provider Programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md).|Script Visual Basic|  
@@ -79,11 +77,11 @@ ms.lasthandoff: 12/05/2017
   
 |Outil|Description|Procédure accès|  
 |----------|-----------------|-------------------|  
-|URL de service Web de Report Server|Utilisez cet outil pour parcourir le contenu du catalogue de rapport dans une page de navigation d'élément générique.<br /><br /> Pour plus d'informations, consultez [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).|Navigateur|  
-|Portail web|**(Mode natif uniquement)** Utilisez cet outil pour administrer l’instance de serveur de rapports unique d’un emplacement distant par le biais d’une connexion HTTP. Vous pouvez effectuer les opérations suivantes :<br /><br /> Afficher, rechercher, imprimer et s'abonner à des rapports,<br /><br /> Créer, sécuriser et gérer l'arborescence des dossiers pour organiser les éléments sur le serveur.<br /><br /> configurer la sécurité basée sur les rôles qui définit l'accès aux éléments et aux opérations,<br /><br /> configurer l'historique, les paramètres et les propriétés d'exécution des rapports,<br /><br /> créer des modèles de rapport qui se connectent et récupérer les données d'une source de données Microsoft SQL Server Analysis Services ou d'une source de données relationnelle SQL Server,<br /><br /> définir la sécurité de l'élément de modèle de façon à autoriser l'accès à des entités spécifiques dans le modèle ou mapper des entités à des rapports générés interactifs prédéfinis que vous créez par avance,<br /><br /> créer des planifications partagées et des sources de données partagées pour faciliter la gestion des planifications et des connexions aux sources de données,<br /><br /> créer des abonnements pilotés par les données qui assurent la présentation des rapports à un nombre important de destinataires,<br /><br /> créer des rapports liés pour réutiliser de différentes manières ou adapter à d'autres fins un rapport existant,<br /><br /> Lancer le Générateur de rapports pour créer des rapports que vous pouvez enregistrer et exécuter sur le serveur de rapports. Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).| Navigateur  
+|URL de service Web de Report Server|Utilisez cet outil pour parcourir le contenu du catalogue de rapport dans une page de navigation d'élément générique.<br /><br /> Pour plus d'informations, consultez [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).|Browser|  
+|Portail web|**(Mode natif uniquement)** Utilisez cet outil pour administrer l’instance de serveur de rapports unique d’un emplacement distant par le biais d’une connexion HTTP. Vous pouvez effectuer les opérations suivantes :<br /><br /> Afficher, rechercher, imprimer et s'abonner à des rapports,<br /><br /> Créer, sécuriser et gérer l'arborescence des dossiers pour organiser les éléments sur le serveur.<br /><br /> configurer la sécurité basée sur les rôles qui définit l'accès aux éléments et aux opérations,<br /><br /> configurer l'historique, les paramètres et les propriétés d'exécution des rapports,<br /><br /> créer des modèles de rapport qui se connectent et récupérer les données d'une source de données Microsoft SQL Server Analysis Services ou d'une source de données relationnelle SQL Server,<br /><br /> définir la sécurité de l'élément de modèle de façon à autoriser l'accès à des entités spécifiques dans le modèle ou mapper des entités à des rapports générés interactifs prédéfinis que vous créez par avance,<br /><br /> créer des planifications partagées et des sources de données partagées pour faciliter la gestion des planifications et des connexions aux sources de données,<br /><br /> créer des abonnements pilotés par les données qui assurent la présentation des rapports à un nombre important de destinataires,<br /><br /> créer des rapports liés pour réutiliser de différentes manières ou adapter à d'autres fins un rapport existant,<br /><br /> Lancer le Générateur de rapports pour créer des rapports que vous pouvez enregistrer et exécuter sur le serveur de rapports. Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).| Browser  
 |Utilitaire RS|Cet outil est un hôte de script que vous pouvez utiliser pour réaliser des opérations contenant des scripts. Par son intermédiaire, vous exécutez des scripts [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour publier des rapports, créer des éléments dans une base de données de serveur de rapports, copier des données entre des bases de données de serveurs de rapports, etc. Pour plus d’informations, consultez [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Ligne de commande|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

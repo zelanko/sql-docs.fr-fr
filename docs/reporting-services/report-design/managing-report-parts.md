@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
   Les parties de rapports peuvent être réutilisées dans les rapports paginés par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 |Propriété|Description|Partie de rapport<br /><br /> Critères de recherche de bibliothèque|  
 |--------------|-----------------|---------------------------------------------|  
-|Nom|Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
+|Nom   |Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
 |Description|Vous pouvez organiser les noms des parties de rapports de manière à simplifier les recherches des utilisateurs dans la bibliothèque. Par exemple, vous pouvez rechercher la description qui commence par « Ventes>> » pour trouver toutes les parties de rapports impliquant une présentation et des données associées aux ventes.|Oui|  
 |CreatedBy|ID de l'utilisateur qui a ajouté la partie de rapport à la base de données du serveur de rapports. Le format exact dépend de la méthode d'authentification. Par exemple, certaines méthodes d'authentification provoquent l'affichage complet du domaine\nom_utilisateur dans les champs CreatedBy et ModifiedBy.|Oui|  
 |CreationDate|Date à laquelle la partie de rapport a été créée à l'origine.<br /><br /> Il s'agit de l'un des critères qu'un utilisateur peut rechercher dans la bibliothèque de parties de rapports.|Oui|  
@@ -77,15 +75,15 @@ ms.lasthandoff: 12/05/2017
 |-------------|-----------|  
 |Ajouter, supprimer, modifier les propriétés de l'élément, gérer la sécurité et télécharger des parties de rapport|Gestionnaire de contenu<br /><br /> Mes rapports|  
 |Ajouter, supprimer et télécharger des parties de rapport|Serveur de publication|  
-|Rechercher et réutiliser|Navigateur<br /><br /> Générateur de rapports|  
+|Rechercher et réutiliser|Browser<br /><br /> Générateur de rapports|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Serveur en mode intégré SharePoint  
   
-|Actions|Rôle|  
+|Actions|Role|  
 |-------------|----------|  
 |Ajouter, supprimer, modifier les propriétés de l'élément, gérer la sécurité et télécharger des parties de rapport|Contrôle total|  
 |Ajouter, supprimer, modifier les propriétés de l'élément et télécharger des parties de rapport|Conception<br /><br /> Collaboration|  
-|Rechercher et réutiliser|Lecture<br /><br /> Vue seule|  
+|Rechercher et réutiliser|Lire<br /><br /> Vue seule|  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Les parties de rapport utilisent les mêmes stratégies d'autorisation que le type d'élément « Resource » existant. Dans un dossier, il n'y a aucune différenciation entre les éléments de ressource traditionnels et les parties de rapports, du point de vue de l'héritage de la sécurité. La partie de rapport héritera de la même stratégie d'autorisation que les images qui figurent dans le même dossier. Lorsque cette distinction est nécessaire, la sécurité au niveau des éléments peut être configurée pour les parties de rapports souhaitées. Sinon, vous pouvez placer les parties de rapports dans des dossiers séparés avec les autorisations appropriées configurées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   

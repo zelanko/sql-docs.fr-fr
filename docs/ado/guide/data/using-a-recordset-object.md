@@ -3,26 +3,28 @@ title: "À l’aide d’un objet Recordset | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: connections [ADO]
+helpviewer_keywords:
+- connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbb3249a4d053519a753daefde425bad09a48fd7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 737b0b01da5f339c1fbda1cf234301dfafad4d19
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-a-recordset-object"></a>À l’aide d’un objet Recordset
 Vous pouvez également utiliser **Recordset.Open** pour établir une connexion implicitement et d’émettre une commande sur la connexion en une seule opération. Par exemple, dans Visual Basic :  

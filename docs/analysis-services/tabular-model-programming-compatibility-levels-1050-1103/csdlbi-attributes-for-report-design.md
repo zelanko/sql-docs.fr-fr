@@ -2,40 +2,37 @@
 title: "Attributs CSDLBI pour la création de rapports | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Attributs de modèle  
  Ces attributs sont définis sur un sous-élément d'un élément [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) CSDL.  
   
-|Nom de l'attribut|Type de données|Description|  
+|Nom de l'attribut|Type de données| Description|  
 |--------------------|---------------|-----------------|  
 |Culture|Texte|Indique la culture utilisée pour les formats monétaires. En cas d'omission, EN-US est utilisé.|  
 |IsRightToLeft|Booléen|Indique si les valeurs des champs de texte doivent être lues de droite à gauche par défaut|  
@@ -45,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de l'attribut|Type de données| Description|  
 |--------------------|---------------|-----------------|  
-|**Nom de la référence**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
+|**ReferenceName**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
 |**Légende**|Texte|Nom complet de l'entité.|  
 |**Documentation**|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification des données.|  
 |**Hidden**|Booléen|Indique si l'entité doit être affichée. La valeur par défaut est **false**.|  
@@ -62,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de l'attribut|Type de données| Description|  
 |--------------------|---------------|-----------------|  
-|**Nom de la référence**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
+|**ReferenceName**|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
 |**Légende**|Texte|Nom complet de l'entité. En cas d'omission, **ReferenceName** est utilisé.|  
 |**Documentation**|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification du champ.|  
 |**Hidden**|Booléen|Indique si le champ doit être affiché. La valeur par défaut est **false**, qui signifie que le champ est affiché.|  

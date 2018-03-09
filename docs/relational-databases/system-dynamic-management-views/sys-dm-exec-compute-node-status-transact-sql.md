@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_compute_node_status (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,33 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODE_STATUS_TSQL
 - DM_EXEC_COMPUTE_NODE_STATUS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8186b170118b57c4998769aae9443b5df436cf85
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f898f754f0b39b0f5746d8ed076c75d26354bccd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexeccomputenodestatus-transact-sql"></a>Sys.dm_exec_compute_node_status (Transact-SQL)
+# <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contient des informations supplémentaires sur les performances et l’état de tous les nœuds de PolyBase. Répertorie une ligne par nœud.  
@@ -41,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Id numérique unique associé au nœud.|Unique sur le cluster de montée en puissance parallèle, quelle que soit le type.|  
 |process_id|**int**|||  
-|nom_processus|**nvarchar(255)**|Nom logique du nœud.|Toute chaîne de longueur appropriée.|  
+|process_name|**nvarchar(255)**|Nom logique du nœud.|Toute chaîne de longueur appropriée.|  
 |allocated_memory|**bigint**|Total alloué de la mémoire sur ce nœud.||  
 |available_memory|**bigint**|Mémoire totale disponible sur ce nœud.||  
 |process_cpu_usage|**bigint**|Utilisation de l’UC de processus totale, en graduations.||  
 |total_cpu_usage|**bigint**|Utilisation du processeur total, en graduations.||  
-|Thread_Count|**bigint**|Nombre total de threads en cours d’utilisation sur ce nœud.||  
+|thread_count|**bigint**|Nombre total de threads en cours d’utilisation sur ce nœud.||  
 |handle_count|**bigint**|Nombre total de handles en cours d’utilisation sur ce nœud.||  
 |total_elapsed_time|**bigint**|Temps total écoulé depuis le système de démarrer ou redémarrer.|Temps total écoulé depuis le système de démarrer ou redémarrer. Si total_elapsed_time dépasse la valeur maximale pour un entier (24.8 jours en millisecondes), cela entraînera l’échec de matérialisation en raison d’un dépassement de capacité. La valeur maximale, en millisecondes est équivalente à 24.8 jours.|  
 |is_available|**bit**|Indicateur précisant si ce nœud est disponible.||  

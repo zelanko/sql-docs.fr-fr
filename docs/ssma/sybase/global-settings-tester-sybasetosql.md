@@ -3,8 +3,11 @@ title: "Paramètres globaux (testeur) (SybaseToSQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a9ebce7d1345b5d9c5a821347ee53ce89f34d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Paramètres globaux (testeur) (SybaseToSQL)
 Utilisez la page testeur de la **paramètres globaux** boîte de dialogue pour spécifier les paramètres de SSMA testeur.  
@@ -36,7 +39,7 @@ Les options suivantes sont disponibles pour ce paramètre :
   
 1.  Oui  
   
-2.  Non  
+2.  non  
   
 **Mode d’économie de tables auxiliaires**  
 Ce paramètre spécifie comment enregistrer les tables auxiliaires internes créés pendant l’exécution du cas de test. Options suivantes peuvent être définies pour ce paramètre :  
@@ -58,7 +61,7 @@ Les options suivantes sont disponibles pour ce paramètre :
   
 1.  Oui  
   
-2.  Non  
+2.  non  
   
 **Arrêter l’exécution de tests après la première défaillance**  
 Ce paramètre spécifie s’il faut arrêter le cas de test en cours d’exécution en cours, si une erreur s’est produite lors de l’exécution. Ensemble d’option par défaut est **Oui**.  
@@ -67,7 +70,7 @@ Les options suivantes sont disponibles pour ce paramètre :
   
 1.  Oui  
   
-2.  Non  
+2.  non  
   
 ## <a name="see-also"></a>Voir aussi  
 [Terminer la préparation du cas de Test &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

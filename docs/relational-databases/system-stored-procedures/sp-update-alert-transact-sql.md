@@ -1,5 +1,5 @@
 ---
-title: sp_update_alert (Transact-SQL) | Documents Microsoft
+title: sp_update_alert (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
 - sp_update_alert
-dev_langs: TSQL
-helpviewer_keywords: sp_update_alert
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b22b08140bc5f0e4d10fc048b40c13b4756a195
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,81 +78,81 @@ sp_update_alert
  [  **@enabled =**] *activé*  
  Spécifie si l’alerte est activée (**1**) ou désactivée (**0**). *activé* est **tinyint**, avec NULL comme valeur par défaut. Pour pouvoir se déclencher, une alerte doit être activée.  
   
- [  **@message_id =**] *message_id*  
+ [ **@message_id =**] *message_id*  
  Nouveau message ou numéro d'erreur pour la définition de l'alerte. En règle générale, *message_id* correspond à un numéro d’erreur dans le **sysmessages** table. *message_id* est **int**, avec NULL comme valeur par défaut. Un message ID peut être utilisé uniquement si le paramètre de niveau de gravité de l’alerte est **0**.  
   
  [  **@severity =**] *gravité*  
  Nouveau niveau de gravité (de **1** via **25**) pour la définition d’alerte. N’importe quel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message envoyé au journal des applications Windows avec la gravité indiquée activera l’alerte. *gravité* est **int**, avec NULL comme valeur par défaut. Un niveau de gravité peut être utilisé uniquement si le paramètre d’ID de message pour l’alerte est **0**.  
   
- [  **@delay_between_responses =**] *délai_entre_réponses*  
+ [ **@delay_between_responses =**] *delay_between_responses*  
  Nouveau délai d'attente, en secondes, entre les réponses faisant suite au déclenchement de l'alerte. *délai_entre_réponses* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@notification_message =**] **'***message_notification***'**  
+ [ **@notification_message =**] **'***notification_message***'**  
  Texte révisé d’un message supplémentaire envoyé à l’opérateur comme faisant partie du message électronique, **envoi réseau**, ou par radiomessagerie. *message_notification* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
- [  **@include_event_description_in =**] *inclure_description_événement_dans*  
+ [ **@include_event_description_in =**] *include_event_description_in*  
  Indique si la description de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le journal des applications Windows doit être incluse dans le message de notification. *inclure_description_événement_dans* est **tinyint**, avec NULL comme valeur par défaut et peut prendre l’une ou plusieurs des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Aucune|  
-|**1**|E-mail|  
-|**2**|Récepteur de radiomessagerie|  
+|**0**|Aucun|  
+|**1**|Messagerie électronique|  
+|**2**|Radiomessagerie|  
 |**4**|**net send**|  
 |**7**|Tous|  
   
  [  **@database_name =**] **'***base de données***'**  
  Nom de la base de données dans laquelle l'erreur doit survenir pour que l'alerte soit déclenchée. *base de données* est **sysname.** Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
- [  **@event_description_keyword =**] **'***motclé_description_événement***'**  
+ [ **@event_description_keyword =**] **'***event_description_keyword***'**  
  Chaîne de caractères devant figurer dans la description de l'erreur dans le journal des messages d'erreur. Les caractères correspondant au modèle d'expression [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE sont admis. *motclé_description_événement* est **nvarchar (100)**, avec NULL comme valeur par défaut. Ce paramètre est utile pour filtrer les noms d’objet (par exemple, **% customer_table %**).  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Numéro d’identification du travail. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut. Si *job_id* est spécifié, *job_name* doit être omis.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nom du travail exécuté en réponse à l'alerte. *job_name* est **sysname**, avec NULL comme valeur par défaut. Si *job_name* est spécifié, *job_id* doit être omis.  
   
- [  **@occurrence_count =** ] *occurrence_count*  
+ [ **@occurrence_count =** ] *occurrence_count*  
  Réinitialise le nombre de fois que l'alerte s'est produite. *occurrence_count* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [  **@count_reset_date =**] *date_réinitialisation_compte*  
+ [ **@count_reset_date =**] *count_reset_date*  
  Réinitialise la date de la dernière réinitialisation du nombre d'occurrences. *date_réinitialisation_compte* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@count_reset_time =**] *heure_réinitialisation_compte*  
+ [ **@count_reset_time =**] *count_reset_time*  
  Réinitialise l'heure de la dernière réinitialisation du nombre d'occurrences. *heure_réinitialisation_compte* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@last_occurrence_date =**] *date_dernière_occurrence*  
+ [ **@last_occurrence_date =**] *last_occurrence_date*  
  Réinitialise la date de la dernière occurrence de l'alerte. *date_dernière_occurrence* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [  **@last_occurrence_time =**] *heure_dernière_occurrence*  
+ [ **@last_occurrence_time =**] *last_occurrence_time*  
  Réinitialise l'heure de la dernière occurrence de l'alerte. *heure_dernière_occurrence* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [  **@last_response_date =**] *date_dernière_réponse*  
+ [ **@last_response_date =**] *last_response_date*  
  Réinitialise la date à laquelle l'alerte a reçu la dernière réponse du service de l'Agent SQL Server. *date_dernière_réponse* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [  **@last_response_time =**] *heure_dernière_réponse*  
+ [ **@last_response_time =**] *last_response_time*  
  Réinitialise l'heure à laquelle l'alerte a reçu la dernière réponse du service de l'Agent SQL Server. *heure_dernière_réponse* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [  **@raise_snmp_trap =**] *raise_snmp_trap*  
+ [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  Réservé.  
   
- [  **@performance_condition =**] **'***l’argument condition_performances***'**  
+ [ **@performance_condition =**] **'***performance_condition***'**  
  Une valeur exprimée dans le format **'***itemcomparatorvalue***'**. *l’argument condition_performances* est **nvarchar (512)**, avec NULL comme valeur par défaut et se compose de ces éléments.  
   
 |Élément de format| Description|  
 |--------------------|-----------------|  
 |*Élément*|Objet de performances, compteur de performances ou instance nommée du compteur.|  
-|*Comparateur*|Un de ces opérateurs :  **>** ,  **<** ,**=**|  
-|*Valeur*|Valeur numérique du compteur.|  
+|*Comparator*|Un de ces opérateurs :  **>** ,  **<** ,**=**|  
+|*Value*|Valeur numérique du compteur.|  
   
- [  **@category_name =**] **'***catégorie***'**  
+ [ **@category_name =**] **'***category***'**  
  Nom de la catégorie d'alerte. *catégorie* est **sysname** avec NULL comme valeur par défaut.  
   
  [  **@wmi_namespace** =] **'***wmi_namespace***'**  
  Espace de noms WMI permettant de rechercher des événements via des requêtes. *wmi_namespace* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@wmi_query** =] **'***wmi_query***'**  
+ [ **@wmi_query**= ] **'***wmi_query***'**  
  Requête spécifiant l'événement WMI pour l'alerte. *wmi_query* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -160,7 +163,7 @@ sp_update_alert
   
  **sp_update_alert** modifie uniquement les paramètres d’alerte pour lesquelles les valeurs sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent être un membre de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -178,7 +181,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

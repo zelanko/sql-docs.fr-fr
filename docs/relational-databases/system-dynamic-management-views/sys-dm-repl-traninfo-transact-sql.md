@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_repl_traninfo (Transact-SQL) | Documents Microsoft
+title: sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,28 +42,28 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Indique si la transaction se trouve dans une base de données publiée à l'aide de la réplication transactionnelle d'égal à égal. Si tel est le cas, la valeur est 1 ; sinon, 0.|  
 |**db_ver**|**int**|Version de base de données.|  
-|**comp_range_address**|**varbinary (8)**|Définit une plage d'annulations partielles à ignorer.|  
-|**textinfo_address**|**varbinary (8)**|Adresse en mémoire de la structure d'informations textuelles mises en cache.|  
-|**fsinfo_address**|**varbinary (8)**|Adresse en mémoire de la structure d'informations FILESTREAM mises en cache.|  
-|**begin_lsn**|**nvarchar (64)**|Numéro séquentiel dans le journal (NSE) de l'enregistrement du début pour la transaction.|  
-|**commit_lsn**|**nvarchar (64)**|Numéro de séquence de l'enregistrement du journal de validation pour la transaction.|  
+|**comp_range_address**|**varbinary(8)**|Définit une plage d'annulations partielles à ignorer.|  
+|**textinfo_address**|**varbinary(8)**|Adresse en mémoire de la structure d'informations textuelles mises en cache.|  
+|**fsinfo_address**|**varbinary(8)**|Adresse en mémoire de la structure d'informations FILESTREAM mises en cache.|  
+|**begin_lsn**|**nvarchar(64)**|Numéro séquentiel dans le journal (NSE) de l'enregistrement du début pour la transaction.|  
+|**commit_lsn**|**nvarchar(64)**|Numéro de séquence de l'enregistrement du journal de validation pour la transaction.|  
 |**dbid**|**smallint**|ID de la base de données.|  
-|**lignes**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
-|**xdesid**|**nvarchar (64)**|ID de transaction.|  
-|**artcache_table_address**|**varbinary (8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
+|**rows**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
+|**xdesid**|**nvarchar(64)**|ID de transaction.|  
+|**artcache_table_address**|**varbinary(8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
 |**server**|**nvarchar(514)**|Nom du serveur.|  
 |**server_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom du serveur.|  
 |**database**|**nvarchar(514)**|Nom de la base de données.|  
 |**db_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom de la base de données.|  
-|**donneur d’ordre**|**nvarchar(514)**|Nom du serveur sur lequel la transaction a débuté.|  
+|**originator**|**nvarchar(514)**|Nom du serveur sur lequel la transaction a débuté.|  
 |**originator_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du serveur sur lequel la transaction a débuté.|  
 |**orig_db**|**nvarchar(514)**|Nom de la base de données où la transaction a débuté.|  
 |**orig_db_len_in_bytes**|**smallint**|Longueur des caractères, en octets, de la base de données où la transaction a débuté.|  
 |**cmds_in_tran**|**int**|Nombre de commandes répliquées dans la transaction active, permettant de déterminer quand une transaction logique doit être validée.|  
 |**is_boundedupdate_singleton**|**tinyint**|Indique si une mise à jour de colonne unique affecte une seule ligne.|  
-|**begin_update_lsn**|**nvarchar (64)**|Numéro de séquence d'enregistrement utilisé dans une mise à jour de colonne unique.|  
-|**delete_lsn**|**nvarchar (64)**|Numéro de séquence d'enregistrement à supprimer dans le cadre d'une mise à jour.|  
-|**last_end_lsn**|**nvarchar (64)**|Dernier numéro d'enregistrement de séquence d'une transaction logique.|  
+|**begin_update_lsn**|**nvarchar(64)**|Numéro de séquence d'enregistrement utilisé dans une mise à jour de colonne unique.|  
+|**delete_lsn**|**nvarchar(64)**|Numéro de séquence d'enregistrement à supprimer dans le cadre d'une mise à jour.|  
+|**last_end_lsn**|**nvarchar(64)**|Dernier numéro d'enregistrement de séquence d'une transaction logique.|  
 |**fcomplete**|**tinyint**|Spécifie si la commande est une mise à jour partielle.|  
 |**fcompensated**|**tinyint**|Spécifie si la transaction est impliquée dans une restauration partielle.|  
 |**fprocessingtext**|**tinyint**|Spécifie si la transaction inclut une colonne avec un type de données binary large.|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 |**is_known_cdc_tran**|**bit**|Indique que la transaction est suivie par la capture de données modifiées.<br /><br /> 0 = Transaction de réplication de transactions.<br /><br /> 1 = Transaction de capture de données modifiées.|  
 |**error_count**|**int**|Nombre d'erreurs rencontrées.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE sur la base de données de publication ou sur la base de données activée pour la capture de données modifiées.  
   
 ## <a name="remarks"></a>Notes  

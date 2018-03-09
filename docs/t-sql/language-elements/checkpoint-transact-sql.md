@@ -1,5 +1,5 @@
 ---
-title: "Point de contrôle (Transact-SQL) | Documents Microsoft"
+title: CHECKPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHECKPOINT_TSQL
 - CHECKPOINT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - events [SQL Server], checkpoints
 - automatic checkpoints
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80afa328b185c25a8bae3af127720ccf6d7c529d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6353bd534827ff9066bd7b184a09d67b5867c3cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +69,13 @@ CHECKPOINT [ checkpoint_duration ]
   
 ##  <a name="Security"></a> Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Autorisations de point de contrôle par défaut aux membres de la **sysadmin** rôle serveur fixe et le **db_owner** et **db_backupoperator** des rôles de base de données fixe et ne sont pas transférables.  
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Configurer l’Option de Configuration de serveur recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   
- [ARRÊT &#40; Transact-SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
+ [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
   
   

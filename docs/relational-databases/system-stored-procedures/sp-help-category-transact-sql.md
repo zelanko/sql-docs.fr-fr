@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact-SQL) | Documents Microsoft
+title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,23 +54,23 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|**TÂCHE**|Fournit des informations sur une catégorie de travaux.|  
-|**ALERTE**|Fournit des informations sur une catégorie d'alertes.|  
+|**JOB**|Fournit des informations sur une catégorie de travaux.|  
+|**ALERT**|Fournit des informations sur une catégorie d'alertes.|  
 |**(OPÉRATEUR)**|Fournit des informations sur une catégorie d'opérateurs.|  
   
- [  **@type=** ] **'***type***'**  
+ [ **@type=** ] **'***type***'**  
  Type de catégorie faisant l'objet d'une demande d'informations. *type* est **varchar(12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
-|**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
+|**MULTI -SERVER**|Catégorie de travaux multiserveur.|  
 |**NONE**|Catégorie d’une classe autre que **travail**.|  
   
  [  **@name=** ] **'***nom***'**  
  Nom de la catégorie faisant l'objet d'une demande d'informations. *nom* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@suffix=** ] *suffixe*  
+ [ **@suffix=** ] *suffix*  
  Spécifie si le **category_type** colonne du jeu de résultats est un identificateur ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre la **category_type** en tant que nom, et **0** indique qu’il a un ID.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -78,7 +81,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**code catégorie**|**int**|ID de la catégorie|  
+|**category_id**|**int**|ID de la catégorie|  
 |**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = none|  
 |**nom**|**sysname**|Nom de la catégorie|  
   
@@ -86,7 +89,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**code catégorie**|**int**|ID de la catégorie|  
+|**category_id**|**int**|ID de la catégorie|  
 |**category_type**|**sysname**|Type de catégorie : Un des **LOCAL**, **multiserveur**, ou **NONE**|  
 |**nom**|**sysname**|Nom de la catégorie|  
   
@@ -95,7 +98,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  Si aucun paramètre n'est spécifié, le jeu de résultats fournit des informations sur toutes les catégories de travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -104,7 +107,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -134,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

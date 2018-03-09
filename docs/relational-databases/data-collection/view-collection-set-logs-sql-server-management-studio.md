@@ -2,29 +2,34 @@
 title: "Afficher les journaux de jeu d’éléments de collecte (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], viewing
 - collection sets [SQL Server], viewing logs
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 454f913984690220807497b608e6f81114f981c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd98e2f24464fb9c5fc38782803768530e7f94ec
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Afficher les journaux de jeu d'éléments de collecte (SQL Server Management Studio)
-  Vous pouvez afficher tous les journaux des jeux d'éléments de collecte, ensemble ou individuellement, à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vous pouvez afficher tous les journaux des jeux d'éléments de collecte, ensemble ou individuellement, à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-view-collection-set-logs"></a>Pour afficher les journaux des jeux de collections  
   
@@ -44,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
      La **Visionneuse du fichier journal** s’ouvre et affiche uniquement le fichier journal du jeu d’éléments de collecte sélectionné.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
  [Gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md)  
   

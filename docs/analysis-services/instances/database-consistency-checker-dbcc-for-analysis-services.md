@@ -2,32 +2,30 @@
 title: "Le vérificateur de cohérence (DBCC) pour Analysis Services de base de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Vérificateur de cohérence de base de données (DBCC) pour Analysis Services
-  DBCC assure la validation de base de données à la demande pour les bases de données multidimensionnelles et tabulaires sur une instance Analysis Services. Vous pouvez exécuter DBCC dans une fenêtre de requête MDX ou XMLA dans SQL Server Management Studio (SSMS) et tracer la sortie DBCC dans SQL Server Profiler ou des sessions xEvent dans SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC assure la validation de base de données à la demande pour les bases de données multidimensionnelles et tabulaires sur une instance Analysis Services. Vous pouvez exécuter DBCC dans une fenêtre de requête MDX ou XMLA dans SQL Server Management Studio (SSMS) et tracer la sortie DBCC dans SQL Server Profiler ou des sessions xEvent dans SSMS.  
 La commande prend une définition d’objet et retourne un jeu de résultats vide ou des informations d’erreur détaillées si l’objet est endommagé.   Dans cet article, vous allez apprendre à exécuter la commande, à interpréter les résultats et à traiter tous les problèmes qui surviennent.  
   
  Pour les bases de données tabulaires, les vérifications de cohérence par DBCC sont équivalentes à la validation intégrée qui se produit automatiquement chaque fois que vous rechargez, synchronisez ou restaurez une base de données.  En revanche, les vérifications de cohérence pour les bases de données multidimensionnelles n’interviennent que quand vous exécutez DBCC à la demande.  
@@ -164,7 +162,7 @@ Execution complete
   
 ```  
   
-### <a name="trace-dbcc-output-in-sql-server-profiler-2016"></a>Tracer la sortie DBCC dans SQL Server Profiler 2016  
+### <a name="trace-dbcc-output-in-sql-server-profiler-2016"></a>Tracer la sortie DBCC dans SQL Server Profiler 2016  
  Vous pouvez afficher la sortie DBCC dans une trace Profiler qui inclut les événements des rapports de progression (Début du rapport de progression, Rapport de progression actuel, Fin du rapport de progression et Erreur du rapport de progression).  
   
 1.  Démarrez une trace. Pour obtenir de l’aide sur l’utilisation de SQL Server Profiler avec Analysis Services, consultez [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md) .  
@@ -175,7 +173,7 @@ Execution complete
   
 4.  Dans SQL Server Profiler, l’activité DBCC est indiquée par le biais d’événements **Command** ayant une sous-classe d’événements de DBCC :  
   
-     ![SSAS-dbcc-Générateur de profils-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-Générateur de profils-eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      Le code d’événement 32 est l’exécution de DBCC.  
   
@@ -242,7 +240,7 @@ Execution complete
 |Colonne|Génère une erreur si l’encodage utilisé pour la colonne n’est pas défini sur une valeur connue.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
 |Colonne|Vérifie si la colonne a été compressée par le moteur en mémoire ou non.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
 |Colonne|Vérifie le type de compression sur la colonne pour les valeurs connues.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
-|Colonne|Quand la « création de jetons » pour la colonne n’est pas définie sur une valeur connue, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
+|Colonne|Quand la « création de jetons » pour la colonne n’est pas définie sur une valeur connue, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
 |Colonne|Si la plage d’ID stockée pour un dictionnaire de données de colonnes ne correspond pas au nombre de valeurs dans le dictionnaire de données ou qu’elle se situe en dehors de la plage autorisée, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du dictionnaire de données.|  
 |Colonne|Vérifie que le nombre de segments de données pour une colonne correspond au nombre de segments de données pour la table à laquelle elle appartient.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
 |Colonne|Vérifie que le nombre de partitions pour une colonne de données correspond au nombre de partitions pour le mappage de segments de données pour la colonne.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  

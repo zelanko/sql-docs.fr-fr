@@ -3,8 +3,9 @@ title: "Item, propriété (ensemble de cellules ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Item
 - Cellset::Item
-helpviewer_keywords: Item property [ADO MD]
+helpviewer_keywords:
+- Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34b0d4a5f2104d625091a0b39f1b009b933bedbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3fa95d6c1441fe81db90d868e08717ff39d37fe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriété de l’élément (ensemble de cellules ADO MD)
 Récupère une cellule d’un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) à l’aide de ses coordonnées.  

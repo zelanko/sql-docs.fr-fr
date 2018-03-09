@@ -2,28 +2,33 @@
 title: "Utiliser le format caractère pour importer ou exporter des données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5dd9155a7cc669a5f7a62036bb42410dced9c48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Le format caractère est recommandé pour l'exportation en bloc de données dans un fichier texte qui doit être utilisé dans un autre programme, ou pour l'importation en bloc de données à partir d'un fichier texte généré par un autre programme.  
 
 Le format caractère utilise le format de données de caractères pour toutes les colonnes. L'enregistrement d'informations au format caractère est utile lorsque les données sont exploitées par un autre programme, par exemple un tableur, ou lorsque les données doivent être copiées dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une base de données issue d'un autre éditeur comme Oracle.  
@@ -31,7 +36,7 @@ Le format caractère utilise le format de données de caractères pour toutes le
 > [!NOTE]
 >  Lors du transfert en bloc de données entre des instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le fichier de données contient des données caractères Unicode mais aucun caractère étendu ni jeu de caractères codés sur deux octets (DBCS), utilisez le format de caractères Unicode. Pour plus d’informations, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
-|Dans cette rubrique :|
+|Dans cette rubrique :|
 |---|
 |[Considérations relatives à l'utilisation du format caractère](#considerations)|
 |[Options de commande pour le format caractère](#command_options)|
@@ -42,7 +47,7 @@ Le format caractère utilise le format de données de caractères pour toutes le
 
   
 ## Considérations relatives à l'utilisation du format caractère<a name="considerations"></a>
-Lors de l'utilisation du format caractère, tenez compte des points suivants :  
+Lors de l'utilisation du format caractère, tenez compte des points suivants :  
   
 -   Par défaut, [l’utilitaire bcp](../../tools/bcp-utility.md) sépare les champs de données de caractères par le caractère de tabulation et termine les enregistrements par un caractère de nouvelle ligne.  Pour plus d’informations sur la spécification des terminateurs de remplacement, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
@@ -219,7 +224,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

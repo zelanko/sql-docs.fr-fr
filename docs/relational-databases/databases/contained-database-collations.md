@@ -2,27 +2,30 @@
 title: "Classements de base de données à relation contenant-contenu | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>Classements de base de données à relation contenant-contenu
-  Diverses propriétés affectent l'ordre de tri et la sémantique d'égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Diverses propriétés affectent l’ordre de tri et la sémantique d’égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Les classements ne s'appliquent pas seulement aux données stockées dans les tables utilisateur, mais à tout le texte géré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les métadonnées, les objets temporaires, les noms de variable, etc. Leur gestion est différente dans une base de données à relation contenant-contenu et dans une base de données sans relation contenant-contenu. Cette modification n'affecte pas de nombreux utilisateurs, mais permet l'indépendance et l'uniformité des instances. Cependant, elle peut provoquer également quelques confusions, ainsi que des problèmes pour les sessions qui accèdent à la fois à des bases de données à relation contenant-contenu et à des bases de données sans relation contenant-contenu.  
   
@@ -34,13 +37,13 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example-1"></a>Exemple 1  
  Par exemple, supposons que nous travaillons à Beijing et que nous utilisons un classement chinois :  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Si nous créons une colonne, son classement par défaut sera ce classement chinois, mais nous pouvons en choisir un autre si nous le voulons :  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -53,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -65,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Exemple 2  
  Par exemple, examinez la base de données (chinoise) ci-dessus utilisée sur une instance avec un classement **Latin1_General** :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -89,7 +92,7 @@ JOIN #T2
   
  Nous pouvons résoudre ce problème en classant la table temporaire de façon explicite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simplifie quelque peu cette opération en fournissant le mot clé **DATABASE_DEFAULT** pour la clause **COLLATE** .  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -139,7 +142,7 @@ END;
   
  Si nous examinons l’exemple de table temp décrit précédemment, nous pouvons voir que ce comportement de classement rend la clause **COLLATE** explicite inutile dans la plupart des utilisations de table temp. Dans une base de données à relation contenant-contenu, ce code s'exécute désormais sans erreur, même si les classements d'instance et de base de données diffèrent :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -280,7 +283,7 @@ GO
 ## <a name="conclusion"></a>Conclusion  
  Le comportement du classement des bases de données à relation contenant-contenu diffère légèrement de celui des bases de données sans relation contenant-contenu. Ce comportement est généralement bénéfique, car il apporte une indépendance par rapport à l'instance et de la simplicité. Certains utilisateurs peuvent avoir des problèmes, en particulier lorsqu'une session accède à la fois à des bases de données avec et sans relation contenant-contenu.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)  
   
   

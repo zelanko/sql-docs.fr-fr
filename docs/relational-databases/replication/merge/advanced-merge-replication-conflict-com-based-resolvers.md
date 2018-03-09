@@ -2,9 +2,12 @@
 title: "Programmes de résolution COM Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01b82214e9d862bcd12b031a6cea6184a48ddabb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflit de réplication de fusion avancée - Programmes de résolution COM
-  Tous les programmes de résolution COM fournis avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gèrent les conflits de mise à jour, et lorsque cela est indiqué, ils gèrent également les conflits d'insertion et de suppression. Ils gèrent tous le suivi des colonnes et la plupart gèrent également le suivi des lignes. Ces programmes de résolution ainsi que tous les programmes de résolution COM déclarent les types de conflit qu'ils peuvent gérer. Ainsi, l'Agent de fusion utilise le programme de résolution par défaut pour tous les autres types de conflit.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tous les programmes de résolution COM fournis avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gèrent les conflits de mise à jour, et lorsque cela est indiqué, ils gèrent également les conflits d’insertion et de suppression. Ils gèrent tous le suivi des colonnes et la plupart gèrent également le suivi des lignes. Ces programmes de résolution ainsi que tous les programmes de résolution COM déclarent les types de conflit qu'ils peuvent gérer. Ainsi, l'Agent de fusion utilise le programme de résolution par défaut pour tous les autres types de conflit.  
   
  Les programmes de résolution sont installés au cours du processus d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la procédure stockée **sp_enumcustomresolvers** pour consulter tous les programmes de résolution de conflits inscrits sur un ordinateur. L'exécution de la procédure permet d'afficher la description et l'identificateur global unique (GUID) de chaque programme de résolution dans un ensemble de résultats séparé.  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
  Le tableau suivant décrit les attributs des programmes de résolution spécifiques.  
   
-|Nom|Entrée requise|Description|Commentaires|  
+|Nom   |Entrée requise|Description|Commentaires|  
 |----------|--------------------|-----------------|--------------|  
 |Outil de résolution des conflits d'addition[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne à totaliser. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs des colonnes spécifiées prennent la valeur représentant la somme des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
 |Outil de résolution des conflits de moyenne[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne dont la moyenne doit être établie. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs de colonnes résultantes représentent la moyenne des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 |Outil de résolution des conflits de téléchargement (download) uniquement[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Pas d'entrées.|Les modifications téléchargées sur le serveur de publication sont rejetées mais les modifications sont téléchargées vers l'Abonné.|Prend en charge tous les types de conflits.|  
 |Programme de résolution des procédures stockées[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server|Nom de la procédure stockée que le programme de résolution doit appeler pour gérer le conflit.|La résolution du conflit dépend de la logique de la procédure stockée spécifiée.|Prend en charge les conflits de mise à jour. Pour plus d’informations, consultez [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
   

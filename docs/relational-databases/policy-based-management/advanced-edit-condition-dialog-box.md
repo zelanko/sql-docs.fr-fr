@@ -2,27 +2,30 @@
 title: "Modification avancée (Condition), boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fdc81bd504974c240949eb165ad232a49c5df6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Boîte de dialogue Modification avancée (Condition)
-  La boîte de dialogue **Modification avancée** permet de créer des expressions complexes pour des conditions de la gestion basée sur des stratégies.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La boîte de dialogue **Modification avancée** permet de créer des expressions complexes pour des conditions de la gestion basée sur des stratégies.  
   
 ## <a name="options"></a>Options  
  **Valeur de cellule**  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
 > **IMPORTANT !** Les fonctions que vous pouvez utiliser pour créer des conditions de Gestion basée sur des stratégies n'utilisent pas toujours la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] . Veillez à suivre l'exemple de syntaxe. Par exemple, lorsque vous utilisez les fonctions **DateAdd** ou **DatePart** , vous devez placer l'argument *datepart* entre guillemets simples.  
   
-|Fonction|Signature|Description|Arguments|Valeur retournée|Exemple|  
+|Fonction|Signature|Description|Arguments|Valeur retournée| Exemple|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Additionne deux nombres.|*expression1* et *expression2* : expression valide de l’un des types de données de la catégorie numérique, à l’exception du type de données **datetime** . Peut être une constante, une propriété ou une fonction qui retourne un type numérique.|Retourne le type de données de l'argument ayant la précédence la plus élevée.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Crée un tableau à partir d'une liste de valeurs. Peut être utilisée avec des fonctions d'agrégation telles que Sum() et Count().|*expression* : expression destinée à être convertie en tableau.|Tableau|`Array(2,3,4,5,6)`|  
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
 |**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|Exécute la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] contre le serveur cible.<br /><br /> Pour plus d’informations sur ExecuteSql(), consultez [Fonction ExecuteSql()](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*returnType* : spécifie le type de retour des données retournées par l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les littéraux valides pour *returnType* sont les suivantes : **Numeric**, **String**, **Bool**, **DateTime**, **Array**et **Guid**.<br /><br /> *sqlQuery* : chaîne qui contient la requête à exécuter.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Exécute une requête Transact-SQL scalaire dans une instance cible de SQL Server. Une seule colonne peut être spécifiée dans une instruction `SELECT` ; les colonnes supplémentaires au delà de la première sont ignorées. La requête obtenue ne doit retourner qu'une seule ligne ; les lignes supplémentaires au-delà de la première sont ignorées. Si la requête retourne un jeu vide, l'expression de condition créée autour de `ExecuteSQL` prendra la valeur false. `ExecuteSql` prend en charge les modes d'évaluation **À la demande** et **Selon la planification** .<br /><br /> -`@@ObjectName`:<br />                      Correspond au champ de nom dans [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). La variable sera remplacée par le nom de l'objet actuel.<br /><br /> -`@@SchemaName`: correspond au champ de nom dans [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). La variable sera remplacée par le nom du schéma pour l'objet actuel, le cas échéant.<br /><br /> Remarque : pour inclure un guillemet simple dans une instruction ExecuteSQL, ajoutez au guillemet simple un deuxième guillemet simple. Par exemple, pour inclure une référence à un utilisateur nommé O'Brian, tapez O"Brian.|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|Exécute le script WQL sur l'espace de noms fourni. L'instruction Select ne peut contenir qu'une seule colonne de retour. Si plusieurs colonnes sont fournies, une erreur est générée.|*returnType* : spécifie le type de retour des données retournées par le WQL. Les littéraux valides sont **Numeric**, **String**, **Bool**, **DateTime**, **Array**et **Guid**.<br /><br /> *namespace* : espace de noms WMI sur lequel effectuer l’exécution.<br /><br /> *wql* : chaîne qui contient le WQL à exécuter.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|Retourne la valeur booléenne FALSE.|Aucune|Retourne la valeur booléenne FALSE.|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|Retourne la date système.|Aucune|Retourne la date système sous forme de valeur DateTime.|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|Retourne la date système.|None|Retourne la date système sous forme de valeur DateTime.|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String *guidString*)|Retourne un GUID à partir d’une chaîne.|*guidString* : représentation sous forme de chaîne du GUID à créer.|Retourne le GUID créé à partir de la chaîne.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|La valeur de *check_expression* est retournée si sa valeur est différente de NULL ; sinon, *replacement_value* est retourné. Si les types sont différents, *replacement_value* est converti implicitement dans le type de *check_expression*.|*check_expression* : expression dans laquelle la valeur NULL est recherchée. *check_expression* peut être de n’importe quel type pris en charge par la gestion basée sur des stratégies : Numeric, String, Bool, DateTime, Array et Guid.<br /><br /> *replacement_value* : expression à retourner si *check_expression* a la valeur NULL. *replacement_value* doit être d’un type qui est implicitement converti dans le type de *check_expression*.|Le type de retour est le type de *check_expression* si *check_expression* n’a pas la valeur NULL ; sinon le type de *replacement_value* est retourné.||  
 |**Len()**|Numeric Len (*string_expression*)|Retourne le nombre de caractères, de l'expression de chaîne donnée, sans espaces blancs de fin.|*string_expression* : expression de chaîne à évaluer.|Retourne une valeur de catégorie de type de données Integer.|`Len('Hello')` retourne `5` dans cet exemple.|  

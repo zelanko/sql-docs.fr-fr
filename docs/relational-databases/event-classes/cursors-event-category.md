@@ -2,10 +2,14 @@
 title: "Cursors, catégorie d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Cursors event category
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d87cf7fed22f6fb4d387f03226c689eafc2e39eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8f5a384535583fd7ae18329061a4f7d34d1f927e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cursors-event-category"></a>Catégorie d'événements Cursors
-  La catégorie d’événements **Cursors** contient des classes d’événements qui permettent de surveiller le comportement des curseurs.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La catégorie d’événements **Cursors** contient des classes d’événements qui permettent de surveiller le comportement des curseurs.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -39,7 +44,7 @@ ms.lasthandoff: 11/09/2017
 |[Classe d'événements CursorRecompile](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Décrit les événements de recompilation de curseur qui se produisent dans les curseurs d'API.|  
 |[Classe d'événements CursorUnprepare](../../relational-databases/event-classes/cursorunprepare-event-class.md)|Décrit les événements d'annulation de préparation de curseur qui se produisent dans les curseurs d'API.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

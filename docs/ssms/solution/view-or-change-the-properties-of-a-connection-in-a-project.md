@@ -3,8 +3,11 @@ title: "Afficher ou modifier les propriétés d’une connexion dans un projet |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 802163ccb796be9840718ce3cc3e2648b0074444
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0bc7f0a8d553cbf7f103732d34a7063425f700ed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Afficher ou modifier les propriétés d'une connexion dans un projet
-Les propriétés d'une connexion enregistrées dans un projet peuvent être affichées. En outre, certaines d'entre elles peuvent être modifiées.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les propriétés d’une connexion enregistrées dans un projet peuvent être affichées. En outre, certaines d’entre elles peuvent être modifiées.  
   
 ### <a name="to-change-the-properties-of-a-connection-in-a-project"></a>Pour modifier les propriétés d'une connexion dans un projet  
   
@@ -35,7 +38,7 @@ Les propriétés d'une connexion enregistrées dans un projet peuvent être affi
   
 2.  Affichez les propriétés de la connexion dans la fenêtre Propriétés. Vous pouvez modifier les propriétés **Délai d’exécution**, **Base de données**et **Délai de connexion dépassé** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Associer une requête à une connexion dans un projet](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [Modifier la connexion associée à une requête](../../ssms/solution/change-the-connection-associated-with-a-query.md)  

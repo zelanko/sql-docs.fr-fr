@@ -2,9 +2,12 @@
 title: "Dépannage des serveurs de publication Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 caps.latest.revision: "62"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2796e5af63fb0fcce047baab1895a4ac58a64f65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Dépannage des serveurs de publication Oracle
-  Cette rubrique présente une liste de plusieurs problèmes qui peuvent se produire lors de la configuration et de l'utilisation d'un serveur de publication Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique présente une liste de plusieurs problèmes qui peuvent se produire lors de la configuration et de l’utilisation d’un serveur de publication Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Une erreur s'est produite avec le logiciel client et réseau d'Oracle  
  Le compte sous lequel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute sur le serveur de distribution doit avoir des autorisations en lecture et en exécution sur le répertoire (et tous les sous-répertoires) où le logiciel réseau client Oracle est installé. Si les autorisations ne sont pas accordées ou si les composants du client Oracle ne sont pas installés correctement, vous recevez le message d'erreur suivant :  
@@ -125,7 +128,7 @@ ms.lasthandoff: 11/09/2017
   
  Si plusieurs versions du logiciel client Oracle sont installées sur le serveur de distribution, assurez-vous que la plus récente soit au moins de version 9 et que la variable système path se réfère d'abord à cette version (des références à d'autres versions sont possibles à condition que la plus récente apparaisse en premier). Pour plus d'informations sur la modification de la variable système path, consultez la section « Une erreur SQL Server 21617 est signalée » plus haut dans cette rubrique.  
   
-## <a name="sql-server-error-21624-or-error-21629-is-raised"></a>Une erreur SQL Server 21624 ou 21629 est signalée  
+## <a name="sql-server-error-21624-or-error-21629-is-raised"></a>Une erreur SQL Server 21624 ou 21629 est signalée  
  Pour les serveurs de distribution en 64 bits, la publication Oracle utilise le fournisseur Oracle OLEDB pour Oracle (OraOLEDB.Oracle). Assurez-vous que le fournisseur Oracle OLEDB est installé et enregistré sur le serveur de distribution. Si ce n'est pas le cas, un (ou deux) des messages suivants s'affiche :  
   
 -   « Impossible de trouver le fournisseur Oracle OLEDB enregistré, OraOLEDB.Oracle, sur le serveur de distribution '%s'. Assurez-vous qu'une version actuelle du fournisseur Oracle OLEDB est installée et enregistrée sur le serveur de distribution.»  
@@ -143,10 +146,10 @@ ms.lasthandoff: 11/09/2017
   
 -   « Impossible de se connecter au serveur de base de données Oracle '%s' au moyen du fournisseur Oracle OLEDB OraOLEDB.Oracle. »  
   
- Si ce message d'erreur s'affiche, vérifiez la connectivité avec la base de données Oracle en exécutant SQL*PLUS directement en employant le nom de connexion et le mot de passe spécifiés lors de la configuration du serveur de publication Oracle. Pour plus d'informations, consultez la section « Le serveur de distribution SQL Server ne peut pas se connecter à l'instance de base de données Oracle », plus haut dans cette rubrique.  
+ Si ce message d'erreur s'affiche, vérifiez la connectivité avec la base de données Oracle en exécutant SQL*PLUS directement en employant le nom de connexion et le mot de passe spécifiés lors de la configuration du serveur de publication Oracle. Pour plus d'informations, consultez la section « Le serveur de distribution SQL Server ne peut pas se connecter à l'instance de base de données Oracle », plus haut dans cette rubrique.  
   
 ## <a name="sql-server-error-21628-is-raised"></a>Une erreur SQL Server 21628 est signalée  
- Pour les serveurs de distribution en 64 bits, la publication Oracle utilise le fournisseur Oracle OLEDB pour Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée une entrée de Registre pour permettre au fournisseur Oracle de s'exécuter en processus avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cas de problème de lecture ou d'écriture de cette entrée de Registre, l'erreur suivante est signalée :  
+ Pour les serveurs de distribution en 64 bits, la publication Oracle utilise le fournisseur Oracle OLEDB pour Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée une entrée de Registre pour permettre au fournisseur Oracle de s'exécuter en processus avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cas de problème de lecture ou d'écriture de cette entrée de Registre, l'erreur suivante est signalée :  
   
  « Impossible de mettre à jour le Registre du serveur de distribution '%s' pour permettre au fournisseur Oracle OLEDB OraOLEDB.Oracle de s'exécuter en processus avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Assurez-vous que la connexion actuelle est autorisée pour modifier les clés de Registre appartenant à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . »  
   
@@ -199,7 +202,7 @@ ms.lasthandoff: 11/09/2017
  Le schéma utilisateur de réplication doit avoir les autorisations décrites dans la section « Création manuelle du schéma utilisateur » de la rubrique [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="oracle-error-ora-01000"></a>Erreur Oracle ORA-01000  
- La réplication utilise des curseurs sur le serveur de publication Oracle au cours du processus d'ajout d'articles à une publication. Il est possible que le nombre maximal de curseurs disponibles sur le serveur de publication soit dépassé au cours de ce processus. Si cela se produit, l'erreur suivante est signalée :  
+ La réplication utilise des curseurs sur le serveur de publication Oracle au cours du processus d'ajout d'articles à une publication. Il est possible que le nombre maximal de curseurs disponibles sur le serveur de publication soit dépassé au cours de ce processus. Si cela se produit, l'erreur suivante est signalée :  
   
  « ORA-01000 : Nombre maximum de curseurs ouverts atteint »  
   
@@ -227,7 +230,7 @@ ms.lasthandoff: 11/09/2017
   
  `GRANT READ ON DIRECTORY <directory_name> TO <replication_administrative_user_schema>`  
   
- Si l'accès n'est pas accordé, l'erreur suivante est générée par l'Agent de lecture du journal :  
+ Si l'accès n'est pas accordé, l'erreur suivante est générée par l'Agent de lecture du journal :  
   
  « ORA-22285 : répertoire ou fichier inexistant pour l'opération fileopen »  
   
@@ -248,8 +251,8 @@ ms.lasthandoff: 11/09/2017
   
 -   Exécutez **sp_dropdistpublisher**. Pour plus d’informations, consultez [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Spécification de relations à l'aide de sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Les éléments dans un document XML peuvent être liés. Les éléments peuvent être imbriqués hiérarchiquement ; en outre, des relations ID, IDREF ou IDREFS peuvent être spécifiées entre les éléments.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Les éléments d'un document XML peuvent être liés. Les éléments peuvent être imbriqués hiérarchiquement ; en outre, des relations ID, IDREF ou IDREFS peuvent être spécifiées entre les éléments.  
   
  Par exemple, dans un schéma XSD, un  **\<client >** élément contient  **\<ordre >** des éléments enfants. Lorsque le schéma est mappé à la base de données AdventureWorks, le  **\<client >** élément est mappé à la table Sales.Customer et  **\<ordre >** élément est mappé à la table Sales.SalesOrderHeader. Ces tables sous-jacentes, Sales.Customer et Sales.SalesOrderHeader, sont liées, car les clients passent des commandes. CustomerID dans la table Sales.SalesOrderHeader est une clé étrangère qui fait référence à la clé primaire CustomerID dans la table Sales.Customer. Vous pouvez établir ces relations entre les éléments de schéma de mappage à l’aide de la **SQL : Relationship** annotation.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  **Parent**  
  Spécifie la relation parente (table). Il s'agit d'un attribut facultatif ; si l'attribut n'est pas spécifié, le nom de la table parente est obtenu à partir des informations contenues dans la hiérarchie enfant du document. Si le schéma spécifie deux hiérarchies parent-enfant qui utilisent la même  **\<SQL : Relationship >** , mais les éléments parents différents, vous ne spécifiez pas l’attribut parent dans  **\<SQL : Relationship >**. Ces informations sont obtenues à partir de la hiérarchie du schéma.  
   
- **clé parente**  
+ **parent-key**  
  Spécifie la clé parente du parent. Si la clé parente est composée de plusieurs colonnes, les valeurs sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé enfant correspondante.  
   
- **Enfant**  
+ **Child**  
  Spécifie la relation enfant (table).  
   
- **clé de l’enfant**  
+ **child-key**  
  Spécifie la clé enfant de l'enfant faisant référence à la clé parente du parent. Si la clé enfant est composée de plusieurs attributs (colonnes), les valeurs de child-key sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé parente correspondante.  
   
  **Inverse**  
@@ -392,7 +394,7 @@ ms.lasthandoff: 11/17/2017
   
  Le  **\<ordre >** élément est un élément enfant de le  **\<client >** élément. **\<SQL : Relationship >** est spécifié sur le  **\<ordre >** élément enfant ; par conséquent, les commandes appartenant à un client apparaissent en tant qu’éléments enfants de  **\<client >**.  
   
- Le  **\<ordre >** élément inclut le  **\<OrderDetail >** élément enfant. **\<SQL : Relationship >** est spécifié sur  **\<OrderDetail >** pour les détails relatifs à une commande apparaissent en tant qu’éléments enfants de cet élément enfant  **\<ordre >** élément.  
+ Le  **\<ordre >** élément inclut le  **\<OrderDetail >** élément enfant. **\<SQL : Relationship >** est spécifié sur  **\<OrderDetail >** pour les détails relatifs à une commande apparaissent en tant qu’éléments enfants de cet élément enfant  **\<commande >**  élément.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

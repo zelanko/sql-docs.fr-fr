@@ -1,5 +1,5 @@
 ---
-title: Transformations Integration Services | Documents Microsoft
+title: Transformations Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c2e4f97d129840e2c045fe942996a5918163c137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-transformations"></a>Transformations Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Les transformations sont les composants du flux de données d’un package qui agrègent, fusionnent, distribuent et modifient des données. Les transformations peuvent également effectuer des opérations de recherche et générer des échantillons de dataset. Cette section décrit les transformations incluses dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et explique leur fonctionnement.  
@@ -104,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  Vous pouvez également écrire des transformations personnalisées. Pour plus d’informations, consultez [Développement d’un composant de transformation personnalisé à sorties synchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) et [Développement d’un composant de transformation personnalisé à sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
   
-

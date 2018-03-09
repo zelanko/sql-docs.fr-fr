@@ -1,5 +1,5 @@
 ---
-title: OPENXML (Transact-SQL) | Documents Microsoft
+title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
 - OPENXML
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OPENXML statement
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +49,13 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *IDOC*  
+ *idoc*  
  Descripteur de document utilisé pour la représentation interne d'un document XML. La représentation interne d’un document XML est créée en appelant **sp_xml_preparedocument**.  
   
  *rowpattern*  
  Correspond au modèle XPath utilisé pour identifier les nœuds (dans le document XML dont le descripteur est transmis dans le *idoc* paramètre) à traiter comme des lignes.  
   
- *indicateurs*  
+ *flags*  
  Indique le mappage qui doit être utilisé entre les données XML et l'ensemble de lignes relationnel, ainsi que le mode de remplissage de la colonne de débordement. *indicateurs* est un paramètre d’entrée facultatif et peut prendre l’une des valeurs suivantes.  
   
 |Valeur d'octet| Description|  
@@ -64,9 +66,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans le contexte d’extraction, cet indicateur indique que les données consommées ne doivent pas être copiées vers la propriété de dépassement de capacité  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- Définition de schéma du formulaire : *ColName**ColType* [*ColPattern* | *métapropriété*] [**,***ColNameColType* [*ColPattern* | *métapropriété*]...]  
+ Définition de schéma du formulaire : *ColName ** ColType* [*ColPattern* | *métapropriété*] [**, *** ColNameColType* [*ColPattern * | *Métapropriété*]...]  
   
- *Nom de colonne*  
+ *ColName*  
  Nom de la colonne dans l'ensemble de lignes.  
   
  *ColType*  
@@ -79,7 +81,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Le modèle XPath général spécifié en tant que *ColPattern* prend également en charge les métapropriétés.  
   
- *Métapropriétés*  
+ *MetaProperty*  
  L'une des métapropriétés fournies par OPENXML. Si *métapropriété* est spécifié, la colonne contienne des informations fournies par cette dernière. Les métapropriétés vous permettent d'extraire des informations (telles que la position relative et les informations sur l'espace de noms) concernant les nœuds XML. Vous disposez ainsi de plus d'informations que n'en propose la représentation textuelle.  
   
  *TableName*  
@@ -90,11 +92,11 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Le tableau suivant décrit la structure de la **bord** table.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID unique du nœud du document.<br /><br /> L’élément racine a une valeur d’ID 0. Les valeurs négatives d'ID sont réservées.|  
 |**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent mais il dépend du type du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
-|**NodeType**|**int**|Identifie le type de nœud. Il s'agit d'un entier qui correspond à la numérotation des types de nœud XML DOM.<br /><br /> Les types de nœuds sont :<br /><br /> 1 = Nœud d'élément<br /><br /> 2 = Nœud d'attribut<br /><br /> 3 = Nœud de texte|  
+|**nodetype**|**int**|Identifie le type de nœud. Il s'agit d'un entier qui correspond à la numérotation des types de nœud XML DOM.<br /><br /> Les types de nœuds sont :<br /><br /> 1 = Nœud d'élément<br /><br /> 2 = Nœud d'attribut<br /><br /> 3 = Nœud de texte|  
 |**localname**|**nvarchar**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
 |**prefix**|**nvarchar**|Préfixe de l'espace de noms du nom de nœud.|  
 |**namespaceuri**|**nvarchar**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  

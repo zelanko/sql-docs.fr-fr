@@ -1,5 +1,5 @@
 ---
-title: "Flux de données | Documents Microsoft"
+title: "Flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>Flux de données
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
  Le diagramme qui suit montre un flux de données composé d'une source, d'une transformation avec une entrée et une sortie et d'une destination. Ce diagramme indique les entrées, les sorties et les sorties d'erreurs, de même que les colonnes d'entrée, de sortie et externes.  
   
- ![Composants et de leurs entrées et sorties de flux de données](../../integration-services/data-flow/media/mw-dts-dataflow.gif "composants et de leurs entrées et sorties de flux de données")  
+ ![Composants de flux de données avec leurs entrées et sorties](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Composants de flux de données avec leurs entrées et sorties")  
   
 ## <a name="data-flow-implementation"></a>Implémentation des flux de données  
  L'ajout d'une tâche de flux de données au flux de contrôle d'un package constitue la première étape de l'implémentation d'un flux de données dans un package. Un package peut inclure plusieurs tâches de flux de données, chacune possédant son propre flux de données. Par exemple, si un package requiert que des flux de données soient exécutés dans un ordre spécifique ou que d'autres tâches soient exécutées entre les flux de données, vous devez utiliser une tâche de flux de données distincte pour chaque flux de données.  
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/03/2017
   
 |Source|Description|  
 |------------|-----------------|  
-|Source Oracle|La source Oracle est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) (en anglais).|  
+|Source Oracle|La source Oracle est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)(en anglais).|  
 |Source SAP BI|La source SAP BI est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Feature Pack Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Source Teradata|La source Teradata est le composant source du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) (en anglais).|  
   
@@ -196,7 +195,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Colonnes  
  Les entrées, les sorties et les sorties d'erreurs sont des collections de colonnes. Chaque colonne peut être configurée, et les propriétés proposées par[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] varient en fonction du type de colonne (entrée, sortie ou externe). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet de définir les propriétés des colonnes selon trois méthodes différentes : par programmation, en utilisant les boîtes de dialogue spécifiques aux composants ou via la boîte de dialogue **Éditeur avancé**.  
   
 ## <a name="paths"></a>Chemins d'accès  
@@ -213,15 +212,14 @@ ms.lasthandoff: 08/03/2017
   
 -   Au niveau de la colonne, vous définissez les propriétés communes à toutes les colonnes, qui viennent s'ajouter aux propriétés personnalisées fournies par le composant pour les colonnes. Si le composant prend en charge l'ajout de colonnes de sortie, vous pouvez ajouter des colonnes aux sorties.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous pouvez définir les propriétés des éléments via les boîtes de dialogue personnalisées fournies pour chaque type d’élément ou encore au moyen de la fenêtre Propriétés ou de la boîte de dialogue **Éditeur avancé** .  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous pouvez définir les propriétés des éléments via les boîtes de dialogue personnalisées fournies pour chaque type d’élément ou encore au moyen de la fenêtre Propriétés ou de la boîte de dialogue **Éditeur avancé** .  
   
  Pour plus d’informations sur la définition des propriétés à l’aide du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Ajouter ou supprimer un composant dans un flux de données](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Connecter des composants dans un flux de données](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Vidéo, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Performances de Microsoft Connector pour Oracle par Attunity), sur le site web technet.microsoft.com.  
-

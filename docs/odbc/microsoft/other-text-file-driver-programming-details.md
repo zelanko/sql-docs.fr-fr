@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,17 +21,17 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 742c775e1abf4396ffc8f99dcbc059f77b61e40c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81d7b06199ccdffac5af32f4d8c0aa7b8c537ae6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-text-file-driver-programming-details"></a>Autres détails de programmation du pilote de fichier texte
 > [!NOTE]  
 >  Cette section fournit des informations de fichier texte spécifiques au pilote sur les fonctions ODBC et d’autres détails de programmation. Pour obtenir des informations générales sur une fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Définition du format du texte (pilote de fichier texte)](../../odbc/microsoft/defining-text-format-text-file-driver.md)  
   

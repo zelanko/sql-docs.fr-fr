@@ -2,10 +2,14 @@
 title: "Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,18 +24,19 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32c90d2d2f06e259d3a363b8dbc758ee6aee8b64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 432e833f5cd9341a083973f8060ddbd477d386c6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) fournit une prise en charge des URI d’espace de noms de la manière suivante :  
   
 -   Il rend le préfixe de l’espace de noms associé au mappage d’URI disponible lors de la [Construction de données XML à l’aide de requêtes FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
@@ -221,7 +226,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Par exemple :  
+ Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Exemple :  
   
 ```  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -245,7 +250,7 @@ Go
   
  Notez qu'une déclaration explicite dans le prologue XQuery remplace le préfixe d'espace de noms et l'espace de noms d'élément par défaut qui sont définis dans la clause WITH.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   

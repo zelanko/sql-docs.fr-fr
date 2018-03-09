@@ -1,14 +1,15 @@
 ---
 title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_NUMERIC_ROUNDABORT_TSQL
 - SET NUMERIC_ROUNDABORT
 - NUMERIC_ROUNDABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rounding expressions
 - precision [SQL Server], rounded expressions
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - NUMERIC_ROUNDABORT
 - SET NUMERIC_ROUNDABORT statement
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a78c81a9990b2a9c895776c5f51fe9046b2eb5d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a4f5a5369321999a980835a502a730bfe383aefd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,20 +43,13 @@ ms.lasthandoff: 11/21/2017
   Spécifie le niveau de gravité de l'erreur générée lorsqu'un arrondi effectué dans une expression entraîne une perte de précision.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET NUMERIC_ROUNDABORT { ON | OFF }   
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET NUMERIC_ROUNDABORT ON;  
-```  
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+SET NUMERIC_ROUNDABORT { ON | OFF }
+```
   
 ## <a name="remarks"></a>Notes  
  Si l'option SET NUMERIC_ROUNDABORT est définie à ON (activée), une erreur se produit dès qu'une perte de précision survient dans une expression. Lorsqu'elle est désactivée (OFF), les pertes de précision ne génèrent pas de messages d'erreur et le résultat est arrondi en fonction de la précision de la colonne ou de la variable contenant le résultat.  
@@ -63,16 +58,16 @@ SET NUMERIC_ROUNDABORT ON;
   
  Si SET NUMERIC_ROUNDABORT est défini à ON, SET ARITHABORT détermine la gravité de l'erreur générée. Le tableau suivant montre les effets de cette valeur (activée et désactivée), dans le cas d'une perte de précision.  
   
-|Paramètre|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|  
-|-------------|--------------------------------|---------------------------------|  
+|Paramètre|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
+|-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|Une erreur est générée ; aucun ensemble de résultats n'est renvoyé.|Pas d'erreur ou d'avertissement ; le résultat est arrondi.|  
 |SET ARITHABORT OFF|Un avertissement est renvoyé ; l'expression renvoie la valeur NULL.|Pas d'erreur ou d'avertissement ; le résultat est arrondi.|  
+
+ L'option SET NUMERIC_ROUNDABORT est définie lors de l'exécution, et non pas au moment de l'analyse.
+
+ SET NUMERIC_ROUNDABORT doit être désactivée (valeur OFF) lors de la création ou de la modification d'index sur des colonnes calculées ou des vues indexées. Si SET NUMERIC_ROUNDABORT est activé, créer, les instructions UPDATE, INSERT et DELETE sur les tables comportant des index sur des colonnes calculées ou des vues indexées échouent. Pour plus d’informations sur les paramètres des options SET requises avec les vues indexées et des index sur des colonnes calculées, consultez « Considérations lorsque vous utilisez des instructions SET » dans [instructions SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
   
- L'option SET NUMERIC_ROUNDABORT est définie lors de l'exécution, et non pas au moment de l'analyse.  
-  
- SET NUMERIC_ROUNDABORT doit être désactivée (valeur OFF) lors de la création ou de la modification d'index sur des colonnes calculées ou des vues indexées. Si SET NUMERIC_ROUNDABORT est activé (OFF), les instructions CREATE, UPDATE, INSERT et DELETE dans des tables comportant des index sur des colonnes calculées ou des vues indexées échouent. Pour plus d’informations sur les paramètres des options SET requises avec les vues indexées et des index sur des colonnes calculées, consultez « Considérations lorsque vous utilisez des instructions SET » dans [instructions SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
-  
- Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante.  
+ Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante :
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  

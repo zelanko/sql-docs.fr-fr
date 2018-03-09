@@ -1,17 +1,14 @@
 ---
 title: "Introduction à la surveillance d’Analysis Services avec SQL Server Profiler | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 01/23/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,18 +18,20 @@ helpviewer_keywords:
 - performance [Analysis Services], SQL Server Profiler
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a02f7cf6e59a39e79810819d59bfa42c60dde748
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 193b7d2907fe41c35560f23e204a3f56e209802d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introduction à la surveillance d’Analysis Services à l’aide de SQL Server Profiler
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les événements générés par une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet d'effectuer les opérations suivantes :  
   
 -   Surveiller les performances d'une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -68,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  Pour optimiser les performances, utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ne surveiller que les événements qui vous intéressent le plus. En effet, le fait de surveiller un trop grand nombre d'événements augmente les servitudes logicielles et peut considérablement accroître la taille du fichier ou de la table de trace, surtout si la surveillance se prolonge sur une période importante. En outre, utilisez le filtrage pour limiter la quantité de données recueillies et éviter que les traces ne deviennent trop volumineuses.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [Créer des traces de SQL Server Profiler pour la relecture &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [Événements de Trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
+ [Créer des Traces du Générateur de profils pour la relecture &#40; Analysis Services &#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

@@ -1,54 +1,50 @@
 ---
-title: "Les modèles tabulaires (SSAS) | Documents Microsoft"
+title: "Les modèles tabulaires | Documents Microsoft"
 ms.custom: 
-ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df607b47e4bb2a5a770e27d1bceb5a6d7e6ebbc
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tabular-modeling-ssas"></a>Modélisation tabulaire (SSAS)
-  Les modèles tabulaires sont des bases de données Analysis Services qui s’exécutent en mémoire ou en mode DirectQuery, en accédant aux données directement à partir de sources de données relationnelles principales.  
+# <a name="tabular-models"></a>Modèles tabulaires
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les modèles tabulaires sont des bases de données Analysis Services qui s’exécutent en mémoire ou en mode DirectQuery, en accédant aux données directement à partir de sources de données relationnelles principales. À l’aide des algorithmes de compression de pointe et processeur de requêtes multithread, le moteur analytique permet un accès rapide aux données et objets de modèle tabulaire par le rapport d’applications clientes telles que Power BI et Excel.  
   
- Par défaut, l’exécution s’effectue en mémoire. À l’aide d’algorithmes de compression de pointe et du processeur de requêtes multithread, le moteur analytique en mémoire permet un accès rapide aux objets de modèles tabulaires et aux données par les applications clientes de création de rapports telles que Microsoft Excel et Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
-  
- DirectQuery est un mode de requête alternatif pour les modèles qui sont trop volumineux pour tenir dans la mémoire, ou lorsque la volatilité des données empêche la mise en place d’une stratégie de traitement raisonnable. Dans cette version, DirectQuery garantit une meilleure parité avec les modèles en mémoire via la prise en charge des sources de données supplémentaires, la possibilité de gérer les tables et les colonnes calculées dans un modèle DirectQuery, la sécurité de niveau ligne via les expressions DAX qui atteignent la base de données principale et les optimisations de requêtes qui assurent un débit plus rapide que dans les versions précédentes.
+ Alors que les modèles en mémoire sont la valeur par défaut :, DirectQuery est un mode de requête alternatif pour les modèles qui sont trop volumineux pour tenir en mémoire, ou lorsque la volatilité des données empêche une stratégie de traitement raisonnable. DirectQuery permet d’obtenir la parité avec les modèles en mémoire prise en charge pour un large éventail de sources de données, permet de gérer les tables calculées et les colonnes dans un modèle DirectQuery, la sécurité de niveau ligne via des expressions DAX qui atteignent la base de données et de requête optimisations qui entraînent un débit plus rapide.
   
  Les modèles tabulaires sont créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l’aide du modèle de projet de modèle tabulaire qui fournit un espace de conception pour la création d’un modèle, de tables, de relations et d’expressions DAX. Vous pouvez importer des données depuis plusieurs sources, puis enrichir le modèle en ajoutant des relations, des colonnes et des tables calculées, des mesures, des indicateurs de performance clés, des hiérarchies et des traductions.  
   
- Des modèles peuvent ensuite être déployés sur une instance d’Analysis Services configurée pour le mode de serveur Tabulaire, à laquelle les applications clientes de création de rapports peuvent se connecter. Les modèles déployés peuvent être gérés dans SQL Server Management Studio comme tous les modèles multidimensionnels. Ils peuvent également être partitionnés pour un traitement optimisé et être sécurisés au niveau de la ligne à l'aide de la sécurité basée sur le rôle.  
+ Les modèles peuvent ensuite être déployés sur Azure Analysis Services ou une instance de SQL Server Analysis Services est configuré pour le mode serveur tabulaire. Les modèles tabulaires déployés peuvent être gérés dans SQL Server Management Studio. À mesure que vos modèles augmentent, ils peuvent partitionnés pour un traitement optimisé et sécurisés au niveau de la ligne en utilisant la sécurité basée sur les rôles.  
   
-## <a name="in-this-section"></a>Dans cette section  
- [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md) - Les rubriques de cette section décrivent la création et le déploiement de solutions de modèles tabulaires.
+## <a name="in-this-section"></a>Contenu de cette section  
+ [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md) -Articles de cette section décrivent la création et le déploiement des solutions de modèle tabulaire.
   
- [Bases de données de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md) - Les rubriques de cette section décrivent la gestion des solutions de modèles tabulaires déployées.
+ [Bases de données model tabulaire](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md) -Articles de cette section décrivent la gestion des solutions de modèle tabulaire déployé.
   
- [Accès aux données de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-data-access.md) - Les rubriques de cette section décrivent la connexion aux solutions de modèles tabulaires déployées.
+ [Accès aux données de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-data-access.md) -Articles de cette section décrivent la connexion au déploiement des solutions de modèle tabulaire.
   
 ## <a name="see-also"></a>Voir aussi  
- [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
- [Comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [Quelles sont les nouveautés dans Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Comparaison des solutions tabulaires et multidimensionnelles](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Outils et applications utilisés dans Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)   
- [Mode DirectQuery &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Mode DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Niveau de compatibilité](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

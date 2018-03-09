@@ -3,8 +3,9 @@ title: "CancelUpdate, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::CancelUpdate
-helpviewer_keywords: CancelUpdate method [ADO]
+f1_keywords:
+- Recordset15::CancelUpdate
+helpviewer_keywords:
+- CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7a118a37c403d9d50019e72b10f482d7b3f089c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd858ec4d40f307027a75fa657c4e4d2b0539064
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate, méthode (ADO)
 Annule les modifications apportées à la ligne actuelle ou nouvelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, avant d’appeler le [mise à jour ](../../../ado/reference/ado-api/update-method.md) (méthode).  

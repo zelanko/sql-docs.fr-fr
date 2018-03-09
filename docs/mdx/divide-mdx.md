@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 9fe4a47b-d5e8-4dc7-ad4a-3e47ab463f03
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ec7d1cf6bf0cd7b702d633c4022230f93a686b53
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7b6be129e35812c2e9f22534a0f9229ec6db6203
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="divide-mdx"></a>Diviser (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  *alternateresult*  
  (Facultatif) Valeur retournée quand la division par zéro provoque une erreur. Lorqu'elle n'est pas fournie, la valeur par défaut est BLANK().  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le résultat de remplacement lors de la division par 0 doit être une constante.  
   
 ## <a name="see-also"></a>Voir aussi  

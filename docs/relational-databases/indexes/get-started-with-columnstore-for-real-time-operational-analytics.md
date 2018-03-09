@@ -8,25 +8,26 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bee5fd436b1f2e8e493983774b45c70f533a5d77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a9f8fc41e72885a9a08d7779afa611e07e1dc8f5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Prise en main de Columnstore pour l’analytique opérationnelle en temps réel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduit l’analytique opérationnelle en temps réel, la possibilité d’exécuter à la fois des charges de travail analytiques et OLTP sur les mêmes tables de base de données en même temps. Outre l’exécution de l’analytique en temps réel, vous pouvez également éliminer le besoin d’opérations d’extraction, de transformation et de chargement (ETL) et d’un entrepôt de données.  
+  SQL Server 2016 introduit l’analytique opérationnelle en temps réel, la possibilité d’exécuter à la fois des charges de travail analytiques et OLTP sur les mêmes tables de base de données en même temps. Outre l’exécution de l’analytique en temps réel, vous pouvez également éliminer le besoin d’opérations d’extraction, de transformation et de chargement (ETL) et d’un entrepôt de données.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Description de l’analytique opérationnelle en temps réel  
  En règle générale, les entreprises ont des systèmes séparés pour les charges de travail opérationnelles (autrement dit, OLTP) et analytiques. Pour ces systèmes, les tâches d’extraction, de transformation et de chargement (ETL) déplacent régulièrement les données du magasin opérationnel vers un magasin d’analytiques. Les données analytiques sont généralement stockées dans un entrepôt de données ou un mini-Data Warehouse dédié à l’exécution de requêtes analytiques. Même si cette solution constitue la norme, elle présente les trois principaux inconvénients suivants :  
@@ -207,10 +208,10 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Charge de travail d’insertion/d’interrogation :**si votre charge de travail insère et interroge principalement des données, l’option COMPRESSION_DELAY avec la valeur par défaut 0 est l’option recommandée. Les lignes nouvellement insérées sont compressées quand 1 million de lignes ont été insérées dans un rowgroup delta unique.  
     Parmi les exemples de cette charge de travail figurent (a) une charge de travail DW classique (b) une analyse des parcours de visite quand vous devez analyser le modèle de clic dans une application web.  
   
--   **Charge de travail OLTP :** si la charge de travail est de type DML lourd (autrement dit, de nombreuses mises à jour, suppressions et insertions associées), vous pouvez voir la fragmentation des index columnstore en examinant la vue de gestion de données sys. dm_db_column_store_row_group_physical_stats. Si vous voyez que plus de 10 % des lignes sont marquées comme supprimées dans des rowgroups récemment compressés, vous pouvez utiliser l’option COMPRESSION_DELAY pour ajouter un délai quand les lignes sont éligibles pour la compression. Si les données récemment insérées pour votre charge de travail restent « chaudes » (autrement dit, si elles sont mises à jour plusieurs fois) pendant, par exemple, 60 minutes, vous devez choisir la valeur 60 pour COMPRESSION_DELAY.  
+-   **Charge de travail OLTP :** si la charge de travail est de type DML lourd (autrement dit, de nombreuses mises à jour, suppressions et insertions associées), vous pouvez voir la fragmentation des index columnstore en examinant la vue de gestion de données sys. dm_db_column_store_row_group_physical_stats. Si vous voyez que plus de 10 % des lignes sont marquées comme supprimées dans des rowgroups récemment compressés, vous pouvez utiliser l’option COMPRESSION_DELAY pour ajouter un délai quand les lignes sont éligibles pour la compression. Si les données récemment insérées pour votre charge de travail restent « chaudes » (autrement dit, si elles sont mises à jour plusieurs fois) pendant, par exemple, 60 minutes, vous devez choisir la valeur 60 pour COMPRESSION_DELAY.  
   
  Nous pensons que la plupart des clients n’auront besoin de rien faire. La valeur par défaut de l’option COMPRESSION_DELAY doit leur convenir.  
-Aux utilisateurs expérimentés, nous recommandons d’exécuter la requête ci-dessous et de collecter un pourcentage de lignes supprimées dans les 7 derniers jours.  
+Aux utilisateurs expérimentés, nous recommandons d’exécuter la requête ci-dessous et de collecter un pourcentage de lignes supprimées dans les 7 derniers jours.  
   
 ```  
 SELECT row_group_id,cast(deleted_rows as float)/cast(total_rows as float)*100 as [% fragmented], created_time  
@@ -224,7 +225,7 @@ ORDER BY created_time DESC
   
  Si le nombre de lignes supprimées dans les rowgroups compressés est supérieur à 20 %, stable dans les anciens rowgroups avec une variation inférieure à 5 % (désignés sous le nom de rowgroups froids), définissez COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Notez que cette approche fonctionne mieux avec une charge de travail stable et relativement homogène.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Chargement de données d’index columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

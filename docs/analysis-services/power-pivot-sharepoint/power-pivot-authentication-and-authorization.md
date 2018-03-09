@@ -2,32 +2,30 @@
 title: Power Pivot Authentication and Authorization | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
-  Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint qui s’exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d’authentification et le modèle d’autorisation fournis par les serveurs SharePoint. L’infrastructure de sécurité SharePoint s’étend au contenu et aux opérations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , car l’ensemble du contenu relatif à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est stocké dans des bases de données de contenu SharePoint, et l’ensemble des opérations relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est effectué par des services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont authentifiés à l’aide d’une identité d’utilisateur SharePoint basée sur leur identité d’utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint qui s’exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d’authentification et le modèle d’autorisation fournis par les serveurs SharePoint. L’infrastructure de sécurité SharePoint s’étend au contenu et aux opérations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , car l’ensemble du contenu relatif à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est stocké dans des bases de données de contenu SharePoint, et l’ensemble des opérations relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est effectué par des services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont authentifiés à l’aide d’une identité d’utilisateur SharePoint basée sur leur identité d’utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
   
  Étant donné que l’intégration à Excel Services est nécessaire pour les analyses de données libre-service, pour sécuriser un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vous devez également bien comprendre le fonctionnement de la sécurité dans Excel Services. Quand un utilisateur interroge un tableau croisé dynamique comportant une connexion de données à des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services transmet une demande de connexion de données à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie pour charger les données. Du fait de cette interaction entre les serveurs, il est indispensable que vous compreniez comment configurer des paramètres de sécurité pour les deux serveurs.  
   
@@ -44,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_auth"></a> Authentification Windows à l'aide de la spécification de connexion en mode classique  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend en charge un ensemble réduit d’options d’authentification disponibles dans SharePoint. Parmi les options d’authentification disponibles, seule l’authentification Windows est prise en charge pour un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. En outre, l'application Web via laquelle la connexion se produit doit être configurée pour le mode classique.  
   
- L’authentification Windows est requise car le moteur de données Analysis Services dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend uniquement en charge l’authentification Windows. Excel Services établit les connexions à Analysis Services via le fournisseur OLE DB MSOLAP à l'aide d'une identité d'utilisateur Windows qui a été authentifiée via NTLM ou du protocole Kerberos.  
+ L’authentification Windows est requise car le moteur de données Analysis Services dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend uniquement en charge l’authentification Windows. Excel Services établit les connexions à Analysis Services via le fournisseur OLE DB MSOLAP à l'aide d'une identité d'utilisateur Windows qui a été authentifiée via NTLM ou du protocole Kerberos.  
   
  La deuxième spécification, l’authentification en mode classique sur l’application web, est nécessaire pour garantir l’opérabilité du service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le service web est un composant qui s’exécute sur un serveur web frontal et fournit la redirection HTTP vers un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans la batterie. Tandis que le service web prend en charge les revendications pour les communications entre services, il ne les prend pas en charge pour les demandes de connexion de données qu’il achemine vers un service partagé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les demandes de chargement de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont prises en charge uniquement pour les connexions authentifiées émanant d’IIS à l’aide d’une identité Windows. La connexion en mode classique sur l’application web permet une connexion réussie du service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aux services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie.  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  La plupart des paramètres relatifs à la sécurité s'appliquent à des emplacements approuvés. Si vous voulez conserver les valeurs par défaut ou utiliser des valeurs différentes pour des sites différents, vous pouvez créer un emplacement approuvé supplémentaire pour les sites qui contiennent les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , puis configurer les paramètres suivants uniquement pour ce site. Pour plus d’informations, voir [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Domaine|Paramètre|Description|  
+|Domaine|Paramètre| Description|  
 |----------|-------------|-----------------|  
 |application Web|Fournisseur d'authentification Windows|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] convertit un jeton de revendications qu’il obtient d’Excel Services en une identité d’utilisateur Windows. Toutes les applications Web qui utilisent Excel Services comme ressource doivent être configurées pour utiliser le fournisseur d'authentification Windows.|  
 |Emplacement approuvé|Type d'emplacement|Cette valeur doit être paramétrée sur **Microsoft SharePoint Foundation**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] récupèrent une copie du fichier .xlsx et la chargent sur un serveur Analysis Services dans la batterie. Le serveur ne peut récupérer que des fichiers .xlsx d'une bibliothèque de contenu.|  

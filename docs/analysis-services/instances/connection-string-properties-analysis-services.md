@@ -2,32 +2,30 @@
 title: "Propriétés de chaîne de connexion (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriétés des chaînes de connexion (Analysis Services)
-  Cette rubrique documente les propriétés de chaîne de connexion que vous pouvez définir dans le concepteur ou les outils d'administration, ou voir dans les chaînes de connexion générées par les applications clientes qui se connectent aux données Analysis Services et interrogent ces dernières. Par conséquent, elle couvre uniquement un sous-ensemble des propriétés disponibles. La liste complète inclut de nombreuses propriétés de serveur et de base de données, vous permettant de personnaliser une connexion à une application spécifique, indépendamment de la façon dont l'instance ou la base de données est configurée sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique documente les propriétés de chaîne de connexion que vous pouvez définir dans le concepteur ou les outils d'administration, ou voir dans les chaînes de connexion générées par les applications clientes qui se connectent aux données Analysis Services et interrogent ces dernières. Par conséquent, elle couvre uniquement un sous-ensemble des propriétés disponibles. La liste complète inclut de nombreuses propriétés de serveur et de base de données, vous permettant de personnaliser une connexion à une application spécifique, indépendamment de la façon dont l'instance ou la base de données est configurée sur le serveur.  
   
  Les développeurs qui créent des chaînes de connexion personnalisées dans un code d’application doivent consulter la documentation de l’API pour le client ADOMD.NET afin d’obtenir une liste plus détaillée : <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -57,11 +55,11 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_common"></a> Paramètres de connexion couramment utilisés  
  Le tableau suivant décrit les propriétés couramment utilisées lors de la génération d'une chaîne de connexion.  
   
-|Propriété|Description|Exemple|  
+|Propriété| Description|Exemple|  
 |--------------|-----------------|-------------|  
 |**Data Source** ou **DataSource**|Spécifie l'instance du serveur. Cette propriété est obligatoire pour toutes les connexions. Les valeurs valides incluent le nom réseau ou l'adresse IP du serveur, local ou localhost pour les connexions locales, une adresse URL si le serveur est configuré pour l'accès HTTP ou HTTPS, ou le nom d'un fichier de cube local (.cub).|`Data source=AW-SRV01` pour l'instance et le port par défaut (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` pour une instance nommée ($Finance) et un port fixe.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` pour un nom de domaine complet, avec le port et l'instance par défaut.<br /><br /> `Data source=172.16.254.1` pour une adresse IP du serveur, en ignorant la recherche de serveur DNS, utile pour résoudre des problèmes de connexion.|  
 |**Initial Catalog** ou **Catalog**|Spécifie le nom de la base de données Analysis Services à laquelle se connecter. La base de données doit être déployée sur Analysis Services et vous devez avoir l'autorisation de vous y connecter. Cette propriété est facultative pour les connexions AMO, mais requise pour ADOMD.NET.|`Initial catalog=AdventureWorks2016`|  
-|**Fournisseur**|Les valeurs valides sont MSOLAP. \<version >, où \<version > est 4, 5, 6 ou 7.<br /><br /> -   MSOLAP.4 publié dans SQL Server 2008, puis SQL Server 2008 R2 (le nom de fichier est msolap100.dll pour SQL Server 2008 et 2008 R2)<br />-   MSOLAP.5 publié dans SQL Server 2012 (le nom de fichier est msolap110.dll)<br />-   MSOLAP.6 publié dans SQL Server 2014 (le nom de fichier est msolap1200.dll)<br />-   MSOLAP.7 publié dans SQL Server 2016 (le nom de fichier est msolap130.dll)<br /><br /> Cette propriété est facultative. Par défaut, les bibliothèques clientes lisent la version actuelle du fournisseur OLE DB à partir du Registre. Il vous suffit de définir cette propriété à si vous avez besoin d’une version spécifique du fournisseur de données, par exemple pour vous connecter à une instance SQL Server 2012.<br /><br /> MSOLAP.4 a été implémenté à la fois dans SQL Server 2008 et dans SQL Server 2008 R2. La version 2008 R2 prend en charge les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et doit parfois être installée manuellement sur les serveurs SharePoint. Pour distinguer ces versions, vous devez vérifier le numéro de build dans les propriétés de fichier du fournisseur : accédez à Program files\Microsoft Analysis Services\AS OLEDB\10. Cliquez avec le bouton droit sur msolap110.dll, puis sélectionnez **Propriétés**. Cliquez sur **Détails**. Consultez les informations de version du fichier. La version doit inclure 10.50. \<buildnumber > pour SQL Server 2008 R2. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) et [Fournisseurs de données utilisés pour les connexions Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` est utilisé pour les connexions qui nécessitent la version SQL Server 2016 du fournisseur OLE DB pour Analysis Services.|  
+|**Fournisseur**|Les valeurs valides sont MSOLAP. \<version >, où \<version > est 4, 5, 6 ou 7.<br /><br /> -   MSOLAP.4 publié dans SQL Server 2008, puis SQL Server 2008 R2 (le nom de fichier est msolap100.dll pour SQL Server 2008 et 2008 R2)<br />-   MSOLAP.5 publié dans SQL Server 2012 (le nom de fichier est msolap110.dll)<br />-   MSOLAP.6 publié dans SQL Server 2014 (le nom de fichier est msolap1200.dll)<br />-   MSOLAP.7 publié dans SQL Server 2016 (le nom de fichier est msolap130.dll)<br /><br /> Cette propriété est facultative. Par défaut, les bibliothèques clientes lisent la version actuelle du fournisseur OLE DB à partir du Registre. Il vous suffit de définir cette propriété à si vous avez besoin d’une version spécifique du fournisseur de données, par exemple pour vous connecter à une instance SQL Server 2012.<br /><br /> MSOLAP.4 a été implémenté à la fois dans SQL Server 2008 et dans SQL Server 2008 R2. La version 2008 R2 prend en charge les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et doit parfois être installée manuellement sur les serveurs SharePoint. Pour distinguer ces versions, vous devez vérifier le numéro de build dans les propriétés de fichier du fournisseur : accédez à Program files\Microsoft Analysis Services\AS OLEDB\10. Cliquez avec le bouton droit sur msolap110.dll, puis sélectionnez **Propriétés**. Cliquez sur **Détails**. Consultez les informations de version du fichier. La version doit inclure 10.50. \<buildnumber > pour SQL Server 2008 R2. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) et [Fournisseurs de données utilisés pour les connexions Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).|`Provider=MSOLAP.7` est utilisé pour les connexions qui nécessitent la version SQL Server 2016 du fournisseur OLE DB pour Analysis Services.|  
 |**Cube**|Nom du cube ou de la perspective. Une base de données peut contenir plusieurs cubes et perspectives. Lorsque plusieurs cibles sont possibles, indiquez le nom du cube ou de la perspective dans la chaîne de connexion.|`Cube=SalesPerspective` indique que vous pouvez utiliser la propriété de chaîne de connexion Cube pour spécifier le nom d’un cube ou le nom d’une perspective.|  
   
 ##  <a name="bkmk_auth"></a> Authentification et sécurité  
@@ -69,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  Les propriétés sont répertoriées par ordre alphabétique.  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**EffectiveUserName**|À utiliser lorsque l'identité de l'utilisateur final doit être empruntée sur le serveur. Spécifiez le compte sous le format domaine\utilisateur. Pour utiliser cette propriété, l'appelant doit avoir des autorisations d'administration dans Analysis Services. Pour plus d'informations sur l'utilisation de cette propriété dans un classeur Excel à partir de SharePoint, consultez [Utiliser Analysis Services EffectiveUserName dans SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=311905). Pour obtenir une illustration de l'utilisation de cette propriété avec Reporting Services, consultez [Utilisation d'EffectiveUserName pour l'emprunt d'identité dans SSAS](http://go.microsoft.com/fwlink/?LinkId=301385).<br /><br /> **EffectiveUserName** est utilisé dans une installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint afin de recueillir des informations d’utilisation. L'identité de l'utilisateur est fournie au serveur afin que les événements ou les erreurs qui incluent l'identité de l'utilisateur puissent être stockés dans les fichiers journaux. Dans le cas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], elle n’est pas utilisée pour l’autorisation.|  
 |**Chiffrer le mot de passe**|Spécifie si un mot de passe local doit être utilisé pour chiffrer les cubes locaux. Les valeurs valides sont True ou False. La valeur par défaut est False.|  
@@ -89,10 +87,10 @@ ms.lasthandoff: 11/17/2017
   
  Les propriétés sont répertoriées par ordre alphabétique.  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**Application Name**|Définit le nom de l'application associée à la connexion. Cette valeur peut être utile pour surveiller les événements de suivi, notamment lorsque vous disposez de plusieurs applications accédant aux mêmes bases de données. Par exemple, ajouter Application Name=’test’ à une chaîne de connexion entraîne l'affichage de ‘test’ dans une trace de SQL Server Profiler, comme le montre la capture d'écran suivante :<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Les alias pour cette propriété sont **sspropinitAppName**, **AppName**. Pour plus d'informations, consultez [Utiliser le paramètre de nom d'application lors de la connexion à SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
-|**AutoSyncPeriod**|Définit la fréquence (en millisecondes) de la synchronisation du cache client et serveur. ADOMD.NET facilite la mise en cache client pour les objets souvent utilisés avec une charge minimale de mémoire. Cela permet de réduire le nombre d'allers-retours au serveur. La valeur par défaut est 10 000 millisecondes (dix secondes). Si la valeur est Null ou 0, la synchronisation automatique est désactivée.|  
+|**AutoSyncPeriod**|Définit la fréquence (en millisecondes) de la synchronisation du cache client et serveur. ADOMD.NET facilite la mise en cache client pour les objets souvent utilisés avec une charge minimale de mémoire. Cela permet de réduire le nombre d'allers-retours au serveur. La valeur par défaut est 10 000 millisecondes (dix secondes). Si la valeur est Null ou 0, la synchronisation automatique est désactivée.|  
 |**Character Encoding**|Définit la manière dont les caractères sont encodés dans la demande. Les valeurs valides sont Default ou UTF-8 (les deux sont équivalentes), et UTF-16| 
 |**CommitTimeout**|Propriété XMLA. Détermine le délai d’attente, exprimé en millisecondes, observé dans la phase de validation d’une commande en cours d’exécution avant d’effectuer une restauration. Quand la valeur est supérieure à 0, remplace la valeur de la propriété CommitTimeout correspondante dans la configuration de serveur. |   
 |**CompareCaseSensitiveStringFlags**|Ajuste les comparaisons de chaînes sensibles à la casse pour les paramètres régionaux spécifiés. Pour plus d'informations sur la définition de cette propriété, consultez [Propriété CompareCaseSensitiveStringFlags](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  
@@ -104,7 +102,7 @@ ms.lasthandoff: 11/17/2017
 |**Packet Size**|Taille d'un paquet réseau (en octets), comprise entre 512 et 32 767. La taille des paquets réseau par défaut est 4 096.|  
 |**Protocol Format**|Définit le format du code XML envoyé au serveur. Les valeurs valides sont Default, XML ou Binary. Le protocole est XMLA. Vous pouvez spécifier que XML soit envoyé sous forme compressée (il s'agit de la valeur par défaut), dans un fichier XML brut ou sous un format binaire. Le format binaire encode les attributs et les éléments XML, ce qui les rend plus petits. La compression est un format propriétaire qui réduit encore la taille des demandes et des réponses. La compression et les formats binaires sont utilisés pour accélérer les demandes et les réponses de transfert de données.<br /><br /> Vous devez utiliser une bibliothèque cliente sur la connexion si vous utilisez le format binaire ou le format compressé. Le fournisseur OLE DB peut mettre en forme les demandes et les réponses au format binaire ou compressé. AMO et ADOMD.NET mettent en forme les demandes sous forme de texte, mais acceptent des réponses au format binaire ou compressé.<br /><br /> Cette propriété de chaîne de connexion est équivalente aux paramètres de configuration de serveur **EnableBinaryXML** et **EnableCompression** .|  
 |**Real Time Olap**|Définissez cette propriété pour ignorer la mise en cache, afin que toutes les partitions écoutent activement les notifications de requêtes. Par défaut, cette propriété n'est pas définie.|  
-|**Safety Options**|Définit le niveau de sécurité pour les actions et les fonctions définies par l'utilisateur. Les valeurs valides sont 0, 1 et 2. Dans une connexion Excel, cette propriété correspond aux options de sécurité=2. Pour plus de détails sur cette option, voir <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.|  
+|**Safety Options**|Définit le niveau de sécurité pour les actions et les fonctions définies par l'utilisateur. Les valeurs valides sont 0, 1 et 2. Dans une connexion Excel, cette propriété correspond aux options de sécurité=2. Pour plus de détails sur cette option, voir <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.|  
 |**SQLQueryMode**|Spécifie si les requêtes SQL incluent des calculs. Les valeurs valides sont Data, Calculated, IncludeEmpty. Data signifie qu'aucun calcul n'est autorisé. Calculated autorise les calculs. IncludeEmpty permet le renvoi de calculs et de lignes vides dans le résultat de la requête.|  
 |**Timeout**|Spécifie la durée (en secondes) pendant laquelle la bibliothèque cliente attend la fin d’une commande avant de générer une erreur.|  
 |**Transport Compression**|Définit la manière dont les communications client et serveur sont compressées, si la compression est définie via la propriété **Protocol Format** . Les valeurs valides sont Default, None, Compressed et **gzip**. Default indique l'absence de compression pour TCP ou **gzip** pour HTTP. None indique qu'aucune compression n'est utilisée. Compressed utilise la compression XPRESS (SQL Server 2008 et versions ultérieures). **gzip** est valide uniquement pour les connexions HTTP, où la demande HTTP inclut Accept-Encoding=gzip.|  
@@ -158,7 +156,7 @@ ms.lasthandoff: 11/17/2017
   
  **Connexions natives (ou directes) au serveur**  
   
- `Data Source=server[:port][\instance]` où « port » et « \instance » sont facultatifs. Par exemple, la spécification de « Data Source=server1 » ouvre une connexion à l'instance par défaut (et au port par défaut 2383) sur un serveur nommé « server1 ».  
+ `Data Source=server[:port][\instance]` où « port » et « \instance » sont facultatifs. Par exemple, la spécification de « Data Source=server1 » ouvre une connexion à l'instance par défaut (et au port par défaut 2383) sur un serveur nommé « server1 ».  
   
  « Data Source=server1:port1 » ouvre une connexion à une instance en cours de exécution d'Analysis Services sur le port « port1 » sur le serveur « server1 ».  
   
@@ -193,7 +191,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_encrypt"></a> Chiffrement des chaînes de connexion  
  Analysis Services utilise ses propres clés de chiffrement pour chiffrer des chaînes de connexion. Il ne génère pas de certificat auto-signé.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre et stocke les chaînes de connexion qu’il utilise pour se connecter à chacune de ses sources de données. Si la connexion à une source de données nécessite un nom d'utilisateur et un mot de passe, vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de stocker le nom et le mot de passe avec la chaîne de connexion, ou lui indiquer de demander le nom et le mot de passe chaque fois qu'une connexion à la source de données est nécessaire. Si vous indiquez à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vous demander les informations utilisateur, ceci implique que ces informations ne doivent pas être stockées et chiffrées. En revanche, si vous stockez ces informations dans la chaîne de connexion, ces informations doivent être chiffrées et protégées.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre et stocke les chaînes de connexion qu'il utilise pour se connecter à chacune de ses sources de données. Si la connexion à une source de données nécessite un nom d'utilisateur et un mot de passe, vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de stocker le nom et le mot de passe avec la chaîne de connexion, ou lui indiquer de demander le nom et le mot de passe chaque fois qu'une connexion à la source de données est nécessaire. Si vous indiquez à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de vous demander les informations utilisateur, ceci implique que ces informations ne doivent pas être stockées et chiffrées. En revanche, si vous stockez ces informations dans la chaîne de connexion, ces informations doivent être chiffrées et protégées.  
   
  Pour chiffrer et protéger les informations de la chaîne de connexion, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise l'API de protection des données.  
   

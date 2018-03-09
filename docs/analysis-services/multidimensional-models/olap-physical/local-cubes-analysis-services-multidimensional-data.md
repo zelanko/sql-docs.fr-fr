@@ -2,15 +2,13 @@
 title: "Cubes locaux (Analysis Services - données multidimensionnelles) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5872bd5a1efda8d8add71bc1ce0e089785352e11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubes locaux (Analysis Services - Données multidimensionnelles)
-  Pour créer, mettre à jour ou supprimer des cubes locaux, vous devez écrire et exécuter un script ASSL ou un programme AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Pour créer, mettre à jour ou supprimer des cubes locaux, vous devez écrire et exécuter un script ASSL ou un programme AMO.  
   
  Les cubes locaux et les modèles d'exploration de données locaux permettent d'analyser une station de travail cliente lorsqu'elle est déconnectée du réseau. Par exemple, une application cliente peut appeler le fournisseur OLE DB pour OLAP 9.0 (MSOLAP.3), qui à son tour charge le moteur de cube local pour créer et interroger des cubes locaux, comme l'indique l'illustration suivante.  
   

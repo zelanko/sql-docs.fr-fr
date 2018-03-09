@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 589ab76ad5ffeb415366c545a4b00a8be2a9d63b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fd6820db6912a15f7991ec76131a8fabe9fd822
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;modèle&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,18 +49,18 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Liste séparée par des virgules des expressions, ou des colonnes de type Predict ou Predict only.   
   
  *n*  
- Ce paramètre est facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *model*  
  Identificateur du modèle  
   
  *liste des conditions*  
- Ce paramètre est facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
+ Facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Ce paramètre est facultatif. Expression qui retourne une valeur scalaire.  
+ Facultatif. Expression qui retourne une valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les colonnes dans le *liste d’expressions* doit être défini comme predict ou predict only, ou associée à une colonne prévisible.  
   
 ## <a name="naive-bayes-example"></a>Exemple de modèle Naive Bayes  
@@ -84,6 +82,6 @@ FROM Forecasting
  [SÉLECTIONNEZ &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

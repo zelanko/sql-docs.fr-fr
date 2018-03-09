@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d4b4f34938bd72e325394d12bdf0c955d480c14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c9c8c5a3098e03da579f2bd043ec9675a8c1adb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-administration"></a>administration de dqs
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vous permet d'administrer et gérer les différentes activités de DQS effectuées sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], de configurer les propriétés de niveau serveur relatives aux activités de DQS, de configurer les paramètres de Reference Data Services et de configurer les paramètres de journalisation de DQS. Ces opérations sont effectuées par le biais de la fonctionnalité **Administration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Selon votre accès de sécurité (rôle) dans DQS, vous êtes autorisé ou non à accéder à certaines fonctionnalités de cette zone.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
  Pour plus d’informations, consultez [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |Explique comment sauvegarder et restaurer les bases de données DQS.|[Sauvegarde et restauration de bases de données DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Décrit comment détacher et attacher des bases de données DQS.|[Attachement et détachement de bases de données DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Services de données de référence dans DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Gérer les fichiers journaux DQS](../data-quality-services/manage-dqs-log-files.md)   
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

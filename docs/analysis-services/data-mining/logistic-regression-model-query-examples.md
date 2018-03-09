@@ -2,34 +2,33 @@
 title: "Exemples de requêtes de modèle de régression logistique | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b423036644bdb4811aec4fcf7fb720b2f783944
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>Exemples de requêtes de modèle de régression logistique
-  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions à l'aide de nouvelles données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions à l'aide de nouvelles données.  
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme MLR (Microsoft Logistic Regression).  
   
@@ -46,9 +45,9 @@ ms.lasthandoff: 11/17/2017
  [Élaboration de prédictions pour une valeur discrète](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> Obtention d'informations sur le modèle de régression logistique  
- Les modèles de régression logistique sont créés en utilisant l'algorithme MNR (Microsoft Neural Network) avec un ensemble spécial de paramètres ; par conséquent, un modèle de régression logistique possède certaines informations identiques à un modèle de réseau neuronal, mais est moins complexe. Pour comprendre la structure du contenu du modèle et les types d’informations stockés dans les différents types de nœuds, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
+ Les modèles de régression logistique sont créés en utilisant l'algorithme MNR (Microsoft Neural Network) avec un ensemble spécial de paramètres ; par conséquent, un modèle de régression logistique possède certaines informations identiques à un modèle de réseau neuronal, mais est moins complexe. Pour comprendre la structure du contenu du modèle et les types d’informations stockés dans les différents types de nœuds, consultez [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
- Pour suivre les scénarios de requête, vous pouvez créer un modèle de régression logistique comme décrit dans la section suivante du Didacticiel intermédiaire sur l’exploration de données : [Leçon 5 : Génération de modèles de réseau neuronal et de régression logistique &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
+ Pour suivre les scénarios de requête, vous pouvez créer un modèle de régression logistique comme décrit dans la section suivante du Didacticiel intermédiaire sur l’exploration de données : [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
   
  Vous pouvez aussi utiliser la structure d’exploration de données (publipostage ciblé) du [Didacticiel sur l’exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -107,7 +106,7 @@ FROM [TM_Logistic Regression].CONTENT
 |Commute Distance|Manquant|0|0|0|1|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
- La requête réelle retourne beaucoup plus de lignes. Toutefois, cet exemple illustre le type d'informations fournies à propos des entrées. Pour les entrées discrètes, chaque valeur possible est répertoriée dans la table. Pour les entrées de valeur continue telles que l’attribut Age, une liste complète est impossible, donc l’entrée est discrétisée en tant que moyenne. Pour plus d’informations sur l’utilisation des informations du nœud de statistiques marginales, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
+ La requête réelle retourne beaucoup plus de lignes. Toutefois, cet exemple illustre le type d'informations fournies à propos des entrées. Pour les entrées discrètes, chaque valeur possible est répertoriée dans la table. Pour les entrées de valeur continue telles que l’attribut Age, une liste complète est impossible, donc l’entrée est discrétisée en tant que moyenne. Pour plus d’informations sur l’utilisation des informations du nœud de statistiques marginales, consultez [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 > [!NOTE]  
 >  Les résultats ont été aplatis pour un affichage plus aisé, mais vous pouvez retourner la table imbriquée dans une colonne unique si votre fournisseur prend en charge des ensembles de lignes hiérarchiques.  
@@ -138,7 +137,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Pour plus d’informations sur les valeurs de probabilité, de prise en charge et d’écart type dans la table NODE_DISTRIBUTION imbriquée, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
+ Pour plus d’informations sur les valeurs de probabilité, de prise en charge et d’écart type dans la table NODE_DISTRIBUTION imbriquée, consultez [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
 ###  <a name="bkmk_Query4"></a> Exemple de requête 4 : élaboration de prédictions pour une valeur discrète  
  La régression logistique est généralement utilisée dans les scénarios où vous souhaitez analyser les facteurs qui contribuent à un résultat binaire. Bien que le modèle utilisé dans le didacticiel prédise une valeur continue, **ServiceGrade**, dans la réalité, vous préfèrerez peut-être le configurer pour qu’il prédise si le niveau de service atteindra une valeur cible discrétisée. Vous pouvez aussi sortir les prédictions en utilisant une valeur continue pour par la suite regrouper les résultats prédits sous les libellés **Bon**, **Correct**ou **Médiocre**.  
@@ -198,13 +197,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Retourne la probabilité ajustée d'un état spécifié.|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Retourne la probabilité pour un état spécifié.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Retourne l'écart-type pour la valeur prédite.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Retourne la valeur de support pour un état spécifié.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance d'une colonne spécifiée.|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Retourne la probabilité ajustée d'un état spécifié.|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Retourne la probabilité pour un état spécifié.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Retourne l'écart-type pour la valeur prédite.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Retourne la valeur de support pour un état spécifié.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance d'une colonne spécifiée.|  
   
  Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -212,10 +211,10 @@ NATURAL PREDICTION JOIN
 >  Pour les modèles de réseau neuronal et de régression logistique, la fonction [PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md) retourne une valeur unique qui représente la taille du jeu d’apprentissage pour le modèle entier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+ [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Référence technique de Microsoft Logistic Regression algorithme](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Leçon 5 : Génération neuronal réseau et les modèles de régression logistique &#40; didacticiel d’exploration de données intermédiaires &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

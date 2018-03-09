@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,7 +23,8 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>Sélectionnez - GROUP - BY Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +102,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>Arguments 
  
-### <a name="column-expression"></a>*expression de colonne*  
+### <a name="column-expression"></a>*column-expression*  
 Spécifie une colonne ou un calcul non agrégées sur une colonne. Cette colonne peut appartenir à une table, une table dérivée ou une vue. La colonne doit apparaître dans la clause FROM de l’instruction SELECT, mais n’est pas nécessaire pour s’affichent dans la liste de sélection. 
 
 Pour les expressions valides, consultez [expression](~/t-sql/language-elements/expressions-transact-sql.md).    
@@ -291,7 +293,7 @@ Liste de sélection :
 - Agrégations vectorielles. Si les fonctions d’agrégation sont incluses dans la liste de sélection, GROUP BY calcule une valeur de synthèse pour chaque groupe. Ces expressions sont dites agrégations vectorielles. 
 - Fonctions d’agrégation distinctes. Les fonctions d’agrégation AVG (DISTINCT *column_name*), COUNT (DISTINCT *column_name*) et SUM (DISTINCT *column_name*) sont pris en charge avec ROLLUP, CUBE et GROUPING SETS.
   
-Clause WHERE :
+Clause WHERE :
 - SQL supprime des lignes qui ne respectent pas les conditions dans la clause WHERE avant toute opération de regroupement.  
   
 Clause HAVING :
@@ -347,7 +349,7 @@ La clause GROUP BY prend en charge toutes les fonctionnalités GROUP BY qui sont
 |Fonctionnalité|SQL Server Integration Services|Niveau de compatibilité SQL Server 100 ou supérieur|SQL Server 2008 ou version ultérieure avec niveau de compatibilité 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agrégats DISTINCT|Non pris en charge pour WITH CUBE ou WITH ROLLUP.|Pris en charge pour WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE ou ROLLUP.|Identique au niveau de comptabilité 100.|  
-|Fonction définie par l'utilisateur avec nom CUBE ou ROLLUP dans la clause GROUP BY|Fonction définie par l’utilisateur **dbo.cube (***arg1***,***.. .argN***)** ou **dbo.rollup (***arg1***,**... *argN***)** dans la clause GROUP BY clause est autorisée.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Fonction définie par l’utilisateur **dbo.cube (***arg1***,**.. .argN**)** ou **dbo.rollup (**arg1**,***.. .argN***)** dans la clause GROUP BY clause n’est pas autorisée.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Le message d’erreur suivant est retourné : « syntaxe incorrecte près du cube' mot clé' &#124;' correctif cumulatif «. »<br /><br /> Pour éviter ce problème, remplacez `dbo.cube` par `[dbo].[cube]` ou `dbo.rollup` par `[dbo].[rollup]`.<br /><br /> L’exemple suivant est autorisé :`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Fonction définie par l’utilisateur **dbo.cube (***arg1***,***.. .argN*) ou **dbo.rollup (***arg1***,***.. .argN***)** dans la clause GROUP BY clause est autorisée.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Fonction définie par l'utilisateur avec nom CUBE ou ROLLUP dans la clause GROUP BY|Fonction définie par l’utilisateur **dbo.cube (***arg1***,***.. .argN***)** ou **dbo.rollup (***arg1***,**... *argN ***)* * dans la clause GROUP BY clause est autorisée.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Fonction définie par l’utilisateur **dbo.cube (***arg1***,**.. .argN**)** ou **dbo.rollup (**arg1**,***.. .argN*** )** dans la clause GROUP BY clause n’est pas autorisée.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Le message d’erreur suivant est retourné : « syntaxe incorrecte près du cube' mot clé' &#124;' correctif cumulatif «. »<br /><br /> Pour éviter ce problème, remplacez `dbo.cube` par `[dbo].[cube]` ou `dbo.rollup` par `[dbo].[rollup]`.<br /><br /> L’exemple suivant est autorisé :`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Fonction définie par l’utilisateur **dbo.cube (***arg1***, ***.. .argN*) ou **dbo.rollup (***arg1***,***.. .argN***)**dans la clause GROUP BY clause est autorisée.<br /><br /> Par exemple : `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Non pris en charge|Pris en charge|Pris en charge|  
 |CUBE|Non pris en charge|Pris en charge|Non pris en charge|  
 |ROLLUP|Non pris en charge|Pris en charge|Non pris en charge|  
@@ -468,10 +470,10 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [GROUPING_ID &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
- [REGROUPEMENT &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [Clause SELECT &#40; Transact-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: Transformation du cache | Documents Microsoft
+title: Transformation du cache | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 83d157914c7090273a213a7f2ed4b6e5ea7f2fa5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-transform"></a>Transformation du cache
   La transformation du cache génère un dataset de référence pour la transformation de recherche en entrant des données depuis une source de données connectée dans le flux de données dans un gestionnaire de connexions du cache. La transformation de recherche effectue des recherches en joignant les données des colonnes d'entrée d'une source de données connectée aux colonnes de la base de données de référence.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/19/2017
   
  Dans un package unique, une seule transformation du cache peut écrire des données dans le même gestionnaire de connexions du cache. Si le package contient plusieurs transformations du cache, la première qui est appelée lors de l'exécution du package écrit les données dans le gestionnaire de connexions. Les opérations d'écriture des transformations du cache suivantes échouent.  
   
- Pour plus d’informations, consultez [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Pour plus d’informations, consultez [Gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configuration de la transformation du cache  
  Vous pouvez configurer le gestionnaire de connexions du cache afin d'enregistrer les données dans un fichier cache (.caw).  
@@ -63,26 +62,25 @@ ms.lasthandoff: 08/19/2017
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur avancé** , consultez [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Éditeur de transformation du cache (Page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de transformation du cache** pour sélectionner un gestionnaire de connexions du cache existant ou en créer un.  
   
- Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ### <a name="options"></a>Options  
  **Cache connection manager**  
  Sélectionnez un gestionnaire de connexions du cache existant en utilisant la liste, ou créez une connexion en utilisant le bouton **Nouvelle** .  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à l'aide de la boîte de dialogue Éditeur du gestionnaire de connexions du cache.  
   
  **Modifier**  
  Modifiez une connexion existante.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)  
   
   
-

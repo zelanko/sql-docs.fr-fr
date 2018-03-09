@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>Définissez @local_variable (Transact-SQL)
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Définit la variable locale spécifiée, précédemment créée à l’aide de DECLARE @*local_variable* instruction, à la valeur spécifiée.  
@@ -74,13 +76,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@***local_variable*  
+ **@** *local_variable*  
  Est le nom d’une variable de n’importe quel type sauf **curseur**, **texte**, **ntext**, **image**, ou **table**. Les noms de variable doivent commencer par un arobase (**@**). Les noms de variables doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
  Propriété d'un type défini par l'utilisateur.  
   
- *nom_champ*  
+ *field_name*  
  Champ public d'un type défini par l'utilisateur.  
   
  *udt_name*  
@@ -92,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *nom_méthode* **(** *argument* [ **,**... *n* ] **)**  
  Méthode de type défini par l'utilisateur qui utilise un ou plusieurs arguments pour modifier l'état d'une instance d'un type. Les méthodes statiques doivent être publiques.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  Variable dont le type se trouve dans un assembly. Pour plus d’informations, consultez [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -120,10 +122,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *expression*  
  Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *variable_de_curseur*  
+ *cursor_variable*  
  Est le nom d’une variable de curseur. Si la variable curseur cible référençait un autre curseur, cette ancienne référence est supprimée.  
   
- *tous les autres cas*  
+ *cursor_name*  
  Nom d'un curseur déclaré à l'aide de l'instruction DECLARE CURSOR.  
   
  CURSOR  
@@ -161,7 +163,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  TYPE_WARNING  
  Indique qu'un message d'avertissement est envoyé au client lorsque le curseur est converti implicitement du type demandé vers un autre type.  
   
- POUR *select_statement*  
+ FOR *select_statement*  
  Instruction SELECT standard qui définit le jeu de résultats du curseur. Les mots clés FOR BROWSE et INTO ne sont pas autorisés dans les *select_statement* d’une déclaration de curseur.  
   
  Si DISTINCT, UNION, GROUP BY ou HAVING sont utilisées, ou une expression d’agrégation est incluse dans le *select_list*, le curseur est créé comme statique.  
@@ -181,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Les variables peuvent être utilisées uniquement dans les expressions et pas dans les noms d'objets ni les mots clés. Pour créer des instructions dynamiques [!INCLUDE[tsql](../../includes/tsql-md.md)], utilisez EXECUTE.  
   
- Les règles de syntaxe pour ensemble  **@**  *variable_de_curseur* n’incluent pas les mots clés LOCAL et GLOBAL. Lorsque le jeu de  **@**  *variable_de_curseur* = CURSOR... syntaxe est utilisée, le curseur est créé comme GLOBAL ou LOCAL, selon le paramètre de la valeur par défaut pour l’option de base de données de curseur local.  
+ Les règles de syntaxe pour ensemble **@*** variable_de_curseur* n’incluent pas les mots clés LOCAL et GLOBAL. Lorsque le jeu **@*** variable_de_curseur* = CURSOR... syntaxe est utilisée, le curseur est créé comme GLOBAL ou LOCAL, selon le paramètre de la valeur par défaut pour l’option de base de données de curseur local.  
   
  Les variables de curseurs sont toujours locales, même lorsqu'elles font référence à un curseur global. Dans ce cas, le curseur comporte à la fois une référence de curseur global et de curseur local. Pour plus d'informations, consultez l'exemple C.  
   
@@ -191,8 +193,8 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  N'utilisez pas de variable dans une instruction INSERT pour concaténer les valeurs (c'est-à-dire, pour calculer des valeurs agrégées). Ceci peut engendrer des résultats de requête inattendus. Le motif en est que certaines expressions dans la liste SELECT (y compris les attributions) peuvent être exécutées plusieurs fois pour chaque ligne de sortie. Pour plus d’informations, consultez [cet article](http://support.microsoft.com/kb/287515).  
   
-## <a name="permissions"></a>Permissions  
- Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utiliser SET  **@**  *local_variable*.  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utiliser SET **@*** local_variable*.  
   
 ## <a name="examples"></a>Exemples  
   

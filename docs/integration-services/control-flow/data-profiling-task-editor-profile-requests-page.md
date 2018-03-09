@@ -1,5 +1,5 @@
 ---
-title: "Éditeur de tâche (Page demandes de profil) de profilage des données | Documents Microsoft"
+title: "Éditeur de tâche de profilage de données (page Demandes de profil) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Éditeur de tâche de profilage de données (page Demandes de profil)
   Utilisez la page **Demandes de profil** de **l’Éditeur de tâche de profilage de données** pour sélectionner et configurer les profils que vous souhaitez calculer. Dans une même tâche de profilage des données, vous pouvez calculer plusieurs profils pour plusieurs colonnes ou des combinaisons de colonnes dans plusieurs tables ou vues.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="requests-pane-options"></a>Options du volet Demandes  
  Le volet Demandes propose les options suivantes :  
   
- **Affichage**  
+ **Afficher**  
  Précisez si vous souhaitez afficher l'ensemble des profils configurés pour la tâche ou simplement l'un d'entre eux.  
   
  Les colonnes dans le volet Demandes changent selon la **vue** que vous sélectionnez. Pour plus d'informations sur chacune de ces colonnes, consultez la section suivante « Colonnes du volet Demandes ».  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  **Type de profil**  
  Sélectionnez un profil des données à partir des options suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Demande de profil de clé candidate**|Calculez un profil de clé candidate.<br /><br /> Ce profil signale si une colonne ou un ensemble de colonnes est une clé, ou une clé approximative, pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs dupliquées dans une colonne clé potentielle.|  
 |**Demande de profil de distribution de longueurs de colonne**|Calculez un profil de distribution de longueurs de colonne.<br /><br /> Le profil de distribution de longueurs de colonne signale toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque longueur représente. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des valeurs non valides. Par exemple, vous profilez une colonne de codes d'états des États-Unis à deux caractères et découvrez des valeurs excédant deux caractères.|  
@@ -138,25 +137,24 @@ ms.lasthandoff: 08/03/2017
   
  Ces options varient selon le profil sélectionné. Pour plus d'informations sur les types de profil individuels, consultez les rubriques suivantes :  
   
--   [Options de demande de profil de clé candidate &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de clé candidate &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil de Ratio Null de la colonne &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de ratio de colonne Null &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil de statistiques de colonne &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de statistiques de colonnes &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil de Distribution de valeur de colonne &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de distribution de valeurs de colonne &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Longueur de colonne Distribution Options de demande de profil &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de distribution de longueurs de colonne &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil de modèle de colonne &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de modèle de colonne &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Fonctionnel Options de demande de profil de dépendance &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil de dépendance fonctionnelle &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Options de demande de profil d’Inclusion &#40; &#41; de la tâche de profilage des données de valeur](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Options Demande de profil d’inclusion de valeur &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche &#40; de profilage des données Page Général &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulaire de profil rapide de Table simple &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

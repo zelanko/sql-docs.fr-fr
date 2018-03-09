@@ -2,10 +2,14 @@
 title: "Créer ou modifier un groupe de serveurs (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc405a4a6302f687d6bec832832d64c87e6bb1c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1deb61c45ababfd67c79131d55db07db1b62926
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Créer ou modifier un groupe de serveurs (SQL Server Management Studio)
-  Cette rubrique explique comment organiser les serveurs dans des serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en créant des groupes de serveurs et en plaçant les serveurs dans les groupes. Vous pouvez créer des groupes de serveurs dans Serveurs inscrits à tout moment ou lors de l'inscription des serveurs.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Cette rubrique explique comment organiser les serveurs dans des serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en créant des groupes de serveurs et en plaçant les serveurs dans les groupes. Vous pouvez créer des groupes de serveurs dans Serveurs inscrits à tout moment ou lors de l'inscription des serveurs.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Vous pouvez également créer un nouveau groupe de serveurs pendant l’inscription d’un serveur, en cliquant sur **Nouveau groupe**, puis en renseignant la boîte de dialogue **Nouveau groupe** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Inscrire des serveurs](../../tools/sql-server-management-studio/register-servers.md)  
   
   

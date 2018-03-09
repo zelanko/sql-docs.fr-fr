@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instances SQL Server nommées et multiples  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Permet d’installer plusieurs instances de base de données par serveur. Chaque instance est identifiée par un nom spécifique. Pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez spécifier le numéro de port de l’instance nommée (recommandé), ou vous pouvez spécifier le nom d’instance comme propriété d’URL JDBC ou un **datasource** propriété. Si aucune propriété de nom d'instance ou de numéro de port n'est spécifiée, une connexion à l'instance par défaut est établie. Observez les exemples suivants :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Permet d’installer plusieurs instances de base de données par serveur. Chaque instance est identifiée par un nom spécifique. Pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez spécifier le numéro de port de l’instance nommée (recommandé), ou vous pouvez spécifier le nom d’instance comme propriété d’URL JDBC ou un **datasource** propriété. Si aucune propriété de nom d'instance ou de numéro de port n'est spécifiée, une connexion à l'instance par défaut est établie. Observez les exemples suivants :  
   
  Pour utiliser un numéro de port, procédez comme suit :  
   
@@ -97,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Un espace vide entre les accolades est un littéral qui n'est pas supprimé.  
   
-##  <a name="Connectingintegrated"></a>La connexion avec l’authentification intégrée de Windows  
+##  <a name="Connectingintegrated"></a> La connexion avec l’authentification intégrée de Windows  
  Le pilote JDBC prend en charge l'utilisation d'une authentification intégrée de type 2 sur les systèmes d'exploitation Windows via la propriété de chaîne de connexion integratedSecurity. Pour utiliser l'authentification intégrée, copiez le fichier sqljdbc_auth.dll dans un répertoire sur le chemin du système Windows de l'ordinateur sur lequel le pilote JDBC est installé.  
   
  Les fichiers sqljdbc_auth.dll sont installés à l'emplacement suivant :  
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Vous pouvez également définir la propriété système java.libary.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Par exemple, si le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l'emplacement de la DLL à l'aide de l'argument de machine virtuelle suivant lors du démarrage de l'application Java :  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>Connexion à l'aide d'adresses IPv6  
  Le pilote JDBC prend en charge l'utilisation d'adresses IPv6 avec la collection de propriétés de connexion et avec la propriété de chaîne de connexion serverName. La valeur serverName initiale, telle que jdbc :*sqlserver*://*nom_serveur*, n’est pas prise en charge pour les adresses IPv6 dans les chaînes de connexion. À l’aide d’un nom pour *nom_serveur* au lieu d’un IPv6 brute adresse fonctionne dans tous les cas dans la connexion. Les exemples suivants fournissent des informations complémentaires.  

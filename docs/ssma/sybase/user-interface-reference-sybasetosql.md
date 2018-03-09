@@ -3,8 +3,11 @@ title: "Référence de l’Interface utilisateur (SybaseToSQL) | Documents Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e749491aea64728e8e58aa4bb041e28a3cbc20fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21e462dc66fd7bb46e9a4ee555b66fb63c153da4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Référence de l’Interface utilisateur (SybaseToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour Sybase.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |---------|---------------|  
 |[Sélection d’objet Avancé &#40; SybaseToSQL &#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Utilisez le **avancé le sélectionnez objet** boîte de dialogue pour rechercher des objets de base de données à l’aide de critères de filtre, puis activez ou désactivez ces objets.|  
 |[Rapport d’évaluation &#40; SybaseToSQL &#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Utilisez le rapport d’évaluation pour afficher les résultats de la conversion d’objets Sybase Adaptive Server Enterprise (ASE) à [!INCLUDE[tsql](../../includes/tsql_md.md)] syntaxe et pour estimer le temps et la complexité d’une migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.|  

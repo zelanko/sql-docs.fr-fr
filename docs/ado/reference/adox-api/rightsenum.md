@@ -3,8 +3,9 @@ title: RightsEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RightsEnum
-helpviewer_keywords: RightsEnum enumeration [ADOX]
+f1_keywords:
+- RightsEnum
+helpviewer_keywords:
+- RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ff15518703e8e8ec2d2c3ee67df691abb1974ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 044edb8cf9fbbc464f653419346637ea0a23de42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rightsenum"></a>RightsEnum
 Spécifie les droits ou autorisations pour un groupe ou utilisateur sur un objet.  

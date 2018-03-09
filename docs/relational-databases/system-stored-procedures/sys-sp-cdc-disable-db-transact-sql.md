@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6bde9363f4778f4aee337d11067b28fefc9895c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf0fefa010665821d13153072e35214080385566
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 sys.sp_cdc_disable_db  
 ```  
   
@@ -52,21 +52,21 @@ sys.sp_cdc_disable_db
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **Sys.sp_cdc_disable_db** désactive la capture de données pour toutes les tables dans la base de données actuellement activée modifiées. Tous les objets systèmes associés à la capture de données modifiées, tels que les tables de modifications, travaux, procédures stockées et fonctions, sont supprimés. Le **is_cdc_enabled** colonne pour l’entrée de la base de données dans le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue est définie sur 0.  
   
 > [!NOTE]  
 >  Si de nombreuses instances de capture sont définies pour la base de données au moment où la capture de données modifiées est désactivée, une transaction longue peut entraîner l'échec de l'exécution de sys.sp_cdc_disable_db. Ce problème peut être évité en désactivant chaque instance de capture à l'aide de sys.sp_cdc_disable_table avant d'exécuter sys.sp_cdc_disable_db.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant désactive la capture de données modifiées pour la base de données `AdventureWorks2012`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE sys.sp_cdc_disable_db;  

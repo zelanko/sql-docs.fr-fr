@@ -1,41 +1,44 @@
 ---
 title: "Always Encrypted référence des API pour le pilote JDBC | Documents Microsoft"
 ms.custom: 
-ms.date: 11/10/2016
+ms.date: 1/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c0d47b3ef5dc4bb01cbc667299902aa283eb039
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e3ed6ba1720ffff58967b4deaeda04194dcf156a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Always Encrypted référence des API pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Always Encrypted permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement à SQL Server. À cette fin, un pilote de Chiffrement intégral installé sur l’ordinateur client chiffre et déchiffre automatiquement les données sensibles dans l’application cliente SQL Server. Le pilote chiffre les données dans les colonnes sensibles avant de les transmettre à SQL Server et il réécrit automatiquement les requêtes pour que la sémantique de l’application soit conservée. De même, il déchiffre de manière transparente les données stockées dans les colonnes de base de données chiffrées qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [à l’aide d’Always Encrypted avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+  Le Chiffrement intégral permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement à SQL Server. À cette fin, un pilote de Chiffrement intégral installé sur l’ordinateur client chiffre et déchiffre automatiquement les données sensibles dans l’application cliente SQL Server. Le pilote chiffre les données dans les colonnes sensibles avant de les transmettre à SQL Server et il réécrit automatiquement les requêtes pour que la sémantique de l’application soit conservée. De même, il déchiffre de manière transparente les données stockées dans les colonnes de base de données chiffrées qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [à l’aide d’Always Encrypted avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!NOTE]  
 >  Always Encrypted est pris en charge uniquement par le pilote Microsoft JDBC 6.0 ou version ultérieure de SQL Server avec SQL Server 2016.  
   
+ ## <a name="always-encrypted-api-references"></a>Always Encrypted références de l’API
+ 
  Plusieurs ajouts et modifications ont été apportés à l’API du pilote JDBC pour une utilisation dans les applications clientes qui utilisent Always Encrypted.  
   
  **SQLServerConnection, classe**  
   
-|Nom|Description|  
+|Nom| Description|  
 |----------|-----------------|  
 |Nouveau mot clé de chaîne de connexion :<br /><br /> columnEncryptionSetting|columnEncryptionSetting = Enabled Active la fonctionnalité de chiffrement intégral pour la connexion et columnEncryptionSetting = Disabled la désactive. Les valeurs acceptées sont Enabled/Disabled. La valeur par défaut est Disabled.|  
 |Nouvelles méthodes :<br /><br /> setColumnEncryptionTrustedMasterKeyPaths de void statique public (Map < String, liste\<chaîne >> trustedKeyPaths)<br /><br /> updateColumnEncryptionTrustedMasterKeyPaths de void statique public (liste du serveur de chaîne\<chaîne > trustedKeyPaths)<br /><br /> public static void removeColumnEncryptionTrustedMasterKeyPaths (serveur de chaîne)|Vous permet de définir/mise à jour/supprimer une liste de chemins d’accès de clés approuvés pour un serveur de base de données. Si, pendant le traitement d’une requête d’application, le pilote reçoit un chemin d’accès de clé qui ne figure pas dans la liste, la requête échoue. Cette propriété fournit une protection supplémentaire contre les attaques de sécurité durant lesquelles un ordinateur SQL Server compromis fournit des chemins d’accès de clés factices, qui peuvent entraîner une fuite des informations d’identification du magasin de clés.|  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/18/2017
 |public getSendTimeAsDatetime() de booléenne finale|Retourne le paramètre de la propriété de connexion sendTimeAsDatetime.|
 |setSendTimeAsDatetime void publique (boolean sendTimeAsDateTimeValue)|Modifie le paramètre de la propriété de connexion sendTimeAsDatetime.|
 
- **Classe de SQLServerConnectionPoolProxy**
+ **SQLServerConnectionPoolProxy Class**
 |Nom| Description|  
 |----------|-----------------|  
 |public getSendTimeAsDatetime() de booléenne finale|Retourne le paramètre de la propriété de connexion sendTimeAsDatetime.|
@@ -56,14 +59,14 @@ ms.lasthandoff: 11/18/2017
 |Nom| Description|  
 |----------|-----------------|  
 |setColumnEncryptionSetting void publique (chaîne columnEncryptionSetting)|Active/désactive la fonctionnalité Always Encrypted pour l’objet de source de données.<br /><br /> La valeur par défaut est Disabled.|  
-|public getColumnEncryptionSetting() de chaîne|Récupère le paramètre de fonctionnalité Always Encrypted pour l’objet de source de données.|
+|public String getColumnEncryptionSetting()|Récupère le paramètre de fonctionnalité Always Encrypted pour l’objet de source de données.|
 |setKeyStoreAuthentication void publique (chaîne keyStoreAuthentication)|Définit le nom qui identifie un magasin de clés. Seule valeur prise en charge est « JavaKeyStorePassword » pour le magasin de clés Java de manutention.<br/><br/>La valeur par défaut est null.|
 |public getKeyStoreAuthentication() de chaîne|Obtient la valeur du paramètre keyStoreAuthentication pour l’objet de source de données.|
 |setKeyStoreSecret void publique (chaîne keyStoreSecret)|Définit le mot de passe pour le keystore Java. Notez que, pour le fournisseur de magasin de clés Java le mot de passe pour le magasin de clés et de la clé doit correspondre à. Notez que, keyStoreAuthentication doit être définie avec « JavaKeyStorePassword ».|
 |setKeyStoreLocation void publique (chaîne keyStoreLocation)|Définit l’emplacement, y compris le nom de fichier pour le keystore Java. Notez que, keyStoreAuthentication doit être définie avec « JavaKeyStorePassword ».|
 |public getKeyStoreLocation() de chaîne|Récupère la keyStoreLocation pour le magasin de clés de Java.|
   
- **Classe de SQLServerColumnEncryptionJavaKeyStoreProvider**  
+ **SQLServerColumnEncryptionJavaKeyStoreProvider Class**  
   
  L’implémentation du fournisseur de magasin de clés pour le magasin de clés de Java. Cette classe permet à l’aide de certificats stockés dans le magasin de clés Java en tant que clés principales de colonne.  
   
@@ -77,12 +80,12 @@ ms.lasthandoff: 11/18/2017
   
 |Nom| Description|  
 |----------|-----------------|  
-|public byte [] decryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Déchiffre la valeur chiffrée spécifiée d’une clé CEK. La valeur chiffrée est censée être chiffrée à l’aide du certificat avec le chemin d’accès de clé spécifié et à l’aide de l’algorithme spécifié.<br /><br /> **Le format du chemin d’accès de clé doit être une des opérations suivantes :**<br /><br /> Thumbprint:<empreinte_certificate><br /><br /> Alias:<alias_certificat><br /><br /> (Substitue SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (chaîne, chaîne, Byte[]).)|  
-|public byte [] encryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] plainTextColumnEncryptionKey)|Chiffre une clé CEK à l’aide du certificat avec le chemin d’accès de clé spécifié et à l’aide de l’algorithme spécifié.<br /><br /> **Le format du chemin d’accès de clé doit être une des opérations suivantes :**<br /><br /> Thumbprint:<empreinte_certificate><br /><br /> Alias:<alias_certificat><br /><br /> (Substitue SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (chaîne, chaîne, Byte[]).)|  
+|public byte [] decryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Déchiffre la valeur chiffrée spécifiée d’une clé CEK. La valeur chiffrée est censée être chiffrée à l’aide du certificat avec le chemin d’accès de clé spécifié et à l’aide de l’algorithme spécifié.<br /><br /> **Le format du chemin d’accès de clé doit être une des opérations suivantes :**<br /><br /> Thumbprint:<empreinte_certificate><br /><br /> Alias:<alias_certificat><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|public byte [] encryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] plainTextColumnEncryptionKey)|Chiffre une clé CEK à l’aide du certificat avec le chemin d’accès de clé spécifié et à l’aide de l’algorithme spécifié.<br /><br /> **Le format du chemin d’accès de clé doit être une des opérations suivantes :**<br /><br /> Thumbprint:<empreinte_certificate><br /><br /> Alias:<alias_certificat><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |setName void publique (nom de chaîne)|Définit le nom de ce fournisseur de magasin de clés.|
 |public chaîne getName ()|Obtient le nom de ce fournisseur de magasin de clés.|
   
- **Classe de SQLServerColumnEncryptionAzureKeyVaultProvider**  
+ **SQLServerColumnEncryptionAzureKeyVaultProvider Class**  
   
  L’implémentation du fournisseur de magasin de clés pour le coffre de clés Azure. Cette classe permet à l’aide des clés stockées dans le coffre de clés Azure en tant que clés principales de colonne.  
   
@@ -90,19 +93,19 @@ ms.lasthandoff: 11/18/2017
   
 |Nom| Description|  
 |----------|-----------------|  
-|public SQLServerColumnEncryptionAzureKeyVaultProvider (SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Fournisseur de magasin de clés pour le coffre de clés Azure.  Vous devez fournir une implémentation de l’interface SQLServerKeyVaultAuthenticationCallback récupérer un jeton d’accès de la clé dans le coffre de clés Azure.|  
+|public SQLServerColumnEncryptionAzureKeyVaultProvider (clientId de chaîne, chaîne clientKey)|Fournisseur de magasin de clés pour le coffre de clés Azure.  Vous devez fournir l’identificateur et la clé du client demande le jeton pour s’authentifier auprès d’Azure Key Vault.|  
   
  Méthodes  
   
 |Nom| Description|  
 |----------|-----------------|  
-|public byte [] decryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Déchiffre la valeur chiffrée spécifiée d’une clé CEK. La valeur chiffrée est censée être chiffrée à l’aide de la clé de la colonne spécifiée IDmaster clé et à l’aide de l’algorithme spécifié. <br />(Substitue SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (chaîne, chaîne, Byte[]).)|  
-|public byte [] encryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] columnEncryptionKey)|Chiffre une clé de chiffrement de colonne à l’aide de la clé principale de colonne spécifiée et à l’aide de l’algorithme spécifié. <br />(Substitue SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (chaîne, chaîne, Byte[]).)|  
+|public byte [] decryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Déchiffre la valeur chiffrée spécifiée d’une clé CEK. La valeur chiffrée est censée être chiffrée à l’aide de la clé de la colonne spécifiée IDmaster clé et à l’aide de l’algorithme spécifié. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|public byte [] encryptColumnEncryptionKey (masterKeyPath de chaîne, chaîne encryptionAlgorithm, byte [] columnEncryptionKey)|Chiffre une clé de chiffrement de colonne à l’aide de la clé principale de colonne spécifiée et à l’aide de l’algorithme spécifié. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |setName void publique (nom de chaîne)|Définit le nom de ce fournisseur de magasin de clés.|
 |public chaîne getName ()|Obtient le nom de ce fournisseur de magasin de clés.|  
   
   
- **Interface de SQLServerKeyVaultAuthenticationCallback**  
+ **SQLServerKeyVaultAuthenticationCallback Interface**  
   
  Cette interface contient une méthode pour l’authentification du coffre de clés Azure, qui doit être implémentée par l’utilisateur.  
   
@@ -112,7 +115,7 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |public getAccessToken de chaîne (autorité de chaîne, les ressources de chaîne, étendue de la chaîne) ;|La méthode doit être substituée. La méthode est utilisée pour accéder à l’émission de jeton de coffre de clés Azure.|  
   
- **Classe SQLServerColumnEncryptionKeyStoreProvider**  
+ **SQLServerColumnEncryptionKeyStoreProvider Class**  
   
  Étendez cette classe pour implémenter un fournisseur de magasins de clés personnalisé.  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/18/2017
   
 |Nom| Description|  
 |----------|-----------------|  
-|setBigDecimal void publique (int parameterIndex, BigDecimal x, int, précision, échelle d’int)<br /><br /> public setObject void (int parameterIndex, objet x, int targetSqlType, précision entier, montée en puissance int)<br /><br /> public setObject void (int parameterIndex, objet x, SQLType targetSqlType, précision entier, l’échelle de nombre entier)<br /><br /> public setTime void (parameterIndex d’int, java.sql.Time, int échelle x)<br /><br /> public setTimestamp void (parameterIndex d’int, java.sql.Timestamp, int échelle x) <br />public setDateTimeOffset void (int parameterIndex, microsoft.sql.DateTimeOffset, int échelle x)|Ces méthodes sont surchargées avec une précision ou un argument d’échelle ou les deux pour prendre en charge le chiffrement intégral pour les types de données spécifiques qui requièrent la précision et l’échelle plus d’informations.|  
+|setBigDecimal void publique (int parameterIndex, BigDecimal x, int, précision, échelle d’int)<br /><br /> public setObject void (int parameterIndex, objet x, int targetSqlType, précision entier, montée en puissance int)<br /><br /> public setObject void (int parameterIndex, objet x, SQLType targetSqlType, précision entier, l’échelle de nombre entier)<br /><br /> public setTime void (parameterIndex d’int, java.sql.Time, int échelle x)<br /><br /> public setTimestamp void (parameterIndex d’int, java.sql.Timestamp, int échelle x) <br />public void setDateTimeOffset(int parameterIndex, microsoft.sql.DateTimeOffset x, int scale)|Ces méthodes sont surchargées avec une précision ou un argument d’échelle ou les deux pour prendre en charge le chiffrement intégral pour les types de données spécifiques qui requièrent la précision et l’échelle plus d’informations.|  
 |setMoney void publique (int parameterIndex, BigDecimal x)<br /><br /> setSmallMoney void publique (int parameterIndex, BigDecimal x)<br /><br /> public setUniqueIdentifier void (int parameterIndex, guid de chaîne)<br /><br /> setDateTime void publique (parameterIndex d’int, java.sql.Timestamp x)<br /><br /> setSmallDateTime void publique (parameterIndex d’int, java.sql.Timestamp x)|Ces méthodes sont ajoutées pour prendre en charge le chiffrement intégral des types de données money, smallmoney, uniqueidentifier, datetime et smalldatetime. <br/><br/>Notez que la méthode setTimestamp() existant est utilisée pour envoyer des valeurs de paramètre dans la colonne chiffrée datetime2. Pour « DateTime » chiffrées et colonnes smalldatetime utiliser les nouvelles méthodes setDateTime() setSmallDateTime() respectivement.|  
 |setBigDecimal finale public void (int parameterIndex, BigDecimal x int précision, échelle int, boolean forceEncrypt)<br /><br /> setMoney public void finale (int parameterIndex, BigDecimal x forceEncrypt booléenne)<br /><br /> setSmallMoney public void finale (int parameterIndex, BigDecimal x forceEncrypt booléenne)<br /><br /> setBoolean final public void (int parameterIndex, boolean x, boolean forceEncrypt)<br /><br /> setByte final public void (int parameterIndex, byte x forceEncrypt booléenne)<br /><br /> setBytes final public void (int parameterIndex, octet x[], boolean forceEncrypt)<br /><br /> setUniqueIdentifier finale public void (int parameterIndex, chaîne guid, boolean forceEncrypt)<br /><br /> setDouble final public void (int parameterIndex, double x, boolean forceEncrypt)<br /><br /> setFloat final public void (parameterIndex d’int, float x, boolean forceEncrypt)<br /><br /> setInt final public void (int parameterIndex, la valeur int, boolean forceEncrypt)<br /><br /> setLong final public void (parameterIndex d’int, long x, boolean forceEncrypt)<br /><br /> public setObject finale (int parameterIndex, objet x, int targetSqlType, précision d’entier, échelle int, boolean forceEncrypt)<br /><br /> setObject final public void (int parameterIndex, objet x, SQLType targetSqlType, entier précision, entier échelle, boolean forceEncrypt)<br /><br /> setShort final public void (int parameterIndex, x court, boolean forceEncrypt)<br /><br /> setString public void finale (forceEncrypt booléenne parameterIndex, chaîne str, int)<br /><br /> setNString finale public void (int parameterIndex, valeur de chaîne, booléen forceEncrypt)<br /><br /> public setTime de void finale (parameterIndex int, java.sql.Time x, l’échelle du type int, boolean forceEncrypt)<br /><br /> public setTimestamp de void finale (parameterIndex int, java.sql.Timestamp, int échelle x, boolean forceEncrypt)<br /><br /> public setDateTimeOffset de void finale (parameterIndex int, microsoft.sql.DateTimeOffset x, l’échelle du type int, boolean forceEncrypt)<br /><br /> setDateTime final public void (parameterIndex d’int, java.sql.Timestamp x forceEncrypt booléenne)<br /><br /> setSmallDateTime finale public void (parameterIndex d’int, java.sql.Timestamp x forceEncrypt booléenne)<br /><br /> setDate public de void finale (parameterIndex int, java.sql.Date x java.util.Calendar cal, boolean forceEncrypt)<br /><br /> setTime de void final public (parameterIndex int, java.sql.Time x java.util.Calendar cal, boolean forceEncrypt)<br /><br /> public setTimestamp de void finale (parameterIndex int, java.sql.Timestamp x java.util.Calendar cal, boolean forceEncrypt)|Définit le paramètre désigné selon la valeur java donnée.<br /><br /> Si le forceEncrypt booléenne est définie sur true, la requête paramètre n’a la valeur si la désignation de colonne est chiffrée et Always Encrypted est activé sur la connexion ou l’instruction.<br /><br /> Si le forceEncrypt booléenne est définie sur false, le pilote ne force pas le chiffrement sur les paramètres.|  
   
@@ -195,7 +198,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Si Always Encrypted est désactivé pour une requête et la requête retourne des résultats des colonnes chiffrées, la requête retournera les valeurs chiffrées. Les valeurs chiffrées aura le type de données varbinary.  
   
-## <a name="see-also"></a>Voir aussi  
+ ## <a name="see-also"></a>Voir aussi  
  [Utilisation du chiffrement intégral avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
-  
+

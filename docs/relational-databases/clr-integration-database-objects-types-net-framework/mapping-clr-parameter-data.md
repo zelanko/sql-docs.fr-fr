@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,61 +28,62 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bee49e277d3492dc93bcdf29b65c1c3007cebe50
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>Mappage des données de paramètres CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le tableau suivant répertorie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données, leurs équivalents dans le common language runtime (CLR) pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les **System.Data.SqlTypes** espace de noms et leurs équivalents de CLR natifs dans les [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Le tableau suivant répertorie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données, leurs équivalents dans le common language runtime (CLR) pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les **System.Data.SqlTypes** espace de noms et leurs équivalents de CLR natifs dans les [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
 |**Type de données SQL Server**|Type (dans System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Type de données CLR (.NET Framework)**|  
-|**bigint**|**SqlInt64**|**Int64, Nullable\<Int64 >**|  
-|**binaire**|**SqlBytes, SqlBinary**|**Byte]**|  
-|**bit**|**SqlBoolean**|**Booléen, Nullable\<booléenne >**|  
-|**char**|Aucune|Aucune|  
-|**cursor**|Aucune|Aucune|  
-|**date**|**SqlDateTime**|**Date/heure, Nullable\<DateTime >**|  
-|**datetime**|**SqlDateTime**|**Date/heure, Nullable\<DateTime >**|  
-|**datetime2**|Aucune|**Date/heure, Nullable\<DateTime >**|  
-|**DATETIMEOFFSET**|**Aucun**|**DateTimeOffset, Nullable\<DateTimeOffset >**|  
-|**decimal**|**SqlDecimal**|**Decimal, Nullable\<décimal >**|  
-|**float**|**SqlDouble**|**Double, Nullable\<Double >**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucune|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucune|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucune|  
-|**image**|Aucune|Aucune|  
-|**int**|**SqlInt32**|**Int32, Nullable\<Int32 >**|  
-|**money**|**SqlMoney**|**Decimal, Nullable\<décimal >**|  
-|**nchar**|**SqlChars, SqlString**|**String, Char]**|  
-|**ntext**|Aucune|Aucune|  
-|**numeric**|**SqlDecimal**|**Decimal, Nullable\<décimal >**|  
-|**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** est une meilleure correspondance pour le transfert de données et d’accès, et **SQLString** constitue une meilleure correspondance pour effectuer des opérations de chaînes.|**String, Char]**|  
-|**nvarchar(1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char >**|  
-|**real**|**SqlSingle** (la plage de **SqlSingle**, toutefois, est supérieure à **réel**)|**Unique, Nullable\<unique >**|  
-|**rowversion**|Aucune|**Byte]**|  
-|**smallint**|**SqlInt16**|**Int16, Nullable\<Int16 >**|  
-|**smallmoney**|**SqlMoney**|**Decimal, Nullable\<décimal >**|  
-|**sql_variant**|Aucune|**Objet**|  
-|**table**|Aucune|Aucune|  
-|**text**|Aucune|Aucune|  
-|**time**|Aucune|**Intervalle de temps, Nullable\<TimeSpan >**|  
-|**timestamp**|Aucune|Aucune|  
-|**tinyint**|**SqlByte**|**Octet, Nullable\<octets >**|  
-|**uniqueidentifier**|**SqlGuid**|**GUID, Nullable\<Guid >**|  
-|**Défini par l’utilisateur de type(UDT)**|Aucune|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
-|**varbinary**|**SqlBytes, SqlBinary**|**Byte]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**Byte, Byte [], Nullable\<octets >**|  
-|**varchar**|Aucune|Aucune|  
-|**xml**|**SqlXml**|Aucune|  
+|**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
+|**binaire**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**bit**|**SqlBoolean**|**Boolean, Nullable\<Boolean>**|  
+|**char**|Aucun|Aucun|  
+|**cursor**|Aucun|Aucun|  
+|**date**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
+|**datetime**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
+|**datetime2**|Aucun|**DateTime, Nullable\<DateTime>**|  
+|**DATETIMEOFFSET**|**Aucun**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
+|**float**|**SqlDouble**|**Double, Nullable\<Double>**|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucun|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucun|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** est défini dans Microsoft.SqlServer.Types.dll, qui est installé avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucun|  
+|**image**|Aucun|Aucun|  
+|**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
+|**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
+|**ntext**|Aucun|Aucun|  
+|**numeric**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
+|**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** est une meilleure correspondance pour le transfert de données et d’accès, et **SQLString** constitue une meilleure correspondance pour effectuer des opérations de chaînes.|**String, Char[]**|  
+|**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char[], Nullable\<char>**|  
+|**real**|**SqlSingle** (la plage de **SqlSingle**, toutefois, est supérieure à **réel**)|**Single, Nullable\<Single>**|  
+|**rowversion**|Aucun|**Byte[]**|  
+|**smallint**|**SqlInt16**|**Int16, Nullable\<Int16>**|  
+|**smallmoney**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**sql_variant**|Aucun|**Objet**|  
+|**table**|Aucun|Aucun|  
+|**texte**|Aucun|Aucun|  
+|**time**|Aucun|**TimeSpan, Nullable\<TimeSpan>**|  
+|**timestamp**|Aucun|Aucun|  
+|**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
+|**uniqueidentifier**|**SqlGuid**|**Guid, Nullable\<Guid>**|  
+|**Défini par l’utilisateur de type(UDT)**|Aucun|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
+|**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
+|**varchar**|Aucun|Aucun|  
+|**xml**|**SqlXml**|Aucun|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Conversion automatique de types de données avec les paramètres de sortie  
  Une méthode CLR peut retourner des informations pour le code ou le programme appelant en marquant un paramètre d’entrée avec la **hors** modificateur (Microsoft Visual c#) ou  **\<Out() > ByRef** (Microsoft Visual Basic) si le paramètre d’entrée est un type de données CLR dans le **System.Data.SqlTypes** espace de noms et le programme appelant spécifie son équivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données comme paramètre d’entrée, une conversion de type produit automatiquement lorsque la méthode CLR retourne le type de données.  
@@ -116,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Type de données CLR (SQL Server)**|**Type de données SQL Server**|  
-|**Décimal**|smallmoney|  
+|**Decimal**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Décimal**|money|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
@@ -129,6 +130,6 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |Ajouté **SqlGeography**, **SqlGeometry**, et **SqlHierarchyId** types à la table de mappage.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données SQL Server dans .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Types de données SQL Server dans le .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

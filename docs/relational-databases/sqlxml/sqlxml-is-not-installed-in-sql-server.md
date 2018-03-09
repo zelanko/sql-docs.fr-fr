@@ -8,28 +8,29 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee759b9c94f2bbc8a7f0c8cb1595600f29959a87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82106a146c4c491ebc48da493ab325c7553b7edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML n'est pas installé dans SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Avant de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 a été publiée avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et faisait partie de l’installation par défaut de tous les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions à l’exception de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la dernière version de SQLXML (SQLXML 4.0 SP1) n'est plus incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer SQLXML 4.0 SP1, téléchargez-le à partir de [emplacement d’installation de SQLXML 4.0 SP1](https://www.microsoft.com/en-us/download/details.aspx?id=30403).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Avant [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 était fourni avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et faisait partie de l'installation par défaut de toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à l'exception de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la dernière version de SQLXML (SQLXML 4.0 SP1) n'est plus incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer SQLXML 4.0 SP1, téléchargez-le à partir de [emplacement d’installation de SQLXML 4.0 SP1](https://www.microsoft.com/en-us/download/details.aspx?id=30403).  
   
  Si une application s’exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et nécessite SQLXML 4.0, vous devez télécharger et installer SQLXML 4.0 SP1.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Comportement de SQLXML 4.0 SP1 avec les nouveaux types de données utilisant SQLOLEDB et le fournisseur OLE DB SQL Server Native Client  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]introduit les types de données suivants, qui permet aux développeurs à l’aide de SQLXML souhaiterez peut-être utiliser :  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit les types de données suivants, qui permet aux développeurs à l’aide de SQLXML souhaiterez peut-être utiliser :  
   
 -   **Date**  
   

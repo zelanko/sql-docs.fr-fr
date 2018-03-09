@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd94ea47cdc9d65e2461bd9b2c1f12deacb67d38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8aab51f8530cfe6ea27315314db996e94734e884
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
 ## <a name="configuring-secure-sockets-layer"></a>Configuration de SSL (Secure Sockets Layer)  
  Pour configurer SSL, spécifiez un certificat à utiliser par l'ordinateur exécutant IIS. La synchronisation Web pour la réplication de fusion prend en charge l'utilisation des certificats de serveur, mais pas celle des certificats clients. Pour configurer IIS pour le déploiement, vous devez d'abord obtenir un certificat auprès d'une Autorité de certification. Pour plus d'informations sur les certificats, consultez la documentation de IIS.  
   
- Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web. Pour le développement et les tests, vous pouvez spécifier un certificat auto-signé. IIS 7 peut créer un certificat automatiquement et l'enregistrer sur votre ordinateur.  
+ Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web. Pour le développement et les tests, vous pouvez spécifier un certificat auto-signé. IIS 7 peut créer un certificat automatiquement et l'enregistrer sur votre ordinateur.  
   
  La différence entre un déploiement pour la production et les procédures indiquées ici est que dans le cadre de tests de production et de préproduction, vous utiliseriez un certificat délivré par une autorité de certification au lieu d'un certificat auto-signé.  
   
@@ -182,11 +182,11 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
  Le compte utilisé pour l'écouteur de réplication SQL Server doit avoir les autorisations décrites dans la rubrique Sécurité de l'Agent de fusion, dans la section « Se connecter au serveur de publication ou au serveur de distribution ».  
   
- En résumé, le compte doit :  
+ En résumé, le compte doit :  
   
 -   être membre de la liste d'accès à la publication (PAL) ;  
   
--   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
+-   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de publication ;  
   
 -   être mappé à une connexion associée à un utilisateur enregistré dans la base de données de distribution ;  
   
@@ -325,7 +325,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     2.  Connectez-vous au serveur en mode de diagnostic. Si le certificat est installé correctement, la boîte de dialogue **Alerte de sécurité** ne s'affiche pas. Si cette boîte de dialogue s'affiche, l'Agent de fusion échoue quand il tente de se connecter à l'ordinateur exécutant IIS. Vous devez vérifier que le certificat pour le serveur auquel vous accédez a été ajouté au magasin de certificats sur l'Abonné en tant que certificat approuvé. Pour plus d'informations sur l'exportation de certificats, consultez la documentation d'IIS.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Synchronisation web pour la réplication de fusion](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md)  
   

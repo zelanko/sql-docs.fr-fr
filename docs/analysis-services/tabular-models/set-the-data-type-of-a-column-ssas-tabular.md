@@ -1,33 +1,31 @@
 ---
-title: "Définir le Type de données d’une colonne (SSAS tabulaire) | Documents Microsoft"
+title: "Définir le Type de données d’une colonne | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Définir le type de données d'une colonne (SSAS Tabulaire)
-  Lorsque vous importez ou collez des données dans un modèle, le générateur de modèles détecte et applique automatiquement les types de données. Après avoir ajouté les données au modèle, vous pouvez modifier manuellement le type de données d'une colonne afin de modifier la manière dont les données sont stockées. Si vous souhaitez simplement changer le format d'affichage des données sans modifier le mode de stockage de ces dernières, suivez plutôt la procédure ci-après.  
+# <a name="set-the-data-type-of-a-column"></a>Définir le type de données d'une colonne 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Lorsque vous importez ou collez des données dans un modèle, le générateur de modèles détecte et applique automatiquement les types de données. Après avoir ajouté les données au modèle, vous pouvez modifier manuellement le type de données d'une colonne afin de modifier la manière dont les données sont stockées. Si vous souhaitez simplement changer le format d'affichage des données sans modifier le mode de stockage de ces dernières, suivez plutôt la procédure ci-après.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Pour modifier le type de données ou le format d'affichage d'une colonne  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 11/17/2017
   
  Si le type de données est pris en charge, mais que le générateur de modèles détecte des valeurs non prises en charge dans le nouveau type de données, vous obtiendrez une autre erreur et devrez corriger les valeurs des données avant de continuer.  
   
- Pour obtenir des informations détaillées sur les types de données utilisés dans des modèles sémantiques Business Intelligence, sur la façon dont ils sont convertis implicitement et sur la manière d’utiliser des types de données différents dans les formules, consultez [Types de données pris en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Pour plus d’informations sur les types de données utilisés dans les modèles sémantiques business intelligence, comment ils sont implicitement converti et comment les différents types de données est utilisés dans les formules, consultez [prise en charge des Types de données](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données pris en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+ [Types de données pris en charge](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

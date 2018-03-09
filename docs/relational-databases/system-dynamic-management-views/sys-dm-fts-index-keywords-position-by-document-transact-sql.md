@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Documents Microsoft
+title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - dm_fts_index_keywords_position_by_document_TSQL
 - dm_fts_index_keywords_position_by_document
 - sys.dm_fts_index_keywords_position_by_document
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_keywords_position_by_document dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9fc96c8db1521ac99601312869146290a622147
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: afb129fac832bafca777747b078d4f44e18f2422
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>Sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne les informations de position de mot clé dans les documents indexés.  
@@ -46,10 +49,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Arguments  
- DB_ID ('*nom_base_de_données*')  
+ db_id('*database_name*')  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de base de données, les sys.dm_fts_index_keywords_position_by_document utilise pour rechercher la base de données spécifié.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -65,7 +68,7 @@ OBJECT_ID('table_name')
 ## <a name="remarks"></a>Notes  
  Utilisez la vue de gestion dynamique pour identifier l’emplacement des mots indexés dans les documents indexés. Cette DMV peut être utilisée pour résoudre les problèmes lorsque **sys.dm_fts_index_keywords_by_document** indique les mots sont dans l’index de recherche en texte intégral, mais lorsque vous exécutez une requête à l’aide de ces mots, le document n’est pas retourné.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur les colonnes couvertes par l'index de recherche en texte intégral et les autorisations CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Exemples  

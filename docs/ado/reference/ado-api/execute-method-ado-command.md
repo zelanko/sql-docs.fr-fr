@@ -3,8 +3,9 @@ title: "Execute (méthode) (commande ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::Execute
 - Command15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-command"></a>Execute (méthode) (commande ADO)
 Exécute la requête, une instruction SQL ou une procédure stockée spécifiée dans le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété de la [objet de commande](../../../ado/reference/ado-api/command-object-ado.md).  

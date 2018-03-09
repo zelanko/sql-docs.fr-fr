@@ -3,8 +3,9 @@ title: "Résumé du modèle d’objet RDS | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b68f17999d9b6c74155463525ca04d6c000cd23f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9423b2f6072f142336e1f36f02785b69f9efdae6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-object-model-summary"></a>Résumé du modèle objet RDS
 > [!IMPORTANT]
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/17/2017
   
 |Objet| Description|  
 |------------|-----------------|  
-|[RDS. Espace de données](../../../ado/reference/rds-api/dataspace-object-rds.md)|Cet objet contient une méthode pour obtenir un serveur proxy. Le proxy peut être la valeur par défaut ou un programme de serveur personnalisé (objet métier). Le programme de serveur peut être appelé sur Internet, un intranet, un réseau local ou être une bibliothèque de liens dynamiques locale.<br /><br /> Le **DataSpace** objet est sécurisé pour le script.|  
+|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Cet objet contient une méthode pour obtenir un serveur proxy. Le proxy peut être la valeur par défaut ou un programme de serveur personnalisé (objet métier). Le programme de serveur peut être appelé sur Internet, un intranet, un réseau local ou être une bibliothèque de liens dynamiques locale.<br /><br /> Le **DataSpace** objet est sécurisé pour le script.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Cet objet représente le programme de serveur par défaut. Il exécute le comportement mise à jour et de récupération des données du Bureau à distance par défaut.<br /><br /> Le **DataFactory** objet n’est pas sécurisé pour le script.|  
-|[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Cet objet peut appeler automatiquement le **RDS. DataSpace** et **RDSServer.DataFactory** objets.<br /><br /> Utilisez cet objet pour appeler le comportement de récupération ou de mise à jour de données de services Bureau à distance par défaut.<br /><br /> Cet objet permet également aux contrôles visuels accéder aux retourné **Recordset** objet.<br /><br /> Le **DataControl** objet est sécurisé pour le script.|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Cet objet peut appeler automatiquement le **RDS. DataSpace** et **RDSServer.DataFactory** objets.<br /><br /> Utilisez cet objet pour appeler le comportement de récupération ou de mise à jour de données de services Bureau à distance par défaut.<br /><br /> Cet objet permet également aux contrôles visuels accéder aux retourné **Recordset** objet.<br /><br /> Le **DataControl** objet est sécurisé pour le script.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes de base des services Bureau à distance](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

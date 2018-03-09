@@ -2,9 +2,12 @@
 title: "Aide (F1) des composants de la boîte à outils | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -12,18 +15,18 @@ f1_keywords: vs.toolbox
 helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
-  La**boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La **boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
   
  Les icônes de la**boîte à outils** peuvent être glissées et déplacées ou copiées et collées dans des éditeurs de code ou sur des surfaces de mode de création au sein de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="add-azure-components-to-the-toolbox"></a>Ajouter des composants Azure à la boîte à outils  
  Le Feature Pack Azure pour Integration Services contient les gestionnaires de connexions permettant de se connecter aux sources de données Azure, ainsi que les tâches permettant d’effectuer les opérations Azure courantes. Installez le Feature Pack pour ajouter ces éléments à la boîte à outils. Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser la boîte à outils](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
  [Choisir des éléments de boîte à outils &#40;page Tâches de maintenance&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   

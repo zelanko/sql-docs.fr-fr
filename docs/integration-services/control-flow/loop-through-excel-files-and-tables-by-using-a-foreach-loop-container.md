@@ -1,10 +1,13 @@
 ---
-title: "Parcourir les fichiers Excel et les Tables à l’aide d’un conteneur de boucles Foreach | Documents Microsoft"
+title: Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,16 +17,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
   Les procédures de cette rubrique expliquent comment effectuer une boucle dans les classeurs Excel d'un dossier, ou dans les tableaux d'un classeur Excel, à l'aide du conteneur de boucles Foreach et de l'énumérateur approprié.  
@@ -94,12 +97,12 @@ ms.lasthandoff: 08/03/2017
   
 9. Dans le conteneur de boucles Foreach, créez des tâches qui utilisent le gestionnaire de connexions Excel pour effectuer les mêmes opérations sur chaque tableau Excel du classeur spécifié. Si vous utilisez une tâche de script dans le but d’examiner le nom de tableau énuméré ou pour utiliser chaque tableau, pensez à ajouter la variable chaîne à la propriété ReadOnlyVariables de la tâche de script.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
- [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md)   
+ [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Source Excel](../../integration-services/data-flow/excel-source.md)   
  [Destination Excel](../../integration-services/data-flow/excel-destination.md)   
- [Utilisation des fichiers Excel avec la tâche de Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Utilisation de fichiers Excel avec la tâche de script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

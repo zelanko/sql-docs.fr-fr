@@ -8,9 +8,7 @@ ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: aea0b5ff0ec119cc19744220442761ae74e9bf86
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez configurer des instances de serveur de rapports localement ou à distance. Pour configurer une instance de serveur de rapports à distance, vous pouvez faire appel à l’outil de configuration de Reporting Services ou bien écrire un code personnalisé qui utilise le fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'outil de configuration de Reporting Services offre une interface graphique avec le fournisseur WMI pour vous permettre de configurer un serveur de rapports sans avoir à écrire du code. Lorsque vous démarrez l'outil, vous pouvez spécifier un serveur distant auquel vous connecter.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour cela, vous devez ouvrir une session localement et être membre du groupe Administrateurs local. Vous ne pouvez pas modifier les paramètres du pare-feu Windows d'un ordinateur distant sur une connexion distante.  
   
  Si vous souhaitez activer l'administration à distance pour un utilisateur non-administrateur, vous devez accorder des autorisations d'activation à distance DCOM (Distributed Component Object Model) au compte. Les instructions de configuration du serveur pour un accès non-administrateur sont fournies dans cette rubrique.  
@@ -60,9 +58,9 @@ ms.lasthandoff: 12/05/2017
   
 -   Activer les demandes WMI distantes pour franchir le Pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
--   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez définir les autorisations DCOM pour activer l'accès WMI distant à un compte d'utilisateur Windows standard. Du fait que WMI utilise DCOM en tant que moyen de transport pour les appels distants, vous devez définir les autorisations DCOM afin que les utilisateurs non connectés en tant qu'administrateur local puissent configurer le serveur.  
+-   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez définir les autorisations DCOM pour activer l'accès WMI distant à un compte d'utilisateur Windows standard. Du fait que WMI utilise DCOM en tant que moyen de transport pour les appels distants, vous devez définir les autorisations DCOM afin que les utilisateurs non connectés en tant qu'administrateur local puissent configurer le serveur.  
   
--   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez également définir les autorisations WMI sur l'espace de noms WMI du serveur de rapports. Par défaut, tous les membres du groupe Administrateurs local ont accès à l'espace de noms WMI du serveur de rapports. Pour accorder un droit d'accès aux personnes qui ne sont pas administrateurs, vous devez définir des autorisations.  
+-   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez également définir les autorisations WMI sur l'espace de noms WMI du serveur de rapports. Par défaut, tous les membres du groupe Administrateurs local ont accès à l'espace de noms WMI du serveur de rapports. Pour accorder un droit d'accès aux personnes qui ne sont pas administrateurs, vous devez définir des autorisations.  
   
  Les instructions relatives à l'exécution de ces tâches sont fournies dans cette rubrique.  
   
@@ -148,7 +146,7 @@ ms.lasthandoff: 12/05/2017
   
 13. Dans la colonne **Autoriser** , sélectionnez **Activer le compte**, **Appel à distance autorisé**et **Sécurité de lecture**, puis cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

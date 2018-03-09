@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d6ab6c2be3f6a05ea04d93b68c75505e9482aec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3197335d84fcfd79f3188580d908d2d435577ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importer des valeurs de projet de nettoyage dans un domaine
   Dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), vous pouvez importer les connaissances de qualité des données collectées pendant le processus de nettoyage dans un projet de nettoyage de qualité des données ou un package Integration Services qui contient le composant de nettoyage DQS dans un domaine. Cela garantit que des connaissances approuvées ne sont pas perdues, et que la base de connaissances est améliorée en permanence.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les connaissances de qualité des données collectées pendant le processus de nettoyage vers un domaine.  
   
 ##  <a name="Import"></a> Importer des valeurs de projet de nettoyage  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Les valeurs non valides seront créées si la valeur importées contredit une règle de domaine.  
   
--   Si vous importez des valeurs à partir de plusieurs projets à la fois, les valeurs sont importées en ordre séquentiel.  
+-   Si vous importez des valeurs à partir de plusieurs projets à la fois, les valeurs sont importées en ordre séquentiel.  
   
 -   Une correction effectuée suite à une relation à base de termes dans un domaine est importée en tant que valeur correcte (et non en tant qu'erreur).  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Vous pouvez importer des valeurs d'un projet uniquement lorsque la base de connaissances a l'état En cours et que la base de connaissances est verrouillée par l'utilisateur qui effectue l'importation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Nettoyage des données](../data-quality-services/data-cleansing.md)   
  [Transformation de nettoyage DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

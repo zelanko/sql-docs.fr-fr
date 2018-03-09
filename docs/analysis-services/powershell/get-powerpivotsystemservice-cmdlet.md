@@ -2,32 +2,30 @@
 title: Applet de commande Get-PowerPivotSystemService | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 33231250-3880-4d75-936b-d70662a01855
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2773e1b0d0331dc1396da5a471549a90f72664d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 20c13c68abadafcbe4cc357345a4b3ba7d0668f7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-powerpivotsystemservice-cmdlet"></a>Applet de commande Get-PowerPivotSystemService
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Renvoie les propriétés globales de l’objet de service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une batterie. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Renvoie les propriétés globales de l’objet de service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une batterie. 
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -40,12 +38,12 @@ ms.lasthandoff: 11/17/2017
 Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a> Description  
  L’applet de commande Get-PowerPivotSystemService retourne les propriétés globales de l’objet de service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il existe un objet parent par batterie de serveurs, mais chaque batterie peut avoir plusieurs instances du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui s’exécutent sur des serveurs d’applications distincts de la batterie. L'objet parent affiche les paramètres de niveau batterie qui ne varient pas en fonction de l'instance. Si la batterie comprend plusieurs installations de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, une liste des instances, séparées par des virgules, indique le nombre d’instances du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] figurant dans la batterie.  
   
 ## <a name="parameters"></a>Paramètres  
   
-### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identité \<PowerPivotMidTierServicePipeBind >  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind>  
  Spécifie l'objet parent à obtenir. La valeur doit être un GUID valide qui identifie l'objet de manière unique dans la batterie.  
   
 |||  
@@ -56,7 +54,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 |Accepter l'entrée de pipeline ?|true|  
 |Accepter les caractères génériques ?|false|  
   
-### <a name="commonparameters"></a>\<Paramètres_courants >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Cette applet de commande prend en charge les paramètres communs : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer et OutVariable. Pour plus d’informations, consultez [About_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Entrées et sorties  

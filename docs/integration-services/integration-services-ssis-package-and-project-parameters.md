@@ -1,11 +1,11 @@
 ---
-title: "Package Integration Services (SSIS) et les paramètres du projet | Documents Microsoft"
+title: "Paramètres de projet et de package Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -16,19 +16,18 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 17d53f23c35f34a155497455b6575fd67f7b0ddb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="integration-services-ssis-package-and-project-parameters"></a>Package Integration Services (SSIS) et les paramètres du projet
+# <a name="integration-services-ssis-package-and-project-parameters"></a>Paramètres de projet et de package Integration Services (SSIS)
   Les paramètres[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) vous permettent d'affecter des valeurs aux propriétés dans des packages au moment de l'exécution du package. Vous pouvez créer des *paramètres de projet* au niveau du projet et des *paramètres de package* au niveau du package. Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  
   
  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] vous créez, modifiez ou supprimez les paramètres d'un projet à l'aide de la fenêtre **Project.params** . Vous créez, modifiez et supprimez les paramètres d'un package à l'aide de l'onglet **Paramètres** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Vous associez un nouveau paramètre ou un paramètre existant à une propriété de tâche à l'aide de la boîte de dialogue **Paramétrer** . Pour plus d'informations sur l'utilisation de la fenêtre **Project.params** et l'onglet **Paramètres** , consultez [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Pour plus d'informations sur la boîte de dialogue **Paramétrer** , consultez [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
@@ -41,9 +40,9 @@ ms.lasthandoff: 09/27/2017
 ## <a name="parameters-and-project-deployment-model"></a>Paramètres et modèle de déploiement de projet  
  Quand vous déployez un projet sur le serveur SQL Server Integration Services (SSIS), vous utilisez des vues, des procédures stockées et l’interface utilisateur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour gérer les paramètres du projet et du package. Pour plus d'informations, consultez les rubriques ci-dessous.  
   
--   [Vues &#40; catalogue Integration Services &#41;](../integration-services/system-views/views-integration-services-catalog.md)  
+-   [Vues &#40;catalogue Integration Services&#41;](../integration-services/system-views/views-integration-services-catalog.md)  
   
--   [Procédures stockées &#40; catalogue Integration Services &#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
+-   [Procédures stockées &#40;catalogue Integration Services&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
 -   [Boîte de dialogue Configurer](../integration-services/service/configure-dialog-box.md)  
   
@@ -74,21 +73,21 @@ ms.lasthandoff: 09/27/2017
   
  Si un paramètre de projet référence une variable d'environnement et la valeur littérale de la variable n'est pas résolue au moment de l'exécution, la valeur de conception est utilisée. La valeur de serveur n'est pas utilisée.  
   
- Pour afficher les variables d'environnement affectées aux valeurs de paramètre, interrogez l'affichage catalog.object_parameters. Pour plus d’informations, consultez [catalog.object_parameters &#40; Base de données SSISDB &#41; ](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+ Pour afficher les variables d'environnement affectées aux valeurs de paramètre, interrogez l'affichage catalog.object_parameters. Pour plus d’informations, consultez [catalog.object_parameters &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
 #### <a name="determining-execution-parameter-values"></a>Détermination des valeurs de paramètre d'exécution  
  La procédure stockée et les vues Transact-SQL suivantes peuvent être utilisées pour afficher et définir des valeurs de paramètre.  
   
- [Catalog.execution_parameter_values &#40; Base de données SSISDB &#41; ](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
+ [catalog.execution_parameter_values &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) (vue)  
  Affiche les valeurs de paramètre effectives qui seront utilisées par une exécution spécifique  
   
- [Catalog.get_parameter_values &#40; Base de données SSISDB &#41; ](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (procédure stockée)  
+ [catalog.get_parameter_values &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (procédure stockée)  
  Résout et affiche les valeurs effectives du package et de la référence environnementale spécifiés  
   
- [Catalog.object_parameters &#40; Base de données SSISDB &#41; ](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
+ [catalog.object_parameters &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (vue)  
  Affiche les paramètres et les propriétés de tous les packages et les projets dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , y compris les valeurs de conception par défaut et les valeurs de serveur par défaut.  
   
- [Catalog.set_execution_parameter_value &#40; Base de données SSISDB &#41;](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  Définit la valeur d'un paramètre pour une instance d'exécution dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Vous pouvez également utiliser la boîte de dialogue **Exécuter le package** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour modifiez la valeur de paramètre. Pour plus d'informations, consultez [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog).  
@@ -110,23 +109,23 @@ ms.lasthandoff: 09/27/2017
 ## <a name="create-parameters"></a>Create Parameters
 Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer les paramètres de projet et de package. Les procédures suivantes fournissent des instructions pas-à-pas pour créer les paramètres de package/projet.  
   
-> **REMARQUE :** si vous convertissez un projet que vous avez créé à l’aide d’une version antérieure de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en modèle de déploiement de projet, vous pouvez utiliser **l’Assistant Conversion de projet Integration Services** pour créer les paramètres en fonction des configurations. Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+> **REMARQUE :** si vous convertissez un projet que vous avez créé à l’aide d’une version antérieure de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en modèle de déploiement de projet, vous pouvez utiliser **l’Assistant Conversion de projet Integration Services** pour créer les paramètres en fonction des configurations. Pour plus d’informations, consultez [Déployer des projets et des packages Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
-### <a name="create-package-parameters"></a>Créer des paramètres de package  
+### <a name="create-package-parameters"></a>Créer les paramètres de package  
   
 1.  Ouvrez le package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], puis cliquez sur l'onglet **Paramètres** dans le Concepteur SSIS.  
   
-     ![Onglet Paramètres du package](../integration-services/media/denali-package-parameters.gif "onglet Paramètres de Package")  
+     ![Onglet des paramètres de package](../integration-services/media/denali-package-parameters.gif "Onglet des paramètres de package")  
   
 2.  Cliquez sur le bouton **Ajouter un paramètre** de la barre d'outils.  
   
-     ![Bouton de barre d’outils Ajouter](../integration-services/media/denali-parameter-add.gif "ajouter le bouton de barre d’outils")  
+     ![Bouton de la barre d’outils](../integration-services/media/denali-parameter-add.gif "Ajouter un bouton à la barre d’outils")  
   
 3.  Entrez les valeurs des propriétés **Nom**, **Type de données**, **Valeur**, **Sensible**et **Requis** dans la liste elle-même ou dans la fenêtre **Propriétés** . Le tableau suivant décrit ces propriétés.  
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom|Nom du paramètre.|  
+    |Nom   |Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
@@ -137,27 +136,27 @@ Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-
   
 4.  Enregistrez le projet pour sauvegarder les modifications apportées aux paramètres. Les valeurs de paramètre sont stockées dans le fichier du projet.  
   
-    > **AVERTISSEMENT !!** Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. À l'aide du dernier bouton de la barre d'outils, vous pouvez spécifier une valeur de paramètre qui n'est utilisée que lorsque vous exécutez le package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    > **AVERTISSEMENT** Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. À l'aide du dernier bouton de la barre d'outils, vous pouvez spécifier une valeur de paramètre qui n'est utilisée que lorsque vous exécutez le package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
     > **REMARQUE :** si vous rouvrez le fichier de package sans ouvrir le projet dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], l’onglet **Paramètres** est vide et désactivé.  
   
-### <a name="create-project-parameters"></a>Créer des paramètres de projet  
+### <a name="create-project-parameters"></a>Créer les paramètres de projet  
   
 1.  Ouvrez le projet dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 2.  Cliquez avec le bouton droit sur **Project.params** dans l'Explorateur de solutions, puis cliquez sur **Ouvrir** ou double-cliquez sur **Project.params** pour l'ouvrir.  
   
-     ![Fenêtre des paramètres de projet](../integration-services/media/denali-project-parameters.gif "fenêtre des paramètres de projet")  
+     ![Fenêtre des paramètres du projet](../integration-services/media/denali-project-parameters.gif "Fenêtre des paramètres du projet")  
   
 3.  Cliquez sur le bouton **Ajouter un paramètre** de la barre d'outils.  
   
-     ![Bouton de barre d’outils Ajouter](../integration-services/media/denali-parameter-add.gif "ajouter le bouton de barre d’outils")  
+     ![Bouton de la barre d’outils](../integration-services/media/denali-parameter-add.gif "Ajouter un bouton à la barre d’outils")  
   
 4.  Entrez les valeurs des propriétés **Nom**, **Type de données**, **Valeur**, **Sensible**et **Requis** .  
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom|Nom du paramètre.|  
+    |Nom   |Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
@@ -166,10 +165,10 @@ Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-
   
 5.  Enregistrez le projet pour sauvegarder les modifications apportées aux paramètres. Les valeurs de paramètres sont stockées dans des configurations au sein du fichier projet. Enregistrez le fichier projet pour valider sur disque toutes les modifications apportées aux valeurs de paramètres.  
   
-    > **AVERTISSEMENT !** Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. En cliquant sur le dernier bouton de la barre d'outils pour ouvrir la boîte de dialogue **Gérer les valeurs de paramètre** , vous pouvez spécifier une valeur pour un paramètre utilisé uniquement lors de l'exécution du package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    > **AVERTISSEMENT** Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. En cliquant sur le dernier bouton de la barre d'outils pour ouvrir la boîte de dialogue **Gérer les valeurs de paramètre** , vous pouvez spécifier une valeur pour un paramètre utilisé uniquement lors de l'exécution du package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
-## <a name="parameterize-dialog-box"></a>Paramétrer (boîte de dialogue)
-Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau paramètre ou existant à la propriété d’une tâche. Vous ouvrez la boîte de dialogue en cliquant avec le bouton droit sur une tâche ou en affichant l'onglet Flux de contrôle dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , puis en cliquant sur **Paramétrer**. La liste suivante décrit les éléments d'interface utilisateur de la boîte de dialogue. Pour plus d’informations sur les paramètres, consultez [Paramètres Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
+## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
+La boîte de dialogue **Paramétrer** vous permet d’associer un paramètre nouveau ou existant à la propriété d’une tâche. Vous ouvrez la boîte de dialogue en cliquant avec le bouton droit sur une tâche ou en affichant l'onglet Flux de contrôle dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , puis en cliquant sur **Paramétrer**. La liste suivante décrit les éléments d'interface utilisateur de la boîte de dialogue. Pour plus d’informations sur les paramètres, consultez [Paramètres Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
 ### <a name="options"></a>Options  
  **Propriété**  
@@ -178,10 +177,10 @@ Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau param�
  **Utiliser un paramètre existant**  
  Sélectionnez cette option pour associer la propriété de la tâche à un paramètre existant, puis sélectionnez le paramètre dans la liste déroulante.  
   
- **N’utilisez pas de paramètre**  
+ **Ne pas utiliser de paramètre**  
  Sélectionnez cette option pour supprimer une référence à un paramètre. Le paramètre n'est pas supprimé.  
   
- **Créer un nouveau paramètre**  
+ **Créer un paramètre**  
  Sélectionnez cette option pour créer un nouveau paramètre que vous souhaitez associer à la propriété de la tâche.  
   
  **Nom**  
@@ -196,16 +195,16 @@ Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau param�
  **Portée**  
  Spécifiez l'étendue du paramètre en sélectionnant l'option **Projet** ou **Package** . Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  
   
- **Sensibles**  
+ **Sensible**  
  Spécifiez si le paramètre contient une valeur sensible en activant ou en désactivant la case à cocher. Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.  
   
- **Requis**  
+ **Obligatoire**  
  Spécifiez si le paramètre nécessite qu'une valeur, autre que la valeur de conception par défaut, soit spécifiée pour que le package puisse s'exécuter.  
  
-## <a name="set-parameter-values-after-the-project-is-deployed"></a>Définissez les valeurs de paramètre après avoir déployé le projet
+## <a name="set-parameter-values-after-the-project-is-deployed"></a>Définir des valeurs de paramètres après le déploiement du projet
 L'Assistant Déploiement vous permet de définir des valeurs de paramètre par défaut du serveur lorsque vous déployez votre projet dans le catalogue. Une fois votre projet dans le catalogue, vous pouvez utiliser l'Explorateur d'objets SQL Server Management Studio (SSMS) ou Transact-SQL pour définir les valeurs par défaut du serveur.  
   
-### <a name="set-server-defaults-with-ssms-object-explorer"></a>Paramètres par défaut du serveur de jeu avec l’Explorateur d’objets SSMS  
+### <a name="set-server-defaults-with-ssms-object-explorer"></a>Définir les valeurs par défaut du serveur avec l’Explorateur d’objets SSMS  
   
 1.  Sélectionnez le projet sous le nœud **Integration Services**, puis cliquez dessus avec le bouton droit.  
   
@@ -217,11 +216,10 @@ L'Assistant Déploiement vous permet de définir des valeurs de paramètre par 
   
 5.  Dans la colonne **Valeur** , spécifiez la valeur de paramètre du serveur par défaut souhaitée.  
 
-### <a name="set-server-defaults-with-transact-sql"></a>Paramètres par défaut du serveur de jeu avec Transact-SQL  
+### <a name="set-server-defaults-with-transact-sql"></a>Définir les paramètres par défaut du serveur avec Transact-SQL  
  Pour définir les paramètres par défaut du serveur avec Transact-SQL, utilisez la procédure stockée [catalog.set_object_parameter_value &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md). Pour afficher les valeurs par défaut actuelles du serveur, interrogez la vue [catalog.object_parameters &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md). Pour effacer une valeur par défaut du serveur, utilisez la procédure stockée [catalog.clear_object_parameter_value &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Astuce rapide SSIS : Paramètres requis](http://go.microsoft.com/fwlink/?LinkId=239781), sur le site mattmasson.com.  
   
   
-

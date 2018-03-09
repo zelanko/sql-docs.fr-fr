@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: StructureColumn
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bec1bd29c696b64b1b8bbbe2c31da593d1f1c098
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +47,7 @@ StructureColumn('structure column name')
   
  Si la colonne de structure d'exploration de données référencée est une table imbriquée, la fonction renvoie une valeur de table. La valeur de table retournée peut être utilisée dans la clause FROM d'une instruction sub-SELECT.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction est polymorphe et peut être utilisée n'importe où dans une instruction qui autorise des expressions, y compris une liste d'expressions SELECT, une expression de condition WHERE et une expression ORDER BY.  
   
  Le nom de la colonne dans la structure d’exploration de données est une valeur de chaîne et en tant que tel doit être placée entre guillemets simples : par exemple, `StructureColumn('` **colonne 1**`')`. S'il y a plusieurs colonnes qui ont le même nom, le nom est résolu dans le contexte de l'instruction SELECT englobante.  

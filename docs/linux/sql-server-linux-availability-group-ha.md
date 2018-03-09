@@ -1,31 +1,31 @@
 ---
 title: "SQL Server Always On le modèles de déploiement du groupe de disponibilité | Documents Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations de groupe de disponibilité
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article présente les configurations de déploiement pris en charge pour les groupes de disponibilité SQL Server Always On sur des serveurs Linux. Un groupe de disponibilité prend en charge la haute disponibilité et protection des données. Détection de défaillance automatique, le basculement automatique et la reconnexion après un basculement transparente fournissent une haute disponibilité. Réplicas synchronisés fournissent la protection des données. 
 
@@ -70,7 +70,7 @@ Un groupe de disponibilité avec trois réplicas synchrones peut fournir à l’
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité secondaire. 
 |Une indisponibilité du réplica secondaire  | Principal est R / w. Aucun basculement automatique si principal n’échoue. |Principal est R / w. Aucun basculement automatique si principal n’échoue également. | Principal n’est pas disponible pour les transactions utilisateur. 
-<sup>*</sup>Par défaut
+<sup>*</sup> Par défaut
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ Un groupe de disponibilité avec deux réplicas synchrones offre une protection 
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w.| Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité secondaire.
 |Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à des pertes de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que celle-ci est résolue secondaire.
-<sup>*</sup>Par défaut
+<sup>*</sup> Par défaut
 
 >[!NOTE]
 >Ceci est le comportement avant SQL Server 2017 CU 1. 
@@ -117,7 +117,7 @@ La valeur par défaut `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le ta
 |Panne du réplica secondaire | Primaire est en lecture/écriture, exécution exposée à des pertes de données (si principal échoue et ne peut pas être récupérée). Aucun basculement automatique si principal n’échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica de basculer vers si principal n’échoue également. 
 |Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si principal n’échoue également. | Principal est R / w. Aucun basculement automatique si principal n’échoue également. 
 |Base de données secondaire synchrone + configuration uniquement panne de réplica| Principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica pour le basculement se principal échoue également. 
-<sup>*</sup>Par défaut
+<sup>*</sup> Par défaut
 
 >[!NOTE]
 >L’instance de SQL Server qui héberge le réplica uniquement configuration peut également héberger d’autres bases de données. Il peut également être inclus en tant qu’une base de données uniquement de configuration pour plus d’un groupe de disponibilité. 
@@ -142,7 +142,7 @@ La valeur par défaut `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le ta
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Comprendre l’agent de ressources de SQL Server pour STIMULATEUR
 
-SQL Server 2017 CTP 1.4 ajouté `sequence_number` à `sys.availability_groups` pour autoriser STIMULATEUR identifier la base de données secondaire des réplicas sont avec le réplica principal. `sequence_number`est une valeur BIGINT monolithique qui représente la mise à jour le réplica de groupe de disponibilité local. Mises à jour STIMULATEUR le `sequence_number` avec chaque modification de configuration de groupe de disponibilité. Les exemples de modifications de configuration de basculement, ajout de réplica ou la suppression. Le nombre est mis à jour sur le serveur principal, puis répliqué vers les réplicas secondaires. Par conséquent, un réplica secondaire qui a une configuration à jour a le même numéro de séquence en tant que le serveur principal. 
+SQL Server 2017 CTP 1.4 ajouté `sequence_number` à `sys.availability_groups` pour autoriser STIMULATEUR identifier la base de données secondaire des réplicas sont avec le réplica principal. `sequence_number` est une valeur BIGINT monolithique qui représente la mise à jour le réplica de groupe de disponibilité local. Mises à jour STIMULATEUR le `sequence_number` avec chaque modification de configuration de groupe de disponibilité. Les exemples de modifications de configuration de basculement, ajout de réplica ou la suppression. Le nombre est mis à jour sur le serveur principal, puis répliqué vers les réplicas secondaires. Par conséquent, un réplica secondaire qui a une configuration à jour a le même numéro de séquence en tant que le serveur principal. 
 
 Lorsque STIMULATEUR décide de promouvoir un réplica principal, il envoie d’abord un *préalable promouvoir* notification à tous les réplicas. Les réplicas de retournent le numéro de séquence. Ensuite, quand il tente réellement STIMULATEUR promouvoir un réplica principal, le réplica lui-même promeut uniquement si son numéro de séquence est le plus élevé de tous les numéros de séquence. Si son propre numéro de séquence ne correspond pas le numéro de séquence le plus élevé, le réplica rejette l’opération de promotion. De cette façon, seul le réplica ayant le numéro de séquence le plus élevé peut être promu principal, ce qui évite toute perte de données. 
 
@@ -150,7 +150,7 @@ Ce processus requiert au moins un réplica disponible pour la promotion avec le 
 
 Par exemple, un groupe de disponibilité avec trois réplicas synchrones - un réplica principal et deux réplicas secondaires synchrones.
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`est 1 ; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 1 ; (3 / 2 -> 1).
 
 - Le nombre de réplicas pour répondre aux préalable promouvoir action requis est 2 ; (3 - 1 = 2). 
 
@@ -161,7 +161,7 @@ Dans ce scénario, les deux réplicas ont répondu pour le basculement doit êtr
 
 Vous pouvez choisir de remplacer le comportement par défaut et empêcher la ressource de groupe de disponibilité de paramètre `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatiquement.
 
-Le script suivant définit `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 sur un groupe de disponibilité nommé `<**ag1**>`. Avant d’exécuter remplacer `<**ag1**>` par le nom de votre groupe de disponibilité.
+Le script suivant définit `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 sur un groupe de disponibilité nommé `<**ag1**>`. Avant de l’exécuter, remplacez `<**ag1**>` par le nom de votre groupe de disponibilité.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

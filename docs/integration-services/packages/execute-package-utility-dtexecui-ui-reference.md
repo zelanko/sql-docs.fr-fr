@@ -1,5 +1,5 @@
 ---
-title: "Exécuter un utilitaire de Package (dtexecui) | Documents Microsoft"
+title: "Utilitaire d’exécution de package (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,19 +26,18 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: de1484e04318c45057213226016379326e670304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="execute-package-utility-dtexecui"></a>Exécuter un utilitaire de Package (dtexecui)
+# <a name="execute-package-utility-dtexecui"></a>Utilitaire d’exécution de package (dtexecui)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant **dtexecui** à partir d’une invite de commandes, offre un autre moyen d’exécuter des packages à l’aide de l’outil d’invite de commandes **DTExec** .  
   
  Les packages sont exécutés dans le même processus que l’utilitaire **dtexecui.exe** . Cet utilitaire étant un outil 32 bits, les packages exécutés à l’aide de **dtexecui.exe** dans un environnement 64 bits s’exécutent dans Windows sur Win32 (WOW). Quand vous développez et testez des commandes à l’aide de l’utilitaire dtexecui.exe sur un ordinateur 64 bits, effectuez les tests en mode 64 bits en utilisant la version 64 bits de **dtexec.exe** avant de déployer ou de planifier les commandes sur un serveur de production.  
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
  Chacune des sélections ci-dessus comporte la série d'options suivante :  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/03/2017
  **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l’authentification Windows et connectez-vous à l’aide d’un compte d’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Utiliser l'authentification SQL Server**  
+ **Utiliser l’authentification SQL Server**  
  Sélectionnez cette option pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas trouver le compte de connexion, l'authentification échoue et l'utilisateur reçoit un message d'erreur.  
   
 > [!IMPORTANT]  
@@ -122,7 +121,7 @@ ms.lasthandoff: 08/03/2017
  **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l'authentification Windows et connectez-vous à l'aide d'un compte d'utilisateur Microsoft Windows.  
   
- **Utiliser l'authentification SQL Server**  
+ **Utiliser l’authentification SQL Server**  
  Cette option est désactivée quand vous exécutez un package stocké dans le **Magasin de packages SSIS**.  
   
  **Package**  
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
  **Supprimer**  
  Sélectionnez un fichier de configuration dans la liste, puis cliquez sur **Supprimer**.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -169,7 +168,7 @@ ms.lasthandoff: 08/03/2017
  **Supprimer**  
  Permet de sélectionner un fichier de commandes dans la zone de texte, puis de le supprimer par le biais du bouton **Supprimer** .  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -188,7 +187,7 @@ ms.lasthandoff: 08/03/2017
  **Chaîne de connexion**  
  Modifie la chaîne de connexion d'un gestionnaire de connexions. Ce champ est modifiable uniquement lorsque la case à cocher **Gestionnaire de connexions** est activée.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -213,7 +212,7 @@ ms.lasthandoff: 08/03/2017
  **Fichier de point de contrôle**  
  Affiche le fichier de points de contrôle que le package utilise, si vous activez les points de contrôle du package.  
   
- **Parcourir**  
+ **...**  
  Cliquez sur le bouton Parcourir **(…)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir** , si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
   
  **Substituer les options de redémarrage**  
@@ -277,20 +276,20 @@ ms.lasthandoff: 08/03/2017
  **GUID d'exécution**  
  Sélectionnez cette option pour générer un rapport sur le GUID de l'instance d'exécution du package.  
   
- **Boîte de**  
+ **Message**  
  Sélectionnez cette option pour générer un rapport sur les messages.  
   
  **Heure de début et heure de fin**  
  Sélectionnez cette option pour générer un rapport sur l'heure à laquelle le package a commencé et s'est terminé.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="logging-page"></a>Page Enregistrement  
- La page **Enregistrement** de la boîte de dialogue **Utilitaire d'exécution de package** permet de créer des modules fournisseur d'informations mis à disposition du package au moment de l'exécution du programme. Vous devez fournir le type du module fournisseur d'informations du package ainsi que la chaîne de connexion afin de pouvoir vous connecter au journal. Chaque entrée de module fournisseur d’informations ajoute une option **/LOGGER***ID_classe* à l’invite de commandes.  
+ La page **Enregistrement** de la boîte de dialogue **Utilitaire d'exécution de package** permet de créer des modules fournisseur d'informations mis à disposition du package au moment de l'exécution du programme. Vous devez fournir le type du module fournisseur d'informations du package ainsi que la chaîne de connexion afin de pouvoir vous connecter au journal. Chaque entrée de module fournisseur d’informations ajoute une option **/LOGGER***classid* à l’invite de commandes.  
   
 ### <a name="options"></a>Options  
  **Module fournisseur d’informations**  
@@ -302,26 +301,26 @@ ms.lasthandoff: 08/03/2017
  **Supprimer**  
  Permet de sélectionner un module fournisseur d'informations pour le supprimer.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="set-values-page"></a>Page Valeurs définies  
- Utilisez la page **Valeurs définies** de la boîte de dialogue **Utilitaire d'exécution de package** pour définir les valeurs des propriétés des packages, des fichiers exécutables, des connexions, des variables et des modules fournisseur d'informations. Pour cela, tapez les chemins d'accès aux propriétés et leurs valeurs. Chaque entrée de chemin d’accès ajoute une option **/SET***chemin_propriété;valeur* à l’invite de commandes.  
+ Utilisez la page **Valeurs définies** de la boîte de dialogue **Utilitaire d'exécution de package** pour définir les valeurs des propriétés des packages, des fichiers exécutables, des connexions, des variables et des modules fournisseur d'informations. Pour cela, tapez les chemins d'accès aux propriétés et leurs valeurs. Chaque entrée de chemin ajoute une option **/SET***propertypath;value* à l’invite de commandes.  
   
 ### <a name="options"></a>Options  
  **Chemin de la propriété**  
  Tapez le chemin d'accès à la propriété. Le chemin doit comporter une barre oblique inverse (\\) pour indiquer que l’élément suivant est un conteneur, un point pour indiquer que l’élément suivant est une propriété et des parenthèses pour indiquer un membre d’une collection. Il est possible d'identifier le membre par son index ou son nom. Par exemple, le chemin d'accès à une variable d'un package est : \Package.Variables[MyVariable].Value.  
   
- **Valeur**  
+ **Value**  
  Tapez la valeur de la propriété.  
   
  **Supprimer**  
  Sélectionnez le chemin d'accès à une propriété et cliquez dessus pour la supprimer.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -352,7 +351,7 @@ ms.lasthandoff: 08/03/2017
  ID de version  
  Spécifiez le numéro d'identification de la version.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -371,14 +370,13 @@ ms.lasthandoff: 08/03/2017
  **Command line**  
  Affiche la ligne de commande actuelle. Cet élément est modifiable si vous avez activé l'option de modifier la ligne de commande manuellement.  
   
- **Execute**  
+ **Exécuter**  
  Permet d'exécuter le package.  
   
  **Fermer**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilitaire DTExec](../../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_resource_semaphores (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_resource_semaphores_TSQL
 - sys.dm_exec_query_resource_semaphores
 - dm_exec_query_resource_semaphores
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_resource_semaphores dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_resource_semaphores dynamic management view
 ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43b2c54040a22b0adfe2d909ff246390ae32bc3d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c87654df467e62c54b2905a0fd3cff9b030bdff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryresourcesemaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**resource_semaphore_id n'**|**smallint**|ID non unique du sémaphore de ressource. 0 pour le sémaphore de ressource ordinaire et 1 pour le sémaphore de ressource de petites requêtes.|  
+|**resource_semaphore_id**|**smallint**|ID non unique du sémaphore de ressource. 0 pour le sémaphore de ressource ordinaire et 1 pour le sémaphore de ressource de petites requêtes.|  
 |**target_memory_kb**|**bigint**|Cible d'allocation d'utilisation en kilo-octets.|  
 |**max_target_memory_kb**|**bigint**|Cible maximale potentielle en kilo-octets. NULL pour le sémaphore de ressource de petites requêtes.|  
 |**total_memory_kb**|**bigint**|Mémoire détenue par le sémaphore de ressource, en kilo-octets. Si le système est soumis à une sollicitation de la mémoire ou si minimale forcée mémoire est fréquemment allouée, cette valeur peut être supérieure à la **target_memory_kb** ou **max_target_memory_kb** valeurs. La mémoire totale est la somme de la mémoire disponible et de la mémoire allouée.|  
@@ -56,9 +59,9 @@ ms.lasthandoff: 11/17/2017
 |**timeout_error_count**|**bigint**|Nombre total d'erreurs de dépassement de délai d'attente depuis le démarrage du serveur. NULL pour le sémaphore de ressource de petites requêtes.|  
 |**forced_grant_count**|**bigint**|Nombre total d'allocations de mémoire minimale forcées depuis le démarrage du serveur. NULL pour le sémaphore de ressource de petites requêtes.|  
 |**pool_id**|**int**|ID du pool de ressources auquel ce sémaphore de ressource appartient.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm_exec_query_memory_grants &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   
   
 

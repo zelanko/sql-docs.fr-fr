@@ -2,10 +2,14 @@
 title: "Suivre les modifications de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +22,19 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b0846e43315062143d462a82e2c588db00b1169
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux fonctionnalités qui suivent les modifications apportées aux données d'une base de données : [Capture de données modifiées](#Capture) et [Suivi des modifications](#Tracking). Ces fonctionnalités permettent aux applications de déterminer les modifications de DML (opérations d’insertion, de mise à jour et de suppression) apportées aux tables utilisateur dans une base de données. La capture de données modifiées et le suivi des modifications peuvent être activés sur la même base de données ; aucune attention particulière n'est requise. Pour connaître les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la capture de données et le suivi des modifications, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Lorsque le suivi des modifications est pris en charge par [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Avantages liés à l'utilisation de la capture de données modifiées ou du suivi des modifications  
@@ -54,12 +59,12 @@ ms.lasthandoff: 11/09/2017
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Différences de fonctionnalités entre la capture de données modifiées et le suivi des modifications  
  Le tableau suivant répertorie les différences de fonctionnalités entre la capture de données modifiées et le suivi des modifications. Le mécanisme de suivi de la capture de données modifiées implique une capture asynchrone des modifications à partir du journal des transactions afin que les modifications soient disponibles après l'opération DML. Dans le suivi des modifications, le mécanisme de suivi implique le suivi synchrone des modifications en parallèle avec les opérations DML, afin que les informations relatives aux modifications soient disponibles immédiatement.  
   
-|Fonctionnalité|Capture de données modifiées|Suivi des modifications|  
+|Fonctionnalité|Capture des données modifiées|Suivi des modifications|  
 |-------------|-------------------------|---------------------|  
 |**Modifications suivies**|||  
 |Modifications DML|Oui|Oui|  
 |**Informations suivies**|||  
-|Données historiques|Oui|Non|  
+|Données historiques|Oui|non|  
 |Si la colonne a été modifiée|Oui|Oui|  
 |Type DML|Oui|Oui|  
   
@@ -90,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 |Type de colonne|Modifications capturées dans les tables de modifications|Limitations|  
 |--------------------|---------------------------------------|-----------------|  
 |Colonnes éparses|Oui|Ne prend pas en charge la capture des modifications lors de l'utilisation d'un jeu de colonnes.|  
-|Colonnes calculées|Non|Les modifications apportées aux colonnes calculées ne sont pas suivies. La colonne apparaîtra dans la table de modifications avec le type approprié, mais aura une valeur NULL.|  
+|Colonnes calculées|non|Les modifications apportées aux colonnes calculées ne sont pas suivies. La colonne apparaîtra dans la table de modifications avec le type approprié, mais aura une valeur NULL.|  
 |XML|Oui|Les modifications apportées aux éléments XML individuels ne sont pas suivies.|  
 |timestamp|Oui|Le type de données dans la table des modifications est converti en binaire.|  
 |types de données BLOB|Oui|L'image précédente de la colonne BLOB est stockée uniquement si la colonne elle-même est modifiée.|  
@@ -141,7 +146,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="Tracking"></a> Change Tracking  
  Le suivi des modifications capture le fait que des lignes d'une table ont été modifiées, mais ne capture pas les données modifiées. Cela permet aux applications de déterminer les lignes qui ont changé, les données de ligne les plus récentes étant obtenues directement à partir des tables utilisateur. Le suivi des modifications est par conséquent plus limité dans les questions historiques auxquelles il peut répondre, comparé à la capture de données modifiées. Toutefois, pour les applications qui ne requièrent pas d'informations historiques, la charge de stockage est largement inférieure puisque les données modifiées ne sont pas capturées. Un mécanisme de suivi synchrone est utilisé pour assurer le suivi des modifications. Ce mécanisme a été conçu pour imposer une charge minimale sur les opérations DML.  
   
- L'illustration suivante montre un scénario de synchronisation qui pourrait tirer parti du suivi des modifications. Dans ce scénario, une application requiert les informations suivantes : toutes les lignes de la table qui ont été modifiées depuis la dernière synchronisation de la table et uniquement les données de la ligne actuelle. Étant donné qu'un mécanisme synchrone est utilisé pour assurer le suivi des modifications, une application peut effectuer la synchronisation bidirectionnelle et détecter de manière fiable tout conflit pouvant survenir.  
+ L'illustration suivante montre un scénario de synchronisation qui pourrait tirer parti du suivi des modifications. Dans ce scénario, une application requiert les informations suivantes : toutes les lignes de la table qui ont été modifiées depuis la dernière synchronisation de la table et uniquement les données de la ligne actuelle. Étant donné qu'un mécanisme synchrone est utilisé pour assurer le suivi des modifications, une application peut effectuer la synchronisation bidirectionnelle et détecter de manière fiable tout conflit pouvant survenir.  
   
  ![Illustration conceptuelle du suivi des modifications](../../relational-databases/track-changes/media/cdcart2.gif "Illustration conceptuelle du suivi des modifications")  
   
@@ -172,7 +177,7 @@ ms.lasthandoff: 11/09/2017
 |Explique comment gérer le suivi des modifications, configurer la sécurité et déterminer l'impact de l'utilisation du suivi des modifications sur le stockage et les performances.|[Gérer le suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
 |Décrit comment les applications qui utilisent le suivi des modifications peuvent obtenir les modifications suivies, appliquer ces modifications à une autre banque de données et mettre à jour la base de données source. Cette rubrique décrit également le rôle joué par le suivi des modifications lorsqu'un basculement se produit et qu'une base de données doit être restaurée à partir d'une sauvegarde.|[Utiliser le suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Fonctions de suivi des modifications &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   

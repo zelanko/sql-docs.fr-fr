@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions file | Documents Microsoft
+title: Gestionnaire de connexions de fichiers | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f45869a6a4df80f2051ff52dd5566e6ca2576f3b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="file-connection-manager"></a>Gestionnaire de connexions de fichiers
   Un gestionnaire de connexions de fichiers permet à un package de référencer un fichier ou dossier existant ou de créer un fichier ou dossier au moment de l'exécution. Par exemple, vous pouvez référencer un fichier Excel. Certains composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent les informations figurant dans les fichiers pour réaliser leur travail. Par exemple, une tâche d'exécution SQL peut référencer un fichier contenant les instructions SQL exécutées par la tâche. D'autres composants exécutent des opérations sur les fichiers. Par exemple, la tâche de système de fichiers peut référencer un fichier pour le copier à un nouvel emplacement.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  Le tableau suivant répertorie les valeurs de **FileUsageType**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Le gestionnaire de connexions de fichiers utilise un fichier existant.|  
 |**1**|Le gestionnaire de connexions de fichiers crée un fichier.|  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  Vous pouvez définir la propriété ConnectionString du gestionnaire de connexions de fichiers en spécifiant une expression dans la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Toutefois, pour éviter une erreur de validation lorsque vous utilisez une expression pour spécifier le fichier ou dossier, dans **l’Éditeur du gestionnaire de connexions de fichiers**, pour **Fichier/Dossier**, ajoutez un chemin de fichier ou de dossier.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
  **Type d'utilisation**  
  Indiquez si le **Gestionnaire de connexions de fichiers** se connecte à un fichier ou dossier existant ou s’il crée un nouveau fichier ou dossier.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Créer un fichier|Crée un nouveau fichier au moment de l'exécution.|  
 |Fichier existant|Utilise un fichier existant.|  
@@ -95,8 +94,7 @@ ms.lasthandoff: 08/09/2017
   
  Si **Dossier**, spécifiez le dossier à utiliser.  
   
- **Parcourir**  
+ **...**  
  Sélectionnez le fichier ou le dossier à l’aide de la boîte de dialogue **Sélectionner un fichier** ou **Rechercher un dossier** .  
   
   
-

@@ -3,8 +3,9 @@ title: Fournisseur Microsoft OLE DB pour SQL Server | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b79b775a9e6bee5a1363cc95089bb0d6e66f40a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Fournisseur Microsoft OLE DB pour la présentation de SQL Server
 Le fournisseur Microsoft OLE DB pour SQL Server, SQLOLEDB, permet à ADO pour accéder à Microsoft SQL Server.
@@ -214,7 +215,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Ordre d’accès|DBPROP_ACCESSORDER|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|
@@ -287,7 +288,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Chemin d’accès de base|SSPROP_STREAM_BASEPATH|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|

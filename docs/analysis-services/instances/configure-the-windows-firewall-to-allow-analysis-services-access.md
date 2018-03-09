@@ -2,16 +2,13 @@
 title: "Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services
-  Une première étape essentielle pour mettre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à disposition sur le réseau consiste à déterminer si vous devez débloquer des ports dans un pare-feu. La plupart des installations nécessitent la création d'au moins une règle de trafic entrant dans le pare-feu qui autorise les connexions à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une première étape essentielle pour mettre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à disposition sur le réseau consiste à déterminer si vous devez débloquer des ports dans un pare-feu. La plupart des installations nécessitent la création d'au moins une règle de trafic entrant dans le pare-feu qui autorise les connexions à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Les conditions de configuration du pare-feu varient selon le mode d'installation de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
@@ -206,7 +204,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_fixed"></a> Utiliser un port fixe pour une instance par défaut ou nommée d'Analysis Services  
  Cette section explique comment configurer le service pour l'écoute d'un port fixe. L'utilisation d'un port fixe est la plus courante lorsqu'Analysis Services est installé en tant qu'instance nommée, cependant, vous pouvez également utiliser cette approche si les besoins de l'entreprise et les besoins en matière de sécurité nécessitent l'utilisation de ports non affectés par défaut.  
   
- Notez que l'utilisation d'un port fixe modifie la syntaxe de connexion de l'instance par défaut, puisqu'il vous faudra ajouter le numéro de port après le nom du serveur. Par exemple, la connexion à une instance locale par défaut d'Analysis Services écoutant le port 54321 dans SQL Server Management Studio nécessite que vous tapiez localhost:54321 comme nom de serveur dans la boîte de dialogue Se connecter au serveur de Management Studio.  
+ Notez que l'utilisation d'un port fixe modifie la syntaxe de connexion de l'instance par défaut, puisqu'il vous faudra ajouter le numéro de port après le nom du serveur. Par exemple, la connexion à une instance locale par défaut d'Analysis Services écoutant le port 54321 dans SQL Server Management Studio nécessite que vous tapiez localhost:54321 comme nom de serveur dans la boîte de dialogue Se connecter au serveur de Management Studio.  
   
  Si vous utilisez une instance nommée, vous pouvez affecter un port fixe sans aucune modification à la façon dont vous spécifiez le nom du serveur (en particulier, vous pouvez utiliser \<nom_serveur\nom_instance > pour vous connecter à une instance nommée à l’écoute sur un port fixe). Cela fonctionne uniquement si le service SQL Server Browser est en cours d'exécution et si vous avez débloqué le port que le service écoute. Service SQL Server Browser fournit la redirection vers le port fixe selon \<nomserveur\nominstance >. Tant que vous ouvrez des ports à la fois pour le service SQL Server Browser et pour l'instance nommée d'Analysis Services à l'écoute du port fixe, le service SQL Server Browser assure la résolution de la connexion en instance nommée.  
   

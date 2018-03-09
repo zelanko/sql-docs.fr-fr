@@ -1,11 +1,11 @@
 ---
-title: Supprimer des Packages | Documents Microsoft
+title: Supprimer des Packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70b39c648fc2d3ddd13db93d3923880edcf56675
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 168527d4e157ea7b4868ed82e1c88cb41d308915
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="delete-packages"></a>Supprimer des packages
   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vous pouvez supprimer des packages enregistrés dans le système de fichiers. Si vous supprimez un package, la suppression est permanente et il est impossible de le restaurer dans un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -40,4 +39,3 @@ ms.lasthandoff: 08/03/2017
 3.  Cliquez sur **OK** pour confirmer la suppression ou cliquez sur **Annuler** pour conserver le package.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Fonctionnalités de performances de flux de données | Documents Microsoft"
+title: "Fonctionnalités de performances de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
  Indépendamment du composant de flux de données, deux règles générales sont à suivre pour améliorer les performances : optimiser les requêtes et éviter les chaînes inutiles.  
   
 #### <a name="optimize-queries"></a>Optimisation des requêtes  
- De nombreux composants de flux de données utilisent des requêtes, soit au cours de l'extraction de données à partir de sources, soit au cours d'opérations de recherche dans le but de créer des tables de référence. La requête par défaut utilise l’instruction SELECT * FROM \<tableName > syntaxe. Ce type de requête retourne toutes les colonnes dans la table source. Le fait de disposer de toutes les colonnes au moment de la conception permet de choisir n'importe quelle colonne comme colonne de recherche, comme colonne SQL directe ou comme colonne source. Cependant, après avoir sélectionné les colonnes à utiliser, vous devez vérifier la requête et vous assurer qu'elle contient uniquement les colonnes utilisées. La suppression de colonnes superflues permet de créer une ligne plus petite et donc d'accroître l'efficacité du flux de données dans un package. Avec des lignes plus petites, vous pouvez faire tenir plus de lignes dans un tampon et, de ce fait, réduire la charge de travail nécessaire pour traiter toutes les lignes dans le dataset.  
+ De nombreux composants de flux de données utilisent des requêtes, soit au cours de l'extraction de données à partir de sources, soit au cours d'opérations de recherche dans le but de créer des tables de référence. La requête par défaut utilise la syntaxe SELECT * FROM \<nom_table>. Ce type de requête retourne toutes les colonnes dans la table source. Le fait de disposer de toutes les colonnes au moment de la conception permet de choisir n'importe quelle colonne comme colonne de recherche, comme colonne SQL directe ou comme colonne source. Cependant, après avoir sélectionné les colonnes à utiliser, vous devez vérifier la requête et vous assurer qu'elle contient uniquement les colonnes utilisées. La suppression de colonnes superflues permet de créer une ligne plus petite et donc d'accroître l'efficacité du flux de données dans un package. Avec des lignes plus petites, vous pouvez faire tenir plus de lignes dans un tampon et, de ce fait, réduire la charge de travail nécessaire pour traiter toutes les lignes dans le dataset.  
   
  Pour construire une requête, vous pouvez taper la requête ou utiliser le générateur de requêtes.  
   
@@ -167,15 +166,15 @@ ms.lasthandoff: 08/03/2017
  L'enregistrement des données sur les destinations peut être plus long que prévu. Pour déterminer si la lenteur provient de l'incapacité de la destination à traiter rapidement des données, vous pouvez provisoirement remplacer la destination par une transformation de calcul du nombre de lignes. Si le débit en sortie s'améliore significativement, il est probable que la destination chargeant les données est la cause du ralentissement.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Vérification des informations de l'onglet Progression  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]Le concepteur fournit des informations sur les flux de contrôle et flux de données lorsque vous exécutez un package [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. L'onglet **Progression** énumère les tâches et les conteneurs par ordre d'exécution et indique les heures de début et de fin, les avertissements et les messages d'erreur pour chaque tâche et chaque conteneur, y compris le package lui-même. Il répertorie également les composants de flux de données par ordre d'exécution et dévoile des informations sur la progression (sous forme de pourcentage) et le nombre de lignes traitées.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] fournit des informations sur le flux de contrôle et le flux de données lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. L'onglet **Progression** énumère les tâches et les conteneurs par ordre d'exécution et indique les heures de début et de fin, les avertissements et les messages d'erreur pour chaque tâche et chaque conteneur, y compris le package lui-même. Il répertorie également les composants de flux de données par ordre d'exécution et dévoile des informations sur la progression (sous forme de pourcentage) et le nombre de lignes traitées.  
   
  Pour activer ou désactiver l'affichage de messages sous l'onglet **Progression** , basculez l'option **Création de rapports de progression de débogage** dans le menu **SSIS** . La désactivation du rapport de progression peut aider à améliorer les performances lors de l'exécution d'un package complexe dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [Trier des données pour la fusion et de Transformations de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  **Articles et publications de blog**  
   
 -   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](http://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
@@ -208,9 +207,8 @@ ms.lasthandoff: 08/03/2017
   
 -   Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
-## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement de packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l’exécution du Package](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

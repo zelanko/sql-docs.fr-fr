@@ -3,8 +3,11 @@ title: "Volet Schéma (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6808554aad795fcda134687dfaf071487217f63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3d0b1ab935d8f6af9390131a0813468bbcdd0732
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Volet Schéma (Visual Database Tools)
-Ce volet donne une représentation graphique des tables ou des objets tables que vous avez sélectionnés dans la connexion de données. Il montre également les jointures entre ces tables et/ou ces objets.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ce volet donne une représentation graphique des tables ou des objets tables que vous avez sélectionnés dans la connexion de données. Il montre également les jointures entre ces tables et/ou ces objets.  
   
 Dans le volet Schéma, vous pouvez :  
   
@@ -56,7 +59,7 @@ Répertorie les tables créées par les requêtes plutôt que celles qui apparti
   
 |Icône|Type d'objet|  
 |--------|---------------|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi1.gif "Icône Visual Database Tools")|Table|  
+|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi1.gif "Icône Visual Database Tools")|Table de charge de travail|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi2.gif "Icône Visual Database Tools")|Requête ou Vue|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi3.gif "Icône Visual Database Tools")|Table liée|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dvudficon.gif "Icône Visual Database Tools")|Fonction définie par l'utilisateur|  
@@ -66,7 +69,7 @@ Chaque rectangle montre les colonnes de la table ou de l'objet table. Des cases 
   
 Le tableau suivant dresse la liste des cases à cocher et des symboles utilisés dans le rectangle, selon la table ou l'objet table.  
   
-|Case à cocher ou symbole| Description|  
+|Case à cocher ou symbole|Description|  
 |-----------------------|---------------|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Icône Visual Database Tools")|Spécifie si une colonne de données apparaît dans l'ensemble des résultats de la requête (requête Select) ou si elle est utilisée dans une requête Update, Insert From, Make Table ou Insert Into. Sélectionnez la colonne pour l'ajouter aux résultats. Si **(Toutes les colonnes)** est sélectionné, toutes les colonnes de données figurent dans le résultat.<br /><br />L'icône utilisée avec la case à cocher dépend du type de requête que vous créez. Lorsque vous créez une requête Delete, vous ne pouvez pas sélectionner des colonnes individuelles.|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Icône Visual Database Tools")|Indique si la colonne de données sert à trier les résultats de la requête (fait partie d'une clause ORDER BY). L'icône indique A-Z pour un ordre de tri croissant et Z-A pour un ordre de tri décroissant.|  
@@ -82,7 +85,7 @@ Si la requête implique une jointure, une ligne de jointure apparaît entre les 
   
 La forme de l'icône au milieu de la ligne de jointure indique la façon dont les tables ou les objets structurés en table sont joints. Si la clause de jointure utilise un autre opérateur que le signe égal (=), il s'affiche dans l'icône de la ligne de jointure. Le tableau suivant fait la liste des icônes qui peuvent être affichées dans une ligne de jointure.  
   
-|Icône de la ligne de jointure| Description|  
+|Icône de la ligne de jointure|Description|  
 |------------------|---------------|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icône Visual Database Tools")|Jointure interne (créée avec l'opérateur « égal »).|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icône Visual Database Tools")|Jointure interne basée sur l'opérateur « plus grand que ». (L'opérateur affiché dans la ligne de jointure est celui qui est utilisé pour la jointure.)|  
@@ -92,13 +95,13 @@ La forme de l'icône au milieu de la ligne de jointure indique la façon dont le
   
 Les icônes présentes aux extrémités de la ligne de jointure indiquent le type de jointure. Le tableau suivant fait la liste des types de jointures et des icônes pouvant apparaître aux extrémités de la ligne de jointure.  
   
-|Icône aux extrémités de la ligne de jointure| Description|  
+|Icône aux extrémités de la ligne de jointure|Description|  
 |-----------------------------|---------------|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Icône Visual Database Tools")|Jointure Un-à-un|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icône Visual Database Tools")|Jointure Un-à-plusieurs|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icône Visual Database Tools")|Le Concepteur de requêtes et de vues ne peut pas déterminer le type de jointure|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

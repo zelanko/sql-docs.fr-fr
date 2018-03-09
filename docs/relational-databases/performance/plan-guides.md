@@ -2,9 +2,12 @@
 title: "Repères de plan | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,23 +23,23 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d012220d8d6328c8ec93e1aa10e23c59461ce082
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0414a27a14e937e7c58ca6ba74de3b6bfd6a2b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-guides"></a>Repères de plan
-  Les repères de plan vous permettent d'optimiser les performances des requêtes lorsque vous ne pouvez pas ou ne souhaitez pas modifier directement le texte de la requête réelle dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Les repères de plan s'avèrent utiles lorsqu'un petit sous-ensemble de requêtes d'une application de base de données fournie par un tiers ne fonctionne pas comme prévu. Dans le repère de plan, vous spécifiez l'instruction Transact-SQL que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre l'instruction Transact-SQL au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les repères de plan vous permettent d’optimiser les performances des requêtes lorsque vous ne pouvez pas ou ne souhaitez pas modifier directement le texte de la requête dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Les repères de plan s'avèrent utiles lorsqu'un petit sous-ensemble de requêtes d'une application de base de données fournie par un tiers ne fonctionne pas comme prévu. Dans le repère de plan, vous spécifiez l'instruction Transact-SQL que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre l'instruction Transact-SQL au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  
   
  Le nombre total de repères de plan que vous pouvez créer est uniquement tributaire des ressources système disponibles. Toutefois, les repères de plan doivent se limiter au traitement des requêtes critiques ciblées à des fins d'amélioration ou de stabilisation des performances. Les repères de plan ne doivent pas influencer la majeure partie de la charge de requête d'une application déployée.  
   
 > [!NOTE]  
->  Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="types-of-plan-guides"></a>Types de repères de plan  
  Il est possible de créer les types de repères de plan suivants.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
  Supposons que la procédure stockée suivante, qui accepte le paramètre `@Country_region`, figure dans une application de base de données déployée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -63,7 +66,7 @@ END;
   
  Vous pouvez résoudre ce problème en modifiant la procédure stockée pour ajouter l'indicateur de requête `OPTIMIZE FOR` à la requête. Toutefois, étant donné que la procédure stockée se trouve dans une application déployée, vous ne pouvez pas modifier directement le code de cette dernière. Vous pouvez en revanche créer le repère de plan suivant dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -83,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>Repère de plan SQL  
  Un repère de plan SQL correspond à des requêtes qui s'exécutent dans le contexte de lots et d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] autonomes ne faisant pas partie d'un objet de base de données. Les repères de plan SQL peuvent également être employés pour les requêtes paramétrables au format spécifié. Les repères de plan SQL s'appliquent aux instructions et aux lots [!INCLUDE[tsql](../../includes/tsql-md.md)] autonomes. Le plus souvent, ces instructions sont envoyées par une application à l’aide de la procédure stockée système [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Imaginons par exemple le traitement autonome suivant :  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Pour empêcher la génération d'un plan d'exécution parallèle sur cette requête, créez le repère de plan suivant et affectez à l'indicateur de requête `MAXDOP` la valeur `1` dans le paramètre `@hints` .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -116,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>Paramétrage de la mise en correspondance du repère de plan  
  Les repères de plan sont limités à la base de données dans laquelle ils sont créés. Par conséquent, seuls les repères de plan existant dans la base de données qui est active lors de l'exécution d'une requête peuvent être mis en correspondance avec cette requête. Supposons que [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est la base de données active et que la requête suivante est exécutée :  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  Seuls les repères de plan de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] peuvent être mis en correspondance avec cette requête. Supposons maintenant que [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est la base de données active et que les instructions suivantes sont exécutées :  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -141,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effet du repère de plan sur le cache du plan  
  La création d'un repère de plan sur un module supprime le plan de requête pour ce module du cache du plan. La création d'un repère de plan de type OBJET ou SQL sur un lot supprime le plan de requête pour un lot qui a la même valeur de hachage. La création d'un repère de plan de type TEMPLATE supprime tous les lots comprenant une instruction unique du cache du plan dans cette base de données.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tâche|Rubrique|  
 |----------|-----------|  
@@ -154,7 +157,7 @@ sp_create_plan_guide
 |Explique comment utiliser SQL Server Profiler pour créer et tester des repères de plan.|[Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Explique comment valider des repères de plan.|[Valider des repères de plan après la mise à niveau](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   

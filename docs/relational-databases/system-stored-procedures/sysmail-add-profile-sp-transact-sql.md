@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
 - sysmail_add_profile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_profile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab45b6b8af6528614a8c5e306bad2cc58eb130d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6295b1f239f136c43e00e047186ce408ab9a4a93
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +51,10 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  [  **@profile_name**  =] **'***profile_name***'**  
  Nom du nouveau profil. *profile_name* est **sysname**, sans valeur par défaut.  
   
- [  **@description**  =] **'***description***'**  
+ [ **@description** = ] **'***description***'**  
  Description facultative du nouveau profil. *Description* est **nvarchar (256)**, sans valeur par défaut.  
   
- [  **@profile_id**  =] *new_profile_id***sortie**  
+ [  **@profile_id**  =] *new_profile_id *** sortie**  
  Retourne l'ID du nouveau profil. *new_profile_id* est **int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -66,7 +69,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  La procédure stockée **sysmail_add_profile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

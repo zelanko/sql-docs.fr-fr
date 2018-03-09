@@ -22,15 +22,15 @@ helpviewer_keywords:
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76ea0e7617daabdbbf140546e9e08d5f0016a2b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d5feafb861d0c0a9cb65f6c8a27d2bfa49d1465
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurations de fichiers (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  Si le groupe de fichiers en cours de restauration est en lecture seule, l'application de sauvegardes de journal est souvent inutile et ignorée. Si la sauvegarde a été réalisée après la mise en lecture seule du fichier, il s'agit de la dernière sauvegarde à restaurer. La récupération par progression s'arrête au point cible.  
   
- Les scénarios de restauration de fichiers sont les suivants :  
+ Les scénarios de restauration de fichiers sont les suivants :  
   
 -   Restauration de fichiers hors ligne  
   
@@ -137,7 +137,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   

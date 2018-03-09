@@ -1,11 +1,11 @@
 ---
-title: Enregistrer des Packages | Documents Microsoft
+title: Enregistrer des packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4ea8bfe361b01ebebbbdd3a794187f4d2983c55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-packages"></a>Enregistrer des packages
   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , vous créez des packages à l’aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et vous les enregistrez dans le système de fichiers sous forme de fichiers XML (fichiers .dtsx). Vous pouvez également enregistrer des copies du fichier XML des packages dans la base de données msdb dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans le magasin de packages. Le magasin de packages représente les dossiers de l’emplacement du système de fichiers gérés par le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/26/2017
     >  Vous pouvez vérifier le chemin d'accès et le nom de fichier dans lequel le package a été enregistré dans la fenêtre Propriétés.  
 
 ## <a name="save-a-copy-of-a-package"></a>Enregistrer une copie d'un package
-  Cette section décrit comment enregistrer une copie d’un package dans le système de fichiers, dans le magasin de packages ou à la **msdb** dans la base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous spécifiez un emplacement dans lequel enregistrer la copie du package, vous pouvez également mettre à jour le nom de celui-ci.  
+  Cette section décrit comment enregistrer une copie d’un package dans le système de fichiers, dans le magasin de packages ou dans la base de données **msdb** dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous spécifiez un emplacement dans lequel enregistrer la copie du package, vous pouvez également mettre à jour le nom de celui-ci.  
   
  Le magasin de packages peut comprendre à la fois la base de données **msdb** et les dossiers du système de fichiers, uniquement la base de données **msdb**, ou uniquement les dossiers du système de fichiers. Dans la base de données **msdb**, les packages sont enregistrés dans la table **sysssispackages** . Cette table comprend une colonne **folderid** qui identifie le dossier logique auquel le package appartient. Les dossiers logiques permettent de regrouper les packages enregistrés dans la base de données **msdb** , à l’image des dossiers du système de fichiers qui permettent de regrouper les packages enregistrés dans le système de fichiers. Les lignes de la table **sysssispackagefolders** de la base de données **msdb** définissent les dossiers.  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur le package dont vous voulez enregistrer une copie.  
   
-2.  Sur le **fichier** menu, cliquez sur **enregistrer une copie de \<fichier de package > en tant que**.  
+2.  Dans le menu **Fichier**, cliquez sur **Enregistrer une copie de \<fichier_package> sous**.  
   
 3.  Dans la boîte de dialogue **Enregistrer une copie du package**, sélectionnez l’emplacement d’un package dans la liste **Emplacement du package**. Les options suivantes sont disponibles :  
     -   SQL Server
@@ -94,7 +93,7 @@ ms.lasthandoff: 09/26/2017
 9. Cliquez sur **OK**.  
 
 ## <a name="save-a-package-as-a-package-template"></a>Enregistrer un package en tant que modèle de package
- Cette section décrit comment désigner et utiliser des packages personnalisés comme modèles lorsque vous créez de nouveaux packages Integration Services dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise un modèle de package qui crée un package vide lorsque vous ajoutez un nouveau package à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Vous ne pouvez pas remplacer ce modèle par défaut, mais vous pouvez en ajouter de nouveaux.  
+ Cette section montre comment désigner et utiliser des packages personnalisés comme modèles quand vous créez des packages Integration Services dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise un modèle de package qui crée un package vide lorsque vous ajoutez un nouveau package à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Vous ne pouvez pas remplacer ce modèle par défaut, mais vous pouvez en ajouter de nouveaux.  
   
  Vous pouvez désigner plusieurs packages à utiliser comme modèles. Avant de pouvoir implémenter de nouveaux packages personnalisés comme modèles, vous devez créer les packages.  
   
@@ -114,9 +113,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, pointez sur **Ajouter**, puis cliquez sur **Nouvel élément**.  
   
-3.  Dans le **ajouter un nouvel élément -\<nom du projet >** boîte de dialogue, cliquez sur le package que vous souhaitez utiliser comme modèle.  
+3.  Dans la boîte de dialogue **Ajouter un nouvel élément -\<nom_projet>**, cliquez sur le package que vous voulez utiliser comme modèle.  
   
      La liste de modèles inclut le modèle de package par défaut nommé Nouveau package SSIS. L'icône de package identifie les modèles pouvant être utilisés comme modèles de packages.  
   
 4.  Cliquez sur **Ajouter**.  
-

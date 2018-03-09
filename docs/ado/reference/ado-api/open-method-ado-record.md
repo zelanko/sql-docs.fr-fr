@@ -3,8 +3,9 @@ title: "Open (méthode) (enregistrement ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc5b12e87123af4abc3b92535b87668b7c983f4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-record"></a>Open (méthode) (enregistrement ADO)
 Ouvre une existante [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) de l’objet ou crée un nouvel élément représenté par le **enregistrement**, par exemple un fichier ou répertoire.  

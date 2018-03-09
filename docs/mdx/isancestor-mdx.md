@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ISANCESTOR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1674a5edccc74db8561a62e550e0e4102e26d7af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2f8b226312442d5fc7b287781a505af410f050db
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +45,10 @@ IsAncestor(Member_Expression1, Member_Expression2)
  *Expression_membre2*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **IsAncestor** fonction renvoie **true** si le premier membre spécifié est un ancêtre du deuxième membre spécifié. Sinon, la fonction retourne **false**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant renvoie **true** si [Date]. [ Fiscal]. CurrentMember est un ancêtre de January 2003 :  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  

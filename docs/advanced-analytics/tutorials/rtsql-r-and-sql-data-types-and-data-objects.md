@@ -2,28 +2,31 @@
 title: "R et SQL les données et les types d’objets de données (R Guide de démarrage rapide SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 4207d26b2f38e3f13a45c21ab40293cf0dc95219
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R et SQL les données et les types d’objets de données (R Guide de démarrage rapide SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans cette étape, vous en savoir plus sur certains problèmes courants qui surviennent lors du déplacement des données entre R et SQL Server :
 
@@ -73,6 +76,7 @@ Pour comprendre pourquoi les exemples 1 et 2 ont des résultats très différe
 EXECUTE sp_execute_external_script
         @language = N'R'
       , @script = N' mytextvariable <- c("hello", " ", "world");
+      OutputDataSet <- as.data.frame(mytextvariable);
       str(OutputDataSet);'
       , @input_data_1 = N'  '
 ;
@@ -84,7 +88,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
   @language = N'R', 
   @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
-    str(OutputDataSet)' , 
+    str(OutputDataSet);' , 
   @input_data_1 = N'  ';
 ```
 
@@ -114,7 +118,7 @@ Pour l’instant, gardez seulement à l’esprit que vous devez vérifier les r�
 
 > [!TIP]
 > 
-> Vous pouvez également utiliser des fonctions R identité, tel que `is.matrix`, `is.vector`, etc..
+> Vous pouvez également utiliser des fonctions R identité, tel que `is.matrix`, `is.vector`, etc.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversion implicite des objets de données
 
@@ -197,10 +201,10 @@ Pour remplir la trame de données, R répète les éléments récupérés de la 
     
 |*Col2*|*Col3*|
 |----|----|
-| 1| 1|
+|1|1|
 |10|2|
 |100|3|
-| 1|4|
+|1|4|
 |10|5|
 |100|6|
 

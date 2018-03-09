@@ -1,5 +1,5 @@
 ---
-title: "Ajout de composants de flux de données par programme | Documents Microsoft"
+title: "Ajout de composants de flux de données par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,30 +21,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a8d8daada2aebcf1b2ef650cf9409c73ad6d1084
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Ajout de composants de flux de données par programme
-  Lorsque vous générez un flux de données, vous commencez par ajouter des composants. Puis vous configurez ces composants et vous les connectez ensemble pour établir le flux de données au moment de l'exécution. Cette section décrit l'ajout d'un composant à la tâche de flux de données, lequel permet de créer l'instance du moment de la conception du composant, puis de configurer ce composant. Pour plus d’informations sur la façon de connecter des composants, consultez [connexion de données de flux de composants par programme](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
+  Lorsque vous générez un flux de données, vous commencez par ajouter des composants. Puis vous configurez ces composants et vous les connectez ensemble pour établir le flux de données au moment de l'exécution. Cette section décrit l'ajout d'un composant à la tâche de flux de données, lequel permet de créer l'instance du moment de la conception du composant, puis de configurer ce composant. Pour plus d’informations sur la connexion de composants, consultez [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-component"></a>Ajout d'un composant  
  Appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A> pour créer un composant et l'ajouter à la tâche de flux de données. Cette méthode renvoie l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> du composant. Toutefois, à ce stade, l'objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ne contient pas d'informations spécifiques à un composant. Définissez la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> pour identifier le type de composant. La tâche de flux de données utilise la valeur de cette propriété pour créer une instance du composant au moment de l'exécution.  
   
- La valeur spécifiée dans la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> peut être le CLSID, le PROGID ou la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> du composant. Le CLSID s'affiche normalement dans la fenêtre Propriétés en tant que valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> du composant. Pour plus d’informations sur l’obtention de cette propriété et autres propriétés des composants disponibles, consultez [découverte des données de flux de composants par programme](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md).  
+ La valeur spécifiée dans la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> peut être le CLSID, le PROGID ou la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> du composant. Le CLSID s'affiche normalement dans la fenêtre Propriétés en tant que valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> du composant. Pour plus d’informations sur l’obtention de cette propriété et d’autres propriétés des composants disponibles, consultez [Découverte des composants de flux de données par programmation](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-managed-component"></a>Ajout d'un composant managé  
- Vous ne pouvez pas utiliser le CLSID ou le PROGID pour ajouter l'un des composants de flux de données managées au flux de données, parce que ces valeurs pointent vers un wrapper et non vers le composant lui-même. Au lieu de cela, vous pouvez utiliser la **CreationName** propriété ou le **AssemblyQualifiedName** propriété comme indiqué dans l’exemple suivant.  
+ Vous ne pouvez pas utiliser le CLSID ou le PROGID pour ajouter l'un des composants de flux de données managées au flux de données, parce que ces valeurs pointent vers un wrapper et non vers le composant lui-même. Vous pouvez utiliser plutôt la propriété **CreationName** ou **AssemblyQualifiedName** comme indiqué dans l’exemple suivant.  
   
- Si vous envisagez d’utiliser le **AssemblyQualifiedName** propriété, vous devez ajouter une référence dans votre [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projet à l’assembly qui contient le composant managé. Ces assemblys ne sont pas répertoriées sous l’onglet .NET de la **ajouter une référence** boîte de dialogue. Normalement vous devez rechercher l’assembly dans le **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** dossier.  
+ Si vous envisagez d’utiliser la propriété **AssemblyQualifiedName**, vous devez ajouter à votre projet [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] une référence à l’assembly qui contient le composant managé. Ces assemblys ne sont pas répertoriés sous l’onglet .NET de la boîte de dialogue **Ajouter une référence**. Vous devez généralement rechercher l’assembly dans le dossier **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**.  
   
  Les composants de flux de données managées intégrés incluent :  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
   
 -   destination DataReader  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Destination compacte  
+-   Destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
   
 -   Composant Script  
   
@@ -145,7 +143,7 @@ End Module
  Dès que possible, vous devez modifier un composant en utilisant les méthodes de l'instance de conception plutôt qu'en modifiant les métadonnées du composant directement. Bien qu'il existe des éléments à définir directement dans les métadonnées, tels que les connexions, il est généralement déconseillé de modifier les métadonnées directement parce que vous passez outre la capacité du composant à surveiller et valider les modifications.  
   
 ## <a name="assigning-connections"></a>Assignation de connexions  
- Certains composants, tels que le composant source OLE DB, requièrent une connexion à des données externes et utilisent un objet <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> existant dans le package dans ce but. La propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> indique le nombre d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> requis au moment de l'exécution par le composant. Si le nombre est supérieur à zéro, le composant requiert une connexion. Assignez un gestionnaire de connexions depuis le package vers le composant en spécifiant les propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> de la première connexion dans la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>. Notez que le nom du Gestionnaire de connexions dans la collection de la connexion en cours d’exécution doit correspondre à celui de la connexion managerreferenced à partir du package.  
+ Certains composants, tels que le composant source OLE DB, requièrent une connexion à des données externes et utilisent un objet <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> existant dans le package dans ce but. La propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> indique le nombre d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> requis au moment de l'exécution par le composant. Si le nombre est supérieur à zéro, le composant requiert une connexion. Assignez un gestionnaire de connexions depuis le package vers le composant en spécifiant les propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> de la première connexion dans la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>. Notez que le nom du gestionnaire de connexions figurant dans la collection de connexions au moment de l’exécution doit correspondre à celui du gestionnaire de connexions référencé depuis le package.  
   
 ## <a name="setting-the-values-of-custom-properties"></a>Définition des valeurs des propriétés personnalisées  
  Après avoir créé l'instance de conception du composant, appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A>. Cette méthode est similaire à un constructeur parce qu'elle initialise un composant nouvellement créé en créant ses propriétés personnalisées et ses objets d'entrée et de sortie. N'appelez pas la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> plusieurs fois sur un composant, parce que le composant risque de se réinitialiser et de perdre toutes les modifications précédemment apportées à ses métadonnées.  
@@ -158,7 +156,7 @@ End Module
  Appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> pour initialiser les colonnes dans les sorties d'un composant source. Étant donné que les composants ne se connectent pas automatiquement aux sources de données externes, appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> avant d'appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> pour fournir au composant un accès à sa source de données externe et la capacité de renseigner ses métadonnées de colonne. Enfin, appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> pour libérer la connexion.  
   
 ## <a name="next-step"></a>Étape suivante  
- Après l’ajout et la configuration du composant, l’étape suivante consiste à créer des chemins d’accès entre les composants, ce qui est décrit dans la rubrique, [création d’un chemin d’accès entre deux composants](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
+ Après avoir ajouté et configuré le composant, l’étape suivante consiste à créer des chemins entre les composants, ce que décrit la rubrique [Création d’un chemin entre deux composants](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="sample"></a>Exemple  
  L'exemple de code suivant ajoute le composant source OLE DB à une tâche de flux de données, crée une instance de conception du composant et configure les propriétés du composant. Cet exemple requiert une référence supplémentaire à l'assembly Microsoft.SqlServer.DTSRuntimeWrap.  
@@ -290,10 +288,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [EzAPI – mise à jour pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), sur blogs.msdn.com.  
+ Entrée de blog, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), sur blogs.msdn.com.  
 
-## <a name="see-also"></a>Voir aussi  
- [Connexion des composants de flux de données par programme](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

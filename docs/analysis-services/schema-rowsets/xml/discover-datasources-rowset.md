@@ -2,15 +2,13 @@
 title: Ensemble de lignes DISCOVER_DATASOURCES | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_DATASOURCES
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdatasources-rowset"></a>Ensemble de lignes DISCOVER_DATASOURCES
-  Retourne la liste des sources de données du fournisseur XML for Analysis (XMLA) qui sont disponibles sur le serveur ou le service Web. Les sources de données publiées sont retournées à partir d'une URL du serveur Web d'application. Le client peut se connecter à l'une des sources de données indiquées dans cette liste.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne une liste de XML pour les sources de données de fournisseur Analysis (XMLA) qui sont disponibles sur le serveur ou le service Web. Les sources de données publiées sont retournées à partir d'une URL du serveur Web d'application. Le client peut se connecter à l'une des sources de données indiquées dans cette liste.  
   
  Si vous appelez le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) méthode avec la **DISCOVER_DATASOURCES** valeur d’énumération dans le [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) élément, le **Discover** méthode retourne la **DISCOVER_DATASOURCES** ensemble de lignes.  
   
@@ -41,13 +39,13 @@ ms.lasthandoff: 11/17/2017
   
  L'ensemble de lignes **DISCOVER_DATASOURCES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Restriction| Description|  
+|Nom de colonne|Indicateur de type|Restriction|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**DataSourceName**|**DBTYPE_WSTR**|Oui|Nom de la source de données, par exemple **Adventure Works**.|  
 |**DataSourceDescription**|**DBTYPE_WSTR**||Description de la source de données entrée par le serveur de publication.<br /><br /> Peut retourner **NULL**.|  
 |**URL**|**DBTYPE_WSTR**|Oui|Chemin d'accès unique qui indique où appeler les méthodes XML for Analysis (XMLA) pour cette source de données.<br /><br /> Peut retourner **NULL**.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Chaîne qui contient les informations supplémentaires requises pour établir la connexion à la source de données.<br /><br /> Peut retourner **NULL**.|  
-|**ProviderName**|**DBTYPE_WSTR**|Oui|Nom du fournisseur de la source de données.<br /><br /> Exemple :`"MSOLAP"`<br /><br /> Peut retourner **NULL**.|  
+|**ProviderName**|**DBTYPE_WSTR**|Oui|Nom du fournisseur de la source de données.<br /><br /> Exemple : `"MSOLAP"`<br /><br /> Peut retourner **NULL**.|  
 |**ProviderType**|**DBTYPE_WSTR**|Oui|Types de données pris en charge par le fournisseur. Ce tableau peut inclure un ou plusieurs des types suivants :<br /><br /> **MDP**: fournisseur de données multidimensionnelles.<br /><br /> **TDP**: fournisseur de données sous forme de tableau.<br /><br /> **DMP**: fournisseur d'exploration de données (implémente la spécification OLE DB pour l'exploration de données).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|Oui|Spécification du type de mode de sécurité que la source de données utilise. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> **Unauthenticated**: aucun ID d'utilisateur ou mot de passe ne doit être envoyé.<br /><br /> **Authenticated**: l'ID utilisateur et le mot de passe doivent être inclus dans les informations requises pour établir la connexion à la source de données.<br /><br /> **Intégré**: la source de données utilise la sécurité sous-jacente pour déterminer l’autorisation, telles que la sécurité intégrée fournie par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
   

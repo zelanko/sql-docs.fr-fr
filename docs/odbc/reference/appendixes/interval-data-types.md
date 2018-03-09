@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -32,11 +32,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-data-types"></a>Types de données Interval
 Un intervalle est défini comme la différence entre deux dates et heures. Intervalles sont exprimés dans un des deux façons différentes. Un est un *année-mois* intervalle qui exprime les intervalles en termes d’années et un nombre entier d’un mois. L’autre est un *-de la journée* intervalle qui exprime les intervalles en termes de jours, les minutes et secondes. Ces deux types d’intervalles sont distincts et ne peut pas être combinés, étant donné que les mois peuvent avoir différents nombres de jours.  
@@ -47,7 +47,7 @@ Un intervalle est défini comme la différence entre deux dates et heures. Inter
   
  Il existe 13 types de données SQL intervalle et 13 types de données C intervalle. Chacun des types de données intervalle C utilise la même structure, SQL_INTERVAL_STRUCT, pour contenir les données de l’intervalle. (Pour plus d’informations, consultez la section suivante, [Structure d’intervalle C](../../../odbc/reference/appendixes/c-interval-structure.md).) Pour plus d’informations sur les types de données SQL, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md); pour plus d’informations sur les types de données C, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificateur de type|Classe| Description|  
+|Identificateur de type|Classe|Description|  
 |---------------------|-----------|-----------------|  
 |MONTH|Année-mois|Nombre de mois entre deux dates.|  
 |YEAR|Année-mois|Nombre d’années entre deux dates.|  

@@ -1,5 +1,5 @@
 ---
-title: "CRÉER une SESSION de DIAGNOSTICS (Transact-SQL) | Documents Microsoft"
+title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,23 +8,25 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda2e9c6813e53bffeab974e5e01b475cdfebe26
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>CRÉER une SESSION de DIAGNOSTICS (Transact-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Les sessions de diagnostic permettent d’enregistrer les informations de diagnostic détaillées, défini par l’utilisateur sur les performances du système ou de la requête.  
@@ -67,7 +69,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *max_item_count_num*  
  Le nombre d’événements devant être persistantes dans une vue. Par exemple, si 100 est spécifié, les 100 derniers événements correspondant aux critères de filtre sont rendues persistantes dans la session de diagnostic. Si moins de 100 événements sont trouvés, la session de diagnostic contient moins de 100 événements. *max_item_count_num* doit être au moins 100 et inférieur ou égal à 100 000.  
   
- *nom_événement*  
+ *event_name*  
  Définit les événements réels à recueillir dans la session de diagnostic.  *nom_événement* est un des événements répertoriés dans [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) où `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
@@ -98,7 +100,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
  Les sessions de diagnostic continue à collecter les métadonnées jusqu'à ce que supprimée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert le **ALTER SERVER STATE** autorisation.  
   
 ## <a name="locking"></a>Verrouillage  

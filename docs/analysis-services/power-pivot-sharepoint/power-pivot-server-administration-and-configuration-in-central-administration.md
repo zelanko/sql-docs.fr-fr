@@ -2,31 +2,29 @@
 title: "Administration de serveur de tableau croisé dynamique et de Configuration dans l’Administration centrale de l’alimentation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a414e1d07c7a8789ed0c91db91cc3af4009c417b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d’un serveur Power Pivot dans l’Administration centrale
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sont gérées par les administrateurs d’application de service SharePoint à l’aide de l’Administration centrale SharePoint.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint doit être configuré avant de pouvoir être utilisé. Après avoir installé [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint à l’aide du programme d’installation de SQL Server, vous pouvez le configurer selon l’une des approches suivantes :  
@@ -66,11 +64,11 @@ ms.lasthandoff: 11/17/2017
 |[Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|Recommandation|Cette étape configure un compte spécial qui peut être utilisé pour exécuter des travaux d'actualisation des données sur le serveur.|  
 |[Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Ce paramètre est facultatif|La collecte des données d'utilisation est configurée par défaut. Vous pouvez utiliser ces étapes pour modifier les paramètres par défaut.|  
 |[Configurer un traitement d’actualisation des données uniquement ou de requêtes uniquement (Power Pivot pour SharePoint)](http://msdn.microsoft.com/en-us/5e027605-1086-4941-bb01-f315df8f829b)|Ce paramètre est facultatif|Une instance [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] peut être consacrée uniquement aux travaux ou requêtes d’actualisation des données. En outre, vous pouvez modifier les paramètres par défaut pour les travaux parallèles d'actualisation des données.|  
-|[Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|Ce paramètre est facultatif|Explique comment mettre à jour les mots de passe ou modifier les comptes de service.|  
+|[Configurer des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|Ce paramètre est facultatif|Explique comment mettre à jour les mots de passe ou modifier les comptes de service.|  
 |[Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Ce paramètre est facultatif|Explique comment modifier les associations de service.|  
 |[Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Ce paramètre est facultatif|Explique comment ajouter la galerie [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en tant qu’emplacement approuvé.|  
 |[Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)|Ce paramètre est facultatif|La journalisation des événements est configurée par défaut. Vous pouvez utiliser ces étapes pour modifier les paramètres par défaut.|  
-|[Configurer des règles d’intégrité PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)|Ce paramètre est facultatif|Les règles d'intégrité du serveur sont configurées par défaut. Vous pouvez utiliser ces étapes pour modifier certains paramètres par défaut.|  
+|[Configurer des règles d’intégrité Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)|Ce paramètre est facultatif|Les règles d'intégrité du serveur sont configurées par défaut. Vous pouvez utiliser ces étapes pour modifier certains paramètres par défaut.|  
 |[Créer et personnaliser une Galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|Ce paramètre est facultatif|Pour les installations que vous configurez manuellement, cette procédure explique comment créer une bibliothèque Galerie [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui affiche des images miniatures des classeurs [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qu’elle contient.|  
 |[Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Ce paramètre est facultatif|Explique comment étendre une bibliothèque de documents pour prendre en charge la création de fichiers de connexion de modèles sémantiques BI.|  
   

@@ -1,5 +1,5 @@
 ---
-title: "Gérer une Instance de capture de données modifiées | Documents Microsoft"
+title: "Gérer une instance CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>Gérer une instance de capture de données modifiées
   Vous pouvez utiliser la console du concepteur CDC pour afficher des informations sur les instances que vous créez et gérer le fonctionnement des instances.  
@@ -111,25 +110,24 @@ ms.lasthandoff: 08/03/2017
     -   **Written changes**: nombre de modifications écrites dans les tables de modifications SQL Server.  
   
  **Oracle**  
- Affiche des informations sur l'instance de capture de données modifiées et sa connexion à la base de données Oracle. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez sur l’instance dans le volet gauche, puis sélectionnez **propriétés** ou cliquez sur **propriétés** dans le volet droit pour ouvrir le \<instance > boîte de dialogue Propriétés.  
+ Affiche des informations sur l'instance de capture de données modifiées et sa connexion à la base de données Oracle. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez avec le bouton droit sur l’instance dans le volet gauche et sélectionnez **Propriétés** ou cliquez sur **Propriétés** dans le volet droit pour ouvrir la boîte de dialogue Propriétés de \<instance>.  
   
  Pour plus d'informations sur ces propriétés et la façon de les modifier, consultez [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tables**  
- Affiche des informations sur les tables incluses dans l'instance de capture de données modifiées. Les informations de colonne sont également disponibles ici. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez sur l’instance dans le volet gauche, puis sélectionnez **propriétés** ou cliquez sur **propriétés** dans le volet droit pour ouvrir le \<instance > boîte de dialogue Propriétés.  
+ Affiche des informations sur les tables incluses dans l'instance de capture de données modifiées. Les informations de colonne sont également disponibles ici. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez avec le bouton droit sur l’instance dans le volet gauche et sélectionnez **Propriétés** ou cliquez sur **Propriétés** dans le volet droit pour ouvrir la boîte de dialogue Propriétés de \<instance>.  
   
  Pour plus d'informations sur ces propriétés et la façon de les modifier, consultez [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Avancé**  
- Affiche les propriétés avancées pour l'instance de capture de données modifiées et les valeurs de propriété. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez sur l’instance dans le volet gauche, puis sélectionnez **propriétés** ou cliquez sur **propriétés** dans le volet droit pour ouvrir le \<instance > boîte de dialogue Propriétés.  
+ Affiche les propriétés avancées pour l'instance de capture de données modifiées et les valeurs de propriété. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez avec le bouton droit sur l’instance dans le volet gauche et sélectionnez **Propriétés** ou cliquez sur **Propriétés** dans le volet droit pour ouvrir la boîte de dialogue Propriétés de \<instance>.  
   
  Pour plus d'informations sur ces propriétés et la façon de les modifier, consultez [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [La création de l’Instance de base de données modifiées SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Comment afficher les propriétés d’Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
- [Comment modifier les propriétés d’Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Utilisez l’Assistant Nouvelle Instance](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Guide pratique pour afficher les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
+ [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Utiliser l’Assistant Nouvelle instance](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

@@ -2,10 +2,14 @@
 title: Configurer IntelliSense (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a4f61032e9cd11158a80b9e95d1d98c457b56be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a459fbc5ba1c1891d3583821b64d634a44fab859
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurer IntelliSense (SQL Server Management Studio)
-  La plupart des options [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense sont activées par défaut. Vous pouvez désactiver une option IntelliSense et l'appeler à l'aide d'une commande de menu ou d'une combinaison de touches.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La plupart des options [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense sont activées par défaut. Vous pouvez désactiver une option IntelliSense et l'appeler à l'aide d'une commande de menu ou d'une combinaison de touches.  
   
 > [!IMPORTANT]  
 >  Certaines modifications ne prendront pas effet dans votre session active de l’éditeur.  Vous devez ouvrir une nouvelle session d’éditeur Transact-SQL pour voir la modification.

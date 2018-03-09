@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c302282bb88761b4e24d4e3efcd51b22ffe31c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete---sql-command"></a>Supprimer : la commande SQL
 Marque les enregistrements marqués en suppression.  
@@ -48,7 +48,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *FilterCondition* spécifie les critères pour que les enregistrements marqués pour suppression. Vous pouvez inclure autant de conditions de filtre que vous le souhaitez, qui les connectent avec AND ou opérateur OR. Vous pouvez également utiliser l’opérateur NOT pour inverser la valeur d’une expression logique, ou vous pouvez utiliser **vide**() pour rechercher un champ vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si SET DELETED est définie sur ON, les enregistrements marqués pour suppression sont ignorées par toutes les commandes qui incluent une étendue.  
   
  DELETE - utilise SQL verrouillage des enregistrements lors du marquage de plusieurs enregistrements pour la suppression de tables ouvert pour l’accès partagé. Cela réduit la contention enregistrement dans les situations multi-utilisateur, mais peut réduire les performances. Pour optimiser les performances, ouvrez la table pour une utilisation exclusive.  

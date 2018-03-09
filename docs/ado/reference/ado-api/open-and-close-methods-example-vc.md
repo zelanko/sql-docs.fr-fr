@@ -3,29 +3,31 @@ title: "Ouvrir et fermer les méthodes-exemple (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Close method [ADO], VC++ example
 - Open method [ADO], VC++ example
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80c97e389a4741f3d45f3cd897ec404b66228a04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 33ea4347a5ef1c086d231d05112644493c4100b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-and-close-methods-example-vc"></a>Les méthodes Open et Close-exemple (VC ++)
 Cet exemple utilise le **ouvrir** et [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthodes sur les deux [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) les objets qui ont été ouverts.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - PARTITION_FUNCTION_TSQL
 - PARTITION_TSQL
 - CREATE_PARTITION_FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RANGE RIGHT partition functions
 - RANGE LEFT partition functions
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +80,12 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **GAUCHE** | OUI  
  Spécifie à quel côté de chaque intervalle de valeur limite, gauche ou à droite, la *boundary_value* [ **,***.. .n* ] appartient, lorsque les valeurs d’intervalle sont triés par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’ordre croissant de gauche à droite. Si cet argument n'est pas spécifié, la valeur par défaut est LEFT.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'étendue d'une fonction de partition est limitée à la base de données dans laquelle elle est créée. Dans la base de données, les fonctions de partition résident dans un espace de noms distinct des autres fonctions.  
   
  Toutes les lignes dont la colonne de partitionnement possède des valeurs NULL sont placées dans la partition située le plus à gauche, sauf si NULL est spécifié comme valeur limite et que RIGHT est indiqué. Dans ce cas, la partition située le plus à gauche est une partition vide et les valeurs NULL sont placées dans la partition suivante.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  N'importe laquelle des autorisations suivantes permet d'exécuter CREATE PARTITION FUNCTION :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -97,35 +99,35 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Création d'une fonction de partition RANGE LEFT sur une colonne de type int  
  La fonction de partition suivante partitionne une table ou un index en quatre partitions.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
  Le tableau suivant illustre une table qui utilise cette fonction de partition sur la colonne de partitionnement **col1** serait partitionnée.  
   
-|Partition|1|2|3|4|  
+|Partition| 1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**Col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <=`1000`|**Col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Création d'une fonction de partition RANGE RIGHT sur une colonne de type int  
  La fonction de partition suivante utilise les mêmes valeurs pour *boundary_value* [ **,***.. .n* ] en tant que l’exemple précédent, mais elle spécifie RANGE RIGHT.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
  Le tableau suivant illustre une table qui utilise cette fonction de partition sur la colonne de partitionnement **col1** serait partitionnée.  
   
-|Partition|1|2|3|4|  
+|Partition| 1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** \<`1`|**col1**  >=  `1` AND **col1** \<`100`|**col1**  >=  `100` AND **col1** \<`1000`|**Col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Création d'une fonction de partition RANGE RIGHT sur une colonne de type datetime  
  La fonction de partition suivante partitionne une table ou un index en 12 partitions, une pour chaque mois d’une année de valeurs dans un **datetime** colonne.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -134,28 +136,28 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  Le tableau suivant illustre une table ou un index qui utilise cette fonction de partition sur la colonne de partitionnement **datecol** serait partitionnée.  
   
-|Partition|1|2|...|11|12|  
+|Partition| 1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**Valeurs**|**datecol** \<`February 1, 2003`|**datecol**  >=  `February 1, 2003` AND **datecol** \<`March 1, 2003`||**datecol**  >=  `November 1, 2003` AND **col1** \<`December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. Création d'une fonction de partition sur une colonne de type char  
  La fonction de partition suivante partitionne une table ou un index en quatre partitions.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
  Le tableau suivant illustre une table qui utilise cette fonction de partition sur la colonne de partitionnement **col1** serait partitionnée.  
   
-|Partition|1|2|3|4|  
+|Partition| 1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** \< `EX`...|**col1**  >=  `EX` AND **col1** \< `RXE`...|**col1**  >=  `RXE` AND **col1** \< `XR`...|**Col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. Création de 15 000 partitions  
  La fonction de partition suivante partitionne une table ou un index en 15 000 partitions.  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +176,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. Création de partitions pour plusieurs années  
  La fonction de partition suivante partitionne une table ou un index en 50 partitions sur un **datetime2** colonne. Il y a une partition pour chaque mois entre janvier 2007 et janvier 2011.  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

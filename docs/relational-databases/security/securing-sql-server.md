@@ -2,13 +2,18 @@
 title: "Sécurisation de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: Security [SQL Server]
+f1_keywords:
+- Security [SQL Server]
 helpviewer_keywords:
 - database objects [SQL Server], security
 - SQL Server, security
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f616ae89a25530c7fd229634e91d8f17646c397e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="securing-sql-server"></a>Sécurisation de SQL Server
-  La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  
+# <a name="securing-sql-server"></a>Sécurisation de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  
   
  Vous trouverez de plus amples informations sur la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le site web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Cela inclut un guide de recommandations et une liste de contrôle de sécurité. Ce site contient également les informations et les téléchargements les plus récents sur les Service Packs.  
   
@@ -53,8 +59,8 @@ ms.lasthandoff: 11/09/2017
 |---------------------------|---------|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
-|Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l'accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuration de la prise en charge de la Protection étendue de l'authentification à l'aide de la liaison de canal et liaison de service|[Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
  La réduction de la surface d'exposition est une mesure de sécurité qui implique l'arrêt ou la désactivation de composants inutilisés. La réduction de la surface d'exposition permet de renforcer la sécurité en réduisant les risques d'attaque à l'encontre d'un système. L'élément principal à prendre en compte pour limiter la surface d'exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implique l'exécution des services requis dotés des privilèges minimaux en attribuant uniquement les droits appropriés aux services et aux utilisateurs. Le tableau ci-dessous contient des informations supplémentaires sur l'accès aux services et au système.  
@@ -126,12 +132,12 @@ GO
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Connexion à, configuration et contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Utiliser SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
-|Connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécution de requêtes à partir de l'invite de commandes|[Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)|  
+|Connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécution de requêtes à partir de l'invite de commandes|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Configuration et contrôle réseau pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Activation et désactivation de fonctionnalités à l'aide de la gestion basée sur une stratégie|[Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Manipulation des clés symétriques d'un serveur de rapports|[Utilitaire rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
   
-### <a name="sql-server-security-catalog-views-and-functions"></a>Affichages catalogue et fonctions de sécurité SQL Server  
+### <a name="sql-server-security-catalog-views-and-functions"></a>Affichages catalogue et fonctions de sécurité SQL Server  
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] présente des informations de sécurité dans plusieurs affichages et fonctions optimisés pour des raisons de performance et d'utilisation. Le tableau ci-dessous contient des informations sur les vues et les fonctions de sécurité.  
   
 |Pour obtenir des informations sur|Consultez|  
@@ -140,13 +146,12 @@ GO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fonctions de sécurité qui retournent des informations sur l’utilisateur actuel, les autorisations et les schémas.|[Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vues de gestion dynamique de la sécurité.|[Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Bonnes pratiques de sécurité de SQL Server 2012 - Tâches opérationnelles et administratives](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [Blog de sécurité SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Livres blancs sur les bonnes pratiques de sécurité et la sécurité des étiquettes](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
 [Protection de votre propriété intellectuelle SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

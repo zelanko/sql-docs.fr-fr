@@ -5,23 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab9a4a049b49b3b5e0e7f9692fb8df2f7be5a824
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0768294a9e8d555e8405e642c7cda3ecc639c5b2
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="security-master-data-services"></a>Sécurité (Master Data Services)
   Utilisez la sécurité dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]pour vous assurer que les utilisateurs ont accès aux données de référence spécifiques nécessaires pour réaliser leur travail, et les empêcher d'accéder aux données qui ne doivent pas leur être accessibles.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
  La seule mise en garde est que toute la sécurité affectée dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ne s'applique pas à Excel tant qu'un intervalle de 20 minutes ne s'est pas écoulé. L'intervalle est défini par le paramètre *MdsMaximumUserInformationCacheInterval* du fichier web.config. Pour modifier l'intervalle, vous pouvez modifier le paramètre et redémarrer IIS.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 |Accorder une autorisation d'accès aux valeurs d'attribut en accordant une autorisation d'accès aux objets de modèle.|[Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Accorder une autorisation d'accès aux valeurs de membre en accordant une autorisation d'accès aux nœuds de la hiérarchie.|[Affecter des autorisations de membre de hiérarchie &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Utilisateurs et groupes &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
  [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   

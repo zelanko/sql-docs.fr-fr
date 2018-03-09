@@ -1,5 +1,5 @@
 ---
-title: SQLSetDescRec | Documents Microsoft
+title: SQLSetDescRec | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQLSetDescRec function
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03db037c6048261681a1f2857be910ebf800c5ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26821deb5f1d2404d1ea41ede439cfde403c265b
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |Paramètre|Attribut associé pour les types de paramètre non table, y compris les colonnes de paramètre table|Attribut associé pour les paramètres table|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*Sous-type*|Ignoré|Pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL, affectez la valeur SQL_DESC_DATETIME_INTERVAL_CODE.|  
+|*SubType*|Ignoré|Pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL, affectez la valeur SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Longueur*|SQL_DESC_OCTET_LENGTH|Longueur du nom du type de paramètre table. Cela peut être SQL_NTS si le nom de type se termine par une valeur NULL ou zéro si le nom de type de paramètre table n'est pas requis.|  
 |*Précision*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Échelle*|SQL_DESC_SCALE|Inutilisé. Ce paramètre doit être nul.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Prise en charge de SQLSetDescRec pour les fonctionnalités Date et Heure améliorées  
  Les valeurs autorisées pour les types date/heure sont les suivantes :  
   
-||*Type*|*Sous-type*|*Longueur*|*Précision*|*Échelle*|  
+||*Type*|*SubType*|*Longueur*|*Précision*|*Échelle*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -67,6 +67,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

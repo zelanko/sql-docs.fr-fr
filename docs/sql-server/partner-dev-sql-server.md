@@ -7,34 +7,38 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: 
+ms.component: sql-non-specified
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 17/09/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: e07cf9de9a3526d018e3ce552bf40e21971bdd72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-development-partners"></a>Partenaires pour le développement avec SQL Server
-Pour la prise en charge du développement de solutions de base de données SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de développement pour Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour la prise en charge du développement de solutions de base de données SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de développement pour Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Nos partenaires pour le développement
 | Partenaire |  Description | Liens |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL est un environnement de développement intégré SQL intelligent, permettant aux développeurs et aux administrateurs de base de données de créer du code SQL à hautes performances sur toutes les plateformes de base de données principales incluant SQL Server, à partir d’une même interface.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] |
-
+|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. donne à la communauté des développeurs une flexibilité dans le choix des langages de programmation, des frameworks et des services, ainsi que dans l’utilisation de l’ensemble d’outils approprié. En utilisant le kit de ressources de Click2Cloud, les développeurs peuvent créer des conteneurs « SQL sur Linux » et les attacher à une application, tout en mettant en œuvre une architecture multilocataire sécurisée. Les conteneurs peuvent être déployés indépendamment sur n’importe quelle plateforme de conteneurs cloud.|[Place de marché][click2cloud_marketplace]<br>[Site web][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vidéo][click2cloud_youtube] |
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur quelques autres de nos partenaires, consultez [Partenaires pour la haute disponibilité et la récupération d’urgence][hadr_partners], [partenaires pour la gestion][management_partners] et [partenaires pour la surveillance][monitor_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
-
+[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -44,22 +48,25 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [Pa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-
+[click2cloud_website]:http://www.click2cloud.net
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
+[click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->
 <!--[idera_press]:-->
 
 <!--YouTube links-->
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/rapid-sql-overview
+[click2cloud_youtube]:https://www.youtube.com/channel/UCjVgly_5QMuNZQh2I2FkHQQ
 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
+[click2cloud_twitter]:https://twitter.com/click2cloudinc 
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/rapid-sql-ide/systemrequirements

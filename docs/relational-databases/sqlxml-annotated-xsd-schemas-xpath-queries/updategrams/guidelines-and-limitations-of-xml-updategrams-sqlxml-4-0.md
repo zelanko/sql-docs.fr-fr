@@ -8,24 +8,27 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: updategrams [SQLXML], about updategrams
+helpviewer_keywords:
+- updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cc5c47ae14b73ea1c69107aa0f7baf5c2dd436d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a8396c837707ad9560aebb2e86617df8bfb2b69
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Règles et limitations des codes de mise à jour XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]N’oubliez pas les éléments suivants lors de l’utilisation de codes XML :  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Tenez compte des éléments suivants lorsque vous utilisez des codes de mise à jour (updategrams) XML :  
   
 -   Si vous utilisez une mise à jour pour une opération d’insertion avec uniquement une seule paire de  **\<avant >** et  **\<après >** blocs, le  **\<avant >** bloc peut être omis. À l’inverse, en cas d’une opération de suppression, le  **\<après >** bloc peut être omis.  
   

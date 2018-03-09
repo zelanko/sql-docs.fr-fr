@@ -3,8 +3,9 @@ title: "Append (méthode) (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _DynaCollection::Append
-helpviewer_keywords: Append method [ADO]
+f1_keywords:
+- _DynaCollection::Append
+helpviewer_keywords:
+- Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-ado"></a>Append (méthode) (ADO)
 Ajoute un objet à une collection. Si la collection est [champs](../../../ado/reference/ado-api/fields-collection-ado.md), un nouveau [champ](../../../ado/reference/ado-api/field-object.md) objet peut être créé avant d’être ajouté à la collection.  
@@ -41,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collection*  
  Un objet de collection.  
   
- *champs*  
+ *fields*  
  A **champs** collection.  
   
  *objet*  

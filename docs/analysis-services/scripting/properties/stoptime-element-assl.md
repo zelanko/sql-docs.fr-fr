@@ -2,15 +2,13 @@
 title: "Élément StopTime (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StopTime Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62690b30361e5f52cdc56226e31c209d60e75f1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5fedfcb3eb2d75419927d8d3c2b0686e80954992
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stoptime-element-assl"></a>Élément StopTime (ASSL)
-  Spécifie la date et l’heure à laquelle un [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) élément doit s’arrêter.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spécifie la date et l’heure à laquelle un [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) élément doit s’arrêter.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,15 +48,15 @@ ms.lasthandoff: 11/17/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|DateTime|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[Trace](../../../analysis-services/scripting/objects/trace-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
  L’élément qui correspond au parent de **StopTime** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Trace>.  
   

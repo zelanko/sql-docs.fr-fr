@@ -1,5 +1,5 @@
 ---
-title: UPPER (Expression SSIS) | Documents Microsoft
+title: UPPER (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1764b39b0242ce7e23d56c9c74f7b953f45009b2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5bd182b9ba88bd36cf24b7d0acbd7deb9bfd5c59
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upper-ssis-expression"></a>UPPER (expression SSIS)
   Renvoie une chaîne de caractères après avoir converti les caractères minuscules en caractères majuscules.  
@@ -47,7 +46,7 @@ UPPER(character_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction UPPER n'est opérationnelle qu'avec le type de données DT_WSTR. Un argument *expression_caractère* qui est un littéral de chaîne ou une colonne de données avec le type de données DT_STR est implicitement converti dans le type de données DT_WSTR avant que UPPER effectue son opération. Les autres types de données doivent être explicitement convertis vers le type de données DT_WSTR. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md) et [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  La fonction UPPER renvoie un résultat NULL si l'argument est NULL.  
@@ -71,9 +70,8 @@ UPPER(SUBSTRING(FirstName, 1, 1))
 UPPER(@PostalCode)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [INFÉRIEUR &#40; Expression SSIS &#41;](../../integration-services/expressions/lower-ssis-expression.md)   
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [LOWER &#40;expression SSIS&#41;](../../integration-services/expressions/lower-ssis-expression.md)   
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

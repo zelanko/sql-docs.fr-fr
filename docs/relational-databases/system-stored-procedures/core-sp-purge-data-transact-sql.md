@@ -1,5 +1,5 @@
 ---
-title: Core.sp_purge_data (Transact-SQL) | Documents Microsoft
+title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_purge_data
 - management data warehouse, data collector stored procedures
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03e5ef5984431f3fe2867e2dc303ca2ba710435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +61,10 @@ core.sp_purge_data
   
  *nom_instance* doit être le nom d’instance complet, constitué du nom de l’ordinateur et le nom d’instance sous la forme *Nom_Ordinateur*\\*instancename*. Lorsque la valeur est NULL, l'instance par défaut sur le serveur local est utilisée.  
   
- [@collection_set_uid =] '*collection_set_uid*'  
+ [@collection_set_uid = ] '*collection_set_uid*'  
  GUID du jeu d'éléments de collecte. *collection_set_uid* est **uniqueidentifier**, avec NULL comme valeur par défaut. Lorsque la valeur est NULL, les lignes éligibles de tous les jeux d'éléments de collecte sont supprimées. Pour obtenir cette valeur, interrogez l'affichage catalogue syscollector_collection_sets.  
   
- [@duration =] *durée*  
+ [@duration = ] *duration*  
  Nombre maximal de minutes pendant lesquelles l'opération de vidage doit s'exécuter. *durée* est **smallint**, avec NULL comme valeur par défaut. Si elle est spécifiée, la valeur doit être zéro ou un entier positif. Lorsque NULL, l'opération s'exécute jusqu'à ce que toutes les lignes éligibles soient supprimées ou que l'opération soit arrêtée manuellement.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -75,7 +77,7 @@ core.sp_purge_data
   
  La procédure doit être exécutée dans le contexte de la base de données d'entrepôt de données de gestion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  

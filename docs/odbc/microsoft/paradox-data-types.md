@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e63f642f7a1921f9d65cd6f8fe665b9e83c9404c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="paradox-data-types"></a>Types de données Paradox
 Le pilote ODBC Paradox mappe les types de données de Corel aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et montre le code SQL ODBC elles sont mappées à des types de données.  
@@ -59,7 +59,7 @@ Le pilote ODBC Paradox mappe les types de données de Corel aux types de donnée
   
  Le tableau suivant présente des limitations sur les types de données de Corel.  
   
-|Type de données| Description|  
+|Type de données|Description|  
 |---------------|-----------------|  
 |ALPHANUMÉRIQUE|Création d’une colonne alphanumérique de zéro ou de longueur non spécifiée retourne en fait une colonne de 255 octets.|  
 |BYTES|Si vous insérez la valeur NULL dans une colonne binaire avec le pilote Paradox5, il est modifié en 0.|  

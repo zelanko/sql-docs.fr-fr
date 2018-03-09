@@ -2,9 +2,12 @@
 title: SQL Server, objet Transactions | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
-  L'objet **Transactions** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour analyser le nombre de transactions actives dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ainsi que les effets de ces transactions sur les ressources, tels que la banque de versions de lignes avec isolement d'instantané dans **tempdb**. Les transactions sont des unités logiques de travail, c'est-à-dire un ensemble d'opérations qui doivent toutes aboutir ou être toutes supprimées d'une base de données afin de maintenir l'intégrité logique des données. Toutes les modifications de données dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont effectuées dans des transactions.  
+# <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet **Transactions** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour analyser le nombre de transactions actives dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], ainsi que les effets de ces transactions sur les ressources, telles que la banque de versions de lignes avec isolement de capture instantanée dans **tempdb**. Les transactions sont des unités logiques de travail, c'est-à-dire un ensemble d'opérations qui doivent toutes aboutir ou être toutes supprimées d'une base de données afin de maintenir l'intégrité logique des données. Toutes les modifications de données dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont effectuées dans des transactions.  
   
  Lorsqu'une base de données est configurée pour autoriser un niveau d'isolement d'instantané, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit gérer un enregistrement des modifications apportées à chaque ligne de la base de données. Chaque fois qu'une ligne est modifiée, une copie de la ligne telle qu'elle existait avant la modification est enregistrée dans une banque de versions de lignes dans **tempdb**. De nombreux compteurs de l'objet **Transaction** peuvent être utilisés pour analyser la taille et le taux de croissance de la banque de versions de lignes dans **tempdb**.  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 |**Création d'unité dans le magasin de versions**|Nombre d'unités d'allocation ayant été créées dans le magasin d'isolement d'instantané depuis le démarrage de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
 |**Troncation d'unité dans le magasin de versions**|Nombre d'unités d'allocation ayant été supprimées du magasin d'isolement d'instantané depuis le démarrage de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,32 +1,33 @@
 ---
-title: SQLDriverConnect (pilote Excel) | Documents Microsoft
+title: SQLDriverConnect (Excel Driver) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Excel driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Excel Driver
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3db750232c45ce02b1dfe32e103d35ab20b366c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 659789e73fa4ad85b0b79b599c6f253afdd566ec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (pilote Excel)
+# <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Excel Driver)
 > [!NOTE]  
 >  Cette rubrique fournit des informations spécifiques au pilote Excel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/20/2017
   
 |Pilote|Mots clés requis|Exemples|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3.0 ou 4.0|Pilote, DriverID|Driver = {pilote Microsoft Excel (*.xls)} ; DBQ = c:\temp ; DriverID = 278|  
-|Microsoft Excel 5.0/7.0|Pilote, DriverID, DBQ|Driver = {pilote Microsoft Excel (*.xls)} ; DBQ=c:\Temp\sample.xls ; DriverID = 22|  
-|Microsoft Excel 97 et versions ultérieur|Pilote, DriverID, DBQ|Driver = {pilote Microsoft Excel (*.xls)} ; DBQ=c:\Temp\sample.xls ; DriverID = 790|
+|Microsoft Excel 3.0 ou 4.0|Driver, DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
+|Microsoft Excel 5.0/7.0|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
+|Microsoft Excel 97 et versions ultérieur|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|

@@ -2,50 +2,58 @@
 title: "Configurer et gérer des filtres pour la recherche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 810fabaeed3a7144b969ccae9e2b7745079f996f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 452745e1557a388ca2abf1fcab6b7995bcc46c44
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurer et gérer des filtres pour la recherche
-  L’indexation de documents dans une colonne de type de données **varbinary**, **varbinary(max)**, **image**ou **xml** nécessite un traitement supplémentaire. Ce traitement doit être effectué par un filtre. Le filtre extrait les informations textuelles du document (en supprimant la mise en forme). Le filtre envoie ensuite le texte au composant d'analyseur lexical pour la langue associée à la colonne de table.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+L’indexation de documents dans une colonne de type de données **varbinary**, **varbinary(max)**, **image** ou **xml** nécessite un traitement supplémentaire. Ce traitement doit être effectué par un filtre. Le filtre extrait les informations textuelles du document (en supprimant la mise en forme). Le filtre envoie ensuite le texte au composant d'analyseur lexical pour la langue associée à la colonne de table.  
+ 
+## <a name="filters-and-document-types"></a>Filtres et types de documents
+Un filtre donné est spécifique à un type de document donné (.doc, .pdf, .xls, .xml, etc.). Ces filtres implémentent l'interface IFilter. Pour plus d’informations sur ces types de document, interrogez l’affichage catalogue [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
- Un filtre donné est spécifique à un type de document donné (.doc, .pdf, .xls, .xml, etc.). Ces filtres implémentent l'interface IFilter. Pour plus d’informations sur ces types de document, interrogez l’affichage catalogue [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
-  
- Des documents binaires peuvent être stockés dans une colonne **varbinary(max)** ou **image** . Pour chaque document, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit le filtre correct en fonction de l'extension de fichier. Dans la mesure où cette dernière n’est pas visible lorsque le fichier est stocké dans une colonne **varbinary(max)** ou **image** , l’extension de fichier (.doc, .xls, .pdf, etc.) doit figurer dans une autre colonne de la table, que l’on nomme colonne de type. Cette colonne de type peut être composée de n'importe quel type de données de caractères ; par ailleurs, elle contient l'extension de fichier du document, par exemple « .doc » pour un document [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Dans la table **Document** contenue dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la colonne **Document** est de type **varbinary(max)**alors que la colonne de type **FileExtension**est de type **nvarchar(8)**.  
-  
-> [!NOTE]  
->  Un filtre peut être en mesure de gérer des objets incorporés dans l'objet parent, selon son implémentation. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne configure pas de filtres pour suivre des liens vers d'autres objets.  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe ses propres filtres XML et HTML. De plus, tous les filtres des formats propriétaires [!INCLUDE[msCoName](../../includes/msconame-md.md)] (.doc, .xdoc, .ppt, etc.) qui sont déjà installés sur le système d’exploitation sont également chargés par  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour identifier les filtres actuellement chargés sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , comme suit :  
-  
-```  
-EXEC sp_help_fulltext_system_components 'filter';   
-```  
-  
- Toutefois, avant de pouvoir utiliser des filtres pour des formats non [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vous devez les charger manuellement dans l’instance de serveur. Pour plus d’informations sur l’installation de filtres supplémentaires, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
-  
- **Pour voir la colonne de type dans un index de recherche en texte intégral existant**  
+Des documents binaires peuvent être stockés dans une colonne **varbinary(max)** ou **image** . Pour chaque document, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit le filtre correct en fonction de l'extension de fichier. Dans la mesure où cette dernière n’est pas visible lorsque le fichier est stocké dans une colonne **varbinary(max)** ou **image** , l’extension de fichier (.doc, .xls, .pdf, etc.) doit figurer dans une autre colonne de la table, que l’on nomme colonne de type. Cette colonne de type peut être composée de n'importe quel type de données de caractères ; par ailleurs, elle contient l'extension de fichier du document, par exemple « .doc » pour un document [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Dans la table **Document** contenue dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la colonne **Document** est de type **varbinary(max)**alors que la colonne de type **FileExtension**est de type **nvarchar(8)**.  
+
+**Pour voir la colonne de type dans un index de recherche en texte intégral existant**  
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+> [!NOTE]  
+>  Un filtre peut être en mesure de gérer des objets incorporés dans l'objet parent, selon son implémentation. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne configure pas de filtres pour suivre des liens vers d'autres objets.  
+
+## <a name="installed-filters"></a>Filtres installés 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe ses propres filtres XML et HTML. De plus, tous les filtres des formats propriétaires [!INCLUDE[msCoName](../../includes/msconame-md.md)] (.doc, .xdoc, .ppt, etc.) qui sont déjà installés sur le système d’exploitation sont également chargés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour identifier les filtres actuellement chargés sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , comme suit :  
+  
+```sql
+EXEC sp_help_fulltext_system_components 'filter';   
+```  
+## <a name="non-microsoft-filters"></a>Filtres non-Microsoft
+Toutefois, avant de pouvoir utiliser des filtres pour des formats non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] , vous devez les charger manuellement dans l’instance de serveur. Pour plus d’informations sur l’installation de filtres supplémentaires, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
+  
+  
+## <a name="see-also"></a> Voir aussi  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   

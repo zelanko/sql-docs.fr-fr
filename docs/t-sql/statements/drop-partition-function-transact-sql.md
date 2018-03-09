@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP PARTITION FUNCTION
 - DROP_PARTITION_FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting partition functions
 - DROP PARTITION FUNCTION statement
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - dropping partition functions
 - removing partition functions
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bd6d0d21ce398784c2baf047bef81282f59465e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 127a240e1619200f758e528acc363a733d33da53
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Supprime une fonction de partition de la base de données active. Les fonctions de partition sont créées à l'aide de CREATE PARTITION FUNCTION et modifiées à l'aide de ALTER PARTITION FUNCTION.  
   

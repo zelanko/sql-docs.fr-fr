@@ -2,10 +2,14 @@
 title: "Stratégies de sauvegarde et de restauration de la réplication de fusion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,19 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
-  Pour la réplication de fusion, effectuez régulièrement des sauvegardes des bases de données suivantes :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour la réplication de fusion, effectuez régulièrement des sauvegardes des bases de données suivantes :  
   
 -   La base de données de publication au niveau du serveur de publication  
   
@@ -50,7 +54,7 @@ ms.lasthandoff: 11/09/2017
  L'utilisation de l'une de ces deux méthodes garantit que, après une restauration, le serveur de publication et tous les Abonnés sont synchronisés.  
   
 > [!NOTE]  
->  Si des tables contiennent des colonnes d'identité, vous devez vérifier que les plages d'identité correctes sont attribuées après une restauration. Pour plus d’informations, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+>  Si des tables contiennent des colonnes d'identité, vous devez vérifier que les plages d'identité correctes sont attribuées après une restauration. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
 ### <a name="synchronizing-the-publication-database"></a>Synchronisation de la base de données de publication  
  La synchronisation d'une base de données de publication avec une base de données d'abonnement vous permet de charger à partir d'une ou plusieurs bases de données d'abonnement les modifications précédemment effectuées dans la base de données de publication, mais qui ne sont pas représentées dans la sauvegarde restaurée. Les données qui peuvent être chargées dépendent de la façon dont une publication est filtrée :  
@@ -94,7 +98,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Sauvegarde et restauration d'une base de données de réédition  
  Une base de données de réédition désigne une base de données qui s'abonne à des données auprès d'un éditeur et qui, à son tour, diffuse ces données à d'autres bases de données d'abonnement. Lorsque vous restaurez une base de données de réédition, suivez les recommandations données dans les sections « Sauvegarde et restauration d'une base de données de publication » et « Sauvegarde et restauration d'une base de données d'abonnement » de cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

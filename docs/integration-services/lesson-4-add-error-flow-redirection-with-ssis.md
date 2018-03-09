@@ -1,11 +1,11 @@
 ---
-title: "Leçon 4 : Ajouter la Redirection de flux d’erreur SSIS | Documents Microsoft"
+title: "Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 48ed42543041f88519f106d8d9e3dcf50392799b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS
 Pour traiter les erreurs qui risquent de se produire dans le processus de transformation, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de décider par composant et par colonne comment traiter les données qui ne peuvent pas être transformées. Vous pouvez choisir d'ignorer une erreur dans certaines colonnes, de rediriger dans sa totalité la ligne qui a échoué ou simplement de faire échouer le composant. Par défaut, tous les composants de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont configurés pour échouer lorsque des erreurs se produisent. Le fait de faire échouer un composant entraîne l'échec du package et l'arrêt de tous les traitements ultérieurs.  
@@ -44,19 +43,18 @@ Avant d'écrire les données d'erreur dans le fichier, vous devez inclure un com
 ## <a name="tasks-in-lesson"></a>Contenu de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Copie du Package de la leçon 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Étape 1 : Copie du package de la leçon 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Étape 2 : Création d’un fichier endommagé](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [Étape 2 : Création d'un fichier corrompu](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Étape 3 : Ajout de Redirection de flux d’erreur](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [Étape 3 : Ajout de redirection de flux d'erreurs](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Étape 4 : Ajout d’une Destination de fichier plat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Étape 4 : Ajout d'une destination de fichier plat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Étape 5 : Test de la leçon 4 du Package du didacticiel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Étape 5 : Test de la leçon 4 du Package du didacticiel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
-[Étape 1 : Copie du Package de la leçon 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[Étape 1 : Copie du package de la leçon 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   
-

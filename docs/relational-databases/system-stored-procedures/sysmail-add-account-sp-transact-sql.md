@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_account_sp
 - sysmail_add_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e24d90b20c91ab6dfb510faad46ceb2b5f8cc19b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 837e8e5035e69b3e8a35d14acce71d02d549d6a7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,19 +67,19 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@display_name**  =] **'***nom_complet***'**  
  Nom complet à utiliser sur des messages électroniques à partir de ce compte. *nom_complet* est **nvarchar (128)**, avec NULL comme valeur par défaut. Par exemple, un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut afficher le nom **SQL Server Agent Automated Mailer** sur les messages électroniques.  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  Adresse à laquelle les réponses aux messages de ce compte sont envoyées. *replyto_address* est **nvarchar (128)**, avec NULL comme valeur par défaut. Par exemple, les réponses à un compte pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut accéder à l’administrateur de base de données,  **danw@Adventure-Works.com** .  
   
- [  **@description**  =] **'***description***'**  
+ [ **@description** = ] **'***description***'**  
  Est une description pour le compte. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
  [  **@mailserver_name**  =] **'***nom_serveur***'**  
  Nom ou adresse IP du serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre la *nom_serveur* en une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
   
- [  **@mailserver_type**  =] '*server_type*'  
+ [ **@mailserver_type** = ] '*server_type*'  
  Type de serveur de messagerie. *server_type* est **sysname**, avec une valeur par défaut **'SMTP'**...  
   
- [  **@port**  =] *numéro_port*  
+ [ **@port** = ] *port_number*  
  Numéro de port du serveur de messagerie. *numéro_port* est **int**, avec la valeur par défaut est 25.  
   
  [  **@username**  =] **'***nom d’utilisateur***'**  
@@ -88,7 +91,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@use_default_credentials**  =] use_default_credentials  
  Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de type bit, avec 0 comme valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre est 0, la messagerie de base de données envoie le  **@username**  et  **@password**  dans le cas contraire, les paramètres, le cas échéant, envoie des messages sans  **@username**  et  **@password**  paramètres.  
   
- [  **@enable_ssl**  =] enable_ssl  
+ [ **@enable_ssl** = ] enable_ssl  
  Spécifie si la messagerie de base de données chiffre les communications à l’aide du protocole SSL (Secure Sockets Layer). **Enable_ssl** est de type bit, avec 0 comme valeur par défaut.  
   
  [  **@account_id**  =] *account_id* sortie  
@@ -106,7 +109,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
  La procédure stockée **sysmail_add_account_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

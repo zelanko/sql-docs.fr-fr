@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4e87d6484f1a04e61907939bd2fa69d93dff426
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79bb5cfbe014006c6400ec54d56b69ce435910fb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Extraction, exploration, sous-rapports et régions de données imbriquées
   Vous pouvez organiser les données de plusieurs façons pour montrer une relation du général au particulier.  Vous pouvez placer toutes les données dans le rapport et les masquer jusqu'à ce qu'un utilisateur clique pour afficher des détails ; il s'agit d'une action d' *exploration* . Vous pouvez afficher les données dans une région de données, telle qu'un tableau ou un graphique, *imbriquée* à l'intérieur d'une autre région de données, telle qu'un tableau ou une matrice. Vous pouvez afficher les données dans un *sous-rapport* intégralement contenu dans un rapport principal. Sinon, vous pouvez placer les données de détail dans des rapports d' *extraction* , des rapports distincts qui s'affichent lorsqu'un utilisateur clique sur un lien.  
@@ -46,13 +44,13 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="SummaryCharacteristics"></a> Résumé des caractéristiques  
  Ce tableau résume les différentes caractéristiques. Les détails sont décrits dans des sections distinctes plus loin dans cette rubrique. L'exploration n'est pas incluse dans ces comparaisons, car vous pouvez appliquer son action d'affichage et de masquage à n'importe quel élément de rapport.  
   
-|Caractéristique|sous-rapport|extraction|imbriquée|  
+|Caractéristique|Sous-rapport|extraction|imbriquée|  
 |-----------|---------------|------------------|------------|  
 |Utilisation du dataset du rapport principal|Identique ou différent|Identique ou différent|Identique|  
 |Récupération des données|Données récupérées en même temps que le rapport principal|Données récupérées à chaque rapport d'extraction|Données toutes récupérées en même temps que le rapport principal|  
 |Traitement et rendu|Avec le rapport principal|Après avoir cliqué sur le lien|Avec le rapport principal.|  
 |Performances|S'exécute plus lentement (mais récupère toutes les données avec le rapport principal)|S'exécute plus vite (mais ne récupère pas toutes les données avec le rapport principal)|S'exécute plus vite (et récupère toutes les données avec le rapport principal)|  
-|Utilisation de paramètres|Oui|Oui|Non|  
+|Utilisation de paramètres|Oui|Oui|non|  
 |Réutilisation possible|En tant que rapport, sous-rapport ou rapport d'extraction dans d'autres rapports|En tant que rapport, sous-rapport ou rapport d'extraction dans d'autres rapports|Réutilisation impossible.|  
 |Emplacement|Hors du rapport principal, sur un serveur de rapports identique ou différent|Hors du rapport principal, sur un serveur de rapports identique|Dans le rapport principal|  
 |Affichage|Dans le rapport principal|Dans un autre rapport|Dans le rapport principal|  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/05/2017
  [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explique comment faire référence aux éléments externes au fichier de définition de rapport.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

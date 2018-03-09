@@ -21,15 +21,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e59972bf634c4326f14081d7909b0926161d90b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
@@ -122,10 +122,10 @@ ms.lasthandoff: 11/17/2017
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Page**, pour ouvrir la boîte de dialogue **Restaurer la page** .  
   
-     **Restaurer**  
+     **Restore**  
      Cette section effectue la même fonction que **Restaurer sur** dans la page [Restaurer la base de données (page Général)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
-     **Base de données**  
+     **Sauvegarde de la base de données**  
      Spécifie la base de données à restaurer. Vous pouvez saisir le nom d'une nouvelle base de données ou en sélectionner une existante dans la liste déroulante. La liste comprend toutes les bases de données se trouvant sur le serveur, à l'exception des bases de données système **master** et **tempdb**.  
   
     > [!WARNING]  
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
     |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour les journaux des transactions).|  
     |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
     |**Server**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
-    |**Base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
+    |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Position**|La position du jeu de sauvegarde dans le volume.|  
     |**Premier NSE**|Numéro séquentiel dans le journal (LSN) correspondant à la première transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.|  
     |**Dernier NSE**|Numéro séquentiel dans le journal (LSN) correspondant à la dernière transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.|  
@@ -211,7 +211,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple restaure quatre pages endommagées du fichier `B` à l'aide de `NORECOVERY`. Ensuite, deux sauvegardes de journal sont appliquées à l'aide de `NORECOVERY`, suivies de la sauvegarde de la fin du journal, qui est restaurée à l'aide de `RECOVERY`. Cet exemple effectue une restauration en ligne. Dans l'exemple, l'ID de fichier `B` est `1`, et les ID des pages endommagées sont `57`, `202`, `916`, et `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -224,9 +224,9 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

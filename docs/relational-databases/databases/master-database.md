@@ -2,9 +2,12 @@
 title: "Base de données master | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,17 +16,17 @@ helpviewer_keywords:
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>Base de données master
-  La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](../../relational-databases/databases/resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](../../relational-databases/databases/resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
   
 ## <a name="physical-properties-of-master"></a>Propriétés physiques de la base de données master  
  Le tableau suivant énumère les valeurs de configuration initiales des données et des journaux de la base de données **master** . La taille de ces fichiers peut varier légèrement en fonction des éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,34 +43,34 @@ ms.lasthandoff: 11/09/2017
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|Non|  
+|AUTO_CLOSE|OFF|non|  
 |AUTO_CREATE_STATISTICS|ON|Oui|  
-|AUTO_SHRINK|OFF|Non|  
+|AUTO_SHRINK|OFF|non|  
 |AUTO_UPDATE_STATISTICS|ON|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|Non|  
+|CHANGE_TRACKING|OFF|non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|non<br /><br /> non<br /><br /> non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|Non|  
-|ENCRYPTION|OFF|Non|  
-|MIXED_PAGE_ALLOCATION|ON|Non|  
+|DB_CHAINING|ON|non|  
+|ENCRYPTION|OFF|non|  
+|MIXED_PAGE_ALLOCATION|ON|non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|Non|  
+|READ_COMMITTED_SNAPSHOT|OFF|non|  
 |RECOVERY|SIMPLE|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
-|Options de Service Broker|DISABLE_BROKER|Non|  
+|Options de Service Broker|DISABLE_BROKER|non|  
 |TRUSTWORTHY|OFF|Oui|  
   
  Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 -   création d'un catalogue ou d'un index de texte intégral ;  
   
--   création de déclencheurs sur les tables système de la base de données ;  
+-   création de déclencheurs sur les tables système de la base de données ;  
   
 -   Suppression de la base de données  
   
@@ -132,7 +135,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  Lorsque vous recréez la base de données **master** , vous recréez toutes les bases de données système.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Bases de données système](../../relational-databases/databases/system-databases.md)  

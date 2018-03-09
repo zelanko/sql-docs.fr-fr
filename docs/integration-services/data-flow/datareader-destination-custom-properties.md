@@ -1,5 +1,5 @@
 ---
-title: "Propriétés personnalisées de la Destination DataReader | Documents Microsoft"
+title: "Propriétés personnalisées de la destination DataReader | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44a9f26f1125f2c6b319653528aaa7eea04aa84f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e7f29a5c88b4cb4e8d090336a8d59072a25cfeb8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriétés personnalisées de la destination DataReader
   La destination DataReader comporte à la fois des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|DataReader|Chaîne|Nom de classe de la destination DataReader.|  
+|DataReader|String|Nom de classe de la destination DataReader.|  
 |FailOnTimeout|Booléen|Indique s’il faut faire échouer l’opération ou non quand un **ReadTimeout** se produit. La valeur par défaut de cette propriété est **False**.|  
 |ReadTimeout|Entier|Nombre de millisecondes devant s'écouler avant l'expiration du délai d'attente. La valeur par défaut de cette propriété est 30000 (30 secondes).|  
   
@@ -40,8 +39,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations, consultez [Destination DataReader](../../integration-services/data-flow/datareader-destination.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

@@ -3,27 +3,27 @@ title: "Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Serve
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: c8e22f070a97dcc0a0f84b55e6f35cda02806637
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document explique comment créer un cluster de groupe de disponibilité de trois nœuds pour SQL Server sur Red Hat Enterprise Linux. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). La couche de clustering basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire de haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construit sur [STIMULATEUR](http://clusterlabs.org/). 
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur la configuration du cluster, options d’agents d
 
 Les sections suivantes les différentes étapes pour configurer un cluster STIMULATEUR et ajouter un groupe de disponibilité en tant que ressource dans le cluster pour la haute disponibilité.
 
-## <a name="roadmap"></a>Feuille de route
+## <a name="roadmap"></a>Roadmap
 
 Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Définissez la propriété cluster start-échec-est-irrécupérable false
 
-`start-failure-is-fatal`Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Après que le basculement se produit, les tentatives de STIMULATEUR à partir de la disponibilité groupe ressources sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR rétrograde le réplica de base de données secondaire, et il rejoint automatiquement le groupe de disponibilité. 
+`start-failure-is-fatal` Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Après que le basculement se produit, les tentatives de STIMULATEUR à partir de la disponibilité groupe ressources sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR rétrograde le réplica de base de données secondaire, et il rejoint automatiquement le groupe de disponibilité. 
 
 Pour mettre à jour la valeur de propriété à `false` exécuter :
 
@@ -151,7 +151,7 @@ Pour plus d’informations sur les propriétés du cluster STIMULATEUR, consulte
 Pour créer la ressource de groupe de disponibilité, utilisez `pcs resource create` de commandes et définissez les propriétés de ressource. La commande suivante crée un `ocf:mssql:ag` maître/esclave pour le groupe de disponibilité avec le nom de ressource de type `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>Créer la ressource IP virtuelle
 
-Pour créer la ressource d’adresse IP virtuelle, exécutez la commande suivante sur un nœud. Utilisez une adresse IP statique disponible à partir du réseau. Remplacez l’adresse IP entre `**<10.128.16.240>**` avec une adresse IP valide.
+Pour créer la ressource d’adresse IP virtuelle, exécutez la commande suivante sur un nœud. Utilisez une adresse IP statique disponible à partir du réseau. Remplacez l’adresse IP entre `<10.128.16.240>` avec une adresse IP valide.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Aucun nom de serveur virtuel est STIMULATEUR équivalents. Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne au lieu d’une adresse IP, inscrire l’adresse de la ressource IP virtuelle et nom du serveur virtuel souhaité dans DNS. Pour les configurations de récupération d’urgence, inscrire le nom du serveur virtuel souhaitée et une adresse IP avec les serveurs DNS sur le serveur principal et le site de récupération d’urgence.

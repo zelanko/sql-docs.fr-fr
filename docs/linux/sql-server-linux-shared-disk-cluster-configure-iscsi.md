@@ -3,26 +3,26 @@ title: Configurer le stockage iSCSI basculement cluster instance - SQL Server su
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ab6e176718ef3db2babdc03990a0b7a6062062cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article explique comment configurer le stockage iSCSI pour une instance de cluster de basculement (FCI) sur Linux. 
 
@@ -57,7 +57,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions de pr
 
     - iface.net_ifacename est le nom de la carte réseau comme indiqué dans le système d’exploitation.
     - iface.hwaddress est l’adresse MAC du nom unique qui sera créé pour cette interface ci-dessous.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Observez l'exemple suivant :
@@ -210,7 +210,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions de pr
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > est le nom du groupe de volumes et \<LogicalVolumeName > est le nom du volume logique qui a été créé. L’exemple de syntaxe ci-dessous correspondant au groupe de volumes et volume logique créé ci-dessus.
+    \<VolumeGroupName > est le nom du groupe de volumes et \<LogicalVolumeName > est le nom du volume logique qui a été créé. L’exemple de syntaxe suivante correspond au groupe de volumes et des volumes logiques à partir de la commande précédente.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions de pr
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet sera doivent être spécifiés if pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

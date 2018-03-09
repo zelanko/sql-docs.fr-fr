@@ -2,9 +2,12 @@
 title: "Basculer vers une base de données secondaire de copie des journaux de transaction (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ecab7acaedde247abc727149f93942da3ea4be61
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Basculer vers une base de données secondaire de copie des journaux de transaction (SQL Server)
-  Le basculement vers une base de données secondaire de copie des journaux de transactions est utile en cas d'échec ou d'un besoin de maintenance de l'instance du serveur principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le basculement vers une base de données secondaire de copie des journaux de transactions est utile en cas d’échec ou d’un besoin de maintenance de l’instance du serveur principal.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Préparation en vue d'un basculement contrôlé  
  En règle générale, les bases de données primaire et secondaire ne sont pas synchronisées, car la base de données primaire est en permanence mise à jour après son dernier travail de sauvegarde. De même, dans certains cas, les sauvegardes récentes du journal des transactions n'ont pas été copiées dans les instances du serveur secondaire ou certaines copies des sauvegardes du journal n'ont peut-être pas encore été appliquées dans la base de données secondaire. Si possible, nous vous recommandons de commencer par synchroniser l'ensemble des bases de données secondaires avec la base de données primaire.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 4.  Une fois que les serveurs secondaires sont synchronisés, vous pouvez basculer vers celui de votre choix en récupérant sa base de données secondaire et en redirigeant des clients vers cette instance de serveur. La récupération place la base de données dans un état cohérent et permet sa mise en ligne.  
   
     > [!NOTE]  
-    >  Lorsque vous rendez une base de données secondaire disponible, vous devez vous assurer que ses métadonnées sont cohérentes avec celles de la base de données primaire d'origine. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  Lorsque vous rendez une base de données secondaire disponible, vous devez vous assurer que ses métadonnées sont cohérentes avec celles de la base de données primaire d'origine. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  Une fois que vous avez récupéré une base de données secondaire, vous pouvez la reconfigurer en tant que base de données primaire pour d'autres bases de données secondaires.  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)   
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91f84144d571982819e063f4c1d61e9bada238dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79cbe8677ba4401fb779dc9765d639b1d86a0f5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-functions"></a>Fonctions système
 Le tableau suivant répertorie les fonctions système qui sont incluses dans l’ensemble de la fonction scalaire ODBC. En appelant **SQLGetInfo** avec un *type d’information* de SQL_SYSTEM_FUNCTIONS, une application peut déterminer les fonctions système sont prises en charge par un pilote.  
@@ -35,7 +35,7 @@ Le tableau suivant répertorie les fonctions système qui sont incluses dans l�
   
  Les valeurs retournées sont représentées en tant que types de données ODBC.  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |**(DE BASE DE DONNÉES)** (ODBC VERSION 1.0)|Retourne le nom de la base de données correspondant au descripteur de connexion. (Le nom de la base de données est également disponible en appelant **SQLGetConnectOption** avec l’option de connexion SQL_CURRENT_QUALIFIER.)|  
 |**IFNULL (** *exp*,*valeur***)** (ODBC version 1.0)|Si *exp* a la valeur null, *valeur* est retourné. Si *exp* n’est pas null, *exp* est retourné. L’ou les types de données possibles *valeur* doit être compatible avec le type de données *exp*.|  

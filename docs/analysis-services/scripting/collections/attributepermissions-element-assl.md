@@ -2,15 +2,13 @@
 title: "Élément AttributePermissions (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AttributePermissions Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad1249da34b33214fd6c5e0fee86c79af28a89d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e64e934d1664ccbdc08755db1eb4721d863c8e0c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributepermissions-element-assl"></a>Élément AttributePermissions (ASSL)
-  Contient la collection d’autorisations d’attribut pour un individu [rôle](../../../analysis-services/scripting/objects/role-element-assl.md) élément sur une dimension spécifique d’un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection d’autorisations d’attribut pour un individu [rôle](../../../analysis-services/scripting/objects/role-element-assl.md) élément sur une dimension spécifique d’un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,9 +47,9 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |Éléments parents|[CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md), [DimensionPermission](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|  
 |Éléments enfants|[AttributePermission](../../../analysis-services/scripting/objects/attributepermission-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour **DimensionPermission**, cette collection peut contenir un seul élément **AttributePermission** par attribut.  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  

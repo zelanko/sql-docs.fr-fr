@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73190521b714859b76ffbf11ec404e4ff791f1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Les datasets partagés sont publiés sur un serveur de rapports et peuvent être utilisés par plusieurs rapports. Vous pouvez créer des datasets à partager avec d’autres utilisateurs. Dans la fenêtre Dataset partagé, vous pouvez sélectionner une source de données partagée, spécifier des propriétés pour le dataset partagé et créer une requête dans le concepteur de requêtes.  
@@ -99,7 +97,7 @@ ms.lasthandoff: 12/05/2017
  Pour enregistrer la requête que vous avez générée, sur le bouton **Générateur de rapports** , cliquez sur **Enregistrer** ou **Enregistrer sous**. Naviguez jusqu'au dossier approprié sur le serveur de rapports, puis enregistrez la définition de dataset partagé. Le dataset partagé n'est pas accessible aux autres utilisateurs tant que vous ne l'avez pas enregistré sur le serveur de rapports.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

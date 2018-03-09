@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - sys.fulltext_index_fragments_TSQL
 - fulltext_index_fragments_TSQL
 - sys.fulltext_index_fragments
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text indexes [SQL Server], fragments
 - full-text indexes [SQL Server], metadata
 - troubleshooting [SQL Server], full-text search
 - sys.fulltext_index_fragments catalog view
 ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be6154ed7b3ffed6231972aeea0aa521536ce3a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d131a8fc53f13c412d058d2971f9156e32c669ec
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |table_id|**int**|ID d'objet de la table qui contient le fragment de l'index de recherche en texte intégral.|  
 |fragment_object_id|**int**|ID d'objet de la table interne associée au fragment.|  
 |fragment_id|**int**|ID logique du fragment d'index de recherche en texte intégral. Celui-ci est unique dans l'ensemble des fragments de cette table.|  
-|timestamp|**timestamp**|Horodateur associé à la création de fragment. Les horodateurs de fragments plus récents sont plus grands que les horodateurs de fragments plus anciens.|  
+|TIMESTAMP|**timestamp**|Horodateur associé à la création de fragment. Les horodateurs de fragments plus récents sont plus grands que les horodateurs de fragments plus anciens.|  
 |data_size|**int**|Taille logique du fragment en octets.|  
 |row_count|**int**|Nombre de lignes individuelles dans le fragment.|  
 |status|**int**|Statut du fragment, une des valeurs suivantes :<br /><br /> 0 = Récemment créé mais pas encore utilisé<br /><br /> 1 = Utilisé pour l'insertion pendant l'alimentation ou la fusion d'index de recherche en texte intégral<br /><br /> 4 = Fermé. Prêt à être interrogé<br /><br /> 6 = Utilisé pour l'entrée de fusion et prêt à être interrogé<br /><br /> 8 = Marqué pour la suppression. Ne sera pas utilisé pour interroger et fusionner la source.<br /><br /> État 4 ou 6 signifie que le fragment fait partie de l’index de recherche en texte intégral logique peut être interrogé ; Autrement dit, il est un *requêtable* fragment.|  
@@ -67,7 +69,7 @@ ALTER FULLTEXT CATALOG ftCatalog REORGANIZE;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

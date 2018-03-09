@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_index_operational_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_index_operational_stats_TSQL
 - sys.dm_db_index_operational_stats
 - dm_db_index_operational_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_index_operational_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3856ea2062d6575f34382c2489d3a80ece259203
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -62,14 +65,14 @@ sys.dm_db_index_operational_stats (
     
  La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifié.    
     
- *object_id* | NULL | 0 | PAR DÉFAUT    
+ *object_id* | NULL | 0 | DEFAULT    
  Identificateur d'objet de la table ou de la vue sur laquelle l'index est défini. *l’object_id* est **int**.    
     
  Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
     
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour toutes les tables et les vues de la base de données spécifiée. Si vous spécifiez NULL pour *object_id*, vous devez également spécifier NULL pour *index_id* et *partition_number*.    
     
- *index_id* | 0 | NULL | -1 | PAR DÉFAUT    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  Identificateur de l'index. *index_id* est **int**. Les entrées autorisées sont l’ID d’un index, 0 si *object_id* est un segment, NULL, -1 ou DEFAULT. La valeur par défaut est -1. Les valeurs NULL, -1 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
     
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier NULL pour *partition_number*.    
@@ -88,7 +91,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|ID de la base de données.|    
 |**object_id**|**int**|ID de la table ou de la vue.|    
 |**index_id**|**int**|ID de l'index ou du segment de mémoire.<br /><br /> 0 = Segment de mémoire|    
-|**hobt_id**|**bigint**|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID du segment de données ou de B-tree de lignes qui effectue le suivi des données internes pour un index columnstore.<br /><br /> NULL : Ceci n’est pas un ensemble de lignes columnstore interne.<br /><br /> Pour plus d’informations, consultez [sys.internal_partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID du segment de données ou de B-tree de lignes qui effectue le suivi des données internes pour un index columnstore.<br /><br /> NULL : Ceci n’est pas un ensemble de lignes columnstore interne.<br /><br /> Pour plus d’informations, consultez [sys.internal_partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|    
 |**leaf_insert_count**|**bigint**|Nombre cumulatif d'insertions de niveau feuille.|    
 |**leaf_delete_count**|**bigint**|Nombre cumulatif de suppressions de niveau feuille. leaf_delete_count est incrémenté uniquement pour les enregistrements supprimés ne sont pas marqués en tant que fantôme tout d’abord. Pour les enregistrements supprimés sont tout d’abord, un fichier fantôme **leaf_ghost_count** est incrémenté à la place.|    
@@ -185,7 +188,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Utilisation de fonctions système pour spécifier des valeurs de paramètres    
  Vous pouvez utiliser la [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions [DB_ID](../../t-sql/functions/db-id-transact-sql.md) et [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) pour spécifier une valeur pour le *database_id* et *object_id* paramètres. Toutefois, la transmission de valeurs non valides à ces fonctions peut entraîner des résultats imprévisibles. Vérifiez systématiquement qu'un ID valide est retourné lorsque vous utilisez DB_ID ou OBJECT_ID. Pour plus d’informations, consultez la section Remarques dans [sys.dm_db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorisations    
  Les autorisations suivantes sont nécessaires :    
     
 -   Autorisation CONTROL sur l'objet spécifié dans la base de données    
@@ -240,13 +243,13 @@ GO
     
 ## <a name="see-also"></a>Voir aussi    
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [Index liés les fonctions et vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
- [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [Sys.dm_db_index_usage_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [Sys.dm_os_latch_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [Sys.dm_db_partition_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [Sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Sys.dm_db_index_physical_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

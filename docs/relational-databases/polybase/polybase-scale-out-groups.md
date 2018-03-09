@@ -1,11 +1,15 @@
 ---
-title: "Groupes PolyBase de montée en puissance parallèle| Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+title: Groupes de scale-out PolyBase | Microsoft Docs
+ms.custom: 
 ms.date: 05/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 989b6a52d4a0e26b32f292fad44a5ad1caf0b71b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>Groupes de scale-out PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  Une instance de SQL Server autonome avec PolyBase peut se transformer en goulot d’étranglement de performances lors du traitement de gros volumes de jeux données dans Hadoop ou le stockage d’objets Blob Azure. La fonctionnalité Groupe PolyBase vous permet de créer un cluster d’instances de SQL Server pour traiter de grands volumes de jeux de données à partir de sources de données externes telles que Hadoop ou le stockage d’objets Blob Azure, sous forme de montée en puissance (scale-out) parallèle pour des performances de requête optimisées.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Une instance de SQL Server autonome avec PolyBase peut se transformer en goulot d’étranglement de performances lors du traitement de grands jeux de données dans Hadoop ou le stockage Blob Azure. La fonctionnalité Groupe PolyBase vous permet de créer un cluster d’instances de SQL Server pour traiter de grands jeux de données à partir de sources de données externes, telles que Hadoop ou le stockage Blob Azure, en mode scale-out pour des performances de requête optimisées.  
   
  Consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) et [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
  Le nœud principal contient l’instance de SQL Server à laquelle les requêtes PolyBase sont envoyées. Chaque groupe PolyBase ne peut avoir qu’un seul nœud principal. Un nœud principal est un regroupement logique du moteur de base de données SQL, du moteur PolyBase et du PolyBase Data Movement Service sur l’instance de SQL Server.  
   
 ### <a name="compute-node"></a>Nœud de calcul  
- Un nœud de calcul contient l’instance de SQL Server qui assiste dans le traitement des requêtes avec montée en puissance sur des données externes. Un nœud de calcul est un regroupement logique de SQL Server et du PolyBase Data Movement Service sur l’instance de SQL Server. Un groupe PolyBase peut avoir plusieurs nœuds de calcul.  
+ Un nœud de calcul contient l’instance de SQL Server qui aide à traiter les requêtes scale-out sur des données externes. Un nœud de calcul est un regroupement logique de SQL Server et du PolyBase Data Movement Service sur l’instance de SQL Server. Un groupe PolyBase peut avoir plusieurs nœuds de calcul.  Le nœud principal et les nœuds de calcul doivent tous exécuter la même version de SQL Server.
   
 ### <a name="distributed-query-processing"></a>Traitement de requêtes distribuées  
  Les requêtes PolyBase sont soumises à SQL Server sur le nœud principal. La partie de la requête qui fait référence à des tables externes est transmise au moteur PolyBase.  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="to-configure-a-polybase-group"></a>Pour configurer un groupe PolyBase  
   
-### <a name="prerequisites"></a>Configuration requise  
+### <a name="prerequisites"></a>Prérequis  
   
 -   N machines dans le même domaine  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="steps"></a>Étapes  
   
-1.  Installez SQL Server avec PolyBase sur N machines.  
+1.  Installez la même version de SQL Server avec PolyBase sur N machines.  
   
 2.  Sélectionnez une instance de SQL Server en tant que nœud principal. Un nœud principal peut uniquement être désigné sur une instance exécutant SQL Server Enterprise.  
   
@@ -69,18 +72,18 @@ ms.lasthandoff: 11/09/2017
   
 4.  Surveillez les nœuds du groupe à l’aide de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).  
   
-5.  Ce paramètre est facultatif. Supprimez un nœud de calcul à l’aide de [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+5.  Facultatif. Supprimez un nœud de calcul à l’aide de [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
 ## <a name="example-walk-through"></a>Exemple de procédure  
- Cet exemple présente les étapes de configuration d’un groupe PolyBase à l’aide :  
+ Cet exemple présente les étapes de configuration d’un groupe PolyBase avec :  
   
-1.  de deux machines dans le domaine *PQTH4A* qui ont pour nom :  
+1.  Deux machines dans le domaine *PQTH4A* qui ont pour nom :  
   
     -   PQTH4A-CMP01  
   
     -   PQTH4A-CMP02  
   
-2.  d’un compte de domaine : *PQTH4A\PolybaseUser*  
+2.  Un compte de domaine : *PQTH4A\PolybaseUser*  
   
 #### <a name="step-1-install-sql-server-with-polybase-on-all-machines"></a>Étape 1 : installez SQL Server avec PolyBase sur toutes les machines.  
   
@@ -117,7 +120,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Arrêtez le moteur PolyBase et redémarrez le service de déplacement des données PolyBase.  
   
-#### <a name="optional-remove-a-compute-node"></a>Facultatif : supprimez un nœud de calcul  
+#### <a name="optional-remove-a-compute-node"></a>Facultatif : supprimez un nœud de calcul  
   
 1.  Connectez-vous au nœud de calcul SQL Server (PQTH4A-CMP02).  
   
@@ -136,9 +139,9 @@ ms.lasthandoff: 11/09/2017
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour le dépannage, consultez [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)   
- [PolyBase Connectivity Configuration (Configuration de la connectivité PolyBase) &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  
+ [Configuration de la connectivité PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  
   
   

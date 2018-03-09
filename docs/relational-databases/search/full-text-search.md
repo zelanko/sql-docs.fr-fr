@@ -2,27 +2,33 @@
 title: "Recherche en texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 07/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text search [SQL Server]
+helpviewer_keywords:
+- full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d97e0e62cc4dbbf0eebc4633e8bddf6d4e712797
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
-  La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
 ## <a name="basic-tasks"></a>Tâches de base
 Cette rubrique présente une vue d’ensemble de la recherche en texte intégral et décrit son architecture ainsi que ses composants. Si vous préférez commencer tout de suite, voici les tâches de base qui vous intéresse.
@@ -55,9 +61,9 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
 -   Mots ou expressions utilisant des valeurs pondérées (*termes pondérés*)  
   
- Les requêtes de texte intégral ne respectent pas la casse. Par exemple, la recherche du terme « Aluminium » ou « aluminium » retourne les mêmes résultats.  
+ Les requêtes de texte intégral ne respectent pas la casse. Par exemple, la recherche du terme « Aluminium » ou « aluminium » retourne les mêmes résultats.  
   
- Les requêtes de texte intégral utilisent un ensemble réduit de prédicats [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS et FREETEXT) et de fonctions (CONTAINSTABLE et FREETEXTTABLE). Toutefois, les objectifs de la recherche pour un scénario d'entreprise donné influencent la structure des requêtes de texte intégral. Par exemple :  
+ Les requêtes de texte intégral utilisent un ensemble réduit de prédicats [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS et FREETEXT) et de fonctions (CONTAINSTABLE et FREETEXTTABLE). Toutefois, les objectifs de la recherche pour un scénario d'entreprise donné influencent la structure des requêtes de texte intégral. Exemple :  
   
 -   Entreprise e-business : rechercher un produit sur un site Web :  
   
@@ -139,7 +145,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  Un traitement supplémentaire peut être effectué pour supprimer les mots vides et normaliser les jetons avant leur stockage dans l'index de recherche en texte intégral ou un fragment d'index.  
   
- À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence.  
+ À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence.  
   
 ###  <a name="querying"></a> Processus d’interrogation de texte intégral  
  Le processeur de requêtes passe les parties de texte intégral d'une requête au Moteur d'indexation et de recherche en texte intégral à des fins de traitement. Le Moteur d'indexation et de recherche en texte intégral effectue l'analyse lexicale et procède éventuellement à des expansions du dictionnaire des synonymes, à la recherche de radical et au traitement des mots vides (mots parasites). Ensuite, les parties de texte intégral de la requête sont représentées sous forme d'opérateurs SQL, essentiellement comme des fonctions table multi-diffusion. Au cours de l'exécution de la requête, ces fonctions table multi-diffusion accèdent à l'index inversé pour extraire les résultats corrects. Les résultats sont alors retournés au client ou bien ils font l'objet d'un traitement supplémentaire avant d'être retournés au client.  
@@ -156,9 +162,9 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
  Pour cet exemple, il faut partir de l’hypothèse qu’un index de recherche en texte intégral a été créé sur la colonne **Title** .  
   
-|DocumentID|Title|  
+|DocumentID|Titre|  
 |----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
+| 1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -172,20 +178,20 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |Mot clé|ColId|DocId|Occurrence|  
 |-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Maintenance|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
-|Installation|1|3|4|  
+|Crank| 1| 1| 1|  
+|Arm| 1| 1|2|  
+|Tire| 1| 1|4|  
+|Maintenance| 1| 1|5|  
+|Front| 1|2| 1|  
+|Front| 1|3| 1|  
+|Reflector| 1|2|2|  
+|Reflector| 1|2|5|  
+|Reflector| 1|3|2|  
+|Bracket| 1|2|3|  
+|Bracket| 1|3|3|  
+|Assembly| 1|2|6|  
+|3| 1|2|7|  
+|Installation| 1|3|4|  
   
  La colonne **Keyword** contient la représentation d'un jeton unique extrait au moment de l'indexation. Les analyseurs lexicaux déterminent le contenu d'un jeton.  
   
@@ -198,7 +204,7 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
 ###  <a name="fragments"></a> Fragments d’index de recherche en texte intégral  
  L'index de recherche en texte intégral logique est habituellement fractionné entre plusieurs tables internes. Chaque table interne est appelé fragment d'index de recherche en texte intégral. Quelques-uns de ces fragments peuvent contenir des données plus récentes que d'autres. Par exemple, si un utilisateur met à jour la ligne suivante dont DocId est 3 et que la table effectue un suivi automatique des modifications, un nouveau fragment est créé.  
   
-|DocumentID|Title|  
+|DocumentID|Titre|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -208,8 +214,8 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+|Rear| 1|3| 1|  
+|Reflector| 1|3|2|  
   
  Comme on peut le constater d'après Fragment 2, les requêtes de texte intégral doivent interroger chaque fragment en interne et ignorer les entrées plus anciennes. Par conséquent, trop de fragments d'index de recherche en texte intégral dans l'index de texte intégral peut conduire à une dégradation substantielle dans les performances des requêtes. Pour réduire le nombre de fragments, réorganisez le catalogue de texte intégral en utilisant l’option REORGANIZE de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md). Cette instruction effectue une *fusion principale*, c’est-à-dire une fusion de tous les fragments en un fragment unique plus grand, et supprime toutes les entrées obsolètes de l’index de recherche en texte intégral.  
   
@@ -217,18 +223,18 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Maintenance|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
+|Crank| 1| 1| 1|  
+|Arm| 1| 1|2|  
+|Tire| 1| 1|4|  
+|Maintenance| 1| 1|5|  
+|Front| 1|2| 1|  
+|Rear| 1|3| 1|  
+|Reflector| 1|2|2|  
+|Reflector| 1|2|5|  
+|Reflector| 1|3|2|  
+|Bracket| 1|2|3|  
+|Assembly| 1|2|6|  
+|3| 1|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Différences entre les index en recherche intégral et les index standard SQL Server :  
   

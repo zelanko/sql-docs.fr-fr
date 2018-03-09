@@ -10,24 +10,26 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8678d4abd61ca93e53c217b295650c9d3998fe50
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>L’exécution sur Linux avec cron du package de planification SQL Server Integration Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Lorsque vous exécutez SQL Server Integration Services (SSIS) et SQL Server sur Windows, vous pouvez automatiser l’exécution de packages SSIS à l’aide de l’Agent SQL Server. Lorsque vous exécutez SQL Server et SSIS sur Linux, toutefois, l’utilitaire SQL Server Agent n’est pas disponible pour planifier des travaux sur Linux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution du package.
 
 Cet article fournit des exemples qui montrent comment automatiser l’exécution des packages SSIS. Les exemples sont écrits pour s’exécuter sur Red Hat Enterprise. Le code est identique pour les autres distributions Linux, telles que Ubuntu.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant d’utiliser le service cron pour exécuter des tâches, vérifiez si elle est en cours d’exécution sur votre ordinateur.
 
@@ -78,3 +80,9 @@ Pour obtenir une description plus détaillée du format de fichier crontab, util
 Voici un exemple partiels de la sortie qui permet d’expliquer l’exemple dans cet article :
 
 ![Description partielle détaillée du format de crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+
+## <a name="related-content-about-ssis-on-linux"></a>Contenu associé sur SSIS sur Linux
+-   [Extraire, transformer et charger des données sur Linux avec SSIS](sql-server-linux-migrate-ssis.md)
+-   [Installer SQL Server Integration Services (SSIS) sur Linux](sql-server-linux-setup-ssis.md)
+-   [Configurer SQL Server Integration Services sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Limitations et problèmes connus pour SSIS sur Linux](sql-server-linux-ssis-known-issues.md)

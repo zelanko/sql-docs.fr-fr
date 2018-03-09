@@ -1,5 +1,5 @@
 ---
-title: RIGHT (Expression SSIS) | Documents Microsoft
+title: RIGHT (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8927e53f0cb8bf082211a7f35a112c7ca626d83c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="right-ssis-expression"></a>RIGHT (expression SSIS)
   Renvoie le nombre de caractères spécifié en commençant par la partie la plus à droite d'une expression de caractères donnée.  
@@ -38,7 +37,7 @@ RIGHT(character_expression,integer_expression)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
+ *expression_caractère*  
  Expression de caractères à partir de laquelle doivent être extraits les caractères.  
   
  *integer_expression*  
@@ -47,7 +46,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si *integer_expression* est supérieure à la longueur de *character_expression*, la fonction retourne *character_expression*.  
   
  Si l’argument *integer_expression* a pour valeur zéro, la fonction renvoie une chaîne de longueur nulle.  
@@ -79,9 +78,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [GAUCHE &#40; Expression SSIS &#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [LEFT &#40;expression SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

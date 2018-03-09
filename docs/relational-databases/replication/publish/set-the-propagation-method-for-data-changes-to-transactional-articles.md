@@ -2,29 +2,34 @@
 title: "Définir la méthode de propagation des modifications de données des articles transactionnels | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79b21cea8d1edfbb3c1aecf5bbaf2f4fa86624a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0f97ecca34a7c61305e243ce75a11dc58a5f641f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
-  Cette rubrique explique comment définir la méthode de propagation pour les modifications de données d'articles transactionnels dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment définir la méthode de propagation pour les modifications de données d'articles transactionnels dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Par défaut, la réplication transactionnelle propage les modifications vers les Abonnés à l'aide d'un ensemble de procédures stockées pour chaque article. Vous pouvez remplacer ces procédures par des procédures personnalisées. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -59,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>Pour générer et utiliser des procédures stockées personnalisées  
   
@@ -71,7 +76,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 5.  Lorsque l'instantané de la publication est généré, il inclut la procédure spécifiée à l'étape précédente. Les procédures utilisent la syntaxe CALL spécifiée, mais incluent également la logique par défaut utilisée par la réplication.  
   
@@ -113,7 +118,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Lors de la spécification de la valeur **NONE** pour un des paramètres ci-dessus, les commandes de ce type ne seront pas répliquées sur l'Abonné.  
   
-     Pour plus d'informations, voir [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>Pour créer un article avec des procédures stockées personnalisées modifiées par utilisateur  
   
@@ -123,7 +128,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **@del_cmd** – spécifiez la valeur **CALL sp_MSdel_*nom_article*** ou **XCALL sp_MSdel_*nom_article***, où ***nom_article*** est la valeur spécifiée pour **@article**.  
   
-    -   **@upd_cmd** – spécifiez la valeur **SCALL sp_MSupd_*nom_article***, **CALL sp_MSupd_*nom_article***, **XCALL sp_MSupd_*nom_article* **ou **MCALL sp_MSupd_*nom_article***, où ***nom_article*** est la valeur spécifiée pour **@article**.  
+    -   **@upd_cmd** – spécifiez la valeur **SCALL sp_MSupd_*nom_article***, **CALL sp_MSupd_*nom_article***, **XCALL sp_MSupd_*nom_article*** ou **MCALL sp_MSupd_*nom_article***, où ***nom_article*** est la valeur spécifiée pour **@article**.  
   
     > [!NOTE]  
     >  Pour chacun des paramètres de commande ci-dessus, vous pouvez spécifier votre propre nom pour les procédures stockées que la réplication génère.  
@@ -151,17 +156,17 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Pour plus d’informations sur la syntaxe CALL, SCALL, XCALL et MCALL, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Pour plus d'informations, voir [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Dans la base de données de publication du serveur de publication, utilisez l'instruction [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) pour modifier [sp_scriptpublicationcustomprocs](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) afin qu'il retourne un script [CREATE PROCEDURE](../../../t-sql/statements/create-procedure-transact-sql.md) pour les procédures stockées personnalisées INSERT, UPDATE et DELETE. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>Pour modifier la méthode de propagation des modifications pour un article existant  
   
-1.  Exécutez [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)dans la base de données de publication du serveur de publication. Spécifiez **@publication**, **@article**, la valeur **ins_cmd**, **upd_cmd**ou **del_cmd** pour **@property**, ainsi que la méthode de propagation appropriée pour **@value**.  
+1.  Exécutez [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) dans la base de données de publication du serveur de publication. Spécifiez **@publication**, **@article**, la valeur **ins_cmd**, **upd_cmd**ou **del_cmd** pour **@property**, ainsi que la méthode de propagation appropriée pour **@value**.  
   
 2.  Répétez l'étape 1 pour chaque méthode de propagation à modifier.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Créer, modifier et supprimer des publications et des articles &#40;réplication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
   

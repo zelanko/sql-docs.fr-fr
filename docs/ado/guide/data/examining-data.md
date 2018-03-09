@@ -3,8 +3,9 @@ title: "Examinez les données | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e08bd9943a3744c5629ea47396a6574b9e23938
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="examining-data"></a>Examen des données
 Le [obtenir des données](../../../ado/guide/data/getting-data.md) section explique comment récupérer des données à partir d’une source de données en tant qu’un ou plusieurs **Recordset** objets. Cette section traite **Recordset** plus en détail, y compris comment naviguer dans le **Recordset** et afficher ses données.  

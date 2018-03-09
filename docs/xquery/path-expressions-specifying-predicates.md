@@ -3,32 +3,38 @@ title: "Spécification de prédicats dans une étape d’Expression de chemin d�
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - axis step [XQuery]
 - predicates [XQuery]
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05290d3f2906136a1d058b63b182877a3226f64e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>Expressions de chemin d’accès - spécification de prédicats
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Comme décrit dans la rubrique [des Expressions de chemin d’accès dans XQuery](../xquery/path-expressions-xquery.md), une étape d’axe dans une expression de chemin d’accès inclut les composants suivants :  
   
@@ -126,7 +132,7 @@ WHERE ProductModelID=7
   
 1.  Si la valeur de l'expression de prédicat est une séquence vide, la valeur de vérité de prédicat est False.  
   
-     Exemple :  
+     Par exemple :  
   
     ```  
     SELECT Instructions.query('  
@@ -153,7 +159,7 @@ WHERE ProductModelID=7
     WHERE ProductModelID=19  
     ```  
   
-     Notez les points suivants dans la requête précédente :  
+     Notez les points suivants dans la requête précédente :  
   
     -   La troisième étape de l'expression spécifie une expression de prédicat de valeur égale à 3. Par conséquent, la valeur de vérité de prédicat de cette expression est True seulement pour les nœuds dont la position de contexte est 3.  
   
@@ -192,11 +198,11 @@ WHERE ProductModelID=7
     select @y  
     ```  
   
-     Notez les points suivants dans la requête précédente :  
+     Notez les points suivants dans la requête précédente :  
   
     -   L’expression dans le **pour** boucle comporte deux étapes, et la seconde étape spécifie un prédicat. La valeur de ce prédicat est une valeur de type booléen. Si cette valeur est True, la valeur de vérité du prédicat est également True.  
   
-    -   La requête retourne les <`Customer`> éléments enfants, dont la valeur de prédicat est True, de la \<Survey > éléments enfants de la racine du document. Voici le résultat obtenu :  
+    -   La requête retourne les <`Customer`> éléments enfants, dont la valeur de prédicat est True, de la \<Survey > éléments enfants de la racine du document. Voici le résultat obtenu :  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -216,7 +222,7 @@ WHERE CatalogDescription.exist('
              ') = 1  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La clause WHERE spécifie les [méthode exist() (type de données XML)](../t-sql/xml/exist-method-xml-data-type.md).  
   

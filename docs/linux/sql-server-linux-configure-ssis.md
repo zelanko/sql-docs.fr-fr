@@ -10,24 +10,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 497735f83cd43844661f7f13e754c4821d193181
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurer SQL Server Integration Services sur Linux avec ssis-conf
 
-Vous exécutez le `ssis-conf` un script de configuration lorsque vous installez SQL Server Integration Services (SSIS) pour Red Hat Enterprise Linux et Ubuntu. Vous pouvez utiliser cet utilitaire pour configurer les propriétés suivantes :
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Vous exécutez le `ssis-conf` un script de configuration lorsque vous installez SQL Server Integration Services (SSIS) pour Red Hat Enterprise Linux et Ubuntu. Pour plus d’informations sur l’installation de SSIS, consultez [installer SQL Server Integration Services (SSIS) sur Linux](sql-server-linux-setup-ssis.md).
+
+Vous pouvez également utiliser le `ssis-conf` utilitaire pour configurer les propriétés suivantes :
 
 | Command |  Description |
 |-------------|---------------------------------------------------------------------|
-| Set-edition | Définir l’édition de SQL Server                                       |
+| set-edition | Définir l’édition de SQL Server                                       |
 | Données de télémétrie   | Activer ou désactiver le service de télémétrie SQL Server Integration Services |
 | configurer       | Initialiser et configurer Microsoft SQL Server Integration Services      |
 |||
@@ -141,3 +145,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## <a name="related-content-about-ssis-on-linux"></a>Contenu associé sur SSIS sur Linux
+-   [Extraire, transformer et charger des données sur Linux avec SSIS](sql-server-linux-migrate-ssis.md)
+-   [Installer SQL Server Integration Services (SSIS) sur Linux](sql-server-linux-setup-ssis.md)
+-   [Limitations et problèmes connus pour SSIS sur Linux](sql-server-linux-ssis-known-issues.md)
+-   [L’exécution sur Linux avec cron du package de planification SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

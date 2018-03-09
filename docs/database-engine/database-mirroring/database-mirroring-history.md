@@ -2,9 +2,12 @@
 title: "Historique de la mise en miroir de bases de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ef0ef28324c0ac78a6970b4fdac7b1523e85a4f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>Historique de la mise en miroir de bases de données
-  Utilisez cette boîte de dialogue pour afficher l'historique d'état de la mise en miroir d'une base de données sur une instance de serveur spécifiée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour afficher l’historique d’état de la mise en miroir d’une base de données sur une instance de serveur spécifiée.  
   
  **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
  **Instance de serveur**  
  Nom de l'instance de serveur à partir de laquelle l'historique est généré.  
   
- **Base de données**  
+ **Sauvegarde de la base de données**  
  Nom de la base de données dont l'historique est généré.  
   
  **Filtrer la liste par**  
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
 |**Taux de restauration**|Taux de restauration des transactions dans la base de données en miroir, en Ko par seconde.|  
 |**Temps de traitement de validation de miroir**|Délai moyen par transaction en millisecondes (uniquement en modes synchrones). Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

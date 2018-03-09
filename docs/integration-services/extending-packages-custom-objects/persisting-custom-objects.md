@@ -1,5 +1,5 @@
 ---
-title: "Persistance des objets personnalisés | Documents Microsoft"
+title: "Persistance des objets personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,28 +16,27 @@ applies_to:
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22ebbf55dbe6fb9a1e63e8a7cfae9fb6674c62ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="persisting-custom-objects"></a>Persistance des objets personnalisés
-  Vous n’avez pas besoin d’implémenter une persistance personnalisée pour les objets personnalisés que vous créez tant que leurs propriétés utilisent uniquement des types de données simples tels que **entier** et **chaîne**. L'implémentation par défaut de la persistance enregistre les métadonnées de votre objet ainsi que les valeurs de toutes ses propriétés.  
+  Il n’est pas nécessaire d’implémenter une persistance personnalisée pour les objets personnalisés que vous créez à condition que leurs propriétés utilisent uniquement des types de données simples, comme **integer** et **string**. L'implémentation par défaut de la persistance enregistre les métadonnées de votre objet ainsi que les valeurs de toutes ses propriétés.  
   
  Toutefois, si votre objet comporte des propriétés qui utilisent des types de données complexes, ou si vous souhaitez effectuer un traitement personnalisé sur des valeurs de propriétés lors de leur chargement et de leur enregistrement, vous pouvez implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> et ses méthodes <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A>. Avec ces méthodes, vous effectuez un chargement depuis (ou un enregistrement vers) la définition XML du package, d'un fragment XML qui contient les propriétés de votre objet et leurs valeurs actuelles. Le format de ce fragment XML n'est pas défini ; il doit uniquement s'agir d'un format XML bien formé.  
   
 > [!IMPORTANT]  
 >  Lorsque vous implémentez une persistance personnalisée, vous devez rendre persistantes toutes les propriétés de l'objet, y compris les propriétés héritées et les propriétés personnalisées que vous avez ajoutées.  
   
-## <a name="example"></a>Exemple  
- Bien que l’exemple de gestionnaire de connexions personnalisé Sql Server ne nécessite pas de persistance personnalisée pour ses trois propriétés de type **chaîne**, le code suivant montre un exemple de code personnalisé requis pour rendre persistants le Gestionnaire de connexions et ses propriétés. La classe qui contient ce code doit implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
+## <a name="example"></a> Exemple  
+ Bien que l’exemple de gestionnaire de connexions personnalisé SQL Server ne requière pas de persistance personnalisée pour ses trois propriétés de type **string**, le code suivant présente un exemple du code personnalisé qui serait requis pour rendre persistants le gestionnaire de connexions et ses propriétés. La classe qui contient ce code doit implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -162,9 +160,8 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Développement d’objets personnalisés pour Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [Génération, déploiement et débogage d’objets personnalisés](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bf9d6ecc7971d8047dff4a808e1fe84a6261b71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fa5f1fb5c50911718adf3aa509dd99fb6e30673c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-deprecated-functions"></a>Mappage des fonctions déconseillées
 Cette section décrit les fonctions déconseillées comment sont mappés par les 3 ODBC*.x* du Gestionnaire de pilotes pour garantir la compatibilité descendante des ODBC 3*.x* pilotes qui sont utilisés avec ODBC 2. *x* applications. Le Gestionnaire de pilotes effectue ce mappage, quelle que soit la version de l’application. Étant donné que chaque ODBC 2. *x* fonctions dans la liste suivante est mappée à la 3 ODBC correspondants*.x* fonction lorsqu’elle est appelée dans un ODBC 3*.x* pilote, la version 3 ODBC*.x* pilote n’a pas d’implémenter ODBC 2. *x* fonctions.  

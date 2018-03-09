@@ -17,18 +17,18 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7c63ec7ac4a85c43606941f61990eb8cc19c9c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab1e592975fce7d5439d33df265bb8ce5bf05c45
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="sql-server-extended-events-packages"></a>Packages d'événements étendus SQL Server
+# <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Un package est un conteneur d'objets d'événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il existe trois sortes de packages Événements étendus :  
@@ -157,7 +157,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   Type  
   
  Pour plus d’informations, consultez [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
@@ -223,7 +223,7 @@ where name = 'lock_mode'
   
  En utilisant cette table comme exemple, supposez que vous possédez une colonne nommée mode et que sa valeur est 5. Le tableau indique que 5 correspond à X, ce qui signifie que le type de verrou est Exclusif.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sessions Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Moteur des Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  

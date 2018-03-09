@@ -1,10 +1,13 @@
 ---
 title: "L’installation de SSMA pour Oracle (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: e4deba6c238773322eddd9d01676e36579addf4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a7cf08071a906fbab060b6069a7cb33ff838c60e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>L’installation de SSMA pour Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) pour Oracle se compose d’une application cliente qui vous permet d’effectuer une migration à partir d’Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et base de données SQL Azure. Il contient également un Pack d’extension qui prend en charge la migration des données et l’utilisation des fonctions du système Oracle dans vos bases de données migrées.  
@@ -30,7 +33,7 @@ Si vous souhaitez mettre à niveau vers une version ultérieure de SSMA pour Ora
   
 ## <a name="contents"></a>Sommaire  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |---------|---------------|  
 |[L’installation de SSMA pour Client Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|Fournit des informations et des instructions pour installer le client SSMA.|  
 |[L’installation des composants SSMA SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|Fournit des informations et des instructions pour installer le Pack d’extension sur les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

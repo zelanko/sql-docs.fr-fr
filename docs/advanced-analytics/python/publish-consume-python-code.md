@@ -2,23 +2,26 @@
 title: Publier et utiliser du code Python | Documents Microsoft
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b060d27376b17709bd0f3fc8f39b8e01a6702e6b
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Publier et consommer des services web de Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Vous pouvez déployer une solution de Python de travail à un service web à l’aide de la fonctionnalité à l’Opérationnalisation dans Microsoft Machine Learning Server. Cette rubrique décrit les étapes pour publier, puis exécutez votre solution.
 

@@ -2,15 +2,13 @@
 title: "Types (exploration de données) de contenu | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir à la fois le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne quand elle est utilisée dans un modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir à la fois le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne quand elle est utilisée dans un modèle.  
   
  Le *type de données* détermine la façon dont les algorithmes traitent les données dans ces colonnes quand vous créez des modèles d’exploration de données. La définition du type de données d'une colonne donne les informations d'algorithme relatives au type de données des colonnes, ainsi que la façon de traiter les données. Chaque type de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge un ou plusieurs types de contenu pour l'exploration de données.  
   
@@ -120,10 +119,10 @@ ms.lasthandoff: 11/17/2017
  En plus des types de contenu susmentionnés qui sont couramment utilisés avec tous les modèles, vous pouvez utiliser des colonnes classifiées pour définir les types de contenu de certains types de données. Pour plus d’informations sur les colonnes classifiées, consultez [Colonnes classifiées &#40;exploration de données&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Contenu des Types de &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
  [Types de données &#40; exploration de données &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Types de données &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [Modifier les propriétés d’une Structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
- [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colonnes de Structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

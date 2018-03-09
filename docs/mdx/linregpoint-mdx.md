@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LINREGPOINT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b3c59b4abe5da7dacf3bf86ab5c055aca441c202
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 37c0f4b4ef73ff14d8c0f46208b94d1b96d995e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
  *Numeric_Expression_x*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des abscisses.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un est de la pente et b l’ordonnée à l’origine :  
   
  y = ax+b  
@@ -63,7 +63,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
 > [!NOTE]  
 >  Le **LinRegPoint** fonction ignore les cellules vides ou les cellules qui contiennent du texte. Cependant, elle tient compte des cellules dont la valeur est zéro.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous retourne la valeur prévue de Unit Sales (ventes à l'unité) sur les dix périodes écoulées en se basant sur la relation statistique entre les mesures Unit Sales (ventes par unité) et Store Sales (ventes par magasin).  
   
 ```  
