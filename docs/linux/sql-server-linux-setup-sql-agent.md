@@ -1,4 +1,4 @@
----
+﻿---
 title: "Installer l’Agent SQL Server sur Linux | Documents Microsoft"
 description: "Cet article décrit comment installer l’Agent SQL Server sur Linux."
 author: rothja
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/21/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- Le [l’Agent SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) exécute les travaux planifiés de SQL Server. À partir de SQL Server 2017 CU4, l’Agent SQL Server est inclus avec le **mssql-serveur** du package et est désactivée par défaut. Pour plus d’informations sur les fonctionnalités prises en charge pour cette version de l’Agent SQL Server, ainsi que des informations de version, consultez le [Release Notes](sql-server-linux-release-notes.md).
+ Le [l’Agent SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) exécute les travaux planifiés de SQL Server. À partir de SQL Server 2017 CU4, l’Agent SQL Server est inclus avec le **mssql-serveur** du package et est désactivée par défaut. Pour plus d’informations sur les fonctionnalités prises en charge pour cette version de l’Agent SQL Server, ainsi que des informations de version, consultez le [notes de publication](sql-server-linux-release-notes.md).
 
  Installer/activer l’Agent SQL Server :
 - [Pour les Versions 2017 CU4 et versions ultérieures, activez l’Agent SQL Server](#EnableAgentAfterCU4)
@@ -56,14 +56,14 @@ Installez l’Agent SQL Server pour votre plateforme :
 
 ### <a name="RHEL">Installer sur RHEL</a>
 
-Utilisez les étapes suivantes pour installer le **mssql-server-agent** sur Red Hat Enterprise Linux. 
+Utilisez les étapes suivantes pour installer le package **mssql-server-agent** sur Red Hat Enterprise Linux. 
 
 ```bash
 sudo yum install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo yum check-update
@@ -75,7 +75,7 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 ### <a name="ubuntu">Installer sur Ubuntu</a>
 
-Utilisez les étapes suivantes pour installer le **mssql-server-agent** sur Ubuntu. 
+Utilisez les étapes suivantes pour installer le package **mssql-server-agent** sur Ubuntu. 
 
 ```bash
 sudo apt-get update 
@@ -83,7 +83,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes : 
 
 ```bash
 sudo apt-get update 
@@ -95,7 +95,7 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 ### <a name="SLES">Installez SLES</a>
 
-Utilisez les étapes suivantes pour installer le **mssql-server-agent** sur SUSE Linux Enterprise Server. 
+Utilisez les étapes suivantes pour installer le package **mssql-server-agent** sur SUSE Linux Enterprise Server. 
 
 Install **mssql-server-agent** 
 
@@ -104,7 +104,7 @@ sudo zypper install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si vous avez déjà **mssql-server-agent** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes : 
 
 ```bash
 sudo zypper refresh

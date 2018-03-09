@@ -1,4 +1,4 @@
----
+﻿---
 title: Prise en main 2017 du serveur SQL sur Ubuntu | Documents Microsoft
 description: "Ce démarrage rapide montre comment installer SQL Server 2017 sur Ubuntu puis créer et interroger une base de données avec sqlcmd."
 author: rothja

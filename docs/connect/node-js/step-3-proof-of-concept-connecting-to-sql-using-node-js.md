@@ -1,4 +1,4 @@
----
+﻿---
 title: "Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Node.js | Documents Microsoft"
 ms.custom: 
 ms.date: 08/08/2017
@@ -21,6 +21,7 @@ ms.workload: On Demand
 ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
 ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
+
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/18/2017
 ---
@@ -55,7 +56,7 @@ La fonction **new Connection** est utilisée pour se connecter à SQL Database.
 ## <a name="step-2--execute-a-query"></a>Étape 2 : Exécuter une requête  
   
   
-Toutes les instructions SQL sont exécutées à l’aide de la fonction **new Request()**. Si l’instruction retourne des lignes, par exemple une instruction select, vous pouvez les récupérer à l’aide de la fonction **request.on()**. S’il n’y a aucune ligne retournée, la fonction request.on() retourne des listes vides.  
+Toutes les instructions SQL sont exécutées à l’aide de la function **new Request()**. Si l’instruction retourne des lignes, par exemple une instruction select, vous pouvez les récupérer à l’aide de la fonction **request.on()**. S’il n’y a aucune ligne retourné la fonction request.on() retourne des listes vides.   
   
   
 ```javascript  
@@ -147,3 +148,4 @@ Dans cet exemple, vous allez apprendre à passer en toute sécurité une command
         connection.execSql(request);  
     }  
 ```  
+

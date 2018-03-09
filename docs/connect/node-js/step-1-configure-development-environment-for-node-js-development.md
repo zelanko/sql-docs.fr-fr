@@ -1,4 +1,4 @@
----
+﻿---
 title: "Étape 1 : Configurer l’environnement de développement pour le développement de Node.js | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
@@ -43,7 +43,7 @@ c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
-4. **Créez un projet de node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire de projet.  
+4. **Créez un projet de node.**  Pour conserver les valeurs par défaut lors de la création de votre projet, appuyez sur entrée jusqu'à ce que le projet est créé. À la fin de cette étape, vous devez voir un fichier package.json dans votre répertoire projet.  
 ```  
 > npm init  
 ```  

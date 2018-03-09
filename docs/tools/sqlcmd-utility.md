@@ -1,4 +1,4 @@
----
+﻿---
 title: Utilitaire SQLCMD | Documents Microsoft
 ms.custom: 
 ms.date: 07/27/2017
@@ -362,7 +362,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Cette option définit la variable de script **sqlcmd** SQLCMDHEADERS. Utilisez **-1** pour indiquer qu’aucun en-tête ne doit être imprimé. En présence d’une valeur non valide, **sqlcmd** génère un message d’erreur et se termine.  
   
  **-k** [**1** | **2**]  
- Supprime de la sortie tous les caractères de contrôle, par exemple les tabulations et les caractères de nouvelle ligne. Cela préserve la mise en forme des colonnes lorsque des données sont retournées. Si 1 est spécifié, les caractères de contrôle sont remplacés par un espace. Si 2 est spécifié, les caractères de contrôle sont remplacés par un espace. **-k** est identique à **-k1**.  
+ Supprime de la sortie tous les caractères de contrôle, par exemple les tabulations et les caractères de nouvelle ligne. Cela préserve la mise en forme des colonnes lorsque des données sont retournées. Si 1 est spécifié, chaque caractère de contrôle est remplacé par un espace. Si 2 est spécifié, les caractères de contrôle consécutifs sont remplacés par un espace. **-k** est identique à **-k1**.  
   
  **-s** *col_separator*  
  Spécifie le caractère de séparation des colonnes. Le caractère espace est utilisé par défaut. Cette option définit la variable de script **sqlcmd** SQLCMDCOLSEP. Pour utiliser des caractères ayant une signification spéciale pour le système d'exploitation, tels que le « et » commercial (&) ou le point-virgule (;), placez ce caractère entre guillemets ("). Le séparateur des colonnes peut être n'importe quel caractère 8 bits.  

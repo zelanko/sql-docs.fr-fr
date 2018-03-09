@@ -1,4 +1,4 @@
----
+﻿---
 title: "Nouveautés de SQL Server 2017 sur Linux | Documents Microsoft"
 description: "Cet article souligne les nouveautés de 2017 du serveur SQL sur Linux."
 author: rothja
